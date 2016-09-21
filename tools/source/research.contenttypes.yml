@@ -1,0 +1,879 @@
+blogposts:
+  name: 'Blog Posts'
+  singular_name: 'BlogPost'
+  display_name: 'Blog Posts'
+  slug: 'blogposts'
+  singular_slug: 'blogpost'
+  fields:
+    # Show on Blog list page, Blog page, Related items snippet, Home page
+    title:
+      type: text
+      required: true
+      label: "Title (required):"
+      variant: inline
+      postfix: "(max. 200 characters)"
+      pattern: "^.{1,200}$"
+      group: "Blog post"
+    slug:
+      type: slug
+      uses: title
+    # Shown on Blog page
+    body:
+      type: html
+      required: false
+      label: "Body (required):"
+      height: 150px
+    # multiselect from dms
+    # Show on Blog list page, Related items snippet, Home page
+    image:
+      type: image
+      required: false
+      label: "Teaser image:"
+      attrib: title
+      extensions: [ gif, jpg, png ]
+    # Show on Blog page
+    attachments:
+      type: filelist
+      required: false
+      label: "Attachments:"
+      group: "Secondary information"
+    structure_parent:
+       type: select
+       values: structures/id,title
+       autocomplete: true
+       label: "Select structure tree parent"
+       group: Structure
+    structure_sortorder:
+      type: integer
+      label: "Sort order in structure tree parent"
+  # Show on Blog page
+  taxonomy: [ tags ]
+  relations:
+    persons:
+      label: "Author(s)"
+      multiple: true
+      format: "{{ item.last_name }}, {{ item.first_name }}"
+      order: last_name
+    person:
+      multiple: true
+      label: "Contact(s)"
+      order: last_name
+      format: "{{ item.last_name }}, {{ item.first_name }}"
+      order: last_name
+    pages:
+      multiple: true
+      label: "Pages"
+      order: -id
+      format: "{{ item.title|escape }}"
+    collections:
+      multiple: true
+      label: "Collections"
+      order: -id
+      format: "{{ item.title|escape }}"
+  record_template: record_blogpost.twig
+  recordsperpage: 100
+  icon_many: "fa:quote-left"
+  icon_one: "fa:quote-right"
+  sort: "-datepublish"
+
+pages:
+  name: Pages
+  singular_name: Page
+  fields:
+    # Shown on Individual pages, Lists, Overviews, Teasers
+    title:
+      type: text
+      required: true
+      label: "Title (required):"
+      variant: inline
+      postfix: "(max. 50 characters)"
+      pattern: "^.{1,50}$"
+      group: Page
+    slug:
+      type: slug
+      uses: title
+    intro:
+      type: textarea
+      label: "Intro:"
+      height: 150px
+    # Shown on Individual pages, Lists
+    teaser:
+      type: html
+      label: "Teaser (required):"
+      height: 150px
+    # Shown on Individual pages
+    body:
+      type: html
+      label: "Body (required):"
+      height: 300px
+    # Shown on Individual pages, Lists, Overviews, Teasers
+    teaser_image:
+      type: image
+      required: false
+      label: "Teaser image:"
+    secondary_mail:
+      type: checkbox
+      label: "Show secondary email instead:"
+    hide_list:
+      type: checkbox
+      label: "Hide from list views:"
+      postfix: "Check to hide this page from overview."
+    filelist_files:
+      type: filelist
+      label: "Attachments:"
+      group: "Secondary information"
+    filelist_downloads:
+      type: text
+      class: narrow
+      label: "Document folder:"
+      postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
+    hide_related:
+      type: checkbox
+      label: "Hide from related content:"
+      postfix: "Check to hide this page from related content sections."
+    hide_related_section:
+      type: checkbox
+      label: "Hide related content section:"
+      postfix: "Check to hide the related content section."
+    listtitle:
+      type: text
+      default: "Thumbnail/image grid view"
+      required: false
+      variant: inline
+      prefix: "<hr><h2>Image Grid</h2>"
+    imagelist:
+      type: imagelist
+      label: "Grid images for subsites:"
+    liststyle:
+      type: select
+      label: "Style modifier"
+      values: ['default', 'fivecols']
+    support_navigation:
+      type: markdown
+      label: "Support navigation:"
+      group: "Support navigation"
+    structure_parent:
+       type: select
+       values: structures/id,title
+       autocomplete: true
+       label: "Select structure tree parent"
+       group: Structure
+    structure_sortorder:
+      type: integer
+      label: "Sort order in structure tree parent"
+  taxonomy: [ tags ]
+  relations:
+    persons:
+      label: "Contact(s)"
+      multiple: true
+      format: "{{ item.last_name }}, {{ item.first_name }}"
+      order: last_name
+    pages:
+      multiple: true
+      label: "Pages"
+      order: -id
+      format: "{{ item.title|escape }}"
+    blogposts:
+      multiple: true
+      label: "Blog posts"
+      order: -id
+      format: "{{ item.title|escape }}"
+    collections:
+      multiple: true
+      label: "Collections"
+      order: -id
+      format: "{{ item.title|escape }}"
+  record_template: record_page.twig
+  icon_many: "fa:files-o"
+  icon_one: "fa:file-o"
+
+collections:
+  name: Collections
+  singular_name: Collection
+  fields:
+    # Shown on Individual pages, Lists, Overviews, Teasers
+    title:
+      type: text
+      required: true
+      label: "Title (required):"
+      variant: inline
+      postfix: "(max. 100 characters)"
+      pattern: "^.{1,100}$"
+      group: Page
+    slug:
+      type: slug
+      uses: title
+    intro:
+      type: textarea
+      label: "Intro:"
+      height: 150px
+    # Shown on Individual pages, Lists
+    teaser:
+      type: html
+      label: "Teaser (required):"
+      height: 150px
+    # Shown on Individual pages
+    body:
+      type: html
+      label: "Body (required):"
+      height: 300px
+    # Shown on Individual pages, Lists, Overviews, Teasers
+    teaser_image:
+      type: image
+      required: false
+      label: "Teaser image:"
+      attrib: title
+      extensions: [ gif, jpg, png ]
+    source:
+      type: text
+      variant: inline
+      class: narrow
+    source_url:
+      type: text
+      required: false
+      label: "URL from source:"
+      variant: inline
+      postfix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+    secondary_mail:
+      type: checkbox
+      label: "Show secondary email instead:"
+    hide_list:
+      type: checkbox
+      label: "Hide from list views:"
+      postfix: "Check to hide this page from overview."
+    filelist_files:
+      type: filelist
+      label: "Attachments:"
+      group: "Secondary information"
+    filelist_downloads:
+      type: text
+      class: narrow
+      label: "Document folder:"
+      postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
+    hide_related:
+      type: checkbox
+      label: "Hide from related content:"
+      postfix: "Check to hide this page from related content sections."
+    hide_related_section:
+      type: checkbox
+      label: "Hide related content section:"
+      postfix: "Check to hide the related content section."
+    listtitle:
+      type: text
+      default: "Thumbnail/image grid view"
+      required: false
+      variant: inline
+      prefix: "<hr><h2>Image Grid</h2>"
+    imagelist:
+      type: imagelist
+      label: "Grid images for subsites:"
+    liststyle:
+      type: select
+      label: "Style modifier"
+      values: ['default', 'fivecols']
+    support_navigation:
+      type: markdown
+      label: "Support navigation:"
+      group: "Support navigation"
+    structure_parent:
+       type: select
+       values: structures/id,title
+       autocomplete: true
+       label: "Select structure tree parent"
+       group: Structure
+    structure_sortorder:
+      type: integer
+      label: "Sort order in structure tree parent"
+  taxonomy: [ tags ]
+  relations:
+    persons:
+      label: "Contact(s)"
+      multiple: true
+      format: "{{ item.last_name }}, {{ item.first_name }}"
+      order: last_name
+    pages:
+      multiple: true
+      label: "Pages"
+      order: -id
+      format: "{{ item.title|escape }}"
+    blogposts:
+      multiple: true
+      label: "Blog posts"
+      order: -id
+      format: "{{ item.title|escape }}"
+    collections:
+      multiple: true
+      label: "Collections"
+      order: -id
+      format: "{{ item.title|escape }}"
+  record_template: record_page.twig
+  icon_many: "fa:share-alt"
+  icon_one: "fa:share-alt"
+
+structures:
+  name: Structures
+  singular_name: Structure
+  fields:
+  # Shown on Overview pages, List pages, Teasers
+    title:
+      type: text
+      required: true
+      label: "Title (required):"
+      variant: inline
+      postfix: "(max. 50 characters)"
+      pattern: "^.{1,50}$"
+      group: Structure
+    # The permalink should be /parent URL/title - eg pro.europeana.eu/share-your-data/getting-started.html
+    slug:
+      type: slug
+      uses: title
+    secondary_mail:
+      type: checkbox
+      required: false
+      label: "Show secondary email instead:"
+    # Shown on Overview pages, List pages
+    teaser:
+      type: html
+      required: false
+      label: "Intro text:"
+      height: 150px
+    # Shown on Overview pages, List pages, Teasers
+    image:
+      type: image
+      required: true
+      label: "Image:"
+      attrib: title
+      extensions: [ gif, jpg, png ]
+    template:
+      type: templateselect
+      filter: '*_structure.twig'
+      postfix: 'Use "default template" for overview.'
+      prefix: "<hr>"
+    content:
+      type: select
+      label: 'Contenttype'
+      values: ['default', 'Events', 'BlogPosts', 'Persons', 'PressReleases', 'Projects', 'Publications', 'TaskForces', 'Jobs']
+      postfix: 'Set content by contenttype'
+      group: "Content type"
+    # subclass get a own body class
+    # -> change name to 'theme'
+    subclass:
+      type: select
+      label: "Subsite theme"
+      values: ['none', 'europeana_subsite_cloud', 'europeana_subsite_creative']
+      prefix: "<hr><h2>Subsite Settings</h2>"
+      group: "Subsite settings"
+    footer:
+      type: select
+      label: 'Subsite footer'
+      values: footer/id,title
+    date_start:
+      type: date
+      required: false
+      label: "Project start:"
+      variant: inline
+    date_end:
+      type: date
+      required: false
+      label: "Project end:"
+      variant: inline
+    structure_parent:
+       type: select
+       values: structures/id,title
+       autocomplete: true
+       label: "Select structure tree parent"
+       group: Structure
+    structure_sortorder:
+      type: integer
+      label: "Sort order in structure tree parent"
+  taxonomy: [ tags ]
+  relations:
+    persons:
+      label: "Contact(s)"
+      multiple: true
+      format: "{{ item.last_name }}, {{ item.first_name }}"
+  record_template: overview_structure.twig
+  recordsperpage: 1000
+  icon_many: "fa:puzzle-piece"
+  icon_one: "fa:puzzle-piece"
+  # viewless: true
+
+persons:
+  name: Persons
+  singular_name: Person
+  fields:
+    # Show on Staff list page, Staff page, Events page (speakers), Contact info block
+    first_name:
+      type: text
+      required: true
+      label: "First name"
+      variant: inline
+      class: narrow
+      postfix: "<em><small>(required)</small></em>"
+      group: "Personal details"
+    # Show on Staff list page, Staff page, Events page (speakers), Contact info block
+    last_name:
+      type: text
+      required: true
+      label: "Last name"
+      postfix: "<em><small>(required)</small></em>"
+      variant: inline
+      class: narrow
+    slug:
+      type: slug
+      uses: [ first_name, last_name ]
+    company:
+      type: text
+      required: false
+      label: "Company:"
+      postfix: (if not Europeana Foundation)
+      variant: inline
+      class: narrow
+    company_url:
+      type: text
+      required: false
+      label: "Company URL:"
+      postfix: (if not Europeana Foundation)
+      pattern: url
+      variant: inline
+      class: narrow
+    job_title:
+      type: text
+      required: false
+      label: "Job Title:"
+      variant: inline
+      class: narrow
+    department:
+      type: select
+      values: ['Europeana Staff', 'Our Partner']
+    team:
+      type: select
+      required: false
+      label: "Team:"
+      values:
+        "(not set)": "(not set)"
+        "Management": "Management"
+        "Editors_Contributors": "Editors & Contributors"
+    introduction:
+      type: html
+      required: false
+      label: "Introduction (120 chars MAX):"
+      pattern: "^.{1,120}$"
+      height: 150px
+    image:
+      type: image
+      required: false
+      label: "Image:"
+      attrib: title
+      extensions: [ gif, jpg, png ]
+    email:
+      type: text
+      required: false
+      label: "Email address:"
+      variant: inline
+      pattern: email
+      class: narrow
+      group: Contact
+    # This is only used if the checkbox is checked on the page - it will override the email address and show the secondary email address instead
+    secondary_email:
+      type: text
+      required: false
+      label: "Secondary email address:"
+      variant: inline
+      pattern: email
+      class: narrow
+    telephone_number:
+      type: text
+      required: false
+      label: "Telephone number:"
+      variant: inline
+      postfix: "<em>Allowed values are numbers, spaces, (, ), + and - </em>"
+      pattern: '^[0-9+ -()]*$'
+      class: narrow
+    other_number:
+      type: text
+      required: false
+      label: "Other number:"
+      variant: inline
+      postfix: "<em>Allowed values are numbers, spaces, (, ), + and - </em>"
+      pattern: '^[0-9+ -]*$'
+      class: narrow
+    linkedin:
+      type: text
+      required: false
+      label: "Linkedin URL:"
+      variant: inline
+      postfix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+      class: narrow
+    twitter:
+      type: text
+      required: false
+      label: "Twitter URL:"
+      variant: inline
+      postfix: '<em>For expample "https://twitter.com/Europeanaeu" </em>'
+      pattern: url
+      class: narrow
+    skype:
+      type: text
+      required: false
+      label: "Skype ID:"
+      variant: inline
+      class: narrow
+    other_links_1:
+      type: text
+      required: false
+      label: "Other link:"
+      variant: inline
+      postfix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+      class: narrow
+    other_links_2:
+      type: text
+      required: false
+      label: "Other link:"
+      variant: inline
+      postfix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+      class: narrow
+    other_links_3:
+      type: text
+      required: false
+      label: "Other link:"
+      variant: inline
+      postfix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+      class: narrow
+    contact_blogpost:
+      type: checkbox
+      label: "Main contact of the blog"
+      group: "Main Contact Options"
+    contact_event:
+      type: checkbox
+      label: "Main contact of events"
+    contact_job:
+      type: checkbox
+      label: "Main contact of the jobs page"
+    contact_person:
+      type: checkbox
+      label: "Main contact of the staff page"
+    contact_publication:
+      type: checkbox
+      label: "Main contact of the publications page"
+    contact_pressrelease:
+      type: checkbox
+      label: "Main contact of the press releases page"
+    contact_taskforce:
+      type: checkbox
+      label: "Main contact of the task forces page"
+    contact_tag:
+      type: checkbox
+      label: "Main contact of tag page"
+    contact_collection:
+      type: checkbox
+      label: "Main contact of collections page"
+    structure_parent:
+       type: select
+       values: structures/id,title
+       autocomplete: true
+       label: "Select structure tree parent"
+       group: Structure
+    structure_sortorder:
+      type: integer
+      label: "Sort order in structure tree parent"
+  taxonomy: [ tags ]
+  sort: team
+  # no pager for person, mabe there is a better solution
+  listing_records: 10000
+  record_template: record_person.twig
+  listing_template : listing_person.twig
+  icon_many: "fa:users"
+  icon_one: "fa:user"
+
+locations:
+  name: Locations
+  singular_name: Location
+  fields:
+    # Shown on Job list page, Job page, Events list page, Events page, Home page
+    title:
+      type: text
+      required: true
+      label: "Title (required):"
+      postfix : "(max. 72 characters)"
+      variant: inline
+      pattern: "^.{1,72}$"
+      group: Location
+    slug:
+      type: slug
+      uses: title
+    # Shown on Jobs page, Events page, Home page
+    geolocation:
+      type: geolocation
+      required: true
+      label: "Location (required):"
+    # If checked, then it will make the content type appear in the drop down Location box in the "Job" content type.
+    europeana_place:
+      type: checkbox
+      prefix: "<hr>"
+      required: false
+      label: "This is a Europeana place of work:"
+      group: "Secondary information"
+    # If checked, then this will be the official office address used in the footer
+    europeana_office:
+      type: checkbox
+      required: false
+      label: "This is the main Europeana office (appear in footer):"
+  record_template: record_location.twig
+  icon_many: "fa:map-marker"
+  icon_one: "fa:map-marker"
+  show_in_menu: false
+
+homepage:
+  name: Homepage
+  singular_name: Homepage
+  fields:
+    title:
+      type: text
+      required: false
+    bannerimage:
+      type: image
+      attrib: title
+      extensions: [ gif, jpg, png ]
+      required: true
+      label: "Banner Image (required):"
+    imageattribution:
+      label: Image Attribution
+      type: text
+    imagelicense:
+      label: Image License
+      type: select
+      values: [ 'CC0', 'CC-BY', 'CC-BY-SA', 'CC-BY-NC', 'CC-BY-NC-SA', 'Public Domain' ]
+    brandcolour:
+      label: Color of graphic
+      type: select
+      values: { brand-colour-site : "Europeana red", brand-colour-white : "White", brand-colour-black : "Black" }
+    brandopacity:
+      label: Transparency of graphic
+      type: select
+      values: { brand-opacity25 : "25 percent", brand-opacity50 : "50 percent", brand-opacity75 : "75 percent", brand-opacity100 : "Not transparent" }
+    brandlocation:
+      label: Location of graphic
+      type: select
+      values: { brand-topleft : "Top left", brand-topright  : "Top right", brand-bottomleft  : "Bottom left", brand-bottomright : "Bottom right"  }
+    bannertext:
+      type: html
+      required: true
+      label: "Banner Text (required):"
+      variant: inline
+      class: wide
+    bannerlink:
+      type: text
+      required: false
+      label: ".. or Banner link:"
+      variant: inline
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      postfix: "(at least one of the above boxes is required)"
+      pattern: url
+      class: narrow
+    subtitle:
+      type: html
+      required: true
+      label: "Intro text (required):"
+      height: 150px
+    callout_1:
+      type: html
+      required: true
+      label: "Join the network (required):"
+      height: 150px
+    callout_2:
+      type: html
+      required: true
+      label: "Share your data (required):"
+      height: 150px
+    callout_3:
+      type: html
+      required: true
+      label: "Use Europeana data (required):"
+      height: 150px
+    callout_6:
+      type: html
+      required: true
+      label: "Latest Updates (required):"
+      height: 150px
+  relations:
+    blogposts:
+      multiple: true
+      label: Select blog posts
+      order: -datepublish
+      format: "{{ item.title|escape }} <span>({{ item.id }})</span>"
+    footers:
+      label: "Footer"
+      multiple: false
+  viewless: true
+  icon_many: "fa:home"
+  icon_one: "fa:home"
+  show_in_menu: false
+
+footers:
+  name : Footers
+  singular_name: Footer
+  fields:
+    title:
+      type: text
+      label: "Title: (required):"
+      required: true
+    # footer logo image
+    image:
+      type: image
+      # required: true
+      label: "Image:"
+      attrib: title
+      extensions: [ gif, jpg, png ]
+    socialmedia:
+      type: html
+      # required: true
+      label: "Social media links:"
+      height: 300px
+    linklist-left:
+      type: html
+      # required: true
+      label: "Linklist left:"
+      height: 300px
+    linklist-right:
+      type: html
+      # required: true
+      label: "Linklist right:"
+      height: 300px
+    mission:
+      type: html
+      # required: true
+      label: "Mission:"
+      height: 300px
+    linklist-other:
+      type: html
+      # required: true
+      label: "Linklist others:"
+      height: 300px
+  relations:
+    locations:
+      label: "Location:"
+      multiple: false
+  viewless: true
+  icon_many: "fa:tasks"
+  icon_one: "fa:tasks"
+  show_in_menu: false
+
+data:
+  name: Data
+  singular_name: Data
+  fields:
+    title:
+      type: text
+      required: false
+      label: "Title:"
+      variant: inline
+      class: narrow
+      group: "Data information"
+    slug:
+      type: slug
+      uses: title
+    intro:
+      type: textarea
+      label: "Intro:"
+      height: 150px
+    teaser:
+      type: html
+      required: true
+      label: "Teaser (required):"
+      height: 150px
+    body:
+      type: html
+      required: true
+      label: "Body (required):"
+      variant: inline
+      class: narrow
+    image:
+      type: image
+      required: true
+      label: "Image:"
+      extensions: [ gif, jpg, png ]
+    provided_by:
+      type: text
+      required: false
+      label: "Provided by:"
+      variant: inline
+      class: narrow
+      group: "Links"
+    provided_by_link:
+      type: text
+      required: false
+      label: "Provided by link:"
+      variant: inline
+      class: narrow
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+    portallink:
+      type: text
+      required: false
+      label: "Portal link:"
+      variant: inline
+      class: narrow
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+    apiconsolelink:
+      type: text
+      required: false
+      label: "Api console link:"
+      variant: inline
+      class: narrow
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+    contact_name:
+      type: text
+      required: false
+      label: "Name:"
+      variant: inline
+      class: narrow
+      group: "contact"
+    contact_email:
+      type: text
+      required: false
+      label: "Email:"
+      variant: inline
+      class: narrow
+      group: "contact"
+  taxonomy: [ tags, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
+  relations:
+    person:
+      multiple: true
+      label: "Contact(s)"
+      order: last_name
+      format: "{{ item.last_name }}, {{ item.first_name }}"
+      order: last_name
+    pages:
+      multiple: true
+      label: "Pages"
+      order: -id
+      format: "{{ item.title|escape }}"
+    data:
+      multiple: true
+      label: "Data"
+      order: -id
+      format: "{{ item.title|escape }}"
+    blog:
+      multiple: true
+      label: "Blog posts"
+      order: -id
+      format: "{{ item.title|escape }}"
+    events:
+      multiple: true
+      label: "Events"
+      order: -id
+      format: "{{ item.title|escape }}"
+  record_template : record_data.twig
+  #listing_template: data_listing.twig
+  listing_template: listing.twig
+  recordsperpage: 1000
+  icon_many: "fa:object-group"
+  icon_one: "fa:object-group"

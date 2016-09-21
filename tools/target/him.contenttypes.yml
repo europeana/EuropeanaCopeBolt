@@ -1,0 +1,722 @@
+## Defaults nodes. Does not create a Contenttype
+__nodes:
+  record_defaults: &record_defaults
+    title:
+      type: text
+      label: "Title (required)"
+      variant: inline
+      postfix: "Shown on Individual pages, Lists, Overviews, Teasers"
+      group: Page
+    slug:
+      type: slug
+      uses: title
+    intro:
+      type: textarea
+      label: "Intro"
+      height: 150px
+      postfix: "Shown on Individual pages"
+    image:
+      type: image
+      label: "Full image"
+      attrib: title
+      postfix: "Shown on Individual pages"
+    body:
+      type: html
+      label: "Body (required)"
+      height: 300px
+      postfix: "Shown on Individual pages"
+  teaser_defaults: &teaser_defaults
+    teaser:
+      type: html
+      label: "Teaser (required)"
+      height: 150px
+      postfix: "Shown on Teasers"
+      group: Teaser
+    teaser_image:
+      type: image
+      label: "Teaser image"
+      postfix: "Shown on Teasers"
+  structure_defaults: &structure_defaults
+    structure_sortorder:
+      type: integer
+      label: "Sort order in structure tree parent"
+      group: Hierarchy
+    structure_parent:
+      type: select
+      default: ''
+      values: structures/id,title
+      autocomplete: true
+      label: "Select structure tree parent"
+    hide_list:
+      type: checkbox
+      label: "Hide from list views"
+      postfix: "Check to hide this page from overview."
+  him_sub_defaults: &him_sub_defaults
+    entryid:
+      type: text
+      required: true
+      readonly: true
+      label: HIM entry ID
+    judgeid:
+      type: text
+      required: true
+      readonly: true
+      label: User ID
+    judgename:
+      type: text
+      required: true
+      readonly: true
+      label: User Name
+    slug:
+      type: slug
+  relation_pages: &relation_pages
+    pages:
+      multiple: true
+      label: "Pages"
+      order: -id
+      format: "{{ item.title|escape }}"
+  relation_blogposts: &relation_blogposts
+    blogposts:
+      multiple: true
+      label: "Blogposts"
+      order: -datepublish
+      format: "{{ item.title|escape }}"
+  relation_events: &relation_events
+    events:
+      label: "Events"
+      multiple: true
+      format: "{{ item.title|escape }}"
+      order: -datepublish
+  relation_pressreleases: &relation_pressreleases
+    pressreleases:
+      multiple: true
+      label: "Press Releases"
+      order: -datepublish
+      format: "{{ item.title|escape }}"
+  relation_structures: &relation_structures
+    structures:
+      multiple: true
+      label: "Structures"
+      order: -id
+      format: "{{ item.title|escape }}"
+  relation_persons: &relation_persons
+     persons:
+       label: "Contacts"
+       multiple: true
+       format: "{{ item.last_name }}, {{ item.first_name }}"
+       order: last_name
+  relation_himentries: &relation_himentries
+    himentries:
+      multiple: true
+      label: "Heritage in Motion Entries"
+      order: -id
+      format: "{{ item.title|escape }}"
+  relation_himeditions: &relation_himeditions
+    himeditions:
+      multiple: true
+      label: "Heritage in Motion Editions"
+      order: id
+      format: "{{ item.title|escape }}"
+
+#################################
+#
+# PAGE
+#
+# Similar to pages in europeana pro
+#
+#################################
+pages:
+  name: Pages
+  singular_name: Page
+  fields:
+    <<: *record_defaults
+    <<: *teaser_defaults
+    <<: *structure_defaults
+    template:
+      type: templateselect
+      filter: 'record_*.twig'
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_events
+    <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_persons
+    <<: *relation_himentries
+  record_template: record_page.twig
+  recordsperpage: 50
+  icon_many: "fa:files-o"
+  icon_one: "fa:file"
+
+#################################
+#
+# BLOG POST
+#
+# Notes:
+# If this is type authors is populated, then instead of showing [By Owner] eg, "By Dean Birkett" in the byline, it will show "By [Written by]"
+# Type Attachments should link directly with our DMS. This should allow for multiple files to be added, and not just one file
+# Type owner is not shown at all if the Written by section is populated; I think dependet choice list are not possible?
+#
+#################################
+blogposts:
+  name: 'Blog Posts'
+  singular_name: 'BlogPost'
+  display_name: 'Blog Posts'
+  slug: 'blogposts'
+  singular_slug: 'blogpost'
+  fields:
+    <<: *record_defaults
+    author:
+      label: "Author(s)"
+      type: select
+      values: persons/last_name,first_name
+      keys: id
+      multiple: true
+    <<: *teaser_defaults
+    attachments:
+      type: filelist
+      group: Attachments
+    <<: *structure_defaults
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    # <<: *relation_blogposts
+    <<: *relation_events
+    <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_blogposts
+    <<: *relation_himentries
+  record_template: record_blogpost.twig
+  listing_template: listing_blog.twig
+  recordsperpage: 100
+  icon_many: "fa:quote-left"
+  icon_one: "fa:quote-right"
+  sort: -datepublish
+
+#################################
+#
+# Events
+#
+# Similar to events in europeana pro
+#
+#################################
+events:
+  name: Events
+  singular_name: Event
+  fields:
+    <<: *record_defaults
+    <<: *teaser_defaults
+    start_event:
+      type: datetime
+      required: false
+      label: "Event start"
+      group: Events Schedule
+    unconfirmed_start:
+      type: checkbox
+      required: false
+      label: "Unconfirmed"
+    end_event:
+      type: datetime
+      required: false
+      label: "Event end"
+    unconfirmed_end:
+      type: checkbox
+      required: false
+      label: "Unconfirmed"
+    <<: *structure_defaults
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_blogposts
+    # <<: *relation_events
+    <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_persons
+    <<: *relation_himentries
+  record_template: record_page.twig
+  icon_many: "fa:calendar"
+  icon_one: "fa:calendar"
+
+#################################
+#
+# PRESSRELEASES
+#
+# Notes:
+# Copy of BLOGPOST
+#
+#################################
+pressreleases:
+  name: 'Press Releases'
+  singular_name: 'Press Release'
+  slug: 'pressreleases'
+  singular_slug: 'pressrelease'
+  fields:
+    <<: *record_defaults
+    author:
+      label: "Author(s)"
+      type: text
+      postfix: "Authors for pressreleases can be anyone, that's why this is a free textfield"
+    <<: *teaser_defaults
+    attachments:
+      type: filelist
+      group: Attachments
+    <<: *structure_defaults
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_events
+    # <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_himentries
+  record_template: record_blogpost.twig
+  listing_template: listing_blog.twig
+  recordsperpage: 100
+  icon_many: "fa:newspaper-o"
+  icon_one: "fa:newspaper-o"
+  sort: -datepublish
+
+#################################
+#
+# STRUCTURE
+#
+# Similar to pages in europeana pro
+#
+#################################
+structures:
+  name: Structures
+  singular_name: Structure
+  fields:
+    <<: *record_defaults
+    suffix:
+      type: html
+      label: "Suffix"
+      height: 150px
+      postfix: "Text after listing on structure page."
+    <<: *teaser_defaults
+    <<: *structure_defaults
+    template:
+      type: templateselect
+      filter: 'record_*.twig'
+    default_content:
+      type: select
+      label: "Default content type"
+      multiple: false
+      values: { default: default, pages: pages, blogposts: blogposts, events: events, persons:persons, pressreleases: pressreleases }
+      postfix: "Choose a content type if you selected a listing template that does not have a default content type set."
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_events
+    <<: *relation_pressreleases
+    # <<: *relation_structures
+    <<: *relation_persons
+    <<: *relation_himentries
+  icon_many: "fa:cubes"
+  icon_one: "fa:cube"
+
+#################################
+#
+# PERSON
+#
+# Notes:
+# The permalink should be /people/{first name}-{last-name} eg. /people/dean-birkett
+#
+#################################
+persons:
+  name: Persons
+  singular_name: Person
+  fields:
+    # Show on Staff list page, Staff page, Events page (speakers), Contact info block
+    first_name:
+      type: text
+      label: "First name"
+      variant: inline
+      class: narrow
+      postfix: "<em><small>(required)</small></em>"
+      group: "Personal details"
+    # Show on Staff list page, Staff page, Events page (speakers), Contact info block
+    last_name:
+      type: text
+      label: "Last name"
+      postfix: "<em><small>(required)</small></em>"
+      variant: inline
+      class: narrow
+    slug:
+      type: slug
+      uses: [ first_name, last_name ]
+    job_title:
+      type: text
+      label: "Job Title"
+      variant: inline
+      class: narrow
+    introduction:
+      type: html
+      label: "Introduction (120 chars MAX)"
+      pattern: "^.{1,120}$"
+      height: 150px
+    image:
+      type: image
+      label: "Image"
+      attrib: title
+      extensions: [ gif, jpg, png ]
+    email:
+      type: text
+      label: "Email address"
+      variant: inline
+      pattern: email
+      class: narrow
+      group: Contact information
+    phone:
+      type: text
+      label: "Work phone"
+      variant: inline
+      class: narrow
+      postfix: <small>Format: +31 (0)12 345 6789</small>
+    twitter:
+      type: text
+      label: "Twitter URL"
+      variant: inline
+      postfix: '<em>For example "https://twitter.com/Europeanaeu" </em>'
+      pattern: url
+      class: narrow
+    <<: *structure_defaults
+  relations:
+    <<: *relation_blogposts
+    <<: *relation_events
+  taxonomy: [ teams ]
+  record_template: record_person.twig
+  listing_template: listing_people.twig
+  icon_many: "fa:users"
+  icon_one: "fa:user"
+
+#################################
+#
+# FOOTER
+#
+#################################
+footers:
+  name : Footers
+  singular_name: Footer
+  fields:
+    title:
+      type: text
+      label: "Title (required)"
+    mission:
+      type: html
+      label: "Mission"
+      height: 300px
+    image:
+      type: image
+      label: "Footer logo image"
+      attrib: title
+    socialmedia:
+      type: html
+      label: "Social media links"
+      height: 300px
+    linklist-left:
+      type: html
+      label: "Linklist left"
+      height: 300px
+      group: "Linklist"
+    linklist-right:
+      type: html
+      label: "Linklist right"
+      height: 300px
+    linklist-other:
+      type: html
+      label: "Linklist others"
+      height: 300px
+  viewless: true
+  show_in_menu: false
+  icon_many: "fa:tasks"
+  icon_one: "fa:tasks"
+
+#################################
+#
+# RESOURCES
+#
+# Resource blocks for frontpage
+# and other parts
+#
+#################################
+resources:
+  name : Resources
+  singular_name: Resource
+  fields:
+    title:
+      type: text
+      label: "Title (required)"
+      postfix: "Resource blocks will be loaded on pages that they are related to if the template uses them"
+      group: "Content"
+    image:
+      type: image
+      label: "Block image"
+      attrib: title
+    body:
+      type: html
+      label: "Block body"
+      height: 300px
+    htmllink:
+      type: text
+      label: "Block HTML link (optional)"
+    weight:
+      type: integer
+      label: "Weight"
+      default: 0
+      group: "Attributes"
+    cssclass:
+      type: text
+      label: "CSS Classname (optional)"
+    cssid:
+      type: text
+      label: "CSS ID (optional)"
+  relations:
+    <<: *relation_pages
+    # <<: *relation_blogposts
+    # <<: *relation_events
+    # <<: *relation_pressreleases
+    <<: *relation_structures
+    # <<: *relation_persons
+    # <<: *relation_himentries
+  viewless: true
+  show_in_menu: false
+  sort: weight
+  icon_many: "fa:tasks"
+  icon_one: "fa:tasks"
+
+
+#################################
+#
+# HIM Gallery
+#
+# An edition has entries
+#
+#################################
+himeditions:
+  name: HiM Editions
+  singular_name: Heritage in Motion Edition
+  slug: himeditions
+  singular_slug: himedition
+  fields:
+    <<: *record_defaults
+    <<: *teaser_defaults
+    submission_deadline:
+      type: datetime
+      label: Submissions deadline
+      default: "2016-01-01"
+      group: Deadlines
+      options:
+        datepicker:
+          changeMonth: true
+          changeYear: true
+          yearRange: "-5:5"
+    submission_start:
+      type: datetime
+      label: Submissions start
+      default: "2016-01-01"
+      options:
+        datepicker:
+          changeMonth: true
+          changeYear: true
+          yearRange: "-5:5"
+    submission_closed:
+      type: checkbox
+      label: Submissions closed
+    edition_menu:
+      type: checkbox
+      label: Show edition in menu
+    submission_cost:
+      type: text
+      label: Submission cost
+      variant: inline
+    <<: *structure_defaults
+  relations:
+    # <<: *relation_himeditions
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_events
+    <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_persons
+    <<: *relation_himentries
+  record_template: listing_video.twig
+  recordsperpage: 50
+  icon_many: "fa:trophy"
+  icon_one: "fa:list-alt"
+
+#################################
+#
+# Heritage in Motion Entries
+# About the submission:
+# - Title*
+# - Project url (vimeo, youtube, slideshare, flickr)*
+# - Project summary incl tagline - 250 words max*
+# - Thumbnail image for video
+# - Credits - 500 words max - this will be a free text field where information about the production year and production team can be added.
+# - Project description - 2000 words max*
+# - Extra url
+# - Dropdown available categories - here a user can multi-select the categories they want to participate in. These categories have no functionality for the rest. They are only visible to the editor. Here the user chooses which categories they want to participate in but the editor assigns the functional categories to the submission.
+# - Tags
+# - Multiple image upload - 10 extra images
+#
+#################################
+himentries:
+  name: HiM Entries
+  singular_name: Heritage in Motion Entry
+  slug: himentries
+  singular_slug: himentry
+  fields:
+    title:
+      type: text
+      class: large
+      label: Title of your entry
+      group: Entry
+    slug:
+      type: slug
+      uses: title
+    summary:
+      type: html
+      label: Project summary incl. tagline (250 words max)
+    credits:
+      type: html
+      label: Information about the production year and production team (500 words max)
+    description:
+      type: html
+      label: A description of the project (2000 words max)
+    projecturl:
+      type: text
+      label: Extra url
+    licence:
+      type: select
+      label: Licence
+      placeholder: "Select a license.."
+      values:
+        ccby: Creative Commons BY
+        ccbysa: Creative Commons BY SA
+        ccbync: Creative Commons BY NC
+        ccbyncsa: Creative Commons BY NC SA
+        ccbynd: Creative Commons BY ND
+        ccbyncnd: Creative Commons BY NC ND
+        cc0: Public Domain
+        other: Other (please specify in description)
+    clienttags:
+      type: text
+      label: Tags
+    userid:
+      type: text
+      required: true
+      readonly: true
+      variant: inline
+      group: Submitted by
+      label: User ID
+    name:
+      type: text
+      required: true
+      readonly: true
+      variant: inline
+      label: User Name
+    email:
+      type: text
+      required: true
+      readonly: true
+      variant: inline
+      label: User Email
+    videolink:
+      type: text
+      required: true
+      label: Where is the video (a youtube or vimeo link)
+      group: media
+    videodownloadstatus:
+      type: text
+      required: true
+      readonly: true
+      default: no
+      postfix: "This will be set by the videodownloader extension.<ul><li>no - No, the video is not processed yet</li><li>yes - Yes, the video has a back-up</li><li>invalid - There was an error downloading the video</li><li>other - This is not a video</li></ul>"
+      label: Has the video been downloaded
+      variant: inline
+    videodownloadlocation:
+      type: text
+      required: true
+      readonly: true
+      default: unknown
+      postfix: "This will be set by the videodownloader extension."
+      label: Where is the downloaded video
+      variant: inline
+    upload_images:
+      type: imagelist
+      label: Add a images and a main thumbnail
+      postfix: "The main thumbnail will be the first image."
+    transaction_id:
+      type: text
+      readonly: true
+      group: meta
+  relations:
+    <<: *relation_himeditions
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_events
+    <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_persons
+    # <<: *relation_himentries
+  taxonomy: [ categories, stages, ranks, tags ]
+  record_template: record_heritage_view.twig
+  listing_template: listing_video.twig
+  listing_records: 10
+  default_status: draft
+  sort: -id
+  recordsperpage: 10
+  icon_many: "fa:trophy"
+  icon_one: "fa:play-circle"
+
+#################################
+#
+# HIM Comments
+#
+# Comments by judges about entries
+#
+#################################
+himcomments:
+  name: HiM Comments
+  singular_name: HiM Comment
+  slug: himcomments
+  singluar_slug: himcomment
+  fields:
+    <<: *him_sub_defaults
+    comment:
+      type: html
+      label: "Comment"
+      height: 300px
+  viewless: true
+  show_in_menu: false
+  icon_many: "fa:comments"
+  icon_one: "fa:comment"
+
+#################################
+#
+# HIM Votes
+#
+# Votes by judges about entries
+#
+#################################
+himvotes:
+  name: HiM Votes
+  singular_name: HiM Vote
+  slug: himvotes
+  singluar_slug: himvote
+  fields:
+    <<: *him_sub_defaults
+    vote:
+      type: float
+      requred: true
+      label: Vote
+      min: 0
+      max: 10
+      step: 0.1
+  viewless: true
+  show_in_menu: false
+  icon_many: "fa:star-half-empty"
+  icon_one: "fa:star"
