@@ -330,8 +330,6 @@ collections:
 apps:
   name: Apps
   singular_name: App
-  singular_slug: 'apps'
-  slug: 'apps'
   fields:
     <<: *record_defaults
     <<: *teaser_defaults
@@ -425,8 +423,6 @@ data:
 documentation:
   name: Documentation
   singular_name: Documentation
-  slug: 'api'
-  singular_slug: 'api'
   fields:
     <<: *record_defaults
     <<: *teaser_defaults
