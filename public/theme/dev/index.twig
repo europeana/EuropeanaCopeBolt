@@ -1,0 +1,21 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main %}
+    <h1>Frontpage listing</h1>
+    {% for ct in app.config.get('contenttypes') if not ct.viewless|default(false) %}
+
+        {% setcontent records = ct.slug ~ "/latest/3" %}
+
+        <h5>{{ __('contenttypes.generic.recent', {'%contenttypes%': ct.slug}) }}</h5>
+        <ul>
+            {% for record in records %}
+                <li><a href="{{ record.link }}">{{ record.title|default(record.slug) }}</a> <div class="subsite">{{ record.subsite }}</div></li>
+            {% else %}
+                <li>{{ __('contenttypes.generic.no-recent', {'%contenttype%': ct.slug}) }}</li>
+            {% endfor %}
+        </ul>
+        <p><a href="{{ paths.root }}{{ct.slug}}">{{ __('contenttypes.generic.overview',{'%contenttypes%': ct.slug}) }} &raquo;</a></p>
+
+    {% endfor %}
+
+{% endblock main %}
