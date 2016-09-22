@@ -273,6 +273,7 @@ projects:
   sort: -datepublish
   icon_many: "fa:clipboard"
   icon_one: "fa:clipboard"
+  show_in_menu: Core business
 
 #################################
 #
@@ -319,6 +320,7 @@ collections:
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
+  show_in_menu: Core business
 
 #################################
 #
@@ -353,6 +355,7 @@ apps:
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
+  show_in_menu: Core business
 
 #################################
 #
@@ -412,6 +415,7 @@ data:
   recordsperpage: 1000
   icon_many: "fa:object-group"
   icon_one: "fa:object-group"
+  show_in_menu: Core business
 
 #################################
 #
@@ -447,6 +451,7 @@ documentation:
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
+  show_in_menu: Core business
 
 #################################
 #
@@ -480,6 +485,7 @@ publications:
   recordsperpage: 50
   icon_many: "fa:book"
   icon_one: "fa:book"
+  show_in_menu: Core business
 
 #################################
 #
@@ -893,6 +899,7 @@ taskforces:
   recordsperpage: 50
   icon_many: "fa:bullseye"
   icon_one: "fa:bullseye"
+  show_in_menu: Core business
 
 #################################
 #
@@ -923,7 +930,7 @@ locations:
   listing_template: listing_locations.twig
   icon_many: "fa:map-marker"
   icon_one: "fa:map-marker"
-  show_in_menu: true
+  show_in_menu: Global
 
 #################################
 #
@@ -964,6 +971,7 @@ blogposts:
   icon_many: "fa:quote-left"
   icon_one: "fa:quote-right"
   sort: -datepublish
+  show_in_menu: Ephemeral
 
 #################################
 #
@@ -1016,6 +1024,7 @@ events:
   listing_template: listing_events.twig
   icon_many: "fa:calendar"
   icon_one: "fa:calendar"
+  show_in_menu: Ephemeral
 
 #################################
 #
@@ -1092,6 +1101,7 @@ jobs:
   listing_template: listing_jobs.twig
   icon_many: "fa:money"
   icon_one: "fa:money"
+  show_in_menu: Ephemeral
 
 #################################
 #
@@ -1125,6 +1135,7 @@ pressreleases:
   icon_many: "fa:newspaper-o"
   icon_one: "fa:newspaper-o"
   sort: -datepublish
+  show_in_menu: Ephemeral
 
 #################################
 #
@@ -1432,7 +1443,7 @@ homepage:
   viewless: true
   icon_many: "fa:home"
   icon_one: "fa:home"
-  show_in_menu: false
+  show_in_menu: Global
 
 #################################
 #
@@ -1475,7 +1486,7 @@ footers:
       label: "Linklist others"
       height: 300px
   viewless: true
-  show_in_menu: false
+  show_in_menu: Global
   icon_many: "fa:tasks"
   icon_one: "fa:tasks"
 
@@ -1525,7 +1536,7 @@ resources:
     <<: *relation_pages
     <<: *relation_structures
   viewless: true
-  show_in_menu: false
+  show_in_menu: Global
   sort: weight
   icon_many: "fa:tasks"
   icon_one: "fa:tasks"
@@ -1590,6 +1601,7 @@ himeditions:
   recordsperpage: 50
   icon_many: "fa:trophy"
   icon_one: "fa:list-alt"
+  show_in_menu: HiM
 
 #################################
 #
@@ -1717,6 +1729,7 @@ himentries:
   recordsperpage: 10
   icon_many: "fa:trophy"
   icon_one: "fa:play-circle"
+  show_in_menu: HiM
 
 #################################
 #
@@ -1737,7 +1750,7 @@ himcomments:
       label: "Comment"
       height: 300px
   viewless: true
-  show_in_menu: false
+  show_in_menu: HiM
   icon_many: "fa:comments"
   icon_one: "fa:comment"
 
@@ -1763,6 +1776,6 @@ himvotes:
       max: 10
       step: 0.1
   viewless: true
-  show_in_menu: false
+  show_in_menu: HiM
   icon_many: "fa:star-half-empty"
   icon_one: "fa:star"
