@@ -184,6 +184,9 @@ CREATE TABLE IF NOT EXISTS bolt_documentation (
   link3 varchar(256) NOT NULL DEFAULT '', # labs
   support_navigation longtext NOT NULL, # labs
   structure_sortorder int(11) NOT NULL DEFAULT 0, # labs
+  structure_parent longtext NOT NULL, # pro
+  templatefields longtext NOT NULL, # pro
+  templateselect longtext NOT NULL, # pro
   PRIMARY KEY (id)
 );
 
