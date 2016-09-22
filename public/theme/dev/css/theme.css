@@ -65,9 +65,13 @@ p.meta {
 
 .subsite {
   display: inline-block;
+  float: right;
+  clear: none;
   font-weight: bold;
   border: 1px solid #f00;
+  border-radius: 3px;
   background: #dfaf8f;
   color: #0a001f;
-  padding: 0.1em 1em;
+  padding: 0.05em 0.5em;
+  line-height: 0.8;
 }
