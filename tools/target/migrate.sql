@@ -187,10 +187,15 @@ CREATE TABLE IF NOT EXISTS bolt_documentation (
   PRIMARY KEY (id)
 );
 
-INSERT INTO europeana_cope.bolt_documentation ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, secondary_mail, hide_related, hide_related_section, files, link1, link2, link3, support_navigation, structure_sortorder
-) SELECT 'labs', d.id,
-  d.slug, d.datecreated, d.datechanged, d.datepublish, d.datedepublish, d.username, d.ownerid, d.status, d.title, d.intro, d.teaser, d.body, d.teaser_image, d.secondary_mail, d.hide_related, d.hide_related_section, d.files, d.link1, d.link2, d.link3, d.support_navigation, d.structure_sortorder
-FROM europeana_labs.bolt_documentation d;
+# INSERT INTO europeana_cope.bolt_documentation ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, secondary_mail, hide_related, hide_related_section, files, link1, link2, link3, support_navigation, structure_sortorder
+# ) SELECT 'labs', d.id,
+#   d.slug, d.datecreated, d.datechanged, d.datepublish, d.datedepublish, d.username, d.ownerid, d.status, d.title, d.intro, d.teaser, d.body, d.teaser_image, d.secondary_mail, d.hide_related, d.hide_related_section, d.files, d.link1, d.link2, d.link3, d.support_navigation, d.structure_sortorder
+# FROM europeana_labs.bolt_documentation d;
+
+INSERT INTO europeana_cope.bolt_documentation ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, secondary_mail, hide_related, hide_related_section, files, link1, link2, link3, support_navigation, structure_sortorder, templatefields, structure_parent, templateselect
+) SELECT 'labs', a.id,
+    a.slug, a.datecreated, a.datechanged, a.datepublish, a.datedepublish, a.username, a.ownerid, a.status, a.title, a.intro, a.teaser, a.body, a.teaser_image, a.secondary_mail, a.hide_related, a.hide_related_section, a.files, a.link1, a.link2, a.link3, a.support_navigation, a.structure_sortorder, a.templatefields, a.structure_parent, a.templateselect
+FROM europeana_labs.bolt_api a;
 
 DROP TABLE IF EXISTS bolt_publications;
 CREATE TABLE IF NOT EXISTS bolt_publications (
