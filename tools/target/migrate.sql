@@ -3,7 +3,7 @@ USE europeana_cope;
 
 -- core business collections and data --
 
--- DROP TABLE IF EXISTS bolt_projects;
+DROP TABLE IF EXISTS bolt_projects;
 CREATE TABLE IF NOT EXISTS bolt_projects (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -38,7 +38,7 @@ INSERT INTO europeana_cope.bolt_projects ( subsite, subsite_id, slug, datecreate
   p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.subtitle, p.date_start, p.date_end, p.teaser, p.intro, p.body, p.url, p.logo, p.filelist, p.structure_parent, p.filelist_downloads, p.structure_sortorder, p.templatefields
 FROM europeana_pro.bolt_projects p;
 
--- DROP TABLE IF EXISTS bolt_collections;
+DROP TABLE IF EXISTS bolt_collections;
 CREATE TABLE IF NOT EXISTS bolt_collections (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -79,7 +79,7 @@ INSERT INTO europeana_cope.bolt_collections ( subsite, subsite_id, slug, datecre
     r.slug, r.datecreated, r.datechanged, r.datepublish, r.datedepublish, r.username, r.ownerid, r.status, r.title, r.intro, r.teaser, r.body, r.teaser_image, r.secondary_mail, r.hide_list, r.filelist_files, r.filelist_downloads, r.hide_related, r.hide_related_section, r.listtitle, r.imagelist, r.liststyle, r.support_navigation, r.source, r.source_url, r.templatefields, r.structure_parent, r.structure_sortorder
 FROM europeana_research.bolt_collections r;
 
--- DROP TABLE IF EXISTS bolt_apps;
+DROP TABLE IF EXISTS bolt_apps;
 CREATE TABLE IF NOT EXISTS bolt_apps (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -113,7 +113,7 @@ INSERT INTO europeana_cope.bolt_apps ( subsite, subsite_id, slug, datecreated, d
   a.slug, a.datecreated, a.datechanged, a.datepublish, a.datedepublish, a.username, a.ownerid, a.status, a.title, a.intro, a.teaser, a.body, a.image, a.link1, a.link2, a.link3, a.contact_name, a.contact_email, a.contact_website, a.templatefields, a.hero
 FROM europeana_labs.bolt_apps a;
 
--- DROP TABLE IF EXISTS bolt_data;
+DROP TABLE IF EXISTS bolt_data;
 CREATE TABLE IF NOT EXISTS bolt_data (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -157,7 +157,7 @@ INSERT INTO europeana_cope.bolt_data ( subsite, subsite_id, slug, datecreated, d
   d.slug, d.datecreated, d.datechanged, d.datepublish, d.datedepublish, d.templatefields, d.username, d.ownerid, d.status, d.title, d.intro, d.teaser, d.body, d.image, d.provided_by, d.provided_by_link, d.portallink, d.apiconsolelink, d.contact_name, d.contact_email
 FROM europeana_research.bolt_data d;
 
--- DROP TABLE IF EXISTS bolt_documentation;
+DROP TABLE IF EXISTS bolt_documentation;
 CREATE TABLE IF NOT EXISTS bolt_documentation (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -192,7 +192,7 @@ INSERT INTO europeana_cope.bolt_documentation ( subsite, subsite_id, slug, datec
   d.slug, d.datecreated, d.datechanged, d.datepublish, d.datedepublish, d.username, d.ownerid, d.status, d.title, d.intro, d.teaser, d.body, d.teaser_image, d.secondary_mail, d.hide_related, d.hide_related_section, d.files, d.link1, d.link2, d.link3, d.support_navigation, d.structure_sortorder
 FROM europeana_labs.bolt_documentation d;
 
--- DROP TABLE IF EXISTS bolt_publications;
+DROP TABLE IF EXISTS bolt_publications;
 CREATE TABLE IF NOT EXISTS bolt_publications (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -227,7 +227,7 @@ FROM europeana_pro.bolt_publications p;
 
 -- people and places --
 
--- DROP TABLE IF EXISTS bolt_persons;
+DROP TABLE IF EXISTS bolt_persons;
 CREATE TABLE IF NOT EXISTS bolt_persons (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -338,7 +338,7 @@ INSERT INTO europeana_cope.bolt_persons ( subsite, subsite_id, slug, datecreated
   p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.first_name, p.last_name, p.company, p.company_url, p.job_title, p.department, p.team, p.introduction, p.image, p.email, p.secondary_email, p.telephone_number, p.other_number, p.linkedin, p.twitter, p.skype, p.other_links_1, p.other_links_2, p.other_links_3, p.contact_blogpost, p.contact_event, p.contact_job, p.contact_person, p.contact_publication, p.contact_pressrelease, p.contact_taskforce, p.contact_tag, p.structure_sortorder, p.structure_parent, p.uid, p.network_participation, p.community, p.community_role, p.europeana_id, p.author_uid, p.author_name, p.modified_uid, p.modified_name, p.latime, p.account_uid, p.account_name, p.public_email, p.public_phone, p.statutes_read, p.statutes_agree, p.public_photo, p.europeana_tech, p.sector, p.country, p.description, p.templatefields, p.candidacy_teaser, p.candidacy_intro
 FROM europeana_pro.bolt_network p;
 
--- DROP TABLE IF EXISTS bolt_taskforces;
+DROP TABLE IF EXISTS bolt_taskforces;
 CREATE TABLE IF NOT EXISTS bolt_taskforces (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -373,7 +373,7 @@ INSERT INTO europeana_cope.bolt_taskforces ( subsite, subsite_id, slug, datecrea
   t.slug, t.datecreated, t.datechanged, t.datepublish, t.datedepublish, t.username, t.ownerid, t.status, t.title, t.department, t.subtitle, t.date_start, t.date_end, t.teaser, t.intro, t.body, t.teaser_image, t.filelist_files, t.filelist_downloads, t.structure_sortorder, t.structure_parent, t.templatefields
 FROM europeana_pro.bolt_taskforces t;
 
--- DROP TABLE IF EXISTS bolt_locations;
+DROP TABLE IF EXISTS bolt_locations;
 CREATE TABLE IF NOT EXISTS bolt_locations (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -414,7 +414,7 @@ FROM europeana_research.bolt_locations l;
 
 -- dynamic and timed content --
 
--- DROP TABLE IF EXISTS bolt_blogposts;
+DROP TABLE IF EXISTS bolt_blogposts;
 CREATE TABLE IF NOT EXISTS bolt_blogposts (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -470,7 +470,7 @@ INSERT INTO europeana_cope.bolt_blogposts ( subsite, subsite_id, slug, datecreat
   b.slug, b.datecreated, b.datechanged, b.datepublish, b.datedepublish, b.username, b.ownerid, b.status, b.title, b.body, b.image, b.attachments, b.templatefields, b.structure_parent, b.structure_sortorder
 FROM europeana_research.bolt_blogposts b;
 
--- DROP TABLE IF EXISTS bolt_events;
+DROP TABLE IF EXISTS bolt_events;
 CREATE TABLE IF NOT EXISTS bolt_events (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -523,7 +523,7 @@ INSERT INTO europeana_cope.bolt_events ( subsite, subsite_id, slug, datecreated,
   e.slug, e.datecreated, e.datechanged, e.datepublish, e.datedepublish, e.username, e.ownerid, e.status, e.title, e.start_event, e.unconfirmed_start, e.end_event, e.unconfirmed_end, e.teaser, e.body, e.introduction, e.teaser_image, e.secondary_mail, e.filelist, e.structure_sortorder, e.support_navigation, e.structure_parent, e.templatefields
 FROM europeana_pro.bolt_events e;
 
--- DROP TABLE IF EXISTS bolt_jobs;
+DROP TABLE IF EXISTS bolt_jobs;
 CREATE TABLE IF NOT EXISTS bolt_jobs (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -559,7 +559,7 @@ INSERT INTO europeana_cope.bolt_jobs ( subsite, subsite_id, slug, datecreated, d
   j.slug, j.datecreated, j.datechanged, j.datepublish, j.datedepublish, j.username, j.ownerid, j.status, j.position, j.department, j.postion_type, j.teaser, j.body, j.salary_eur, j.scale_eur, j.deadline, j.filelist, j.structure_sortorder
 FROM europeana_labs.bolt_jobs j;
 
--- DROP TABLE IF EXISTS bolt_pressreleases;
+DROP TABLE IF EXISTS bolt_pressreleases;
 CREATE TABLE IF NOT EXISTS bolt_pressreleases (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -606,7 +606,7 @@ FROM europeana_pro.bolt_pressreleases p;
 
 -- static pages and structural components --
 
--- DROP TABLE IF EXISTS bolt_structures;
+DROP TABLE IF EXISTS bolt_structures;
 CREATE TABLE IF NOT EXISTS bolt_structures (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -670,7 +670,7 @@ INSERT INTO europeana_cope.bolt_structures ( subsite, subsite_id, slug, datecrea
   s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.secondary_mail, s.teaser, s.image, s.template, s.content, s.subclass, s.footer, s.date_start, s.date_end, s.templatefields, s.structure_parent, s.structure_sortorder
 FROM europeana_research.bolt_structures s;
 
--- DROP TABLE IF EXISTS bolt_pages;
+DROP TABLE IF EXISTS bolt_pages;
 CREATE TABLE IF NOT EXISTS bolt_pages (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -741,7 +741,7 @@ INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, 
   p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.intro, p.teaser, p.body, p.teaser_image, p.secondary_mail, p.hide_list, p.filelist_files, p.filelist_downloads, p.hide_related, p.hide_related_section, p.listtitle, p.imagelist, p.liststyle, p.support_navigation, p.templatefields, p.structure_parent, p.structure_sortorder
 FROM europeana_research.bolt_pages p;
 
--- DROP TABLE IF EXISTS bolt_homepage;
+DROP TABLE IF EXISTS bolt_homepage;
 CREATE TABLE IF NOT EXISTS bolt_homepage (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -816,7 +816,7 @@ FROM europeana_research.bolt_homepage h;
 
 -- blocks and resources --
 
--- DROP TABLE IF EXISTS bolt_footers;
+DROP TABLE IF EXISTS bolt_footers;
 CREATE TABLE IF NOT EXISTS bolt_footers (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -864,7 +864,7 @@ INSERT INTO europeana_cope.bolt_footers ( subsite, subsite_id, slug, datecreated
   f.slug, f.datecreated, f.datechanged, f.datepublish, f.datedepublish, f.username, f.ownerid, f.status, f.title, f.image, f.socialmedia, f.linklist_left, f.linklist_right, f.mission, f.linklist_other, f.templatefields
 FROM europeana_research.bolt_footers f;
 
--- DROP TABLE IF EXISTS bolt_resources;
+DROP TABLE IF EXISTS bolt_resources;
 CREATE TABLE IF NOT EXISTS bolt_resources (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -895,7 +895,7 @@ FROM europeana_him.bolt_resources r;
 
 -- heritage in motion specific --
 
--- DROP TABLE IF EXISTS bolt_himcomments;
+DROP TABLE IF EXISTS bolt_himcomments;
 CREATE TABLE IF NOT EXISTS bolt_himcomments (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -921,7 +921,7 @@ INSERT INTO europeana_cope.bolt_himcomments ( subsite, subsite_id, slug, datecre
   hc.slug, hc.datecreated, hc.datechanged, hc.datepublish, hc.datedepublish, hc.username, hc.ownerid, hc.status, hc.templatefields, hc.entryid, hc.judgeid, hc.judgename, hc.comment
 FROM europeana_him.bolt_himcomments hc;
 
--- DROP TABLE IF EXISTS bolt_himeditions;
+DROP TABLE IF EXISTS bolt_himeditions;
 CREATE TABLE IF NOT EXISTS bolt_himeditions (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -957,7 +957,7 @@ INSERT INTO europeana_cope.bolt_himeditions ( subsite, subsite_id, slug, datecre
   he.slug, he.datecreated, he.datechanged, he.datepublish, he.datedepublish, he.username, he.ownerid, he.status, he.templatefields, he.title, he.intro, he.image, he.body, he.teaser, he.teaser_image, he.submission_deadline, he.submission_start, he.submission_closed, he.edition_menu, he.structure_sortorder, he.structure_parent, he.hide_list, he.submission_cost
 FROM europeana_him.bolt_himeditions he;
 
--- DROP TABLE IF EXISTS bolt_himentries;
+DROP TABLE IF EXISTS bolt_himentries;
 CREATE TABLE IF NOT EXISTS bolt_himentries (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -1007,7 +1007,7 @@ INSERT INTO europeana_cope.bolt_himentries ( subsite, subsite_id, slug, datecrea
   he.slug, he.datecreated, he.datechanged, he.datepublish, he.datedepublish, he.username, he.ownerid, he.status, he.templatefields, he.title, he.teaser, he.body, he.image, he.video, he.userid, he.name, he.email, he.description, he.videolink, he.videodownloadstatus, he.videodownloadlocation, he.projecturl, he.licence, he.upload_thumb, he.upload_1, he.upload_2, he.upload_3, he.upload_4, he.upload_5, he.upload_6, he.upload_7, he.upload_8, he.clienttags, he.summary, he.credits, he.upload_images, he.transaction_id
 FROM europeana_him.bolt_himentries he;
 
--- DROP TABLE IF EXISTS bolt_himvotes;
+DROP TABLE IF EXISTS bolt_himvotes;
 CREATE TABLE IF NOT EXISTS bolt_himvotes (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
@@ -1035,7 +1035,7 @@ FROM europeana_him.bolt_himvotes hv;
 
 -- metadata, relations and users --
 
--- DROP TABLE IF EXISTS bolt_users;
+DROP TABLE IF EXISTS bolt_users;
 CREATE TABLE bolt_users (
   id int(11) NOT NULL AUTO_INCREMENT,
   username varchar(32) NOT NULL DEFAULT '',
@@ -1082,7 +1082,7 @@ INSERT INTO europeana_cope.bolt_users ( subsite, subsite_id, username, password,
 FROM europeana_research.bolt_users u;
 
 
--- DROP TABLE IF EXISTS bolt_taxonomy;
+DROP TABLE IF EXISTS bolt_taxonomy;
 CREATE TABLE bolt_taxonomy (
   id int(11) NOT NULL AUTO_INCREMENT,
   content_id int(11) NOT NULL DEFAULT 0,
@@ -1121,7 +1121,7 @@ INSERT INTO europeana_cope.bolt_taxonomy ( subsite, subsite_id, content_id, cont
 FROM europeana_research.bolt_taxonomy t;
 
 
--- DROP TABLE IF EXISTS bolt_relations;
+DROP TABLE IF EXISTS bolt_relations;
 CREATE TABLE bolt_relations (
   id int(11) NOT NULL AUTO_INCREMENT,
   from_contenttype varchar(32) NOT NULL DEFAULT '',
@@ -1158,143 +1158,3 @@ INSERT INTO europeana_cope.bolt_relations ( subsite, subsite_id, from_contenttyp
 FROM europeana_research.bolt_relations r;
 
 -- add queries from migrate-prepare below
-
--- queries for relations_from
-UPDATE bolt_relations r, bolt_apps x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'apps';
-UPDATE bolt_relations r, bolt_blogposts x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'blogposts';
-UPDATE bolt_relations r, bolt_collections x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'collections';
-UPDATE bolt_relations r, bolt_data x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'data';
-UPDATE bolt_relations r, bolt_documentation x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'documentation';
-UPDATE bolt_relations r, bolt_events x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'events';
-UPDATE bolt_relations r, bolt_footers x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'footers';
-UPDATE bolt_relations r, bolt_himcomments x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'himcomments';
-UPDATE bolt_relations r, bolt_himeditions x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'himeditions';
-UPDATE bolt_relations r, bolt_himentries x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'himentries';
-UPDATE bolt_relations r, bolt_himvotes x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'himvotes';
-UPDATE bolt_relations r, bolt_homepage x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'homepage';
-UPDATE bolt_relations r, bolt_jobs x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'jobs';
-UPDATE bolt_relations r, bolt_locations x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'locations';
-UPDATE bolt_relations r, bolt_pages x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'pages';
-UPDATE bolt_relations r, bolt_pressreleases x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'pressreleases';
-UPDATE bolt_relations r, bolt_projects x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'projects';
-UPDATE bolt_relations r, bolt_publications x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'publications';
-UPDATE bolt_relations r, bolt_resources x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'resources';
-UPDATE bolt_relations r, bolt_structures x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'structures';
-UPDATE bolt_relations r, bolt_taskforces x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'taskforces';
--- queries for relations_to
-UPDATE bolt_relations r, bolt_apps x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'apps';
-UPDATE bolt_relations r, bolt_blogposts x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'blogposts';
-UPDATE bolt_relations r, bolt_collections x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'collections';
-UPDATE bolt_relations r, bolt_data x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'data';
-UPDATE bolt_relations r, bolt_documentation x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'documentation';
-UPDATE bolt_relations r, bolt_events x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'events';
-UPDATE bolt_relations r, bolt_footers x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'footers';
-UPDATE bolt_relations r, bolt_himcomments x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'himcomments';
-UPDATE bolt_relations r, bolt_himeditions x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'himeditions';
-UPDATE bolt_relations r, bolt_himentries x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'himentries';
-UPDATE bolt_relations r, bolt_himvotes x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'himvotes';
-UPDATE bolt_relations r, bolt_homepage x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'homepage';
-UPDATE bolt_relations r, bolt_jobs x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'jobs';
-UPDATE bolt_relations r, bolt_locations x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'locations';
-UPDATE bolt_relations r, bolt_pages x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'pages';
-UPDATE bolt_relations r, bolt_pressreleases x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'pressreleases';
-UPDATE bolt_relations r, bolt_projects x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'projects';
-UPDATE bolt_relations r, bolt_publications x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'publications';
-UPDATE bolt_relations r, bolt_resources x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'resources';
-UPDATE bolt_relations r, bolt_structures x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'structures';
-UPDATE bolt_relations r, bolt_taskforces x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'taskforces';
--- queries for taxonomy
-UPDATE bolt_taxonomy t, bolt_apps c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'apps';
-UPDATE bolt_taxonomy t, bolt_blogposts c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'blogposts';
-UPDATE bolt_taxonomy t, bolt_collections c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'collections';
-UPDATE bolt_taxonomy t, bolt_data c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'data';
-UPDATE bolt_taxonomy t, bolt_documentation c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'documentation';
-UPDATE bolt_taxonomy t, bolt_events c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'events';
-UPDATE bolt_taxonomy t, bolt_footers c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'footers';
-UPDATE bolt_taxonomy t, bolt_himcomments c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'himcomments';
-UPDATE bolt_taxonomy t, bolt_himeditions c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'himeditions';
-UPDATE bolt_taxonomy t, bolt_himentries c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'himentries';
-UPDATE bolt_taxonomy t, bolt_himvotes c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'himvotes';
-UPDATE bolt_taxonomy t, bolt_homepage c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'homepage';
-UPDATE bolt_taxonomy t, bolt_jobs c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'jobs';
-UPDATE bolt_taxonomy t, bolt_locations c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'locations';
-UPDATE bolt_taxonomy t, bolt_pages c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'pages';
-UPDATE bolt_taxonomy t, bolt_pressreleases c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'pressreleases';
-UPDATE bolt_taxonomy t, bolt_projects c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'projects';
-UPDATE bolt_taxonomy t, bolt_publications c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'publications';
-UPDATE bolt_taxonomy t, bolt_resources c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'resources';
-UPDATE bolt_taxonomy t, bolt_structures c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'structures';
-UPDATE bolt_taxonomy t, bolt_taskforces c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'taskforces';
--- queries for usernames
-UPDATE bolt_apps c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_blogposts c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_collections c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_data c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_documentation c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_events c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_footers c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_himcomments c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_himeditions c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_himentries c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_himvotes c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_homepage c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_jobs c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_locations c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_pages c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_pressreleases c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_projects c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_publications c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_resources c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_structures c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_taskforces c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
--- queries for user_dedupe
-DELETE FROM bolt_users WHERE id IN ( SELECT u.id FROM bolt_users u, bolt_users u2 WHERE u.id <> u2.id AND u.username = u2.username AND u.id > u2.id );
--- queries for user_id
-UPDATE bolt_apps c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_blogposts c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_collections c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_data c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_documentation c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_events c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_footers c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_himcomments c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_himeditions c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_himentries c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_himvotes c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_homepage c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_jobs c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_locations c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_pages c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_pressreleases c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_projects c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_publications c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_resources c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_structures c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_taskforces c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
--- queries for cleanup
-ALTER TABLE bolt_relations DROP subsite;
-ALTER TABLE bolt_taxonomy DROP subsite;
--- queries for cleanup_id
-ALTER TABLE bolt_relations DROP subsite_id;
-ALTER TABLE bolt_taxonomy DROP subsite_id;
-ALTER TABLE bolt_apps DROP subsite_id;
-ALTER TABLE bolt_blogposts DROP subsite_id;
-ALTER TABLE bolt_collections DROP subsite_id;
-ALTER TABLE bolt_data DROP subsite_id;
-ALTER TABLE bolt_documentation DROP subsite_id;
-ALTER TABLE bolt_events DROP subsite_id;
-ALTER TABLE bolt_footers DROP subsite_id;
-ALTER TABLE bolt_himcomments DROP subsite_id;
-ALTER TABLE bolt_himeditions DROP subsite_id;
-ALTER TABLE bolt_himentries DROP subsite_id;
-ALTER TABLE bolt_himvotes DROP subsite_id;
-ALTER TABLE bolt_homepage DROP subsite_id;
-ALTER TABLE bolt_jobs DROP subsite_id;
-ALTER TABLE bolt_locations DROP subsite_id;
-ALTER TABLE bolt_pages DROP subsite_id;
-ALTER TABLE bolt_pressreleases DROP subsite_id;
-ALTER TABLE bolt_projects DROP subsite_id;
-ALTER TABLE bolt_publications DROP subsite_id;
-ALTER TABLE bolt_resources DROP subsite_id;
-ALTER TABLE bolt_structures DROP subsite_id;
-ALTER TABLE bolt_taskforces DROP subsite_id;

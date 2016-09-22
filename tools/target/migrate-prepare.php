@@ -35,15 +35,35 @@ foreach ($content_types as $ctype => $table) {
 
 // set username
 foreach ($content_types as $ctype => $table) {
-  $query['usernames'][] = "UPDATE $table c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;\n";
+  $query['usernames'][] = "UPDATE $table c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;\n";
 }
 
 // remove duplicate users by username
-$query['user_dedupe'][] = "DELETE FROM bolt_users WHERE id IN ( SELECT u.id FROM bolt_users u, bolt_users u2 WHERE u.id <> u2.id AND u.username = u2.username AND u.id > u2.id );\n";
+
+$query['user_dedupe'][] = "UPDATE bolt_users u, bolt_users u2
+SET
+  u.username = concat('dupe-', u.subsite, '-', u.subsite_id, '-', u.username),
+  u.email = concat('dupe-', u.subsite, '-', u.subsite_id, '-', u.email)
+WHERE
+  u.id <> u2.id
+  AND u.username = u2.username
+  AND u.id > u2.id;
+";
+
+$query['user_dedupe'][] = "UPDATE bolt_users u, bolt_users u2
+SET
+  u.email = concat('dupe-', u.email)
+WHERE
+  u.id <> u2.id
+  AND u.email = u2.email
+  AND u.id > u2.id;
+";
+
+$query['user_dedupe'][] = "DELETE FROM bolt_users WHERE username like 'dupe-%';\n";
 
 // set userid
 foreach ($content_types as $ctype => $table) {
-  $query['user_id'][] = "UPDATE $table c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;\n";
+  $query['user_id'][] = "UPDATE $table c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;\n";
 }
 
 $query['cleanup'][] = "ALTER TABLE bolt_relations DROP subsite;\n";

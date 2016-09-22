@@ -65,51 +65,66 @@ UPDATE bolt_taxonomy t, bolt_resources c SET t.content_id = c.id WHERE c.subsite
 UPDATE bolt_taxonomy t, bolt_structures c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'structures';
 UPDATE bolt_taxonomy t, bolt_taskforces c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'taskforces';
 -- queries for usernames
-UPDATE bolt_apps c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_blogposts c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_collections c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_data c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_documentation c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_events c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_footers c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_himcomments c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_himeditions c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_himentries c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_himvotes c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_homepage c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_jobs c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_locations c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_pages c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_pressreleases c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_projects c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_publications c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_resources c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_structures c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
-UPDATE bolt_taskforces c, bolt_users y SET c.username = y.username WHERE y.id = c.ownerid AND c.subsite = y.subsite;
+UPDATE bolt_apps c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_blogposts c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_collections c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_data c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_documentation c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_events c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_footers c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_himcomments c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_himeditions c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_himentries c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_himvotes c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_homepage c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_jobs c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_locations c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_pages c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_pressreleases c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_projects c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_publications c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_resources c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_structures c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_taskforces c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
 -- queries for user_dedupe
-DELETE FROM bolt_users WHERE id IN ( SELECT u.id FROM bolt_users u, bolt_users u2 WHERE u.id <> u2.id AND u.username = u2.username AND u.id > u2.id );
+UPDATE bolt_users u, bolt_users u2
+SET
+  u.username = concat('dupe-', u.subsite, '-', u.subsite_id, '-', u.username),
+  u.email = concat('dupe-', u.subsite, '-', u.subsite_id, '-', u.email)
+WHERE
+  u.id <> u2.id
+  AND u.username = u2.username
+  AND u.id > u2.id;
+UPDATE bolt_users u, bolt_users u2
+SET
+  u.email = concat('dupe-', u.email)
+WHERE
+  u.id <> u2.id
+  AND u.email = u2.email
+  AND u.id > u2.id;
+DELETE FROM bolt_users WHERE username like 'dupe-%';
 -- queries for user_id
-UPDATE bolt_apps c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_blogposts c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_collections c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_data c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_documentation c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_events c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_footers c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_himcomments c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_himeditions c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_himentries c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_himvotes c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_homepage c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_jobs c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_locations c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_pages c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_pressreleases c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_projects c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_publications c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_resources c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_structures c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
-UPDATE bolt_taskforces c, bolt_users y SET c.ownerid = y.id WHERE c.username = y.username;
+UPDATE bolt_apps c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_blogposts c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_collections c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_data c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_documentation c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_events c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_footers c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_himcomments c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_himeditions c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_himentries c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_himvotes c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_homepage c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_jobs c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_locations c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_pages c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_pressreleases c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_projects c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_publications c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_resources c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_structures c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_taskforces c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
 -- queries for cleanup
 ALTER TABLE bolt_relations DROP subsite;
 ALTER TABLE bolt_taxonomy DROP subsite;
