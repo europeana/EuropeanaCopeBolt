@@ -1,5 +1,4 @@
 <?php
-
 $content_types = [
   'apps' => 'bolt_apps',
   'blogposts' => 'bolt_blogposts',
@@ -18,6 +17,7 @@ $content_types = [
   'pages' => 'bolt_pages',
   'pressreleases' => 'bolt_pressreleases',
   'projects' => 'bolt_projects',
+  'persons' => 'bolt_persons',
   'publications' => 'bolt_publications',
   'resources' => 'bolt_resources',
   'structures' => 'bolt_structures',
