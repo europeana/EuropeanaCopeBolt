@@ -2,11 +2,11 @@
 
 {% block main %}
     <h1>Frontpage listing</h1>
-    {% for ct in app.config.get('contenttypes') if not ct.viewless|default(false) %}
+    {% for ct in app.config.get('contenttypes')  %}
 
-        {% setcontent records = ct.slug ~ "/latest/3" %}
+        {% setcontent records = ct.slug ~ "/random/5" %}
 
-        <h5>{{ __('contenttypes.generic.recent', {'%contenttypes%': ct.slug}) }}</h5>
+        <h5>{{ ct.name }}</h5>
         <ul>
             {% for record in records %}
                 <li><a href="{{ record.link }}">{{ record.title|default(record.slug) }}</a> <div class="subsite">{{ record.subsite }}</div></li>
