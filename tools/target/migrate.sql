@@ -540,6 +540,7 @@ CREATE TABLE IF NOT EXISTS bolt_jobs (
   department longtext NOT NULL, # pro
   postion_type longtext NOT NULL, # pro
   teaser longtext NOT NULL, # pro
+  title varchar(256) DEFAULT '', # new
   body longtext NOT NULL, # pro
   salary_eur varchar(256) NOT NULL DEFAULT '', # pro
   scale_eur varchar(256) NOT NULL DEFAULT '', # pro
