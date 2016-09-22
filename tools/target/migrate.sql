@@ -554,9 +554,9 @@ CREATE TABLE IF NOT EXISTS bolt_jobs (
   PRIMARY KEY (id)
 );
 
-INSERT INTO europeana_cope.bolt_jobs ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, position, department, postion_type, teaser, body, salary_eur, scale_eur, deadline, filelist, structure_sortorder
+INSERT INTO europeana_cope.bolt_jobs ( subsite, subsite_id, title, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, position, department, postion_type, teaser, body, salary_eur, scale_eur, deadline, filelist, structure_sortorder
 ) SELECT 'pro', j.id,
-  j.slug, j.datecreated, j.datechanged, j.datepublish, j.datedepublish, j.username, j.ownerid, j.status, j.position, j.department, j.postion_type, j.teaser, j.body, j.salary_eur, j.scale_eur, j.deadline, j.filelist, j.structure_sortorder
+  j.position, j.slug, j.datecreated, j.datechanged, j.datepublish, j.datedepublish, j.username, j.ownerid, j.status, j.position, j.department, j.postion_type, j.teaser, j.body, j.salary_eur, j.scale_eur, j.deadline, j.filelist, j.structure_sortorder
 FROM europeana_labs.bolt_jobs j;
 
 DROP TABLE IF EXISTS bolt_pressreleases;
