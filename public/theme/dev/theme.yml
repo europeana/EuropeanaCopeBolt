@@ -22,7 +22,7 @@ notfound: notfound.twig
 # Optional overrides. These override the ones in config.yml, but can be set in
 # either place.
 taxonomy_sort: DESC
-homepage: page/1
+homepage: null
 listing_sort: datepublish DESC
 listing_records: 16
 search_results_records: 16
