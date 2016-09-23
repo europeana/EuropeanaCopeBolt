@@ -38,7 +38,7 @@
         <p class="meta">{{ __('general.phrase.related-content') }}
         <ul>
             {% for related in relatedrecords %}
-                <li><a href="{{ related.link }}">{{ related.title }}</a> <div class="subsite">{{ record.subsite }}</div></li>
+                <li><a href="{{ related.link }}">{{ related.title }}</a> {% include 'partials/_subsite_indicator.twig' with { 'record': record } %}</li>
             {%  endfor %}
         </ul>
         </p>

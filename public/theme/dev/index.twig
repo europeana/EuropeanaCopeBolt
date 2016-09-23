@@ -9,7 +9,7 @@
         <h5>{{ ct.name }}</h5>
         <ul>
             {% for record in records %}
-                <li><a href="{{ record.link }}">{{ record.title|default(record.slug) }}</a> <div class="subsite">{{ record.subsite }}</div></li>
+                <li><a href="{{ record.link }}">{{ record.title|default(record.slug) }}</a> {% include 'partials/_subsite_indicator.twig' with { 'record': record } %}</li>
             {% else %}
                 <li>{{ __('contenttypes.generic.no-recent', {'%contenttype%': ct.slug}) }}</li>
             {% endfor %}

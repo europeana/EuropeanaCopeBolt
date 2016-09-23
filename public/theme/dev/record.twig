@@ -1,7 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
 {% block main %}
-    <div class="subsite">{{ record.subsite }}</div>
+    {% include 'partials/_subsite_indicator.twig' with { 'record': record } %}
 
     <h1>{{ record.title }}</h1>
 

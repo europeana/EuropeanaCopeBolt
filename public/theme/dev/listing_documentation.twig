@@ -28,7 +28,7 @@
 
         {% for record in records %}
             <article>
-                <div class="subsite">{{ record.subsite }}</div>
+                {% include 'partials/_subsite_indicator.twig' with { 'record': record } %}
                 <h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
 
                 {{ popup(record.image, 1200, 500) }}
