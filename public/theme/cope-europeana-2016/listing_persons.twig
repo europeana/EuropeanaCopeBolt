@@ -1,0 +1,24 @@
+{#
+Base listing template
+#}
+{% extends '_listing.twig' %}
+
+{% block list %}
+    <div class="team">
+        {% if records is not defined %}
+            {% setcontent records = 'persons' limit 10 orderby order allowpaging %}
+        {% endif %}
+
+        <ul class="results-list cf">
+            {% for item in records %}
+                {# if blogitem #}
+                <li class="list-item cf">
+                    {% include 'items/_item-intro-person.twig' with { item: item } %}
+                </li>
+                {# end blogitem #}
+            {% endfor %}
+        </ul>
+
+        {{ pager('', 3, 'items/_item-pagination.twig') }}
+    </div>
+{% endblock %}
