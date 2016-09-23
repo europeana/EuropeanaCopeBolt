@@ -1,0 +1,49 @@
+{#
+Patternlab links:
+http://develop.styleguide.eanadev.org/?p=templates-HIM-homepage
+#}
+{% extends '_base.twig' %}
+
+{% block body %}
+
+<!-- Start content -->
+<div class="l-content">
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+<style>
+    div.subsite {
+        display: inline-block;
+        background: #D4F1EF none repeat scroll 0 0;
+        border: 1px solid #9EC9C6;
+        padding: 3px 10px;
+        margin-left: 2rem;
+        border-radius: 3px;
+        line-height: 0.8;
+    }
+</style>
+    <h1>{{ app.config.get('general/sitename') }}</h1>
+    {% for ct in app.config.get('contenttypes')  %}
+
+        {% setcontent records = ct.slug ~ "/random/5" %}
+
+        <h5>{{ ct.name }}</h5>
+        <ul>
+            {% for record in records %}
+                <li><a href="{{ record.link }}">{{ record.title|default(record.slug) }}</a> {% include 'items/_subsite_indicator.twig' with { 'record': record } %}</li>
+            {% else %}
+                <li>{{ __('contenttypes.generic.no-recent', {'%contenttype%': ct.slug}) }}</li>
+            {% endfor %}
+        </ul>
+        <p><a href="{{ paths.root }}{{ct.slug}}">{{ __('contenttypes.generic.overview',{'%contenttypes%': ct.slug}) }} &raquo;</a></p>
+
+    {% endfor %}
+
+</div>
+    
+{% endblock %}

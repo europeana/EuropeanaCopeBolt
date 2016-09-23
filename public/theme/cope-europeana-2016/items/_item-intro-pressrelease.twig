@@ -1,0 +1,41 @@
+<div class="item-supplementary">
+    <div class="item-image">
+        <a href="{{ item.link() }}">
+            {% if item.teaser_image %}
+                <img src="{{ thumbnail(item.teaser_image, 400, 300) }}" title="{{ item.teaser_image|title }}">
+            {% endif %}
+        </a>
+    </div>
+</div><!--
+
+             --><div class="item-details">
+
+    <h2 class="title">
+        <a href="{{ item.link() }}">{{ item.title|default('Placeholder title') }}</a>
+    </h2>
+
+
+    <div class="item-meta-primary">
+        {% if item.author is not empty %}
+            <span class="author-name">By: <span>{{ item.author }}</span></span>
+        {% endif %}
+
+        {% include 'items/_item-readtime.twig' with { record: item } %}
+
+    </div>
+
+    <div class="item-meta-secondary">
+
+        {% include 'items/_item-date.twig' with { record: item } %}
+
+        {% include 'items/_item-tags.twig' with { record: item } %}
+
+        {% include 'items/_item-comments-link.twig' with { record: item } %}
+
+    </div>
+
+    <div class="item-preview">
+        {{ item.teaser|default('Placeholder teaser') }}
+    </div>
+
+</div>

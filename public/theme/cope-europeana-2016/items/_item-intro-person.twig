@@ -1,0 +1,62 @@
+<div class="l-person block block-thumb">
+    <div class="b-inner">
+        <div class="b-thumb">
+            <a href="{{ item.link() }}">
+                {% if item.image %}
+                    <img src="{{ item.image|image( 300, 400, "c") }}" alt="{{ item.image|title }}" />
+                {% else %}
+                    <img src="{{ paths.theme }}/images/fpo_avatar.png" alt="{{ item.image|title }}" />
+                {% endif %}
+            </a>
+        </div>
+        <div class="b-text">
+            <h2 class="person-name"><a href="{{ item.link() }}">{{ item.first_name }} {{ item.last_name }}</a></h2>
+            <div class="jobdetails">
+                <div class="job-title">{{ item.job_title }}</div>
+            </div>
+
+            {% if item.email is not empty %}
+                <div class="item-sendemail">
+                    <a class="email" href="mailto:{{ item.email }}">
+                        <svg class="icon icon-sendemail"><use xlink:href="#icon-sendemail"></use></svg>
+                        {{ item.email }}
+                    </a>
+                </div>
+            {% endif %}
+
+            {% if item.phone is not empty %}
+                <div class="item-phone-work">
+                    <svg class="icon icon-phone-work"><use xlink:href="#icon-phone-work"></use></svg>
+                    <span class="tel">{{ item.phone }}</span>
+                </div> {# we currently have no phonenumber in contenttypes ^AW  #}
+            {% endif %}
+
+            {% if item.twitter is not empty %}
+                {% set twittername = item.twitter|split('/')|last %}
+                <div class="item-twitter">
+                    <a href="{{ item.twitter }}">
+                        <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+                        @{{ twittername }}
+                    </a>
+                </div>
+            {% endif %}
+
+            {% if item.skype is not empty %} {# not used in HiM, but set up for new pro #}
+                <div class="item-twitter">
+                    <a href="{{ item.skype }}">
+                        <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+                        {{ item.skype }}
+                    </a>
+                </div>
+            {% endif %}
+
+            {% if item.linkedin is not empty %} {# not used in HiM, but set up for new pro #}
+                <div class="item-linkedin">
+                    <a href="{{ item.linkedin }}"><svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
+                        {{ item.first_name }} {{ item.last_name }}</a>
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>

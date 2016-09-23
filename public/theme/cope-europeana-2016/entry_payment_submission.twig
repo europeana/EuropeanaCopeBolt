@@ -1,0 +1,45 @@
+{#
+Patternlab links:
+http://develop.styleguide.eanadev.org/?p=templates-HIM-login
+#}
+{% extends '_base.twig' %}
+
+{% if is_member() %}
+    {% set member = member() %}
+    {% set currentuser = { 'id': member.guid, 'name': member.displayname, 'email': member.email } %}
+    {% setcontent currentedition = 'himeditions' where { 'submission_start': '<now', 'submission_deadline': '>now', 'submission_closed': '!1' } returnsingle %}
+    {% setcontent himentry = 'himentries/' ~ app.request.attributes.get('entry') where { 'userid': currentuser.id, status: '!' } returnsingle %}
+{% endif %}
+
+{% block bodyclass %}page_login{% endblock %}
+
+{% block body %}
+
+<main role="main" class="l-page no-sidebar">
+    <div class="lc">
+        {% if not is_member() %}
+            <section class="page_intro">
+                <p>You must be logged in.</p>
+            </section>
+        {% else %}
+            <section class="page_intro">
+                <p>Entry Submission Payment</p>
+            </section>
+
+            <div class="item-details">
+                <label for="submission_title">Entry Title</label>
+                <input type="text" id="submission_title" disabled="disabled" value="{{ himentry.title }}">
+            </div>
+
+            <div class="item-details">
+                <label for="submission_cost">Entry Title</label>
+                <input type="text" id="submission_cost" disabled="disabled" value="{{ currentedition.submission_cost }}">
+            </div>
+
+            {{ payment_button('mollie', 'post') }}
+        {% endif %}
+    </div>
+</main>
+<!-- End Main -->
+
+{% endblock %}

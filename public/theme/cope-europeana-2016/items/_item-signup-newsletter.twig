@@ -1,0 +1,66 @@
+<div class="signup">
+    <form
+        method="post"
+        {# FIXME - check newsletter id #}
+        action="http://europeana.us3.list-manage.com/subscribe/post?u=ad318b7566f97eccc895e014e&amp;amp;id=1d4f51a117"
+        class="inline-form newsletter-form"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        target="_blank"
+        onSubmit="return checkForm()">
+
+        <script type="text/javascript">
+
+        {# FIXME - check below scripts #}
+
+        // Inline javascript for simplicity in porting to externally developed sites.
+        //   Note: (there is dependency on jquery here that should be satisfied by whoever uses this molecule)
+
+        var checkForm = function(form_obj) {
+               var why = "";
+               var email = $('#mce-EMAIL');
+               var filter=/^[a-z0-9_\-\.\+]+@[a-z0-9_\-\.]+\.[a-z]{2,4}$/i;
+
+               if (email.val().length==0) {
+                 why += "* Email must be specified\n";
+               }
+               else if (!filter.test(email.val())) {
+                 why += "* Email must be a valid email address.\n";
+               }
+
+               if (!$('#mce-LANGUAGE-0').is(':checked') && !$('#mce-LANGUAGE-1').is(':checked')) {
+                 why += "* A language must be specified.\n";
+               }
+
+               if (why != "") {
+                 alert(why);
+                 return false;
+               }
+               return true;
+             };
+        </script>
+
+        <label for="newsletter-field" class="title">Sign up for our newsletter</label>
+
+        <div class="inline-container">
+            <input placeholder="email address"
+               type="email"
+               name="EMAIL"
+               value=""
+               id="mce-EMAIL"
+               class="js-placeholder newsletter-field" />
+            <button class="newsletter-submit">
+                <svg class="icon icon-check">
+                    <use xlink:href="#icon-check"></use>
+                </svg>
+            </button>
+        </div>
+
+        <div class="newsletter-options">
+            <input type="radio" name="LANGUAGE" value="English" autocomplete="off" id="mce-LANGUAGE-0" checked />
+            <label for="mce-LANGUAGE-0">
+                English
+            </label>
+        </div>
+    </form>
+</div>

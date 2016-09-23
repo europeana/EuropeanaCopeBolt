@@ -1,0 +1,264 @@
+{#
+Patternlab links:
+http://develop.styleguide.eanadev.org/?p=templates-HIM-user-profile
+#}
+{% extends '_base_page.twig' %}
+
+{% if is_member() %}
+    {% set member = member() %}
+    {% set member_meta = member_meta() %}
+    {# use the current user from the members extension #}
+    {% set currentuser = { 'id': member.guid|default(1), 'name': member.displayname|default('Rick'), 'email': member.email|default('rick@browsercheck.nl') } %}
+    {% setcontent himentries = 'himentries' where { 'userid': currentuser.id, status: '!' } %}
+    {% setcontent currentedition = 'himeditions' where { 'submission_start': '<now', 'submission_deadline': '>now', 'submission_closed': '!1' } returnsingle %}
+{% endif %}
+
+{% block bodyclass %} page_user_profile {% endblock %}
+
+{% block main %}
+{% if is_member() and member_has_role('judge') %}
+    {{ redirect('/page/rate-heritage-in-motion-entries') }}
+{% elseif is_member() %}
+    {# judges should never get here #}
+
+<!-- Start content -->
+<div class="l-content">
+
+    <div class="page_header">
+
+        {% include 'items/_item-breadcrumb.twig' %}
+
+    </div>
+
+    <div class="account-header section">
+
+        {% if currentedition %}
+        <h2>Current Competition: <span class="highlight">{{ currentedition.title }}</span></h2>
+        <p>Deadline: Submit your entries before {{ currentedition.submission_deadline | date("F jS Y") }}</p>
+        {% else %}
+        <h2 data-bolt-field="title">{{ record.title }}: {{ currentuser.name|default() }}</h2>
+        {% endif %}
+
+        <a href="/page/submit-a-new-video-for-heritage-in-motion" class="btn cta">Add a new Entry</a>
+    </div>
+
+
+    <div class="section">
+        <ul class="cf">
+            {% for himentry in himentries %}
+
+                {% if himentry.status != 'published' %}
+                    {% set viewlink = '/page/preview-a-heritage-in-motion-entry?id='~himentry.id %}
+                {% else %}
+                     {% set viewlink = himentry.link %}
+                {% endif %}
+
+                <li class="submission-list-item list-item cf">
+                    <h3><span class="inabox">{{ currentedition.title }}</span> Submission #{{loop.revindex}} </h3>
+                    {#{{ dump(himentry) }}#}
+                    <div class="cf">
+
+                        <div class="item-supplementary">
+                            <div class="item-image">
+
+                                <a href="{{ viewlink }}">
+                                    {% if himentry.upload_images is not empty %}
+                                        {% set first = himentry.upload_images|first %}
+                                        <img src="{{ image(first.filename, 640, 360) }}" alt="{{ first.title }} - thumbnail" />
+                                    {% else %}
+                                        {% set videodata = getvideodata( himentry.videolink ) %}
+                                        {#{{ dump(videodata) }}#}
+                                        {% if videodata.type == 'youtube' %}
+                                            <img src="https://img.youtube.com/vi/{{ videodata.video_id }}/mqdefault.jpg" alt="{{ record.title }} - thumbnail" />
+                                        {% else %}
+                                            <span class="no-image">No image for {{ videodata.type }}</span>
+                                        {% endif %}
+                                    {% endif %}
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="item-details">
+                            <h4>{{ himentry.title }}</h4>
+                            <div class="summary">
+                                {{ himentry.summary|default(himentry.description) }}
+                            </div>
+
+                            {# % if himentry.clienttags is defined and himentry.clienttags is not empty %}
+                                <div class="item-meta-secondary">
+                                    {% set himentrytags = himentry.clienttags|split(',') %}
+                                    {% include 'items/_item-tags.twig' with {tags: himentrytags} %}
+                                </div>
+                            {% endif % #}
+                        </div>
+                    </div>
+
+                    <div class="submission-meta cf">
+
+                        {% if himentry.group.slug == 'declined' %}
+                            <span class="submission-status btn pill rejected">
+                                <svg class="icon icon-delete">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-delete"></use>
+                                </svg>
+                                Rejected
+                            </span>
+                        {% elseif himentry.group.slug == 'in_review' %}
+                            <span class="submission-status btn pill approved">
+                                <svg class="icon icon-check">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use>
+                                </svg>
+                                Approved
+                            </span>
+                        {% elseif himentry.group.slug == 'online' %}
+                            <span class="submission-status btn pill approved">
+                                <svg class="icon icon-check">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use>
+                                </svg>
+                                Online
+                            </span>
+                        {% elseif himentry.group.slug == 'submitted' %}
+                            <span class="submission-status btn pill pending">Pending approval</span>
+                        {% else %}
+                            <span class="submission-status btn pill draft">
+                                <svg class="icon icon-check">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use>
+                                </svg>
+                                Saved as draft
+                            </span>
+                        {% endif %}
+
+
+                        {# FIXME: use the actual payment and moderation status to determine which buttons are shown #}
+                        {# FIXME: add payment button that is visible when payment status is incomplete #}
+                        {% set payment = payment(himentry.transaction_id)|default('') %}
+                        {% if payment.status|default('') != 'paid'
+                            and himentry.group.slug not in ['declined', 'in_review', 'submitted', 'online'] %}
+                            {{ cart(
+                                gateway = 'mollie',
+                                amount = currentedition.values.submission_cost|number_format(2),
+                                currency = 'EUR',
+                                description = 'HiM entry payment: ' ~ himentry.id,
+                                data = { 'contenttype': 'himentries', 'id': himentry.id },
+                                method = 'GET'
+                            ) }}
+                        {% elseif payment.status|default('') != 'paid'
+                            and himentry.group.slug == 'declined' %}
+                            <span class="submission-status btn pill pending">
+                                <svg class="icon icon-delete">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-delete"></use>
+                                </svg>
+                                Unpaid
+                            </span>
+                        {% else %}
+                            <span class="submission-status btn pill approved">
+                                <svg class="icon icon-check">
+                                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use>
+                                </svg>
+                                Paid
+                            </span>
+                        {% endif %}
+
+
+
+                        <div class="submission-actions">
+                            <ul class="button-bar button-bar-small">
+                                {% if himentry.status != 'published'
+                                    and himentry.group.slug not in ['declined', 'in_review', 'submitted', 'online'] %}
+                                    <li class="button-bar__item">
+                                        <a href="/page/edit-a-heritage-in-motion-entry?id={{ himentry.id }}"
+                                           class="button-bar__button">
+                                            <svg class="icon icon-edit">
+                                                <use xlink:href="#icon-edit"></use>
+                                            </svg>
+                                            Edit
+                                        </a>
+                                    </li>
+                                    <li class="button-bar__item">
+                                        <a href="/page/preview-a-heritage-in-motion-entry?id={{ himentry.id }}"
+                                           class="button-bar__button">
+                                            <svg class="icon icon-view">
+                                                <use xlink:href="#icon-view"></use>
+                                            </svg>
+                                            Preview
+                                        </a>
+                                    </li>
+                                {% elseif himentry.status != 'published'
+                                    and himentry.group.slug in ['declined', 'in_review', 'submitted', 'online'] %}
+                                    <li>
+                                        <a href="/page/preview-a-heritage-in-motion-entry?id={{ himentry.id }}"
+                                           class="button-bar__button">
+                                            <svg class="icon icon-view">
+                                                <use xlink:href="#icon-view"></use>
+                                            </svg>
+                                            Preview
+                                        </a>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a href="{{ himentry.link }}"
+                                           class="button-bar__button">
+                                            <svg class="icon icon-view">
+                                                <use xlink:href="#icon-view"></use>
+                                            </svg>
+                                            View
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+
+                </li>
+            {% else %}
+                <li class="submission-list-item list-item cf">
+                    {# FIXME: make a real error message here #}
+                    <div>
+                        <h3>You have no submissions yet.</h3>
+
+                        <div class="cf">
+                            <a href="/page/submit-a-new-video-for-heritage-in-motion" class="btn cta">Add a Project</a>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{# END l-content #}
+
+
+<div class="l-sidebar">
+    {%  include 'items/_item-profile-mini.twig' with { currentuser: currentuser, member: member|default(), member_meta: member_meta|default() } %}
+
+{#  <div class="section">
+        <nav class="nav_secondary" role="navigation">
+            <ul class="level1">
+                <li>
+                    <a href="#" class="is-current">Entries</a>
+                </li>
+                <li>
+                    <a href="#">Profile</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+#}
+
+</div>
+{# end sidebar #}
+
+<!-- End Content -->
+{% else %}
+    <div class="l-content">
+        <div class="page_header">
+            {% include 'items/_item-breadcrumb.twig' %}
+        </div>
+
+        <div id="entry-detail" class="entry-detail">
+            <p>You need to <a href="/authentication/login">sign in</a> for this.</p>
+        </div>
+    </div>
+    <div class="l-sidebar">
+    </div>
+{% endif %}
+{% endblock %}

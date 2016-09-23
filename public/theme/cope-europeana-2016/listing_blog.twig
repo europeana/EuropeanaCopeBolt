@@ -1,0 +1,65 @@
+{#
+Patternlab links:
+http://develop.styleguide.eanadev.org/?p=templates-HIM-ListPage-blog
+#}
+{% extends 'listing.twig' %}
+
+{% block sortby %}
+    {% include 'items/_item-sortby.twig' %}
+{% endblock sortby %}
+
+
+{% block rss %}
+
+{# FIXME - check for correct contenttype. Only for blogs? #}
+<div class="item-rss">
+    <a href="/blogposts/rss/feed.xml" class="btn btn2">
+        <svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg>
+        Subscribe to RSS
+    </a>
+</div>
+
+{% endblock %}
+
+{% block list %}
+
+{# set order #}
+    {% set order = contenttype['sort'] %}
+    {% if app.request.get('order') %}
+        {% set order = app.request.get('order') %}
+    {% endif %}
+
+
+    {% if taxonomytype is defined %}
+        {% if taxonomy.options[slug] is defined %}
+            {% set title = __('Overview for') ~ ' ' ~ taxonomy.options[slug] %}
+        {% else %}
+            {% set title = __('Overview for') ~ ' ' ~ taxonomy.options[slug] %}
+        {% endif %}
+        {% set records = records|order(app.config.get('general/listing_sort')) %}
+    {% endif %}
+
+    {% if search is defined %}
+        {% set title = __('Search results for <b> %search% </b>.', { '%search%': search|escape })  %}
+    {% endif %}
+<div class="results cf">
+
+    {% if records is not defined %}
+        {% setcontent records = 'blogposts' limit 10 orderby order allowpaging %}
+    {% endif %}
+
+    <ul class="results-list cf">
+        {% for item in records %}
+            {# if blogitem #}
+            <li class="list-item cf">
+                {% include 'items/_item-intro-blogpost.twig' with { item: item } %}
+            </li>
+            {# end blogitem #}
+        {% endfor %}
+    </ul>
+
+    {{ pager('', 3, 'items/_item-pagination.twig') }}
+
+</div>
+
+{% endblock %}

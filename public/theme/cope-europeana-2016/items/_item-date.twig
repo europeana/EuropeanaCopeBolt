@@ -1,0 +1,28 @@
+{#
+  used in:
+    - record_blogpost
+    - listing_blog (record)
+#}
+
+
+{% if date is not defined and record is defined %}
+    {% set date = record.datepublish %}
+{% endif %}
+
+{% if date is defined %}
+
+<span class="item-date">
+    <svg class="icon icon-calendar">
+        <use xlink:href="#icon-calendar"></use>
+    </svg>
+    {% if date ==  '0000-00-00' %}
+        <span>not set</span>
+    {% else %}
+    <span class="item-day">{{ date|localdate("%e") }}</span>
+    <span class="item-month">{{ date|localdate("%B") }}</span>
+    <span class="item-year">{{ date|localdate("%Y") }}</span>
+     {% endif %}
+</span>
+
+{% endif %}
+

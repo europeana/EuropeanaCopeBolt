@@ -1,0 +1,115 @@
+{#
+Patternlab links:
+http://develop.styleguide.eanadev.org/?p=templates-HIM-entry-detail
+http://develop.styleguide.eanadev.org/?p=templates-HIM-entry-detail-judge
+#}
+{% extends '_base_page.twig' %}
+
+{% block bodyclass %} page_entry_detail {% endblock %}
+
+{% block main %}
+
+<!-- Start content -->
+<div class="l-content">
+
+    <div class="page_header">
+
+    {% include 'items/_item-breadcrumb.twig' %}
+
+    </div>
+
+    <div id="entry-detail" class="entry-detail">
+        <div class="section">
+
+            {% if record.videolink %}
+                <!-- <div class="video-fluid"> -->
+                    <a class="embedly-card" href="{{ record.videolink }}" data-card-width="100%" data-card-controls="0" data-card-theme="dark" data-card-chrome="0">{{ record.title }}</a>
+
+                <!-- </div> -->
+            {% endif %}
+
+            <div class="cf entry-info">
+                <!-- Entry meta data -->
+                <div class="entry-data">
+
+                    {% if record.upload_images is not empty %}
+                        {%  set first = record.upload_images|first %}
+                        <img src="{{ image(first.filename, 640, 360) }}" alt="{{ first.title }} - thumbnail" />
+                    {% else %}
+                        {% set videodata = getvideodata( record.videolink ) %}
+                        {#{{ dump(videodata) }}#}
+                        {% if videodata.type == 'youtube' %}
+                            <img src="https://img.youtube.com/vi/{{ videodata.video_id }}/mqdefault.jpg" alt="{{ record.title }} - thumbnail" />
+                        {% else %}
+                            <span class="no-image">No image for {{ videodata.type }}</span>
+                        {% endif %}
+                    {% endif %}
+
+                    <div class="entry-data-inner">
+                        <ul>
+                            <li class="credits">
+                                {% if record.credits is defined  %}
+                                    <div>{{ record.credits|striptags|nl2br }}</div>
+                                {% else %}
+                                    <div><p>No credits yet.</p></div>
+                                {% endif %}
+                            </li>
+
+                            <li><a href="{{ record.projecturl }}">{{ record.projecturl }}</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="entry-text prose">
+
+                    <h2>{{ record.title }}</h2>
+
+
+                    {% if record.summary is defined  %}
+                        <div>{{ record.summary|striptags|nl2br }}</div>
+                    {% else %}
+                        <div><p>No summary yet.</p></div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        {% if record.clienttags is defined and record.clienttags is not empty %}
+            <div class="item-meta-secondary section">
+                {% set himentrytags = record.clienttags|split(',') %}
+                {% include 'items/_item-tags.twig' with {tags: himentrytags} %}
+            </div>
+        {% endif %}
+
+        <div class="section">
+            {% if record.description is defined  %}
+                <div>{{ record.description|striptags|nl2br }}</div>
+            {% else %}
+                <div><p>No description yet.</p></div>
+            {% endif %}
+        </div>
+
+        {% if record.upload_images is not empty %}
+            <div class="section">
+                <h3>Extra media</h3>
+                <ul class="gallery_4">
+                    {% for image in record.upload_images|default([]) %}
+                        <li><img src="{{ image(image.filename) }}" alt="{{ image.title }}"></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="l-sidebar js-getstickywidth">
+    {% include 'items/_item-tags-large.twig' with {items: record.taxonomy.categories|default()} %}
+</div>
+
+<!-- End Main -->
+
+<!-- End Content -->
+
+{% endblock %}

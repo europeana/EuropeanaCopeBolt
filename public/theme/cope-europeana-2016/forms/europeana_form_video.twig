@@ -1,0 +1,284 @@
+{#
+ # Passed in variables:
+ #   webpath     - URI for the default web assets
+ #}
+{% form_theme form 'forms/europeana_custom.twig' %}
+<!-- Yes we got the forms/europeana_form.twig template -->
+
+{% block boltforms_css %}
+<!-- no custom css -->
+{% endblock boltforms_css %}
+
+{% if debug or ((error or message) and app.request.get(formname)) %}
+    <div class="section">
+        {% if debug %}
+            <p class="is-error">[Debug] Notification debug mode enabled!</p>
+        {% endif %}
+
+        {% if error and app.request.get(formname) %}
+            <p class="is-error">{{ error }}</p>
+        {% endif %}
+
+        {% if message and app.request.get(formname) %}
+            <p class="is-information">{{ message }}</p>
+        {% endif %}
+    </div>
+{% endif %}
+
+{% if not sent %}
+    {{ html_pre }}
+    {#
+        {{ dump(form) }}
+        {{ dump(defaults) }}
+        {{ dump(defaults['fullentry']) }}
+    #}
+
+    {{ form_start(form, {'attr': {'name': formname } }) }}
+        {{ form_errors(form) }}
+
+            {% if defaults['videolink']|default() %}
+                <div>
+                    <a class="embedly-card" href="{{ defaults['videolink'] }}" data-card-width="100%"  data-card-controls="0" data-card-theme="dark" data-card-chrome="0">{{ defaults['title'] }}</a>
+                </div>
+                <div>
+                    {{ form_label(form['videolink']) }}
+                    {{ form_errors(form['videolink']) }}
+                    {{ form_widget(form['videolink'], {'value': defaults['videolink']|default()}) }}
+                </div>
+            {% else %}
+                <div class="entry-upload entry-primary-upload">
+                    <div class="dropzone">
+                        <div class="inner centre">
+                            <a href="#">
+                                <svg class="icon icon-upload">
+                                    <use xlink:href="#icon-upload"></use>
+                                </svg>
+                                Add a Video/Image URL here
+                            </a>
+                            {{ form_label(form['videolink']) }}
+                            {{ form_errors(form['videolink']) }}
+                            {{ form_widget(form['videolink'], {'value': defaults['videolink']|default()}) }}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="cf entry-info">
+                <!-- Entry meta data -->
+                <div class="entry-data">
+                    <div class="entry-data-inner">
+                        <ul>
+                            <li>
+                                {% if form['credits'] is defined %}
+                                    {{ form_label(form['credits']) }}
+                                    {{ form_errors(form['credits']) }}
+                                    {{ form_widget(form['credits'], {'value': defaults['credits']|default()}) }}
+                                {% else %}
+                                    <p>Invalid form field</p>
+                                {% endif %}
+                            </li>
+
+                            <li>
+                                {% if form['projecturl'] is defined %}
+                                    {{ form_label(form['projecturl']) }}
+                                    {{ form_errors(form['projecturl']) }}
+                                    {{ form_widget(form['projecturl'], {'value': defaults['projecturl']|default()}) }}
+                                {% else %}
+                                    <p>Invalid form field</p>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="entry-text prose">
+                    {% if form['title'] is defined %}
+                        <div class="field-container">
+                        {{ form_label(form['title']) }}
+                        {{ form_errors(form['title']) }}
+                        {{ form_widget(form['title'], {'value': defaults['title']|default()}) }}
+                        </div>
+                    {% else %}
+                        <p>Invalid form field</p>
+                    {% endif %}
+
+                    {% if form['summary'] is defined %}
+                        <div class="field-container">
+                        {{ form_label(form['summary']) }}
+                        {{ form_errors(form['summary']) }}
+                        {{ form_widget(form['summary'], {'value': defaults['summary']|default()}) }}
+                        </div>
+                    {% else %}
+                        <p>Invalid form field</p>
+                    {% endif %}
+
+
+                </div>
+            </div>
+
+
+        {% if form['clienttags'] is defined %}
+            <div class="taglist section">
+                <div>
+                    <span class="item-tags">
+                        <svg class="icon icon-bookmark">
+                            <use xlink:href="#icon-bookmark"></use>
+                        </svg>
+                        {{ form_label(form['clienttags']) }}
+                    </span>
+
+                    {{ form_errors(form['clienttags']) }}
+                    {{ form_widget(form['clienttags'], {'value': defaults['clienttags']|default()}) }}
+
+                </div>
+            </div>
+        {% endif %}
+
+
+        <div class="section">
+            {% if form['description'] is defined %}
+                {{ form_label(form['description']) }}
+                {{ form_errors(form['description']) }}
+                {{ form_widget(form['description'], {'value': defaults['description']|default()}) }}
+            {% else %}
+                <p>Invalid form field</p>
+            {% endif %}
+        </div>
+
+        {% if form['upload_images'] is defined %}
+            <div class="extra-media section">
+                {{ form_label(form['upload_images']) }}
+                {{ form_errors(form['upload_images']) }}
+                {{ form_widget(form['upload_images']) }}
+
+                <div>
+                    <h3>Extra media</h3>
+                    <ul class="gallery_4">
+                        {% for image in defaults['upload_images']|default([]) %}
+                            <li>
+                                <a href="{{ image(image.filename) }}">
+                                    <img src="{{ thumbnail(image.filename, 430, 360) }}" alt="{{ image.title }}" }} />
+                                </a>
+                                <input type="hidden"
+                                       id="heritageedit_upload_images_{{ loop.index0 }}_filename"
+                                       name="heritageedit[upload_images][{{ loop.index0 }}][filename]"
+                                       value="{{ image.filename }}">
+                                <input type="text"
+                                       id="heritageedit_upload_images_{{ loop.index0 }}_title"
+                                       name="heritageedit[upload_images][{{ loop.index0 }}][title]"
+                                       value="{{ image.title }}">
+                            </li>
+                        {% endfor %}
+
+                        {% if defaults['upload_images']|length < 10 %}
+                            {% if form['new_image'] %}
+                                <li class="upload-image">
+                                    {{ form_label(form['new_image']) }}
+                                    {{ form_errors(form['new_image']) }}
+                                    {{ form_widget(form['new_image'], {'value': defaults['new_image']|default()}) }}
+
+                                </li>
+                            {% endif %}
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        {% elseif form['new_image'] is defined %}
+            <div class="extra-media section">
+                <div>
+                    <h3>Extra media</h3>
+                    <ul class="gallery_4">
+                        {% if form['new_image'] %}
+                            <li class="upload-image upload-image-first">
+                                {{ form_label(form['new_image']) }}
+                                {{ form_errors(form['new_image']) }}
+                                {{ form_widget(form['new_image'], {'value': defaults['new_image']|default()}) }}
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        {% else %}
+            <div class="extra-media section">
+                <div>
+                    <p>You can add extra images when you have saved the item as a draft.</p>
+                </div>
+            </div>
+        {% endif %}
+
+        {% for key, value in fields  %}
+            {% if value.config.name not in ['submit', 'videolink', 'summary', 'credits', 'description', 'title', 'projecturl', 'clienttags',  'upload_images', 'new_image'] %}
+                <div class="{% if form[key].vars.attr.class is defined %} boltforms-{{ form[key].vars.attr.class }}-row{% endif %}">
+                    {{ form_label(form[key]) }}
+                    {{ form_errors(form[key]) }}
+                    {{ form_widget(form[key], {'value': defaults[key]|default()}) }}
+                </div>
+            {% else %}
+                <!-- skipped form field {{ value.config.name }} because it has already been rendered -->
+            {% endif %}
+        {% endfor %}
+
+        <div class="section">
+            <div class="submit-buttons cf js-sticky {% if form.submit.vars.attr.class is defined %} boltforms-{{ form.submit.vars.attr.class }}-row{% endif %}">
+
+                {% set fullentry = defaults['fullentry']|default() %}
+                {% if fullentry.transaction_id is defined %}
+                    {% set payment = payment(fullentry.transaction_id)|default('') %}
+                    {% if fullentry.group.slug not in ['declined', 'in_review', 'online', 'submitted'] %}
+                        <div class="group1">
+                            {# FIXME: I want to not render this in some cases
+                               hack to hide the button but still have it rendered
+                               this is stupid, but the submit button does not listen to me
+                            #}
+                            <span class="hidden" style="display: none;">
+                                <!-- this is a button that the CMS needs to generate -->
+                                {{ form_widget(form.submit) }}
+                            </span>
+
+                            <button class="save draft">
+                                <svg class="icon icon-check">
+                                    <use xlink:href="#icon-check"></use>
+                                </svg>
+                                Save Draft</button>
+
+                        </div>
+                    {% endif %}
+
+                    <div class="group2">
+                        {% if payment.status|default('') != 'paid' %}
+                            {# This has to be a link, because we're in a bloody form that cannot embed another form #}
+                            <a href="/page/pay-for-a-heritage-in-motion-entry?id={{ defaults['id'] }}" class="btn pay">Proceed to payment</a>
+                        {% else %}
+                            {# if you click this button or link you will save the entry and set the taxonomy stage to 'waiting for approval' #}
+                            <a href="/async/him-entry-review?id={{ defaults['id'] }}" class="btn submit">Submit for review</a>
+                        {% endif %}
+
+                        <a href="/profile" class="button cancel">Cancel</a>
+                    </div>
+                {% else %}
+                    <div class="group1">
+                        {# FIXME: I want to not render this in some cases
+                           hack to hide the button but still have it rendered
+                           this is stupid, but the submit button does not listen to me
+                        #}
+                        <span class="hidden" style="display: none;">
+                            <!-- this is a button that the CMS needs to generate -->
+                            {{ form_widget(form.submit) }}
+                        </span>
+
+                        <button class="save draft">
+                            <svg class="icon icon-check">
+                                <use xlink:href="#icon-check"></use>
+                            </svg>
+                            Save Draft</button>
+
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+    {{ form_end(form) }}
+
+{% else %}
+    {{ html_post }}
+{% endif %}

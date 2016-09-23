@@ -1,0 +1,124 @@
+{#
+
+LISTING.TWIG
+
+Extended by:
+listing_blog.twig
+listing_people.twig
+
+Patternlab links:
+http://develop.styleguide.eanadev.org/?p=templates-HIM-ListPage
+#}
+{% extends '_base_page.twig' %}
+
+{% block main %}
+
+    {% if taxonomytype is defined %}
+        {% if taxonomy.options[slug] is defined %}
+            {% set title = __('Overview for') ~ ' ' ~ taxonomy.options[slug] %}
+        {% else %}
+            {% set title = __('Overview for') ~ ' ' ~ slug %}
+        {% endif %}
+        {% set records = records|order(app.config.get('general/listing_sort')) %}
+    {% endif %}
+
+    {% if search is defined %}
+        {% set title = __('Search results for <b> %search% </b>.', { '%search%': search|escape })  %}
+    {% endif %}
+
+<!-- Start content -->
+<div class="l-content">
+
+    <div class="page_header">
+
+
+        {% include 'items/_item-breadcrumb.twig' %}
+
+        {% block sortby %}
+        {% endblock sortby %}
+
+    </div>
+
+    <div id="maincontent" class="maincontent">
+        {%  if record is defined %}
+            <div class="textcontent">
+                <div class="prose">
+                    <h1 class="title">{{ record.title }}</h1>
+
+                    <p class="intro">
+                        {{ record.intro }}
+                    </p>
+
+                    <div class="prose body">
+                        {{ record.body }}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% block rss %}
+        {% endblock %}
+
+        {% block list %}
+
+            {# set order #}
+            {% set order = contenttype['sort'] %}
+            {% if app.request.get('order') %}
+                {% set order = app.request.get('order') %}
+            {% endif %}
+
+            {% if records is not defined and record.default_content %}
+                {% setcontent records = record.default_content limit 10 orderby order allowpaging %}
+            {% elseif records is not defined and record.relation is not empty  %}
+                {% set records = record.related() %}
+            {% endif %}
+            <div class="results cf">
+
+                <ul class="results-list cf">
+                    {% for item in records %}
+                        <li class="list-item cf">{% include 'items/_item-intro-record.twig' with { item: item } %}</li>  
+                    {% endfor %}
+                </ul>
+
+                {{ pager('', 3, 'items/_item-pagination.twig') }}
+            </div>
+        {% endblock %} {# end block list #}
+
+        {% if record is defined and record.suffix is defined %}
+            <div class="textcontent">
+                <div class="prose">
+                    <div class="suffix">
+                        {{ record.suffix }}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if record.relation is defined %}
+            {% include 'items/_item-related.twig' with { record: record, short: 'true' } %}
+        {% endif %}
+
+    </div> {# end maincontent #}
+
+</div>
+
+<div class="l-sidebar">
+    {% block sidebar %}
+
+        {% if record is defined %}
+            {% set contacts = record.related('persons') %}
+            {% if contacts is defined and contacts is not empty %}
+                {% include 'items/_item-help.twig' with { records: contacts } %}
+            {% endif %}
+        {% else %}
+            <!-- no contact for sidebar found -->
+        {% endif %}
+
+    {% endblock %}
+
+</div>
+
+
+<!-- End Content -->
+
+{% endblock %}

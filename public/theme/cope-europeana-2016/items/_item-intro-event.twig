@@ -1,0 +1,37 @@
+<div class="item-supplementary">
+    <div class="item-bigdate">
+        {% include 'items/_item-date-event.twig' with {record : item} %}
+    </div>
+</div><!--
+
+--><div class="item-details">
+
+    <h2 class="title">
+        <a href="{{ item.link() }}">{{ item.title|default('Placeholder title') }}</a>
+    </h2>
+
+
+    <div class="item-meta-primary">
+
+        {% setcontent authors = 'persons' where { id: item.author|join(' || ') } %}
+        {% include 'items/_item-author.twig' with { record: authors } %}
+
+        {% include 'items/_item-readtime.twig' with { record: item } %}
+
+    </div>
+
+    <div class="item-meta-secondary">
+
+        {% include 'items/_item-date.twig' with { record: item } %}
+
+        {% include 'items/_item-tags.twig' with { record: item } %}
+
+        {% include 'items/_item-comments-link.twig' with { record: item } %}
+
+    </div>
+
+    <div class="item-preview">
+        {{ item.teaser|default('Placeholder teaser') }}
+    </div>
+
+</div>

@@ -1,0 +1,24 @@
+<h2 class="submitter-name"><a href="#" class="submitter-name2 editable" data-name="submitted-by2" data-type="text" data-pk="1" data-title="Enter submitter name">{{ member.name|default('unknown') }}</a></h2>
+
+<div class="submitter-bio">
+    {{ member.bio|default('no bio entered') }}
+</div>
+
+<div class="submitter-meta">
+
+    <div class="item-sendemail">
+        <a class="email editable" href="#" data-name="submitted-email" data-type="text" data-pk="1" data-title="Enter submitter email">
+            <svg class="icon icon-sendemail"><use xlink:href="#icon-sendemail"></use></svg>
+            {{ member.email|default('unknown@example.com') }}
+        </a>
+    </div>
+
+    <div class="item-phone-work">
+        <svg class="icon icon-phone-work">
+            <use xlink:href="#icon-phone-work"></use>
+        </svg>
+
+        <a class="tel editable" href="#" data-name="submitted-telephone" data-type="text" data-pk="1" data-title="Enter submitter phone number">{{ member.phone|default('unknown') }}</a>
+
+    </div>
+</div>

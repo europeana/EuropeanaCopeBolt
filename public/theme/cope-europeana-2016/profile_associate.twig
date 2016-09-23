@@ -1,0 +1,9 @@
+{{ form_start(form_associate) }}
+
+{% for provider in providers|keys %}
+    {% if provider != 'local' %}
+        {{ form_row(form_associate[provider]) }}
+    {% endif %}
+{% endfor %}
+
+{{ form_end(form_associate) }}

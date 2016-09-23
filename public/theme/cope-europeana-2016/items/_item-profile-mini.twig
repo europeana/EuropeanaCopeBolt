@@ -1,0 +1,96 @@
+{#{{ dump(currentuser) }}#}
+{#{{ dump(member) }}#}
+{#{{ dump(member_meta) }}#}
+{#{{ dump(is_member()) }}#}
+{#{{ dump(member_has_role('judge')) }}#}
+
+<div class="section">
+    <nav class="nav_secondary" role="navigation">
+        <ul class="level1">
+            {% if is_member() and member_has_role('judge') %}
+                <li>
+                    <a href="/page/rate-heritage-in-motion-entries" {% if paths.current == '/page/rate-heritage-in-motion-entries'  %}class="is-current"{% endif %}>Rate Entries</a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="/profile" {% if paths.current == '/profile'  %}class="is-current"{% endif %}>Submissions</a>
+                </li>
+            {% endif %}
+            <li>
+                <a href="/membership/profile/edit" {% if 'membership/profile' in paths.current %}class="is-current"{% endif %}>Profile</a>
+            </li>
+        </ul>
+    </nav>
+</div> 
+
+{#
+<div class="account-detail cf">
+    <div class="account-item">
+        <h4>Username</h4>
+        <a data-name="username"
+           data-type="text">{{ currentuser.name|default('unknown') }}</a>
+    </div>
+
+    <div class="account-item">
+        <h4>E-mail</h4>
+        <a data-name="email"
+           data-type="text">{{ currentuser.email|default('unknown') }}</a>
+    </div>
+
+    <div class="account-item">
+        <a href="/membership/profile/edit" class="btn pill">Edit profile »</a>
+    </div>
+
+</div>
+#}
+
+{#
+<div class="section social-logins cf">
+{% set providers = member_providers() %}
+{% if providers is not empty and providers|length > 1 %}
+        <h4>Your account is connected with:</h4>
+
+        {%- for provider in member_providers() %}
+            {% if provider == 'google' %}
+                {% set providerclass = 'googleplus' %}
+            {% else %}
+                {% set providerclass = provider %}
+            {% endif %}
+
+            {% if provider != 'local' %}
+                <a class="icon-social" data-connected="true" href="#" title="{{ provider|title }}">
+                    <svg class="icon icon-{{ providerclass }}">
+                        <use xlink:href="#icon-{{ providerclass }}"></use>
+                    </svg>
+                </a>
+            {% endif %}
+        {% endfor -%}
+{% else %}
+    {%- for provider in member_providers() %}
+        {% if provider == 'google' %}
+            {% set providerclass = 'googleplus' %}
+        {% else %}
+            {% set providerclass = provider %}
+        {% endif %}
+
+        {% if provider != 'local' %}
+            <h4>Your account is connected to a {{ provider|title }} account.</h4>
+            <a class="icon-social" data-connected="true" href="#" title="{{ provider|title }}">
+                <svg class="icon icon-{{ providerclass }}">
+                    <use xlink:href="#icon-{{ providerclass }}"></use>
+                </svg>
+            </a>
+        {% else %}
+            <h4>You have a local account</h4>
+            
+            <div class="account-item">
+                <a href="/membership/profile/edit" class="btn pill">Add another login »</a>
+            </div>
+            
+        {% endif %}
+    {% endfor -%}
+{% endif %}
+</div>
+
+#}
+

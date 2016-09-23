@@ -1,0 +1,41 @@
+{% if item.taxonomy is defined and item.taxonomy.categories is defined %}
+    <h3>{{ item.taxonomy.categories|first }}</h3>
+{% else %}
+    <h3>{{ title|default('') }}</h3>
+{% endif %}
+<div class="video-item block block-stacked">
+    <div class="b-inner">
+        <div class="b-thumb">
+            <a href="{{ item.link() }}" data-featherlight="{{ item.link() }} #entry-detail" aria-hidden="true">
+                {% if item.upload_images is not empty %}
+                    {%  set first = item.upload_images|first %}
+                    <img src="{{ image(first.filename, 640, 360) }}" alt="{{ first.title }} - thumbnail" />
+                {% else %}
+                    {% set videodata = getvideodata( item.videolink ) %}
+                    {#{{ dump(videodata) }}#}
+                    {% if videodata.type == 'youtube' %}
+                        <img src="https://img.youtube.com/vi/{{ videodata.video_id }}/mqdefault.jpg" width="100%" alt="{{ item.title }}" />
+                    {% else %}
+                        <span class="no-image">No image for {{ videodata.type }}</span>
+                    {% endif %}
+                {% endif %}
+            </a>
+        </div>
+        <div class="b-text">
+            <div class="video-title"><a href="{{ item.link() }}" data-featherlight="{{ item.link() }} #entry-detail">{{ item.title }}</a></div>
+            <div class="item-meta-primary">
+                <span class="video-attribution">{{ item.name }}</span>
+            </div>
+            <div class="video-description">
+                <p>{{ item.summary }}</p>
+            </div>
+
+            {% if item.clienttags is defined and item.clienttags is not empty %}
+                <div class="item-meta-secondary">
+                    {% set himentrytags = item.clienttags|split(',') %}
+                    {% include 'items/_item-tags.twig' with {tags: himentrytags} %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

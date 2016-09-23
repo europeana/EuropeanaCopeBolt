@@ -1,0 +1,35 @@
+{# FIXME does not work when no / in slug : {% set slugs = paths.currenturl|split('/') %} #}
+
+{#{% set slugs = paths.currenturl %}#}
+{% set slugs = paths.current %}
+<div class="js-sticky">
+    <nav class="nav_secondary js-accordion" role="navigation">
+
+        <ul class="level1">
+            {% for item in menu %}
+            <li class="{{ item.class|default('') }}">
+                {% if item.path is defined and item.path == slugs %}
+                    <a href="{{ item.link|default('#') }}" class="is-current">{{ item.label|default('[unlabeled link]') }}</a>
+                {% elseif item.link is defined and item.link == slugs %}
+                    <a href="{{ item.link|default('#') }}" class="is-current">{{ item.label|default('[unlabeled link]') }}</a>
+                {% else %}
+                    <a href="{{ item.link|default('#') }}">{{ item.label|default('[unlabeled link]') }}</a>
+                {% endif %}
+                {% if item.submenu is defined %}
+                <ul class="level2">
+                    {% for subitem in item.submenu %}
+                    <li class="{{subitem.class|default('')}}">
+                        {% if (subitem.path in slugs) %}
+                            <a href="{{ subitem.link|default('#') }}" class="is-current" >{{ subitem.label|default('[unlabeled link]') }}</a>
+                        {% else %}
+                            <a href="{{ subitem.link|default('#') }}">{{ subitem.label|default('[unlabeled link]') }}</a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

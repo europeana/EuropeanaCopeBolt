@@ -1,0 +1,78 @@
+{#
+ # Passed in variables:
+ #   * stage — The stage of the workflow, either
+ #             email     — Form to enter the account email address
+ #             submitted — After the email address has been submitted
+ #             password  — Form to enter *new* password
+ #             reset     — After the new password has been saved to the database
+ #   * link  — Relative URL to the login page
+ #}
+{#
+Patternlab links:
+n/a
+#}
+{% extends '_base.twig' %}
+
+{% block bodyclass %}page_login{% endblock %}
+
+{% block body %}
+
+    <main role="main" class="l-page no-sidebar">
+        <div class="lc">
+            <section class="page_intro">
+                <h1>Password recovery.</h1>
+            </section>
+
+            <section class="login-register section">
+                <div class="inner">
+                    {% block recovery %}
+                        {% include "feedback.twig" %}
+
+                        {%  if stage == 'email' %}
+                            {{ _self.recovery_start(form_profile_recovery) }}
+                        {% elseif stage == 'password' %}
+                            {{ _self.recovery_finish(form_profile_recovery) }}
+                        {% elseif stage == 'submitted' %}
+                            <p>An email has been send to {{ email }}. Please follow the instructions to complete the process.</p>
+                        {% elseif stage == 'reset' %}
+                            <p>Password reset was successful!</p>
+                            <p><a href="{{ link }}">Click here to go to the login page…</a></p>
+                        {% else %}
+                            <p>Invalid request!</p>
+                        {% endif %}
+
+                    {% endblock recovery %}
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <!-- End Main -->
+
+{% endblock %}
+
+{% macro recovery_start(form_profile_recovery) %}
+    {{ form_start(form_profile_recovery) }}
+    <p>Enter the email address associated with your account:</p>
+    <div class="input-wrapper-icon icon-user">
+        {{ form_widget(form_profile_recovery.email, {'attr': {'class': 'icon-bg icon-user'}}) }}
+    </div>
+    {% do form_profile_recovery.password.setRendered %}
+    <div class="form-controls cf">
+        {{ form_row(form_profile_recovery.submit, {'label': 'Submit »', 'attr': {'class': 'btn btn-light pill'}}) }}
+    </div>
+    {{ form_end(form_profile_recovery) }}
+{% endmacro %}
+
+{% macro recovery_finish(form_profile_recovery) %}
+    {{ form_start(form_profile_recovery) }}
+    <p>Enter a new password for your account</p>
+    {% do form_profile_recovery.email.setRendered %}
+    <div class="input-wrapper-icon icon-password">
+        {{ form_widget(form_profile_recovery.password, {'attr': {'class': 'icon-bg icon-password'}}) }}
+    </div>
+    <div class="form-controls cf">
+        {{ form_row(form_profile_recovery.submit, {'label': 'Continue »', 'attr': {'class': 'btn btn-light pill'}}) }}
+    </div>
+    {{ form_end(form_profile_recovery) }}
+{% endmacro %}

@@ -1,0 +1,24 @@
+{% set slugs = paths.current %}
+<ul class="nav">
+    {% for item in menu %}
+        <li>
+            {% if item.path is defined and ( item.path|slice(1, item.path|length) in slugs) %}
+                <a class="is-current" href="{{ item.link|default('#') }}">{{ item.label|default('[unlabeled link]') }}</a>
+            {% else %}
+                <a href="{{ item.link|default('#') }}">{{ item.label|default('[unlabeled link]')  }}</a>
+            {% endif %}
+
+            {% if item.submenu is defined %}
+                <ul class="menu-sublevel caret">
+                    {% for subitem in item.submenu %}
+                        <li>
+                            <a href="{{ subitem.link|default('#') }}"
+                               class="{{subitem.class|default('')}}"
+                               tabindex="1">{{ subitem.label|default('[unlabeled link]') }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

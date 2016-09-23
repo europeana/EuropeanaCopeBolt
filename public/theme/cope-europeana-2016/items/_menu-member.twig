@@ -1,0 +1,23 @@
+<div class="nav-toggle nav-toggle-settings nav-utility">
+    <ul id="profile-menu" class="sm cf nav-access caret-right">
+        <li>
+            <a href={%- if is_member() and member_has_role('judge') -%}"/page/rate-heritage-in-motion-entries" {%- else -%}"/profile" {%- endif %}
+                tabindex="6">
+                <svg class="icon icon-users">
+                    <use xlink:href="#icon-users"></use>
+                </svg><span class="link-text">Hi {{ member.displayname }}</span>
+            </a>
+            <ul class="menu-sublevel caret">
+                <li><a href="/membership/profile/edit" tabindex="1">Profile</a></li>
+                <li class="menu-divider"></li>
+                {% if is_member() and member_has_role('judge') %}
+                    <li><a href="/page/rate-heritage-in-motion-entries" tabindex="1">Rate Entries</a></li>
+                {% else %}
+                    <li><a href="/profile" tabindex="1">Submissions</a></li>
+                {% endif %}
+                <li class="menu-divider"></li>
+                <li><a href="/authentication/logout" tabindex="3">Log Out</a></li>
+            </ul>
+        </li>
+    </ul></div>
+

@@ -1,0 +1,28 @@
+{% set categories = app.config.get('taxonomy/categories') %}
+<div class="l-categories js-sticky">
+    <h4>Filter by {{ categories.name }}:</h4>
+    <ul class="tags tags-large">
+        {% if items is not empty %}
+            {% for link, value in items %}
+                {% for key, name in categories.options %}
+                    <li>
+                        <a href="{{ paths.root }}{{ categories.slug }}/{{ key }}"
+                           class="tag{% if name == value %} is-active{% endif %}">
+                            {{ name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endfor %}
+        {% else %}
+            {% for key, name in categories.options %}
+                {%- set linkpath = paths.root ~ categories.slug ~ '/' ~ key -%}
+                <li>
+                    <a href="{{ linkpath }}"
+                       class="tag{% if app.paths.current == linkpath %} is-active{% endif %}">
+                        {{ name }}
+                    </a>
+                </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+</div>

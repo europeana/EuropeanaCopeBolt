@@ -20,6 +20,27 @@ payoff: Europeana Pro, Labs, Research combined.
 # in next releases
 theme: dev
 
+#Stylesheets from patternlab
+stylesheet:
+  prod: https://europeana-styleguide-production.s3.amazonaws.com/v0.1/css/pro/screen.css
+  dev: http://develop.styleguide.eanadev.org/css/pro/screen.css
+  beta: http://develop.styleguide.eanadev.org/css/pro/screen.css
+
+requirejs:
+    prod:
+        main: http://styleguide.europeana.eu/js/modules/main/main-heritageinmotion.js
+        js: http://styleguide.europeana.eu/js/modules/require.js
+
+    beta:
+
+        main: http://styleguide.europeana.eu/js/modules/main/main-heritageinmotion.js
+        js: http://styleguide.europeana.eu/js/modules/require.js
+
+    dev:
+        main: http://styleguide.europeana.eu/js/modules/main/main-heritageinmotion.js
+        js: http://styleguide.europeana.eu/js/modules/require.js
+
+
 # The locale that'll be used by the application. If no locale is set the
 # fallback locale is 'en_GB'. For available options, see:
 # https://docs.bolt.cm/other/locales

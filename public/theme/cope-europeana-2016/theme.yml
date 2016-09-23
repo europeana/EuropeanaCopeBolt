@@ -1,0 +1,43 @@
+# Variables that are in this file, can be used in your twig template like {{ theme.foo }}
+# Note: If variables do not immediately show up, clear the cache, in the Bolt Backend.
+foo: bar
+
+# Choose which contenttypes are listed on the frontpage
+frontpage_contenttypes:
+    - entries
+    - pages
+
+
+# There can be defined the templates for the template chooser
+templateselect:
+    templates:
+         - name: 'Basic page with menu (record.twig)'
+           filename: 'record.twig'
+         - name: 'Basic page without menu (record_page.twig)'
+           filename: 'record_page.twig'
+         - name: 'Homepage (index.twig)'
+           filename: 'index.twig'
+         - name: 'Record with new heritage entry form'
+           filename: 'record_heritage_new.twig'
+         - name: 'Record with listing of heritage entries'
+           filename: 'record_heritage_my_entries.twig'
+         - name: 'Record with edit heritage entry form'
+           filename: 'record_heritage_edit.twig'
+         - name: 'Record with heritage entry preview'
+           filename: 'record_heritage_view_my_entry.twig'
+         - name: 'Contact form (record_contact.twig)'
+           filename: 'record_contact.twig'
+         - name: 'Login / register page (profile_login.twig)'
+           filename: 'profile_login.twig'
+         - name: 'Default listing (listing.twig)'
+           filename: 'listing.twig'
+         - name: 'Default listing with menu (listing_menu.twig)'
+           filename: 'listing_menu.twig'
+         - name: 'Gallery video listing (listing_video.twig)'
+           filename: 'listing_video.twig'
+         - name: 'Gallery video listing for judges (listing_video_judges.twig)'
+           filename: 'listing_video_judges.twig'
+         - name: 'People listing (listing_people.twig)'
+           filename: 'listing_people.twig'
+         - name: 'Blog listing (listing_blog.twig)'
+           filename: 'listing_blog.twig'

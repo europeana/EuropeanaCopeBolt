@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="{{ htmllang() }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% if record is defined %}
+            <title>{{ record.title ? (app.config.get('general/sitename') ~ ' | ' ~ record.title|excerpt(55)) : app.config.get('general/sitename') }}</title>
+            <meta name="description" content="{{ record.body|excerpt(160) ?: app.config.get('general/payoff') }}">
+        {% else %}
+            <title>{{ app.config.get('general/sitename') }}</title>
+            <meta name="description" content="{{ app.config.get('general/payoff') }}">
+        {% endif %}
+
+        {# FIXME <!-- google verification -->
+        <meta name="google-site-verification" content="XXX" /> #}
+
+        <link rel="Shortcut Icon" href="{{ paths.theme }}images/favicon/favicon.ico" />
+
+        <!-- loading environment: {{ app.config.get('general/environment')|default('prod') }} -->
+        {% set stylesheet = app.config.get('general/stylesheet/'~ app.config.get('general/environment')|default('prod') ) %}
+        <link rel="stylesheet" href="{{ stylesheet }}?new"  media="all"/>
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700|Open+Sans:400italic,700italic,400,700&subset=latin,greek,cyrillic' rel='stylesheet' type='text/css'>
+
+        {% block headerscripts %}
+        {% endblock %}
+
+    </head>
+    <body class="{% block bodyclass %}{% endblock %}">
+        {# 
+         if is_member() %}
+            {% set member = member() %}
+            {% set member_meta = member_meta() %}
+            {% set is_judge = member_has_role('judge') %}
+            {% if is_judge %}
+                <div class="user-banner">
+                    <span class="user-label">Judge</span>
+                </div>
+            {% endif %}
+        {% else %}
+            {% set is_judge = false %}
+        {% endif %}
+        
+        #}
+
+        {# include SVG #}
+        {% include 'svg/global_svg.twig' %}
+        {% include 'svg/him_svg.twig' %}
+
+{% block header %}
+        <!-- Begin .header -->
+    <div class="header-wrapper">
+        <!-- Super global navigation not included-->
+        <header class="header">
+
+            <!-- Off canvas search bar -->
+
+            <!-- wrapper for navigation bar -->
+            <div class="cf">
+                <a href="/" class="logo ir" tabindex="1">
+                    <h1>{{ app.config.get('general/sitename') }}</h1>
+                </a>
+                <!-- Primary navigation -->
+                <nav role="navigation" class="nav_primary">
+                    <ul id="main-menu" class="sm cf nav-access ">
+                        {{ menu('primary', 'items/_menu-main.twig') }}
+                    </ul>
+                </nav>
+
+                <div class="nav-global">
+                    <a href="#" class="nav-toggle nav-toggle-menu" tabindex="1">
+                        <svg class="icon icon-menu">
+                            <use xlink:href="#icon-menu"></use>
+                        </svg>
+                        <span>Menu</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+        <!-- Collapsed drawer menu -->
+        <nav class="drawer menu-right nav_primary">
+            <ul class="js-hack-smartmenu sm nav-access ">
+                {{ menu('primary', 'items/_menu-main.twig') }}
+            </ul>
+        </nav>
+
+        <!-- End .header -->
+{% endblock %}
+
+        <!-- Main site wrapper for offcanvas navigation -->
+        <div class="pusher">
+
+{% block body %}
+            <p>The body seems to be missing in your template.</p>
+{% endblock %}
+
+
+{% block footer %}
+            <!-- Start Footer -->
+            <footer class="footer" role="contentinfo">
+                <div class="lc">
+                    <div class="grid">
+                        <div class="l-contact">
+                            <h4 class="title">Empowered by:</h4>
+                            <div class="footer_logo">
+                                <a href="http://europeana.eu"><img src="{{ paths.theme }}images/europeana-logo-symbol.png" alt="Europeana - think culture"></a>
+                            </div>
+                        </div><!--
+
+                     --><div class="l-content">
+                            <div class="l-sitemap cf grid">
+                                <div class="linklist l-linklist ">
+                                    <div class="inner">
+                                        <h4 class="title">More info</h4>
+                                        {{ menu('footer-more-info', 'items/_menu-footer-more-info.twig') }}
+                                    </div>
+                                </div><!--
+
+                         --></div>
+                        </div><!--
+
+                     --><div class="l-nextsteps">
+
+                            {# {% include 'items/_item-signup-newsletter.twig' %} #}
+
+                            {% include 'items/_item-social-links.twig' %}
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lc">
+
+                {# FIXME: switched off until we have something here {%  include 'items/_item-powered-by.twig' %}#}
+
+                </div>
+
+
+                <div class="sub-footer lc">
+                    {{ menu('footer-static-links', 'items/_menu-footer-static-links.twig') }}
+
+                    <p class="copyright">
+                        {{ config.get('general/copyright')|default('Co-financed by the European Union.')|raw }}
+                    </p>
+                </div>
+
+
+            </footer>
+            <!-- End Footer -->
+{% endblock %}
+
+        </div>
+        <!-- End of pusher div - wraps the site to allow offcanvas menus-->
+
+        {% set requirejs = app.config.get('general/requirejs/'~ app.config.get('general/environment')|default('prod') ~ '/js' )  %}
+        {% set requiremain = app.config.get('general/requirejs/'~ app.config.get('general/environment')|default('prod') ~ '/main' ) %}
+        <script data-main="{{ requiremain }}" src="{{ requirejs }}"></script>
+
+    </body>
+</html>

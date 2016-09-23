@@ -1,0 +1,34 @@
+{#
+Patternlab links:
+n/a
+#}
+{% extends '_base.twig' %}
+
+{% block bodyclass %}page_login{% endblock %}
+
+{% block body %}
+
+    <main role="main" class="l-page no-sidebar">
+        <div class="lc">
+            {% if not is_member() %}
+                <section class="page_intro">
+                    <h1>Be part of the Heritage in Motion competition NOW!</h1>
+                    <p>Create an account, Submit your work, Compete and connect with other culture challengers</p>
+                </section>
+
+                <section class="login-register section">
+                    <div class="inner">
+                            {% set register_fields = true %}
+                            {% include 'items/_item-register.twig' %}
+                    </div>
+                </section>
+            {% else %}
+                <section class="page_intro">
+                    <p>You are already logged in, so registation is not possible.</p>
+                </section>
+            {% endif %}
+        </div>
+    </main>
+    <!-- End Main -->
+
+{% endblock %}

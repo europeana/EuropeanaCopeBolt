@@ -1,0 +1,30 @@
+{#
+  used in:
+    - record_blogpost
+    - listing_blog
+#}
+{% if tags is defined %}
+{# no link, because specific HiM tags that have no link #}
+<span class="item-tags">
+    <svg class="icon icon-bookmark">
+        <use xlink:href="#icon-bookmark"></use>
+    </svg>
+    <ul class="inline-list">
+        {% for tag in tags %}
+            <li class="item-tag">{{ tag }}</li>
+        {% endfor %}
+    </ul>
+</span>
+{% elseif record.taxonomy.tags is defined  %}
+<span class="item-tags">
+    <svg class="icon icon-bookmark">
+        <use xlink:href="#icon-bookmark"></use>
+    </svg>
+    <ul class="inline-list">
+    {% for link, value in record.taxonomy.tags %}
+        <li class="item-tag"><a href="{{ link }}">{{ value }}</a></li>
+    {% endfor %}
+    </ul>
+</span>
+{% endif %}
+

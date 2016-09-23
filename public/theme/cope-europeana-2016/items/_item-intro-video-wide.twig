@@ -1,0 +1,42 @@
+<div class="item-supplementary">
+    <div class="item-image">
+        <a href="{{ item.link() }}">
+            {% if item.upload_images is not empty %}
+                {%  set first = item.upload_images|first %}
+                <img src="{{ image(first.filename, 640, 360) }}" alt="{{ first.title }} - thumbnail" />
+            {% else %}
+                {% set videodata = getvideodata( item.videolink ) %}
+                {#{{ dump(videodata) }}#}
+                {% if videodata.type == 'youtube' %}
+                    <img src="https://img.youtube.com/vi/{{ videodata.video_id }}/mqdefault.jpg" width="100%" alt="{{ item.title }}" />
+                {% else %}
+                    <span class="no-image">No image for {{ videodata.type }}</span>
+                {% endif %}
+            {% endif %}
+        </a>
+    </div>
+</div><!--
+    --><div class="item-details">
+    <h2 class="title"><a href="{{ item.link() }}">{{ item.title }}</a></h2>
+
+    <div class="item-meta-secondary">
+        {% include 'items/_item-date.twig' with { item: item } %}
+
+        <div class="item-meta-primary">
+            <span class="video-attribution">{{ item.name }}</span>
+        </div>
+
+
+        {% if item.clienttags is defined and item.clienttags is not empty %}
+            <div class="item-meta-secondary">
+                {% set himentrytags = item.clienttags|split(',') %}
+                {% include 'items/_item-tags.twig' with {tags: himentrytags} %}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="item-preview">
+        {{ item.description }}
+    </div>
+</div>
+
