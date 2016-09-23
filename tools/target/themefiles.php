@@ -24,7 +24,7 @@ $content_types = [
   'taskforces' => 'bolt_taskforces'
 ];
 
-foreach($content_types as $type => table) {
+foreach($content_types as $type => $table) {
 
   echo "cp listing.twig listing_" . $type . ".twig\n";
   echo "cp record.twig record_" . str_replace('s.twig', '.twig', $type. '.twig') . "\n";
