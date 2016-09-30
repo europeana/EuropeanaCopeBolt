@@ -220,45 +220,210 @@ __nodes:
 
 #################################
 #
-# PROJECTS
+# HOMEPAGE
 #
 #################################
-projects:
-  name: Projects
-  singular_name: Project
+homepage:
+  name: Homepages
+  singular_name: Homepage
   fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    subtitle:
-      type: text
-      label: "Subtitle"
-      variant: inline
-      postfix: "Shown on Individual pages, Lists, Overviews, Teasers"
-      group: Project specific
-    url:
+    title:
       type: text
       required: false
-      label: "Link to projects website:"
+      group: "Hero image"
+    bannerimage:
+      type: image
+      attrib: title
+      extensions: [ gif, jpg, png ]
+      required: true
+      label: "Banner Image (required):"
+      group: "Hero image"
+    imageattribution:
+      label: Image Attribution
+      type: text
+      group: "Hero image"
+    imagelicense:
+      label: Image License
+      type: select
+      values: [ 'CC0', 'CC-BY', 'CC-BY-SA', 'CC-BY-NC', 'CC-BY-NC-SA', 'Public Domain' ]
+      group: "Hero image"
+    brandcolour:
+      label: Color of graphic
+      type: select
+      values: { brand-colour-site : "Europeana Green", brand-colour-white : "White", brand-colour-black : "Black" }
+      group: "Hero graphic"
+    brandopacity:
+      label: Transparency of graphic
+      type: select
+      values: { brand-opacity25 : "25 percent", brand-opacity50 : "50 percent", brand-opacity75 : "75 percent", brand-opacity100 : "Not transparent" }
+      group: "Hero graphic"
+    brandlocation:
+      label: Location of graphic
+      type: select
+      values: { brand-topleft : "Top left", brand-topright  : "Top right", brand-bottomleft  : "Bottom left", brand-bottomright : "Bottom right"  }
+      group: "Hero graphic"
+    bannertext:
+      type: html
+      required: true
+      label: "Banner Text (required):"
+      variant: inline
+      class: wide
+      group: "Hero graphic"
+    bannerlink:
+      type: text
+      required: false
+      label: ".. or Banner link:"
       variant: inline
       prefix: "<em>URL has to start with http:// or https://</em>"
+      postfix: "(at least one of the above boxes is required)"
       pattern: url
-    logo:
-      type: image
-      required: false
-      label: "Project logo:"
-      extensions: [ gif, jpg, png ]
-    filelist:
-      type: filelist
+      class: narrow
+      group: "Hero graphic"
+    subtitle:
+      type: html
       required: true
-      label: "Downloads:"
-      group: "Secondary information"
-    filelist_downloads:
+      label: "Intro text (required):"
+      height: 150px
+      group: "Hero graphic"
+    callout_1:
+      type: html
+      height: 150px
+      group: "CTA, Links"
+    callout_2:
+      type: html
+      height: 150px
+    callout_3:
+      type: html
+      height: 150px
+    callout_4:
+      type: html
+      height: 150px
+    callout_5:
+      type: html
+      height: 150px
+    callout_6:
+      type: html
+      height: 150px
+    use_manual_1:
+      type: checkbox
+      label: "Use this settings:"
+      group: "Latest 1"
+    flag_colour_1:
+      label: "Color of flag 1: "
+      type: select
+      values: { category_1 : "Orange", category_2 : "Yellow", category_3 : "Blue", category_4 : "Raspberry", category_5 : "Jade green"}
+      group: "Latest 1"
+    flag_label_1:
+      label: "Label of flag 1:"
       type: text
       class: narrow
-      label: "Document folder:"
-      postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
-    <<: *structure_defaults
-  taxonomy: [ tags ]
+      group: "Latest 1"
+    latest_title_1:
+      label: "Title of update 2:"
+      type: text
+      class: narrow
+      group: "Latest 1"
+    latest_teaser_1:
+      label: "Teaser for update 1:"
+      type: html
+      required: true
+      height: 150px
+      group: "Latest 1"
+    latest_image_1:
+      label: "Image for update 1: "
+      type: image
+      attrib: title
+      group: "Latest 1"
+    latest_url_1:
+      label: "Url for update 1: "
+      type: text
+      required: false
+      variant: inline
+      class: narrow
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+      group: "Latest 1"
+    use_manual_2:
+      type: checkbox
+      label: "Use this settings:"
+      group: "Latest 2"
+    flag_colour_2:
+      label: "Color of flag 2: "
+      type: select
+      values: { category_1 : "Orange", category_2 : "Yellow", category_3 : "Blue", category_4 : "Raspberry", category_5 : "Jade green"}
+      group: "Latest 2"
+    flag_label_2:
+      label: "Label of flag 2:"
+      type: text
+      class: narrow
+      group: "Latest 2"
+    latest_title_2:
+      label: "Title of update 2:"
+      type: text
+      class: narrow
+      group: "Latest 2"
+    latest_teaser_2:
+      label: "Teaser for update 2:"
+      type: html
+      required: true
+      height: 150px
+      group: "Latest 2"
+    latest_image_2:
+      label: "Image for update 2: "
+      type: image
+      attrib: title
+      group: "Latest 2"
+    latest_url_2:
+      label: "Url for update 2: "
+      type: text
+      required: false
+      variant: inline
+      class: narrow
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+      group: "Latest 2"
+    use_manual_3:
+      type: checkbox
+      label: "Use this settings:"
+      group: "Latest 3"
+    flag_colour_3:
+      label: "Color of flag 3: "
+      type: select
+      values: { category_1 : "Orange", category_2 : "Yellow", category_3 : "Blue", category_4 : "Raspberry", category_5 : "Jade green"}
+      group: "Latest 3"
+    flag_label_3:
+      label: "Label of flag 3:"
+      type: text
+      class: narrow
+      group: "Latest 3"
+    latest_title_3:
+      label: "Title of update 3:"
+      type: text
+      group: "Latest 3"
+      class: narrow
+    latest_teaser_3:
+      label: "Teaser for update 3:"
+      type: html
+      required: true
+      height: 150px
+      group: "Latest 3"
+    latest_image_3:
+      label: "Image for update 3: "
+      type: image
+      attrib: title
+      group: "Latest 3"
+    latest_url_3:
+      label: "Url for update 3: "
+      type: text
+      required: false
+      variant: inline
+      class: narrow
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+      group: "Latest 3"
+    subsite:
+      type: select
+      values: ['unknown', 'him', 'labs', 'pro', 'research', 'zoho']
   relations:
     <<: *relation_pages
     <<: *relation_blogposts
@@ -266,42 +431,83 @@ projects:
     <<: *relation_pressreleases
     <<: *relation_structures
     <<: *relation_persons
-  record_template: record_project.twig
-  listing_template: listing_projects.twig
-  listing_records: 5
-  recordsperpage: 20
-  sort: -datepublish
-  icon_many: "fa:clipboard"
-  icon_one: "fa:clipboard"
-  show_in_menu: Core business
+  viewless: true
+  icon_many: "fa:home"
+  icon_one: "fa:home"
+  show_in_menu: Global
 
 #################################
 #
-# COLLECTIONS
+# STRUCTURE
 #
 #################################
-collections:
-  name: Collections
-  singular_name: Collection
+structures:
+  name: Structures
+  singular_name: Structure
+  fields:
+    <<: *record_defaults
+    suffix:
+      type: html
+      label: "Suffix"
+      height: 150px
+      postfix: "Text after listing on structure page."
+    <<: *teaser_defaults
+    <<: *media_defaults
+    <<: *structure_defaults
+    template:
+      type: templateselect
+      filter: 'record_*.twig'
+    default_content:
+      type: select
+      label: "Default content type"
+      multiple: false
+      values: { default: default, pages: pages, blogposts: blogposts, events: events, persons:persons, pressreleases: pressreleases }
+      postfix: "Choose a content type if you selected a listing template that does not have a default content type set."
+    subclass:
+      type: select
+      label: "Subsite theme"
+      values: ['none', 'europeana_subsite_cloud', 'europeana_subsite_creative', 'europeana_subsite_enumerate']
+      prefix: "<hr><h2>Subsite Settings</h2>"
+      group: "Subsite settings"
+    footer:
+      type: select
+      label: 'Subsite footer'
+      values: footer/id,title
+    date_start:
+      type: date
+      required: false
+      label: "Project start:"
+      variant: inline
+    date_end:
+      type: date
+      required: false
+      label: "Project end:"
+      variant: inline
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_events
+    <<: *relation_pressreleases
+    <<: *relation_persons
+    <<: *relation_himentries
+  record_template: record_structure.twig
+  listing_template: listing_structures.twig
+  icon_many: "fa:cubes"
+  icon_one: "fa:cube"
+  show_in_menu: Global
+
+#################################
+#
+# PAGE
+#
+#################################
+pages:
+  name: Pages
+  singular_name: Page
   fields:
     <<: *record_defaults
     <<: *teaser_defaults
-    source:
-      type: text
-      variant: inline
-      class: narrow
-      group: Collection specific
-    source_url:
-      type: text
-      required: false
-      label: "URL from source:"
-      variant: inline
-      postfix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-    support_navigation:
-      type: markdown
-      label: "Support navigation:"
-    <<: *display_defaults
     <<: *media_defaults
     <<: *structure_defaults
     template:
@@ -315,11 +521,119 @@ collections:
     <<: *relation_pressreleases
     <<: *relation_structures
     <<: *relation_persons
-  record_template: record_collection.twig
-  listing_template: listing_collections.twig
+  record_template: record_page.twig
+  listing_template: listing_pages.twig
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
+
+#################################
+#
+# BLOG POST
+#
+#################################
+blogposts:
+  name: 'Blog Posts'
+  singular_name: 'BlogPost'
+  display_name: 'Blog Posts'
+  slug: 'blogposts'
+  singular_slug: 'blogpost'
+  fields:
+    <<: *record_defaults
+    author:
+      label: "Author(s)"
+      type: select
+      values: persons/last_name,first_name
+      keys: id
+      multiple: true
+    hero:
+      type: html
+      label: "'Hero' block contents:"
+    <<: *media_defaults
+    <<: *teaser_defaults
+    <<: *structure_defaults
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_events
+    <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_blogposts
+    <<: *relation_himentries
+  record_template: record_blogpost.twig
+  listing_template: listing_blogposts.twig
+  recordsperpage: 100
+  icon_many: "fa:quote-left"
+  icon_one: "fa:quote-right"
+  sort: -datepublish
+  show_in_menu: Ephemeral
+
+#################################
+#
+# PRESSRELEASES
+#
+#################################
+pressreleases:
+  name: 'Press Releases'
+  singular_name: 'Press Release'
+  slug: 'pressreleases'
+  singular_slug: 'pressrelease'
+  fields:
+    <<: *record_defaults
+    author:
+      label: "Author(s)"
+      type: text
+      postfix: "Authors for pressreleases can be anyone, that's why this is a free textfield"
+    <<: *teaser_defaults
+    <<: *media_defaults
+    <<: *structure_defaults
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_events
+    <<: *relation_structures
+    <<: *relation_himentries
+  record_template: record_pressrelease.twig
+  listing_template: listing_pressreleases.twig
+  recordsperpage: 100
+  icon_many: "fa:newspaper-o"
+  icon_one: "fa:newspaper-o"
+  sort: -datepublish
+  show_in_menu: Ephemeral
+
+#################################
+#
+# PUBLICATIONS
+#
+#################################
+publications:
+  name: Publications
+  singular_name: Publication
+  fields:
+    <<: *record_defaults
+    <<: *teaser_defaults
+    <<: *media_defaults
+    isbn:
+      type: text
+      required: false
+      label: "ISBN:"
+      variant: inline
+      group: "ISBN"
+    <<: *structure_defaults
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_events
+    <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_persons
+  record_template: record_publication.twig
+  listing_template: listing_publications.twig
+  recordsperpage: 50
+  icon_many: "fa:book"
+  icon_one: "fa:book"
   show_in_menu: Core business
 
 #################################
@@ -451,22 +765,83 @@ documentation:
 
 #################################
 #
-# PUBLICATIONS
+# COLLECTIONS
 #
 #################################
-publications:
-  name: Publications
-  singular_name: Publication
+collections:
+  name: Collections
+  singular_name: Collection
   fields:
     <<: *record_defaults
     <<: *teaser_defaults
-    <<: *media_defaults
-    isbn:
+    source:
+      type: text
+      variant: inline
+      class: narrow
+      group: Collection specific
+    source_url:
       type: text
       required: false
-      label: "ISBN:"
+      label: "URL from source:"
       variant: inline
-      group: "ISBN"
+      postfix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+    support_navigation:
+      type: markdown
+      label: "Support navigation:"
+    <<: *display_defaults
+    <<: *media_defaults
+    <<: *structure_defaults
+    template:
+      type: templateselect
+      filter: 'record_*.twig'
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_events
+    <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_persons
+  record_template: record_collection.twig
+  listing_template: listing_collections.twig
+  recordsperpage: 50
+  icon_many: "fa:files-o"
+  icon_one: "fa:file"
+  show_in_menu: Core business
+
+#################################
+#
+# TASKFORCES
+#
+#################################
+taskforces:
+  name: TaskForces
+  singular_name: TaskForce
+  fields:
+    <<: *record_defaults
+    <<: *teaser_defaults
+    department:
+      type: select
+      label: "Department:"
+      values: [ "Europeana Network", "Europeana Tech" ]
+      group: "Taskforce"
+    subtitle:
+      type: text
+      required: false
+      label: "Subtitle:"
+      variant: inline
+    date_start:
+      type: date
+      required: false
+      label: "Expected timeframe start:"
+      format: "{{d.Y}}"
+    date_end:
+      type: date
+      required: false
+      label: "Expected timeframe end:"
+      format: "{{d.Y}}"
+    <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
   relations:
@@ -476,12 +851,199 @@ publications:
     <<: *relation_pressreleases
     <<: *relation_structures
     <<: *relation_persons
-  record_template: record_publication.twig
-  listing_template: listing_publications.twig
+  record_template: record_taskforce.twig
+  listing_template: listing_taskforces.twig
   recordsperpage: 50
-  icon_many: "fa:book"
-  icon_one: "fa:book"
+  icon_many: "fa:bullseye"
+  icon_one: "fa:bullseye"
   show_in_menu: Core business
+
+#################################
+#
+# PROJECTS
+#
+#################################
+projects:
+  name: Projects
+  singular_name: Project
+  fields:
+    <<: *record_defaults
+    <<: *teaser_defaults
+    subtitle:
+      type: text
+      label: "Subtitle"
+      variant: inline
+      postfix: "Shown on Individual pages, Lists, Overviews, Teasers"
+      group: Project specific
+    url:
+      type: text
+      required: false
+      label: "Link to projects website:"
+      variant: inline
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+    logo:
+      type: image
+      required: false
+      label: "Project logo:"
+      extensions: [ gif, jpg, png ]
+    filelist:
+      type: filelist
+      required: true
+      label: "Downloads:"
+      group: "Secondary information"
+    filelist_downloads:
+      type: text
+      class: narrow
+      label: "Document folder:"
+      postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
+    <<: *structure_defaults
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_events
+    <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_persons
+  record_template: record_project.twig
+  listing_template: listing_projects.twig
+  listing_records: 5
+  recordsperpage: 20
+  sort: -datepublish
+  icon_many: "fa:clipboard"
+  icon_one: "fa:clipboard"
+  show_in_menu: Core business
+
+#################################
+#
+# Events
+#
+#################################
+events:
+  name: Events
+  singular_name: Event
+  fields:
+    <<: *record_defaults
+    <<: *teaser_defaults
+    start_event:
+      type: datetime
+      required: false
+      label: "Event start"
+      group: Events Schedule
+    unconfirmed_start:
+      type: checkbox
+      required: false
+      label: "Unconfirmed"
+    end_event:
+      type: datetime
+      required: false
+      label: "Event end"
+    unconfirmed_end:
+      type: checkbox
+      required: false
+      label: "Unconfirmed"
+    external_link:
+      type: text
+      required: false
+      label: "Link:"
+      variant: inline
+      class: narrow
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+    <<: *media_defaults
+    <<: *display_defaults
+    <<: *structure_defaults
+  taxonomy: [ tags ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_persons
+    <<: *relation_himentries
+  record_template: record_event.twig
+  listing_template: listing_events.twig
+  icon_many: "fa:calendar"
+  icon_one: "fa:calendar"
+  show_in_menu: Ephemeral
+
+#################################
+#
+# JOBS
+#
+#################################
+jobs:
+  name: Jobs
+  singular_name: Job
+  fields:
+    <<: *record_defaults
+    <<: *teaser_defaults
+    position:
+      type: text
+      required: true
+      label: "Position (required):"
+      variant: inline
+      class: wide
+      group: "Job information"
+    slug:
+      type: slug
+      uses: position
+    department:
+      type: select
+      required: false
+      label: "Position will be in this team:"
+      values:
+        - 'Management'
+        - 'People & Business Support'
+        - 'End User (Collections)'
+        - 'Marketing & Communications'
+        - 'Re-use'
+        - 'Network & Sustainability'
+        - 'Programme & Policy'
+        - 'Data Partner Services'
+        - 'Research & Development'
+        - 'Product Owner & Design'
+        - 'Software Development'
+        - 'Infrastructure'
+        - 'The European Library'
+    postion_type:
+      type: select
+      required: false
+      label: "Contract type:"
+      values: [ "Full time", "Part time", "Internship", "Full time (Maternity cover)", "Full time (Temp)", "Part time (Temp)" ]
+    salary_eur:
+      type: text
+      required: false
+      variant: inline
+      label: "Monthly salary (EUR):"
+      index: true
+    scale_eur:
+      type: text
+      required: false
+      variant: inline
+      label: "Scale (EUR):"
+      index: true
+    deadline:
+      type: date
+      required: false
+      label: "Deadline"
+    <<: *media_defaults
+    <<: *structure_defaults
+  taxonomy: [ ]
+  relations:
+    <<: *relation_pages
+    <<: *relation_blogposts
+    <<: *relation_events
+    <<: *relation_pressreleases
+    <<: *relation_structures
+    <<: *relation_persons
+  sort: -datepublish
+  record_template: record_job.twig
+  listing_template: listing_jobs.twig
+  icon_many: "fa:money"
+  icon_one: "fa:money"
+  show_in_menu: Ephemeral
 
 #################################
 #
@@ -851,51 +1413,29 @@ persons:
 
 #################################
 #
-# TASKFORCES
+# Organisation
 #
 #################################
-taskforces:
-  name: TaskForces
-  singular_name: TaskForce
+organisations:
+  name: Organisations
+  singular_name: Organisation
   fields:
     <<: *record_defaults
-    <<: *teaser_defaults
-    department:
-      type: select
-      label: "Department:"
-      values: [ "Europeana Network", "Europeana Tech" ]
-      group: "Taskforce"
-    subtitle:
-      type: text
+    europeana_place:
+      type: checkbox
+      prefix: "<hr>"
       required: false
-      label: "Subtitle:"
-      variant: inline
-    date_start:
-      type: date
+      label: "This is a Europeana place of work:"
+      group: "Secondary information"
+    europeana_office:
+      type: checkbox
       required: false
-      label: "Expected timeframe start:"
-      format: "{{d.Y}}"
-    date_end:
-      type: date
-      required: false
-      label: "Expected timeframe end:"
-      format: "{{d.Y}}"
-    <<: *media_defaults
-    <<: *structure_defaults
-  taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
-  record_template: record_taskforce.twig
-  listing_template: listing_taskforces.twig
-  recordsperpage: 50
-  icon_many: "fa:bullseye"
-  icon_one: "fa:bullseye"
-  show_in_menu: Core business
+      label: "This is the main Europeana office (appear in footer):"
+  record_template: record_organisationn.twig
+  listing_template: listing_organisation.twig
+  icon_many: "fa:map-marker"
+  icon_one: "fa:map-marker"
+  show_in_menu: Global
 
 #################################
 #
@@ -928,518 +1468,6 @@ locations:
   icon_one: "fa:map-marker"
   show_in_menu: Global
 
-#################################
-#
-# BLOG POST
-#
-#################################
-blogposts:
-  name: 'Blog Posts'
-  singular_name: 'BlogPost'
-  display_name: 'Blog Posts'
-  slug: 'blogposts'
-  singular_slug: 'blogpost'
-  fields:
-    <<: *record_defaults
-    author:
-      label: "Author(s)"
-      type: select
-      values: persons/last_name,first_name
-      keys: id
-      multiple: true
-    hero:
-      type: html
-      label: "'Hero' block contents:"
-    <<: *media_defaults
-    <<: *teaser_defaults
-    <<: *structure_defaults
-  taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_blogposts
-    <<: *relation_himentries
-  record_template: record_blogpost.twig
-  listing_template: listing_blogposts.twig
-  recordsperpage: 100
-  icon_many: "fa:quote-left"
-  icon_one: "fa:quote-right"
-  sort: -datepublish
-  show_in_menu: Ephemeral
-
-#################################
-#
-# Events
-#
-#################################
-events:
-  name: Events
-  singular_name: Event
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    start_event:
-      type: datetime
-      required: false
-      label: "Event start"
-      group: Events Schedule
-    unconfirmed_start:
-      type: checkbox
-      required: false
-      label: "Unconfirmed"
-    end_event:
-      type: datetime
-      required: false
-      label: "Event end"
-    unconfirmed_end:
-      type: checkbox
-      required: false
-      label: "Unconfirmed"
-    external_link:
-      type: text
-      required: false
-      label: "Link:"
-      variant: inline
-      class: narrow
-      prefix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-    <<: *media_defaults
-    <<: *display_defaults
-    <<: *structure_defaults
-  taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
-    <<: *relation_himentries
-  record_template: record_event.twig
-  listing_template: listing_events.twig
-  icon_many: "fa:calendar"
-  icon_one: "fa:calendar"
-  show_in_menu: Ephemeral
-
-#################################
-#
-# JOBS
-#
-#################################
-jobs:
-  name: Jobs
-  singular_name: Job
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    position:
-      type: text
-      required: true
-      label: "Position (required):"
-      variant: inline
-      class: wide
-      group: "Job information"
-    slug:
-      type: slug
-      uses: position
-    department:
-      type: select
-      required: false
-      label: "Position will be in this team:"
-      values:
-        - 'Management'
-        - 'People & Business Support'
-        - 'End User (Collections)'
-        - 'Marketing & Communications'
-        - 'Re-use'
-        - 'Network & Sustainability'
-        - 'Programme & Policy'
-        - 'Data Partner Services'
-        - 'Research & Development'
-        - 'Product Owner & Design'
-        - 'Software Development'
-        - 'Infrastructure'
-        - 'The European Library'
-    postion_type:
-      type: select
-      required: false
-      label: "Contract type:"
-      values: [ "Full time", "Part time", "Internship", "Full time (Maternity cover)", "Full time (Temp)", "Part time (Temp)" ]
-    salary_eur:
-      type: text
-      required: false
-      variant: inline
-      label: "Monthly salary (EUR):"
-      index: true
-    scale_eur:
-      type: text
-      required: false
-      variant: inline
-      label: "Scale (EUR):"
-      index: true
-    deadline:
-      type: date
-      required: false
-      label: "Deadline"
-    <<: *media_defaults
-    <<: *structure_defaults
-  taxonomy: [ ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
-  sort: -datepublish
-  record_template: record_job.twig
-  listing_template: listing_jobs.twig
-  icon_many: "fa:money"
-  icon_one: "fa:money"
-  show_in_menu: Ephemeral
-
-#################################
-#
-# PRESSRELEASES
-#
-#################################
-pressreleases:
-  name: 'Press Releases'
-  singular_name: 'Press Release'
-  slug: 'pressreleases'
-  singular_slug: 'pressrelease'
-  fields:
-    <<: *record_defaults
-    author:
-      label: "Author(s)"
-      type: text
-      postfix: "Authors for pressreleases can be anyone, that's why this is a free textfield"
-    <<: *teaser_defaults
-    <<: *media_defaults
-    <<: *structure_defaults
-  taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_structures
-    <<: *relation_himentries
-  record_template: record_pressrelease.twig
-  listing_template: listing_pressreleases.twig
-  recordsperpage: 100
-  icon_many: "fa:newspaper-o"
-  icon_one: "fa:newspaper-o"
-  sort: -datepublish
-  show_in_menu: Ephemeral
-
-#################################
-#
-# STRUCTURE
-#
-#################################
-structures:
-  name: Structures
-  singular_name: Structure
-  fields:
-    <<: *record_defaults
-    suffix:
-      type: html
-      label: "Suffix"
-      height: 150px
-      postfix: "Text after listing on structure page."
-    <<: *teaser_defaults
-    <<: *media_defaults
-    <<: *structure_defaults
-    template:
-      type: templateselect
-      filter: 'record_*.twig'
-    default_content:
-      type: select
-      label: "Default content type"
-      multiple: false
-      values: { default: default, pages: pages, blogposts: blogposts, events: events, persons:persons, pressreleases: pressreleases }
-      postfix: "Choose a content type if you selected a listing template that does not have a default content type set."
-    subclass:
-      type: select
-      label: "Subsite theme"
-      values: ['none', 'europeana_subsite_cloud', 'europeana_subsite_creative', 'europeana_subsite_enumerate']
-      prefix: "<hr><h2>Subsite Settings</h2>"
-      group: "Subsite settings"
-    footer:
-      type: select
-      label: 'Subsite footer'
-      values: footer/id,title
-    date_start:
-      type: date
-      required: false
-      label: "Project start:"
-      variant: inline
-    date_end:
-      type: date
-      required: false
-      label: "Project end:"
-      variant: inline
-  taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_persons
-    <<: *relation_himentries
-  record_template: record_structure.twig
-  listing_template: listing_structures.twig
-  icon_many: "fa:cubes"
-  icon_one: "fa:cube"
-
-#################################
-#
-# PAGE
-#
-#################################
-pages:
-  name: Pages
-  singular_name: Page
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    <<: *media_defaults
-    <<: *structure_defaults
-    template:
-      type: templateselect
-      filter: 'record_*.twig'
-  taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
-  record_template: record_page.twig
-  listing_template: listing_pages.twig
-  recordsperpage: 50
-  icon_many: "fa:files-o"
-  icon_one: "fa:file"
-
-#################################
-#
-# HOMEPAGE
-#
-#################################
-homepage:
-  name: Homepage
-  singular_name: Homepage
-  fields:
-    title:
-      type: text
-      required: false
-      group: "Hero image"
-    bannerimage:
-      type: image
-      attrib: title
-      extensions: [ gif, jpg, png ]
-      required: true
-      label: "Banner Image (required):"
-      group: "Hero image"
-    imageattribution:
-      label: Image Attribution
-      type: text
-      group: "Hero image"
-    imagelicense:
-      label: Image License
-      type: select
-      values: [ 'CC0', 'CC-BY', 'CC-BY-SA', 'CC-BY-NC', 'CC-BY-NC-SA', 'Public Domain' ]
-      group: "Hero image"
-    brandcolour:
-      label: Color of graphic
-      type: select
-      values: { brand-colour-site : "Europeana Green", brand-colour-white : "White", brand-colour-black : "Black" }
-      group: "Hero graphic"
-    brandopacity:
-      label: Transparency of graphic
-      type: select
-      values: { brand-opacity25 : "25 percent", brand-opacity50 : "50 percent", brand-opacity75 : "75 percent", brand-opacity100 : "Not transparent" }
-      group: "Hero graphic"
-    brandlocation:
-      label: Location of graphic
-      type: select
-      values: { brand-topleft : "Top left", brand-topright  : "Top right", brand-bottomleft  : "Bottom left", brand-bottomright : "Bottom right"  }
-      group: "Hero graphic"
-    bannertext:
-      type: html
-      required: true
-      label: "Banner Text (required):"
-      variant: inline
-      class: wide
-      group: "Hero graphic"
-    bannerlink:
-      type: text
-      required: false
-      label: ".. or Banner link:"
-      variant: inline
-      prefix: "<em>URL has to start with http:// or https://</em>"
-      postfix: "(at least one of the above boxes is required)"
-      pattern: url
-      class: narrow
-      group: "Hero graphic"
-    subtitle:
-      type: html
-      required: true
-      label: "Intro text (required):"
-      height: 150px
-      group: "Hero graphic"
-    callout_1:
-      type: html
-      height: 150px
-      group: "CTA, Links"
-    callout_2:
-      type: html
-      height: 150px
-    callout_3:
-      type: html
-      height: 150px
-    callout_4:
-      type: html
-      height: 150px
-    callout_5:
-      type: html
-      height: 150px
-    callout_6:
-      type: html
-      height: 150px
-    use_manual_1:
-      type: checkbox
-      label: "Use this settings:"
-      group: "Latest 1"
-    flag_colour_1:
-      label: "Color of flag 1: "
-      type: select
-      values: { category_1 : "Orange", category_2 : "Yellow", category_3 : "Blue", category_4 : "Raspberry", category_5 : "Jade green"}
-      group: "Latest 1"
-    flag_label_1:
-      label: "Label of flag 1:"
-      type: text
-      class: narrow
-      group: "Latest 1"
-    latest_title_1:
-      label: "Title of update 2:"
-      type: text
-      class: narrow
-      group: "Latest 1"
-    latest_teaser_1:
-      label: "Teaser for update 1:"
-      type: html
-      required: true
-      height: 150px
-      group: "Latest 1"
-    latest_image_1:
-      label: "Image for update 1: "
-      type: image
-      attrib: title
-      group: "Latest 1"
-    latest_url_1:
-      label: "Url for update 1: "
-      type: text
-      required: false
-      variant: inline
-      class: narrow
-      prefix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-      group: "Latest 1"
-    use_manual_2:
-      type: checkbox
-      label: "Use this settings:"
-      group: "Latest 2"
-    flag_colour_2:
-      label: "Color of flag 2: "
-      type: select
-      values: { category_1 : "Orange", category_2 : "Yellow", category_3 : "Blue", category_4 : "Raspberry", category_5 : "Jade green"}
-      group: "Latest 2"
-    flag_label_2:
-      label: "Label of flag 2:"
-      type: text
-      class: narrow
-      group: "Latest 2"
-    latest_title_2:
-      label: "Title of update 2:"
-      type: text
-      class: narrow
-      group: "Latest 2"
-    latest_teaser_2:
-      label: "Teaser for update 2:"
-      type: html
-      required: true
-      height: 150px
-      group: "Latest 2"
-    latest_image_2:
-      label: "Image for update 2: "
-      type: image
-      attrib: title
-      group: "Latest 2"
-    latest_url_2:
-      label: "Url for update 2: "
-      type: text
-      required: false
-      variant: inline
-      class: narrow
-      prefix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-      group: "Latest 2"
-    use_manual_3:
-      type: checkbox
-      label: "Use this settings:"
-      group: "Latest 3"
-    flag_colour_3:
-      label: "Color of flag 3: "
-      type: select
-      values: { category_1 : "Orange", category_2 : "Yellow", category_3 : "Blue", category_4 : "Raspberry", category_5 : "Jade green"}
-      group: "Latest 3"
-    flag_label_3:
-      label: "Label of flag 3:"
-      type: text
-      class: narrow
-      group: "Latest 3"
-    latest_title_3:
-      label: "Title of update 3:"
-      type: text
-      group: "Latest 3"
-      class: narrow
-    latest_teaser_3:
-      label: "Teaser for update 3:"
-      type: html
-      required: true
-      height: 150px
-      group: "Latest 3"
-    latest_image_3:
-      label: "Image for update 3: "
-      type: image
-      attrib: title
-      group: "Latest 3"
-    latest_url_3:
-      label: "Url for update 3: "
-      type: text
-      required: false
-      variant: inline
-      class: narrow
-      prefix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-      group: "Latest 3"
-    subsite:
-      type: select
-      values: ['unknown', 'him', 'labs', 'pro', 'research', 'zoho']
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
-  viewless: true
-  icon_many: "fa:home"
-  icon_one: "fa:home"
-  show_in_menu: Global
 
 #################################
 #
@@ -1537,6 +1565,8 @@ resources:
   icon_many: "fa:tasks"
   icon_one: "fa:tasks"
 
+#################################
+#################################
 
 #################################
 #
