@@ -1431,7 +1431,7 @@ organisations:
       type: checkbox
       required: false
       label: "This is the main Europeana office (appear in footer):"
-  record_template: record_organisationn.twig
+  record_template: record_organisations.twig
   listing_template: listing_organisation.twig
   icon_many: "fa:map-marker"
   icon_one: "fa:map-marker"
