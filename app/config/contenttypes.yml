@@ -157,13 +157,22 @@ __nodes:
     contact_record:
       type: select
       label: "Contact record"
-      multiple: true
+      multiple: false
       values: persons/id,first_name,last_name
-      group: Hierarchy
+      group: Support contact
+      prefix: '<div><h3>Support Contact</h3><p>The support contact is usually a europeana staff member who is designated as the primary contact about the current record.</p></div>'
       postfix: '<p>Use this to select a contact to display along this record. If nothing is selected the contact for the parent structure will be selected</p>'
+    contact_blurb:
+      type: html
+      required: false
+      label: "Contact blurb"
+      height: 150px
+      postfix: '<p>Use this field to override the introduction from the contact record with a custom blurb.</p>'
+      group: Support contact
     template: &template_defaults
       type: templateselect
       filter: 'record_*.twig'
+      group: Hierarchy
   him_sub_defaults: &him_sub_defaults
     entryid:
       type: text
@@ -860,88 +869,25 @@ persons:
       postfix: "<em><small>(required)</small></em>"
       variant: inline
       class: narrow
-    slug:
-      type: slug
-      uses: [ first_name, last_name ]
-    subsite:
-      type: select
-      values: ['unknown', 'him', 'labs', 'pro', 'research', 'zoho']
-    introduction:
-      type: html
-      label: "Introduction (120 chars MAX)"
-      pattern: "^.{1,120}$"
-      height: 150px
-    description:
-      type: html
-      required: false
-      label: "Description:"
-      height: 150px
-    image:
-      type: image
-      label: "Image"
-      attrib: title
-      extensions: [ gif, jpg, png ]
-    public_photo:
-      label: "Show photo on website"
-      type: select
-      values: ["false", "true"]
+      group: "Personal"
     email:
       type: text
       label: "Email address"
       variant: inline
       pattern: email
       class: narrow
-      group: "Contact"
-    public_email:
-      type: text
-      required: false
-      label: "Public email:"
-      variant: inline
-      pattern: email
-      class: narrow
     phone:
       type: text
-      label: "Work phone"
+      label: "Public phone number"
       variant: inline
       class: narrow
       postfix: <small>Format: +31 (0)12 345 6789</small>
-    public_phone:
-      type: text
-      required: false
-      label: "Public phone:"
-      variant: inline
-      postfix: "<em>Allowed values are numbers, spaces, (, ), + and - </em>"
-      pattern: '^[0-9+ -()]*$'
-      class: narrow
     twitter:
       type: text
       label: "Twitter URL"
       variant: inline
       postfix: '<em>For example "https://twitter.com/Europeanaeu" </em>'
       pattern: url
-      class: narrow
-    secondary_email:
-      type: text
-      required: false
-      label: "Secondary email address:"
-      variant: inline
-      pattern: email
-      class: narrow
-    telephone_number:
-      type: text
-      required: false
-      label: "Telephone number:"
-      variant: inline
-      postfix: "<em>Allowed values are numbers, spaces, (, ), + and - </em>"
-      pattern: '^[0-9+ -()]*$'
-      class: narrow
-    other_number:
-      type: text
-      required: false
-      label: "Other number:"
-      variant: inline
-      postfix: "<em>Allowed values are numbers, spaces, (, ), + and - </em>"
-      pattern: '^[0-9+ -]*$'
       class: narrow
     linkedin:
       type: text
@@ -957,43 +903,59 @@ persons:
       label: "Skype ID:"
       variant: inline
       class: narrow
-    other_links_1:
-      type: text
+    image:
+      type: image
+      label: "Image"
+      attrib: title
+      extensions: [ gif, jpg, png ]
+    introduction:
+      type: html
+      label: "Introduction (Main Bio)"
+      height: 200px
+      group: "Personal"
+    speaker_teaser:
+      type: html
       required: false
-      label: "Other link:"
-      variant: inline
-      postfix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-      class: narrow
-      group: "Links"
-    other_links_2:
-      type: text
+      label: "Speaker Teaser"
+      height: 100px
+      group: "Personal"
+      prefix: "<div><h3>Speaker introduction</h3><p>Enter a short introduction for use on event pages where this person is a speaker.</p><br></div>"
+    speaker_intro:
+      type: html
       required: false
-      label: "Other link:"
-      variant: inline
-      postfix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-      class: narrow
-    other_links_3:
-      type: text
+      label: "Speaker Introduction"
+      height: 200px
+      group: "Personal"
+    candidacy_teaser:
+      type: html
       required: false
-      label: "Other link:"
-      variant: inline
-      postfix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-      class: narrow
+      label: "Candicacy Teaser"
+      height: 100px
+      group: "Personal"
+      prefix: "<div><h3>MC Election Candidacy</h3><p>Enter a short introduction for use on membership election pages where this person is a elegible.</p><br></div>"
+    candidacy_intro:
+      type: html
+      required: false
+      label: "Candicacy Introduction"
+      height: 200px
+      group: "Personal"
     company:
       type: text
       required: false
-      label: "Company:"
+      label: "Company"
       postfix: (if not Europeana Foundation)
       variant: inline
       class: narrow
       group: "Company"
+    job_title:
+      type: text
+      label: "Job Title"
+      variant: inline
+      class: narrow
     company_url:
       type: text
       required: false
-      label: "Company URL:"
+      label: "Company URL"
       postfix: (if not Europeana Foundation)
       pattern: url
       variant: inline
@@ -1010,40 +972,10 @@ persons:
       class: narrow
       variant: inline
       label: "Sector"
-    job_title:
-      type: text
-      label: "Job Title"
-      variant: inline
-      class: narrow
-    contact_blogpost:
-      type: checkbox
-      label: "Main contact of the blog"
-      group: "Main Contact Options"
-    contact_event:
-      type: checkbox
-      label: "Main contact of events"
-    contact_job:
-      type: checkbox
-      label: "Main contact of the jobs page"
-    contact_person:
-      type: checkbox
-      label: "Main contact of the staff page"
-    contact_publication:
-      type: checkbox
-      label: "Main contact of the publications page"
-    contact_pressrelease:
-      type: checkbox
-      label: "Main contact of the press releases page"
-    contact_taskforce:
-      type: checkbox
-      label: "Main contact of the task forces page"
-    contact_tag:
-      type: checkbox
-      label: "Main contact of tag page"
     team:
       type: select
       required: false
-      label: "Team:"
+      label: "Team"
       values:
         "(not set)": "(not set)"
         "Management": "Management"
@@ -1059,7 +991,7 @@ persons:
         "Technology": "Software Development"
         "Infrastructure": "Infrastructure"
         "The European Library": "The European Library"
-      group: "Europeana internal"
+      group: "Europeana Networks"
     boardposition:
       type: text
       required: false
@@ -1098,7 +1030,6 @@ persons:
         "MC Election Candidate": "MC Election Candidate"
         "Observer": "Observer"
         "Friend of Europeana": "Friend of Europeana"
-      group: "Network"
     community:
       type: select
       required: false
@@ -1128,22 +1059,12 @@ persons:
         "(not set)": "(not set)"
         "false": "false"
         "true": "true"
-    candidacy_teaser:
-      type: html
-      required: false
-      label: "Candicacy Teaser:"
-      height: 150px
-      group: "MC election"
-    candidacy_intro:
-      type: html
-      required: false
-      label: "Candicacy Introduction:"
-      height: 200px
     uid:
       type: text
       class: narrow
       variant: inline
-      group: "ZOHO"
+      group: meta
+      prefix: "<div><h3>Zoho data</h3></div>"
     europeana_id:
       type: text
       class: narrow
@@ -1195,38 +1116,25 @@ persons:
         "false": "false"
         "true": "true"
     <<: *structure_defaults
+    slug:
+      type: slug
+      uses: [ first_name, last_name ]
+    subsite:
+      type: select
+      label: "Subsite"
+      values:
+        unknown: Unknown
+        pro: Europeana Pro
+        labs: Europeana Labs
+        research: Europeana Research
+        zoho: ZOHO CRM
+        him: Heritage in motion
   taxonomy: [ teams, tags ]
   <<: *all_relations
   record_template: record_person.twig
   listing_template: listing_persons.twig
   icon_many: "fa:users"
   icon_one: "fa:user"
-
-#################################
-#
-# Organisation
-#
-#################################
-organisations:
-  name: Organisations
-  singular_name: Organisation
-  fields:
-    <<: *record_defaults
-    europeana_place:
-      type: checkbox
-      prefix: "<hr>"
-      required: false
-      label: "This is a Europeana place of work:"
-      group: "Secondary information"
-    europeana_office:
-      type: checkbox
-      required: false
-      label: "This is the main Europeana office (appear in footer):"
-  record_template: record_organisations.twig
-  listing_template: listing_organisation.twig
-  icon_many: "fa:map-marker"
-  icon_one: "fa:map-marker"
-  show_in_menu: Global
 
 #################################
 #
@@ -1241,18 +1149,17 @@ locations:
     geolocation:
       type: geolocation
       required: true
-      label: "Location (required):"
+      label: "Location (required)"
       group: "Location"
     europeana_place:
       type: checkbox
       prefix: "<hr>"
       required: false
-      label: "This is a Europeana place of work:"
-      group: "Secondary information"
+      label: "This is a Europeana place of work"
     europeana_office:
       type: checkbox
       required: false
-      label: "This is the main Europeana office (appear in footer):"
+      label: "This is the main Europeana office (appear in footer)"
   record_template: record_location.twig
   listing_template: listing_locations.twig
   icon_many: "fa:map-marker"
@@ -1276,9 +1183,6 @@ resources:
       label: "Title (required)"
       postfix: "Resource blocks will be loaded on pages that they are related to if the template uses them. On landing pages they can also be set as footers for a subtree."
       group: "Content"
-    subsite:
-      type: select
-      values: ['unknown', 'him', 'labs', 'pro', 'research', 'zoho']
     image:
       type: image
       label: "Block image"
@@ -1301,6 +1205,17 @@ resources:
     cssid:
       type: text
       label: "CSS ID (optional)"
+    subsite:
+      type: select
+      label: "Subsite"
+      values:
+        unknown: Unknown
+        pro: Europeana Pro
+        labs: Europeana Labs
+        research: Europeana Research
+        zoho: ZOHO CRM
+        him: Heritage in motion
+      group: meta
   <<: *all_relations
   viewless: true
   show_in_menu: Global
