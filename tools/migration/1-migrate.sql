@@ -79,8 +79,8 @@ INSERT INTO europeana_cope.bolt_collections ( subsite, subsite_id, slug, datecre
     r.slug, r.datecreated, r.datechanged, r.datepublish, r.datedepublish, r.username, r.ownerid, r.status, r.title, r.intro, r.teaser, r.body, r.teaser_image, r.secondary_mail, r.hide_list, r.filelist_files, r.filelist_downloads, r.hide_related, r.hide_related_section, r.listtitle, r.imagelist, r.liststyle, r.support_navigation, r.source, r.source_url, r.templatefields, r.structure_parent, r.structure_sortorder
 FROM europeana_research.bolt_collections r;
 
-DROP TABLE IF EXISTS bolt_apps;
-CREATE TABLE IF NOT EXISTS bolt_apps (
+DROP TABLE IF EXISTS bolt_applications;
+CREATE TABLE IF NOT EXISTS bolt_applications (
   id int(11) NOT NULL AUTO_INCREMENT, # all
   slug varchar(128) NOT NULL DEFAULT '', # all
   datecreated datetime NOT NULL, # all
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS bolt_apps (
   PRIMARY KEY (id)
 );
 
-INSERT INTO europeana_cope.bolt_apps ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, image, link1, link2, link3, contact_name, contact_email, contact_website, templatefields, hero
+INSERT INTO europeana_cope.bolt_applications ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, image, link1, link2, link3, contact_name, contact_email, contact_website, templatefields, hero
 ) SELECT 'labs', a.id,
   a.slug, a.datecreated, a.datechanged, a.datepublish, a.datedepublish, a.username, a.ownerid, a.status, a.title, a.intro, a.teaser, a.body, a.image, a.link1, a.link2, a.link3, a.contact_name, a.contact_email, a.contact_website, a.templatefields, a.hero
 FROM europeana_labs.bolt_apps a;

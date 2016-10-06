@@ -8,30 +8,18 @@ __nodes:
       required: true
       postfix: "The main title is shown on individual pages as the page title and on listings. Also used for related content teasers"
       group: Main
-    slug:
-      type: slug
-      uses: title
-    subsite:
-      type: select
-      label: "Subsite"
-      values:
-        unknown: Unknown
-        pro: Europeana Pro
-        labs: Europeana Labs
-        research: Europeana Research
-        zoho: ZOHO CRM
-        him: Heritage in motion
-      postfix: "The site this content was imported from."
     intro:
       type: html
       label: "Intro"
       height: 150px
       postfix: "Shown on individual pages before the main body text"
+      group: Main
     body:
       type: html
       label: "Body (required)"
       height: 300px
       postfix: "Shown on individual pages as main body text"
+      group: Main
   teaser_defaults: &teaser_defaults
     teaser:
       type: html
@@ -65,19 +53,6 @@ __nodes:
       variant: inline
       class: narrow
       group: "External contact"
-  display_defaults: &display_defaults
-    hide_list:
-      type: checkbox
-      label: "Hide from list views"
-      postfix: "Check to hide this page from listings."
-    hide_related:
-      type: checkbox
-      label: "Hide from related content"
-      postfix: "Check to hide this page from related content sections."
-    support_navigation:
-      type: checkbox
-      label: "Support navigation"
-      postfix: "Check to automatically generate support navigation from the headings in the main body text."
   media_defaults: &media_defaults
     image:
       type: image
@@ -134,15 +109,28 @@ __nodes:
       variant: inline
       class: narrow
       pattern: ^.{0,250}$
+      prefix: '<div><h3>Call To Action Button</h3><p>You can add a call to action button to the bottom of the body text of this record.</p><br></div>'
     calltoactionlink:
       type: text
       required: false
       label: "Call to Action Link"
       variant: inline
       class: narrow
-      postfix: "<em>A full URL has to start with <b>http://</b> or <b>https://</b> Internal links are also possible.</em>"
+      postfix: "<em>If you want to use a full URL it has to start with a protocol like <b>http://</b> or <b>https://</b><br>Internal links are also possible, for internal links the protocol and the domain is not needed.</em>"
       pattern: url
   structure_defaults: &structure_defaults
+    subsite:
+      type: select
+      label: "Subsite"
+      values:
+        unknown: Unknown
+        pro: Europeana Pro
+        labs: Europeana Labs
+        research: Europeana Research
+        zoho: ZOHO CRM
+        him: Heritage in motion
+      postfix: "The site this content was imported from."
+      group: Hierarchy
     structure_parent:
       type: select
       default: ''
@@ -153,6 +141,25 @@ __nodes:
     structure_sortorder:
       type: integer
       label: "Sort order in structure tree parent"
+      group: Hierarchy
+    slug:
+      type: slug
+      uses: title
+      group: Hierarchy
+    hide_list:
+      type: checkbox
+      label: "Hide from list views"
+      postfix: "Check to hide this page from listings."
+      group: Hierarchy
+    hide_related:
+      type: checkbox
+      label: "Hide from related content"
+      postfix: "Check to hide this page from related content sections."
+      group: Hierarchy
+    support_navigation:
+      type: checkbox
+      label: "Support navigation"
+      postfix: "Check to automatically generate support navigation from the headings in the main body text."
       group: Hierarchy
     contact_record:
       type: select
@@ -222,8 +229,8 @@ __nodes:
       multiple: true
       order: -datepublish
       format: "{{ item.title|escape }}"
-  relation_apps: &relation_apps
-    apps:
+  relation_applications: &relation_applications
+    applications:
       label: "Apps"
       multiple: true
       order: title
@@ -302,7 +309,7 @@ __nodes:
       <<: *relation_blogposts
       <<: *relation_pressreleases
       <<: *relation_publications
-      <<: *relation_apps
+      <<: *relation_applications
       <<: *relation_data
       <<: *relation_documentation
       <<: *relation_collections
@@ -363,7 +370,7 @@ structures:
     <<: *relation_blogposts
     <<: *relation_pressreleases
     <<: *relation_publications
-    <<: *relation_apps
+    <<: *relation_applications
     <<: *relation_data
     <<: *relation_documentation
     <<: *relation_collections
@@ -426,11 +433,8 @@ blogposts:
       values: persons/last_name,first_name
       keys: id
       multiple: true
-    hero:
-      type: html
-      label: "'Hero' block contents:"
-    <<: *media_defaults
     <<: *teaser_defaults
+    <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
@@ -460,6 +464,10 @@ pressreleases:
       postfix: "Authors for pressreleases can be anyone, that's why this is a free textfield"
     <<: *teaser_defaults
     <<: *media_defaults
+    imagegallery:
+      type: imagelist
+      label: "Images gallery (optional)"
+      postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
@@ -482,13 +490,14 @@ publications:
   fields:
     <<: *record_defaults
     <<: *teaser_defaults
-    <<: *media_defaults
     isbn:
       type: text
       required: false
       label: "ISBN:"
       variant: inline
       group: "ISBN"
+    <<: *contact_defaults
+    <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
@@ -504,19 +513,22 @@ publications:
 # APPS
 #
 #################################
-apps:
+Applications:
   name: Apps
   singular_name: App
+  slug: applications
+  singular_slug: application
   fields:
     <<: *record_defaults
     <<: *teaser_defaults
     <<: *link_defaults
     <<: *contact_defaults
+    <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ appthemes, appcategories, tags ]
   <<: *all_relations
-  record_template: record_app.twig
-  listing_template: listing_apps.twig
+  record_template: record_application.twig
+  listing_template: listing_applications.twig
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
@@ -533,7 +545,6 @@ data:
   fields:
     <<: *record_defaults
     <<: *teaser_defaults
-    <<: *media_defaults
     provided_by:
       type: text
       required: false
@@ -566,6 +577,7 @@ data:
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
     <<: *contact_defaults
+    <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ tags, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
   <<: *all_relations
@@ -587,9 +599,8 @@ documentation:
   fields:
     <<: *record_defaults
     <<: *teaser_defaults
-    <<: *media_defaults
     <<: *link_defaults
-    <<: *display_defaults
+    <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
@@ -623,10 +634,6 @@ collections:
       variant: inline
       postfix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
-    support_navigation:
-      type: markdown
-      label: "Support navigation:"
-    <<: *display_defaults
     <<: *media_defaults
     <<: *structure_defaults
     template:
@@ -720,21 +727,7 @@ projects:
       variant: inline
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
-    logo:
-      type: image
-      required: false
-      label: "Project logo:"
-      extensions: [ gif, jpg, png ]
-    filelist:
-      type: filelist
-      required: true
-      label: "Downloads:"
-      group: "Secondary information"
-    filelist_downloads:
-      type: text
-      class: narrow
-      label: "Document folder:"
-      postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
+    <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
@@ -777,7 +770,6 @@ events:
       required: false
       label: "Unconfirmed"
     <<: *media_defaults
-    <<: *display_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
@@ -796,22 +788,23 @@ jobs:
   name: Jobs
   singular_name: Job
   fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
     position:
       type: text
       required: true
-      label: "Position (required):"
+      label: "Position (required)"
       variant: inline
       class: wide
       group: "Job information"
-    slug:
-      type: slug
-      uses: position
+    body:
+      type: html
+      label: "Body (required)"
+      height: 300px
+      postfix: "Shown on individual pages as main body text"
+      group: "Job information"
     department:
       type: select
       required: false
-      label: "Position will be in this team:"
+      label: "Position will be in this team"
       values:
         - 'Management'
         - 'People & Business Support'
@@ -826,29 +819,37 @@ jobs:
         - 'Software Development'
         - 'Infrastructure'
         - 'The European Library'
+      group: "Job information"
     postion_type:
       type: select
       required: false
-      label: "Contract type:"
+      label: "Contract type"
       values: [ "Full time", "Part time", "Internship", "Full time (Maternity cover)", "Full time (Temp)", "Part time (Temp)" ]
+      group: "Job information"
     salary_eur:
       type: text
       required: false
       variant: inline
-      label: "Monthly salary (EUR):"
+      label: "Monthly salary (EUR)"
       index: true
+      group: "Job information"
     scale_eur:
       type: text
       required: false
       variant: inline
-      label: "Scale (EUR):"
+      label: "Scale (EUR)"
       index: true
+      group: "Job information"
     deadline:
       type: date
       required: false
       label: "Deadline"
+      group: "Job information"
     <<: *media_defaults
     <<: *structure_defaults
+    slug:
+      type: slug
+      uses: position
   taxonomy: [ tags ]
   <<: *all_relations
   record_template: record_job.twig
