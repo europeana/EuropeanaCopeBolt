@@ -23,7 +23,7 @@ __nodes:
         him: Heritage in motion
       postfix: "The site this content was imported from."
     intro:
-      type: textarea
+      type: html
       label: "Intro"
       height: 150px
       postfix: "Shown on individual pages before the main body text"
@@ -191,9 +191,6 @@ __nodes:
       label: User Name
     slug:
       type: slug
-    subsite:
-      type: select
-      values: ['unknown', 'him', 'labs', 'pro', 'research', 'zoho']
   relation_structures: &relation_structures
     structures:
       label: "Structures"
@@ -323,8 +320,10 @@ __nodes:
 #
 #################################
 structures:
-  name: Structures
+  name: Structures and Landingpages
   singular_name: Structure
+  slug: structures
+  singular_slug: structure
   fields:
     <<: *record_defaults
     suffix:
@@ -380,7 +379,6 @@ structures:
   listing_template: listing_structures.twig
   icon_many: "fa:cubes"
   icon_one: "fa:cube"
-  show_in_menu: Global
 
 #################################
 #
@@ -439,9 +437,9 @@ blogposts:
   record_template: record_blogpost.twig
   listing_template: listing_blogposts.twig
   recordsperpage: 100
+  sort: -datepublish
   icon_many: "fa:quote-left"
   icon_one: "fa:quote-right"
-  sort: -datepublish
   show_in_menu: Ephemeral
 
 #################################
@@ -468,9 +466,9 @@ pressreleases:
   record_template: record_pressrelease.twig
   listing_template: listing_pressreleases.twig
   recordsperpage: 100
+  sort: -datepublish
   icon_many: "fa:newspaper-o"
   icon_one: "fa:newspaper-o"
-  sort: -datepublish
   show_in_menu: Ephemeral
 
 #################################
@@ -573,7 +571,7 @@ data:
   <<: *all_relations
   record_template: record_data.twig
   listing_template: listing_data.twig
-  recordsperpage: 1000
+  recordsperpage: 100
   icon_many: "fa:object-group"
   icon_one: "fa:object-group"
   show_in_menu: Core business
@@ -649,31 +647,44 @@ collections:
 #
 #################################
 taskforces:
-  name: TaskForces
-  singular_name: TaskForce
+  name: Task Forces and Working Groups
+  slug: taskforces
+  singular_name: Task Force
+  singular_slug: taskforce
   fields:
     <<: *record_defaults
     <<: *teaser_defaults
-    department:
-      type: select
-      label: "Department:"
-      values: [ "Europeana Network", "Europeana Tech" ]
-      group: "Taskforce"
     subtitle:
       type: text
       required: false
-      label: "Subtitle:"
+      label: "Subtitle"
       variant: inline
+      group: "Taskforce"
+    tf_or_wg:
+      type: select
+      required: true
+      multiple: false
+      default: "TaskForce"
+      label: "TaskForce or WorkingGroup"
+      values: [ "TaskForce", "WorkingGroup" ]
+      group: "Taskforce"
+    department:
+      type: select
+      label: "Department"
+      values: [ "Europeana Network", "Europeana Tech" ]
+      group: "Taskforce"
     date_start:
       type: date
       required: false
-      label: "Expected timeframe start:"
+      label: "Expected timeframe start"
       format: "{{d.Y}}"
+      group: "Taskforce"
     date_end:
       type: date
       required: false
-      label: "Expected timeframe end:"
+      label: "Expected timeframe end"
       format: "{{d.Y}}"
+      group: "Taskforce"
     <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
@@ -840,9 +851,9 @@ jobs:
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  sort: -datepublish
   record_template: record_job.twig
   listing_template: listing_jobs.twig
+  sort: -datepublish
   icon_many: "fa:money"
   icon_one: "fa:money"
   show_in_menu: Ephemeral
@@ -1164,7 +1175,7 @@ locations:
   listing_template: listing_locations.twig
   icon_many: "fa:map-marker"
   icon_one: "fa:map-marker"
-  show_in_menu: Global
+  show_in_menu: System
 
 #################################
 #
@@ -1175,8 +1186,10 @@ locations:
 #
 #################################
 resources:
-  name : Resources
-  singular_name: Resource
+  name : Resource blocks
+  singular_name: Resource block
+  slug: resources
+  singular_slug: resource
   fields:
     title:
       type: text
@@ -1218,10 +1231,10 @@ resources:
       group: meta
   <<: *all_relations
   viewless: true
-  show_in_menu: Global
   sort: weight
   icon_many: "fa:tasks"
   icon_one: "fa:tasks"
+  show_in_menu: System
 
 #################################
 #################################
@@ -1394,8 +1407,8 @@ himentries:
   listing_template: listing_himentries.twig
   listing_records: 10
   default_status: draft
-  sort: -id
   recordsperpage: 10
+  sort: -id
   icon_many: "fa:trophy"
   icon_one: "fa:play-circle"
   show_in_menu: HiM
