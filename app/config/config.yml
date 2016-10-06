@@ -459,3 +459,6 @@ hash_strength: 10
 #        disable: true     # Disable news panel. Defaults to false. "Alerts" will still be shown.
 #    stack:
 #        disable: true     # Disable stack usage. Defaults to false.
+backend:
+    stack:
+        disable: true
