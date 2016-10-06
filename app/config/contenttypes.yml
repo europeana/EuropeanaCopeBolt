@@ -236,9 +236,18 @@ structures:
     <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
+    structuretype:
+      type: select
+      label: "Type of structure"
+      values:
+        structure: Normal structure
+        landingpage: Landing page
+        listingpage: Listing page
+        homepage: Global homepage
+        subsite: Subsite homepage
     template:
       type: templateselect
-      filter: 'record_*.twig'
+      filter: 'record_structure_*.twig'
     default_content:
       type: select
       label: "Default content type"
