@@ -6,35 +6,37 @@ __nodes:
       label: "Title (required)"
       variant: inline
       required: true
-      postfix: "Shown on Individual pages, Lists, Overviews, Teasers"
+      postfix: "The main title is shown on individual pages as the page title and on listings. Also used for related content teasers"
       group: Main
     slug:
       type: slug
       uses: title
     subsite:
       type: select
+      label: "Subsite"
       values: ['unknown', 'him', 'labs', 'pro', 'research', 'zoho']
+      postfix: "The site this content was imported from."
     intro:
       type: textarea
       label: "Intro"
       height: 150px
-      postfix: "Shown on Individual pages"
+      postfix: "Shown on individual pages before the main body text"
     body:
       type: html
       label: "Body (required)"
       height: 300px
-      postfix: "Shown on Individual pages"
+      postfix: "Shown on individual pages as main body text"
   teaser_defaults: &teaser_defaults
     teaser:
       type: html
       label: "Teaser (required)"
       height: 150px
-      postfix: "Shown on Teasers"
+      postfix: "The teaser is shown on listing pages instead of the intro and body fields. Also used for related content teasers"
       group: Teaser
     teaser_image:
       type: image
       label: "Teaser image"
-      postfix: "Shown on Teasers"
+      postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers"
   contact_defaults: &contact_defaults
     contact_name:
       type: text
@@ -56,61 +58,40 @@ __nodes:
       variant: inline
       class: narrow
   display_defaults: &display_defaults
-    secondary_mail:
-      type: checkbox
-      label: "Show secondary email instead:"
-      group: Display settings
     hide_list:
       type: checkbox
       label: "Hide from list views:"
-      postfix: "Check to hide this page from overview."
+      postfix: "Check to hide this page from listings."
     hide_related:
       type: checkbox
       label: "Hide from related content:"
       postfix: "Check to hide this page from related content sections."
-    hide_related_section:
-      type: checkbox
-      label: "Hide related content section:"
-      postfix: "Check to hide the related content section."
-    liststyle:
-      type: select
-      label: "Style modifier"
-      values: ['default', 'fivecols']
     support_navigation:
-      type: markdown
+      type: checkbox
       label: "Support navigation:"
+      postfix: "Check to automatically generate support navigation from the headings in the main body text."
   media_defaults: &media_defaults
     image:
       type: image
-      label: "Full image"
+      label: "Main image"
       attrib: title
-      postfix: "Shown on Individual pages"
+      postfix: "The main image is displayed on individual pages."
       required: true
       extensions: [ gif, jpg, png ]
       group: "Media"
-    files:
-      type: filelist
-      required: false
-      label: "Files:"
-    listtitle:
-      type: text
-      default: "Image Grid"
-      required: false
-      variant: inline
-    imagelist:
+    imagegallery:
       type: imagelist
-      label: "Grid images for subsites:"
-    filelist_files:
+      label: "Images gallery (optional)"
+      postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
+    attachments:
       type: filelist
-      label: "Attachments:"
+      required: false
+      label: "Attachments (optional)"
     filelist_downloads:
       type: text
       class: narrow
       label: "Document folder:"
       postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
-    attachments:
-      type: filelist
-      group: Attachments
   link_defaults: &link_defaults
     link1:
       type: text
