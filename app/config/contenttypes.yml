@@ -249,6 +249,11 @@ structures:
       type: select
       label: "Subtheme"
       values: ['none', 'europeana_subsite_cloud', 'europeana_subsite_creative', 'europeana_subsite_enumerate']
+    footers:
+      type: select
+      label: "Footer resources"
+      values: resources/id,title
+      postfix: "Choose one or more footer reource blocks. The resources will be used as footers for the whole substructure"
   taxonomy: [ tags ]
   relations:
     <<: *relation_pages
@@ -1249,7 +1254,7 @@ resources:
     title:
       type: text
       label: "Title (required)"
-      postfix: "Resource blocks will be loaded on pages that they are related to if the template uses them"
+      postfix: "Resource blocks will be loaded on pages that they are related to if the template uses them. On landing pages they can also be set as footers for a subtree."
       group: "Content"
     subsite:
       type: select
