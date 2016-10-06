@@ -14,7 +14,13 @@ __nodes:
     subsite:
       type: select
       label: "Subsite"
-      values: ['unknown', 'him', 'labs', 'pro', 'research', 'zoho']
+      values:
+        unknown: Unknown
+        pro: Europeana Pro
+        labs: Europeana Labs
+        research: Europeana Research
+        zoho: ZOHO CRM
+        him: Heritage in motion
       postfix: "The site this content was imported from."
     intro:
       type: textarea
@@ -40,35 +46,37 @@ __nodes:
   contact_defaults: &contact_defaults
     contact_name:
       type: text
+      label: "Name"
       required: false
-      label: "Name:"
       variant: inline
       class: narrow
-      group: "Contact"
+      group: "External contact"
     contact_email:
       type: text
+      label: "Email"
       required: false
-      label: "Email:"
       variant: inline
       class: narrow
+      group: "External contact"
     contact_website:
       type: text
+      label: "Website"
       required: false
-      label: "Website:"
       variant: inline
       class: narrow
+      group: "External contact"
   display_defaults: &display_defaults
     hide_list:
       type: checkbox
-      label: "Hide from list views:"
+      label: "Hide from list views"
       postfix: "Check to hide this page from listings."
     hide_related:
       type: checkbox
-      label: "Hide from related content:"
+      label: "Hide from related content"
       postfix: "Check to hide this page from related content sections."
     support_navigation:
       type: checkbox
-      label: "Support navigation:"
+      label: "Support navigation"
       postfix: "Check to automatically generate support navigation from the headings in the main body text."
   media_defaults: &media_defaults
     image:
@@ -79,24 +87,22 @@ __nodes:
       required: true
       extensions: [ gif, jpg, png ]
       group: "Media"
-    imagegallery:
-      type: imagelist
-      label: "Images gallery (optional)"
-      postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
     attachments:
       type: filelist
       required: false
       label: "Attachments (optional)"
+      group: "Media"
     filelist_downloads:
       type: text
       class: narrow
-      label: "Document folder:"
+      label: "Document folder"
       postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
+      group: "Media"
   link_defaults: &link_defaults
     link1:
       type: text
       required: false
-      label: "External link1:"
+      label: "External link 1"
       variant: inline
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
@@ -105,30 +111,59 @@ __nodes:
     link2:
       type: text
       required: false
-      label: "External link2:"
+      label: "External link 2"
       variant: inline
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
+      group: "Related External Links"
     link3:
       type: text
       required: false
-      label: "External link3:"
+      label: "External link 3"
       variant: inline
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
+      group: "Related External Links"
+  calltoaction_defaults: &calltoaction_defaults
+    calltoactiontext:
+      type: text
+      required: false
+      label: "Call to Action Text"
+      variant: inline
+      class: narrow
+      pattern: ^.{0,250}$
+    calltoactionlink:
+      type: text
+      required: false
+      label: "Call to Action Link"
+      variant: inline
+      class: narrow
+      postfix: "<em>A full URL has to start with <b>http://</b> or <b>https://</b> Internal links are also possible.</em>"
+      pattern: url
   structure_defaults: &structure_defaults
-    structure_sortorder:
-      type: integer
-      label: "Sort order in structure tree parent"
-      group: Hierarchy
     structure_parent:
       type: select
       default: ''
       values: structures/id,title
       autocomplete: true
       label: "Select structure tree parent"
+      group: Hierarchy
+    structure_sortorder:
+      type: integer
+      label: "Sort order in structure tree parent"
+      group: Hierarchy
+    contact_record:
+      type: select
+      label: "Contact record"
+      multiple: true
+      values: persons/id,first_name,last_name
+      group: Hierarchy
+      postfix: '<p>Use this to select a contact to display along this record. If nothing is selected the contact for the parent structure will be selected</p>'
+    template: &template_defaults
+      type: templateselect
+      filter: 'record_*.twig'
   him_sub_defaults: &him_sub_defaults
     entryid:
       type: text
@@ -150,54 +185,128 @@ __nodes:
     subsite:
       type: select
       values: ['unknown', 'him', 'labs', 'pro', 'research', 'zoho']
+  relation_structures: &relation_structures
+    structures:
+      label: "Structures"
+      multiple: true
+      order: -id
+      format: "{{ item.title|escape }}"
+      prefix: "<div><h3>Usage of relations</h3><p>Use these relations only for hard linking of items. For grouping items together the Tags are better suited.</p><br></div>"
   relation_pages: &relation_pages
     pages:
-      multiple: true
       label: "Pages"
+      multiple: true
       order: -id
       format: "{{ item.title|escape }}"
   relation_blogposts: &relation_blogposts
     blogposts:
-      multiple: true
       label: "Blogposts"
+      multiple: true
       order: -datepublish
+      format: "{{ item.title|escape }}"
+  relation_pressreleases: &relation_pressreleases
+    pressreleases:
+      label: "Press Releases"
+      multiple: true
+      order: -datepublish
+      format: "{{ item.title|escape }}"
+  relation_publications: &relation_publications
+    publications:
+      label: "Publications"
+      multiple: true
+      order: -datepublish
+      format: "{{ item.title|escape }}"
+  relation_apps: &relation_apps
+    apps:
+      label: "Apps"
+      multiple: true
+      order: title
+      format: "{{ item.title|escape }}"
+  relation_data: &relation_data
+    data:
+      label: "Data"
+      multiple: true
+      order: title
+      format: "{{ item.title|escape }}"
+  relation_documentation: &relation_documentation
+    documentation:
+      label: "Documentation"
+      multiple: true
+      order: title
+      format: "{{ item.title|escape }}"
+  relation_collections: &relation_collections
+    collections:
+      label: "Collections"
+      multiple: true
+      order: title
+      format: "{{ item.title|escape }}"
+  relation_taskforces: &relation_taskforces
+    taskforces:
+      label: "Taskforces / Working groups"
+      multiple: true
+      order: title
+      format: "{{ item.title|escape }}"
+  relation_projects: &relation_projects
+    projects:
+      label: "Projects"
+      multiple: true
+      order: title
       format: "{{ item.title|escape }}"
   relation_events: &relation_events
     events:
       label: "Events"
       multiple: true
-      format: "{{ item.title|escape }}"
-      order: -datepublish
-  relation_pressreleases: &relation_pressreleases
-    pressreleases:
-      multiple: true
-      label: "Press Releases"
       order: -datepublish
       format: "{{ item.title|escape }}"
-  relation_structures: &relation_structures
-    structures:
+  relation_jobs: &relation_jobs
+    jobs:
+      label: "Jobs"
       multiple: true
-      label: "Structures"
-      order: -id
+      order: title
       format: "{{ item.title|escape }}"
   relation_persons: &relation_persons
-     persons:
-       label: "Contacts"
-       multiple: true
-       format: "{{ item.last_name }}, {{ item.first_name }}"
-       order: last_name
+    persons:
+      label: "Contacts"
+      multiple: true
+      order: last_name
+      format: "{{ item.last_name }}, {{ item.first_name }}"
   relation_himentries: &relation_himentries
     himentries:
-      multiple: true
       label: "Heritage in Motion Entries"
+      multiple: true
       order: -id
       format: "{{ item.title|escape }}"
   relation_himeditions: &relation_himeditions
     himeditions:
-      multiple: true
       label: "Heritage in Motion Editions"
+      multiple: true
       order: id
       format: "{{ item.title|escape }}"
+  relation_resources: &relation_resources
+    resources:
+      label: "Footer resources"
+      multiple: true
+      order: weight
+      format: "{{ item.title|escape }}"
+      postfix: "Choose one or more footer resource blocks. The resources will be used as footers for the whole substructure. Resources wille be ordered by the weight field."
+  all_relations: &all_relations
+    relations:
+      <<: *relation_structures
+      <<: *relation_pages
+      <<: *relation_blogposts
+      <<: *relation_pressreleases
+      <<: *relation_publications
+      <<: *relation_apps
+      <<: *relation_data
+      <<: *relation_documentation
+      <<: *relation_collections
+      <<: *relation_taskforces
+      <<: *relation_projects
+      <<: *relation_events
+      <<: *relation_jobs
+      <<: *relation_persons
+      <<: *relation_himentries
+      <<: *relation_himeditions
 
 #################################
 #
@@ -227,7 +336,7 @@ structures:
         homepage: Global homepage
         subsite: Subsite homepage
     template:
-      type: templateselect
+      <<: *template_defaults
       filter: 'record_structure_*.twig'
     default_content:
       type: select
@@ -239,19 +348,25 @@ structures:
       type: select
       label: "Subtheme"
       values: ['none', 'europeana_subsite_cloud', 'europeana_subsite_creative', 'europeana_subsite_enumerate']
-    footers:
-      type: select
-      label: "Footer resources"
-      values: resources/id,title
-      postfix: "Choose one or more footer reource blocks. The resources will be used as footers for the whole substructure"
   taxonomy: [ tags ]
   relations:
+    <<: *relation_structures
     <<: *relation_pages
     <<: *relation_blogposts
-    <<: *relation_events
     <<: *relation_pressreleases
+    <<: *relation_publications
+    <<: *relation_apps
+    <<: *relation_data
+    <<: *relation_documentation
+    <<: *relation_collections
+    <<: *relation_taskforces
+    <<: *relation_projects
+    <<: *relation_events
+    <<: *relation_jobs
     <<: *relation_persons
     <<: *relation_himentries
+    <<: *relation_himeditions
+    <<: *relation_resources
   record_template: record_structure.twig
   listing_template: listing_structures.twig
   icon_many: "fa:cubes"
@@ -268,20 +383,16 @@ pages:
   singular_name: Page
   fields:
     <<: *record_defaults
+    <<: *calltoaction_defaults
     <<: *teaser_defaults
     <<: *media_defaults
+    imagegallery:
+      type: imagelist
+      label: "Images gallery (optional)"
+      postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
     <<: *structure_defaults
-    template:
-      type: templateselect
-      filter: 'record_*.twig'
   taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
+  <<: *all_relations
   record_template: record_page.twig
   listing_template: listing_pages.twig
   recordsperpage: 50
@@ -301,6 +412,7 @@ blogposts:
   singular_slug: 'blogpost'
   fields:
     <<: *record_defaults
+    <<: *calltoaction_defaults
     author:
       label: "Author(s)"
       type: select
@@ -314,13 +426,7 @@ blogposts:
     <<: *teaser_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_blogposts
-    <<: *relation_himentries
+  <<: *all_relations
   record_template: record_blogpost.twig
   listing_template: listing_blogposts.twig
   recordsperpage: 100
@@ -349,12 +455,7 @@ pressreleases:
     <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_structures
-    <<: *relation_himentries
+  <<: *all_relations
   record_template: record_pressrelease.twig
   listing_template: listing_pressreleases.twig
   recordsperpage: 100
@@ -383,13 +484,7 @@ publications:
       group: "ISBN"
     <<: *structure_defaults
   taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
+  <<: *all_relations
   record_template: record_publication.twig
   listing_template: listing_publications.twig
   recordsperpage: 50
@@ -408,21 +503,11 @@ apps:
   fields:
     <<: *record_defaults
     <<: *teaser_defaults
-    hero:
-      type: html
-      label: "'Hero' block contents:"
-      group: "Secondary information"
     <<: *link_defaults
     <<: *contact_defaults
     <<: *structure_defaults
   taxonomy: [ appthemes, appcategories, tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
+  <<: *all_relations
   record_template: record_app.twig
   listing_template: listing_apps.twig
   recordsperpage: 50
@@ -476,13 +561,7 @@ data:
     <<: *contact_defaults
     <<: *structure_defaults
   taxonomy: [ tags, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
+  <<: *all_relations
   record_template: record_data.twig
   listing_template: listing_data.twig
   recordsperpage: 1000
@@ -505,18 +584,8 @@ documentation:
     <<: *link_defaults
     <<: *display_defaults
     <<: *structure_defaults
-    support_navigation:
-      type: html
-      label: "Support navigation:"
-      group: "Support Navigation"
   taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
+  <<: *all_relations
   record_template: record_documentation.twig
   listing_template: listing_documentation.twig
   recordsperpage: 50
@@ -557,13 +626,7 @@ collections:
       type: templateselect
       filter: 'record_*.twig'
   taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
+  <<: *all_relations
   record_template: record_collection.twig
   listing_template: listing_collections.twig
   recordsperpage: 50
@@ -605,13 +668,7 @@ taskforces:
     <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
+  <<: *all_relations
   record_template: record_taskforce.twig
   listing_template: listing_taskforces.twig
   recordsperpage: 50
@@ -660,13 +717,7 @@ projects:
       postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
     <<: *structure_defaults
   taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
+  <<: *all_relations
   record_template: record_project.twig
   listing_template: listing_projects.twig
   listing_records: 5
@@ -686,6 +737,7 @@ events:
   singular_name: Event
   fields:
     <<: *record_defaults
+    <<: *calltoaction_defaults
     <<: *teaser_defaults
     start_event:
       type: datetime
@@ -704,25 +756,11 @@ events:
       type: checkbox
       required: false
       label: "Unconfirmed"
-    external_link:
-      type: text
-      required: false
-      label: "Link:"
-      variant: inline
-      class: narrow
-      prefix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
     <<: *media_defaults
     <<: *display_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
-    <<: *relation_himentries
+  <<: *all_relations
   record_template: record_event.twig
   listing_template: listing_events.twig
   icon_many: "fa:calendar"
@@ -791,14 +829,8 @@ jobs:
       label: "Deadline"
     <<: *media_defaults
     <<: *structure_defaults
-  taxonomy: [ ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
+  taxonomy: [ tags ]
+  <<: *all_relations
   sort: -datepublish
   record_template: record_job.twig
   listing_template: listing_jobs.twig
@@ -1163,10 +1195,8 @@ persons:
         "false": "false"
         "true": "true"
     <<: *structure_defaults
-  relations:
-    <<: *relation_blogposts
-    <<: *relation_events
-  taxonomy: [ teams ]
+  taxonomy: [ teams, tags ]
+  <<: *all_relations
   record_template: record_person.twig
   listing_template: listing_persons.twig
   icon_many: "fa:users"
@@ -1271,9 +1301,7 @@ resources:
     cssid:
       type: text
       label: "CSS ID (optional)"
-  relations:
-    <<: *relation_pages
-    <<: *relation_structures
+  <<: *all_relations
   viewless: true
   show_in_menu: Global
   sort: weight
@@ -1328,15 +1356,7 @@ himeditions:
       label: Submission cost
       variant: inline
     <<: *structure_defaults
-  relations:
-    # <<: *relation_himeditions
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
-    <<: *relation_himentries
+  <<: *all_relations
   record_template: record_himedition.twig
   listing_template: listing_himeditions.twig
   recordsperpage: 50
@@ -1453,15 +1473,8 @@ himentries:
       type: text
       readonly: true
       group: meta
-  relations:
-    <<: *relation_himeditions
-    <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_events
-    <<: *relation_pressreleases
-    <<: *relation_structures
-    <<: *relation_persons
   taxonomy: [ categories, stages, ranks, tags ]
+  <<: *all_relations
   record_template: record_himentry.twig
   listing_template: listing_himentries.twig
   listing_records: 10
