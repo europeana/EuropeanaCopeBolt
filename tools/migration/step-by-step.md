@@ -30,15 +30,14 @@
 ## Prepare first run
 
 10. Modify the bolt installation to use the `europeana_cope` database by setting the connection in `app/config_local.yml`
-11. Replace `app/config/contenttypes.yml` with `tools/migration/1-contenttypes.yml`
 
 ## Data cleanup scripts
 
-12. Run the script `3-cleanup-contenttypes-content.sql` to cleanup contenttypes and merge data
-13. Replace the `app/config/contenttypes.yml` file with `tools/migration/3-contenttypes.yml`
+11. Run the script `3-cleanup-contenttypes-content.sql` to cleanup contenttypes and merge data
+12. Replace the `app/config/contenttypes.yml` file with `tools/migration/3-contenttypes.yml`
 
 ## Finished
 
-14. Run `php app/nut database:update` to setup all other tables for bolt
-15. You can now login to bolt on http://example.com/admin
-16. Bolt is now up to date and you can continue with the new site.
+13. Run `php app/nut database:update` to setup all other tables for bolt
+14. You can now login to bolt on http://example.com/admin
+15. Bolt is now up to date and you can continue with the new site.
