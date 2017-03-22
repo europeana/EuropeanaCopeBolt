@@ -1,8 +1,10 @@
-/files/
-public/files
+app/config/*_local.yml
+app/config/extensions/*_local.yml
+
+app/cache/
 public/files/
-cache/
-thumbs/
+public/thumbs/
+
 vendor/
 
 # NPM, Gulp and Grunt stuff
