@@ -4,7 +4,7 @@
 
 1. Check out the source as per normal from gitlab
 2. Do not run bolt or nut yet
-3. Run composer install --no-dev
+3. Run ./boltflow.sh
 
 ## Set up database for import
 
