@@ -15,30 +15,31 @@
     - europeana_labs
     - europeana_research
 6. make sure there is a user with read access to those 4 databases
+7. import a copy of the production databases from the 4 sites into these databases
 
 ## Import and merge databases
 
-7. make sure that the user has create database access
-8. run the script `1-migrate.sql`
+8. make sure that the same user has create database access
+9. In your mysql admin tool of choice, run the script `1-migrate.sql`
     - this script will create the `europeana_cope` database
     - the data from all 4 databases will be copied to `europeana_cope`
 
 ## Set up relations and some housekeeping
 
-9. The relations population script is created by running `php ./2-migrate-prepare.php > 2-relations-and-taxonomy.sql` on the console (running this again this is probably optional, unless the file `2-relations-and-taxonomy.sql` is missing)
-10. After that use the `2-relations-and-taxonomy.sql` script on the `europeana_cope` database to populate the relations
+10. The relations population script is created by running `php ./2-migrate-prepare.php > 2-relations-and-taxonomy.sql` on the console (running this again this is probably optional, unless the file `2-relations-and-taxonomy.sql` is missing)
+12. After that use the `2-relations-and-taxonomy.sql` script on the `europeana_cope` database to populate the relations
 
 ## Data cleanup scripts
 
-11. Run the script `3-cleanup-contenttypes-content.sql` to cleanup contenttypes and merge data
-12. Replace the `app/config/contenttypes.yml` file with `tools/migration/3-contenttypes.yml`
-13. After that use the `4-bolt-modifications.sql` script on the `europeana_cope` database to fix some bolt related field settings.
+13. Run the script `3-cleanup-contenttypes-content.sql` to cleanup contenttypes and merge data
+14. Replace the `app/config/contenttypes.yml` file with `tools/migration/3-contenttypes.yml`
+15. After that use the `4-bolt-modifications.sql` script on the `europeana_cope` database to fix some bolt related field settings.
 
-## Finished
+## Last preparation
 
-13. Run `php app/nut database:update` to setup all other tables for bolt - this should do almost nothing
+16. Run `php app/nut database:update` to setup all other tables for bolt - this should do almost nothing
 
 ## First run
 
-14. You can now login to bolt on http://example.com/admin
-15. Bolt is now up to date and you can continue with the new site.
+17. You can now login to bolt on http://example.com/admin
+18. Bolt is now up to date and you can continue with the new site.
