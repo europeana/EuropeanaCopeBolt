@@ -1,10 +1,18 @@
+# hide symlink to public from git
+html
+
+# hide local configs
 app/config/*_local.yml
 app/config/extensions/*_local.yml
 
+# hide cache files
 app/cache/
-public/files/
 public/thumbs/
 
+# hide user submitted files
+public/files/
+
+# hide vendor resources
 vendor/
 
 # NPM, Gulp and Grunt stuff
