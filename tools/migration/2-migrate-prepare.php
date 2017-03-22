@@ -1,6 +1,6 @@
 <?php
 $content_types = [
-  'apps' => 'bolt_apps',
+  'apps' => 'bolt_applications',
   'blogposts' => 'bolt_blogposts',
   'collections' => 'bolt_collections',
   'data' => 'bolt_data',

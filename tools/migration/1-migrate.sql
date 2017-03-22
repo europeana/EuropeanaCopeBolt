@@ -16,18 +16,18 @@ CREATE TABLE IF NOT EXISTS bolt_projects (
   status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  body longtext NOT NULL, # pro
+  body longtext NULL, # pro
   date_end date DEFAULT NULL, # pro
   date_start date DEFAULT NULL, # pro
-  filelist longtext NOT NULL, # pro
+  filelist longtext NULL, # pro
   filelist_downloads varchar(256) NOT NULL DEFAULT '', # pro
-  intro longtext NOT NULL, # pro
-  logo longtext NOT NULL, # pro
-  structure_parent longtext NOT NULL, # pro
+  intro longtext NULL, # pro
+  logo longtext NULL, # pro
+  structure_parent longtext NULL, # pro
   structure_sortorder int(11) NOT NULL DEFAULT 0, # pro
   subtitle varchar(256) NOT NULL DEFAULT '', # pro
-  teaser longtext NOT NULL, # pro
-  templatefields longtext NOT NULL, # pro
+  teaser longtext NULL, # pro
+  templatefields longtext NULL, # pro
   title varchar(256) NOT NULL DEFAULT '', # pro
   url varchar(256) NOT NULL DEFAULT '', # pro
   PRIMARY KEY (id)
@@ -51,25 +51,25 @@ CREATE TABLE IF NOT EXISTS bolt_collections (
   status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  body longtext NOT NULL, # research
+  body longtext NULL, # research
   filelist_downloads varchar(256) NOT NULL DEFAULT '', # research
-  filelist_files longtext NOT NULL, # research
+  filelist_files longtext NULL, # research
   hide_list tinyint(1) NOT NULL DEFAULT 0, # research
   hide_related tinyint(1) NOT NULL DEFAULT 0, # research
   hide_related_section tinyint(1) NOT NULL DEFAULT 0, # research
-  imagelist longtext NOT NULL, # research
-  intro longtext NOT NULL, # research
-  liststyle longtext NOT NULL, # research
+  imagelist longtext NULL, # research
+  intro longtext NULL, # research
+  liststyle longtext NULL, # research
   listtitle varchar(256) NOT NULL DEFAULT '', # research
   secondary_mail tinyint(1) NOT NULL DEFAULT 0, # research
   source varchar(256) NOT NULL DEFAULT '', # research
   source_url varchar(256) NOT NULL DEFAULT '', # research
-  structure_parent longtext NOT NULL, # research
+  structure_parent longtext NULL, # research
   structure_sortorder int(11) NOT NULL DEFAULT 0, # research
-  support_navigation longtext NOT NULL, # research
-  teaser longtext NOT NULL, # research
-  teaser_image longtext NOT NULL, # research
-  templatefields longtext NOT NULL, # research
+  support_navigation longtext NULL, # research
+  teaser longtext NULL, # research
+  teaser_image longtext NULL, # research
+  templatefields longtext NULL, # research
   title varchar(256) NOT NULL DEFAULT '', # research
   PRIMARY KEY (id)
 );
@@ -92,18 +92,18 @@ CREATE TABLE IF NOT EXISTS bolt_applications (
   status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  body longtext NOT NULL, # labs
+  body longtext NULL, # labs
   contact_email varchar(256) NOT NULL DEFAULT '', # labs
   contact_name varchar(256) NOT NULL DEFAULT '', # labs
   contact_website varchar(256) NOT NULL DEFAULT '', # labs
-  hero longtext NOT NULL, # labs
-  image longtext NOT NULL, # labs
-  intro longtext NOT NULL, # labs
+  hero longtext NULL, # labs
+  image longtext NULL, # labs
+  intro longtext NULL, # labs
   link1 varchar(256) NOT NULL DEFAULT '', # labs
   link2 varchar(256) NOT NULL DEFAULT '', # labs
   link3 varchar(256) NOT NULL DEFAULT '', # labs
-  teaser longtext NOT NULL, # labs
-  templatefields longtext NOT NULL, # labs
+  teaser longtext NULL, # labs
+  templatefields longtext NULL, # labs
   title varchar(256) NOT NULL DEFAULT '', # labs
   PRIMARY KEY (id)
 );
@@ -127,12 +127,12 @@ CREATE TABLE IF NOT EXISTS bolt_data (
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
   apiconsolelink varchar(256) NOT NULL DEFAULT '', # labs # research
-  body longtext NOT NULL, # labs # research
+  body longtext NULL, # labs # research
   contact_email varchar(256) NOT NULL DEFAULT '', # labs # research
   contact_name varchar(256) NOT NULL DEFAULT '', # labs # research
   country varchar(256) NOT NULL DEFAULT '', # research
-  image longtext NOT NULL, # labs # research
-  intro longtext NOT NULL, # labs # research
+  image longtext NULL, # labs # research
+  intro longtext NULL, # labs # research
   itemtype varchar(256) NOT NULL DEFAULT '', # research
   language_coverage varchar(256) NOT NULL DEFAULT '', # research
   portallink varchar(256) NOT NULL DEFAULT '', # labs # research
@@ -140,8 +140,8 @@ CREATE TABLE IF NOT EXISTS bolt_data (
   provided_by_link varchar(256) NOT NULL DEFAULT '', # labs # research
   spatial_coverage varchar(256) NOT NULL DEFAULT '', # research
   subjects varchar(256) NOT NULL DEFAULT '', # research
-  teaser longtext NOT NULL, # labs # research
-  templatefields longtext NOT NULL, # labs
+  teaser longtext NULL, # labs # research
+  templatefields longtext NULL, # labs
   time_coverage varchar(256) NOT NULL DEFAULT '', # research
   title varchar(256) NOT NULL DEFAULT '', # labs # research
   PRIMARY KEY (id)
@@ -171,22 +171,22 @@ CREATE TABLE IF NOT EXISTS bolt_documentation (
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
   title varchar(256) NOT NULL DEFAULT '', # labs
-  intro longtext NOT NULL, # labs
-  teaser longtext NOT NULL, # labs
-  body longtext NOT NULL, # labs
-  teaser_image longtext NOT NULL, # labs
+  intro longtext NULL, # labs
+  teaser longtext NULL, # labs
+  body longtext NULL, # labs
+  teaser_image longtext NULL, # labs
   secondary_mail tinyint(1) NOT NULL DEFAULT 0, # labs
   hide_related tinyint(1) NOT NULL DEFAULT 0, # labs
   hide_related_section tinyint(1) NOT NULL DEFAULT 0, # labs
-  files longtext NOT NULL, # labs
+  files longtext NULL, # labs
   link1 varchar(256) NOT NULL DEFAULT '', # labs
   link2 varchar(256) NOT NULL DEFAULT '', # labs
   link3 varchar(256) NOT NULL DEFAULT '', # labs
-  support_navigation longtext NOT NULL, # labs
+  support_navigation longtext NULL, # labs
   structure_sortorder int(11) NOT NULL DEFAULT 0, # labs
-  structure_parent longtext NOT NULL, # pro
-  templatefields longtext NOT NULL, # pro
-  templateselect longtext NOT NULL, # pro
+  structure_parent longtext NULL, # pro
+  templatefields longtext NULL, # pro
+  templateselect longtext NULL, # pro
   PRIMARY KEY (id)
 );
 
@@ -214,17 +214,17 @@ CREATE TABLE IF NOT EXISTS bolt_publications (
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
   title varchar(256) NOT NULL DEFAULT '', # pro
-  subtitle longtext NOT NULL, # pro
-  body longtext NOT NULL, # pro
+  subtitle longtext NULL, # pro
+  body longtext NULL, # pro
   isbn varchar(256) NOT NULL DEFAULT '', # pro
-  filelist longtext NOT NULL, # pro
-  image longtext NOT NULL, # pro
-  parents longtext NOT NULL, # pro
-  teaser longtext NOT NULL, # pro
+  filelist longtext NULL, # pro
+  image longtext NULL, # pro
+  parents longtext NULL, # pro
+  teaser longtext NULL, # pro
   introduction varchar(256) NOT NULL DEFAULT '', # pro
   structure_sortorder int(11) NOT NULL DEFAULT 0, # pro
-  structure_parent longtext NOT NULL, # pro
-  templatefields longtext NOT NULL, # pro
+  structure_parent longtext NULL, # pro
+  templatefields longtext NULL, # pro
   PRIMARY KEY (id)
 );
 
@@ -252,12 +252,12 @@ CREATE TABLE IF NOT EXISTS bolt_persons (
   account_uid varchar(256) NOT NULL DEFAULT '', # zoho
   author_name varchar(256) NOT NULL DEFAULT '', # zoho
   author_uid varchar(256) NOT NULL DEFAULT '', # zoho
-  candidacy_intro longtext NOT NULL, # zoho
-  candidacy_teaser longtext NOT NULL, # zoho
+  candidacy_intro longtext NULL, # zoho
+  candidacy_teaser longtext NULL, # zoho
   checkbox_chief tinyint(1) NOT NULL DEFAULT 0, # pro
   checkbox_europeana tinyint(1) NOT NULL DEFAULT 0, # pro
   checkbox_network tinyint(1) NOT NULL DEFAULT 0, # pro
-  community longtext NOT NULL, # zoho
+  community longtext NULL, # zoho
   community_role varchar(256) NOT NULL DEFAULT '', # zoho
   company varchar(256) NOT NULL DEFAULT '', # labs # pro # research # zoho
   company_url varchar(256) NOT NULL DEFAULT '', # labs # pro # research # zoho
@@ -277,22 +277,22 @@ CREATE TABLE IF NOT EXISTS bolt_persons (
   contact_taskforce tinyint(1) NOT NULL DEFAULT 0, # pro # research # zoho
   contact_tech tinyint(1) NOT NULL DEFAULT 0, # pro
   country varchar(256) NOT NULL DEFAULT '', # zoho
-  department longtext NOT NULL, # pro # research # zoho
-  description longtext NOT NULL, # zoho
+  department longtext NULL, # pro # research # zoho
+  description longtext NULL, # zoho
   email varchar(256) NOT NULL DEFAULT '', # him # labs # pro # research # zoho
   europeana_id varchar(256) NOT NULL DEFAULT '', # zoho
-  europeana_tech longtext NOT NULL, # zoho
+  europeana_tech longtext NULL, # zoho
   first_name varchar(256) NOT NULL DEFAULT '', # him # labs # pro # research # zoho
   hide_list tinyint(1) NOT NULL DEFAULT 0, # him
-  image longtext NOT NULL, # him # labs # pro # research # zoho
-  introduction longtext NOT NULL, # labs # pro # research # zoho # him
+  image longtext NULL, # him # labs # pro # research # zoho
+  introduction longtext NULL, # labs # pro # research # zoho # him
   job_title varchar(256) DEFAULT '', # him # labs # pro # research # zoho
   last_name varchar(256) DEFAULT '', # him # labs # pro # research # zoho
   latime varchar(256) NOT NULL DEFAULT '', # zoho
   linkedin varchar(256) DEFAULT '', # him # labs # pro # research # zoho
   modified_name varchar(256) NOT NULL DEFAULT '', # zoho
   modified_uid varchar(256) NOT NULL DEFAULT '', # zoho
-  network_participation longtext NOT NULL, # zoho
+  network_participation longtext NULL, # zoho
   other_links_1 varchar(256) NOT NULL DEFAULT '', # labs # pro # research # zoho
   other_links_2 varchar(256) NOT NULL DEFAULT '', # labs # pro # research # zoho
   other_links_3 varchar(256) NOT NULL DEFAULT '', # labs # pro # research # zoho
@@ -300,17 +300,17 @@ CREATE TABLE IF NOT EXISTS bolt_persons (
   phone varchar(256) DEFAULT '', # him
   public_email varchar(256) NOT NULL DEFAULT '', # zoho
   public_phone varchar(256) NOT NULL DEFAULT '', # zoho
-  public_photo longtext NOT NULL, # zoho
+  public_photo longtext NULL, # zoho
   secondary_email varchar(256) NOT NULL DEFAULT '', # labs # pro # research # zoho
   sector varchar(256) NOT NULL DEFAULT '', # zoho
   skype varchar(256) DEFAULT '', # him # labs # pro # research # zoho
-  statutes_agree longtext NOT NULL, # zoho
-  statutes_read longtext NOT NULL, # zoho
+  statutes_agree longtext NULL, # zoho
+  statutes_read longtext NULL, # zoho
   structure_parent longtext, # labs # pro # research # zoho # him
   structure_sortorder int(11) NOT NULL DEFAULT 0, # him # labs # pro # research # zoho
   team longtext, # pro # research # zoho # him
   telephone_number varchar(256) NOT NULL DEFAULT '', # labs # pro # research # zoho
-  templatefields longtext NOT NULL, # him # labs # pro # research # zoho
+  templatefields longtext NULL, # him # labs # pro # research # zoho
   twitter varchar(256) DEFAULT '', # him # labs # pro # research # zoho
   uid varchar(256) NOT NULL DEFAULT '', # zoho
   PRIMARY KEY (id)
@@ -360,19 +360,19 @@ CREATE TABLE IF NOT EXISTS bolt_taskforces (
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
   title varchar(256) NOT NULL DEFAULT '', # pro
-  department longtext NOT NULL, # pro
+  department longtext NULL, # pro
   subtitle varchar(256) NOT NULL DEFAULT '', # pro
   date_start date DEFAULT NULL, # pro
   date_end date DEFAULT NULL, # pro
-  teaser longtext NOT NULL, # pro
-  intro longtext NOT NULL, # pro
-  body longtext NOT NULL, # pro
-  teaser_image longtext NOT NULL, # pro
-  filelist_files longtext NOT NULL, # pro
+  teaser longtext NULL, # pro
+  intro longtext NULL, # pro
+  body longtext NULL, # pro
+  teaser_image longtext NULL, # pro
+  filelist_files longtext NULL, # pro
   filelist_downloads varchar(256) NOT NULL DEFAULT '', # pro
   structure_sortorder int(11) NOT NULL DEFAULT 0, # pro
-  structure_parent longtext NOT NULL, # pro
-  templatefields longtext NOT NULL, # pro
+  structure_parent longtext NULL, # pro
+  templatefields longtext NULL, # pro
   PRIMARY KEY (id)
 );
 
@@ -396,8 +396,8 @@ CREATE TABLE IF NOT EXISTS bolt_locations (
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
   europeana_office tinyint(1) NOT NULL DEFAULT 0, # labs # pro # research
   europeana_place tinyint(1) NOT NULL DEFAULT 0, # labs # pro # research
-  geolocation longtext NOT NULL, # labs # pro # research
-  templatefields longtext NOT NULL, # labs # pro # research
+  geolocation longtext NULL, # labs # pro # research
+  templatefields longtext NULL, # labs # pro # research
   title varchar(256) NOT NULL DEFAULT '', # labs # pro # research
   PRIMARY KEY (id)
 );
@@ -435,21 +435,21 @@ CREATE TABLE IF NOT EXISTS bolt_blogposts (
   status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  attachments longtext NOT NULL, # him # pro # research
+  attachments longtext NULL, # him # pro # research
   author longtext, # him
-  body longtext NOT NULL, # labs # pro # research # him
-  files longtext NOT NULL, # labs
-  hero longtext NOT NULL, # labs
+  body longtext NULL, # labs # pro # research # him
+  files longtext NULL, # labs
+  hero longtext NULL, # labs
   hide_list tinyint(1) NOT NULL DEFAULT 0, # him
-  image longtext NOT NULL, # him # labs # pro # research
-  intro longtext NOT NULL, # labs # him
+  image longtext NULL, # him # labs # pro # research
+  intro longtext NULL, # labs # him
   originalurl varchar(256) NOT NULL DEFAULT '', # pro
-  parents longtext NOT NULL, # pro
-  structure_parent longtext NOT NULL, # labs # pro # research # him
+  parents longtext NULL, # pro
+  structure_parent longtext NULL, # labs # pro # research # him
   structure_sortorder int(11) NOT NULL DEFAULT 0, # him # labs # pro # research
-  teaser longtext NOT NULL, # pro # him
-  teaser_image longtext NOT NULL, # him
-  templatefields longtext NOT NULL, # him # labs # pro # research
+  teaser longtext NULL, # pro # him
+  teaser_image longtext NULL, # him
+  templatefields longtext NULL, # him # labs # pro # research
   title varchar(256) DEFAULT '', # him # labs # pro # research
   PRIMARY KEY (id)
 );
@@ -491,22 +491,22 @@ CREATE TABLE IF NOT EXISTS bolt_events (
   status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  body longtext NOT NULL, # labs # pro # him
+  body longtext NULL, # labs # pro # him
   end_event datetime DEFAULT NULL, # him # labs # pro
   external_link varchar(256) NOT NULL DEFAULT '', # labs
   file varchar(256) NOT NULL DEFAULT '', # pro
-  filelist longtext NOT NULL, # labs # pro
+  filelist longtext NULL, # labs # pro
   hide_list tinyint(1) NOT NULL DEFAULT 0, # him
-  image longtext NOT NULL, # him
+  image longtext NULL, # him
   intro longtext, # him
   secondary_mail tinyint(1) NOT NULL DEFAULT 0, # labs # pro
   start_event datetime DEFAULT NULL, # him # labs # pro
-  structure_parent longtext NOT NULL, # labs # pro # him
+  structure_parent longtext NULL, # labs # pro # him
   structure_sortorder int(11) NOT NULL DEFAULT 0, # him # labs # pro
-  support_navigation longtext NOT NULL, # pro
-  teaser longtext NOT NULL, # labs # pro # him
-  teaser_image longtext NOT NULL, # him # labs # pro
-  templatefields longtext NOT NULL, # him # labs # pro
+  support_navigation longtext NULL, # pro
+  teaser longtext NULL, # labs # pro # him
+  teaser_image longtext NULL, # him # labs # pro
+  templatefields longtext NULL, # him # labs # pro
   title varchar(256) DEFAULT '', # him # labs # pro
   unconfirmed_end tinyint(1) NOT NULL DEFAULT 0, # him # labs # pro
   unconfirmed_start tinyint(1) NOT NULL DEFAULT 0, # him # labs # pro
@@ -545,21 +545,21 @@ CREATE TABLE IF NOT EXISTS bolt_jobs (
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
   position varchar(256) NOT NULL DEFAULT '', # pro
-  department longtext NOT NULL, # pro
-  postion_type longtext NOT NULL, # pro
-  teaser longtext NOT NULL, # pro
+  department longtext NULL, # pro
+  postion_type longtext NULL, # pro
+  teaser longtext NULL, # pro
   title varchar(256) DEFAULT '', # new
-  body longtext NOT NULL, # pro
+  body longtext NULL, # pro
   salary_eur varchar(256) NOT NULL DEFAULT '', # pro
   scale_eur varchar(256) NOT NULL DEFAULT '', # pro
   salary_gbp varchar(256) NOT NULL DEFAULT '', # pro
   scale_gbp varchar(256) NOT NULL DEFAULT '', # pro
   deadline date DEFAULT NULL, # pro
   deadlinelabel varchar(256) NOT NULL DEFAULT '', # pro
-  filelist longtext NOT NULL, # pro
-  structure_parent longtext NOT NULL, # pro
+  filelist longtext NULL, # pro
+  structure_parent longtext NULL, # pro
   structure_sortorder int(11) NOT NULL DEFAULT 0, # pro
-  templatefields longtext NOT NULL, # pro
+  templatefields longtext NULL, # pro
   PRIMARY KEY (id)
 );
 
@@ -581,22 +581,22 @@ CREATE TABLE IF NOT EXISTS bolt_pressreleases (
   status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  attachments longtext NOT NULL, # him
+  attachments longtext NULL, # him
   author varchar(256) DEFAULT '', # him
-  body longtext NOT NULL, # pro # him
-  filelist longtext NOT NULL, # pro
+  body longtext NULL, # pro # him
+  filelist longtext NULL, # pro
   hide_list tinyint(1) NOT NULL DEFAULT 0, # him
-  image longtext NOT NULL, # him # pro
+  image longtext NULL, # him # pro
   intro longtext, # him
-  introduction longtext NOT NULL, # pro
+  introduction longtext NULL, # pro
   isbn varchar(256) NOT NULL DEFAULT '', # pro
-  parents longtext NOT NULL, # pro
-  structure_parent longtext NOT NULL, # pro # him
+  parents longtext NULL, # pro
+  structure_parent longtext NULL, # pro # him
   structure_sortorder int(11) NOT NULL DEFAULT 0, # him # pro
-  subtitle longtext NOT NULL, # pro
+  subtitle longtext NULL, # pro
   teaser longtext, # him
-  teaser_image longtext NOT NULL, # him
-  templatefields longtext NOT NULL, # pro # him
+  teaser_image longtext NULL, # him
+  templatefields longtext NULL, # pro # him
   title varchar(256) DEFAULT '', # him # pro
   PRIMARY KEY (id)
 );
@@ -628,29 +628,29 @@ CREATE TABLE IF NOT EXISTS bolt_structures (
   status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  body longtext NOT NULL, # pro # him
-  children longtext NOT NULL, # pro
-  contacts longtext NOT NULL, # pro
-  content longtext NOT NULL, # labs # pro # research
+  body longtext NULL, # pro # him
+  children longtext NULL, # pro
+  contacts longtext NULL, # pro
+  content longtext NULL, # labs # pro # research
   date_end date DEFAULT NULL, # labs # pro # research
   date_start date DEFAULT NULL, # labs # pro # research
   default_content longtext, # him
-  footer longtext NOT NULL, # labs # pro # research
+  footer longtext NULL, # labs # pro # research
   hide_list tinyint(1) NOT NULL DEFAULT 0, # him
-  image longtext NOT NULL, # him # labs # pro # research
+  image longtext NULL, # him # labs # pro # research
   intro longtext, # him # pro
-  parent longtext NOT NULL, # pro
-  position longtext NOT NULL, # pro
+  parent longtext NULL, # pro
+  position longtext NULL, # pro
   secondary_mail tinyint(1) NOT NULL DEFAULT 0, # labs # pro # research
-  selectfield longtext NOT NULL, # pro
-  structure_parent longtext NOT NULL, # labs # pro # research # him
+  selectfield longtext NULL, # pro
+  structure_parent longtext NULL, # labs # pro # research # him
   structure_sortorder int(11) NOT NULL DEFAULT 0, # him # labs # pro # research
-  subclass longtext NOT NULL, # labs # pro # research
-  suffix longtext NOT NULL, # pro # him
-  teaser longtext NOT NULL, # labs # pro # research# him
-  teaser_image longtext NOT NULL, # him
+  subclass longtext NULL, # labs # pro # research
+  suffix longtext NULL, # pro # him
+  teaser longtext NULL, # labs # pro # research# him
+  teaser_image longtext NULL, # him
   template varchar(256) DEFAULT '', # him # labs # pro # research
-  templatefields longtext NOT NULL, # him # labs # pro # research
+  templatefields longtext NULL, # him # labs # pro # research
   title varchar(256) DEFAULT '', # him # labs # pro # research
   PRIMARY KEY (id)
 );
@@ -670,8 +670,8 @@ FROM europeana_labs.bolt_structures s;
 -- pro
 INSERT INTO europeana_cope.bolt_structures ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, selectfield, contacts, secondary_mail, intro, image, template, parent, teaser, position, children, subclass, content, footer, date_start, date_end, structure_sortorder, structure_parent, templatefields, body, suffix
 ) SELECT 'pro', s.id,
-  s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.selectfield, s.contacts, s.secondary_mail, s.intro, s.image, s.template, s.parent, s.teaser, s.position, s.children, s.subclass, s.content, s.footer, s.date_start, s.date_end, s.structure_sortorder, s.structure_parent, s.templatefields, s.body, s.suffix
-FROM europeana_pro.bolt_structures s;
+    s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.selectfield, s.contacts, s.secondary_mail, s.intro, s.image, s.template, s.parent, s.teaser, s.position, s.children, s.subclass, s.content, s.footer, null, null, s.structure_sortorder, s.structure_parent, s.templatefields, s.body, s.suffix
+  FROM europeana_pro.bolt_structures s;
 
 -- research
 INSERT INTO europeana_cope.bolt_structures ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, secondary_mail, teaser, image, template, content, subclass, footer, date_start, date_end, templatefields, structure_parent, structure_sortorder
@@ -693,36 +693,36 @@ CREATE TABLE IF NOT EXISTS bolt_pages (
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
   title varchar(256) NOT NULL DEFAULT '', # all
-  body longtext NOT NULL, # all
+  body longtext NULL, # all
   intro longtext, # pro # labs # him #research
   teaser longtext, # pro # labs # him #research
-  parent longtext NOT NULL, # pro
-  position longtext NOT NULL, # pro
-  contacts longtext NOT NULL, # pro
+  parent longtext NULL, # pro
+  position longtext NULL, # pro
+  contacts longtext NULL, # pro
   structure_sortorder int(11) NOT NULL DEFAULT 0, # all
-  structure_parent longtext NOT NULL, # all
+  structure_parent longtext NULL, # all
   secondary_mail tinyint(1) NOT NULL DEFAULT 0, # pro # labs # research
-  teaser_image longtext NOT NULL, # all
+  teaser_image longtext NULL, # all
   show_page tinyint(1) NOT NULL DEFAULT 0, # pro
-  support_navigation longtext NOT NULL, # pro # labs # research
-  filelist_files longtext NOT NULL, # pro # research
+  support_navigation longtext NULL, # pro # labs # research
+  filelist_files longtext NULL, # pro # research
   filelist_downloads varchar(256) NOT NULL DEFAULT '', # pro # research
   hide_list tinyint(1) NOT NULL DEFAULT 0, # all
-  parents longtext NOT NULL, # pro
+  parents longtext NULL, # pro
   listtitle varchar(256) NOT NULL DEFAULT '', # pro # research
-  imagelist longtext NOT NULL, # pro # research
-  liststyle longtext NOT NULL, # pro # research
+  imagelist longtext NULL, # pro # research
+  liststyle longtext NULL, # pro # research
   hide_related tinyint(1) NOT NULL DEFAULT 0, # pro # labs # research
   hide_related_section tinyint(1) NOT NULL DEFAULT 0, # pro # labs # research
-  templatefields longtext NOT NULL, # all
-  files longtext NOT NULL, # labs
+  templatefields longtext NULL, # all
+  files longtext NULL, # labs
   link1 varchar(256) NOT NULL DEFAULT '', # labs
   link2 varchar(256) NOT NULL DEFAULT '', # labs
   link3 varchar(256) NOT NULL DEFAULT '', # labs
-  hero longtext NOT NULL, # labs
+  hero longtext NULL, # labs
   templateselect varchar(256) NOT NULL DEFAULT '', # labs
   template varchar(256) DEFAULT '', # him
-  image longtext NOT NULL, # him
+  image longtext NULL, # him
   PRIMARY KEY (id)
 );
 
@@ -741,8 +741,9 @@ FROM europeana_labs.bolt_pages p;
 -- pro
 INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, parent, position, contacts, secondary_mail, teaser, body, teaser_image, show_page, support_navigation, filelist_files, filelist_downloads, intro, hide_list, parents, listtitle, imagelist, liststyle, hide_related, hide_related_section, structure_sortorder, structure_parent, templatefields
 ) SELECT 'pro', p.id,
-  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.parent, p.position, p.contacts, p.secondary_mail, p.teaser, p.body, p.teaser_image, p.show_page, p.support_navigation, p.filelist_files, p.filelist_downloads, p.intro, p.hide_list, p.parents, p.listtitle, p.imagelist, p.liststyle, p.hide_related, p.hide_related_section, p.structure_sortorder, p.structure_parent, p.templatefields
-FROM europeana_pro.bolt_pages p;
+    p.slug, p.datecreated, p.datechanged, p.datepublish, null, p.username, p.ownerid, p.status, p.title, p.parent, p.position, p.contacts, p.secondary_mail, p.teaser, p.body, p.teaser_image, p.show_page, p.support_navigation, p.filelist_files, p.filelist_downloads, p.intro, p.hide_list, p.parents, p.listtitle, p.imagelist, p.liststyle, p.hide_related, p.hide_related_section, p.structure_sortorder, p.structure_parent, p.templatefields
+  FROM europeana_pro.bolt_pages p;
+
 
 -- research
 INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, secondary_mail, hide_list, filelist_files, filelist_downloads, hide_related, hide_related_section, listtitle, imagelist, liststyle, support_navigation, templatefields, structure_parent, structure_sortorder
@@ -763,41 +764,41 @@ CREATE TABLE IF NOT EXISTS bolt_homepage (
   status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  bannerimage longtext NOT NULL, # labs # pro # research
+  bannerimage longtext NULL, # labs # pro # research
   bannerlink varchar(256) NOT NULL DEFAULT '', # labs # pro # research
-  bannerlink_select longtext NOT NULL, # pro
-  bannertext longtext NOT NULL, # labs # pro # research
-  brandcolour longtext NOT NULL, # labs # pro # research
-  brandlocation longtext NOT NULL, # labs # pro # research
-  brandopacity longtext NOT NULL, # labs # pro # research
-  callout_1 longtext NOT NULL, # labs # pro # research
-  callout_2 longtext NOT NULL, # labs # pro # research
-  callout_3 longtext NOT NULL, # labs # pro # research
-  callout_4 longtext NOT NULL, # pro
-  callout_5 longtext NOT NULL, # pro
-  callout_6 longtext NOT NULL, # pro # research
-  flag_colour_1 longtext NOT NULL, # labs
-  flag_colour_2 longtext NOT NULL, # labs
-  flag_colour_3 longtext NOT NULL, # labs
+  bannerlink_select longtext NULL, # pro
+  bannertext longtext NULL, # labs # pro # research
+  brandcolour longtext NULL, # labs # pro # research
+  brandlocation longtext NULL, # labs # pro # research
+  brandopacity longtext NULL, # labs # pro # research
+  callout_1 longtext NULL, # labs # pro # research
+  callout_2 longtext NULL, # labs # pro # research
+  callout_3 longtext NULL, # labs # pro # research
+  callout_4 longtext NULL, # pro
+  callout_5 longtext NULL, # pro
+  callout_6 longtext NULL, # pro # research
+  flag_colour_1 longtext NULL, # labs
+  flag_colour_2 longtext NULL, # labs
+  flag_colour_3 longtext NULL, # labs
   flag_label_1 varchar(256) NOT NULL DEFAULT '', # labs
   flag_label_2 varchar(256) NOT NULL DEFAULT '', # labs
   flag_label_3 varchar(256) NOT NULL DEFAULT '', # labs
   imageattribution varchar(256) NOT NULL DEFAULT '', # labs # pro # research
-  imagelicense longtext NOT NULL, # labs # pro # research
-  latest_image_1 longtext NOT NULL, # labs
-  latest_image_2 longtext NOT NULL, # labs
-  latest_image_3 longtext NOT NULL, # labs
-  latest_teaser_1 longtext NOT NULL, # labs
-  latest_teaser_2 longtext NOT NULL, # labs
-  latest_teaser_3 longtext NOT NULL, # labs
+  imagelicense longtext NULL, # labs # pro # research
+  latest_image_1 longtext NULL, # labs
+  latest_image_2 longtext NULL, # labs
+  latest_image_3 longtext NULL, # labs
+  latest_teaser_1 longtext NULL, # labs
+  latest_teaser_2 longtext NULL, # labs
+  latest_teaser_3 longtext NULL, # labs
   latest_title_1 varchar(256) NOT NULL DEFAULT '', # labs
   latest_title_2 varchar(256) NOT NULL DEFAULT '', # labs
   latest_title_3 varchar(256) NOT NULL DEFAULT '', # labs
   latest_url_1 varchar(256) NOT NULL DEFAULT '', # labs
   latest_url_2 varchar(256) NOT NULL DEFAULT '', # labs
   latest_url_3 varchar(256) NOT NULL DEFAULT '', # labs
-  subtitle longtext NOT NULL, # labs # pro # research
-  templatefields longtext NOT NULL, # labs # pro # research
+  subtitle longtext NULL, # labs # pro # research
+  templatefields longtext NULL, # labs # pro # research
   title varchar(256) NOT NULL DEFAULT '', # labs # pro # research
   use_manual_1 tinyint(1) NOT NULL DEFAULT 0, # labs
   use_manual_2 tinyint(1) NOT NULL DEFAULT 0, # labs
@@ -838,13 +839,13 @@ CREATE TABLE IF NOT EXISTS bolt_footers (
   status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  image longtext NOT NULL, # him # labs # pro # research
-  linklist_left longtext NOT NULL, # labs # pro # research # him
-  linklist_other longtext NOT NULL, # labs # pro # research # him
-  linklist_right longtext NOT NULL, # labs # pro # research # him
-  mission longtext NOT NULL, # labs # pro # research # him
-  socialmedia longtext NOT NULL, # labs # pro # research # him
-  templatefields longtext NOT NULL, # him # labs # pro # research
+  image longtext NULL, # him # labs # pro # research
+  linklist_left longtext NULL, # labs # pro # research # him
+  linklist_other longtext NULL, # labs # pro # research # him
+  linklist_right longtext NULL, # labs # pro # research # him
+  mission longtext NULL, # labs # pro # research # him
+  socialmedia longtext NULL, # labs # pro # research # him
+  templatefields longtext NULL, # him # labs # pro # research
   title varchar(256) DEFAULT '', # him # labs # pro # research
   PRIMARY KEY (id)
 );
@@ -890,8 +891,8 @@ CREATE TABLE IF NOT EXISTS bolt_resources (
   cssclass varchar(256) DEFAULT '', # him
   cssid varchar(256) DEFAULT '', # him
   htmllink varchar(256) DEFAULT '', # him
-  image longtext NOT NULL, # him
-  templatefields longtext NOT NULL, # him
+  image longtext NULL, # him
+  templatefields longtext NULL, # him
   title varchar(256) DEFAULT '', # him
   weight int(11) NOT NULL DEFAULT 0, # him
   PRIMARY KEY (id)
@@ -921,7 +922,7 @@ CREATE TABLE IF NOT EXISTS bolt_himcomments (
   entryid varchar(256) DEFAULT '', # him
   judgeid varchar(256) DEFAULT '', # him
   judgename varchar(256) DEFAULT '', # him
-  templatefields longtext NOT NULL, # him
+  templatefields longtext NULL, # him
   PRIMARY KEY (id)
 );
 
@@ -946,7 +947,7 @@ CREATE TABLE IF NOT EXISTS bolt_himeditions (
   body longtext, # him
   edition_menu tinyint(1) NOT NULL DEFAULT 0, # him
   hide_list tinyint(1) NOT NULL DEFAULT 0, # him
-  image longtext NOT NULL, # him
+  image longtext NULL, # him
   intro longtext, # him
   structure_parent longtext, # him
   structure_sortorder int(11) NOT NULL DEFAULT 0, # him
@@ -955,8 +956,8 @@ CREATE TABLE IF NOT EXISTS bolt_himeditions (
   submission_deadline datetime DEFAULT NULL, # him
   submission_start datetime DEFAULT NULL, # him
   teaser longtext, # him
-  teaser_image longtext NOT NULL, # him
-  templatefields longtext NOT NULL, # him
+  teaser_image longtext NULL, # him
+  templatefields longtext NULL, # him
   title varchar(256) DEFAULT '', # him
   PRIMARY KEY (id)
 );
@@ -979,7 +980,7 @@ CREATE TABLE IF NOT EXISTS bolt_himentries (
   status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  body longtext NOT NULL, # him
+  body longtext NULL, # him
   clienttags varchar(256) DEFAULT '', # him
   credits longtext, # him
   description longtext, # him
@@ -989,8 +990,8 @@ CREATE TABLE IF NOT EXISTS bolt_himentries (
   name varchar(256) DEFAULT '', # him
   projecturl varchar(256) DEFAULT '', # him
   summary longtext, # him
-  teaser longtext NOT NULL, # him
-  templatefields longtext NOT NULL, # him
+  teaser longtext NULL, # him
+  templatefields longtext NULL, # him
   title varchar(256) DEFAULT '', # him
   transaction_id varchar(256) DEFAULT '', # him
   upload_1 longtext, # him
@@ -1001,7 +1002,7 @@ CREATE TABLE IF NOT EXISTS bolt_himentries (
   upload_6 longtext, # him
   upload_7 longtext, # him
   upload_8 longtext, # him
-  upload_images longtext NOT NULL, # him
+  upload_images longtext NULL, # him
   upload_thumb longtext, # him
   userid varchar(256) DEFAULT '', # him
   video longtext, # him
@@ -1032,7 +1033,7 @@ CREATE TABLE IF NOT EXISTS bolt_himvotes (
   entryid varchar(256) DEFAULT '', # him
   judgeid varchar(256) DEFAULT '', # him
   judgename varchar(256) DEFAULT '', # him
-  templatefields longtext NOT NULL, # him
+  templatefields longtext NULL, # him
   vote double NOT NULL DEFAULT '0', # him
   PRIMARY KEY (id)
 );
@@ -1053,14 +1054,14 @@ CREATE TABLE bolt_users (
   lastseen datetime DEFAULT NULL,
   lastip varchar(45) NOT NULL DEFAULT '',
   displayname varchar(32) NOT NULL DEFAULT '',
-  stack longtext NOT NULL,
+  stack longtext NULL,
   enabled tinyint(1) NOT NULL DEFAULT '1',
   shadowpassword varchar(128) DEFAULT NULL,
   shadowtoken varchar(128) DEFAULT NULL,
   shadowvalidity datetime DEFAULT NULL,
   failedlogins int(11) NOT NULL DEFAULT 0,
   throttleduntil datetime DEFAULT NULL,
-  roles longtext NOT NULL,
+  roles longtext NULL,
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
   PRIMARY KEY (`id`)
