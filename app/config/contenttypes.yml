@@ -382,8 +382,6 @@ structures:
     <<: *relation_himentries
     <<: *relation_himeditions
     <<: *relation_resources
-  record_template: record_structure.twig
-  listing_template: listing_structures.twig
   icon_many: "fa:cubes"
   icon_one: "fa:cube"
 
@@ -407,8 +405,6 @@ pages:
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_page.twig
-  listing_template: listing_pages.twig
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
@@ -438,8 +434,6 @@ blogposts:
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_blogpost.twig
-  listing_template: listing_blogposts.twig
   recordsperpage: 100
   sort: -datepublish
   icon_many: "fa:quote-left"
@@ -471,8 +465,6 @@ pressreleases:
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_pressrelease.twig
-  listing_template: listing_pressreleases.twig
   recordsperpage: 100
   sort: -datepublish
   icon_many: "fa:newspaper-o"
@@ -501,8 +493,6 @@ publications:
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_publication.twig
-  listing_template: listing_publications.twig
   recordsperpage: 50
   icon_many: "fa:book"
   icon_one: "fa:book"
@@ -513,7 +503,7 @@ publications:
 # APPS
 #
 #################################
-Applications:
+applications:
   name: Apps
   singular_name: App
   slug: applications
@@ -527,8 +517,6 @@ Applications:
     <<: *structure_defaults
   taxonomy: [ appthemes, appcategories, tags ]
   <<: *all_relations
-  record_template: record_application.twig
-  listing_template: listing_applications.twig
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
@@ -581,8 +569,6 @@ data:
     <<: *structure_defaults
   taxonomy: [ tags, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
   <<: *all_relations
-  record_template: record_data.twig
-  listing_template: listing_data.twig
   recordsperpage: 100
   icon_many: "fa:object-group"
   icon_one: "fa:object-group"
@@ -604,8 +590,6 @@ documentation:
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_documentation.twig
-  listing_template: listing_documentation.twig
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
@@ -641,8 +625,6 @@ collections:
       filter: 'record_*.twig'
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_collection.twig
-  listing_template: listing_collections.twig
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
@@ -696,8 +678,6 @@ taskforces:
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_taskforce.twig
-  listing_template: listing_taskforces.twig
   recordsperpage: 50
   icon_many: "fa:bullseye"
   icon_one: "fa:bullseye"
@@ -731,8 +711,6 @@ projects:
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_project.twig
-  listing_template: listing_projects.twig
   listing_records: 5
   recordsperpage: 20
   sort: -datepublish
@@ -773,8 +751,6 @@ events:
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_event.twig
-  listing_template: listing_events.twig
   icon_many: "fa:calendar"
   icon_one: "fa:calendar"
   show_in_menu: Ephemeral
@@ -852,8 +828,6 @@ jobs:
       uses: position
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_job.twig
-  listing_template: listing_jobs.twig
   sort: -datepublish
   icon_many: "fa:money"
   icon_one: "fa:money"
@@ -1143,8 +1117,6 @@ persons:
         him: Heritage in motion
   taxonomy: [ teams, tags ]
   <<: *all_relations
-  record_template: record_person.twig
-  listing_template: listing_persons.twig
   icon_many: "fa:users"
   icon_one: "fa:user"
 
@@ -1172,8 +1144,6 @@ locations:
       type: checkbox
       required: false
       label: "This is the main Europeana office (appear in footer)"
-  record_template: record_location.twig
-  listing_template: listing_locations.twig
   icon_many: "fa:map-marker"
   icon_one: "fa:map-marker"
   show_in_menu: System
@@ -1286,8 +1256,6 @@ himeditions:
       variant: inline
     <<: *structure_defaults
   <<: *all_relations
-  record_template: record_himedition.twig
-  listing_template: listing_himeditions.twig
   recordsperpage: 50
   icon_many: "fa:trophy"
   icon_one: "fa:list-alt"
@@ -1404,8 +1372,6 @@ himentries:
       group: meta
   taxonomy: [ categories, stages, ranks, tags ]
   <<: *all_relations
-  record_template: record_himentry.twig
-  listing_template: listing_himentries.twig
   listing_records: 10
   default_status: draft
   recordsperpage: 10
