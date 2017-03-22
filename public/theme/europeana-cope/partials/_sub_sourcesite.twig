@@ -1,0 +1,12 @@
+<span class="subsite {{ record.subsite }}">
+    Source:
+    {% if record.subsite == 'pro' %}
+        <a href="http://pro.europeana.eu{{ record.link }}" target="_blank">Pro</a>
+    {% elseif record.subsite == 'labs' %}
+        <a href="http://labs.europeana.eu{{ record.link }}" target="_blank">Labs</a>
+    {% elseif record.subsite == 'research' %}
+        <a href="http://research.europeana.eu{{ record.link }}" target="_blank">Research</a>
+    {% else %}
+        <a href="http://heritageinmotion.eu{{ record.link }}" target="_blank">Heritage in Motion</a>
+    {% endif %}
+</span>

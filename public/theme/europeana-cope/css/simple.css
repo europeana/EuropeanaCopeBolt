@@ -53,3 +53,10 @@ footer nav ul {
     float: right;
     clear: none;
 }
+.subsite {
+    display: inline-block;
+    padding: 2px 5px;
+    border: 1px solid #b35e4d;
+    border-radius: 2px;
+    background: #b3d4fc;
+}

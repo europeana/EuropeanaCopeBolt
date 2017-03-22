@@ -7,6 +7,7 @@
         '%name%': record.user.displayname|default(__('Unknown')),
         '%date%': record.datepublish|localedatetime("%A %B %e, %Y")
     }) }}
+    {{ include('partials/_sub_sourcesite.twig', { record: record }) }}
 </p>
 
 {% if extended|default() %}
