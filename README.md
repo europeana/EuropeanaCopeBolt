@@ -1,10 +1,3 @@
-### Bolt Installer for Composer
+# Europeana COPE project
 
-To start the install just run the following command replacing the project with
-the name you want to use.
-
-`composer create-project bolt/composer-install:^3.3@dev <MYPROJECT> --prefer-dist`
-
-
-After the packages have downloaded, you can choose whether you would like a
-separate public directory and if so choose a name.
+This repository is the basic website for europeana cope.
