@@ -12,20 +12,16 @@
        so we can use it to print a helpful message.
        Lastly, "path('contentlisting', {'contenttypeslug': ct.slug})" will output something like '/pages',
        effectively creating a working link to that contenttpye's listing page. #}
-    {% for ct in app.config.get('contenttypes') if not ct.viewless|default(false) %}
-
-        {% setcontent records = ct.slug ~ "/latest/3" %}
-
-        <h5>{{ __('contenttypes.generic.recent', {'%contenttypes%': ct.slug}) }}</h5>
-        <ul>
-            {% for record in records %}
-                <li><a href="{{ record.link }}">{{ record.title }}</a></li>
-            {% else %}
-                <li>{{ __('contenttypes.generic.no-recent', {'%contenttype%': ct.slug}) }}</li>
-            {% endfor %}
-        </ul>
-        <p><a href="{{ path('contentlisting', {'contenttypeslug': ct.slug}) }}">{{ __('contenttypes.generic.overview',{'%contenttypes%': ct.slug}) }} &raquo;</a></p>
-    {% endfor %}
+    {%- for ct in app.config.get('contenttypes') if not ct.viewless|default(false) -%}
+    {%- setcontent records = ct.slug ~ "/latest/3" -%}
+    <h5>{{ __('contenttypes.generic.recent', {'%contenttypes%': ct.slug}) }}</h5>
+    <ul>{% for record in records %}
+        <li><a href="{{ record.link }}">{{ record.title }}</a></li>
+    {% else -%}
+        <li>{{ __('contenttypes.generic.no-recent', {'%contenttype%': ct.slug}) }}</li>
+    {% endfor %}</ul>
+    <p><a href="{{ path('contentlisting', {'contenttypeslug': ct.slug}) }}">{{ __('contenttypes.generic.overview',{'%contenttypes%': ct.slug}) }} &raquo;</a></p>
+    {%- endfor -%}
 
     {% if haswidgets('aside_bottom') %}
         {{ widgets('aside_bottom') }}

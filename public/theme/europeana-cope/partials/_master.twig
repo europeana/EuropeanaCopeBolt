@@ -9,6 +9,8 @@
             {{ app.config.get('general/sitename') -}}
         {% if record.title is not defined and app.config.get('general/payoff') %} | {{ app.config.get('general/payoff') }}{% endif -%}
     </title>
+
+    <link rel="stylesheet" href="{{ asset('css/simple.css', 'theme') }}">
     {% block headincludes %}
     {% endblock headincludes %}
 </head>
