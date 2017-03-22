@@ -251,9 +251,9 @@ accept_file_types: [ twig, html, js, css, scss, gif, jpg, jpeg, png, ico, zip, t
 # it will only be accessible through the value set in 'path'.
 # Keep the path simple: lowercase only, no extra slashes or other special
 # characters.
-# branding:
+branding:
 #     name: SuperCMS
-#     path: /admin
+    path: /admin
 #     provided_by: [ supercool@example.org, "Supercool Webdesign Co." ]
 #     news_source: http://news.example.org
 #     news_variable: news
