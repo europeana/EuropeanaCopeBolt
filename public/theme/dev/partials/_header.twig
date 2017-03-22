@@ -1,9 +1,0 @@
-<!-- Header bar -->
-
-{# the values in the 'app.config' object are taken directly from the file app/config/config.yml #}
-<div class="large-12 columns headertitle">
-<h2>{{ app.config.get('general/sitename') }}</h2>
-    {% if app.config.get('general/payoff') %}
-        <p>{{ app.config.get('general/payoff') }}</p>
-    {% endif %}
-</div>
