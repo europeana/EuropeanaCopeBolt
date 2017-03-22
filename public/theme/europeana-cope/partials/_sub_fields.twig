@@ -38,7 +38,10 @@
         {% set value = value|twig %}
     {% endif %}
 
-    <div {% if key is not empty %}data-bolt-field="{{key}}"{% endif %}>{{ value }}</div>
+    <div {% if key is not empty %}data-bolt-field="{{key}}"{% endif %} class="field">
+        {% if key is not empty %}<label>{{ key }}:</label>{% endif %}
+        <div class="value">{{ value|raw }}</div>
+    </div>
 {% endmacro %}
 
 {% macro imagelistfield(images) %}

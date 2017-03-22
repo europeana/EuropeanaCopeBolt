@@ -49,3 +49,7 @@ div.pagination ul, div.pagination ul li, nav ul, nav ul li {
 nav ul li a {
     padding-right: 0.4em;
 }
+footer nav ul {
+    float: right;
+    clear: none;
+}
