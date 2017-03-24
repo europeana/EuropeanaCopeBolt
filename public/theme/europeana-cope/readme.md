@@ -1,6 +1,10 @@
 Bolt europeana-cope Theme
 =========================
 
+This is the base theme for the europeana cope project.
+
+It is based on the minimal theme.
+
 File Structure
 --------------
 
