@@ -13,7 +13,7 @@
                 <h2>{{ ct.name }}</h2>
                 <ul>{% for record in records %}
                         <li>
-                            {% include 'partials/_record_title.twig' with {record: record} %}
+                            {% include 'partials/_view_title.twig' with {record: record} %}
                         </li>
                     {% else -%}
                         <li>{{ __('contenttypes.generic.no-recent', {'%contenttype%': ct.slug}) }}</li>
