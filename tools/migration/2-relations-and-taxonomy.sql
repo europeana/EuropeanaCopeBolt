@@ -159,3 +159,5 @@ ALTER TABLE bolt_publications DROP subsite_id;
 ALTER TABLE bolt_resources DROP subsite_id;
 ALTER TABLE bolt_structures DROP subsite_id;
 ALTER TABLE bolt_taskforces DROP subsite_id;
+
+UPDATE europeana_cope.bolt_pages SET template = '';

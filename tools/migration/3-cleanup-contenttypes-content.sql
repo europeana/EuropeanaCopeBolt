@@ -76,3 +76,29 @@ ALTER TABLE europeana_cope.bolt_persons DROP community_role;
 -- rename columns
 ALTER TABLE europeana_cope.bolt_persons CHANGE image public_photo longtext;
 ALTER TABLE europeana_cope.bolt_persons CHANGE description bio longtext;
+
+-- kill all custom templates
+UPDATE bolt_applications SET template='';
+UPDATE bolt_blogposts SET template='';
+UPDATE bolt_collections SET template='';
+UPDATE bolt_data SET template='';
+UPDATE bolt_documentation SET template='';
+UPDATE bolt_events SET template='';
+#UPDATE bolt_footers SET template='';
+#UPDATE bolt_himcomments SET template='';
+UPDATE bolt_himeditions SET template='';
+#UPDATE bolt_himentries SET template='';
+#UPDATE bolt_himvotes SET template='';
+#UPDATE bolt_homepage SET template='';
+UPDATE bolt_jobs SET template='';
+#UPDATE bolt_locations SET template='';
+UPDATE bolt_pages SET template='';
+UPDATE bolt_persons SET template='';
+UPDATE bolt_pressreleases SET template='';
+UPDATE bolt_projects SET template='';
+UPDATE bolt_publications SET template='';
+#UPDATE bolt_relations SET template='';
+#UPDATE bolt_resources SET template='';
+UPDATE bolt_structures SET template='';
+UPDATE bolt_taskforces SET template='';
+#UPDATE bolt_taxonomy SET template='';
