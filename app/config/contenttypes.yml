@@ -1115,7 +1115,7 @@ persons:
         research: Europeana Research
         zoho: ZOHO CRM
         him: Heritage in motion
-  taxonomy: [ teams, tags ]
+  taxonomy: [ tags ]
   <<: *all_relations
   icon_many: "fa:users"
   icon_one: "fa:user"
