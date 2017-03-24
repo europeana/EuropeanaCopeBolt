@@ -14,33 +14,22 @@
         {% endif %}
     </h1>
 
-    {# Perhaps we post a small teaser, stored in the 'block' named 'Search teaser' #}
-    {% setcontent block = "block/search-teaser" %}
-
-    {# check if we have 'content'. If so, we know we have have a teaser to display. #}
-    {% if block.content is defined %}
-        {{ block.content }}
-    {% endif %}
-
     <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain">
         <input type="search" value="{{ search|default() }}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="search" >
         <button type="submit" class="button">{{ __('general.phrase.search') }}</button>
     </form>
 
     {% for record in records %}
-
         {% include 'partials/_view_teaser.twig' with {record: record} %}
-
     {% else %}
         <article>
-
             <p>
                 {{ __('general.phrase.no-result-for-search-term', { '%SEARCHTERM%': search|escape }) }}
             </p>
-
         </article>
     {% endfor %}
 
     {# If there are more records than will fit on one page, the pager is shown. #}
+    {{ pager(template = 'partials/_pager.twig') }}
 
 {% endblock main %}

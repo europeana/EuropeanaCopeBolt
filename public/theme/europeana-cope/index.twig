@@ -2,7 +2,6 @@
 
 {% block body %}
     <main>
-        {{ widgets('main_top') }}
         <section>
             <h2>Contenttypes</h2>
             {#{{ dump(app.config.get('contenttypes')) }}#}
@@ -22,6 +21,5 @@
                 {#{{ dump(ct) }}#}
             </section>
         {%- endfor -%}
-        {{ widgets('main_bottom') }}
     </main>
 {% endblock body %}

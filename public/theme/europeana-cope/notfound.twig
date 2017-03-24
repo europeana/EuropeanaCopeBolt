@@ -14,16 +14,8 @@
         {{ fields(record) }}
     {% else %}
         <p>
-            The requested page was not found.
+        {{ __("Unfortunately, this page is not available. Try another page, or go to the <a href=\"%paths_root%\">homepage</a>.", {'%paths_root%': path('homepage')} ) }}
         </p>
-
-        <div class="primary callout" data-closable>
-            <h5>Add a Blocks record with slug '404-not-found' to customize this message. </h5>
-            <p>If it's not showing up here, doublecheck that the <tt>slug</tt> is correct, and that the Block is published.</p>
-            <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
     {% endif %}
 
 {% endblock main %}

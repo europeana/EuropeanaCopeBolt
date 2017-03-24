@@ -25,12 +25,10 @@
 
     {% block body %}
         <main>
-            {{ widgets('main_top') }}
             <section>
                 {% block main %}
                 {% endblock main %}
             </section>
-            {{ widgets('main_bottom') }}
 
             {% block aside %}
                 {{ include('partials/_aside.twig') }}
