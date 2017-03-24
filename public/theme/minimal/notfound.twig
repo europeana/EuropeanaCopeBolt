@@ -1,0 +1,21 @@
+{% extends 'partials/_master.twig' %}
+
+{% setcontent record = 'blocks/404-not-found' %}
+
+{% block title %}
+    {{ record.title|default('404 not found') }}
+{% endblock title %}
+
+{% block main %}
+
+    <h1>{{ record.title|default('404 not found') }}</h1>
+
+    {% if fields(record) %}
+        {{ fields(record) }}
+    {% else %}
+        <p>
+        {{ __("Unfortunately, this page is not available. Try another page, or go to the <a href=\"%paths_root%\">homepage</a>.", {'%paths_root%': path('homepage')} ) }}
+        </p>
+    {% endif %}
+
+{% endblock main %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ app.config.get('general/sitename') }} | Maintenance</title>
+
+    <link rel="stylesheet" href="{{ asset('css/maintenance.css', 'theme') }}">
+</head>
+
+<body>
+    <div class="alert">
+        <h1><b>{{ app.config.get('general/sitename') }}</b> &raquo; Maintenance</h1>
+        <p>
+            This website is currently offline, as we are performing site maintenance. <br>
+            Please be patient - we'll be back shortly!
+        </p>
+    </div>
+</body>
+</html>

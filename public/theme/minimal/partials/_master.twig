@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="{{ htmllang() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {%- if record.title is defined %}{{ record.title|striptags }} | {% endif -%}
+            {{ app.config.get('general/sitename') -}}
+        {% if record.title is not defined and app.config.get('general/payoff') %} | {{ app.config.get('general/payoff') }}{% endif -%}
+    </title>
+
+    <link rel="stylesheet" href="{{ asset('css/simple.css', 'theme') }}">
+    {% block headincludes %}
+    {% endblock headincludes %}
+</head>
+<body>
+    {% block topbar %}
+        {{ include('partials/_topbar.twig') }}
+    {% endblock topbar %}
+
+    {% block header %}
+        {{ include('partials/_header.twig') }}
+    {% endblock header %}
+
+    {% block body %}
+        <main>
+            <section>
+                {% block main %}
+                {% endblock main %}
+            </section>
+
+            {% block aside %}
+                {{ include('partials/_aside.twig') }}
+            {% endblock aside %}
+        </main>
+    {% endblock body %}
+
+    {% block footer %}
+        {{ include('partials/_footer.twig') }}
+    {% endblock footer %}
+
+    {% block bottomincludes %}
+    {% endblock bottomincludes %}
+</body>
+</html>

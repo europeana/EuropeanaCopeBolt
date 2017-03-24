@@ -1,0 +1,11 @@
+<!-- Footer -->
+<footer>
+    <p>{{ __("This website is <a href='%url%' target='_blank' title='Sophisticated, lightweight & simple CMS'>Built with Bolt</a>.",{'%url%':'http://bolt.cm'}) }}</p>
+    <nav>
+        {{ menu(
+            identifier = 'main',
+            template = 'partials/_menu.twig',
+            params = {'withsubmenus': false, 'class': 'inline-list align-right'}
+        ) }}
+    </nav>
+</footer>
