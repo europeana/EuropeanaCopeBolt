@@ -27,11 +27,8 @@
     {% endif %}
 
     {% for record in records %}
-        <article>
 
-            {% include 'partials/_snippet_record_teaser.twig' with {record: record} %}
-
-        </article>
+        {% include 'partials/_record_teaser.twig' with {record: record} %}
 
         {% if not loop.last %}
             <hr>

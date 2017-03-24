@@ -7,7 +7,7 @@
         '%name%': record.user.displayname|default(__('Unknown')),
         '%date%': record.datepublish|localedatetime("%A %B %e, %Y")
     }) }}
-    {{ include('partials/_sub_sourcesite.twig', { record: record }) }}
+    {{ include('partials/_snippet_record_sourcesite.twig', { record: record }) }}
 </p>
 
 {% if extended|default() %}
@@ -15,7 +15,7 @@
         <a href="{{ record.link() }}">{{ __('general.phrase.permalink') }}</a> -
         {# include the 'default' links to taxonomies. Check the documentation for ways to modify and customize
            what is output to the browser: https://docs.bolt.cm/content/taxonomies #}
-        {{ include('_sub_taxonomylinks.twig', { record: record }) }}
+        {{ include('partials/_taxonomy_links.twig', { record: record }) }}
     </p>
 
     {% set previous = record.previous('id') %}
