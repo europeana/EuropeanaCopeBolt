@@ -28,7 +28,7 @@ These are the most important files, included in this theme.
 ├── views/                   - Several view templates that are called from partials_view_*.twig
 ├── index.twig               - Template used for 'home'
 ├── listing.twig             - Template used for 'listings', like `/pages` or `/category/movies`
-├── maintenance_default.twig - Template used for the maintenance page
+├── maintenance.twig         - Template used for the maintenance page
 ├── notfound.twig            - Template used for the '404 not found' pages
 ├── page.twig                - Template used for single record pages, like `/page/lorem-ipsum`
 ├── readme.md                - This file. :-)
