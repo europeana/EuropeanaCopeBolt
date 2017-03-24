@@ -1,0 +1,2 @@
+{% set template =  'views/_banner_' ~ record.contenttype.slug ~ '.twig' %}
+{% include [template, 'views/_banner_default.twig'] with {record:record} %}

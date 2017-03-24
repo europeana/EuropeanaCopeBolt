@@ -1,5 +1,3 @@
-<div class="snippet-record-title record-{{ record.contenttype.slug  }}">
-    <a href="{{ record.link }}">{{ record.title }}</a>
-    {% include 'partials/_record_sourcesite.twig' with {record: record} %}
-</div>
+{% set template =  'views/_title_' ~ record.contenttype.slug ~ '.twig' %}
+{% include [template, 'views/_title_default.twig'] with {record:record} %}
 
