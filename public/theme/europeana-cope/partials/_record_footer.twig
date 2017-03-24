@@ -7,7 +7,7 @@
         '%name%': record.user.displayname|default(__('Unknown')),
         '%date%': record.datepublish|localedatetime("%A %B %e, %Y")
     }) }}
-    {{ include('partials/_snippet_record_sourcesite.twig', { record: record }) }}
+    {{ include('partials/_record_sourcesite.twig', { record: record }) }}
 </p>
 
 {% if extended|default() %}

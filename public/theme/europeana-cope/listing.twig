@@ -30,10 +30,6 @@
 
         {% include 'partials/_record_teaser.twig' with {record: record} %}
 
-        {% if not loop.last %}
-            <hr>
-        {% endif %}
-
     {% else %}
         <article>
 
@@ -47,6 +43,6 @@
     {% endfor %}
 
     {# If there are more records than will fit on one page, the pager is shown. #}
-    {{ pager(template = 'partials/_sub_pager.twig') }}
+    {{ pager(template = 'partials/_pager.twig') }}
 
 {% endblock main %}
