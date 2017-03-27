@@ -25,7 +25,10 @@ $content_types = [
 ];
 
 foreach($content_types as $type => $table) {
-
-  echo "cp listing.twig listing_" . $type . ".twig\n";
-  echo "cp record.twig record_" . str_replace('s.twig', '.twig', $type. '.twig') . "\n";
+  echo "cp _banner_default.twig _banner_" . $type . ".twig\n";
+  echo "cp _title_default.twig _title_" . $type . ".twig\n";
+  echo "cp _teaser_default.twig _teaser_" . $type . ".twig\n";
+  echo "cp _detail_default.twig _detail_" . $type . ".twig\n";
+  #echo "cp listing.twig listing_" . $type . ".twig\n";
+  #echo "cp record.twig record_" . str_replace('s.twig', '.twig', $type. '.twig') . "\n";
 }
