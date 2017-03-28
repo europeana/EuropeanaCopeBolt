@@ -134,7 +134,7 @@ class StructureExtension extends SimpleExtension
             'something' => mt_rand(),
         ];
 
-        return $this->renderTemplate('structure.twig', $context);
+        return $this->renderTemplate('structure_frontend.twig', $context);
     }
 
     /**
@@ -157,7 +157,7 @@ class StructureExtension extends SimpleExtension
          *   - Menu icon a Font Awesome small child
          *   - Required Bolt permissions 'settings'
          */
-        $adminMenuEntry = (new MenuEntry('structure-backend-page', 'structure-backend-page-route'))
+        $adminMenuEntry = (new MenuEntry('structure-backend-page', 'structures'))
             ->setLabel('Structure Admin')
             ->setIcon('fa:child')
             ->setPermission('settings')
@@ -180,7 +180,7 @@ class StructureExtension extends SimpleExtension
         $config = $this->getConfig();
 
         return [
-            '/structure/url' => new StructureController($config),
+            '/structures/url' => new StructureController($config),
         ];
     }
 
@@ -192,7 +192,7 @@ class StructureExtension extends SimpleExtension
      */
     protected function registerFrontendRoutes(ControllerCollection $collection)
     {
-        $collection->match('/structure/url', [$this, 'routeStructureUrl']);
+        $collection->match('/structures/url', [$this, 'routeStructureUrl']);
     }
 
     /**
@@ -222,7 +222,7 @@ class StructureExtension extends SimpleExtension
      */
     protected function registerBackendRoutes(ControllerCollection $collection)
     {
-        $collection->match('/extend/structure', [$this, 'structureBackendPage']);
+        $collection->match('/extend/structures', [$this, 'structureBackendPage']);
     }
 
     /**
@@ -234,6 +234,6 @@ class StructureExtension extends SimpleExtension
      */
     public function structureBackendPage(Request $request)
     {
-        return $this->renderTemplate('structure_backend.twig', ['title' => 'My Custom Page']);
+        return $this->renderTemplate('structure_backend.twig', ['title' => 'Structure Page']);
     }
 }

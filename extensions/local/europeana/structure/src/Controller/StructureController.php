@@ -147,6 +147,6 @@ class StructureController implements ControllerProviderInterface
      */
     public function structureUrlTemplate(Application $app, Request $request)
     {
-        return $app['twig']->render('structure.twig', ['title' => 'Look at This Nice Template'], []);
+        return $app['twig']->render('structure_frontend.twig', ['title' => 'Look at This Nice Template'], []);
     }
 }
