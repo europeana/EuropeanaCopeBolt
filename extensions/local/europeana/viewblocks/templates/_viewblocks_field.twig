@@ -1,0 +1,100 @@
+{#=== Options ============================================================================#}
+{% set id = 1 %}
+{% set attr_opt = {
+class:        field.class|default(''),
+name_id:      key,
+required:     field.required|default(false),
+readonly:     field.readonly|default(false)
+}%}
+
+{#=== FIELDSET ============================================================================#}
+<fieldset class="viewblocks">
+    <div class="row">
+        <label class="col-sm-4 col-lg-4 control-labe" for="{{ key }}_{{ id }}_title">Title (optional)</label>
+        <div class="col-sm-8 col-lg-8">
+            <input class="form-control"
+                   name="{{ key }}_{{ id }}_title"
+                   maxlength="255"
+                   type="text"
+                   value="{{ context.content.values[key]|default('') }}">
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_{{ id }}_template">Templates</label>
+        <div class="col-sm-8 col-lg-8">
+            <select class="form-control"
+                    name="{{ key }}_{{ id }}_template">
+                {% for option in field.options.templates|default(['title', 'teaser', 'detail']) %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-12">
+            <p>Selected template for this view block.</p>
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_{{ id }}_filepath">File path</label>
+        <div class="col-sm-8 col-lg-8">
+            <input class="form-control"
+                   name="{{ key }}_{{ id }}_filepath"
+                   maxlength="255"
+                   type="text"
+                   value="{{ context.content.values[key]|default('') }}">
+        </div>
+        <div class="col-sm-12">
+            <p>System path if the template is set to file.</p>
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_{{ id }}_filebrowserpath">Filebrowser path</label>
+        <div class="col-sm-8 col-lg-8">
+            <input class="form-control"
+                   name="{{ key }}_{{ id }}_filebrowserpath"
+                   maxlength="255"
+                   type="text"
+                   value="{{ context.content.values[key]|default('') }}">
+        </div>
+        <div class="col-sm-12">
+            <p>System path if the template is set to filebrowser.</p>
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_{{ id }}_retrieval">Retrieval</label>
+        <div class="col-sm-8 col-lg-8">
+            <select class="form-control"
+                    name="{{ key }}_{{ id }}_retrieval">
+                {% for option in field.options.retrieval|default(['random', 'latest', 'specified', 'highlighted']) %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_{{ id }}_items">Items</label>
+        <div class="col-sm-8 col-lg-8">
+            <input class="form-control"
+                   name="{{ key }}_{{ id }}_items"
+                   maxlength="255"
+                   type="text"
+                   value="{{ context.content.values[key]|default('') }}">
+        </div>
+        <div class="col-sm-12">
+            <p>Comma separated items if the retrieval option is set to specified.</p>
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_{{ id }}_sources">Sources</label>
+        <div class="col-sm-8 col-lg-8">
+            <select class="form-control"
+                    name="{{ key }}_{{ id }}_sources">
+                {% for option in field.options.sources|default(['pages', 'entries']) %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-12">
+            <p>Content type to load.</p>
+        </div>
+    </div>
+</fieldset>

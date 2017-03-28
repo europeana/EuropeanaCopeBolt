@@ -1,0 +1,29 @@
+{
+    "name": "europeana/viewblocks",
+    "description": "A field type for view blocks on landingpages",
+    "type": "bolt-extension",
+    "keywords": [
+    ],
+    "require": {
+        "bolt/bolt": "^3.0"
+    },
+
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lodewijk Evers",
+            "email": "lodewijk@twokings.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Bolt\\Extension\\Europeana\\ViewBlocks\\": [ "src" ]
+        }
+    },
+    "extra": {
+        "bolt-assets": "web",
+        "bolt-class": "Bolt\\Extension\\Europeana\\ViewBlocks\\ViewBlocksExtension"
+    }
+}

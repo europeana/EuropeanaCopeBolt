@@ -337,43 +337,28 @@ landingpages:
     viewblocks:
       type: repeater
       fields:
-        viewtitle:
-          type: text
-          class: large
-          postfix: 'optional title for the view block'
-        style:
-          type: select
-          values: [ 'title', 'banner', 'teaser', 'detail', 'face', 'listing', 'expander', 'filebrowser', 'file' ]
-          default: title
-          postfix: 'the template that the block should use'
-        source:
-          type: select
-          values:
-            - landingpages
-            - pages
-            - blogposts
-            - pressreleases
-            - publications
-            - data
-            - documentation
-            - collections
-            - taskforces
-            - events
-            - jobs
-            - persons
-            - locations
-          postfix: should this block get stuff from a content type
-        type:
-          type: select
-          values: [ 'random', 'latest', 'specified', 'highlighted' ]
-          default: latest
-          postfix: 'what content should be loaded'
-        items:
-          type: text
-          postfix: 'item IDs for the items that need to be loaded if specified is selected for the type'
-        link:
-          type: text
-          postfix: 'optional link'
+        blocks:
+          type: viewblocks
+          label: Block
+          class: block form-control
+          options:
+            templates: [ 'title', 'banner', 'teaser', 'detail', 'face', 'listing', 'expander', 'filebrowser', 'file' ]
+            retrieval: [ 'random', 'latest', 'specified', 'highlighted' ]
+            sources:
+              - landingpages
+              - pages
+              - blogposts
+              - pressreleases
+              - publications
+              - data
+              - documentation
+              - collections
+              - taskforces
+              - events
+              - jobs
+              - persons
+              - locations
+          postfix: 'simple block'
       group: Views
     <<: *structure_defaults
   <<: *all_relations
