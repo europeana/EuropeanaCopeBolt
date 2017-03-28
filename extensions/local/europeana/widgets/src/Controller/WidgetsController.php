@@ -147,6 +147,6 @@ class WidgetsController implements ControllerProviderInterface
      */
     public function widgetsUrlTemplate(Application $app, Request $request)
     {
-        return $app['twig']->render('widgets.twig', ['title' => 'Look at This Nice Template'], []);
+        return $app['twig']->render('widgets_frontend.twig', ['title' => 'Look at This Nice Template'], []);
     }
 }

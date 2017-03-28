@@ -135,7 +135,7 @@ class WidgetsExtension extends SimpleExtension
             'something' => mt_rand(),
         ];
 
-        return $this->renderTemplate('widgets.twig', $context);
+        return $this->renderTemplate('widgets_frontend.twig', $context);
     }
 
     /**
@@ -158,7 +158,7 @@ class WidgetsExtension extends SimpleExtension
          *   - Menu icon a Font Awesome small child
          *   - Required Bolt permissions 'settings'
          */
-        $adminMenuEntry = (new MenuEntry('widgets-backend-page', 'widgets-backend-page-route'))
+        $adminMenuEntry = (new MenuEntry('widgets-backend-page', 'widgets'))
             ->setLabel('Widgets Admin')
             ->setIcon('fa:child')
             ->setPermission('settings')
@@ -223,7 +223,7 @@ class WidgetsExtension extends SimpleExtension
      */
     protected function registerBackendRoutes(ControllerCollection $collection)
     {
-        $collection->match('/extend/widgets-backend-page-route', [$this, 'widgetsBackendPage']);
+        $collection->match('/extend/widgets', [$this, 'widgetsBackendPage']);
     }
 
     /**
@@ -235,6 +235,6 @@ class WidgetsExtension extends SimpleExtension
      */
     public function widgetsBackendPage(Request $request)
     {
-        return $this->renderTemplate('widgets_backend_site.twig', ['title' => 'My Custom Page']);
+        return $this->renderTemplate('widgets_backend.twig', ['title' => 'Widgets Page']);
     }
 }
