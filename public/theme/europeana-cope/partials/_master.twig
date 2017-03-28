@@ -10,11 +10,15 @@
         {% if record.title is not defined and app.config.get('general/payoff') %} | {{ app.config.get('general/payoff') }}{% endif -%}
     </title>
 
-    <link rel="stylesheet" href="{{ asset('css/simple.css', 'theme') }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800&subset=latin,greek,cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/screen.css', 'theme') }}">
+
     {% block headincludes %}
     {% endblock headincludes %}
 </head>
-<body>
+<body class="{% block bodyclass %}{% endblock bodyclass %}">
+    {{ include('partials/_svg_library.twig') }}
+
     {% block topbar %}
         {{ include('partials/_topbar.twig') }}
     {% endblock topbar %}
