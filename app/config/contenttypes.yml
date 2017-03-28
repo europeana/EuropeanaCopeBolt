@@ -130,37 +130,41 @@ __nodes:
         zoho: ZOHO CRM
         him: Heritage in motion
       postfix: "The site this content was imported from."
-      group: Hierarchy
+      group: Structure
     structure_parent:
       type: select
       default: ''
       values: structures/id,title
       autocomplete: true
       label: "Select structure tree parent"
-      group: Hierarchy
+      group: Structure
     structure_sortorder:
       type: integer
       label: "Sort order in structure tree parent"
-      group: Hierarchy
+      group: Structure
     slug:
       type: slug
       uses: title
-      group: Hierarchy
+      group: Structure
     hide_list:
       type: checkbox
       label: "Hide from list views"
       postfix: "Check to hide this page from listings."
-      group: Hierarchy
+      group: Structure
     hide_related:
       type: checkbox
       label: "Hide from related content"
       postfix: "Check to hide this page from related content sections."
-      group: Hierarchy
+      group: Structure
     support_navigation:
       type: checkbox
       label: "Support navigation"
       postfix: "Check to automatically generate support navigation from the headings in the main body text."
-      group: Hierarchy
+      group: Structure
+    template: &template_defaults
+      type: templateselect
+      group: Structure
+  support_defaults: &support_defaults
     contact_record:
       type: select
       label: "Contact record"
@@ -176,10 +180,6 @@ __nodes:
       height: 150px
       postfix: '<p>Use this field to override the introduction from the contact record with a custom blurb.</p>'
       group: Support contact
-    template: &template_defaults
-      type: templateselect
-      filter: 'record_*.twig'
-      group: Hierarchy
   him_sub_defaults: &him_sub_defaults
     entryid:
       type: text
@@ -323,7 +323,67 @@ __nodes:
 
 #################################
 #
-# HOMEPAGE / STRUCTURE / LANDINGPAGE
+# LANDINGPAGE
+#
+#################################
+landingpages:
+  name: Landing pages
+  singular_name: Landing page
+  slug: landingpages
+  singular_slug: landingpages
+  fields:
+    <<: *record_defaults
+    <<: *teaser_defaults
+    viewblocks:
+      type: repeater
+      fields:
+        viewtitle:
+          type: text
+          class: large
+          postfix: 'optional title for the view block'
+        style:
+          type: select
+          values: [ 'title', 'banner', 'teaser', 'detail', 'face', 'listing', 'expander', 'filebrowser', 'file' ]
+          default: title
+          postfix: 'the template that the block should use'
+        source:
+          type: select
+          values:
+            - landingpages
+            - pages
+            - blogposts
+            - pressreleases
+            - publications
+            - data
+            - documentation
+            - collections
+            - taskforces
+            - events
+            - jobs
+            - persons
+            - locations
+          postfix: should this block get stuff from a content type
+        type:
+          type: select
+          values: [ 'random', 'latest', 'specified', 'highlighted' ]
+          default: latest
+          postfix: 'what content should be loaded'
+        items:
+          type: text
+          postfix: 'item IDs for the items that need to be loaded if specified is selected for the type'
+        link:
+          type: text
+          postfix: 'optional link'
+      group: Views
+    <<: *structure_defaults
+  <<: *all_relations
+  taxonomy: [ tags ]
+  icon_many: "fa:map"
+  icon_one: "fa:map-pin"
+
+#################################
+#
+# HOMEPAGE / STRUCTURE
 #
 #################################
 structures:
@@ -341,6 +401,7 @@ structures:
     <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
     structuretype:
       type: select
       label: "Type of structure"
@@ -403,6 +464,7 @@ pages:
       label: "Images gallery (optional)"
       postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   recordsperpage: 50
@@ -432,6 +494,7 @@ blogposts:
     <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   recordsperpage: 100
@@ -462,6 +525,7 @@ pressreleases:
       label: "Images gallery (optional)"
       postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   recordsperpage: 100
@@ -490,6 +554,7 @@ publications:
     <<: *contact_defaults
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   recordsperpage: 50
@@ -514,6 +579,7 @@ applications:
     <<: *contact_defaults
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ appthemes, appcategories, tags ]
   <<: *all_relations
   recordsperpage: 50
@@ -566,6 +632,7 @@ data:
     <<: *contact_defaults
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
   <<: *all_relations
   recordsperpage: 100
@@ -587,6 +654,7 @@ documentation:
     <<: *link_defaults
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   recordsperpage: 50
@@ -622,6 +690,7 @@ collections:
     template:
       type: templateselect
       filter: 'record_*.twig'
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   recordsperpage: 50
@@ -675,6 +744,7 @@ taskforces:
       group: "Taskforce"
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   recordsperpage: 50
@@ -708,6 +778,7 @@ projects:
       pattern: url
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   listing_records: 5
@@ -748,6 +819,7 @@ events:
       label: "Unconfirmed"
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   icon_many: "fa:calendar"
@@ -824,6 +896,7 @@ jobs:
     slug:
       type: slug
       uses: position
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   sort: -datepublish
@@ -1112,6 +1185,7 @@ persons:
         research: Europeana Research
         zoho: ZOHO CRM
         him: Heritage in motion
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   icon_many: "fa:users"
@@ -1252,6 +1326,7 @@ himeditions:
       label: Submission cost
       variant: inline
     <<: *structure_defaults
+    <<: *support_defaults
   <<: *all_relations
   recordsperpage: 50
   icon_many: "fa:trophy"
