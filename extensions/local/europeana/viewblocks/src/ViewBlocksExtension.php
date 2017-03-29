@@ -32,8 +32,8 @@ class ViewBlocksExtension extends SimpleExtension
   protected function registerAssets()
   {
     return [
-      (new Stylesheet('web/viewblocks.backend.css'))->setZone(Zone::BACKEND),
-      (new JavaScript('web/viewblocks.backend.js'))->setZone(Zone::BACKEND),
+      (new Stylesheet('/bolt-public/view/css/viewblocks.backend.css'))->setZone(Zone::BACKEND),
+      (new JavaScript('/bolt-public/view/js/viewblocks.backend.js'))->setZone(Zone::BACKEND),
     ];
   }
 }
