@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b72d43e493283f6d63f95c96bbd7b1e",
+    "content-hash": "cc3924d5108c3fe758b678eaa4f36fd4",
     "packages": [
         {
             "name": "bobdenotter/seo",
@@ -48,6 +48,61 @@
                 "issues": "https://github.com/bobdenotter/seo/issues"
             },
             "time": "2017-02-06T17:16:37+00:00"
+        },
+        {
+            "name": "bolt/sitemap",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/Sitemap.git",
+                "reference": "5867c9a0d86ea0de21e2c910b5f0fe40c1db15e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/Sitemap/zipball/5867c9a0d86ea0de21e2c910b5f0fe40c1db15e1",
+                "reference": "5867c9a0d86ea0de21e2c910b5f0fe40c1db15e1",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-icon": "icon-sitemap.png",
+                "bolt-class": "Bolt\\Extension\\Bolt\\Sitemap\\SitemapExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\Sitemap\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                },
+                {
+                    "name": "Patrick van Kouteren",
+                    "email": "info@wedesignit.nl"
+                },
+                {
+                    "name": "Gawain Lynch",
+                    "email": "gawain.lynch@gmail.com"
+                }
+            ],
+            "description": "An extension to create XML sitemaps for your Bolt website.",
+            "keywords": [
+                "SEO",
+                "sitemap"
+            ],
+            "support": {
+                "source": "https://github.com/bolt/Sitemap/tree/master",
+                "issues": "https://github.com/bolt/Sitemap/issues"
+            },
+            "time": "2017-02-26T13:59:52+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
