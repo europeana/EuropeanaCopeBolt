@@ -97,11 +97,11 @@ class StructureExtension extends SimpleExtension
     {
         return [
             // Web assets that will be loaded in the frontend
-            new Stylesheet('/bolt-public/view/css/structure.css'),
-            new JavaScript('/bolt-public/view/js/structure.js'),
+            new Stylesheet('structure.css'),
+            new JavaScript('structure.js'),
             // Web assets that will be loaded in the backend
-            (new Stylesheet('/bolt-public/view/css/structure.backend.css'))->setZone(Zone::BACKEND),
-            (new JavaScript('/bolt-public/view/js/structure.backend.js'))->setZone(Zone::BACKEND),
+            (new Stylesheet('structure.backend.css'))->setZone(Zone::BACKEND),
+            (new JavaScript('structure.backend.js'))->setZone(Zone::BACKEND),
         ];
     }
 
