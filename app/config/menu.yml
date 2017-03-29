@@ -6,3 +6,15 @@ main:
       title: This is the first menu item.
       path: homepage
       class: first
+    - label: Pro
+      path: pro
+    - label: Research
+      path: research
+    - label: Labs
+      path: labs
+      submenu:
+        - label: Sub 1
+          path: entry/2
+        - label: Sub 2
+          class: menu-item-class
+          path: entry/3

@@ -23,26 +23,27 @@
         {{ include('partials/_topbar.twig') }}
     {% endblock topbar %}
 
-    {% block header %}
-        {{ include('partials/_header.twig') }}
-    {% endblock header %}
+    {% block navigation %}
+        {{ include('partials/_navigation.twig') }}
+    {% endblock navigation %}
 
-    {% block body %}
-        <main>
-            <section>
+    <div class="canvas"> {# contains all items next to navigation #}
+        {% block header %}
+            {{ include('partials/_header.twig') }}
+        {% endblock header %}
+
+        {% block body %}
+            <main>
                 {% block main %}
                 {% endblock main %}
-            </section>
+            </main>
 
-            {% block aside %}
-                {{ include('partials/_aside.twig') }}
-            {% endblock aside %}
-        </main>
-    {% endblock body %}
+        {% endblock body %}
 
-    {% block footer %}
-        {{ include('partials/_footer.twig') }}
-    {% endblock footer %}
+        {% block footer %}
+            {{ include('partials/_footer.twig') }}
+        {% endblock footer %}
+    </div>
 
     {% block bottomincludes %}
     {% endblock bottomincludes %}

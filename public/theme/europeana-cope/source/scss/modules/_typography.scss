@@ -1,0 +1,175 @@
+/**
+ * File:        _typography.scss
+ * Description: _typography.scss contains all text styles for Rijksoverheid makeitso
+ * Author:      Sebastiaan Bonardt - @_sebbon
+ */
+
+
+
+// Gebruikte fonts zijn Open Sans 400, 400i, 700 (bold), 800 (extra-bold).
+// Geladen via Google fonts
+
+
+body {
+    font-size:100%;
+    font-family:$base-font-family;
+    color:$baseFontColour;
+    line-height: 1.875em;
+}
+
+h1, h2, h3, h4, h5 {
+    color:$baseFontHeaderColour;
+    font-family: $base-font-family;
+    margin-top:0;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.125;
+}
+
+h1, .alpha {
+    font-size: 2rem; // 32px
+    margin-bottom:2.75rem;
+}
+
+h2, .beta {
+    font-size: 1.75rem;
+}
+
+h3, .gamma {
+    font-size: 1.25rem;
+}
+
+h4, .delta {
+    font-size: 0.875rem;
+    color: $light-gray;
+    margin-bottom: 2rem;
+
+    footer & {
+        font-size: 0.875rem;
+        color: $light-gray;
+        text-transform: uppercase;
+    }
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+
+ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    li {
+        padding:0;
+        margin:0;
+    }
+}
+
+.introduction {
+    p a,
+    ul a,
+    ol a {
+        text-decoration: underline;
+    }
+}
+
+.body {
+    p a,
+    ul a,
+    ol a {
+        text-decoration: underline;
+    }
+}
+
+.introduction p, .introduction ul, .introduction ol, .introduction {
+    font-family:$base-font-family;
+    font-weight: 400;
+}
+
+.body p, .body ul, .body ol, .body  {
+    font-family:$base-font-family;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+// .btn {
+//     // padding: 0.25em 0.5em;
+//     background-color: $baseFirstThemeColour;
+//     border:0 solid $black;
+//     display:block;
+//     // margin-bottom:1.5em;
+//     &:link, &:visited {
+//         color:$white;
+//         text-decoration:none;
+
+//         .btn__subtext {
+//             text-decoration:none;
+//         }
+//     }
+//     &:hover, &:active, &:focus {
+//         text-decoration:underline;
+//         // background-color: darken($baseFirstThemeColour, 5%);
+//     }
+// }
+
+// a, a:link, a:visited {
+//     transition: all 80ms linear;
+//     color:$baseLinkColour;
+// }
+
+// a:hover, a:active, a:focus {
+//     text-decoration:none;
+// }
+
+
+// main, footer {
+//     p, ul, ol, dl, pre, cite, blockquote, table {
+//         margin:0 0 1.5em 0;
+//         font-size: 1;
+//         @include respond-to(wide-screens) {
+//             font-size: 1.125rem;
+//         }
+//     }
+//     .introduction{
+//         p, ul, ol, dl, pre, cite, blockquote, table {
+//             font-size: 1.125rem;
+//             @include respond-to(wide-screens) {
+//                 font-size: 1.125rem;
+//             }
+//         }
+//     }
+
+//     li ol, li ul {
+//         margin-top:0.5em;
+//     }
+//     ol ol li:last-child {
+//         margin-bottom:0;
+//     }
+// }
+
+
+
+svg.icon {
+    display: inline-block;
+    fill: #f09;
+    fill: CurrentColor;
+    height: 24px;
+    width: 24px;
+
+    a & {
+        vertical-align: middle;
+        height: 1em;
+        width: 1em;
+    }
+}
+
+figcaption {
+
+}
+

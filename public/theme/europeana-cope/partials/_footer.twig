@@ -1,11 +1,44 @@
-<!-- Footer -->
+<!-- Start Footer -->
+
 <footer>
-    <p>{{ __("This website is <a href='%url%' target='_blank' title='Sophisticated, lightweight & simple CMS'>Built with Bolt</a>.",{'%url%':'http://bolt.cm'}) }}</p>
-    <nav>
-        {{ menu(
-            identifier = 'main',
-            template = 'partials/_menu.twig',
-            params = {'withsubmenus': false, 'class': 'inline-list align-right'}
-        ) }}
-    </nav>
+    <div class="inner-wrap">
+
+        <div class="footer-block footer-block-address">
+
+        </div>
+
+        <div class="footer-block footer-block-mission">
+            <h4>We transform the world with culture</h4>
+            <p>
+                We transform the world with culture! We want to build on Europe’s rich heritage and make it easier for people to use, whether for work, for learning or just for fun.
+            </p>
+        </div>
+
+        <div class="footer-block footer-block-socials">
+            <h4>Find us elsewhere</h4>
+        </div>
+
+        <div class="sub-footer">
+
+            <!-- start subnav -->
+            <ul class="nav">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about-us">About us</a>
+                </li>
+                <li>
+                    <a href="http://europeana.eu/portal/rights/terms-and-policies.html">Terms &amp; policies</a>
+                </li>
+                <li>
+                    <a href="/sitemap">Sitemap</a>
+                </li>
+            </ul>
+            <!-- end subnav-->
+
+            <p class="copyright">Co-funded by the European Union.</p>
+        </div>
+
+    </div>
 </footer>

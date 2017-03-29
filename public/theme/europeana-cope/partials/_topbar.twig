@@ -1,7 +1,7 @@
 <div class="topbar">
-    <nav>
-      {{ menu(template = 'partials/_menu.twig') }}
-    </nav>
+    <button class="menu-toggle">
+        menu
+    </button>
 
     <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain">
       <input type="search" value="{% if search is defined %}{{ search|escape }}{% endif %}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="search">
