@@ -71,19 +71,6 @@ readonly:     field.readonly|default(false)
         </div>
     </div>
     <div class="row">
-        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_{{ id }}_items">Items</label>
-        <div class="col-sm-8 col-lg-8">
-            <input class="form-control"
-                   name="{{ key }}_{{ id }}_items"
-                   maxlength="255"
-                   type="text"
-                   value="{{ context.content.values[key]|default('') }}">
-        </div>
-        <div class="col-sm-12">
-            <p>Comma separated items if the retrieval option is set to specified.</p>
-        </div>
-    </div>
-    <div class="row">
         <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_{{ id }}_sources">Sources</label>
         <div class="col-sm-8 col-lg-8">
             <select class="form-control"
@@ -95,6 +82,19 @@ readonly:     field.readonly|default(false)
         </div>
         <div class="col-sm-12">
             <p>Content type to load.</p>
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_{{ id }}_items">Items</label>
+        <div class="col-sm-8 col-lg-8">
+            <input class="form-control"
+                   name="{{ key }}_{{ id }}_items"
+                   maxlength="255"
+                   type="text"
+                   value="{{ context.content.values[key]|default('') }}">
+        </div>
+        <div class="col-sm-12">
+            <p>Comma separated items if the retrieval option is set to specified.</p>
         </div>
     </div>
 </fieldset>
