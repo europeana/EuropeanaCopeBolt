@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc3924d5108c3fe758b678eaa4f36fd4",
+    "content-hash": "f8067640b8e9ed3f54a1902f9025ef53",
     "packages": [
         {
             "name": "bobdenotter/seo",
@@ -48,6 +48,68 @@
                 "issues": "https://github.com/bobdenotter/seo/issues"
             },
             "time": "2017-02-06T17:16:37+00:00"
+        },
+        {
+            "name": "bolt/jsonapi",
+            "version": "v3.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xiaohutai/jsonapi.git",
+                "reference": "81683ec743ec5636f4148148c86ed98d1c7cfd43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/81683ec743ec5636f4148148c86ed98d1c7cfd43",
+                "reference": "81683ec743ec5636f4148148c86ed98d1c7cfd43",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-class": "Bolt\\Extension\\Bolt\\JsonApi\\JSONAPIExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\JsonApi\\": [
+                        "",
+                        "src"
+                    ]
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Dammers",
+                    "email": "tobias@twokings.nl"
+                },
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                },
+                {
+                    "name": "Xiao-Hu Tai",
+                    "email": "xiao@twokings.nl"
+                },
+                {
+                    "name": "Dennis Snijder",
+                    "email": "Dennissnijder97@gmail.com"
+                }
+            ],
+            "description": "Provides simple JSON access to Bolt's internal data structures.",
+            "keywords": [
+                "api",
+                "json",
+                "jsonapi"
+            ],
+            "support": {
+                "source": "https://github.com/xiaohutai/jsonapi/tree/v3.0.9",
+                "issues": "https://github.com/xiaohutai/jsonapi/issues"
+            },
+            "time": "2017-03-20T19:08:38+00:00"
         },
         {
             "name": "bolt/sitemap",
