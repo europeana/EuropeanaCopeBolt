@@ -438,7 +438,6 @@ blogposts:
   sort: -datepublish
   icon_many: "fa:quote-left"
   icon_one: "fa:quote-right"
-  show_in_menu: Ephemeral
 
 #################################
 #
@@ -469,7 +468,7 @@ pressreleases:
   sort: -datepublish
   icon_many: "fa:newspaper-o"
   icon_one: "fa:newspaper-o"
-  show_in_menu: Ephemeral
+  show_in_menu: Other
 
 #################################
 #
@@ -496,7 +495,7 @@ publications:
   recordsperpage: 50
   icon_many: "fa:book"
   icon_one: "fa:book"
-  show_in_menu: Core business
+  show_in_menu: Other
 
 #################################
 #
@@ -520,7 +519,7 @@ applications:
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
-  show_in_menu: Core business
+  show_in_menu: Other
 
 #################################
 #
@@ -572,7 +571,7 @@ data:
   recordsperpage: 100
   icon_many: "fa:object-group"
   icon_one: "fa:object-group"
-  show_in_menu: Core business
+
 
 #################################
 #
@@ -593,7 +592,7 @@ documentation:
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
-  show_in_menu: Core business
+  show_in_menu: Other
 
 #################################
 #
@@ -628,7 +627,7 @@ collections:
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
-  show_in_menu: Core business
+  show_in_menu: Other
 
 #################################
 #
@@ -681,7 +680,7 @@ taskforces:
   recordsperpage: 50
   icon_many: "fa:bullseye"
   icon_one: "fa:bullseye"
-  show_in_menu: Core business
+  show_in_menu: Other
 
 #################################
 #
@@ -716,7 +715,7 @@ projects:
   sort: -datepublish
   icon_many: "fa:clipboard"
   icon_one: "fa:clipboard"
-  show_in_menu: Core business
+  show_in_menu: Other
 
 #################################
 #
@@ -753,7 +752,6 @@ events:
   <<: *all_relations
   icon_many: "fa:calendar"
   icon_one: "fa:calendar"
-  show_in_menu: Ephemeral
 
 #################################
 #
@@ -831,7 +829,6 @@ jobs:
   sort: -datepublish
   icon_many: "fa:money"
   icon_one: "fa:money"
-  show_in_menu: Ephemeral
 
 #################################
 #
@@ -1146,7 +1143,7 @@ locations:
       label: "This is the main Europeana office (appear in footer)"
   icon_many: "fa:map-marker"
   icon_one: "fa:map-marker"
-  show_in_menu: System
+  show_in_menu: Other
 
 #################################
 #
@@ -1205,7 +1202,7 @@ resources:
   sort: weight
   icon_many: "fa:tasks"
   icon_one: "fa:tasks"
-  show_in_menu: System
+  show_in_menu: Other
 
 #################################
 #################################
