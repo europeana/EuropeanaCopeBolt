@@ -9,6 +9,9 @@ app/config/extensions/*_local.yml
 app/cache/
 public/thumbs/
 
+tools/*.sql
+tools/*/*.sql
+
 # hide user submitted files
 public/files
 public/files/
