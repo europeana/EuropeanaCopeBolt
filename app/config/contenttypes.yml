@@ -332,33 +332,35 @@ landingpages:
   slug: landingpages
   singular_slug: landingpages
   fields:
+    testviewblock:
+      type: viewblocks
+      label: Block
+      options:
+        templates: [ 'title', 'banner', 'teaser', 'detail', 'face', 'listing', 'expander', 'filebrowser', 'file' ]
+        retrieval: [ 'random', 'latest', 'specified', 'highlighted' ]
+        sources:
+          - landingpages
+          - pages
+          - blogposts
+          - pressreleases
+          - publications
+          - data
+          - documentation
+          - collections
+          - taskforces
+          - events
+          - jobs
+          - persons
+          - locations
+      postfix: 'simple block'
+      group: Main
     <<: *record_defaults
     <<: *teaser_defaults
     viewblocks:
       type: repeater
       fields:
-        blocks:
-          type: viewblocks
-          label: Block
-          class: block form-control
-          options:
-            templates: [ 'title', 'banner', 'teaser', 'detail', 'face', 'listing', 'expander', 'filebrowser', 'file' ]
-            retrieval: [ 'random', 'latest', 'specified', 'highlighted' ]
-            sources:
-              - landingpages
-              - pages
-              - blogposts
-              - pressreleases
-              - publications
-              - data
-              - documentation
-              - collections
-              - taskforces
-              - events
-              - jobs
-              - persons
-              - locations
-          postfix: 'simple block'
+        line:
+          type: text
       group: Views
     <<: *structure_defaults
   <<: *all_relations

@@ -37,11 +37,11 @@ class ViewBlocksExtension extends SimpleExtension
     $backendJs = new JavaScript();
     $backendJs->setFileName('viewblocks.backend.js')->setZone(Zone::BACKEND)->setPriority(15);
 
-
     $assets = [
       $backendCss,
       $backendJs,
     ];
+
     return $assets;
   }
 }

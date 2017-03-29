@@ -1,0 +1,124 @@
+{% extends '@bolt/_base/_fieldset.twig' %}
+
+{#=== OPTIONS ========================================================================================================#}
+
+{#=== INIT ===========================================================================================================#}
+{% block fieldset_type 'view-block' %}
+
+{% block fieldset_label_text  labelkey %}
+{% block fieldset_label_class 'col-xs-12 control-label' %}
+
+{% if context.content.get(contentkey) is empty or context.content.get(contentkey) is not json or context.content.get(contentkey) == '[]' %}
+    {% set currentvalue = '[[]]' %}
+{% else %}
+    {% set currentvalue = context.content.get(contentkey) %}
+{% endif %}
+
+{#=== FIELDSET =======================================================================================================#}
+{% block fieldset_controls %}
+    <div class="col-sm-12 col-lg-12 viewblocks">
+        <div class="col-sm-12 col-lg-12">
+            <ul>
+                <li>contentkey: {{ contentkey }}</li>
+                <li>currentvalue: {{ currentvalue }}</li>
+                <li>labelkey: {{ labelkey }}</li>
+                <li>class: {{ field.class }}</li>
+                <li>label: {{ field.label }}</li>
+                <li>variant: {{ field.variant }}</li>
+                <li>canupload: {{ field.canUpload }}</li>
+                <li>default: {{ field.default }}</li>
+                <li>type: {{ field.type }}</li>
+                <li>postfix: {{ field.postfix }}</li>
+            </ul>
+        </div>
+
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_title">Title (optional)</label>
+        <div class="col-sm-8 col-lg-8">
+            <input class="form-control"
+                   id="{{ key }}_title"
+                   name="{{ key }}[title]"
+                   maxlength="255"
+                   type="text"
+                   value="{{ context.content.get(key)['title']|default('') }}">
+        </div>
+
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_template">Templates</label>
+        <div class="col-sm-8 col-lg-8">
+            <select class="form-control"
+                    id="{{ key }}_template"
+                    name="{{ key }}[template]">
+                {% for option in field.options.templates|default(['title', 'teaser', 'detail']) %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-12">
+            <p>Selected template for this view block.</p>
+        </div>
+
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_filepath">File path</label>
+        <div class="col-sm-8 col-lg-8">
+            <input class="form-control"
+                   id="{{ key }}_filepath"
+                   name="{{ key }}[filepath]"
+                   maxlength="255"
+                   type="text"
+                   value="{{ context.content.get(key)['filepath']|default('') }}">
+        </div>
+        <div class="col-sm-12">
+            <p>System path if the template is set to file.</p>
+        </div>
+
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_filebrowserpath">Filebrowser path</label>
+        <div class="col-sm-8 col-lg-8">
+            <input class="form-control"
+                   id="{{ key }}_filebrowserpath"
+                   name="{{ key }}[filebrowserpath]"
+                   maxlength="255"
+                   type="text"
+                   value="{{ context.content.get(key)['filebrowserpath']|default('') }}">
+        </div>
+        <div class="col-sm-12">
+            <p>System path if the template is set to filebrowser.</p>
+        </div>
+
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_retrieval">Retrieval</label>
+        <div class="col-sm-8 col-lg-8">
+            <select class="form-control"
+                    id="{{ key }}_retrieval"
+                    name="{{ key }}[retrieval]">
+                {% for option in field.options.retrieval|default(['random', 'latest', 'specified', 'highlighted']) %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_sources">Sources</label>
+        <div class="col-sm-8 col-lg-8">
+            <select class="form-control"
+                    id="{{ key }}_sources"
+                    name="{{ key }}[sources]">
+                {% for option in field.options.sources|default(['pages', 'entries']) %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-12">
+            <p>Content type to load.</p>
+        </div>
+
+        <label class="col-sm-4 col-lg-4 control-label" for="{{ key }}_items">Items</label>
+        <div class="col-sm-8 col-lg-8">
+            <input class="form-control"
+                   id="{{ key }}_items"
+                   name="{{ key }}[items]"
+                   maxlength="255"
+                   type="text"
+                   value="{{ context.content.get(key)['items']|default('') }}">
+        </div>
+        <div class="col-sm-12">
+            <p>Comma separated items if the retrieval option is set to specified.</p>
+        </div>
+
+    </div>
+{% endblock fieldset_controls %}
