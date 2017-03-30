@@ -3,6 +3,7 @@
 namespace Bolt\Extension\Europeana\ViewBlocks\Field;
 
 use Bolt\Field\FieldInterface;
+use Doctrine\DBAL\Types\Type;
 
 class ViewBlocksField implements FieldInterface
 {
@@ -19,12 +20,12 @@ class ViewBlocksField implements FieldInterface
 
   public function getStorageType()
   {
-    return 'text';
+    return Type::getType('json_array');
   }
 
   public function getStorageOptions()
   {
-    return ['default' => ''];
+    return [];
   }
 
 }

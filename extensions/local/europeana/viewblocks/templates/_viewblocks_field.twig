@@ -1,97 +1,108 @@
+{#=== INIT ===========================================================================================================#}
+
+{% set currentcontent = context.content.get(contentkey)|default('') %}
+
 {#=== OPTIONS ========================================================================================================#}
 
-{% set option = {
-    class:       ('form-control ' ~ field.class)|trim,
-    height:      field.height|default(''),
-    label:       field.label,
-    info:        field.info|default(''),
-    required:    field.required|default(false),
-    errortext:   field.error|default(''),
-    placeholder: field.placeholder|default(''),
-    options:     field.options|default(''),
-    templates:   field.options.templates|default([ 'title', 'teaser', 'detail' ]),
-    retrieval:   field.options.retrieval|default([ 'random', 'latest', 'specified', 'highlighted' ]),
-    sources:     field.options.sources|default([ 'pages', 'entries' ]),
-} %}
-
-{#=== INIT ===========================================================================================================#}
-{% set currentcontent = context.content.get(contentkey)|default('') %}
 {% set attributes = {
     text: {
-        class:           option.class,
-        data_errortext:  option.errortext,
-        name:            name,
-        placeholder:     option.placeholder,
-        required:        option.required,
-        style:           option.height ? 'height: ' ~ option.height ~ ';' : '',
+        name:            name ~ '_current',
+        label:           field.label,
+        class:           'visible-value',
+        data_errortext:  field.error|default(''),
+        placeholder:     field.placeholder|default(''),
+        required:        field.required|default(false),
+        style:           field.height|default('') ? 'height: ' ~ field.height ~ ';' : '',
     },
-    hidden: {
-        name:           name,
-        id:             key,
-        type:           'hidden',
-        value:          currentcontent,
+    before: {
+        name:           name ~ '_before',
+        class:          'invisible-value hide',
+    },
+    templates: {
+        'label':     'Templates',
+        'name':      key ~ '[templates]',
+        'id':        key ~ '[templates]',
+        'all':       false,
+        'clear':     false,
+        'required':  true,
+        'multiple':  false,
+        'values':    field.options.templates|default({ 'titles': 'Title links', 'teasers': 'Teasers', 'details': 'Full details' }),
+        'default':   'teasers',
+    },
+    ordering: {
+        'label':     'Ordering',
+        'name':      key ~ '[ordering]',
+        'id':        key ~ '[ordering]',
+        'all':       false,
+        'clear':     false,
+        'required':  true,
+        'multiple':  false,
+        'values':    field.options.ordering|default({ 'random': 'random', 'latest': 'latest', 'specified': 'specified' }),
+        'default':   'latest',
+    },
+    sources: {
+        'label':     'Sources',
+        'name':      key ~ '[sources]',
+        'id':        key ~ '[sources]',
+        'all':       false,
+        'clear':     false,
+        'required':  true,
+        'multiple':  false,
+        'values':    field.options.sources|default({ 'pages': 'Pages', 'entries': "Entries" }),
+        'default':   'pages',
     }
 } %}
 
-{% if option.templates is iterable %}
-    {% set template_values = option.templates %}
-{% endif %}
-
-{# Get the current selection. Either a single value, or an array. #}
-{% set selection = currentcontent['templates']|default(option.templates[0]) %}
-{% if selection is not iterable %}
-    {% set selection = [ selection ] %}
-{% endif %}
-
-{# If the current selection contains an existing id, we must use _only_ the id, and not accept a fallback. #}
-{% set onlyids = selection|first in template_values|keys %}
-
-{# Build the select options array #}
-{% set templates_options = [] %}
-{% for id, value in template_values %}
-    {% set is_array = (value is iterable and (value | length) > 1) %}
-    {% set templates_options = templates_options|merge([{
-        value:     id,
-        text:      is_array ? value[0:]|join(' / ') : value,
-        selected:  id in selection or (not onlyids and (is_array ? value[0] : value) in selection),
-    }]) %}
-{% endfor %}
-
-{# Templates BUIC options #}
-{% set templates_label = 'templates' %}
-{% set templates_opt_select = {
-    'all':       0,
-    'clear':     false,
-    'id':        key ~ '[' ~ templates_label ~ ']',
-    'multiple':  0,
-    'name':      templates_label,
-    'options':   templates_options,
-    'required':  true,
-} %}
 
 
 {#=== FIELDSET =======================================================================================================#}
-
-{% extends '@bolt/_base/_fieldset.twig' %}
-
-{% block fieldset_type 'viewblocks' %}
-{% block fieldset_widget 'fieldViewBlocks' %}
-
-{% block fieldset_label_text  labelkey %}
-{% block fieldset_label_info  option.info %}
-{% block fieldset_label_class 'col-xs-12 control-label' %}
-
-{% block fieldset_controls %}
-    <div class="col-xs-12">
-        <pre{{ macro.attr(attributes.text) }}>{{ currentcontent }}</pre>
-        <input{{ macro.attr(attributes.hidden) }}>
-    </div>
-    <div class="col-xs-12">
-        {% from '@bolt/_buic/_select.twig' import buic_select %}
-        <label class="col-sm-3">Template</label>
-        <div class="col-sm-9">
-            {{ buic_select( templates_opt_select ) }}
+<fieldset class="form-group bolt-field-text viewblocks">
+    <legend class="sr-only">{{ labelkey }}</legend>
+    <label class="main col-xs-12">{{ labelkey }}: {{ field.info|default('') }}</label>
+    <div class="form-group">
+        <div class="col-xs-12">
+            <div class="col-sm-12">
+                {% include '@bolt/editcontent/fields/_select.twig' with {
+                    field: attributes.templates,
+                    labelkey: attributes.templates.label,
+                    key: attributes.templates.name,
+                    name: attributes.templates.name
+                } %}
+            </div>
         </div>
     </div>
-{% endblock fieldset_controls %}
+    <div class="form-group">
+        <div class="col-xs-12">
+            <div class="col-sm-12">
+                {% include '@bolt/editcontent/fields/_select.twig' with {
+                    field: attributes.ordering,
+                    labelkey: attributes.ordering.label,
+                    key: attributes.ordering.name,
+                    name: attributes.ordering.name
+                } %}
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12">
+            <div class="col-sm-12">
+                {% include '@bolt/editcontent/fields/_select.twig' with {
+                    field: attributes.sources,
+                    labelkey: attributes.sources.label,
+                    key: attributes.sources.name,
+                    name: attributes.sources.name
+                } %}
+            </div>
+        </div>
+    </div>
+    <div class="form-group visiblevalues">
+        <div class="col-xs-12">
+            <div class="col-sm-12">
+                <p{{ macro.attr(attributes.text) }}>{{ currentcontent|json_encode }}</p>
+                <p{{ macro.attr(attributes.before) }}>{{ currentcontent|json_encode }}</p>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
 
