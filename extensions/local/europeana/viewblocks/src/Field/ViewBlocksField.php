@@ -20,7 +20,7 @@ class ViewBlocksField implements FieldInterface
 
   public function getStorageType()
   {
-    return Type::getType('json_array');
+    return 'text';
   }
 
   public function getStorageOptions()

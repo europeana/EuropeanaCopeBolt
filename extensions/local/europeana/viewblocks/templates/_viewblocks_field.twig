@@ -3,25 +3,10 @@
 {% set currentcontent = context.content.get(contentkey)|default('') %}
 
 {#=== OPTIONS ========================================================================================================#}
-
-{% set attributes = {
-    text: {
-        name:            name ~ '_current',
-        label:           field.label,
-        class:           'current-value',
-        data_errortext:  field.error|default(''),
-        placeholder:     field.placeholder|default(''),
-        required:        field.required|default(false),
-        style:           field.height|default('') ? 'height: ' ~ field.height ~ ';' : '',
-    },
-    before: {
-        name:           name ~ '_before',
-        class:          'before-value hide',
-    },
+{% set datablocks = {
     templates: {
         'label':     'Templates',
         'name':      key ~ '[templates]',
-        'id':        key ~ '[templates]',
         'all':       false,
         'clear':     false,
         'required':  true,
@@ -32,7 +17,6 @@
     ordering: {
         'label':     'Ordering',
         'name':      key ~ '[ordering]',
-        'id':        key ~ '[ordering]',
         'all':       false,
         'clear':     false,
         'required':  true,
@@ -43,7 +27,6 @@
     sources: {
         'label':     'Sources',
         'name':      key ~ '[sources]',
-        'id':        key ~ '[sources]',
         'all':       false,
         'clear':     false,
         'required':  true,
@@ -51,8 +34,29 @@
         'values':    field.options.sources|default({ 'pages': 'Pages', 'entries': "Entries" }),
         'default':   'pages',
     }
-} %}
 
+} %}
+{% set attributes = {
+    text: {
+        name:            key,
+        id:              key,
+        label:           field.label,
+        class:           'current-value viewblocks-field',
+        data_errortext:  field.error|default(''),
+        placeholder:     field.placeholder|default(''),
+        required:        field.required|default(false),
+        style:           field.height|default('') ? 'height: ' ~ field.height ~ ';' : '',
+        data_source:     key ~ '_source',
+    },
+    source: {
+        name:            key ~ '_source',
+        id:              key ~ '_source',
+        class:           'col-sm-12 data-value',
+        data_templates:  datablocks.templates|json_encode,
+        data_ordering:   datablocks.ordering|json_encode,
+        data_sources:    datablocks.sources|json_encode,
+    }
+} %}
 
 
 {#=== FIELDSET =======================================================================================================#}
@@ -61,45 +65,8 @@
     <label class="main col-xs-12">{{ labelkey }}: {{ field.info|default('') }}</label>
     <div class="form-group">
         <div class="col-xs-12">
-            <div class="col-sm-12">
-                {% include '@bolt/editcontent/fields/_select.twig' with {
-                    field: attributes.templates,
-                    labelkey: attributes.templates.label,
-                    key: attributes.templates.name,
-                    name: attributes.templates.name
-                } %}
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-xs-12">
-            <div class="col-sm-12">
-                {% include '@bolt/editcontent/fields/_select.twig' with {
-                    field: attributes.ordering,
-                    labelkey: attributes.ordering.label,
-                    key: attributes.ordering.name,
-                    name: attributes.ordering.name
-                } %}
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-xs-12">
-            <div class="col-sm-12">
-                {% include '@bolt/editcontent/fields/_select.twig' with {
-                    field: attributes.sources,
-                    labelkey: attributes.sources.label,
-                    key: attributes.sources.name,
-                    name: attributes.sources.name
-                } %}
-            </div>
-        </div>
-    </div>
-    <div class="form-group visiblevalues">
-        <div class="col-xs-12">
-            <div class="col-sm-12">
-                <span{{ macro.attr(attributes.text) }}>{{ currentcontent|json_encode }}</span>
-                <span{{ macro.attr(attributes.before) }}>{{ currentcontent|json_encode }}</span>
+            <div{{ macro.attr(attributes.source) }}>
+                <textarea{{ macro.attr(attributes.text) }}>{{ currentcontent|default('') }}</textarea>
             </div>
         </div>
     </div>

@@ -367,22 +367,129 @@ landingpages:
   slug: landingpages
   singular_slug: landingpages
   fields:
-    block:
-      <<: *viewblock_defaults
-      group: Main
     <<: *record_defaults
+    body:
+      type: html
+      label: "Body (optional)"
+    modules:
+      label: Modules
+      type: repeater
+      separator: true
+      fields:
+        title:
+          type: text
+          label: Title (optional)
+          info: "If this field is set the title will be shown as title for the block, if no title is set the block will not have a title either."
+          placeholder: If the block has a title you can enter it here
+        body:
+          type: html
+          label: "Body (optional)"
+          height: 100px
+          postfix: "Shown in module blocks as body text"
+        templates:
+          type: select
+          default: teasers
+          info: "The template selects the kind of display this block uses"
+          values:
+            titles: Title with a link
+            banners: Banner
+            teasers: Teaser
+            details: Full record details
+            body: Show only body field
+            faces: Round images or photos with a link
+            listing: Listing of records
+            expander: Expander block with records
+            browser: Filebrowser block
+            files: File block
+            hidden: Hidden block (for custom scripting)
+        ordering:
+          type: select
+          default: latest
+          info: "The ordering is for the templates where a list is selected"
+          values:
+            latest: The newest records first
+            current: Currently relevant (based on start and end date)
+            alphabetical: Alphabetically ordered
+            specified: Select some records below
+            highlighted: Records based on highlighted flag
+            random: A number of random records
+        sources:
+          type: select
+          default: posts
+          info: "What contenttype should be used as source for this block"
+          values:
+            pages: Pages, Listings, Landingpages, Structures and Collections
+            posts: Blogposts, Pressreleases, Publications and News
+            data: Data, Applications, Documentation
+            projects: Projects, Taskforces and Workinggroups
+            jobs: Jobs
+            events: Events
+        override_amount:
+          type: integer
+          label: Amount
+          variant: inline
+          info: "If this field is set this number will be used as the number of items in the listing"
+        selected_pages:
+          type: select
+          default: ''
+          multiple: true
+          values: pages/id,title
+          autocomplete: true
+          label: "Select Pages"
+        selected_posts:
+          type: select
+          default: ''
+          multiple: true
+          values: posts/id,title
+          autocomplete: true
+          label: "Select Posts"
+        selected_data:
+          type: select
+          default: ''
+          multiple: true
+          values: data/id,title
+          autocomplete: true
+          label: "Select data"
+        selected_projects:
+          type: select
+          default: ''
+          multiple: true
+          values: projects/id,title
+          autocomplete: true
+          label: "Select Projects"
+        selected_jobs:
+          type: select
+          default: ''
+          multiple: true
+          values: jobs/id,title
+          autocomplete: true
+          label: "Select Jobs"
+        selected_events:
+          type: select
+          default: ''
+          multiple: true
+          values: events/id,title
+          autocomplete: true
+          label: "Select Events"
+        override_css_id:
+          type: text
+          label: DOM ID
+          variant: inline
+          info: "If this field is set the id will be used in the HTML for styling"
+        override_css_class:
+          type: text
+          label: CSS Class
+          variant: inline
+          info: "If this field is set the classname will be used in the HTML for styling"
+      group: Main
+    pagefooter:
+      type: html
+      label: "Pagefooter (optional)"
+      height: 100px
+      postfix: "Shown on individual pages below the main body text"
+      group: Main
     <<: *teaser_defaults
     <<: *structure_defaults
-    viewblocks:
-      type: repeater
-      fields:
-        hide_list:
-          type: checkbox
-          label: "Hide from list views"
-          postfix: "Check to hide this page from listings."
-#        viewtext:
-#          <<: *viewblock_defaults
-      group: Views
   <<: *all_relations
   taxonomy: [ tags ]
   icon_many: "fa:map"

@@ -1,33 +1,54 @@
-jQuery(document).ready(function($) {
-    console.log('viewblocks js loaded');
-    $('.viewblocks select').each(function() {
-        $(this).on('change', function() {
-            var currentvalue = $(this).val();
-
-            var currentkey = $(this).attr('id');
-            // console.log('the changed element', currentkey);
-
-            var parent = $(this).parents('fieldset.viewblocks');
-            // the currenttext is the current value
-            var currenttext = $(parent).find('.visiblevalues .current-value');
-            // the invisible text is the original value
-            // var incurrenttext = $(parent).find('.visiblevalues .before-value');
-
-            var field, key, subkey = currentkey;
-            var match = currentkey.replace(']', '').split('[');
-            if(match) {
-                field = match[0] ? match[0] : currentkey;
-                key = match[1] ? match[1] : null;
-                subkey = match[2] ? match[2] : null;
+jQuery.fn.extend(
+    {
+        loadViewBlock: function() {
+            console.log('initializing viewblock', this);
+            $(this).addClass('viewblocks');
+            $(this).
+            return this;
+        },
+        onAvailable: function(fn){
+            var sel = this.selector;
+            var timer;
+            var self = this;
+            if (this.length > 0) {
+                fn.call(this);
             }
-            console.log('field:', field, 'key:', key, 'subkey:', subkey, '- set to:', currentvalue);
+            else {
+                timer = setInterval(function(){
+                    if ($(sel).length > 0) {
+                        fn.call($(sel));
+                        clearInterval(timer);
+                    }
+                },50);
+            }
+        }
+    }
+);
 
-            var newvalue, oldvalue;
-            oldvalue = $(currenttext).text();
-            if(oldvalue !== '') { newvalue = JSON.parse(oldvalue); } else { newvalue = ''; }
-            newvalue[key] = currentvalue;
 
-            currenttext.text(JSON.stringify(newvalue));
-        });
+jQuery(document).ready(function($) {
+    console.log('viewblocks js start');
+
+    $('.repeater-slot .repeater-group').onAvailable(
+        function() {
+            //console.log('initializing viewblock for initial fields');
+            $(this).loadViewBlock();
+        }
+    );
+    $('.repeater-add button').on('click', function() {
+        //console.log('a repeater is added');
+        setTimeout(
+            function() {
+                $('.repeater-slot .repeater-group:not(.viewblocks)').onAvailable(
+                    function() {
+                        //console.log('initializing viewblock for new fields');
+                        $(this).loadViewBlock();
+                    }
+                );
+            },
+            200
+        );
     });
+
+    console.log('viewblocks js loaded');
 });

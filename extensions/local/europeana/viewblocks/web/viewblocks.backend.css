@@ -1,3 +1,7 @@
 .viewblocks {
     background: #fc0;
 }
+.viewblocks .control-label,
+.viewblocks .form-control {
+    margin-bottom: 0.2em;
+}
