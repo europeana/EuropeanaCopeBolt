@@ -1,0 +1,163 @@
+/*
+* FOOTER
+**/
+
+.sub-footer {
+    border-top: 1px solid $menu-gray;
+}
+
+/*
+* WIDGET ELEMENTEN
+**/
+
+img.round {
+    border-radius: 50%;
+
+    .fourth & {
+        width: 108px;
+        height: 108px;
+        margin: 0 auto;
+    }
+
+    .third & {
+        width: 164px;
+        height: 164px;
+        margin: 0 auto;
+    }
+
+}
+
+.colored-image {
+    display: block;
+    height: 100%;
+    background-color: $baseFirstThemeColour;
+    background-blend-mode: multiply;
+}
+
+/*
+* WIDGET HERO BANNERS
+**/
+
+.banner {
+    height: 20rem;
+    position: relative;
+
+    .colored-image {
+        position: absolute;
+        width: 100%;
+        left:0;
+        top:0;
+
+    }
+
+    h3 {
+        text-transform: uppercase;
+    }
+
+    .header-group {
+        position: absolute;
+        bottom: 0;
+        color: $white;
+        padding: 1rem;
+        left: 66.666%;
+        width: 33%;
+        text-shadow: 0px 0px 2px rgba($black, 0.5);
+
+        p {
+            font-size: 0.875rem;
+        }
+    }
+
+    &.third .header-group {
+        left: 0;
+        width: 100%;
+
+        p {
+            font-size: 0.75rem;
+        }
+    }
+
+}
+
+
+/*
+* WIDGET CALL TO ACTION LINE
+**/
+
+.banner-line {
+    //position: relative;
+    height: 55px;
+    background-color: $baseFirstThemeColour;
+    overflow: hidden;
+    //for vertical alignment
+    display: flex;
+    align-items: center;
+
+
+    .colored-image {
+        float:left;
+        width: 55%;
+        background-color: $baseFirstThemeColour;
+        background-blend-mode: multiply;
+    }
+
+    h3 {
+        position: absolute;
+        right: 45%;
+        margin: 0 1rem 0 0;
+        color: $white;
+    }
+
+    .button {
+        display: inline-block;
+        border-radius: 5px;
+        background-color: darken($baseFirstThemeColour, 25%);
+        color: $white;
+        border: 0;
+        padding: .3rem 4rem;
+        margin-left: 5rem;
+
+    }
+
+    input.button {
+        margin-left: 0;
+        border-radius: 0 5px 5px 0;
+        padding: .3rem 1rem;
+    }
+
+    form {
+        float:left;
+        width: 45%;
+        padding: .3rem 3rem .3rem 1rem;
+
+        input {
+            display: table-cell;
+            height: 2.25rem;
+        }
+    }
+
+
+}
+
+
+/*
+* BUTTONS
+**/
+
+a.button, .button, button {
+    text-decoration: none;
+}
+
+.button-link {
+    border: 3px solid $dark-blue;
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 0.875rem;
+    padding: .3em 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -.3px;
+    color: $dark-blue;
+
+}
+

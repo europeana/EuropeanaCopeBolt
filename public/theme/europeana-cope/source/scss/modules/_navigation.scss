@@ -25,3 +25,23 @@ nav.main-menu {
     }
 }
 
+nav.footer-menu {
+    ul {
+
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+        border-bottom: 1px dotted $dark-blue;
+        margin-right: .8em;
+
+        &:hover, &:focus, &:active {
+            color: $link-blue;
+        }
+    }
+}

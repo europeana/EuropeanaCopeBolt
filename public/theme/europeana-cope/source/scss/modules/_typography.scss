@@ -14,7 +14,7 @@ body {
     font-size:100%;
     font-family:$base-font-family;
     color:$baseFontColour;
-    line-height: 1.875em;
+    line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5 {
@@ -32,17 +32,19 @@ h1, .alpha {
 }
 
 h2, .beta {
-    font-size: 1.75rem;
+    font-size: 1.625rem;
+
 }
 
 h3, .gamma {
     font-size: 1.25rem;
+
 }
 
 h4, .delta {
     font-size: 0.875rem;
     color: $light-gray;
-    margin-bottom: 2rem;
+    margin-bottom: 0.8rem;
 
     footer & {
         font-size: 0.875rem;
@@ -54,6 +56,37 @@ h4, .delta {
 h5 {
     font-size: 1rem;
 }
+
+h2.widget, h3.widget {
+    font-size: 1rem;
+    // text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: $white;
+}
+
+section {
+    > h2, //temp
+    .inner-wrap > h2 {
+        font-size: 1.625rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: $medium-gray;
+        text-align: center;
+        margin: 0 0 .4rem 0
+
+    }
+
+    .inner-wrap > p {
+        text-align: center;
+        margin: 0 0 3rem 0;
+        letter-spacing: -.3px;
+    }
+}
+
+
+
 
 
 ul {
@@ -92,9 +125,39 @@ ul {
     font-weight: 400;
 }
 
+address {
+    font-family: $base-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
 
+footer {
+    font-family: $base-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: $black;
+}
 
+.footer-block-mission p {
+    font-size: 1.0625rem;
+    font-style: italic;
+}
 
+.footer-block-socials {
+
+    a {
+        font-size: 3rem;
+        font-style: italic;
+        line-height: 1.6;
+        color: $dark-blue;
+        text-decoration: none;
+    }
+
+}
 
 
 
@@ -159,14 +222,9 @@ svg.icon {
     display: inline-block;
     fill: #f09;
     fill: CurrentColor;
-    height: 24px;
-    width: 24px;
+    height: 1.2em;
+    width: 1.2em;
 
-    a & {
-        vertical-align: middle;
-        height: 1em;
-        width: 1em;
-    }
 }
 
 figcaption {

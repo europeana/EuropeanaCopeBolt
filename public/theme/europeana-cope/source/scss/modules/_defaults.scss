@@ -130,6 +130,7 @@ input {
 img {
   max-width:100%;
   height: auto;
+  display: block; // to prevent extra pixels on bottom;
 }
 
 blockquote {
