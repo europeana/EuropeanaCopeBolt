@@ -8,10 +8,10 @@ jQuery(document).ready(function($) {
             // console.log('the changed element', currentkey);
 
             var parent = $(this).parents('fieldset.viewblocks');
-            // the visibletext is the current value
-            var visibletext = $(parent).find('.visiblevalues .visible-value');
+            // the currenttext is the current value
+            var currenttext = $(parent).find('.visiblevalues .current-value');
             // the invisible text is the original value
-            // var invisibletext = $(parent).find('.visiblevalues .invisible-value');
+            // var incurrenttext = $(parent).find('.visiblevalues .before-value');
 
             var field, key, subkey = currentkey;
             var match = currentkey.replace(']', '').split('[');
@@ -23,11 +23,11 @@ jQuery(document).ready(function($) {
             console.log('field:', field, 'key:', key, 'subkey:', subkey, '- set to:', currentvalue);
 
             var newvalue, oldvalue;
-            oldvalue = $(visibletext).text();
+            oldvalue = $(currenttext).text();
             if(oldvalue !== '') { newvalue = JSON.parse(oldvalue); } else { newvalue = ''; }
             newvalue[key] = currentvalue;
 
-            visibletext.text(JSON.stringify(newvalue));
+            currenttext.text(JSON.stringify(newvalue));
         });
     });
 });

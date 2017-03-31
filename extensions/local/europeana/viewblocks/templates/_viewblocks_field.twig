@@ -8,7 +8,7 @@
     text: {
         name:            name ~ '_current',
         label:           field.label,
-        class:           'visible-value',
+        class:           'current-value',
         data_errortext:  field.error|default(''),
         placeholder:     field.placeholder|default(''),
         required:        field.required|default(false),
@@ -16,7 +16,7 @@
     },
     before: {
         name:           name ~ '_before',
-        class:          'invisible-value hide',
+        class:          'before-value hide',
     },
     templates: {
         'label':     'Templates',
@@ -56,7 +56,7 @@
 
 
 {#=== FIELDSET =======================================================================================================#}
-<fieldset class="form-group bolt-field-text viewblocks">
+<fieldset class="form-group bolt-field-text viewblocks" name="{{ name }}" id="{{ name }}">
     <legend class="sr-only">{{ labelkey }}</legend>
     <label class="main col-xs-12">{{ labelkey }}: {{ field.info|default('') }}</label>
     <div class="form-group">
@@ -98,8 +98,8 @@
     <div class="form-group visiblevalues">
         <div class="col-xs-12">
             <div class="col-sm-12">
-                <p{{ macro.attr(attributes.text) }}>{{ currentcontent|json_encode }}</p>
-                <p{{ macro.attr(attributes.before) }}>{{ currentcontent|json_encode }}</p>
+                <span{{ macro.attr(attributes.text) }}>{{ currentcontent|json_encode }}</span>
+                <span{{ macro.attr(attributes.before) }}>{{ currentcontent|json_encode }}</span>
             </div>
         </div>
     </div>

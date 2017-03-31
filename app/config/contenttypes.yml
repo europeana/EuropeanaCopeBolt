@@ -215,7 +215,6 @@ __nodes:
         override_title: true
         override_amount: true
       postfix: 'A simple widget block'
-      group: Main
   him_sub_defaults: &him_sub_defaults
     entryid:
       type: text
@@ -370,9 +369,20 @@ landingpages:
   fields:
     block:
       <<: *viewblock_defaults
+      group: Main
     <<: *record_defaults
     <<: *teaser_defaults
     <<: *structure_defaults
+    viewblocks:
+      type: repeater
+      fields:
+        hide_list:
+          type: checkbox
+          label: "Hide from list views"
+          postfix: "Check to hide this page from listings."
+#        viewtext:
+#          <<: *viewblock_defaults
+      group: Views
   <<: *all_relations
   taxonomy: [ tags ]
   icon_many: "fa:map"
