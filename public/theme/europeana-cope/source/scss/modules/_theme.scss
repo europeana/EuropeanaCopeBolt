@@ -34,6 +34,18 @@ img.round {
     background-blend-mode: multiply;
 }
 
+.label {
+    display: inline-block;
+    font-size: 0.9375rem;
+    color: $white;
+    background: $baseFirstThemeColour;
+    padding: 0 0.5rem;
+    line-height: 1.6;
+    margin: 0.75rem 0;
+}
+
+
+
 /*
 * WIDGET HERO BANNERS
 **/
@@ -75,6 +87,56 @@ img.round {
         p {
             font-size: 0.75rem;
         }
+    }
+
+}
+
+
+/*
+* WIDGET TWO COLUMN TEASERS / NEWS
+**/
+
+.teaser-twocol {
+
+    .img-container {
+        width: 50%;
+        float: left;
+        position: relative;
+        margin-right: .875rem;
+    }
+
+    .img-insert {
+        position: absolute;
+        padding: .75rem 0.875rem;
+        margin: 0;
+        top: 0;
+        right: 0;
+        background: $white;
+    }
+
+    .label {
+        margin: 0 0 0.75rem 0;
+    }
+
+    p {
+        margin: 0 0 .5rem;
+    }
+
+
+}
+
+/*
+* WIDGET THREE COLUMN TEASERS / SEMI STATIC CONTENT
+**/
+
+.teaser-threecol {
+
+    img {
+
+    }
+
+    p {
+        margin: 0 0 .5rem;
     }
 
 }
@@ -151,7 +213,7 @@ a.button, .button, button {
 .button-link {
     border: 3px solid $dark-blue;
     display: inline-block;
-    margin: 0 auto;
+    margin: .75rem auto 0 auto;
     font-size: 0.875rem;
     padding: .3em 1em;
     text-transform: uppercase;

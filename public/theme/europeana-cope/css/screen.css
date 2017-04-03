@@ -586,9 +586,6 @@ section > .inner-wrap {
 header {
   background: #f60; }
 
-main {
-  background: #9f6; }
-
 aside {
   background: #0f9; }
 
@@ -622,11 +619,11 @@ footer {
     left: 1.25rem; }
 
 .column {
+  background: #fc8;
   min-height: 2rem;
   width: 100%;
   margin-bottom: 2rem;
-  padding: 0 0.875rem;
-  background: #fc8; }
+  padding: 0 0.875rem; }
   @media only screen and (min-width: 24em) {
     .column {
       padding: 0 0.875rem; } }
@@ -746,7 +743,18 @@ h2, .beta {
   font-size: 1.625rem; }
 
 h3, .gamma {
-  font-size: 1.25rem; }
+  font-size: 1.5rem;
+  margin-bottom: .75rem;
+  color: #4d4d4d; }
+  h3 a, .gamma a {
+    color: #095f90;
+    text-decoration: none; }
+  .teaser-twocol h3, .teaser-twocol .gamma {
+    color: #293745;
+    margin-bottom: .75rem; }
+  .teaser-threecol h3, .teaser-threecol .gamma {
+    font-size: 1.375rem;
+    margin: .75rem 0 0.5rem; }
 
 h4, .delta {
   font-size: 0.875rem;
@@ -833,6 +841,21 @@ footer {
   color: #293745;
   text-decoration: none; }
 
+.teaser-twocol .img-insert {
+  font-size: .75rem;
+  color: #4d4d4d; }
+  .teaser-twocol .img-insert span {
+    color: #1a1a1a; }
+
+a.readmore {
+  color: #1a1a1a;
+  font-weight: 700;
+  text-align: right;
+  display: block;
+  text-decoration: none; }
+  a.readmore:hover, a.readmore:active, a.readmore:focus {
+    color: #095f90; }
+
 svg.icon {
   display: inline-block;
   fill: #f09;
@@ -874,6 +897,15 @@ img.round {
   background-color: #E11D53;
   background-blend-mode: multiply; }
 
+.label {
+  display: inline-block;
+  font-size: 0.9375rem;
+  color: #fff;
+  background: #E11D53;
+  padding: 0 0.5rem;
+  line-height: 1.6;
+  margin: 0.75rem 0; }
+
 /*
 * WIDGET HERO BANNERS
 **/
@@ -902,6 +934,35 @@ img.round {
     width: 100%; }
     .banner.third .header-group p {
       font-size: 0.75rem; }
+
+/*
+* WIDGET TWO COLUMN TEASERS / NEWS
+**/
+.teaser-twocol .img-container {
+  width: 50%;
+  float: left;
+  position: relative;
+  margin-right: .875rem; }
+
+.teaser-twocol .img-insert {
+  position: absolute;
+  padding: .75rem 0.875rem;
+  margin: 0;
+  top: 0;
+  right: 0;
+  background: #fff; }
+
+.teaser-twocol .label {
+  margin: 0 0 0.75rem 0; }
+
+.teaser-twocol p {
+  margin: 0 0 .5rem; }
+
+/*
+* WIDGET THREE COLUMN TEASERS / SEMI STATIC CONTENT
+**/
+.teaser-threecol p {
+  margin: 0 0 .5rem; }
 
 /*
 * WIDGET CALL TO ACTION LINE
@@ -951,7 +1012,7 @@ a.button, .button, button {
 .button-link {
   border: 3px solid #293745;
   display: inline-block;
-  margin: 0 auto;
+  margin: .75rem auto 0 auto;
   font-size: 0.875rem;
   padding: .3em 1em;
   text-transform: uppercase;

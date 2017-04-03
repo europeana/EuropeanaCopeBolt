@@ -70,7 +70,7 @@ header {
 }
 
 main {
-    background: #9f6;
+    // background: #9f6;
 }
 
 aside {
@@ -119,11 +119,11 @@ footer {
 
 
 .column {
+      background: #fc8;
     min-height: 2rem;
     width:100%;
     margin-bottom: 2rem;
     padding: 0 0.875rem;
-    background: #fc8;
 
     @include respond-to(medium-screens) {
         padding: 0 0.875rem;
