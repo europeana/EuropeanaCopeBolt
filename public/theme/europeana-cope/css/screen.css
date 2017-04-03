@@ -755,6 +755,12 @@ h3, .gamma {
   .teaser-threecol h3, .teaser-threecol .gamma {
     font-size: 1.375rem;
     margin: .75rem 0 0.5rem; }
+  .icon-three-col h3, .icon-three-col .gamma {
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #293745; }
 
 h4, .delta {
   font-size: 0.875rem;
@@ -963,6 +969,12 @@ img.round {
 **/
 .teaser-threecol p {
   margin: 0 0 .5rem; }
+
+/*
+* WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS
+**/
+.icon-three-col img.round {
+  margin: 2.5rem auto; }
 
 /*
 * WIDGET CALL TO ACTION LINE

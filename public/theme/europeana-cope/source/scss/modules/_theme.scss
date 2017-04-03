@@ -131,12 +131,19 @@ img.round {
 
 .teaser-threecol {
 
-    img {
-
-    }
-
     p {
         margin: 0 0 .5rem;
+    }
+}
+
+/*
+* WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS
+**/
+
+.icon-three-col {
+
+    img.round {
+        margin: 2.5rem auto;
     }
 
 }
