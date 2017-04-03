@@ -1,0 +1,29 @@
+{% spaceless %}
+{% set title = module.get('title') %}
+{% set body = module.get('body') %}
+{% set template = module.get('templates') %}
+{% set templatefile = 'modules/_' ~ template ~ '.twig' %}
+{% set ordering = module.get('ordering') %}
+{% set sources = module.get('sources') %}
+{% set override_amount = module.get('override_amount') %}
+{% set override_css_id = module.get('override_css_id') %}
+{% set override_css_class = module.get('override_css_class') %}
+{% set selected_records = '' %}
+{% if template != 'body' and ordering == 'specified' %}
+    {% set field = 'selected_' ~ sources %}
+    {% set ids = module.get(field) %}
+{% elseif template != 'body' %}
+    {% setcontent selected_records = sources ~ '/' ~ ordering ~ '/' ~ override_amount %}
+{% endif %}
+{% endspaceless %}
+{{ dump(selected_records) }}
+<div {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module{%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+    {%- if override_css_class %}<span>class: {{ override_css_class }}</span>{% endif -%}
+    {# automatically laod module template #}
+    {% include [templatefile, 'modules/_default.twig'] with {
+        'module': module,
+        'title': title,
+        'body': body,
+        'records': selected_records
+    } %}
+</div>

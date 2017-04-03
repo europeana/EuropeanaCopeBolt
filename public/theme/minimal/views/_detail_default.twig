@@ -12,8 +12,13 @@
 
     {{ record.body }}
 
+
     {# If there are repeaters, we should output them. #}
-    {{ fields(common = false, extended = false, repeaters = true) }}
+    {% for module in record.modules %}
+        {{ include('partials/_default_module.twig', { 'module': module }) }}
+    {% endfor %}
+
+    {{ fields(common = false, extended = false, repeaters = false) }}
 
     {{ include('partials/_record_footer.twig', { 'record': record, 'extended': true }) }}
 

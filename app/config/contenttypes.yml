@@ -419,6 +419,7 @@ landingpages:
           info: "What contenttype should be used as source for this block"
           values:
             pages: Pages, Listings, Landingpages, Structures and Collections
+            persons: Persons
             posts: Blogposts, Pressreleases, Publications and News
             data: Data, Applications, Documentation
             projects: Projects, Taskforces and Workinggroups
@@ -427,6 +428,7 @@ landingpages:
         override_amount:
           type: integer
           label: Amount
+          default: 3
           variant: inline
           info: "If this field is set this number will be used as the number of items in the listing"
         selected_pages:
@@ -436,11 +438,18 @@ landingpages:
           values: pages/id,title
           autocomplete: true
           label: "Select Pages"
+        selected_persons:
+          type: select
+          default: ''
+          multiple: true
+          values: persons/id,name
+          autocomplete: true
+          label: "Select Persons"
         selected_posts:
           type: select
           default: ''
           multiple: true
-          values: posts/id,title
+          values: posts/id,first_name,last_name,email
           autocomplete: true
           label: "Select Posts"
         selected_data:

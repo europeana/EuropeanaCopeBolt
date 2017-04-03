@@ -1,10 +1,91 @@
 jQuery.fn.extend(
     {
         loadViewBlock: function() {
-            console.log('initializing viewblock', this);
+            console.log('initializing viewblock', $(this));
             $(this).addClass('viewblocks');
-            $(this).
+
+            // prepare display according to current settings
+            $(this)
+                .templateSwitcher()
+                .orderSwitcher()
+                .sourceSwitcher();
+
+            // add change handlers to block
+            $(this).on('change', this.callChanges);
+
             return this;
+        },
+        callChanges: function() {
+            console.log('changes called', $(this));
+            $(this)
+                .templateSwitcher()
+                .orderSwitcher()
+                .sourceSwitcher();
+        },
+        templateSwitcher: function() {
+            var viewblock = $(this);
+            var templateselect = viewblock.find('select[name*="templates"]');
+            var newvalue = templateselect.val();
+            viewblock.data('templatevalue', newvalue);
+            console.log('templatesSwitcher triggered', viewblock.data('templatevalue'));
+            return viewblock;
+        },
+        orderSwitcher: function() {
+            var viewblock = $(this);
+            var orderselect = viewblock.find('select[name*="ordering"]');
+            var templatevalue = viewblock.data('templatevalue');
+            //console.log('templatevalue', templatevalue);
+            if(templatevalue == 'body') {
+                orderselect.parents('.repeater-field').hide();
+            } else {
+                orderselect.parents('.repeater-field').show();
+            }
+            var newvalue = orderselect.val();
+            viewblock.data('ordervalue', newvalue);
+            console.log('orderSwitcher triggered', viewblock.data('ordervalue'));
+            return viewblock;
+        },
+        sourceSwitcher: function() {
+            var viewblock = $(this);
+            var sourceselect = viewblock.find('select[name*="sources"]');
+            var newvalue = sourceselect.val();
+            viewblock.data('sourcevalue', newvalue);
+            //console.log('sourceSwitcher triggered', newvalue, sourceselect);
+            var parentblock = sourceselect.parents('.panel.viewblocks');
+            var selectedamount = parentblock.find('input[name*="override_amount"]');
+            var selectedct = parentblock.find('select[name*="selected"]');
+            var amount =  selectedct.length;
+            //console.log('selected content types', sourceselect, newvalue, parentblock, selectedct, amount);
+
+            var templatevalue = viewblock.data('templatevalue');
+            if(templatevalue == 'body') {
+                sourceselect.parents('.repeater-field').hide();
+                selectedamount.parents('.repeater-field').hide();
+            } else {
+                sourceselect.parents('.repeater-field').show();
+            }
+
+            var orderingvalue = viewblock.data('ordervalue');
+            if(orderingvalue == 'specified') {
+                selectedamount.parents('.repeater-field').hide();
+            } else {
+                selectedamount.parents('.repeater-field').show();
+            }
+
+            // loop through all options to hide the source selector
+            for (var ct = 0; ct < amount; ct++) {
+                var currentct = $(selectedct[ct]);
+                var ctname = currentct.attr('name') ? currentct.attr('name') : false;
+                var parentfieldset = $(currentct.parents('.repeater-field'));
+                parentfieldset.hide();
+                if (ctname.indexOf(newvalue) != -1
+                    && templatevalue !== 'body'
+                    && orderingvalue == 'specified') {
+                    console.log('enable', newvalue, 'ctname', ctname);
+                    parentfieldset.show();
+                }
+            }
+            return viewblock;
         },
         onAvailable: function(fn){
             var sel = this.selector;
@@ -32,7 +113,10 @@ jQuery(document).ready(function($) {
     $('.repeater-slot .repeater-group').onAvailable(
         function() {
             //console.log('initializing viewblock for initial fields');
-            $(this).loadViewBlock();
+            $(this).each(function() {
+                console.log('initializing viewblocks for new field', $(this));
+                $(this).loadViewBlock();
+            });
         }
     );
     $('.repeater-add button').on('click', function() {
@@ -41,7 +125,7 @@ jQuery(document).ready(function($) {
             function() {
                 $('.repeater-slot .repeater-group:not(.viewblocks)').onAvailable(
                     function() {
-                        //console.log('initializing viewblock for new fields');
+                        console.log('initializing viewblocks for new fields', $(this));
                         $(this).loadViewBlock();
                     }
                 );
