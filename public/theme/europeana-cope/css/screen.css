@@ -752,10 +752,12 @@ h3, .gamma {
   .teaser-twocol h3, .teaser-twocol .gamma {
     color: #293745;
     margin-bottom: .75rem; }
-  .teaser-threecol h3, .teaser-threecol .gamma {
+  .teaser-threecol h3,
+  .catstreams-threecol h3, .teaser-threecol .gamma,
+  .catstreams-threecol .gamma {
     font-size: 1.375rem;
     margin: .75rem 0 0.5rem; }
-  .icon-three-col h3, .icon-three-col .gamma {
+  .icon-threecol h3, .icon-threecol .gamma {
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
@@ -813,6 +815,12 @@ ul {
 .body ol a {
   text-decoration: underline; }
 
+a {
+  color: #095f90;
+  text-decoration: none; }
+  a:hover, a:active, a.focus {
+    text-decoration: underline; }
+
 .introduction p, .introduction ul, .introduction ol, .introduction {
   font-family: "Open Sans", Arial, Sans-serif;
   font-weight: 400; }
@@ -862,12 +870,26 @@ a.readmore {
   a.readmore:hover, a.readmore:active, a.readmore:focus {
     color: #095f90; }
 
+p.meta span {
+  white-space: nowrap;
+  display: inline-block;
+  margin-right: 1rem; }
+
+p.meta span.caldate {
+  font-size: 0.875rem;
+  margin-top: 1rem; }
+
+p.meta svg {
+  fill: #777777;
+  margin-right: .2rem; }
+
 svg.icon {
   display: inline-block;
   fill: #f09;
   fill: CurrentColor;
   height: 1.2em;
-  width: 1.2em; }
+  width: 1.2em;
+  vertical-align: text-top; }
 
 /**
  * File:        _forms.scss

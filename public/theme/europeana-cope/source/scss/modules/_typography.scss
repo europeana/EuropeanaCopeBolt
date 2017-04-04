@@ -51,18 +51,21 @@ h3, .gamma {
         margin-bottom: .75rem;
     }
 
-    .teaser-threecol & {
+    .teaser-threecol &,
+    .catstreams-threecol & {
         font-size: 1.375rem;
         margin: .75rem 0 0.5rem; //optically even
     }
 
-    .icon-three-col & {
+    .icon-threecol & {
         text-transform: uppercase;
         font-weight: 400;
         text-align: center;
         font-size: 1.25rem;
         color: $dark-blue;
     }
+
+
 
 }
 
@@ -140,6 +143,15 @@ ul {
     }
 }
 
+a {
+    color: $link-blue;
+    text-decoration: none;
+
+    &:hover, &:active, &.focus {
+        text-decoration: underline;
+    }
+}
+
 .introduction p, .introduction ul, .introduction ol, .introduction {
     font-family:$base-font-family;
     font-weight: 400;
@@ -209,6 +221,25 @@ a.readmore {
     }
 }
 
+p.meta {
+
+    span {
+        white-space: nowrap;
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    span.caldate {
+        font-size: 0.875rem;
+        margin-top: 1rem;
+    }
+
+    svg {
+        fill: $light-gray;
+        margin-right: .2rem;
+    }
+}
+
 
 // .btn {
 //     // padding: 0.25em 0.5em;
@@ -273,6 +304,7 @@ svg.icon {
     fill: CurrentColor;
     height: 1.2em;
     width: 1.2em;
+    vertical-align: text-top;
 
 }
 
