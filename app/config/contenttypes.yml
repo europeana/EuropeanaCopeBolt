@@ -381,11 +381,6 @@ landingpages:
           label: Title (optional)
           info: "If this field is set the title will be shown as title for the block, if no title is set the block will not have a title either."
           placeholder: If the block has a title you can enter it here
-        body:
-          type: html
-          label: "Body (optional)"
-          height: 100px
-          postfix: "Shown in module blocks as body text"
         templates:
           type: select
           default: teasers
@@ -395,13 +390,18 @@ landingpages:
             banners: Banner
             teasers: Teaser
             details: Full record details
-            body: Show only body field
             faces: Round images or photos with a link
             listing: Listing of records
             expander: Expander block with records
             browser: Filebrowser block
             files: File block
+            body: Show only the module body field
             hidden: Hidden block (for custom scripting)
+        body:
+          type: html
+          label: "Module body (optional)"
+          height: 100px
+          postfix: "Shown in module blocks as body text"
         ordering:
           type: select
           default: latest

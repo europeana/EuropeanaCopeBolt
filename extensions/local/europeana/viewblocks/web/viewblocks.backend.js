@@ -25,8 +25,14 @@ jQuery.fn.extend(
         templateSwitcher: function() {
             var viewblock = $(this);
             var templateselect = viewblock.find('select[name*="templates"]');
+            var bodyblock = viewblock.find('textarea[name*="body"]');
             var newvalue = templateselect.val();
             viewblock.data('templatevalue', newvalue);
+            if(newvalue == 'body') {
+                bodyblock.parents('.repeater-field').show();
+            } else {
+                bodyblock.parents('.repeater-field').hide();
+            }
             console.log('templatesSwitcher triggered', viewblock.data('templatevalue'));
             return viewblock;
         },

@@ -3,11 +3,11 @@ fieldset.bolt-field-repeater .viewblocks {
     border-right-width: 6px;
     margin: 5px 0 15px 0;
 }
-fieldset.bolt-field-repeater .viewblocks .repeater-field {
-    margin-top: 4px;
-}
 fieldset.bolt-field-repeater .viewblocks .panel-body {
     padding: 4px 0 15px 0;
+}
+fieldset.bolt-field-repeater .viewblocks .repeater-field {
+    margin-top: 10px;
 }
 .viewblocks .control-label,
 .viewblocks .form-control {
