@@ -386,15 +386,25 @@ landingpages:
           default: teasers
           info: "The template selects the kind of display this block uses"
           values:
-            titles: Title with a link
-            banners: Banner
-            teasers: Teaser
-            details: Full record details
-            faces: Round images or photos with a link
-            listing: Listing of records
-            expander: Expander block with records
-            browser: Filebrowser block
-            files: File block
+            titles: "Title with a link"
+            teasers: "Teaser view"
+            listing: "Listing of records"
+            listingexpander: "Expander block with records - vertical accordeon"
+            listingnews: "Two news postings and a link to more."
+            listingpersons: "Person listing"
+            listingevents: "Event listing"
+            listingsemistatic: "Three static intro items"
+            listingstreamers: "Three column category streamers"
+            listingfaces: "Round images or photos with a link"
+            listingthumbnails: "Four columns with round thumbnailed links"
+            details: "Full record details (recommended only for single items)"
+            banners: "Banner view (one or two items)"
+            breakers: "Section breakers, call to action (one or two items)"
+            calltoactionform: "Call to action form main page (one item)"
+            calltoactionlink: "Call to action button main page (one item)"
+            calltoactionblog: "Call to action blog page (one item)"
+            filecontent: "File content block"
+            fileslisting: "File list block"
             body: Show only the module body field
             hidden: Hidden block (for custom scripting)
         body:

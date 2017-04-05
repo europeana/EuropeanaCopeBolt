@@ -1,0 +1,9 @@
+<article class="snippet-listing-thumbnails record-{{ record.contenttype.slug  }}">
+    <a href="{{ record.link }}">
+        <img src="{{ thumbnail(record.image, 300, 300) }}" title="{{ (record.first_name ~ ' ' ~ record.last_name)|default(record.title|default('title unknown')) }}" />
+    </a>
+
+    <h2>
+        <a href="{{ record.link }}">{{ (record.first_name ~ ' ' ~ record.last_name)|default(record.title|default('title unknown')) }}</a>
+    </h2>
+</article>

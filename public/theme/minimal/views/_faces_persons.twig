@@ -1,4 +1,4 @@
-<article>
+<article class="snippet-faces-persons record-{{ record.contenttype.slug  }}">
     <h2>
         <a href="{{ record.link }}">
             <img src="{{ image(record.image, 300, 300) }}" title="{{ (record.first_name ~ ' ' ~ record.last_name)|default(record.title|default('title unknown')) }}" />

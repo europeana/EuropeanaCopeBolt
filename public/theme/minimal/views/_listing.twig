@@ -1,0 +1,16 @@
+<article class="snippet-listing record-{{ record.contenttype.slug  }}">
+    <h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
+
+    {{ popup(record.image, 1200, 500) }}
+
+    {# display something introduction-like.. #}
+    {% if record.introduction %}
+        {{ record.introduction }}
+    {% elseif record.teaser %}
+        {{ record.teaser }}
+    {% else %}
+        <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+    {% endif %}
+
+    {% include 'partials/_record_footer.twig' with { 'record': record } %}
+</article>

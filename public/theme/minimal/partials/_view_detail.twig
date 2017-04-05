@@ -1,2 +1,2 @@
 {% set template =  'views/_detail_' ~ record.contenttype.slug ~ '.twig' %}
-{% include [template, 'views/_detail_default.twig', 'views/_fallback.twig'] with {record:record} %}
+{% include [template, 'views/_details.twig', 'views/_fallback.twig'] with {record:record} %}
