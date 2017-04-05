@@ -436,6 +436,7 @@ landingpages:
           default: ''
           multiple: true
           values: pages/id,title,status
+          keys: id
           autocomplete: true
           label: "Select Pages"
         selected_persons:
@@ -443,6 +444,7 @@ landingpages:
           default: ''
           multiple: true
           values: persons/id,first_name,last_name,email,status
+          keys: id
           autocomplete: true
           label: "Select Persons"
         selected_posts:
@@ -450,6 +452,7 @@ landingpages:
           default: ''
           multiple: true
           values: posts/id,title,status
+          keys: id
           autocomplete: true
           label: "Select Posts"
         selected_data:
@@ -457,6 +460,7 @@ landingpages:
           default: ''
           multiple: true
           values: data/id,title,status
+          keys: id
           autocomplete: true
           label: "Select data"
         selected_projects:
@@ -464,6 +468,7 @@ landingpages:
           default: ''
           multiple: true
           values: projects/id,title,status
+          keys: id
           autocomplete: true
           label: "Select Projects"
         selected_jobs:
@@ -471,6 +476,7 @@ landingpages:
           default: ''
           multiple: true
           values: jobs/id,title,status
+          keys: id
           autocomplete: true
           label: "Select Jobs"
         selected_events:
@@ -478,6 +484,7 @@ landingpages:
           default: ''
           multiple: true
           values: events/id,title,status
+          keys: id
           autocomplete: true
           label: "Select Events"
         override_css_id:
