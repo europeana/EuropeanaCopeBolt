@@ -1,0 +1,100 @@
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body {
+        > header, > nav, > footer, .breadcrumb, > aside, .payoff {
+            display: none;
+        }
+        .main-content {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        aside .btn {
+            display:none;
+        }
+    }
+
+    // prevent headings from being printed at the bottom of the page
+    h2, h3, h4 {
+        page-break-after: avoid;
+    }
+
+    // prevent images from bleeding over the edge of the printed page
+    img {
+        max-width: 100% !important;
+    }
+
+    // articles always start on a fresh page
+    article {
+        page-break-before: always;
+    }
+
+    // prevent large elements, such as unordered lists and images, from being split across multiple pages
+    ul, img {
+        page-break-inside: avoid;
+    }
+
+    // don't do anything special with internal links
+    a, a:link, a:visited {
+        font-weight: normal;
+        text-decoration:underline;
+    }
+
+    // add the link to href links
+    a[href^=http]:after {
+        content:" (" attr(href) ")";
+        font-weight: bolder;
+        text-decoration: underline;
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+}

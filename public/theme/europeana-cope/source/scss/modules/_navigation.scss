@@ -1,0 +1,47 @@
+/**
+ * File:        _navigation.scss
+ * Description: _navigation.scss for website navigation, mobile-menu and search togglers and breadcrumb
+ * Author:      Anke@twokings.nl
+ */
+
+nav.main-menu {
+    position: absolute;
+    width: 235px;
+    top: 95px; //magic number: height from topbar
+    left:0;
+
+    ul {
+        padding: 0 1.125rem 0 0.6875rem
+    }
+
+    li {
+        border-bottom: 1px solid $menu-gray;
+        padding: 0.8125rem 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+nav.footer-menu {
+    ul {
+
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+        border-bottom: 1px dotted $dark-blue;
+        margin-right: .8em;
+
+        &:hover, &:focus, &:active {
+            color: $link-blue;
+        }
+    }
+}

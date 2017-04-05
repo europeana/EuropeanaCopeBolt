@@ -1,0 +1,35 @@
+{
+  "name": "europeana-cope",
+  "version": "1.0.0",
+  "description": "Europeana COPE Bolt template theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/twokings/289_europeana_cope"
+  },
+  "author": {
+    "name": "Lodewijk Evers",
+    "email": "lodewijk@twokings.nl"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-uglify": "^2.0.0",
+    "run-sequence": "^1.2.2",
+    "yargs": "^6.5.0"
+  },
+  "dependencies": {
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-minify-css": "^1.2.4"
+  }
+}

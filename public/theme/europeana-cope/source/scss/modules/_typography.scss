@@ -1,0 +1,314 @@
+/**
+ * File:        _typography.scss
+ * Description: _typography.scss contains all text styles for Rijksoverheid makeitso
+ * Author:      Sebastiaan Bonardt - @_sebbon
+ */
+
+
+
+// Gebruikte fonts zijn Open Sans 400, 400i, 700 (bold), 800 (extra-bold).
+// Geladen via Google fonts
+
+
+body {
+    font-size:100%;
+    font-family:$base-font-family;
+    color:$baseFontColour;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+    color:$baseFontHeaderColour;
+    font-family: $base-font-family;
+    margin-top:0;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.125;
+}
+
+h1, .alpha {
+    font-size: 2rem; // 32px
+    margin-bottom:2.75rem;
+}
+
+h2, .beta {
+    font-size: 1.625rem;
+
+}
+
+h3, .gamma {
+    font-size: 1.5rem;
+    margin-bottom: .75rem; // taken from height in teaser-twocol. Als nodog, mag deze aangepast.
+    color: $medium-gray;
+
+    a {
+        color: $link-blue;
+        text-decoration: none;
+    }
+
+    .teaser-twocol & {
+        color: $dark-blue;
+        margin-bottom: .75rem;
+    }
+
+    .teaser-threecol &,
+    .catstreams-threecol & {
+        font-size: 1.375rem;
+        margin: .75rem 0 0.5rem; //optically even
+    }
+
+    .icon-threecol & {
+        text-transform: uppercase;
+        font-weight: 400;
+        text-align: center;
+        font-size: 1.25rem;
+        color: $dark-blue;
+    }
+
+
+
+}
+
+h4, .delta {
+    font-size: 0.875rem;
+    color: $light-gray;
+    margin-bottom: 0.8rem;
+
+    footer & {
+        font-size: 0.875rem;
+        color: $light-gray;
+        text-transform: uppercase;
+    }
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h2.widget, h3.widget {
+    font-size: 1rem;
+    // text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: $white;
+}
+
+section {
+    > h2, //temp
+    .inner-wrap > h2 {
+        font-size: 1.625rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: $medium-gray;
+        text-align: center;
+        margin: 0 0 .4rem 0
+
+    }
+
+    .inner-wrap > p {
+        text-align: center;
+        margin: 0 0 3rem 0;
+        letter-spacing: -.3px;
+    }
+}
+
+
+
+
+
+ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    li {
+        padding:0;
+        margin:0;
+    }
+}
+
+.introduction {
+    p a,
+    ul a,
+    ol a {
+        text-decoration: underline;
+    }
+}
+
+.body {
+    p a,
+    ul a,
+    ol a {
+        text-decoration: underline;
+    }
+}
+
+a {
+    color: $link-blue;
+    text-decoration: none;
+
+    &:hover, &:active, &.focus {
+        text-decoration: underline;
+    }
+}
+
+.introduction p, .introduction ul, .introduction ol, .introduction {
+    font-family:$base-font-family;
+    font-weight: 400;
+}
+
+.body p, .body ul, .body ol, .body  {
+    font-family:$base-font-family;
+    font-weight: 400;
+}
+
+address {
+    font-family: $base-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+footer {
+    font-family: $base-font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: $black;
+}
+
+.footer-block-mission p {
+    font-size: 1.0625rem;
+    font-style: italic;
+}
+
+.footer-block-socials {
+
+    a {
+        font-size: 3rem;
+        font-style: italic;
+        line-height: 1.6;
+        color: $dark-blue;
+        text-decoration: none;
+    }
+
+}
+
+.img-insert {
+
+    .teaser-twocol & {
+        font-size: .75rem;
+        color: $medium-gray;
+
+        span {
+            color: $black;
+        }
+    }
+
+}
+
+a.readmore {
+    color: $black;
+    font-weight: 700;
+    text-align: right;
+    display: block;
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+        color: $link-blue;
+    }
+}
+
+p.meta {
+
+    span {
+        white-space: nowrap;
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    span.caldate {
+        font-size: 0.875rem;
+        margin-top: 1rem;
+    }
+
+    svg {
+        fill: $light-gray;
+        margin-right: .2rem;
+    }
+}
+
+
+// .btn {
+//     // padding: 0.25em 0.5em;
+//     background-color: $baseFirstThemeColour;
+//     border:0 solid $black;
+//     display:block;
+//     // margin-bottom:1.5em;
+//     &:link, &:visited {
+//         color:$white;
+//         text-decoration:none;
+
+//         .btn__subtext {
+//             text-decoration:none;
+//         }
+//     }
+//     &:hover, &:active, &:focus {
+//         text-decoration:underline;
+//         // background-color: darken($baseFirstThemeColour, 5%);
+//     }
+// }
+
+// a, a:link, a:visited {
+//     transition: all 80ms linear;
+//     color:$baseLinkColour;
+// }
+
+// a:hover, a:active, a:focus {
+//     text-decoration:none;
+// }
+
+
+// main, footer {
+//     p, ul, ol, dl, pre, cite, blockquote, table {
+//         margin:0 0 1.5em 0;
+//         font-size: 1;
+//         @include respond-to(wide-screens) {
+//             font-size: 1.125rem;
+//         }
+//     }
+//     .introduction{
+//         p, ul, ol, dl, pre, cite, blockquote, table {
+//             font-size: 1.125rem;
+//             @include respond-to(wide-screens) {
+//                 font-size: 1.125rem;
+//             }
+//         }
+//     }
+
+//     li ol, li ul {
+//         margin-top:0.5em;
+//     }
+//     ol ol li:last-child {
+//         margin-bottom:0;
+//     }
+// }
+
+
+
+svg.icon {
+    display: inline-block;
+    fill: #f09;
+    fill: CurrentColor;
+    height: 1.2em;
+    width: 1.2em;
+    vertical-align: text-top;
+
+}
+
+figcaption {
+
+}
+
