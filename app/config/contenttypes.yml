@@ -438,6 +438,7 @@ landingpages:
           values: pages/id,title,status
           keys: id
           autocomplete: true
+          sortable: true
           label: "Select Pages"
         selected_persons:
           type: select
@@ -446,6 +447,7 @@ landingpages:
           values: persons/id,first_name,last_name,email,status
           keys: id
           autocomplete: true
+          sortable: true
           label: "Select Persons"
         selected_posts:
           type: select
@@ -454,6 +456,7 @@ landingpages:
           values: posts/id,title,status
           keys: id
           autocomplete: true
+          sortable: true
           label: "Select Posts"
         selected_data:
           type: select
@@ -462,6 +465,7 @@ landingpages:
           values: data/id,title,status
           keys: id
           autocomplete: true
+          sortable: true
           label: "Select data"
         selected_projects:
           type: select
@@ -470,6 +474,7 @@ landingpages:
           values: projects/id,title,status
           keys: id
           autocomplete: true
+          sortable: true
           label: "Select Projects"
         selected_jobs:
           type: select
@@ -478,6 +483,7 @@ landingpages:
           values: jobs/id,title,status
           keys: id
           autocomplete: true
+          sortable: true
           label: "Select Jobs"
         selected_events:
           type: select
@@ -486,6 +492,7 @@ landingpages:
           values: events/id,title,status
           keys: id
           autocomplete: true
+          sortable: true
           label: "Select Events"
         override_css_id:
           type: text
