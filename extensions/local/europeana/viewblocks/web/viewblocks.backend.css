@@ -1,5 +1,10 @@
-.viewblocks {
-    background: #fc0;
+fieldset.bolt-field-repeater .viewblocks {
+    border-left-width: 6px;
+    border-right-width: 6px;
+    margin: 5px 0;
+}
+fieldset.bolt-field-repeater .viewblocks .repeater-field {
+    margin-top: 4px;
 }
 .viewblocks .control-label,
 .viewblocks .form-control {
