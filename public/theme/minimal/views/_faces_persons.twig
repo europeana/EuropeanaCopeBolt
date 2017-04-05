@@ -1,0 +1,13 @@
+<article>
+    <h2><a href="{{ record.link }}">{{ image(record.image, 300, 300) }}</a></h2>
+
+    {# display something introduction-like.. #}
+    {% if record.introduction %}
+        {{ record.introduction }}
+    {% elseif record.teaser %}
+        {{ record.teaser }}
+    {% else %}
+        <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+    {% endif %}
+    <a href="{{ record.link }}">{{ (record.first_name ~ ' ' ~ record.last_name)|default(record.title|default('title unknown')) }}</a>
+</article>
