@@ -435,49 +435,49 @@ landingpages:
           type: select
           default: ''
           multiple: true
-          values: pages/id,title
+          values: pages/id,title,status
           autocomplete: true
           label: "Select Pages"
         selected_persons:
           type: select
           default: ''
           multiple: true
-          values: persons/id,name
+          values: persons/id,first_name,last_name,email,status
           autocomplete: true
           label: "Select Persons"
         selected_posts:
           type: select
           default: ''
           multiple: true
-          values: posts/id,first_name,last_name,email
+          values: posts/id,title,status
           autocomplete: true
           label: "Select Posts"
         selected_data:
           type: select
           default: ''
           multiple: true
-          values: data/id,title
+          values: data/id,title,status
           autocomplete: true
           label: "Select data"
         selected_projects:
           type: select
           default: ''
           multiple: true
-          values: projects/id,title
+          values: projects/id,title,status
           autocomplete: true
           label: "Select Projects"
         selected_jobs:
           type: select
           default: ''
           multiple: true
-          values: jobs/id,title
+          values: jobs/id,title,status
           autocomplete: true
           label: "Select Jobs"
         selected_events:
           type: select
           default: ''
           multiple: true
-          values: events/id,title
+          values: events/id,title,status
           autocomplete: true
           label: "Select Events"
         override_css_id:
