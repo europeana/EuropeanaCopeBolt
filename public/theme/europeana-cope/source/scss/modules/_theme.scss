@@ -3,7 +3,7 @@
 **/
 
 .sub-footer {
-    border-top: 1px solid $menu-gray;
+    border-top: 1px solid $line-gray;
 }
 
 /*
@@ -50,9 +50,12 @@ img.round {
 * WIDGET HERO BANNERS
 **/
 
-.banner {
+.banner,
+a.banner {
+    display: block;
     height: 20rem;
     position: relative;
+    margin: 1rem 0;
 
     .colored-image {
         position: absolute;
@@ -126,6 +129,38 @@ img.round {
 }
 
 /*
+* WIDGET CALL TO ACTION - READ MORE (hoort bij bovestaande NEWS)
+**/
+
+.calltoaction-readmore {
+    height: 55px;
+    position: relative;
+    text-align: center;
+
+    .header-group {
+        position: absolute;
+        top: 0rem;
+        width: 80%;
+        left: 50%;
+        margin-left: -40%;
+    }
+
+    p {
+        display: inline-block;
+        color: $white;
+        font-size: 0.875rem;
+        margin-right: 1rem;
+    }
+
+    .button-link {
+        display: inline-block;
+    }
+
+}
+
+
+
+/*
 * WIDGET THREE COLUMN TEASERS / SEMI STATIC CONTENT
 **/
 
@@ -141,19 +176,31 @@ img.round {
 **/
 
 .icon-threecol {
+    text-align: center;
 
     img.round {
         margin: 2.5rem auto;
     }
-
 }
 
 
 /*
 * WIDGET THREE COLUMN CATEGORY TEASER / CATEGORY STREAMS v2
 **/
-// geen eigen styles, alles en typography etc
 
+.catstream-threecol {
+    // FIXME: bredere padding bij lijn in het midden, ook nog in def design?
+    border-left: 1px solid $line-gray;
+    border-right: 1px solid $line-gray;
+
+    &:nth-of-type(1){
+        border-left: 0px;
+    }
+
+    &:nth-of-type(3){
+        border-right: 0px;
+    }
+}
 
 
 /*
@@ -173,9 +220,10 @@ img.round {
 * WIDGET CALL TO ACTION FULL / HALF
 **/
 
-.call-to-action {
+.calltoaction {
     height: 200px;
     position: relative;
+    margin: 1rem 0;
     // display: flex;
     // justify-content: center;
 
@@ -208,6 +256,7 @@ img.round {
     height: 55px;
     background-color: $baseFirstThemeColour;
     overflow: hidden;
+    margin: 1rem 0;
     //for vertical alignment
     display: flex;
     align-items: center;
@@ -279,7 +328,8 @@ a.button, .button, button {
     letter-spacing: -.3px;
     color: $dark-blue;
 
-    .call-to-action & {
+    .calltoaction &,
+    .calltoaction-readmore & {
         color: $white;
         border: 2px solid $white;
         font-weight: 400;

@@ -619,7 +619,6 @@ footer {
     left: 1.25rem; }
 
 .column {
-  background: #fc8;
   min-height: 2rem;
   width: 100%;
   margin-bottom: 2rem;
@@ -765,7 +764,7 @@ h3, .gamma {
     text-align: center;
     font-size: 1.25rem;
     color: #293745; }
-  .call-to-action h3, .call-to-action .gamma {
+  .calltoaction h3, .calltoaction .gamma {
     margin-bottom: .5rem; }
 
 h4, .delta {
@@ -942,17 +941,23 @@ img.round {
 /*
 * WIDGET HERO BANNERS
 **/
-.banner {
+.banner,
+a.banner {
+  display: block;
   height: 20rem;
-  position: relative; }
-  .banner .colored-image {
+  position: relative;
+  margin: 1rem 0; }
+  .banner .colored-image,
+  a.banner .colored-image {
     position: absolute;
     width: 100%;
     left: 0;
     top: 0; }
-  .banner h3 {
+  .banner h3,
+  a.banner h3 {
     text-transform: uppercase; }
-  .banner .header-group {
+  .banner .header-group,
+  a.banner .header-group {
     position: absolute;
     bottom: 0;
     color: #fff;
@@ -960,12 +965,15 @@ img.round {
     left: 66.666%;
     width: 33%;
     text-shadow: 0px 0px 2px rgba(26, 26, 26, 0.5); }
-    .banner .header-group p {
+    .banner .header-group p,
+    a.banner .header-group p {
       font-size: 0.875rem; }
-  .banner.third .header-group {
+  .banner.third .header-group,
+  a.banner.third .header-group {
     left: 0;
     width: 100%; }
-    .banner.third .header-group p {
+    .banner.third .header-group p,
+    a.banner.third .header-group p {
       font-size: 0.75rem; }
 
 /*
@@ -992,6 +1000,27 @@ img.round {
   margin: 0 0 .5rem; }
 
 /*
+* WIDGET CALL TO ACTION - READ MORE (hoort bij bovestaande NEWS)
+**/
+.calltoaction-readmore {
+  height: 55px;
+  position: relative;
+  text-align: center; }
+  .calltoaction-readmore .header-group {
+    position: absolute;
+    top: 0rem;
+    width: 80%;
+    left: 50%;
+    margin-left: -40%; }
+  .calltoaction-readmore p {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.875rem;
+    margin-right: 1rem; }
+  .calltoaction-readmore .button-link {
+    display: inline-block; }
+
+/*
 * WIDGET THREE COLUMN TEASERS / SEMI STATIC CONTENT
 **/
 .teaser-threecol p {
@@ -1000,12 +1029,22 @@ img.round {
 /*
 * WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS v1
 **/
-.icon-threecol img.round {
-  margin: 2.5rem auto; }
+.icon-threecol {
+  text-align: center; }
+  .icon-threecol img.round {
+    margin: 2.5rem auto; }
 
 /*
 * WIDGET THREE COLUMN CATEGORY TEASER / CATEGORY STREAMS v2
 **/
+.catstream-threecol {
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc; }
+  .catstream-threecol:nth-of-type(1) {
+    border-left: 0px; }
+  .catstream-threecol:nth-of-type(3) {
+    border-right: 0px; }
+
 /*
 * WIDGET FOUR COLUMN THUMBNAILED LINKS
 **/
@@ -1017,10 +1056,11 @@ img.round {
 /*
 * WIDGET CALL TO ACTION FULL / HALF
 **/
-.call-to-action {
+.calltoaction {
   height: 200px;
-  position: relative; }
-  .call-to-action .header-group {
+  position: relative;
+  margin: 1rem 0; }
+  .calltoaction .header-group {
     position: absolute;
     bottom: 2.5rem;
     left: 50%;
@@ -1028,7 +1068,7 @@ img.round {
     color: #fff;
     text-align: center;
     width: 70%; }
-    .call-to-action .header-group p {
+    .calltoaction .header-group p {
       font-size: 0.875rem;
       margin: 0 0 0.5em 0; }
 
@@ -1039,6 +1079,7 @@ img.round {
   height: 55px;
   background-color: #E11D53;
   overflow: hidden;
+  margin: 1rem 0;
   display: flex;
   align-items: center; }
   .calltoaction-line .colored-image {
@@ -1088,7 +1129,8 @@ a.button, .button, button {
   font-weight: 700;
   letter-spacing: -.3px;
   color: #293745; }
-  .call-to-action .button-link {
+  .calltoaction .button-link,
+  .calltoaction-readmore .button-link {
     color: #fff;
     border: 2px solid #fff;
     font-weight: 400;
