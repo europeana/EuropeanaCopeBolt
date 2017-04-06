@@ -137,10 +137,10 @@ img.round {
 }
 
 /*
-* WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS
+* WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS v1
 **/
 
-.icon-three-col {
+.icon-threecol {
 
     img.round {
         margin: 2.5rem auto;
@@ -150,10 +150,60 @@ img.round {
 
 
 /*
+* WIDGET THREE COLUMN CATEGORY TEASER / CATEGORY STREAMS v2
+**/
+// geen eigen styles, alles en typography etc
+
+
+
+/*
+* WIDGET FOUR COLUMN THUMBNAILED LINKS
+**/
+
+.thumblink-fourcol {
+    text-align: center;
+
+    h3 {
+        margin: 1rem 0 .5rem;
+    }
+}
+
+
+/*
+* WIDGET CALL TO ACTION FULL / HALF
+**/
+
+.call-to-action {
+    height: 200px;
+    position: relative;
+    // display: flex;
+    // justify-content: center;
+
+    .header-group {
+        position: absolute;
+        bottom: 2.5rem;
+        left: 50%;
+        margin-left: -35%;
+        color: $white;
+        text-align: center;
+        width: 70%;
+
+
+        p {
+            font-size: 0.875rem;
+            margin: 0 0 0.5em 0;
+        }
+
+    }
+
+}
+
+
+/*
 * WIDGET CALL TO ACTION LINE
 **/
 
-.banner-line {
+.calltoaction-line {
     //position: relative;
     height: 55px;
     background-color: $baseFirstThemeColour;
@@ -175,6 +225,7 @@ img.round {
         right: 45%;
         margin: 0 1rem 0 0;
         color: $white;
+        text-transform: none;
     }
 
     .button {
@@ -228,5 +279,12 @@ a.button, .button, button {
     letter-spacing: -.3px;
     color: $dark-blue;
 
+    .call-to-action & {
+        color: $white;
+        border: 2px solid $white;
+        font-weight: 400;
+        letter-spacing: 0;
+        font-size: 0.75rem;
+    }
 }
 

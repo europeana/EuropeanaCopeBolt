@@ -753,16 +753,20 @@ h3, .gamma {
     color: #293745;
     margin-bottom: .75rem; }
   .teaser-threecol h3,
-  .catstreams-threecol h3, .teaser-threecol .gamma,
-  .catstreams-threecol .gamma {
+  .catstream-threecol h3, .teaser-threecol .gamma,
+  .catstream-threecol .gamma {
     font-size: 1.375rem;
     margin: .75rem 0 0.5rem; }
-  .icon-threecol h3, .icon-threecol .gamma {
+  .icon-threecol h3,
+  .thumblink-fourcol h3, .icon-threecol .gamma,
+  .thumblink-fourcol .gamma {
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
     font-size: 1.25rem;
     color: #293745; }
+  .call-to-action h3, .call-to-action .gamma {
+    margin-bottom: .5rem; }
 
 h4, .delta {
   font-size: 0.875rem;
@@ -778,6 +782,7 @@ h5 {
 
 h2.widget, h3.widget {
   font-size: 1rem;
+  text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1.5px;
   color: #fff; }
@@ -993,31 +998,61 @@ img.round {
   margin: 0 0 .5rem; }
 
 /*
-* WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS
+* WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS v1
 **/
-.icon-three-col img.round {
+.icon-threecol img.round {
   margin: 2.5rem auto; }
+
+/*
+* WIDGET THREE COLUMN CATEGORY TEASER / CATEGORY STREAMS v2
+**/
+/*
+* WIDGET FOUR COLUMN THUMBNAILED LINKS
+**/
+.thumblink-fourcol {
+  text-align: center; }
+  .thumblink-fourcol h3 {
+    margin: 1rem 0 .5rem; }
+
+/*
+* WIDGET CALL TO ACTION FULL / HALF
+**/
+.call-to-action {
+  height: 200px;
+  position: relative; }
+  .call-to-action .header-group {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    margin-left: -35%;
+    color: #fff;
+    text-align: center;
+    width: 70%; }
+    .call-to-action .header-group p {
+      font-size: 0.875rem;
+      margin: 0 0 0.5em 0; }
 
 /*
 * WIDGET CALL TO ACTION LINE
 **/
-.banner-line {
+.calltoaction-line {
   height: 55px;
   background-color: #E11D53;
   overflow: hidden;
   display: flex;
   align-items: center; }
-  .banner-line .colored-image {
+  .calltoaction-line .colored-image {
     float: left;
     width: 55%;
     background-color: #E11D53;
     background-blend-mode: multiply; }
-  .banner-line h3 {
+  .calltoaction-line h3 {
     position: absolute;
     right: 45%;
     margin: 0 1rem 0 0;
-    color: #fff; }
-  .banner-line .button {
+    color: #fff;
+    text-transform: none; }
+  .calltoaction-line .button {
     display: inline-block;
     border-radius: 5px;
     background-color: #700e29;
@@ -1025,15 +1060,15 @@ img.round {
     border: 0;
     padding: .3rem 4rem;
     margin-left: 5rem; }
-  .banner-line input.button {
+  .calltoaction-line input.button {
     margin-left: 0;
     border-radius: 0 5px 5px 0;
     padding: .3rem 1rem; }
-  .banner-line form {
+  .calltoaction-line form {
     float: left;
     width: 45%;
     padding: .3rem 3rem .3rem 1rem; }
-    .banner-line form input {
+    .calltoaction-line form input {
       display: table-cell;
       height: 2.25rem; }
 
@@ -1053,6 +1088,12 @@ a.button, .button, button {
   font-weight: 700;
   letter-spacing: -.3px;
   color: #293745; }
+  .call-to-action .button-link {
+    color: #fff;
+    border: 2px solid #fff;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 0.75rem; }
 
 @media print {
   *,
