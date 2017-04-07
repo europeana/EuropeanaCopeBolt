@@ -1,9 +1,0 @@
-<article class="column fourth thumblink-fourcol record-{{ record.contenttype.slug  }}">
-    <a href="{{ record.link }}">
-        {% include('partials/_image_snippet.twig') with { record: record, width: 250, height: 250, class: 'round' } %}
-    </a>
-    <h3>{{ (record.first_name ~ ' ' ~ record.last_name)|default(record.title|default('title unknown')) }}</h3>
-    <a href="{{ record.link }}" class="button-link">
-        Learn more
-    </a>
-</article>

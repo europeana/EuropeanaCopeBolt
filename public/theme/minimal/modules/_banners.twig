@@ -1,0 +1,19 @@
+{#
+Available variables
+    'module':    the full module object
+    'title':     title of the module
+    'body':      body of the module
+    'records':   array of (selected) records that belong to the module
+#}
+{% for record in records %}
+    {% if record.id is defined %}
+        <a class="banner third" href="#">
+            <div class="colored-image"
+                 style="background-image: url({{ image(record.image, 1800, 400)|default('https://unsplash.it/1800/400') }})"></div>
+            <div class="header-group">
+                <h3 class="widget">{{ record.title }}</h3>
+                {{ record.intro }}
+            </div>
+        </a>
+    {% endif %}
+{% endfor %}

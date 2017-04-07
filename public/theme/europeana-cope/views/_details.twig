@@ -3,9 +3,11 @@
 
     {{ record.teaser }}
 
+    {% if record.image %}
     <a href="{{ image(record.image) }}">
-        {% include('partials/_image_snippet.twig') with { record: record, width: 740, height: 560 } %}
+        <img src="{{  image(record.image, 740, 560)|default('https://unsplash.it/740/560') }}" />
     </a>
+    {% endif %}
 
     {{ record.body }}
 
