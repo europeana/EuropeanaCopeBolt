@@ -3,7 +3,7 @@
 **/
 
 .sub-footer {
-    border-top: 1px solid $menu-gray;
+    border-top: 1px solid $line-gray;
 }
 
 /*
@@ -50,9 +50,12 @@ img.round {
 * WIDGET HERO BANNERS
 **/
 
-.banner {
+.banner,
+a.banner {
+    display: block;
     height: 20rem;
     position: relative;
+    margin: 1rem 0;
 
     .colored-image {
         position: absolute;
@@ -126,6 +129,38 @@ img.round {
 }
 
 /*
+* WIDGET CALL TO ACTION - READ MORE (hoort bij bovestaande NEWS)
+**/
+
+.calltoaction-readmore {
+    height: 55px;
+    position: relative;
+    text-align: center;
+
+    .header-group {
+        position: absolute;
+        top: 0rem;
+        width: 80%;
+        left: 50%;
+        margin-left: -40%;
+    }
+
+    p {
+        display: inline-block;
+        color: $white;
+        font-size: 0.875rem;
+        margin-right: 1rem;
+    }
+
+    .button-link {
+        display: inline-block;
+    }
+
+}
+
+
+
+/*
 * WIDGET THREE COLUMN TEASERS / SEMI STATIC CONTENT
 **/
 
@@ -137,13 +172,76 @@ img.round {
 }
 
 /*
-* WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS
+* WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS v1
 **/
 
-.icon-three-col {
+.icon-threecol {
+    text-align: center;
 
     img.round {
         margin: 2.5rem auto;
+    }
+}
+
+
+/*
+* WIDGET THREE COLUMN CATEGORY TEASER / CATEGORY STREAMS v2
+**/
+
+.catstream-threecol {
+    // FIXME: bredere padding bij lijn in het midden, ook nog in def design?
+    border-left: 1px solid $line-gray;
+    border-right: 1px solid $line-gray;
+
+    &:nth-of-type(1){
+        border-left: 0px;
+    }
+
+    &:nth-of-type(3){
+        border-right: 0px;
+    }
+}
+
+
+/*
+* WIDGET FOUR COLUMN THUMBNAILED LINKS
+**/
+
+.thumblink-fourcol {
+    text-align: center;
+
+    h3 {
+        margin: 1rem 0 .5rem;
+    }
+}
+
+
+/*
+* WIDGET CALL TO ACTION FULL / HALF
+**/
+
+.calltoaction {
+    height: 200px;
+    position: relative;
+    margin: 1rem 0;
+    // display: flex;
+    // justify-content: center;
+
+    .header-group {
+        position: absolute;
+        bottom: 2.5rem;
+        left: 50%;
+        margin-left: -35%;
+        color: $white;
+        text-align: center;
+        width: 70%;
+
+
+        p {
+            font-size: 0.875rem;
+            margin: 0 0 0.5em 0;
+        }
+
     }
 
 }
@@ -153,11 +251,12 @@ img.round {
 * WIDGET CALL TO ACTION LINE
 **/
 
-.banner-line {
+.calltoaction-line {
     //position: relative;
     height: 55px;
     background-color: $baseFirstThemeColour;
     overflow: hidden;
+    margin: 1rem 0;
     //for vertical alignment
     display: flex;
     align-items: center;
@@ -175,6 +274,7 @@ img.round {
         right: 45%;
         margin: 0 1rem 0 0;
         color: $white;
+        text-transform: none;
     }
 
     .button {
@@ -228,5 +328,13 @@ a.button, .button, button {
     letter-spacing: -.3px;
     color: $dark-blue;
 
+    .calltoaction &,
+    .calltoaction-readmore & {
+        color: $white;
+        border: 2px solid $white;
+        font-weight: 400;
+        letter-spacing: 0;
+        font-size: 0.75rem;
+    }
 }
 

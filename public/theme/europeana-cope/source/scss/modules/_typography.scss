@@ -52,17 +52,22 @@ h3, .gamma {
     }
 
     .teaser-threecol &,
-    .catstreams-threecol & {
+    .catstream-threecol & {
         font-size: 1.375rem;
         margin: .75rem 0 0.5rem; //optically even
     }
 
-    .icon-threecol & {
+    .icon-threecol &,
+    .thumblink-fourcol & {
         text-transform: uppercase;
         font-weight: 400;
         text-align: center;
         font-size: 1.25rem;
         color: $dark-blue;
+    }
+
+    .calltoaction & {
+        margin-bottom: .5rem;
     }
 
 
@@ -85,9 +90,9 @@ h5 {
     font-size: 1rem;
 }
 
-h2.widget, h3.widget {
+h2.widget, h3.widget { //HEADERS IN BANNERS / CALL TO ACTIONS
     font-size: 1rem;
-    // text-transform: uppercase;
+    text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1.5px;
     color: $white;

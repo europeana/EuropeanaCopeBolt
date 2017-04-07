@@ -2,67 +2,91 @@
 
 {% block main %}
     <section>
-        <h2>Hero Banner - one item</h2>
-        <div class="banner"> {# FIXME: Overlay met halve cirkels er nog in? #}
+        {# Hero Banner - one item #}
+        <a class="banner" href="#"> {# FIXME: Overlay met halve cirkels er nog in? #}
             <div class="colored-image" style="background-image: url(https://unsplash.it/1800/400)"></div>
             <div class="header-group">
                 <h3 class="widget">Show us what you've got</h3>
                 <p>Placeholder example with one example of what you can find in this section like something very relevant. </p>
             </div>
-        </div>
+        </a>
     </section>
 
-    <section>
-        <h2>Hero Banner - three items</h2>
-        <div class="banner third">
+    <section class="group">
+        {# Hero banner - three items #}
+        <a class="banner third" href="#">
             <div class="colored-image" style="background-image: url(https://unsplash.it/600/400)"></div>
             <div class="header-group">
                 <h3 class="widget">Show us what you've got</h3>
                 <p>Placeholder example with one example of what you can find in this section like something very relevant. </p>
             </div>
-        </div>
-        <div class="banner third">
+        </a>
+        <a class="banner third" href="#">
             <div class="colored-image" style="background-image: url(https://unsplash.it/600/400)"></div>
             <div class="header-group">
                 <h3 class="widget">Show us what you've got</h3>
                 <p>Placeholder example with one example of what you can find in this section like something very relevant. </p>
             </div>
-        </div>
-        <div class="banner third">
+        </a>
+        <a class="banner third" href="#">
             <div class="colored-image" style="background-image: url(https://unsplash.it/600/400)"></div>
             <div class="header-group">
                 <h3 class="widget">Show us what you've got</h3>
                 <p>Placeholder example with one example of what you can find in this section like something very relevant. </p>
             </div>
-        </div>
+        </a>
     </section>
 
      <section>
-        <h2>Section breakers - Call to action full</h2>
-        <div class="banner">
-            <img src="https://unsplash.it/1800/350" />
+        {# Section breakers - Call to action FULL #}
+        <div class="calltoaction">
+            <div class="colored-image" style="background-image: url(https://unsplash.it/1600/350)"></div>
+            <div class="header-group">
+                <h3 class="widget">Connect, contribute, create</h3>
+                <p>Discover how we transform the world with culture.</p>
+                <a class="button-link" href="#">
+                    Learn more
+                </a>
+            </div>
         </div>
     </section>
 
-    <section>
-        <h2>Section breakers - Call to action half</h2>
-        <div class="banner half">
-            <img src="https://unsplash.it/800/400" />
+    <section class="group">
+        {# Section breakers - Call to action HALF #}
+        <div class="calltoaction half">
+            <div class="colored-image" style="background-image: url(https://unsplash.it/800/400)"></div>
+            <div class="header-group">
+                <h3 class="widget">Connect, contribute, create</h3>
+                <p>Discover how we transform the world with culture.</p>
+                <a class="button-link">
+                    Learn more
+                </a>
+            </div>
         </div>
-        <div class="banner half">
-            <img src="https://unsplash.it/800/400" />
+
+        <div class="calltoaction half">
+            <div class="colored-image" style="background-image: url(https://unsplash.it/800/400)"></div>
+            <div class="header-group">
+                <h3 class="widget">Connect, contribute, create</h3>
+                <p>Discover how we transform the world with culture.</p>
+                <a class="button-link">
+                    Learn more
+                </a>
+            </div>
         </div>
     </section>
+
+
 
     <section> {# FIXME maak verschillende kleurversies #}
-        <h2>Call to action line - form</h2>
-        <div class="banner-line">
+        {# Call to action line - form #}
+        <div class="calltoaction-line">
             <div class="colored-image" style="background-image: url(https://unsplash.it/800/90)"></div>
             <h3 class="widget">SIGN UP for our newsletter</h3>
             <form>
                 <label for="email-signup" class="sr-only">E-mail address</label>
                 {% spaceless %}
-                <input type="text" name="emailaddress" id="email-signup">
+                <input type="text" name="emailaddress" id="email-signup" placeholder="e-mailaddress">
                 <input class="button" value="Submit" type="submit">
                 {% endspaceless %}
             </form>
@@ -70,8 +94,8 @@
     </section>
 
     <section>
-        <h2>Call to action line - button</h2>
-        <div class="banner-line">
+        {# Call to action line - button #}
+        <div class="calltoaction-line">
             <div class="colored-image" style="background-image: url(https://unsplash.it/800/90)"></div>
             <h3 class="widget">Become a network member</h3>
             <a href="#" class="button">Apply here</a>
@@ -84,7 +108,7 @@
             <p>invision name: news</p>
             <div class="column half teaser-twocol">
                 <div class="img-container">
-                    <img src="https://unsplash.it/600/600" />
+                    <img src="https://unsplash.it/600/600" alt="xx"/>
                     <p class="img-insert">
                         Created: <span class="date">5 November 2012</span>
                     </p>
@@ -97,7 +121,7 @@
 
             <div class="column half teaser-twocol">
                 <div class="img-container">
-                    <img src="https://unsplash.it/600/600" />
+                    <img src="https://unsplash.it/600/600" alt="xx"/>
                     <p class="img-insert">
                         Created: <span class="date">5 November 2012</span>
                     </p>
@@ -108,6 +132,18 @@
                 <a href="#" class="readmore">Read more</a>
             </div>
         </div>
+
+        {# onderstaande Call to action hoort onder deze Two Column teasers #}
+        <div class="calltoaction-readmore">
+            <div class="colored-image" style="background-image: url(https://unsplash.it/800/90)"></div>
+            <div class="header-group">
+                <p>Find out what else has happened</p>
+                <a class="button-link">
+                    See more news
+                </a>
+            </div>
+        </div>
+
     </section>
 
     <section>
@@ -115,7 +151,7 @@
             <h2>Three-column teasers</h2>
             <p>Invision name: semi-static content</p>
             <div class="column third teaser-threecol">
-                <img src="https://unsplash.it/700/435" />
+                <img src="https://unsplash.it/700/435" alt="xx"/>
                 <h3>Dit is een titel</h3>
                 <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
                 <a class="button-link">
@@ -124,7 +160,7 @@
             </div>
 
             <div class="column third teaser-threecol">
-                <img src="https://unsplash.it/700/435" />
+                <img src="https://unsplash.it/700/435" alt="xx"/>
                 <h3>Dit is een titel</h3>
                 <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
                 <a class="button-link">
@@ -133,7 +169,7 @@
             </div>
 
             <div class="column third teaser-threecol">
-                <img src="https://unsplash.it/700/435" />
+                <img src="https://unsplash.it/700/435" alt="xx"/>
                 <h3>Dit is een titel</h3>
                 <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
                 <a class="button-link">
@@ -147,21 +183,20 @@
 
     <section>
         <div class="inner-wrap">
-            <h2>Three-column category icon</h2>
-            <p>Invision name: three-column category streams v1</p>
+            {# Three-column category icon #}
             <div class="column third icon-threecol">
                 <h3>Dit is een titel</h3>
-                <img class="round" src="https://unsplash.it/300/300" />
+                <img class="round" src="https://unsplash.it/300/300" alt="xx"/>
                 <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens.</p>
             </div>
-            <div class="column third icon-three-col">
+            <div class="column third icon-threecol">
                 <h3>Dit is een titel</h3>
-                <img class="round" src="https://unsplash.it/300/300" />
+                <img class="round" src="https://unsplash.it/300/300" alt="xx"/>
                 <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit.</p>
             </div>
-            <div class="column third icon-three-col">
+            <div class="column third icon-threecol">
                 <h3>Dit is een titel</h3>
-                <img class="round" src="https://unsplash.it/300/300" />
+                <img class="round" src="https://unsplash.it/300/300" alt="xx"/>
                 <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his.</p>
             </div>
         </div>
@@ -169,10 +204,9 @@
 
     <section>
         <div class="inner-wrap">
-            <h2>Three-column category teaser</h2>
-            <p>Invision name: three-column category streams v2</p>
-            <div class="column third catstreams-threecol">
-                <img src="https://unsplash.it/700/435" />
+            {#  Three-column category teaser #}
+            <div class="column third catstream-threecol">
+                <img src="https://unsplash.it/700/435" alt="xx"/>
                 <h3>Get set, #Europeana280 – join us as we celebrate Europe’s art history the digital way</h3>
                 <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
                 <p class="meta">
@@ -187,8 +221,8 @@
 
             </div>
 
-            <div class="column third catstreams-threecol">
-                <img src="https://unsplash.it/700/435" />
+            <div class="column third catstream-threecol">
+                <img src="https://unsplash.it/700/435" alt="xx"/>
                 <h3>Get set, #Europeana280 – join us as we celebrate Europe’s art history the digital way</h3>
                 <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
                 <p class="meta">
@@ -203,8 +237,8 @@
 
             </div>
 
-            <div class="column third catstreams-threecol">
-                <img src="https://unsplash.it/700/435" />
+            <div class="column third catstream-threecol">
+                <img src="https://unsplash.it/700/435" alt="xx"/>
                 <h3>Get set, #Europeana280 – join us as we celebrate Europe’s art history the digital way</h3>
                 <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
                 <p class="meta">
@@ -225,17 +259,33 @@
         <div class="inner-wrap">
             <h2>Four-column thumbnailed links</h2>
             <p>Invision name: thumbnailed links</p>
-            <div class="column fourth">
-                <img class="round" src="https://unsplash.it/250/250" />
+            <div class="column fourth thumblink-fourcol">
+                <img class="round" src="https://unsplash.it/250/250" alt="xx"/>
+                <h3>advocacy</h3>
+                <a class="button-link">
+                    Learn more
+                </a>
             </div>
-            <div class="column fourth">
-                <img class="round" src="https://unsplash.it/250/250" />
+            <div class="column fourth thumblink-fourcol">
+                <img class="round" src="https://unsplash.it/250/250" alt="xx"/>
+                <h3>standardization</h3>
+                <a class="button-link">
+                    Learn more
+                </a>
             </div>
-            <div class="column fourth">
-                <img class="round" src="https://unsplash.it/250/250" />
+            <div class="column fourth thumblink-fourcol">
+                <img class="round" src="https://unsplash.it/250/250" alt="xx"/>
+                <h3>Cultural heritage institutions</h3>
+                <a class="button-link">
+                    Learn more
+                </a>
             </div>
-            <div class="column fourth">
-                <img class="round" src="https://unsplash.it/250/250" />
+            <div class="column fourth thumblink-fourcol">
+                <img class="round" src="https://unsplash.it/250/250" alt="xx"/>
+                <h3>standardization</h3>
+                <a class="button-link">
+                    Learn more
+                </a>
             </div>
         </div>
     </section>
