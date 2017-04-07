@@ -1,16 +1,9 @@
-<article class="snippet-listingfaces record-{{ record.contenttype.slug  }}">
-    <h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
-
-    {{ popup(record.image, 1200, 500) }}
-
-    {# display something introduction-like.. #}
-    {% if record.introduction %}
-        {{ record.introduction }}
-    {% elseif record.teaser %}
-        {{ record.teaser }}
-    {% else %}
-        <p>{{ record.excerpt(300, false, search|default('')) }}</p>
-    {% endif %}
-
-    {% include 'partials/_record_footer.twig' with { 'record': record } %}
+<article class="column fourth thumblink-fourcol record-{{ record.contenttype.slug  }}">
+    <a href="{{ record.link }}">
+        {% include('partials/_image_snippet.twig') with { record: record, width: 250, height: 250, class: 'round' } %}
+    </a>
+    <h3>{{ (record.first_name ~ ' ' ~ record.last_name)|default(record.title|default('title unknown')) }}</h3>
+    <a href="{{ record.link }}" class="button-link">
+        Learn more
+    </a>
 </article>

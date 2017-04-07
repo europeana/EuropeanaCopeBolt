@@ -1,9 +1,11 @@
-<article class="snippet-listing-thumbnails record-{{ record.contenttype.slug  }}">
-    <a href="{{ record.link }}">
-        <img src="{{ thumbnail(record.image, 300, 300) }}" title="{{ (record.first_name ~ ' ' ~ record.last_name)|default(record.title|default('title unknown')) }}" />
-    </a>
-
-    <h2>
-        <a href="{{ record.link }}">{{ (record.first_name ~ ' ' ~ record.last_name)|default(record.title|default('title unknown')) }}</a>
-    </h2>
+<article class="column third icon-threecol record-{{ record.contenttype.slug  }}">
+    <h3>{{ record.title|default('title unknown') }}</h3>
+    {% include('partials/_image_snippet.twig') with { record: record, width: 250, height: 250, class: 'round' } %}
+    {% if record.teaser %}
+        {{ record.teaser }}
+    {% elseif record.intro %}
+        {{ record.intro }}
+    {% else %}
+        <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+    {% endif %}
 </article>

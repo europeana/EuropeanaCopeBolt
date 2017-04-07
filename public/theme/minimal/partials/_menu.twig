@@ -27,7 +27,7 @@
         </a>
 
         {% if item.submenu is defined and withsubmenus %}
-            <ul class="menu submenu vertical" data-submenu>
+            <ul class="sub-menu" data-submenu>
                 {% for submenu in item.submenu %}
                     {{ display_menu_item(submenu, loop) }}
                 {% endfor %}
@@ -41,7 +41,7 @@
 {% from _self import display_menu_item %}
 
 {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
-<ul  class="menu vertical medium-horizontal {{ class|default('') }}" data-responsive-menu="accordion medium-dropdown">
+<ul  class="play-menu">
 {% for item in menu %}
     {% if item.label is defined %}
         {{ display_menu_item(item, loop, '', withsubmenus) }}
