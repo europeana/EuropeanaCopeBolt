@@ -1,0 +1,17 @@
+{# Section breakers - Call to action FULL #}
+<div class="calltoaction">
+    <div class="colored-image" style="background-image: url({{ image(record.image, 1600, 350)|default('https://unsplash.it/1600/350') }})"></div>
+    <div class="header-group">
+        <h3 class="widget">{{ record.title }}</h3>
+        {% if record.teaser %}
+            {{ record.teaser }}
+        {% elseif record.intro %}
+            {{ record.intro }}
+        {% else %}
+            <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+        {% endif %}
+        <a class="button-link" href="{{ record.link }}">
+            Learn more
+        </a>
+    </div>
+</div>

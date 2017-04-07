@@ -1,3 +1,3 @@
 {% set template =  'views/_title_' ~ record.contenttype.slug ~ '.twig' %}
-{% include [template, 'views/_title_default.twig'] with {record:record} %}
-
+<!-- loading templatefile for view: '{{ template }}' or 'views/_titles.twig' or 'views/_fallback.twig' -->
+{% include [template, 'views/_titles.twig', 'views/_fallback.twig'] with {record:record} %}

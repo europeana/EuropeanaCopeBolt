@@ -1,0 +1,17 @@
+<article class="column teaser record-{{ record.contenttype.slug  }}">
+    <div class="img-container">
+        <img src="{{ image(record.image, 600, 600) }}" alt="{{ record.image.title }}"/>
+        <p class="img-insert">
+        Created: <span class="date">5 November 2012</span>
+        </p>
+    </div>
+    <h3><a href="{{ record.link }}">{{ record.title }}</a></h3>
+    {% if record.introduction %}
+        {{ record.introduction }}
+    {% elseif record.teaser %}
+        {{ record.teaser }}
+    {% else %}
+        <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+    {% endif %}
+    <a href="{{ record.link }}" class="readmore">Read more</a>
+</article>

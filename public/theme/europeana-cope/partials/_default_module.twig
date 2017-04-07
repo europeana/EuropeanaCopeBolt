@@ -1,0 +1,37 @@
+{% spaceless %}
+{% set title = module.get('title') %}
+{% set body = module.get('body') %}
+{% set template = module.get('templates') %}
+{% set templatefile = 'modules/_' ~ template ~ '.twig' %}
+{% set ordering = module.get('ordering') %}
+{% set sources = module.get('sources') %}
+{% set override_amount = module.get('override_amount') %}
+{% set override_css_id = module.get('override_css_id') %}
+{% set override_css_class = module.get('override_css_class') %}
+{% set selected_records = [] %}
+{% if template != 'body' and ordering == 'specified' %}
+    {% set field = 'selected_' ~ sources %}
+    {% set ids = module.get(field) %}
+    {% if ids is iterable %}
+        {% for id in ids %}
+            {% set contentquery = sources ~ '/' ~ id %}
+            {% setcontent record = contentquery returnsingle %}
+            {% set selected_records = selected_records|merge([record]) %}
+        {% endfor %}
+    {% endif %}
+{% elseif template != 'body' %}
+    {% set contentquery = sources ~ '/' ~ ordering ~ '/' ~ override_amount %}
+    {% setcontent selected_records = contentquery %}
+{% endif %}
+{% endspaceless %}
+<!-- loading templatefile for module: '{{ templatefile }}' or 'modules/_default.twig' -->
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module{%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+    {# automatically load module template #}
+    {% include [templatefile, 'modules/_default.twig'] with {
+        'module': module,
+        'title': title,
+        'body': body,
+        'records': selected_records
+    } %}
+
+</section>

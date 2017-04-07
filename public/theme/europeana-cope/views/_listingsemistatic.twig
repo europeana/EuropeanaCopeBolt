@@ -1,0 +1,17 @@
+<article class="column third teaser-threecol record-{{ record.contenttype.slug }}">
+    {% include('partials/_image_snippet.twig') with { record: record, width: 700, height: 435 } %}
+
+    <h3>{{ record.title }}</h3>
+
+    {# display something introduction-like.. #}
+    {% if record.introduction %}
+        {{ record.introduction }}
+    {% elseif record.teaser %}
+        {{ record.teaser }}
+    {% else %}
+        <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+    {% endif %}
+    <a class="button-link" href="{{ record.link }}">
+        See More
+    </a>
+</article>

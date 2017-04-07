@@ -1,0 +1,19 @@
+<article class="column teaser record-{{ record.contenttype.slug  }}">
+    <div class="img-container">
+        {% include('partials/_image_snippet.twig') with { record: record, width: 600, height: 600 } %}
+        {% if record.datepublish is not empty %}
+            <p class="img-insert">
+                Created: <span class="date">{{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+            </p>
+        {% endif %}
+    </div>
+    <h3><a href="{{ record.link }}">{{ record.title }}</a></h3>
+    {% if record.introduction %}
+        {{ record.introduction }}
+    {% elseif record.teaser %}
+        {{ record.teaser }}
+    {% else %}
+        <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+    {% endif %}
+    <a href="{{ record.link }}" class="readmore">Read more</a>
+</article>
