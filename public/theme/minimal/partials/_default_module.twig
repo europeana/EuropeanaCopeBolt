@@ -24,12 +24,14 @@
     {% setcontent selected_records = contentquery %}
 {% endif %}
 {% endspaceless %}
-<div {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module{%- if override_css_class %} {{ override_css_class }}{% endif -%}">
-    {# automatically laod module template #}
+<!-- loading templatefile for module: '{{ templatefile }}' or 'modules/_default.twig' -->
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module{%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+    {# automatically load module template #}
     {% include [templatefile, 'modules/_default.twig'] with {
         'module': module,
         'title': title,
         'body': body,
         'records': selected_records
     } %}
-</div>
+
+</section>

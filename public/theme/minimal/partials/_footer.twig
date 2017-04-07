@@ -1,11 +1,82 @@
-<!-- Footer -->
+<!-- Start Footer -->
+
 <footer>
-    <p>{{ __("This website is <a href='%url%' target='_blank' title='Sophisticated, lightweight & simple CMS'>Built with Bolt</a>.",{'%url%':'http://bolt.cm'}) }}</p>
-    <nav>
-        {{ menu(
-            identifier = 'main',
-            template = 'partials/_menu.twig',
-            params = {'withsubmenus': false, 'class': 'inline-list align-right'}
-        ) }}
-    </nav>
+    <div class="inner-wrap">
+
+        <div class="group">
+        <div class="footer-block footer-block-address">
+            <img class="logo-small" src="{{ paths.theme }}images/europeana_logo_footer.png" alt="Europeana"/>
+            <address>
+                Europeana Foundation
+                <br />Prins Willem-Alexanderhof 5
+                <br />2595 BE Den Haag
+                <br />Netherlands
+            </address>
+        </div>
+
+        <div class="footer-block footer-block-mission">
+            <h4>We transform the world with culture</h4>
+            <p>
+                We transform the world with culture! We want to build on Europe’s rich heritage and make it easier for people to use, whether for work, for learning or just for fun.
+            </p>
+        </div>
+
+        <div class="footer-block footer-block-socials">
+            <h4>Find us elsewhere</h4>
+            <div class="socials">
+                <a href="" class="tw">
+                    <svg class="icon icon-twitter">
+                        <use xlink:href="#icon-twitter"> </use>
+                    </svg> <span class="sr-only">twitter</span>
+                </a>
+                <a href="" class="fb">
+                     <svg class="icon icon-facebook">
+                        <use xlink:href="#icon-facebook"> </use>
+                    </svg> <span class="sr-only">facebook</span>
+                </a>
+                <a href="" class="gp">
+                     <svg class="icon icon-googleplus">
+                        <use xlink:href="#icon-googleplus"> </use>
+                    </svg> <span class="sr-only">Google Plus</span>
+                </a>
+                <a href="" class="li">
+                     <svg class="icon icon-linkedin">
+                        <use xlink:href="#icon-linkedin"> </use>
+                    </svg> <span class="sr-only">Linked In</span>
+                </a>
+                <a href="" class="gh">
+                     <svg class="icon icon-github">
+                        <use xlink:href="#icon-github"> </use>
+                    </svg> <span class="sr-only">Github</span>
+                </a>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="sub-footer">
+
+            <!-- start subnav -->
+            <nav class="footer-menu">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                   <li>
+                        <a href="http://europeana.eu/portal/rights/terms-and-policies.html">Terms &amp; policies</a>
+                    </li>
+                     <li>
+                        <a href="/contact-us">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="/sitemap">Sitemap</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- end subnav-->
+
+            <p class="copyright">Co-funded by the European Union.</p>
+        </div>
+
+    </div>
 </footer>

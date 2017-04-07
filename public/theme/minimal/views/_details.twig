@@ -3,23 +3,21 @@
 
     {{ record.teaser }}
 
-    {% if record.image!="" %}
-        <a href="{{ image(record.image) }}">
-            <img src="{{ thumbnail(record.image, 740, 560) }}">
-        </a>
-    {% endif %}
+    <a href="{{ image(record.image) }}">
+        {% include('partials/_image_snippet.twig') with { record: record, width: 740, height: 560 } %}
+    </a>
 
     {{ record.body }}
-
 
     {# If there are repeaters, we should output them. #}
     {% for module in record.modules %}
         {{ include('partials/_default_module.twig', { 'module': module }) }}
     {% endfor %}
 
+    <!-- load other fields if any are available -->
     {{ fields(common = false, extended = false, repeaters = false) }}
 
+    <!-- show a footer -->
     {{ include('partials/_record_footer.twig', { 'record': record, 'extended': true }) }}
 
-    {{ dump(record) }}
 </article>

@@ -1,7 +1,7 @@
 <article class="snippet-listing-expander record-{{ record.contenttype.slug  }}">
     <h2><a href="{{ record.link }}">{{ record.title }}</a></h2>
 
-    {{ popup(record.image, 1200, 500) }}
+    {% include('partials/_image_snippet.twig') with { record: record, width: 700, height: 435 } %}
 
     {# display something introduction-like.. #}
     {% if record.introduction %}

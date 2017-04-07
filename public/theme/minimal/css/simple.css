@@ -18,11 +18,6 @@ h1, h2, h3, h4, h5, div, p, nav > ul {
     margin: 0;
     padding: 0.5em;
 }
-.sf-toolbar,
-.sf-toolbar > div,
-.sf-toolbar > div > div {
-    padding: 0;
-}
 main section {
     float: left;
     clear: left;

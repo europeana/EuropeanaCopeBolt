@@ -2,4 +2,6 @@
 
 {% block main %}
     {% include 'partials/_view_detail.twig' with {record: record} %}
+    {# uncomment this for more debug information #}
+    {{ dump(record) }}
 {% endblock main %}

@@ -10,35 +10,40 @@
         {% if record.title is not defined and app.config.get('general/payoff') %} | {{ app.config.get('general/payoff') }}{% endif -%}
     </title>
 
-    <link rel="stylesheet" href="{{ asset('css/simple.css', 'theme') }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800&subset=latin,greek,cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/screen.css', 'theme') }}">
+
     {% block headincludes %}
     {% endblock headincludes %}
 </head>
-<body>
+<body class="{% block bodyclass %}{% endblock bodyclass %}">
+    {{ include('partials/_svg_library.twig') }}
+
     {% block topbar %}
         {{ include('partials/_topbar.twig') }}
     {% endblock topbar %}
 
-    {% block header %}
-        {{ include('partials/_header.twig') }}
-    {% endblock header %}
+    {% block navigation %}
+        {{ include('partials/_navigation.twig') }}
+    {% endblock navigation %}
 
-    {% block body %}
-        <main>
-            <section>
+    <div class="canvas"> {# contains all items next to navigation #}
+        {% block header %}
+            {{ include('partials/_header.twig') }}
+        {% endblock header %}
+
+        {% block body %}
+            <main>
                 {% block main %}
                 {% endblock main %}
-            </section>
+            </main>
 
-            {% block aside %}
-                {{ include('partials/_aside.twig') }}
-            {% endblock aside %}
-        </main>
-    {% endblock body %}
+        {% endblock body %}
 
-    {% block footer %}
-        {{ include('partials/_footer.twig') }}
-    {% endblock footer %}
+        {% block footer %}
+            {{ include('partials/_footer.twig') }}
+        {% endblock footer %}
+    </div>
 
     {% block bottomincludes %}
     {% endblock bottomincludes %}
