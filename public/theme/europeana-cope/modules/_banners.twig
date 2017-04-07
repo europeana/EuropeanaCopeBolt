@@ -7,7 +7,7 @@ Available variables
 #}
 {% for record in records %}
     {% if record.id is defined %}
-        <a class="banner third" href="#">
+        <a class="banner" href="#">
             <div class="colored-image"
                  style="background-image: url({{ image(record.image, 1800, 400)|default('https://unsplash.it/1800/400') }})"></div>
             <div class="header-group">
