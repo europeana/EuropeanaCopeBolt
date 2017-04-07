@@ -251,7 +251,8 @@ a.banner {
 * WIDGET CALL TO ACTION LINE
 **/
 
-.calltoaction-line {
+.calltoactionform,
+.calltoactionlink {
     //position: relative;
     height: 55px;
     background-color: $baseFirstThemeColour;
@@ -328,6 +329,14 @@ a.button, .button, button {
     letter-spacing: -.3px;
     color: $dark-blue;
 
+    &:hover, &:active, &:focus {
+        background-color: $dark-blue;
+        color: $white;
+        text-decoration: none;
+        font-weight: 400;
+    }
+
+
     .calltoaction &,
     .calltoaction-readmore & {
         color: $white;
@@ -335,6 +344,13 @@ a.button, .button, button {
         font-weight: 400;
         letter-spacing: 0;
         font-size: 0.75rem;
+
+        &:hover, &:active, &:focus {
+            background-color: $white;
+            color: $baseFirstThemeColour;
+            font-weight: 700;
+        }
     }
+
 }
 
