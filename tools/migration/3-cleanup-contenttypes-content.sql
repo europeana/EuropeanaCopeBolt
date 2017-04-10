@@ -30,11 +30,9 @@ DROP TABLE europeana_cope.bolt_homepage;
 -- do similar things to the other content types
 -- merge superflous fields, eg. files, filelists and filelist_downloads for projects, collections and publications
 ALTER TABLE europeana_cope.bolt_projects CHANGE filelist_downloads document_folder VARCHAR( 256 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
-ALTER TABLE europeana_cope.bolt_collections CHANGE filelist_downloads document_folder VARCHAR( 256 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
 ALTER TABLE europeana_cope.bolt_taskforces CHANGE filelist_downloads document_folder VARCHAR( 256 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
 ALTER TABLE europeana_cope.bolt_pages CHANGE filelist_downloads document_folder VARCHAR( 256 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
 
-ALTER TABLE europeana_cope.bolt_collections CHANGE filelist_files attachments LONGTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
 ALTER TABLE europeana_cope.bolt_taskforces CHANGE filelist_files attachments LONGTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
 ALTER TABLE europeana_cope.bolt_pages CHANGE filelist_files attachments LONGTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
 
@@ -43,15 +41,12 @@ ALTER TABLE europeana_cope.bolt_pages CHANGE filelist_files attachments LONGTEXT
 ALTER TABLE europeana_cope.bolt_structures DROP date_start;
 ALTER TABLE europeana_cope.bolt_structures DROP date_end;
 
-ALTER TABLE europeana_cope.bolt_collections DROP support_navigation;
 ALTER TABLE europeana_cope.bolt_documentation DROP support_navigation;
 ALTER TABLE europeana_cope.bolt_events DROP support_navigation;
 ALTER TABLE europeana_cope.bolt_pages DROP support_navigation;
 
-ALTER TABLE europeana_cope.bolt_collections DROP liststyle;
 ALTER TABLE europeana_cope.bolt_pages DROP liststyle;
 
-ALTER TABLE europeana_cope.bolt_collections DROP secondary_mail;
 ALTER TABLE europeana_cope.bolt_documentation DROP secondary_mail;
 ALTER TABLE europeana_cope.bolt_events DROP secondary_mail;
 ALTER TABLE europeana_cope.bolt_structures DROP secondary_mail;
@@ -83,7 +78,6 @@ ALTER TABLE europeana_cope.bolt_persons CHANGE description bio longtext;
 -- kill all custom templates
 UPDATE bolt_applications SET template='';
 UPDATE bolt_posts SET template='';
-UPDATE bolt_collections SET template='';
 UPDATE bolt_data SET template='';
 UPDATE bolt_documentation SET template='';
 UPDATE bolt_events SET template='';

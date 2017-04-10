@@ -199,25 +199,6 @@ CREATE INDEX IDX_2F1E7917BE74E59A ON bolt_documentation (datechanged);
 CREATE INDEX IDX_2F1E7917A5131421 ON bolt_documentation (datepublish);
 CREATE INDEX IDX_2F1E7917B7805520 ON bolt_documentation (datedepublish);
 CREATE INDEX IDX_2F1E79177B00651C ON bolt_documentation (status);
-ALTER TABLE bolt_collections
-  ADD image LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)',
-  ADD filelist_downloads VARCHAR(256) DEFAULT '',
-  ADD contact_record LONGTEXT DEFAULT NULL,
-  ADD contact_blurb LONGTEXT DEFAULT NULL,
-  ADD template VARCHAR(256) DEFAULT '',
-  CHANGE slug slug VARCHAR(128) NOT NULL,
-  CHANGE status status VARCHAR(32) NOT NULL,
-  CHANGE subsite subsite LONGTEXT DEFAULT NULL,
-  CHANGE source source VARCHAR(256) DEFAULT '',
-  CHANGE source_url source_url VARCHAR(256) DEFAULT '',
-  CHANGE title title VARCHAR(256) DEFAULT '',
-  CHANGE hide_related_section support_navigation TINYINT(1) DEFAULT '0' NOT NULL;
-CREATE INDEX IDX_6EC4CAA6989D9B62 ON bolt_collections (slug);
-CREATE INDEX IDX_6EC4CAA6AFBA6FD8 ON bolt_collections (datecreated);
-CREATE INDEX IDX_6EC4CAA6BE74E59A ON bolt_collections (datechanged);
-CREATE INDEX IDX_6EC4CAA6A5131421 ON bolt_collections (datepublish);
-CREATE INDEX IDX_6EC4CAA6B7805520 ON bolt_collections (datedepublish);
-CREATE INDEX IDX_6EC4CAA67B00651C ON bolt_collections (status);
 ALTER TABLE bolt_taskforces
   ADD tf_or_wg LONGTEXT DEFAULT NULL,
   ADD image LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)',

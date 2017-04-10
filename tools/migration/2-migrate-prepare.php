@@ -2,7 +2,7 @@
 $content_types = [
   'apps' => 'bolt_applications',
   'posts' => 'bolt_posts',
-  'collections' => 'bolt_collections',
+  'collections' => 'bolt_pages',
   'data' => 'bolt_data',
   'documentation' => 'bolt_documentation',
   'events' => 'bolt_events',
