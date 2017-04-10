@@ -1,4 +1,7 @@
 -- merge homepages into structures
+
+USE europeana_cope;
+
 -- because structures have less fields we'll discard all links etc.
 -- they must be manually recreated as related blocks
 INSERT INTO europeana_cope.bolt_structures (

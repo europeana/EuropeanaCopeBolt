@@ -13,8 +13,8 @@
     - europeana_pro
     - europeana_labs
     - europeana_research
-6. make sure there is a user with read access to those 4 databases
-7. import a copy of the production databases from the 4 sites into these databases
+6. make sure there is a user with read access to those 3 databases
+7. import a copy of the production databases from the 3 sites into these databases
 
 ## Import and merge databases
 

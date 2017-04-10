@@ -1,3 +1,4 @@
+-- queries for intro
 USE europeana_cope;
 -- queries for relations_from
 UPDATE bolt_relations r, bolt_applications x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'apps';
@@ -135,5 +136,3 @@ ALTER TABLE bolt_publications DROP subsite_id;
 ALTER TABLE bolt_resources DROP subsite_id;
 ALTER TABLE bolt_structures DROP subsite_id;
 ALTER TABLE bolt_taskforces DROP subsite_id;
-
-UPDATE europeana_cope.bolt_pages SET template = '';

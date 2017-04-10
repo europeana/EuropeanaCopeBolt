@@ -513,7 +513,7 @@ publications:
 # APPS
 #
 #################################
-Applications:
+applications:
   name: Apps
   singular_name: App
   slug: applications
@@ -551,7 +551,7 @@ data:
       label: "Provided by:"
       variant: inline
       class: narrow
-      group: "Links"
+      group: "Related External Links"
     provided_by_link:
       type: text
       required: false
@@ -560,6 +560,7 @@ data:
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
+      group: "Related External Links"
     portallink:
       type: text
       required: false
@@ -568,6 +569,7 @@ data:
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
+      group: "Related External Links"
     apiconsolelink:
       type: text
       required: false
@@ -576,6 +578,8 @@ data:
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
+      group: "Related External Links"
+    <<: *link_defaults
     <<: *contact_defaults
     <<: *media_defaults
     <<: *structure_defaults

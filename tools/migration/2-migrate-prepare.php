@@ -20,6 +20,8 @@ $content_types = [
   'taskforces' => 'bolt_taskforces'
 ];
 
+$query['intro'][] = "USE europeana_cope;\n";
+
 foreach ($content_types as $ctype => $table) {
   $query['relations_from'][] = "UPDATE bolt_relations r, $table x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = '$ctype';\n";
 
