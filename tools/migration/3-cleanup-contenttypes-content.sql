@@ -82,7 +82,7 @@ ALTER TABLE europeana_cope.bolt_persons CHANGE description bio longtext;
 
 -- kill all custom templates
 UPDATE bolt_applications SET template='';
-UPDATE bolt_blogposts SET template='';
+UPDATE bolt_posts SET template='';
 UPDATE bolt_collections SET template='';
 UPDATE bolt_data SET template='';
 UPDATE bolt_documentation SET template='';
@@ -93,9 +93,7 @@ UPDATE bolt_jobs SET template='';
 #UPDATE bolt_locations SET template='';
 UPDATE bolt_pages SET template='';
 UPDATE bolt_persons SET template='';
-UPDATE bolt_pressreleases SET template='';
 UPDATE bolt_projects SET template='';
-UPDATE bolt_publications SET template='';
 #UPDATE bolt_relations SET template='';
 #UPDATE bolt_resources SET template='';
 UPDATE bolt_structures SET template='';

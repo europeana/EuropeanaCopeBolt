@@ -1,7 +1,7 @@
 <?php
 $content_types = [
   'apps' => 'bolt_applications',
-  'blogposts' => 'bolt_blogposts',
+  'posts' => 'bolt_posts',
   'collections' => 'bolt_collections',
   'data' => 'bolt_data',
   'documentation' => 'bolt_documentation',
@@ -11,10 +11,10 @@ $content_types = [
   'jobs' => 'bolt_jobs',
   'locations' => 'bolt_locations',
   'pages' => 'bolt_pages',
-  'pressreleases' => 'bolt_pressreleases',
+  'pressreleases' => 'bolt_posts',
   'projects' => 'bolt_projects',
   'persons' => 'bolt_persons',
-  'publications' => 'bolt_publications',
+  'publications' => 'bolt_posts',
   'resources' => 'bolt_resources',
   'structures' => 'bolt_structures',
   'taskforces' => 'bolt_taskforces'
@@ -71,7 +71,7 @@ $query['cleanup_id'][] = "ALTER TABLE bolt_relations DROP subsite_id;\n";
 $query['cleanup_id'][] = "ALTER TABLE bolt_taxonomy DROP subsite_id;\n";
 
 foreach ($content_types as $ctype => $table) {
-    $query['cleanup_id'][] = "ALTER TABLE $table DROP subsite_id;\n";
+    $query['cleanup_id'][$table] = "ALTER TABLE $table DROP subsite_id;\n";
 }
 
 foreach ($query as $group => $queries) {

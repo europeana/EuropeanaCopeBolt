@@ -128,6 +128,8 @@ __nodes:
         labs: Europeana Labs
         research: Europeana Research
         zoho: ZOHO CRM
+        publications: Publications
+        pressreleases: Pressreleases
         him: Heritage in motion
       postfix: "The site this content was imported from."
       group: Hierarchy
@@ -211,21 +213,9 @@ __nodes:
       multiple: true
       order: -id
       format: "{{ item.title|escape }}"
-  relation_blogposts: &relation_blogposts
-    blogposts:
-      label: "Blogposts"
-      multiple: true
-      order: -datepublish
-      format: "{{ item.title|escape }}"
-  relation_pressreleases: &relation_pressreleases
-    pressreleases:
-      label: "Press Releases"
-      multiple: true
-      order: -datepublish
-      format: "{{ item.title|escape }}"
-  relation_publications: &relation_publications
-    publications:
-      label: "Publications"
+  relation_posts: &relation_posts
+    posts:
+      label: "Posts"
       multiple: true
       order: -datepublish
       format: "{{ item.title|escape }}"
@@ -306,9 +296,7 @@ __nodes:
     relations:
       <<: *relation_structures
       <<: *relation_pages
-      <<: *relation_blogposts
-      <<: *relation_pressreleases
-      <<: *relation_publications
+      <<: *relation_posts
       <<: *relation_applications
       <<: *relation_data
       <<: *relation_documentation
@@ -357,7 +345,7 @@ structures:
       type: select
       label: "Default content type"
       multiple: false
-      values: { default: default, pages: pages, blogposts: blogposts, events: events, persons: persons, pressreleases: pressreleases }
+      values: { default: default, pages: pages, posts: blogposts, events: events, persons: persons }
       postfix: "Choose a content type if you selected a listing template that does not have a default content type set."
     subtheme:
       type: select
@@ -367,9 +355,7 @@ structures:
   relations:
     <<: *relation_structures
     <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_pressreleases
-    <<: *relation_publications
+    <<: *relation_posts
     <<: *relation_applications
     <<: *relation_data
     <<: *relation_documentation
@@ -418,12 +404,12 @@ pages:
 # BLOG POST
 #
 #################################
-blogposts:
+posts:
   name: 'Blog Posts'
   singular_name: 'BlogPost'
   display_name: 'Blog Posts'
-  slug: 'blogposts'
-  singular_slug: 'blogpost'
+  slug: 'posts'
+  singular_slug: 'post'
   fields:
     <<: *record_defaults
     <<: *calltoaction_defaults
@@ -433,6 +419,9 @@ blogposts:
       values: persons/last_name,first_name
       keys: id
       multiple: true
+    isbn:
+      label: "ISBN)"
+      type: text
     <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
@@ -445,68 +434,6 @@ blogposts:
   icon_many: "fa:quote-left"
   icon_one: "fa:quote-right"
   show_in_menu: Ephemeral
-
-#################################
-#
-# PRESSRELEASES
-#
-#################################
-pressreleases:
-  name: 'Press Releases'
-  singular_name: 'Press Release'
-  slug: 'pressreleases'
-  singular_slug: 'pressrelease'
-  fields:
-    <<: *record_defaults
-    author:
-      label: "Author(s)"
-      type: text
-      postfix: "Authors for pressreleases can be anyone, that's why this is a free textfield"
-    <<: *teaser_defaults
-    <<: *media_defaults
-    imagegallery:
-      type: imagelist
-      label: "Images gallery (optional)"
-      postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
-    <<: *structure_defaults
-  taxonomy: [ tags ]
-  <<: *all_relations
-  record_template: record_pressrelease.twig
-  listing_template: listing_pressreleases.twig
-  recordsperpage: 100
-  sort: -datepublish
-  icon_many: "fa:newspaper-o"
-  icon_one: "fa:newspaper-o"
-  show_in_menu: Ephemeral
-
-#################################
-#
-# PUBLICATIONS
-#
-#################################
-publications:
-  name: Publications
-  singular_name: Publication
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    isbn:
-      type: text
-      required: false
-      label: "ISBN:"
-      variant: inline
-      group: "ISBN"
-    <<: *contact_defaults
-    <<: *media_defaults
-    <<: *structure_defaults
-  taxonomy: [ tags ]
-  <<: *all_relations
-  record_template: record_publication.twig
-  listing_template: listing_publications.twig
-  recordsperpage: 50
-  icon_many: "fa:book"
-  icon_one: "fa:book"
-  show_in_menu: Core business
 
 #################################
 #
