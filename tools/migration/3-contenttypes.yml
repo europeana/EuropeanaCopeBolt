@@ -132,37 +132,41 @@ __nodes:
         pressreleases: Pressreleases
         him: Heritage in motion
       postfix: "The site this content was imported from."
-      group: Hierarchy
+      group: Structure
     structure_parent:
       type: select
       default: ''
       values: structures/id,title
       autocomplete: true
       label: "Select structure tree parent"
-      group: Hierarchy
+      group: Structure
     structure_sortorder:
       type: integer
       label: "Sort order in structure tree parent"
-      group: Hierarchy
+      group: Structure
     slug:
       type: slug
       uses: title
-      group: Hierarchy
+      group: Structure
     hide_list:
       type: checkbox
       label: "Hide from list views"
       postfix: "Check to hide this page from listings."
-      group: Hierarchy
+      group: Structure
     hide_related:
       type: checkbox
       label: "Hide from related content"
       postfix: "Check to hide this page from related content sections."
-      group: Hierarchy
+      group: Structure
     support_navigation:
       type: checkbox
       label: "Support navigation"
       postfix: "Check to automatically generate support navigation from the headings in the main body text."
-      group: Hierarchy
+      group: Structure
+    template: &template_defaults
+      type: templateselect
+      group: Structure
+  support_defaults: &support_defaults
     contact_record:
       type: select
       label: "Contact record"
@@ -178,10 +182,41 @@ __nodes:
       height: 150px
       postfix: '<p>Use this field to override the introduction from the contact record with a custom blurb.</p>'
       group: Support contact
-    template: &template_defaults
-      type: templateselect
-      filter: 'record_*.twig'
-      group: Hierarchy
+  viewblock_defaults:
+    block: &viewblock_defaults
+      type: viewblocks
+      label: Block
+      options:
+        templates:
+          titles: Title with a link
+          banners: Banner
+          teasers: Teaser
+          details: Full record details
+          faces: Round images or photos with a link
+          listing: Listing of records
+          expander: Expander block with records
+          browser: Filebrowser block
+          files: File block
+          hidden: Hidden block (for custom scripting)
+        ordering:
+          latest: The newest records first
+          current: Currently relevant (based on start and end date)
+          alphabetical: Alphabetically ordered
+          specified: Select some records below
+          highlighted: Records based on highlighted flag
+          random: A number of random records
+        sources:
+          pages: Pages, Listings, Landingpages, Structures and Collections
+          posts: Blogposts, Pressreleases, Publications and News
+          data: Data, Applications, Documentation
+          projects: Projects, Taskforces and Workinggroups
+          jobs: Jobs
+          events: Events
+        override_id: true
+        override_class: true
+        override_title: true
+        override_amount: true
+      postfix: 'A simple widget block'
   relation_structures: &relation_structures
     structures:
       label: "Structures"
@@ -201,12 +236,6 @@ __nodes:
       multiple: true
       order: -datepublish
       format: "{{ item.title|escape }}"
-  relation_applications: &relation_applications
-    applications:
-      label: "Apps"
-      multiple: true
-      order: title
-      format: "{{ item.title|escape }}"
   relation_data: &relation_data
     data:
       label: "Data"
@@ -216,12 +245,6 @@ __nodes:
   relation_documentation: &relation_documentation
     documentation:
       label: "Documentation"
-      multiple: true
-      order: title
-      format: "{{ item.title|escape }}"
-  relation_collections: &relation_collections
-    collections:
-      label: "Collections"
       multiple: true
       order: title
       format: "{{ item.title|escape }}"
@@ -267,10 +290,8 @@ __nodes:
       <<: *relation_structures
       <<: *relation_pages
       <<: *relation_posts
-      <<: *relation_applications
       <<: *relation_data
       <<: *relation_documentation
-      <<: *relation_collections
       <<: *relation_taskforces
       <<: *relation_projects
       <<: *relation_events
@@ -279,7 +300,179 @@ __nodes:
 
 #################################
 #
-# HOMEPAGE / STRUCTURE / LANDINGPAGE
+# LANDINGPAGE
+#
+#################################
+landingpages:
+  name: Landing pages
+  singular_name: Landing page
+  slug: landingpages
+  singular_slug: landingpages
+  fields:
+    <<: *record_defaults
+    body:
+      type: html
+      label: "Body (optional)"
+    modules:
+      label: Modules
+      type: repeater
+      separator: true
+      fields:
+        title:
+          type: text
+          label: Title (optional)
+          info: "If this field is set the title will be shown as title for the block, if no title is set the block will not have a title either."
+          placeholder: If the block has a title you can enter it here
+        templates:
+          type: select
+          default: teasers
+          info: "The template selects the kind of display this block uses"
+          values:
+            titles: "Title with a link"
+            teasers: "Teaser view"
+            listing: "Listing of records"
+            listingexpander: "Expander block with records - vertical accordeon"
+            listingnews: "Two news postings and a link to more."
+            listingpersons: "Person listing"
+            listingevents: "Event listing"
+            listingsemistatic: "Three static intro items"
+            listingstreamers: "Three column category streamers"
+            listingfaces: "Round images or photos with a link"
+            listingthumbnails: "Four columns with round thumbnailed links"
+            details: "Full record details (recommended only for single items)"
+            banners: "Banner view (one or two items)"
+            breakers: "Section breakers, call to action (one or two items)"
+            calltoactionform: "Call to action form main page (one item)"
+            calltoactionlink: "Call to action button main page (one item)"
+            calltoactionblog: "Call to action blog page (one item)"
+            filecontent: "File content block"
+            fileslisting: "File list block"
+            body: Show only the module body field
+            hidden: Hidden block (for custom scripting)
+        body:
+          type: html
+          label: "Module body (optional)"
+          height: 100px
+          postfix: "Shown in module blocks as body text"
+        ordering:
+          type: select
+          default: latest
+          info: "The ordering is for the templates where a list is selected"
+          values:
+            latest: The newest records first
+            current: Currently relevant (based on start and end date)
+            alphabetical: Alphabetically ordered
+            specified: Select some records below
+            highlighted: Records based on highlighted flag
+            random: A number of random records
+        sources:
+          type: select
+          default: posts
+          info: "What contenttype should be used as source for this block"
+          values:
+            pages: Pages, Listings, Landingpages, Structures and Collections
+            persons: Persons
+            posts: Blogposts, Pressreleases, Publications and News
+            data: Data, Applications, Documentation
+            projects: Projects, Taskforces and Workinggroups
+            jobs: Jobs
+            events: Events
+        override_amount:
+          type: integer
+          label: Amount
+          default: 3
+          variant: inline
+          info: "If this field is set this number will be used as the number of items in the listing"
+        selected_pages:
+          type: select
+          default: ''
+          multiple: true
+          values: pages/id,title,status
+          keys: id
+          autocomplete: true
+          sortable: true
+          label: "Select Pages"
+        selected_persons:
+          type: select
+          default: ''
+          multiple: true
+          values: persons/id,first_name,last_name,email,status
+          keys: id
+          autocomplete: true
+          sortable: true
+          label: "Select Persons"
+        selected_posts:
+          type: select
+          default: ''
+          multiple: true
+          values: posts/id,title,status
+          keys: id
+          autocomplete: true
+          sortable: true
+          label: "Select Posts"
+        selected_data:
+          type: select
+          default: ''
+          multiple: true
+          values: data/id,title,status
+          keys: id
+          autocomplete: true
+          sortable: true
+          label: "Select data"
+        selected_projects:
+          type: select
+          default: ''
+          multiple: true
+          values: projects/id,title,status
+          keys: id
+          autocomplete: true
+          sortable: true
+          label: "Select Projects"
+        selected_jobs:
+          type: select
+          default: ''
+          multiple: true
+          values: jobs/id,title,status
+          keys: id
+          autocomplete: true
+          sortable: true
+          label: "Select Jobs"
+        selected_events:
+          type: select
+          default: ''
+          multiple: true
+          values: events/id,title,status
+          keys: id
+          autocomplete: true
+          sortable: true
+          label: "Select Events"
+        override_css_id:
+          type: text
+          label: DOM ID
+          variant: inline
+          info: "If this field is set the id will be used in the HTML for styling"
+        override_css_class:
+          type: text
+          label: CSS Class
+          variant: inline
+          info: "If this field is set the classname will be used in the HTML for styling"
+      group: Main
+    pagefooter:
+      type: html
+      label: "Pagefooter (optional)"
+      height: 100px
+      postfix: "Shown on individual pages below the main body text"
+      group: Main
+    <<: *teaser_defaults
+    <<: *structure_defaults
+  <<: *all_relations
+  taxonomy: [ tags ]
+  icon_many: "fa:map"
+  icon_one: "fa:map-pin"
+
+#################################
+#
+# HOMEPAGE / STRUCTURE
 #
 #################################
 structures:
@@ -324,20 +517,17 @@ structures:
     <<: *relation_structures
     <<: *relation_pages
     <<: *relation_posts
-    <<: *relation_applications
     <<: *relation_data
     <<: *relation_documentation
-    <<: *relation_collections
     <<: *relation_taskforces
     <<: *relation_projects
     <<: *relation_events
     <<: *relation_jobs
     <<: *relation_persons
     <<: *relation_resources
-  record_template: record_structure.twig
-  listing_template: listing_structures.twig
   icon_many: "fa:cubes"
   icon_one: "fa:cube"
+  show_in_menu: System
 
 #################################
 #
@@ -359,8 +549,6 @@ pages:
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_page.twig
-  listing_template: listing_pages.twig
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
@@ -386,46 +574,17 @@ posts:
       keys: id
       multiple: true
     isbn:
-      label: "ISBN)"
+      label: "ISBN"
       type: text
     <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_blogpost.twig
-  listing_template: listing_blogposts.twig
   recordsperpage: 100
   sort: -datepublish
   icon_many: "fa:quote-left"
   icon_one: "fa:quote-right"
-  show_in_menu: Ephemeral
-
-#################################
-#
-# APPS
-#
-#################################
-applications:
-  name: Apps
-  singular_name: App
-  slug: applications
-  singular_slug: application
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    <<: *link_defaults
-    <<: *contact_defaults
-    <<: *media_defaults
-    <<: *structure_defaults
-  taxonomy: [ appthemes, appcategories, tags ]
-  <<: *all_relations
-  record_template: record_application.twig
-  listing_template: listing_applications.twig
-  recordsperpage: 50
-  icon_many: "fa:files-o"
-  icon_one: "fa:file"
-  show_in_menu: Core business
 
 #################################
 #
@@ -476,14 +635,12 @@ data:
     <<: *contact_defaults
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
   <<: *all_relations
-  record_template: record_data.twig
-  listing_template: listing_data.twig
   recordsperpage: 100
   icon_many: "fa:object-group"
   icon_one: "fa:object-group"
-  show_in_menu: Core business
 
 #################################
 #
@@ -499,51 +656,13 @@ documentation:
     <<: *link_defaults
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_documentation.twig
-  listing_template: listing_documentation.twig
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
-  show_in_menu: Core business
-
-#################################
-#
-# COLLECTIONS
-#
-#################################
-collections:
-  name: Collections
-  singular_name: Collection
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    source:
-      type: text
-      variant: inline
-      class: narrow
-      group: Collection specific
-    source_url:
-      type: text
-      required: false
-      label: "URL from source:"
-      variant: inline
-      postfix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-    <<: *media_defaults
-    <<: *structure_defaults
-    template:
-      type: templateselect
-      filter: 'record_*.twig'
-  taxonomy: [ tags ]
-  <<: *all_relations
-  record_template: record_collection.twig
-  listing_template: listing_collections.twig
-  recordsperpage: 50
-  icon_many: "fa:files-o"
-  icon_one: "fa:file"
-  show_in_menu: Core business
+  show_in_menu: System
 
 #################################
 #
@@ -591,14 +710,13 @@ taskforces:
       group: "Taskforce"
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_taskforce.twig
-  listing_template: listing_taskforces.twig
   recordsperpage: 50
   icon_many: "fa:bullseye"
   icon_one: "fa:bullseye"
-  show_in_menu: Core business
+  show_in_menu: System
 
 #################################
 #
@@ -626,16 +744,14 @@ projects:
       pattern: url
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_project.twig
-  listing_template: listing_projects.twig
   listing_records: 5
   recordsperpage: 20
   sort: -datepublish
   icon_many: "fa:clipboard"
   icon_one: "fa:clipboard"
-  show_in_menu: Core business
 
 #################################
 #
@@ -668,13 +784,11 @@ events:
       label: "Unconfirmed"
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_event.twig
-  listing_template: listing_events.twig
   icon_many: "fa:calendar"
   icon_one: "fa:calendar"
-  show_in_menu: Ephemeral
 
 #################################
 #
@@ -747,14 +861,12 @@ jobs:
     slug:
       type: slug
       uses: position
+    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_job.twig
-  listing_template: listing_jobs.twig
   sort: -datepublish
   icon_many: "fa:money"
   icon_one: "fa:money"
-  show_in_menu: Ephemeral
 
 #################################
 #
@@ -1037,10 +1149,10 @@ persons:
         labs: Europeana Labs
         research: Europeana Research
         zoho: ZOHO CRM
-  taxonomy: [ teams, tags ]
+
+    <<: *support_defaults
+  taxonomy: [ tags ]
   <<: *all_relations
-  record_template: record_person.twig
-  listing_template: listing_persons.twig
   icon_many: "fa:users"
   icon_one: "fa:user"
 
@@ -1068,8 +1180,6 @@ locations:
       type: checkbox
       required: false
       label: "This is the main Europeana office (appear in footer)"
-  record_template: record_location.twig
-  listing_template: listing_locations.twig
   icon_many: "fa:map-marker"
   icon_one: "fa:map-marker"
   show_in_menu: System

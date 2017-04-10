@@ -128,6 +128,8 @@ __nodes:
         labs: Europeana Labs
         research: Europeana Research
         zoho: ZOHO CRM
+        publications: Publications
+        pressreleases: Pressreleases
         him: Heritage in motion
       postfix: "The site this content was imported from."
       group: Structure
@@ -215,24 +217,6 @@ __nodes:
         override_title: true
         override_amount: true
       postfix: 'A simple widget block'
-  him_sub_defaults: &him_sub_defaults
-    entryid:
-      type: text
-      required: true
-      readonly: true
-      label: HIM entry ID
-    judgeid:
-      type: text
-      required: true
-      readonly: true
-      label: User ID
-    judgename:
-      type: text
-      required: true
-      readonly: true
-      label: User Name
-    slug:
-      type: slug
   relation_structures: &relation_structures
     structures:
       label: "Structures"
@@ -246,29 +230,11 @@ __nodes:
       multiple: true
       order: -id
       format: "{{ item.title|escape }}"
-  relation_blogposts: &relation_blogposts
-    blogposts:
-      label: "Blogposts"
+  relation_posts: &relation_posts
+    posts:
+      label: "Posts"
       multiple: true
       order: -datepublish
-      format: "{{ item.title|escape }}"
-  relation_pressreleases: &relation_pressreleases
-    pressreleases:
-      label: "Press Releases"
-      multiple: true
-      order: -datepublish
-      format: "{{ item.title|escape }}"
-  relation_publications: &relation_publications
-    publications:
-      label: "Publications"
-      multiple: true
-      order: -datepublish
-      format: "{{ item.title|escape }}"
-  relation_applications: &relation_applications
-    applications:
-      label: "Apps"
-      multiple: true
-      order: title
       format: "{{ item.title|escape }}"
   relation_data: &relation_data
     data:
@@ -279,12 +245,6 @@ __nodes:
   relation_documentation: &relation_documentation
     documentation:
       label: "Documentation"
-      multiple: true
-      order: title
-      format: "{{ item.title|escape }}"
-  relation_collections: &relation_collections
-    collections:
-      label: "Collections"
       multiple: true
       order: title
       format: "{{ item.title|escape }}"
@@ -318,18 +278,6 @@ __nodes:
       multiple: true
       order: last_name
       format: "{{ item.last_name }}, {{ item.first_name }}"
-  relation_himentries: &relation_himentries
-    himentries:
-      label: "Heritage in Motion Entries"
-      multiple: true
-      order: -id
-      format: "{{ item.title|escape }}"
-  relation_himeditions: &relation_himeditions
-    himeditions:
-      label: "Heritage in Motion Editions"
-      multiple: true
-      order: id
-      format: "{{ item.title|escape }}"
   relation_resources: &relation_resources
     resources:
       label: "Footer resources"
@@ -341,20 +289,14 @@ __nodes:
     relations:
       <<: *relation_structures
       <<: *relation_pages
-      <<: *relation_blogposts
-      <<: *relation_pressreleases
-      <<: *relation_publications
-      <<: *relation_applications
+      <<: *relation_posts
       <<: *relation_data
       <<: *relation_documentation
-      <<: *relation_collections
       <<: *relation_taskforces
       <<: *relation_projects
       <<: *relation_events
       <<: *relation_jobs
       <<: *relation_persons
-      <<: *relation_himentries
-      <<: *relation_himeditions
 
 #################################
 #
@@ -534,7 +476,7 @@ landingpages:
 #
 #################################
 structures:
-  name: Structures
+  name: Structures and Landingpages
   singular_name: Structure
   slug: structures
   singular_slug: structure
@@ -548,7 +490,6 @@ structures:
     <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
-    <<: *support_defaults
     structuretype:
       type: select
       label: "Type of structure"
@@ -565,7 +506,7 @@ structures:
       type: select
       label: "Default content type"
       multiple: false
-      values: { default: default, pages: pages, blogposts: blogposts, events: events, persons: persons, pressreleases: pressreleases }
+      values: { default: default, pages: pages, posts: blogposts, events: events, persons: persons }
       postfix: "Choose a content type if you selected a listing template that does not have a default content type set."
     subtheme:
       type: select
@@ -575,23 +516,18 @@ structures:
   relations:
     <<: *relation_structures
     <<: *relation_pages
-    <<: *relation_blogposts
-    <<: *relation_pressreleases
-    <<: *relation_publications
-    <<: *relation_applications
+    <<: *relation_posts
     <<: *relation_data
     <<: *relation_documentation
-    <<: *relation_collections
     <<: *relation_taskforces
     <<: *relation_projects
     <<: *relation_events
     <<: *relation_jobs
     <<: *relation_persons
-    <<: *relation_himentries
-    <<: *relation_himeditions
     <<: *relation_resources
   icon_many: "fa:cubes"
   icon_one: "fa:cube"
+  show_in_menu: System
 
 #################################
 #
@@ -611,7 +547,6 @@ pages:
       label: "Images gallery (optional)"
       postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
     <<: *structure_defaults
-    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   recordsperpage: 50
@@ -623,12 +558,12 @@ pages:
 # BLOG POST
 #
 #################################
-blogposts:
+posts:
   name: 'Blog Posts'
   singular_name: 'BlogPost'
   display_name: 'Blog Posts'
-  slug: 'blogposts'
-  singular_slug: 'blogpost'
+  slug: 'posts'
+  singular_slug: 'post'
   fields:
     <<: *record_defaults
     <<: *calltoaction_defaults
@@ -638,101 +573,18 @@ blogposts:
       values: persons/last_name,first_name
       keys: id
       multiple: true
+    isbn:
+      label: "ISBN"
+      type: text
     <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
-    <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
   recordsperpage: 100
   sort: -datepublish
   icon_many: "fa:quote-left"
   icon_one: "fa:quote-right"
-
-#################################
-#
-# PRESSRELEASES
-#
-#################################
-pressreleases:
-  name: 'Press Releases'
-  singular_name: 'Press Release'
-  slug: 'pressreleases'
-  singular_slug: 'pressrelease'
-  fields:
-    <<: *record_defaults
-    author:
-      label: "Author(s)"
-      type: text
-      postfix: "Authors for pressreleases can be anyone, that's why this is a free textfield"
-    <<: *teaser_defaults
-    <<: *media_defaults
-    imagegallery:
-      type: imagelist
-      label: "Images gallery (optional)"
-      postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
-    <<: *structure_defaults
-    <<: *support_defaults
-  taxonomy: [ tags ]
-  <<: *all_relations
-  recordsperpage: 100
-  sort: -datepublish
-  icon_many: "fa:newspaper-o"
-  icon_one: "fa:newspaper-o"
-  show_in_menu: Other
-
-#################################
-#
-# PUBLICATIONS
-#
-#################################
-publications:
-  name: Publications
-  singular_name: Publication
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    isbn:
-      type: text
-      required: false
-      label: "ISBN:"
-      variant: inline
-      group: "ISBN"
-    <<: *contact_defaults
-    <<: *media_defaults
-    <<: *structure_defaults
-    <<: *support_defaults
-  taxonomy: [ tags ]
-  <<: *all_relations
-  recordsperpage: 50
-  icon_many: "fa:book"
-  icon_one: "fa:book"
-  show_in_menu: Other
-
-#################################
-#
-# APPS
-#
-#################################
-applications:
-  name: Apps
-  singular_name: App
-  slug: applications
-  singular_slug: application
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    <<: *link_defaults
-    <<: *contact_defaults
-    <<: *media_defaults
-    <<: *structure_defaults
-    <<: *support_defaults
-  taxonomy: [ appthemes, appcategories, tags ]
-  <<: *all_relations
-  recordsperpage: 50
-  icon_many: "fa:files-o"
-  icon_one: "fa:file"
-  show_in_menu: Other
 
 #################################
 #
@@ -751,7 +603,7 @@ data:
       label: "Provided by:"
       variant: inline
       class: narrow
-      group: "Links"
+      group: "Related External Links"
     provided_by_link:
       type: text
       required: false
@@ -760,6 +612,7 @@ data:
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
+      group: "Related External Links"
     portallink:
       type: text
       required: false
@@ -768,6 +621,7 @@ data:
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
+      group: "Related External Links"
     apiconsolelink:
       type: text
       required: false
@@ -776,6 +630,8 @@ data:
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
+      group: "Related External Links"
+    <<: *link_defaults
     <<: *contact_defaults
     <<: *media_defaults
     <<: *structure_defaults
@@ -785,7 +641,6 @@ data:
   recordsperpage: 100
   icon_many: "fa:object-group"
   icon_one: "fa:object-group"
-
 
 #################################
 #
@@ -807,43 +662,7 @@ documentation:
   recordsperpage: 50
   icon_many: "fa:files-o"
   icon_one: "fa:file"
-  show_in_menu: Other
-
-#################################
-#
-# COLLECTIONS
-#
-#################################
-collections:
-  name: Collections
-  singular_name: Collection
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    source:
-      type: text
-      variant: inline
-      class: narrow
-      group: Collection specific
-    source_url:
-      type: text
-      required: false
-      label: "URL from source:"
-      variant: inline
-      postfix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-    <<: *media_defaults
-    <<: *structure_defaults
-    template:
-      type: templateselect
-      filter: 'record_*.twig'
-    <<: *support_defaults
-  taxonomy: [ tags ]
-  <<: *all_relations
-  recordsperpage: 50
-  icon_many: "fa:files-o"
-  icon_one: "fa:file"
-  show_in_menu: Other
+  show_in_menu: System
 
 #################################
 #
@@ -897,7 +716,7 @@ taskforces:
   recordsperpage: 50
   icon_many: "fa:bullseye"
   icon_one: "fa:bullseye"
-  show_in_menu: Other
+  show_in_menu: System
 
 #################################
 #
@@ -933,7 +752,6 @@ projects:
   sort: -datepublish
   icon_many: "fa:clipboard"
   icon_one: "fa:clipboard"
-  show_in_menu: Other
 
 #################################
 #
@@ -1331,7 +1149,7 @@ persons:
         labs: Europeana Labs
         research: Europeana Research
         zoho: ZOHO CRM
-        him: Heritage in motion
+
     <<: *support_defaults
   taxonomy: [ tags ]
   <<: *all_relations
@@ -1364,7 +1182,7 @@ locations:
       label: "This is the main Europeana office (appear in footer)"
   icon_many: "fa:map-marker"
   icon_one: "fa:map-marker"
-  show_in_menu: Other
+  show_in_menu: System
 
 #################################
 #
@@ -1416,234 +1234,13 @@ resources:
         labs: Europeana Labs
         research: Europeana Research
         zoho: ZOHO CRM
-        him: Heritage in motion
       group: meta
   <<: *all_relations
   viewless: true
   sort: weight
   icon_many: "fa:tasks"
   icon_one: "fa:tasks"
-  show_in_menu: Other
+  show_in_menu: System
 
 #################################
 #################################
-
-#################################
-#
-# HIM Gallery
-#
-# An edition has entries
-#
-#################################
-himeditions:
-  name: HiM Editions
-  singular_name: Heritage in Motion Edition
-  slug: himeditions
-  singular_slug: himedition
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    submission_deadline:
-      type: datetime
-      label: Submissions deadline
-      default: "2016-01-01"
-      group: Deadlines
-      options:
-        datepicker:
-          changeMonth: true
-          changeYear: true
-          yearRange: "-5:5"
-    submission_start:
-      type: datetime
-      label: Submissions start
-      default: "2016-01-01"
-      options:
-        datepicker:
-          changeMonth: true
-          changeYear: true
-          yearRange: "-5:5"
-    submission_closed:
-      type: checkbox
-      label: Submissions closed
-    edition_menu:
-      type: checkbox
-      label: Show edition in menu
-    submission_cost:
-      type: text
-      label: Submission cost
-      variant: inline
-    <<: *structure_defaults
-    <<: *support_defaults
-  <<: *all_relations
-  recordsperpage: 50
-  icon_many: "fa:trophy"
-  icon_one: "fa:list-alt"
-  show_in_menu: HiM
-
-#################################
-#
-# Heritage in Motion Entries
-# About the submission:
-# - Title*
-# - Project url (vimeo, youtube, slideshare, flickr)*
-# - Project summary incl tagline - 250 words max*
-# - Thumbnail image for video
-# - Credits - 500 words max - this will be a free text field where information about the production year and production team can be added.
-# - Project description - 2000 words max*
-# - Extra url
-# - Dropdown available categories - here a user can multi-select the categories they want to participate in. These categories have no functionality for the rest. They are only visible to the editor. Here the user chooses which categories they want to participate in but the editor assigns the functional categories to the submission.
-# - Tags
-# - Multiple image upload - 10 extra images
-#
-#################################
-himentries:
-  name: HiM Entries
-  singular_name: Heritage in Motion Entry
-  slug: himentries
-  singular_slug: himentry
-  fields:
-    title:
-      type: text
-      class: large
-      label: Title of your entry
-      group: Entry
-    slug:
-      type: slug
-      uses: title
-    subsite:
-      type: select
-      values: ['unknown', 'him', 'labs', 'pro', 'research', 'zoho']
-    summary:
-      type: html
-      label: Project summary incl. tagline (250 words max)
-    credits:
-      type: html
-      label: Information about the production year and production team (500 words max)
-    description:
-      type: html
-      label: A description of the project (2000 words max)
-    projecturl:
-      type: text
-      label: Extra url
-    licence:
-      type: select
-      label: Licence
-      placeholder: "Select a license.."
-      values:
-        ccby: Creative Commons BY
-        ccbysa: Creative Commons BY SA
-        ccbync: Creative Commons BY NC
-        ccbyncsa: Creative Commons BY NC SA
-        ccbynd: Creative Commons BY ND
-        ccbyncnd: Creative Commons BY NC ND
-        cc0: Public Domain
-        other: Other (please specify in description)
-    clienttags:
-      type: text
-      label: Tags
-    userid:
-      type: text
-      required: true
-      readonly: true
-      variant: inline
-      group: Submitted by
-      label: User ID
-    name:
-      type: text
-      required: true
-      readonly: true
-      variant: inline
-      label: User Name
-    email:
-      type: text
-      required: true
-      readonly: true
-      variant: inline
-      label: User Email
-    videolink:
-      type: text
-      required: true
-      label: Where is the video (a youtube or vimeo link)
-      group: media
-    videodownloadstatus:
-      type: text
-      required: true
-      readonly: true
-      default: no
-      postfix: "This will be set by the videodownloader extension.<ul><li>no - No, the video is not processed yet</li><li>yes - Yes, the video has a back-up</li><li>invalid - There was an error downloading the video</li><li>other - This is not a video</li></ul>"
-      label: Has the video been downloaded
-      variant: inline
-    videodownloadlocation:
-      type: text
-      required: true
-      readonly: true
-      default: unknown
-      postfix: "This will be set by the videodownloader extension."
-      label: Where is the downloaded video
-      variant: inline
-    upload_images:
-      type: imagelist
-      label: Add a images and a main thumbnail
-      postfix: "The main thumbnail will be the first image."
-    transaction_id:
-      type: text
-      readonly: true
-      group: meta
-  taxonomy: [ categories, stages, ranks, tags ]
-  <<: *all_relations
-  listing_records: 10
-  default_status: draft
-  recordsperpage: 10
-  sort: -id
-  icon_many: "fa:trophy"
-  icon_one: "fa:play-circle"
-  show_in_menu: HiM
-
-#################################
-#
-# HIM Comments
-#
-# Comments by judges about entries
-#
-#################################
-himcomments:
-  name: HiM Comments
-  singular_name: HiM Comment
-  slug: himcomments
-  singluar_slug: himcomment
-  fields:
-    <<: *him_sub_defaults
-    comment:
-      type: html
-      label: "Comment"
-      height: 300px
-  viewless: true
-  show_in_menu: HiM
-  icon_many: "fa:comments"
-  icon_one: "fa:comment"
-
-#################################
-#
-# HIM Votes
-#
-# Votes by judges about entries
-#
-#################################
-himvotes:
-  name: HiM Votes
-  singular_name: HiM Vote
-  slug: himvotes
-  singluar_slug: himvote
-  fields:
-    <<: *him_sub_defaults
-    vote:
-      type: float
-      requred: true
-      label: Vote
-      min: 0
-      max: 10
-      step: 0.1
-  viewless: true
-  show_in_menu: HiM
-  icon_many: "fa:star-half-empty"
-  icon_one: "fa:star"
