@@ -316,12 +316,6 @@ CREATE TABLE IF NOT EXISTS bolt_persons (
   PRIMARY KEY (id)
 );
 
--- him
-INSERT INTO europeana_cope.bolt_persons ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, first_name, last_name, job_title, introduction, image, email, linkedin, twitter, skype, structure_sortorder, structure_parent, hide_list, phone, team
-) SELECT 'him', p.id,
-  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.templatefields, p.first_name, p.last_name, p.job_title, p.introduction, p.image, p.email, p.linkedin, p.twitter, p.skype, p.structure_sortorder, p.structure_parent, p.hide_list, p.phone, p.team
-FROM europeana_him.bolt_persons p;
-
 -- labs
 INSERT INTO europeana_cope.bolt_persons ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, first_name, last_name, company, company_url, job_title, introduction, image, email, secondary_email, telephone_number, other_number, linkedin, twitter, skype, other_links_1, other_links_2, other_links_3, contact_blogpost, contact_event, contact_person, contact_tag, structure_sortorder, templatefields, structure_parent
 ) SELECT 'labs', p.id,
@@ -454,11 +448,6 @@ CREATE TABLE IF NOT EXISTS bolt_blogposts (
   PRIMARY KEY (id)
 );
 
--- him
-INSERT INTO europeana_cope.bolt_blogposts ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, title, intro, body, image, attachments, teaser, teaser_image, structure_sortorder, structure_parent, hide_list, author
-) SELECT 'him', b.id,
-  b.slug, b.datecreated, b.datechanged, b.datepublish, b.datedepublish, b.username, b.ownerid, b.status, b.templatefields, b.title, b.intro, b.body, b.image, b.attachments, b.teaser, b.teaser_image, b.structure_sortorder, b.structure_parent, b.hide_list, b.author
-FROM europeana_him.bolt_blogposts b;
 
 -- labs
 INSERT INTO europeana_cope.bolt_blogposts ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, body, image, files, structure_sortorder, templatefields, structure_parent, hero, intro
@@ -512,12 +501,6 @@ CREATE TABLE IF NOT EXISTS bolt_events (
   unconfirmed_start tinyint(1) NOT NULL DEFAULT 0, # him # labs # pro
   PRIMARY KEY (id)
 );
-
--- him
-INSERT INTO europeana_cope.bolt_events ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, title, intro, image, body, teaser, teaser_image, start_event, unconfirmed_start, end_event, unconfirmed_end, structure_sortorder, structure_parent, hide_list
-) SELECT 'him', e.id,
-  e.slug, e.datecreated, e.datechanged, e.datepublish, e.datedepublish, e.username, e.ownerid, e.status, e.templatefields, e.title, e.intro, e.image, e.body, e.teaser, e.teaser_image, e.start_event, e.unconfirmed_start, e.end_event, e.unconfirmed_end, e.structure_sortorder, e.structure_parent, e.hide_list
-FROM europeana_him.bolt_events e;
 
 -- labs
 INSERT INTO europeana_cope.bolt_events ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, start_event, unconfirmed_start, end_event, unconfirmed_end, teaser, body, teaser_image, filelist, secondary_mail, structure_sortorder, external_link, templatefields, structure_parent
@@ -601,12 +584,6 @@ CREATE TABLE IF NOT EXISTS bolt_pressreleases (
   PRIMARY KEY (id)
 );
 
--- him
-INSERT INTO europeana_cope.bolt_pressreleases ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, title, intro, image, body, author, teaser, teaser_image, attachments, structure_sortorder, structure_parent, hide_list
-) SELECT 'him', p.id,
-  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.templatefields, p.title, p.intro, p.image, p.body, p.author, p.teaser, p.teaser_image, p.attachments, p.structure_sortorder, p.structure_parent, p.hide_list
-FROM europeana_him.bolt_pressreleases p;
-
 -- pro
 INSERT INTO europeana_cope.bolt_pressreleases ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, subtitle, body, isbn, filelist, image, parents, introduction, structure_sortorder, structure_parent, templatefields
 ) SELECT 'pro', p.id,
@@ -654,12 +631,6 @@ CREATE TABLE IF NOT EXISTS bolt_structures (
   title varchar(256) DEFAULT '', # him # labs # pro # research
   PRIMARY KEY (id)
 );
-
--- him
-INSERT INTO europeana_cope.bolt_structures ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, title, intro, body, image, suffix, teaser, teaser_image, structure_sortorder, structure_parent, hide_list, template, default_content
-) SELECT 'him', s.id,
-  s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.templatefields, s.title, s.intro, s.body, s.image, s.suffix, s.teaser, s.teaser_image, s.structure_sortorder, s.structure_parent, s.hide_list, s.template, s.default_content
-FROM europeana_him.bolt_structures s;
 
 -- labs
 INSERT INTO europeana_cope.bolt_structures ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, secondary_mail, teaser, image, template, content, subclass, footer, date_start, date_end, structure_sortorder, templatefields, structure_parent
@@ -725,12 +696,6 @@ CREATE TABLE IF NOT EXISTS bolt_pages (
   image longtext NULL, # him
   PRIMARY KEY (id)
 );
-
--- him
-INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, title, intro, teaser, body, teaser_image, hide_list, template, structure_sortorder, structure_parent, image
-) SELECT 'him', p.id,
-  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.templatefields, p.title, p.intro, p.teaser, p.body, p.teaser_image, p.hide_list, p.template, p.structure_sortorder, p.structure_parent, p.image
-FROM europeana_him.bolt_pages p;
 
 -- labs
 INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, secondary_mail, hide_related, hide_related_section, support_navigation, structure_sortorder, files, link1, link2, link3, templatefields, structure_parent, hero, hide_list, templateselect
@@ -850,12 +815,6 @@ CREATE TABLE IF NOT EXISTS bolt_footers (
   PRIMARY KEY (id)
 );
 
--- him
-INSERT INTO europeana_cope.bolt_footers ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, title, image, socialmedia, linklist_left, linklist_right, mission, linklist_other
-) SELECT 'him', f.id,
-  f.slug, f.datecreated, f.datechanged, f.datepublish, f.datedepublish, f.username, f.ownerid, f.status, f.templatefields, f.title, f.image, f.socialmedia, f.linklist_left, f.linklist_right, f.mission, f.linklist_other
-FROM europeana_him.bolt_footers f;
-
 -- labs
 INSERT INTO europeana_cope.bolt_footers ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, image, socialmedia, linklist_left, linklist_right, mission, linklist_other, templatefields
 ) SELECT 'labs', f.id,
@@ -898,151 +857,6 @@ CREATE TABLE IF NOT EXISTS bolt_resources (
   PRIMARY KEY (id)
 );
 
-INSERT INTO europeana_cope.bolt_resources ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, title, image, body, htmllink, weight, cssclass, cssid
-) SELECT 'him', r.id,
-  r.slug, r.datecreated, r.datechanged, r.datepublish, r.datedepublish, r.username, r.ownerid, r.status, r.templatefields, r.title, r.image, r.body, r.htmllink, r.weight, r.cssclass, r.cssid
-FROM europeana_him.bolt_resources r;
-
--- heritage in motion specific --
-
-DROP TABLE IF EXISTS bolt_himcomments;
-CREATE TABLE IF NOT EXISTS bolt_himcomments (
-  id int(11) NOT NULL AUTO_INCREMENT, # all
-  slug varchar(128) NOT NULL DEFAULT '', # all
-  datecreated datetime NOT NULL, # all
-  datechanged datetime NOT NULL, # all
-  datepublish datetime DEFAULT NULL, # all
-  datedepublish datetime DEFAULT NULL, # all
-  username varchar(32) DEFAULT '', # all
-  ownerid int(11) DEFAULT NULL, # all
-  status varchar(32) NOT NULL DEFAULT '', # all
-  subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
-  subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  comment longtext, # him
-  entryid varchar(256) DEFAULT '', # him
-  judgeid varchar(256) DEFAULT '', # him
-  judgename varchar(256) DEFAULT '', # him
-  templatefields longtext NULL, # him
-  PRIMARY KEY (id)
-);
-
-INSERT INTO europeana_cope.bolt_himcomments ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, entryid, judgeid, judgename, comment
-) SELECT 'him', hc.id,
-  hc.slug, hc.datecreated, hc.datechanged, hc.datepublish, hc.datedepublish, hc.username, hc.ownerid, hc.status, hc.templatefields, hc.entryid, hc.judgeid, hc.judgename, hc.comment
-FROM europeana_him.bolt_himcomments hc;
-
-DROP TABLE IF EXISTS bolt_himeditions;
-CREATE TABLE IF NOT EXISTS bolt_himeditions (
-  id int(11) NOT NULL AUTO_INCREMENT, # all
-  slug varchar(128) NOT NULL DEFAULT '', # all
-  datecreated datetime NOT NULL, # all
-  datechanged datetime NOT NULL, # all
-  datepublish datetime DEFAULT NULL, # all
-  datedepublish datetime DEFAULT NULL, # all
-  username varchar(32) DEFAULT '', # all
-  ownerid int(11) DEFAULT NULL, # all
-  status varchar(32) NOT NULL DEFAULT '', # all
-  subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
-  subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  body longtext, # him
-  edition_menu tinyint(1) NOT NULL DEFAULT 0, # him
-  hide_list tinyint(1) NOT NULL DEFAULT 0, # him
-  image longtext NULL, # him
-  intro longtext, # him
-  structure_parent longtext, # him
-  structure_sortorder int(11) NOT NULL DEFAULT 0, # him
-  submission_closed tinyint(1) NOT NULL DEFAULT 0, # him
-  submission_cost varchar(256) DEFAULT '', # him
-  submission_deadline datetime DEFAULT NULL, # him
-  submission_start datetime DEFAULT NULL, # him
-  teaser longtext, # him
-  teaser_image longtext NULL, # him
-  templatefields longtext NULL, # him
-  title varchar(256) DEFAULT '', # him
-  PRIMARY KEY (id)
-);
-
-INSERT INTO europeana_cope.bolt_himeditions ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, title, intro, image, body, teaser, teaser_image, submission_deadline, submission_start, submission_closed, edition_menu, structure_sortorder, structure_parent, hide_list, submission_cost
-) SELECT 'him', he.id,
-  he.slug, he.datecreated, he.datechanged, he.datepublish, he.datedepublish, he.username, he.ownerid, he.status, he.templatefields, he.title, he.intro, he.image, he.body, he.teaser, he.teaser_image, he.submission_deadline, he.submission_start, he.submission_closed, he.edition_menu, he.structure_sortorder, he.structure_parent, he.hide_list, he.submission_cost
-FROM europeana_him.bolt_himeditions he;
-
-DROP TABLE IF EXISTS bolt_himentries;
-CREATE TABLE IF NOT EXISTS bolt_himentries (
-  id int(11) NOT NULL AUTO_INCREMENT, # all
-  slug varchar(128) NOT NULL DEFAULT '', # all
-  datecreated datetime NOT NULL, # all
-  datechanged datetime NOT NULL, # all
-  datepublish datetime DEFAULT NULL, # all
-  datedepublish datetime DEFAULT NULL, # all
-  username varchar(32) DEFAULT '', # all
-  ownerid int(11) DEFAULT NULL, # all
-  status varchar(32) NOT NULL DEFAULT '', # all
-  subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
-  subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  body longtext NULL, # him
-  clienttags varchar(256) DEFAULT '', # him
-  credits longtext, # him
-  description longtext, # him
-  email varchar(256) DEFAULT '', # him
-  image longtext, # him
-  licence longtext, # him
-  name varchar(256) DEFAULT '', # him
-  projecturl varchar(256) DEFAULT '', # him
-  summary longtext, # him
-  teaser longtext NULL, # him
-  templatefields longtext NULL, # him
-  title varchar(256) DEFAULT '', # him
-  transaction_id varchar(256) DEFAULT '', # him
-  upload_1 longtext, # him
-  upload_2 longtext, # him
-  upload_3 longtext, # him
-  upload_4 longtext, # him
-  upload_5 longtext, # him
-  upload_6 longtext, # him
-  upload_7 longtext, # him
-  upload_8 longtext, # him
-  upload_images longtext NULL, # him
-  upload_thumb longtext, # him
-  userid varchar(256) DEFAULT '', # him
-  video longtext, # him
-  videodownloadlocation varchar(256) DEFAULT '', # him
-  videodownloadstatus varchar(256) DEFAULT '', # him
-  videolink varchar(256) DEFAULT '', # him
-  PRIMARY KEY (id)
-);
-
-INSERT INTO europeana_cope.bolt_himentries ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, title, teaser, body, image, video, userid, name, email, description, videolink, videodownloadstatus, videodownloadlocation, projecturl, licence, upload_thumb, upload_1, upload_2, upload_3, upload_4, upload_5, upload_6, upload_7, upload_8, clienttags, summary, credits, upload_images, transaction_id
-) SELECT 'him', he.id,
-  he.slug, he.datecreated, he.datechanged, he.datepublish, he.datedepublish, he.username, he.ownerid, he.status, he.templatefields, he.title, he.teaser, he.body, he.image, he.video, he.userid, he.name, he.email, he.description, he.videolink, he.videodownloadstatus, he.videodownloadlocation, he.projecturl, he.licence, he.upload_thumb, he.upload_1, he.upload_2, he.upload_3, he.upload_4, he.upload_5, he.upload_6, he.upload_7, he.upload_8, he.clienttags, he.summary, he.credits, he.upload_images, he.transaction_id
-FROM europeana_him.bolt_himentries he;
-
-DROP TABLE IF EXISTS bolt_himvotes;
-CREATE TABLE IF NOT EXISTS bolt_himvotes (
-  id int(11) NOT NULL AUTO_INCREMENT, # all
-  slug varchar(128) NOT NULL DEFAULT '', # all
-  datecreated datetime NOT NULL, # all
-  datechanged datetime NOT NULL, # all
-  datepublish datetime DEFAULT NULL, # all
-  datedepublish datetime DEFAULT NULL, # all
-  username varchar(32) DEFAULT '', # all
-  ownerid int(11) DEFAULT NULL, # all
-  status varchar(32) NOT NULL DEFAULT '', # all
-  subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
-  subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  entryid varchar(256) DEFAULT '', # him
-  judgeid varchar(256) DEFAULT '', # him
-  judgename varchar(256) DEFAULT '', # him
-  templatefields longtext NULL, # him
-  vote double NOT NULL DEFAULT '0', # him
-  PRIMARY KEY (id)
-);
-
-INSERT INTO europeana_cope.bolt_himvotes ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, templatefields, entryid, judgeid, judgename, vote
-) SELECT 'him', hv.id,
-  hv.slug, hv.datecreated, hv.datechanged, hv.datepublish, hv.datedepublish, hv.username, hv.ownerid, hv.status, hv.templatefields, hv.entryid, hv.judgeid, hv.judgename, hv.vote
-FROM europeana_him.bolt_himvotes hv;
-
 -- metadata, relations and users --
 
 DROP TABLE IF EXISTS bolt_users;
@@ -1066,12 +880,6 @@ CREATE TABLE bolt_users (
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
   PRIMARY KEY (`id`)
 );
-
--- him
-INSERT INTO europeana_cope.bolt_users ( subsite, subsite_id, username, password, email, lastseen, lastip, displayname, stack, enabled, shadowpassword, shadowtoken, shadowvalidity, failedlogins, throttleduntil, roles
-) SELECT 'him', u.id,
-  u.username, u.password, u.email, u.lastseen, u.lastip, u.displayname, u.stack, u.enabled, u.shadowpassword, u.shadowtoken, u.shadowvalidity, u.failedlogins, u.throttleduntil, u.roles
-FROM europeana_him.bolt_users u;
 
 -- labs
 INSERT INTO europeana_cope.bolt_users ( subsite, subsite_id, username, password, email, lastseen, lastip, displayname, stack, enabled, shadowpassword, shadowtoken, shadowvalidity, failedlogins, throttleduntil, roles
@@ -1106,12 +914,6 @@ CREATE TABLE bolt_taxonomy (
   PRIMARY KEY (`id`)
 );
 
--- him
-INSERT INTO europeana_cope.bolt_taxonomy ( subsite, subsite_id, content_id, contenttype, taxonomytype, slug, name, sortorder
-) SELECT 'him', t.id,
-  t.content_id, t.contenttype, t.taxonomytype, t.slug, t.name, t.sortorder
-FROM europeana_him.bolt_taxonomy t;
-
 -- labs
 INSERT INTO europeana_cope.bolt_taxonomy ( subsite, subsite_id, content_id, contenttype, taxonomytype, slug, name, sortorder
 ) SELECT 'labs', t.id,
@@ -1142,12 +944,6 @@ CREATE TABLE bolt_relations (
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
   PRIMARY KEY (`id`)
 );
-
--- him
-INSERT INTO europeana_cope.bolt_relations ( subsite, subsite_id, from_contenttype, from_id, to_contenttype, to_id
-) SELECT 'him', r.id,
-  r.from_contenttype, r.from_id, r.to_contenttype, r.to_id
-FROM europeana_him.bolt_relations r;
 
 -- labs
 INSERT INTO europeana_cope.bolt_relations ( subsite, subsite_id, from_contenttype, from_id, to_contenttype, to_id

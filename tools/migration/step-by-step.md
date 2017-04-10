@@ -10,7 +10,6 @@
 ## Set up database for import
 
 5. set up a server with the databases for
-    - europeana_him
     - europeana_pro
     - europeana_labs
     - europeana_research
