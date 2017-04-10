@@ -242,18 +242,6 @@ __nodes:
       multiple: true
       order: title
       format: "{{ item.title|escape }}"
-  relation_documentation: &relation_documentation
-    documentation:
-      label: "Documentation"
-      multiple: true
-      order: title
-      format: "{{ item.title|escape }}"
-  relation_taskforces: &relation_taskforces
-    taskforces:
-      label: "Taskforces / Working groups"
-      multiple: true
-      order: title
-      format: "{{ item.title|escape }}"
   relation_projects: &relation_projects
     projects:
       label: "Projects"
@@ -291,8 +279,6 @@ __nodes:
       <<: *relation_pages
       <<: *relation_posts
       <<: *relation_data
-      <<: *relation_documentation
-      <<: *relation_taskforces
       <<: *relation_projects
       <<: *relation_events
       <<: *relation_jobs
@@ -518,8 +504,6 @@ structures:
     <<: *relation_pages
     <<: *relation_posts
     <<: *relation_data
-    <<: *relation_documentation
-    <<: *relation_taskforces
     <<: *relation_projects
     <<: *relation_events
     <<: *relation_jobs
@@ -644,82 +628,6 @@ data:
 
 #################################
 #
-# DOCUMENTATION
-#
-#################################
-documentation:
-  name: Documentation
-  singular_name: Documentation
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    <<: *link_defaults
-    <<: *media_defaults
-    <<: *structure_defaults
-    <<: *support_defaults
-  taxonomy: [ tags ]
-  <<: *all_relations
-  recordsperpage: 50
-  icon_many: "fa:files-o"
-  icon_one: "fa:file"
-  show_in_menu: System
-
-#################################
-#
-# TASKFORCES
-#
-#################################
-taskforces:
-  name: Task Forces and Working Groups
-  slug: taskforces
-  singular_name: Task Force
-  singular_slug: taskforce
-  fields:
-    <<: *record_defaults
-    <<: *teaser_defaults
-    subtitle:
-      type: text
-      required: false
-      label: "Subtitle"
-      variant: inline
-      group: "Taskforce"
-    tf_or_wg:
-      type: select
-      required: true
-      multiple: false
-      default: "TaskForce"
-      label: "TaskForce or WorkingGroup"
-      values: [ "TaskForce", "WorkingGroup" ]
-      group: "Taskforce"
-    department:
-      type: select
-      label: "Department"
-      values: [ "Europeana Network", "Europeana Tech" ]
-      group: "Taskforce"
-    date_start:
-      type: date
-      required: false
-      label: "Expected timeframe start"
-      format: "{{d.Y}}"
-      group: "Taskforce"
-    date_end:
-      type: date
-      required: false
-      label: "Expected timeframe end"
-      format: "{{d.Y}}"
-      group: "Taskforce"
-    <<: *media_defaults
-    <<: *structure_defaults
-    <<: *support_defaults
-  taxonomy: [ tags ]
-  <<: *all_relations
-  recordsperpage: 50
-  icon_many: "fa:bullseye"
-  icon_one: "fa:bullseye"
-  show_in_menu: System
-
-#################################
-#
 # PROJECTS
 #
 #################################
@@ -728,7 +636,6 @@ projects:
   singular_name: Project
   fields:
     <<: *record_defaults
-    <<: *teaser_defaults
     subtitle:
       type: text
       label: "Subtitle"
@@ -742,6 +649,18 @@ projects:
       variant: inline
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
+    projecttype:
+      type: select
+      required: true
+      multiple: false
+      default: "Project"
+      label: "TaskForce or WorkingGroup"
+      values: [ "TaskForce", "WorkingGroup", "Project" ]
+    department:
+      type: select
+      label: "Department"
+      values: [ "Europeana Network", "Europeana Tech" ]
+    <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
     <<: *support_defaults

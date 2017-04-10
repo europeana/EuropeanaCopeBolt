@@ -16,27 +16,35 @@ CREATE TABLE IF NOT EXISTS bolt_projects (
   status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
+  attachments longtext NULL, # pro
   body longtext NULL, # pro
   date_end date DEFAULT NULL, # pro
   date_start date DEFAULT NULL, # pro
-  filelist longtext NULL, # pro
+  department longtext NULL, # pro
   filelist_downloads varchar(256) NOT NULL DEFAULT '', # pro
   intro longtext NULL, # pro
   logo longtext NULL, # pro
+  projecttype longtext NULL,
   structure_parent longtext NULL, # pro
   structure_sortorder int(11) NOT NULL DEFAULT 0, # pro
   subtitle varchar(256) NOT NULL DEFAULT '', # pro
   teaser longtext NULL, # pro
+  teaser_image longtext NULL, # pro
   templatefields longtext NULL, # pro
   title varchar(256) NOT NULL DEFAULT '', # pro
   url varchar(256) NOT NULL DEFAULT '', # pro
   PRIMARY KEY (id)
 );
 
-INSERT INTO europeana_cope.bolt_projects ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, subtitle, date_start, date_end, teaser, intro, body, url, logo, filelist, structure_parent, filelist_downloads, structure_sortorder, templatefields
+INSERT INTO europeana_cope.bolt_projects ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, subtitle, date_start, date_end, teaser, intro, body, url, logo, attachments, structure_parent, filelist_downloads, structure_sortorder, templatefields, projecttype
 ) SELECT 'pro', p.id,
-  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.subtitle, p.date_start, p.date_end, p.teaser, p.intro, p.body, p.url, p.logo, p.filelist, p.structure_parent, p.filelist_downloads, p.structure_sortorder, p.templatefields
+  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.subtitle, p.date_start, p.date_end, p.teaser, p.intro, p.body, p.url, p.logo, p.filelist, p.structure_parent, p.filelist_downloads, p.structure_sortorder, p.templatefields, 'Project'
 FROM europeana_pro.bolt_projects p;
+
+INSERT INTO europeana_cope.bolt_projects ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, department, subtitle, date_start, date_end, teaser, intro, body, teaser_image, attachments, filelist_downloads, structure_sortorder, structure_parent, templatefields, projecttype
+) SELECT 'pro', t.id,
+    t.slug, t.datecreated, t.datechanged, t.datepublish, t.datedepublish, t.username, t.ownerid, t.status, t.title, t.department, t.subtitle, t.date_start, t.date_end, t.teaser, t.intro, t.body, t.teaser_image, t.filelist_files, t.filelist_downloads, t.structure_sortorder, t.structure_parent, t.templatefields, 'TaskForce'
+  FROM europeana_pro.bolt_taskforces t;
 
 
 DROP TABLE IF EXISTS bolt_data;
@@ -58,6 +66,7 @@ CREATE TABLE IF NOT EXISTS bolt_data (
   contact_name varchar(256) NOT NULL DEFAULT '', # labs # research
   contact_website varchar(256) NOT NULL DEFAULT '', # labs
   country varchar(256) NOT NULL DEFAULT '', # research
+  files longtext NULL, # labs
   hero longtext NULL, # labs
   image longtext NULL, # labs # research
   intro longtext NULL, # labs # research
@@ -94,50 +103,10 @@ INSERT INTO europeana_cope.bolt_data ( subsite, subsite_id, slug, datecreated, d
     a.slug, a.datecreated, a.datechanged, a.datepublish, a.datedepublish, a.username, a.ownerid, a.status, a.title, a.intro, a.teaser, a.body, a.image, a.link1, a.link2, a.link3, a.contact_name, a.contact_email, a.contact_website, a.templatefields, a.hero
   FROM europeana_labs.bolt_apps a;
 
-
-DROP TABLE IF EXISTS bolt_documentation;
-CREATE TABLE IF NOT EXISTS bolt_documentation (
-  id int(11) NOT NULL AUTO_INCREMENT, # all
-  slug varchar(128) NOT NULL DEFAULT '', # all
-  datecreated datetime NOT NULL, # all
-  datechanged datetime NOT NULL, # all
-  datepublish datetime DEFAULT NULL, # all
-  datedepublish datetime DEFAULT NULL, # all
-  username varchar(32) DEFAULT '', # all
-  ownerid int(11) DEFAULT NULL, # all
-  status varchar(32) NOT NULL DEFAULT '', # all
-  subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
-  subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  title varchar(256) NOT NULL DEFAULT '', # labs
-  intro longtext NULL, # labs
-  teaser longtext NULL, # labs
-  body longtext NULL, # labs
-  teaser_image longtext NULL, # labs
-  secondary_mail tinyint(1) NOT NULL DEFAULT 0, # labs
-  hide_related tinyint(1) NOT NULL DEFAULT 0, # labs
-  hide_related_section tinyint(1) NOT NULL DEFAULT 0, # labs
-  files longtext NULL, # labs
-  link1 varchar(256) NOT NULL DEFAULT '', # labs
-  link2 varchar(256) NOT NULL DEFAULT '', # labs
-  link3 varchar(256) NOT NULL DEFAULT '', # labs
-  support_navigation longtext NULL, # labs
-  structure_sortorder int(11) NOT NULL DEFAULT 0, # labs
-  structure_parent longtext NULL, # pro
-  templatefields longtext NULL, # pro
-  templateselect longtext NULL, # pro
-  PRIMARY KEY (id)
-);
-
-# INSERT INTO europeana_cope.bolt_documentation ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, secondary_mail, hide_related, hide_related_section, files, link1, link2, link3, support_navigation, structure_sortorder
-# ) SELECT 'labs', d.id,
-#   d.slug, d.datecreated, d.datechanged, d.datepublish, d.datedepublish, d.username, d.ownerid, d.status, d.title, d.intro, d.teaser, d.body, d.teaser_image, d.secondary_mail, d.hide_related, d.hide_related_section, d.files, d.link1, d.link2, d.link3, d.support_navigation, d.structure_sortorder
-# FROM europeana_labs.bolt_documentation d;
-
-INSERT INTO europeana_cope.bolt_documentation ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, secondary_mail, hide_related, hide_related_section, files, link1, link2, link3, support_navigation, structure_sortorder, templatefields, structure_parent, templateselect
-) SELECT 'labs', a.id,
-    a.slug, a.datecreated, a.datechanged, a.datepublish, a.datedepublish, a.username, a.ownerid, a.status, a.title, a.intro, a.teaser, a.body, a.teaser_image, a.secondary_mail, a.hide_related, a.hide_related_section, a.files, a.link1, a.link2, a.link3, a.support_navigation, a.structure_sortorder, a.templatefields, a.structure_parent, a.templateselect
+INSERT INTO europeana_cope.bolt_data ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, files, link1, link2, link3, structure_sortorder, templatefields, structure_parent
+) SELECT 'api', a.id,
+    a.slug, a.datecreated, a.datechanged, a.datepublish, a.datedepublish, a.username, a.ownerid, a.status, a.title, a.intro, a.teaser, a.body, a.files, a.link1, a.link2, a.link3, a.structure_sortorder, a.templatefields, a.structure_parent
 FROM europeana_labs.bolt_api a;
-
 
 -- people and places --
 
@@ -222,11 +191,11 @@ CREATE TABLE IF NOT EXISTS bolt_persons (
   PRIMARY KEY (id)
 );
 
--- labs
-INSERT INTO europeana_cope.bolt_persons ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, first_name, last_name, company, company_url, job_title, introduction, image, email, secondary_email, telephone_number, other_number, linkedin, twitter, skype, other_links_1, other_links_2, other_links_3, contact_blogpost, contact_event, contact_person, contact_tag, structure_sortorder, templatefields, structure_parent
-) SELECT 'labs', p.id,
-  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.first_name, p.last_name, p.company, p.company_url, p.job_title, p.introduction, p.image, p.email, p.secondary_email, p.telephone_number, p.other_number, p.linkedin, p.twitter, p.skype, p.other_links_1, p.other_links_2, p.other_links_3, p.contact_blogpost, p.contact_event, p.contact_person, p.contact_tag, p.structure_sortorder, p.templatefields, p.structure_parent
-FROM europeana_labs.bolt_persons p;
+-- zoho
+INSERT INTO europeana_cope.bolt_persons ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, first_name, last_name, company, company_url, job_title, department, team, introduction, image, email, secondary_email, telephone_number, other_number, linkedin, twitter, skype, other_links_1, other_links_2, other_links_3, contact_blogpost, contact_event, contact_job, contact_person, contact_publication, contact_pressrelease, contact_taskforce, contact_tag, structure_sortorder, structure_parent, uid, network_participation, community, community_role, europeana_id, author_uid, author_name, modified_uid, modified_name, latime, account_uid, account_name, public_email, public_phone, statutes_read, statutes_agree, public_photo, europeana_tech, sector, country, description, templatefields, candidacy_teaser, candidacy_intro
+) SELECT 'zoho', p.id,
+    p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.first_name, p.last_name, p.company, p.company_url, p.job_title, p.department, p.team, p.introduction, p.image, p.email, p.secondary_email, p.telephone_number, p.other_number, p.linkedin, p.twitter, p.skype, p.other_links_1, p.other_links_2, p.other_links_3, p.contact_blogpost, p.contact_event, p.contact_job, p.contact_person, p.contact_publication, p.contact_pressrelease, p.contact_taskforce, p.contact_tag, p.structure_sortorder, p.structure_parent, p.uid, p.network_participation, p.community, p.community_role, p.europeana_id, p.author_uid, p.author_name, p.modified_uid, p.modified_name, p.latime, p.account_uid, p.account_name, p.public_email, p.public_phone, p.statutes_read, p.statutes_agree, p.public_photo, p.europeana_tech, p.sector, p.country, p.description, p.templatefields, p.candidacy_teaser, p.candidacy_intro
+  FROM europeana_pro.bolt_network p;
 
 -- pro
 INSERT INTO europeana_cope.bolt_persons ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, first_name, last_name, checkbox_europeana, checkbox_network, company, company_url, job_title, team, introduction, image, email, secondary_email, telephone_number, other_number, linkedin, twitter, skype, other_links_1, other_links_2, other_links_3, checkbox_chief, contact_blog, contact_event, contact_job, contact_staff, contact_publication, contact_aggregator, contact_tech, contact_network, contact_member, contact_blogpost, contact_pressrelease, department, contact_taskforce, contact_tag, contact_person, structure_sortorder, structure_parent, templatefields
@@ -234,52 +203,18 @@ INSERT INTO europeana_cope.bolt_persons ( subsite, subsite_id, slug, datecreated
   p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.first_name, p.last_name, p.checkbox_europeana, p.checkbox_network, p.company, p.company_url, p.job_title, p.team, p.introduction, p.image, p.email, p.secondary_email, p.telephone_number, p.other_number, p.linkedin, p.twitter, p.skype, p.other_links_1, p.other_links_2, p.other_links_3, p.checkbox_chief, p.contact_blog, p.contact_event, p.contact_job, p.contact_staff, p.contact_publication, p.contact_aggregator, p.contact_tech, p.contact_network, p.contact_member, p.contact_blogpost, p.contact_pressrelease, p.department, p.contact_taskforce, p.contact_tag, p.contact_person, p.structure_sortorder, p.structure_parent, p.templatefields
 FROM europeana_pro.bolt_persons p;
 
+-- labs
+INSERT INTO europeana_cope.bolt_persons ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, first_name, last_name, company, company_url, job_title, introduction, image, email, secondary_email, telephone_number, other_number, linkedin, twitter, skype, other_links_1, other_links_2, other_links_3, contact_blogpost, contact_event, contact_person, contact_tag, structure_sortorder, templatefields, structure_parent
+) SELECT 'labs', p.id,
+    p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.first_name, p.last_name, p.company, p.company_url, p.job_title, p.introduction, p.image, p.email, p.secondary_email, p.telephone_number, p.other_number, p.linkedin, p.twitter, p.skype, p.other_links_1, p.other_links_2, p.other_links_3, p.contact_blogpost, p.contact_event, p.contact_person, p.contact_tag, p.structure_sortorder, p.templatefields, p.structure_parent
+  FROM europeana_labs.bolt_persons p;
+
 -- research
 INSERT INTO europeana_cope.bolt_persons ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, first_name, last_name, company, company_url, job_title, department, team, introduction, image, email, secondary_email, telephone_number, other_number, linkedin, twitter, skype, other_links_1, other_links_2, other_links_3, contact_blogpost, contact_event, contact_job, contact_person, contact_publication, contact_pressrelease, contact_taskforce, contact_tag, contact_collection, templatefields, structure_parent, structure_sortorder
 ) SELECT 'research', p.id,
   p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.first_name, p.last_name, p.company, p.company_url, p.job_title, p.department, p.team, p.introduction, p.image, p.email, p.secondary_email, p.telephone_number, p.other_number, p.linkedin, p.twitter, p.skype, p.other_links_1, p.other_links_2, p.other_links_3, p.contact_blogpost, p.contact_event, p.contact_job, p.contact_person, p.contact_publication, p.contact_pressrelease, p.contact_taskforce, p.contact_tag, p.contact_collection, p.templatefields, p.structure_parent, p.structure_sortorder
 FROM europeana_research.bolt_persons p;
 
--- zoho
-INSERT INTO europeana_cope.bolt_persons ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, first_name, last_name, company, company_url, job_title, department, team, introduction, image, email, secondary_email, telephone_number, other_number, linkedin, twitter, skype, other_links_1, other_links_2, other_links_3, contact_blogpost, contact_event, contact_job, contact_person, contact_publication, contact_pressrelease, contact_taskforce, contact_tag, structure_sortorder, structure_parent, uid, network_participation, community, community_role, europeana_id, author_uid, author_name, modified_uid, modified_name, latime, account_uid, account_name, public_email, public_phone, statutes_read, statutes_agree, public_photo, europeana_tech, sector, country, description, templatefields, candidacy_teaser, candidacy_intro
-) SELECT 'zoho', p.id,
-  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.first_name, p.last_name, p.company, p.company_url, p.job_title, p.department, p.team, p.introduction, p.image, p.email, p.secondary_email, p.telephone_number, p.other_number, p.linkedin, p.twitter, p.skype, p.other_links_1, p.other_links_2, p.other_links_3, p.contact_blogpost, p.contact_event, p.contact_job, p.contact_person, p.contact_publication, p.contact_pressrelease, p.contact_taskforce, p.contact_tag, p.structure_sortorder, p.structure_parent, p.uid, p.network_participation, p.community, p.community_role, p.europeana_id, p.author_uid, p.author_name, p.modified_uid, p.modified_name, p.latime, p.account_uid, p.account_name, p.public_email, p.public_phone, p.statutes_read, p.statutes_agree, p.public_photo, p.europeana_tech, p.sector, p.country, p.description, p.templatefields, p.candidacy_teaser, p.candidacy_intro
-FROM europeana_pro.bolt_network p;
-
-DROP TABLE IF EXISTS bolt_taskforces;
-CREATE TABLE IF NOT EXISTS bolt_taskforces (
-  id int(11) NOT NULL AUTO_INCREMENT, # all
-  slug varchar(128) NOT NULL DEFAULT '', # all
-  datecreated datetime NOT NULL, # all
-  datechanged datetime NOT NULL, # all
-  datepublish datetime DEFAULT NULL, # all
-  datedepublish datetime DEFAULT NULL, # all
-  username varchar(32) DEFAULT '', # all
-  ownerid int(11) DEFAULT NULL, # all
-  status varchar(32) NOT NULL DEFAULT '', # all
-  subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
-  subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  title varchar(256) NOT NULL DEFAULT '', # pro
-  department longtext NULL, # pro
-  subtitle varchar(256) NOT NULL DEFAULT '', # pro
-  date_start date DEFAULT NULL, # pro
-  date_end date DEFAULT NULL, # pro
-  teaser longtext NULL, # pro
-  intro longtext NULL, # pro
-  body longtext NULL, # pro
-  teaser_image longtext NULL, # pro
-  filelist_files longtext NULL, # pro
-  filelist_downloads varchar(256) NOT NULL DEFAULT '', # pro
-  structure_sortorder int(11) NOT NULL DEFAULT 0, # pro
-  structure_parent longtext NULL, # pro
-  templatefields longtext NULL, # pro
-  PRIMARY KEY (id)
-);
-
-INSERT INTO europeana_cope.bolt_taskforces ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, department, subtitle, date_start, date_end, teaser, intro, body, teaser_image, filelist_files, filelist_downloads, structure_sortorder, structure_parent, templatefields
-) SELECT 'pro', t.id,
-  t.slug, t.datecreated, t.datechanged, t.datepublish, t.datedepublish, t.username, t.ownerid, t.status, t.title, t.department, t.subtitle, t.date_start, t.date_end, t.teaser, t.intro, t.body, t.teaser_image, t.filelist_files, t.filelist_downloads, t.structure_sortorder, t.structure_parent, t.templatefields
-FROM europeana_pro.bolt_taskforces t;
 
 DROP TABLE IF EXISTS bolt_locations;
 CREATE TABLE IF NOT EXISTS bolt_locations (
@@ -771,17 +706,17 @@ CREATE TABLE bolt_users (
   PRIMARY KEY (`id`)
 );
 
+-- pro
+INSERT INTO europeana_cope.bolt_users ( subsite, subsite_id, username, password, email, lastseen, lastip, displayname, stack, enabled, shadowpassword, shadowtoken, shadowvalidity, failedlogins, throttleduntil, roles
+) SELECT 'pro', u.id,
+    u.username, u.password, u.email, u.lastseen, u.lastip, u.displayname, u.stack, u.enabled, u.shadowpassword, u.shadowtoken, u.shadowvalidity, u.failedlogins, u.throttleduntil, u.roles
+  FROM europeana_pro.bolt_users u;
+
 -- labs
 INSERT INTO europeana_cope.bolt_users ( subsite, subsite_id, username, password, email, lastseen, lastip, displayname, stack, enabled, shadowpassword, shadowtoken, shadowvalidity, failedlogins, throttleduntil, roles
 ) SELECT 'labs', u.id,
   u.username, u.password, u.email, u.lastseen, u.lastip, u.displayname, u.stack, u.enabled, u.shadowpassword, u.shadowtoken, u.shadowvalidity, u.failedlogins, u.throttleduntil, u.roles
 FROM europeana_labs.bolt_users u;
-
--- pro
-INSERT INTO europeana_cope.bolt_users ( subsite, subsite_id, username, password, email, lastseen, lastip, displayname, stack, enabled, shadowpassword, shadowtoken, shadowvalidity, failedlogins, throttleduntil, roles
-) SELECT 'pro', u.id,
-  u.username, u.password, u.email, u.lastseen, u.lastip, u.displayname, u.stack, u.enabled, u.shadowpassword, u.shadowtoken, u.shadowvalidity, u.failedlogins, u.throttleduntil, u.roles
-FROM europeana_pro.bolt_users u;
 
 -- research
 INSERT INTO europeana_cope.bolt_users ( subsite, subsite_id, username, password, email, lastseen, lastip, displayname, stack, enabled, shadowpassword, shadowtoken, shadowvalidity, failedlogins, throttleduntil, roles
