@@ -318,3 +318,26 @@ CREATE INDEX IDX_B7581F15BE74E59A ON bolt_resources (datechanged);
 CREATE INDEX IDX_B7581F15A5131421 ON bolt_resources (datepublish);
 CREATE INDEX IDX_B7581F15B7805520 ON bolt_resources (datedepublish);
 CREATE INDEX IDX_B7581F157B00651C ON bolt_resources (status);
+ALTER TABLE bolt_data
+  ADD teaser_image LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)',
+  ADD attachments LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)',
+  ADD filelist_downloads VARCHAR(256) DEFAULT '',
+  ADD structure_parent LONGTEXT DEFAULT NULL,
+  ADD structure_sortorder INT DEFAULT 0 NOT NULL,
+  ADD hide_list TINYINT(1) DEFAULT '0' NOT NULL,
+  ADD hide_related TINYINT(1) DEFAULT '0' NOT NULL,
+  ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL,
+  ADD template VARCHAR(256) DEFAULT '',
+  ADD contact_record LONGTEXT DEFAULT NULL,
+  ADD contact_blurb LONGTEXT DEFAULT NULL,
+  CHANGE slug slug VARCHAR(128) NOT NULL,
+  CHANGE status status VARCHAR(32) NOT NULL,
+  CHANGE subsite subsite LONGTEXT DEFAULT NULL,
+  CHANGE apiconsolelink apiconsolelink VARCHAR(256) DEFAULT '',
+  CHANGE contact_email contact_email VARCHAR(256) DEFAULT '',
+  CHANGE contact_name contact_name VARCHAR(256) DEFAULT '',
+  CHANGE contact_website contact_website VARCHAR(256) DEFAULT '',
+  CHANGE portallink portallink VARCHAR(256) DEFAULT '',
+  CHANGE provided_by provided_by VARCHAR(256) DEFAULT '',
+  CHANGE provided_by_link provided_by_link VARCHAR(256) DEFAULT '',
+  CHANGE title title VARCHAR(256) DEFAULT '';
