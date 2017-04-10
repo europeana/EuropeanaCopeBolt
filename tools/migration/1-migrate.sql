@@ -443,7 +443,7 @@ INSERT INTO europeana_cope.bolt_posts ( subsite, subsite_id, slug, datecreated, 
 FROM europeana_pro.bolt_publications p;
 
 -- pro pressreleases
-INSERT INTO europeana_cope.bolt_pressreleases ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, subtitle, body, isbn, filelist, image, parents, intro, structure_sortorder, structure_parent, templatefields
+INSERT INTO europeana_cope.bolt_posts ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, subtitle, body, isbn, filelist, image, parents, intro, structure_sortorder, structure_parent, templatefields
 ) SELECT 'pressreleases', p.id,
     p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.subtitle, p.body, p.isbn, p.filelist, p.image, p.parents, p.introduction, p.structure_sortorder, p.structure_parent, p.templatefields
   FROM europeana_pro.bolt_pressreleases p;
