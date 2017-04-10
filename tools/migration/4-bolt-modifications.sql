@@ -60,7 +60,7 @@ CREATE INDEX IDX_31AF1BC8BE74E59A ON bolt_pages (datechanged);
 CREATE INDEX IDX_31AF1BC8A5131421 ON bolt_pages (datepublish);
 CREATE INDEX IDX_31AF1BC8B7805520 ON bolt_pages (datedepublish);
 CREATE INDEX IDX_31AF1BC87B00651C ON bolt_pages (status);
-ALTER TABLE bolt_blogposts
+ALTER TABLE bolt_posts
   ADD calltoactiontext VARCHAR(256) DEFAULT '',
   ADD calltoactionlink VARCHAR(256) DEFAULT '',
   ADD filelist_downloads VARCHAR(256) DEFAULT '',
@@ -71,58 +71,16 @@ ALTER TABLE bolt_blogposts
   ADD template VARCHAR(256) DEFAULT '',
   CHANGE slug slug VARCHAR(128) NOT NULL,
   CHANGE status status VARCHAR(32) NOT NULL,
-  CHANGE subsite subsite LONGTEXT DEFAULT NULL;
-CREATE INDEX IDX_6D96B2CA989D9B62 ON bolt_blogposts (slug);
-CREATE INDEX IDX_6D96B2CAAFBA6FD8 ON bolt_blogposts (datecreated);
-CREATE INDEX IDX_6D96B2CABE74E59A ON bolt_blogposts (datechanged);
-CREATE INDEX IDX_6D96B2CAA5131421 ON bolt_blogposts (datepublish);
-CREATE INDEX IDX_6D96B2CAB7805520 ON bolt_blogposts (datedepublish);
-CREATE INDEX IDX_6D96B2CA7B00651C ON bolt_blogposts (status);
-ALTER TABLE bolt_pressreleases
-  ADD filelist_downloads VARCHAR(256) DEFAULT '',
-  ADD imagegallery LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)',
-  ADD hide_related TINYINT(1) DEFAULT '0' NOT NULL,
-  ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL,
-  ADD contact_record LONGTEXT DEFAULT NULL,
-  ADD contact_blurb LONGTEXT DEFAULT NULL,
-  ADD template VARCHAR(256) DEFAULT '',
-  CHANGE slug slug VARCHAR(128) NOT NULL,
-  CHANGE status status VARCHAR(32) NOT NULL,
-  CHANGE subsite subsite LONGTEXT DEFAULT NULL;
-CREATE INDEX IDX_C95D3508989D9B62 ON bolt_pressreleases (slug);
-CREATE INDEX IDX_C95D3508AFBA6FD8 ON bolt_pressreleases (datecreated);
-CREATE INDEX IDX_C95D3508BE74E59A ON bolt_pressreleases (datechanged);
-CREATE INDEX IDX_C95D3508A5131421 ON bolt_pressreleases (datepublish);
-CREATE INDEX IDX_C95D3508B7805520 ON bolt_pressreleases (datedepublish);
-CREATE INDEX IDX_C95D35087B00651C ON bolt_pressreleases (status);
-ALTER TABLE bolt_publications
-  ADD intro LONGTEXT DEFAULT NULL,
-  ADD teaser_image LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)',
-  ADD contact_name VARCHAR(256) DEFAULT '',
-  ADD contact_email VARCHAR(256) DEFAULT '',
-  ADD contact_website VARCHAR(256) DEFAULT '',
-  ADD attachments LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)',
-  ADD filelist_downloads VARCHAR(256) DEFAULT '',
-  ADD hide_list TINYINT(1) DEFAULT '0' NOT NULL,
-  ADD hide_related TINYINT(1) DEFAULT '0' NOT NULL,
-  ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL,
-  ADD contact_record LONGTEXT DEFAULT NULL,
-  ADD contact_blurb LONGTEXT DEFAULT NULL,
-  ADD template VARCHAR(256) DEFAULT '',
-  CHANGE slug slug VARCHAR(128) NOT NULL,
-  CHANGE status status VARCHAR(32) NOT NULL,
   CHANGE subsite subsite LONGTEXT DEFAULT NULL,
-  CHANGE title title VARCHAR(256) DEFAULT '',
   CHANGE isbn isbn VARCHAR(256) DEFAULT '';
-CREATE INDEX IDX_4AC2124F989D9B62 ON bolt_publications (slug);
-CREATE INDEX IDX_4AC2124FAFBA6FD8 ON bolt_publications (datecreated);
-CREATE INDEX IDX_4AC2124FBE74E59A ON bolt_publications (datechanged);
-CREATE INDEX IDX_4AC2124FA5131421 ON bolt_publications (datepublish);
-CREATE INDEX IDX_4AC2124FB7805520 ON bolt_publications (datedepublish);
-CREATE INDEX IDX_4AC2124F7B00651C ON bolt_publications (status);
+CREATE INDEX IDX_99864447989D9B62 ON bolt_posts (slug);
+CREATE INDEX IDX_99864447AFBA6FD8 ON bolt_posts (datecreated);
+CREATE INDEX IDX_99864447BE74E59A ON bolt_posts (datechanged);
+CREATE INDEX IDX_99864447A5131421 ON bolt_posts (datepublish);
+CREATE INDEX IDX_99864447B7805520 ON bolt_posts (datedepublish);
+CREATE INDEX IDX_998644477B00651C ON bolt_posts (status);
 ALTER TABLE bolt_data
   ADD teaser_image LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)',
-  ADD contact_website VARCHAR(256) DEFAULT '',
   ADD attachments LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)',
   ADD filelist_downloads VARCHAR(256) DEFAULT '',
   ADD structure_parent LONGTEXT DEFAULT NULL,
@@ -130,19 +88,24 @@ ALTER TABLE bolt_data
   ADD hide_list TINYINT(1) DEFAULT '0' NOT NULL,
   ADD hide_related TINYINT(1) DEFAULT '0' NOT NULL,
   ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL,
+  ADD template VARCHAR(256) DEFAULT '',
   ADD contact_record LONGTEXT DEFAULT NULL,
   ADD contact_blurb LONGTEXT DEFAULT NULL,
-  ADD template VARCHAR(256) DEFAULT '',
+  ADD contact_website VARCHAR(256) DEFAULT '',
   CHANGE slug slug VARCHAR(128) NOT NULL,
   CHANGE status status VARCHAR(32) NOT NULL,
   CHANGE subsite subsite LONGTEXT DEFAULT NULL,
   CHANGE apiconsolelink apiconsolelink VARCHAR(256) DEFAULT '',
   CHANGE contact_email contact_email VARCHAR(256) DEFAULT '',
   CHANGE contact_name contact_name VARCHAR(256) DEFAULT '',
+  CHANGE contact_website contact_website VARCHAR(256) DEFAULT '',
   CHANGE portallink portallink VARCHAR(256) DEFAULT '',
   CHANGE provided_by provided_by VARCHAR(256) DEFAULT '',
   CHANGE provided_by_link provided_by_link VARCHAR(256) DEFAULT '',
-  CHANGE title title VARCHAR(256) DEFAULT '';
+  CHANGE title title VARCHAR(256) DEFAULT '',
+  CHANGE link1 link1 VARCHAR(256) DEFAULT '',
+  CHANGE link2 link2 VARCHAR(256) DEFAULT '',
+  CHANGE link3 link3 VARCHAR(256) DEFAULT '';
 CREATE INDEX IDX_770612B8989D9B62 ON bolt_data (slug);
 CREATE INDEX IDX_770612B8AFBA6FD8 ON bolt_data (datecreated);
 CREATE INDEX IDX_770612B8BE74E59A ON bolt_data (datechanged);
@@ -318,26 +281,4 @@ CREATE INDEX IDX_B7581F15BE74E59A ON bolt_resources (datechanged);
 CREATE INDEX IDX_B7581F15A5131421 ON bolt_resources (datepublish);
 CREATE INDEX IDX_B7581F15B7805520 ON bolt_resources (datedepublish);
 CREATE INDEX IDX_B7581F157B00651C ON bolt_resources (status);
-ALTER TABLE bolt_data
-  ADD teaser_image LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)',
-  ADD attachments LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)',
-  ADD filelist_downloads VARCHAR(256) DEFAULT '',
-  ADD structure_parent LONGTEXT DEFAULT NULL,
-  ADD structure_sortorder INT DEFAULT 0 NOT NULL,
-  ADD hide_list TINYINT(1) DEFAULT '0' NOT NULL,
-  ADD hide_related TINYINT(1) DEFAULT '0' NOT NULL,
-  ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL,
-  ADD template VARCHAR(256) DEFAULT '',
-  ADD contact_record LONGTEXT DEFAULT NULL,
-  ADD contact_blurb LONGTEXT DEFAULT NULL,
-  CHANGE slug slug VARCHAR(128) NOT NULL,
-  CHANGE status status VARCHAR(32) NOT NULL,
-  CHANGE subsite subsite LONGTEXT DEFAULT NULL,
-  CHANGE apiconsolelink apiconsolelink VARCHAR(256) DEFAULT '',
-  CHANGE contact_email contact_email VARCHAR(256) DEFAULT '',
-  CHANGE contact_name contact_name VARCHAR(256) DEFAULT '',
-  CHANGE contact_website contact_website VARCHAR(256) DEFAULT '',
-  CHANGE portallink portallink VARCHAR(256) DEFAULT '',
-  CHANGE provided_by provided_by VARCHAR(256) DEFAULT '',
-  CHANGE provided_by_link provided_by_link VARCHAR(256) DEFAULT '',
-  CHANGE title title VARCHAR(256) DEFAULT '';
+
