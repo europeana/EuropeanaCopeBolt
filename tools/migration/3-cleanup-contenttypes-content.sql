@@ -92,3 +92,11 @@ UPDATE bolt_projects SET template='';
 UPDATE bolt_structures SET template='';
 UPDATE bolt_taskforces SET template='';
 #UPDATE bolt_taxonomy SET template='';
+
+-- update user one
+UPDATE europeana_cope.bolt_users
+SET email = 'lodewijk@twokings.nl',
+  username = 'admin',
+  password = '$2y$08$mH4dP.5RizoZM4djZk7TKuamh2N7Ne6ll8e5YPw4d.aV6j57xhqlO'
+WHERE id = '1';
+
