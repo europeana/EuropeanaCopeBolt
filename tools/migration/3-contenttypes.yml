@@ -182,24 +182,6 @@ __nodes:
       type: templateselect
       filter: 'record_*.twig'
       group: Hierarchy
-  him_sub_defaults: &him_sub_defaults
-    entryid:
-      type: text
-      required: true
-      readonly: true
-      label: HIM entry ID
-    judgeid:
-      type: text
-      required: true
-      readonly: true
-      label: User ID
-    judgename:
-      type: text
-      required: true
-      readonly: true
-      label: User Name
-    slug:
-      type: slug
   relation_structures: &relation_structures
     structures:
       label: "Structures"
@@ -273,18 +255,6 @@ __nodes:
       multiple: true
       order: last_name
       format: "{{ item.last_name }}, {{ item.first_name }}"
-  relation_himentries: &relation_himentries
-    himentries:
-      label: "Heritage in Motion Entries"
-      multiple: true
-      order: -id
-      format: "{{ item.title|escape }}"
-  relation_himeditions: &relation_himeditions
-    himeditions:
-      label: "Heritage in Motion Editions"
-      multiple: true
-      order: id
-      format: "{{ item.title|escape }}"
   relation_resources: &relation_resources
     resources:
       label: "Footer resources"
@@ -306,8 +276,6 @@ __nodes:
       <<: *relation_events
       <<: *relation_jobs
       <<: *relation_persons
-      <<: *relation_himentries
-      <<: *relation_himeditions
 
 #################################
 #
@@ -365,8 +333,6 @@ structures:
     <<: *relation_events
     <<: *relation_jobs
     <<: *relation_persons
-    <<: *relation_himentries
-    <<: *relation_himeditions
     <<: *relation_resources
   record_template: record_structure.twig
   listing_template: listing_structures.twig
@@ -1071,7 +1037,6 @@ persons:
         labs: Europeana Labs
         research: Europeana Research
         zoho: ZOHO CRM
-        him: Heritage in motion
   taxonomy: [ teams, tags ]
   <<: *all_relations
   record_template: record_person.twig
@@ -1159,7 +1124,6 @@ resources:
         labs: Europeana Labs
         research: Europeana Research
         zoho: ZOHO CRM
-        him: Heritage in motion
       group: meta
   <<: *all_relations
   viewless: true
