@@ -76,7 +76,6 @@ ALTER TABLE europeana_cope.bolt_persons CHANGE image public_photo longtext;
 ALTER TABLE europeana_cope.bolt_persons CHANGE description bio longtext;
 
 -- kill all custom templates
-UPDATE bolt_applications SET template='';
 UPDATE bolt_posts SET template='';
 UPDATE bolt_data SET template='';
 UPDATE bolt_documentation SET template='';

@@ -39,40 +39,6 @@ INSERT INTO europeana_cope.bolt_projects ( subsite, subsite_id, slug, datecreate
 FROM europeana_pro.bolt_projects p;
 
 
-DROP TABLE IF EXISTS bolt_applications;
-CREATE TABLE IF NOT EXISTS bolt_applications (
-  id int(11) NOT NULL AUTO_INCREMENT, # all
-  slug varchar(128) NOT NULL DEFAULT '', # all
-  datecreated datetime NOT NULL, # all
-  datechanged datetime NOT NULL, # all
-  datepublish datetime DEFAULT NULL, # all
-  datedepublish datetime DEFAULT NULL, # all
-  username varchar(32) DEFAULT '', # all
-  ownerid int(11) DEFAULT NULL, # all
-  status varchar(32) NOT NULL DEFAULT '', # all
-  subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
-  subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  body longtext NULL, # labs
-  contact_email varchar(256) NOT NULL DEFAULT '', # labs
-  contact_name varchar(256) NOT NULL DEFAULT '', # labs
-  contact_website varchar(256) NOT NULL DEFAULT '', # labs
-  hero longtext NULL, # labs
-  image longtext NULL, # labs
-  intro longtext NULL, # labs
-  link1 varchar(256) NOT NULL DEFAULT '', # labs
-  link2 varchar(256) NOT NULL DEFAULT '', # labs
-  link3 varchar(256) NOT NULL DEFAULT '', # labs
-  teaser longtext NULL, # labs
-  templatefields longtext NULL, # labs
-  title varchar(256) NOT NULL DEFAULT '', # labs
-  PRIMARY KEY (id)
-);
-
-INSERT INTO europeana_cope.bolt_applications ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, image, link1, link2, link3, contact_name, contact_email, contact_website, templatefields, hero
-) SELECT 'labs', a.id,
-  a.slug, a.datecreated, a.datechanged, a.datepublish, a.datedepublish, a.username, a.ownerid, a.status, a.title, a.intro, a.teaser, a.body, a.image, a.link1, a.link2, a.link3, a.contact_name, a.contact_email, a.contact_website, a.templatefields, a.hero
-FROM europeana_labs.bolt_apps a;
-
 DROP TABLE IF EXISTS bolt_data;
 CREATE TABLE IF NOT EXISTS bolt_data (
   id int(11) NOT NULL AUTO_INCREMENT, # all
@@ -90,10 +56,15 @@ CREATE TABLE IF NOT EXISTS bolt_data (
   body longtext NULL, # labs # research
   contact_email varchar(256) NOT NULL DEFAULT '', # labs # research
   contact_name varchar(256) NOT NULL DEFAULT '', # labs # research
+  contact_website varchar(256) NOT NULL DEFAULT '', # labs
   country varchar(256) NOT NULL DEFAULT '', # research
+  hero longtext NULL, # labs
   image longtext NULL, # labs # research
   intro longtext NULL, # labs # research
   itemtype varchar(256) NOT NULL DEFAULT '', # research
+  link1 varchar(256) NOT NULL DEFAULT '', # labs
+  link2 varchar(256) NOT NULL DEFAULT '', # labs
+  link3 varchar(256) NOT NULL DEFAULT '', # labs
   language_coverage varchar(256) NOT NULL DEFAULT '', # research
   portallink varchar(256) NOT NULL DEFAULT '', # labs # research
   provided_by varchar(256) NOT NULL DEFAULT '', # labs # research
@@ -116,6 +87,13 @@ INSERT INTO europeana_cope.bolt_data ( subsite, subsite_id, slug, datecreated, d
 ) SELECT 'research', d.id,
   d.slug, d.datecreated, d.datechanged, d.datepublish, d.datedepublish, d.templatefields, d.username, d.ownerid, d.status, d.title, d.intro, d.teaser, d.body, d.image, d.provided_by, d.provided_by_link, d.portallink, d.apiconsolelink, d.contact_name, d.contact_email
 FROM europeana_research.bolt_data d;
+
+
+INSERT INTO europeana_cope.bolt_data ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, image, link1, link2, link3, contact_name, contact_email, contact_website, templatefields, hero
+) SELECT 'apps', a.id,
+    a.slug, a.datecreated, a.datechanged, a.datepublish, a.datedepublish, a.username, a.ownerid, a.status, a.title, a.intro, a.teaser, a.body, a.image, a.link1, a.link2, a.link3, a.contact_name, a.contact_email, a.contact_website, a.templatefields, a.hero
+  FROM europeana_labs.bolt_apps a;
+
 
 DROP TABLE IF EXISTS bolt_documentation;
 CREATE TABLE IF NOT EXISTS bolt_documentation (

@@ -1,7 +1,7 @@
 -- queries for intro
 USE europeana_cope;
 -- queries for relations_from
-UPDATE bolt_relations r, bolt_applications x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'apps';
+UPDATE bolt_relations r, bolt_data x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'apps';
 UPDATE bolt_relations r, bolt_posts x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'posts';
 UPDATE bolt_relations r, bolt_pages x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'collections';
 UPDATE bolt_relations r, bolt_data x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'data';
@@ -20,7 +20,7 @@ UPDATE bolt_relations r, bolt_resources x SET r.from_id = x.id WHERE x.subsite_i
 UPDATE bolt_relations r, bolt_structures x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'structures';
 UPDATE bolt_relations r, bolt_taskforces x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'taskforces';
 -- queries for relations_to
-UPDATE bolt_relations r, bolt_applications x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'apps';
+UPDATE bolt_relations r, bolt_data x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'apps';
 UPDATE bolt_relations r, bolt_posts x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'posts';
 UPDATE bolt_relations r, bolt_pages x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'collections';
 UPDATE bolt_relations r, bolt_data x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'data';
@@ -38,8 +38,19 @@ UPDATE bolt_relations r, bolt_posts x SET r.to_id = x.id WHERE x.subsite_id = r.
 UPDATE bolt_relations r, bolt_resources x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'resources';
 UPDATE bolt_relations r, bolt_structures x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'structures';
 UPDATE bolt_relations r, bolt_taskforces x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'taskforces';
+-- queries for relations_ct_from
+UPDATE bolt_relations r SET r.to_contenttype = 'pages' WHERE r.to_contenttype = 'apps';
+UPDATE bolt_relations r SET r.to_contenttype = 'pages' WHERE r.to_contenttype = 'apps';
+UPDATE bolt_relations r SET r.to_contenttype = 'posts' WHERE r.to_contenttype = 'blogposts';
+UPDATE bolt_relations r SET r.to_contenttype = 'posts' WHERE r.to_contenttype = 'blogposts';
+UPDATE bolt_relations r SET r.to_contenttype = 'pages' WHERE r.to_contenttype = 'collections';
+UPDATE bolt_relations r SET r.to_contenttype = 'pages' WHERE r.to_contenttype = 'collections';
+UPDATE bolt_relations r SET r.to_contenttype = 'posts' WHERE r.to_contenttype = 'publications';
+UPDATE bolt_relations r SET r.to_contenttype = 'posts' WHERE r.to_contenttype = 'publications';
+UPDATE bolt_relations r SET r.to_contenttype = 'posts' WHERE r.to_contenttype = 'pressreleases';
+UPDATE bolt_relations r SET r.to_contenttype = 'posts' WHERE r.to_contenttype = 'pressreleases';
 -- queries for taxonomy
-UPDATE bolt_taxonomy t, bolt_applications c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'apps';
+UPDATE bolt_taxonomy t, bolt_data c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'apps';
 UPDATE bolt_taxonomy t, bolt_posts c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'posts';
 UPDATE bolt_taxonomy t, bolt_pages c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'collections';
 UPDATE bolt_taxonomy t, bolt_data c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'data';
@@ -58,7 +69,7 @@ UPDATE bolt_taxonomy t, bolt_resources c SET t.content_id = c.id WHERE c.subsite
 UPDATE bolt_taxonomy t, bolt_structures c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'structures';
 UPDATE bolt_taxonomy t, bolt_taskforces c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'taskforces';
 -- queries for usernames
-UPDATE bolt_applications c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
+UPDATE bolt_data c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
 UPDATE bolt_posts c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
 UPDATE bolt_pages c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
 UPDATE bolt_data c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
@@ -94,7 +105,7 @@ WHERE
   AND u.id > u2.id;
 DELETE FROM bolt_users WHERE username like 'dupe-%';
 -- queries for user_id
-UPDATE bolt_applications c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
+UPDATE bolt_data c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
 UPDATE bolt_posts c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
 UPDATE bolt_pages c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
 UPDATE bolt_data c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
@@ -118,10 +129,9 @@ ALTER TABLE bolt_taxonomy DROP subsite;
 -- queries for cleanup_id
 ALTER TABLE bolt_relations DROP subsite_id;
 ALTER TABLE bolt_taxonomy DROP subsite_id;
-ALTER TABLE bolt_applications DROP subsite_id;
+ALTER TABLE bolt_data DROP subsite_id;
 ALTER TABLE bolt_posts DROP subsite_id;
 ALTER TABLE bolt_pages DROP subsite_id;
-ALTER TABLE bolt_data DROP subsite_id;
 ALTER TABLE bolt_documentation DROP subsite_id;
 ALTER TABLE bolt_events DROP subsite_id;
 ALTER TABLE bolt_footers DROP subsite_id;

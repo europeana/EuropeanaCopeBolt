@@ -1,6 +1,6 @@
 <?php
 $content_types = [
-  'apps' => 'bolt_applications',
+  'apps' => 'bolt_data',
   'posts' => 'bolt_posts',
   'collections' => 'bolt_pages',
   'data' => 'bolt_data',
@@ -20,6 +20,15 @@ $content_types = [
   'taskforces' => 'bolt_taskforces'
 ];
 
+$ct_mergers = [
+  'apps' => 'pages',
+  'blogposts' => 'posts',
+  'collections' => 'pages',
+  'publications' => 'posts',
+  'pressreleases' => 'posts'
+
+];
+
 $query['intro'][] = "USE europeana_cope;\n";
 
 foreach ($content_types as $ctype => $table) {
@@ -27,6 +36,13 @@ foreach ($content_types as $ctype => $table) {
 
   $query['relations_to'][] = "UPDATE bolt_relations r, $table x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = '$ctype';\n";
 }
+
+foreach ($ct_mergers as $oldct => $newct) {
+  $query['relations_ct_from'][] = "UPDATE bolt_relations r SET r.to_contenttype = '$newct' WHERE r.to_contenttype = '$oldct';\n";
+
+  $query['relations_ct_from'][] = "UPDATE bolt_relations r SET r.to_contenttype = '$newct' WHERE r.to_contenttype = '$oldct';\n";
+}
+
 
 foreach ($content_types as $ctype => $table) {
   $query['taxonomy'][] = "UPDATE bolt_taxonomy t, $table c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = '$ctype';\n";
