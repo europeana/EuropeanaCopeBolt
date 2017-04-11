@@ -573,15 +573,18 @@ body {
   body > main, body [role="main"] {
     position: relative; }
 
-.topbar {
-  background: #f09; }
-
 @media only screen and (min-width: 50em) {
   .canvas {
     padding-left: 235px; } }
 
 section > .inner-wrap {
-  padding: 0 2rem; }
+  padding: 0 0rem; }
+  @media only screen and (min-width: 50em) {
+    section > .inner-wrap {
+      padding: 0 2rem; } }
+
+section.topbar {
+  padding: 0 0.875rem; }
 
 header {
   background: #f60; }
@@ -596,7 +599,7 @@ footer {
 
 .inner-wrap {
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   max-width: 76rem;
   position: relative;
   overflow: auto; }
@@ -694,7 +697,11 @@ nav.main-menu {
   position: absolute;
   width: 235px;
   top: 95px;
-  left: 0; }
+  left: 0;
+  display: none; }
+  @media only screen and (min-width: 24em) {
+    nav.main-menu {
+      display: block; } }
   nav.main-menu ul {
     padding: 0 1.125rem 0 0.6875rem; }
   nav.main-menu li {
@@ -902,6 +909,67 @@ svg.icon {
  */
 input {
   border: 1px solid #1a1a1a; }
+
+/*
+* TOPBAR
+**/
+.topbar {
+  position: relative; }
+  .topbar h1, .topbar .alpha {
+    margin: 1rem 0 0 0; }
+    .topbar h1 img, .topbar .alpha img {
+      height: 50px; }
+      @media only screen and (min-width: 24em) {
+        .topbar h1 img, .topbar .alpha img {
+          height: 65px; } }
+  .topbar button.toggle {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 1rem; }
+    .topbar button.toggle.menu-toggle {
+      left: 0rem; }
+    .topbar button.toggle.search-toggle {
+      right: 0rem; }
+    @media only screen and (min-width: 50em) {
+      .topbar button.toggle {
+        display: none; } }
+  .topbar form {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 0.875rem; }
+    @media only screen and (min-width: 50em) {
+      .topbar form {
+        display: block; } }
+
+.mainlogo {
+  position: relative;
+  padding-left: 1.5rem;
+  margin: 0 auto;
+  width: 200px; }
+  @media only screen and (min-width: 50em) {
+    .mainlogo {
+      margin: 0 0; } }
+
+.version-flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: #D43900;
+  text-transform: uppercase;
+  padding: 0em .5em;
+  font-size: 0.75rem; }
+
+.payoff {
+  color: #4d4d4d;
+  font-size: 0.75rem;
+  text-align: center; }
+  @media only screen and (min-width: 50em) {
+    .payoff {
+      text-align: left;
+      margin: -1.2rem 0 1.1rem 4rem; } }
 
 /*
 * FOOTER
