@@ -583,11 +583,8 @@ section > .inner-wrap {
     section > .inner-wrap {
       padding: 0 2rem; } }
 
-section.topbar {
-  padding: 0 0.875rem; }
-
 header {
-  background: #f60; }
+  padding: 0 0.875rem; }
 
 aside {
   background: #0f9; }
@@ -699,7 +696,7 @@ nav.main-menu {
   top: 95px;
   left: 0;
   display: none; }
-  @media only screen and (min-width: 24em) {
+  @media only screen and (min-width: 50em) {
     nav.main-menu {
       display: block; } }
   nav.main-menu ul {
@@ -913,34 +910,34 @@ input {
 /*
 * TOPBAR
 **/
-.topbar {
+header {
   position: relative; }
-  .topbar h1, .topbar .alpha {
+  header h1, header .alpha {
     margin: 1rem 0 0 0; }
-    .topbar h1 img, .topbar .alpha img {
+    header h1 img, header .alpha img {
       height: 50px; }
       @media only screen and (min-width: 24em) {
-        .topbar h1 img, .topbar .alpha img {
+        header h1 img, header .alpha img {
           height: 65px; } }
-  .topbar button.toggle {
+  header button.toggle {
     background: none;
     border: none;
     position: absolute;
     top: 1rem; }
-    .topbar button.toggle.menu-toggle {
+    header button.toggle.menu-toggle {
       left: 0rem; }
-    .topbar button.toggle.search-toggle {
+    header button.toggle.search-toggle {
       right: 0rem; }
     @media only screen and (min-width: 50em) {
-      .topbar button.toggle {
+      header button.toggle {
         display: none; } }
-  .topbar form {
+  header form {
     display: none;
     position: absolute;
     top: 1rem;
     right: 0.875rem; }
     @media only screen and (min-width: 50em) {
-      .topbar form {
+      header form {
         display: block; } }
 
 .mainlogo {
