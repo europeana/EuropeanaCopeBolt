@@ -49,7 +49,7 @@ body {
 }
 
 .topbar {
-    background: #f09;
+    //background: #f09;
 }
 
 .canvas {
@@ -62,7 +62,15 @@ body {
 section {
 
     > .inner-wrap {
-        padding: 0 2rem;
+        padding: 0 0rem; // n
+
+        @include respond-to(large-screens){
+            padding: 0 2rem;
+        }
+    }
+
+    &.topbar {
+        padding: 0 0.875rem;
     }
 }
 
@@ -87,7 +95,7 @@ footer {
 .inner-wrap {
     @extend %group;
     margin: 0 auto;
-    padding: 0 1.5rem; //temp, taken from sketch files. May need tweaking.
+    padding: 0 1rem; //temp, taken from sketch files. May need tweaking.
     max-width: $site-max-width;
     position:relative;
     //prevent margin-collapse

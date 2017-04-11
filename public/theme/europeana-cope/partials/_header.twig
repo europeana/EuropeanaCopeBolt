@@ -1,8 +1,11 @@
 <!-- Header bar -->
 {# the values in the 'app.config' object are taken directly from the file app/config/config.yml #}
 <header>
-<h2>{{ app.config.get('general/sitename') }}</h2>
-    {% if app.config.get('general/payoff') %}
-        <p>{{ app.config.get('general/payoff') }}</p>
-    {% endif %}
+    <nav class="quicklinks">
+        <ul>
+            <li><a href="/page/who-we-are">Who we are</a></li>
+            <li><a href="/page/what-we-do">What we do</a></li>
+            <li><a href="/page/main-services">Main services</a></li>
+        </ul>
+    </nav>
 </header>
