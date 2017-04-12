@@ -99,23 +99,6 @@ __nodes:
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
       group: "Related Links"
-  calltoaction_defaults: &calltoaction_defaults
-    calltoactiontext:
-      type: text
-      required: false
-      label: "Call to Action Text"
-      variant: inline
-      class: narrow
-      pattern: ^.{0,250}$
-      prefix: '<div><h3>Call To Action Button</h3><p>You can add a call to action button to the bottom of the body text of this record.</p><br></div>'
-    calltoactionlink:
-      type: text
-      required: false
-      label: "Call to Action Link"
-      variant: inline
-      class: narrow
-      postfix: "<em>If you want to use a full URL it has to start with a protocol like <b>http://</b> or <b>https://</b><br>Internal links are also possible, for internal links the protocol and the domain is not needed.</em>"
-      pattern: url
   structure_defaults: &structure_defaults
     subsite:
       type: select
@@ -522,7 +505,6 @@ pages:
   singular_name: Page
   fields:
     <<: *record_defaults
-    <<: *calltoaction_defaults
     <<: *teaser_defaults
     <<: *media_defaults
     imagegallery:
@@ -576,7 +558,6 @@ posts:
       height: 300px
       postfix: "Shown on individual pages as main body text"
       group: Main
-    <<: *calltoaction_defaults
     author:
       label: "Author(s)"
       type: select
@@ -754,7 +735,6 @@ events:
   singular_name: Event
   fields:
     <<: *record_defaults
-    <<: *calltoaction_defaults
     <<: *teaser_defaults
     start_event:
       type: datetime
@@ -773,6 +753,10 @@ events:
       type: checkbox
       required: false
       label: "Unconfirmed"
+    geolocation:
+      type: geolocation
+      required: true
+      label: "Location"
     <<: *media_defaults
     <<: *structure_defaults
     <<: *support_defaults
@@ -1216,16 +1200,6 @@ resources:
     cssid:
       type: text
       label: "CSS ID (optional)"
-    subsite:
-      type: select
-      label: "Subsite"
-      values:
-        unknown: Unknown
-        pro: Europeana Pro
-        labs: Europeana Labs
-        research: Europeana Research
-        zoho: ZOHO CRM
-      group: meta
   <<: *all_relations
   viewless: true
   sort: weight
