@@ -405,62 +405,6 @@ landingpages:
 
 #################################
 #
-# HOMEPAGE / STRUCTURE
-#
-#################################
-structures:
-  name: Structures and Landingpages
-  singular_name: Structure
-  slug: structures
-  singular_slug: structure
-  fields:
-    <<: *record_defaults
-    suffix:
-      type: html
-      label: "Suffix"
-      height: 150px
-      postfix: "Text after listing on structure page."
-    <<: *teaser_defaults
-    <<: *media_defaults
-    <<: *structure_defaults
-    structuretype:
-      type: select
-      label: "Type of structure"
-      values:
-        structure: Normal structure
-        landingpage: Landing page
-        listingpage: Listing page
-        homepage: Global homepage
-        subsite: Subsite homepage
-    template:
-      <<: *template_defaults
-      filter: 'record_structure_*.twig'
-    default_content:
-      type: select
-      label: "Default content type"
-      multiple: false
-      values: { default: default, pages: pages, posts: blogposts, events: events, persons: persons }
-      postfix: "Choose a content type if you selected a listing template that does not have a default content type set."
-    subtheme:
-      type: select
-      label: "Subtheme"
-      values: ['none', 'europeana_subsite_cloud', 'europeana_subsite_creative', 'europeana_subsite_enumerate']
-  taxonomy: [ tags, communities ]
-  relations:
-    <<: *relation_pages
-    <<: *relation_posts
-    <<: *relation_data
-    <<: *relation_projects
-    <<: *relation_events
-    <<: *relation_jobs
-    <<: *relation_persons
-    <<: *relation_resources
-  icon_many: "fa:cubes"
-  icon_one: "fa:cube"
-  show_in_menu: System
-
-#################################
-#
 # PAGE
 #
 #################################
@@ -564,7 +508,7 @@ data:
       expanded: true
       default: "Data"
       label: "Data type"
-      values: [ "Data", "Tool", "Documentation", "API" ]
+      values: [ "Data", "Tool", "Showcase", "Documentation", "API" ]
       postfix: "Select if this record is a data, documentation, tool or API record"
     intro:
       type: html

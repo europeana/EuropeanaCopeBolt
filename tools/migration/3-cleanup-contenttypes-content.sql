@@ -2,7 +2,6 @@
 
 USE europeana_cope;
 
-
 -- merge superflous fields, eg. files, filelists and filelist_downloads for projects, collections and publications
 ALTER TABLE europeana_cope.bolt_projects CHANGE filelist_downloads document_folder VARCHAR( 256 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
 ALTER TABLE europeana_cope.bolt_pages CHANGE filelist_downloads document_folder VARCHAR( 256 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
@@ -26,6 +25,7 @@ ALTER TABLE europeana_cope.bolt_persons DROP contact_taskforce;
 ALTER TABLE europeana_cope.bolt_persons DROP contact_tag;
 ALTER TABLE europeana_cope.bolt_persons DROP community;
 ALTER TABLE europeana_cope.bolt_persons DROP community_role;
+
 -- rename columns
 ALTER TABLE europeana_cope.bolt_persons CHANGE image public_photo longtext;
 ALTER TABLE europeana_cope.bolt_persons CHANGE description bio longtext;
