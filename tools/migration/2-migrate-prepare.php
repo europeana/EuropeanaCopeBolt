@@ -7,7 +7,6 @@ $content_types = [
   'documentation' => 'bolt_data',
   'events' => 'bolt_events',
   'footers' => 'bolt_footers',
-  'homepage' => 'bolt_homepage',
   'jobs' => 'bolt_jobs',
   'locations' => 'bolt_locations',
   'pages' => 'bolt_pages',

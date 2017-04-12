@@ -2,31 +2,6 @@
 
 USE europeana_cope;
 
--- because structures have less fields we'll discard all links etc.
--- they must be manually recreated as related blocks
-INSERT INTO europeana_cope.bolt_landingpages (
-  slug, datecreated, datechanged, datepublish, datedepublish,
-  username, ownerid, status, title,
-  intro, body, image, suffix, teaser, teaser_image,
-  structure_sortorder, structure_parent, hide_list, templatefields, template,
-  default_content
-)
-SELECT
-  slug, datecreated, datechanged, datepublish, datedepublish,
-  username, ownerid, status, title,
-  '', '', '', '', concat('<h3>', subtitle, '</h3>\n', bannertext, '\n', bannerlink, '\n', imageattribution, '\n', imagelicense), bannerimage,
-  0, 0, 0, templatefields, '',
-  ''
-FROM europeana_cope.bolt_homepage;
-
--- skipped fields
--- brandcolour, brandopacity, brandlocation, callout_1, callout_2, callout_3,
--- use_manual_1, flag_colour_1, flag_label_1, latest_title_1, latest_teaser_1, latest_image_1, latest_url_1,
--- use_manual_2, flag_colour_2, flag_label_2, latest_title_2, latest_teaser_2, latest_image_2, latest_url_2,
--- use_manual_3, flag_colour_3, flag_label_3, latest_title_3, latest_teaser_3, latest_image_3, latest_url_3,
-
-DROP TABLE europeana_cope.bolt_homepage;
-
 -- do similar things to the other content types
 -- merge superflous fields, eg. files, filelists and filelist_downloads for projects, collections and publications
 ALTER TABLE europeana_cope.bolt_projects CHANGE filelist_downloads document_folder VARCHAR( 256 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';

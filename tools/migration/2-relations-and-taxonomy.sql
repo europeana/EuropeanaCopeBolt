@@ -8,7 +8,6 @@ UPDATE bolt_relations r, bolt_data x SET r.from_id = x.id WHERE x.subsite_id = r
 UPDATE bolt_relations r, bolt_data x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'documentation';
 UPDATE bolt_relations r, bolt_events x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'events';
 UPDATE bolt_relations r, bolt_footers x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'footers';
-UPDATE bolt_relations r, bolt_homepage x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'homepage';
 UPDATE bolt_relations r, bolt_jobs x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'jobs';
 UPDATE bolt_relations r, bolt_locations x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'locations';
 UPDATE bolt_relations r, bolt_pages x SET r.from_id = x.id WHERE x.subsite_id = r.from_id AND x.subsite = r.subsite AND r.from_contenttype = 'pages';
@@ -27,7 +26,6 @@ UPDATE bolt_relations r, bolt_data x SET r.to_id = x.id WHERE x.subsite_id = r.t
 UPDATE bolt_relations r, bolt_data x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'documentation';
 UPDATE bolt_relations r, bolt_events x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'events';
 UPDATE bolt_relations r, bolt_footers x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'footers';
-UPDATE bolt_relations r, bolt_homepage x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'homepage';
 UPDATE bolt_relations r, bolt_jobs x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'jobs';
 UPDATE bolt_relations r, bolt_locations x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'locations';
 UPDATE bolt_relations r, bolt_pages x SET r.to_id = x.id WHERE x.subsite_id = r.to_id AND x.subsite = r.subsite AND r.to_contenttype = 'pages';
@@ -61,7 +59,6 @@ UPDATE bolt_taxonomy t, bolt_data c SET t.content_id = c.id WHERE c.subsite_id =
 UPDATE bolt_taxonomy t, bolt_data c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'documentation';
 UPDATE bolt_taxonomy t, bolt_events c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'events';
 UPDATE bolt_taxonomy t, bolt_footers c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'footers';
-UPDATE bolt_taxonomy t, bolt_homepage c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'homepage';
 UPDATE bolt_taxonomy t, bolt_jobs c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'jobs';
 UPDATE bolt_taxonomy t, bolt_locations c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'locations';
 UPDATE bolt_taxonomy t, bolt_pages c SET t.content_id = c.id WHERE c.subsite_id = t.content_id AND c.subsite = t.subsite AND t.contenttype = 'pages';
@@ -80,7 +77,6 @@ UPDATE bolt_data c, bolt_users u SET c.username = u.username WHERE u.subsite_id 
 UPDATE bolt_data c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
 UPDATE bolt_events c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
 UPDATE bolt_footers c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
-UPDATE bolt_homepage c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
 UPDATE bolt_jobs c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
 UPDATE bolt_locations c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
 UPDATE bolt_pages c, bolt_users u SET c.username = u.username WHERE u.subsite_id = c.ownerid AND c.subsite = u.subsite;
@@ -116,7 +112,6 @@ UPDATE bolt_data c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.usern
 UPDATE bolt_data c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
 UPDATE bolt_events c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
 UPDATE bolt_footers c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
-UPDATE bolt_homepage c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
 UPDATE bolt_jobs c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
 UPDATE bolt_locations c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
 UPDATE bolt_pages c, bolt_users u SET c.ownerid = u.id WHERE c.username = u.username;
@@ -138,7 +133,6 @@ ALTER TABLE bolt_posts DROP subsite_id;
 ALTER TABLE bolt_pages DROP subsite_id;
 ALTER TABLE bolt_events DROP subsite_id;
 ALTER TABLE bolt_footers DROP subsite_id;
-ALTER TABLE bolt_homepage DROP subsite_id;
 ALTER TABLE bolt_jobs DROP subsite_id;
 ALTER TABLE bolt_locations DROP subsite_id;
 ALTER TABLE bolt_projects DROP subsite_id;
