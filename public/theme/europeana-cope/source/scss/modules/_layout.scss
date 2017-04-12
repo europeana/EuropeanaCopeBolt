@@ -54,7 +54,7 @@ body {
 
 .canvas {
 
-    @include respond-to(large-screens){
+    @include respond-to(menu-full){
         padding-left: 235px;
     }
 }
