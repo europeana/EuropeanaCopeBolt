@@ -71,9 +71,16 @@ section {
 
 }
 
+section.contentheader {
+    > .inner-wrap {
+        padding: 0 1rem;
+    }
+}
+
 header {
     //background: #f60;
 }
+
 
 main {
     // background: #9f6;
