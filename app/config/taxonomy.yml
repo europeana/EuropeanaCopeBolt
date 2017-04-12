@@ -9,6 +9,23 @@ tags:
     allow_spaces: false
     #listing_template: tag-listing.twig #custom template
 
+communities:
+    name: Communities
+    slug: communities
+    singular_name: Community
+    singular_slug: community
+    behaves_like: categories
+    multiple: false
+    options:
+        tech: Tech
+        ipr: IPR
+        education: Education
+        research: Research
+        member_states: Member States
+        fashion: Fashion
+        art: Art
+    postfix: "Select one of the communities to activate the branding for that communitie in the website."
+
 groups:
     slug: groups
     singular_slug: group

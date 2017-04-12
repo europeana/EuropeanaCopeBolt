@@ -71,34 +71,6 @@ __nodes:
       label: "Document folder"
       postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
       group: "Media"
-  link_defaults: &link_defaults
-    link1:
-      type: text
-      required: false
-      label: "External link 1"
-      variant: inline
-      class: narrow
-      prefix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-      group: "Related Links"
-    link2:
-      type: text
-      required: false
-      label: "External link 2"
-      variant: inline
-      class: narrow
-      prefix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-      group: "Related Links"
-    link3:
-      type: text
-      required: false
-      label: "External link 3"
-      variant: inline
-      class: narrow
-      prefix: "<em>URL has to start with http:// or https://</em>"
-      pattern: url
-      group: "Related Links"
   structure_defaults: &structure_defaults
     subsite:
       type: select
@@ -199,19 +171,13 @@ __nodes:
         override_title: true
         override_amount: true
       postfix: 'A simple widget block'
-  relation_structures: &relation_structures
-    structures:
-      label: "Structures"
-      multiple: true
-      order: -id
-      format: "{{ item.title|escape }}"
-      prefix: "<div><h3>Usage of relations</h3><p>Use these relations only for hard linking of items. For grouping items together the Tags are better suited.</p><br></div>"
   relation_pages: &relation_pages
     pages:
       label: "Pages"
       multiple: true
       order: -id
       format: "{{ item.title|escape }}"
+      prefix: "<div><h3>Usage of relations</h3><p>Use these relations only for hard linking of items. For grouping items together the Tags are better suited.</p><br></div>"
   relation_posts: &relation_posts
     posts:
       label: "Posts"
@@ -257,7 +223,6 @@ __nodes:
       postfix: "Choose one or more footer resource blocks. The resources will be used as footers for the whole substructure. Resources wille be ordered by the weight field."
   all_relations: &all_relations
     relations:
-      <<: *relation_structures
       <<: *relation_pages
       <<: *relation_posts
       <<: *relation_data
@@ -434,7 +399,7 @@ landingpages:
     <<: *teaser_defaults
     <<: *structure_defaults
   <<: *all_relations
-  taxonomy: [ tags ]
+  taxonomy: [ tags, communities ]
   icon_many: "fa:map"
   icon_one: "fa:map-pin"
 
@@ -480,9 +445,8 @@ structures:
       type: select
       label: "Subtheme"
       values: ['none', 'europeana_subsite_cloud', 'europeana_subsite_creative', 'europeana_subsite_enumerate']
-  taxonomy: [ tags ]
+  taxonomy: [ tags, communities ]
   relations:
-    <<: *relation_structures
     <<: *relation_pages
     <<: *relation_posts
     <<: *relation_data
@@ -512,7 +476,7 @@ pages:
       label: "Images gallery (optional)"
       postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
     <<: *structure_defaults
-  taxonomy: [ tags ]
+  taxonomy: [ tags, communities ]
   <<: *all_relations
   recordsperpage: 50
   icon_many: "fa:files-o"
@@ -570,7 +534,7 @@ posts:
     <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
-  taxonomy: [ tags ]
+  taxonomy: [ tags, communities ]
   <<: *all_relations
   recordsperpage: 100
   sort: -datepublish
@@ -649,12 +613,38 @@ data:
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
       group: "Related Links"
-    <<: *link_defaults
+    link1:
+      type: text
+      required: false
+      label: "External link 1"
+      variant: inline
+      class: narrow
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+      group: "Related Links"
+    link2:
+      type: text
+      required: false
+      label: "External link 2"
+      variant: inline
+      class: narrow
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+      group: "Related Links"
+    link3:
+      type: text
+      required: false
+      label: "External link 3"
+      variant: inline
+      class: narrow
+      prefix: "<em>URL has to start with http:// or https://</em>"
+      pattern: url
+      group: "Related Links"
     <<: *support_defaults
     <<: *contact_defaults
     <<: *media_defaults
     <<: *structure_defaults
-  taxonomy: [ tags, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
+  taxonomy: [ tags, communities, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
   <<: *all_relations
   recordsperpage: 100
   icon_many: "fa:object-group"
@@ -717,7 +707,7 @@ projects:
     <<: *media_defaults
     <<: *structure_defaults
     <<: *support_defaults
-  taxonomy: [ tags ]
+  taxonomy: [ tags, communities ]
   <<: *all_relations
   listing_records: 5
   recordsperpage: 20
@@ -760,7 +750,7 @@ events:
     <<: *media_defaults
     <<: *structure_defaults
     <<: *support_defaults
-  taxonomy: [ tags ]
+  taxonomy: [ tags, communities ]
   <<: *all_relations
   icon_many: "fa:calendar"
   icon_one: "fa:calendar"
@@ -837,7 +827,7 @@ jobs:
       type: slug
       uses: position
     <<: *support_defaults
-  taxonomy: [ tags ]
+  taxonomy: [ tags, communities ]
   <<: *all_relations
   sort: -datepublish
   icon_many: "fa:money"
@@ -1126,7 +1116,7 @@ persons:
         zoho: ZOHO CRM
 
     <<: *support_defaults
-  taxonomy: [ tags ]
+  taxonomy: [ tags, communities ]
   <<: *all_relations
   icon_many: "fa:users"
   icon_one: "fa:user"
@@ -1200,6 +1190,7 @@ resources:
     cssid:
       type: text
       label: "CSS ID (optional)"
+  taxonomy: [ tags, communities ]
   <<: *all_relations
   viewless: true
   sort: weight
