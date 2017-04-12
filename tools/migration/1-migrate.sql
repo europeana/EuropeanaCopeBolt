@@ -12,7 +12,7 @@ CREATE TABLE bolt_landingpages (
   username varchar(32)  DEFAULT '',
   ownerid int(11) DEFAULT NULL,
   status varchar(32)  NOT NULL,
-  subsite longtext NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
+  subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
   templatefields longtext,
   title varchar(256)  DEFAULT '',
@@ -370,7 +370,7 @@ INSERT INTO europeana_cope.bolt_posts ( subsite, subsite_id, slug, datecreated, 
 FROM europeana_pro.bolt_publications p;
 
 -- pro pressreleases
-INSERT INTO europeana_cope.bolt_posts ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, subtitle, body, isbn, filelist, image, parents, intro, structure_sortorder, structure_parent, templatefields
+INSERT INTO europeana_cope.bolt_posts ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, subtitle, body, isbn, files, image, parents, intro, structure_sortorder, structure_parent, templatefields
 ) SELECT 'pressreleases', p.id,
     p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.subtitle, p.body, p.isbn, p.filelist, p.image, p.parents, p.introduction, p.structure_sortorder, p.structure_parent, p.templatefields
   FROM europeana_pro.bolt_pressreleases p;
