@@ -20,17 +20,25 @@ textarea {
     font-size: 1rem;
     margin: 0 0 1rem;
     display: block;
+    -webkit-appearance: none;
 }
 
 form.searchform {
+
+
     [type="search"] {
-        display: table-cell;
+        display: inline-block;
         width: 300px;
+        -webkit-appearance: none;
+        vertical-align: middle;
+        margin: 0;
     }
 
     button {
-        display: table-cell;
-        margin-left: .2rem;
+        display: inline-block;
+        margin: 0;
+        vertical-align: middle;
+
     }
 }
 
