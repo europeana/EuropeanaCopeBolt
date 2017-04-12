@@ -16,14 +16,14 @@ __nodes:
       group: Main
     body:
       type: html
-      label: "Body (required)"
+      label: "Body"
       height: 300px
       postfix: "Shown on individual pages as main body text"
       group: Main
   teaser_defaults: &teaser_defaults
     teaser:
       type: html
-      label: "Teaser (required)"
+      label: "Teaser"
       height: 150px
       postfix: "The teaser is shown on listing pages instead of the intro and body fields. Also used for related content teasers"
       group: Teaser
@@ -38,21 +38,19 @@ __nodes:
       required: false
       variant: inline
       class: narrow
-      group: "External contact"
+      prefix: '<div><h3>External Contact</h3><p>The external contact is usually someone in the network who is designated as the primary contact about the current record.</p></div>'
     contact_email:
       type: text
       label: "Email"
       required: false
       variant: inline
       class: narrow
-      group: "External contact"
     contact_website:
       type: text
       label: "Website"
       required: false
       variant: inline
       class: narrow
-      group: "External contact"
   media_defaults: &media_defaults
     image:
       type: image
@@ -82,7 +80,7 @@ __nodes:
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
-      group: "Related External Links"
+      group: "Related Links"
     link2:
       type: text
       required: false
@@ -91,7 +89,7 @@ __nodes:
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
-      group: "Related External Links"
+      group: "Related Links"
     link3:
       type: text
       required: false
@@ -100,7 +98,7 @@ __nodes:
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
-      group: "Related External Links"
+      group: "Related Links"
   calltoaction_defaults: &calltoaction_defaults
     calltoactiontext:
       type: text
@@ -131,41 +129,42 @@ __nodes:
         publications: Publications
         pressreleases: Pressreleases
         him: Heritage in motion
+      group: meta
       postfix: "The site this content was imported from."
-      group: Structure
+      prefix: "<div><h3>Site structure data</h3></div>"
     structure_parent:
       type: select
       default: ''
       values: structures/id,title
       autocomplete: true
       label: "Select structure tree parent"
-      group: Structure
+      group: meta
     structure_sortorder:
       type: integer
       label: "Sort order in structure tree parent"
-      group: Structure
+      group: meta
     slug:
       type: slug
       uses: title
-      group: Structure
+      group: meta
     hide_list:
       type: checkbox
       label: "Hide from list views"
       postfix: "Check to hide this page from listings."
-      group: Structure
+      group: meta
     hide_related:
       type: checkbox
       label: "Hide from related content"
       postfix: "Check to hide this page from related content sections."
-      group: Structure
+      group: meta
     support_navigation:
       type: checkbox
       label: "Support navigation"
       postfix: "Check to automatically generate support navigation from the headings in the main body text."
-      group: Structure
+      group: meta
     template: &template_defaults
       type: templateselect
-      group: Structure
+      group: meta
   support_defaults: &support_defaults
     contact_record:
       type: select
@@ -543,13 +542,40 @@ pages:
 #
 #################################
 posts:
-  name: 'Blog Posts'
-  singular_name: 'BlogPost'
-  display_name: 'Blog Posts'
+  name: 'Posts'
+  singular_name: 'Post'
+  display_name: 'Posts'
   slug: 'posts'
   singular_slug: 'post'
   fields:
-    <<: *record_defaults
+    title:
+      type: text
+      label: "Title (required)"
+      variant: inline
+      required: true
+      postfix: "The main title is shown on individual pages as the page title and on listings. Also used for related content teasers"
+      group: Main
+    posttype:
+      type: select
+      required: true
+      multiple: false
+      expanded: true
+      default: "Blog"
+      label: "Post type"
+      values: [ "Blog", "Pressrelease", "Publication", "News" ]
+      postfix: "Select if this record is a Blog, Pressrelease, Publication or other News record"
+    intro:
+      type: html
+      label: "Intro"
+      height: 150px
+      postfix: "Shown on individual pages before the main body text"
+      group: Main
+    body:
+      type: html
+      label: "Body (required)"
+      height: 300px
+      postfix: "Shown on individual pages as main body text"
+      group: Main
     <<: *calltoaction_defaults
     author:
       label: "Author(s)"
@@ -579,47 +605,74 @@ data:
   name: Data
   singular_name: Data
   fields:
-    <<: *record_defaults
+    title:
+      type: text
+      label: "Title (required)"
+      variant: inline
+      required: true
+      postfix: "The main title is shown on individual pages as the page title and on listings. Also used for related content teasers"
+      group: Main
+    datatype:
+      type: select
+      required: true
+      multiple: false
+      expanded: true
+      default: "Data"
+      label: "Data type"
+      values: [ "Data", "Tool", "Documentation", "API" ]
+      postfix: "Select if this record is a data, documentation, tool or API record"
+    intro:
+      type: html
+      label: "Intro"
+      height: 150px
+      postfix: "Shown on individual pages before the main body text"
+      group: Main
+    body:
+      type: html
+      label: "Body (required)"
+      height: 300px
+      postfix: "Shown on individual pages as main body text"
+      group: Main
     <<: *teaser_defaults
     provided_by:
       type: text
       required: false
-      label: "Provided by:"
+      label: "Provided by"
       variant: inline
       class: narrow
-      group: "Related External Links"
+      group: "Related Links"
     provided_by_link:
       type: text
       required: false
-      label: "Provided by link:"
+      label: "Provided by link"
       variant: inline
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
-      group: "Related External Links"
+      group: "Related Links"
     portallink:
       type: text
       required: false
-      label: "Portal link:"
+      label: "Portal link"
       variant: inline
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
-      group: "Related External Links"
+      group: "Related Links"
     apiconsolelink:
       type: text
       required: false
-      label: "Api console link:"
+      label: "Api console link"
       variant: inline
       class: narrow
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
-      group: "Related External Links"
+      group: "Related Links"
     <<: *link_defaults
+    <<: *support_defaults
     <<: *contact_defaults
     <<: *media_defaults
     <<: *structure_defaults
-    <<: *support_defaults
   taxonomy: [ tags, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
   <<: *all_relations
   recordsperpage: 100
@@ -635,13 +688,43 @@ projects:
   name: Projects
   singular_name: Project
   fields:
-    <<: *record_defaults
+    title:
+      type: text
+      label: "Title (required)"
+      variant: inline
+      required: true
+      postfix: "The main title is shown on individual pages as the page title and on listings. Also used for related content teasers"
+      group: Main
     subtitle:
       type: text
       label: "Subtitle"
       variant: inline
       postfix: "Shown on Individual pages, Lists, Overviews, Teasers"
-      group: Project specific
+    projecttype:
+      type: select
+      required: true
+      multiple: false
+      expanded: true
+      default: "Project"
+      label: "Project type"
+      values: [ "TaskForce", "WorkingGroup", "Project" ]
+      postfix: "Select if this record is a project, a workinggroup or a taskforce"
+    intro:
+      type: html
+      label: "Intro"
+      height: 150px
+      postfix: "Shown on individual pages before the main body text"
+      group: Main
+    body:
+      type: html
+      label: "Body (required)"
+      height: 300px
+      postfix: "Shown on individual pages as main body text"
+      group: Main
+    department:
+      type: select
+      label: "Department"
+      values: [ "Europeana Network", "Europeana Tech" ]
     url:
       type: text
       required: false
@@ -649,17 +732,6 @@ projects:
       variant: inline
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
-    projecttype:
-      type: select
-      required: true
-      multiple: false
-      default: "Project"
-      label: "TaskForce or WorkingGroup"
-      values: [ "TaskForce", "WorkingGroup", "Project" ]
-    department:
-      type: select
-      label: "Department"
-      values: [ "Europeana Network", "Europeana Tech" ]
     <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
@@ -974,7 +1046,7 @@ persons:
       type: select
       required: false
       multiple: true
-      label: "Interested in:"
+      label: "Interested in"
       values:
         "(not set)": "(not set)"
         "Academic research": "Academic research"
