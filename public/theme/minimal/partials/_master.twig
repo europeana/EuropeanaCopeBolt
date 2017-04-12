@@ -19,18 +19,18 @@
 <body class="{% block bodyclass %}{% endblock bodyclass %}">
     {{ include('partials/_svg_library.twig') }}
 
-    {% block topbar %}
-        {{ include('partials/_topbar.twig') }}
-    {% endblock topbar %}
+    {% block header %}
+        {{ include('partials/_header.twig') }}
+    {% endblock header %}
 
     {% block navigation %}
         {{ include('partials/_navigation.twig') }}
     {% endblock navigation %}
 
     <div class="canvas"> {# contains all items next to navigation #}
-        {% block header %}
-            {{ include('partials/_header.twig') }}
-        {% endblock header %}
+        {% block contentheader %}
+            {{ include('partials/_contentheader.twig') }}
+        {% endblock contentheader %}
 
         {% block body %}
             <main>

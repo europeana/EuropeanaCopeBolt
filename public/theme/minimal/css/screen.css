@@ -573,18 +573,18 @@ body {
   body > main, body [role="main"] {
     position: relative; }
 
-.topbar {
-  background: #f09; }
-
 @media only screen and (min-width: 50em) {
   .canvas {
     padding-left: 235px; } }
 
 section > .inner-wrap {
-  padding: 0 2rem; }
+  padding: 0 0rem; }
+  @media only screen and (min-width: 50em) {
+    section > .inner-wrap {
+      padding: 0 2rem; } }
 
 header {
-  background: #f60; }
+  padding: 0 0.875rem; }
 
 aside {
   background: #0f9; }
@@ -596,7 +596,7 @@ footer {
 
 .inner-wrap {
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   max-width: 76rem;
   position: relative;
   overflow: auto; }
@@ -694,7 +694,11 @@ nav.main-menu {
   position: absolute;
   width: 235px;
   top: 95px;
-  left: 0; }
+  left: 0;
+  display: none; }
+  @media only screen and (min-width: 50em) {
+    nav.main-menu {
+      display: block; } }
   nav.main-menu ul {
     padding: 0 1.125rem 0 0.6875rem; }
   nav.main-menu li {
@@ -904,6 +908,67 @@ input {
   border: 1px solid #1a1a1a; }
 
 /*
+* TOPBAR
+**/
+header {
+  position: relative; }
+  header h1, header .alpha {
+    margin: 1rem 0 0 0; }
+    header h1 img, header .alpha img {
+      height: 50px; }
+      @media only screen and (min-width: 24em) {
+        header h1 img, header .alpha img {
+          height: 65px; } }
+  header button.toggle {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 1rem; }
+    header button.toggle.menu-toggle {
+      left: 0rem; }
+    header button.toggle.search-toggle {
+      right: 0rem; }
+    @media only screen and (min-width: 50em) {
+      header button.toggle {
+        display: none; } }
+  header form {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 0.875rem; }
+    @media only screen and (min-width: 50em) {
+      header form {
+        display: block; } }
+
+.mainlogo {
+  position: relative;
+  padding-left: 1.5rem;
+  margin: 0 auto;
+  width: 200px; }
+  @media only screen and (min-width: 50em) {
+    .mainlogo {
+      margin: 0 0; } }
+
+.version-flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: #D43900;
+  text-transform: uppercase;
+  padding: 0em .5em;
+  font-size: 0.75rem; }
+
+.payoff {
+  color: #4d4d4d;
+  font-size: 0.75rem;
+  text-align: center; }
+  @media only screen and (min-width: 50em) {
+    .payoff {
+      text-align: left;
+      margin: -1.2rem 0 1.1rem 4rem; } }
+
+/*
 * FOOTER
 **/
 .sub-footer {
@@ -1075,25 +1140,29 @@ a.banner {
 /*
 * WIDGET CALL TO ACTION LINE
 **/
-.calltoaction-line {
+.calltoactionform,
+.calltoactionlink {
   height: 55px;
   background-color: #E11D53;
   overflow: hidden;
   margin: 1rem 0;
   display: flex;
   align-items: center; }
-  .calltoaction-line .colored-image {
+  .calltoactionform .colored-image,
+  .calltoactionlink .colored-image {
     float: left;
     width: 55%;
     background-color: #E11D53;
     background-blend-mode: multiply; }
-  .calltoaction-line h3 {
+  .calltoactionform h3,
+  .calltoactionlink h3 {
     position: absolute;
     right: 45%;
     margin: 0 1rem 0 0;
     color: #fff;
     text-transform: none; }
-  .calltoaction-line .button {
+  .calltoactionform .button,
+  .calltoactionlink .button {
     display: inline-block;
     border-radius: 5px;
     background-color: #700e29;
@@ -1101,15 +1170,18 @@ a.banner {
     border: 0;
     padding: .3rem 4rem;
     margin-left: 5rem; }
-  .calltoaction-line input.button {
+  .calltoactionform input.button,
+  .calltoactionlink input.button {
     margin-left: 0;
     border-radius: 0 5px 5px 0;
     padding: .3rem 1rem; }
-  .calltoaction-line form {
+  .calltoactionform form,
+  .calltoactionlink form {
     float: left;
     width: 45%;
     padding: .3rem 3rem .3rem 1rem; }
-    .calltoaction-line form input {
+    .calltoactionform form input,
+    .calltoactionlink form input {
       display: table-cell;
       height: 2.25rem; }
 
@@ -1129,6 +1201,11 @@ a.button, .button, button {
   font-weight: 700;
   letter-spacing: -.3px;
   color: #293745; }
+  .button-link:hover, .button-link:active, .button-link:focus {
+    background-color: #293745;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400; }
   .calltoaction .button-link,
   .calltoaction-readmore .button-link {
     color: #fff;
@@ -1136,6 +1213,13 @@ a.button, .button, button {
     font-weight: 400;
     letter-spacing: 0;
     font-size: 0.75rem; }
+    .calltoaction .button-link:hover, .calltoaction .button-link:active, .calltoaction .button-link:focus,
+    .calltoaction-readmore .button-link:hover,
+    .calltoaction-readmore .button-link:active,
+    .calltoaction-readmore .button-link:focus {
+      background-color: #fff;
+      color: #E11D53;
+      font-weight: 700; }
 
 @media print {
   *,
