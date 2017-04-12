@@ -4,7 +4,7 @@ USE europeana_cope;
 
 -- because structures have less fields we'll discard all links etc.
 -- they must be manually recreated as related blocks
-INSERT INTO europeana_cope.bolt_structures (
+INSERT INTO europeana_cope.bolt_landingpages (
   slug, datecreated, datechanged, datepublish, datedepublish,
   username, ownerid, status, title,
   intro, body, image, suffix, teaser, teaser_image,
@@ -36,22 +36,10 @@ ALTER TABLE europeana_cope.bolt_pages CHANGE filelist_files attachments LONGTEXT
 
 -- remove columns that we don't use anymore
 -- ALTER TABLE europeana_cope.bolt_table DROP column_name;
-ALTER TABLE europeana_cope.bolt_structures DROP date_start;
-ALTER TABLE europeana_cope.bolt_structures DROP date_end;
-
-ALTER TABLE europeana_cope.bolt_events DROP support_navigation;
-ALTER TABLE europeana_cope.bolt_pages DROP support_navigation;
-
-ALTER TABLE europeana_cope.bolt_pages DROP liststyle;
-
-ALTER TABLE europeana_cope.bolt_events DROP secondary_mail;
-ALTER TABLE europeana_cope.bolt_structures DROP secondary_mail;
-ALTER TABLE europeana_cope.bolt_pages DROP secondary_mail;
 
 -- cleanup persons contenttype
 -- only public information should ever be on the site
 ALTER TABLE europeana_cope.bolt_persons DROP email;
-ALTER TABLE europeana_cope.bolt_persons DROP secondary_mail;
 ALTER TABLE europeana_cope.bolt_persons DROP phone;
 ALTER TABLE europeana_cope.bolt_persons DROP telephone_number;
 ALTER TABLE europeana_cope.bolt_persons DROP other_number;

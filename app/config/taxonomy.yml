@@ -26,22 +26,14 @@ communities:
         art: Art
     postfix: "Select one of the communities to activate the branding for that communitie in the website."
 
-groups:
-    slug: groups
-    singular_slug: group
-    behaves_like: grouping
-    options: { main: "The main group", meta: "Meta group", other: "The other stuff" }
-    has_sortorder: true
+##############################################
+# categorization for APP contenttype
+#   - appthemes
+#   - appcategories
+#   - apptags
+#
 
-categories:
-    name: Categories
-    slug: categories
-    singular_name: Category
-    singular_slug: category
-    behaves_like: categories
-    multiple: true
-    options: [ news, events, movies, music, books, life, love, fun ]
-
+# TODO: Convert to datatype field
 appthemes:
     slug: appthemes
     name: Type
@@ -50,6 +42,7 @@ appthemes:
     behaves_like: categories
     options: [Showcase, Tools]
 
+# TODO: Convert to itemtype category
 appcategories:
     name: Theme
     slug: appcategories
@@ -59,12 +52,12 @@ appcategories:
     multiple: 1
     options: [API Implementation, Discovery, Hackathon Prototype, R&D Results, Curation/Annotation,Education, Client Library, Pilot, Gaming, Distribution, Tourism, Linked Open Data]
 
+# TODO: convert to plain tags
 apptags:
     slug: apptags
     name: Tags
     singular_name: Tag
     behaves_like: tags
-
 
 ##############################################
 # categorization for DATA contenttype
@@ -100,6 +93,18 @@ itemtype:
         - "Posters"
         - "Prints"
         - "Sheet Music"
+        - "API Implementation"
+        - "Discovery"
+        - "Hackathon Prototype"
+        - "R&D Results"
+        - "Curation / Annotation"
+        - "Education"
+        - "Client Library"
+        - "Pilot"
+        - "Gaming"
+        - "Distribution"
+        - "Tourism"
+        - "Linked Open Data"
         # Europeana can enter more terms here, if needed.
     multiple: true
     autocomplete: true

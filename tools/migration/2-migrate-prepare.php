@@ -16,7 +16,7 @@ $content_types = [
   'persons' => 'bolt_persons',
   'publications' => 'bolt_posts',
   'resources' => 'bolt_resources',
-  'structures' => 'bolt_structures',
+  'structures' => 'bolt_landingpages',
   'taskforces' => 'bolt_projects'
 ];
 

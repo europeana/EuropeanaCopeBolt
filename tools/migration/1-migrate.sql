@@ -1,6 +1,60 @@
 CREATE DATABASE IF NOT EXISTS europeana_cope DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE europeana_cope;
 
+DROP TABLE IF EXISTS bolt_landingpages;
+CREATE TABLE bolt_landingpages (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  slug varchar(128) NOT NULL,
+  datecreated datetime NOT NULL,
+  datechanged datetime NOT NULL,
+  datepublish datetime DEFAULT NULL,
+  datedepublish datetime DEFAULT NULL,
+  username varchar(32)  DEFAULT '',
+  ownerid int(11) DEFAULT NULL,
+  status varchar(32)  NOT NULL,
+  subsite longtext NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
+  subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
+  templatefields longtext,
+  title varchar(256)  DEFAULT '',
+  intro longtext,
+  body longtext,
+  teaser longtext,
+  teaser_image longtext,
+  structure_parent longtext,
+  structure_sortorder int(11) NOT NULL DEFAULT '0',
+  hide_list tinyint(1) NOT NULL DEFAULT '0',
+  hide_related tinyint(1) NOT NULL DEFAULT '0',
+  template varchar(256) DEFAULT '',
+  pagefooter longtext,
+  content longtext NULL, # labs # pro # research
+  footer longtext NULL, # labs # pro # research
+  image longtext NULL, # him # labs # pro # research
+  PRIMARY KEY (id)
+);
+
+-- pro
+INSERT INTO europeana_cope.bolt_landingpages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, image, template, teaser, content, footer, structure_sortorder, structure_parent, templatefields, body, pagefooter
+) SELECT 'pro', s.id,
+    s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.intro, s.image, s.template, s.teaser, s.content, s.footer, s.structure_sortorder, s.structure_parent, s.templatefields, s.body, s.suffix
+  FROM europeana_pro.bolt_structures s;
+
+-- labs
+INSERT INTO europeana_cope.bolt_landingpages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, teaser, image, template, content, footer,  structure_sortorder, templatefields, structure_parent
+) SELECT 'labs', s.id,
+    s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.teaser, s.image, s.template, s.content, s.footer, s.structure_sortorder, s.templatefields, s.structure_parent
+  FROM europeana_labs.bolt_structures s;
+
+-- research
+INSERT INTO europeana_cope.bolt_landingpages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, teaser, image, template, content, footer, templatefields, structure_parent, structure_sortorder
+) SELECT 'research', s.id,
+    s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.teaser, s.image, s.template, s.content, s.footer, s.templatefields, s.structure_parent, s.structure_sortorder
+  FROM europeana_research.bolt_structures s;
+
+UPDATE europeana_cope.bolt_landingpages SET pagefooter = concat(pagefooter, "\n", footer) WHERE footer != '';
+UPDATE europeana_cope.bolt_landingpages SET teaser_image = image WHERE teaser_image = '' AND image != '';
+ALTER TABLE europeana_cope.bolt_landingpages DROP footer;
+ALTER TABLE europeana_cope.bolt_landingpages DROP image;
+
 -- core business collections and data --
 
 DROP TABLE IF EXISTS bolt_projects;
@@ -343,11 +397,9 @@ CREATE TABLE IF NOT EXISTS bolt_events (
   hide_list tinyint(1) NOT NULL DEFAULT 0, # him
   image longtext NULL, # him
   intro longtext, # him
-  secondary_mail tinyint(1) NOT NULL DEFAULT 0, # labs # pro
   start_event datetime DEFAULT NULL, # him # labs # pro
   structure_parent longtext NULL, # labs # pro # him
   structure_sortorder int(11) NOT NULL DEFAULT 0, # him # labs # pro
-  support_navigation longtext NULL, # pro
   teaser longtext NULL, # labs # pro # him
   teaser_image longtext NULL, # him # labs # pro
   templatefields longtext NULL, # him # labs # pro
@@ -358,15 +410,15 @@ CREATE TABLE IF NOT EXISTS bolt_events (
 );
 
 -- labs
-INSERT INTO europeana_cope.bolt_events ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, start_event, unconfirmed_start, end_event, unconfirmed_end, teaser, body, teaser_image, filelist, secondary_mail, structure_sortorder, external_link, templatefields, structure_parent
+INSERT INTO europeana_cope.bolt_events ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, start_event, unconfirmed_start, end_event, unconfirmed_end, teaser, body, teaser_image, filelist, structure_sortorder, external_link, templatefields, structure_parent
 ) SELECT 'labs', e.id,
-  e.slug, e.datecreated, e.datechanged, e.datepublish, e.datedepublish, e.username, e.ownerid, e.status, e.title, e.start_event, e.unconfirmed_start, e.end_event, e.unconfirmed_end, e.teaser, e.body, e.teaser_image, e.filelist, e.secondary_mail, e.structure_sortorder, e.external_link, e.templatefields, e.structure_parent
+  e.slug, e.datecreated, e.datechanged, e.datepublish, e.datedepublish, e.username, e.ownerid, e.status, e.title, e.start_event, e.unconfirmed_start, e.end_event, e.unconfirmed_end, e.teaser, e.body, e.teaser_image, e.filelist, e.structure_sortorder, e.external_link, e.templatefields, e.structure_parent
 FROM europeana_labs.bolt_events e;
 
 -- pro
-INSERT INTO europeana_cope.bolt_events ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, start_event, unconfirmed_start, end_event, unconfirmed_end, teaser, body, intro, teaser_image, secondary_mail, filelist, structure_sortorder, support_navigation, structure_parent, templatefields
+INSERT INTO europeana_cope.bolt_events ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, start_event, unconfirmed_start, end_event, unconfirmed_end, teaser, body, intro, teaser_image, filelist, structure_sortorder, structure_parent, templatefields
 ) SELECT 'pro', e.id,
-  e.slug, e.datecreated, e.datechanged, e.datepublish, e.datedepublish, e.username, e.ownerid, e.status, e.title, e.start_event, e.unconfirmed_start, e.end_event, e.unconfirmed_end, e.teaser, e.body, e.introduction, e.teaser_image, e.secondary_mail, e.filelist, e.structure_sortorder, e.support_navigation, e.structure_parent, e.templatefields
+  e.slug, e.datecreated, e.datechanged, e.datepublish, e.datedepublish, e.username, e.ownerid, e.status, e.title, e.start_event, e.unconfirmed_start, e.end_event, e.unconfirmed_end, e.teaser, e.body, e.introduction, e.teaser_image, e.filelist, e.structure_sortorder, e.structure_parent, e.templatefields
 FROM europeana_pro.bolt_events e;
 
 DROP TABLE IF EXISTS bolt_jobs;
@@ -409,63 +461,6 @@ FROM europeana_labs.bolt_jobs j;
 
 -- static pages and structural components --
 
-DROP TABLE IF EXISTS bolt_structures;
-CREATE TABLE IF NOT EXISTS bolt_structures (
-  id int(11) NOT NULL AUTO_INCREMENT, # all
-  slug varchar(128) NOT NULL DEFAULT '', # all
-  datecreated datetime NOT NULL, # all
-  datechanged datetime NOT NULL, # all
-  datepublish datetime DEFAULT NULL, # all
-  datedepublish datetime DEFAULT NULL, # all
-  username varchar(32) DEFAULT '', # all
-  ownerid int(11) DEFAULT NULL, # all
-  status varchar(32) NOT NULL DEFAULT '', # all
-  subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
-  subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  body longtext NULL, # pro # him
-  children longtext NULL, # pro
-  contacts longtext NULL, # pro
-  content longtext NULL, # labs # pro # research
-  date_end date DEFAULT NULL, # labs # pro # research
-  date_start date DEFAULT NULL, # labs # pro # research
-  default_content longtext, # him
-  footer longtext NULL, # labs # pro # research
-  hide_list tinyint(1) NOT NULL DEFAULT 0, # him
-  image longtext NULL, # him # labs # pro # research
-  intro longtext, # him # pro
-  parent longtext NULL, # pro
-  position longtext NULL, # pro
-  secondary_mail tinyint(1) NOT NULL DEFAULT 0, # labs # pro # research
-  selectfield longtext NULL, # pro
-  structure_parent longtext NULL, # labs # pro # research # him
-  structure_sortorder int(11) NOT NULL DEFAULT 0, # him # labs # pro # research
-  subclass longtext NULL, # labs # pro # research
-  suffix longtext NULL, # pro # him
-  teaser longtext NULL, # labs # pro # research# him
-  teaser_image longtext NULL, # him
-  template varchar(256) DEFAULT '', # him # labs # pro # research
-  templatefields longtext NULL, # him # labs # pro # research
-  title varchar(256) DEFAULT '', # him # labs # pro # research
-  PRIMARY KEY (id)
-);
-
--- labs
-INSERT INTO europeana_cope.bolt_structures ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, secondary_mail, teaser, image, template, content, subclass, footer, date_start, date_end, structure_sortorder, templatefields, structure_parent
-) SELECT 'labs', s.id,
-  s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.secondary_mail, s.teaser, s.image, s.template, s.content, s.subclass, s.footer, s.date_start, s.date_end, s.structure_sortorder, s.templatefields, s.structure_parent
-FROM europeana_labs.bolt_structures s;
-
--- pro
-INSERT INTO europeana_cope.bolt_structures ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, selectfield, contacts, secondary_mail, intro, image, template, parent, teaser, position, children, subclass, content, footer, date_start, date_end, structure_sortorder, structure_parent, templatefields, body, suffix
-) SELECT 'pro', s.id,
-    s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.selectfield, s.contacts, s.secondary_mail, s.intro, s.image, s.template, s.parent, s.teaser, s.position, s.children, s.subclass, s.content, s.footer, null, null, s.structure_sortorder, s.structure_parent, s.templatefields, s.body, s.suffix
-  FROM europeana_pro.bolt_structures s;
-
--- research
-INSERT INTO europeana_cope.bolt_structures ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, secondary_mail, teaser, image, template, content, subclass, footer, date_start, date_end, templatefields, structure_parent, structure_sortorder
-) SELECT 'research', s.id,
-  s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.secondary_mail, s.teaser, s.image, s.template, s.content, s.subclass, s.footer, s.date_start, s.date_end, s.templatefields, s.structure_parent, s.structure_sortorder
-FROM europeana_research.bolt_structures s;
 
 DROP TABLE IF EXISTS bolt_pages;
 CREATE TABLE IF NOT EXISTS bolt_pages (
@@ -493,20 +488,17 @@ CREATE TABLE IF NOT EXISTS bolt_pages (
   imagelist longtext NULL, # pro # research
   intro longtext, # pro # labs # him #research
   listtitle varchar(256) NOT NULL DEFAULT '', # pro # research
-  liststyle longtext NULL, # pro # research
   link1 varchar(256) NOT NULL DEFAULT '', # labs
   link2 varchar(256) NOT NULL DEFAULT '', # labs
   link3 varchar(256) NOT NULL DEFAULT '', # labs
   parent longtext NULL, # pro
   parents longtext NULL, # pro
   position longtext NULL, # pro
-  secondary_mail tinyint(1) NOT NULL DEFAULT 0, # pro # labs # research
   show_page tinyint(1) NOT NULL DEFAULT 0, # pro
   source varchar(256) NOT NULL DEFAULT '', # research
   source_url varchar(256) NOT NULL DEFAULT '', # research
   structure_sortorder int(11) NOT NULL DEFAULT 0, # all
   structure_parent longtext NULL, # all
-  support_navigation longtext NULL, # pro # labs # research
   teaser longtext, # pro # labs # him #research
   teaser_image longtext NULL, # all
   templatefields longtext NULL, # all
@@ -517,28 +509,28 @@ CREATE TABLE IF NOT EXISTS bolt_pages (
 );
 
 -- labs
-INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, secondary_mail, hide_related, hide_related_section, support_navigation, structure_sortorder, files, link1, link2, link3, templatefields, structure_parent, hero, hide_list, templateselect
+INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, hide_related, hide_related_section, structure_sortorder, files, link1, link2, link3, templatefields, structure_parent, hero, hide_list, templateselect
 ) SELECT 'labs', p.id,
-  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.intro, p.teaser, p.body, p.teaser_image, p.secondary_mail, p.hide_related, p.hide_related_section, p.support_navigation, p.structure_sortorder, p.files, p.link1, p.link2, p.link3, p.templatefields, p.structure_parent, p.hero, p.hide_list, p.templateselect
+  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.intro, p.teaser, p.body, p.teaser_image, p.hide_related, p.hide_related_section, p.structure_sortorder, p.files, p.link1, p.link2, p.link3, p.templatefields, p.structure_parent, p.hero, p.hide_list, p.templateselect
 FROM europeana_labs.bolt_pages p;
 
 -- pro
-INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, parent, position, contacts, secondary_mail, teaser, body, teaser_image, show_page, support_navigation, filelist_files, filelist_downloads, intro, hide_list, parents, listtitle, imagelist, liststyle, hide_related, hide_related_section, structure_sortorder, structure_parent, templatefields
+INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, parent, position, contacts,  teaser, body, teaser_image, show_page, filelist_files, filelist_downloads, intro, hide_list, parents, listtitle, imagelist, hide_related, hide_related_section, structure_sortorder, structure_parent, templatefields
 ) SELECT 'pro', p.id,
-    p.slug, p.datecreated, p.datechanged, p.datepublish, null, p.username, p.ownerid, p.status, p.title, p.parent, p.position, p.contacts, p.secondary_mail, p.teaser, p.body, p.teaser_image, p.show_page, p.support_navigation, p.filelist_files, p.filelist_downloads, p.intro, p.hide_list, p.parents, p.listtitle, p.imagelist, p.liststyle, p.hide_related, p.hide_related_section, p.structure_sortorder, p.structure_parent, p.templatefields
+    p.slug, p.datecreated, p.datechanged, p.datepublish, null, p.username, p.ownerid, p.status, p.title, p.parent, p.position, p.contacts, p.teaser, p.body, p.teaser_image, p.show_page, p.filelist_files, p.filelist_downloads, p.intro, p.hide_list, p.parents, p.listtitle, p.imagelist, p.hide_related, p.hide_related_section, p.structure_sortorder, p.structure_parent, p.templatefields
   FROM europeana_pro.bolt_pages p;
 
 
 -- research
-INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, secondary_mail, hide_list, filelist_files, filelist_downloads, hide_related, hide_related_section, listtitle, imagelist, liststyle, support_navigation, templatefields, structure_parent, structure_sortorder
+INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, hide_list, filelist_files, filelist_downloads, hide_related, hide_related_section, listtitle, imagelist, templatefields, structure_parent, structure_sortorder
 ) SELECT 'research', p.id,
-  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.intro, p.teaser, p.body, p.teaser_image, p.secondary_mail, p.hide_list, p.filelist_files, p.filelist_downloads, p.hide_related, p.hide_related_section, p.listtitle, p.imagelist, p.liststyle, p.support_navigation, p.templatefields, p.structure_parent, p.structure_sortorder
+  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.intro, p.teaser, p.body, p.teaser_image, p.hide_list, p.filelist_files, p.filelist_downloads, p.hide_related, p.hide_related_section, p.listtitle, p.imagelist, p.templatefields, p.structure_parent, p.structure_sortorder
 FROM europeana_research.bolt_pages p;
 
 -- collections to pages
-INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, secondary_mail, hide_list, filelist_files, filelist_downloads, hide_related, hide_related_section, listtitle, imagelist, liststyle, source, source_url, templatefields, structure_parent, structure_sortorder
+INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, hide_list, filelist_files, filelist_downloads, hide_related, hide_related_section, listtitle, imagelist, source, source_url, templatefields, structure_parent, structure_sortorder
 ) SELECT 'collections', r.id,
-    r.slug, r.datecreated, r.datechanged, r.datepublish, r.datedepublish, r.username, r.ownerid, r.status, r.title, r.intro, r.teaser, r.body, r.teaser_image, r.secondary_mail, r.hide_list, r.filelist_files, r.filelist_downloads, r.hide_related, r.hide_related_section, r.listtitle, r.imagelist, r.liststyle, r.source, r.source_url, r.templatefields, r.structure_parent, r.structure_sortorder
+    r.slug, r.datecreated, r.datechanged, r.datepublish, r.datedepublish, r.username, r.ownerid, r.status, r.title, r.intro, r.teaser, r.body, r.teaser_image, r.hide_list, r.filelist_files, r.filelist_downloads, r.hide_related, r.hide_related_section, r.listtitle, r.imagelist, r.source, r.source_url, r.templatefields, r.structure_parent, r.structure_sortorder
   FROM europeana_research.bolt_collections r;
 
 DROP TABLE IF EXISTS bolt_homepage;

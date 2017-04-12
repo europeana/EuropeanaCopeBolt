@@ -564,7 +564,7 @@ data:
       expanded: true
       default: "Data"
       label: "Data type"
-      values: [ "Data", "Tool", "Documentation", "API" ]
+      values: [ "Data", "Tool", "Showcase", "Documentation", "API" ]
       postfix: "Select if this record is a data, documentation, tool or API record"
     intro:
       type: html
