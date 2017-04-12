@@ -569,7 +569,7 @@ body {
     z-index: 2;
     position: relative; }
   body > header {
-    padding: 0; }
+    padding: 0 0.875rem; }
   body > main, body [role="main"] {
     position: relative; }
 
@@ -582,9 +582,6 @@ section > .inner-wrap {
   @media only screen and (min-width: 50em) {
     section > .inner-wrap {
       padding: 0 2rem; } }
-
-header {
-  padding: 0 0.875rem; }
 
 aside {
   background: #0f9; }
@@ -690,6 +687,32 @@ footer {
  * Description: _navigation.scss for website navigation, mobile-menu and search togglers and breadcrumb
  * Author:      Anke@twokings.nl
  */
+/*
+* CONTENTHEADER
+**/
+nav.quicklinks ul {
+  background-color: #69737C;
+  text-align: center; }
+  @media only screen and (min-width: 24em) {
+    nav.quicklinks ul {
+      text-align: left; } }
+
+nav.quicklinks li {
+  display: inline-block; }
+
+nav.quicklinks a {
+  display: block;
+  color: #fff;
+  padding: 1rem 0.5rem;
+  font-size: 0.875rem; }
+  @media only screen and (min-width: 24em) {
+    nav.quicklinks a {
+      font-size: 0.875rem;
+      padding: 1rem; } }
+
+/*
+* MAIN MENU
+**/
 nav.main-menu {
   position: absolute;
   width: 235px;
@@ -901,14 +924,40 @@ svg.icon {
 
 /**
  * File:        _forms.scss
- * Description: _forms.scss contains all form styles for makeitso 
- * Author:      Sebastiaan Bonardt - @_sebbon
+ * Description: _forms.scss contains all form styles for makeitso
  */
-input {
-  border: 1px solid #1a1a1a; }
+[type="email"],
+[type="number"],
+[type="tel"],
+[type="search"],
+[type="time"],
+[type="url"],
+[type="color"],
+textarea {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: .8rem 0.5rem;
+  font-size: 1rem;
+  margin: 0 0 1rem;
+  display: block; }
+
+form.searchform [type="search"] {
+  display: table-cell;
+  width: 300px; }
+
+form.searchform button {
+  display: table-cell;
+  margin-left: .2rem; }
+
+form button, form .button {
+  background-color: #293745;
+  border-radius: 5px;
+  color: #fff;
+  border: 0;
+  padding: 0.7em 0.8em; }
 
 /*
-* TOPBAR
+* HEADER
 **/
 header {
   position: relative; }
@@ -944,10 +993,11 @@ header {
   position: relative;
   padding-left: 1.5rem;
   margin: 0 auto;
-  width: 200px; }
+  width: 185px; }
   @media only screen and (min-width: 50em) {
     .mainlogo {
-      margin: 0 0; } }
+      margin: 0 0;
+      width: 225px; } }
 
 .version-flag {
   position: absolute;
@@ -957,7 +1007,10 @@ header {
   background-color: #D43900;
   text-transform: uppercase;
   padding: 0em .5em;
-  font-size: 0.75rem; }
+  font-size: 0.6875rem; }
+  @media only screen and (min-width: 24em) {
+    .version-flag {
+      font-size: 0.75rem; } }
 
 .payoff {
   color: #4d4d4d;

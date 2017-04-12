@@ -1,13 +1,47 @@
 /**
  * File:        _forms.scss
- * Description: _forms.scss contains all form styles for makeitso 
- * Author:      Sebastiaan Bonardt - @_sebbon
+ * Description: _forms.scss contains all form styles for makeitso
  */
+
+
+//input all
+
+[type="email"],
+[type="number"],
+[type="tel"],
+[type="search"],
+[type="time"],
+[type="url"],
+[type="color"],
+textarea {
+    border: 1px solid $line-gray;
+    border-radius: 5px;
+    padding: .8rem 0.5rem;
+    font-size: 1rem;
+    margin: 0 0 1rem;
+    display: block;
+}
+
+form.searchform {
+    [type="search"] {
+        display: table-cell;
+        width: 300px;
+    }
+
+    button {
+        display: table-cell;
+        margin-left: .2rem;
+    }
+}
 
 form {
 
-}
+    button, .button {
+        background-color: $dark-blue;
+        border-radius: 5px;
+        color: $white;
+        border: 0;
+        padding: 0.7em 0.8em;
+    }
 
-input {
-    border:1px solid $black;
 }

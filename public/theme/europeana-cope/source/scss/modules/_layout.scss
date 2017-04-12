@@ -39,7 +39,7 @@ body {
         position: relative;
     }
     > header {
-        padding:0;
+        padding: 0 0.875rem;
     }
     > main,[role="main"] {
         position: relative;
@@ -73,7 +73,6 @@ section {
 
 header {
     //background: #f60;
-    padding: 0 0.875rem;
 }
 
 main {

@@ -4,6 +4,45 @@
  * Author:      Anke@twokings.nl
  */
 
+
+/*
+* CONTENTHEADER
+**/
+
+nav.quicklinks {
+
+    ul {
+        background-color: $quicklinks-bar;
+        text-align: center;
+
+        @include respond-to (medium-screens) {
+            text-align: left;
+        }
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        color: $white;
+        padding: 1rem 0.5rem;
+        font-size: 0.875rem;
+
+        @include respond-to (medium-screens) {
+            font-size: 0.875rem;
+            padding: 1rem;
+        }
+    }
+}
+
+
+/*
+* MAIN MENU
+**/
+
+
 nav.main-menu {
     position: absolute;
     width: 235px;
@@ -14,9 +53,6 @@ nav.main-menu {
     @include respond-to(large-screens) {
         display: block; //check, medium or large?
     }
-
-
-
 
     ul {
         padding: 0 1.125rem 0 0.6875rem
