@@ -32,7 +32,7 @@ header {
             right: 0rem;
         }
 
-        @include respond-to(large-screens) {
+        @include respond-to(menu-full) {
             display: none;
         }
     }
@@ -43,7 +43,7 @@ header {
         top: 1rem;
         right: 0.875rem;
 
-        @include respond-to (large-screens) {
+        @include respond-to (menu-full) {
             display: block;
         }
     }
@@ -56,7 +56,7 @@ header {
     margin: 0 auto;
     width: 185px;
 
-    @include respond-to (large-screens) {
+    @include respond-to (menu-full) {
         margin: 0 0;
         width: 225px;
     }
@@ -82,7 +82,7 @@ header {
     font-size: 0.75rem;
     text-align: center;
 
-    @include respond-to (large-screens) {
+    @include respond-to (menu-full) {
         text-align: left;
         margin: -1.2rem 0 1.1rem 4rem; //visual heights to get layout as designed
     }
@@ -209,12 +209,16 @@ img.round {
 
 .label {
     display: inline-block;
-    font-size: 0.9375rem;
+    font-size: 0.75rem;
     color: $white;
     background: $baseFirstThemeColour;
     padding: 0 0.5rem;
     line-height: 1.6;
     margin: 0.75rem 0;
+
+    @include respond-to(medium-screens){
+        font-size: 0.9375rem;
+    }
 }
 
 
@@ -226,9 +230,14 @@ img.round {
 .banner,
 a.banner {
     display: block;
-    height: 20rem;
+    height: 16rem;
     position: relative;
-    margin: 1rem 0;
+    margin:  0;
+
+    @include respond-to(large-screens){
+        height: 20rem;
+        margin: 1rem 0;
+    }
 
     .colored-image {
         position: absolute;
@@ -247,12 +256,22 @@ a.banner {
         bottom: 0;
         color: $white;
         padding: 1rem;
-        left: 66.666%;
-        width: 33%;
+        left: 0;
+        width: 100%;
         text-shadow: 0px 0px 2px rgba($black, 0.5);
 
+        @include respond-to(large-screens){
+            left: 66.666%;
+            width: 33%;
+        }
+
         p {
-            font-size: 0.875rem;
+            font-size: 0.75rem;
+
+            @include respond-to(large-screens){
+                font-size: 0.875rem;
+            }
+
         }
     }
 
@@ -275,10 +294,14 @@ a.banner {
 .teaser-twocol {
 
     .img-container {
-        width: 50%;
+        width: 27.5%;
         float: left;
         position: relative;
         margin-right: .875rem;
+
+        @include respond-to(large-screens){
+            width: 50%;
+        }
     }
 
     .img-insert {
@@ -288,6 +311,11 @@ a.banner {
         top: 0;
         right: 0;
         background: $white;
+        display: none;
+
+        @include respond-to(large-screens){
+        display: block;
+        }
     }
 
     .label {
@@ -298,6 +326,22 @@ a.banner {
         margin: 0 0 .5rem;
     }
 
+    p.meta {
+        display: block;
+
+        @include respond-to(large-screens){
+            display: none;
+        }
+    }
+
+    a.readmore {
+        display: none;
+
+        @include respond-to(medium-screens){
+            display: block;
+        }
+    }
+
 
 }
 
@@ -306,27 +350,34 @@ a.banner {
 **/
 
 .calltoaction-readmore {
-    height: 55px;
-    position: relative;
-    text-align: center;
+    padding: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-to(large-screens){
+        height: 55px;
+    }
 
     .header-group {
-        position: absolute;
-        top: 0rem;
-        width: 80%;
-        left: 50%;
-        margin-left: -40%;
+        text-align: center;
+        width: 95%;
+
+        @include respond-to(medium-screens){
+            width: 80%;
+        }
     }
 
     p {
         display: inline-block;
         color: $white;
         font-size: 0.875rem;
-        margin-right: 1rem;
+        margin: 0.5rem 1rem 0.5rem 1rem;
     }
 
     .button-link {
         display: inline-block;
+        margin-top: 0;
     }
 
 }
@@ -397,14 +448,15 @@ a.banner {
     height: 200px;
     position: relative;
     margin: 1rem 0;
-    // display: flex;
-    // justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .header-group {
-        position: absolute;
-        bottom: 2.5rem;
-        left: 50%;
-        margin-left: -35%;
+        // position: absolute;
+        // bottom: 2.5rem;
+        // left: 50%;
+        // margin-left: -35%;
         color: $white;
         text-align: center;
         width: 70%;

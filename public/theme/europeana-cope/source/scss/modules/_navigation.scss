@@ -50,7 +50,7 @@ nav.main-menu {
     left:0;
     display: none;
 
-    @include respond-to(large-screens) {
+    @include respond-to(menu-full) {
         display: block; //check, medium or large?
     }
 

@@ -454,14 +454,14 @@ input {
 
 .up-to-large-screens {
   display: block; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 47.9375em) {
     .up-to-large-screens {
       display: none;
       visibility: hidden; } }
 
 .large-screens-up {
   display: none; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 47.9375em) {
     .large-screens-up {
       display: block; } }
 
@@ -573,13 +573,13 @@ body {
   body > main, body [role="main"] {
     position: relative; }
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 60em) {
   .canvas {
     padding-left: 235px; } }
 
 section > .inner-wrap {
   padding: 0 0rem; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 47.9375em) {
     section > .inner-wrap {
       padding: 0 2rem; } }
 
@@ -630,32 +630,32 @@ footer {
 .fourth {
   width: 50%;
   float: left; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 47.9375em) {
     .fourth {
       width: 25%; } }
 
 .third {
   width: 100%; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 47.9375em) {
     .third {
       float: left;
       width: 33.333%; } }
 
 .two-third {
   width: 100%; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 47.9375em) {
     .two-third {
       float: left;
       width: 66.6666%; } }
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 47.9375em) {
   .half {
     float: left;
     width: 50%; } }
 
 .footer-block {
   background-color: transparent !important; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 47.9375em) {
     .footer-block {
       float: left;
       width: 49%;
@@ -722,7 +722,7 @@ nav.main-menu {
   top: 95px;
   left: 0;
   display: none; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 60em) {
     nav.main-menu {
       display: block; } }
   nav.main-menu ul {
@@ -772,9 +772,12 @@ h2, .beta {
   font-size: 1.625rem; }
 
 h3, .gamma {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: .75rem;
   color: #4d4d4d; }
+  @media only screen and (min-width: 24em) {
+    h3, .gamma {
+      font-size: 1.5rem; } }
   h3 a, .gamma a {
     color: #095f90;
     text-decoration: none; }
@@ -818,18 +821,26 @@ h2.widget, h3.widget {
 
 section > h2,
 section .inner-wrap > h2 {
-  font-size: 1.625rem;
+  font-size: 1.125rem;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 2px;
   color: #4d4d4d;
   text-align: center;
   margin: 0 0 .4rem 0; }
+  @media only screen and (min-width: 24em) {
+    section > h2,
+    section .inner-wrap > h2 {
+      font-size: 1.625rem; } }
 
 section .inner-wrap > p {
   text-align: center;
   margin: 0 0 3rem 0;
-  letter-spacing: -.3px; }
+  letter-spacing: -.3px;
+  font-size: 0.875rem; }
+  @media only screen and (min-width: 24em) {
+    section .inner-wrap > p {
+      font-size: 1rem; } }
 
 ul {
   padding: 0;
@@ -904,18 +915,21 @@ a.readmore {
   a.readmore:hover, a.readmore:active, a.readmore:focus {
     color: #095f90; }
 
-p.meta span {
-  white-space: nowrap;
-  display: inline-block;
-  margin-right: 1rem; }
-
-p.meta span.caldate {
-  font-size: 0.875rem;
-  margin-top: 1rem; }
-
-p.meta svg {
-  fill: #777777;
-  margin-right: .2rem; }
+p.meta {
+  font-size: 0.75rem; }
+  @media only screen and (min-width: 47.9375em) {
+    p.meta {
+      font-size: 0.875rem; } }
+  p.meta span {
+    white-space: nowrap;
+    display: inline-block;
+    margin-right: 1rem; }
+  p.meta span.caldate {
+    font-size: 0.875rem;
+    margin-top: 1rem; }
+  p.meta svg {
+    fill: #777777;
+    margin-right: .2rem; }
 
 svg.icon {
   display: inline-block;
@@ -985,7 +999,7 @@ header {
       left: 0rem; }
     header button.toggle.search-toggle {
       right: 0rem; }
-    @media only screen and (min-width: 50em) {
+    @media only screen and (min-width: 60em) {
       header button.toggle {
         display: none; } }
   header form {
@@ -993,7 +1007,7 @@ header {
     position: absolute;
     top: 1rem;
     right: 0.875rem; }
-    @media only screen and (min-width: 50em) {
+    @media only screen and (min-width: 60em) {
       header form {
         display: block; } }
 
@@ -1002,7 +1016,7 @@ header {
   padding-left: 1.5rem;
   margin: 0 auto;
   width: 185px; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 60em) {
     .mainlogo {
       margin: 0 0;
       width: 225px; } }
@@ -1024,7 +1038,7 @@ header {
   color: #4d4d4d;
   font-size: 0.75rem;
   text-align: center; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 60em) {
     .payoff {
       text-align: left;
       margin: -1.2rem 0 1.1rem 4rem; } }
@@ -1036,7 +1050,7 @@ header {
   text-transform: uppercase;
   font-size: 0.75rem;
   margin: .5rem 0; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 47.9375em) {
     .highlight-bar h2 {
       font-weight: 400;
       font-size: 1rem;
@@ -1053,12 +1067,12 @@ header {
   margin-right: .25rem; }
   .highlight-bar li:last-child {
     margin-right: 0; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 47.9375em) {
     .highlight-bar li {
       width: 17rem;
       margin-top: 1rem; } }
 
-@media only screen and (min-width: 50em) {
+@media only screen and (min-width: 47.9375em) {
   .highlight-bar img {
     float: left;
     margin-right: 1rem; } }
@@ -1070,7 +1084,7 @@ header {
   font-size: 0.75rem;
   max-height: 112px;
   overflow: hidden; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 47.9375em) {
     .highlight-bar li a {
       font-size: 1rem; } }
 
@@ -1083,7 +1097,7 @@ header {
   position: absolute;
   top: 0;
   right: 0.875rem; }
-  @media only screen and (min-width: 50em) {
+  @media only screen and (min-width: 47.9375em) {
     .highlight-bar a.readmore {
       top: auto;
       bottom: 0; } }
@@ -1116,12 +1130,15 @@ img.round {
 
 .label {
   display: inline-block;
-  font-size: 0.9375rem;
+  font-size: 0.75rem;
   color: #fff;
   background: #E11D53;
   padding: 0 0.5rem;
   line-height: 1.6;
   margin: 0.75rem 0; }
+  @media only screen and (min-width: 24em) {
+    .label {
+      font-size: 0.9375rem; } }
 
 /*
 * WIDGET HERO BANNERS
@@ -1129,9 +1146,14 @@ img.round {
 .banner,
 a.banner {
   display: block;
-  height: 20rem;
+  height: 16rem;
   position: relative;
-  margin: 1rem 0; }
+  margin: 0; }
+  @media only screen and (min-width: 47.9375em) {
+    .banner,
+    a.banner {
+      height: 20rem;
+      margin: 1rem 0; } }
   .banner .colored-image,
   a.banner .colored-image {
     position: absolute;
@@ -1147,12 +1169,21 @@ a.banner {
     bottom: 0;
     color: #fff;
     padding: 1rem;
-    left: 66.666%;
-    width: 33%;
+    left: 0;
+    width: 100%;
     text-shadow: 0px 0px 2px rgba(26, 26, 26, 0.5); }
+    @media only screen and (min-width: 47.9375em) {
+      .banner .header-group,
+      a.banner .header-group {
+        left: 66.666%;
+        width: 33%; } }
     .banner .header-group p,
     a.banner .header-group p {
-      font-size: 0.875rem; }
+      font-size: 0.75rem; }
+      @media only screen and (min-width: 47.9375em) {
+        .banner .header-group p,
+        a.banner .header-group p {
+          font-size: 0.875rem; } }
   .banner.third .header-group,
   a.banner.third .header-group {
     left: 0;
@@ -1165,10 +1196,13 @@ a.banner {
 * WIDGET TWO COLUMN TEASERS / NEWS
 **/
 .teaser-twocol .img-container {
-  width: 50%;
+  width: 27.5%;
   float: left;
   position: relative;
   margin-right: .875rem; }
+  @media only screen and (min-width: 47.9375em) {
+    .teaser-twocol .img-container {
+      width: 50%; } }
 
 .teaser-twocol .img-insert {
   position: absolute;
@@ -1176,7 +1210,11 @@ a.banner {
   margin: 0;
   top: 0;
   right: 0;
-  background: #fff; }
+  background: #fff;
+  display: none; }
+  @media only screen and (min-width: 47.9375em) {
+    .teaser-twocol .img-insert {
+      display: block; } }
 
 .teaser-twocol .label {
   margin: 0 0 0.75rem 0; }
@@ -1184,26 +1222,43 @@ a.banner {
 .teaser-twocol p {
   margin: 0 0 .5rem; }
 
+.teaser-twocol p.meta {
+  display: block; }
+  @media only screen and (min-width: 47.9375em) {
+    .teaser-twocol p.meta {
+      display: none; } }
+
+.teaser-twocol a.readmore {
+  display: none; }
+  @media only screen and (min-width: 24em) {
+    .teaser-twocol a.readmore {
+      display: block; } }
+
 /*
 * WIDGET CALL TO ACTION - READ MORE (hoort bij bovestaande NEWS)
 **/
 .calltoaction-readmore {
-  height: 55px;
-  position: relative;
-  text-align: center; }
+  padding: .75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (min-width: 47.9375em) {
+    .calltoaction-readmore {
+      height: 55px; } }
   .calltoaction-readmore .header-group {
-    position: absolute;
-    top: 0rem;
-    width: 80%;
-    left: 50%;
-    margin-left: -40%; }
+    text-align: center;
+    width: 95%; }
+    @media only screen and (min-width: 24em) {
+      .calltoaction-readmore .header-group {
+        width: 80%; } }
   .calltoaction-readmore p {
     display: inline-block;
     color: #fff;
     font-size: 0.875rem;
-    margin-right: 1rem; }
+    margin: 0.5rem 1rem 0.5rem 1rem; }
   .calltoaction-readmore .button-link {
-    display: inline-block; }
+    display: inline-block;
+    margin-top: 0; }
 
 /*
 * WIDGET THREE COLUMN TEASERS / SEMI STATIC CONTENT
@@ -1244,12 +1299,11 @@ a.banner {
 .calltoaction {
   height: 200px;
   position: relative;
-  margin: 1rem 0; }
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .calltoaction .header-group {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    margin-left: -35%;
     color: #fff;
     text-align: center;
     width: 70%; }

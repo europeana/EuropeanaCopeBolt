@@ -54,7 +54,7 @@ $quicklinks-bar:         #69737C;
 // $break-midmobile: 400;
 $break-small: 100;
 $break-medium: 384;
-$break-large: 800;
+$break-large: 767;
 $break-xlarge: 1280;
 $break-wide: 1440;
 $break-xwide: 1600;
@@ -62,8 +62,8 @@ $break-xwide: 1600;
 // $break-r-u-insane: 1840;
 
 /* seperate menu breakpoints */
-$break-menumedium: 744; //46,5 rem, full menu + collapsed search
-$break-menufull: 984; //61,5 rem, full menu + full search
+$break-menumedium: 744; //not used
+$break-menufull: 960; // full menu
 
 $site-max-width:76rem; // 1216px
 

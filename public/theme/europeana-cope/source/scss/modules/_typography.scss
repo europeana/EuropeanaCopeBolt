@@ -34,12 +34,17 @@ h1, .alpha {
 h2, .beta {
     font-size: 1.625rem;
 
+
 }
 
 h3, .gamma {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: .75rem; // taken from height in teaser-twocol. Als nodog, mag deze aangepast.
     color: $medium-gray;
+
+    @include respond-to (medium-screens) {
+        font-size: 1.5rem;
+    }
 
     a {
         color: $link-blue;
@@ -101,13 +106,17 @@ h2.widget, h3.widget { //HEADERS IN BANNERS / CALL TO ACTIONS
 section {
     > h2, //temp
     .inner-wrap > h2 {
-        font-size: 1.625rem;
+        font-size: 1.125rem;
         text-transform: uppercase;
         font-weight: 400;
         letter-spacing: 2px;
         color: $medium-gray;
         text-align: center;
-        margin: 0 0 .4rem 0
+        margin: 0 0 .4rem 0;
+
+        @include respond-to (medium-screens) {
+            font-size: 1.625rem;
+        }
 
     }
 
@@ -115,6 +124,11 @@ section {
         text-align: center;
         margin: 0 0 3rem 0;
         letter-spacing: -.3px;
+        font-size: 0.875rem; // Carlos wants 0.75rem, 2K Think that's too small.
+
+        @include respond-to (medium-screens) {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -227,6 +241,11 @@ a.readmore {
 }
 
 p.meta {
+    font-size: 0.75rem;
+
+    @include respond-to(large-screens) {
+        font-size: 0.875rem;
+    }
 
     span {
         white-space: nowrap;
