@@ -939,15 +939,20 @@ textarea {
   padding: .8rem 0.5rem;
   font-size: 1rem;
   margin: 0 0 1rem;
-  display: block; }
+  display: block;
+  -webkit-appearance: none; }
 
 form.searchform [type="search"] {
-  display: table-cell;
-  width: 300px; }
+  display: inline-block;
+  width: 300px;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  margin: 0; }
 
 form.searchform button {
-  display: table-cell;
-  margin-left: .2rem; }
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle; }
 
 form button, form .button {
   background-color: #293745;
