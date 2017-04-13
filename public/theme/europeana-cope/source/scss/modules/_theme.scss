@@ -175,8 +175,39 @@ header {
 * FOOTER
 **/
 
+footer {
+    .logo-small {
+        width: 80px;
+        display: inline-block;
+        margin-right: 1rem;
+
+        @include respond-to (medium-screens){
+            width: 128px;
+            display: block;
+            margin-bottom: 1rem;
+        }
+    }
+
+    address {
+        display: inline-block;
+    }
+}
+
 .sub-footer {
     border-top: 1px solid $line-gray;
+}
+
+.footer-block-address {
+    margin-bottom: 2rem;
+
+    >* {
+        vertical-align: middle;
+    }
+}
+
+.footer-block-mission {
+    margin-bottom: 2rem;
+
 }
 
 /*
@@ -324,6 +355,11 @@ a.banner {
 
     p {
         margin: 0 0 .5rem;
+        font-size: 0.875rem;
+
+        @include respond-to(medium-screens){
+            font-size: 1rem;
+        }
     }
 
     p.meta {
@@ -392,6 +428,11 @@ a.banner {
 
     p {
         margin: 0 0 .5rem;
+        font-size: 0.875rem;
+
+        @include respond-to(medium-screens){
+            font-size: 1rem;
+        }
     }
 }
 
@@ -424,6 +465,14 @@ a.banner {
     &:nth-of-type(3){
         border-right: 0px;
     }
+
+    p {
+        font-size: 0.875rem;
+
+        @include respond-to(medium-screens){
+            font-size: 1rem;
+        }
+    }
 }
 
 
@@ -453,10 +502,6 @@ a.banner {
     align-items: center;
 
     .header-group {
-        // position: absolute;
-        // bottom: 2.5rem;
-        // left: 50%;
-        // margin-left: -35%;
         color: $white;
         text-align: center;
         width: 70%;
@@ -545,14 +590,25 @@ a.button, .button, button {
 
 .button-link {
     border: 3px solid $dark-blue;
-    display: inline-block;
+    display: block;
     margin: .75rem auto 0 auto;
-    font-size: 0.875rem;
+    width: 115px; // centering needs fixed width. Can be adjusted.
+    text-align: center;
+    font-size: 0.75rem;
     padding: .3em 1em;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: -.3px;
     color: $dark-blue;
+
+
+    @include respond-to(medium-screens){
+        margin: .75rem auto 0 auto;
+        width: auto;
+        display: inline-block;
+        font-size: 0.875rem;
+
+    }
 
     &:hover, &:active, &:focus {
         background-color: $dark-blue;

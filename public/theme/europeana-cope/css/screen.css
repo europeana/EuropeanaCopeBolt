@@ -26,6 +26,42 @@
 /**
 *   Helper
 */
+footer:after {
+  content: "content";
+  display: block;
+  height: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px; }
+
+@media only screen and (min-width: 6.25em) {
+  footer:after {
+    content: "small-screens";
+    background-color: #0f9; } }
+
+@media only screen and (min-width: 24em) {
+  footer:after {
+    content: "medium-screens";
+    background-color: #f06; } }
+
+@media only screen and (min-width: 47.9375em) {
+  footer:after {
+    content: "large-screens";
+    background-color: #90f; } }
+
+@media only screen and (min-width: 80em) {
+  footer:after {
+    content: "xlarge-screens";
+    background-color: #903; } }
+
+@media only screen and (min-width: 90em) {
+  footer:after {
+    content: "wide-screens";
+    background-color: #906; } }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -592,7 +628,10 @@ aside {
 footer {
   background: #e7e7e7;
   border-top: 6px solid #293745;
-  padding-top: 4.75rem; }
+  padding-top: 2rem; }
+  @media only screen and (min-width: 47.9375em) {
+    footer {
+      padding-top: 4.75rem; } }
 
 .inner-wrap {
   margin: 0 auto;
@@ -654,36 +693,38 @@ footer {
     width: 50%; } }
 
 .footer-block {
-  background-color: transparent !important; }
+  background-color: transparent !important;
+  float: left;
+  margin-left: 1%; }
+  .footer-block:first-child {
+    margin-left: 0; }
   @media only screen and (min-width: 47.9375em) {
-    .footer-block {
-      float: left;
-      width: 49%;
-      padding: 0.5%;
-      margin-left: 1%;
-      margin-right: 1%; }
-      .footer-block:first-child {
-        margin-left: 0; }
-        .footer-block:first-child + .footer-block {
-          margin-right: 0; }
-        .footer-block:first-child + .footer-block + .footer-block {
-          margin-left: 0;
-          margin-right: 0;
-          width: 100%; } }
+    .footer-block.footer-block-address {
+      width: 39%; } }
   @media only screen and (min-width: 80em) {
-    .footer-block {
-      width: 32%; }
-      .footer-block:first-child {
-        margin-left: 0; }
-        .footer-block:first-child + .footer-block {
-          margin-right: 1%; }
-        .footer-block:first-child + .footer-block + .footer-block {
-          margin: 0 0 0 1%;
-          width: 32%; } }
+    .footer-block.footer-block-address {
+      width: 24%; } }
+  @media only screen and (min-width: 47.9375em) {
+    .footer-block.footer-block-mission {
+      width: 59%; } }
+  @media only screen and (min-width: 80em) {
+    .footer-block.footer-block-mission {
+      width: 40%; } }
+  .footer-block.footer-block-socials {
+    width: 100%; }
+    @media only screen and (min-width: 47.9375em) {
+      .footer-block.footer-block-socials {
+        width: 59%; } }
+    @media only screen and (min-width: 80em) {
+      .footer-block.footer-block-socials {
+        width: 32.333%; } }
 
 .sub-footer {
   padding: 2rem 0 0 0;
-  margin: 9.5rem 0 0 0; }
+  margin: 3.5rem 0 0 0; }
+  @media only screen and (min-width: 47.9375em) {
+    .sub-footer {
+      margin: 9.5rem 0 0 0; } }
 
 /**
  * File:        _navigation.scss
@@ -787,16 +828,26 @@ h3, .gamma {
   .teaser-threecol h3,
   .catstream-threecol h3, .teaser-threecol .gamma,
   .catstream-threecol .gamma {
-    font-size: 1.375rem;
+    font-size: 1rem;
     margin: .75rem 0 0.5rem; }
+    @media only screen and (min-width: 24em) {
+      .teaser-threecol h3,
+      .catstream-threecol h3, .teaser-threecol .gamma,
+      .catstream-threecol .gamma {
+        font-size: 1.375rem; } }
   .icon-threecol h3,
   .thumblink-fourcol h3, .icon-threecol .gamma,
   .thumblink-fourcol .gamma {
     text-transform: uppercase;
     font-weight: 400;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #293745; }
+    @media only screen and (min-width: 24em) {
+      .icon-threecol h3,
+      .thumblink-fourcol h3, .icon-threecol .gamma,
+      .thumblink-fourcol .gamma {
+        font-size: 1.25rem; } }
   .calltoaction h3, .calltoaction .gamma {
     margin-bottom: .5rem; }
 
@@ -805,9 +856,12 @@ h4, .delta {
   color: #777777;
   margin-bottom: 0.8rem; }
   footer h4, footer .delta {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: #777777;
     text-transform: uppercase; }
+    @media only screen and (min-width: 24em) {
+      footer h4, footer .delta {
+        font-size: 0.875rem; } }
 
 h5 {
   font-size: 1rem; }
@@ -878,7 +932,6 @@ address {
   font-family: "Open Sans", Arial, Sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 0.875rem;
   line-height: 1.6; }
 
 footer {
@@ -890,15 +943,26 @@ footer {
   color: #1a1a1a; }
 
 .footer-block-mission p {
-  font-size: 1.0625rem;
+  font-size: 0.875rem;
   font-style: italic; }
+  @media only screen and (min-width: 24em) {
+    .footer-block-mission p {
+      font-size: 1.0625rem; } }
 
-.footer-block-socials a {
-  font-size: 3rem;
-  font-style: italic;
-  line-height: 1.6;
-  color: #293745;
-  text-decoration: none; }
+.footer-block-socials {
+  text-align: center; }
+  @media only screen and (min-width: 47.9375em) {
+    .footer-block-socials {
+      text-align: left; } }
+  .footer-block-socials a {
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #293745;
+    text-decoration: none; }
+    @media only screen and (min-width: 24em) {
+      .footer-block-socials a {
+        font-size: 3rem; } }
 
 .teaser-twocol .img-insert {
   font-size: .75rem;
@@ -1105,8 +1169,29 @@ header {
 /*
 * FOOTER
 **/
+footer .logo-small {
+  width: 80px;
+  display: inline-block;
+  margin-right: 1rem; }
+  @media only screen and (min-width: 24em) {
+    footer .logo-small {
+      width: 128px;
+      display: block;
+      margin-bottom: 1rem; } }
+
+footer address {
+  display: inline-block; }
+
 .sub-footer {
   border-top: 1px solid #cccccc; }
+
+.footer-block-address {
+  margin-bottom: 2rem; }
+  .footer-block-address > * {
+    vertical-align: middle; }
+
+.footer-block-mission {
+  margin-bottom: 2rem; }
 
 /*
 * WIDGET ELEMENTEN
@@ -1220,7 +1305,11 @@ a.banner {
   margin: 0 0 0.75rem 0; }
 
 .teaser-twocol p {
-  margin: 0 0 .5rem; }
+  margin: 0 0 .5rem;
+  font-size: 0.875rem; }
+  @media only screen and (min-width: 24em) {
+    .teaser-twocol p {
+      font-size: 1rem; } }
 
 .teaser-twocol p.meta {
   display: block; }
@@ -1264,7 +1353,11 @@ a.banner {
 * WIDGET THREE COLUMN TEASERS / SEMI STATIC CONTENT
 **/
 .teaser-threecol p {
-  margin: 0 0 .5rem; }
+  margin: 0 0 .5rem;
+  font-size: 0.875rem; }
+  @media only screen and (min-width: 24em) {
+    .teaser-threecol p {
+      font-size: 1rem; } }
 
 /*
 * WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS v1
@@ -1284,6 +1377,11 @@ a.banner {
     border-left: 0px; }
   .catstream-threecol:nth-of-type(3) {
     border-right: 0px; }
+  .catstream-threecol p {
+    font-size: 0.875rem; }
+    @media only screen and (min-width: 24em) {
+      .catstream-threecol p {
+        font-size: 1rem; } }
 
 /*
 * WIDGET FOUR COLUMN THUMBNAILED LINKS
@@ -1367,14 +1465,22 @@ a.button, .button, button {
 
 .button-link {
   border: 3px solid #293745;
-  display: inline-block;
+  display: block;
   margin: .75rem auto 0 auto;
-  font-size: 0.875rem;
+  width: 115px;
+  text-align: center;
+  font-size: 0.75rem;
   padding: .3em 1em;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: -.3px;
   color: #293745; }
+  @media only screen and (min-width: 24em) {
+    .button-link {
+      margin: .75rem auto 0 auto;
+      width: auto;
+      display: inline-block;
+      font-size: 0.875rem; } }
   .button-link:hover, .button-link:active, .button-link:focus {
     background-color: #293745;
     color: #fff;

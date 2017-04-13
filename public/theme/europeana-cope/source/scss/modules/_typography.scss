@@ -58,8 +58,12 @@ h3, .gamma {
 
     .teaser-threecol &,
     .catstream-threecol & {
-        font-size: 1.375rem;
+        font-size: 1rem;
         margin: .75rem 0 0.5rem; //optically even
+
+        @include respond-to (medium-screens) {
+            font-size: 1.375rem;
+        }
     }
 
     .icon-threecol &,
@@ -67,8 +71,12 @@ h3, .gamma {
         text-transform: uppercase;
         font-weight: 400;
         text-align: center;
-        font-size: 1.25rem;
+        font-size: 1rem;
         color: $dark-blue;
+
+        @include respond-to (medium-screens) {
+            font-size: 1.25rem;
+        }
     }
 
     .calltoaction & {
@@ -85,9 +93,13 @@ h4, .delta {
     margin-bottom: 0.8rem;
 
     footer & {
-        font-size: 0.875rem;
+        font-size: 0.75rem;
         color: $light-gray;
         text-transform: uppercase;
+
+        @include respond-to (medium-screens) {
+            font-size: 0.875rem;
+        }
     }
 }
 
@@ -185,8 +197,12 @@ address {
     font-family: $base-font-family;
     font-style: normal;
     font-weight: 400;
-    font-size: 0.875rem;
+    //font-size: 0.75rem;
     line-height: 1.6;
+
+    // @include respond-to (medium-screens) {
+    //     font-size: 0.875rem;
+    // }
 }
 
 footer {
@@ -199,18 +215,33 @@ footer {
 }
 
 .footer-block-mission p {
-    font-size: 1.0625rem;
+
+    font-size: 0.875rem;
     font-style: italic;
+
+    @include respond-to (medium-screens) {
+        font-size: 1.0625rem;
+    }
 }
 
 .footer-block-socials {
+    text-align: center;
+
+    @include respond-to (large-screens) {
+        text-align: left;
+    }
+
 
     a {
-        font-size: 3rem;
+        font-size: 2rem;
         font-style: italic;
         line-height: 1.6;
         color: $dark-blue;
         text-decoration: none;
+
+        @include respond-to (medium-screens) {
+            font-size: 3rem;
+        }
     }
 
 }
@@ -263,63 +294,6 @@ p.meta {
         margin-right: .2rem;
     }
 }
-
-
-// .btn {
-//     // padding: 0.25em 0.5em;
-//     background-color: $baseFirstThemeColour;
-//     border:0 solid $black;
-//     display:block;
-//     // margin-bottom:1.5em;
-//     &:link, &:visited {
-//         color:$white;
-//         text-decoration:none;
-
-//         .btn__subtext {
-//             text-decoration:none;
-//         }
-//     }
-//     &:hover, &:active, &:focus {
-//         text-decoration:underline;
-//         // background-color: darken($baseFirstThemeColour, 5%);
-//     }
-// }
-
-// a, a:link, a:visited {
-//     transition: all 80ms linear;
-//     color:$baseLinkColour;
-// }
-
-// a:hover, a:active, a:focus {
-//     text-decoration:none;
-// }
-
-
-// main, footer {
-//     p, ul, ol, dl, pre, cite, blockquote, table {
-//         margin:0 0 1.5em 0;
-//         font-size: 1;
-//         @include respond-to(wide-screens) {
-//             font-size: 1.125rem;
-//         }
-//     }
-//     .introduction{
-//         p, ul, ol, dl, pre, cite, blockquote, table {
-//             font-size: 1.125rem;
-//             @include respond-to(wide-screens) {
-//                 font-size: 1.125rem;
-//             }
-//         }
-//     }
-
-//     li ol, li ul {
-//         margin-top:0.5em;
-//     }
-//     ol ol li:last-child {
-//         margin-bottom:0;
-//     }
-// }
-
 
 
 svg.icon {
