@@ -157,9 +157,9 @@ INSERT INTO europeana_cope.bolt_data ( subsite, subsite_id, slug, datecreated, d
     a.slug, a.datecreated, a.datechanged, a.datepublish, a.datedepublish, a.username, a.ownerid, a.status, a.title, a.intro, a.teaser, a.body, a.image, a.link1, a.link2, a.link3, a.contact_name, a.contact_email, a.contact_website, a.templatefields, a.hero
   FROM europeana_labs.bolt_apps a;
 
-INSERT INTO europeana_cope.bolt_data ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, files, link1, link2, link3, structure_sortorder, templatefields, structure_parent
+INSERT INTO europeana_cope.bolt_data ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, files, link1, link2, link3, templatefields
 ) SELECT 'api', a.id,
-    a.slug, a.datecreated, a.datechanged, a.datepublish, a.datedepublish, a.username, a.ownerid, a.status, a.title, a.intro, a.teaser, a.body, a.files, a.link1, a.link2, a.link3, a.structure_sortorder, a.templatefields, a.structure_parent
+    a.slug, a.datecreated, a.datechanged, a.datepublish, a.datedepublish, a.username, a.ownerid, a.status, a.title, a.intro, a.teaser, a.body, a.files, a.link1, a.link2, a.link3, a.templatefields
 FROM europeana_labs.bolt_api a;
 
 -- people and places --
