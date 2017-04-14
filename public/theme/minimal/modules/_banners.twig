@@ -5,11 +5,17 @@ Available variables
     'body':      body of the module
     'records':   array of (selected) records that belong to the module
 #}
+<section class="group">
 {% for record in records %}
     {% if record.id is defined %}
         <a class="banner" href="#">
+            {% if record.image is not empty %}
             <div class="colored-image"
                  style="background-image: url({{ image(record.image, 1800, 400)|default('https://unsplash.it/1800/400') }})"></div>
+            {% else %}
+                <div class="colored-image"
+                     style="background-image: url('https://unsplash.it/1800/400')"></div>
+            {% endif %}
             <div class="header-group">
                 <h3 class="widget">{{ record.title }}</h3>
                 {{ record.intro }}
@@ -17,3 +23,4 @@ Available variables
         </a>
     {% endif %}
 {% endfor %}
+</section>
