@@ -5,7 +5,7 @@
 
     {% if record.image %}
     <a href="{{ image(record.image) }}">
-        <img src="{{  image(record.image, 740, 560)|default('https://unsplash.it/740/560') }}" />
+        <img src="{{ image(record.image, 740, 560)|default('https://unsplash.it/740/560') }}" />
     </a>
     {% endif %}
 
@@ -17,7 +17,7 @@
     {% endfor %}
 
     <!-- load other fields if any are available -->
-    {{ fields(common = false, extended = false, repeaters = false) }}
+    {{ fields(common = false, extended = true, repeaters = false) }}
 
     <!-- show a footer -->
     {{ include('partials/_record_footer.twig', { 'record': record, 'extended': true }) }}

@@ -10,7 +10,7 @@
         {% else %}
             <p>{{ record.excerpt(300, false, search|default('')) }}</p>
         {% endif %}
-        <a class="button-link" href="{{ record.link }}">
+        <a class="button-link" href="{{ record.htmllink|default(record.link)|default('#') }}">
             Learn more
         </a>
     </div>

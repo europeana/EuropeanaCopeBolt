@@ -4,10 +4,10 @@
     <h3>{{ record.title }}</h3>
 
     {# display something introduction-like.. #}
-    {% if record.introduction %}
-        {{ record.introduction }}
-    {% elseif record.teaser %}
+    {% if record.teaser %}
         {{ record.teaser }}
+    {% elseif record.intro %}
+        {{ record.intro }}
     {% else %}
         <p>{{ record.excerpt(300, false, search|default('')) }}</p>
     {% endif %}
