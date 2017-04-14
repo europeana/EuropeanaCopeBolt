@@ -254,34 +254,42 @@ landingpages:
         title:
           type: text
           label: Title (optional)
-          info: "If this field is set the title will be shown as title for the block, if no title is set the block will not have a title either."
-          placeholder: If the block has a title you can enter it here
+          info: The title will be shown as title for the block, if the title is empty the block will not have a title either
+          placeholder: Optional block title
+          variant: inline
+        subtitle:
+          type: text
+          label: Subtitle (optional)
+          info: The subtitle is may be one short line of text
+          placeholder: Optional short subtitle
+          variant: inline
         templates:
           type: select
           default: teasers
-          info: "The template selects the kind of display this block uses"
+          info: Use the template to select how the module will look
+          postfix: Use the template to select how the module will look
           values:
-            titles: "Title with a link"
-            teasers: "Teaser view"
-            listing: "Listing of records"
-            listingexpander: "Expander block with records - vertical accordeon"
-            listingnews: "Two news postings and a link to more."
-            listingpersons: "Person listing"
-            listingevents: "Event listing"
-            listingsemistatic: "Three static intro items"
-            listingstreamers: "Three column category streamers"
-            listingfaces: "Round images or photos with a link"
-            listingthumbnails: "Four columns with round thumbnailed links"
-            details: "Full record details (recommended only for single items)"
-            banners: "Banner view (one or two items)"
-            breakers: "Section breakers, call to action (one or two items)"
-            calltoactionform: "Call to action form main page (one item)"
-            calltoactionlink: "Call to action button main page (one item)"
-            calltoactionblog: "Call to action blog page (one item)"
-            filecontent: "File content block"
-            fileslisting: "File list block"
-            body: Show only the module body field
-            hidden: Hidden block (for custom scripting)
+            titles:           "Title with a link (_titles.twig)"
+            teasers:          "Teaser view (_teasers.twig)"
+            listing:          "Listing of records (_listing.twig)"
+            #listingexpander:  "Expander block with records - vertical accordeon (_listingexpander.twig)"
+            #listingnews:      "News postings and a link to more (_listingnews.twig)"
+            #listingpersons:   "Person listing (_listingpersons.twig)"
+            #listingevents:    "Event listing (_listingevents.twig)"
+            #listingsemistatic: "Three static intro items (_listingsemistatic.twig)"
+            #listingstreamers: "Three column category streamers (_listingstreamers.twig)"
+            #listingfaces:     "Round images or photos with a link (_listingfaces.twig)"
+            #listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
+            details:          "Full details for single items (_details.twig)"
+            banners:          "Banner view (_banners.twig)"
+            #breakers:         "Section breakers, call to action (_breakers.twig)"
+            calltoactionform: "Call to action form main page  (_calltoactionform.twig)"
+            calltoactionlink: "Call to action button main page (_calltoactionlinks.twig)"
+            calltoactionblog: "Call to action blog page  (_calltoactionblog.twig)"
+            #filecontent:      "File content block (_filecontent.twig)"
+            #fileslisting:     "File list block (_fileslisting.twig)"
+            body:             "Show only the module body field  (_body.twig)"
+            hidden:           "Hidden block for custom scripting (_hidden.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -290,7 +298,8 @@ landingpages:
         ordering:
           type: select
           default: latest
-          info: "The ordering is for the templates where a list is selected"
+          info: Use the ordering to select how the module will load records
+          postfix: Use the ordering to select how the module will load records
           values:
             latest: The newest records first
             current: Currently relevant (based on start and end date)
@@ -301,7 +310,8 @@ landingpages:
         sources:
           type: select
           default: posts
-          info: "What contenttype should be used as source for this block"
+          info: Use this to select what contenttype the module will load
+          postfix: Use this to select what contenttype the module will load
           values:
             pages: Pages, Listings, Landingpages, Structures and Collections
             persons: Persons
@@ -383,12 +393,14 @@ landingpages:
           type: text
           label: DOM ID
           variant: inline
-          info: "If this field is set the id will be used in the HTML for styling"
+          placeholder: If you need to add a custom css ID you can enter that here
+          info: If you need to add a custom css ID you can enter that here
         override_css_class:
           type: text
           label: CSS Class
           variant: inline
-          info: "If this field is set the classname will be used in the HTML for styling"
+          placeholder: If you need to add custom css classes you can enter them here
+          info: If you need to add custom css classes you can enter them here
       group: Main
     pagefooter:
       type: html
