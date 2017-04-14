@@ -254,7 +254,6 @@ landingpages:
             #filecontent:      "File content block (_filecontent.twig)"
             #fileslisting:     "File list block (_fileslisting.twig)"
             body:             "Show only the module body field  (_body.twig)"
-            hidden:           "Hidden block for custom scripting (_hidden.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -266,10 +265,12 @@ landingpages:
           info: Use the ordering to select how the module will load records
           postfix: Use the ordering to select how the module will load records
           values:
+            specified: Select some records below
             latest: The newest records first
             current: Currently relevant (based on start and end date)
+            tagged: Records based on on a certain tag
+            category: Records based on on a certain category
             alphabetical: Alphabetically ordered
-            specified: Select some records below
             highlighted: Records based on highlighted flag
             random: A number of random records
         sources:
