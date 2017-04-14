@@ -669,6 +669,14 @@ events:
   singular_name: Event
   fields:
     <<: *record_defaults
+    location_name:
+      type: text
+      required: true
+      label: "Location Name"
+    geolocation:
+      type: geolocation
+      required: true
+      label: "Location Place"
     <<: *teaser_defaults
     start_event:
       type: datetime
@@ -687,10 +695,6 @@ events:
       type: checkbox
       required: false
       label: "Unconfirmed"
-    geolocation:
-      type: geolocation
-      required: true
-      label: "Location"
     <<: *media_defaults
     <<: *structure_defaults
     <<: *support_defaults
@@ -1064,34 +1068,6 @@ persons:
   <<: *all_relations
   icon_many: "fa:users"
   icon_one: "fa:user"
-
-#################################
-#
-# LOCATIONS
-#
-#################################
-locations:
-  name: Locations
-  singular_name: Location
-  fields:
-    <<: *record_defaults
-    geolocation:
-      type: geolocation
-      required: true
-      label: "Location (required)"
-      group: "Location"
-    europeana_place:
-      type: checkbox
-      prefix: "<hr>"
-      required: false
-      label: "This is a Europeana place of work"
-    europeana_office:
-      type: checkbox
-      required: false
-      label: "This is the main Europeana office (appear in footer)"
-  icon_many: "fa:map-marker"
-  icon_one: "fa:map-marker"
-  show_in_menu: System
 
 #################################
 #

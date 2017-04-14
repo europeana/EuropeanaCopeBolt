@@ -269,46 +269,6 @@ INSERT INTO europeana_cope.bolt_persons ( subsite, subsite_id, slug, datecreated
   p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.first_name, p.last_name, p.company, p.company_url, p.job_title, p.department, p.team, p.introduction, p.image, p.email, p.secondary_email, p.telephone_number, p.other_number, p.linkedin, p.twitter, p.skype, p.other_links_1, p.other_links_2, p.other_links_3, p.contact_blogpost, p.contact_event, p.contact_job, p.contact_person, p.contact_publication, p.contact_pressrelease, p.contact_taskforce, p.contact_tag, p.contact_collection, p.templatefields, p.structure_parent, p.structure_sortorder
 FROM europeana_research.bolt_persons p;
 
-
-DROP TABLE IF EXISTS bolt_locations;
-CREATE TABLE IF NOT EXISTS bolt_locations (
-  id int(11) NOT NULL AUTO_INCREMENT, # all
-  slug varchar(128) NOT NULL DEFAULT '', # all
-  datecreated datetime NOT NULL, # all
-  datechanged datetime NOT NULL, # all
-  datepublish datetime DEFAULT NULL, # all
-  datedepublish datetime DEFAULT NULL, # all
-  username varchar(32) DEFAULT '', # all
-  ownerid int(11) DEFAULT NULL, # all
-  status varchar(32) NOT NULL DEFAULT '', # all
-  subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
-  subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  europeana_office tinyint(1) NOT NULL DEFAULT 0, # labs # pro # research
-  europeana_place tinyint(1) NOT NULL DEFAULT 0, # labs # pro # research
-  geolocation longtext NULL, # labs # pro # research
-  templatefields longtext NULL, # labs # pro # research
-  title varchar(256) NOT NULL DEFAULT '', # labs # pro # research
-  PRIMARY KEY (id)
-);
-
--- labs
-INSERT INTO europeana_cope.bolt_locations ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, geolocation, europeana_place, europeana_office, templatefields
-) SELECT 'labs', l.id,
-  l.slug, l.datecreated, l.datechanged, l.datepublish, l.datedepublish, l.username, l.ownerid, l.status, l.title, l.geolocation, l.europeana_place, l.europeana_office, l.templatefields
-FROM europeana_labs.bolt_locations l;
-
--- pro
-INSERT INTO europeana_cope.bolt_locations ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, geolocation, europeana_place, europeana_office, templatefields
-) SELECT 'pro', l.id,
-  l.slug, l.datecreated, l.datechanged, l.datepublish, l.datedepublish, l.username, l.ownerid, l.status, l.title, l.geolocation, l.europeana_place, l.europeana_office, l.templatefields
-FROM europeana_pro.bolt_locations l;
-
--- research
-INSERT INTO europeana_cope.bolt_locations ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, geolocation, europeana_place, europeana_office, templatefields
-) SELECT 'research', l.id,
-  l.slug, l.datecreated, l.datechanged, l.datepublish, l.datedepublish, l.username, l.ownerid, l.status, l.title, l.geolocation, l.europeana_place, l.europeana_office, l.templatefields
-FROM europeana_research.bolt_locations l;
-
 -- dynamic and timed content --
 
 DROP TABLE IF EXISTS bolt_posts;
@@ -406,20 +366,27 @@ CREATE TABLE IF NOT EXISTS bolt_events (
   title varchar(256) DEFAULT '', # him # labs # pro
   unconfirmed_end tinyint(1) NOT NULL DEFAULT 0, # him # labs # pro
   unconfirmed_start tinyint(1) NOT NULL DEFAULT 0, # him # labs # pro
+  location_name varchar(256) DEFAULT '',
+  geolocation longtext,
   PRIMARY KEY (id)
 );
 
 -- labs
-INSERT INTO europeana_cope.bolt_events ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, start_event, unconfirmed_start, end_event, unconfirmed_end, teaser, body, teaser_image, filelist, structure_sortorder, external_link, templatefields, structure_parent
-) SELECT 'labs', e.id,
-  e.slug, e.datecreated, e.datechanged, e.datepublish, e.datedepublish, e.username, e.ownerid, e.status, e.title, e.start_event, e.unconfirmed_start, e.end_event, e.unconfirmed_end, e.teaser, e.body, e.teaser_image, e.filelist, e.structure_sortorder, e.external_link, e.templatefields, e.structure_parent
-FROM europeana_labs.bolt_events e;
-
+INSERT INTO europeana_cope.bolt_events ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, start_event, unconfirmed_start, end_event, unconfirmed_end, teaser, body, teaser_image, filelist, structure_sortorder, external_link, templatefields, structure_parent, location_name, geolocation
+) SELECT 'labs', e.id, e.slug, e.datecreated, e.datechanged, e.datepublish, e.datedepublish, e.username, e.ownerid, e.status, e.title, e.start_event, e.unconfirmed_start, e.end_event, e.unconfirmed_end, e.teaser, e.body, e.teaser_image, e.filelist, e.structure_sortorder, e.external_link, e.templatefields, e.structure_parent, l.title, l.geolocation
+  FROM europeana_labs.bolt_events e
+    JOIN europeana_labs.bolt_relations r
+      ON r.from_id = e.id AND r.from_contenttype = 'events'
+    JOIN europeana_labs.bolt_locations l
+      ON r.to_id = l.id AND r.to_contenttype = 'locations';
 -- pro
-INSERT INTO europeana_cope.bolt_events ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, start_event, unconfirmed_start, end_event, unconfirmed_end, teaser, body, intro, teaser_image, filelist, structure_sortorder, structure_parent, templatefields
-) SELECT 'pro', e.id,
-  e.slug, e.datecreated, e.datechanged, e.datepublish, e.datedepublish, e.username, e.ownerid, e.status, e.title, e.start_event, e.unconfirmed_start, e.end_event, e.unconfirmed_end, e.teaser, e.body, e.introduction, e.teaser_image, e.filelist, e.structure_sortorder, e.structure_parent, e.templatefields
-FROM europeana_pro.bolt_events e;
+INSERT INTO europeana_cope.bolt_events ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, start_event, unconfirmed_start, end_event, unconfirmed_end, teaser, body, intro, teaser_image, filelist, structure_sortorder, structure_parent, templatefields, location_name, geolocation
+) SELECT 'pro', e.id, e.slug, e.datecreated, e.datechanged, e.datepublish, e.datedepublish, e.username, e.ownerid, e.status, e.title, e.start_event, e.unconfirmed_start, e.end_event, e.unconfirmed_end, e.teaser, e.body, e.introduction, e.teaser_image, e.filelist, e.structure_sortorder, e.structure_parent, e.templatefields, l.title, l.geolocation
+  FROM europeana_pro.bolt_events e
+    JOIN europeana_pro.bolt_relations r
+      ON r.from_id = e.id AND r.from_contenttype = 'events'
+    JOIN europeana_pro.bolt_locations l
+      ON r.to_id = l.id AND r.to_contenttype = 'locations';
 
 DROP TABLE IF EXISTS bolt_jobs;
 CREATE TABLE IF NOT EXISTS bolt_jobs (
