@@ -8,7 +8,6 @@ $content_types = [
   'events' => 'bolt_events',
   'footers' => 'bolt_footers',
   'jobs' => 'bolt_jobs',
-  'locations' => 'bolt_locations',
   'pages' => 'bolt_pages',
   'pressreleases' => 'bolt_posts',
   'projects' => 'bolt_projects',

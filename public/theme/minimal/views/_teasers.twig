@@ -1,14 +1,13 @@
-<article class="column teaser record-{{ record.contenttype.slug }}">
+<article class="column half teaser-twocol group record-{{ record.contenttype.slug  }}">
     <div class="img-container">
-        {% include('partials/_image_snippet.twig') with { record: record, width: 600, height: 600 } %}
-        {% if record.datepublish is not empty %}
+        <img src="{{ image(record.image, 600, 600) }}" alt="{{ record.title }}"/>
         <p class="img-insert">
-            Created: <span class="date">{{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+        Created: <span class="date">{{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
         </p>
-        {% endif %}
     </div>
-
     <h3><a href="{{ record.link }}">{{ record.title }}</a></h3>
+    <p class="meta">Created: <span class="date">{{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span></p>
+    <div class="label">Networking</div>
     {% if record.introduction %}
         {{ record.introduction }}
     {% elseif record.teaser %}

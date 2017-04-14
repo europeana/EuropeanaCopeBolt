@@ -9,7 +9,7 @@ CREATE INDEX IDX_ABAA1200FE2A268F ON bolt_taxonomy (taxonomytype);
 CREATE INDEX IDX_ABAA1200989D9B62 ON bolt_taxonomy (slug);
 CREATE INDEX IDX_ABAA1200FEA3B3F9 ON bolt_taxonomy (sortorder);
 
-ALTER TABLE bolt_users DROP subsite, DROP subsite_id, CHANGE username username VARCHAR(32) NOT NULL, CHANGE password password VARCHAR(128) NOT NULL, CHANGE email email VARCHAR(254) NOT NULL, CHANGE displayname displayname VARCHAR(32) NOT NULL;
+ALTER TABLE bolt_users  CHANGE username username VARCHAR(32) NOT NULL, CHANGE password password VARCHAR(128) NOT NULL, CHANGE email email VARCHAR(254) NOT NULL, CHANGE displayname displayname VARCHAR(32) NOT NULL;
 CREATE UNIQUE INDEX UNIQ_5585B54F85E0677 ON bolt_users (username);
 CREATE UNIQUE INDEX UNIQ_5585B54E7927C74 ON bolt_users (email);
 CREATE INDEX IDX_5585B5450F9BB84 ON bolt_users (enabled);
@@ -22,7 +22,7 @@ CREATE INDEX IDX_9646C36CA5131421 ON bolt_landingpages (datepublish);
 CREATE INDEX IDX_9646C36CB7805520 ON bolt_landingpages (datedepublish);
 CREATE INDEX IDX_9646C36C7B00651C ON bolt_landingpages (status);
 
-ALTER TABLE bolt_pages ADD attachments LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD filelist_downloads VARCHAR(256) DEFAULT '', ADD imagegallery LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL, CHANGE slug slug VARCHAR(128) NOT NULL, CHANGE status status VARCHAR(32) NOT NULL, CHANGE subsite subsite LONGTEXT DEFAULT NULL, CHANGE title title VARCHAR(256) DEFAULT '';
+ALTER TABLE bolt_pages ADD attachments LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD filelist_downloads VARCHAR(256) DEFAULT '', ADD imagegallery LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL, CHANGE slug slug VARCHAR(128) NOT NULL, CHANGE status status VARCHAR(32) NOT NULL, CHANGE subsite subsite LONGTEXT DEFAULT NULL, CHANGE title title VARCHAR(256) DEFAULT '', CHANGE template template VARCHAR(256) DEFAULT '';
 CREATE INDEX IDX_31AF1BC8989D9B62 ON bolt_pages (slug);
 CREATE INDEX IDX_31AF1BC8AFBA6FD8 ON bolt_pages (datecreated);
 CREATE INDEX IDX_31AF1BC8BE74E59A ON bolt_pages (datechanged);
@@ -54,7 +54,7 @@ CREATE INDEX IDX_A2B1999A5131421 ON bolt_projects (datepublish);
 CREATE INDEX IDX_A2B1999B7805520 ON bolt_projects (datedepublish);
 CREATE INDEX IDX_A2B19997B00651C ON bolt_projects (status);
 
-ALTER TABLE bolt_events ADD geolocation LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD attachments LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD filelist_downloads VARCHAR(256) DEFAULT '', ADD hide_related TINYINT(1) DEFAULT '0' NOT NULL, ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL, ADD template VARCHAR(256) DEFAULT '', ADD contact_record LONGTEXT DEFAULT NULL, ADD contact_blurb LONGTEXT DEFAULT NULL, CHANGE slug slug VARCHAR(128) NOT NULL, CHANGE status status VARCHAR(32) NOT NULL, CHANGE subsite subsite LONGTEXT DEFAULT NULL;
+ALTER TABLE bolt_events ADD attachments LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD filelist_downloads VARCHAR(256) DEFAULT '', ADD hide_related TINYINT(1) DEFAULT '0' NOT NULL, ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL, ADD template VARCHAR(256) DEFAULT '', ADD contact_record LONGTEXT DEFAULT NULL, ADD contact_blurb LONGTEXT DEFAULT NULL, CHANGE slug slug VARCHAR(128) NOT NULL, CHANGE status status VARCHAR(32) NOT NULL, CHANGE subsite subsite LONGTEXT DEFAULT NULL;
 CREATE INDEX IDX_E6464385989D9B62 ON bolt_events (slug);
 CREATE INDEX IDX_E6464385AFBA6FD8 ON bolt_events (datecreated);
 CREATE INDEX IDX_E6464385BE74E59A ON bolt_events (datechanged);
@@ -79,14 +79,6 @@ CREATE INDEX IDX_A932D9E6BE74E59A ON bolt_persons (datechanged);
 CREATE INDEX IDX_A932D9E6A5131421 ON bolt_persons (datepublish);
 CREATE INDEX IDX_A932D9E6B7805520 ON bolt_persons (datedepublish);
 CREATE INDEX IDX_A932D9E67B00651C ON bolt_persons (status);
-
-ALTER TABLE bolt_locations ADD intro LONGTEXT DEFAULT NULL, ADD body LONGTEXT DEFAULT NULL, CHANGE slug slug VARCHAR(128) NOT NULL, CHANGE status status VARCHAR(32) NOT NULL, CHANGE title title VARCHAR(256) DEFAULT '';
-CREATE INDEX IDX_4FD8BE01989D9B62 ON bolt_locations (slug);
-CREATE INDEX IDX_4FD8BE01AFBA6FD8 ON bolt_locations (datecreated);
-CREATE INDEX IDX_4FD8BE01BE74E59A ON bolt_locations (datechanged);
-CREATE INDEX IDX_4FD8BE01A5131421 ON bolt_locations (datepublish);
-CREATE INDEX IDX_4FD8BE01B7805520 ON bolt_locations (datedepublish);
-CREATE INDEX IDX_4FD8BE017B00651C ON bolt_locations (status);
 
 ALTER TABLE bolt_resources CHANGE slug slug VARCHAR(128) NOT NULL, CHANGE status status VARCHAR(32) NOT NULL;
 CREATE INDEX IDX_B7581F15989D9B62 ON bolt_resources (slug);
