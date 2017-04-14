@@ -3,6 +3,7 @@
 Available variables
     'module':    the full module object
     'title':     title of the module
+    'subtitle':  subtitle of the module
     'body':      body of the module
     'records':   array of (selected) records that belong to the module
 #}
@@ -16,6 +17,10 @@ Available variables
         <h2>{{ title }}</h2>
     {% endif %}
 
+    {% if subtitle|default('') is not empty %}
+        <p>{{ subtitle }}</p>
+    {% endif %}
+
     {% if body is not empty %}
         {{ body|raw }}
     {% endif %}
@@ -26,7 +31,7 @@ Available variables
                 {% set templatefile =  'views/_' ~  template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
                 {% set defaulttemplatefile =  'views/_' ~  template ~ '.twig' %}
                 <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
-                {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { record: record } %}
+                {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { record: record, template: template } %}
             {% else %}
                 <!-- selected record is unpublished or otherwise unavailable -->
             {% endif %}
