@@ -136,41 +136,6 @@ __nodes:
       height: 150px
       postfix: '<p>Use this field to override the introduction from the contact record with a custom blurb.</p>'
       group: Support contact
-  viewblock_defaults:
-    block: &viewblock_defaults
-      type: viewblocks
-      label: Block
-      options:
-        templates:
-          titles: Title with a link
-          banners: Banner
-          teasers: Teaser
-          details: Full record details
-          faces: Round images or photos with a link
-          listing: Listing of records
-          expander: Expander block with records
-          browser: Filebrowser block
-          files: File block
-          hidden: Hidden block (for custom scripting)
-        ordering:
-          latest: The newest records first
-          current: Currently relevant (based on start and end date)
-          alphabetical: Alphabetically ordered
-          specified: Select some records below
-          highlighted: Records based on highlighted flag
-          random: A number of random records
-        sources:
-          pages: Pages, Listings, Landingpages, Structures and Collections
-          posts: Blogposts, Pressreleases, Publications and News
-          data: Data, Applications, Documentation
-          projects: Projects, Taskforces and Workinggroups
-          jobs: Jobs
-          events: Events
-        override_id: true
-        override_class: true
-        override_title: true
-        override_amount: true
-      postfix: 'A simple widget block'
   relation_pages: &relation_pages
     pages:
       label: "Pages"
