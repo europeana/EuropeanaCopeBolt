@@ -175,8 +175,39 @@ header {
 * FOOTER
 **/
 
+footer {
+    .logo-small {
+        width: 80px;
+        display: inline-block;
+        margin-right: 1rem;
+
+        @include respond-to (medium-screens){
+            width: 128px;
+            display: block;
+            margin-bottom: 1rem;
+        }
+    }
+
+    address {
+        display: inline-block;
+    }
+}
+
 .sub-footer {
     border-top: 1px solid $line-gray;
+}
+
+.footer-block-address {
+    margin-bottom: 2rem;
+
+    >* {
+        vertical-align: middle;
+    }
+}
+
+.footer-block-mission {
+    margin-bottom: 2rem;
+
 }
 
 /*
@@ -324,6 +355,11 @@ a.banner {
 
     p {
         margin: 0 0 .5rem;
+        font-size: 0.875rem;
+
+        @include respond-to(medium-screens){
+            font-size: 1rem;
+        }
     }
 
     p.meta {
@@ -392,6 +428,11 @@ a.banner {
 
     p {
         margin: 0 0 .5rem;
+        font-size: 0.875rem;
+
+        @include respond-to(medium-screens){
+            font-size: 1rem;
+        }
     }
 }
 
@@ -417,12 +458,25 @@ a.banner {
     border-left: 1px solid $line-gray;
     border-right: 1px solid $line-gray;
 
+     @include respond-to(large-screens){
+        padding: 0 1.5rem; // vanwege lijn, bredere padding
+    }
+
+
     &:nth-of-type(1){
         border-left: 0px;
     }
 
     &:nth-of-type(3){
         border-right: 0px;
+    }
+
+    p {
+        font-size: 0.875rem;
+
+        @include respond-to(medium-screens){
+            font-size: 1rem;
+        }
     }
 }
 
@@ -453,10 +507,6 @@ a.banner {
     align-items: center;
 
     .header-group {
-        // position: absolute;
-        // bottom: 2.5rem;
-        // left: 50%;
-        // margin-left: -35%;
         color: $white;
         text-align: center;
         width: 70%;
@@ -478,29 +528,48 @@ a.banner {
 
 .calltoactionform,
 .calltoactionlink {
-    //position: relative;
-    height: 55px;
+    position: relative;
     background-color: $baseFirstThemeColour;
     overflow: hidden;
     margin: 1rem 0;
-    //for vertical alignment
-    display: flex;
-    align-items: center;
+
+
+    @include respond-to(large-screens) {
+        height: 55px;
+        //for vertical alignment
+        display: flex;
+        align-items: center;
+    }
 
 
     .colored-image {
-        float:left;
-        width: 55%;
+        display: block;
+        width: 100%;
+        height: 55px;
         background-color: $baseFirstThemeColour;
         background-blend-mode: multiply;
+
+        @include respond-to(large-screens) {
+            width: 55%;
+            float: left;
+        }
     }
 
     h3 {
         position: absolute;
-        right: 45%;
         margin: 0 1rem 0 0;
         color: $white;
         text-transform: none;
+        top: 1.1rem;
+        text-align: center;
+        width: 100%;
+        left: 0;
+
+        @include respond-to(large-screens) {
+            right: 45%;
+            left: auto;
+            width: auto;
+        }
     }
 
     .button {
@@ -510,20 +579,43 @@ a.banner {
         color: $white;
         border: 0;
         padding: .3rem 4rem;
-        margin-left: 5rem;
+        text-align: center;
+
+
+        &.actionbutton {
+            margin: 1rem auto;
+            display: block;
+            width: 80%;
+            max-width: 250px;
+
+        @include respond-to(large-screens) {
+            display: inline-block;
+            margin: 0 0 0 5rem;
+            width: auto;
+            max-width: none;
+            }
+        }
 
     }
 
-    input.button {
+    input.button,
+    button[type=submit] {
         margin-left: 0;
         border-radius: 0 5px 5px 0;
         padding: .3rem 1rem;
     }
 
     form {
-        float:left;
-        width: 45%;
-        padding: .3rem 3rem .3rem 1rem;
+        width: 100%;
+        padding: .5rem 0;
+        text-align: center;
+
+        @include respond-to(large-screens) {
+            float:left;
+            width: 45%;
+            padding: .3rem 3rem .3rem 1rem;
+            text-align: left;
+        }
 
         input {
             display: table-cell;
@@ -545,14 +637,25 @@ a.button, .button, button {
 
 .button-link {
     border: 3px solid $dark-blue;
-    display: inline-block;
+    display: block;
     margin: .75rem auto 0 auto;
-    font-size: 0.875rem;
+    width: 115px; // centering needs fixed width. Can be adjusted.
+    text-align: center;
+    font-size: 0.75rem;
     padding: .3em 1em;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: -.3px;
     color: $dark-blue;
+
+
+    @include respond-to(medium-screens){
+        margin: .75rem auto 0 auto;
+        width: auto;
+        display: inline-block;
+        font-size: 0.875rem;
+
+    }
 
     &:hover, &:active, &:focus {
         background-color: $dark-blue;

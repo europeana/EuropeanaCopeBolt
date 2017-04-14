@@ -93,7 +93,11 @@ aside {
 footer {
     background: $footer-gray;
     border-top: 6px solid $dark-blue;
-    padding-top: 4.75rem;
+    padding-top: 2rem;
+
+    @include respond-to(large-screens){
+        padding-top: 4.75rem;
+    }
 }
 
 .inner-wrap {
@@ -132,7 +136,7 @@ footer {
 
 
 .column {
-      // background: #fc8;
+    //  background: #fc8;
     min-height: 2rem;
     width:100%;
     margin-bottom: 2rem;
@@ -215,44 +219,56 @@ footer {
 .footer-block {
     background-color: transparent!important;
 
-    @include respond-to(large-screens) {
-        float:left;
-        width:49%;
-        padding:0.5%;
-        //margin:0 1%;
-        margin-left:1%;
-        margin-right:1%;
+    float: left;
+    margin-left: 1%;
 
-        &:first-child {
-            margin-left:0;
-            & + .footer-block {
-                margin-right:0;
-            }
-            & + .footer-block + .footer-block {
-                margin-left: 0;
-                margin-right: 0;
-                width: 100%;
-            }
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &.footer-block-address {
+
+        @include respond-to(large-screens) {
+            width: 39%;
+        }
+
+        @include respond-to(xlarge-screens) {
+            width: 24%;
         }
     }
-    @include respond-to(xlarge-screens) {
-        width: 32%;
-        &:first-child {
-            margin-left:0;
-            & + .footer-block {
-                margin-right:1%;
-            }
-            & + .footer-block + .footer-block {
-                margin:0 0 0 1%;
-                width: 32%;
-            }
+
+    &.footer-block-mission {
+
+        @include respond-to(large-screens) {
+            width: 59%;
+        }
+
+        @include respond-to(xlarge-screens) {
+            width: 40%
         }
     }
+
+    &.footer-block-socials {
+        width: 100%;
+
+        @include respond-to(large-screens) {
+            width: 59%;
+        }
+
+        @include respond-to(xlarge-screens) {
+            width: 32.333%
+        }
+    }
+
 }
 
 .sub-footer {
     padding: 2rem 0 0 0;
-    margin: 9.5rem 0 0 0;
+    margin: 3.5rem 0 0 0;
+
+    @include respond-to(large-screens) {
+        margin: 9.5rem 0 0 0;
+    }
 }
 
 
