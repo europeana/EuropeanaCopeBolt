@@ -271,6 +271,25 @@ a.readmore {
     }
 }
 
+a.tag,
+a.team {
+    border-bottom: 1px dotted $link-blue;
+    font-size: 0.75rem;
+    margin-right: .5rem;
+
+    &:last-child {
+            margin-right: 0;
+        }
+
+    @include respond-to(medium-screens) {
+        font-size: 0.9375rem;
+    }
+
+    .label + & {
+        margin-left: .5rem;
+    }
+}
+
 p.meta {
     font-size: 0.75rem;
 
@@ -282,6 +301,10 @@ p.meta {
         white-space: nowrap;
         display: inline-block;
         margin-right: 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
     span.caldate {
@@ -303,7 +326,12 @@ svg.icon {
     height: 1.2em;
     width: 1.2em;
     vertical-align: text-top;
+}
 
+.svg-link {
+    svg {
+        fill: $baseFirstThemeColour;
+    }
 }
 
 figcaption {

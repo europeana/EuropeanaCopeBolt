@@ -243,7 +243,7 @@ img.round {
     font-size: 0.75rem;
     color: $white;
     background: $baseFirstThemeColour;
-    padding: 0 0.5rem;
+    padding: 0 0.7rem;
     line-height: 1.6;
     margin: 0.75rem 0;
 
@@ -624,6 +624,25 @@ a.banner {
     }
 
 
+}
+
+/*
+***********************************************************************
+* CONTENT PAGE
+***********************************************************************
+**/
+
+.side-info {
+    text-align: right;
+    padding: 0 0.875rem;
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+    .label {
+        margin-top: 0;
+    }
 }
 
 

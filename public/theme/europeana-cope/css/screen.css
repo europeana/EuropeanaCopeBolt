@@ -402,6 +402,7 @@ th {
   box-sizing: border-box; }
 
 input {
+  -webkit-appearance: none;
   border-radius: 0; }
 
 .invisible-accessible, .sr-only {
@@ -622,6 +623,7 @@ footer {
     left: 1.25rem; }
 
 .column {
+  background: #fc8;
   min-height: 2rem;
   width: 100%;
   margin-bottom: 2rem;
@@ -943,6 +945,22 @@ a.readmore {
   a.readmore:hover, a.readmore:active, a.readmore:focus {
     color: #095f90; }
 
+a.tag,
+a.team {
+  border-bottom: 1px dotted #095f90;
+  font-size: 0.75rem;
+  margin-right: .5rem; }
+  a.tag:last-child,
+  a.team:last-child {
+    margin-right: 0; }
+  @media only screen and (min-width: 24em) {
+    a.tag,
+    a.team {
+      font-size: 0.9375rem; } }
+  .label + a.tag, .label +
+  a.team {
+    margin-left: .5rem; }
+
 p.meta {
   font-size: 0.75rem; }
   @media only screen and (min-width: 47.9375em) {
@@ -952,6 +970,8 @@ p.meta {
     white-space: nowrap;
     display: inline-block;
     margin-right: 1rem; }
+    p.meta span:last-child {
+      margin-right: 0; }
   p.meta span.caldate {
     font-size: 0.875rem;
     margin-top: 1rem; }
@@ -966,6 +986,9 @@ svg.icon {
   height: 1.2em;
   width: 1.2em;
   vertical-align: text-top; }
+
+.svg-link svg {
+  fill: #E11D53; }
 
 /**
  * File:        _forms.scss
@@ -984,13 +1007,11 @@ textarea {
   padding: .8rem 0.5rem;
   font-size: 1rem;
   margin: 0 0 1rem;
-  display: block;
-  -webkit-appearance: none; }
+  display: block; }
 
 form.searchform [type="search"] {
   display: inline-block;
   width: 300px;
-  -webkit-appearance: none;
   vertical-align: middle;
   margin: 0; }
 
@@ -1182,7 +1203,7 @@ img.round {
   font-size: 0.75rem;
   color: #fff;
   background: #E11D53;
-  padding: 0 0.5rem;
+  padding: 0 0.7rem;
   line-height: 1.6;
   margin: 0.75rem 0; }
   @media only screen and (min-width: 24em) {
@@ -1464,6 +1485,19 @@ a.banner {
     .calltoactionlink form input {
       display: table-cell;
       height: 2.25rem; }
+
+/*
+***********************************************************************
+* CONTENT PAGE
+***********************************************************************
+**/
+.side-info {
+  text-align: right;
+  padding: 0 0.875rem; }
+  .side-info p {
+    margin-bottom: 0.5rem; }
+  .side-info .label {
+    margin-top: 0; }
 
 /*
 * BUTTONS

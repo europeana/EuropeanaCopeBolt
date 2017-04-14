@@ -1,0 +1,357 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main %}
+    <section>
+        {# Hero Banner - one item #}
+        <a class="banner" href="#"> {# FIXME: Overlay met halve cirkels er nog in? #}
+            <div class="colored-image" style="background-image: url(https://unsplash.it/1800/400)"></div>
+            <div class="header-group">
+                <h3 class="widget">Show us what you've got</h3>
+                <p>Placeholder example with one example of what you can find in this section like something very relevant. </p>
+            </div>
+        </a>
+    </section>
+
+    <section class="group">
+        {# Hero banner - three items #}
+        <a class="banner third" href="#">
+            <div class="colored-image" style="background-image: url(https://unsplash.it/600/400)"></div>
+            <div class="header-group">
+                <h3 class="widget">Show us what you've got</h3>
+                <p>Placeholder example with one example of what you can find in this section like something very relevant. </p>
+            </div>
+        </a>
+        <a class="banner third" href="#">
+            <div class="colored-image" style="background-image: url(https://unsplash.it/600/400)"></div>
+            <div class="header-group">
+                <h3 class="widget">Show us what you've got</h3>
+                <p>Placeholder example with one example of what you can find in this section like something very relevant. </p>
+            </div>
+        </a>
+        <a class="banner third" href="#">
+            <div class="colored-image" style="background-image: url(https://unsplash.it/600/400)"></div>
+            <div class="header-group">
+                <h3 class="widget">Show us what you've got</h3>
+                <p>Placeholder example with one example of what you can find in this section like something very relevant. </p>
+            </div>
+        </a>
+    </section>
+
+     <section>
+        {# Section breakers - Call to action FULL #}
+        <div class="calltoaction colored-image" style="background-image: url(https://unsplash.it/1600/350)">
+            <div class="header-group">
+                <h3 class="widget">Connect, contribute, create</h3>
+                <p>Discover how we transform the world with culture.</p>
+                <a class="button-link" href="#">
+                    Learn more
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="group">
+        {# Section breakers - Call to action HALF #}
+        <div class="calltoaction half colored-image" style="background-image: url(https://unsplash.it/800/400)">
+            {# <div class="colored-image" style="background-image: url(https://unsplash.it/800/400)"></div> #}
+            <div class="header-group">
+                <h3 class="widget">Connect, contribute, create</h3>
+                <p>Discover how we transform the world with culture.</p>
+                <a class="button-link">
+                    Learn more
+                </a>
+            </div>
+        </div>
+
+        <div class="calltoaction half colored-image" style="background-image: url(https://unsplash.it/800/400)">
+            {# <div class="colored-image" style="background-image: url(https://unsplash.it/800/400)"></div> #}
+            <div class="header-group">
+                <h3 class="widget">Connect, contribute, create</h3>
+                <p>Discover how we transform the world with culture.</p>
+                <a class="button-link">
+                    Learn more
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section> {# FIXME maak verschillende kleurversies #}
+        {# Call to action line - form #}
+        <div class="calltoactionform">
+            <div class="colored-image" style="background-image: url(https://unsplash.it/800/90)"></div>
+            <h3 class="widget">SIGN UP for our newsletter</h3>
+            <form>
+                <label for="email-signup" class="sr-only">E-mail address</label>
+                {% spaceless %}
+                <input type="text" name="emailaddress" id="email-signup" placeholder="e-mailaddress">
+                {# <input class="button" value="Submit" type="submit"> #}
+                <button type="submit" class="button">
+                    <svg class="icon icon-check">
+                        <use xlink:href="#icon-check"></use>
+                    </svg>
+                    <span class="sr-only">Submit</span>
+                </button>
+                {% endspaceless %}
+            </form>
+        </div>
+    </section>
+
+    <section>
+        {# Call to action line - button #}
+        <div class="calltoactionlink">
+            <div class="colored-image" style="background-image: url(https://unsplash.it/800/90)"></div>
+            <h3 class="widget">Become a network member</h3>
+            <a href="#" class="button actionbutton">Apply here</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="inner-wrap">
+            <h2>Two-column teasers</h2>
+            <p>invision name: news</p>
+            <article class="column half teaser-twocol group">
+                <div class="img-container">
+                    <a href="#"><img src="https://unsplash.it/600/600" alt="xx"/></a>
+                    <p class="img-insert">
+                        Created: <span class="date">5 November 2012</span>
+                    </p>
+                </div>
+                <h3><a href="#">More cats then dogs in western hemisphere</a></h3>
+                <p class="meta">Created: <span class="date">5 November 2012</span></p>
+                <div class="label">Networking</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idemque diviserunt naturam hominis in animum et &hellip; </p>
+                <a href="#" class="readmore">Read more</a>
+            </article>
+
+            <article class="column half teaser-twocol group">
+                <div class="img-container">
+                    <a href="#"><img src="https://unsplash.it/600/600" alt="xx"/></a>
+                    <p class="img-insert">
+                        Created: <span class="date">5 November 2012</span>
+                    </p>
+                </div>
+                <h3><a href="#">More cats then dogs in western hemisphere</a></h3>
+                <p class="meta">Created: <span class="date">5 November 2012</span></p>
+                <div class="label">Networking</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idemque diviserunt naturam hominis in animum et &hellip; </p>
+                <a href="#" class="readmore">Read more</a>
+            </article>
+        </div>
+
+        {# onderstaande Call to action hoort onder deze Two Column teasers #}
+        <div class="calltoaction-readmore colored-image" style="background-image: url(https://unsplash.it/800/90)">
+            <div class="header-group">
+                <p>Find out what else has happened</p>
+                <a class="button-link">
+                    See more news
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="inner-wrap">
+            <h2>Three-column teasers</h2>
+            <p>Invision name: semi-static content</p>
+            <article class="column third teaser-threecol">
+                <img src="https://unsplash.it/768/435" alt="xx"/>
+                <h3>Dit is een titel</h3>
+                <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
+                <a class="button-link" href="#">
+                    See more
+                </a>
+            </article>
+
+            <article class="column third teaser-threecol">
+                <img src="https://unsplash.it/768/435" alt="xx"/>
+                <h3>Dit is een titel</h3>
+                <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
+                <a class="button-link" href="#">
+                    See more
+                </a>
+            </article>
+
+            <article class="column third teaser-threecol">
+                <img src="https://unsplash.it/768/435" alt="xx"/>
+                <h3>Dit is een titel</h3>
+                <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
+                <a class="button-link" href="#">
+                    See more
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="inner-wrap">
+            {# Three-column category icon #}
+            <section class="third">
+                <div class="column icon-threecol">
+                    <h3>Dit is een titel</h3>
+                    <img class="round" src="https://unsplash.it/300/300" alt="xx"/>
+                    <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens.</p>
+                </div>
+
+                {#  Three-column category teaser #}
+                <article class="column catstream-threecol">
+                    <img src="https://unsplash.it/768/435" alt="xx"/>
+                    <h3>Get set, #Europeana280 – join us as we celebrate Europe’s art history the digital way</h3>
+                    <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
+                    <p class="meta">
+                        <span class="author">By: <a href="#">Joris Pekel</a></span>
+                        <span class="readtime">7 mins to read</span>
+                        <span class="caldate">
+                            <svg class="icon icon-calendar">
+                                <use xlink:href="#icon-calendar"></use>
+                            </svg>
+                            2 September 2016</span>
+                    </p>
+                </article>
+
+                <article class="column catstream-threecol">
+                    <img src="https://unsplash.it/768/435" alt="xx"/>
+                    <h3>Get set, #Europeana280 – join us as we celebrate Europe’s art history the digital way</h3>
+                    <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
+                    <p class="meta">
+                        <span class="author">By: <a href="#">Joris Pekel</a></span>
+                        <span class="readtime">7 mins to read</span>
+                        <span class="caldate">
+                            <svg class="icon icon-calendar">
+                                <use xlink:href="#icon-calendar"></use>
+                            </svg>
+                            2 September 2016</span>
+                    </p>
+                </article>
+
+            </section>
+
+            {# Three-column category icon #}
+            <section class="third">
+                <div class="column icon-threecol">
+                    <h3>Dit is een titel</h3>
+                    <img class="round" src="https://unsplash.it/300/300" alt="xx"/>
+                    <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens.</p>
+                </div>
+
+                {#  Three-column category teaser #}
+                <article class="column catstream-threecol">
+                    <img src="https://unsplash.it/768/435" alt="xx"/>
+                    <h3>Get set, #Europeana280 – join us as we celebrate Europe’s art history the digital way</h3>
+                    <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
+                    <p class="meta">
+                        <span class="author">By: <a href="#">Joris Pekel</a></span>
+                        <span class="readtime">7 mins to read</span>
+                        <span class="caldate">
+                            <svg class="icon icon-calendar">
+                                <use xlink:href="#icon-calendar"></use>
+                            </svg>
+                            2 September 2016</span>
+                    </p>
+
+                </article>
+
+                <article class="column catstream-threecol">
+                    <img src="https://unsplash.it/768/435" alt="xx"/>
+                    <h3>Get set, #Europeana280 – join us as we celebrate Europe’s art history the digital way</h3>
+                    <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
+                    <p class="meta">
+                        <span class="author">By: <a href="#">Joris Pekel</a></span>
+                        <span class="readtime">7 mins to read</span>
+                        <span class="caldate">
+                            <svg class="icon icon-calendar">
+                                <use xlink:href="#icon-calendar"></use>
+                            </svg>
+                            2 September 2016</span>
+                    </p>
+                </article>
+
+            </section>
+
+            {# Three-column category icon #}
+            <section class="third">
+                <div class="column icon-threecol">
+                    <h3>Dit is een titel</h3>
+                    <img class="round" src="https://unsplash.it/300/300" alt="xx"/>
+                    <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens.</p>
+                </div>
+
+                {#  Three-column category teaser #}
+                <article class="column catstream-threecol">
+                    <img src="https://unsplash.it/768/435" alt="xx"/>
+                    <h3>Get set, #Europeana280 – join us as we celebrate Europe’s art history the digital way</h3>
+                    <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
+                    <p class="meta">
+                        <span class="author">By: <a href="#">Joris Pekel</a></span>
+                        <span class="readtime">7 mins to read</span>
+                        <span class="caldate">
+                            <svg class="icon icon-calendar">
+                                <use xlink:href="#icon-calendar"></use>
+                            </svg>
+                            2 September 2016</span>
+                    </p>
+
+                </article>
+
+                <article class="column catstream-threecol">
+                    <img src="https://unsplash.it/768/435" alt="xx"/>
+                    <h3>Get set, #Europeana280 – join us as we celebrate Europe’s art history the digital way</h3>
+                    <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
+                    <p class="meta">
+                        <span class="author">By: <a href="#">Joris Pekel</a></span>
+                        <span class="readtime">7 mins to read</span>
+                        <span class="caldate">
+                            <svg class="icon icon-calendar">
+                                <use xlink:href="#icon-calendar"></use>
+                            </svg>
+                            2 September 2016</span>
+                    </p>
+                </article>
+            </section>
+
+        </div>
+    </section>
+
+
+    <section>
+        <div class="inner-wrap">
+            <h2>Four-column thumbnailed links</h2>
+            <p>Invision name: thumbnailed links</p>
+            <div class="column fourth thumblink-fourcol">
+                <img class="round" src="https://unsplash.it/250/250" alt="xx"/>
+                <h3>advocacy</h3>
+                <a class="button-link">
+                    Learn more
+                </a>
+            </div>
+            <div class="column fourth thumblink-fourcol">
+                <img class="round" src="https://unsplash.it/250/250" alt="xx"/>
+                <h3>standardization</h3>
+                <a class="button-link">
+                    Learn more
+                </a>
+            </div>
+            <div class="column fourth thumblink-fourcol">
+                <img class="round" src="https://unsplash.it/250/250" alt="xx"/>
+                <h3>Cultural heritage institutions</h3>
+                <a class="button-link">
+                    Learn more
+                </a>
+            </div>
+            <div class="column fourth thumblink-fourcol">
+                <img class="round" src="https://unsplash.it/250/250" alt="xx"/>
+                <h3>standardization</h3>
+                <a class="button-link">
+                    Learn more
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+{% endblock main %}
