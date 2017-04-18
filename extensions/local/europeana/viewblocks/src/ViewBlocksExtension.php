@@ -6,7 +6,6 @@ use Bolt\Asset\File\JavaScript;
 use Bolt\Asset\File\Stylesheet;
 use Bolt\Controller\Zone;
 use Bolt\Extension\SimpleExtension;
-use Bolt\Extension\Europeana\ViewBlocks\Field\ViewBlocksField;
 
 /**
  * ViewBlocks extension class.
@@ -15,19 +14,6 @@ use Bolt\Extension\Europeana\ViewBlocks\Field\ViewBlocksField;
  */
 class ViewBlocksExtension extends SimpleExtension
 {
-  public function registerFields()
-  {
-    return [
-      new ViewBlocksField(),
-    ];
-  }
-
-  protected function registerTwigPaths()
-  {
-    return [
-      'templates'
-    ];
-  }
 
   protected function registerAssets()
   {
