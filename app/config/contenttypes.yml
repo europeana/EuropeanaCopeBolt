@@ -387,7 +387,7 @@ landingpages:
     <<: *teaser_defaults
     <<: *structure_defaults
   <<: *all_relations
-  taxonomy: [ tags, communities ]
+  taxonomy: [ communities, markets, categories, tags ]
   icon_many: "fa:map"
   icon_one: "fa:map-pin"
 
@@ -408,7 +408,7 @@ pages:
       label: "Images gallery (optional)"
       postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
     <<: *structure_defaults
-  taxonomy: [ tags, communities ]
+  taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   recordsperpage: 50
   icon_many: "fa:files-o"
@@ -466,7 +466,7 @@ posts:
     <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
-  taxonomy: [ tags, communities ]
+  taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   recordsperpage: 100
   sort: -datepublish
@@ -576,7 +576,7 @@ data:
     <<: *contact_defaults
     <<: *media_defaults
     <<: *structure_defaults
-  taxonomy: [ tags, communities, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
+  taxonomy: [ communities, markets, categories, tags, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
   <<: *all_relations
   recordsperpage: 100
   icon_many: "fa:object-group"
@@ -639,7 +639,7 @@ projects:
     <<: *media_defaults
     <<: *structure_defaults
     <<: *support_defaults
-  taxonomy: [ tags, communities ]
+  taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   listing_records: 5
   recordsperpage: 20
@@ -686,7 +686,7 @@ events:
     <<: *media_defaults
     <<: *structure_defaults
     <<: *support_defaults
-  taxonomy: [ tags, communities ]
+  taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   icon_many: "fa:calendar"
   icon_one: "fa:calendar"
@@ -763,7 +763,7 @@ jobs:
       type: slug
       uses: position
     <<: *support_defaults
-  taxonomy: [ tags, communities ]
+  taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   sort: -datepublish
   icon_many: "fa:money"
@@ -1050,9 +1050,8 @@ persons:
         labs: Europeana Labs
         research: Europeana Research
         zoho: ZOHO CRM
-
     <<: *support_defaults
-  taxonomy: [ tags, communities ]
+  taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   icon_many: "fa:users"
   icon_one: "fa:user"
@@ -1098,7 +1097,7 @@ resources:
     cssid:
       type: text
       label: "CSS ID (optional)"
-  taxonomy: [ tags, communities ]
+  taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   viewless: true
   sort: weight

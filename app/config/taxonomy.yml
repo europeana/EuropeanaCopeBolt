@@ -7,7 +7,6 @@ tags:
     behaves_like: tags
     postfix: "Add some freeform tags. Start a new tag by typing a comma or space."
     allow_spaces: false
-    #listing_template: tag-listing.twig #custom template
 
 communities:
     name: Communities
@@ -24,7 +23,48 @@ communities:
         member_states: Member States
         fashion: Fashion
         art: Art
-    postfix: "Select one of the communities to activate the branding for that communitie in the website."
+    postfix: "Select one of the communities to activate the branding for that community in the website."
+
+markets:
+    name: Markets
+    slug: markets
+    singular_name: Market
+    singular_slug: market
+    behaves_like: categories
+    multiple: true
+    options:
+        academic_research: Academic Research
+        chis: CHIs
+        creative_industries: Creative industries
+        culture_lover: Culture lover
+        education: Education
+    postfix: "Select one or more markets"
+
+categories:
+    name: Categories
+    slug: categories
+    singular_name: Category
+    singular_slug: category
+    behaves_like: categories
+    multiple: true
+    options:
+        legal_interoperability: Legal interoperability of data
+        impact_framework: Impact framework
+        crossdomain_exchange: Cross-domain data exchange of interoperability
+        statistics: Statistics
+        advocacy: Advocacy
+        api: API
+        thematic_collections: Thematic Collections
+        curated_datasets: Curated datasets
+        workshops: Workshops
+        funding: Funding
+        project_brokerage: EU project brokerage and support
+        collections_publication: Collections publication
+        virtual_ehibitions: Virtual Exhibitions
+        network_association: Network Association
+        campaigns: Campaigns
+        year_of_cultural_heritage: Year of Cultural Heritage
+    postfix: "Select one or more categories"
 
 ##############################################
 # categorization for APP contenttype
