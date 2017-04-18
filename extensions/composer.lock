@@ -4,9 +4,81 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3d70fd694ff01ebec60313c90ae6a2a5",
-    "content-hash": "106928de1afb04db9090c8c0a4bff4e8",
+    "content-hash": "f0716a28b89d8b7fbd657386aca63c06",
     "packages": [
+        {
+            "name": "bacboslab/menueditor",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bacbos/bolt-menu-editor.git",
+                "reference": "c311963ad5dd8036b854061f436c6db7bdf6f90c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bacbos/bolt-menu-editor/zipball/c311963ad5dd8036b854061f436c6db7bdf6f90c",
+                "reference": "c311963ad5dd8036b854061f436c6db7bdf6f90c",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-icon": "bolt-menu-editor.png",
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\Bacboslab\\Menueditor\\MenueditorExtension",
+                "bolt-screenshots": [
+                    "screenshot.png",
+                    "screenshot2.png"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bacboslab\\Menueditor\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bacboslab\\Menueditor\\Tests\\": "tests",
+                    "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steven Wüthrich / bacbos lab",
+                    "email": "hello@bacbos.ch",
+                    "homepage": "http://bacbos.ch"
+                },
+                {
+                    "name": "Svante Richter",
+                    "email": "svante.richter@gmail.com"
+                },
+                {
+                    "name": "Erwin Goossen",
+                    "email": "erwin@navelpluisje.nl"
+                }
+            ],
+            "description": "A visual menu editor for Bolt CMS",
+            "keywords": [
+                "admin",
+                "editor",
+                "menu",
+                "tool",
+                "visual"
+            ],
+            "support": {
+                "source": "https://github.com/bacbos/bolt-menu-editor/tree/master",
+                "issues": "https://github.com/bacbos/bolt-menu-editor/issues"
+            },
+            "time": "2017-02-01T21:38:05+00:00"
+        },
         {
             "name": "bobdenotter/seo",
             "version": "v0.14.2",
@@ -48,7 +120,7 @@
                 "source": "https://github.com/bobdenotter/seo/tree/v0.14.2",
                 "issues": "https://github.com/bobdenotter/seo/issues"
             },
-            "time": "2017-04-06 15:36:42"
+            "time": "2017-04-06T15:36:42+00:00"
         },
         {
             "name": "bolt/jsonapi",
@@ -110,7 +182,7 @@
                 "source": "https://github.com/xiaohutai/jsonapi/tree/v3.0.11",
                 "issues": "https://github.com/xiaohutai/jsonapi/issues"
             },
-            "time": "2017-04-12 15:28:22"
+            "time": "2017-04-12T15:28:22+00:00"
         },
         {
             "name": "bolt/sitemap",
@@ -165,7 +237,7 @@
                 "source": "https://github.com/bolt/Sitemap/tree/master",
                 "issues": "https://github.com/bolt/Sitemap/issues"
             },
-            "time": "2017-02-26 13:59:52"
+            "time": "2017-02-26T13:59:52+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
@@ -225,7 +297,7 @@
                 "source": "https://github.com/wikimedia/composer-merge-plugin/tree/v1.4.0",
                 "issues": "https://github.com/wikimedia/composer-merge-plugin/issues"
             },
-            "time": "2017-03-13 16:52:55"
+            "time": "2017-03-13T16:52:55+00:00"
         }
     ],
     "packages-dev": [],
