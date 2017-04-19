@@ -14,15 +14,7 @@ CREATE UNIQUE INDEX UNIQ_5585B54F85E0677 ON bolt_users (username);
 CREATE UNIQUE INDEX UNIQ_5585B54E7927C74 ON bolt_users (email);
 CREATE INDEX IDX_5585B5450F9BB84 ON bolt_users (enabled);
 
-ALTER TABLE bolt_landingpages ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL, CHANGE subsite subsite LONGTEXT DEFAULT NULL;
-CREATE INDEX IDX_9646C36C989D9B62 ON bolt_landingpages (slug);
-CREATE INDEX IDX_9646C36CAFBA6FD8 ON bolt_landingpages (datecreated);
-CREATE INDEX IDX_9646C36CBE74E59A ON bolt_landingpages (datechanged);
-CREATE INDEX IDX_9646C36CA5131421 ON bolt_landingpages (datepublish);
-CREATE INDEX IDX_9646C36CB7805520 ON bolt_landingpages (datedepublish);
-CREATE INDEX IDX_9646C36C7B00651C ON bolt_landingpages (status);
-
-ALTER TABLE bolt_pages ADD attachments LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD filelist_downloads VARCHAR(256) DEFAULT '', ADD imagegallery LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL, CHANGE slug slug VARCHAR(128) NOT NULL, CHANGE status status VARCHAR(32) NOT NULL, CHANGE subsite subsite LONGTEXT DEFAULT NULL, CHANGE title title VARCHAR(256) DEFAULT '', CHANGE template template VARCHAR(256) DEFAULT '';
+ALTER TABLE bolt_pages ADD image LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD attachments LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD filelist_downloads VARCHAR(256) DEFAULT '', ADD imagegallery LONGTEXT DEFAULT NULL COMMENT '(DC2Type:json_array)', ADD support_navigation TINYINT(1) DEFAULT '0' NOT NULL, CHANGE slug slug VARCHAR(128) NOT NULL, CHANGE status status VARCHAR(32) NOT NULL, CHANGE subsite subsite LONGTEXT DEFAULT NULL, CHANGE template template VARCHAR(256) DEFAULT '', CHANGE title title VARCHAR(256) DEFAULT '';
 CREATE INDEX IDX_31AF1BC8989D9B62 ON bolt_pages (slug);
 CREATE INDEX IDX_31AF1BC8AFBA6FD8 ON bolt_pages (datecreated);
 CREATE INDEX IDX_31AF1BC8BE74E59A ON bolt_pages (datechanged);

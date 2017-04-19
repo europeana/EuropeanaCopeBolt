@@ -14,7 +14,7 @@ $content_types = [
   'persons' => 'bolt_persons',
   'publications' => 'bolt_posts',
   'resources' => 'bolt_resources',
-  'structures' => 'bolt_landingpages',
+  'structures' => 'bolt_pages',
   'taskforces' => 'bolt_projects'
 ];
 
@@ -25,7 +25,10 @@ $ct_mergers = [
   'publications' => 'posts',
   'pressreleases' => 'posts',
   'documentation' => 'data',
-  'taskforces' => 'projects'
+  'taskforces' => 'projects',
+  'pro-structures' => 'pages',
+  'labs-structures' => 'pages',
+  'research-structures' => 'pages'
 ];
 
 $query['intro'][] = "USE europeana_cope;\n";

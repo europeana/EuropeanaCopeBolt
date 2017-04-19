@@ -196,16 +196,15 @@ __nodes:
       <<: *relation_jobs
       <<: *relation_persons
 
+
 #################################
 #
-# LANDINGPAGE
+# PAGE
 #
 #################################
-landingpages:
-  name: Landing pages
-  singular_name: Landing page
-  slug: landingpages
-  singular_slug: landingpages
+pages:
+  name: Pages
+  singular_name: Page
   fields:
     <<: *record_defaults
     body:
@@ -384,23 +383,6 @@ landingpages:
       height: 100px
       postfix: "Shown on individual pages below the main body text"
       group: Main
-    <<: *teaser_defaults
-    <<: *structure_defaults
-  <<: *all_relations
-  taxonomy: [ communities, markets, categories, tags ]
-  icon_many: "fa:map"
-  icon_one: "fa:map-pin"
-
-#################################
-#
-# PAGE
-#
-#################################
-pages:
-  name: Pages
-  singular_name: Page
-  fields:
-    <<: *record_defaults
     <<: *teaser_defaults
     <<: *media_defaults
     imagegallery:

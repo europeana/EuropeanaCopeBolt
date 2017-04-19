@@ -1,33 +1,33 @@
 main:
     -
         label: 'Homepage'
-        path: landingpages/1
+        path: pages/1
         class: first
     -
         label: 'Our mission'
-        path: landingpages/2
+        path: pages/2
     -
         label: 'What we do'
-        path: landingpages/3
+        path: pages/3
         submenu:
             -
-                path: landingpages/9
+                path: pages/9
                 label: Advocacy
                 submenu:
                     -
-                        path: page/114
+                        link: /page/copyright-reform
                         label: Copyright Reform
                     -
-                        path: landingpages/36
+                        path: pages/36
                         label: Cultural awareness
                     -
-                        path: landingpages/37
+                        path: pages/37
                         label: Re-usable content
                     -
-                        path: landingpages/38
+                        path: pages/38
                         label: Copyright Reform
             -
-                path: landingpages/10
+                path: pages/10
                 label: Standardisation
                 submenu:
                     -
@@ -40,32 +40,32 @@ main:
                         path: /page/cross-domain-data-exchange
                         label: Cross-domain data exchange and interoparability (EDM)
             -
-                path: landingpages/11
+                path: pages/11
                 label: Discovery
             -
-                path: landingpages/12
+                path: pages/12
                 label: Academic research
             -
-                path: landingpages/13
+                path: pages/13
                 label: Creative industries
             -
-                path: landingpages/14
+                path: pages/14
                 label: CHIs
             -
-                path: landingpages/15
+                path: pages/15
                 label: Education
             -
-                path: landingpages/16
+                path: pages/16
                 label: EU project brokerage and support
             -
-                path: landingpages/17
+                path: pages/17
                 label: Campaigns
     -
         label: Network
-        path: landingpages/4
+        path: pages/4
         submenu:
             -
-                path: landingpages/18
+                path: pages/18
                 label: About the network
                 submenu:
                     -
@@ -78,7 +78,7 @@ main:
                         path: persons/network-members
                         label: Network members
             -
-                path: landingpages/19
+                path: pages/19
                 label: Specialty communities
                 submenu:
                     -
@@ -97,20 +97,20 @@ main:
                         path: community/member-states
                         label: Member states
             -
-                path: landingpages/20
+                path: pages/20
                 label: Task forces
             -
-                path: landingpages/21
+                path: pages/21
                 label: Working groups
             -
                 path: events
                 label: Events
     -
         label: Services
-        path: landingpages/5
+        path: pages/5
         submenu:
             -
-                path: landingpages/22
+                path: pages/22
                 label: Incubation services
                 submenu:
                     -
@@ -133,7 +133,7 @@ main:
                                 link: /services/incubation/funding/investor-forum
                                 label: Investor Forum
             -
-                path: landingpages/23
+                path: pages/23
                 label: Publication services
                 submenu:
                     -
@@ -156,10 +156,10 @@ main:
                         label: Content marketing
     -
         label: Resources
-        path: landingpages/6
+        path: pages/6
         submenu:
             -
-                path: landingpages/24
+                path: pages/24
                 label: Statistics
                 submenu:
                     -
@@ -169,7 +169,7 @@ main:
                         link: /resources/statistics/enumerate
                         label: Enumerate
             -
-                path: landingpages/25
+                path: pages/25
                 label: Standardisation
                 submenu:
                     -
@@ -191,7 +191,7 @@ main:
                         link: /resources/standardisation/impact-toolkit
                         label: Impact toolkit
             -
-                path: landingpages/26
+                path: pages/26
                 label: Advocacy
                 submenu:
                     -
@@ -201,7 +201,7 @@ main:
                         link: /resources/advocacy/europeana-publishing-framework
                         label: Europeana Publishing Framework
             -
-                path: landingpages/27
+                path: pages/27
                 label: Developer services
                 submenu:
                     -
@@ -217,7 +217,7 @@ main:
                         link: /resources/developer-services/software-libraries
                         label: Software libraries
             -
-                path: landingpages/28
+                path: pages/28
                 label: Datasets
                 submenu:
                     -
@@ -227,10 +227,10 @@ main:
                         link: /resources/datasets/academic-research
                         label: Academic research
             -
-                path: landingpages/29
+                path: pages/29
                 label: Case studies
             -
-                path: landingpages/30
+                path: pages/30
                 label: Ingestion tools
                 submenu:
                     -
@@ -240,7 +240,7 @@ main:
                         link: /resources/ingestion-tools/operation-direct
                         label: Operation direct
             -
-                path: landingpages/31
+                path: pages/31
                 label: Document archive
                 submenu:
                     -
@@ -259,24 +259,30 @@ main:
                         link: /resources/document-archive/task-force-recommendations
                         label: Task force recommentations
             -
-                path: landingpages/32
+                path: pages/32
                 label: Europeana branding guidelines
     -
         label: News
-        path: landingpages/7
+        path: pages/7
         submenu:
             -
-                path: landingpages/33
+                path: pages/33
                 label: Blog
             -
-                path: landingpages/34
+                path: pages/34
                 label: Press releases
             -
-                path: landingpages/35
+                path: pages/35
                 label: Publications
     -
         label: Jobs
-        path: landingpages/8
+        path: pages/8
+    -
+        label: Sitemap
+        path: visual-sitemap
+    -
+        label: Listings
+        path: homepage
     -
         link: /page/styleguide
         label: Styleguide

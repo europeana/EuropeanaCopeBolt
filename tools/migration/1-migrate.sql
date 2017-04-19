@@ -1,59 +1,144 @@
 CREATE DATABASE IF NOT EXISTS europeana_cope DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE europeana_cope;
 
-DROP TABLE IF EXISTS bolt_landingpages;
-CREATE TABLE bolt_landingpages (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  slug varchar(128) NOT NULL,
-  datecreated datetime NOT NULL,
-  datechanged datetime NOT NULL,
-  datepublish datetime DEFAULT NULL,
-  datedepublish datetime DEFAULT NULL,
-  username varchar(32)  DEFAULT '',
-  ownerid int(11) DEFAULT NULL,
-  status varchar(32)  NOT NULL,
+-- static pages and structural components --
+
+DROP TABLE IF EXISTS bolt_pages;
+CREATE TABLE IF NOT EXISTS bolt_pages (
+  id int(11) NOT NULL AUTO_INCREMENT, # all
+  slug varchar(128) NOT NULL DEFAULT '', # all
+  datecreated datetime NOT NULL, # all
+  datechanged datetime NOT NULL, # all
+  datepublish datetime DEFAULT NULL, # all
+  datedepublish datetime DEFAULT NULL, # all
+  username varchar(32) DEFAULT '', # all
+  ownerid int(11) DEFAULT NULL, # all
+  status varchar(32) NOT NULL DEFAULT '', # all
   subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
   subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  templatefields longtext,
-  title varchar(256)  DEFAULT '',
-  intro longtext,
-  body longtext,
-  teaser longtext,
-  teaser_image longtext,
-  structure_parent longtext,
-  structure_sortorder int(11) NOT NULL DEFAULT '0',
-  hide_list tinyint(1) NOT NULL DEFAULT '0',
-  hide_related tinyint(1) NOT NULL DEFAULT '0',
-  template varchar(256) DEFAULT '',
-  pagefooter longtext,
-  content longtext NULL, # labs # pro # research
+  body longtext NULL, # all
+  contacts longtext NULL, # pro
+  files longtext NULL, # labs
+  filelist_files longtext NULL, # pro # research
+  filelist_downloads varchar(256) NOT NULL DEFAULT '', # pro # research
+  hero longtext NULL, # labs
+  hide_list tinyint(1) NOT NULL DEFAULT 0, # all
+  hide_related tinyint(1) NOT NULL DEFAULT 0, # pro # labs # research
+  hide_related_section tinyint(1) NOT NULL DEFAULT 0, # pro # labs # research
+  image longtext NULL, # him
+  imagelist longtext NULL, # pro # research
+  intro longtext NULL, # pro # labs # him #research
+  listtitle varchar(256) NOT NULL DEFAULT '', # pro # research
+  link1 varchar(256) NOT NULL DEFAULT '', # labs
+  link2 varchar(256) NOT NULL DEFAULT '', # labs
+  link3 varchar(256) NOT NULL DEFAULT '', # labs
+  parent longtext NULL, # pro
+  parents longtext NULL, # pro
+  position longtext NULL, # pro
+  show_page tinyint(1) NOT NULL DEFAULT 0, # pro
+  source varchar(256) NOT NULL DEFAULT '', # research
+  source_url varchar(256) NOT NULL DEFAULT '', # research
+  structure_sortorder int(11) NOT NULL DEFAULT 0, # all
+  structure_parent longtext NULL, # all
+  teaser longtext, # pro # labs # him #research
+  teaser_image longtext NULL, # all
+  templatefields longtext NULL, # all
+  template varchar(256) NOT NULL DEFAULT '', # labs
+  title varchar(256) NOT NULL DEFAULT '', # all
+  pagefooter longtext NULL,
   footer longtext NULL, # labs # pro # research
-  image longtext NULL, # him # labs # pro # research
   PRIMARY KEY (id)
 );
 
+/*
+-- Query: SELECT * FROM europeana_cope.bolt_landingpages
+-- Date: 2017-04-19 12:13
+*/
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (1,'homepage','2017-04-19 10:19:42','2017-04-19 10:19:42','2017-04-19 10:19:08',NULL,'',1,'published','','[]','Europeana professional','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (2,'our-mission','2017-04-19 10:20:31','2017-04-19 10:20:31','2017-04-19 10:20:08',NULL,'',1,'published','','[]','Our mission','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (3,'what-we-do','2017-04-19 10:21:06','2017-04-19 10:21:06','2017-04-19 10:20:52',NULL,'',1,'published','','[]','What we do','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (4,'network','2017-04-19 10:21:22','2017-04-19 10:21:22','2017-04-19 10:21:14',NULL,'',1,'published','','[]','Network','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (5,'services','2017-04-19 10:21:42','2017-04-19 10:21:42','2017-04-19 10:21:31',NULL,'',1,'published','','[]','Services','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (6,'resources','2017-04-19 10:22:26','2017-04-19 10:22:26','2017-04-19 10:22:13',NULL,'',1,'published','','[]','Resources','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (7,'news','2017-04-19 10:23:00','2017-04-19 10:23:00','2017-04-19 10:22:33',NULL,'',1,'published','','[]','News','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (8,'jobs','2017-04-19 10:23:25','2017-04-19 10:23:25','2017-04-19 10:23:06',NULL,'',1,'published','','[]','Jobs','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (9,'advocacy','2017-04-19 10:25:19','2017-04-19 10:25:19','2017-04-19 10:23:37',NULL,'',1,'published','','[]','Advocacy','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (10,'standardisation','2017-04-19 10:26:05','2017-04-19 10:26:05','2017-04-19 10:25:39',NULL,'',1,'published','','[]','Standardisation','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (11,'discovery','2017-04-19 10:37:04','2017-04-19 10:37:04','2017-04-19 10:36:56',NULL,'',1,'published','','[]','Discovery','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (12,'academic-research','2017-04-19 10:37:19','2017-04-19 10:37:19','2017-04-19 10:37:12',NULL,'',1,'published','','[]','Academic research','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (13,'creative-industries','2017-04-19 10:37:38','2017-04-19 10:37:38','2017-04-19 10:37:26',NULL,'',1,'published','','[]','Creative industries','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (14,'chis','2017-04-19 10:37:52','2017-04-19 10:37:52','2017-04-19 10:37:45',NULL,'',1,'published','','[]','CHIs','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (15,'education','2017-04-19 10:38:08','2017-04-19 10:38:08','2017-04-19 10:38:02',NULL,'',1,'published','','[]','Education','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (16,'eu-project-brokerage-and-support','2017-04-19 10:38:24','2017-04-19 10:38:24','2017-04-19 10:38:16',NULL,'',1,'published','','[]','EU project brokerage and support','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (17,'campaigns','2017-04-19 10:38:50','2017-04-19 10:40:24','2017-04-19 10:38:42',NULL,'',1,'published','','[]','Campaigns','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (18,'about-the-network','2017-04-19 10:44:35','2017-04-19 10:44:35','2017-04-19 10:43:59',NULL,'',1,'published','','[]','About the network','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (19,'specialty-communities','2017-04-19 10:45:42','2017-04-19 10:45:42','2017-04-19 10:44:47',NULL,'',1,'published','','[]','Specialty communities','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (20,'task-forces','2017-04-19 10:46:15','2017-04-19 10:46:15','2017-04-19 10:45:56',NULL,'',1,'published','','[]','Task forces','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (21,'working-groups','2017-04-19 10:46:48','2017-04-19 10:46:48','2017-04-19 10:46:33',NULL,'',1,'published','','[]','Working groups','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (22,'incubation-services','2017-04-19 10:50:37','2017-04-19 10:50:37','2017-04-19 10:50:25',NULL,'',1,'published','','[]','Incubation services','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (23,'publication-services','2017-04-19 10:50:55','2017-04-19 10:51:02','2017-04-19 10:50:45',NULL,'',1,'published','','[]','Publication services','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (24,'statistics','2017-04-19 10:53:54','2017-04-19 10:53:54','2017-04-19 10:53:40',NULL,'',1,'published','','[]','Statistics','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (25,'resources-standardisation','2017-04-19 10:54:08','2017-04-19 10:54:08','2017-04-19 10:54:01',NULL,'',1,'published','','[]','Standardisation','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (26,'resources-advocacy','2017-04-19 10:54:25','2017-04-19 10:54:25','2017-04-19 10:54:15',NULL,'',1,'published','','[]','Advocacy','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (27,'developer-services','2017-04-19 10:54:44','2017-04-19 10:54:44','2017-04-19 10:54:37',NULL,'',1,'published','','[]','Developer services','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (28,'datasets','2017-04-19 10:55:32','2017-04-19 10:55:32','2017-04-19 10:55:25',NULL,'',1,'published','','[]','Datasets','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (29,'case-studies','2017-04-19 10:55:47','2017-04-19 10:55:47','2017-04-19 10:55:40',NULL,'',1,'published','','[]','Case studies','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (30,'ingestion-tools','2017-04-19 10:56:05','2017-04-19 10:56:05','2017-04-19 10:55:59',NULL,'',1,'published','','[]','Ingestion tools','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (31,'document-archive','2017-04-19 10:56:19','2017-04-19 10:56:19','2017-04-19 10:56:13',NULL,'',1,'published','','[]','Document archive','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (32,'europeana-branding-guidelines','2017-04-19 10:56:33','2017-04-19 10:56:33','2017-04-19 10:56:28',NULL,'',1,'published','','[]','Europeana branding guidelines','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (33,'blog','2017-04-19 10:57:10','2017-04-19 10:57:10','2017-04-19 10:56:51',NULL,'',1,'published','','[]','Blog','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (34,'press-releases','2017-04-19 10:57:36','2017-04-19 10:57:36','2017-04-19 10:57:20',NULL,'',1,'published','','[]','Press releases','','');
+INSERT INTO `bolt_pages` (`id`,`slug`,`datecreated`,`datechanged`,`datepublish`,`datedepublish`,`username`,`ownerid`,`status`,`subsite`,`templatefields`,`title`,`intro`,`body`) VALUES (35,'publications','2017-04-19 10:57:53','2017-04-19 10:57:53','2017-04-19 10:57:45',NULL,'',1,'published','','[]','Publications','','');
+
+
 -- pro
-INSERT INTO europeana_cope.bolt_landingpages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, image, template, teaser, content, footer, structure_sortorder, structure_parent, templatefields, body, pagefooter
-) SELECT 'pro', s.id,
-    s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.intro, s.image, '', s.teaser, s.content, s.footer, s.structure_sortorder, s.structure_parent, s.templatefields, s.body, s.suffix
+INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, image, template, teaser, footer, structure_sortorder, structure_parent, templatefields, body, pagefooter
+) SELECT 'pro-structures', s.id,
+    s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.intro, s.image, '', s.teaser, s.footer, s.structure_sortorder, s.structure_parent, s.templatefields, s.body, s.suffix
   FROM europeana_pro.bolt_structures s;
 
 -- labs
-INSERT INTO europeana_cope.bolt_landingpages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, teaser, image, template, content, footer,  structure_sortorder, templatefields, structure_parent
-) SELECT 'labs', s.id,
-    s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.teaser, s.image, '', s.content, s.footer, s.structure_sortorder, s.templatefields, s.structure_parent
+INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, teaser, image, template, footer,  structure_sortorder, templatefields, structure_parent
+) SELECT 'labs-structure', s.id,
+    s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.teaser, s.image, '', s.footer, s.structure_sortorder, s.templatefields, s.structure_parent
   FROM europeana_labs.bolt_structures s;
 
 -- research
-INSERT INTO europeana_cope.bolt_landingpages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, teaser, image, template, content, footer, templatefields, structure_parent, structure_sortorder
-) SELECT 'research', s.id,
-    s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.teaser, s.image, '', s.content, s.footer, s.templatefields, s.structure_parent, s.structure_sortorder
+INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, teaser, image, template, footer, templatefields, structure_parent, structure_sortorder
+) SELECT 'research-structure', s.id,
+    s.slug, s.datecreated, s.datechanged, s.datepublish, s.datedepublish, s.username, s.ownerid, s.status, s.title, s.teaser, s.image, '', s.footer, s.templatefields, s.structure_parent, s.structure_sortorder
   FROM europeana_research.bolt_structures s;
 
-UPDATE europeana_cope.bolt_landingpages SET pagefooter = concat(pagefooter, "\n", footer) WHERE footer != '';
-UPDATE europeana_cope.bolt_landingpages SET teaser_image = image WHERE teaser_image = '' AND image != '';
-ALTER TABLE europeana_cope.bolt_landingpages DROP footer;
-ALTER TABLE europeana_cope.bolt_landingpages DROP image;
+UPDATE europeana_cope.bolt_pages SET pagefooter = concat(pagefooter, "\n", footer) WHERE footer != '';
+UPDATE europeana_cope.bolt_pages SET teaser_image = image WHERE teaser_image = '' AND image != '';
+ALTER TABLE europeana_cope.bolt_pages DROP footer;
+ALTER TABLE europeana_cope.bolt_pages DROP image;
+
+
+-- labs
+INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, hide_related, hide_related_section, structure_sortorder, files, link1, link2, link3, templatefields, structure_parent, hero, hide_list, template
+) SELECT 'labs', p.id,
+    p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.intro, p.teaser, p.body, p.teaser_image, p.hide_related, p.hide_related_section, p.structure_sortorder, p.files, p.link1, p.link2, p.link3, p.templatefields, p.structure_parent, p.hero, p.hide_list, ''
+  FROM europeana_labs.bolt_pages p;
+
+-- pro
+INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, parent, position, contacts,  teaser, body, teaser_image, show_page, filelist_files, filelist_downloads, intro, hide_list, parents, listtitle, imagelist, hide_related, hide_related_section, structure_sortorder, structure_parent, templatefields
+) SELECT 'pro', p.id,
+    p.slug, p.datecreated, p.datechanged, p.datepublish, null, p.username, p.ownerid, p.status, p.title, p.parent, p.position, p.contacts, p.teaser, p.body, p.teaser_image, p.show_page, p.filelist_files, p.filelist_downloads, p.intro, p.hide_list, p.parents, p.listtitle, p.imagelist, p.hide_related, p.hide_related_section, p.structure_sortorder, p.structure_parent, p.templatefields
+  FROM europeana_pro.bolt_pages p;
+
+
+-- research
+INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, hide_list, filelist_files, filelist_downloads, hide_related, hide_related_section, listtitle, imagelist, templatefields, structure_parent, structure_sortorder
+) SELECT 'research', p.id,
+    p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.intro, p.teaser, p.body, p.teaser_image, p.hide_list, p.filelist_files, p.filelist_downloads, p.hide_related, p.hide_related_section, p.listtitle, p.imagelist, p.templatefields, p.structure_parent, p.structure_sortorder
+  FROM europeana_research.bolt_pages p;
+
+-- collections to pages
+INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, hide_list, filelist_files, filelist_downloads, hide_related, hide_related_section, listtitle, imagelist, source, source_url, templatefields, structure_parent, structure_sortorder
+) SELECT 'collections', r.id,
+    r.slug, r.datecreated, r.datechanged, r.datepublish, r.datedepublish, r.username, r.ownerid, r.status, r.title, r.intro, r.teaser, r.body, r.teaser_image, r.hide_list, r.filelist_files, r.filelist_downloads, r.hide_related, r.hide_related_section, r.listtitle, r.imagelist, r.source, r.source_url, r.templatefields, r.structure_parent, r.structure_sortorder
+  FROM europeana_research.bolt_collections r;
 
 -- core business collections and data --
 
@@ -426,78 +511,6 @@ INSERT INTO europeana_cope.bolt_jobs ( subsite, subsite_id, title, slug, datecre
 FROM europeana_labs.bolt_jobs j;
 
 
--- static pages and structural components --
-
-
-DROP TABLE IF EXISTS bolt_pages;
-CREATE TABLE IF NOT EXISTS bolt_pages (
-  id int(11) NOT NULL AUTO_INCREMENT, # all
-  slug varchar(128) NOT NULL DEFAULT '', # all
-  datecreated datetime NOT NULL, # all
-  datechanged datetime NOT NULL, # all
-  datepublish datetime DEFAULT NULL, # all
-  datedepublish datetime DEFAULT NULL, # all
-  username varchar(32) DEFAULT '', # all
-  ownerid int(11) DEFAULT NULL, # all
-  status varchar(32) NOT NULL DEFAULT '', # all
-  subsite varchar(32) NOT NULL DEFAULT 'unknown', # all [ content is either 'pro', 'labs', 'research' or 'him' ]
-  subsite_id int(11) NOT NULL DEFAULT 0, # all [ intermediary ID used for importing - remove after import ]
-  body longtext NULL, # all
-  contacts longtext NULL, # pro
-  files longtext NULL, # labs
-  filelist_files longtext NULL, # pro # research
-  filelist_downloads varchar(256) NOT NULL DEFAULT '', # pro # research
-  hero longtext NULL, # labs
-  hide_list tinyint(1) NOT NULL DEFAULT 0, # all
-  hide_related tinyint(1) NOT NULL DEFAULT 0, # pro # labs # research
-  hide_related_section tinyint(1) NOT NULL DEFAULT 0, # pro # labs # research
-  image longtext NULL, # him
-  imagelist longtext NULL, # pro # research
-  intro longtext, # pro # labs # him #research
-  listtitle varchar(256) NOT NULL DEFAULT '', # pro # research
-  link1 varchar(256) NOT NULL DEFAULT '', # labs
-  link2 varchar(256) NOT NULL DEFAULT '', # labs
-  link3 varchar(256) NOT NULL DEFAULT '', # labs
-  parent longtext NULL, # pro
-  parents longtext NULL, # pro
-  position longtext NULL, # pro
-  show_page tinyint(1) NOT NULL DEFAULT 0, # pro
-  source varchar(256) NOT NULL DEFAULT '', # research
-  source_url varchar(256) NOT NULL DEFAULT '', # research
-  structure_sortorder int(11) NOT NULL DEFAULT 0, # all
-  structure_parent longtext NULL, # all
-  teaser longtext, # pro # labs # him #research
-  teaser_image longtext NULL, # all
-  templatefields longtext NULL, # all
-  template varchar(256) NOT NULL DEFAULT '', # labs
-  title varchar(256) NOT NULL DEFAULT '', # all
-  PRIMARY KEY (id)
-);
-
--- labs
-INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, hide_related, hide_related_section, structure_sortorder, files, link1, link2, link3, templatefields, structure_parent, hero, hide_list, template
-) SELECT 'labs', p.id,
-  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.intro, p.teaser, p.body, p.teaser_image, p.hide_related, p.hide_related_section, p.structure_sortorder, p.files, p.link1, p.link2, p.link3, p.templatefields, p.structure_parent, p.hero, p.hide_list, ''
-FROM europeana_labs.bolt_pages p;
-
--- pro
-INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, parent, position, contacts,  teaser, body, teaser_image, show_page, filelist_files, filelist_downloads, intro, hide_list, parents, listtitle, imagelist, hide_related, hide_related_section, structure_sortorder, structure_parent, templatefields
-) SELECT 'pro', p.id,
-    p.slug, p.datecreated, p.datechanged, p.datepublish, null, p.username, p.ownerid, p.status, p.title, p.parent, p.position, p.contacts, p.teaser, p.body, p.teaser_image, p.show_page, p.filelist_files, p.filelist_downloads, p.intro, p.hide_list, p.parents, p.listtitle, p.imagelist, p.hide_related, p.hide_related_section, p.structure_sortorder, p.structure_parent, p.templatefields
-  FROM europeana_pro.bolt_pages p;
-
-
--- research
-INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, hide_list, filelist_files, filelist_downloads, hide_related, hide_related_section, listtitle, imagelist, templatefields, structure_parent, structure_sortorder
-) SELECT 'research', p.id,
-  p.slug, p.datecreated, p.datechanged, p.datepublish, p.datedepublish, p.username, p.ownerid, p.status, p.title, p.intro, p.teaser, p.body, p.teaser_image, p.hide_list, p.filelist_files, p.filelist_downloads, p.hide_related, p.hide_related_section, p.listtitle, p.imagelist, p.templatefields, p.structure_parent, p.structure_sortorder
-FROM europeana_research.bolt_pages p;
-
--- collections to pages
-INSERT INTO europeana_cope.bolt_pages ( subsite, subsite_id, slug, datecreated, datechanged, datepublish, datedepublish, username, ownerid, status, title, intro, teaser, body, teaser_image, hide_list, filelist_files, filelist_downloads, hide_related, hide_related_section, listtitle, imagelist, source, source_url, templatefields, structure_parent, structure_sortorder
-) SELECT 'collections', r.id,
-    r.slug, r.datecreated, r.datechanged, r.datepublish, r.datedepublish, r.username, r.ownerid, r.status, r.title, r.intro, r.teaser, r.body, r.teaser_image, r.hide_list, r.filelist_files, r.filelist_downloads, r.hide_related, r.hide_related_section, r.listtitle, r.imagelist, r.source, r.source_url, r.templatefields, r.structure_parent, r.structure_sortorder
-  FROM europeana_research.bolt_collections r;
 
 -- blocks and resources --
 
