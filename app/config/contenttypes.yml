@@ -167,12 +167,6 @@ __nodes:
       multiple: true
       order: -datepublish
       format: "{{ item.title|escape }}"
-  relation_jobs: &relation_jobs
-    jobs:
-      label: "Jobs"
-      multiple: true
-      order: title
-      format: "{{ item.title|escape }}"
   relation_persons: &relation_persons
     persons:
       label: "Contacts"
@@ -193,7 +187,6 @@ __nodes:
       <<: *relation_data
       <<: *relation_projects
       <<: *relation_events
-      <<: *relation_jobs
       <<: *relation_persons
 
 
