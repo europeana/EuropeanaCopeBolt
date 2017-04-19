@@ -12,13 +12,14 @@
 
 {# The 'recursive' macro, for inserting one menu item. If it has a submenu, it
    invokes itself to insert the items of the submenus. #}
-{% macro display_menu_item(item, loop, extraclass, withsubmenus) %}
+{% macro display_menu_item(item, loop, withsubmenus, level) %}
     {% from _self import display_menu_item %}
     {% spaceless %}
     <li class="index-{{ loop.index -}}
         {{ item.path|default('') == 'homepage' ? ' menu-text' -}}
         {{ loop.first ? ' first' -}}
         {{ loop.last ? ' last' -}}
+        {{ (level > 0) ? ' level-' ~ level -}}
         {{ (item.submenu|default(false) and withsubmenus) ? ' is-dropdown-submenu-parent' -}}
         {{ item|current ? ' active' }}">
 
@@ -28,8 +29,9 @@
 
         {% if item.submenu is defined and withsubmenus %}
             <ul class="sub-menu" data-submenu>
+                {% set sublevel = level+1 %}
                 {% for submenu in item.submenu %}
-                    {{ display_menu_item(submenu, loop) }}
+                    {{ display_menu_item(submenu, loop, withsubmenus, sublevel) }}
                 {% endfor %}
             </ul>
         {% endif %}
@@ -44,7 +46,7 @@
 <ul  class="play-menu">
 {% for item in menu %}
     {% if item.label is defined %}
-        {{ display_menu_item(item, loop, '', withsubmenus) }}
+        {{ display_menu_item(item, loop, withsubmenus, 0) }}
     {% endif %}
 {% endfor %}
 </ul>
