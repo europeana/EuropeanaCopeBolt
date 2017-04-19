@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0716a28b89d8b7fbd657386aca63c06",
+    "content-hash": "5010dd32cbea5c887cd2142f5fed94f2",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -124,16 +124,16 @@
         },
         {
             "name": "bolt/jsonapi",
-            "version": "v3.0.11",
+            "version": "v3.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xiaohutai/jsonapi.git",
-                "reference": "5fb2f6ae2deeb089550e5adb3ab41d3b003f906f"
+                "reference": "61bc2ba84272c3fa7b25e7d4afde21bf187ea336"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/5fb2f6ae2deeb089550e5adb3ab41d3b003f906f",
-                "reference": "5fb2f6ae2deeb089550e5adb3ab41d3b003f906f",
+                "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/61bc2ba84272c3fa7b25e7d4afde21bf187ea336",
+                "reference": "61bc2ba84272c3fa7b25e7d4afde21bf187ea336",
                 "shasum": ""
             },
             "require": {
@@ -179,10 +179,10 @@
                 "jsonapi"
             ],
             "support": {
-                "source": "https://github.com/xiaohutai/jsonapi/tree/v3.0.11",
+                "source": "https://github.com/xiaohutai/jsonapi/tree/v3.0.12",
                 "issues": "https://github.com/xiaohutai/jsonapi/issues"
             },
-            "time": "2017-04-12T15:28:22+00:00"
+            "time": "2017-04-18T14:50:35+00:00"
         },
         {
             "name": "bolt/sitemap",
