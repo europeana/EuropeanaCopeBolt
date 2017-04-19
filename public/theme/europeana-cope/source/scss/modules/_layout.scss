@@ -85,12 +85,16 @@ article {
     //background: #40e; //blue
 }
 
+.column {
+    //background: #fc8;
+}
+
 main {
-    //background: #9f6;
+    // background: #9f6;
 }
 
 aside {
-    background: #0f9;
+    // background: #0f9;
 }
 
 footer {
@@ -139,7 +143,6 @@ footer {
 
 
 .column {
-     //background: #fc8;
     min-height: 2rem;
     width:100%;
     margin-bottom: 2rem;
@@ -149,6 +152,43 @@ footer {
         padding: 0 0.875rem;
 
     }
+
+}
+
+.contentpage {
+    article.column {
+        padding: 0 0.875rem;
+
+        @include respond-to(medium-screens) {
+            padding: 0 2rem;
+        }
+    }
+
+    figure {
+        margin: 2rem 0rem; //1rem 2rem;
+
+        @include respond-to(medium-screens) {
+             margin: 1rem 2rem;
+        }
+
+        @include respond-to(large-screens) {
+             margin: 1rem 4rem;
+        }
+    }
+
+    .header-group,
+    .body {
+        padding: 0 ;
+
+        @include respond-to(large-screens) {
+            padding: 0 4rem;
+        }
+        @include respond-to(xlarge-screens) {
+            padding: 0 8rem;
+        }
+    }
+
+
 }
 
 

@@ -1,0 +1,62 @@
+/*
+* BUTTONS
+**/
+
+a.button, .button, button {
+    text-decoration: none;
+    display: inline-block; // to adjust width to text
+    border-radius: 5px;
+    background-color: $baseFirstThemeColour;
+    color: $white;
+    border: 0;
+    padding: .3rem 4rem;
+    text-align: center;
+}
+
+.button-link {
+    border: 3px solid $dark-blue;
+    display: block;
+    margin: .75rem auto 0 auto;
+    width: 115px; // centering needs fixed width. Can be adjusted.
+    text-align: center;
+    font-size: 0.75rem;
+    padding: .3em 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -.3px;
+    color: $dark-blue;
+
+
+    @include respond-to(medium-screens){
+        margin: .75rem auto 0 auto;
+        width: auto;
+        display: inline-block;
+        font-size: 0.875rem;
+
+    }
+
+    &:hover, &:active, &:focus {
+        background-color: $dark-blue;
+        color: $white;
+        text-decoration: none;
+        font-weight: 400;
+    }
+
+
+    .calltoaction &,
+    .calltoaction-readmore & {
+        color: $white;
+        border: 2px solid $white;
+        font-weight: 400;
+        letter-spacing: 0;
+        font-size: 0.75rem;
+
+        &:hover, &:active, &:focus {
+            background-color: $white;
+            color: $baseFirstThemeColour;
+            font-weight: 700;
+        }
+    }
+
+}
+

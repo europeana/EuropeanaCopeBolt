@@ -27,8 +27,12 @@ h1, h2, h3, h4, h5 {
 }
 
 h1, .alpha {
-    font-size: 2rem; // 32px
-    margin-bottom:2.75rem;
+    font-size: 1.5rem; // 24px
+    margin-bottom: 2rem; //2.75rem;
+
+    @include respond-to (large-screens) {
+        font-size: 2rem; //32px
+    }
 }
 
 h2, .beta {
@@ -42,7 +46,7 @@ h3, .gamma {
     margin-bottom: .75rem; // taken from height in teaser-twocol. Als nodog, mag deze aangepast.
     color: $medium-gray;
 
-    @include respond-to (medium-screens) {
+    @include respond-to (large-screens) {
         font-size: 1.5rem;
     }
 
@@ -164,6 +168,14 @@ ul {
     ol a {
         text-decoration: underline;
     }
+
+    p {
+        font-size: 1.125rem;
+
+        @include respond-to (large-screens){
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .body {
@@ -271,6 +283,12 @@ a.readmore {
     }
 }
 
+a.primary-link {
+    color: $baseFirstThemeColour;
+    font-weight: 700;
+    display: block;
+}
+
 a.tag,
 a.team {
     border-bottom: 1px dotted $link-blue;
@@ -300,10 +318,15 @@ p.meta {
     span {
         white-space: nowrap;
         display: inline-block;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
 
         &:last-child {
             margin-right: 0;
+        }
+
+        + span:before {
+            content: "|";
+            margin-right: 0.5rem;
         }
     }
 
@@ -335,6 +358,18 @@ svg.icon {
 }
 
 figcaption {
+    text-align: center;
+    font-size: 0.6875rem;
+    font-style: italic;
+    border-top: 1px solid $line-gray;
+    margin-top: .75rem;
+    padding-top: 0.5rem;
+    // display: block;
 
+    @include respond-to(large-screens) {
+        font-size: 1rem;
+        margin-top: 1rem;
+        padding-top: 0.75rem;
+    }
 }
 

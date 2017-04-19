@@ -26,6 +26,43 @@
 /**
 *   Helper
 */
+footer:after {
+  content: "content";
+  display: block;
+  height: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  font-size: 12px; }
+
+@media only screen and (min-width: 6.25em) {
+  footer:after {
+    content: "small-screens";
+    background-color: #0f9; } }
+
+@media only screen and (min-width: 24em) {
+  footer:after {
+    content: "medium-screens";
+    background-color: #f06; } }
+
+@media only screen and (min-width: 47.9375em) {
+  footer:after {
+    content: "large-screens";
+    background-color: #90f; } }
+
+@media only screen and (min-width: 80em) {
+  footer:after {
+    content: "xlarge-screens";
+    background-color: #903; } }
+
+@media only screen and (min-width: 90em) {
+  footer:after {
+    content: "wide-screens";
+    background-color: #906; } }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -587,9 +624,6 @@ section > .inner-wrap {
 section.contentheader > .inner-wrap {
   padding: 0 1rem; }
 
-aside {
-  background: #0f9; }
-
 footer {
   background: #e7e7e7;
   border-top: 6px solid #293745;
@@ -630,6 +664,33 @@ footer {
   @media only screen and (min-width: 24em) {
     .column {
       padding: 0 0.875rem; } }
+
+.contentpage article.column {
+  padding: 0 0.875rem; }
+  @media only screen and (min-width: 24em) {
+    .contentpage article.column {
+      padding: 0 2rem; } }
+
+.contentpage figure {
+  margin: 2rem 0rem; }
+  @media only screen and (min-width: 24em) {
+    .contentpage figure {
+      margin: 1rem 2rem; } }
+  @media only screen and (min-width: 47.9375em) {
+    .contentpage figure {
+      margin: 1rem 4rem; } }
+
+.contentpage .header-group,
+.contentpage .body {
+  padding: 0; }
+  @media only screen and (min-width: 47.9375em) {
+    .contentpage .header-group,
+    .contentpage .body {
+      padding: 0 4rem; } }
+  @media only screen and (min-width: 80em) {
+    .contentpage .header-group,
+    .contentpage .body {
+      padding: 0 8rem; } }
 
 .fourth {
   width: 50%;
@@ -771,8 +832,11 @@ h1, h2, h3, h4, h5 {
   line-height: 1.125; }
 
 h1, .alpha {
-  font-size: 2rem;
-  margin-bottom: 2.75rem; }
+  font-size: 1.5rem;
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 47.9375em) {
+    h1, .alpha {
+      font-size: 2rem; } }
 
 h2, .beta {
   font-size: 1.625rem; }
@@ -781,7 +845,7 @@ h3, .gamma {
   font-size: 1.25rem;
   margin-bottom: .75rem;
   color: #4d4d4d; }
-  @media only screen and (min-width: 24em) {
+  @media only screen and (min-width: 47.9375em) {
     h3, .gamma {
       font-size: 1.5rem; } }
   h3 a, .gamma a {
@@ -874,6 +938,12 @@ ul {
 .introduction ol a {
   text-decoration: underline; }
 
+.introduction p {
+  font-size: 1.125rem; }
+  @media only screen and (min-width: 47.9375em) {
+    .introduction p {
+      font-size: 1.5rem; } }
+
 .body p a,
 .body ul a,
 .body ol a {
@@ -944,6 +1014,11 @@ a.readmore {
   a.readmore:hover, a.readmore:active, a.readmore:focus {
     color: #095f90; }
 
+a.primary-link {
+  color: #E11D53;
+  font-weight: 700;
+  display: block; }
+
 a.tag,
 a.team {
   border-bottom: 1px dotted #095f90;
@@ -968,9 +1043,12 @@ p.meta {
   p.meta span {
     white-space: nowrap;
     display: inline-block;
-    margin-right: 1rem; }
+    margin-right: 0.5rem; }
     p.meta span:last-child {
       margin-right: 0; }
+    p.meta span + span:before {
+      content: "|";
+      margin-right: 0.5rem; }
   p.meta span.caldate {
     font-size: 0.875rem;
     margin-top: 1rem; }
@@ -988,6 +1066,70 @@ svg.icon {
 
 .svg-link svg {
   fill: #E11D53; }
+
+figcaption {
+  text-align: center;
+  font-size: 0.6875rem;
+  font-style: italic;
+  border-top: 1px solid #cccccc;
+  margin-top: .75rem;
+  padding-top: 0.5rem; }
+  @media only screen and (min-width: 47.9375em) {
+    figcaption {
+      font-size: 1rem;
+      margin-top: 1rem;
+      padding-top: 0.75rem; } }
+
+/*
+* BUTTONS
+**/
+a.button, .button, button {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #E11D53;
+  color: #fff;
+  border: 0;
+  padding: .3rem 4rem;
+  text-align: center; }
+
+.button-link {
+  border: 3px solid #293745;
+  display: block;
+  margin: .75rem auto 0 auto;
+  width: 115px;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: .3em 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -.3px;
+  color: #293745; }
+  @media only screen and (min-width: 24em) {
+    .button-link {
+      margin: .75rem auto 0 auto;
+      width: auto;
+      display: inline-block;
+      font-size: 0.875rem; } }
+  .button-link:hover, .button-link:active, .button-link:focus {
+    background-color: #293745;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400; }
+  .calltoaction .button-link,
+  .calltoaction-readmore .button-link {
+    color: #fff;
+    border: 2px solid #fff;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 0.75rem; }
+    .calltoaction .button-link:hover, .calltoaction .button-link:active, .calltoaction .button-link:focus,
+    .calltoaction-readmore .button-link:hover,
+    .calltoaction-readmore .button-link:active,
+    .calltoaction-readmore .button-link:focus {
+      background-color: #fff;
+      color: #E11D53;
+      font-weight: 700; }
 
 /**
  * File:        _forms.scss
@@ -1442,12 +1584,7 @@ a.banner {
   .calltoactionform .button,
   .calltoactionlink .button {
     display: inline-block;
-    border-radius: 5px;
-    background-color: #700e29;
-    color: #fff;
-    border: 0;
-    padding: .3rem 4rem;
-    text-align: center; }
+    background-color: #700e29; }
     .calltoactionform .button.actionbutton,
     .calltoactionlink .button.actionbutton {
       margin: 1rem auto;
@@ -1492,55 +1629,44 @@ a.banner {
 **/
 .side-info {
   text-align: right;
-  padding: 0 0.875rem; }
+  padding: 0 0.875rem;
+  margin-bottom: 1rem; }
   .side-info p {
     margin-bottom: 0.5rem; }
   .side-info .label {
     margin-top: 0; }
 
-/*
-* BUTTONS
-**/
-a.button, .button, button {
-  text-decoration: none; }
+.contentpage .header-group {
+  position: relative; }
 
-.button-link {
-  border: 3px solid #293745;
-  display: block;
-  margin: .75rem auto 0 auto;
-  width: 115px;
-  text-align: center;
-  font-size: 0.75rem;
-  padding: .3em 1em;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: -.3px;
-  color: #293745; }
-  @media only screen and (min-width: 24em) {
-    .button-link {
-      margin: .75rem auto 0 auto;
-      width: auto;
-      display: inline-block;
-      font-size: 0.875rem; } }
-  .button-link:hover, .button-link:active, .button-link:focus {
-    background-color: #293745;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 400; }
-  .calltoaction .button-link,
-  .calltoaction-readmore .button-link {
-    color: #fff;
-    border: 2px solid #fff;
-    font-weight: 400;
-    letter-spacing: 0;
-    font-size: 0.75rem; }
-    .calltoaction .button-link:hover, .calltoaction .button-link:active, .calltoaction .button-link:focus,
-    .calltoaction-readmore .button-link:hover,
-    .calltoaction-readmore .button-link:active,
-    .calltoaction-readmore .button-link:focus {
-      background-color: #fff;
-      color: #E11D53;
-      font-weight: 700; }
+.contentpage figure {
+  margin-bottom: 2rem; }
+
+.author-small {
+  margin-bottom: 1rem; }
+  @media only screen and (min-width: 47.9375em) {
+    .author-small {
+      position: absolute;
+      max-width: 100px;
+      left: -2.75rem;
+      top: 0; } }
+  @media only screen and (min-width: 80em) {
+    .author-small {
+      left: -.5rem; } }
+  .author-small img {
+    float: left;
+    margin: 0 1rem 1rem 0; }
+    @media only screen and (min-width: 47.9375em) {
+      .author-small img {
+        float: none; } }
+  .author-small p.name {
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin: 1rem 0 0 0; }
+  .author-small p.function {
+    font-style: italic;
+    font-size: 0.625rem;
+    margin: 0; }
 
 @media print {
   *,
