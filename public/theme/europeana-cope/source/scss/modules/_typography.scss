@@ -87,6 +87,22 @@ h3, .gamma {
         margin-bottom: .5rem;
     }
 
+    .speaker-list & {
+        color: $link-blue;
+        font-size: 1rem;
+        text-align: center;
+        padding-top: 1em;
+
+        @include respond-to (large-screens) {
+            font-size: 1.25rem;
+        }
+    }
+
+    .location-list & {
+        font-size: 1.125rem;
+        color: $light-gray;
+        margin-top: 0;
+    }
 
 
 }
@@ -134,6 +150,18 @@ section {
             font-size: 1.625rem;
         }
 
+    }
+
+    &.info-list > h2 {
+        font-weight: 700;
+        text-transform: none;
+        letter-spacing: 0;
+        text-align: left;
+        margin: 0 0 3rem 0;
+
+        @include respond-to (medium-screens) {
+            font-size: 1.375rem;
+        }
     }
 
     .inner-wrap > p {
@@ -186,6 +214,49 @@ ul {
     }
 }
 
+p {
+
+    font-size: 0.875rem;
+
+    @include respond-to (medium-screens){
+        font-size: 1rem;
+    }
+
+    .teaser-twocol &,
+    .teaser-threecol &,
+    .catstream-threecol & {
+        color: $medium-gray;
+    }
+
+    &.function {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: $light-gray;
+        line-height: 1.125;
+    }
+
+    &.name {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: $medium-gray;
+        line-height: 1.125;
+
+        span {
+            font-weight: 400;
+            font-size: 0.875em;
+        }
+    }
+
+    // .info-list &,
+    // .author-big & {
+    //     font-size: .75rem;
+
+    //     @include respond-to (medium-screens){
+    //         font-size: 1rem;
+    //     }
+    // }
+}
+
 a {
     color: $link-blue;
     text-decoration: none;
@@ -198,6 +269,7 @@ a {
 .introduction p, .introduction ul, .introduction ol, .introduction {
     font-family:$base-font-family;
     font-weight: 400;
+    color: $medium-gray;
 }
 
 .body p, .body ul, .body ol, .body  {
@@ -271,42 +343,55 @@ footer {
 
 }
 
-a.readmore {
-    color: $black;
-    font-weight: 700;
-    text-align: right;
-    display: block;
-    text-decoration: none;
+a {
+    &.readmore {
+        color: $black;
+        font-weight: 700;
+        text-align: right;
+        display: block;
+        text-decoration: none;
 
-    &:hover, &:active, &:focus {
-        color: $link-blue;
+        &:hover, &:active, &:focus {
+            color: $link-blue;
+        }
     }
-}
 
-a.primary-link {
-    color: $baseFirstThemeColour;
-    font-weight: 700;
-    display: block;
-}
+    &.primary-link {
+        color: $baseFirstThemeColour;
+        font-weight: 700;
+        display: inline-block;
+        margin: 1rem 0;
+    }
 
-a.tag,
-a.team {
-    border-bottom: 1px dotted $link-blue;
-    font-size: 0.75rem;
-    margin-right: .5rem;
+    &.tag,
+    &.team {
+        border-bottom: 1px dotted $link-blue;
+        font-size: 0.75rem;
+        margin-right: .5rem;
 
-    &:last-child {
-            margin-right: 0;
+        &:last-child {
+                margin-right: 0;
+            }
+
+        @include respond-to(medium-screens) {
+            font-size: 0.9375rem;
         }
 
-    @include respond-to(medium-screens) {
-        font-size: 0.9375rem;
+        .label + & {
+            margin-left: .5rem;
+        }
     }
 
-    .label + & {
-        margin-left: .5rem;
+    &.phone {
+        color: $medium-gray;
+        white-space: nowrap;
+    }
+
+    &.email {
+       //white-space: nowrap;
     }
 }
+
 
 p.meta {
     font-size: 0.75rem;
@@ -348,7 +433,7 @@ svg.icon {
     fill: CurrentColor;
     height: 1.2em;
     width: 1.2em;
-    vertical-align: text-top;
+    vertical-align: text-bottom;
 }
 
 .svg-link {

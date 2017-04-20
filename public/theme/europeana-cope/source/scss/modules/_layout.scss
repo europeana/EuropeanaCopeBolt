@@ -30,6 +30,8 @@ body {
     margin:0;
     position:relative;
     padding:0;
+    background-color: $off-white;
+
     > header, footer, main, [role="main"] {
         width:100%;
         display:block;
@@ -53,9 +55,10 @@ body {
 }
 
 .canvas {
+    background-color: $white;
 
     @include respond-to(menu-full){
-        padding-left: 235px;
+        margin-left: 235px;
     }
 }
 
@@ -185,6 +188,17 @@ footer {
         }
         @include respond-to(xlarge-screens) {
             padding: 0 8rem;
+        }
+    }
+
+    .info-list {
+        padding: 0 ;
+
+        @include respond-to(large-screens) {
+            padding: 0 2rem; // 2rem smaller then body
+        }
+        @include respond-to(xlarge-screens) {
+            padding: 0 6rem; // 2rem smaller then body
         }
     }
 

@@ -11,6 +11,10 @@ a.button, .button, button {
     border: 0;
     padding: .3rem 4rem;
     text-align: center;
+
+    &:hover, &:active, &:focus {
+        background-color: darken($baseFirstThemeColour,25%);
+    }
 }
 
 .button-link {

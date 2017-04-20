@@ -612,10 +612,6 @@ a.banner {
             text-align: left;
         }
 
-        input {
-            display: table-cell;
-            height: 2.25rem;
-        }
     }
 
 
@@ -685,8 +681,165 @@ a.banner {
     p.function {
         font-style: italic;
         font-size: 0.625rem;
-        margin: 0;
+        //margin: 0;
+        color: $medium-gray;
+        font-weight: 400;
     }
 }
 
+.info-list {
+    margin: 3rem 0;
+
+    li {
+        border-bottom: 1px solid $line-gray;
+        padding-bottom: 1.5rem;
+
+        @include respond-to(large-screens) {
+            padding: 0 2rem 1.5rem 2rem; //
+        }
+    }
+
+    .img-container {
+        float: left;
+        margin: 0 1rem 1rem 0;
+        width: 95px;
+
+        @include respond-to(large-screens) {
+            margin: 0 2rem 1rem 0;
+            width: 175px;
+        }
+    }
+
+    img {
+        width: 95px;
+        height: 95px;
+
+        @include respond-to(large-screens) {
+            width: 175px;
+            height: 175px;
+        }
+    }
+
+    .txt-container {
+        padding: 0 0rem 0 112px;
+
+        @include respond-to(large-screens) {
+            padding: 0 0rem 0 236px;
+        }
+    }
+
+    p.function {
+        margin-top: 0;
+    }
+
+    .contact a {
+        margin-right: .2rem;
+
+        &.phone,
+        &.email {
+            margin-left: .5rem;
+        }
+    }
+
+
+    .button {
+        margin: 1rem 0;
+    }
+}
+
+.location-list {
+
+    svg {
+        fill: $medium-gray;
+    }
+
+}
+
+
+.author-big {
+    .img-container {
+        float: left;
+        margin: 0 1rem 1rem 0;
+
+        @include respond-to(large-screens) {
+            margin: 0 2rem 1rem 0;
+        }
+    }
+
+    img {
+        width: 90px;
+        height: 90px;
+
+        @include respond-to(large-screens) {
+            width: 144px;
+            height: 144px;
+        }
+    }
+
+    .txt-container {
+        padding: 0 2rem 0 108px; //magic number: img plus margin
+        max-width: 900px;
+
+        @include respond-to(large-screens) {
+            padding: 0 2rem 0 176px; //magic number: img plus margin
+        }
+    }
+}
+
+.event-date {
+    display: inline-block;
+    width: 95px;
+    background-color: $white;
+    padding: 0.8rem 0;
+    text-align: center;
+    line-height: 1;
+    color: $medium-gray;
+
+    @include respond-to(large-screens){
+            width: 172px;
+            padding: 0.8rem;
+        }
+
+    .event-days {
+        display: block;
+        letter-spacing: -0.05em;
+        font-size: 1.25rem;
+
+        @include respond-to(large-screens){
+            font-size: 2rem;
+        }
+
+    }
+
+    .event-month {
+        display: block;
+        margin-top: 0.6em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 0.6875rem;
+
+        @include respond-to(large-screens){
+            font-size: 0.6875rem;
+        }
+    }
+
+    .event-time {
+        display: block;
+        border-top: 1px solid #e7e7e7;
+        padding: 0.6em 0;
+        margin-top: 0.4em;
+        font-weight: 700;
+        font-size: 0.6875rem;
+
+        @include respond-to(large-screens){
+            font-size: 1rem;
+        }
+    }
+
+    svg {
+        fill: $light-gray;
+    }
+
+}
 
