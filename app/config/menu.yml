@@ -2,13 +2,15 @@ main:
     -
         label: 'Homepage'
         path: pages/1
-        class: first
+        class: home
     -
         label: 'Our mission'
         path: pages/2
+        class: mission
     -
         label: 'What we do'
         path: pages/3
+        class: wwd
         submenu:
             -
                 path: pages/9
@@ -63,6 +65,7 @@ main:
     -
         label: Network
         path: pages/4
+        class: network
         submenu:
             -
                 path: pages/18
@@ -108,6 +111,7 @@ main:
     -
         label: Services
         path: pages/5
+        class: services
         submenu:
             -
                 path: pages/22
@@ -157,6 +161,7 @@ main:
     -
         label: Resources
         path: pages/6
+        class: resources
         submenu:
             -
                 path: pages/24
@@ -264,6 +269,7 @@ main:
     -
         label: News
         path: pages/7
+        class: news
         submenu:
             -
                 path: pages/33
@@ -277,13 +283,16 @@ main:
     -
         label: Jobs
         path: pages/8
+        class: jobs
     -
         label: Sitemap
         path: visual-sitemap
+        class: secondary
     -
         label: Listings
         path: homepage
+        class: secondary
     -
         link: /page/styleguide
         label: Styleguide
-        class: last
+        class: last secondary
