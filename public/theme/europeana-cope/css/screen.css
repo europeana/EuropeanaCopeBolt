@@ -26,43 +26,6 @@
 /**
 *   Helper
 */
-footer:after {
-  content: "content";
-  display: block;
-  height: 16px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
-  text-align: center;
-  font-size: 12px; }
-
-@media only screen and (min-width: 6.25em) {
-  footer:after {
-    content: "small-screens";
-    background-color: #0f9; } }
-
-@media only screen and (min-width: 24em) {
-  footer:after {
-    content: "medium-screens";
-    background-color: #f06; } }
-
-@media only screen and (min-width: 47.9375em) {
-  footer:after {
-    content: "large-screens";
-    background-color: #90f; } }
-
-@media only screen and (min-width: 80em) {
-  footer:after {
-    content: "xlarge-screens";
-    background-color: #903; } }
-
-@media only screen and (min-width: 90em) {
-  footer:after {
-    content: "wide-screens";
-    background-color: #906; } }
-
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -599,7 +562,8 @@ body {
   min-height: 100%;
   margin: 0;
   position: relative;
-  padding: 0; }
+  padding: 0;
+  background-color: #f1f1ee; }
   body > header, body footer, body main, body [role="main"] {
     width: 100%;
     display: block;
@@ -611,9 +575,11 @@ body {
   body > main, body [role="main"] {
     position: relative; }
 
-@media only screen and (min-width: 60em) {
-  .canvas {
-    padding-left: 235px; } }
+.canvas {
+  background-color: #fff; }
+  @media only screen and (min-width: 60em) {
+    .canvas {
+      margin-left: 235px; } }
 
 section > .inner-wrap {
   padding: 0 0rem; }
@@ -691,6 +657,15 @@ footer {
     .contentpage .header-group,
     .contentpage .body {
       padding: 0 8rem; } }
+
+.contentpage .info-list {
+  padding: 0; }
+  @media only screen and (min-width: 47.9375em) {
+    .contentpage .info-list {
+      padding: 0 2rem; } }
+  @media only screen and (min-width: 80em) {
+    .contentpage .info-list {
+      padding: 0 6rem; } }
 
 .fourth {
   width: 50%;
@@ -820,7 +795,7 @@ nav.footer-menu a {
 body {
   font-size: 100%;
   font-family: "Open Sans", Arial, Sans-serif;
-  color: #4d4d4d;
+  color: #1a1a1a;
   line-height: 1.6; }
 
 h1, h2, h3, h4, h5 {
@@ -879,6 +854,18 @@ h3, .gamma {
         font-size: 1.25rem; } }
   .calltoaction h3, .calltoaction .gamma {
     margin-bottom: .5rem; }
+  .speaker-list h3, .speaker-list .gamma {
+    color: #095f90;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 1em; }
+    @media only screen and (min-width: 47.9375em) {
+      .speaker-list h3, .speaker-list .gamma {
+        font-size: 1.25rem; } }
+  .location-list h3, .location-list .gamma {
+    font-size: 1.125rem;
+    color: #777777;
+    margin-top: 0; }
 
 h4, .delta {
   font-size: 0.875rem;
@@ -916,6 +903,16 @@ section .inner-wrap > h2 {
     section .inner-wrap > h2 {
       font-size: 1.625rem; } }
 
+section.info-list > h2 {
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  text-align: left;
+  margin: 0 0 3rem 0; }
+  @media only screen and (min-width: 24em) {
+    section.info-list > h2 {
+      font-size: 1.375rem; } }
+
 section .inner-wrap > p {
   text-align: center;
   margin: 0 0 3rem 0;
@@ -949,6 +946,29 @@ ul {
 .body ol a {
   text-decoration: underline; }
 
+p {
+  font-size: 0.875rem; }
+  @media only screen and (min-width: 24em) {
+    p {
+      font-size: 1rem; } }
+  .teaser-twocol p,
+  .teaser-threecol p,
+  .catstream-threecol p {
+    color: #4d4d4d; }
+  p.function {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #777777;
+    line-height: 1.125; }
+  p.name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #4d4d4d;
+    line-height: 1.125; }
+    p.name span {
+      font-weight: 400;
+      font-size: 0.875em; }
+
 a {
   color: #095f90;
   text-decoration: none; }
@@ -957,7 +977,8 @@ a {
 
 .introduction p, .introduction ul, .introduction ol, .introduction {
   font-family: "Open Sans", Arial, Sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #4d4d4d; }
 
 .body p, .body ul, .body ol, .body {
   font-family: "Open Sans", Arial, Sans-serif;
@@ -1017,23 +1038,24 @@ a.readmore {
 a.primary-link {
   color: #E11D53;
   font-weight: 700;
-  display: block; }
+  display: inline-block;
+  margin: 1rem 0; }
 
-a.tag,
-a.team {
+a.tag, a.team {
   border-bottom: 1px dotted #095f90;
   font-size: 0.75rem;
   margin-right: .5rem; }
-  a.tag:last-child,
-  a.team:last-child {
+  a.tag:last-child, a.team:last-child {
     margin-right: 0; }
   @media only screen and (min-width: 24em) {
-    a.tag,
-    a.team {
+    a.tag, a.team {
       font-size: 0.9375rem; } }
-  .label + a.tag, .label +
-  a.team {
+  .label + a.tag, .label + a.team {
     margin-left: .5rem; }
+
+a.phone {
+  color: #4d4d4d;
+  white-space: nowrap; }
 
 p.meta {
   font-size: 0.75rem; }
@@ -1062,7 +1084,7 @@ svg.icon {
   fill: CurrentColor;
   height: 1.2em;
   width: 1.2em;
-  vertical-align: text-top; }
+  vertical-align: text-bottom; }
 
 .svg-link svg {
   fill: #E11D53; }
@@ -1092,6 +1114,8 @@ a.button, .button, button {
   border: 0;
   padding: .3rem 4rem;
   text-align: center; }
+  a.button:hover, a.button:active, a.button:focus, .button:hover, .button:active, .button:focus, button:hover, button:active, button:focus {
+    background-color: #700e29; }
 
 .button-link {
   border: 3px solid #293745;
@@ -1135,6 +1159,7 @@ a.button, .button, button {
  * File:        _forms.scss
  * Description: _forms.scss contains all form styles for makeitso
  */
+[type="text"],
 [type="email"],
 [type="number"],
 [type="tel"],
@@ -1149,6 +1174,21 @@ textarea {
   font-size: 1rem;
   margin: 0 0 1rem;
   display: block; }
+  .calltoactionform [type="text"], .calltoactionform
+  [type="email"], .calltoactionform
+  [type="number"], .calltoactionform
+  [type="tel"], .calltoactionform
+  [type="search"], .calltoactionform
+  [type="time"], .calltoactionform
+  [type="url"], .calltoactionform
+  [type="color"], .calltoactionform
+  textarea {
+    display: inline-block;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: .2rem 0.5rem;
+    height: 2.20rem;
+    border: none; }
 
 form.searchform [type="search"] {
   display: inline-block;
@@ -1617,10 +1657,6 @@ a.banner {
         width: 45%;
         padding: .3rem 3rem .3rem 1rem;
         text-align: left; } }
-    .calltoactionform form input,
-    .calltoactionlink form input {
-      display: table-cell;
-      height: 2.25rem; }
 
 /*
 ***********************************************************************
@@ -1666,7 +1702,112 @@ a.banner {
   .author-small p.function {
     font-style: italic;
     font-size: 0.625rem;
-    margin: 0; }
+    color: #4d4d4d;
+    font-weight: 400; }
+
+.info-list {
+  margin: 3rem 0; }
+  .info-list li {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 1.5rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .info-list li {
+        padding: 0 2rem 1.5rem 2rem; } }
+  .info-list .img-container {
+    float: left;
+    margin: 0 1rem 1rem 0;
+    width: 95px; }
+    @media only screen and (min-width: 47.9375em) {
+      .info-list .img-container {
+        margin: 0 2rem 1rem 0;
+        width: 175px; } }
+  .info-list img {
+    width: 95px;
+    height: 95px; }
+    @media only screen and (min-width: 47.9375em) {
+      .info-list img {
+        width: 175px;
+        height: 175px; } }
+  .info-list .txt-container {
+    padding: 0 0rem 0 112px; }
+    @media only screen and (min-width: 47.9375em) {
+      .info-list .txt-container {
+        padding: 0 0rem 0 236px; } }
+  .info-list p.function {
+    margin-top: 0; }
+  .info-list .contact a {
+    margin-right: .2rem; }
+    .info-list .contact a.phone, .info-list .contact a.email {
+      margin-left: .5rem; }
+  .info-list .button {
+    margin: 1rem 0; }
+
+.location-list svg {
+  fill: #4d4d4d; }
+
+.author-big .img-container {
+  float: left;
+  margin: 0 1rem 1rem 0; }
+  @media only screen and (min-width: 47.9375em) {
+    .author-big .img-container {
+      margin: 0 2rem 1rem 0; } }
+
+.author-big img {
+  width: 90px;
+  height: 90px; }
+  @media only screen and (min-width: 47.9375em) {
+    .author-big img {
+      width: 144px;
+      height: 144px; } }
+
+.author-big .txt-container {
+  padding: 0 2rem 0 108px;
+  max-width: 900px; }
+  @media only screen and (min-width: 47.9375em) {
+    .author-big .txt-container {
+      padding: 0 2rem 0 176px; } }
+
+.event-date {
+  display: inline-block;
+  width: 95px;
+  background-color: #fff;
+  padding: 0.8rem 0;
+  text-align: center;
+  line-height: 1;
+  color: #4d4d4d; }
+  @media only screen and (min-width: 47.9375em) {
+    .event-date {
+      width: 172px;
+      padding: 0.8rem; } }
+  .event-date .event-days {
+    display: block;
+    letter-spacing: -0.05em;
+    font-size: 1.25rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .event-date .event-days {
+        font-size: 2rem; } }
+  .event-date .event-month {
+    display: block;
+    margin-top: 0.6em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.6875rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .event-date .event-month {
+        font-size: 0.6875rem; } }
+  .event-date .event-time {
+    display: block;
+    border-top: 1px solid #e7e7e7;
+    padding: 0.6em 0;
+    margin-top: 0.4em;
+    font-weight: 700;
+    font-size: 0.6875rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .event-date .event-time {
+        font-size: 1rem; } }
+  .event-date svg {
+    fill: #777777; }
 
 @media print {
   *,

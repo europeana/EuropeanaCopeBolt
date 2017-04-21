@@ -6,6 +6,7 @@
 
 //input all
 
+[type="text"],
 [type="email"],
 [type="number"],
 [type="tel"],
@@ -20,6 +21,18 @@ textarea {
     font-size: 1rem;
     margin: 0 0 1rem;
     display: block;
+
+
+    .calltoactionform & {
+        //display: table-cell;
+        display: inline-block;
+        border-radius: 0;
+        margin-bottom: 0;
+        padding: .2rem 0.5rem; //larger padding cuts off text, interfering with height
+        height: 2.20rem;
+        border: none;
+
+    }
 }
 
 form.searchform {
@@ -51,3 +64,4 @@ form {
     }
 
 }
+
