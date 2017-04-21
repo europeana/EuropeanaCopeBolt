@@ -97,8 +97,17 @@ main {
 }
 
 aside {
-    // background: #0f9;
+    border-top: 1px solid $line-gray;
+
+    > .inner-wrap {
+        padding: 0 0rem; // n
+
+        @include respond-to(large-screens){
+            padding: 0 0rem;
+        }
+    }
 }
+
 
 footer {
     background: $footer-gray;
@@ -159,7 +168,7 @@ footer {
 }
 
 .contentpage {
-    article.column {
+    article.main-column {
         padding: 0 0.875rem;
 
         @include respond-to(medium-screens) {
@@ -270,7 +279,6 @@ footer {
         // }
     }
 }
-
 
 
 .footer-block {
