@@ -421,7 +421,7 @@ a.banner {
 
 
 /*
-* WIDGET THREE COLUMN TEASERS / SEMI STATIC CONTENT
+* WIDGET THREE COLUMN TEASERS / SEMI STATIC CONTENT / RELATED ITEMS
 **/
 
 .teaser-threecol {
@@ -434,6 +434,37 @@ a.banner {
             font-size: 1rem;
         }
     }
+
+    aside & {
+        background-color: $off-white;
+
+        h3, p {
+            padding: 0 1.75rem;
+        }
+    }
+}
+
+.teaser-container {  // Flexbox to make the items same height. because background.
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(large-screens){
+        flex-direction: row;
+        flex-align: stretch;
+    }
+
+    .teaser-threecol {
+        padding: 0 0 0 0;
+
+        @include respond-to(large-screens){
+            margin-right: 1.75rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
 }
 
 /*
@@ -741,9 +772,22 @@ a.banner {
         }
     }
 
-
     .button {
         margin: 1rem 0;
+    }
+
+    .socials {
+        text-align: center;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.5rem;
+        }
+
+        svg:last-child {
+            margin-right: 0;
+        }
     }
 }
 
@@ -842,4 +886,6 @@ a.banner {
     }
 
 }
+
+
 

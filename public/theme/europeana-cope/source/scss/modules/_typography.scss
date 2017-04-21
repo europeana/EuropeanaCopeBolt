@@ -38,7 +38,6 @@ h1, .alpha {
 h2, .beta {
     font-size: 1.625rem;
 
-
 }
 
 h3, .gamma {
@@ -137,7 +136,7 @@ h2.widget, h3.widget { //HEADERS IN BANNERS / CALL TO ACTIONS
 
 section {
     > h2, //temp
-    .inner-wrap > h2 {
+    > .inner-wrap > h2 {
         font-size: 1.125rem;
         text-transform: uppercase;
         font-weight: 400;
@@ -176,7 +175,13 @@ section {
     }
 }
 
-
+aside {
+    > .inner-wrap >h2 {
+        font-size: 1.375rem;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+    }
+}
 
 
 
@@ -247,14 +252,6 @@ p {
         }
     }
 
-    // .info-list &,
-    // .author-big & {
-    //     font-size: .75rem;
-
-    //     @include respond-to (medium-screens){
-    //         font-size: 1rem;
-    //     }
-    // }
 }
 
 a {
