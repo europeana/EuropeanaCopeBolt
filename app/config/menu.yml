@@ -7,6 +7,16 @@ main:
         label: 'Our mission'
         path: pages/2
         class: mission
+        submenu:
+            -
+                path: pages/2
+                label: 'Our mission'
+            -
+                link: /page/avout-us
+                label: 'About us'
+            -
+                link: /page/governing-board
+                label: 'Governing Board'
     -
         label: 'What we do'
         path: pages/3

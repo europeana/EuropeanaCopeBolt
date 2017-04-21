@@ -16,15 +16,15 @@
         {% from _self import display_menu_item %}
         {% spaceless %}
             <li class="index-{{ loop.index -}}
-                {{ item.path|default('') == 'homepage' ? ' menu-text' -}}
-                {{ ' ' ~item.class|default('') -}}
+                {{ item.path|default('') == 'homepage' ? '' -}}
+                {{ ' ' ~ item.class|default('') -}}
                 {{ loop.first ? ' first' -}}
                 {{ loop.last ? ' last' -}}
                 {{ (level > 0) ? ' level-' ~ level -}}
-                {{ (item.submenu|default(false) and withsubmenus) ? ' is-dropdown-submenu-parent' -}}
+                {{ (item.submenu|default(false) and withsubmenus) ? ' is-parent' -}}
                 {{ item|current ? ' active' }}">
 
-                <a href="{{ item.link }}" title='{{ item.title|default('')|escape }}' class='{{ item.class|default('') }}'>
+                <a href="{{ item.link }}" title='{{ item.title|default('')|escape }}'>
                     {{- item.label|default('-') -}}
                 </a>
 
@@ -53,3 +53,48 @@
     </ul>
 
 {% endspaceless %}
+
+<style>
+    /* main menu items */
+    ul.play-menu .home,
+    ul.play-menu .home:hover
+                             { border-color: #555; background-color: #444; color: #eee; }
+    ul.play-menu .mission,
+    ul.play-menu .mission:hover
+                             { border-color: #add; background-color: #acc; }
+    ul.play-menu .wwd,
+    ul.play-menu .wwd:hover
+                             { border-color: #dad; background-color: #cac; }
+    ul.play-menu .network,
+    ul.play-menu .network:hover
+                             { border-color: #dbb; background-color: #daa; }
+    ul.play-menu .services,
+    ul.play-menu .services:hover
+                             { border-color: #bbd; background-color: #aad; }
+    ul.play-menu .resources,
+    ul.play-menu .resources:hover
+                             { border-color: #cc3; background-color: #bb3; }
+    ul.play-menu .news,
+    ul.play-menu .news:hover
+                             { border-color: #77f; background-color: #66f; }
+    ul.play-menu .jobs,
+    ul.play-menu .jobs:hover
+                             { border-color: #4f4; background-color: #3f3; }
+    /* secondary menu items */
+    ul.play-menu .secondary  { border-color: #eee; background-color: #ededed; color: #aaa; border-bottom: none; padding-bottom: 5px; padding-top: 5px; border-color: #ededed; }
+    /* mouseover thingies */
+    ul.play-menu li          { padding-left: 10px; border-left: 15px solid #c0c; }
+    ul.play-menu li:hover a:hover
+                             { text-decoration: underline; }
+    ul.play-menu li.is-parent.current
+                             { padding-bottom: 0; padding-left: 0; }
+    ul.play-menu li.is-parent.current a
+                             { margin-left: 10px; }
+    ul.play-menu li.current ul.sub-menu
+                             { background-color: #fff; padding-left: 0; padding-right: 0; margin-bottom: 0; padding-bottom: 10px; margin-top: 10px; }
+    ul.play-menu li.current ul li
+                             { padding-left: 0; padding-bottom: 0; padding-right: 0; border: none; }
+    ul.play-menu li.active   { border-color: #fc0; }
+    ul.play-menu li.backlevel{ border-color: #999; }
+
+</style>
