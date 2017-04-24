@@ -176,10 +176,16 @@ section {
 }
 
 aside {
-    > .inner-wrap >h2 {
-        font-size: 1.375rem;
+    > .inner-wrap > h2 {
+        font-size: 1.125rem;
         text-transform: uppercase;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+        //padding: 0 .875rem;
+
+        @include respond-to (medium-screens) {
+            font-size: 1.375rem;
+            margin-bottom: 3rem;
+        }
     }
 }
 

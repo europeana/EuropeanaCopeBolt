@@ -439,7 +439,19 @@ a.banner {
         background-color: $off-white;
 
         h3, p {
-            padding: 0 1.75rem;
+            padding: 0 1.5rem;
+        }
+
+        h3 {
+            margin: 1.5rem 0 1rem;
+
+            a {
+                color: $medium-gray;
+            }
+        }
+
+        p {
+            margin-bottom: 1.5rem;
         }
     }
 }
@@ -447,10 +459,12 @@ a.banner {
 .teaser-container {  // Flexbox to make the items same height. because background.
     display: flex;
     flex-direction: column;
+    // padding: 0 0.875rem;
 
     @include respond-to(large-screens){
         flex-direction: row;
         flex-align: stretch;
+        padding: 0;
     }
 
     .teaser-threecol {
@@ -764,11 +778,20 @@ a.banner {
     }
 
     .contact a {
-        margin-right: .2rem;
+        margin-right: .5rem;
 
         &.phone,
         &.email {
-            margin-left: .5rem;
+            //margin-left: .5rem;
+        }
+
+        &.li,
+        &.tw {
+            display: none;
+
+            @include respond-to(large-screens) {
+                display: inline-block;
+            }
         }
     }
 
@@ -778,6 +801,10 @@ a.banner {
 
     .socials {
         text-align: center;
+
+        @include respond-to(large-screens) {
+            display: none;
+        }
 
         svg {
             width: 2rem;

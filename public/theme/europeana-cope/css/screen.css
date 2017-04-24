@@ -581,22 +581,28 @@ body {
     .canvas {
       margin-left: 235px; } }
 
-section > .inner-wrap {
-  padding: 0 0rem; }
+section > .inner-wrap,
+aside > .inner-wrap {
+  padding: 4rem 0rem 0rem; }
   @media only screen and (min-width: 47.9375em) {
-    section > .inner-wrap {
+    section > .inner-wrap,
+    aside > .inner-wrap {
       padding: 0 2rem; } }
 
 section.contentheader > .inner-wrap {
   padding: 0 1rem; }
 
 aside {
-  border-top: 1px solid #cccccc; }
+  border-top: 1px solid #cccccc;
+  margin: 0 0.875rem; }
+  @media only screen and (min-width: 24em) {
+    aside {
+      margin: 0 2rem; } }
   aside > .inner-wrap {
-    padding: 0 0rem; }
+    padding: 2rem 0rem 0; }
     @media only screen and (min-width: 47.9375em) {
       aside > .inner-wrap {
-        padding: 0 0rem; } }
+        padding: 4rem 0 0; } }
 
 footer {
   background: #e7e7e7;
@@ -615,8 +621,6 @@ footer {
   @media only screen and (min-width: 24em) {
     .inner-wrap {
       padding: 0 1.5rem; } }
-  section .inner-wrap {
-    padding-top: 4rem; }
 
 .skipcontent {
   background-color: #fff;
@@ -931,9 +935,13 @@ section .inner-wrap > p {
       font-size: 1rem; } }
 
 aside > .inner-wrap > h2 {
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   text-transform: uppercase;
-  margin-bottom: 3rem; }
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 24em) {
+    aside > .inner-wrap > h2 {
+      font-size: 1.375rem;
+      margin-bottom: 3rem; } }
 
 ul {
   padding: 0;
@@ -1541,7 +1549,13 @@ a.banner {
 aside .teaser-threecol {
   background-color: #f1f1ee; }
   aside .teaser-threecol h3, aside .teaser-threecol p {
-    padding: 0 1.75rem; }
+    padding: 0 1.5rem; }
+  aside .teaser-threecol h3 {
+    margin: 1.5rem 0 1rem; }
+    aside .teaser-threecol h3 a {
+      color: #4d4d4d; }
+  aside .teaser-threecol p {
+    margin-bottom: 1.5rem; }
 
 .teaser-container {
   display: flex;
@@ -1549,7 +1563,8 @@ aside .teaser-threecol {
   @media only screen and (min-width: 47.9375em) {
     .teaser-container {
       flex-direction: row;
-      flex-align: stretch; } }
+      flex-align: stretch;
+      padding: 0; } }
   .teaser-container .teaser-threecol {
     padding: 0 0 0 0; }
     @media only screen and (min-width: 47.9375em) {
@@ -1769,13 +1784,19 @@ aside .teaser-threecol {
   .info-list p.function {
     margin-top: 0; }
   .info-list .contact a {
-    margin-right: .2rem; }
-    .info-list .contact a.phone, .info-list .contact a.email {
-      margin-left: .5rem; }
+    margin-right: .5rem; }
+    .info-list .contact a.li, .info-list .contact a.tw {
+      display: none; }
+      @media only screen and (min-width: 47.9375em) {
+        .info-list .contact a.li, .info-list .contact a.tw {
+          display: inline-block; } }
   .info-list .button {
     margin: 1rem 0; }
   .info-list .socials {
     text-align: center; }
+    @media only screen and (min-width: 47.9375em) {
+      .info-list .socials {
+        display: none; } }
     .info-list .socials svg {
       width: 2rem;
       height: 2rem;

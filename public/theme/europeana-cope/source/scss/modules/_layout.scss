@@ -62,10 +62,11 @@ body {
     }
 }
 
-section {
+section,
+aside {
 
     > .inner-wrap {
-        padding: 0 0rem; // n
+        padding: 4rem 0rem 0rem; // n
 
         @include respond-to(large-screens){
             padding: 0 2rem;
@@ -98,12 +99,21 @@ main {
 
 aside {
     border-top: 1px solid $line-gray;
+    margin: 0 0.875rem;
+
+    @include respond-to(medium-screens){
+        margin: 0 2rem;
+    }
+
+    @include respond-to(large-screens){
+        //margin: 0;
+    }
 
     > .inner-wrap {
-        padding: 0 0rem; // n
+        padding: 2rem 0rem 0;
 
         @include respond-to(large-screens){
-            padding: 0 0rem;
+            padding: 4rem 0 0;
         }
     }
 }
@@ -130,10 +140,6 @@ footer {
 
     @include respond-to(medium-screens){
         padding: 0 1.5rem; // 15px ipv 10 0 0.625rem;
-    }
-
-    section & {
-        padding-top: 4rem;
     }
 
 }
