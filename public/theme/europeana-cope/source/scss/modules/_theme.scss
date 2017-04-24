@@ -736,7 +736,7 @@ a.banner {
     margin: 3rem 0;
 
     li {
-        border-bottom: 1px solid $line-gray;
+        //border-bottom: 1px solid $line-gray;
         padding-bottom: 1.5rem;
 
         @include respond-to(large-screens) {
@@ -828,9 +828,15 @@ a.banner {
 
 
 .author-big {
+
+    border-top: 1px solid $line-gray;
+    padding: 2rem 0 0 0;
+
     .img-container {
         float: left;
         margin: 0 1rem 1rem 0;
+
+
 
         @include respond-to(large-screens) {
             margin: 0 2rem 1rem 0;
@@ -854,6 +860,15 @@ a.banner {
         @include respond-to(large-screens) {
             padding: 0 2rem 0 176px; //magic number: img plus margin
         }
+    }
+}
+
+.related-content {
+    border-top: 1px solid $line-gray;
+    padding: 2rem 0 0 0;
+
+    @include respond-to(large-screens) {
+        padding: 4rem 0 0 0;
     }
 }
 

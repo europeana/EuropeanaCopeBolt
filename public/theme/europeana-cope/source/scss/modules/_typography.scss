@@ -176,17 +176,20 @@ section {
 }
 
 aside {
-    > .inner-wrap > h2 {
+    .related-content >  h2 {
         font-size: 1.125rem;
-        text-transform: uppercase;
+        font-weight: 700;
+        text-align: left;
         margin-bottom: 2rem;
-        //padding: 0 .875rem;
+        letter-spacing: 0;
 
         @include respond-to (medium-screens) {
             font-size: 1.375rem;
             margin-bottom: 3rem;
         }
     }
+
+
 }
 
 
