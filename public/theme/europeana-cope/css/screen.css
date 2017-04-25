@@ -1111,7 +1111,8 @@ svg.icon {
 .svg-link svg {
   fill: #E11D53; }
 
-figcaption {
+figcaption,
+p.figcaption {
   text-align: center;
   font-size: 0.6875rem;
   font-style: italic;
@@ -1119,7 +1120,8 @@ figcaption {
   margin-top: .75rem;
   padding-top: 0.5rem; }
   @media only screen and (min-width: 47.9375em) {
-    figcaption {
+    figcaption,
+    p.figcaption {
       font-size: 1rem;
       margin-top: 1rem;
       padding-top: 0.75rem; } }
@@ -1849,6 +1851,13 @@ aside .teaser-threecol {
     .event-date {
       width: 172px;
       padding: 0.8rem; } }
+  .event-figure .event-date {
+    padding: 0.8rem;
+    width: 120px; }
+    @media only screen and (min-width: 47.9375em) {
+      .event-figure .event-date {
+        padding: 1.6rem;
+        width: 200px; } }
   .event-date .event-days {
     display: block;
     letter-spacing: -0.05em;
@@ -1876,8 +1885,49 @@ aside .teaser-threecol {
     @media only screen and (min-width: 47.9375em) {
       .event-date .event-time {
         font-size: 1rem; } }
+  .event-date .event-location {
+    display: block;
+    border-top: 1px solid #e7e7e7;
+    padding: 0.6em 0 0;
+    font-size: 0.75rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .event-date .event-location {
+        font-size: 1rem; } }
   .event-date svg {
     fill: #777777; }
+
+.event-figure {
+  position: relative;
+  height: 560x; }
+  .event-figure .img-container {
+    position: relative; }
+    @media only screen and (min-width: 47.9375em) {
+      .event-figure .img-container {
+        position: absolute;
+        bottom: 55px;
+        left: 0;
+        z-index: 10;
+        display: inline-block;
+        height: 70%;
+        width: 60%;
+        overflow: hidden; } }
+  .event-figure .event-img {
+    width: 100%;
+    height: auto;
+    padding-top: 0; }
+    @media only screen and (min-width: 47.9375em) {
+      .event-figure .event-img {
+        padding-top: 2rem; } }
+  .event-figure .event-date {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20; }
+    @media only screen and (min-width: 47.9375em) {
+      .event-figure .event-date {
+        left: auto;
+        right: 0;
+        top: 0; } }
 
 @media print {
   *,

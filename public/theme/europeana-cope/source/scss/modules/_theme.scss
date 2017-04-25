@@ -872,6 +872,9 @@ a.banner {
     }
 }
 
+
+// BLOCK voor event dates
+
 .event-date {
     display: inline-block;
     width: 95px;
@@ -885,6 +888,16 @@ a.banner {
             width: 172px;
             padding: 0.8rem;
         }
+
+    .event-figure & {
+        padding: 0.8rem;
+        width: 120px;
+
+        @include respond-to(large-screens){
+            padding: 1.6rem;
+            width: 200px;
+        }
+    }
 
     .event-days {
         display: block;
@@ -923,11 +936,80 @@ a.banner {
         }
     }
 
+    .event-location {
+        display: block;
+        border-top: 1px solid #e7e7e7;
+        padding: 0.6em 0 0;
+        font-size: 0.75rem;
+
+        @include respond-to(large-screens){
+            font-size: 1rem;
+        }
+
+    }
+
     svg {
         fill: $light-gray;
     }
 
 }
 
+.event-figure {
+    position: relative;
+    height: 560x;
+
+    .map {
+
+    }
+
+    .img-container {
+        position: relative;
+        // bottom: 55px;
+        // left: 0;
+        // z-index: 10;
+        // display: inline-block;
+        // height: 70%;
+        // width: 60%;
+        // overflow: hidden;
+
+        @include respond-to(large-screens){
+            position: absolute;
+            bottom: 55px;
+            left: 0;
+            z-index: 10;
+            display: inline-block;
+            height: 70%;
+            width: 60%;
+            overflow: hidden;
+        }
+
+    }
+
+    .event-img {
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+
+        @include respond-to(large-screens){
+            padding-top: 2rem;
+        }
+    }
+
+    .event-date {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 20;
+
+        @include respond-to(large-screens){
+            left: auto;
+            right: 0;
+            top: 0;
+        }
+
+    }
+
+
+}
 
 
