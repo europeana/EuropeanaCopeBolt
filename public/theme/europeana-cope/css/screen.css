@@ -1900,15 +1900,17 @@ aside .teaser-threecol {
   position: relative;
   height: 560x;
   margin-bottom: 2rem; }
-  @media only screen and (min-width: 47.9375em) {
-    .event-figure .map {
-      height: auto; } }
+  .event-figure .map {
+    position: relative; }
+    @media only screen and (min-width: 47.9375em) {
+      .event-figure .map {
+        height: auto; } }
   .event-figure .img-container {
     position: relative; }
     @media only screen and (min-width: 47.9375em) {
       .event-figure .img-container {
         position: absolute;
-        bottom: 55px;
+        bottom: 0;
         left: 0;
         z-index: 10;
         display: inline-block;
@@ -1932,6 +1934,78 @@ aside .teaser-threecol {
         left: auto;
         right: 0;
         top: 0; } }
+
+.file-content-module {
+  margin-bottom: 2rem; }
+  .file-content-module .collapse-header {
+    position: relative;
+    box-shadow: 1px 1px 5px rgba(26, 26, 26, 0.5);
+    padding: 1rem;
+    margin-bottom: 4px;
+    text-align: center; }
+    .file-content-module .collapse-header h3 {
+      display: inline-block;
+      font-weight: 400;
+      font-size: 0.875rem;
+      margin-bottom: 0;
+      color: #1a1a1a; }
+      @media only screen and (min-width: 24em) {
+        .file-content-module .collapse-header h3 {
+          font-size: 1rem; } }
+    .file-content-module .collapse-header .content-kind {
+      position: absolute;
+      left: 1rem;
+      margin: 0;
+      display: inline-block;
+      color: #777777; }
+  .file-content-module .collapse-content {
+    background-color: #f1f1ee;
+    padding: 1rem;
+    color: #1a1a1a;
+    font-size: 0.875rem; }
+    @media only screen and (min-width: 24em) {
+      .file-content-module .collapse-content {
+        font-size: 1rem; } }
+    .file-content-module .collapse-content.has-sublist {
+      padding-bottom: 0; }
+    .file-content-module .collapse-content p {
+      margin-top: 0; }
+    .file-content-module .collapse-content .meta {
+      font-size: 0.75rem; }
+      @media only screen and (min-width: 47.9375em) {
+        .file-content-module .collapse-content .meta {
+          display: inline-block;
+          margin-left: .5rem; } }
+    .file-content-module .collapse-content .date-added {
+      float: right;
+      text-align: right; }
+      @media only screen and (min-width: 47.9375em) {
+        .file-content-module .collapse-content .date-added {
+          display: block;
+          position: absolute;
+          right: 1rem;
+          bottom: 1rem; } }
+    .file-content-module .collapse-content a {
+      color: #1a1a1a; }
+  .file-content-module li {
+    position: relative; }
+  .file-content-module li.collapse-content {
+    border-bottom: 1px solid #cccccc; }
+  .file-content-module ul.sublist {
+    background: #fff;
+    padding: 0 .5rem;
+    margin: 1rem -1rem 0;
+    border-top: 1px solid #cccccc; }
+    .file-content-module ul.sublist li {
+      border-left: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
+      background: #fff;
+      padding: 1rem; }
+      .file-content-module ul.sublist li:last-of-type {
+        border-bottom: 0; }
+  .file-content-module svg {
+    margin-right: .5rem; }
 
 @media print {
   *,

@@ -960,6 +960,7 @@ a.banner {
     margin-bottom: 2rem;
 
     .map {
+        position: relative;
         // height: 250px;
         // overflow: hidden;
 
@@ -984,7 +985,7 @@ a.banner {
 
         @include respond-to(large-screens){
             position: absolute;
-            bottom: 55px;
+            bottom: 0;
             left: 0;
             z-index: 10;
             display: inline-block;
@@ -1016,10 +1017,123 @@ a.banner {
             right: 0;
             top: 0;
         }
+    }
+}
 
+// COLLAPSSIBLE CONTENT
+
+.file-content-module {
+    margin-bottom: 2rem;
+
+    .collapse-header {
+        position: relative;
+        box-shadow: 1px 1px 5px rgba($black, 0.5);
+        padding: 1rem;
+        margin-bottom: 4px; // Magic number - to prevent from overlapping boxshadow of header
+        text-align: center;
+
+        h3 {
+            display: inline-block;
+            font-weight: 400;
+            font-size: 0.875rem;
+            margin-bottom: 0;
+            color: $black;
+
+            @include respond-to(medium-screens){
+                font-size: 1rem;
+            }
+
+        }
+
+        .content-kind {
+            position: absolute;
+            left: 1rem;
+            margin: 0;
+            display: inline-block;
+            color: $light-gray;
+        }
+    }
+
+    .collapse-content {
+        background-color: $off-white;
+        padding: 1rem;
+        color: $black;
+        font-size: 0.875rem;
+
+        @include respond-to(medium-screens){
+                font-size: 1rem;
+            }
+
+
+        &.has-sublist {
+            padding-bottom: 0;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        .meta {
+            font-size: 0.75rem;
+
+            @include respond-to(large-screens){
+                display: inline-block;
+                margin-left: .5rem;
+            }
+        }
+
+        .date-added {
+            float: right;
+            text-align: right;
+
+            @include respond-to(large-screens){
+                display: block;
+                position: absolute;
+                right: 1rem;
+                bottom: 1rem;
+            }
+        }
+
+        a {
+            //display: block;
+            color: $black;
+            //margin: 1rem;
+
+        }
+    }
+
+    li {
+        position: relative;
+    }
+
+    li.collapse-content {
+        border-bottom: 1px solid $line-gray;
+    }
+
+    ul.sublist { //subfolders
+        background: $white;
+        padding: 0 .5rem;
+        //margin-top: 1rem;
+        margin: 1rem -1rem 0;
+        border-top: 1px solid $line-gray;
+
+        li {
+            border-left: 1px solid $line-gray;
+            border-right: 1px solid $line-gray;
+            border-bottom: 1px solid $line-gray;
+            background: $white;
+            padding: 1rem;
+
+            &:last-of-type {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    svg {
+        margin-right: .5rem;
     }
 
 
 }
-
 
