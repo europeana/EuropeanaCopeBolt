@@ -1022,8 +1022,13 @@ a.banner {
 
 // COLLAPSSIBLE CONTENT
 
-.file-content-module {
-    margin-bottom: 2rem;
+.file-content-module,
+.download-module {
+    margin: 2rem 0;
+
+    @include respond-to(medium-screens){
+        margin: 4rem 0;
+    }
 
     .collapse-header {
         position: relative;
@@ -1073,35 +1078,36 @@ a.banner {
             margin-top: 0;
         }
 
-        .meta {
-            font-size: 0.75rem;
-            margin-top: .5rem;
+    }
 
-            @include respond-to(large-screens){
-                display: inline-block;
-                margin-left: .5rem;
-                margin-top: 0;
-            }
+    .meta {
+        font-size: 0.75rem;
+        margin-top: .5rem;
+
+        @include respond-to(large-screens){
+            display: inline-block;
+            margin-left: .5rem;
+            margin-top: 0;
         }
+    }
 
-        .date-added {
-            float: right;
-            text-align: right;
+    .date-added {
+        float: right;
+        text-align: right;
 
-            @include respond-to(large-screens){
-                display: block;
-                position: absolute;
-                right: 1rem;
-                bottom: 1rem;
-            }
+        @include respond-to(large-screens){
+            display: block;
+            position: absolute;
+            right: 1rem;
+            bottom: 1.1rem; //optical
         }
+    }
 
-        a {
-            //display: block;
-            color: $black;
-            //margin: 1rem;
+    a {
+        //display: block;
+        color: $black;
+        //margin: 1rem;
 
-        }
     }
 
     li {
@@ -1136,6 +1142,25 @@ a.banner {
         margin-right: .5rem;
     }
 
+}
 
+.download-module { // DOWNLOAD ONLY STYLES
+    margin: 2rem 0;
+
+    @include respond-to(medium-screens){
+        margin: 4rem 0;
+    }
+
+    li {
+        position: relative;
+        border-bottom: 1px solid $line-gray;
+        border-top: 1px solid $line-gray;
+        padding: 1rem;
+        font-size: 0.875rem;
+
+        @include respond-to(medium-screens){
+                font-size: 1rem;
+            }
+    }
 }
 

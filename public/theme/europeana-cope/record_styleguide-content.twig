@@ -9,6 +9,9 @@
 
             <article class="column main-column">
 
+
+                {# SIDE-INFO #}
+
                 <div class="side-info">
                     <p class="meta">
                         <span class="readtime">7 minutes to read</span>
@@ -28,6 +31,9 @@
                         <a class="team">Collections Team</a>
                     </span> #}
                 </div>
+
+
+                {# HEADER OF ARTICLE #}
 
                 <div class="header-group">
                     <div class="author-small group">
@@ -50,6 +56,7 @@
 
 
                 {# EVENT MAP #}
+
                 <figure class="event-figure">
                     <div class="map">
 
@@ -87,7 +94,7 @@
 
                 {# COLLAPSED CONTENT #}
 
-                <div class="file-browser file-content-module">
+                <section class="file-browser file-content-module">
                     <div class="collapse-header">
                         <p class="content-kind">
                             <svg class="icon icon-folder">
@@ -105,11 +112,12 @@
                     <div class="collapse-content">
                         <p>Art lovers have a new place to enjoy and engage with Europe’s rich artistic heritage. At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use them for learning, enjoyment, sharing, and to build on in new creative ways.</p>
                     </div>
-                </div>
+                </section>
 
 
+                {# FILE CONTENT MODULE / COLLAPSED CONTENT #}
 
-                <div class="file-browser file-content-module">
+                <section class="file-browser file-content-module">
                     <div class="collapse-header">
                         <p class="content-kind">
                             <svg class="icon icon-folder">
@@ -127,7 +135,7 @@
                     <ul class="">
                         <li class="collapse-content has-sublist">
                             <a href="#">
-                                <svg class="icon icon-file">
+                                <svg class="icon icon-document">
                                     <use xlink:href="#icon-folder"></use>
                                 </svg>
                                 Council Conclusions Europeana Strategy Staff
@@ -137,8 +145,8 @@
                             <ul class="sublist">
                                 <li class="">
                                     <a href="#">
-                                    <svg class="icon icon-file">
-                                        <use xlink:href="#icon-file"></use>
+                                    <svg class="icon icon-document">
+                                        <use xlink:href="#icon-document"></use>
                                     </svg>
 
                                         Council Conclusions Europeana Strategy Staff
@@ -152,8 +160,8 @@
 
                                 <li class="">
                                     <a href="#">
-                                    <svg class="icon icon-file">
-                                        <use xlink:href="#icon-file"></use>
+                                    <svg class="icon icon-document">
+                                        <use xlink:href="#icon-document"></use>
                                     </svg>
 
                                         Council Conclusions Europeana Strategy Staff
@@ -170,8 +178,8 @@
                         <li class="collapse-content">
 
                             <a href="#">
-                                <svg class="icon icon-file">
-                                    <use xlink:href="#icon-file"></use>
+                                <svg class="icon icon-document">
+                                    <use xlink:href="#icon-document"></use>
                                 </svg>
                                 Council Conclusions Europeana Strategy Staff
 
@@ -180,17 +188,18 @@
 
                         <li class="collapse-content">
                             <a href="#">
-                                <svg class="icon icon-file">
-                                    <use xlink:href="#icon-file"></use>
+                                <svg class="icon icon-document">
+                                    <use xlink:href="#icon-document"></use>
                                 </svg>
                                 Council Conclusions Europeana Strategy Staff
 
                             </a>
                         </li>
                     </ul>
-                </div>
+                </section>
 
 
+                {# BODY #}
 
                 <div class="body"> {# can be multiple bodies #}
                     {# <h2>Behold! A header 2!</h2> #}
@@ -200,6 +209,27 @@
                     <h4>And this a header 4</h4>
                     <p>Art lovers have a new place to enjoy and engage with Europe’s rich artistic heritage. At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use them for learning, enjoyment, sharing, and to build on in new creative ways.</p>
                 </div>
+
+
+                {# DOWNLOAD MODULE #}
+
+                <section class="download-module">
+                    <ul>
+                        <li> <a href="#">
+                            <svg class="icon icon-document">
+                                <use xlink:href="#icon-document"></use>
+                            </svg>
+                            This is a download
+                            <div class="meta">
+                                <span class="filesize">2.5 MB</span>
+                                <span class="date-added">Added 12/25/16</span>
+                            </div>
+                        </a>
+                    </ul>
+                </section>
+
+
+                {# INFO LIST #}
 
                 <section class="info-list speaker-list">
                     <h2>Speakers for this event</h2>
@@ -336,6 +366,9 @@
     <aside>
         <div class="inner-wrap">
 
+
+            {# AUTHOR #}
+
             <section class="author-big column">
                 <div class="img-container">
                     <img class="round" src="https://unsplash.it/144/144" alt="name"/>
@@ -362,6 +395,9 @@
                     </div>
                 </div>
             </section>
+
+
+            {# RELATED CONTENT #}
 
             <section class="related-content">
                 <h2>Related content</h2>
@@ -395,6 +431,8 @@
                     </article>
                     </div>
                 </div>
+
+
             </section>
         </aside>
 
