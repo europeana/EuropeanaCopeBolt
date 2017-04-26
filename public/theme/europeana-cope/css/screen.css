@@ -1971,11 +1971,13 @@ aside .teaser-threecol {
     .file-content-module .collapse-content p {
       margin-top: 0; }
     .file-content-module .collapse-content .meta {
-      font-size: 0.75rem; }
+      font-size: 0.75rem;
+      margin-top: .5rem; }
       @media only screen and (min-width: 47.9375em) {
         .file-content-module .collapse-content .meta {
           display: inline-block;
-          margin-left: .5rem; } }
+          margin-left: .5rem;
+          margin-top: 0; } }
     .file-content-module .collapse-content .date-added {
       float: right;
       text-align: right; }

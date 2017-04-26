@@ -1075,10 +1075,12 @@ a.banner {
 
         .meta {
             font-size: 0.75rem;
+            margin-top: .5rem;
 
             @include respond-to(large-screens){
                 display: inline-block;
                 margin-left: .5rem;
+                margin-top: 0;
             }
         }
 
