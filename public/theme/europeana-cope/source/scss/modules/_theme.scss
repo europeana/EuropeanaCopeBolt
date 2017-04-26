@@ -957,19 +957,29 @@ a.banner {
 .event-figure {
     position: relative;
     height: 560x;
+    margin-bottom: 2rem;
 
     .map {
+        // height: 250px;
+        // overflow: hidden;
 
+        @include respond-to(large-screens){
+            height: auto;
+        }
+
+        img {
+            // width: 100%;
+        }
     }
 
     .img-container {
         position: relative;
-        // bottom: 55px;
+        // bottom: 0;
         // left: 0;
         // z-index: 10;
         // display: inline-block;
         // height: 70%;
-        // width: 60%;
+        // width: 70%;
         // overflow: hidden;
 
         @include respond-to(large-screens){
@@ -988,7 +998,7 @@ a.banner {
     .event-img {
         width: 100%;
         height: auto;
-        padding-top: 0;
+        padding-top: 0rem;
 
         @include respond-to(large-screens){
             padding-top: 2rem;
@@ -997,8 +1007,8 @@ a.banner {
 
     .event-date {
         position: absolute;
-        left: 0;
-        top: 0;
+        right: 1rem;
+        top: -2rem;
         z-index: 20;
 
         @include respond-to(large-screens){

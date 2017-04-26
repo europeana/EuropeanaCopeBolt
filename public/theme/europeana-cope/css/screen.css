@@ -1898,7 +1898,11 @@ aside .teaser-threecol {
 
 .event-figure {
   position: relative;
-  height: 560x; }
+  height: 560x;
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 47.9375em) {
+    .event-figure .map {
+      height: auto; } }
   .event-figure .img-container {
     position: relative; }
     @media only screen and (min-width: 47.9375em) {
@@ -1914,14 +1918,14 @@ aside .teaser-threecol {
   .event-figure .event-img {
     width: 100%;
     height: auto;
-    padding-top: 0; }
+    padding-top: 0rem; }
     @media only screen and (min-width: 47.9375em) {
       .event-figure .event-img {
         padding-top: 2rem; } }
   .event-figure .event-date {
     position: absolute;
-    left: 0;
-    top: 0;
+    right: 1rem;
+    top: -2rem;
     z-index: 20; }
     @media only screen and (min-width: 47.9375em) {
       .event-figure .event-date {
