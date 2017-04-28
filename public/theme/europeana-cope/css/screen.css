@@ -678,6 +678,15 @@ footer {
     .contentpage .info-list {
       padding: 0 6rem; } }
 
+.listingpage ul.search-results {
+  margin: 2rem 0rem; }
+  @media only screen and (min-width: 24em) {
+    .listingpage ul.search-results {
+      margin: 1rem 2rem; } }
+  @media only screen and (min-width: 47.9375em) {
+    .listingpage ul.search-results {
+      margin: 1rem 4rem; } }
+
 .fourth {
   width: 50%;
   float: left; }
@@ -1717,9 +1726,13 @@ aside .teaser-threecol {
 .side-info {
   text-align: right;
   padding: 0 0.875rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 47.9375em) {
+    .side-info {
+      margin-bottom: 2rem; } }
   .side-info p {
-    margin-bottom: 0.5rem; }
+    margin-bottom: 0.5rem;
+    color: #777777; }
   .side-info .label {
     margin-top: 0; }
 
@@ -1763,6 +1776,8 @@ aside .teaser-threecol {
     @media only screen and (min-width: 47.9375em) {
       .info-list li {
         padding: 0 2rem 1.5rem 2rem; } }
+  .info-list .info-block {
+    padding: 0.8rem 0; }
   .info-list .img-container {
     float: left;
     margin: 0 1rem 1rem 0;
@@ -1839,33 +1854,34 @@ aside .teaser-threecol {
     .related-content {
       padding: 4rem 0 0 0; } }
 
-.event-date {
+.info-block {
   display: inline-block;
   width: 95px;
   background-color: #fff;
-  padding: 0.8rem 0;
+  padding: 0.8rem;
   text-align: center;
   line-height: 1;
   color: #4d4d4d; }
   @media only screen and (min-width: 47.9375em) {
-    .event-date {
+    .info-block {
       width: 172px;
       padding: 0.8rem; } }
-  .event-figure .event-date {
-    padding: 0.8rem;
+  .event-figure .info-block {
     width: 120px; }
     @media only screen and (min-width: 47.9375em) {
-      .event-figure .event-date {
+      .event-figure .info-block {
         padding: 1.6rem;
         width: 200px; } }
-  .event-date .event-days {
+  .teaser .info-block {
+    width: auto; }
+  .info-block .event-days {
     display: block;
     letter-spacing: -0.05em;
     font-size: 1.25rem; }
     @media only screen and (min-width: 47.9375em) {
-      .event-date .event-days {
+      .info-block .event-days {
         font-size: 2rem; } }
-  .event-date .event-month {
+  .info-block .event-month {
     display: block;
     margin-top: 0.6em;
     font-weight: 700;
@@ -1873,9 +1889,9 @@ aside .teaser-threecol {
     letter-spacing: 0.1em;
     font-size: 0.6875rem; }
     @media only screen and (min-width: 47.9375em) {
-      .event-date .event-month {
+      .info-block .event-month {
         font-size: 0.6875rem; } }
-  .event-date .event-time {
+  .info-block .event-time {
     display: block;
     border-top: 1px solid #e7e7e7;
     padding: 0.6em 0;
@@ -1883,17 +1899,49 @@ aside .teaser-threecol {
     font-weight: 700;
     font-size: 0.6875rem; }
     @media only screen and (min-width: 47.9375em) {
-      .event-date .event-time {
+      .info-block .event-time {
         font-size: 1rem; } }
-  .event-date .event-location {
+  .info-block .event-location {
     display: block;
     border-top: 1px solid #e7e7e7;
     padding: 0.6em 0 0;
     font-size: 0.75rem; }
     @media only screen and (min-width: 47.9375em) {
-      .event-date .event-location {
+      .info-block .event-location {
         font-size: 1rem; } }
-  .event-date svg {
+  .info-block .info-type {
+    display: block;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .info-block .info-type {
+        font-size: 1.5rem; } }
+  .info-block .info-date {
+    display: block;
+    padding: 0.6em 0;
+    font-size: 0.75rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .info-block .info-date {
+        font-size: 0.8125rem; } }
+  .info-block .info-author {
+    display: block;
+    border-top: 1px solid #e7e7e7;
+    padding: 0.6em 0 0;
+    font-size: 0.75rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .info-block .info-author {
+        font-size: 0.8125rem; } }
+  .info-block .info-action {
+    display: block;
+    color: #1a8ac7;
+    padding: 1.6em 0 0;
+    text-transform: uppercase;
+    font-weight: 700; }
+    .info-block .info-action svg {
+      fill: #1a8ac7;
+      margin-right: .5rem; }
+  .info-block svg {
     fill: #777777; }
 
 .event-figure {
@@ -1924,13 +1972,13 @@ aside .teaser-threecol {
     @media only screen and (min-width: 47.9375em) {
       .event-figure .event-img {
         padding-top: 2rem; } }
-  .event-figure .event-date {
+  .event-figure .info-block {
     position: absolute;
     right: 1rem;
     top: -2rem;
     z-index: 20; }
     @media only screen and (min-width: 47.9375em) {
-      .event-figure .event-date {
+      .event-figure .info-block {
         left: auto;
         right: 0;
         top: 0; } }
@@ -2047,6 +2095,37 @@ aside .teaser-threecol {
     @media only screen and (min-width: 24em) {
       .download-module li {
         font-size: 1rem; } }
+
+/*
+***********************************************************************
+* LISTING PAGE
+***********************************************************************
+**/
+.teaser {
+  margin-bottom: 3.5rem; }
+  .teaser .img-container {
+    position: relative; }
+    @media only screen and (min-width: 47.9375em) {
+      .teaser .img-container {
+        float: left;
+        width: 55%;
+        margin-right: 1.5rem; } }
+    .teaser .img-container .info-block {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-top: 0; }
+  .teaser .actions-footer {
+    vertical-align: bottom;
+    margin: 2rem 0 0 0; }
+    .teaser .actions-footer a.add-calendar {
+      color: #4d4d4d; }
+    .teaser .actions-footer svg {
+      fill: #E11D53; }
+    .teaser .actions-footer .button-link,
+    .teaser .actions-footer .cta-link {
+      margin-top: 0;
+      float: right; }
 
 @media print {
   *,

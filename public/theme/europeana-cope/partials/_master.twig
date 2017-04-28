@@ -28,9 +28,13 @@
     {% endblock navigation %}
 
     <div class="canvas"> {# contains all items next to navigation #}
-        {% block contentheader %}
-            {{ include('partials/_contentheader.twig') }}
-        {% endblock contentheader %}
+
+        {# FIXME: Show this part on landing and homepage, not the rest #}
+        {% if app.request.get('_route') == 'homepage' %}
+            {% block contentheader %}
+                {{ include('partials/_contentheader.twig') }}
+            {% endblock contentheader %}
+        {% endif %}
 
         {% block body %}
             <main>

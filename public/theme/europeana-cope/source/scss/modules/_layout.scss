@@ -219,6 +219,21 @@ footer {
 
 }
 
+.listingpage {
+
+    ul.search-results {
+        margin: 2rem 0rem;
+
+        @include respond-to(medium-screens) {
+             margin: 1rem 2rem;
+        }
+
+        @include respond-to(large-screens) {
+             margin: 1rem 4rem;
+        }
+    }
+}
+
 
 
 // column classes. Half is 50%, Third 33%, TwoThirds 66%..... such wows...
