@@ -1223,20 +1223,47 @@ a.banner {
 ***********************************************************************
 **/
 
-ul.search-results {
+.filter-listing {
+
+    border-bottom: 2px solid $line-gray;
+    font-size: 0.9375rem;
+
+    ul{
+        display: inline-block;
+    }
+
+    p {
+        display: inline-block;
+        font-size: 0.9375rem;
+        margin: 0;
+        color: $medium-gray;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        color: $baseFirstThemeColour;
+        padding: 1rem;
+    }
 
 }
 
 .teaser {
     margin-bottom: 3.5rem;
 
+
     .img-container {
         position: relative;
+        margin-bottom: 2rem;
 
         @include respond-to(large-screens){
             float:left;
             width: 55%;
             margin-right: 1.5rem;
+            margin-bottom: 0;
         }
 
         .info-block {
