@@ -23,6 +23,8 @@ header {
         border: none;
         position: absolute;
         top: 1rem;
+        padding: 1rem;
+        font-size: 1.25rem;
 
         &.menu-toggle{
             left: 0rem;
@@ -30,6 +32,10 @@ header {
 
         &.search-toggle {
             right: 0rem;
+        }
+
+        svg {
+            fill: $medium-gray;
         }
 
         @include respond-to(menu-full) {

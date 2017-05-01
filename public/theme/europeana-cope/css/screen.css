@@ -1268,11 +1268,15 @@ header {
     background: none;
     border: none;
     position: absolute;
-    top: 1rem; }
+    top: 1rem;
+    padding: 1rem;
+    font-size: 1.25rem; }
     header button.toggle.menu-toggle {
       left: 0rem; }
     header button.toggle.search-toggle {
       right: 0rem; }
+    header button.toggle svg {
+      fill: #4d4d4d; }
     @media only screen and (min-width: 60em) {
       header button.toggle {
         display: none; } }
