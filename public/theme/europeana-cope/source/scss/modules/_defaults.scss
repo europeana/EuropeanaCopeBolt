@@ -162,39 +162,5 @@ a.external {
   }
 }
 
-//default bolt pagination
-.pagination {
-    li {
-        float:left;
-        margin: 0 0.45rem 0 0;
-        text-align:center;
-        width:44px;
-        a {
-            transition: all 100ms linear;
-            padding: 0.45em 0;
-            display: block;
-            border: 1px solid $baseSecondThemeColour;
-            background-color: $baseSecondThemeColour;
-            &:link, &:visited {
-                text-decoration:none;
-            }
-            &:hover, &:active, &:focus {
-                background-color: darken($baseSecondThemeColour, 7%);
-                border: 1px solid  darken($baseSecondThemeColour, 7%);
-            }
-        }
-        &.active {
-            a {
-                border:1px solid $baseSecondThemeColour;
-                background-color: $white;
-                &:link, &:visited {
-                    text-decoration:none;
-                }
-                &:hover, &:active, &:focus {
-                    background-color: $baseSecondThemeColour;
-                }
-            }
-        }
-    }
-}
+
 
