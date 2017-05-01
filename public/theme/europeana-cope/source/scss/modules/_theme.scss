@@ -504,21 +504,28 @@ a.banner {
 * WIDGET THREE COLUMN CATEGORY TEASER / CATEGORY STREAMS v2
 **/
 
+section.catstream {
+    padding-top: 2rem;
+
+    @include respond-to(large-screens){
+        padding-top: 4rem;
+    }
+}
+
 .catstream-threecol {
-    // FIXME: bredere padding bij lijn in het midden, ook nog in def design?
     border-left: 1px solid $line-gray;
     border-right: 1px solid $line-gray;
 
-     @include respond-to(large-screens){
+    @include respond-to(large-screens){
         padding: 0 1.5rem; // vanwege lijn, bredere padding
     }
 
 
-    &:nth-of-type(1){
+    .catstream-index1 & {
         border-left: 0px;
     }
 
-    &:nth-of-type(3){
+    .catstream-index3 &{
         border-right: 0px;
     }
 

@@ -581,12 +581,10 @@ body {
     .canvas {
       margin-left: 235px; } }
 
-section > .inner-wrap,
-aside > .inner-wrap {
-  padding: 4rem 0rem 0rem; }
+section > .inner-wrap {
+  padding: 0rem 0rem 0rem; }
   @media only screen and (min-width: 47.9375em) {
-    section > .inner-wrap,
-    aside > .inner-wrap {
+    section > .inner-wrap {
       padding: 0 2rem; } }
 
 section.contentheader > .inner-wrap {
@@ -928,11 +926,12 @@ section > .inner-wrap > h2 {
   letter-spacing: 2px;
   color: #4d4d4d;
   text-align: center;
-  margin: 0 0 .4rem 0; }
+  margin: 2rem 0 .4rem 0; }
   @media only screen and (min-width: 24em) {
     section > h2,
     section > .inner-wrap > h2 {
-      font-size: 1.625rem; } }
+      font-size: 1.625rem;
+      margin: 4rem 0 .4rem 0; } }
 
 section.info-list > h2 {
   font-weight: 700;
@@ -957,12 +956,12 @@ aside .related-content > h2 {
   font-size: 1.125rem;
   font-weight: 700;
   text-align: left;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem;
   letter-spacing: 0; }
   @media only screen and (min-width: 24em) {
     aside .related-content > h2 {
       font-size: 1.375rem;
-      margin-bottom: 3rem; } }
+      margin: 0 0 3rem; } }
 
 ul {
   padding: 0;
@@ -1611,15 +1610,21 @@ aside .teaser-threecol {
 /*
 * WIDGET THREE COLUMN CATEGORY TEASER / CATEGORY STREAMS v2
 **/
+section.catstream {
+  padding-top: 2rem; }
+  @media only screen and (min-width: 47.9375em) {
+    section.catstream {
+      padding-top: 4rem; } }
+
 .catstream-threecol {
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc; }
   @media only screen and (min-width: 47.9375em) {
     .catstream-threecol {
       padding: 0 1.5rem; } }
-  .catstream-threecol:nth-of-type(1) {
+  .catstream-index1 .catstream-threecol {
     border-left: 0px; }
-  .catstream-threecol:nth-of-type(3) {
+  .catstream-index3 .catstream-threecol {
     border-right: 0px; }
   .catstream-threecol p {
     font-size: 0.875rem; }

@@ -62,11 +62,11 @@ body {
     }
 }
 
-section,
-aside {
+section {
 
     > .inner-wrap {
-        padding: 4rem 0rem 0rem; // n
+        padding: 0rem 0rem 0rem; // n
+        // padding: 4rem 0rem 0rem;
 
         @include respond-to(large-screens){
             padding: 0 2rem;
