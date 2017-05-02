@@ -684,10 +684,10 @@ section.catstream {
 .side-info {
     text-align: right;
     padding: 0 0.875rem;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
 
     @include respond-to(large-screens) {
-        margin-bottom: 2rem;
+        // margin-bottom: 2rem;
     }
 
     p {
@@ -702,13 +702,16 @@ section.catstream {
 
 
 .contentpage {
-    .header-group {
-    position: relative;
+    .header-group,
+    .personal {
+        position: relative;
+        margin-top: 2rem;
+
+        @include respond-to(large-screens) {
+            margin-top: 3rem;
+        }
     }
 
-    figure {
-        margin-bottom: 2rem;
-    }
 
 }
 
@@ -1121,6 +1124,14 @@ section.catstream {
             margin: 0;
             display: inline-block;
             color: $light-gray;
+
+            span {
+                display: none;
+
+                @include respond-to(large-screens){
+                    display: inline;
+                }
+            }
         }
     }
 
@@ -1228,6 +1239,67 @@ section.catstream {
             }
     }
 }
+
+
+.personal {
+
+    h1 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .socials {
+        margin-top: 1.5rem;
+
+        svg {
+            font-size: 2rem;
+        }
+
+    }
+
+}
+
+.personal-img {
+
+    @include respond-to(large-screens){
+        float:left;
+        width: 45%;
+    }
+}
+
+.personal-details {
+    color: $medium-gray;
+
+    @include respond-to(large-screens){
+        float:left;
+        width: 55%;
+        padding-left: 1.5rem;
+    }
+}
+
+.personal-network {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.personal-function {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+
+    span:first-of-type{
+        font-weight: 700;
+    }
+}
+
+.personal-contact {
+    a {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+
 
 
 /*

@@ -173,7 +173,7 @@ footer {
 }
 
 .contentpage {
-    article.main-column {
+    .main-column {
         padding: 0 0.875rem;
 
         @include respond-to(medium-screens) {
@@ -181,20 +181,24 @@ footer {
         }
     }
 
-    figure {
+    figure,
+    .personal {
         margin: 2rem 0rem; //1rem 2rem;
 
         @include respond-to(medium-screens) {
-             margin: 1rem 2rem;
+             margin: 1rem 2rem 2rem;
         }
 
         @include respond-to(large-screens) {
-             margin: 1rem 4rem;
+             margin: 1rem 4rem 4rem;
         }
     }
 
     .header-group,
-    .body {
+    .body,
+    .file-content-module,
+    .download-module,
+    {
         padding: 0 ;
 
         @include respond-to(large-screens) {
@@ -202,6 +206,17 @@ footer {
         }
         @include respond-to(xlarge-screens) {
             padding: 0 8rem;
+        }
+    }
+
+    blockquote {
+        margin: 1rem 0 ;
+
+        @include respond-to(large-screens) {
+            margin: 2rem 4rem;
+        }
+        @include respond-to(xlarge-screens) {
+            margin: 2rem 8rem;
         }
     }
 
@@ -219,20 +234,21 @@ footer {
 
 }
 
-.listingpage {
+// listingpage
 
-    ul.search-results {
-        margin: 2rem 0rem;
+ul.search-results,
+ul.teaser-list {
+    margin: 2rem 0rem;
 
-        @include respond-to(medium-screens) {
-             margin: 1rem 2rem;
-        }
+    @include respond-to(medium-screens) {
+         margin: 1rem 2rem;
+    }
 
-        @include respond-to(large-screens) {
-             margin: 1rem 4rem;
-        }
+    @include respond-to(large-screens) {
+         margin: 1rem 4rem;
     }
 }
+
 
 
 

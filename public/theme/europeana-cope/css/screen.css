@@ -616,32 +616,50 @@ footer {
     .column {
       padding: 0 0.875rem; } }
 
-.contentpage article.main-column {
+.contentpage .main-column {
   padding: 0 0.875rem; }
   @media only screen and (min-width: 24em) {
-    .contentpage article.main-column {
+    .contentpage .main-column {
       padding: 0 2rem; } }
 
-.contentpage figure {
+.contentpage figure,
+.contentpage .personal {
   margin: 2rem 0rem; }
   @media only screen and (min-width: 24em) {
-    .contentpage figure {
-      margin: 1rem 2rem; } }
+    .contentpage figure,
+    .contentpage .personal {
+      margin: 1rem 2rem 2rem; } }
   @media only screen and (min-width: 47.9375em) {
-    .contentpage figure {
-      margin: 1rem 4rem; } }
+    .contentpage figure,
+    .contentpage .personal {
+      margin: 1rem 4rem 4rem; } }
 
 .contentpage .header-group,
-.contentpage .body {
+.contentpage .body,
+.contentpage .file-content-module,
+.contentpage .download-module {
   padding: 0; }
   @media only screen and (min-width: 47.9375em) {
     .contentpage .header-group,
-    .contentpage .body {
+    .contentpage .body,
+    .contentpage .file-content-module,
+    .contentpage .download-module {
       padding: 0 4rem; } }
   @media only screen and (min-width: 80em) {
     .contentpage .header-group,
-    .contentpage .body {
+    .contentpage .body,
+    .contentpage .file-content-module,
+    .contentpage .download-module {
       padding: 0 8rem; } }
+
+.contentpage blockquote {
+  margin: 1rem 0; }
+  @media only screen and (min-width: 47.9375em) {
+    .contentpage blockquote {
+      margin: 2rem 4rem; } }
+  @media only screen and (min-width: 80em) {
+    .contentpage blockquote {
+      margin: 2rem 8rem; } }
 
 .contentpage .info-list {
   padding: 0; }
@@ -652,13 +670,16 @@ footer {
     .contentpage .info-list {
       padding: 0 6rem; } }
 
-.listingpage ul.search-results {
+ul.search-results,
+ul.teaser-list {
   margin: 2rem 0rem; }
   @media only screen and (min-width: 24em) {
-    .listingpage ul.search-results {
+    ul.search-results,
+    ul.teaser-list {
       margin: 1rem 2rem; } }
   @media only screen and (min-width: 47.9375em) {
-    .listingpage ul.search-results {
+    ul.search-results,
+    ul.teaser-list {
       margin: 1rem 4rem; } }
 
 .fourth {
@@ -1097,6 +1118,9 @@ a.phone {
   color: #4d4d4d;
   white-space: nowrap; }
 
+a svg {
+  margin-right: .5rem; }
+
 p.meta {
   font-size: 0.75rem; }
   @media only screen and (min-width: 47.9375em) {
@@ -1117,6 +1141,11 @@ p.meta {
   p.meta svg {
     fill: #777777;
     margin-right: .2rem; }
+
+.personal-network span + span:before,
+.personal-function span + span:before {
+  content: "|";
+  margin-right: 0.5rem; }
 
 svg.icon {
   display: inline-block;
@@ -1143,6 +1172,12 @@ p.figcaption {
       font-size: 1rem;
       margin-top: 1rem;
       padding-top: 0.75rem; } }
+
+blockquote {
+  font-style: italic;
+  color: #4d4d4d;
+  padding: .75rem 1.5rem;
+  border-left: 1px solid #777777; }
 
 /*
 * BUTTONS
@@ -1744,22 +1779,21 @@ section.catstream {
 **/
 .side-info {
   text-align: right;
-  padding: 0 0.875rem;
-  margin-bottom: 2rem; }
-  @media only screen and (min-width: 47.9375em) {
-    .side-info {
-      margin-bottom: 2rem; } }
+  padding: 0 0.875rem; }
   .side-info p {
     margin-bottom: 0.5rem;
     color: #777777; }
   .side-info .label {
     margin-top: 0; }
 
-.contentpage .header-group {
-  position: relative; }
-
-.contentpage figure {
-  margin-bottom: 2rem; }
+.contentpage .header-group,
+.contentpage .personal {
+  position: relative;
+  margin-top: 2rem; }
+  @media only screen and (min-width: 47.9375em) {
+    .contentpage .header-group,
+    .contentpage .personal {
+      margin-top: 3rem; } }
 
 .author-small {
   margin-bottom: 1rem; }
@@ -2034,6 +2068,13 @@ section.catstream {
       margin: 0;
       display: inline-block;
       color: #777777; }
+      .file-content-module .collapse-header .content-kind span,
+      .download-module .collapse-header .content-kind span {
+        display: none; }
+        @media only screen and (min-width: 47.9375em) {
+          .file-content-module .collapse-header .content-kind span,
+          .download-module .collapse-header .content-kind span {
+            display: inline; } }
   .file-content-module .collapse-content,
   .download-module .collapse-content {
     background-color: #f1f1ee;
@@ -2114,6 +2155,42 @@ section.catstream {
     @media only screen and (min-width: 24em) {
       .download-module li {
         font-size: 1rem; } }
+
+.personal h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem; }
+
+.personal .socials {
+  margin-top: 1.5rem; }
+  .personal .socials svg {
+    font-size: 2rem; }
+
+@media only screen and (min-width: 47.9375em) {
+  .personal-img {
+    float: left;
+    width: 45%; } }
+
+.personal-details {
+  color: #4d4d4d; }
+  @media only screen and (min-width: 47.9375em) {
+    .personal-details {
+      float: left;
+      width: 55%;
+      padding-left: 1.5rem; } }
+
+.personal-network {
+  font-weight: 700;
+  margin-bottom: 1rem; }
+
+.personal-function {
+  font-size: 0.875rem;
+  margin-bottom: 1rem; }
+  .personal-function span:first-of-type {
+    font-weight: 700; }
+
+.personal-contact a {
+  display: block;
+  margin-bottom: 0.5rem; }
 
 /*
 ***********************************************************************

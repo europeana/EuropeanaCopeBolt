@@ -44,6 +44,7 @@ h1, .alpha {
             margin: 2rem 0 3rem;
         }
     }
+
 }
 
 h2, .beta {
@@ -413,6 +414,10 @@ a {
     &.email {
        //white-space: nowrap;
     }
+
+    svg {
+        margin-right: .5rem;
+    }
 }
 
 
@@ -449,6 +454,15 @@ p.meta {
     }
 }
 
+.personal-network,
+.personal-function {
+
+    span + span:before {
+        content: "|";
+        margin-right: 0.5rem;
+    }
+}
+
 
 svg.icon {
     display: inline-block;
@@ -480,5 +494,12 @@ p.figcaption {
         margin-top: 1rem;
         padding-top: 0.75rem;
     }
+}
+
+blockquote {
+    font-style: italic;
+    color: $medium-gray;
+    padding: .75rem 1.5rem; //optisch hetzelfde
+    border-left: 1px solid $light-gray;
 }
 
