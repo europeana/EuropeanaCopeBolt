@@ -2265,6 +2265,48 @@ section.catstream {
       color: #095f90;
       margin: 0 .5rem; }
 
+.skin-research nav.quicklinks ul {
+  background-color: #7F3978; }
+
+.skin-research .colored-image {
+  background-color: #7F3978; }
+
+.skin-research .calltoactionform,
+.skin-research .calltoactionlink {
+  background-color: #7F3978; }
+  .skin-research .calltoactionform .button,
+  .skin-research .calltoactionlink .button {
+    background-color: #391935; }
+
+.skin-research a.button, .skin-research .button, .skin-research button {
+  background-color: #7F3978; }
+  .skin-research a.button:hover, .skin-research a.button:active, .skin-research a.button:focus, .skin-research .button:hover, .skin-research .button:active, .skin-research .button:focus, .skin-research button:hover, .skin-research button:active, .skin-research button:focus {
+    background-color: #391935; }
+
+.skin-research .searchform button {
+  background-color: #293745; }
+
+.skin-labs nav.quicklinks ul {
+  background-color: #37B98B; }
+
+.skin-labs .colored-image {
+  background-color: #37B98B; }
+
+.skin-labs .calltoactionform,
+.skin-labs .calltoactionlink {
+  background-color: #37B98B; }
+  .skin-labs .calltoactionform .button,
+  .skin-labs .calltoactionlink .button {
+    background-color: #206a50; }
+
+.skin-labs a.button, .skin-labs .button, .skin-labs button {
+  background-color: #37B98B; }
+  .skin-labs a.button:hover, .skin-labs a.button:active, .skin-labs a.button:focus, .skin-labs .button:hover, .skin-labs .button:active, .skin-labs .button:focus, .skin-labs button:hover, .skin-labs button:active, .skin-labs button:focus {
+    background-color: #206a50; }
+
+.skin-labs .searchform button {
+  background-color: #293745; }
+
 @media print {
   *,
   *:before,

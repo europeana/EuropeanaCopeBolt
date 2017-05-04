@@ -1,0 +1,69 @@
+.skin-research {
+
+    nav.quicklinks ul {
+        background-color: $researchSkinColour;
+    }
+
+    .colored-image {
+        background-color: $researchSkinColour;
+    }
+
+    .calltoactionform,
+    .calltoactionlink {
+        background-color: $researchSkinColour;
+
+        .button {
+            background-color: darken($researchSkinColour,20%);
+        }
+    }
+
+    a.button, .button, button {
+    background-color: $researchSkinColour;
+
+        &:hover, &:active, &:focus {
+        background-color: darken($researchSkinColour,20%);
+        }
+    }
+
+    .searchform button { //exception
+        background-color: $dark-blue;
+    }
+}
+
+
+
+
+
+
+
+.skin-labs {
+
+    nav.quicklinks ul {
+        background-color: $labsSkinColour;
+    }
+
+    .colored-image {
+        background-color: $labsSkinColour;
+    }
+
+    .calltoactionform,
+    .calltoactionlink {
+        background-color: $labsSkinColour;
+
+        .button {
+            background-color: darken($labsSkinColour,20%);
+        }
+    }
+
+    a.button, .button, button {
+    background-color: $labsSkinColour;
+
+        &:hover, &:active, &:focus {
+        background-color: darken($labsSkinColour,20%);
+        }
+    }
+
+    .searchform button { //exception
+        background-color: $dark-blue;
+    }
+}
