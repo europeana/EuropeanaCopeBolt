@@ -181,6 +181,21 @@ section {
         }
     }
 
+    &.teaser-list-section div > h2 {
+        font-size: 1.25rem;
+        // margin-left: 0rem; // too many exceptions
+
+        @include respond-to (medium-screens) {
+            font-size: 1.5rem;
+            // margin-left: 2rem;
+
+        }
+
+        @include respond-to (large-screens) {
+            // margin-left: 4rem;
+        }
+    }
+
     .inner-wrap > p {
         text-align: center;
         margin: 0 0 3rem 0;
@@ -192,6 +207,7 @@ section {
         }
     }
 }
+
 
 aside {
     .related-content >  h2 {

@@ -1243,6 +1243,13 @@ section.catstream {
 
 .personal {
 
+    // Te veel uitzonderingen
+    // + blockquote {
+    //    @include respond-to(large-screens){
+    //         margin-top: -2rem;
+    //     }
+    // }
+
     h1 {
         margin-bottom: 1rem;
         font-size: 1.5rem;
@@ -1298,8 +1305,9 @@ section.catstream {
     }
 }
 
+.person-related {
 
-
+}
 
 
 /*
@@ -1381,5 +1389,17 @@ section.catstream {
 }
 
 
+.link-list {
+    margin: 2rem 0;
 
+    li {
+        display: inline;
+
+        & + li:before {
+            content: "|";
+            color: $link-blue;
+            margin: 0 .5rem;
+        }
+    }
+}
 

@@ -497,18 +497,17 @@ img {
   height: auto;
   display: block; }
 
-blockquote {
-  clear: both; }
-
-a.external:after {
+a.external:after,
+a[href*="//"]:after {
   content: "";
-  background: transparent center center no-repeat;
-  background-image: url(../img/icons/externe_link.svg);
-  background-size: cover;
-  width: 16px;
-  height: 16px;
+  background-image: url(../images/icons/icon-linkout.svg);
+  width: 1em;
+  height: .9em;
   display: inline-block;
-  margin-left: 1px; }
+  fill: inherit;
+  background-size: cover;
+  margin-left: .5rem;
+  vertical-align: -3px; }
 
 /**
  * File:        _layout.scss
@@ -562,6 +561,9 @@ section > .inner-wrap {
   @media only screen and (min-width: 47.9375em) {
     section > .inner-wrap {
       padding: 0 2rem; } }
+
+section.teaser-list-section {
+  margin-top: 4rem; }
 
 section.contentheader > .inner-wrap {
   padding: 0 1rem; }
@@ -676,11 +678,11 @@ ul.teaser-list {
   @media only screen and (min-width: 24em) {
     ul.search-results,
     ul.teaser-list {
-      margin: 1rem 2rem; } }
+      margin: 4rem 2rem; } }
   @media only screen and (min-width: 47.9375em) {
     ul.search-results,
     ul.teaser-list {
-      margin: 1rem 4rem; } }
+      margin: 4rem 4rem; } }
 
 .fourth {
   width: 50%;
@@ -962,6 +964,12 @@ section.info-list > h2 {
   @media only screen and (min-width: 24em) {
     section.info-list > h2 {
       font-size: 1.375rem; } }
+
+section.teaser-list-section div > h2 {
+  font-size: 1.25rem; }
+  @media only screen and (min-width: 24em) {
+    section.teaser-list-section div > h2 {
+      font-size: 1.5rem; } }
 
 section .inner-wrap > p {
   text-align: center;
@@ -2241,6 +2249,15 @@ section.catstream {
     .teaser .actions-footer .cta-link {
       margin-top: 0;
       float: right; }
+
+.link-list {
+  margin: 2rem 0; }
+  .link-list li {
+    display: inline; }
+    .link-list li + li:before {
+      content: "|";
+      color: #095f90;
+      margin: 0 .5rem; }
 
 @media print {
   *,

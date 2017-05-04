@@ -133,33 +133,21 @@ img {
   display: block; // to prevent extra pixels on bottom;
 }
 
-blockquote {
-  //quotes: "\201C""\201D""\2018""\2019";
-  clear:both;
-}
 
-blockquote:before {
-  //content: open-quote;
-  //margin-right:0.1em;
-  }
+a.external,
+a[href*="//"] {
 
-blockquote:after {
-  //content: close-quote;
-  //margin-left:0em;
-}
-
-a.external {
-
-  &:after {
-    content: "";
-    background: transparent center center no-repeat;
-    background-image: url(../img/icons/externe_link.svg);
-    background-size: cover;
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    margin-left: 1px;
-  }
+    &:after {
+        content: "";
+        background-image: url(../images/icons/icon-linkout.svg);
+        width: 1em;
+        height: .9em;
+        display: inline-block;
+        fill: inherit;
+        background-size: cover;
+        margin-left: .5rem;
+        vertical-align: -3px;
+    }
 }
 
 
