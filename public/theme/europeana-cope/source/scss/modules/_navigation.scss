@@ -29,6 +29,7 @@ nav.quicklinks {
         color: $white;
         padding: 1rem 0.5rem;
         font-size: 0.875rem;
+        line-height: 21px; // magic number: to align bar with menu on left
 
         @include respond-to (medium-screens) {
             font-size: 0.875rem;
@@ -49,19 +50,26 @@ nav.main-menu {
     top: 95px; //magic number: height from topbar
     left:0;
     display: none;
+    background-color: $off-white;
 
     @include respond-to(menu-full) {
         display: block; //check, medium or large?
     }
 
     ul {
-        padding: 0 1.125rem 0 0.6875rem
+        padding: 0;
+        //padding: 0 1.125rem 0 0.6875rem;
+        background: $white;
     }
 
     li {
         border-bottom: 1px solid $line-gray;
         padding: 0.8125rem 0;
     }
+
+    // ul > li {
+    //     margin: 0 1.125rem 0 0.6875rem;
+    // }
 
     a {
         text-decoration: none;

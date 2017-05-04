@@ -5,9 +5,9 @@
 header {
     position: relative;
 
-    h1, .alpha { //logo
+    h1, .home-link { //logo
         margin: 1rem 0 0 0;
-
+        display: block;
 
         img {
            height: 50px;

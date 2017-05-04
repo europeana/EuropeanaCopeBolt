@@ -29,12 +29,11 @@
 
     <div class="canvas"> {# contains all items next to navigation #}
 
-        {# FIXME: Show this part on landing and homepage, not the rest #}
-        {% if app.request.get('_route') == 'homepage' %}
-            {% block contentheader %}
-                {{ include('partials/_contentheader.twig') }}
-            {% endblock contentheader %}
-        {% endif %}
+
+        {% block contentheader %}
+            {{ include('partials/_contentheader.twig') }}
+        {% endblock contentheader %}
+
 
         {% block body %}
             <main>

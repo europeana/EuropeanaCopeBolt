@@ -537,8 +537,7 @@ body {
   min-height: 100%;
   margin: 0;
   position: relative;
-  padding: 0;
-  background-color: #f1f1ee; }
+  padding: 0; }
   body > header, body footer, body main, body [role="main"] {
     width: 100%;
     display: block;
@@ -547,6 +546,9 @@ body {
     position: relative; }
   body > header {
     padding: 0 0.875rem; }
+    @media only screen and (min-width: 60em) {
+      body > header {
+        height: 95px; } }
   body > main, body [role="main"] {
     position: relative; }
 
@@ -766,7 +768,8 @@ nav.quicklinks a {
   display: block;
   color: #fff;
   padding: 1rem 0.5rem;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  line-height: 21px; }
   @media only screen and (min-width: 24em) {
     nav.quicklinks a {
       font-size: 0.875rem;
@@ -780,12 +783,14 @@ nav.main-menu {
   width: 235px;
   top: 95px;
   left: 0;
-  display: none; }
+  display: none;
+  background-color: #f1f1ee; }
   @media only screen and (min-width: 60em) {
     nav.main-menu {
       display: block; } }
   nav.main-menu ul {
-    padding: 0 1.125rem 0 0.6875rem; }
+    padding: 0;
+    background: #fff; }
   nav.main-menu li {
     border-bottom: 1px solid #cccccc;
     padding: 0.8125rem 0; }
@@ -1298,12 +1303,13 @@ form button, form .button {
 **/
 header {
   position: relative; }
-  header h1, header .alpha {
-    margin: 1rem 0 0 0; }
-    header h1 img, header .alpha img {
+  header h1, header .home-link {
+    margin: 1rem 0 0 0;
+    display: block; }
+    header h1 img, header .home-link img {
       height: 50px; }
       @media only screen and (min-width: 24em) {
-        header h1 img, header .alpha img {
+        header h1 img, header .home-link img {
           height: 65px; } }
   header button.toggle {
     background: none;
