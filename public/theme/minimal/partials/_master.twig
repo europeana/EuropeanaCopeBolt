@@ -17,6 +17,8 @@
     {% endblock headincludes %}
 </head>
 <body class="{% block bodyclass %}{% endblock bodyclass %}">
+{# LODEWIJK: Bodyclass-> Add skin-labs of skin-research to change skin-color #}
+
     {{ include('partials/_svg_library.twig') }}
 
     {% block header %}
@@ -28,9 +30,12 @@
     {% endblock navigation %}
 
     <div class="canvas"> {# contains all items next to navigation #}
+
+
         {% block contentheader %}
             {{ include('partials/_contentheader.twig') }}
         {% endblock contentheader %}
+
 
         {% block body %}
             <main>

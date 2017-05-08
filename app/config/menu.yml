@@ -294,6 +294,8 @@ main:
         label: Jobs
         path: pages/8
         class: jobs
+
+secondary:
     -
         label: Sitemap
         path: visual-sitemap
@@ -305,4 +307,4 @@ main:
     -
         link: /page/styleguide
         label: Styleguide
-        class: last secondary
+        class: secondary

@@ -9,7 +9,10 @@
         </ul>
     </nav>
 
-    <div class="inner-wrap">
+
+    {# FIXME: Show this part on landing and homepage, not the rest #}
+        {% if app.request.get('_route') == 'homepage' %}
+            <div class="inner-wrap">
         <div class="highlight-bar">
             <h2>Latest publications</h2>
             <ul class="group">
@@ -35,5 +38,6 @@
             <a class="readmore" href="#">More</a>
         </div>
     </div>
+    {% endif %}
 
 </section>
