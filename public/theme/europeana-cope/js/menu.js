@@ -11,31 +11,28 @@
 ;(function($, window, document, undefined) {
     $.europeanaMenu = function(element, options) {
         var plugin = this;
-
         plugin.settings = {};
-
         var $element = $(element), element = element;
 
         plugin.init = function() {
             plugin.settings = $.extend({}, $.europeanaMenu.defaultOptions, options);
-            // code goes here
             plugin.europeanaMenuAddToplevelClone();
             plugin.europeanaMenuHideInactive();
             plugin.europeanaMenuWatermark();
-
             //_europeanaMenu_private_method();
         };
 
         // clone the top level entries and add them to the dom
         plugin.europeanaMenuAddToplevelClone = function() {
-            // add a new ul element
+            // add a new ul for the cloned menu
             var clonedMenu = $('<ul>').attr({
                 'class': 'backlinks play-menu',
                 'id': 'backlinks'
             });
+            // add all toplevel menu items to the cloned menu
             $element.find('> li:not(.home)').each(
                 function() {
-                    // add menu link and classes to a new li element
+                    // add menu link and classes to a new li
                     clonedMenu.append(
                         $('<li>')
                             .addClass($(this).attr('class'))
@@ -44,11 +41,10 @@
                     $(this).addClass('toplevel');
                 }
             );
-
-            // move the first element to the end
+            // add the .home element to the end of the cloned menu
             $element.find('> li.home').each(
                 function() {
-                    // add menu link and classes to a new li element
+                    // add menu link and classes to a new li
                     clonedMenu.append(
                         $('<li>')
                             .addClass($(this).attr('class'))
@@ -57,40 +53,36 @@
                     $(this).addClass('toplevel');
                 }
             );
-
-            // add everything to the dom
+            // add the clones menu to the dom after the original list
             $element.after(clonedMenu);
         };
 
-        // hide all incactive items
+        // hide all inactive items
         plugin.europeanaMenuHideInactive = function() {
             if(!$element.find('li.home').hasClass('active')) {
+                // this happens when we're not on the .home page
                 $element.find('> li').each(
                     function() {
                         if(!$element.data('hasActiveLink') && !$(this).hasClass('active')) {
-                            //console.log('we dont have an active page');
                             $(this).find('ul.sub-menu').hide();
                         } else if(!$(this).hasClass('active')) {
-                            //console.log('we have an active page', $element.data('hasActiveLink'));
                             $(this).hide();
                         }
                     }
                 );
             } else {
-                //console.log('were on the homepage');
+                // this only happens when we are on the .home page
                 $element.find('ul.sub-menu').hide();
             }
         };
 
-        // show we were here
+        // add a class to show we were here
         plugin.europeanaMenuWatermark = function() {
-            // code goes here
             $element.addClass(plugin.settings.extraclass);
             // console.log('inside public plugin', element, $element);
         };
 
         var _europeanaMenu_private_method = function() {
-            // code goes here
             // console.log('inside private plugin', element, $element);
         };
 
@@ -98,9 +90,10 @@
     };
 
     $.europeanaMenu.defaultOptions = {
-        extraclass: 'has-menu',
-        onMenuChange: function() {},
-        onMenuLoad: function() {}
+        extraclass: 'has-menu'
+        //,
+        //onMenuChange: function() {},
+        //onMenuLoad: function() {}
     };
 
     $.fn.europeanaMenu = function(options) {
@@ -108,15 +101,13 @@
             if (undefined == $(this).data('europeanaMenu')) {
                 var plugin = new $.europeanaMenu(this, options);
                 $(this).data('europeanaMenu', plugin);
-
-                // do stuff
             }
         });
     };
 
     $.fn.clearActivePath = function() {
         return this.each(function() {
-            // get the parent links
+            // remove all the .active links
             $('li').removeClass('active');
         });
     };
@@ -125,7 +116,6 @@
         return this.each(function() {
             // get the parent links
             var activeLink = $(this).find('.active');
-            // console.log(activeLink.length);
             // add active class to all parent items
             if(activeLink.length>0) {
                 $(this).data('hasActiveLink', true);
@@ -142,6 +132,7 @@ $(document).ready(function() {
         'extraclass': 'has-europeana-menu'
     });
 
+    // a quick and dirty way to do inline page loads
     $('.play-menu .sub-menu a').each(function() {
         $(this).bind(
             'click touchend',
@@ -174,8 +165,5 @@ $(document).ready(function() {
             }
         );
     });
-    //$('#playmenu').data('europeanaMenu').europeanaMenuWatermark();
-    // get the value of a property
-    //$('#playmenu').data('europeanaMenu').settings.foo;
 });
 
