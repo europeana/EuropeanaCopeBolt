@@ -44,7 +44,8 @@
     {% from _self import display_menu_item %}
 
     {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
-    <ul  class="play-menu">
+    {# we need all these classes for the jquery interactivity #}
+    <ul class="play-menu main-menu">
         {% for item in menu %}
             {% if item.label is defined %}
                 {{ display_menu_item(item, loop, withsubmenus, 0) }}
