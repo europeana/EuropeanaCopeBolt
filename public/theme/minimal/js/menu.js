@@ -159,7 +159,15 @@ $(document).ready(function() {
                 console.log('clicked link', target, title);
 
                 // load the new page with ajax
-                $('div.canvas').load(target + ' div.canvas > *');
+                $('div.canvas').load(
+                    target + ' div.canvas > *',
+                    function( response, status, xhr ) {
+                        if ( status == "error" ) {
+                            var msg = "Sorry but there was an error: ";
+                            $('div.canvas main').html($('<div>').text( msg + xhr.status + " " + xhr.statusText ));
+                        }
+                    }
+                );
                 // add url to history
                 history.pushState(null, title, target);
                 document.title = title;
