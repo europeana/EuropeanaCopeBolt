@@ -56,6 +56,29 @@
 {% endspaceless %}
 
 <style>
+    /* base layout */
+    #playmenu {
+        top: 0;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+    #playmenu li.active.toplevel:not(.home) {
+        min-height: 26em;
+    }
+    #playmenu li.active.toplevel a {
+        min-height: 1.9em;
+    }
+    ul.play-menu > li > .sub-menu {
+        min-height: 23em;
+    }
+    ul.play-menu .sub-menu .sub-menu {
+        display: none;
+    }
+    ul.play-menu .sub-menu li.active .sub-menu,
+    ul.play-menu .sub-menu li:hover .sub-menu {
+        display: block;
+    }
     /* main menu item colours */
     ul.play-menu .home       { border-color: #555; background-color: #444; }
     ul.play-menu .home a     { color: #eee; }
@@ -84,13 +107,47 @@
     /* mouseover thingies */
     ul.play-menu a:hover
                              { font-weight: bold; letter-spacing: -0.5px; }
-    .active > a              { font-weight: bold; letter-spacing: -0.5px; background: rgba(255,180,0,0.4);  }
-
-    nav ul.backlinks {
+    .active > a              { font-weight: bold; letter-spacing: -0.5px; }
+    /* hackish way to add a marker */
+    .active > a:after        { content: " ▶"; }
+    /* the mouseover menu styles */
+    nav #backlinks {
+        background: transparent;
+    }
+    nav #backlinks:hover {
         background: #999;
     }
-    ul.backlinks li {
+    #backlinks {
+        top: 3.25em;
+        position: absolute;
+        width: 15px;
+        overflow: hidden;
+        z-index: 10;
+        height: 22.75em;
+        -webkit-transition: width 0.2s ease-in-out;
+        -moz-transition: width 0.2s ease-in-out;
+        -o-transition: width 0.2s ease-in-out;
+        transition: width 0.2s ease-in-out;
+    }
+    #backlinks:before {
+        content: "◀";
+        color: #fff;
+        top: 10em;
+        position: absolute;
+    }
+    #backlinks:hover {
+        -webkit-transition: width 0.2s ease-in-out;
+        -moz-transition: width 0.2s ease-in-out;
+        -o-transition: width 0.2s ease-in-out;
+        transition: width 0.2s ease-in-out;
+        width: 100%;
+    }
+    #backlinks li {
         border-left: none;
         margin-left: 15px;
     }
+    #backlinks li.active {
+        display: none;
+    }
+
 </style>

@@ -20,6 +20,7 @@
             plugin.settings = $.extend({}, $.europeanaMenu.defaultOptions, options);
             // code goes here
             plugin.europeanaMenuAddToplevelClone();
+            plugin.europeanaMenuHideInactive();
             plugin.europeanaMenuWatermark();
 
             //_europeanaMenu_private_method();
@@ -43,6 +44,7 @@
                     $(this).addClass('toplevel');
                 }
             );
+
             // move the first element to the end
             $element.find('> li.home').each(
                 function() {
@@ -60,22 +62,36 @@
             $element.after(clonedMenu);
         };
 
+        // hide all incactive items
+        plugin.europeanaMenuHideInactive = function() {
+            if(!$element.find('li.home').hasClass('active')) {
+                $element.find('> li').each(
+                    function() {
+                        if(!$element.data('hasActiveLink') && !$(this).hasClass('active')) {
+                            console.log('we dont have an active page');
+                            $(this).find('ul.sub-menu').hide();
+                        } else if(!$(this).hasClass('active')) {
+                            console.log('we have an active page', $element.data('hasActiveLink'));
+                            $(this).hide();
+                        }
+                    }
+                );
+            } else {
+                console.log('were on the homepage');
+                $element.find('ul.sub-menu').hide();
+            }
+        };
+
         // show we were here
         plugin.europeanaMenuWatermark = function() {
             // code goes here
             $element.addClass(plugin.settings.extraclass);
-            $element.find('.level-2').each(function() {
-                $(this).hide();
-            });
-            $element.find('.level-1').each(function() {
-                $(this).hide();
-            });
-            console.log('inside public plugin', element, $element);
+            // console.log('inside public plugin', element, $element);
         };
 
         var _europeanaMenu_private_method = function() {
             // code goes here
-            console.log('inside private plugin', element, $element);
+            // console.log('inside private plugin', element, $element);
         };
 
         plugin.init();
@@ -99,19 +115,25 @@
     };
 
     $.fn.findActivePath = function() {
-        // get the parent links
-        var activeLink = $(this).find('.active');
-        // add active class to all parent items
-        $(activeLink).parents('li').addClass('active');
+        return this.each(function() {
+            // get the parent links
+            var activeLink = $(this).find('.active');
+            console.log(activeLink.length);
+            // add active class to all parent items
+            if(activeLink.length>0) {
+                $(this).data('hasActiveLink', true);
+                $(activeLink).parents('li').addClass('active');
+            }
+        });
     };
 
 }(jQuery, window, document));
 
 $(document).ready(function() {
     // attach the plugin to an element
-    $('#playmenu').europeanaMenu({
+    $('#playmenu').findActivePath().europeanaMenu({
         'extraclass': 'has-europeana-menu'
-    }).findActivePath();
+    });
 
     //$('#playmenu').data('europeanaMenu').europeanaMenuWatermark();
     // get the value of a property
