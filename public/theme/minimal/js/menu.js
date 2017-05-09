@@ -68,16 +68,16 @@
                 $element.find('> li').each(
                     function() {
                         if(!$element.data('hasActiveLink') && !$(this).hasClass('active')) {
-                            console.log('we dont have an active page');
+                            //console.log('we dont have an active page');
                             $(this).find('ul.sub-menu').hide();
                         } else if(!$(this).hasClass('active')) {
-                            console.log('we have an active page', $element.data('hasActiveLink'));
+                            //console.log('we have an active page', $element.data('hasActiveLink'));
                             $(this).hide();
                         }
                     }
                 );
             } else {
-                console.log('were on the homepage');
+                //console.log('were on the homepage');
                 $element.find('ul.sub-menu').hide();
             }
         };
@@ -114,11 +114,18 @@
         });
     };
 
+    $.fn.clearActivePath = function() {
+        return this.each(function() {
+            // get the parent links
+            $('li').removeClass('active');
+        });
+    };
+
     $.fn.findActivePath = function() {
         return this.each(function() {
             // get the parent links
             var activeLink = $(this).find('.active');
-            console.log(activeLink.length);
+            // console.log(activeLink.length);
             // add active class to all parent items
             if(activeLink.length>0) {
                 $(this).data('hasActiveLink', true);
@@ -135,7 +142,32 @@ $(document).ready(function() {
         'extraclass': 'has-europeana-menu'
     });
 
+    $('.play-menu .sub-menu a').each(function() {
+        $(this).bind(
+            'click touchend',
+            function(e) {
+                e.preventDefault();
+                var target = $(this).attr('href');
+                var title = $(this).text();
+                var currentLi = $(this).parent();
+
+                $('.play-menu').clearActivePath('active');
+                // move selected item to top of menu
+                currentLi.addClass('active');
+                $('.play-menu').findActivePath('active');
+
+                console.log('clicked link', target, title);
+
+                // load the new page with ajax
+                $('div.canvas').load(target + ' div.canvas > *');
+                // add url to history
+                history.pushState(null, title, target);
+                document.title = title;
+            }
+        );
+    });
     //$('#playmenu').data('europeanaMenu').europeanaMenuWatermark();
     // get the value of a property
     //$('#playmenu').data('europeanaMenu').settings.foo;
 });
+
