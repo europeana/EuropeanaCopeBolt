@@ -133,7 +133,7 @@ $(document).ready(function() {
     });
 
     // a quick and dirty way to do inline page loads
-    $('.play-menu .sub-menu a').each(function() {
+    $('xx_dontuse_xx .play-menu .sub-menu a').each(function() {
         $(this).bind(
             'click touchend',
             function(e) {
