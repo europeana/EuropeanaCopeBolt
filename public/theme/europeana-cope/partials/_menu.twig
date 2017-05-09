@@ -44,7 +44,8 @@
     {% from _self import display_menu_item %}
 
     {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
-    <ul  class="play-menu">
+    {# we need all these classes for the jquery interactivity #}
+    <ul class="play-menu" id="playmenu">
         {% for item in menu %}
             {% if item.label is defined %}
                 {{ display_menu_item(item, loop, withsubmenus, 0) }}
@@ -55,46 +56,98 @@
 {% endspaceless %}
 
 <style>
-    /* main menu items */
-    ul.play-menu .home,
-    ul.play-menu .home:hover
-                             { border-color: #555; background-color: #444; color: #eee; }
-    ul.play-menu .mission,
-    ul.play-menu .mission:hover
-                             { border-color: #add; background-color: #acc; }
-    ul.play-menu .wwd,
-    ul.play-menu .wwd:hover
-                             { border-color: #dad; background-color: #cac; }
-    ul.play-menu .network,
-    ul.play-menu .network:hover
-                             { border-color: #dbb; background-color: #daa; }
-    ul.play-menu .services,
-    ul.play-menu .services:hover
-                             { border-color: #bbd; background-color: #aad; }
-    ul.play-menu .resources,
-    ul.play-menu .resources:hover
-                             { border-color: #cc3; background-color: #bb3; }
-    ul.play-menu .news,
-    ul.play-menu .news:hover
-                             { border-color: #77f; background-color: #66f; }
-    ul.play-menu .jobs,
-    ul.play-menu .jobs:hover
-                             { border-color: #4f4; background-color: #3f3; }
-    /* secondary menu items */
-    ul.play-menu .secondary  { border-color: #eee; background-color: #ededed; color: #aaa; border-bottom: none; padding-bottom: 5px; padding-top: 5px; border-color: #ededed; }
+    /* base layout */
+    #playmenu {
+        top: 0;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+    #playmenu li.active.toplevel:not(.home) {
+        min-height: 26em;
+    }
+    #playmenu li.active.toplevel a {
+        min-height: 1.9em;
+    }
+    ul.play-menu > li > .sub-menu {
+        min-height: 23em;
+    }
+    ul.play-menu .sub-menu .sub-menu {
+        display: none;
+    }
+    ul.play-menu .sub-menu li.active .sub-menu,
+    ul.play-menu .sub-menu li:hover .sub-menu {
+        display: block;
+    }
+    /* main menu item colours */
+    ul.play-menu .home       { border-color: #555; background-color: #444; }
+    ul.play-menu .home a     { color: #eee; }
+    ul.play-menu .mission    { border-color: #add; background-color: #acc; }
+    ul.play-menu .wwd        { border-color: #dad; background-color: #cac; }
+    ul.play-menu .network    { border-color: #dbb; background-color: #daa; }
+    ul.play-menu .services   { border-color: #bbd; background-color: #aad; }
+    ul.play-menu .resources  { border-color: #cc3; background-color: #bb3; }
+    ul.play-menu .news       { border-color: #77f; background-color: #66f; }
+    ul.play-menu .jobs       { border-color: #4f4; background-color: #3f3; }
+    /* menu structure */
+    ul.play-menu a           { display: block; }
+    ul.play-menu li          { padding-left: 10px; border-left: 15px solid; }
+    ul.play-menu li > .sub-menu
+    { margin: 10px 0 -12px -10px; border-left: none; }
+    ul.play-menu li > .sub-menu .sub-menu
+    { margin-right: -5px; }
+    ul.play-menu .sub-menu li
+    { padding-left: 10px; border-left: none; }
+    ul.play-menu .sub-menu .sub-menu
+    { padding-bottom: 10px; }
+    ul.play-menu .sub-menu .sub-menu li
+    { padding: 2px 10px; border-bottom: none; }
+    ul.play-menu li.level-2 a
+    { font-size: 90%; }
     /* mouseover thingies */
-    ul.play-menu li          { padding-left: 10px; border-left: 15px solid #c0c; }
-    ul.play-menu li:hover a:hover
-                             { text-decoration: underline; }
-    ul.play-menu li.is-parent.current
-                             { padding-bottom: 0; padding-left: 0; }
-    ul.play-menu li.is-parent.current a
-                             { margin-left: 10px; }
-    ul.play-menu li.current ul.sub-menu
-                             { background-color: #fff; padding-left: 0; padding-right: 0; margin-bottom: 0; padding-bottom: 10px; margin-top: 10px; }
-    ul.play-menu li.current ul li
-                             { padding-left: 0; padding-bottom: 0; padding-right: 0; border: none; }
-    ul.play-menu li.active   { border-color: #fc0; }
-    ul.play-menu li.backlevel{ border-color: #999; }
+    ul.play-menu a:hover
+    { font-weight: bold; letter-spacing: -0.5px; }
+    .active > a              { font-weight: bold; letter-spacing: -0.5px; }
+    /* hackish way to add a marker */
+    .active > a:after        { content: " ▶"; }
+    /* the mouseover menu styles */
+    nav #backlinks {
+        background: transparent;
+    }
+    nav #backlinks:hover {
+        background: #999;
+    }
+    #backlinks {
+        top: 3.25em;
+        position: absolute;
+        width: 15px;
+        overflow: hidden;
+        z-index: 10;
+        height: 22.75em;
+        -webkit-transition: width 0.2s ease-in-out;
+        -moz-transition: width 0.2s ease-in-out;
+        -o-transition: width 0.2s ease-in-out;
+        transition: width 0.2s ease-in-out;
+    }
+    #backlinks:before {
+        content: "◀";
+        color: #fff;
+        top: 10em;
+        position: absolute;
+    }
+    #backlinks:hover {
+        -webkit-transition: width 0.2s ease-in-out;
+        -moz-transition: width 0.2s ease-in-out;
+        -o-transition: width 0.2s ease-in-out;
+        transition: width 0.2s ease-in-out;
+        width: 100%;
+    }
+    #backlinks li {
+        border-left: none;
+        margin-left: 15px;
+    }
+    #backlinks li.active {
+        display: none;
+    }
 
 </style>

@@ -44,7 +44,7 @@
     {% from _self import display_menu_item %}
 
     {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
-    <ul  class="play-menu secondary">
+    <ul class="secondary-menu" id="play-secondary">
         {% for item in menu %}
             {% if item.label is defined %}
                 {{ display_menu_item(item, loop, withsubmenus, 0) }}
@@ -53,3 +53,26 @@
     </ul>
 
 {% endspaceless %}
+
+<style>
+    /* secondary menu items */
+    ul.secondary-menu .secondary
+    { border-color: #eee; background-color: #ededed; color: #aaa; border-bottom: none; padding-bottom: 5px; padding-top: 5px; border-color: #ededed; }
+    ul.secondary-menu li
+    { padding-left: 10px; border-left: 15px solid #c0c; }
+    ul.secondary-menu a
+    { display: block; }
+    /* mouseover thingies */
+    ul.secondary-menu li:hover a:hover
+    { font-weight: bold; letter-spacing: -0.5px; }
+    ul.secondary-menu li.is-parent.current
+    { padding-bottom: 0; padding-left: 0; }
+    ul.secondary-menu li.is-parent.current a
+    { margin-left: 10px; }
+    ul.secondary-menu li.current ul.sub-menu
+    { background-color: #fff; padding-left: 0; padding-right: 0; margin-bottom: 0; padding-bottom: 10px; margin-top: 10px; }
+    ul.secondary-menu li.current ul li
+    { padding-left: 0; padding-bottom: 0; padding-right: 0; border: none; }
+
+
+</style>
