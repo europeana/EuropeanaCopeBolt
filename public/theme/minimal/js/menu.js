@@ -24,6 +24,14 @@
 
         // clone the top level entries and add them to the dom
         plugin.europeanaMenuAddToplevelClone = function() {
+            // don't clone if the home link is active
+            if($element.find('li.home').hasClass('active')) {
+                return;
+            }
+            // don't clone if the main menu does not have an active link
+            if(!$element.find('li').hasClass('active')) {
+                return;
+            }
             // add a new ul for the cloned menu
             var clonedMenu = $('<ul>').attr({
                 'class': 'backlinks play-menu',
