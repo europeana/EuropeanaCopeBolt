@@ -27,16 +27,36 @@
 
         // clone the top level entries and add them to the dom
         plugin.europeanaMenuAddToplevelClone = function() {
+            // add a new ul element
             var clonedMenu = $('<ul>').attr({
-                'class': 'clone play-menu',
-                'id': 'toplevelclone'
+                'class': 'backlinks play-menu',
+                'id': 'backlinks'
             });
-            $element.find('> li').each(function() {
-                $(this).addClass('toplevel');
-                clonedMenu.append($('<li>').addClass($(this).attr('class')).append($(this).children('a').clone()));
-            });
-            var firstItem = clonedMenu.first().detach();
-            clonedMenu.append(firstItem);
+            $element.find('> li:not(.home)').each(
+                function() {
+                    // add menu link and classes to a new li element
+                    clonedMenu.append(
+                        $('<li>')
+                            .addClass($(this).attr('class'))
+                            .append($(this).children('a').clone())
+                    );
+                    $(this).addClass('toplevel');
+                }
+            );
+            // move the first element to the end
+            $element.find('> li.home').each(
+                function() {
+                    // add menu link and classes to a new li element
+                    clonedMenu.append(
+                        $('<li>')
+                            .addClass($(this).attr('class'))
+                            .append($(this).children('a').clone())
+                    );
+                    $(this).addClass('toplevel');
+                }
+            );
+
+            // add everything to the dom
             $element.after(clonedMenu);
         };
 
@@ -44,7 +64,12 @@
         plugin.europeanaMenuWatermark = function() {
             // code goes here
             $element.addClass(plugin.settings.extraclass);
-
+            $element.find('.level-2').each(function() {
+                $(this).hide();
+            });
+            $element.find('.level-1').each(function() {
+                $(this).hide();
+            });
             console.log('inside public plugin', element, $element);
         };
 
@@ -84,11 +109,11 @@
 
 $(document).ready(function() {
     // attach the plugin to an element
-    $('ul.main-menu').europeanaMenu({
+    $('#playmenu').europeanaMenu({
         'extraclass': 'has-europeana-menu'
     }).findActivePath();
 
-    //$('ul.play-menu').data('europeanaMenu').europeanaMenuWatermark();
+    //$('#playmenu').data('europeanaMenu').europeanaMenuWatermark();
     // get the value of a property
-    //$('ul.play-menu').data('europeanaMenu').settings.foo;
+    //$('#playmenu').data('europeanaMenu').settings.foo;
 });

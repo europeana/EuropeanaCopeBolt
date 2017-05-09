@@ -45,7 +45,7 @@
 
     {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
     {# we need all these classes for the jquery interactivity #}
-    <ul class="play-menu main-menu">
+    <ul class="play-menu" id="playmenu">
         {% for item in menu %}
             {% if item.label is defined %}
                 {{ display_menu_item(item, loop, withsubmenus, 0) }}
@@ -86,4 +86,11 @@
                              { font-weight: bold; letter-spacing: -0.5px; }
     .active > a              { font-weight: bold; letter-spacing: -0.5px; background: rgba(255,180,0,0.4);  }
 
+    nav ul.backlinks {
+        background: #999;
+    }
+    ul.backlinks li {
+        border-left: none;
+        margin-left: 15px;
+    }
 </style>
