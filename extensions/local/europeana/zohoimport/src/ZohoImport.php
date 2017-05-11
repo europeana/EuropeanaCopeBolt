@@ -19,12 +19,12 @@ class ZohoImport
 
   public function __construct($app)
   {
-  // set variables that are needed later
-  $this->app = $app;
-  $this->config = $this->app['zohoimport.config'];
-  $this->debug_mode = $this->config['debug_mode'];
-  $this->remote_request_counter = 0;
-  $this->structure_tree_map = $this->orderStructureTreeMap();
+    // set variables that are needed later
+    $this->app = $app;
+    $this->config = $this->app['zohoimport.config'];
+    $this->debug_mode = $this->config['debug_mode'];
+    $this->remote_request_counter = 0;
+    $this->structure_tree_map = $this->orderStructureTreeMap();
   }
 
   /**
@@ -32,7 +32,37 @@ class ZohoImport
    */
   public function zohoImportOverview()
   {
-  return 'ZOHO Import overview: not implemented yet.';
+    return 'ZOHO Import overview: not implemented yet.';
+  }
+
+  public function logger($type, $message, $event = 'zoho', $context = null) {
+    switch($type) {
+      case 'error':
+        $this->app['logger.system']->error($message, [
+          'event' => $event,
+          'context' => $context
+        ]);
+        break;
+      case 'warning':
+        $this->app['logger.system']->warning($message, [
+          'event' => $event,
+          'context' => $context
+        ]);
+        break;
+      case 'debug':
+        $this->app['logger.system']->debug($message, [
+          'event' => $event,
+          'context' => $context
+        ]);
+        break;
+      case 'info':
+      default:
+        $this->app['logger.system']->info($message, [
+          'event' => $event,
+          'context' => $context
+        ]);
+        break;
+    }
   }
 
 
@@ -61,9 +91,12 @@ class ZohoImport
       if($this->config['image_downloads'] !== true) {
         $output .= "importing extra images is disabled<br>\n";
       }
-      $this->app['logger.system']->info($name
+
+
+      $logmessage = $name
         . ' started import - batch:'. $batchdate . ' - '
-        . $config['source']['type'], array('event' => 'zohoimport'));
+        . $config['source']['type'];
+      $this->logger('info', $logmessage, 'zohoimport');
 
       if(is_array($config['source']['loopparams'])) {
         // the import has paging so lets use that
@@ -88,9 +121,12 @@ class ZohoImport
           if($this->debug_mode) {
             dump($localconfig);
           }
-          $this->app['logger.system']->debug($name . ' step ' . $looper
+
+          $logmessage = $name . ' step ' . $looper
             . ' from:' . $localconfig['source']['getparams'][$counter]
-            . ' - to: ' . $localconfig['source']['getparams'][$stepper], array('event' => 'zohoimport'));
+            . ' - to: ' . $localconfig['source']['getparams'][$stepper];
+          $this->logger('debug', $logmessage, 'zohoimport');
+
           $this->fetchAnyResource($name, $localconfig);
           $this->normalizeInput($name, $localconfig);
 
@@ -99,8 +135,11 @@ class ZohoImport
             if($this->debug_mode) {
               dump($name . ' limit reached - 100 iterations are a bit much, please try to modify this import');
             }
-            $this->app['logger.system']->warning($name
-              . ' limit reached - 100 iterations are a bit much, please try to modify this import', array('event' => 'zohoimport'));
+
+            $logmessage = $name
+              . ' limit reached - 100 iterations are a bit much, please try to modify this import';
+            $this->logger('warning', $logmessage, 'zohoimport');
+
             if($on_console) {
               echo 'import step '. $looper. ': hard import limit reached. 100 iterations are a bit much, please try to modify this import..'."\n";
             } else {
@@ -111,7 +150,9 @@ class ZohoImport
             if($this->debug_mode) {
               dump($name . ' found end of data for import');
             }
-            $this->app['logger.system']->info($name . ' found end of data for import', array('event' => 'zohoimport'));
+            $logmessage = $name . ' found end of data for import';
+            $this->logger('info', $logmessage, 'zohoimport');
+
             if($on_console) {
               echo  'import step '. $looper. ': end of data found..'."\n";
             } else {
@@ -196,8 +237,8 @@ class ZohoImport
         $output .= 'depublished removed records' . "<br>\n";
       }
 
-      $this->app['logger.system']->info($name . ' - completed import - batch:'. $batchdate . ' - ' . $config['source']['type'], array('event' => 'zohoimport'));
-
+      $logmessage = $name . ' - completed import - batch:'. $batchdate . ' - ' . $config['source']['type'];
+      $this->logger('info', $logmessage, 'zohoimport');
     }
 
     $endtime = time();
@@ -208,7 +249,8 @@ class ZohoImport
 
     $output .= 'import took ~ ' . $batchdelta . " seconds<br>\n";
 
-    $this->app['logger.system']->info(strip_tags($output), array('event' => 'zohoimport'));
+    $logmessage = strip_tags($output);
+    $this->logger('info', $logmessage, 'zohoimport');
 
     return $output;
   }
@@ -225,12 +267,13 @@ class ZohoImport
     } else {
       $on_console = false;
     }
+    $record = false;
 
     foreach ($inputrecords as $inputrecord) {
       $uid = $config['target']['mapping']['fields']['uid'];
 
       // clear previous record
-      if($record->values) {
+      if($record && $record->values) {
         unset($record->values);
       }
       unset($record);
@@ -253,8 +296,9 @@ class ZohoImport
         if($on_console) {
           echo 'record is empty, preparing a new one: ' . $inputrecord[$uid] . "\n";
         }
-        $this->app['logger.system']->debug($name
-          . ' - preparing a new record: ' . $inputrecord[$uid], array('event' => 'zohoimport'));
+        $logmessage = $name
+          . ' - preparing a new record: ' . $inputrecord[$uid];
+        $this->logger('debug', $logmessage, 'zohoimport');
         $record = $this->app['storage']->getEmptyContent($config['target']['contenttype']);
         $items['status'] = $config['target']['defaults']['new'];
       } else {
@@ -264,8 +308,9 @@ class ZohoImport
         if($on_console) {
           echo 'found existing record: ' . $inputrecord[$uid] . "\n";
         }
-        $this->app['logger.system']->debug($name
-          . ' - updating existing record: ' . $inputrecord[$uid], array('event' => 'zohoimport'));
+        $logmessage = $name
+          . ' - updating existing record: ' . $inputrecord[$uid];
+        $this->logger('debug', $logmessage, 'zohoimport');
         $items['status'] = $config['target']['defaults']['updated'];
       }
 
@@ -384,7 +429,8 @@ class ZohoImport
       dump('depublishing all removed records for: ' . $name . ' - ' . $date);
     }
 
-    $this->app['logger.system']->info($name . ' - depublishing all removed records - batch:' . $date, array('event' => 'zohoimport'));
+    $logmessage = $name . ' - depublishing all removed records - batch:' . $date;
+    $this->logger('info', $logmessage, 'zohoimport');
 
     //dump($config);
 
@@ -401,7 +447,7 @@ class ZohoImport
     $stmt->bindValue('datechanged', $date);
     $res = $stmt->execute();
 
-    //dump($result);
+    //dump($res);
     return true;
   }
 
@@ -421,7 +467,8 @@ class ZohoImport
       // it is unused
       $this->normalizeFromSimpleXML($name, $config);
     } else {
-      $this->app['logger.system']->error('Error occurred during normalize: ' . $name . ' - ' . $config['source']['type'], array('event' => 'zohoimport'));
+      $logmessage = 'Error occurred during normalize: ' . $name . ' - ' . $config['source']['type'];
+      $this->logger('info', $logmessage, 'zohoimport');
     }
 
     // dump($this->resourcedata[$name]);
@@ -652,7 +699,8 @@ class ZohoImport
       $data = file_get_contents($url);
       $this->filedata[$name] = $data;
     } catch (RequestException $e) {
-      $this->app['logger.system']->error('Error occurred during fetch: ' . $e->getMessage(), array('event' => 'zohoimport'));
+      $logmessage = 'Error occurred during fetch: ' . $e->getMessage();
+      $this->logger('error', $logmessage, 'zohoimport');
     }
   }
 
@@ -679,7 +727,8 @@ class ZohoImport
 
       $this->filedata[$name] = $data;
     } catch (RequestException $e) {
-      $this->app['logger.system']->error('Error occurred during fetch: ' . $e->getMessage(), array('event' => 'zohoimport'));
+      $logmessage = 'Error occurred during fetch: ' . $e->getMessage();
+      $this->logger('error', $logmessage, 'zohoimport');
       // make sure we can use this key later
       $this->filedata[$name] = false;
     }
@@ -796,7 +845,8 @@ class ZohoImport
 
     // only fetch photos from contacts that need it
     if($source_record["Show photo on europeana site"] == 'true' ) {
-      $this->app['logger.system']->debug('we should check for a public photo at:' . $params['source_url'], array('event' => 'zohoimport'));
+      $logmessage = 'we should check for a public photo at:' . $params['source_url'];
+      $this->logger('debug', $logmessage, 'zohoimport');
       if($on_console) {
         echo "we should check for a public photo by Show photo on europeana site:\n" . $params['source_url'] . "\n";
         // echo "===============================================================";
@@ -806,7 +856,8 @@ class ZohoImport
         // die();
       }
     } elseif($source_record['public_photo'] == true || $source_record['public_photo'] == 'true') {
-      $this->app['logger.system']->debug('we should check for a public photo at:' . $params['source_url'], array('event' => 'zohoimport'));
+      $logmessage = 'we should check for a public photo at:' . $params['source_url'];
+      $this->logger('debug', $logmessage, 'zohoimport');
       if($on_console) {
         echo "we should check for a public photo by public_photo:\n" . $params['source_url'] . "\n";
         // echo "===============================================================";
@@ -816,7 +867,8 @@ class ZohoImport
         // die();
       }
     } elseif($source_record["Show photo on europeana site"] == false || $source_record["Show photo on europeana site"] == 'false' ) {
-      $this->app['logger.system']->debug('no remote photo needed for:' . $params['source_url'], array('event' => 'zohoimport'));
+      $logmessage = 'no remote photo needed for:' . $params['source_url'];
+      $this->logger('debug', $logmessage, 'zohoimport');
       if(0 && $on_console) {
         echo "no remote photo needed for by Show photo on europeana site: " . $params['source_url'] . "\n";
         //dump($params);
@@ -824,7 +876,8 @@ class ZohoImport
       }
       return false;
     } elseif($source_record['public_photo'] == false || $source_record['public_photo'] == 'false') {
-      $this->app['logger.system']->debug('no remote photo needed for:' . $source_record['public_photo'], array('event' => 'zohoimport'));
+      $logmessage = 'no remote photo needed for:' . $source_record['public_photo'];
+      $this->logger('debug', $logmessage, 'zohoimport');
       if(0 && $on_console) {
         echo "no remote photo needed for by public_photo: " . $source_record['source_url'] . "\n";
         //dump($params);
@@ -832,7 +885,8 @@ class ZohoImport
       }
       return false;
     } else {
-      $this->app['logger.system']->debug('we should check for a public photo at:' . $params['source_url'], array('event' => 'zohoimport'));
+      $logmessage = 'we should check for a public photo at:' . $params['source_url'];
+      $this->logger('debug', $logmessage, 'zohoimport');
       if(0 && $on_console) {
         echo "we should check for a public photo at: " . $params['source_url'] . "\n";
         //dump($params);
@@ -878,20 +932,23 @@ class ZohoImport
             echo "existing image is still fresh:\n" . $existing_image_age . " : " . $existing_image_path . "\n";
           }
 
-          $this->app['logger.system']->warning('last image change was not long enough ago (' . $existing_image_age . ' seconds) - skipping image fetching for user ' . $params['name'], array('event' => 'zohoimport'));
+          $logmessage = 'last image change was not long enough ago (' . $existing_image_age . ' seconds) - skipping image fetching for user ' . $params['name'];
+          $this->logger('warning', $logmessage, 'zohoimport');
           return false;
         }
       } else {
         if($on_console) {
           echo "no existing image found in filesystem\n";
         }
-        $this->app['logger.system']->debug('no existing photo found in filesystem for:' . $params['name'], array('event' => 'zohoimport'));
+        $logmessage = 'no existing photo found in filesystem for:' . $params['name'];
+        $this->logger('debug', $logmessage, 'zohoimport');
       }
     } else {
       if($on_console) {
         echo "no existing image set in record\n";
       }
-      $this->app['logger.system']->debug('no existing photo set in record:' . $params['name'], array('event' => 'zohoimport'));
+      $logmessage = 'no existing photo set in record:' . $params['name'];
+      $this->logger('debug', $logmessage, 'zohoimport');
     }
 
     $cachepath = $this->app['paths']['cachepath'];
@@ -932,7 +989,8 @@ class ZohoImport
         }
         unset($this->filedata[$params['name']]);
 
-        $this->app['logger.system']->warning('no remote photo found for:' . $params['name'] . ' at url: ' . $params['source_url'], array('event' => 'zohoimport'));
+        $logmessage = 'no remote photo found for:' . $params['name'] . ' at url: ' . $params['source_url'];
+        $this->logger('info', $logmessage, 'zohoimport');
         return false;
       }
 
@@ -981,7 +1039,8 @@ class ZohoImport
     //   dump($image);
     // }
 
-    $this->app['logger.system']->info('loaded remote photo resource for: ' . $params['name'], array('event' => 'zohoimport'));
+    $logmessage = 'loaded remote photo resource for: ' . $params['name'];
+    $this->logger('info', $logmessage, 'zohoimport');
 
     // return the filename for record
     return json_encode(array('file' => $image['target_dbname'], 'title' => $image['id']));

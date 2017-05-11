@@ -51,6 +51,7 @@ class ZohoImportCommand extends BaseCommand
       case 'test':
       default:
         $text = 'Running test import';
+        $type = 'test';
         break;
     }
     $text = "<info>" . $text . "</info>\n";
@@ -65,6 +66,8 @@ class ZohoImportCommand extends BaseCommand
     } else {
       // do stuff
     }
+
+    $this->app['zohoimport']->logger('info', $text, 'zoho-console-'.$type, ['input'=>$input, 'output'=>$output]);
 
     if ($input->getOption('summary')) {
       $num = 12;

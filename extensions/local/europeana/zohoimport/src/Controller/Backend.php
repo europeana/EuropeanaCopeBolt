@@ -57,13 +57,17 @@ class Backend implements ControllerProviderInterface
       case 'test':
       default:
         $text = 'Running test import';
+        $type = 'test';
         break;
     }
+    $app['zohoimport']->logger('info', $text, 'zoho-backend-'.$type, $request);
+
     $text .= "<br>\n" . $app['zohoimport']->zohoImportOverview();
 
     $html = $app['twig']->render('overview.twig', [
       'title' => 'ZOHO Import overview',
       'text' => $text,
+      'zohoconfig' => $app['zohoimport.config']
     ]);
 
 
@@ -71,6 +75,5 @@ class Backend implements ControllerProviderInterface
 
     return $html;
   }
-
 
 }
