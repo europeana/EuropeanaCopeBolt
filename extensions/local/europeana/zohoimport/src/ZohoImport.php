@@ -485,7 +485,7 @@ class ZohoImport
 
     // get down into the root element
     $root = $config['target']['mapping']['root'];
-    $elements = split('\.', $root);
+    $elements = explode('\.', $root);
 
     foreach($elements as $elm) {
       $items = $items[$elm];
