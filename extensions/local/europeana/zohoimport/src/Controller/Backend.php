@@ -47,6 +47,7 @@ class Backend implements ControllerProviderInterface
     switch ($type) {
       case 'full':
         $text = 'Running full import';
+        $text .= "<br>\n" . $app['zohoimport']->importJob();
         break;
       case 'update':
         $text = 'Running update';
@@ -57,21 +58,17 @@ class Backend implements ControllerProviderInterface
       case 'test':
       default:
         $text = 'Running test import';
+        $text .= "<br>\n" . $app['zohoimport']->zohoImportOverview();
         $type = 'test';
         break;
     }
     $app['zohoimport']->logger('info', $text, 'zoho-backend-'.$type, $request);
-
-    $text .= "<br>\n" . $app['zohoimport']->zohoImportOverview();
 
     $html = $app['twig']->render('overview.twig', [
       'title' => 'ZOHO Import overview',
       'text' => $text,
       'zohoconfig' => $app['zohoimport.config']
     ]);
-
-
-
 
     return $html;
   }

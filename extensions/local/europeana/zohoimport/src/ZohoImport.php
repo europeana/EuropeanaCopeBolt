@@ -76,6 +76,7 @@ class ZohoImport
       dump($this->config);
     }
     $this->getEnabledSources();
+
     $output = '';
 
     $this->remote_request_counter = 0;
