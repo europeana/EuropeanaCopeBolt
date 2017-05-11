@@ -2,6 +2,7 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport;
 
+use Bolt\Extension\Europeana\ZohoImport\Parser\Normalizer;
 use SimpleXMLElement;
 use mjohnson\utility\TypeConverter as TypeConverter;
 use Symfony\Component\HttpFoundation\File\File as File;
@@ -129,7 +130,9 @@ class ZohoImport
           $this->logger('debug', $logmessage, 'zohoimport');
 
           $this->fetchAnyResource($name, $localconfig);
-          $this->normalizeInput($name, $localconfig);
+
+          $normalizer = new Normalizer($name, $this->filedata, $localconfig);
+          $this->resourcedata = $normalizer->normalizeInput($name);
 
           if($looper > 100) {
             $this->endcondition = true;
@@ -198,7 +201,10 @@ class ZohoImport
           }
 
           $this->fetchAnyResource($name, $localconfig);
-          $this->normalizeInput($name, $localconfig);
+
+          $normalizer = new Normalizer($name, $this->filedata, $localconfig);
+          $this->resourcedata = $normalizer->normalizeInput($name);
+
           if($this->resourcedata[$name]!='nodata') {
             $this->saveRecords($name, $localconfig);
           }
@@ -217,7 +223,10 @@ class ZohoImport
         }
         // the import has no paging so lets import everything at once
         $this->fetchAnyResource($name, $config);
-        $this->normalizeInput($name, $config);
+
+        $normalizer = new Normalizer($name, $this->filedata, $config);
+        $this->resourcedata = $normalizer->normalizeInput($name);
+
         if($this->resourcedata[$name]!='nodata') {
           $this->saveRecords($name, $config);
         }
@@ -452,210 +461,7 @@ class ZohoImport
     return true;
   }
 
-  /**
-   * Parse a string into a usable php structure
-   */
-  private function normalizeInput($name, $config)
-  {
-    if($config['source']['type'] == 'json') {
-      $this->normalizeFromZohoJson($name, $config);
-    } elseif($config['source']['type'] == 'plainjson') {
-      $this->normalizeFromJson($name, $config);
-    } elseif($config['source']['type'] == 'xml') {
-      $this->normalizeFromXml($name, $config);
-    } elseif($config['source']['type'] == 'simplexml') {
-      // this returns an array of simplexml objects for the nodes in the root
-      // it is unused
-      $this->normalizeFromSimpleXML($name, $config);
-    } else {
-      $logmessage = 'Error occurred during normalize: ' . $name . ' - ' . $config['source']['type'];
-      $this->logger('info', $logmessage, 'zohoimport');
-    }
 
-    // dump($this->resourcedata[$name]);
-  }
-
-  /**
-   * Parse a nice json string into a usable php structure
-   */
-  private function normalizeFromJson($name, $config, $input = '')
-  {
-    $doc = json_decode($this->filedata[$name]);
-
-    $items = TypeConverter::toArray($doc);
-
-    // get down into the root element
-    $root = $config['target']['mapping']['root'];
-    $elements = explode('\.', $root);
-
-    foreach($elements as $elm) {
-      $items = $items[$elm];
-    }
-
-    // Modify deep nested json objects
-    $test = reset($items);
-    if(!TypeConverter::isArray($test)) {
-      foreach($items as $value) {
-        $value = TypeConverter::toArray($value);
-        $value = $this->convertNulls($value);
-        $values[] = $value;
-        unset($value);
-      }
-      $items = $values;
-    }
-    $this->resourcedata[$name] = $items;
-    return $doc;
-  }
-
-  public function convertNulls($array) {
-    foreach($array as $key => $value) {
-      if ($value === null) {
-        $array[$key] = '';
-      }
-    }
-    return $array;
-  }
-
-  /**
-   * Parse a json string into a usable php structure
-   */
-  private function normalizeFromZohoJson($name, $config, $input = '')
-  {
-    $doc = json_decode($this->filedata[$name]);
-
-    if(empty($doc)) {
-      if($this->debug_mode) {
-        dump('empty $doc');
-        dump($doc);
-      }
-      die();
-    }
-
-    if($config['on_console']) {
-      $on_console = $config['on_console'];
-    } else {
-      $on_console = false;
-    }
-
-    $items = TypeConverter::toArray($doc);
-
-    // get down into the root element
-    $root = $config['target']['mapping']['root'];
-    $elements = explode('\.', $root);
-    if($elements[0] == 'response' && !$items['response']) {
-      array_shift($elements);
-    }
-
-    if(array_key_exists('nodata', $items['response']) && is_array($items['response']['nodata'])) {
-      $this->resourcedata[$name] = 'nodata';
-      return $doc;
-    }
-
-    foreach($elements as $elm) {
-      $items = $items[$elm];
-    }
-
-    if(empty($items)) {
-      if($this->debug_mode) {
-        dump('empty $items');
-        dump($doc);
-        dump($items);
-      }
-      die();
-    }
-
-    // Modify deep nested json objects
-    $test = reset($items);
-    if(!is_array($test)) {
-      foreach($items as $rawzohoitem) {
-        if(isset($rawzohoitem->FL) && is_array($rawzohoitem->FL)) {
-          $currentrow = $rawzohoitem->FL;
-          foreach($currentrow as $rowitem) {
-            $outrow[$rowitem->val] = $rowitem->content;
-          }
-        }
-
-        $outrows[] = $outrow;
-        unset($outrow);
-      }
-    }
-
-    $this->resourcedata[$name] = $outrows;
-    return $doc;
-  }
-
-
-  /**
-   * Parse an xml string into a usable php structure
-   */
-  private function normalizeFromXml($name, $config, $input = '')
-  {
-    $doc = new SimpleXMLElement($this->filedata[$name]);
-
-    $items = TypeConverter::xmlToArray($doc, TypeConverter::XML_MERGE);
-
-    // get down into the root element
-    $root = $config['target']['mapping']['root'];
-    $elements = explode('/', str_replace('//', '', $root));
-    if($elements[0] == 'response' && !$items['response']) {
-      array_shift($elements);
-    }
-
-    if(array_key_exists('nodata', $items['response']) && is_array($items['response']['nodata'])) {
-      $this->resourcedata[$name] = 'nodata';
-      return $doc;
-    }
-
-    foreach($elements as $elm) {
-      $items = $items[$elm];
-    }
-
-    $items = $this->flattenZOHO($items);
-
-    $this->resourcedata[$name] = $items;
-    return $doc;
-  }
-
-  /**
-   * Flatten the array values in a record that comes from ZOHO
-   *
-   * This specifically gets the key => data pairs
-   * in the subkey FL to the top level of a row
-   *
-   * from
-   *   $array[$i]['FL'][$j][val=>'key',(value|content)=>'data']
-   * into
-   *   $array[$i][key]=data
-   */
-  private function flattenZOHO($inarray) {
-    $test = reset($inarray);
-    $outarray = [];
-    if(array_key_exists('FL', $test)) {
-      foreach($inarray as $row) {
-        $outrow = null;
-        foreach($row['FL'] as $fk => $fv) {
-          $outrow[$fv['val']] = $fv['value']?trim($fv['value']):trim($fv['content']);
-        }
-        $outarray[] = $outrow;
-      }
-    }
-
-    return $outarray;
-  }
-
-  /**
-   * Parse an xml string into a usable php structure with simplexml
-   *
-   * UNUSED
-   */
-  private function normalizeFromSimpleXML($name, $config, $input = '')
-  {
-    $doc = new SimpleXMLElement($this->filedata[$name]);
-    $root = $config['target']['mapping']['root'];
-    $items = $doc->xpath($root);
-    $this->resourcedata[$name] = $items;
-    return $doc;
-  }
 
   /**
    * Check if the resource is a local file or a remote file and fetch it
