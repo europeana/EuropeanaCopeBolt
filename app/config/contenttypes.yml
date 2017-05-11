@@ -31,26 +31,19 @@ __nodes:
       type: image
       label: "Teaser image"
       postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers"
-  contact_defaults: &contact_defaults
-    contact_name:
+  cta_defaults: &cta_defaults
+    button_text:
       type: text
-      label: "Name"
-      required: false
-      variant: inline
-      class: narrow
-      prefix: '<div><h3>External Contact</h3><p>The external contact is usually someone in the network who is designated as the primary contact about the current record.</p></div>'
-    contact_email:
+      label: "Call to action button text"
+      group: "CTA"
+    button_link:
       type: text
-      label: "Email"
-      required: false
-      variant: inline
-      class: narrow
-    contact_website:
+      label: "Call to action button link"
+      group: "CTA"
+    button_intro:
       type: text
-      label: "Website"
-      required: false
-      variant: inline
-      class: narrow
+      label: "Optional prefix text for the call to action button"
+      group: "CTA"
   media_defaults: &media_defaults
     image:
       type: image
@@ -136,6 +129,26 @@ __nodes:
       height: 150px
       postfix: '<p>Use this field to override the introduction from the contact record with a custom blurb.</p>'
       group: Support contact
+  contact_defaults: &contact_defaults
+    contact_name:
+      type: text
+      label: "Name"
+      required: false
+      variant: inline
+      class: narrow
+      prefix: '<div><h3>External Contact</h3><p>The external contact is usually someone in the network who is designated as the primary contact about the current record.</p></div>'
+    contact_email:
+      type: text
+      label: "Email"
+      required: false
+      variant: inline
+      class: narrow
+    contact_website:
+      type: text
+      label: "Website"
+      required: false
+      variant: inline
+      class: narrow
   relation_pages: &relation_pages
     pages:
       label: "Pages"
@@ -377,12 +390,15 @@ pages:
       postfix: "Shown on individual pages below the main body text"
       group: Main
     <<: *teaser_defaults
+    <<: *cta_defaults
     <<: *media_defaults
     imagegallery:
       type: imagelist
       label: "Images gallery (optional)"
       postfix: "Add images to generate a picture gallery. If left blank, no gallery will be shown."
     <<: *structure_defaults
+    <<: *support_defaults
+    <<: *contact_defaults
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   recordsperpage: 50
@@ -439,6 +455,7 @@ posts:
       label: "ISBN"
       type: text
     <<: *teaser_defaults
+    <<: *cta_defaults
     <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ communities, markets, categories, tags ]
@@ -486,6 +503,7 @@ data:
       postfix: "Shown on individual pages as main body text"
       group: Main
     <<: *teaser_defaults
+    <<: *cta_defaults
     provided_by:
       type: text
       required: false
@@ -547,10 +565,10 @@ data:
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
       group: "Related Links"
-    <<: *support_defaults
-    <<: *contact_defaults
     <<: *media_defaults
     <<: *structure_defaults
+    <<: *support_defaults
+    <<: *contact_defaults
   taxonomy: [ communities, markets, categories, tags, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage ]
   <<: *all_relations
   recordsperpage: 100
@@ -611,6 +629,7 @@ projects:
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
     <<: *teaser_defaults
+    <<: *cta_defaults
     <<: *media_defaults
     <<: *structure_defaults
     <<: *support_defaults
@@ -641,6 +660,7 @@ events:
       required: true
       label: "Location Place"
     <<: *teaser_defaults
+    <<: *cta_defaults
     start_event:
       type: datetime
       required: false
@@ -661,6 +681,7 @@ events:
     <<: *media_defaults
     <<: *structure_defaults
     <<: *support_defaults
+    <<: *contact_defaults
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   icon_many: "fa:calendar"
@@ -738,6 +759,7 @@ jobs:
       type: slug
       uses: position
     <<: *support_defaults
+    <<: *contact_defaults
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   sort: -datepublish
@@ -789,7 +811,7 @@ persons:
     linkedin:
       type: text
       required: false
-      label: "Linkedin URL:"
+      label: "Linkedin URL"
       variant: inline
       postfix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
@@ -797,7 +819,7 @@ persons:
     skype:
       type: text
       required: false
-      label: "Skype ID:"
+      label: "Skype ID"
       variant: inline
       class: narrow
     image:
@@ -821,19 +843,6 @@ persons:
       type: html
       required: false
       label: "Speaker Introduction"
-      height: 200px
-      group: "Personal"
-    candidacy_teaser:
-      type: html
-      required: false
-      label: "Candicacy Teaser"
-      height: 100px
-      group: "Personal"
-      prefix: "<div><h3>MC Election Candidacy</h3><p>Enter a short introduction for use on membership election pages where this person is a elegible.</p><br></div>"
-    candidacy_intro:
-      type: html
-      required: false
-      label: "Candicacy Introduction"
       height: 200px
       group: "Personal"
     company:
@@ -956,6 +965,19 @@ persons:
         "(not set)": "(not set)"
         "false": "false"
         "true": "true"
+    candidacy_teaser:
+      type: html
+      required: false
+      label: "Candicacy Teaser"
+      height: 100px
+      group: "Europeana Networks"
+      prefix: "<div><h3>MC Election Candidacy</h3><p>Enter a short introduction for use on membership election pages where this person is a elegible.</p><br></div>"
+    candidacy_intro:
+      type: html
+      required: false
+      label: "Candicacy Introduction"
+      height: 200px
+      group: "Europeana Networks"
     uid:
       type: text
       class: narrow
@@ -1025,7 +1047,6 @@ persons:
         labs: Europeana Labs
         research: Europeana Research
         zoho: ZOHO CRM
-    <<: *support_defaults
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   icon_many: "fa:users"
