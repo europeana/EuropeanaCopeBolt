@@ -2,7 +2,6 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport\Parser;
 
-use Bolt\Extension\Europeana\ZohoImport\ZohoImport;
 use SimpleXMLElement;
 use mjohnson\utility\TypeConverter as TypeConverter;
 
@@ -14,10 +13,10 @@ class Normalizer
   private $debug_mode;
 
   function __construct($data, $filedata, $config) {
-    $this->data = $data;
+    $this->data = [$data => []];
     $this->filedata = $filedata;
     $this->config = $config;
-    // dump($this, $data, $filedata, $config);
+    //dump($this, $data, $filedata, $config);
     $this->debug_mode = array_key_exists('debug_mode' , $this->config)?$this->config['debug_mode']:null;
     //require_once (dirname(__DIR__) . '/TypeConverter/TypeConverter.php');
   }
@@ -39,7 +38,9 @@ class Normalizer
       $this->normalizeFromSimpleXML($name);
     } else {
       $logmessage = 'Error occurred during normalize: ' . $name . ' - ' . $this->config['source']['type'];
-      $this->logger('info', $logmessage, 'zohoimport');
+      //$this->logger('info', $logmessage, 'zohoimport');
+      dump($logmessage);
+      die();
     }
 
     return $this->data;
@@ -57,7 +58,7 @@ class Normalizer
 
     // get down into the root element
     $root = $this->config['target']['mapping']['root'];
-    $elements = explode('\.', $root);
+    $elements = explode('.', $root);
 
     foreach($elements as $elm) {
       $items = $items[$elm];
@@ -85,7 +86,7 @@ class Normalizer
   {
     $doc = json_decode($this->filedata[$name]);
 
-    dump($doc, $this, $name);
+    //dump($name, $doc, $this);
 
     if(empty($doc)) {
       if($this->debug_mode) {
@@ -105,7 +106,8 @@ class Normalizer
 
     // get down into the root element
     $root = $this->config['target']['mapping']['root'];
-    $elements = explode('\.', $root);
+    $elements = explode('.', $root);
+
     if($elements[0] == 'response' && !$items['response']) {
       array_shift($elements);
     }

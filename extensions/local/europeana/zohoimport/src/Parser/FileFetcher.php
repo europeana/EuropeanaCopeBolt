@@ -66,7 +66,7 @@ class FileFetcher
   /**
    * Fetch a remote url resource
    */
-  private function fetchRemoteResource($name, $url) {
+  public function fetchRemoteResource($name, $url) {
     $curlOptions = array('CURLOPT_CONNECTTIMEOUT' => 5);
     // Set cURL proxy options if there's a proxy
     if ($this->app['config']->get('general/httpProxy')) {
@@ -90,6 +90,8 @@ class FileFetcher
       // make sure we can use this key later
       $this->filedata[$name] = false;
     }
+
+    return $this->filedata;
   }
 
   /**
