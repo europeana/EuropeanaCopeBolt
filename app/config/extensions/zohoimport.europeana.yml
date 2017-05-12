@@ -1,118 +1,144 @@
 # debug mode will make this process a lot slower
 debug_mode: false
+# the path for downloads images in hookafterload
 image_path: 'zoho_images'
+# set image_downloads to true for the hookafterload images
+image_downloads: true
 
 # Make the associations with the different values and their structure tree equivalent
 # rank  - the order of importance, with 1 as highest rank
 # label - the label that is present in the source field
 # id    - the id for the target field
 # the default map will be the one that is set for all non matching records
-# the default id will have the lowest rank
 structure_tree_map:
-    founding:
+    governing:
         rank: 1
         label: "Founding Member"
-        id: 55
-    governing:
-        rank: 2
-        label: "Governing Board"
-        id: 55
+        id: 58
     management:
-        rank: 3
-        label: "Association Management Board"
-        id: 56
+        rank: 2
+        label: "Network Association Management Board Member"
+        id: 57
     council:
+        rank: 3
+        label: "Members Council Member"
+        id: 59
+    contentholders:
         rank: 4
-        label: "Association Members Council"
-        id: 57
-    members:
+        label: "Representative of Content Holder Associations"
+        id: 58
+    experts:
         rank: 5
-        label: "Association Network Member"
-        id: 57
+        label: "Representative of Specific Fields of Expertise"
+        id: 58
     partners:
         rank: 6
-        label: "Partner"
-        id: 56
-    default:
+        label: "Member States Representative"
+        id: 58
+    observers:
+        rank: 7
+        label: "Observer"
+        id: 58
+    candidates:
+        rank: 8
+        label: "MC Election Candidate"
+        id: 62
+    members:
+        rank: 9
+        label: "Network Association Member"
+        id: 57
+    partners:
         rank: 10
+        label: "Friend of Europeana"
+        id: 29
+    default:
+        rank: 11
         label: "*"
-        id: 56
+        id: 29
 
 remotes:
-    zoho:
-        enabled: false
+    zoho_json_remote:
+        enabled: true
         source:
-            url: https://crm.zoho.com/crm/private/xml/Contacts/getRecords
-            type: xml
-            getparams:                # ad any required get-params to the config here
-                authtoken: 'insert token here'
+            url: https://crm.zoho.com/crm/private/json/Contacts/getRecords
+            getparams:
+                authtoken: 'e95153d23c8b0d4a5eb5c885531f2d6b'
                 scope: crmapi
             loopparams:
                 counter: fromIndex
                 stepper: toIndex
                 start: 1       # start at this (should be 1)
-                size: 200      # number of records to tech per iteration
+                size: 100      # number of records to fetch per iteration
             # generate a token by going to
             # https://accounts.zoho.com/apiauthtoken/create?SCOPE=ZohoCRM/crmapi
-            
-            ## get params are not needed for file based access
-            #file: examples/Contacts-Timothy.xml
-            #type: xml
+            # file: examples/Contacts-Timothy.json
+            type: json
         target:
-            contenttype: partners
+            contenttype: network
             defaults:
                 new: 'published'       # may also be any valid status
                 updated: 'published'   # may also be any valid status
                 removed: 'unpublished' # may also be any valid status
-            hookafterload:             # magic callbacks to manipulate data after loading it
-                # fetch a remote photo from ZOHO based on the CONTACTID
+            hookafterload:
                 image:
-                    callback: downloadZohoPhotoFromURL 
-                    source_url: 'https://crm.zoho.com/crm/private/xml/Contacts/downloadPhoto?authtoken=insert token here&scope=crmapi&id=CONTACTID'
+                    callback: downloadZohoPhotoFromURL
+                    source_url: 'https://crm.zoho.com/crm/private/xml/Contacts/downloadPhoto?authtoken=e95153d23c8b0d4a5eb5c885531f2d6b&scope=crmapi&id=CONTACTID'
                     source_field: CONTACTID
                     target_field: image
-                # map a participation level to a structure tree parent for breadcrumbs
                 structure_parent:
                     callback: setParentStructure
                     source_url: false
                     source_field: "Participation level"
                     target_field: structure_parent
-                sector:
-                    callback: flattenArrays
-                    source_url: false
-                    source_field: sector
-                    target_field: sector
-            mapping:
+            mapping: # mappings in XPATH
                 root: 'response.result.Contacts.row'
-                                       # mapping root in "jQuery" for json type resources
-                # root: '//response/result/Contacts/row'
-                                       # mapping root in XPATH for xml type resources
                 fields:
-                    uid: 'CONTACTID'
-                    datecreated: 'Created Time'
-                    datechanged: 'Modified Time'
-                    first_name: 'First Name'
-                    last_name: 'Last Name'
-                    org_name: 'Organisation Name'
-                    sector: 'Sector'
-                    email: 'Email'
-                    network: 'Network participation level'
-    atom_feed_example:
-        enabled: false
-        source:
-            url: http://example.com/atom
-            getparams:
-                authtoken: 'a-itis-a-me-a-mario'
-                scope: test
-                test: test
-        target:
-            defaults:
-                new: 'published'       # may also be any valid status
-                updated: 'published'   # may also be any valid status
-                removed: 'unpublished' # may also be any valid status
-            mapping:
-                id: 'feed:entry:id'
-                last_modified: 'feed:entry:updated'
-                title: 'feed:entry:title'
-                body: 'feed:entry:item'
-                type: 'feed:entry:category::term'
+                    # bolt_col: "ZOHO Field name"           # example: "Example value"
+                    uid: "CONTACTID"                        # example: "1482250000000152005"
+                    datecreated: "Created Time"             # example: "2015-06-04 16:37:25"
+                    datechanged: "Modified Time"            # example: "2015-06-09 14:44:58"
+
+                    first_name: "First Name"                # example: "Timothy"
+                    last_name: "Last Name"                  # example: "Test"
+
+                    email: "Public email"                   # example: "test@browsercheck.nl"
+                    phone: "Public phone"                          # example: "0703457628"
+
+                    twitter: "Twitter"                      # example: "twokings"
+                    linkedin: "LinkedIn profile"            # example: "https://linkedin.com/in/twokings"
+                    skype: "Skype ID"                       # example: "example"
+
+                    introduction: "Description"             # example: "Test record"
+
+                    company: "Account Name"                 # example: "Test"
+                    job_title: "Title"                      # example: "Tester"
+
+                    network_participation: "Participation level"
+                                                            # example: "Governing Board;Association Members Council"
+                    community: "Member of community"        # example: "Data partner;EuropeanaTech (R&D)"
+                    community_role: "Community role"        # example: "Test"
+                    europeana_tech: "Member of EuropeanaTech"
+
+                    sector: "Sector"
+                    country: "Country"
+                    boardposition: "Europeana Foundation Board position"
+
+                    # fields that can safely be ignored
+                    europeana_id: "ID"                      # default: "EL30MC"
+                    # author_uid: "SMOWNERID"                 # example: "1482250000000131003"
+                    # author_name: "Contact Owner"            # example: "Bob den Otter"
+                    # modified_uid: "MODIFIEDBY"              # example: "1482250000000131003"
+                    # modified_name: "Modified By"            # example: "Bob den Otter"
+                    # latime: "Last Activity Time"            # example: "2015-06-09 14:44:58"
+                    account_uid: "ACCOUNTID"                # example: "1482250000000152017"
+                    # statutes_read: "I have read and agree to the statutes"
+                                                            # example: "true"
+                    # statutes_agree: "I have read and agree to the statutes"
+                                                            # example: "true"
+                    # public_phone: "Phone"                   # example: "1234567890"
+                    # public_email: "Email"            # example: "test@browsercheck.nl"
+                    # secondary_email: "Secondary Email"      # example: "twest2@browsercheck.nl"
+                    # other_number: "Mobile"                  # example: "+316123456789"
+                    # community: "Interested in..."           # example: "Data partner;EuropeanaTech (R&D)
+                    public_photo: "Show photo on europeana site"
+                                                            # example: "true"

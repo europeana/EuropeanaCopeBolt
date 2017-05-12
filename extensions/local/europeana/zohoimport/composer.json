@@ -3,7 +3,8 @@
     "description": "Import XML, ATOM or JSON nodes into a content type",
     "type": "bolt-extension",
     "require": {
-        "bolt/bolt": "^3.0"
+        "bolt/bolt": "^3.0",
+        "mjohnson/type-converter": "^2.0"
     },
     "license": "MIT",
     "authors": [

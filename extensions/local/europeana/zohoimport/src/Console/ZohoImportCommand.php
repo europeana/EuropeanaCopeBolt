@@ -59,12 +59,15 @@ class ZohoImportCommand extends BaseCommand
     if ($type == 'full') {
       //$on_console = true;
       //$text .= $this->app['extensions.ZohoImport']->importJob($on_console);
+
+      $text .= "\n" . $this->app['zohoimport']->importJob();
     } else if ($type == 'update') {
       // do stuff
     } else if ($type == 'imageonly') {
       // do stuff
     } else {
       // do stuff
+      $text .= "\n" . $this->app['zohoimport']->zohoImportOverview();
     }
 
     $this->app['zohoimport']->logger('info', $text, 'zoho-console-'.$type, ['input'=>$input, 'output'=>$output]);

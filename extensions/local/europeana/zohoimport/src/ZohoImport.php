@@ -74,7 +74,7 @@ class ZohoImport
   {
     //dump($this->config);
     if($this->debug_mode) {
-      dump($this->config);
+      dump($on_console, $this->config);
     }
     $this->getEnabledSources();
 
@@ -116,6 +116,8 @@ class ZohoImport
 
         if($on_console) {
           $localconfig['on_console'] = $on_console;
+        } else {
+          $localconfig['on_console'] = false;
         }
 
         while($this->endcondition==false) {

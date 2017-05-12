@@ -3,7 +3,7 @@
 namespace Bolt\Extension\Europeana\ZohoImport\Parser;
 
 use Bolt\Extension\Europeana\ZohoImport\ZohoImport;
-use SimpleXMLElement;
+use SimpleXMLElement;;
 use mjohnson\utility\TypeConverter as TypeConverter;
 
 class Normalizer
@@ -17,7 +17,9 @@ class Normalizer
     $this->data = $data;
     $this->filedata = $filedata;
     $this->config = $config;
-    $this->debug_mode = $this->config['debug_mode'];
+    // dump($this, $data, $filedata, $config);
+    $this->debug_mode = array_key_exists('debug_mode' , $this->config)?$this->config['debug_mode']:null;
+    require_once (dirname(__DIR__) . '/TypeConverter/TypeConverter.php');
   }
 
   /**
@@ -83,6 +85,8 @@ class Normalizer
   {
     $doc = json_decode($this->filedata[$name]);
 
+    dump($doc, $this, $name);
+
     if(empty($doc)) {
       if($this->debug_mode) {
         dump('empty $doc');
@@ -100,7 +104,7 @@ class Normalizer
     $items = TypeConverter::toArray($doc);
 
     // get down into the root element
-    $root = $config['target']['mapping']['root'];
+    $root = $this->config['target']['mapping']['root'];
     $elements = explode('\.', $root);
     if($elements[0] == 'response' && !$items['response']) {
       array_shift($elements);
