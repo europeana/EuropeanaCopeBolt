@@ -1,3 +1,7 @@
+{% if item is  not defined %}
+    {% set item = record %}
+{% endif %}
+
 <span class="event-days">
 
 {# Check for one day event #}

@@ -1,12 +1,17 @@
 <article class="teaser teaser-download group">
     <div class="img-container">
-        <img src="https://unsplash.it/600/400" alt="alt"/>
+        <img src="{{ item.image|default('notfound')|thumbnail(600,400,'c')}}" alt="{{ record.title }}"/>
 
         <div class="info-block">
-           <span class="info-date">Created: 19 december 2017</span>
+           <span class="info-date">Created: {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+
+            {% if item.contact_record %}
             <span class="info-author">
-                By: <a href="#">Stevie Nicks</a>
+                {% setcontent author = 'persons' where { id : item.contact_record } returnsingle %}
+                By <a href="{{ author.link() }}">{{ author.first_name }} {{ author.last_name }}</a>
             </span>
+            {% endif %}
+
             <a class="info-action">
                 <svg class="icon icon-calendar">
                     <use xlink:href="#icon-calendar"></use>
@@ -16,14 +21,21 @@
 
     </div>
 
-    <h2>Important whitepaper downloadable.pdf</h2>
+    <h2><a href="{{ item.link() }}">{{ item.title }}</a></h2>
 
     {% include 'partials/_tags.twig' %}
 
-    <p>The Europeana Network Association Annual General Meeting (AGM) is an annual key event for Europeana and its network. It provides the opportunity for ...</p>
+    {% if item.teaser %}
+        {{ item.teaser }}
+    {% elseif item.intro %}
+        {{ item.intro }}
+    {% else %}
+        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+    {% endif %}
+
     <div class="actions-footer">
 
-       <span class="read-time">10 minutes to read</span>
+       {% include 'partials/_readtime.twig' %}
        <a class="readmore">
             Call to action
         </a>

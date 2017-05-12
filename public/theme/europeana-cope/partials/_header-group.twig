@@ -1,17 +1,28 @@
 {# HEADER OF ARTICLE #}
 
 <div class="header-group">
+
+    {% if record.contact_record %}
     <div class="author-small group">
-        <img class="round" src="https://unsplash.it/72/72" alt="name"/>
-        <p class="name">Victor-Jan Vos</p>
-        <p class="function">Head of programmes, policy & research</p>
+        {% setcontent author = 'persons' where { id : record.contact_record } returnsingle %}
+
+        <img class="round" src="{{ author.image|default('notfound')|thumbnail(72, 72, 'c') }}" alt="portrait of {{ author.first_name }} {{ author.last_name }}"/>
+        <p class="name">{{ author.first_name }} {{ author.last_name }}</p>
+        <p class="function">{{ author.job_title }}</p>
     </div>
+    {% endif %}
 
     <h1>{{ record.title }}</h1>
 
-    <h2 class="subtitle">'Show us what you've got!'</h2>
+    <h2 class="subtitle">Where does the subtitle come from?</h2>
+
+    {% if record.contenttype.slug in ['events'] and record.geolocation is not empty %}
+        <address>
+            {{record.geolocation.formatted_address | replace({',': '<br/>'})|raw }}
+        </address>
+    {% endif %}
 
     <div class="introduction">
-        {{ record.introduction }}
+        {{ record.intro }}
     </div>
 </div>

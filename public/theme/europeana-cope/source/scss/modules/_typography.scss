@@ -331,6 +331,11 @@ address {
     // @include respond-to (medium-screens) {
     //     font-size: 0.875rem;
     // }
+
+    .header-group & {
+        font-size: 0.875rem;
+        color: $medium-gray;
+    }
 }
 
 footer {

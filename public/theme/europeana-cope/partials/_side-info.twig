@@ -2,20 +2,25 @@
 
 <div class="side-info">
     <p class="meta">
-        {# <span class="readtime">7 minutes to read</span> #}
-        <span class="location">Den Haag, The Netherlands</span>
-        <span class="date">Posted at 11 oktober 2016</span>
-    </p>
-    <div class="label">Platform</div>
-    <a class="tag" href="#">Management</a>
-    <a class="tag" href="#">AGM</a>
-    <a class="tag" href="#">Network</a>
 
-    {# OPTIE
-     <span class="svg-link" href="#">
-         <svg class="icon icon-users">
+        {% if record.contenttype.slug in ['blogs', 'pages'] %}
+        {% include 'partials/_readtime.twig' %}
+        {% endif %}
+
+        {% if record.contenttype.slug in ['events'] %}
+        <span class="location">Location follows - assembla 689</span>
+        {% endif %}
+
+        <span class="date">Posted at {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+    </p>
+    {% include 'partials/_tags.twig' %}
+
+    {% if record.team is not empty %}
+    <span class="svg-link" href="#">
+        <svg class="icon icon-users">
             <use xlink:href="#icon-users"></use>
         </svg>
-        <a class="team">Collections Team</a>
-    </span> #}
+        <a class="team">{{ record.team }}</a>
+    </span>
+    {% endif %}
 </div>

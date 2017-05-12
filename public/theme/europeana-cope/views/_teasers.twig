@@ -20,7 +20,6 @@
 
     {% include 'partials/_tags.twig' %}
 
-
     {% if item.teaser %}
         {{ item.teaser }}
     {% elseif item.intro %}
@@ -29,11 +28,9 @@
         <p>{{ item.excerpt(150, false, search|default('')) }}</p>
     {% endif %}
 
-
     <div class="actions-footer">
 
-        {# FIXME add time #}
-        <span class="read-time">10 minutes to read</span>
+        {% include 'partials/_readtime.twig' %}
         <a class="readmore" href="{{ item.link() }}">
             Read more
         </a>

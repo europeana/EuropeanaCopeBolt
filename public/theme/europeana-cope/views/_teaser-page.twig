@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <h2>{{ item.title }}</h2>
+    <h2><a href="{{ item.link() }}">{{ item.title }}</a></h2>
 
     {% include 'partials/_tags.twig' %}
 
@@ -29,7 +29,7 @@
     {% endif %}
 
     <div class="actions-footer">
-        <span class="read-time">10 minutes to read</span>
+        {% include 'partials/_readtime.twig' %}
         <a class="readmore" href="{{ item.link() }}">
             Call to action
         </a>

@@ -1,3 +1,5 @@
+{% if (item.start_event is not empty) and (item.end_event is not empty) %}
+{# when no times, we make no add to calendar blokkie #}
 
 {% set icslink =
 'data:text/calendar;
@@ -9,7 +11,7 @@ URL:'~item.link()~'%0A
 DTSTART:'~item.start_event|localedatetime("%Y%m%dT%H%M%S")~'%0A
 DTEND:'~item.end_event|localedatetime("%Y%m%dT%H%M%S")~'%0A
 SUMMARY:'~item.title~'%0A
-LOCATION:'~item.geolocation.address~'%0A
+LOCATION:'~item.geolocation.address|default("No location given")~'%0A
 END:VEVENT%0A
 END:VCALENDAR'
 %}
@@ -20,3 +22,5 @@ END:VCALENDAR'
     </svg>
     Add to calendar
 </a>
+
+{% endif %}
