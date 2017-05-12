@@ -18,6 +18,9 @@
         "psr-4": {
             "Bolt\\Extension\\Europeana\\ZohoImport\\": [
                 "src"
+            ],
+            "mjohnson\\utility\\": [
+                "src/TypeConverter"
             ]
         }
     },

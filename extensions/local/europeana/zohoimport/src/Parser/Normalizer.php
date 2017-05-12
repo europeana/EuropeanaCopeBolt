@@ -19,7 +19,7 @@ class Normalizer
     $this->config = $config;
     // dump($this, $data, $filedata, $config);
     $this->debug_mode = array_key_exists('debug_mode' , $this->config)?$this->config['debug_mode']:null;
-    require_once (dirname(__DIR__) . '/TypeConverter/TypeConverter.php');
+    //require_once (dirname(__DIR__) . '/TypeConverter/TypeConverter.php');
   }
 
   /**
