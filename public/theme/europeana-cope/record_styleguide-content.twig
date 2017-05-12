@@ -10,44 +10,10 @@
             <article class="column main-column">
 
 
-                {# SIDE-INFO #}
+                {% include 'partials/_side-info.twig' %}
 
-                <div class="side-info">
-                    <p class="meta">
-                        <span class="readtime">7 minutes to read</span>
-                        {# OPTIE <span class="location">Den Haag, The Netherlands</span> #}
-                        <span class="date">Posted at 11 oktober 2016</span>
-                    </p>
-                    <div class="label">Platform</div>
-                    <a class="tag" href="#">Management</a>
-                    <a class="tag" href="#">AGM</a>
-                    <a class="tag" href="#">Network</a>
+                {% include 'partials/_header-group.twig' %}
 
-                    {# OPTIE
-                     <span class="svg-link" href="#">
-                         <svg class="icon icon-users">
-                            <use xlink:href="#icon-users"></use>
-                        </svg>
-                        <a class="team">Collections Team</a>
-                    </span> #}
-                </div>
-
-
-                {# HEADER OF ARTICLE #}
-
-                <div class="header-group">
-                    <div class="author-small group">
-                        <img class="round" src="https://unsplash.it/72/72" alt="name"/>
-                        <p class="name">Victor-Jan Vos</p>
-                        <p class="function">Head of programmes, policy & research</p>
-                    </div>
-
-                    <h1>This is the title of an article or blogpost</h1>
-
-                    <div class="introduction">
-                        <p>Merete Sanderhoff introduces the new Europeana Art History Collections advisory board. </p>
-                    </div>
-                </div>
 
                 <figure>
                     <img class="main-img" src="https://unsplash.it/1240/600" alt="name" />
@@ -55,158 +21,16 @@
                 </figure>
 
 
-                {# EVENT MAP #}
-
-                <figure class="event-figure">
-                    <div class="map">
-
-                        {# HERE BE MAP #}
-                        <img src="https://unsplash.it/1020/560?image=967" alt="name" />
-
-                        <div class="img-container">
-                            <img class="event-img" src="https://unsplash.it/700/510" alt="name" />
-
-                            <div class="info-block">
-                                <span class="event-days">19 — 21</span>
-                                <span class="event-month">october 2017<br /></span>
-                                <span class="event-time">
-                                    <svg class="icon icon-clock">
-                                        <use xlink:href="#icon-clock"></use>
-                                    </svg>
-                                    09:00 — 18:00
-                                </span>
-                                <span class="event-location">
-                                    <svg class="icon icon-location">
-                                        <use xlink:href="#icon-location"></use>
-                                    </svg>
-                                    Riga, Latvia
-                                </span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <figcaption>
-                        The National Library of Latvia. Image: Wikimedia Commons, CC BY SA.
-                    </figcaption>
-                </figure>
+                {% include 'partials/_event-figure.twig' %}
 
 
+                {% include 'partials/_collapsed-content.twig'%}
 
-                {# COLLAPSED CONTENT #}
-
-                <section class="file-browser file-content-module">
-                    <div class="collapse-header">
-                        <p class="content-kind">
-                            <svg class="icon icon-folder">
-                                <use xlink:href="#icon-folder"></use>
-                            </svg>
-                            <span>Collapsed content</span>
-                        </p>
-
-                        <h3>AGM documentation</h3>
-                        <a href="#">
-                            <svg class="icon icon-navigate-up">
-                                <use xlink:href="#icon-navigate-up"></use>
-                            </svg>
-                            <span class="sr-only">Open folder</span>
-                        </a>
-                    </div>
-                    <div class="collapse-content">
-                        <p>Art lovers have a new place to enjoy and engage with Europe’s rich artistic heritage. At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use them for learning, enjoyment, sharing, and to build on in new creative ways.</p>
-                    </div>
-                </section>
 
                 <div class="body"> {# can be multiple bodies #}
                     {# <h2>Behold! A header 2!</h2> #}
                     <p>Art lovers have a new place to enjoy and engage with Europe’s rich artistic heritage. At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use them for learning, enjoyment, sharing, and to build on in new creative ways.</p>
                 </div>
-
-                {# FILE CONTENT MODULE / COLLAPSED CONTENT #}
-
-                <section class="file-browser file-content-module">
-                    <div class="collapse-header">
-                        <p class="content-kind">
-                            <svg class="icon icon-folder">
-                                <use xlink:href="#icon-folder"></use>
-                            </svg>
-                            <span>Folder</span>
-                        </p>
-
-                        <h3>AGM documentation</h3>
-                        <a href="#">
-                            <svg class="icon icon-arrow-up">
-                                <use xlink:href="#icon-arrow-up"></use>
-                            </svg>
-                            <span class="sr-only">Open folder</span>
-                        </a>
-                    </div>
-                    <ul class="">
-                        <li class="collapse-content has-sublist">
-                            <a href="#">
-                                <svg class="icon icon-document">
-                                    <use xlink:href="#icon-folder"></use>
-                                </svg>
-                                Council Conclusions Europeana Strategy Staff
-                            </a>
-
-
-                            <ul class="sublist">
-                                <li class="">
-                                    <a href="#">
-                                    <svg class="icon icon-document">
-                                        <use xlink:href="#icon-document"></use>
-                                    </svg>
-
-                                        Council Conclusions Europeana Strategy Staff
-                                        <div class="meta">
-                                            <span class="filesize">2.5 MB</span>
-                                            <span class="date-added">Added 12/25/16</span>
-                                        </div>
-
-                                    </a>
-                                </li>
-
-                                <li class="">
-                                    <a href="#">
-                                    <svg class="icon icon-document">
-                                        <use xlink:href="#icon-document"></use>
-                                    </svg>
-
-                                        Council Conclusions Europeana Strategy Staff
-                                        <div class="meta">
-                                            <span class="filesize">2.5 MB</span>
-                                            <span class="date-added">Added 12/25/16</span>
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-                        <li class="collapse-content">
-
-                            <a href="#">
-                                <svg class="icon icon-document">
-                                    <use xlink:href="#icon-document"></use>
-                                </svg>
-                                Council Conclusions Europeana Strategy Staff
-
-                            </a>
-                        </li>
-
-                        <li class="collapse-content">
-                            <a href="#">
-                                <svg class="icon icon-document">
-                                    <use xlink:href="#icon-document"></use>
-                                </svg>
-                                Council Conclusions Europeana Strategy Staff
-
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-
 
                 {# BODY #}
 
@@ -219,153 +43,11 @@
                     <p>Art lovers have a new place to enjoy and engage with Europe’s rich artistic heritage. At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use them for learning, enjoyment, sharing, and to build on in new creative ways.</p>
                 </div>
 
+                {% include 'partials/_download-content.twig'%}
 
-                {# DOWNLOAD MODULE #}
+                {% include 'partials/_list-speaker-list.twig' with { record:record, title: 'titel hier'} %}
 
-                <section class="download-module">
-                    <ul>
-                        <li> <a href="#">
-                            <svg class="icon icon-document">
-                                <use xlink:href="#icon-document"></use>
-                            </svg>
-                            This is a download
-                            <div class="meta">
-                                <span class="filesize">2.5 MB</span>
-                                <span class="date-added">Added 12/25/16</span>
-                            </div>
-                        </a>
-                    </ul>
-                </section>
-
-
-                {# INFO LIST #}
-
-                <section class="info-list speaker-list">
-                    <h2>Speakers for this event</h2>
-                    <ul>
-                        <li class="group">
-                            <div class="img-container">
-                                <img class="info-img" src="https://unsplash.it/172/172" alt="name" />
-                                <h3>Timothy Hill</h3>
-
-                                <div class="socials">
-                                    <a href="#" class="tw">
-                                        <svg class="icon icon-twitter">
-                                            <use xlink:href="#icon-twitter"></use>
-                                        </svg>
-                                        <span class="sr-only">Twitter</span>
-                                    </a>
-                                    <a href="#" class="li">
-                                        <svg class="icon icon-linkedin">
-                                            <use xlink:href="#icon-linkedin"></use>
-                                        </svg>
-                                        <span class="sr-only">LinkedIn</span>
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="txt-container">
-                                <p class="function">Search engineer</p>
-                                <p>Art lovers have a new place to enjoy and engage with Europe’s rich artistic heritage. At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use arning, enjoyment, sharing, and to build on in new creative ways.</p>
-                                <div class="contact">
-                                    <a href="#" class="tw">
-                                        <svg class="icon icon-twitter">
-                                            <use xlink:href="#icon-twitter"></use>
-                                        </svg>
-                                        <span class="sr-only">Twitter</span>
-                                    </a>
-                                    <a href="#" class="li">
-                                        <svg class="icon icon-linkedin">
-                                            <use xlink:href="#icon-linkedin"></use>
-                                        </svg>
-                                        <span class="sr-only">LinkedIn</span>
-                                    </a>
-                                    <a href="mailto:#" class="email">Victor-jan.vos@europeana.eu</a>
-                                    <a href="#" class="phone">+31 70 32 45 678</a>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="group">
-                            <div class="img-container">
-                                <img class="info-img" src="https://unsplash.it/172/172" alt="name" />
-                                <h3>Timothy Hill</h3>
-
-                                <div class="socials">
-                                    <a href="#" class="tw">
-                                        <svg class="icon icon-twitter">
-                                            <use xlink:href="#icon-twitter"></use>
-                                        </svg>
-                                        <span class="sr-only">Twitter</span>
-                                    </a>
-                                    <a href="#" class="li">
-                                        <svg class="icon icon-linkedin">
-                                            <use xlink:href="#icon-linkedin"></use>
-                                        </svg>
-                                        <span class="sr-only">LinkedIn</span>
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="txt-container">
-                                <p class="function">Search engineer</p>
-                                <p>Art lovers have a new place to enjoy and engage with Europe’s rich artistic heritage. At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use arning, enjoyment, sharing, and to build on in new creative ways.</p>
-                                <div class="contact">
-                                    <a href="#" class="tw">
-                                        <svg class="icon icon-twitter">
-                                            <use xlink:href="#icon-twitter"></use>
-                                        </svg>
-                                        <span class="sr-only">Twitter</span>
-                                    </a>
-                                    <a href="#" class="li">
-                                        <svg class="icon icon-linkedin">
-                                            <use xlink:href="#icon-linkedin"></use>
-                                        </svg>
-                                        <span class="sr-only">LinkedIn</span>
-                                    </a>
-                                    <a href="mailto:#" class="email">Victor-jan.vos@europeana.eu</a>
-                                    <a href="#" class="phone">+31 70 32 45 678</a>
-                                </div>
-                            </div>
-                        </li>
-
-                    </ul>
-                </section>
-
-                <section class="info-list location-list">
-                    <h2>Event venue and description</h2>
-                    <ul>
-                        <li>
-                            <div class="img-container">
-                                <img class="info-img" src="https://unsplash.it/172/172" alt="name" />
-                                <div class="info-block">
-                                    <span class="event-days">19 — 21</span>
-                                    <span class="event-month">october 2017<br /></span>
-                                    <span class="event-time">
-                                        <svg class="icon icon-clock">
-                                            <use xlink:href="#icon-clock"></use>
-                                        </svg>
-                                        09:00 — 18:00
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="txt-container">
-                                <h3>Europeana network association AGM 2017</h3>
-                                <p>Art lovers have a new place to enjoy and engage with Europe’s rich artistic heritage. At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use them for learning, enjoyment, sharing, and to build on in new creative ways.</p>
-                                <div class="location">
-                                    <svg class="icon icon-location">
-                                        <use xlink:href="#icon-location"></use>
-                                    </svg>
-                                    <span class="sr-only">Location:</span> Den Haag
-                                </div>
-                                <a class="primary-link" href="#">Learn everything about the event here</a>
-                                <a class="button">
-                                    Register for your place
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
+                {% include 'partials/_list-location-list.twig' %}
 
             </article>
 
@@ -376,35 +58,7 @@
         <div class="inner-wrap">
 
 
-            {# AUTHOR #}
-
-            <section class="author-big column">
-                <div class="img-container">
-                    <img class="round" src="https://unsplash.it/144/144" alt="name"/>
-                </div>
-                <div class="txt-container">
-                    <p class="name"><span>Created by</span> Victor-Jan Vos</p>
-                    <p class="function">Head of programmes, policy & research</p>
-                    <p>At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use them for learning, enjoyment, sharing.</p>
-                    <div class="contact">
-                        <a href="#" class="tw">
-                            <svg class="icon icon-twitter">
-                                <use xlink:href="#icon-twitter"></use>
-                            </svg>
-                            <span class="sr-only">Twitter</span>
-                        </a>
-                        <a href="#" class="tw">
-                            <svg class="icon icon-linkedin">
-                                <use xlink:href="#icon-linkedin"></use>
-                            </svg>
-                            <span class="sr-only">LinkedIn</span>
-                        </a>
-                        <a href="#" class="email">Victor-jan.vos@europeana.eu</a>
-                        <a href="#" class="phone">+31 70 32 45 678</a>
-                    </div>
-                </div>
-            </section>
-
+            {% include 'partials/_author.twig' %}
 
             {# RELATED CONTENT #}
 

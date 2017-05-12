@@ -1004,6 +1004,7 @@ section.catstream {
         border-top: 1px solid #e7e7e7;
         padding: 0.6em 0 0;
         font-size: 0.75rem;
+        line-height: 1.4;
 
         @include respond-to(large-screens){
             font-size: 0.8125rem;
@@ -1046,6 +1047,10 @@ section.catstream {
         img {
             // width: 100%;
         }
+    }
+
+    img.static-map {
+        width: 100%;
     }
 
     .img-container {

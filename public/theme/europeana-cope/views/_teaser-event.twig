@@ -1,0 +1,49 @@
+<article class="teaser teaser-event group">
+    <div class="img-container">
+        <img src="{{ item.image|default('notfound')|thumbnail(600,400,'c')}}" alt="alt"/>
+
+        <div class="info-block">
+            <span class="event-days">19 — 21</span>
+            <span class="event-month">october 2017<br /></span>
+            <span class="event-time">
+                <svg class="icon icon-clock">
+                    <use xlink:href="#icon-clock"></use>
+                </svg>
+                09:00 — 18:00
+            </span>
+            <span class="event-location">
+                <svg class="icon icon-location">
+                    <use xlink:href="#icon-location"></use>
+                </svg>
+                Riga, Latvia
+            </span>
+        </div>
+    </div>
+
+    <h2>{{ item.title }}</h2>
+
+    {% include 'partials/_tags.twig' %}
+
+    {% if item.teaser %}
+        {{ item.teaser }}
+    {% elseif item.intro %}
+        {{ item.intro }}
+    {% else %}
+        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+    {% endif %}
+
+    <div class="actions-footer">
+        <a class="add-calendar" href="#">
+            <svg class="icon icon-calendar">
+                <use xlink:href="#icon-calendar"></use>
+            </svg>
+            Add to calendar
+        </a>
+
+        <a class="button-link" href="{{ item.link() }}">
+            Call to action
+        </a>
+
+    </div>
+
+</article>

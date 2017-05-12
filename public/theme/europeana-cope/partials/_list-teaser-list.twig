@@ -1,0 +1,36 @@
+<ul class="teaser-list">
+
+{% for item in items %}
+
+    <li>
+    {% if item.contenttype.slug == 'pages' %}
+        {# PAGINA #}
+        {% include 'views/_teaser-page.twig' with { item:item } %}
+
+    {% elseif item.contenttype.slug == 'posts' %}
+        {# POST #}
+        {% include 'views/_teaser-blog.twig' with { item:item } %}
+
+    {% elseif item.contenttype.slug == 'data' %}
+        {# DATA #}
+        {% include 'views/_teaser-dataset.twig' with { item:item } %}
+
+    {% elseif item.contenttype.slug == 'projects' %}
+        {# PROJECT #}
+        {% include 'views/_teaser-project.twig' with { item:item } %}
+
+    {% elseif item.contenttype.slug == 'events' %}
+        {# EVENT #}
+        {% include 'views/_teaser-event.twig' with { item:item } %}
+
+    {% elseif item.contenttype.slug == 'persons' %}
+        {# PERSON #}
+        {% include 'views/_teasers.twig' with { item:item } %}
+
+    {% endif %}
+
+    </li>
+
+{% endfor %}
+
+</ul>

@@ -1,0 +1,15 @@
+{% if item is not defined %}
+    {% set record = item %}
+{% endif %}
+
+{% if item.taxonomy.communities is defined %}
+    {% for cmt in item.taxonomy.communities %}
+    <div class="label">{{ cmt }}</div>
+    {% endfor %}
+{% endif %}
+
+{% if item.taxonomy.tags is defined %}
+    {% for tag in item.taxonomy.tags %}
+    <a class="tag" href="/tags/{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+{% endif %}

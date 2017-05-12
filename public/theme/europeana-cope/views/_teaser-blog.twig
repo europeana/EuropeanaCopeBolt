@@ -1,0 +1,41 @@
+<article class="teaser teaser-blog group">
+    <div class="img-container">
+        <img src="{{ item.image|default('notfound')|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+
+        <div class="info-block">
+            <span class="info-type">Blog</span>
+            <span class="info-date">Created: {{ item.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+
+            {% for aut in item.author %}
+                {% setcontent author = 'persons' where { id : aut } returnsingle %}
+                <span class="info-author">
+                    {{ author.first_name }} {{ author.last_name }}
+                </span>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <h2>{{ item.title }}</h2>
+
+    {% include 'partials/_tags.twig' %}
+
+
+    {% if item.teaser %}
+    {{ item.teaser }}
+    {% elseif item.intro %}
+        {{ item.intro }}
+    {% else %}
+        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+    {% endif %}
+
+    <div class="actions-footer">
+        <span class="read-time">10 minutes to read</span>
+        <a class="button-link" href="{{ item.link() }}" >
+            Read more
+        </a>
+
+    </div>
+
+</article>

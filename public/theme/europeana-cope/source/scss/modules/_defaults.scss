@@ -134,8 +134,9 @@ img {
 }
 
 
-a.external,
-a[href*="//"] {
+a.external
+//a[href *="//"]: not([href *="pro.europeana.com"]): after
+{
 
     &:after {
         content: "";

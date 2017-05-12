@@ -1,11 +1,12 @@
-<article class="teaser group">
+<article class="teaser teaser-page group">
     <div class="img-container">
-        <img src="{{ item.image|default('notfound')|thumbnail(600,400,'c')}}" alt="{{ record.title }}"/>
+        <img src="{{ item.image|default('notfound')|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
 
         <div class="info-block">
-           <span class="info-date">Updated: {{ record.datechanged|localedatetime("%A %B %e, %Y") }}</span>
+            <span class="info-type">Page</span>
+            <span class="info-date">Created: {{ item.datepublish|localedatetime("%A %B %e, %Y") }}</span>
 
-           {% if item.contact_record %}
+            {% if item.contact_record %}
             <span class="info-author">
                 {% setcontent author = 'persons' where { id : item.contact_record } returnsingle %}
                 By <a href="{{ author.link() }}">{{ author.first_name }} {{ author.last_name }}</a>
@@ -13,29 +14,24 @@
             {% endif %}
 
         </div>
-
     </div>
 
     <h2>{{ item.title }}</h2>
 
     {% include 'partials/_tags.twig' %}
 
-
     {% if item.teaser %}
-        {{ item.teaser }}
+    {{ item.teaser }}
     {% elseif item.intro %}
         {{ item.intro }}
     {% else %}
         <p>{{ item.excerpt(150, false, search|default('')) }}</p>
     {% endif %}
 
-
     <div class="actions-footer">
-
-        {# FIXME add time #}
         <span class="read-time">10 minutes to read</span>
         <a class="readmore" href="{{ item.link() }}">
-            Read more
+            Call to action
         </a>
 
     </div>

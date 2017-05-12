@@ -1,0 +1,48 @@
+{% if 'Founding Member' in record.network_participation %}
+    {% set mainparticipation = 'Founding Member' %}
+
+{% elseif 'Governing Board' in record.network_participation %}
+    {% set mainparticipation = 'Governing Board' %}
+
+{% elseif 'Management Board' in record.network_participation %}
+    {% set mainparticipation = 'Management Board' %}
+
+{% elseif 'Members Council' in record.network_participation %}
+    {% set mainparticipation = 'Members Council' %}
+
+{% elseif 'Network Association Member' in record.network_participation %}
+    {% set mainparticipation = 'Network Association Member' %}
+
+{% elseif 'Partner' in record.network_participation %}
+    {% set mainparticipation = 'Partner' %}
+
+{% else %}
+    {% set mainparticipation = '' %}
+
+{% endif %}
+
+{{ mainparticipation }}
+
+{# https://europeanadev.assembla.com/spaces/europeana-professional/tickets/688-what-should-be-the-hierarchy-of-the-network-participation-level-/details# #}
+
+
+
+{# "Founding Member": "Founding Member"
+"Governing Board": "Governing Board"
+"Management Board": "Management Board"
+"Members Council": "Members Council"
+"Network Association Member": "Network Association Member"
+"MC Election Candidate": "MC Election Candidate"
+"Partner": "Partner"
+"Not a Network member": "Not a Network member"
+"(not set)": "-- new options --"
+"Network Association Member": "Network Association Member"
+"Members Council Member": "Members Council Member"
+"Network Association Management Board Member": "Network Association Management Board Member"
+"Founding Member": "Founding Member"
+"Member States Representative": "Member States Representative"
+"Representative of Content Holder Associations": "Representative of Content Holder Associations"
+"Representative of Specific Fields of Expertise": "Representative of Specific Fields of Expertise"
+"MC Election Candidate": "MC Election Candidate"
+"Observer": "Observer"
+"Friend of Europeana": "Friend of Europeana" #}

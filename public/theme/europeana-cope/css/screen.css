@@ -497,8 +497,7 @@ img {
   height: auto;
   display: block; }
 
-a.external:after,
-a[href*="//"]:after {
+a.external:after {
   content: "";
   background-image: url(../images/icons/icon-linkout.svg);
   width: 1em;
@@ -664,6 +663,9 @@ footer {
   @media only screen and (min-width: 80em) {
     .contentpage blockquote {
       margin: 2rem 8rem; } }
+
+.contentpage .body blockquote {
+  margin-left: 0; }
 
 .contentpage .info-list {
   padding: 0; }
@@ -871,6 +873,8 @@ h2, .beta {
   @media only screen and (min-width: 24em) {
     h2, .beta {
       font-size: 1.625rem; } }
+  h2.subtitle, .beta.subtitle {
+    font-weight: 400; }
 
 h3, .gamma {
   font-size: 1.25rem;
@@ -1134,6 +1138,11 @@ a.phone {
 a svg {
   margin-right: .5rem; }
 
+a:hover svg,
+a:active svg,
+a:focus svg {
+  fill: #053048; }
+
 p.meta {
   font-size: 0.75rem; }
   @media only screen and (min-width: 47.9375em) {
@@ -1162,7 +1171,6 @@ p.meta {
 
 svg.icon {
   display: inline-block;
-  fill: #f09;
   fill: CurrentColor;
   height: 1.2em;
   width: 1.2em;
@@ -1191,6 +1199,9 @@ blockquote {
   color: #4d4d4d;
   padding: .75rem 1.5rem;
   border-left: 1px solid #777777; }
+
+p blockquote {
+  margin-left: 0; }
 
 /*
 * BUTTONS
@@ -1995,7 +2006,8 @@ section.catstream {
     display: block;
     border-top: 1px solid #e7e7e7;
     padding: 0.6em 0 0;
-    font-size: 0.75rem; }
+    font-size: 0.75rem;
+    line-height: 1.4; }
     @media only screen and (min-width: 47.9375em) {
       .info-block .info-author {
         font-size: 0.8125rem; } }
@@ -2020,6 +2032,8 @@ section.catstream {
     @media only screen and (min-width: 47.9375em) {
       .event-figure .map {
         height: auto; } }
+  .event-figure img.static-map {
+    width: 100%; }
   .event-figure .img-container {
     position: relative; }
     @media only screen and (min-width: 47.9375em) {

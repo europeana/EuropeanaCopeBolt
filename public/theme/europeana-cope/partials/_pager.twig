@@ -1,8 +1,22 @@
+{# <ol class="pagination">
+    <li class='current'><a href="?page=1">1</a></li>
+    <li ><a href="?page=2">2</a></li>
+    <li ><a href="?page=3">3</a></li>
+    <li ><a href="?page=4">4</a></li>
+    <li ><a href="?page=5">5</a></li>
+
+    <li class="disabled"><a>...</a></li>
+
+    <li><a href="?page=80">80</a></li>
+    <li><a href="?page=91">→</a></li>
+
+</ol> #}
+
+
 {% set link = pager.makelink() %}
 
 {% if pager.totalpages > 1 %}
-<div class="pagination text-center {{class}}">
-  <ul class="pagination">
+<ol class="pagination">
 {# 'first' and 'prev' #}
 {% if pager.current > 1 and class!="narrow" %}
     <li><a href="{{link}}{{pager.current-1}}" rel="noindex, follow">&#8592; </a></li>
@@ -32,6 +46,6 @@
 {% if pager.current < pager.totalpages and class!="narrow" %}
     <li><a href="{{link}}{{pager.current+1}}" rel="noindex, follow">&#8594;</a></li>
 {% endif %}
-  </ul>
-</div>
+</ul>
+
 {% endif %}

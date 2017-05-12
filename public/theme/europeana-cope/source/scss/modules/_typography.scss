@@ -55,6 +55,10 @@ h2, .beta {
         font-size: 1.625rem;
     }
 
+    &.subtitle {
+        font-weight: 400;
+    }
+
 }
 
 h3, .gamma {
@@ -434,6 +438,13 @@ a {
     svg {
         margin-right: .5rem;
     }
+
+    &:hover svg,
+    &:active svg,
+    &:focus svg {
+        fill: darken($link-blue, 15%);
+    }
+
 }
 
 
@@ -482,7 +493,6 @@ p.meta {
 
 svg.icon {
     display: inline-block;
-    fill: #f09;
     fill: CurrentColor;
     height: 1.2em;
     width: 1.2em;
@@ -517,5 +527,9 @@ blockquote {
     color: $medium-gray;
     padding: .75rem 1.5rem; //optisch hetzelfde
     border-left: 1px solid $light-gray;
+}
+
+p blockquote {
+    margin-left: 0;
 }
 
