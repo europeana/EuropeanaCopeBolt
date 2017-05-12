@@ -1,0 +1,292 @@
+{
+    "response": {
+        "result": {
+            "Leads": {
+                "row": [{
+                    "no": "1",
+                    "FL": [{
+                        "content": "1482250000000152001",
+                        "val": "LEADID"
+                    }, {
+                        "content": "1482250000000131003",
+                        "val": "SMOWNERID"
+                    }, {
+                        "content": "Bob den Otter",
+                        "val": "Lead Owner"
+                    }, {
+                        "content": "Timothy",
+                        "val": "First Name"
+                    }, {
+                        "content": "Test",
+                        "val": "Last Name"
+                    }, {
+                        "content": "Tester",
+                        "val": "Designation"
+                    }, {
+                        "content": "test@browsercheck.nl",
+                        "val": "Email"
+                    }, {
+                        "content": "http://www.example.com",
+                        "val": "Website"
+                    }, {
+                        "content": "1482250000000131003",
+                        "val": "MODIFIEDBY"
+                    }, {
+                        "content": "Bob den Otter",
+                        "val": "Modified By"
+                    }, {
+                        "content": "2015-06-04 16:32:15",
+                        "val": "Created Time"
+                    }, {
+                        "content": "2015-06-04 16:32:15",
+                        "val": "Modified Time"
+                    }, {
+                        "content": "Test adres 5",
+                        "val": "Street"
+                    }, {
+                        "content": "Test Plaats",
+                        "val": "City"
+                    }, {
+                        "content": "Zuid Holland",
+                        "val": "State"
+                    }, {
+                        "content": "1234AB",
+                        "val": "Zip Code"
+                    }, {
+                        "content": "Netherlands",
+                        "val": "Country"
+                    }, {
+                        "content": "Test record to check the input & output",
+                        "val": "Description"
+                    }, {
+                        "content": "2015-06-04 16:32:15",
+                        "val": "Last Activity Time"
+                    }, {
+                        "content": "Test",
+                        "val": "Organisation Name"
+                    }, {
+                        "content": "Creative industries",
+                        "val": "Sector"
+                    }, {
+                        "content": "true",
+                        "val": "I agree with the Statutes & By Laws"
+                    }]
+                }, {
+                    "no": "2",
+                    "FL": [{
+                        "content": "1482250000000149003",
+                        "val": "LEADID"
+                    }, {
+                        "content": "1482250000000083003",
+                        "val": "SMOWNERID"
+                    }, {
+                        "content": "Dasha",
+                        "val": "Lead Owner"
+                    }, {
+                        "content": "Aubery",
+                        "val": "First Name"
+                    }, {
+                        "content": "Escande",
+                        "val": "Last Name"
+                    }, {
+                        "content": "Batman",
+                        "val": "Designation"
+                    }, {
+                        "content": "aubery.escande@europeana.eu",
+                        "val": "Email"
+                    }, {
+                        "content": "1482250000000083003",
+                        "val": "MODIFIEDBY"
+                    }, {
+                        "content": "Dasha",
+                        "val": "Modified By"
+                    }, {
+                        "content": "2015-06-02 16:39:20",
+                        "val": "Created Time"
+                    }, {
+                        "content": "2015-06-02 17:09:49",
+                        "val": "Modified Time"
+                    }, {
+                        "content": "UK",
+                        "val": "Country"
+                    }, {
+                        "content": "2015-06-02 17:09:49",
+                        "val": "Last Activity Time"
+                    }, {
+                        "content": "Canon",
+                        "val": "Organisation Name"
+                    }, {
+                        "content": "Creative industry",
+                        "val": "Sector"
+                    }, {
+                        "content": "true",
+                        "val": "I agree with the Statutes & By Laws"
+                    }]
+                }, {
+                    "no": "3",
+                    "FL": [{
+                        "content": "1482250000000138027",
+                        "val": "LEADID"
+                    }, {
+                        "content": "1482250000000083003",
+                        "val": "SMOWNERID"
+                    }, {
+                        "content": "Dasha",
+                        "val": "Lead Owner"
+                    }, {
+                        "content": "Valentine",
+                        "val": "First Name"
+                    }, {
+                        "content": "Charles",
+                        "val": "Last Name"
+                    }, {
+                        "content": "Librarian",
+                        "val": "Designation"
+                    }, {
+                        "content": "dasha.m@gmail.com",
+                        "val": "Email"
+                    }, {
+                        "content": "1482250000000083003",
+                        "val": "MODIFIEDBY"
+                    }, {
+                        "content": "Dasha",
+                        "val": "Modified By"
+                    }, {
+                        "content": "2015-05-28 12:42:44",
+                        "val": "Created Time"
+                    }, {
+                        "content": "2015-05-28 13:00:41",
+                        "val": "Modified Time"
+                    }, {
+                        "content": "Germany",
+                        "val": "Country"
+                    }, {
+                        "content": "Ms.",
+                        "val": "Salutation"
+                    }, {
+                        "content": "2015-05-28 13:00:41",
+                        "val": "Last Activity Time"
+                    }, {
+                        "content": "BNF",
+                        "val": "Organisation Name"
+                    }, {
+                        "content": "Library",
+                        "val": "Sector"
+                    }, {
+                        "content": "false",
+                        "val": "I agree with the Statutes & By Laws"
+                    }]
+                }, {
+                    "no": "4",
+                    "FL": [{
+                        "content": "1482250000000138013",
+                        "val": "LEADID"
+                    }, {
+                        "content": "1482250000000083003",
+                        "val": "SMOWNERID"
+                    }, {
+                        "content": "Dasha",
+                        "val": "Lead Owner"
+                    }, {
+                        "content": "Luis",
+                        "val": "First Name"
+                    }, {
+                        "content": "Pinto",
+                        "val": "Last Name"
+                    }, {
+                        "content": "Network leader",
+                        "val": "Designation"
+                    }, {
+                        "content": "luis.pinto@europeana.eu",
+                        "val": "Email"
+                    }, {
+                        "content": "1482250000000083003",
+                        "val": "MODIFIEDBY"
+                    }, {
+                        "content": "Dasha",
+                        "val": "Modified By"
+                    }, {
+                        "content": "2015-05-28 12:31:55",
+                        "val": "Created Time"
+                    }, {
+                        "content": "2015-06-02 17:09:48",
+                        "val": "Modified Time"
+                    }, {
+                        "content": "Netherlands",
+                        "val": "Country"
+                    }, {
+                        "content": "Mr.",
+                        "val": "Salutation"
+                    }, {
+                        "content": "2015-06-02 17:09:48",
+                        "val": "Last Activity Time"
+                    }, {
+                        "content": "Peace Palace",
+                        "val": "Organisation Name"
+                    }, {
+                        "content": "Other",
+                        "val": "Sector"
+                    }, {
+                        "content": "true",
+                        "val": "I agree with the Statutes & By Laws"
+                    }]
+                }, {
+                    "no": "5",
+                    "FL": [{
+                        "content": "1482250000000138007",
+                        "val": "LEADID"
+                    }, {
+                        "content": "1482250000000083003",
+                        "val": "SMOWNERID"
+                    }, {
+                        "content": "Dasha",
+                        "val": "Lead Owner"
+                    }, {
+                        "content": "David",
+                        "val": "First Name"
+                    }, {
+                        "content": "Haskiya",
+                        "val": "Last Name"
+                    }, {
+                        "content": "Art director",
+                        "val": "Designation"
+                    }, {
+                        "content": "dasha.haskiya@europeana.eu",
+                        "val": "Email"
+                    }, {
+                        "content": "1482250000000083003",
+                        "val": "MODIFIEDBY"
+                    }, {
+                        "content": "Dasha",
+                        "val": "Modified By"
+                    }, {
+                        "content": "2015-05-28 12:30:49",
+                        "val": "Created Time"
+                    }, {
+                        "content": "2015-05-28 12:30:57",
+                        "val": "Modified Time"
+                    }, {
+                        "content": "United Kingdom",
+                        "val": "Country"
+                    }, {
+                        "content": "Mr.",
+                        "val": "Salutation"
+                    }, {
+                        "content": "2015-05-28 12:30:57",
+                        "val": "Last Activity Time"
+                    }, {
+                        "content": "Google",
+                        "val": "Organisation Name"
+                    }, {
+                        "content": "Creative industries",
+                        "val": "Sector"
+                    }, {
+                        "content": "false",
+                        "val": "I agree with the Statutes & By Laws"
+                    }]
+                }]
+            }
+        },
+        "uri": "/crm/private/json/Leads/getRecords"
+    }
+}

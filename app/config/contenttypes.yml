@@ -906,12 +906,12 @@ persons:
       class: narrow
       variant: inline
       label: "Europeana Foundation Board position"
-    department:
-      type: select
-      default: 'Our Partner'
-      values:
-        'Europeana Staff': 'Europeana Staff'
-        'Our Partner': 'Our Partner'
+#    department:
+#      type: select
+#      default: 'Our Partner'
+#      values:
+#        'Europeana Staff': 'Europeana Staff'
+#        'Our Partner': 'Our Partner'
     network_participation:
       type: select
       required: false
@@ -931,7 +931,6 @@ persons:
         "Network Association Member": "Network Association Member"
         "Members Council Member": "Members Council Member"
         "Network Association Management Board Member": "Network Association Management Board Member"
-        "Founding Member": "Founding Member"
         "Member States Representative": "Member States Representative"
         "Representative of Content Holder Associations": "Representative of Content Holder Associations"
         "Representative of Specific Fields of Expertise": "Representative of Specific Fields of Expertise"
@@ -990,26 +989,26 @@ persons:
       type: text
       class: narrow
       variant: inline
-    author_uid:
-      type: text
-      class: narrow
-      variant: inline
-    author_name:
-      type: text
-      class: narrow
-      variant: inline
-    modified_uid:
-      type: text
-      class: narrow
-      variant: inline
-    modified_name:
-      type: text
-      class: narrow
-      variant: inline
-    latime:
-      type: text
-      class: narrow
-      variant: inline
+#    author_uid:
+#      type: text
+#      class: narrow
+#      variant: inline
+#    author_name:
+#      type: text
+#      class: narrow
+#      variant: inline
+#    modified_uid:
+#      type: text
+#      class: narrow
+#      variant: inline
+#    modified_name:
+#      type: text
+#      class: narrow
+#      variant: inline
+#    latime:
+#      type: text
+#      class: narrow
+#      variant: inline
     account_uid:
       type: text
       class: narrow
@@ -1018,24 +1017,24 @@ persons:
       type: text
       class: narrow
       variant: inline
-    statutes_read:
-      type: select
-      required: false
-      multiple: false
-      label: "I have read & agree to the statutes"
-      values:
-        "(not set)": "(not set)"
-        "false": "false"
-        "true": "true"
-    statutes_agree:
-      type: select
-      required: false
-      multiple: false
-      label: "I agree to statutes"
-      values:
-        "(not set)": "(not set)"
-        "false": "false"
-        "true": "true"
+#    statutes_read:
+#      type: select
+#      required: false
+#      multiple: false
+#      label: "I have read & agree to the statutes"
+#      values:
+#        "(not set)": "(not set)"
+#        "false": "false"
+#        "true": "true"
+#    statutes_agree:
+#      type: select
+#      required: false
+#      multiple: false
+#      label: "I agree to statutes"
+#      values:
+#        "(not set)": "(not set)"
+#        "false": "false"
+#        "true": "true"
     <<: *structure_defaults
     slug:
       type: slug

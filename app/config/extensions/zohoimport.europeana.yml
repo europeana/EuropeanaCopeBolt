@@ -1,0 +1,144 @@
+# debug mode will make this process a lot slower
+debug_mode: false
+# the path for downloads images in hookafterload
+image_path: 'zoho_images'
+# set image_downloads to true for the hookafterload images
+image_downloads: true
+
+# Make the associations with the different values and their structure tree equivalent
+# rank  - the order of importance, with 1 as highest rank
+# label - the label that is present in the source field
+# id    - the id for the target field
+# the default map will be the one that is set for all non matching records
+structure_tree_map:
+    governing:
+        rank: 1
+        label: "Founding Member"
+        id: 58
+    management:
+        rank: 2
+        label: "Network Association Management Board Member"
+        id: 57
+    council:
+        rank: 3
+        label: "Members Council Member"
+        id: 59
+    contentholders:
+        rank: 4
+        label: "Representative of Content Holder Associations"
+        id: 58
+    experts:
+        rank: 5
+        label: "Representative of Specific Fields of Expertise"
+        id: 58
+    partners:
+        rank: 6
+        label: "Member States Representative"
+        id: 58
+    observers:
+        rank: 7
+        label: "Observer"
+        id: 58
+    candidates:
+        rank: 8
+        label: "MC Election Candidate"
+        id: 62
+    members:
+        rank: 9
+        label: "Network Association Member"
+        id: 57
+    partners:
+        rank: 10
+        label: "Friend of Europeana"
+        id: 29
+    default:
+        rank: 11
+        label: "*"
+        id: 29
+
+remotes:
+    zoho_json_remote:
+        enabled: true
+        source:
+            url: https://crm.zoho.com/crm/private/json/Contacts/getRecords
+            getparams:
+                authtoken: 'e95153d23c8b0d4a5eb5c885531f2d6b'
+                scope: crmapi
+            loopparams:
+                counter: fromIndex
+                stepper: toIndex
+                start: 1       # start at this (should be 1)
+                size: 100      # number of records to fetch per iteration
+            # generate a token by going to
+            # https://accounts.zoho.com/apiauthtoken/create?SCOPE=ZohoCRM/crmapi
+            # file: examples/Contacts-Timothy.json
+            type: json
+        target:
+            contenttype: network
+            defaults:
+                new: 'published'       # may also be any valid status
+                updated: 'published'   # may also be any valid status
+                removed: 'unpublished' # may also be any valid status
+            hookafterload:
+                image:
+                    callback: downloadZohoPhotoFromURL
+                    source_url: 'https://crm.zoho.com/crm/private/xml/Contacts/downloadPhoto?authtoken=e95153d23c8b0d4a5eb5c885531f2d6b&scope=crmapi&id=CONTACTID'
+                    source_field: CONTACTID
+                    target_field: image
+                structure_parent:
+                    callback: setParentStructure
+                    source_url: false
+                    source_field: "Participation level"
+                    target_field: structure_parent
+            mapping: # mappings in XPATH
+                root: 'response.result.Contacts.row'
+                fields:
+                    # bolt_col: "ZOHO Field name"           # example: "Example value"
+                    uid: "CONTACTID"                        # example: "1482250000000152005"
+                    datecreated: "Created Time"             # example: "2015-06-04 16:37:25"
+                    datechanged: "Modified Time"            # example: "2015-06-09 14:44:58"
+
+                    first_name: "First Name"                # example: "Timothy"
+                    last_name: "Last Name"                  # example: "Test"
+
+                    email: "Public email"                   # example: "test@browsercheck.nl"
+                    phone: "Public phone"                          # example: "0703457628"
+
+                    twitter: "Twitter"                      # example: "twokings"
+                    linkedin: "LinkedIn profile"            # example: "https://linkedin.com/in/twokings"
+                    skype: "Skype ID"                       # example: "example"
+
+                    introduction: "Description"             # example: "Test record"
+
+                    company: "Account Name"                 # example: "Test"
+                    job_title: "Title"                      # example: "Tester"
+
+                    network_participation: "Participation level"
+                                                            # example: "Governing Board;Association Members Council"
+                    community: "Member of community"        # example: "Data partner;EuropeanaTech (R&D)"
+                    community_role: "Community role"        # example: "Test"
+                    europeana_tech: "Member of EuropeanaTech"
+
+                    sector: "Sector"
+                    country: "Country"
+                    boardposition: "Europeana Foundation Board position"
+
+                    # fields that can safely be ignored
+                    europeana_id: "ID"                      # default: "EL30MC"
+                    # author_uid: "SMOWNERID"                 # example: "1482250000000131003"
+                    # author_name: "Contact Owner"            # example: "Bob den Otter"
+                    # modified_uid: "MODIFIEDBY"              # example: "1482250000000131003"
+                    # modified_name: "Modified By"            # example: "Bob den Otter"
+                    # latime: "Last Activity Time"            # example: "2015-06-09 14:44:58"
+                    account_uid: "ACCOUNTID"                # example: "1482250000000152017"
+                    # statutes_read: "I have read and agree to the statutes"
+                                                            # example: "true"
+                    # statutes_agree: "I have read and agree to the statutes"
+                                                            # example: "true"
+                    # public_phone: "Phone"                   # example: "1234567890"
+                    # public_email: "Email"            # example: "test@browsercheck.nl"
+                    # secondary_email: "Secondary Email"      # example: "twest2@browsercheck.nl"
+                    # other_number: "Mobile"                  # example: "+316123456789"
+                    # community: "Interested in..."           # example: "Data partner;EuropeanaTech (R&D)
+                    public_photo: "Show photo on europeana site"
+                                                            # example: "true"

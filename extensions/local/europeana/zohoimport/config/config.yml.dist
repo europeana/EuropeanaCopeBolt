@@ -1,0 +1,118 @@
+# debug mode will make this process a lot slower
+debug_mode: false
+image_path: 'zoho_images'
+
+# Make the associations with the different values and their structure tree equivalent
+# rank  - the order of importance, with 1 as highest rank
+# label - the label that is present in the source field
+# id    - the id for the target field
+# the default map will be the one that is set for all non matching records
+# the default id will have the lowest rank
+structure_tree_map:
+    founding:
+        rank: 1
+        label: "Founding Member"
+        id: 55
+    governing:
+        rank: 2
+        label: "Governing Board"
+        id: 55
+    management:
+        rank: 3
+        label: "Association Management Board"
+        id: 56
+    council:
+        rank: 4
+        label: "Association Members Council"
+        id: 57
+    members:
+        rank: 5
+        label: "Association Network Member"
+        id: 57
+    partners:
+        rank: 6
+        label: "Partner"
+        id: 56
+    default:
+        rank: 10
+        label: "*"
+        id: 56
+
+remotes:
+    zoho:
+        enabled: false
+        source:
+            url: https://crm.zoho.com/crm/private/xml/Contacts/getRecords
+            type: xml
+            getparams:                # ad any required get-params to the config here
+                authtoken: 'insert token here'
+                scope: crmapi
+            loopparams:
+                counter: fromIndex
+                stepper: toIndex
+                start: 1       # start at this (should be 1)
+                size: 200      # number of records to tech per iteration
+            # generate a token by going to
+            # https://accounts.zoho.com/apiauthtoken/create?SCOPE=ZohoCRM/crmapi
+            
+            ## get params are not needed for file based access
+            #file: examples/Contacts-Timothy.xml
+            #type: xml
+        target:
+            contenttype: partners
+            defaults:
+                new: 'published'       # may also be any valid status
+                updated: 'published'   # may also be any valid status
+                removed: 'unpublished' # may also be any valid status
+            hookafterload:             # magic callbacks to manipulate data after loading it
+                # fetch a remote photo from ZOHO based on the CONTACTID
+                image:
+                    callback: downloadZohoPhotoFromURL 
+                    source_url: 'https://crm.zoho.com/crm/private/xml/Contacts/downloadPhoto?authtoken=insert token here&scope=crmapi&id=CONTACTID'
+                    source_field: CONTACTID
+                    target_field: image
+                # map a participation level to a structure tree parent for breadcrumbs
+                structure_parent:
+                    callback: setParentStructure
+                    source_url: false
+                    source_field: "Participation level"
+                    target_field: structure_parent
+                sector:
+                    callback: flattenArrays
+                    source_url: false
+                    source_field: sector
+                    target_field: sector
+            mapping:
+                root: 'response.result.Contacts.row'
+                                       # mapping root in "jQuery" for json type resources
+                # root: '//response/result/Contacts/row'
+                                       # mapping root in XPATH for xml type resources
+                fields:
+                    uid: 'CONTACTID'
+                    datecreated: 'Created Time'
+                    datechanged: 'Modified Time'
+                    first_name: 'First Name'
+                    last_name: 'Last Name'
+                    org_name: 'Organisation Name'
+                    sector: 'Sector'
+                    email: 'Email'
+                    network: 'Network participation level'
+    atom_feed_example:
+        enabled: false
+        source:
+            url: http://example.com/atom
+            getparams:
+                authtoken: 'a-itis-a-me-a-mario'
+                scope: test
+                test: test
+        target:
+            defaults:
+                new: 'published'       # may also be any valid status
+                updated: 'published'   # may also be any valid status
+                removed: 'unpublished' # may also be any valid status
+            mapping:
+                id: 'feed:entry:id'
+                last_modified: 'feed:entry:updated'
+                title: 'feed:entry:title'
+                body: 'feed:entry:item'
+                type: 'feed:entry:category::term'
