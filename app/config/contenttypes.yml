@@ -456,6 +456,8 @@ posts:
       type: text
     <<: *teaser_defaults
     <<: *cta_defaults
+    <<: *support_defaults
+    <<: *contact_defaults
     <<: *media_defaults
     <<: *structure_defaults
   taxonomy: [ communities, markets, categories, tags ]
