@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5010dd32cbea5c887cd2142f5fed94f2",
+    "content-hash": "595a3c111252be3677dac8ac92283d91",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -186,16 +186,16 @@
         },
         {
             "name": "bolt/sitemap",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/Sitemap.git",
-                "reference": "5867c9a0d86ea0de21e2c910b5f0fe40c1db15e1"
+                "reference": "6a9b76fd5718787451d41b99dd1d1ffa3b308530"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/Sitemap/zipball/5867c9a0d86ea0de21e2c910b5f0fe40c1db15e1",
-                "reference": "5867c9a0d86ea0de21e2c910b5f0fe40c1db15e1",
+                "url": "https://api.github.com/repos/bolt/Sitemap/zipball/6a9b76fd5718787451d41b99dd1d1ffa3b308530",
+                "reference": "6a9b76fd5718787451d41b99dd1d1ffa3b308530",
                 "shasum": ""
             },
             "require": {
@@ -234,10 +234,10 @@
                 "sitemap"
             ],
             "support": {
-                "source": "https://github.com/bolt/Sitemap/tree/master",
+                "source": "https://github.com/bolt/Sitemap/tree/2.2.0",
                 "issues": "https://github.com/bolt/Sitemap/issues"
             },
-            "time": "2017-02-26T13:59:52+00:00"
+            "time": "2017-05-11T09:32:22+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
