@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<response uri="/crm/private/xml/Leads/getRecords">
+    <result>
+        <Leads>
+            <row no="1">
+                <FL val="LEADID">1482250000000152001</FL>
+                <FL val="SMOWNERID">1482250000000131003</FL>
+                <FL val="Lead Owner">
+                    <![CDATA[Bob den Otter]]>
+                </FL>
+                <FL val="First Name">
+                    <![CDATA[Timothy]]>
+                </FL>
+                <FL val="Last Name">
+                    <![CDATA[Test]]>
+                </FL>
+                <FL val="Designation">
+                    <![CDATA[Tester]]>
+                </FL>
+                <FL val="Email">
+                    <![CDATA[test@browsercheck.nl]]>
+                </FL>
+                <FL val="Website">
+                    <![CDATA[http://www.example.com]]>
+                </FL>
+                <FL val="MODIFIEDBY">1482250000000131003</FL>
+                <FL val="Modified By">
+                    <![CDATA[Bob den Otter]]>
+                </FL>
+                <FL val="Created Time">
+                    <![CDATA[2015-06-04 16:32:15]]>
+                </FL>
+                <FL val="Modified Time">
+                    <![CDATA[2015-06-04 16:32:15]]>
+                </FL>
+                <FL val="Street">
+                    <![CDATA[Test adres 5]]>
+                </FL>
+                <FL val="City">
+                    <![CDATA[Test Plaats]]>
+                </FL>
+                <FL val="State">
+                    <![CDATA[Zuid Holland]]>
+                </FL>
+                <FL val="Zip Code">
+                    <![CDATA[1234AB]]>
+                </FL>
+                <FL val="Country">
+                    <![CDATA[Netherlands]]>
+                </FL>
+                <FL val="Description">
+                    <![CDATA[Test record to check the input & output]]>
+                </FL>
+                <FL val="Last Activity Time">
+                    <![CDATA[2015-06-04 16:32:15]]>
+                </FL>
+                <FL val="Organisation Name">
+                    <![CDATA[Test]]>
+                </FL>
+                <FL val="Sector">
+                    <![CDATA[Creative industries]]>
+                </FL>
+                <FL val="I agree with the Statutes &amp; By Laws">
+                    <![CDATA[true]]>
+                </FL>
+            </row>
+            <row no="2">
+                <FL val="LEADID">1482250000000149003</FL>
+                <FL val="SMOWNERID">1482250000000083003</FL>
+                <FL val="Lead Owner">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="First Name">
+                    <![CDATA[Aubery]]>
+                </FL>
+                <FL val="Last Name">
+                    <![CDATA[Escande]]>
+                </FL>
+                <FL val="Designation">
+                    <![CDATA[Batman]]>
+                </FL>
+                <FL val="Email">
+                    <![CDATA[aubery.escande@europeana.eu]]>
+                </FL>
+                <FL val="MODIFIEDBY">1482250000000083003</FL>
+                <FL val="Modified By">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="Created Time">
+                    <![CDATA[2015-06-02 16:39:20]]>
+                </FL>
+                <FL val="Modified Time">
+                    <![CDATA[2015-06-02 17:09:49]]>
+                </FL>
+                <FL val="Country">
+                    <![CDATA[UK]]>
+                </FL>
+                <FL val="Last Activity Time">
+                    <![CDATA[2015-06-02 17:09:49]]>
+                </FL>
+                <FL val="Organisation Name">
+                    <![CDATA[Canon]]>
+                </FL>
+                <FL val="Sector">
+                    <![CDATA[Creative industry]]>
+                </FL>
+                <FL val="I agree with the Statutes &amp; By Laws">
+                    <![CDATA[true]]>
+                </FL>
+            </row>
+            <row no="3">
+                <FL val="LEADID">1482250000000138027</FL>
+                <FL val="SMOWNERID">1482250000000083003</FL>
+                <FL val="Lead Owner">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="First Name">
+                    <![CDATA[Valentine]]>
+                </FL>
+                <FL val="Last Name">
+                    <![CDATA[Charles]]>
+                </FL>
+                <FL val="Designation">
+                    <![CDATA[Librarian]]>
+                </FL>
+                <FL val="Email">
+                    <![CDATA[dasha.m@gmail.com]]>
+                </FL>
+                <FL val="MODIFIEDBY">1482250000000083003</FL>
+                <FL val="Modified By">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="Created Time">
+                    <![CDATA[2015-05-28 12:42:44]]>
+                </FL>
+                <FL val="Modified Time">
+                    <![CDATA[2015-05-28 13:00:41]]>
+                </FL>
+                <FL val="Country">
+                    <![CDATA[Germany]]>
+                </FL>
+                <FL val="Salutation">
+                    <![CDATA[Ms.]]>
+                </FL>
+                <FL val="Last Activity Time">
+                    <![CDATA[2015-05-28 13:00:41]]>
+                </FL>
+                <FL val="Organisation Name">
+                    <![CDATA[BNF]]>
+                </FL>
+                <FL val="Sector">
+                    <![CDATA[Library]]>
+                </FL>
+                <FL val="I agree with the Statutes &amp; By Laws">
+                    <![CDATA[false]]>
+                </FL>
+            </row>
+            <row no="4">
+                <FL val="LEADID">1482250000000138013</FL>
+                <FL val="SMOWNERID">1482250000000083003</FL>
+                <FL val="Lead Owner">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="First Name">
+                    <![CDATA[Luis]]>
+                </FL>
+                <FL val="Last Name">
+                    <![CDATA[Pinto]]>
+                </FL>
+                <FL val="Designation">
+                    <![CDATA[Network leader]]>
+                </FL>
+                <FL val="Email">
+                    <![CDATA[luis.pinto@europeana.eu]]>
+                </FL>
+                <FL val="MODIFIEDBY">1482250000000083003</FL>
+                <FL val="Modified By">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="Created Time">
+                    <![CDATA[2015-05-28 12:31:55]]>
+                </FL>
+                <FL val="Modified Time">
+                    <![CDATA[2015-06-02 17:09:48]]>
+                </FL>
+                <FL val="Country">
+                    <![CDATA[Netherlands]]>
+                </FL>
+                <FL val="Salutation">
+                    <![CDATA[Mr.]]>
+                </FL>
+                <FL val="Last Activity Time">
+                    <![CDATA[2015-06-02 17:09:48]]>
+                </FL>
+                <FL val="Organisation Name">
+                    <![CDATA[Peace Palace]]>
+                </FL>
+                <FL val="Sector">
+                    <![CDATA[Other]]>
+                </FL>
+                <FL val="I agree with the Statutes &amp; By Laws">
+                    <![CDATA[true]]>
+                </FL>
+            </row>
+            <row no="5">
+                <FL val="LEADID">1482250000000138007</FL>
+                <FL val="SMOWNERID">1482250000000083003</FL>
+                <FL val="Lead Owner">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="First Name">
+                    <![CDATA[David]]>
+                </FL>
+                <FL val="Last Name">
+                    <![CDATA[Haskiya]]>
+                </FL>
+                <FL val="Designation">
+                    <![CDATA[Art director]]>
+                </FL>
+                <FL val="Email">
+                    <![CDATA[dasha.haskiya@europeana.eu]]>
+                </FL>
+                <FL val="MODIFIEDBY">1482250000000083003</FL>
+                <FL val="Modified By">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="Created Time">
+                    <![CDATA[2015-05-28 12:30:49]]>
+                </FL>
+                <FL val="Modified Time">
+                    <![CDATA[2015-05-28 12:30:57]]>
+                </FL>
+                <FL val="Country">
+                    <![CDATA[United Kingdom]]>
+                </FL>
+                <FL val="Salutation">
+                    <![CDATA[Mr.]]>
+                </FL>
+                <FL val="Last Activity Time">
+                    <![CDATA[2015-05-28 12:30:57]]>
+                </FL>
+                <FL val="Organisation Name">
+                    <![CDATA[Google]]>
+                </FL>
+                <FL val="Sector">
+                    <![CDATA[Creative industries]]>
+                </FL>
+                <FL val="I agree with the Statutes &amp; By Laws">
+                    <![CDATA[false]]>
+                </FL>
+            </row>
+        </Leads>
+    </result>
+</response>

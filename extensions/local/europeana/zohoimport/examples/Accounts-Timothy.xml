@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<response uri="/crm/private/xml/Accounts/getRecords">
+    <result>
+        <Accounts>
+            <row no="1">
+                <FL val="ACCOUNTID">1482250000000152017</FL>
+                <FL val="SMOWNERID">1482250000000131003</FL>
+                <FL val="Account Owner">
+                    <![CDATA[Bob den Otter]]>
+                </FL>
+                <FL val="Account Name">
+                    <![CDATA[Test]]>
+                </FL>
+                <FL val="MODIFIEDBY">1482250000000131003</FL>
+                <FL val="Modified By">
+                    <![CDATA[Bob den Otter]]>
+                </FL>
+                <FL val="Created Time">
+                    <![CDATA[2015-06-04 16:40:29]]>
+                </FL>
+                <FL val="Modified Time">
+                    <![CDATA[2015-06-04 16:40:29]]>
+                </FL>
+                <FL val="Last Activity Time">
+                    <![CDATA[2015-06-04 16:40:29]]>
+                </FL>
+            </row>
+            <row no="2">
+                <FL val="ACCOUNTID">1482250000000087254</FL>
+                <FL val="SMOWNERID">1482250000000083003</FL>
+                <FL val="Account Owner">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="Account Name">
+                    <![CDATA[KB]]>
+                </FL>
+                <FL val="MODIFIEDBY">1482250000000083003</FL>
+                <FL val="Modified By">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="Created Time">
+                    <![CDATA[2015-05-07 16:15:32]]>
+                </FL>
+                <FL val="Modified Time">
+                    <![CDATA[2015-05-21 18:06:08]]>
+                </FL>
+                <FL val="Last Activity Time">
+                    <![CDATA[2015-05-21 18:06:08]]>
+                </FL>
+                <FL val="Sector">
+                    <![CDATA[Library]]>
+                </FL>
+                <FL val="Country">
+                    <![CDATA[Netherlands]]>
+                </FL>
+            </row>
+            <row no="3">
+                <FL val="ACCOUNTID">1482250000000084074</FL>
+                <FL val="SMOWNERID">1482250000000083003</FL>
+                <FL val="Account Owner">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="Account Name">
+                    <![CDATA[Europeana]]>
+                </FL>
+                <FL val="Website">
+                    <![CDATA[http://pro.europeana.eu/]]>
+                </FL>
+                <FL val="MODIFIEDBY">1482250000000083003</FL>
+                <FL val="Modified By">
+                    <![CDATA[Dasha]]>
+                </FL>
+                <FL val="Created Time">
+                    <![CDATA[2015-05-07 11:23:38]]>
+                </FL>
+                <FL val="Modified Time">
+                    <![CDATA[2015-05-21 18:05:50]]>
+                </FL>
+                <FL val="Last Activity Time">
+                    <![CDATA[2015-05-21 18:05:50]]>
+                </FL>
+                <FL val="Sector">
+                    <![CDATA[Other]]>
+                </FL>
+                <FL val="Country">
+                    <![CDATA[Netherlands]]>
+                </FL>
+            </row>
+        </Accounts>
+    </result>
+</response>

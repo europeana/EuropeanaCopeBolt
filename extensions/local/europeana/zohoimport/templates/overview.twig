@@ -1,0 +1,18 @@
+{% extends '_base/_page-nav.twig' %}
+
+{% block page_title -%}
+    {{ title }}
+{%- endblock page_title %}
+
+{% block page_main %}
+
+    {% if text is not null %}
+        <div class="">
+            {{ text|raw }}
+        </div>
+    {% else %}
+        {{ dump(config) }}
+    {% endif %}
+
+    {{ dump(zohoconfig) }}
+{% endblock %}
