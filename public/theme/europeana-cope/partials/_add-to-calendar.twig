@@ -1,0 +1,22 @@
+
+{% set icslink =
+'data:text/calendar;
+charset=utf8,
+BEGIN:VCALENDAR%0A
+VERSION:2.0%0A
+BEGIN:VEVENT%0A
+URL:'~item.link()~'%0A
+DTSTART:'~item.start_event|localedatetime("%Y%m%dT%H%M%S")~'%0A
+DTEND:'~item.end_event|localedatetime("%Y%m%dT%H%M%S")~'%0A
+SUMMARY:'~item.title~'%0A
+LOCATION:'~item.geolocation.address~'%0A
+END:VEVENT%0A
+END:VCALENDAR'
+%}
+
+<a class="add-calendar" href="{{ icslink }}">
+    <svg class="icon icon-calendar">
+        <use xlink:href="#icon-calendar"></use>
+    </svg>
+    Add to calendar
+</a>

@@ -1,0 +1,22 @@
+<span class="event-days">
+
+{# Check for one day event #}
+{% if (item.start_event|localedatetime("%e %B")) == (item.end_event|localedatetime("%e %B")) %}
+    {{ item.start_event|localedatetime("%e") }}
+{% else %}
+    {{ item.start_event|localedatetime("%e") }} — {{ item.end_event|localedatetime("%e") }}
+{% endif %}
+</span>
+
+<span class="event-month">{{ item.start_event|localedatetime("%B %Y") }}<br /></span>
+
+{# check if a sensible time is given #}
+{% if (item.start_event|localedatetime("%H:%M") != '00:00') and (item.end_event|localedatetime("%H:%M") != '00:00') %}
+<span class="event-time">
+    <svg class="icon icon-clock">
+        <use xlink:href="#icon-clock"></use>
+    </svg>
+    {{ item.start_event|localedatetime("%H:%M") }} — {{ item.end_event|localedatetime("%H:%M") }}
+</span>
+
+{% endif %}

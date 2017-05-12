@@ -3,19 +3,12 @@
         <img src="{{ item.image|default('notfound')|thumbnail(600,400,'c')}}" alt="alt"/>
 
         <div class="info-block">
-            <span class="event-days">19 — 21</span>
-            <span class="event-month">october 2017<br /></span>
-            <span class="event-time">
-                <svg class="icon icon-clock">
-                    <use xlink:href="#icon-clock"></use>
-                </svg>
-                09:00 — 18:00
-            </span>
+            {% include 'partials/_event-datetime.twig' %}
             <span class="event-location">
                 <svg class="icon icon-location">
                     <use xlink:href="#icon-location"></use>
                 </svg>
-                Riga, Latvia
+                {{ item.geolocation.address }}
             </span>
         </div>
     </div>
@@ -33,12 +26,7 @@
     {% endif %}
 
     <div class="actions-footer">
-        <a class="add-calendar" href="#">
-            <svg class="icon icon-calendar">
-                <use xlink:href="#icon-calendar"></use>
-            </svg>
-            Add to calendar
-        </a>
+        {% include 'partials/_add-to-calendar.twig' %}
 
         <a class="button-link" href="{{ item.link() }}">
             Call to action
