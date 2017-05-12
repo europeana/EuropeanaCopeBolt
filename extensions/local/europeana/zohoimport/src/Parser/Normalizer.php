@@ -3,7 +3,7 @@
 namespace Bolt\Extension\Europeana\ZohoImport\Parser;
 
 use Bolt\Extension\Europeana\ZohoImport\ZohoImport;
-use SimpleXMLElement;;
+use SimpleXMLElement;
 use mjohnson\utility\TypeConverter as TypeConverter;
 
 class Normalizer

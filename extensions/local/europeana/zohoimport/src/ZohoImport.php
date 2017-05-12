@@ -2,10 +2,9 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport;
 
+use Bolt\Extension\Europeana\ZohoImport\Parser\FileFetcher;
 use Bolt\Extension\Europeana\ZohoImport\Parser\Normalizer;
-use SimpleXMLElement;
-use mjohnson\utility\TypeConverter as TypeConverter;
-use Symfony\Component\HttpFoundation\File\File as File;
+
 
 class ZohoImport
 {
@@ -131,7 +130,7 @@ class ZohoImport
             . ' - to: ' . $localconfig['source']['getparams'][$stepper];
           $this->logger('debug', $logmessage, 'zohoimport');
 
-          $this->fetchAnyResource($name, $localconfig);
+          $this->fileFetcher($name, $localconfig);
 
           $normalizer = new Normalizer($name, $this->filedata, $localconfig);
           $this->resourcedata = $normalizer->normalizeInput($name);
@@ -202,7 +201,7 @@ class ZohoImport
             dump($localconfig);
           }
 
-          $this->fetchAnyResource($name, $localconfig);
+          $this->fileFetcher($name, $localconfig);
 
           $normalizer = new Normalizer($name, $this->filedata, $localconfig);
           $this->resourcedata = $normalizer->normalizeInput($name);
@@ -224,7 +223,8 @@ class ZohoImport
           // dump($config);
         }
         // the import has no paging so lets import everything at once
-        $this->fetchAnyResource($name, $config);
+
+        $this->fileFetcher($name, $config);
 
         $normalizer = new Normalizer($name, $this->filedata, $config);
         $this->resourcedata = $normalizer->normalizeInput($name);
@@ -464,91 +464,6 @@ class ZohoImport
   }
 
 
-
-  /**
-   * Check if the resource is a local file or a remote file and fetch it
-   */
-  private function fetchAnyResource($name, $enabled)
-  {
-    if($enabled['on_console']) {
-      $on_console = $enabled['on_console'];
-    } else {
-      $on_console = false;
-    }
-
-    if(array_key_exists('file', $enabled['source'])) {
-      $source = __DIR__."/".$enabled['source']['file'];
-      if(file_exists($source)) {
-        $this->fetchLocalResource($name, $source);
-      }
-    } else {
-      $source = $enabled['source']['url'];
-
-      if(array_key_exists('getparams', $enabled['source']) && !empty($enabled['source']['getparams'])) {
-        $gkeys = [];
-        foreach((array) $enabled['source']['getparams'] as $gkey => $gvalue) {
-          $gkeys[] = $gkey ."=" . urlencode($gvalue);
-        }
-        $source .= "?" . join('&', $gkeys);
-      }
-
-      if($on_console) {
-        echo 'fetching: ' . $name . ' - ' . $source . "\n";
-      }
-
-      $this->fetchRemoteResource($name, $source);
-    }
-  }
-
-  /**
-   * Fetch a local file resource
-   */
-  private function fetchLocalResource($name, $url) {
-    try {
-      $data = file_get_contents($url);
-      $this->filedata[$name] = $data;
-    } catch (RequestException $e) {
-      $logmessage = 'Error occurred during fetch: ' . $e->getMessage();
-      $this->logger('error', $logmessage, 'zohoimport');
-    }
-  }
-
-  /**
-   * Fetch a remote url resource
-   */
-  private function fetchRemoteResource($name, $url) {
-    $curlOptions = array('CURLOPT_CONNECTTIMEOUT' => 5);
-    // Set cURL proxy options if there's a proxy
-    if ($this->app['config']->get('general/httpProxy')) {
-      $curlOptions['CURLOPT_PROXY'] = $this->app['config']->get('general/httpProxy/host');
-      $curlOptions['CURLOPT_PROXYTYPE'] = 'CURLPROXY_HTTP';
-      $curlOptions['CURLOPT_PROXYUSERPWD'] = $this->app['config']->get('general/httpProxy/user') . ':' . $this->app['config']->get('general/httpProxy/password');
-    }
-
-    try {
-      if (!isset($this->app['deprecated.php']) || $this->app['deprecated.php']) {
-        $data = $this->app['guzzle.client']->get($url, null, $curlOptions)->send()->getBody(true);
-      } else {
-        $data = $this->app['guzzle.client']->get($url, array(), $curlOptions)->getBody(true);
-      }
-
-      $this->countRemoteRequest('image'); // count remote requests to determine if we hit a limit yet
-
-      $this->filedata[$name] = $data;
-    } catch (RequestException $e) {
-      $logmessage = 'Error occurred during fetch: ' . $e->getMessage();
-      $this->logger('error', $logmessage, 'zohoimport');
-      // make sure we can use this key later
-      $this->filedata[$name] = false;
-    }
-  }
-
-  /**
-   * increment remote request counter
-   */
-  public function countRemoteRequest($name = 'unknown') {
-    $this->remote_request_counter++;
-  }
 
   /**
    * HOOKAFTERLOAD:
@@ -880,6 +795,23 @@ class ZohoImport
     }
 
     return $this->enabledsources;
+  }
+
+  /**
+   * Magically fetch a remote resource
+   *
+   * @param $name
+   * @param $localconfig
+   */
+  private function fileFetcher($name, $localconfig) {
+    $filefetcher = new FileFetcher($this->app);
+    $this->filedata = $filefetcher->fetchAnyResource($name, $localconfig);
+
+    if($errormessage = $filefetcher->errors()) {
+      $this->logger('error', $errormessage, 'zohoimport');
+    }
+
+    $this->remote_request_counter += $filefetcher->remoteRequestCount();
   }
 
   /**
