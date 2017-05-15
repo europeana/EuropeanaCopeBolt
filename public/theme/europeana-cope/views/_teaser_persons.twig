@@ -1,0 +1,107 @@
+ {# {{ dump(item) }} #}
+ <article class="teaser teaser-persons group">
+    <div class="img-container">
+        <img src="{{ item.image|default('notfound')|thumbnail(172,172,'c')}}" alt="Portrait of {{ item.first_name }} {{ item.last_name }}"/>
+
+        <h3><a href="{{ item.link() }}">{{ item.first_name }} {{ item.last_name }}</a></h3>
+
+        <div class="socials">
+            {% if item.twitter is not empty %}
+            <a href="{{ item.twitter }}" class="tw">
+                <svg class="icon icon-twitter">
+                    <use xlink:href="#icon-twitter"></use>
+                </svg><span class="sr-only">{{ item.twitter }}</span>
+            </a>
+            {% endif %}
+            {% if item.linkedin is not empty %}
+            <a href="{{ item.linkedin }}" class="li">
+                <svg class="icon icon-linkedin">
+                    <use xlink:href="#icon-linkedin"></use>
+                </svg><span class="sr-only">{{ item.linkedin }}</span>
+            </a>
+            {% endif %}
+        </div>
+
+    </div>
+    <div class="txt-container">
+        <p class="function">
+            {% if item.job_title %}
+                {{ item.job_title }},
+            {% endif %}
+            {{ item.company }}</p>
+
+        {% if item.introduction %}
+            {{ item.introduction }}
+        {% else %}
+            <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+        {% endif %}
+
+        <div class="contact">
+             {% if item.twitter is not empty %}
+            <a href="{{ item.twitter }}" class="tw">
+                <svg class="icon icon-twitter">
+                    <use xlink:href="#icon-twitter"></use>
+                </svg><span class="sr-only">{{ item.twitter }}</span>
+            </a>
+            {% endif %}
+            {% if item.linkedin is not empty %}
+            <a href="{{ item.linkedin }}" class="li">
+                <svg class="icon icon-linkedin">
+                    <use xlink:href="#icon-linkedin"></use>
+                </svg><span class="sr-only">{{ item.linkedin }}</span>
+            </a>
+            {% endif %}
+
+            {% if item.email is not empty %}
+            <a href="mailto:{{ item.email }}" class="email">{{ item.email }}</a>
+            {% endif %}
+
+            {% if item.phone is not empty %}
+            <a href="tel:{{ item.phone }}" class="phone">{{ item.phone }}</a>
+            {% endif %}
+        </div>
+    </div>
+</article>
+
+
+
+  {#   <div class="img-container">
+        <img src="{{ item.teaser_image|default('notfound')|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+
+        <div class="info-block">
+            <span class="info-type">Blog</span>
+            <span class="info-date">Created: {{ item.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+
+            {% for aut in item.author %}
+                {% setcontent author = 'persons' where { id : aut } returnsingle %}
+                <span class="info-author">
+                    {{ author.first_name }} {{ author.last_name }}
+                </span>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <h2><a href="{{ item.link() }}">{{ item.title }}</a></h2>
+
+    {% include 'partials/_tags.twig' %}
+
+
+    {% if item.teaser %}
+    {{ item.teaser }}
+    {% elseif item.intro %}
+        {{ item.intro }}
+    {% else %}
+        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+    {% endif %}
+
+    <div class="actions-footer">
+        {% include 'partials/_readtime.twig' %}
+        <a class="button-link" href="{{ item.link() }}" >
+            Read more
+        </a>
+
+    </div>
+
+</article> #}

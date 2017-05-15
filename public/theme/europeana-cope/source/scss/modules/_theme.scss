@@ -753,7 +753,8 @@ section.catstream {
     }
 }
 
-.info-list {
+.info-list,
+.teaser-persons {
     margin: 3rem 0;
 
     li {
@@ -1396,6 +1397,19 @@ section.catstream {
 
 }
 
+.teaser-persons {
+    .img-container {
+        float: left;
+        margin: 0 1rem 1rem 0;
+        width: 95px;
+
+        @include respond-to(large-screens) {
+            margin: 0 2rem 1rem 0;
+            width: 175px;
+        }
+    }
+}
+
 
 .link-list {
     margin: 2rem 0;
@@ -1410,4 +1424,6 @@ section.catstream {
         }
     }
 }
+
+
 

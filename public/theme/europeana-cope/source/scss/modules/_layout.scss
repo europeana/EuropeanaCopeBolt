@@ -231,7 +231,8 @@ footer {
         margin-left: 0;
     }
 
-    .info-list {
+    .info-list,
+    .teaser-persons {
         padding: 0 ;
 
         @include respond-to(large-screens) {

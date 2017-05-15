@@ -667,13 +667,16 @@ footer {
 .contentpage .body blockquote {
   margin-left: 0; }
 
-.contentpage .info-list {
+.contentpage .info-list,
+.contentpage .teaser-persons {
   padding: 0; }
   @media only screen and (min-width: 47.9375em) {
-    .contentpage .info-list {
+    .contentpage .info-list,
+    .contentpage .teaser-persons {
       padding: 0 2rem; } }
   @media only screen and (min-width: 80em) {
-    .contentpage .info-list {
+    .contentpage .info-list,
+    .contentpage .teaser-persons {
       padding: 0 6rem; } }
 
 ul.search-results,
@@ -914,13 +917,16 @@ h3, .gamma {
         font-size: 1.25rem; } }
   .calltoaction h3, .calltoaction .gamma {
     margin-bottom: .5rem; }
-  .speaker-list h3, .speaker-list .gamma {
-    color: #095f90;
+  .speaker-list h3,
+  .teaser-persons h3, .speaker-list .gamma,
+  .teaser-persons .gamma {
     font-size: 1rem;
     text-align: center;
     padding-top: 1em; }
     @media only screen and (min-width: 47.9375em) {
-      .speaker-list h3, .speaker-list .gamma {
+      .speaker-list h3,
+      .teaser-persons h3, .speaker-list .gamma,
+      .teaser-persons .gamma {
         font-size: 1.25rem; } }
   .location-list h3, .location-list .gamma {
     font-size: 1.125rem;
@@ -1850,56 +1856,77 @@ section.catstream {
     color: #4d4d4d;
     font-weight: 400; }
 
-.info-list {
+.info-list,
+.teaser-persons {
   margin: 3rem 0; }
-  .info-list li {
+  .info-list li,
+  .teaser-persons li {
     padding-bottom: 1.5rem; }
     @media only screen and (min-width: 47.9375em) {
-      .info-list li {
+      .info-list li,
+      .teaser-persons li {
         padding: 0 2rem 1.5rem 2rem; } }
-  .info-list .info-block {
+  .info-list .info-block,
+  .teaser-persons .info-block {
     padding: 0.8rem 0; }
-  .info-list .img-container {
+  .info-list .img-container,
+  .teaser-persons .img-container {
     float: left;
     margin: 0 1rem 1rem 0;
     width: 95px; }
     @media only screen and (min-width: 47.9375em) {
-      .info-list .img-container {
+      .info-list .img-container,
+      .teaser-persons .img-container {
         margin: 0 2rem 1rem 0;
         width: 175px; } }
-  .info-list img {
+  .info-list img,
+  .teaser-persons img {
     width: 95px;
     height: 95px; }
     @media only screen and (min-width: 47.9375em) {
-      .info-list img {
+      .info-list img,
+      .teaser-persons img {
         width: 175px;
         height: 175px; } }
-  .info-list .txt-container {
+  .info-list .txt-container,
+  .teaser-persons .txt-container {
     padding: 0 0rem 0 112px; }
     @media only screen and (min-width: 47.9375em) {
-      .info-list .txt-container {
+      .info-list .txt-container,
+      .teaser-persons .txt-container {
         padding: 0 0rem 0 236px; } }
-  .info-list p.function {
+  .info-list p.function,
+  .teaser-persons p.function {
     margin-top: 0; }
-  .info-list .contact a {
+  .info-list .contact a,
+  .teaser-persons .contact a {
     margin-right: .5rem; }
-    .info-list .contact a.li, .info-list .contact a.tw {
+    .info-list .contact a.li, .info-list .contact a.tw,
+    .teaser-persons .contact a.li,
+    .teaser-persons .contact a.tw {
       display: none; }
       @media only screen and (min-width: 47.9375em) {
-        .info-list .contact a.li, .info-list .contact a.tw {
+        .info-list .contact a.li, .info-list .contact a.tw,
+        .teaser-persons .contact a.li,
+        .teaser-persons .contact a.tw {
           display: inline-block; } }
-  .info-list .button {
+  .info-list .button,
+  .teaser-persons .button {
     margin: 1rem 0; }
-  .info-list .socials {
+  .info-list .socials,
+  .teaser-persons .socials {
     text-align: center; }
     @media only screen and (min-width: 47.9375em) {
-      .info-list .socials {
+      .info-list .socials,
+      .teaser-persons .socials {
         display: none; } }
-    .info-list .socials svg {
+    .info-list .socials svg,
+    .teaser-persons .socials svg {
       width: 2rem;
       height: 2rem;
       margin-right: 0.5rem; }
-    .info-list .socials svg:last-child {
+    .info-list .socials svg:last-child,
+    .teaser-persons .socials svg:last-child {
       margin-right: 0; }
 
 .location-list svg {
@@ -2275,6 +2302,15 @@ section.catstream {
     .teaser .actions-footer .cta-link {
       margin-top: 0;
       float: right; }
+
+.teaser-persons .img-container {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  width: 95px; }
+  @media only screen and (min-width: 47.9375em) {
+    .teaser-persons .img-container {
+      margin: 0 2rem 1rem 0;
+      width: 175px; } }
 
 .link-list {
   margin: 2rem 0; }
