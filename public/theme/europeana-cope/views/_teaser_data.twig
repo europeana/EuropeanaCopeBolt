@@ -1,7 +1,7 @@
 
 <article class="teaser teaser-dataset group">
         <div class="img-container">
-        <img src="{{ item.image|default('notfound')|thumbnail(600,400,'c')}}" alt="alt"/>
+        <img src="{{ item.teaser_image|default('notfound')|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
 
         <div class="info-block">
             <span class="info-type">Dataset</span>

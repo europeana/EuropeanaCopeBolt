@@ -30,9 +30,9 @@
     <li class="disabled"><a>…</a></li>
 {% endif %}
 
-{% for i in max(1, pager.current-surr)..min(pager.current+surr, pager.totalpages) %}
-    <li {% if i==pager.current %}class='active'{%endif%}><a href="{{link}}{{i}}" {% if i != 1 %}rel="noindex, follow"{% endif %}>{{i}}</a></li>
-{% endfor %}
+{% for i in max(1, pager.current-surr)..min(pager.current+surr, pager.totalpages) -%}
+    <li {% if i==pager.current %}class='current'{%endif%}><a href="{{link}}{{i}}" {% if i != 1 %}rel="noindex, follow"{% endif %}>{{i}}</a></li>
+{%- endfor %}
 
 {# end with '..' if there are more than surr+1 after currentpage.. #}
 {% if pager.current < (pager.totalpages - surr - 1) %}
