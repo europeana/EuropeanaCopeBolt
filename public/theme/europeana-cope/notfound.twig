@@ -1,21 +1,34 @@
 {% extends 'partials/_master.twig' %}
 
+{% block bodyclass 'contentpage' %}
+
 {% setcontent record = 'blocks/404-not-found' %}
 
 {% block title %}
     {{ record.title|default('404 not found') }}
 {% endblock title %}
 
+
 {% block main %}
 
-    <h1>{{ record.title|default('404 not found') }}</h1>
+<section>
+    <div class="inner-wrap">
 
-    {% if fields(record) %}
-        {{ fields(record) }}
-    {% else %}
-        <p>
-        {{ __("Unfortunately, this page is not available. Try another page, or go to the <a href=\"%paths_root%\">homepage</a>.", {'%paths_root%': path('homepage')} ) }}
-        </p>
-    {% endif %}
+        <article class="column main-column">
+            <h1>{{ record.title|default('404 not found') }}</h1>
+
+            {% if fields(record) %}
+                {{ fields(record) }}
+            {% else %}
+                <p>
+                {{ __("Unfortunately, this page is not available. Try another page, or go to the <a href=\"%paths_root%\">homepage</a>.", {'%paths_root%': path('homepage')} ) }}
+                </p>
+            {% endif %}
+
+         </article>
+    </div>
+</section>
+
 
 {% endblock main %}
+

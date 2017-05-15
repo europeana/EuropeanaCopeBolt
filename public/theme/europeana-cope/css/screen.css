@@ -1986,10 +1986,13 @@ section.catstream {
     display: block;
     border-top: 1px solid #e7e7e7;
     padding: 0.6em 0 0;
-    font-size: 0.75rem; }
+    font-size: 0.75rem;
+    line-height: 1.4;
+    max-width: 150px; }
     @media only screen and (min-width: 47.9375em) {
       .info-block .event-location {
-        font-size: 1rem; } }
+        font-size: 1rem;
+        max-width: 200px; } }
   .info-block .info-type {
     display: block;
     font-size: 1.25rem;
