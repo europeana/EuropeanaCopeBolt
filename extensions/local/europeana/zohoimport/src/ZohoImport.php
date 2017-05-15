@@ -541,7 +541,7 @@ class ZohoImport
     }
 
     // only fetch photos from contacts that need it
-    if($source_record["Show photo on europeana site"] == 'true' ) {
+    if(array_key_exists("Show photo on europeana site", $source_record) && $source_record["Show photo on europeana site"] == 'true' ) {
       $logmessage = 'we should check for a public photo at:' . $params['source_url'];
       $this->logger('debug', $logmessage, 'zohoimport');
       if($on_console) {
@@ -552,7 +552,8 @@ class ZohoImport
         // dump($source_record);
         // die();
       }
-    } elseif($source_record['public_photo'] == true || $source_record['public_photo'] == 'true') {
+    } elseif(array_key_exists('public_photo', $source_record)
+      && ($source_record['public_photo'] == true || $source_record['public_photo'] == 'true')) {
       $logmessage = 'we should check for a public photo at:' . $params['source_url'];
       $this->logger('debug', $logmessage, 'zohoimport');
       if($on_console) {
