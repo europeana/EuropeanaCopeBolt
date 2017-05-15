@@ -40,8 +40,9 @@
                     {# If we specified an order in config.yml, sort them here, accordingly: #}
                     {% set records = records|order(app.config.get('general/listing_sort')) %}
                 {% endif %}
-            {% elseif contenttype.name is defined %}
-                <h1>{{ contenttype.name }}</h1> {# werkt niet - AW #}
+            {% elseif records|first.contenttype is defined %}
+                {# this assumes the first record has the same contenttype as all the others #}
+                <h1>{{ records|first.contenttype.name|default('List') }}</h1>
             {% endif %}
 
             <ul class="teaser-list">
