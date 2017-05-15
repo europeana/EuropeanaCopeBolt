@@ -386,7 +386,7 @@ class ZohoImport
         }
       }
 
-      dump($items, $record);
+      //dump('items and record:', $items, $record);
       // Store the data array into the record
       $record->setValues($items);
 
