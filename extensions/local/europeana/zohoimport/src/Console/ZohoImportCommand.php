@@ -60,7 +60,7 @@ class ZohoImportCommand extends BaseCommand
       //$on_console = true;
       //$text .= $this->app['extensions.ZohoImport']->importJob($on_console);
 
-      $text .= "\n" . $this->app['zohoimport']->importJob();
+      $text .= "\n" . $this->app['zohoimport']->importJob(true, $output);
     } else if ($type == 'update') {
       // do stuff
     } else if ($type == 'imageonly') {

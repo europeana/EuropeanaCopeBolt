@@ -42,10 +42,6 @@ class FileFetcher
         $source .= "?" . join('&', $gkeys);
       }
 
-      if($on_console) {
-        echo 'fetching: ' . $name . ' - ' . $source . "\n";
-      }
-
       $this->fetchRemoteResource($name, $source);
     }
     return $this->filedata;
