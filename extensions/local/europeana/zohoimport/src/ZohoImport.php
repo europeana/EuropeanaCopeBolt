@@ -672,6 +672,7 @@ class ZohoImport
       // really fetch the file
       $filefetcher = new FileFetcher($this->app);
       $this->filedata = $filefetcher->fetchRemoteResource($params['name'], $params['source_url']);
+      $this->remote_request_counter += $filefetcher->remoteRequestCount('image');
 
       // no file
       if(empty($this->filedata[$params['name']])) {
@@ -824,6 +825,7 @@ class ZohoImport
    */
   public function zohoImportOverview()
   {
+
     return 'ZOHO Import overview: not implemented yet.';
   }
 
