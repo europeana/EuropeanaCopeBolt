@@ -2,10 +2,9 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport;
 
+use Bolt\Extension\Europeana\ZohoImport\Parser\FileFetcher;
 use Bolt\Extension\Europeana\ZohoImport\Parser\Normalizer;
-use SimpleXMLElement;
-use mjohnson\utility\TypeConverter as TypeConverter;
-use Symfony\Component\HttpFoundation\File\File as File;
+use Symfony\Component\HttpFoundation\File\File;
 
 class ZohoImport
 {
@@ -27,45 +26,6 @@ class ZohoImport
     $this->remote_request_counter = 0;
     $this->structure_tree_map = $this->orderStructureTreeMap();
   }
-
-  /**
-   * Overview page
-   */
-  public function zohoImportOverview()
-  {
-    return 'ZOHO Import overview: not implemented yet.';
-  }
-
-  public function logger($type, $message, $event = 'zoho', $context = null) {
-    switch($type) {
-      case 'error':
-        $this->app['logger.system']->error($message, [
-          'event' => $event,
-          'context' => $context
-        ]);
-        break;
-      case 'warning':
-        $this->app['logger.system']->warning($message, [
-          'event' => $event,
-          'context' => $context
-        ]);
-        break;
-      case 'debug':
-        $this->app['logger.system']->debug($message, [
-          'event' => $event,
-          'context' => $context
-        ]);
-        break;
-      case 'info':
-      default:
-        $this->app['logger.system']->info($message, [
-          'event' => $event,
-          'context' => $context
-        ]);
-        break;
-    }
-  }
-
 
   /**
    * Run the importer (with debug stuff for development)
@@ -90,10 +50,10 @@ class ZohoImport
         dump('processing ' . $name);
         // dump($config);
       }
+
       if($this->config['image_downloads'] !== true) {
         $output .= "importing extra images is disabled<br>\n";
       }
-
 
       $logmessage = $name
         . ' started import - batch:'. $batchdate . ' - '
@@ -102,7 +62,7 @@ class ZohoImport
 
       if(is_array($config['source']['loopparams'])) {
         // the import has paging so lets use that
-        $this->endcondition=false;
+        $this->endcondition = false;
         $localconfig = $config;
 
         $counter = $config['source']['loopparams']['counter'];
@@ -114,24 +74,20 @@ class ZohoImport
         $looper = 1; // just a counter to see how far we are
         $numrecords = 0;
 
-        if($on_console) {
-          $localconfig['on_console'] = $on_console;
-        } else {
-          $localconfig['on_console'] = false;
+        $localconfig['on_console'] = $on_console;
+
+        if($this->debug_mode) {
+          dump($localconfig);
         }
 
-        while($this->endcondition==false) {
-
-          if($this->debug_mode) {
-            dump($localconfig);
-          }
+        while($this->endcondition == false) {
 
           $logmessage = $name . ' step ' . $looper
             . ' from:' . $localconfig['source']['getparams'][$counter]
             . ' - to: ' . $localconfig['source']['getparams'][$stepper];
           $this->logger('debug', $logmessage, 'zohoimport');
 
-          $this->fetchAnyResource($name, $localconfig);
+          $this->fileFetcher($name, $localconfig);
 
           $normalizer = new Normalizer($name, $this->filedata, $localconfig);
           $this->resourcedata = $normalizer->normalizeInput($name);
@@ -202,7 +158,7 @@ class ZohoImport
             dump($localconfig);
           }
 
-          $this->fetchAnyResource($name, $localconfig);
+          $this->fileFetcher($name, $localconfig);
 
           $normalizer = new Normalizer($name, $this->filedata, $localconfig);
           $this->resourcedata = $normalizer->normalizeInput($name);
@@ -224,7 +180,8 @@ class ZohoImport
           // dump($config);
         }
         // the import has no paging so lets import everything at once
-        $this->fetchAnyResource($name, $config);
+
+        $this->fileFetcher($name, $config);
 
         $normalizer = new Normalizer($name, $this->filedata, $config);
         $this->resourcedata = $normalizer->normalizeInput($name);
@@ -281,8 +238,13 @@ class ZohoImport
     }
     $record = false;
 
+    //dump($name, $config, $inputrecords);
+    dump($name, $config);
+
     foreach ($inputrecords as $inputrecord) {
       $uid = $config['target']['mapping']['fields']['uid'];
+
+      dump($uid . " : " . $inputrecord[$uid]);
 
       // clear previous record
       if($record && $record->values) {
@@ -362,7 +324,8 @@ class ZohoImport
 
           if(!array_key_exists($key, $items) || empty($items[$key])) {
             // it is a new value for the $items
-            $tempvalue = $this->$hookparams['callback']($inputrecord, $record, $hookparams);
+            $callbackname = $hookparams['callback'];
+            $tempvalue = $this->$callbackname($inputrecord, $record, $hookparams);
             // set the new value only if there is a result for the callback
             if(0 && $this->debug_mode) {
               dump('tempvalue ' . $key . ': '. $tempvalue);
@@ -395,6 +358,10 @@ class ZohoImport
       }
       $sanitize = true;
       if($sanitize) {
+        $items['structure_sortorder'] = 0;
+        $items['hide_list'] = 0;
+        $items['hide_related'] = 0;
+        $items['support_navigation'] = 0;
         // clean up some variables for inserting
         if(!empty($items['first_name']) || !empty($items['last_name'])) {
           $items['slug'] = $this->app['slugify']->slugify($items['first_name'] ." ". $items['last_name']);
@@ -419,6 +386,7 @@ class ZohoImport
         }
       }
 
+      //dump('items and record:', $items, $record);
       // Store the data array into the record
       $record->setValues($items);
 
@@ -464,91 +432,6 @@ class ZohoImport
   }
 
 
-
-  /**
-   * Check if the resource is a local file or a remote file and fetch it
-   */
-  private function fetchAnyResource($name, $enabled)
-  {
-    if($enabled['on_console']) {
-      $on_console = $enabled['on_console'];
-    } else {
-      $on_console = false;
-    }
-
-    if(array_key_exists('file', $enabled['source'])) {
-      $source = __DIR__."/".$enabled['source']['file'];
-      if(file_exists($source)) {
-        $this->fetchLocalResource($name, $source);
-      }
-    } else {
-      $source = $enabled['source']['url'];
-
-      if(array_key_exists('getparams', $enabled['source']) && !empty($enabled['source']['getparams'])) {
-        $gkeys = [];
-        foreach((array) $enabled['source']['getparams'] as $gkey => $gvalue) {
-          $gkeys[] = $gkey ."=" . urlencode($gvalue);
-        }
-        $source .= "?" . join('&', $gkeys);
-      }
-
-      if($on_console) {
-        echo 'fetching: ' . $name . ' - ' . $source . "\n";
-      }
-
-      $this->fetchRemoteResource($name, $source);
-    }
-  }
-
-  /**
-   * Fetch a local file resource
-   */
-  private function fetchLocalResource($name, $url) {
-    try {
-      $data = file_get_contents($url);
-      $this->filedata[$name] = $data;
-    } catch (RequestException $e) {
-      $logmessage = 'Error occurred during fetch: ' . $e->getMessage();
-      $this->logger('error', $logmessage, 'zohoimport');
-    }
-  }
-
-  /**
-   * Fetch a remote url resource
-   */
-  private function fetchRemoteResource($name, $url) {
-    $curlOptions = array('CURLOPT_CONNECTTIMEOUT' => 5);
-    // Set cURL proxy options if there's a proxy
-    if ($this->app['config']->get('general/httpProxy')) {
-      $curlOptions['CURLOPT_PROXY'] = $this->app['config']->get('general/httpProxy/host');
-      $curlOptions['CURLOPT_PROXYTYPE'] = 'CURLPROXY_HTTP';
-      $curlOptions['CURLOPT_PROXYUSERPWD'] = $this->app['config']->get('general/httpProxy/user') . ':' . $this->app['config']->get('general/httpProxy/password');
-    }
-
-    try {
-      if (!isset($this->app['deprecated.php']) || $this->app['deprecated.php']) {
-        $data = $this->app['guzzle.client']->get($url, null, $curlOptions)->send()->getBody(true);
-      } else {
-        $data = $this->app['guzzle.client']->get($url, array(), $curlOptions)->getBody(true);
-      }
-
-      $this->countRemoteRequest('image'); // count remote requests to determine if we hit a limit yet
-
-      $this->filedata[$name] = $data;
-    } catch (RequestException $e) {
-      $logmessage = 'Error occurred during fetch: ' . $e->getMessage();
-      $this->logger('error', $logmessage, 'zohoimport');
-      // make sure we can use this key later
-      $this->filedata[$name] = false;
-    }
-  }
-
-  /**
-   * increment remote request counter
-   */
-  public function countRemoteRequest($name = 'unknown') {
-    $this->remote_request_counter++;
-  }
 
   /**
    * HOOKAFTERLOAD:
@@ -615,9 +498,14 @@ class ZohoImport
       // highest ranks are first in zoho
       // so return the value for the first matched rank
       foreach($labels as $label) {
-        $rank = $this->structure_tree_map['ranks'][$label];
-        $id = $this->structure_tree_map['ids'][$label];
-        return $id;
+        if(array_key_exists($label,  $this->structure_tree_map['ranks'])) {
+          $rank = $this->structure_tree_map['ranks'][$label];
+          $id = $this->structure_tree_map['ids'][$label];
+          return $id;
+        } else {
+          $message = "unknown rank $label";
+          $this->logger('warning', $message);
+        }
         // and override previously set label if the rank is higer (number is lower)
         // if($rank < $lastrank) {
         //   $rank = $lastrank;
@@ -636,7 +524,7 @@ class ZohoImport
   public function downloadZohoPhotoFromURL($source_record, $target_record, $params)
   {
 
-    if($params['on_console']) {
+    if(array_key_exists('on_console', $params) && $params['on_console']) {
       $on_console = $params['on_console'];
     } else {
       $on_console = false;
@@ -653,7 +541,7 @@ class ZohoImport
     }
 
     // only fetch photos from contacts that need it
-    if($source_record["Show photo on europeana site"] == 'true' ) {
+    if(array_key_exists("Show photo on europeana site", $source_record) && $source_record["Show photo on europeana site"] == 'true' ) {
       $logmessage = 'we should check for a public photo at:' . $params['source_url'];
       $this->logger('debug', $logmessage, 'zohoimport');
       if($on_console) {
@@ -664,7 +552,8 @@ class ZohoImport
         // dump($source_record);
         // die();
       }
-    } elseif($source_record['public_photo'] == true || $source_record['public_photo'] == 'true') {
+    } elseif(array_key_exists('public_photo', $source_record)
+      && ($source_record['public_photo'] == true || $source_record['public_photo'] == 'true')) {
       $logmessage = 'we should check for a public photo at:' . $params['source_url'];
       $this->logger('debug', $logmessage, 'zohoimport');
       if($on_console) {
@@ -781,7 +670,8 @@ class ZohoImport
       }
 
       // really fetch the file
-      $this->fetchRemoteResource($params['name'], $params['source_url']);
+      $filefetcher = new FileFetcher($this->app);
+      $this->filedata = $filefetcher->fetchRemoteResource($params['name'], $params['source_url']);
 
       // no file
       if(empty($this->filedata[$params['name']])) {
@@ -883,6 +773,23 @@ class ZohoImport
   }
 
   /**
+   * Magically fetch a remote resource
+   *
+   * @param $name
+   * @param $localconfig
+   */
+  private function fileFetcher($name, $localconfig) {
+    $filefetcher = new FileFetcher($this->app);
+    $this->filedata = $filefetcher->fetchAnyResource($name, $localconfig);
+
+    if($errormessage = $filefetcher->errors()) {
+      $this->logger('error', $errormessage, 'zohoimport');
+    }
+
+    $this->remote_request_counter += $filefetcher->remoteRequestCount();
+  }
+
+  /**
    * Utility function for setParentStructure
    * Orders and prepares the configuration value for speedy processing
    */
@@ -909,6 +816,53 @@ class ZohoImport
 
     //dump($ranklabels);
     return $ranklabels;
+  }
+
+
+  /**
+   * Overview page
+   */
+  public function zohoImportOverview()
+  {
+    return 'ZOHO Import overview: not implemented yet.';
+  }
+
+  /**
+   * Add messages to the bolt log
+   *
+   * @param        $type
+   * @param        $message
+   * @param string $event
+   * @param null   $context
+   */
+  public function logger($type, $message, $event = 'zoho', $context = null) {
+    switch($type) {
+      case 'error':
+        $this->app['logger.system']->error($message, [
+          'event' => $event,
+          'context' => $context
+        ]);
+        break;
+      case 'warning':
+        $this->app['logger.system']->warning($message, [
+          'event' => $event,
+          'context' => $context
+        ]);
+        break;
+      case 'debug':
+        $this->app['logger.system']->debug($message, [
+          'event' => $event,
+          'context' => $context
+        ]);
+        break;
+      case 'info':
+      default:
+        $this->app['logger.system']->info($message, [
+          'event' => $event,
+          'context' => $context
+        ]);
+        break;
+    }
   }
 
 }

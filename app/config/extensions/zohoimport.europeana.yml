@@ -74,7 +74,7 @@ remotes:
             # file: examples/Contacts-Timothy.json
             type: json
         target:
-            contenttype: network
+            contenttype: persons
             defaults:
                 new: 'published'       # may also be any valid status
                 updated: 'published'   # may also be any valid status
