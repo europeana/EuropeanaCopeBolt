@@ -223,9 +223,13 @@ pages:
       group: Modules
       fields:
         enabled:
-          type: checkbox
-          label: Enabled
-          postfix: If this field is unchecked the module will not be displayed
+          type: select
+          label: Show or Hide
+          default: disabled
+          required: true
+          values:
+            enabled: Show this module
+            disabled: Do not show this module
         title:
           type: text
           label: Title (optional)

@@ -6,6 +6,7 @@ jQuery.fn.extend(
 
             // prepare display according to current settings
             $(this)
+                .masterSwitcher()
                 .templateSwitcher()
                 .orderSwitcher()
                 .sourceSwitcher();
@@ -18,17 +19,38 @@ jQuery.fn.extend(
         callChanges: function() {
             console.log('changes called', $(this));
             $(this)
+                .masterSwitcher()
                 .templateSwitcher()
                 .orderSwitcher()
                 .sourceSwitcher();
         },
+        masterSwitcher: function() {
+            var viewblock = $(this);
+            var masterswitch = viewblock.find('select[name*="enabled"]');
+            $(masterswitch).parents('.repeater-field').addClass('masterswitch');
+            var newvalue = masterswitch.val();
+            if(newvalue === 'enabled') {
+                viewblock.addClass('master-switch-enabled');
+                viewblock.find('.repeater-field:not(.masterswitch)').show();
+            } else {
+                viewblock.removeClass('master-switch-enabled');
+                // TODO: make the other subitems all listen nicely
+                viewblock.find('.repeater-field:not(.masterswitch)').hide();
+            }
+            console.log('masterSwitcher triggered');
+            return viewblock;
+        },
         templateSwitcher: function() {
             var viewblock = $(this);
+
+            if(!viewblock.hasClass('master-switch-enabled')) {
+                return viewblock;
+            }
             var templateselect = viewblock.find('select[name*="templates"]');
             var bodyblock = viewblock.find('textarea[name*="body"]');
             var newvalue = templateselect.val();
             viewblock.data('templatevalue', newvalue);
-            if(newvalue == 'body') {
+            if(newvalue === 'body') {
                 bodyblock.parents('.repeater-field').show();
             } else {
                 bodyblock.parents('.repeater-field').hide();
@@ -38,10 +60,14 @@ jQuery.fn.extend(
         },
         orderSwitcher: function() {
             var viewblock = $(this);
+
+            if(!viewblock.hasClass('master-switch-enabled')) {
+                return viewblock;
+            }
             var orderselect = viewblock.find('select[name*="ordering"]');
             var templatevalue = viewblock.data('templatevalue');
             //console.log('templatevalue', templatevalue);
-            if(templatevalue == 'body') {
+            if(templatevalue === 'body') {
                 orderselect.parents('.repeater-field').hide();
             } else {
                 orderselect.parents('.repeater-field').show();
@@ -53,6 +79,10 @@ jQuery.fn.extend(
         },
         sourceSwitcher: function() {
             var viewblock = $(this);
+
+            if(!viewblock.hasClass('master-switch-enabled')) {
+                return viewblock;
+            }
             var sourceselect = viewblock.find('select[name*="sources"]');
             var newvalue = sourceselect.val();
             viewblock.data('sourcevalue', newvalue);
@@ -64,7 +94,7 @@ jQuery.fn.extend(
             //console.log('selected content types', sourceselect, newvalue, parentblock, selectedct, amount);
 
             var templatevalue = viewblock.data('templatevalue');
-            if(templatevalue == 'body') {
+            if(templatevalue === 'body') {
                 sourceselect.parents('.repeater-field').hide();
                 selectedamount.parents('.repeater-field').hide();
             } else {
@@ -72,7 +102,7 @@ jQuery.fn.extend(
             }
 
             var orderingvalue = viewblock.data('ordervalue');
-            if(orderingvalue == 'specified') {
+            if(orderingvalue === 'specified') {
                 selectedamount.parents('.repeater-field').hide();
             } else {
                 selectedamount.parents('.repeater-field').show();
@@ -86,7 +116,7 @@ jQuery.fn.extend(
                 parentfieldset.hide();
                 if (ctname.indexOf(newvalue) != -1
                     && templatevalue !== 'body'
-                    && orderingvalue == 'specified') {
+                    && orderingvalue === 'specified') {
                     console.log('enable', newvalue, 'ctname', ctname);
                     parentfieldset.show();
                 }
