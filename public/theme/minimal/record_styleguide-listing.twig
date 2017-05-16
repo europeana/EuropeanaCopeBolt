@@ -1,0 +1,69 @@
+{% extends 'partials/_master.twig' %}
+
+{% block bodyclass 'listingpage' %}
+
+{% block main %}
+
+    <section>
+        <div class="inner-wrap">
+
+            <div class="column">
+
+                <div class="filter-listing">
+                    <p>Categories:</p>
+                    <ul>
+                        <li><a>Networking (123)</a></li>
+                        <li><a>Partnerships (123)</a></li>
+                        <li><a>Re-Use (123)</a></li>
+                        <li><a>Research (123)</a></li>
+                        <li><a>Education (123)</a></li>
+                        {# <li><a>Case Studies (123)</a></li> #}
+                    </ul>
+                </div>
+
+                <h1>1337 search results for "cute kittens"</h1>
+
+
+
+                <ul class="teaser-list">
+
+                    {# EVENT TEASER #}
+                    <li class="group">
+                        {% include 'views/_teaser_events.twig' %}
+                    </li>
+
+                    <li>
+                        {% include 'views/_teaser_pages.twig' %}
+                    </li>
+
+                    <li>
+                        {% include 'views/_teaser_posts.twig' %}
+                    </li>
+
+                    <li>
+                        {% include 'views/_teaser_data.twig' %}
+                    </li>
+
+                    <li>
+                       {% include 'views/_teasers.twig' %}
+                    </li>
+
+                    <li>
+                        {% include 'views/_teaser_downloads.twig' %}
+                    </li>
+
+
+                </ul>
+
+                {# Pagination #}
+                {# {% include 'partials/_pager.twig' %} #}
+                {{ pager('', 4, 'partials/_pager.twig') }}
+
+            </div> {# /column #}
+
+        </div>
+    </section>
+
+
+
+{% endblock main %}

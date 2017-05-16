@@ -1,45 +1,77 @@
 {% extends 'partials/_master.twig' %}
 
+{% block bodyclass 'listingpage' %}
+
 {% block main %}
 
-    {# This template is used for 'listings': Generic pages that list a number of
-       records from a certain contenttype. These records are available as an array
-       called 'records'. In the for-loop below, we iterate over the records that
-       are on this page. It can be used for overview pages like 'all entries', or
-       'all records tagged with kittens'. #}
 
-    {# If used for listing a taxonomy, we add a heading.: #}
-    {% if taxonomytype is defined %}
-        <h1>
-            {{ __('general.phrase.overview-for') }}
-            {% if taxonomy.options[slug] is defined %}
-                {{ taxonomy.options[slug] }}
-            {% else %}
-                {{ slug }}
+<section>
+    <div class="inner-wrap">
+
+        <div class="column">
+
+            <div class="filter-listing">
+                <p>Categories: ( new design will come )</p>
+                <ul>
+                    <li><a>cat 1</a></li>
+                    <li><a>cat 2</a></li>
+                    <li><a>cat 3</a></li>
+                    <li><a>cat 4</a></li>
+                    {# <li><a>Case Studies (123)</a></li> #}
+                </ul>
+            </div>
+
+            {# <h1>1337 search results for "cute kittens"</h1> #}
+
+
+            {# If used for listing a taxonomy, we add a heading.: #}
+            {% if taxonomytype is defined %}
+                <h1>
+                    {{ __('general.phrase.overview-for') }}
+                    {% if taxonomy.options[slug] is defined %}
+                        {{ taxonomy.options[slug] }}
+                    {% else %}
+                        {{ slug }}
+                    {% endif %}
+                </h1>
+                {# Taxonomies are fetched unordered by design except if 'has_sortorder'
+                   is set to true. This way we keep 'grouping' intact in the listing. #}
+                {% if not taxonomy.has_sortorder %}
+                    {# If we specified an order in config.yml, sort them here, accordingly: #}
+                    {% set records = records|order(app.config.get('general/listing_sort')) %}
+                {% endif %}
+            {% elseif records|first.contenttype is defined %}
+                {# this assumes the first record has the same contenttype as all the others #}
+                <h1>{{ records|first.contenttype.name|default('List') }}</h1>
             {% endif %}
-        </h1>
-        {# Taxonomies are fetched unordered by design except if 'has_sortorder'
-           is set to true. This way we keep 'grouping' intact in the listing. #}
-        {% if not taxonomy.has_sortorder %}
-            {# If we specified an order in config.yml, sort them here, accordingly: #}
-            {% set records = records|order(app.config.get('general/listing_sort')) %}
-        {% endif %}
-    {% endif %}
 
-    {% for record in records %}
-        {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
-        <!-- loading listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
-        {% include [template, 'views/_teasers.twig', 'views/_fallback.twig'] with {record:record} %}
-    {% else %}
-        <article>
-            <h2>{{ __('general.phrase.no-content-found') }}</h2>
-            <p>
-                {{ __("Unfortunately, no content could be found. Try another page, or go to the <a href=\"%paths_root%\">homepage</a>.", {'%paths_root%': path('homepage')} ) }}
-            </p>
-        </article>
-    {% endfor %}
+            <ul class="teaser-list">
+            {% for record in records %}
+                {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
+                <!-- loading listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
 
-    {# If there are more records than will fit on one page, the pager is shown. #}
-    {{ pager(template = 'partials/_pager.twig') }}
+                {% include [template, 'views/_teasers.twig', 'views/_fallback.twig'] with { item : record } %}
+            {% else %}
+                <article>
+                    <h2>{{ __('general.phrase.no-content-found') }}</h2>
+                    <p>
+                        {{ __("Unfortunately, no content could be found. Try another page, or go to the <a href=\"%paths_root%\">homepage</a>.", {'%paths_root%': path('homepage')} ) }}
+                    </p>
+                </article>
+            {% endfor %}
+            </ul>
+
+            {# If there are more records than will fit on one page, the pager is shown. #}
+            {{ pager(template = 'partials/_pager.twig') }}
+
+        </div> {# /column #}
+
+    </div>
+</section>
+
+
+
+
+
 
 {% endblock main %}

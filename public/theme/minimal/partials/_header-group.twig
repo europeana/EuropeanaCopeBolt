@@ -1,0 +1,28 @@
+{# HEADER OF ARTICLE #}
+
+<div class="header-group">
+
+    {% if record.contact_record %}
+    <div class="author-small group">
+        {% setcontent author = 'persons' where { id : record.contact_record } returnsingle %}
+
+        <img class="round" src="{{ author.image|default('notfound')|thumbnail(72, 72, 'c') }}" alt="portrait of {{ author.first_name }} {{ author.last_name }}"/>
+        <p class="name">{{ author.first_name }} {{ author.last_name }}</p>
+        <p class="function">{{ author.job_title }}</p>
+    </div>
+    {% endif %}
+
+    <h1>{{ record.title }}</h1>
+
+    <h2 class="subtitle">Where does the subtitle come from?</h2>
+
+    {% if record.contenttype.slug in ['events'] and record.geolocation is not empty %}
+        <address>
+            {{record.geolocation.formatted_address | replace({',': '<br/>'})|raw }}
+        </address>
+    {% endif %}
+
+    <div class="introduction">
+        {{ record.intro }}
+    </div>
+</div>

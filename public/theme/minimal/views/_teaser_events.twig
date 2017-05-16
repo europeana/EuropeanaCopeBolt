@@ -1,0 +1,37 @@
+<article class="teaser teaser-events group">
+    <div class="img-container">
+        <img src="{{ item.teaser_image|default('notfound')|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+
+        <div class="info-block">
+            {% include 'partials/_event-datetime.twig' %}
+            <span class="event-location">
+                <svg class="icon icon-location">
+                    <use xlink:href="#icon-location"></use>
+                </svg>
+                {{ item.geolocation.address }}
+            </span>
+        </div>
+    </div>
+
+    <h2><a href="{{ item.link() }}">{{ item.title }}</a></h2>
+
+    {% include 'partials/_tags.twig' %}
+
+    {% if item.teaser %}
+        {{ item.teaser }}
+    {% elseif item.intro %}
+        {{ item.intro }}
+    {% else %}
+        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+    {% endif %}
+
+    <div class="actions-footer">
+        {% include 'partials/_add-to-calendar.twig' %}
+
+        <a class="button-link" href="{{ item.link() }}">
+            Call to action
+        </a>
+
+    </div>
+
+</article>

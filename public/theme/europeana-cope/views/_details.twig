@@ -20,22 +20,34 @@
                     </div>
                 </div>
 
-                {% if record.image is defined %}
+                {% if record.image is defined and record.image is not empty %}
                 <figure>
                     <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="ALT" />
 
                     {% if record.values.image.title is defined %}
                         <figcaption>
-                        {{ record.values.image.title }}
-                    </figcaption>
+                            {{ record.values.image.title }}
+                        </figcaption>
                     {% endif %}
 
                 </figure>
                 {% endif %}
 
-                <div class="body"> {# can be multiple bodies #}
-                    {{ record.body }}
-                </div>
+                {% if record.body is not empty %}
+                    <div class="body"> {# can be multiple bodies #}
+                        {{ record.body }}
+                    </div>
+                {% endif %}
+
+                {% for module in record.modules %}
+                    {{ include('partials/_default_module.twig', { 'module': module }) }}
+                {% endfor %}
+
+                {% if record.pagefooter is defined %}
+                    <div class="body pagefooter">
+                        {{ record.pagefooter }}
+                    </div>
+                {% endif %}
 
             </article>
 

@@ -1,0 +1,39 @@
+<article class="teaser teaser-pages group">
+    <div class="img-container">
+        <img src="{{ item.teaser_image|default('notfound')|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+
+        <div class="info-block">
+            <span class="info-type">Page</span>
+            <span class="info-date">Created: {{ item.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+
+            {% if item.contact_record %}
+            <span class="info-author">
+                {% setcontent author = 'persons' where { id : item.contact_record } returnsingle %}
+                By <a href="{{ author.link() }}">{{ author.first_name }} {{ author.last_name }}</a>
+            </span>
+            {% endif %}
+
+        </div>
+    </div>
+
+    <h2><a href="{{ item.link() }}">{{ item.title }}</a></h2>
+
+    {% include 'partials/_tags.twig' %}
+
+    {% if item.teaser %}
+    {{ item.teaser }}
+    {% elseif item.intro %}
+        {{ item.intro }}
+    {% else %}
+        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+    {% endif %}
+
+    <div class="actions-footer">
+        {% include 'partials/_readtime.twig' %}
+        <a class="readmore" href="{{ item.link() }}">
+            Call to action
+        </a>
+
+    </div>
+
+</article>

@@ -1,0 +1,39 @@
+{# {% block bodyclass 'contentpage' %} #}
+
+    <section>
+        <div class="inner-wrap">
+
+            <article class="column main-column">
+
+
+                {% include 'partials/_side-info.twig' %}
+
+                {% include 'partials/_header-group.twig' %}
+
+                {% include 'partials/_event-figure.twig' %}
+
+                <div class="body">
+                    {{ record.body }}
+
+                    <ul class="link-list">
+                        <li><a href="">Link to website</a></li>
+                        <li><a class="" href="http://www.example.com">Link to another website</a></li>
+                    </ul>
+
+                </div>
+
+                <a class="button">
+                    Register for your place
+                </a>
+
+            </article>
+
+
+            {% include 'partials/_list-speaker-list.twig' with { record:record, title: 'titel hier'} %}
+
+
+            {% include 'partials/_list-location-list.twig' %}
+
+
+       </div>
+    </section>

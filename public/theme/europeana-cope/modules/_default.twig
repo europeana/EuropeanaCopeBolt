@@ -31,7 +31,7 @@ Available variables
                 {% set templatefile =  'views/_' ~  template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
                 {% set defaulttemplatefile =  'views/_' ~  template ~ '.twig' %}
                 <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
-                {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { record: record, template: template } %}
+                {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
             {% else %}
                 <!-- selected record is unpublished or otherwise unavailable -->
             {% endif %}

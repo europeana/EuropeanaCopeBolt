@@ -1,3 +1,140 @@
+
+    <section>
+        <div class="inner-wrap">
+
+            <article class="column main-column">
+
+                {# HEADER OF ARTICLE #}
+
+                <div class="header-group">
+                    <div class="author-small group">
+                        <img class="round" src="https://unsplash.it/72/72" alt="name"/>
+                        <p class="name">Victor-Jan Vos</p>
+                        <p class="function">Head of programmes, policy & research</p>
+                    </div>
+
+                    <h1>{{ record.title }}</h1>
+
+                    <div class="introduction">
+                        {{record.intro}}
+                    </div>
+                </div>
+
+                {% if record.image is defined and record.image is not empty %}
+                <figure>
+                    <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="ALT" />
+
+                    {% if record.values.image.title is defined %}
+                        <figcaption>
+                        {{ record.values.image.title }}
+                    </figcaption>
+                    {% endif %}
+
+                </figure>
+                {% endif %}
+
+                {% if record.body is not empty %}
+                    <div class="body"> {# can be multiple bodies #}
+                        {{ record.body }}
+                    </div>
+                {% endif %}
+
+                {% for module in record.modules %}
+                    {{ include('partials/_default_module.twig', { 'module': module }) }}
+                {% endfor %}
+
+                {% if record.pagefooter is defined %}
+                    <div class="body pagefooter">
+                        {{ record.pagefooter }}
+                    </div>
+                {% endif %}
+            </article>
+
+        </div>
+    </section>
+
+    {# AUTEUR EN RELATED - NOG NIET GEBRUIKT< DUS UITGECOMMENT _ ANKE 5 mei 2015
+
+    <aside>
+        <div class="inner-wrap">
+
+
+            {# AUTHOR
+
+            <section class="author-big column">
+                <div class="img-container">
+                    <img class="round" src="https://unsplash.it/144/144" alt="name"/>
+                </div>
+                <div class="txt-container">
+                    <p class="name"><span>Created by</span> Victor-Jan Vos</p>
+                    <p class="function">Head of programmes, policy & research</p>
+                    <p>At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use them for learning, enjoyment, sharing.</p>
+                    <div class="contact">
+                        <a href="#" class="tw">
+                            <svg class="icon icon-twitter">
+                                <use xlink:href="#icon-twitter"></use>
+                            </svg>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                        <a href="#" class="tw">
+                            <svg class="icon icon-linkedin">
+                                <use xlink:href="#icon-linkedin"></use>
+                            </svg>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                        <a href="#" class="email">Victor-jan.vos@europeana.eu</a>
+                        <a href="#" class="phone">+31 70 32 45 678</a>
+                    </div>
+                </div>
+            </section>
+
+
+            {# RELATED CONTENT
+
+            <section class="related-content">
+                <h2>Related content</h2>
+
+                    <div class="teaser-container">
+                    <article class="column third teaser-threecol">
+                        <a href="#">
+                            <img src="https://unsplash.it/768/435" alt="xx"/>
+                        </a>
+                        <h3><a href="#">Dit is een titel</a></h3>
+                        <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum. Si de re disceptari oportet, nulla mihi tecum.</p>
+
+                    </article>
+
+                    <article class="column third teaser-threecol">
+                        <a href="#">
+                            <img src="https://unsplash.it/768/435" alt="xx"/>
+                        </a>
+                        <h3><a href="#">Dit is een titel</a></h3>
+                        <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
+
+                    </article>
+
+                    <article class="column third teaser-threecol">
+                        <a href="#">
+                            <img src="https://unsplash.it/768/435" alt="xx"/>
+                        </a>
+                        <h3><a href="#">Dit is een titel</a></h3>
+                        <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens bit. Si de re disceptari oportet, nulla mihi tecum.</p>
+
+                    </article>
+                    </div>
+                </div>
+
+
+            </section>
+        </aside>
+
+#}
+
+
+
+{# OUDE _DETAILS.TWIG#}
+
+{#
 <article class="snippet-details record-{{ record.contenttype.slug  }}">
     <h1>{{ record.title }}</h1>
 
@@ -11,7 +148,7 @@
 
     {{ record.body }}
 
-    {# If there are repeaters, we should output them. #}
+    {# If there are repeaters, we should output them.
     {% for module in record.modules %}
         {{ include('partials/_default_module.twig', { 'module': module }) }}
     {% endfor %}
@@ -23,3 +160,5 @@
     {{ include('partials/_record_footer.twig', { 'record': record, 'extended': true }) }}
 
 </article>
+
+#}
