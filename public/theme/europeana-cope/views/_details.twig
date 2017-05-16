@@ -4,19 +4,19 @@
 
             <article class="column main-column">
 
-                {# HEADER OF ARTICLE #}
+               {% include 'partials/_side-info.twig' %}
 
                 <div class="header-group">
-                    <div class="author-small group">
-                        <img class="round" src="https://unsplash.it/72/72" alt="name"/>
-                        <p class="name">Victor-Jan Vos</p>
-                        <p class="function">Head of programmes, policy & research</p>
-                    </div>
+
+                    {% if record.contact_record %}
+                        {% setcontent author = 'persons' where { id : record.contact_record } returnsingle %}
+                        {% include 'views/_mini_persons.twig' with { item: author } %}
+                    {% endif %}
 
                     <h1>{{ record.title }}</h1>
 
                     <div class="introduction">
-                        {{record.intro}}
+                        {{ record.intro }}
                     </div>
                 </div>
 

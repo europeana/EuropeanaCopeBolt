@@ -1937,6 +1937,9 @@ section.catstream {
 .primary-call-to-action {
   text-align: center;
   margin: 2rem 0; }
+  @media only screen and (min-width: 47.9375em) {
+    .primary-call-to-action {
+      margin: 4rem 0; } }
 
 .info-block {
   display: inline-block;

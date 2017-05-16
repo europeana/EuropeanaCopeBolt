@@ -819,6 +819,10 @@ section.catstream {
 .primary-call-to-action {
     text-align: center;
     margin: 2rem 0;
+
+    @include respond-to(large-screens) {
+        margin: 4rem 0;
+    }
 }
 
 
