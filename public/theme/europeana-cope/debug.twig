@@ -1,0 +1,27 @@
+{% extends 'partials/_master.twig' %}
+
+{% block bodyclass 'contentpage' %}
+
+{% block main %}
+    <div class="debug">
+        <h3>Record: {{ record.title }}</h3>
+        {{ dump(record) }}
+    </div>
+    <hr>
+    <div class="excerpt">
+        <h3>Excerpt:</h3>
+        <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+    </div>
+    <hr>
+    {% for view in ['titles', 'listing', 'mini', 'teaser', 'related', 'detail'] %}
+    <div class="{{ view }}" style="width: 100%; clear: both; float: left; border-top: 15px solid; padding-top: 20px;">
+        <h3>{{ view }}</h3>
+        {% set template =  'views/_' ~ view ~ '_' ~ record.contenttype.slug ~ '.twig' %}
+        {% set secondtemplate =  'views/_' ~ view ~ '.twig' %}
+        {% set fallbacktemplate =  'views/_' ~ view ~ 's.twig' %}
+        <p class="info">Loading templatefile for view: '{{ template }}', '{{ secondtemplate }}', '{{ fallbacktemplate }}' or 'views/_fallback.twig'</p>
+        {% include [template, secondtemplate, fallbacktemplate, 'views/_fallback.twig'] with { item: record } %}
+    </div>
+    {% endfor %}
+
+{% endblock main %}
