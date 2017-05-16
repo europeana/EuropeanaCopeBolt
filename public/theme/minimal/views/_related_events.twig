@@ -1,0 +1,28 @@
+<article class="column third teaser-threecol related-events">
+    <a href="{{ item.link() }}">
+        <img src="{{ item.teaser_image|default('notfound')|thumbnail(768, 550, 'c') }}" alt=""/>
+    </a>
+    <div class="info-block">
+        {% include 'partials/_event-datetime.twig' %}
+
+        {% if item.location_name is not empty %}
+            <span class="event-location">
+            <svg class="icon icon-location">
+                <use xlink:href="#icon-location"></use>
+            </svg>
+            {{ item.location_name }}
+        </span>
+        {% endif %}
+    </div>
+
+    <h3><a href="{{ item.link() }}">{{ item.title }}</a></h3>
+
+    {% if item.teaser %}
+        {{ item.teaser }}
+    {% elseif item.introduction %}
+       {{ item.intro|excerpt(150) }}
+    {% else %}
+        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+    {% endif %}
+
+</article>

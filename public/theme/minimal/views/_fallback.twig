@@ -1,4 +1,3 @@
 <div class="snippet-fallback record-{{ record.contenttype.slug|default('unknown') }}">
-    <h2>The template '{{ template }}' is not available</h2>
-    {{ dump(record) }}
+    <p class="error">The template '{{ template }}' is not available</p>
 </div>

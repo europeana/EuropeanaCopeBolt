@@ -570,10 +570,15 @@ section.contentheader > .inner-wrap {
   padding: 0 1rem; }
 
 aside {
-  padding: 0 0.875rem; }
+  padding: 0 0.875rem;
+  margin-top: 2rem; }
   @media only screen and (min-width: 24em) {
     aside {
-      padding: 0 2rem; } }
+      padding: 0 2rem;
+      margin-top: 2rem; } }
+  @media only screen and (min-width: 47.9375em) {
+    aside {
+      margin-top: 4rem; } }
   aside > .inner-wrap {
     padding: 0rem 0rem 0; }
     @media only screen and (min-width: 47.9375em) {
@@ -678,6 +683,9 @@ footer {
   @media only screen and (min-width: 80em) {
     .contentpage .info-list {
       padding: 0 8rem; } }
+
+.body > * {
+  margin: 2rem 0; }
 
 ul.search-results,
 ul.teaser-list {
@@ -1219,6 +1227,26 @@ blockquote {
 p blockquote {
   margin-left: 0; }
 
+.info, .succes {
+  padding: 1rem;
+  border: 1px solid #3a945b;
+  background: #b7e3c7; }
+
+.notice {
+  padding: 1rem;
+  border: 1px solid #095f90;
+  background: #9fd8f9; }
+
+.warning {
+  padding: 1rem;
+  border: 1px solid #de770f;
+  background: #f7c38f; }
+
+.error {
+  padding: 1rem;
+  border: 1px solid #de2d0f;
+  background: #f79e8f; }
+
 /*
 * BUTTONS
 **/
@@ -1673,6 +1701,17 @@ aside .teaser-threecol {
         margin-right: 1.75rem; }
         .teaser-container .teaser-threecol:last-child {
           margin-right: 0; } }
+
+.related-events {
+  position: relative; }
+  .related-events .info-block {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 145px; }
+    @media only screen and (min-width: 24em) {
+      .related-events .info-block {
+        width: 172px; } }
 
 /*
 * WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS v1

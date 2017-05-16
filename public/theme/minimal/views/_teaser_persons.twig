@@ -2,6 +2,7 @@
 
 {# Als speaker is set to true, the speaker_teaser is shown in this teaser, instead of the introduction
 #}
+
  <article class="teaser teaser-persons group">
     <div class="img-container">
         <img src="{{ item.image|default('notfound')|thumbnail(172,172,'c')}}" alt="Portrait of {{ item.first_name }} {{ item.last_name }}"/>
@@ -33,12 +34,14 @@
             {% endif %}
             {{ item.company }}</p>
 
-        {% if speaker %}
+        {% if speaker|default(false) %}
             {{ item.speaker_teaser }}
+        {% elseif item.teaser %}
+            {{ item.teaser }}
         {% elseif item.introduction %}
-           {{ item.introduction }}
+           {{ item.introduction|excerpt(300) }}
         {% else %}
-            <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+            <p>{{ item.excerpt(300, false, search|default('')) }}</p>
         {% endif %}
 
         <div class="contact">

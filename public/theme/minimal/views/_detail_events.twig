@@ -8,7 +8,26 @@
 
                 {% include 'partials/_side-info.twig' %}
 
-                {% include 'partials/_header-group.twig' %}
+                <div class="header-group">
+
+                    {% if record.contact_record %}
+                        {% setcontent author = 'persons' where { id : record.contact_record } returnsingle %}
+                        {% include 'views/_mini_persons.twig' with { item: author } %}
+                    {% endif %}
+
+                    <h1>{{ record.title }}</h1>
+
+                    <h2 class="subtitle">Where does the subtitle come from?</h2>
+
+                    <address>
+                        {{record.geolocation.formatted_address | replace({',': '<br/>'})|raw }}
+                    </address>
+
+
+                    <div class="introduction">
+                        {{ record.intro }}
+                    </div>
+                </div>
 
                 {% include 'partials/_event-figure.twig' %}
 
