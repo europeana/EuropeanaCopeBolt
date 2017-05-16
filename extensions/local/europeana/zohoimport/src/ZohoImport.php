@@ -455,6 +455,51 @@ class ZohoImport
   }
 
 
+  /**
+   * getLastImportDate
+   */
+  private function getLastImportDate($config)
+  {
+    $contenttype = $config['target']['contenttype'];
+    $prefix = $this->app['config']->get('general/database/prefix');
+    $tablename = $prefix . $contenttype;
+    $query = "SELECT max(datechanged) as maxdate FROM $tablename";
+    $stmt = $this->app['db']->prepare($query);
+    $res = $stmt->execute();
+    $result = $stmt->fetch();
+    return $result['maxdate'];
+  }
+
+
+  /**
+   * getPublishedRecords
+   */
+  private function getPublishedRecords($config)
+  {
+    $contenttype = $config['target']['contenttype'];
+    $prefix = $this->app['config']->get('general/database/prefix');
+    $tablename = $prefix . $contenttype;
+    $query = "SELECT count(id) as published FROM $tablename WHERE status = 'published'";
+    $stmt = $this->app['db']->prepare($query);
+    $res = $stmt->execute();
+    $result = $stmt->fetch();
+    return $result['published'];
+  }
+
+  /**
+   * getUnpublishedRecords
+   */
+  private function getUnpublishedRecords($config)
+  {
+    $contenttype = $config['target']['contenttype'];
+    $prefix = $this->app['config']->get('general/database/prefix');
+    $tablename = $prefix . $contenttype;
+    $query = "SELECT count(id) as unpublished FROM $tablename WHERE status <> 'published'";
+    $stmt = $this->app['db']->prepare($query);
+    $res = $stmt->execute();
+    $result = $stmt->fetch();
+    return $result['unpublished'];
+  }
 
   /**
    * HOOKAFTERLOAD:
@@ -854,8 +899,58 @@ class ZohoImport
    */
   public function zohoImportOverview()
   {
+    $config = $this->config;
+    $output = [];
+    //dump($config);
+    foreach($config['remotes'] as $remotekey => $remote) {
+      //dump($remotekey, $remote);
+      if ($remote['enabled']) {
+        $localconfig = $remote;
+        // show date of last import
+        $lastimportdate = $this->getLastImportDate($localconfig);
+        // dump($lastimportdate);
+        // SELECT max(datechanged) FROM europeana_cope.bolt_persons;
+        // show number of imported items
+        $num_imported_items = 'n/a';
+
+        // show number of requests
+        $num_remote_request = 'n/a';
+        // show number of published items
+        // $num_published_records = 'n/a';
+        $num_published_records = $this->getPublishedRecords($localconfig);
+        // show number of unpublished items
+        // $num_unpublished_records = 'n/a';
+        $num_unpublished_records = $this->getUnpublishedRecords($localconfig);
+        // show how to manually import a new batch
+        $table = [
+          'head' => [ 'Import', 'amount' ],
+          'data' => [
+            [ 'last run', $lastimportdate ],
+            //[ 'items', $num_imported_items ],
+            //[ 'remote requests', $num_remote_request ],
+            [ 'published records', $num_published_records ],
+            [ 'unpublished records', $num_unpublished_records ]
+          ]
+        ];
+        $rowoutput = $tableoutput = '';
+        foreach ($table['head'] as $cell) {
+          $rowoutput .= '<th>' . $cell . '</th>';
+        }
+        $tableoutput .= '<tr>'.$rowoutput.'</tr>';
+        foreach($table['data'] as $key => $row) {
+          $rowoutput = '';
+          foreach ($row as $cell) {
+            $rowoutput .= '<td>' . $cell . '</td>';
+          }
+          $tableoutput .= '<tr>'.$rowoutput.'</tr>';
+        }
+        $output[$remotekey] = '<h3>remote: '.$remotekey.'</h3><table class="table-striped dashboardlisting">'.$tableoutput.'</table>';
+
+      }
+    }
     //dump($this->app);
-    return 'ZOHO Import overview: not implemented yet.';
+
+    return join('', $output);
   }
 
   /**
