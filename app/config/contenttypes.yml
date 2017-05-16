@@ -220,6 +220,7 @@ pages:
       label: Modules
       type: repeater
       separator: true
+      group: Modules
       fields:
         title:
           type: text
