@@ -222,6 +222,10 @@ pages:
       separator: true
       group: Modules
       fields:
+        enabled:
+          type: checkbox
+          label: Enabled
+          postfix: If this field is unchecked the module will not be displayed
         title:
           type: text
           label: Title (optional)
