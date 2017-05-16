@@ -1227,6 +1227,26 @@ blockquote {
 p blockquote {
   margin-left: 0; }
 
+.info, .succes {
+  padding: 1rem;
+  border: 1px solid #3a945b;
+  background: #b7e3c7; }
+
+.notice {
+  padding: 1rem;
+  border: 1px solid #095f90;
+  background: #9fd8f9; }
+
+.warning {
+  padding: 1rem;
+  border: 1px solid #de770f;
+  background: #f7c38f; }
+
+.error {
+  padding: 1rem;
+  border: 1px solid #de2d0f;
+  background: #f79e8f; }
+
 /*
 * BUTTONS
 **/

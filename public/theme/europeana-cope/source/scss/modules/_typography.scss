@@ -547,3 +547,30 @@ p blockquote {
     margin-left: 0;
 }
 
+
+
+.info, .succes {
+    padding: 1rem;
+    border: 1px solid #3a945b;
+    background: lighten(#3a945b, 40%);
+}
+
+.notice {
+    padding: 1rem;
+    border: 1px solid $link-blue;
+    background: lighten($link-blue, 50%);
+}
+
+.warning {
+    padding: 1rem;
+    border: 1px solid #de770f;
+    background: lighten(#de770f, 30%);
+}
+
+
+
+.error {
+    padding: 1rem;
+    border: 1px solid #de2d0f;
+    background: lighten(#de2d0f, 30%);
+}
