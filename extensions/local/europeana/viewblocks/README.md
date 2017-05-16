@@ -3,6 +3,12 @@ Europeana ViewBlocks extension
 
 This extension adds javascript in the europeana site back-end that handles the modules for the landing pages.
 
+If correctly installed the following files exist in the folder
+`public/extensions/local/europeana/viewblocks`
+
+- viewsblocks.backend.css
+- viewsblocks.backend.js
+
 It requires the following configuration for `contenttypes.yml`.
 
 ```yml
@@ -44,6 +50,7 @@ landingpages:
             calltoactionlink: "Call to action button main page (_calltoactionlinks.twig)"
             calltoactionblog: "Call to action blog page (_calltoactionblog.twig)"
             body:             "Show only the module body field (_body.twig)"
+            # more options can be added here as needed
         body:
           type: html
           label: "Module body (optional)"
