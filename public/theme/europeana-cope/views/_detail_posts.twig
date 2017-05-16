@@ -75,30 +75,9 @@
         {# RELATED CONTENT #}
 
         {% if record.related('posts') is not empty %}
-        <section class="related-content">
-            <h2>Related content</h2>
 
-            <div class="teaser-container">
-            {% for item in record.related('posts')|shuffle|slice(0, 3) %}
-                <article class="column third teaser-threecol">
-                    <a href="#">
-                        <img src="{{ item.teaser_image|default('notfound')|thumbnail(768, 435, 'c') }}" alt=""/>
-                    </a>
-                    <h3><a href="{{ item.link() }}">{{ item.title }}</a></h3>
+            {% include 'modules/_related_posts.twig' with { record : record, title : 'Related' } %}
 
-                    {% if item.teaser %}
-                        {{ item.teaser }}
-                    {% elseif item.introduction %}
-                       {{ item.intro|excerpt(150) }}
-                    {% else %}
-                        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
-                    {% endif %}
-
-                </article>
-            {% endfor %}
-
-            </div>
-        </section>
         {% endif %}
 
     </aside>
