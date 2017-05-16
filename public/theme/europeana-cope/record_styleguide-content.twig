@@ -45,9 +45,17 @@
 
                 {% include 'partials/_download-content.twig'%}
 
-                {% include 'partials/_list-speaker-list.twig' with { record:record, title: 'titel hier'} %}
+                <section class="info-list-section">
+                    <h2>Speakers for this event</h2>
+                    {% include 'partials/_list-speaker-list.twig' %}
+                </section>
 
-                {% include 'partials/_list-location-list.twig' %}
+                <section class="info-list-section">
+                    <h2>Event venue and description</h2>
+                    {% include 'partials/_list-location-list.twig' %}
+                </section>
+
+
 
             </article>
 

@@ -1,4 +1,8 @@
  {# {{ dump(item) }} #}
+
+{# Als speaker is set to true, the speaker_teaser is shown in this teaser, instead of the introduction
+#}
+
  <article class="teaser teaser-persons group">
     <div class="img-container">
         <img src="{{ item.image|default('notfound')|thumbnail(172,172,'c')}}" alt="Portrait of {{ item.first_name }} {{ item.last_name }}"/>
@@ -30,8 +34,10 @@
             {% endif %}
             {{ item.company }}</p>
 
-        {% if item.introduction %}
-            {{ item.introduction }}
+        {% if speaker %}
+            {{ item.speaker_teaser }}
+        {% elseif item.introduction %}
+           {{ item.introduction }}
         {% else %}
             <p>{{ item.excerpt(150, false, search|default('')) }}</p>
         {% endif %}
@@ -62,46 +68,3 @@
         </div>
     </div>
 </article>
-
-
-
-  {#   <div class="img-container">
-        <img src="{{ item.teaser_image|default('notfound')|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
-
-        <div class="info-block">
-            <span class="info-type">Blog</span>
-            <span class="info-date">Created: {{ item.datepublish|localedatetime("%A %B %e, %Y") }}</span>
-
-            {% for aut in item.author %}
-                {% setcontent author = 'persons' where { id : aut } returnsingle %}
-                <span class="info-author">
-                    {{ author.first_name }} {{ author.last_name }}
-                </span>
-            {% endfor %}
-
-        </div>
-
-    </div>
-
-    <h2><a href="{{ item.link() }}">{{ item.title }}</a></h2>
-
-    {% include 'partials/_tags.twig' %}
-
-
-    {% if item.teaser %}
-    {{ item.teaser }}
-    {% elseif item.intro %}
-        {{ item.intro }}
-    {% else %}
-        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
-    {% endif %}
-
-    <div class="actions-footer">
-        {% include 'partials/_readtime.twig' %}
-        <a class="button-link" href="{{ item.link() }}" >
-            Read more
-        </a>
-
-    </div>
-
-</article> #}

@@ -742,6 +742,7 @@ section.catstream {
         font-weight: 700;
         font-size: 0.75rem;
         margin: 1rem 0 0 0;
+        line-height: 1.4;
     }
 
     p.function {
@@ -750,106 +751,8 @@ section.catstream {
         //margin: 0;
         color: $medium-gray;
         font-weight: 400;
+        line-height: 1.6;
     }
-}
-
-.info-list,
-.teaser-persons {
-    margin: 3rem 0;
-
-    li {
-        //border-bottom: 1px solid $line-gray;
-        padding-bottom: 1.5rem;
-
-        @include respond-to(large-screens) {
-            padding: 0 2rem 1.5rem 2rem; //
-        }
-    }
-
-    .info-block {
-        padding: 0.8rem 0;
-    }
-
-    .img-container {
-        float: left;
-        margin: 0 1rem 1rem 0;
-        width: 95px;
-
-        @include respond-to(large-screens) {
-            margin: 0 2rem 1rem 0;
-            width: 175px;
-        }
-    }
-
-    img {
-        width: 95px;
-        height: 95px;
-
-        @include respond-to(large-screens) {
-            width: 175px;
-            height: 175px;
-        }
-    }
-
-    .txt-container {
-        padding: 0 0rem 0 112px;
-
-        @include respond-to(large-screens) {
-            padding: 0 0rem 0 236px;
-        }
-    }
-
-    p.function {
-        margin-top: 0;
-    }
-
-    .contact a {
-        margin-right: .5rem;
-
-        &.phone,
-        &.email {
-            //margin-left: .5rem;
-        }
-
-        &.li,
-        &.tw {
-            display: none;
-
-            @include respond-to(large-screens) {
-                display: inline-block;
-            }
-        }
-    }
-
-    .button {
-        margin: 1rem 0;
-    }
-
-    .socials {
-        text-align: center;
-
-        @include respond-to(large-screens) {
-            display: none;
-        }
-
-        svg {
-            width: 2rem;
-            height: 2rem;
-            margin-right: 0.5rem;
-        }
-
-        svg:last-child {
-            margin-right: 0;
-        }
-    }
-}
-
-.location-list {
-
-    svg {
-        fill: $medium-gray;
-    }
-
 }
 
 
@@ -896,6 +799,11 @@ section.catstream {
     @include respond-to(large-screens) {
         padding: 4rem 0 0 0;
     }
+}
+
+.primary-call-to-action {
+    text-align: center;
+    margin: 2rem 0;
 }
 
 
@@ -1066,8 +974,8 @@ section.catstream {
             left: 0;
             z-index: 10;
             display: inline-block;
-            height: 70%;
-            width: 60%;
+            height: 80%; //70%;
+            width: 70%; //60%;
             overflow: hidden;
         }
 
@@ -1314,10 +1222,19 @@ section.catstream {
     }
 }
 
-.person-related {
 
+.info-list {
+// in an info list, the teasers are separated by lines
+
+    li {
+        padding: 2rem;
+        border-bottom: 2px solid $line-gray;
+    }
+
+    .teaser {
+        margin: 0;
+    }
 }
-
 
 /*
 ***********************************************************************
@@ -1398,6 +1315,23 @@ section.catstream {
 }
 
 .teaser-persons {
+    margin: 3rem 0;
+
+    // Not used:
+    // li {
+    //     //border-bottom: 1px solid $line-gray;
+    //     padding-bottom: 1.5rem;
+
+    //     @include respond-to(large-screens) {
+    //         padding: 0 2rem 1.5rem 2rem; //
+    //     }
+    // }
+
+    // Not used?
+    // .info-block {
+    //     padding: 0.8rem 0;
+    // }
+
     .img-container {
         float: left;
         margin: 0 1rem 1rem 0;
@@ -1406,6 +1340,68 @@ section.catstream {
         @include respond-to(large-screens) {
             margin: 0 2rem 1rem 0;
             width: 175px;
+        }
+    }
+
+    img {
+        width: 95px;
+        height: 95px;
+
+        @include respond-to(large-screens) {
+            width: 175px;
+            height: 175px;
+        }
+    }
+
+    .txt-container {
+        padding: 0 0rem 0 112px;
+
+        @include respond-to(large-screens) {
+            padding: 0 0rem 0 236px;
+        }
+    }
+
+    p.function {
+        margin-top: 0;
+    }
+
+    .contact a {
+        margin-right: .5rem;
+
+        &.phone,
+        &.email {
+            //margin-left: .5rem;
+        }
+
+        &.li,
+        &.tw {
+            display: none;
+
+            @include respond-to(large-screens) {
+                display: inline-block;
+            }
+        }
+    }
+
+    .button {
+        margin: 1rem 0;
+    }
+
+    .socials {
+        text-align: center;
+
+        @include respond-to(large-screens) {
+            display: none;
+        }
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.5rem;
+        }
+
+        svg:last-child {
+            margin-right: 0;
         }
     }
 }

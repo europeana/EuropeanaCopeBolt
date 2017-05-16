@@ -205,6 +205,8 @@ footer {
     .body,
     .file-content-module,
     .download-module,
+    .primary-call-to-action
+
     {
         padding: 0 ;
 
@@ -231,15 +233,19 @@ footer {
         margin-left: 0;
     }
 
-    .info-list,
-    .teaser-persons {
+    .info-list-section {
+
+    }
+
+    .info-list
+    {
         padding: 0 ;
 
         @include respond-to(large-screens) {
-            padding: 0 2rem; // 2rem smaller then body
+            padding: 0 4rem;
         }
         @include respond-to(xlarge-screens) {
-            padding: 0 6rem; // 2rem smaller then body
+            padding: 0 8rem;
         }
     }
 

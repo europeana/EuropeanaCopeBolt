@@ -173,15 +173,24 @@ section {
 
     }
 
-    &.info-list > h2 {
+    &.info-list-section > h2 {
         font-weight: 700;
         text-transform: none;
         letter-spacing: 0;
         text-align: left;
         margin: 0 0 3rem 0;
+        padding: 0;
 
         @include respond-to (medium-screens) {
             font-size: 1.375rem;
+        }
+
+        @include respond-to (large-screens) {
+            padding: 0 4rem;
+        }
+
+        @include respond-to (xlarge-screens) {
+            padding: 0 8rem;
         }
     }
 
