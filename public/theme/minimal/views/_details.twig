@@ -7,11 +7,25 @@
                 {# HEADER OF ARTICLE #}
 
                 <div class="header-group">
-                    <div class="author-small group">
-                        <img class="round" src="https://unsplash.it/72/72" alt="name"/>
-                        <p class="name">Victor-Jan Vos</p>
-                        <p class="function">Head of programmes, policy & research</p>
-                    </div>
+                    {% if record.author is not empty %}
+                        {% for aut in record.author %}
+                            {% setcontent author = 'persons' where { id : aut } returnsingle %}
+                            {% if author is not empty %}
+                            <div class="author-small group">
+                                <img class="round" src="https://unsplash.it/72/72" alt="name"/>
+                                <p class="name">{{ author.first_name }} {{ author.last_name }}</p>
+                                <p class="function">Head of programmes, policy & research</p>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% elseif record.contact_record %}
+                        {% setcontent author = 'persons' where { id : record.contact_record } returnsingle %}
+                        <div class="author-small group">
+                            <img class="round" src="https://unsplash.it/72/72" alt="name"/>
+                            <p class="name">{{ author.first_name }} {{ author.last_name }}</p>
+                            <p class="function">Head of programmes, policy & research</p>
+                        </div>
+                    {% endif %}
 
                     <h1>{{ record.title }}</h1>
 

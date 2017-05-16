@@ -1,0 +1,18 @@
+{% extends 'partials/_master.twig' %}
+
+{% block bodyclass 'contentpage' %}
+
+{% block main %}
+    <h1>Record debug for: {{ record.title }}</h1>
+    {{ dump(record) }}
+    <hr>
+    <h1>Excerpt:</h1>
+    <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+    <hr>
+    <h1>teaser</h1>
+    <div class="teaser">
+        {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
+        <!-- loading templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
+        {% include [template, 'views/_teasers.twig', 'views/_fallback.twig'] with { item:record } %}
+    </div>
+{% endblock main %}

@@ -6,12 +6,16 @@
             <span class="info-type">Blog</span>
             <span class="info-date">Created: {{ item.datepublish|localedatetime("%A %B %e, %Y") }}</span>
 
-            {% for aut in item.author %}
-                {% setcontent author = 'persons' where { id : aut } returnsingle %}
-                <span class="info-author">
-                    {{ author.first_name }} {{ author.last_name }}
-                </span>
-            {% endfor %}
+            {% if item.author is not empty %}
+                {% for aut in item.author %}
+                    {% setcontent author = 'persons' where { id : aut } returnsingle %}
+                    {% if author is not empty %}
+                    <span class="info-author">
+                        {{ author.first_name }} {{ author.last_name }}
+                    </span>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
 
         </div>
 
