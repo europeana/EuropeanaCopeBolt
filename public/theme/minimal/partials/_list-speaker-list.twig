@@ -1,93 +1,13 @@
 {# INFO LIST #}
+<ul class="info-list speaker-list">
 
-<section class="info-list speaker-list">
-    <h2>Speakers for this event</h2>
-    <ul>
-        <li class="group">
-            <div class="img-container">
-                <img class="info-img" src="https://unsplash.it/172/172" alt="name" />
-                <h3>Timothy Hill</h3>
+{% for item in items %}
 
-                <div class="socials">
-                    <a href="#" class="tw">
-                        <svg class="icon icon-twitter">
-                            <use xlink:href="#icon-twitter"></use>
-                        </svg>
-                        <span class="sr-only">Twitter</span>
-                    </a>
-                    <a href="#" class="li">
-                        <svg class="icon icon-linkedin">
-                            <use xlink:href="#icon-linkedin"></use>
-                        </svg>
-                        <span class="sr-only">LinkedIn</span>
-                    </a>
-                </div>
+    <li>
+    {# PERSON #}
+        {% include 'views/_teaser_persons.twig' with { item:item} %}
+    </li>
 
-            </div>
-            <div class="txt-container">
-                <p class="function">Search engineer</p>
-                <p>Art lovers have a new place to enjoy and engage with Europe’s rich artistic heritage. At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use arning, enjoyment, sharing, and to build on in new creative ways.</p>
-                <div class="contact">
-                    <a href="#" class="tw">
-                        <svg class="icon icon-twitter">
-                            <use xlink:href="#icon-twitter"></use>
-                        </svg>
-                        <span class="sr-only">Twitter</span>
-                    </a>
-                    <a href="#" class="li">
-                        <svg class="icon icon-linkedin">
-                            <use xlink:href="#icon-linkedin"></use>
-                        </svg>
-                        <span class="sr-only">LinkedIn</span>
-                    </a>
-                    <a href="mailto:#" class="email">Victor-jan.vos@europeana.eu</a>
-                    <a href="#" class="phone">+31 70 32 45 678</a>
-                </div>
-            </div>
-        </li>
+{% endfor %}
 
-        <li class="group">
-            <div class="img-container">
-                <img class="info-img" src="https://unsplash.it/172/172" alt="name" />
-                <h3>Timothy Hill</h3>
-
-                <div class="socials">
-                    <a href="#" class="tw">
-                        <svg class="icon icon-twitter">
-                            <use xlink:href="#icon-twitter"></use>
-                        </svg>
-                        <span class="sr-only">Twitter</span>
-                    </a>
-                    <a href="#" class="li">
-                        <svg class="icon icon-linkedin">
-                            <use xlink:href="#icon-linkedin"></use>
-                        </svg>
-                        <span class="sr-only">LinkedIn</span>
-                    </a>
-                </div>
-
-            </div>
-            <div class="txt-container">
-                <p class="function">Search engineer</p>
-                <p>Art lovers have a new place to enjoy and engage with Europe’s rich artistic heritage. At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use arning, enjoyment, sharing, and to build on in new creative ways.</p>
-                <div class="contact">
-                    <a href="#" class="tw">
-                        <svg class="icon icon-twitter">
-                            <use xlink:href="#icon-twitter"></use>
-                        </svg>
-                        <span class="sr-only">Twitter</span>
-                    </a>
-                    <a href="#" class="li">
-                        <svg class="icon icon-linkedin">
-                            <use xlink:href="#icon-linkedin"></use>
-                        </svg>
-                        <span class="sr-only">LinkedIn</span>
-                    </a>
-                    <a href="mailto:#" class="email">Victor-jan.vos@europeana.eu</a>
-                    <a href="#" class="phone">+31 70 32 45 678</a>
-                </div>
-            </div>
-        </li>
-
-    </ul>
-</section>
+</ul>

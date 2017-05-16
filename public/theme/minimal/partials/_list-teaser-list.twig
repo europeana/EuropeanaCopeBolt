@@ -25,6 +25,10 @@
 
     {% elseif item.contenttype.slug == 'persons' %}
         {# PERSON #}
+        {% include 'views/_teaser_persons.twig' with { item:item } %}
+
+    {% else %}
+        {# fallback #}
         {% include 'views/_teasers.twig' with { item:item } %}
 
     {% endif %}

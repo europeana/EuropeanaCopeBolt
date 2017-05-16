@@ -8,7 +8,9 @@
 
         <img class="round" src="{{ author.image|default('notfound')|thumbnail(72, 72, 'c') }}" alt="portrait of {{ author.first_name }} {{ author.last_name }}"/>
         <p class="name">{{ author.first_name }} {{ author.last_name }}</p>
-        <p class="function">{{ author.job_title }}</p>
+        <p class="function">{{ author.job_title }}
+            {% if author.company is not empty %}, {{ author.company }} {% endif %}
+        </p>
     </div>
     {% endif %}
 

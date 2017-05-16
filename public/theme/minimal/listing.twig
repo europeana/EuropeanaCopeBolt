@@ -38,12 +38,13 @@
                 {% if categories is not empty %}
                     <p>Categories:</p>
                     <ul>
-                    {% for item, catname in categories %}
-                        <li><a href="{{ contenttypepath ~ item|slugify }}">{{ catname }}</a></li>
-                    {% endfor %}
+                        {% for item, catname in categories %}
+                            <li><a href="{{ contenttypepath ~ item|slugify }}">{{ catname }}</a></li>
+                        {% endfor %}
                     </ul>
                 {% endif %}
             </div>
+
 
             {# <h1>1337 search results for "cute kittens"</h1> #}
 

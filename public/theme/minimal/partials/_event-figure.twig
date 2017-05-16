@@ -5,7 +5,7 @@
 
         {# HERE BE MAP #}
         {% if record.geolocation is not empty %}
-        <img width="640" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?center={{ record.geolocation.latitude }},{{ record.geolocation.longitude - 0.03}}&zoom=13&scale=2&size=640x400&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{{ record.geolocation.address }}" alt="Google Map of {{ record.geolocation.address }}">
+        <img width="640" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?center={{ record.geolocation.latitude }},{{ record.geolocation.longitude - 0.15}}&zoom=11&scale=2&size=640x400&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{{ record.geolocation.address }}" alt="Google Map of {{ record.geolocation.address }}">
 
         {% else %}
             <img width="640" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?center=München&zoom=4&scale=2&size=640x400&maptype=roadmap&format=png&visual_refresh=true" alt="Google Map of Europa">
@@ -18,12 +18,12 @@
             <div class="info-block">
                 {% include 'partials/_event-datetime.twig' %}
 
-                {% if record.geolocation is not empty %}
+                {% if record.location_name is not empty %}
                 <span class="event-location">
                     <svg class="icon icon-location">
                         <use xlink:href="#icon-location"></use>
                     </svg>
-                    {{ record.geolocation.address }}
+                    {{ record.location_name }}
                 </span>
                 {% endif %}
 
