@@ -570,10 +570,15 @@ section.contentheader > .inner-wrap {
   padding: 0 1rem; }
 
 aside {
-  padding: 0 0.875rem; }
+  padding: 0 0.875rem;
+  margin-top: 2rem; }
   @media only screen and (min-width: 24em) {
     aside {
-      padding: 0 2rem; } }
+      padding: 0 2rem;
+      margin-top: 2rem; } }
+  @media only screen and (min-width: 47.9375em) {
+    aside {
+      margin-top: 4rem; } }
   aside > .inner-wrap {
     padding: 0rem 0rem 0; }
     @media only screen and (min-width: 47.9375em) {

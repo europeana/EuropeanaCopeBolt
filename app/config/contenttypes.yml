@@ -830,6 +830,11 @@ persons:
       label: "Image"
       attrib: title
       extensions: [ gif, jpg, png ]
+    teaser:
+      type: html
+      label: "Teaser"
+      height: 150px
+      postfix: "The teaser is shown on listing pages instead of the intro and body fields. Also used for related content teasers"
     introduction:
       type: html
       label: "Introduction (Main Bio)"
@@ -1051,6 +1056,7 @@ persons:
         zoho: ZOHO CRM
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
+  sort: "last_name"
   icon_many: "fa:users"
   icon_one: "fa:user"
 

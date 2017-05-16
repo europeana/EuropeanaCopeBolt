@@ -1,0 +1,138 @@
+
+    <section>
+        <div class="inner-wrap">
+
+            <article class="column main-column">
+
+                {% include 'partials/_side-info.twig' %}
+
+                <div class="header-group">
+
+                    {% if record.author is not empty %}
+                        {% for aut in record.author %}
+                            {% setcontent author = 'persons' where { id : aut } returnsingle %}
+                            {% include 'views/_mini_persons.twig' with { item: author } %}
+                        {% endfor %}
+                    {% endif %}
+
+                    <h1>{{ record.title }}</h1>
+
+                    <div class="introduction">
+                        {{ record.intro }}
+                    </div>
+                </div>
+
+
+                {% if record.image is defined and record.image is not empty %}
+                <figure>
+                    <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="" />
+
+                    {% if record.values.image.title is defined %}
+                        <figcaption>
+                            {{ record.values.image.title }}
+                        </figcaption>
+                    {% endif %}
+
+                </figure>
+                {% endif %}
+
+                {% if record.body is not empty %}
+                    <div class="body"> {# can be multiple bodies #}
+                        {{ record.body }}
+                    </div>
+                {% endif %}
+
+                {% for module in record.modules %}
+                    {{ include('partials/_default_module.twig', { 'module': module }) }}
+                {% endfor %}
+
+                {% if record.pagefooter is defined %}
+                    <div class="body pagefooter">
+                        {{ record.pagefooter }}
+                    </div>
+                {% endif %}
+
+            </article>
+
+        </div>
+    </section>
+
+    <aside>
+        <div class="inner-wrap">
+
+         {# AUTHOR BIG #}
+         {% if record.author is not empty %}
+
+            {% for aut in record.author %}
+            {% setcontent author = 'persons' where { id : aut } returnsingle %}
+
+            {% include 'views/_teaser_author.twig' with { item : author } %}
+
+            {% endfor %}
+        {% endif %}
+
+
+        {# RELATED CONTENT #}
+
+        {% if record.related('posts') is not empty %}
+        <section class="related-content">
+            <h2>Related content</h2>
+
+            <div class="teaser-container">
+            {% for item in record.related('posts')|shuffle|slice(0, 3) %}
+                <article class="column third teaser-threecol">
+                    <a href="#">
+                        <img src="{{ item.teaser_image|default('notfound')|thumbnail(768, 435, 'c') }}" alt=""/>
+                    </a>
+                    <h3><a href="{{ item.link() }}">{{ item.title }}</a></h3>
+
+                    {% if item.teaser %}
+                        {{ item.teaser }}
+                    {% elseif item.introduction %}
+                       {{ item.intro|excerpt(150) }}
+                    {% else %}
+                        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+                    {% endif %}
+
+                </article>
+            {% endfor %}
+
+            </div>
+        </section>
+        {% endif %}
+
+    </aside>
+
+
+
+
+{# OUDE _DETAILS.TWIG#}
+
+{#
+<article class="snippet-details record-{{ record.contenttype.slug  }}">
+    <h1>{{ record.title }}</h1>
+
+    {{ record.teaser }}
+
+    {% if record.image %}
+    <a href="{{ image(record.image) }}">
+        <img src="{{ image(record.image, 740, 560)|default('https://unsplash.it/740/560') }}" />
+    </a>
+    {% endif %}
+
+    {{ record.body }}
+
+    {# If there are repeaters, we should output them.
+    {% for module in record.modules %}
+        {{ include('partials/_default_module.twig', { 'module': module }) }}
+    {% endfor %}
+
+    <!-- load other fields if any are available -->
+    {{ fields(common = false, extended = true, repeaters = false) }}
+
+    <!-- show a footer -->
+    {{ include('partials/_record_footer.twig', { 'record': record, 'extended': true }) }}
+
+</article>
+
+#}

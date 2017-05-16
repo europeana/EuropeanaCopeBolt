@@ -47,12 +47,8 @@
 
                 <section class="info-list-section">
                     <h2>Speakers for this event</h2>
-                    {% include 'partials/_list-speaker-list.twig' %}
-                </section>
-
-                <section class="info-list-section">
-                    <h2>Event venue and description</h2>
-                    {% include 'partials/_list-location-list.twig' %}
+                    {% setcontent speakers = 'persons/latest/4'%}
+                    {% include 'partials/_list-speaker-list.twig' with { items : speakers } %}
                 </section>
 
 

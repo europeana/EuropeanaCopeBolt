@@ -106,13 +106,15 @@ main {
 
 aside {
     padding: 0 0.875rem;
+    margin-top: 2rem;
 
     @include respond-to(medium-screens){
         padding: 0 2rem;
+        margin-top: 2rem;
     }
 
     @include respond-to(large-screens){
-        //margin: 0;
+        margin-top: 4rem;
     }
 
     > .inner-wrap {

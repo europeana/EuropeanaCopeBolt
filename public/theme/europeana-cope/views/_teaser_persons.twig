@@ -34,12 +34,14 @@
             {% endif %}
             {{ item.company }}</p>
 
-        {% if speaker %}
+        {% if speaker|default(false) %}
             {{ item.speaker_teaser }}
+        {% elseif item.teaser %}
+            {{ item.teaser }}
         {% elseif item.introduction %}
-           {{ item.introduction }}
+           {{ item.introduction|excerpt(300) }}
         {% else %}
-            <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+            <p>{{ item.excerpt(300, false, search|default('')) }}</p>
         {% endif %}
 
         <div class="contact">
