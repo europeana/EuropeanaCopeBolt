@@ -57,8 +57,17 @@ class Backend implements ControllerProviderInterface
         break;
       case 'test':
       default:
-        $text = 'Running test import';
-        $text .= "<br>\n" . $app['zohoimport']->zohoImportOverview();
+        $text = '<div class="panel">
+            <div class="panel-heading"><h2>Remotes</h2></div>
+            <div class="panel-body">
+            ' . $app['zohoimport']->zohoImportOverview() . '
+            </div><div class="panel-footer"></div></div>';
+        $text .= '<div class="panel">
+            <div class="panel-heading"><h2>Manual control</h2></div>
+            <div class="panel-body">
+                <p>Please run the importer on the console with <tt>php app/nut zoho:import full</tt></p>
+                <p>You can try a <a href="/admin/extend/zohoimport/full">full import</a>, but that will stall because the process takes to long for the web interface.</p>
+            </div><div class="panel-footer"></div></div>';
         $type = 'test';
         break;
     }

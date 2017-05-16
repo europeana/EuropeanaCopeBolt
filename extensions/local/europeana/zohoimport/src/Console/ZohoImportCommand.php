@@ -67,7 +67,11 @@ class ZohoImportCommand extends BaseCommand
       // do stuff
     } else {
       // do stuff
-      $text .= "\n" . $this->app['zohoimport']->zohoImportOverview();
+      $text .= "\n" . strip_tags(
+        str_replace('<tr>', "\n<tr>",
+          str_replace('</td><td>',': </td><td>',$this->app['zohoimport']->zohoImportOverview())
+        )
+      );
     }
 
     $this->app['zohoimport']->logger('info', $text, 'zoho-console-'.$type, ['input'=>$input, 'output'=>$output]);
