@@ -487,6 +487,21 @@ a.banner {
 
 }
 
+.related-events {
+    position: relative;
+
+    .info-block {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 145px;
+
+        @include respond-to(medium-screens){
+            width: 172px;
+        }
+    }
+}
+
 /*
 * WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS v1
 **/

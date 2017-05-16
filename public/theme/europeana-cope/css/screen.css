@@ -684,6 +684,9 @@ footer {
     .contentpage .info-list {
       padding: 0 8rem; } }
 
+.body > * {
+  margin: 2rem 0; }
+
 ul.search-results,
 ul.teaser-list {
   margin: 2rem 0rem; }
@@ -1678,6 +1681,17 @@ aside .teaser-threecol {
         margin-right: 1.75rem; }
         .teaser-container .teaser-threecol:last-child {
           margin-right: 0; } }
+
+.related-events {
+  position: relative; }
+  .related-events .info-block {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 145px; }
+    @media only screen and (min-width: 24em) {
+      .related-events .info-block {
+        width: 172px; } }
 
 /*
 * WIDGET THREE COLUMN CATEGORY ICON / CATEGORY STREAMS v1
