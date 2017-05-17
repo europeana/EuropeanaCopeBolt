@@ -5,57 +5,6 @@ image_path: 'zoho_images'
 # set image_downloads to true for the hookafterload images
 image_downloads: true
 
-# Make the associations with the different values and their structure tree equivalent
-# rank  - the order of importance, with 1 as highest rank
-# label - the label that is present in the source field
-# id    - the id for the target field
-# the default map will be the one that is set for all non matching records
-structure_tree_map:
-    governing:
-        rank: 1
-        label: "Founding Member"
-        id: 58
-    management:
-        rank: 2
-        label: "Network Association Management Board Member"
-        id: 57
-    council:
-        rank: 3
-        label: "Members Council Member"
-        id: 59
-    contentholders:
-        rank: 4
-        label: "Representative of Content Holder Associations"
-        id: 58
-    experts:
-        rank: 5
-        label: "Representative of Specific Fields of Expertise"
-        id: 58
-    partners:
-        rank: 6
-        label: "Member States Representative"
-        id: 58
-    observers:
-        rank: 7
-        label: "Observer"
-        id: 58
-    candidates:
-        rank: 8
-        label: "MC Election Candidate"
-        id: 62
-    members:
-        rank: 9
-        label: "Network Association Member"
-        id: 57
-    partners:
-        rank: 10
-        label: "Friend of Europeana"
-        id: 29
-    default:
-        rank: 11
-        label: "*"
-        id: 29
-
 remotes:
     zoho_json_remote:
         enabled: true
@@ -85,11 +34,6 @@ remotes:
                     source_url: 'https://crm.zoho.com/crm/private/xml/Contacts/downloadPhoto?authtoken=e95153d23c8b0d4a5eb5c885531f2d6b&scope=crmapi&id=CONTACTID'
                     source_field: CONTACTID
                     target_field: image
-                structure_parent:
-                    callback: setParentStructure
-                    source_url: false
-                    source_field: "Participation level"
-                    target_field: structure_parent
             mapping: # mappings in XPATH
                 root: 'response.result.Contacts.row'
                 fields:

@@ -243,6 +243,63 @@ class ZohoImport
   }
 
   /**
+   * Overview page
+   */
+  public function zohoImportOverview()
+  {
+    $config = $this->config;
+    $output = [];
+    //dump($config);
+    foreach($config['remotes'] as $remotekey => $remote) {
+      //dump($remotekey, $remote);
+      if ($remote['enabled']) {
+        $localconfig = $remote;
+        // show date of last import
+        $lastimportdate = $this->getLastImportDate($localconfig);
+
+        // TODO: show number of imported items in last batch
+        $num_imported_items = 'n/a';
+
+        // TODO: show number of requests in last batch
+        $num_remote_request = 'n/a';
+
+        // show number of published items
+        $num_published_records = $this->getPublishedRecords($localconfig);
+
+        // show number of unpublished items
+        $num_unpublished_records = $this->getUnpublishedRecords($localconfig);
+
+        $table = [
+          'head' => [ 'Import', 'amount' ],
+          'data' => [
+            [ 'last run', $lastimportdate ],
+            //[ 'items', $num_imported_items ],
+            //[ 'remote requests', $num_remote_request ],
+            [ 'published records', $num_published_records ],
+            [ 'unpublished records', $num_unpublished_records ]
+          ]
+        ];
+        $rowoutput = $tableoutput = '';
+        foreach ($table['head'] as $cell) {
+          $rowoutput .= '<th>' . $cell . '</th>';
+        }
+        $tableoutput .= '<tr>'.$rowoutput.'</tr>';
+        foreach($table['data'] as $key => $row) {
+          $rowoutput = '';
+          foreach ($row as $cell) {
+            $rowoutput .= '<td>' . $cell . '</td>';
+          }
+          $tableoutput .= '<tr>'.$rowoutput.'</tr>';
+        }
+        $output[$remotekey] = '<h3>remote: '.$remotekey.'</h3><table class="table-striped dashboardlisting">'.$tableoutput.'</table>';
+      }
+    }
+    //dump($this->app);
+
+    return join('', $output);
+  }
+
+  /**
    * Save the record for each row
    */
   private function saveRecords($name, $config)
@@ -260,7 +317,6 @@ class ZohoImport
       //dump($name, $config, $inputrecords);
       dump('processing import: '. $name, $config);
     }
-
 
     foreach ($inputrecords as $inputrecord) {
       $uid = $config['target']['mapping']['fields']['uid'];
@@ -502,89 +558,6 @@ class ZohoImport
   }
 
   /**
-   * HOOKAFTERLOAD:
-   * Set a title if none is set
-   */
-  public function setFallbackTitle($source_record, &$target_record, $params)
-  {
-    $result = null;
-    if(array_key_exists($params['source_field'], $source_record) && !empty($source_record[$params['source_field']])) {
-      if(0 && $this->debug_mode) {
-        dump('setting title');
-        dump($params);
-        dump($params['source_field'] . ": " . $source_record[$params['source_field']] . ' - '.  $params['target_field'] . ": " .$target_record->values[$params['target_field']]);
-        //dump($source_record);
-        dump($target_record->values);
-      }
-      if(empty($target_record->values[$params['target_field']])) {
-        $result = $source_record[$params['source_field']];
-        $target_record->values[$params['target_field']] = $result;
-      }
-    }
-    if(0 && $this->debug_mode) {
-      dump('new ' . $params['target_field'] . ": " . $result);
-    }
-    return $result;
-  }
-
-  /**
-   * HOOKAFTERLOAD:
-   * Check if a field is an array
-   * If yes, encode it
-   */
-  public function flattenArrays($source_record, $target_record, $params)
-  {
-    $result = false;
-    if(array_key_exists($params['source_field'], $source_record) && !empty($source_record[$params['source_field']])) {
-      if(is_array($source_record[$params['source_field']])) {
-        $result = (string)json_encode($source_record[$params['source_field']]);
-        if(0 && $this->debug_mode) {
-          dump('flattening');
-          dump($result);
-        }
-      } else {
-        $result = $source_record[$params['source_field']];
-      }
-    }
-    return $result;
-  }
-
-  /**
-   * HOOKAFTERLOAD:
-   * Get the structuretree parent id and return it
-   * If not structure tree id is found return the default id
-   */
-  public function setParentStructure($source_record, $target_record, $params)
-  {
-    // dump('setParentStructure');
-    $id = $this->structure_tree_map['default_id'];
-    $lastrank = $this->structure_tree_map['lowest_rank'];
-
-    if(array_key_exists($params['source_field'], $source_record) && !empty($source_record[$params['source_field']])) {
-      $labels = explode(';',$source_record[$params['source_field']]);
-      // loop trough all of found labels
-      // highest ranks are first in zoho
-      // so return the value for the first matched rank
-      foreach($labels as $label) {
-        if(array_key_exists($label,  $this->structure_tree_map['ranks'])) {
-          $rank = $this->structure_tree_map['ranks'][$label];
-          $id = $this->structure_tree_map['ids'][$label];
-          return $id;
-        } else {
-          $message = "unknown rank $label";
-          $this->logger('warning', $message);
-        }
-        // and override previously set label if the rank is higer (number is lower)
-        // if($rank < $lastrank) {
-        //   $rank = $lastrank;
-        //   $id = $this->structure_tree_map['ids'][$label];
-        // }
-      }
-    }
-    return $id;
-  }
-
-  /**
    * HOOKAFTERLOAD: Get a photo from ZOHO
    * Save it to the filesystem
    * And return the url
@@ -614,12 +587,6 @@ class ZohoImport
       $this->logger('debug', $logmessage, 'zohoimport');
       if($on_console) {
         $this->writeconsole('<info>public photo (show photo on europeana site) available at: <a href="' . $params['source_url'] .'">zoho '. $source_record['CONTACTID'] .'</a></info>');
-
-        // echo "===============================================================";
-        // dump($params);
-        // echo "===============================================================";
-        // dump($source_record);
-        // die();
       }
     } elseif(array_key_exists('public_photo', $source_record)
       && ($source_record['public_photo'] == true || $source_record['public_photo'] == 'true')) {
@@ -627,19 +594,12 @@ class ZohoImport
       $this->logger('debug', $logmessage, 'zohoimport');
       if($on_console) {
         $this->writeconsole('<info>public photo (public_photo) available at: <a href="' . $params['source_url'] .'">zoho '. $source_record['uid'] .'</a></info>');
-        // echo "===============================================================";
-        // dump($params);
-        // echo "===============================================================";
-        // dump($source_record);
-        // die();
       }
     } elseif($source_record["Show photo on europeana site"] == false || $source_record["Show photo on europeana site"] == 'false' ) {
       $logmessage = 'no remote photo needed for:' . $params['source_url'];
       $this->logger('debug', $logmessage, 'zohoimport');
       if(0 && $on_console) {
         $this->writeconsole("no remote photo needed for by Show photo on europeana site: " . $params['source_url']);
-        //dump($params);
-        //die();
       }
       return false;
     } elseif($source_record['public_photo'] == false || $source_record['public_photo'] == 'false') {
@@ -647,8 +607,6 @@ class ZohoImport
       $this->logger('debug', $logmessage, 'zohoimport');
       if(0 && $on_console) {
         $this->writeconsole("no remote photo needed for by public_photo: " . $source_record['source_url']);
-        //dump($params);
-        //die();
       }
       return false;
     } else {
@@ -656,9 +614,6 @@ class ZohoImport
       $this->logger('debug', $logmessage, 'zohoimport');
       if(0 && $on_console) {
         $this->writeconsole("we should check for a public photo at: " . $params['source_url']);
-        //dump($params);
-        // dump($target_record->values);
-        // die();
       }
     }
 
@@ -801,8 +756,6 @@ class ZohoImport
     $imagefile = new File($image['tmpname']);
     $newfile = $imagefile->move($image['target_dir'], $image['target_name']);
 
-    //dump($image);
-
     // if($on_console) {
     //   echo "fetched image:\n";
     //   dump($image);
@@ -861,6 +814,7 @@ class ZohoImport
       $this->logger('error', $errormessage, 'zohoimport');
     }
 
+    // TODO: fix remote request counter
     $this->remote_request_counter += $filefetcher->remoteRequestCount();
   }
 
@@ -891,66 +845,6 @@ class ZohoImport
 
     //dump($ranklabels);
     return $ranklabels;
-  }
-
-
-  /**
-   * Overview page
-   */
-  public function zohoImportOverview()
-  {
-    $config = $this->config;
-    $output = [];
-    //dump($config);
-    foreach($config['remotes'] as $remotekey => $remote) {
-      //dump($remotekey, $remote);
-      if ($remote['enabled']) {
-        $localconfig = $remote;
-        // show date of last import
-        $lastimportdate = $this->getLastImportDate($localconfig);
-        // dump($lastimportdate);
-        // SELECT max(datechanged) FROM europeana_cope.bolt_persons;
-        // show number of imported items
-        $num_imported_items = 'n/a';
-
-        // show number of requests
-        $num_remote_request = 'n/a';
-        // show number of published items
-        // $num_published_records = 'n/a';
-        $num_published_records = $this->getPublishedRecords($localconfig);
-        // show number of unpublished items
-        // $num_unpublished_records = 'n/a';
-        $num_unpublished_records = $this->getUnpublishedRecords($localconfig);
-        // show how to manually import a new batch
-        $table = [
-          'head' => [ 'Import', 'amount' ],
-          'data' => [
-            [ 'last run', $lastimportdate ],
-            //[ 'items', $num_imported_items ],
-            //[ 'remote requests', $num_remote_request ],
-            [ 'published records', $num_published_records ],
-            [ 'unpublished records', $num_unpublished_records ]
-          ]
-        ];
-        $rowoutput = $tableoutput = '';
-        foreach ($table['head'] as $cell) {
-          $rowoutput .= '<th>' . $cell . '</th>';
-        }
-        $tableoutput .= '<tr>'.$rowoutput.'</tr>';
-        foreach($table['data'] as $key => $row) {
-          $rowoutput = '';
-          foreach ($row as $cell) {
-            $rowoutput .= '<td>' . $cell . '</td>';
-          }
-          $tableoutput .= '<tr>'.$rowoutput.'</tr>';
-        }
-        $output[$remotekey] = '<h3>remote: '.$remotekey.'</h3><table class="table-striped dashboardlisting">'.$tableoutput.'</table>';
-
-      }
-    }
-    //dump($this->app);
-
-    return join('', $output);
   }
 
   /**

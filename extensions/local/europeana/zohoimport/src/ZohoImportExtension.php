@@ -77,6 +77,7 @@ class ZohoImportExtension extends SimpleExtension
     return [
       'debug_mode' => 'false',
       'image_path' => 'zoho_images',
+      'image_downloads' => true,
       'remotes' => [
         'atom_feed_example' => [
           'enabled' => false,
