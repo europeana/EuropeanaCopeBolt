@@ -14,7 +14,6 @@ class ZohoImport
   private $filedata;
   private $enabledsources;
   private $debug_mode;
-  private $structure_tree_map;
   private $remote_request_counter;
   private $on_console;
   private $consoleoutput;
@@ -26,7 +25,6 @@ class ZohoImport
     $this->config = $this->app['zohoimport.config'];
     $this->debug_mode = $this->config['debug_mode'];
     $this->remote_request_counter = 0;
-    $this->structure_tree_map = $this->orderStructureTreeMap();
   }
 
   /**
@@ -816,35 +814,6 @@ class ZohoImport
 
     // TODO: fix remote request counter
     $this->remote_request_counter += $filefetcher->remoteRequestCount();
-  }
-
-  /**
-   * Utility function for setParentStructure
-   * Orders and prepares the configuration value for speedy processing
-   */
-  private function orderStructureTreeMap()
-  {
-    $ranklabels = $ids = $ranks = [];
-    $structure_tree_map = $this->config['structure_tree_map'];
-    $ranklabels['source'] = $structure_tree_map;
-    $lowestrank = 0;
-
-    foreach($structure_tree_map as $key => $map) {
-      $ranks[$map['label']] = $map['rank'];
-      if($map['rank']>$lowestrank) {
-        $lowestrank = $map['rank'];
-        $default_id = $map['id'];
-      }
-      $ids[$map['label']] = $map['id'];
-    }
-    $ranklabels['lowest_rank'] = $lowestrank;
-    $ranklabels['default_id'] = $default_id;
-
-    $ranklabels['ranks'] = $ranks;
-    $ranklabels['ids'] = $ids;
-
-    //dump($ranklabels);
-    return $ranklabels;
   }
 
   /**
