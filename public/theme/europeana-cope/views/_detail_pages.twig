@@ -1,7 +1,6 @@
 
     <section>
         <div class="inner-wrap">
-
             <article class="column main-column">
 
                {% include 'partials/_side-info.twig' %}
@@ -39,8 +38,12 @@
                     </div>
                 {% endif %}
 
+                {% if record.imagegallery is not empty %}
+                    {% include 'views/_imagegallery.twig' %}
+                {% endif %}
+
                 {% for module in record.modules %}
-                    {# {{ include('partials/_default_module.twig', { 'module': module }) }} #}
+                    {{ include('partials/_default_module.twig', { 'module': module }) }}
                 {% endfor %}
 
                 {% if record.pagefooter is defined %}

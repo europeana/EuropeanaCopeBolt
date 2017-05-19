@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "595a3c111252be3677dac8ac92283d91",
+    "content-hash": "8b5f9ccaa2dfebfe5b84828f7ec38650",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -238,6 +238,64 @@
                 "issues": "https://github.com/bolt/Sitemap/issues"
             },
             "time": "2017-05-11T09:32:22+00:00"
+        },
+        {
+            "name": "soapbox/relatedcontent",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/graham73may/bolt-related-content.git",
+                "reference": "b4532382fcaf53a718f8fd898a0d7793e3383dbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/graham73may/bolt-related-content/zipball/b4532382fcaf53a718f8fd898a0d7793e3383dbe",
+                "reference": "b4532382fcaf53a718f8fd898a0d7793e3383dbe",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.2.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-class": "Bolt\\Extension\\Soapbox\\RelatedContent\\RelatedContentExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Soapbox\\RelatedContent\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Bolt\\Extension\\Soapbox\\RelatedContent\\Tests\\": "tests",
+                    "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham May",
+                    "email": "graham.may@soapbox.co.uk"
+                }
+            ],
+            "description": "Retrieves a list of similar content based on taxonomies and fields.",
+            "keywords": [
+                "categories",
+                "related",
+                "related content",
+                "tags",
+                "taxonomy"
+            ],
+            "support": {
+                "source": "https://github.com/graham73may/bolt-related-content/tree/master",
+                "issues": "https://github.com/graham73may/bolt-related-content/issues"
+            },
+            "time": "2017-03-03T23:16:20+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",

@@ -1,8 +1,6 @@
 
 $( document ).ready(function() {
 
-console.log('JOEHOE');
-
 
     //  init jQuery plugin "minRead"
     //  https://github.com/heyimjuani/minRead

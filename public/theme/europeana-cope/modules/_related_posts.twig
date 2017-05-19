@@ -2,12 +2,24 @@
 {% set template = 'related' %}
 {% endspaceless %}
 
+
+{% if record.related() is not empty %}
+    {# get the manually set related records #}
+    {% set records = record.related()|shuffle|slice(0, 3) %}
+{% elseif record.taxonomy.categories is defined %}
+    {# get the automatically related records by category #}
+    {# {% setcontent records = record.contenttype.slug where { categories : record.taxonomy.categories } %} #}
+
+    {# FIXME Extensie is nog stuk #}
+    {# {% set records = relatedcontent(record) %} #}
+{% endif %}
+
+{% if (records is defined) and (records is not empty) %}
+
 <section class="related-content">
     <h2>{{ title|default('Related content') }}</h2>
 
     <div class="teaser-container">
-
-    {% set records = record.related()|shuffle|slice(0, 3) %}
 
     {% if records is iterable %}
         {% for record in records %}
@@ -24,5 +36,7 @@
 
     </div>
 </section>
+
+{% endif %}
 
 

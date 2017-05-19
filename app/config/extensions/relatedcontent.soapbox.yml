@@ -1,0 +1,27 @@
+# Limit the number of items returned
+limit : 3
+
+# Content types to look for related content in
+contenttypes: [ pages, posts, events, data, projects ]
+# contenttypes: [ posts ]
+
+# Taxonomies to check related content for
+# - Don't define a taxonomies variable at all to use (Comment it out) = Use all taxonomies
+# - taxonomies: [ ] = Don't use any taxonomies
+# - taxonomies: [tags] = Only use specific taxonomies
+taxonomies: [ categories, tags ]
+
+# Fields to use for content retrieval and weighting
+fields: [ intro ]
+
+# Is there a field that allows for related content to be manually chosen?
+# The items in this field will be given priority over automatically selected related content
+# The auto items will be returned + a number of auto items to make up the enough items to meet the limit: value above.
+# - Leave blank / comment out to only use auto related content
+# manual_related_content_field: related_content
+
+# What type of value is stored in your the manual related content field?
+# - single (e.g. a single select)
+# - array (e.g. a multi select)
+# - json (e.g. a plugin like relationlist)
+manual_related_content_field_type: json
