@@ -75,7 +75,7 @@
                 {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
                 <!-- loading listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
 
-                {% include [template, 'views/_teasers.twig', 'views/_fallback.twig'] with { item : record } %}
+                {% include [template, 'views/_teaser.twig', 'views/_fallback.twig'] with { item : record } %}
             {% else %}
                 <article>
                     <h2>{{ __('general.phrase.no-content-found') }}</h2>

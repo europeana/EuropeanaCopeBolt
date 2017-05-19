@@ -23,9 +23,64 @@
             {% set selected_records = selected_records|merge([record]) %}
         {% endfor %}
     {% endif %}
-{% elseif template != 'body' %}
-    {% set contentquery = sources ~ '/' ~ ordering ~ '/' ~ override_amount %}
+{% elseif template != 'body' and ordering == 'random' %}
+    {% set contentquery = sources ~ '/' ~ ordering ~ '/' ~ override_amount|default(10) %}
     {% setcontent selected_records = contentquery %}
+{% elseif template != 'body' %}
+    {% if sources == 'persons'  %}
+        {% set filtername = 'network_participation' %}
+        {% set filtervalue = module.get('filter_persons') %}
+    {% elseif sources == 'posts' %}
+        {% set filtername = 'posttype' %}
+        {% set filtervalue = module.get('filter_posts') %}
+    {% elseif sources == 'data' %}
+        {% set filtername = 'datatype' %}
+        {% set filtervalue = module.get('filter_data') %}
+    {% elseif sources == 'projects' %}
+        {% set filtername = 'projecttype' %}
+        {% set filtervalue = module.get('filter_projects') %}
+    {% else %}
+        {% set filtername = 1 %}
+        {% set filtervalue = 1 %}
+    {% endif %}
+
+    {% if ordering == 'latest' %}
+        {% setcontent selected_records = sources where {filtername: filtervalue} orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+    {% elseif ordering == 'latest_unpaged' %}
+        {% setcontent selected_records = sources where {filtername: filtervalue} orderby '-datepublish' limit override_amount|default(10) %}
+    {% elseif ordering == 'oldest' %}
+        {% setcontent selected_records = sources where {filtername: filtervalue} orderby 'datepublish' limit override_amount|default(10) allowpaging %}
+    {% elseif ordering == 'oldest_unpaged' %}
+        {% setcontent selected_records = sources where {filtername: filtervalue} orderby 'datepublish' limit override_amount|default(10) %}
+    {% elseif ordering == 'alphabetical' %}
+        {% if sources != 'persons' %}
+            {% setcontent selected_records = sources where {filtername: filtervalue} orderby 'title' limit override_amount|default(10) %}
+        {% else %}
+            {% setcontent selected_records = sources where {filtername: filtervalue} orderby 'last_name' limit override_amount|default(10) %}
+        {% endif %}
+    {% elseif ordering == 'tag' %}
+        {% set basetag = module.get('basetag') %}
+        {% setcontent selected_records = sources where {filtername: filtervalue, 'tag': basetag} orderby 'datepublish' limit override_amount|default(10) allowpaging %}
+    {% elseif ordering == 'tag_unpaged' %}
+        {% set basetag = module.get('basetag') %}
+        {% setcontent selected_records = sources where {filtername: filtervalue, 'tag': basetag} orderby 'datepublish' limit override_amount|default(10) %}
+    {% elseif ordering == 'category' %}
+        {% set basecategory = module.get('basecategory') %}
+        {% setcontent selected_records = sources where {filtername: filtervalue, 'category': basecategory} orderby 'datepublish' limit override_amount|default(10) allowpaging %}
+    {% elseif ordering == 'category_unpaged' %}
+        {% set basecategory = module.get('basecategory') %}
+        {% setcontent selected_records = sources where {filtername: filtervalue, 'category': basecategory} orderby 'datepublish' limit override_amount|default(10) %}
+    {% elseif ordering == 'calendar' %}
+        {{ dump(module, template, ordering, override_amount) }}
+    {% elseif ordering == 'calendar_upcoming' %}
+        {{ dump(module, template, ordering, override_amount) }}
+    {% elseif ordering == 'calendar_archive' %}
+        {{ dump(module, template, ordering, override_amount) }}
+    {% else %}
+        {{ dump(module, template, ordering, override_amount) }}
+    {% endif %}
+{% else %}
+    <p class="error">Whoops, we don't know what to do here.</p>
 {% endif %}
 {% endspaceless %}
 <!-- loading templatefile for module: '{{ templatefile }}' or 'modules/_default.twig' -->

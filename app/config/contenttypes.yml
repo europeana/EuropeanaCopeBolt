@@ -268,8 +268,8 @@ pages:
           info: Use the template to select how the module will look
           postfix: Use the template to select how the module will look
           values:
-            titles:           "Title with a link (_titles.twig)"
-            teasers:          "Teaser view (_teasers.twig)"
+            title:           "Title with a link (_title.twig)"
+            teaser:          "Teaser view (_teaser.twig)"
             listing:          "Listing of records (_listing.twig)"
             #listingexpander:  "Expander block with records - vertical accordeon (_listingexpander.twig)"
             #listingnews:      "News postings and a link to more (_listingnews.twig)"
@@ -279,8 +279,8 @@ pages:
             #listingstreamers: "Three column category streamers (_listingstreamers.twig)"
             #listingfaces:     "Round images or photos with a link (_listingfaces.twig)"
             #listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
-            details:          "Full details for single items (_details.twig)"
-            banners:          "Banner view (_banners.twig)"
+            detail:          "Full details for single items (_detail.twig)"
+            banner:          "Banner view (_banner.twig)"
             #breakers:         "Section breakers, call to action (_breakers.twig)"
             calltoactionform: "Call to action form main page (_calltoactionform.twig)"
             calltoactionlink: "Call to action button main page (_calltoactionlinks.twig)"
