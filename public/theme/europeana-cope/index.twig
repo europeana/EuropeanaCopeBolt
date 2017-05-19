@@ -17,7 +17,7 @@
                         <li>
                             {% set template =  'views/_title_' ~ record.contenttype.slug ~ '.twig' %}
                             <!-- loading templatefile for view: '{{ template }}' or 'views/_titles.twig' or 'views/_fallback.twig' -->
-                            {% include [template, 'views/_titles.twig', 'views/_fallback.twig'] with {record:record} %}
+                            {% include [template, 'views/_title.twig', 'views/_fallback.twig'] with {record:record} %}
                         </li>
                     {% else -%}
                         <li>{{ __('contenttypes.generic.no-recent', {'%contenttype%': ct.slug}) }}</li>

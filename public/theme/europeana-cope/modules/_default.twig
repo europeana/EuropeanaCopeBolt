@@ -28,8 +28,8 @@ Available variables
     {% if records is iterable %}
         {% for record in records %}
             {% if record.id is defined %}
-                {% set templatefile =  'views/_' ~  template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
-                {% set defaulttemplatefile =  'views/_' ~  template ~ '.twig' %}
+                {% set templatefile =  'views/_' ~ template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
+                {% set defaulttemplatefile =  'views/_' ~ template ~ '.twig' %}
                 <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
                 {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
             {% else %}

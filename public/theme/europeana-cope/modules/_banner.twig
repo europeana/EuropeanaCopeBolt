@@ -18,11 +18,14 @@ Available variables
             {% endif %}
             <div class="header-group">
                 <h3 class="widget">{{ record.title }}</h3>
-                {% if record.intro %}
-                    {{ record.intro }}
-                {% elseif record.teaser %}
+                {% if record.teaser %}
                     {{ record.teaser }}
+                {% elseif record.intro %}
+                    {{ record.intro }}
+                {% elseif record.body %}
+                    {{ record.body }}
                 {% else %}
+                    {# for banners we do not want an excerpt unless really necessary #}
                     <p>{{ record.excerpt(300, false, search|default('')) }}</p>
                 {% endif %}
             </div>
