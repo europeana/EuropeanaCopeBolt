@@ -4,15 +4,13 @@
 
             <article class="column main-column">
 
-                {% include 'partials/_side-info.twig' %}
+               {% include 'partials/_side-info.twig' %}
 
                 <div class="header-group">
 
-                    {% if record.author is not empty %}
-                       {#  {% for aut in record.author %}
-                            {% setcontent author = 'persons' where { id : aut } returnsingle %}
-                            {% include 'views/_mini_persons.twig' with { item: author } %}
-                        {% endfor %} #}
+                    {% if record.contact_record %}
+                        {% setcontent author = 'persons' where { id : record.contact_record } returnsingle %}
+                        {% include 'views/_mini_persons.twig' with { item: author } %}
                     {% endif %}
 
                     <h1>{{ record.title }}</h1>
@@ -22,10 +20,9 @@
                     </div>
                 </div>
 
-
                 {% if record.image is defined and record.image is not empty %}
                 <figure>
-                    <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="" />
+                    <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="ALT" />
 
                     {% if record.values.image.title is defined %}
                         <figcaption>
@@ -43,7 +40,7 @@
                 {% endif %}
 
                 {% for module in record.modules %}
-                    {{ include('partials/_default_module.twig', { 'module': module }) }}
+                    {# {{ include('partials/_default_module.twig', { 'module': module }) }} #}
                 {% endfor %}
 
                 {% if record.pagefooter is defined %}
@@ -73,6 +70,7 @@
 
 
         {# RELATED CONTENT #}
-       {% include 'modules/_related_posts.twig' with { record : record, title : 'Related' } %}
+
+        {% include 'modules/_related_posts.twig' with { record : record, title : 'Related' } %}
 
     </aside>

@@ -7,8 +7,7 @@
 
 <section>
     <div class="inner-wrap">
-        {#{{ dump(app.request.get('cat')) }}#}
-        {#{{ dump(app.config.get('general')) }}#}
+
         <div class="column">
             {# set the contenttype if there is one #}
             {% if records|first.contenttype is defined %}
