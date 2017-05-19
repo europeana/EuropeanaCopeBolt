@@ -149,6 +149,26 @@ __nodes:
       required: false
       variant: inline
       class: narrow
+  network_default_values: &network_default_values
+    values:
+      "(not set)": "(not set)"
+      "Founding Member": "Founding Member"
+      "Governing Board": "Governing Board"
+      "Management Board": "Management Board"
+      "Members Council": "Members Council"
+      "Network Association Member": "Network Association Member"
+      "MC Election Candidate": "MC Election Candidate"
+      "Partner": "Partner"
+      "Not a Network member": "Not a Network member"
+      "Network Association Member": "Network Association Member"
+      "Members Council Member": "Members Council Member"
+      "Network Association Management Board Member": "Network Association Management Board Member"
+      "Member States Representative": "Member States Representative"
+      "Representative of Content Holder Associations": "Representative of Content Holder Associations"
+      "Representative of Specific Fields of Expertise": "Representative of Specific Fields of Expertise"
+      "MC Election Candidate": "MC Election Candidate"
+      "Observer": "Observer"
+      "Friend of Europeana": "Friend of Europeana"
   relation_pages: &relation_pages
     pages:
       label: "Pages"
@@ -262,12 +282,12 @@ pages:
             details:          "Full details for single items (_details.twig)"
             banners:          "Banner view (_banners.twig)"
             #breakers:         "Section breakers, call to action (_breakers.twig)"
-            calltoactionform: "Call to action form main page  (_calltoactionform.twig)"
+            calltoactionform: "Call to action form main page (_calltoactionform.twig)"
             calltoactionlink: "Call to action button main page (_calltoactionlinks.twig)"
-            calltoactionblog: "Call to action blog page  (_calltoactionblog.twig)"
+            calltoactionblog: "Call to action blog page (_calltoactionblog.twig)"
             #filecontent:      "File content block (_filecontent.twig)"
             #fileslisting:     "File list block (_fileslisting.twig)"
-            body:             "Show only the module body field  (_body.twig)"
+            body:             "Module body field - for extra body blocks between modules (_body.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -275,17 +295,24 @@ pages:
           postfix: "Shown in module blocks as body text"
         ordering:
           type: select
+          label: Order- and filtering
           default: latest
           info: Use the ordering to select how the module will load records
-          postfix: Use the ordering to select how the module will load records
+          postfix: Use the ordering and filtering to select how the module will load records
           values:
             specified: Select some records below
-            latest: The newest records first
-            current: Currently relevant (based on start and end date)
-            tagged: Records based on on a certain tag
-            category: Records based on on a certain category
-            alphabetical: Alphabetically ordered
-            highlighted: Records based on highlighted flag
+            latest: The newest records first (with pagination)
+            latest_unpaged: The newest records first (without pagination)
+            tag: Tag (with pagination)
+            tag_unpaged: Tag (without pagination)
+            category: Category (with pagination)
+            category_unpaged: Category (without pagination)
+            oldest: Chronological with the oldest records first (with pagination)
+            oldest_unpaged: Chronological with the oldest records first (without pagination)
+            calendar: Calendar (based on start and end date)
+            calendar_upcoming: Calendar upcoming (based on start and end date)
+            calendar_archive: Calendar archive (based on start and end date)
+            alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:
           type: select
@@ -307,6 +334,19 @@ pages:
           default: 3
           variant: inline
           info: "If this field is set this number will be used as the number of items in the listing"
+          prefix: '<hr>'
+        basetag:
+          type: text
+          label: Selected tag
+          variant: inline
+          placeholder: Enter a tag here
+          info: The selected tag will be used to filter the records that are shown
+        basecategory:
+          type: text
+          label: Selected category
+          variant: inline
+          placeholder: Enter a category slug here
+          info: The selected category will be used to filter the records that are shown
         selected_pages:
           type: select
           default: ''
@@ -316,6 +356,14 @@ pages:
           autocomplete: true
           sortable: true
           label: "Select Pages"
+        filter_persons:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: Filter persons
+          postfix: You can optionally choose one of the network participation levels to filter
+          <<: *network_default_values
         selected_persons:
           type: select
           default: ''
@@ -325,6 +373,13 @@ pages:
           autocomplete: true
           sortable: true
           label: "Select Persons"
+        filter_posts:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter post type"
+          values: [ "Blog", "Pressrelease", "Publication", "News" ]
         selected_posts:
           type: select
           default: ''
@@ -334,6 +389,13 @@ pages:
           autocomplete: true
           sortable: true
           label: "Select Posts"
+        filter_data:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter data type"
+          values: [ "Data", "Tool", "Showcase", "Documentation", "API" ]
         selected_data:
           type: select
           default: ''
@@ -343,6 +405,13 @@ pages:
           autocomplete: true
           sortable: true
           label: "Select data"
+        filter_projects:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter project type"
+          values: [ "TaskForce", "WorkingGroup", "Project" ]
         selected_projects:
           type: select
           default: ''
@@ -385,6 +454,7 @@ pages:
           variant: inline
           placeholder: If you need to add a custom css ID you can enter that here
           info: If you need to add a custom css ID you can enter that here
+          prefix: '<hr>'
         override_css_class:
           type: text
           label: CSS Class
@@ -930,27 +1000,8 @@ persons:
       type: select
       required: false
       multiple: true
-      label: "Network participation level:"
-      values:
-        "(not set)": "(not set)"
-        "Founding Member": "Founding Member"
-        "Governing Board": "Governing Board"
-        "Management Board": "Management Board"
-        "Members Council": "Members Council"
-        "Network Association Member": "Network Association Member"
-        "MC Election Candidate": "MC Election Candidate"
-        "Partner": "Partner"
-        "Not a Network member": "Not a Network member"
-        "(not set)": "-- new options --"
-        "Network Association Member": "Network Association Member"
-        "Members Council Member": "Members Council Member"
-        "Network Association Management Board Member": "Network Association Management Board Member"
-        "Member States Representative": "Member States Representative"
-        "Representative of Content Holder Associations": "Representative of Content Holder Associations"
-        "Representative of Specific Fields of Expertise": "Representative of Specific Fields of Expertise"
-        "MC Election Candidate": "MC Election Candidate"
-        "Observer": "Observer"
-        "Friend of Europeana": "Friend of Europeana"
+      label: "Network participation level"
+      <<: *network_default_values
     community:
       type: select
       required: false
