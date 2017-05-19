@@ -54,82 +54,27 @@
         </div>
     </section>
 
-    {# AUTEUR EN RELATED - NOG NIET GEBRUIKT< DUS UITGECOMMENT _ ANKE 5 mei 2015
-
     <aside>
         <div class="inner-wrap">
 
+         {# AUTHOR BIG #}
+         {% if record.author is not empty %}
 
-            {# AUTHOR
+            {% for aut in record.author %}
+            {% setcontent author = 'persons' where { id : aut } returnsingle %}
 
-            <section class="author-big column">
-                <div class="img-container">
-                    <img class="round" src="https://unsplash.it/144/144" alt="name"/>
-                </div>
-                <div class="txt-container">
-                    <p class="name"><span>Created by</span> Victor-Jan Vos</p>
-                    <p class="function">Head of programmes, policy & research</p>
-                    <p>At Europeana Art History Collections, you can discover artworks and stories of art from all over Europe, and use them for learning, enjoyment, sharing.</p>
-                    <div class="contact">
-                        <a href="#" class="tw">
-                            <svg class="icon icon-twitter">
-                                <use xlink:href="#icon-twitter"></use>
-                            </svg>
-                            <span class="sr-only">Twitter</span>
-                        </a>
-                        <a href="#" class="tw">
-                            <svg class="icon icon-linkedin">
-                                <use xlink:href="#icon-linkedin"></use>
-                            </svg>
-                            <span class="sr-only">LinkedIn</span>
-                        </a>
-                        <a href="#" class="email">Victor-jan.vos@europeana.eu</a>
-                        <a href="#" class="phone">+31 70 32 45 678</a>
-                    </div>
-                </div>
-            </section>
+            {% include 'views/_teaser_author.twig' with { item : author } %}
+
+            {% endfor %}
+        {% endif %}
 
 
-            {# RELATED CONTENT
+        {# RELATED CONTENT #}
 
-            <section class="related-content">
-                <h2>Related content</h2>
+        {% include 'modules/_related_posts.twig' with { record : record, title : 'Related' } %}
 
-                    <div class="teaser-container">
-                    <article class="column third teaser-threecol">
-                        <a href="#">
-                            <img src="https://unsplash.it/768/435" alt="xx"/>
-                        </a>
-                        <h3><a href="#">Dit is een titel</a></h3>
-                        <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum. Si de re disceptari oportet, nulla mihi tecum.</p>
+    </aside>
 
-                    </article>
-
-                    <article class="column third teaser-threecol">
-                        <a href="#">
-                            <img src="https://unsplash.it/768/435" alt="xx"/>
-                        </a>
-                        <h3><a href="#">Dit is een titel</a></h3>
-                        <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens semper vacabit. Si de re disceptari oportet, nulla mihi tecum.</p>
-
-                    </article>
-
-                    <article class="column third teaser-threecol">
-                        <a href="#">
-                            <img src="https://unsplash.it/768/435" alt="xx"/>
-                        </a>
-                        <h3><a href="#">Dit is een titel</a></h3>
-                        <p>Huius ego nunc auctoritatem sequens idem faciam. Itaque his sapiens bit. Si de re disceptari oportet, nulla mihi tecum.</p>
-
-                    </article>
-                    </div>
-                </div>
-
-
-            </section>
-        </aside>
-
-#}
 
 
 
