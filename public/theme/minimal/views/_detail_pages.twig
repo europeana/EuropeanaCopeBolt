@@ -40,7 +40,7 @@
                 {% endif %}
 
                 {% for module in record.modules %}
-                    {# {{ include('partials/_default_module.twig', { 'module': module }) }} #}
+                    {{ include('partials/_default_module.twig', { 'module': module }) }}
                 {% endfor %}
 
                 {% if record.pagefooter is defined %}
