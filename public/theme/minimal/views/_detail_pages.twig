@@ -1,14 +1,15 @@
 
     <section>
         <div class="inner-wrap">
-
             <article class="column main-column">
 
                {% include 'partials/_side-info.twig' %}
 
                 <div class="header-group">
 
-                    {% if record.contact_record %}
+                    {% if record.contact_name is not empty %}
+                        {% include 'views/_mini_externalcontact.twig' %}
+                    {% elseif record.contact_record %}
                         {% setcontent author = 'persons' where { id : record.contact_record } returnsingle %}
                         {% include 'views/_mini_persons.twig' with { item: author } %}
                     {% endif %}
@@ -61,15 +62,17 @@
     <aside>
         <div class="inner-wrap">
 
-         {# AUTHOR BIG #}
-         {% if record.author is not empty %}
+        {# AUTHOR BIG #}
+        {% if record.contact_name is not empty %}
+        {# external contact #}
+        {% include 'views/_teaser_externalcontact.twig' %}
 
-            {% for aut in record.author %}
-            {% setcontent author = 'persons' where { id : aut } returnsingle %}
+        {% elseif record.contact_record is not empty %}
+        {# internal support #}
 
-            {% include 'views/_teaser_author.twig' with { item : author } %}
+        {% setcontent author = 'persons' where { id : record.contact_record } returnsingle %}
+        {% include 'views/_teaser_author.twig' with { item : author } %}
 
-            {% endfor %}
         {% endif %}
 
 

@@ -1,3 +1,7 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
 <div class="author-small group">
     <img class="round" src="{{ item.image|default('notfound')|thumbnail(72, 72, 'c') }}" alt="portrait of {{ item.first_name }} {{ item.last_name }}"/>
     <p class="name">{{ item.first_name }} {{ item.last_name }}</p>
