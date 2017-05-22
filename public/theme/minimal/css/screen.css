@@ -1895,6 +1895,14 @@ section.catstream {
     @media only screen and (min-width: 47.9375em) {
       .author-small img {
         float: none; } }
+  .author-small .letter-overlay {
+    position: absolute;
+    color: #fff;
+    font-size: 3rem;
+    top: 0px;
+    width: 72px;
+    left: 0;
+    text-align: center; }
   .author-small p.name {
     font-weight: 700;
     font-size: 0.75rem;
@@ -1912,10 +1920,19 @@ section.catstream {
   padding: 2rem 0 0 0; }
   .author-big .img-container {
     float: left;
-    margin: 0 1rem 1rem 0; }
+    margin: 0 1rem 1rem 0;
+    position: relative; }
     @media only screen and (min-width: 47.9375em) {
       .author-big .img-container {
-        margin: 0 2rem 1rem 0; } }
+        margin: 0 2rem 0rem 0; } }
+  .author-big .letter-overlay {
+    position: absolute;
+    color: #fff;
+    font-size: 5rem;
+    top: 6px;
+    width: 144px;
+    left: 0;
+    text-align: center; }
   .author-big img {
     width: 90px;
     height: 90px; }
@@ -1924,11 +1941,12 @@ section.catstream {
         width: 144px;
         height: 144px; } }
   .author-big .txt-container {
-    padding: 0 2rem 0 108px;
     max-width: 900px; }
     @media only screen and (min-width: 47.9375em) {
       .author-big .txt-container {
         padding: 0 2rem 0 176px; } }
+  .author-big a.url {
+    display: block; }
 
 .related-content {
   border-top: 1px solid #cccccc;
