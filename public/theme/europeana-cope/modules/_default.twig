@@ -6,6 +6,7 @@ Available variables
     'subtitle':  subtitle of the module
     'body':      body of the module
     'records':   array of (selected) records that belong to the module
+    'allow_pager': boolean to check is the pager is available
 #}
 {% set override_css_id = module.get('override_css_id') %}
 {% set override_css_class = module.get('override_css_class') %}
@@ -36,6 +37,11 @@ Available variables
                 <!-- selected record is unpublished or otherwise unavailable -->
             {% endif %}
         {% endfor %}
+
+        {% set pagername = records|first.contenttype.slug|default('') %}
+        {% if pagername is not empty and allow_pager == true %}
+            {{ pager( pagername ) }}
+        {% endif %}
     {% endif %}
 
 </section>
