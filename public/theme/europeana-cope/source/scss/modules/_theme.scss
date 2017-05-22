@@ -753,6 +753,16 @@ section.catstream {
          }
     }
 
+    .letter-overlay {
+        position: absolute;
+        color: $white;
+        font-size: 3rem;
+        top: 0px;
+        width: 72px;
+        left: 0;
+        text-align: center;
+    }
+
     p.name {
         font-weight: 700;
         font-size: 0.75rem;
@@ -775,16 +785,27 @@ section.catstream {
 
     border-top: 1px solid $line-gray;
     padding: 2rem 0 0 0;
+    // min-height: 175px; // height of image + padding
 
     .img-container {
         float: left;
         margin: 0 1rem 1rem 0;
-
+        position: relative;
 
 
         @include respond-to(large-screens) {
-            margin: 0 2rem 1rem 0;
+            margin: 0 2rem 0rem 0;
         }
+    }
+
+    .letter-overlay {
+        position: absolute;
+        color: $white;
+        font-size: 5rem;
+        top: 6px; //magic number / optical
+        width: 144px;
+        left: 0;
+        text-align: center;
     }
 
     img {
@@ -798,12 +819,16 @@ section.catstream {
     }
 
     .txt-container {
-        padding: 0 2rem 0 108px; //magic number: img plus margin
+        // padding: 0 2rem 0 108px; //magic number: img plus margin
         max-width: 900px;
 
         @include respond-to(large-screens) {
             padding: 0 2rem 0 176px; //magic number: img plus margin
         }
+    }
+
+    a.url {
+        display: block;
     }
 }
 

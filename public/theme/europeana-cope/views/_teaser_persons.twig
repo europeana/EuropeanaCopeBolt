@@ -1,4 +1,8 @@
- {# {{ dump(item) }} #}
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+{# {{ dump(item) }} #}
 
 {# Als speaker is set to true, the speaker_teaser is shown in this teaser, instead of the introduction
 #}
