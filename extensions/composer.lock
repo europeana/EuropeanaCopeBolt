@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b5f9ccaa2dfebfe5b84828f7ec38650",
+    "content-hash": "40ff6c6a75e71999d42a20ef97967838",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -296,6 +296,76 @@
                 "issues": "https://github.com/graham73may/bolt-related-content/issues"
             },
             "time": "2017-03-03T23:16:20+00:00"
+        },
+        {
+            "name": "twokings/hierarchical-routes",
+            "version": "v0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xiaohutai/bolt-hierarchicalroutes.git",
+                "reference": "8e9e908286ca5c1843b95ffa2d314d3cd358129e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xiaohutai/bolt-hierarchicalroutes/zipball/8e9e908286ca5c1843b95ffa2d314d3cd358129e",
+                "reference": "8e9e908286ca5c1843b95ffa2d314d3cd358129e",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7"
+            },
+            "suggest": {
+                "bacboslab/menueditor": "A visual menu editor for Bolt CMS"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\TwoKings\\HierarchicalRoutes\\HierarchicalRoutesExtension",
+                "bolt-icon": "bolt-icon.png",
+                "bolt-screenshots": [
+                    "screenshots/screenshot1.png"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\TwoKings\\HierarchicalRoutes\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Bolt\\Extension\\TwoKings\\HierarchicalRouets\\Tests\\": "tests",
+                    "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Xiao-Hu Tai",
+                    "email": "xiao@twokings.nl"
+                }
+            ],
+            "description": "Dynamically make hierarchical routes based on the menu configuration",
+            "keywords": [
+                "breadcrumbs",
+                "child-page",
+                "hierarchical content",
+                "hierarchical routes",
+                "hierarchy",
+                "menu",
+                "parent-page",
+                "structure",
+                "sub-page"
+            ],
+            "support": {
+                "source": "https://github.com/xiaohutai/bolt-hierarchicalroutes/tree/v0.0.2",
+                "issues": "https://github.com/xiaohutai/bolt-hierarchicalroutes/issues"
+            },
+            "time": "2017-05-19T12:55:18+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",

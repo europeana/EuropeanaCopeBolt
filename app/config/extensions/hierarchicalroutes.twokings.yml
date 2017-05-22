@@ -1,0 +1,69 @@
+# Menu
+# ----
+# The menu structure defined in `app/config/menu.yml` to use for hierarchical
+# routes. Use a name or an array of menu names.
+
+menu: main
+# menu: [ main, aside, footer ]
+
+
+# Rules
+# -----
+# Configure additional rules for handling items dynamically. Think of rules such
+# as: "blog posts of a certain category must fall under a specific parent".
+#
+# The most specific rules need to be on top. Currently, there are two types:
+#
+# - `contenttype`: Applies the rule a whole contenttype, and is not constrained
+#                  by a limit. This is a simple, generic and fast check.
+#
+# - `query`: Applies the rule to a setcontent-like query, note that this query
+#            may have an implicit limit. This requires the records to be fetched
+#            from the database.
+
+rules:
+    # - type: query
+    #   params:
+    #     query: "showcases"
+    #     parameters: { limit: 10, tags: 'sports' }
+    #     parent: "entry/1"
+    # - type: contenttype
+    #   params:
+    #     slug: "pages"
+    #     parent: "entry/1"
+
+
+# Cache
+# -----
+# Enable cache in order to save the generated look-up table for performance.
+# The duration of the cache is in minutes.
+
+cache:
+    enabled: false
+    duration: 10
+
+
+# Settings
+# --------
+# overwrite-duplicates: Whether to overwrite when a duplicate entry has been
+#                       found. Basically always overwrite (keep last value)
+#                       versus never overwrite (keep first value).
+#
+#                       Note that this handling of duplicates does not make much
+#                       sense. There _should_ be no duplicates. This feature
+#                       might change in the future.
+#
+# rebuild-on-save: Rebuild hierarchy after saving or deleting a record. Only
+#                  used when caching is enabled. This is useful if rebuilding
+#                  the hierarchy costs some time. In that case, you might want
+#                  to clear the cache manually and have a longer than default
+#                  cache duration.
+#
+# override-slugs: Allow (slugifized) names in `menu.yml` override the slugs
+#                 defined in the records. Not implemented yet.
+#
+
+settings:
+    overwrite-duplicates : false
+    rebuild-on-save      : true
+    override-slugs       : false # -- todo: not implemented yet.
