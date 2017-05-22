@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "bolt/bolt",
-            "version": "v3.2.13",
+            "version": "v3.2.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/bolt.git",
-                "reference": "dc8e113846303b1ac1e69619cf4a3a8aacb628f9"
+                "reference": "a006c4a24a375f40a96b612889e6cb7d34a45640"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/bolt/zipball/dc8e113846303b1ac1e69619cf4a3a8aacb628f9",
-                "reference": "dc8e113846303b1ac1e69619cf4a3a8aacb628f9",
+                "url": "https://api.github.com/repos/bolt/bolt/zipball/a006c4a24a375f40a96b612889e6cb7d34a45640",
+                "reference": "a006c4a24a375f40a96b612889e6cb7d34a45640",
                 "shasum": ""
             },
             "require": {
@@ -120,7 +120,7 @@
                 "silex",
                 "symfony"
             ],
-            "time": "2017-05-09T11:03:50+00:00"
+            "time": "2017-05-22T09:55:33+00:00"
         },
         {
             "name": "bolt/filesystem",
@@ -466,16 +466,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "7ee2a5e1cf32e9c8439445fe8dce2c046c2abebd"
+                "reference": "489e09ee6c3ba431fbeeef9147afdaeb6f91b647"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/7ee2a5e1cf32e9c8439445fe8dce2c046c2abebd",
-                "reference": "7ee2a5e1cf32e9c8439445fe8dce2c046c2abebd",
+                "url": "https://api.github.com/repos/composer/composer/zipball/489e09ee6c3ba431fbeeef9147afdaeb6f91b647",
+                "reference": "489e09ee6c3ba431fbeeef9147afdaeb6f91b647",
                 "shasum": ""
             },
             "require": {
@@ -539,7 +539,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2017-03-10T08:29:45+00:00"
+            "time": "2017-05-17T06:17:53+00:00"
         },
         {
             "name": "composer/semver",
@@ -666,21 +666,21 @@
         },
         {
             "name": "contao/imagine-svg",
-            "version": "0.1.3",
+            "version": "0.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contao/imagine-svg.git",
-                "reference": "8e5515c757f23bc03c59fd14ecc2f8ade82f3447"
+                "reference": "aa9d4d1847364cb9c2f589833ec63096de914cf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contao/imagine-svg/zipball/8e5515c757f23bc03c59fd14ecc2f8ade82f3447",
-                "reference": "8e5515c757f23bc03c59fd14ecc2f8ade82f3447",
+                "url": "https://api.github.com/repos/contao/imagine-svg/zipball/aa9d4d1847364cb9c2f589833ec63096de914cf2",
+                "reference": "aa9d4d1847364cb9c2f589833ec63096de914cf2",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
-                "imagine/imagine": "^0.6",
+                "imagine/imagine": "^0.6|^0.7",
                 "php": ">=5.5.0"
             },
             "require-dev": {
@@ -711,7 +711,7 @@
                 }
             ],
             "description": "Contao Imagine SVG library",
-            "time": "2017-02-14T13:44:59+00:00"
+            "time": "2017-05-20T13:06:46+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1563,23 +1563,24 @@
         },
         {
             "name": "imagine/imagine",
-            "version": "v0.6.3",
+            "version": "v0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/avalanche123/Imagine.git",
-                "reference": "149041d2a1b517107bfe270ca2b1a17aa341715d"
+                "reference": "a9a702a946073cbca166718f1b02a1e72d742daa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/149041d2a1b517107bfe270ca2b1a17aa341715d",
-                "reference": "149041d2a1b517107bfe270ca2b1a17aa341715d",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/a9a702a946073cbca166718f1b02a1e72d742daa",
+                "reference": "a9a702a946073cbca166718f1b02a1e72d742daa",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "sami/sami": "dev-master"
+                "sami/sami": "^3.3",
+                "symfony/phpunit-bridge": "^3.2"
             },
             "suggest": {
                 "ext-gd": "to use the GD implementation",
@@ -1616,7 +1617,7 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2015-09-19T16:54:05+00:00"
+            "time": "2017-05-16T10:31:22+00:00"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -1813,16 +1814,16 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.2.0",
+            "version": "5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "e3c9bccdc38bbd09bcac0131c00f3be58368b416"
+                "reference": "429be236f296ca249d61c65649cdf2652f4a5e80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/e3c9bccdc38bbd09bcac0131c00f3be58368b416",
-                "reference": "e3c9bccdc38bbd09bcac0131c00f3be58368b416",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/429be236f296ca249d61c65649cdf2652f4a5e80",
+                "reference": "429be236f296ca249d61c65649cdf2652f4a5e80",
                 "shasum": ""
             },
             "require": {
@@ -1831,7 +1832,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.1",
                 "json-schema/json-schema-test-suite": "1.2.0",
-                "phpdocumentor/phpdocumentor": "~2",
+                "phpdocumentor/phpdocumentor": "^2.7",
                 "phpunit/phpunit": "^4.8.22"
             },
             "bin": [
@@ -1876,7 +1877,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2017-03-22T22:43:35+00:00"
+            "time": "2017-05-16T21:06:09+00:00"
         },
         {
             "name": "league/flysystem",
