@@ -8,11 +8,13 @@
 
                 <div class="header-group">
 
-                    {% if record.author is not empty %}
-                       {#  {% for aut in record.author %}
+                    {% if record.contact_name is not empty %}
+                        {% include 'views/_mini_externalcontact.twig' %}
+                    {% elseif record.author is not empty %}
+                        {% for aut in record.author %}
                             {% setcontent author = 'persons' where { id : aut } returnsingle %}
                             {% include 'views/_mini_persons.twig' with { item: author } %}
-                        {% endfor %} #}
+                        {% endfor %}
                     {% endif %}
 
                     <h1>{{ record.title }}</h1>
@@ -60,8 +62,11 @@
     <aside>
         <div class="inner-wrap">
 
-         {# AUTHOR BIG #}
-         {% if record.author is not empty %}
+        {# AUTHOR BIG #}
+        {% if record.contact_name is not empty %}
+        {% include 'views/_teaser_externalcontact.twig' %}
+
+        {% elseif record.author is not empty %}
 
             {% for aut in record.author %}
             {% setcontent author = 'persons' where { id : aut } returnsingle %}
