@@ -453,6 +453,18 @@ a {
         margin-right: .5rem;
     }
 
+    &.add-calendar {
+        font-size: 0.75rem;
+
+        @include respond-to(medium-screens) {
+            font-size: 0.9375rem;
+        }
+
+        svg {
+            fill: $baseFirstThemeColour;
+        }
+    }
+
     &:hover svg,
     &:active svg,
     &:focus svg {

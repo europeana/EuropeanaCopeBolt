@@ -701,8 +701,12 @@ section.catstream {
     padding: 0 0.875rem;
     // margin-bottom: 2rem;
 
+
     @include respond-to(large-screens) {
         // margin-bottom: 2rem;
+        position: absolute;
+        top: -7.5rem;
+        right: 0;
     }
 
     p {
@@ -714,6 +718,48 @@ section.catstream {
         margin-top: 0;
     }
 }
+
+.deadline-block {
+    // display: inline-block;
+    // max-width: 200px;
+    text-align: center;
+    margin: 2rem 0 1rem;
+
+    @include respond-to(medium-screens) {
+        display: inline-block;
+    }
+
+}
+
+.date-block {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-top: 1px solid $line-gray;
+    border-bottom: 1px solid $line-gray;
+    text-align: center;
+    color: $medium-gray;
+    font-weight: 700;
+
+    .date-type {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.75rem;
+
+        @include respond-to(medium-screens){
+            font-size: .87rem;
+        }
+    }
+
+    .date {
+        display: block;
+        font-size: 1rem;
+
+        @include respond-to(medium-screens){
+            font-size: 1.25rem;
+        }
+    }
+}
+
 
 
 .contentpage {
@@ -727,7 +773,14 @@ section.catstream {
         }
     }
 
+    &.detail-jobs {
+        .header-group h1 {
 
+            @include respond-to(large-screens) {
+                padding-right: 150px; // magic number, to avoid problems with abs pos deadline block
+            }
+        }
+    }
 }
 
 .author-small {

@@ -1,6 +1,6 @@
 {% extends 'partials/_master.twig' %}
 
-{% block bodyclass 'contentpage' %}
+{% block bodyclass 'contentpage detail-'~record.contenttype.slug %}
 
 {% block main %}
     {% set template =  'views/_detail_' ~ record.contenttype.slug ~ '.twig' %}

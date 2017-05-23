@@ -135,9 +135,11 @@ footer {
     background: $footer-gray;
     border-top: 6px solid $dark-blue;
     padding-top: 2rem;
+    margin-top: 3rem; // voor contentpages zo gedaan. snelle fix, vast mooi
 
     @include respond-to(large-screens){
         padding-top: 4.75rem;
+        margin-top: 5rem; // voor contentpages zo gedaan. snelle fix, vast mooi
     }
 }
 
@@ -188,9 +190,14 @@ footer {
 .contentpage {
     .main-column {
         padding: 0 0.875rem;
+        position: relative;
 
         @include respond-to(medium-screens) {
             padding: 0 2rem;
+        }
+
+        @include respond-to(large-screens) {
+            margin-top: 8.125rem;
         }
     }
 

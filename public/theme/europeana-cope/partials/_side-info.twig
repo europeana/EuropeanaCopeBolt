@@ -7,20 +7,36 @@
         {% include 'partials/_readtime.twig' %}
         {% endif %}
 
-        {% if record.contenttype.slug in ['events'] %}
-        <span class="location">Location follows - assembla 689</span>
-        {% endif %}
-
         <span class="date">Posted at {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
     </p>
     {% include 'partials/_tags.twig' %}
 
     {% if record.team is not empty %}
+        {% set team = record.team %}
+    {% elseif record.department is not empty %}
+        {% set team = record.department %}
+    {% endif %}
+
+    {% if team is defined and team is not empty %}
     <span class="svg-link" href="#">
         <svg class="icon icon-users">
             <use xlink:href="#icon-users"></use>
         </svg>
-        <a class="team">{{ record.team }}</a>
+        <a class="team" href="#">{{ team }}</a>
     </span>
     {% endif %}
+
+    {% if record.deadline is not empty %}
+    <br />{# dirty hack, Anke, works! #}
+    <div class="deadline-block">
+        <div class="date-block">
+            <span class="date-type">Deadline</span>
+            <span class="date">{{ record.deadline|localedatetime("%B %e, %Y") }}</span>
+        </div>
+
+        {% include 'partials/_add-to-calendar.twig' with { date : record.deadline } %}
+
+        </div>
+    {% endif %}
+
 </div>

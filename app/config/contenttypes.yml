@@ -809,7 +809,7 @@ jobs:
         - 'Infrastructure'
         - 'The European Library'
       group: "Job information"
-    postion_type:
+    position_type:
       type: select
       required: false
       label: "Contract type"

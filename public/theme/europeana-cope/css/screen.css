@@ -591,10 +591,12 @@ aside {
 footer {
   background: #e7e7e7;
   border-top: 6px solid #293745;
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  margin-top: 3rem; }
   @media only screen and (min-width: 47.9375em) {
     footer {
-      padding-top: 4.75rem; } }
+      padding-top: 4.75rem;
+      margin-top: 5rem; } }
 
 .inner-wrap {
   margin: 0 auto;
@@ -628,10 +630,14 @@ footer {
       padding: 0 0.875rem; } }
 
 .contentpage .main-column {
-  padding: 0 0.875rem; }
+  padding: 0 0.875rem;
+  position: relative; }
   @media only screen and (min-width: 24em) {
     .contentpage .main-column {
       padding: 0 2rem; } }
+  @media only screen and (min-width: 47.9375em) {
+    .contentpage .main-column {
+      margin-top: 8.125rem; } }
 
 .contentpage figure,
 .contentpage .personal {
@@ -1164,6 +1170,14 @@ a.phone {
 
 a svg {
   margin-right: .5rem; }
+
+a.add-calendar {
+  font-size: 0.75rem; }
+  @media only screen and (min-width: 24em) {
+    a.add-calendar {
+      font-size: 0.9375rem; } }
+  a.add-calendar svg {
+    fill: #E11D53; }
 
 a:hover svg,
 a:active svg,
@@ -1863,11 +1877,45 @@ section.catstream {
 .side-info {
   text-align: right;
   padding: 0 0.875rem; }
+  @media only screen and (min-width: 47.9375em) {
+    .side-info {
+      position: absolute;
+      top: -7.5rem;
+      right: 0; } }
   .side-info p {
     margin-bottom: 0.5rem;
     color: #777777; }
   .side-info .label {
     margin-top: 0; }
+
+.deadline-block {
+  text-align: center;
+  margin: 2rem 0 1rem; }
+  @media only screen and (min-width: 24em) {
+    .deadline-block {
+      display: inline-block; } }
+
+.date-block {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  text-align: center;
+  color: #4d4d4d;
+  font-weight: 700; }
+  .date-block .date-type {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem; }
+    @media only screen and (min-width: 24em) {
+      .date-block .date-type {
+        font-size: .87rem; } }
+  .date-block .date {
+    display: block;
+    font-size: 1rem; }
+    @media only screen and (min-width: 24em) {
+      .date-block .date {
+        font-size: 1.25rem; } }
 
 .contentpage .header-group,
 .contentpage .personal {
@@ -1877,6 +1925,10 @@ section.catstream {
     .contentpage .header-group,
     .contentpage .personal {
       margin-top: 3rem; } }
+
+@media only screen and (min-width: 47.9375em) {
+  .contentpage.detail-jobs .header-group h1 {
+    padding-right: 150px; } }
 
 .author-small {
   margin-bottom: 1rem; }
