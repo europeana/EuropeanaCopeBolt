@@ -253,6 +253,15 @@ img.round {
     line-height: 1.6;
     margin: 0.75rem 0;
 
+    &:hover, &:focus, &:active {
+        color: $baseFirstThemeColour;
+        background: $white;
+        font-weight: 700;
+        text-decoration: none;
+        border: 1px solid $baseFirstThemeColour;
+        letter-spacing: -.5px;
+    }
+
     @include respond-to(medium-screens){
         font-size: 0.9375rem;
     }
@@ -1516,6 +1525,21 @@ section.catstream {
             margin: 0 .5rem;
         }
     }
+}
+
+.community-info {
+    position: absolute;
+    top: -6rem;
+
+    font-size: 2.18rem;
+    display: inline-block;
+    text-transform: uppercase;
+    color: $medium-gray;
+    padding: 0 0.2em;
+    border-top: 4px solid $black;
+    border-bottom: 4px solid $black;
+    line-height: 1.4;
+
 }
 
 

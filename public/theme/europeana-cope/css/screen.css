@@ -596,7 +596,7 @@ footer {
   @media only screen and (min-width: 47.9375em) {
     footer {
       padding-top: 4.75rem;
-      margin-top: 5rem; } }
+      margin-top: 8rem; } }
 
 .inner-wrap {
   margin: 0 auto;
@@ -645,11 +645,11 @@ footer {
   @media only screen and (min-width: 24em) {
     .contentpage figure,
     .contentpage .personal {
-      margin: 1rem 2rem 2rem; } }
+      margin: 2rem 2rem 2rem; } }
   @media only screen and (min-width: 47.9375em) {
     .contentpage figure,
     .contentpage .personal {
-      margin: 1rem 4rem 4rem; } }
+      margin: 2rem 4rem 4rem; } }
 
 .contentpage .header-group,
 .contentpage .body,
@@ -1038,21 +1038,39 @@ ul {
     padding: 0;
     margin: 0; }
 
-.introduction p a,
-.introduction ul a,
-.introduction ol a {
-  text-decoration: underline; }
-
-.introduction p {
+.introduction {
   font-size: 1.125rem; }
+  .introduction p a,
+  .introduction ul a,
+  .introduction ol a {
+    text-decoration: underline; }
+  .introduction p {
+    font-size: 1.125rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .introduction p {
+        font-size: 1.5rem; } }
   @media only screen and (min-width: 47.9375em) {
-    .introduction p {
+    .introduction {
       font-size: 1.5rem; } }
 
 .body p a,
 .body ul a,
 .body ol a {
   text-decoration: underline; }
+
+.body ul {
+  list-style: disc outside url("../images/list-dot.svg");
+  padding-left: 40px; }
+
+.body ul li,
+.body ol li {
+  margin-bottom: 1rem; }
+
+.body p, .body ul, .body ol {
+  font-size: 0.875rem; }
+  @media only screen and (min-width: 24em) {
+    .body p, .body ul, .body ol {
+      font-size: 1rem; } }
 
 p {
   font-size: 0.875rem; }
@@ -1158,6 +1176,9 @@ a.tag, a.team {
   margin-right: .5rem; }
   a.tag:last-child, a.team:last-child {
     margin-right: 0; }
+  a.tag:hover, a.tag:focus, a.tag:active, a.team:hover, a.team:focus, a.team:active {
+    text-decoration: none;
+    border-bottom: 1px solid #095f90; }
   @media only screen and (min-width: 24em) {
     a.tag, a.team {
       font-size: 0.9375rem; } }
@@ -1554,6 +1575,13 @@ img.round {
   padding: 0 0.7rem;
   line-height: 1.6;
   margin: 0.75rem 0; }
+  .label:hover, .label:focus, .label:active {
+    color: #E11D53;
+    background: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #E11D53;
+    letter-spacing: -.5px; }
   @media only screen and (min-width: 24em) {
     .label {
       font-size: 0.9375rem; } }
@@ -2415,6 +2443,18 @@ section.catstream {
       content: "|";
       color: #095f90;
       margin: 0 .5rem; }
+
+.community-info {
+  position: absolute;
+  top: -6rem;
+  font-size: 2.18rem;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  padding: 0 0.2em;
+  border-top: 4px solid #1a1a1a;
+  border-bottom: 4px solid #1a1a1a;
+  line-height: 1.4; }
 
 .skin-research nav.quicklinks ul {
   background-color: #7F3978; }

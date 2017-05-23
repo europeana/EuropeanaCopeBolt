@@ -2,9 +2,9 @@
     {% set item = record %}
 {% endif %}
 
-{% if item.taxonomy.communities is defined %}
-    {% for cmt in item.taxonomy.communities %}
-    <div class="label">{{ cmt }}</div>
+{% if item.taxonomy.categories is defined %}
+    {% for cat in item.taxonomy.categories %}
+    <a class="label" href="/categories/{{ cat }}">{{ cat }}</a>
     {% endfor %}
 {% endif %}
 

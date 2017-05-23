@@ -265,6 +265,12 @@ ul {
             font-size: 1.5rem;
         }
     }
+
+    font-size: 1.125rem;
+
+        @include respond-to (large-screens){
+            font-size: 1.5rem;
+        }
 }
 
 .body {
@@ -272,6 +278,26 @@ ul {
     ul a,
     ol a {
         text-decoration: underline;
+    }
+
+    ul {
+        list-style: disc outside url('../images/list-dot.svg');
+        padding-left: 40px;
+    }
+
+    ul li,
+    ol li {
+
+        margin-bottom: 1rem;
+
+    }
+
+    p, ul, ol {
+    font-size: 0.875rem;
+
+        @include respond-to (medium-screens){
+            font-size: 1rem;
+        }
     }
 }
 
@@ -430,6 +456,11 @@ a {
         &:last-child {
                 margin-right: 0;
             }
+
+        &:hover, &:focus, &:active {
+            text-decoration: none;
+            border-bottom: 1px solid $link-blue;
+        }
 
         @include respond-to(medium-screens) {
             font-size: 0.9375rem;

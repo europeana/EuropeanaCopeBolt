@@ -139,7 +139,7 @@ footer {
 
     @include respond-to(large-screens){
         padding-top: 4.75rem;
-        margin-top: 5rem; // voor contentpages zo gedaan. snelle fix, vast mooi
+        margin-top: 8rem; // voor contentpages zo gedaan. snelle fix, vast mooi
     }
 }
 
@@ -206,11 +206,11 @@ footer {
         margin: 2rem 0rem; //1rem 2rem;
 
         @include respond-to(medium-screens) {
-             margin: 1rem 2rem 2rem;
+             margin: 2rem 2rem 2rem;
         }
 
         @include respond-to(large-screens) {
-             margin: 1rem 4rem 4rem;
+             margin: 2rem 4rem 4rem;
         }
     }
 
