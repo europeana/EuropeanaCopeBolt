@@ -711,6 +711,15 @@ projects:
       pattern: url
     <<: *teaser_defaults
     <<: *cta_defaults
+    start_event:
+      type: datetime
+      required: false
+      label: "Project start"
+      group: Project Schedule
+    end_event:
+      type: datetime
+      required: false
+      label: "Project end"
     <<: *media_defaults
     <<: *structure_defaults
     <<: *support_defaults
