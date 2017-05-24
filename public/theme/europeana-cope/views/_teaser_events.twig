@@ -4,7 +4,14 @@
 
 <article class="teaser teaser-events group">
     <div class="img-container">
-        <img src="{{ item.teaser_image|default('notfound')|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+
+        {% if item.teaser_image is defined and item.teaser_image is not empty %}
+            <img src="{{ item.teaser_image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+        {% elseif item.image is defined and item.image is not empty %}
+            <img src="{{ item.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+        {% else %}
+            <img src="/theme/europeana-cope/images/default.png" width="600" height="400" style="height:400px;" alt=""/>
+        {% endif %}
 
         <div class="info-block">
             {% include 'partials/_event-datetime.twig' %}

@@ -32,43 +32,6 @@
 /***********************************************
 HULPJE
 ***********************************************/
-footer:after {
-  content: "content";
-  display: block;
-  height: 16px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
-  text-align: center;
-  font-size: 12px; }
-
-@media only screen and (min-width: 6.25em) {
-  footer:after {
-    content: "small-screens";
-    background-color: #0f9; } }
-
-@media only screen and (min-width: 24em) {
-  footer:after {
-    content: "medium-screens";
-    background-color: #f06; } }
-
-@media only screen and (min-width: 47.9375em) {
-  footer:after {
-    content: "large-screens";
-    background-color: #90f; } }
-
-@media only screen and (min-width: 80em) {
-  footer:after {
-    content: "xlarge-screens";
-    background-color: #903; } }
-
-@media only screen and (min-width: 90em) {
-  footer:after {
-    content: "wide-screens";
-    background-color: #906; } }
-
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -684,7 +647,7 @@ footer {
 
 .contentpage figure,
 .contentpage .personal {
-  margin: 2rem 0rem; }
+  margin: 1rem 0rem; }
   @media only screen and (min-width: 24em) {
     .contentpage figure,
     .contentpage .personal {
@@ -2216,6 +2179,9 @@ section.catstream {
   position: relative;
   height: 560x;
   margin-bottom: 2rem; }
+  .event-figure .add-calendar-wrapper {
+    text-align: right;
+    padding-bottom: 1rem; }
   .event-figure .map {
     position: relative; }
     @media only screen and (min-width: 47.9375em) {

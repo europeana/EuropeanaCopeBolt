@@ -30,7 +30,7 @@ BEGIN:VCALENDAR%0A
 VERSION:2.0%0A
 BEGIN:VEVENT%0A
 URL:'~paths.host~''~item.link()~'%0A
-DTSTART:'~date|localedatetime("%Y%m%d")~'%0A
+DTSTART:'~singledate|localedatetime("%Y%m%d")~'%0A
 SUMMARY:'~item.title~'%0A
 LOCATION:'~item.geolocation.address|default("No location given")~'%0A
 END:VEVENT%0A

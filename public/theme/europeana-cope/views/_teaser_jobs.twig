@@ -4,11 +4,18 @@
 
 <article class="teaser teaser-pages group">
     <div class="img-container">
-        <img src="{{ item.teaser_image|default('notfound')|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+
+        {% if item.teaser_image is defined and item.teaser_image is not empty %}
+            <img src="{{ item.teaser_image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+        {% elseif item.image is defined and item.image is not empty %}
+            <img src="{{ item.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+        {% else %}
+            <img src="/theme/europeana-cope/images/default.png" width="600" height="400" style="height:400px;" alt=""/>
+        {% endif %}
 
         <div class="info-block">
-            <span class="info-type">Page</span>
-            <span class="info-date">Created: {{ item.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+            <span class="info-type">Job</span>
+            <span class="info-date">Deadline: {{ item.deadline|localedatetime("%e %B  %Y") }}</span>
 
             {% if item.contact_record %}
             <span class="info-author">
@@ -22,7 +29,18 @@
 
     <h2><a href="{{ item.link() }}">{{ item.title }}</a></h2>
 
-    {% include 'partials/_tags.twig' %}
+    {% if item.department is not empty %}
+    <span class="svg-link" href="#">
+        <svg class="icon icon-users">
+            <use xlink:href="#icon-users"></use>
+        </svg>
+        <span class="team">{{ item.department }}</span>
+    </span>
+    {% endif %}
+
+    {% if record.position_type is not empty %}
+        <p>Position type: {{ record.position_type }}</p>
+    {% endif %}
 
     {% if item.teaser %}
     {{ item.teaser }}
