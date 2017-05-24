@@ -12,10 +12,10 @@ main:
                 path: pages/2
                 label: 'Our mission'
             -
-                link: page/about-us
+                link: pages/about-us
                 label: 'About us'
             -
-                link: /page/governing-board
+                link: pages/governing-board
                 label: 'Governing Board'
     -
         label: 'What we do'
@@ -27,7 +27,7 @@ main:
                 label: Advocacy
                 submenu:
                     -
-                        link: /page/copyright-reform
+                        link: pages/copyright-reform
                         label: 'Copyright Reform'
                     -
                         path: pages/36
@@ -43,13 +43,13 @@ main:
                 label: Standardisation
                 submenu:
                     -
-                        link: /page/legal-interoperability-data
+                        link: pages/legal-interoperability-data
                         label: 'Legal interoperability of data'
                     -
-                        link: /page/impact-framework
+                        link: pages/impact-framework
                         label: 'Impact framework'
                     -
-                        path: /page/cross-domain-data-exchange
+                        path: pages/cross-domain-data-exchange
                         label: 'Cross-domain data exchange and interoparability (EDM)'
             -
                 path: pages/11
@@ -82,13 +82,13 @@ main:
                 label: 'About the network'
                 submenu:
                     -
-                        path: page/management-board
+                        path: pages/management-board
                         label: 'Management board'
                     -
-                        path: page/members-council
+                        path: pages/members-council
                         label: 'Members council'
                     -
-                        path: page/network-members
+                        path: pages/network-members
                         label: 'Network members'
             -
                 path: pages/19
@@ -304,6 +304,6 @@ secondary:
         path: homepage
         class: secondary
     -
-        link: /page/styleguide
+        link: pages/styleguide
         label: Styleguide
         class: secondary
