@@ -5,7 +5,7 @@
 
 {% if record.related() is not empty %}
     {# get the manually set related records #}
-    {% set records = record.related()|shuffle|slice(0, 3) %}
+    {% set records = record.related()|shuffle %}
 {% elseif record.taxonomy.categories is defined %}
     {# get the automatically related records by category #}
     {# {% setcontent records = record.contenttype.slug where { categories : record.taxonomy.categories } %} #}
@@ -22,8 +22,8 @@
     <div class="teaser-container">
 
     {% if records is iterable %}
-        {% for record in records %}
-            {% if record.id is defined %}
+        {% for record in records if record.contenttype.slug != 'persons' %}
+            {% if loop.index <= 3 %}
                 {% set templatefile =  'views/_' ~  template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
                 {% set defaulttemplatefile =  'views/_' ~  template ~ '.twig' %}
                 <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->

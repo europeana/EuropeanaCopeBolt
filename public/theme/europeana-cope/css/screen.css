@@ -13,6 +13,9 @@
  */
 /* Europeana colours */
 /* Theme colors */
+/* Sass z-indexing
+*
+*/
 /*
  * Mixin: Breakpoints handling RWD
  */
@@ -26,6 +29,46 @@
 /**
 *   Helper
 */
+/***********************************************
+HULPJE
+***********************************************/
+footer:after {
+  content: "content";
+  display: block;
+  height: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  font-size: 12px; }
+
+@media only screen and (min-width: 6.25em) {
+  footer:after {
+    content: "small-screens";
+    background-color: #0f9; } }
+
+@media only screen and (min-width: 24em) {
+  footer:after {
+    content: "medium-screens";
+    background-color: #f06; } }
+
+@media only screen and (min-width: 47.9375em) {
+  footer:after {
+    content: "large-screens";
+    background-color: #90f; } }
+
+@media only screen and (min-width: 80em) {
+  footer:after {
+    content: "xlarge-screens";
+    background-color: #903; } }
+
+@media only screen and (min-width: 90em) {
+  footer:after {
+    content: "wide-screens";
+    background-color: #906; } }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1572,6 +1615,7 @@ img.round {
   font-size: 0.75rem;
   color: #fff;
   background: #E11D53;
+  border: 1px solid #fff;
   padding: 0 0.7rem;
   line-height: 1.6;
   margin: 0.75rem 0; }
@@ -1908,6 +1952,7 @@ section.catstream {
   @media only screen and (min-width: 47.9375em) {
     .side-info {
       position: absolute;
+      z-index: 1;
       top: -7.5rem;
       right: 0; } }
   .side-info p {
@@ -1931,12 +1976,12 @@ section.catstream {
   text-align: center;
   color: #4d4d4d;
   font-weight: 700; }
-  .date-block .date-type {
+  .date-block .date-txt {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.75rem; }
     @media only screen and (min-width: 24em) {
-      .date-block .date-type {
+      .date-block .date-txt {
         font-size: .87rem; } }
   .date-block .date {
     display: block;
@@ -1944,6 +1989,25 @@ section.catstream {
     @media only screen and (min-width: 24em) {
       .date-block .date {
         font-size: 1.25rem; } }
+
+.community-info {
+  position: absolute;
+  top: 15px;
+  font-size: 1.5rem;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  padding: 0 0.2em;
+  border-top: 4px solid #1a1a1a;
+  border-bottom: 4px solid #1a1a1a;
+  line-height: 1.4; }
+  @media only screen and (min-width: 24em) {
+    .community-info {
+      font-size: 2.18rem;
+      top: 7px; } }
+  @media only screen and (min-width: 47.9375em) {
+    .community-info {
+      top: -6rem; } }
 
 .contentpage .header-group,
 .contentpage .personal {
@@ -1955,8 +2019,20 @@ section.catstream {
       margin-top: 3rem; } }
 
 @media only screen and (min-width: 47.9375em) {
-  .contentpage.detail-jobs .header-group h1 {
+  .contentpage.detail-jobs .header-group h1, .contentpage.detail-projects .header-group h1 {
     padding-right: 150px; } }
+
+@media only screen and (min-width: 80em) {
+  .contentpage.detail-jobs .header-group h1, .contentpage.detail-projects .header-group h1 {
+    padding-right: 100px; } }
+
+@media only screen and (min-width: 47.9375em) {
+  .contentpage.detail-jobs .introduction, .contentpage.detail-projects .introduction {
+    padding-right: 150px; } }
+
+@media only screen and (min-width: 80em) {
+  .contentpage.detail-jobs .introduction, .contentpage.detail-projects .introduction {
+    padding-right: 100px; } }
 
 .author-small {
   margin-bottom: 1rem; }
@@ -2443,18 +2519,6 @@ section.catstream {
       content: "|";
       color: #095f90;
       margin: 0 .5rem; }
-
-.community-info {
-  position: absolute;
-  top: -6rem;
-  font-size: 2.18rem;
-  display: inline-block;
-  text-transform: uppercase;
-  color: #4d4d4d;
-  padding: 0 0.2em;
-  border-top: 4px solid #1a1a1a;
-  border-bottom: 4px solid #1a1a1a;
-  line-height: 1.4; }
 
 .skin-research nav.quicklinks ul {
   background-color: #7F3978; }

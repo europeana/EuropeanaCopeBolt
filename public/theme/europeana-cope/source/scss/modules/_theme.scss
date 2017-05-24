@@ -249,6 +249,7 @@ img.round {
     font-size: 0.75rem;
     color: $white;
     background: $baseFirstThemeColour;
+    border: 1px solid $white; // to prevent skipping when hovered
     padding: 0 0.7rem;
     line-height: 1.6;
     margin: 0.75rem 0;
@@ -714,6 +715,7 @@ section.catstream {
     @include respond-to(large-screens) {
         // margin-bottom: 2rem;
         position: absolute;
+        z-index: index($layers, higher-content);
         top: -7.5rem;
         right: 0;
     }
@@ -727,6 +729,8 @@ section.catstream {
         margin-top: 0;
     }
 }
+
+
 
 .deadline-block {
     // display: inline-block;
@@ -749,7 +753,7 @@ section.catstream {
     color: $medium-gray;
     font-weight: 700;
 
-    .date-type {
+    .date-txt {
         text-transform: uppercase;
         letter-spacing: 1px;
         font-size: 0.75rem;
@@ -769,6 +773,29 @@ section.catstream {
     }
 }
 
+.community-info {
+    position: absolute;
+    top: 15px; //magic number - optical nice space
+
+    font-size: 1.5rem;
+    display: inline-block;
+    text-transform: uppercase;
+    color: $medium-gray;
+    padding: 0 0.2em;
+    border-top: 4px solid $black;
+    border-bottom: 4px solid $black;
+    line-height: 1.4;
+
+    @include respond-to(medium-screens){
+        font-size: 2.18rem;
+        top: 7px; //magic number - optical nice space
+    }
+
+    @include respond-to(large-screens){
+        top: -6rem;
+    }
+
+}
 
 
 .contentpage {
@@ -782,11 +809,24 @@ section.catstream {
         }
     }
 
-    &.detail-jobs {
+    &.detail-jobs,
+    &.detail-projects {
         .header-group h1 {
 
             @include respond-to(large-screens) {
-                padding-right: 150px; // magic number, to avoid problems with abs pos deadline block
+                padding-right: 150px; // magic number, to avoid problems with abs pos time block
+            }
+            @include respond-to(xlarge-screens) {
+                padding-right: 100px;
+            }
+        }
+
+        .introduction {
+           @include respond-to(large-screens) {
+                padding-right: 150px; // magic number, to avoid problems with abs pos time block
+            }
+             @include respond-to(xlarge-screens) {
+                padding-right: 100px;
             }
         }
     }
@@ -1527,20 +1567,7 @@ section.catstream {
     }
 }
 
-.community-info {
-    position: absolute;
-    top: -6rem;
 
-    font-size: 2.18rem;
-    display: inline-block;
-    text-transform: uppercase;
-    color: $medium-gray;
-    padding: 0 0.2em;
-    border-top: 4px solid $black;
-    border-bottom: 4px solid $black;
-    line-height: 1.4;
-
-}
 
 
 

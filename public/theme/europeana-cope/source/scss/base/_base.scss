@@ -46,6 +46,15 @@ $version-flag:          #D43900; // only used for beta flag
 $quicklinks-bar:        #69737C;
 
 
+/* Sass z-indexing
+*
+*/
+
+$layers: higher-content, modals, navigation;
+
+// use as:
+// z-index: index($layers, modals); https://www.smashingmagazine.com/2014/06/sassy-z-index-management-for-complex-layouts/
+
 /*
  * Mixin: Breakpoints handling RWD
  */
@@ -155,60 +164,60 @@ $site-max-width:76rem; // 1216px
 *   Helper
 */
 
-// /***********************************************
-// HULPJE
-// ***********************************************/
+/***********************************************
+HULPJE
+***********************************************/
 
 
 
-// footer {
+footer {
 
-//     &:after {
-//             content: "content";
-//             display: block;
-//             height: 16px;
-//             position: fixed;
-//             bottom: 0;
-//             left: 0;
-//             z-index: 1000;
-//             width: 100%;
-//             text-align: center;
-//             font-size: 12px;
+    &:after {
+            content: "content";
+            display: block;
+            height: 16px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
 
-//         }
+        }
 
-//     @include respond-to(small-screens){
-//         &:after {
-//             content: "small-screens";
-//             background-color: #0f9;
-//         }
-//     }
+    @include respond-to(small-screens){
+        &:after {
+            content: "small-screens";
+            background-color: #0f9;
+        }
+    }
 
-//     @include respond-to(medium-screens) {
-//             &:after {
-//                 content: "medium-screens";
-//                 background-color: #f06;
-//         }
-//     }
+    @include respond-to(medium-screens) {
+            &:after {
+                content: "medium-screens";
+                background-color: #f06;
+        }
+    }
 
-//     @include respond-to(large-screens) {
-//         &:after {
-//             content: "large-screens";
-//             background-color: #90f;
-//         }
-//     }
+    @include respond-to(large-screens) {
+        &:after {
+            content: "large-screens";
+            background-color: #90f;
+        }
+    }
 
-//     @include respond-to(xlarge-screens) {
-//         &:after {
-//             content: "xlarge-screens";
-//             background-color: #903;
-//         }
-//     }
+    @include respond-to(xlarge-screens) {
+        &:after {
+            content: "xlarge-screens";
+            background-color: #903;
+        }
+    }
 
-//     @include respond-to(wide-screens) {
-//         &:after {
-//             content: "wide-screens";
-//             background-color: #906;
-//         }
-//     }
-// }
+    @include respond-to(wide-screens) {
+        &:after {
+            content: "wide-screens";
+            background-color: #906;
+        }
+    }
+}
