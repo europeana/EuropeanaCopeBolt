@@ -26,11 +26,12 @@
                code in the 'else' part of the for-loop is used. #}
             <h1>
                 {% if search is not empty %}
-                    {{ records|length }} {{ __('general.phrase.search-results-for-variable', { '%search%': search }) }}
+                    {{ searchresult.no_of_results }} search results for "{{ search }}"
                 {% else %}
                     {{ __('general.phrase.search') }}
                 {% endif %}
             </h1>
+            {{ dump(records) }}
 
             <ul class="teaser-list">
             {% for record in records %}

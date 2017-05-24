@@ -21,7 +21,7 @@ END:VEVENT%0A
 END:VCALENDAR'
 %}
 
-{% elseif singledate is not empty %}
+{% elseif singledate is defined and singledate is not empty %}
 
 {% set icslink =
 'data:text/calendar;
@@ -39,7 +39,7 @@ END:VCALENDAR'
 
 {% endif %}
 
-{% if icslink is not empty %}
+{% if icslink is defined and icslink is not empty %}
 
 <a class="add-calendar" href="{{ icslink }}">
     <svg class="icon icon-calendar">
