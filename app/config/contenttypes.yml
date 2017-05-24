@@ -379,7 +379,11 @@ pages:
           multiple: false
           expanded: true
           label: "Filter post type"
-          values: [ "Blog", "Pressrelease", "Publication", "News" ]
+          values:
+            "Blog": "Blog"
+            "Pressrelease": "Pressrelease"
+            "Publication": "Publication"
+            "News": "News"
         selected_posts:
           type: select
           default: ''
@@ -395,7 +399,12 @@ pages:
           multiple: false
           expanded: true
           label: "Filter data type"
-          values: [ "Data", "Tool", "Showcase", "Documentation", "API" ]
+          values:
+            "Data": "Data"
+            "Tool": "Tool"
+            "Showcase": "Showcase"
+            "Documentation": "Documentation"
+            "API": "API"
         selected_data:
           type: select
           default: ''
@@ -411,7 +420,10 @@ pages:
           multiple: false
           expanded: true
           label: "Filter project type"
-          values: [ "TaskForce", "WorkingGroup", "Project" ]
+          values:
+            "TaskForce": "TaskForce"
+            "WorkingGroup": "WorkingGroup"
+            "Project": "Project"
         selected_projects:
           type: select
           default: ''
