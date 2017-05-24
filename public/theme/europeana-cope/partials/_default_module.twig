@@ -48,38 +48,34 @@
     {% endif %}
 
     {% if ordering == 'latest' %}
-        {% setcontent selected_records = sources where {filtername: filtervalue} orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+        {% setcontent selected_records = sources where {(filtername): (filtervalue)} orderby '-datepublish' limit override_amount|default(10) allowpaging  %}
     {% elseif ordering == 'latest_unpaged' %}
-        {% setcontent selected_records = sources where {filtername: filtervalue} orderby '-datepublish' limit override_amount|default(10) %}
+        {% setcontent selected_records = sources where {(filtername): (filtervalue)} orderby '-datepublish' limit override_amount|default(10) %}
         {% set allow_pager = false %}
     {% elseif ordering == 'oldest' %}
-        {% setcontent selected_records = sources where {filtername: filtervalue} orderby 'datepublish' limit override_amount|default(10) allowpaging %}
+        {% setcontent selected_records = sources where {(filtername): (filtervalue)} orderby 'datepublish' limit override_amount|default(10) allowpaging %}
     {% elseif ordering == 'oldest_unpaged' %}
-        {% setcontent selected_records = sources where {filtername: filtervalue} orderby 'datepublish' limit override_amount|default(10) %}
+        {% setcontent selected_records = sources where {(filtername): (filtervalue)} orderby 'datepublish' limit override_amount|default(10) %}
         {% set allow_pager = false %}
     {% elseif ordering == 'alphabetical' %}
         {% if sources != 'persons' %}
-            {% setcontent selected_records = sources where { filtername: '%' ~ filtervalue ~ '%' } orderby 'title' limit override_amount|default(10) allowpaging printquery %}
+            {% setcontent selected_records = sources where { (filtername): '%' ~ (filtervalue) ~'%' } orderby 'title' limit override_amount|default(10) allowpaging  %}
         {% else %}
-            {% if filtername|default() == 'network_participation' %}
-                {% setcontent selected_records = sources where { 'network_participation': '%' ~ filtervalue ~ '%' } orderby 'last_name' limit override_amount|default(10) allowpaging %}
-            {% else %}
-                {% setcontent selected_records = sources where { filtername: filtervalue } orderby 'last_name' limit override_amount|default(10) allowpaging %}
-            {% endif %}
+            {% setcontent selected_records = sources where { (filtername): '%' ~ (filtervalue) ~'%' } orderby 'last_name' limit override_amount|default(10) allowpaging  %}
         {% endif %}
     {% elseif ordering == 'tag' %}
         {% set basetag = module.get('basetag') %}
-        {% setcontent selected_records = sources where {filtername: filtervalue, tags: basetag} orderby '-datepublish' limit override_amount|default(10) allowpaging  %}
+        {% setcontent selected_records = sources where {(filtername): (filtervalue), tags: basetag} orderby '-datepublish' limit override_amount|default(10) allowpaging  %}
     {% elseif ordering == 'tag_unpaged' %}
         {% set basetag = module.get('basetag') %}
-        {% setcontent selected_records = sources where {filtername: filtervalue, tags: basetag} orderby '-datepublish' limit override_amount|default(10)  %}
+        {% setcontent selected_records = sources where {(filtername): (filtervalue), tags: basetag} orderby '-datepublish' limit override_amount|default(10)  %}
         {% set allow_pager = false %}
     {% elseif ordering == 'category' %}
         {% set basecategory = module.get('basecategory') %}
-        {% setcontent selected_records = sources where {filtername: filtervalue, categories: basecategory} orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+        {% setcontent selected_records = sources where {(filtername): (filtervalue), categories: basecategory} orderby '-datepublish' limit override_amount|default(10) allowpaging  %}
     {% elseif ordering == 'category_unpaged' %}
         {% set basecategory = module.get('basecategory') %}
-        {% setcontent selected_records = sources where {filtername: filtervalue, categories: basecategory} orderby '-datepublish' limit override_amount|default(10)  %}
+        {% setcontent selected_records = sources where {(filtername): (filtervalue), categories: basecategory} orderby '-datepublish' limit override_amount|default(10)  %}
         {% set allow_pager = false %}
     {% elseif ordering == 'calendar' %}
         {{ dump(module, template, ordering, override_amount) }}
