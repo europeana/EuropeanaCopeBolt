@@ -3,13 +3,13 @@
 {% endif %}
 
 {% if item.taxonomy.categories is defined %}
-    {% for cat in item.taxonomy.categories %}
-    <a class="label" href="/categories/{{ cat }}">{{ cat }}</a>
+    {% for cat, catname in item.taxonomy.categories %}
+    <a class="label" href="{{ cat }}">{{ catname }}</a>
     {% endfor %}
 {% endif %}
 
 {% if item.taxonomy.tags is defined %}
-    {% for tag in item.taxonomy.tags %}
-    <a class="tag" href="/tags/{{ tag }}">{{ tag }}</a>
+    {% for tag, tagname in item.taxonomy.tags %}
+    <a class="tag" href="{{ tag }}">{{ tagname }}</a>
     {% endfor %}
 {% endif %}

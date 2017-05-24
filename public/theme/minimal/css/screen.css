@@ -13,6 +13,9 @@
  */
 /* Europeana colours */
 /* Theme colors */
+/* Sass z-indexing
+*
+*/
 /*
  * Mixin: Breakpoints handling RWD
  */
@@ -26,6 +29,46 @@
 /**
 *   Helper
 */
+/***********************************************
+HULPJE
+***********************************************/
+footer:after {
+  content: "content";
+  display: block;
+  height: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  font-size: 12px; }
+
+@media only screen and (min-width: 6.25em) {
+  footer:after {
+    content: "small-screens";
+    background-color: #0f9; } }
+
+@media only screen and (min-width: 24em) {
+  footer:after {
+    content: "medium-screens";
+    background-color: #f06; } }
+
+@media only screen and (min-width: 47.9375em) {
+  footer:after {
+    content: "large-screens";
+    background-color: #90f; } }
+
+@media only screen and (min-width: 80em) {
+  footer:after {
+    content: "xlarge-screens";
+    background-color: #903; } }
+
+@media only screen and (min-width: 90em) {
+  footer:after {
+    content: "wide-screens";
+    background-color: #906; } }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -591,10 +634,12 @@ aside {
 footer {
   background: #e7e7e7;
   border-top: 6px solid #293745;
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  margin-top: 3rem; }
   @media only screen and (min-width: 47.9375em) {
     footer {
-      padding-top: 4.75rem; } }
+      padding-top: 4.75rem;
+      margin-top: 8rem; } }
 
 .inner-wrap {
   margin: 0 auto;
@@ -628,10 +673,14 @@ footer {
       padding: 0 0.875rem; } }
 
 .contentpage .main-column {
-  padding: 0 0.875rem; }
+  padding: 0 0.875rem;
+  position: relative; }
   @media only screen and (min-width: 24em) {
     .contentpage .main-column {
       padding: 0 2rem; } }
+  @media only screen and (min-width: 47.9375em) {
+    .contentpage .main-column {
+      margin-top: 8.125rem; } }
 
 .contentpage figure,
 .contentpage .personal {
@@ -639,11 +688,11 @@ footer {
   @media only screen and (min-width: 24em) {
     .contentpage figure,
     .contentpage .personal {
-      margin: 1rem 2rem 2rem; } }
+      margin: 2rem 2rem 2rem; } }
   @media only screen and (min-width: 47.9375em) {
     .contentpage figure,
     .contentpage .personal {
-      margin: 1rem 4rem 4rem; } }
+      margin: 2rem 4rem 4rem; } }
 
 .contentpage .header-group,
 .contentpage .body,
@@ -1032,21 +1081,39 @@ ul {
     padding: 0;
     margin: 0; }
 
-.introduction p a,
-.introduction ul a,
-.introduction ol a {
-  text-decoration: underline; }
-
-.introduction p {
+.introduction {
   font-size: 1.125rem; }
+  .introduction p a,
+  .introduction ul a,
+  .introduction ol a {
+    text-decoration: underline; }
+  .introduction p {
+    font-size: 1.125rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .introduction p {
+        font-size: 1.5rem; } }
   @media only screen and (min-width: 47.9375em) {
-    .introduction p {
+    .introduction {
       font-size: 1.5rem; } }
 
 .body p a,
 .body ul a,
 .body ol a {
   text-decoration: underline; }
+
+.body ul {
+  list-style: disc outside url("../images/list-dot.svg");
+  padding-left: 40px; }
+
+.body ul li,
+.body ol li {
+  margin-bottom: 1rem; }
+
+.body p, .body ul, .body ol {
+  font-size: 0.875rem; }
+  @media only screen and (min-width: 24em) {
+    .body p, .body ul, .body ol {
+      font-size: 1rem; } }
 
 p {
   font-size: 0.875rem; }
@@ -1152,6 +1219,9 @@ a.tag, a.team {
   margin-right: .5rem; }
   a.tag:last-child, a.team:last-child {
     margin-right: 0; }
+  a.tag:hover, a.tag:focus, a.tag:active, a.team:hover, a.team:focus, a.team:active {
+    text-decoration: none;
+    border-bottom: 1px solid #095f90; }
   @media only screen and (min-width: 24em) {
     a.tag, a.team {
       font-size: 0.9375rem; } }
@@ -1164,6 +1234,14 @@ a.phone {
 
 a svg {
   margin-right: .5rem; }
+
+a.add-calendar {
+  font-size: 0.75rem; }
+  @media only screen and (min-width: 24em) {
+    a.add-calendar {
+      font-size: 0.9375rem; } }
+  a.add-calendar svg {
+    fill: #E11D53; }
 
 a:hover svg,
 a:active svg,
@@ -1537,9 +1615,17 @@ img.round {
   font-size: 0.75rem;
   color: #fff;
   background: #E11D53;
+  border: 1px solid #fff;
   padding: 0 0.7rem;
   line-height: 1.6;
   margin: 0.75rem 0; }
+  .label:hover, .label:focus, .label:active {
+    color: #E11D53;
+    background: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #E11D53;
+    letter-spacing: -.5px; }
   @media only screen and (min-width: 24em) {
     .label {
       font-size: 0.9375rem; } }
@@ -1863,11 +1949,65 @@ section.catstream {
 .side-info {
   text-align: right;
   padding: 0 0.875rem; }
+  @media only screen and (min-width: 47.9375em) {
+    .side-info {
+      position: absolute;
+      z-index: 1;
+      top: -7.5rem;
+      right: 0; } }
   .side-info p {
     margin-bottom: 0.5rem;
     color: #777777; }
   .side-info .label {
     margin-top: 0; }
+
+.deadline-block {
+  text-align: center;
+  margin: 2rem 0 1rem; }
+  @media only screen and (min-width: 24em) {
+    .deadline-block {
+      display: inline-block; } }
+
+.date-block {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  text-align: center;
+  color: #4d4d4d;
+  font-weight: 700; }
+  .date-block .date-txt {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem; }
+    @media only screen and (min-width: 24em) {
+      .date-block .date-txt {
+        font-size: .87rem; } }
+  .date-block .date {
+    display: block;
+    font-size: 1rem; }
+    @media only screen and (min-width: 24em) {
+      .date-block .date {
+        font-size: 1.25rem; } }
+
+.community-info {
+  position: absolute;
+  top: 15px;
+  font-size: 1.5rem;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  padding: 0 0.2em;
+  border-top: 4px solid #1a1a1a;
+  border-bottom: 4px solid #1a1a1a;
+  line-height: 1.4; }
+  @media only screen and (min-width: 24em) {
+    .community-info {
+      font-size: 2.18rem;
+      top: 7px; } }
+  @media only screen and (min-width: 47.9375em) {
+    .community-info {
+      top: -6rem; } }
 
 .contentpage .header-group,
 .contentpage .personal {
@@ -1877,6 +2017,22 @@ section.catstream {
     .contentpage .header-group,
     .contentpage .personal {
       margin-top: 3rem; } }
+
+@media only screen and (min-width: 47.9375em) {
+  .contentpage.detail-jobs .header-group h1, .contentpage.detail-projects .header-group h1 {
+    padding-right: 150px; } }
+
+@media only screen and (min-width: 80em) {
+  .contentpage.detail-jobs .header-group h1, .contentpage.detail-projects .header-group h1 {
+    padding-right: 100px; } }
+
+@media only screen and (min-width: 47.9375em) {
+  .contentpage.detail-jobs .introduction, .contentpage.detail-projects .introduction {
+    padding-right: 150px; } }
+
+@media only screen and (min-width: 80em) {
+  .contentpage.detail-jobs .introduction, .contentpage.detail-projects .introduction {
+    padding-right: 100px; } }
 
 .author-small {
   margin-bottom: 1rem; }
