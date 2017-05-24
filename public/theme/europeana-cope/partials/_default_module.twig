@@ -5,6 +5,8 @@
 {% spaceless %}
 {% set title = module.get('title') %}
 {% set subtitle = module.get('subtitle') %}
+{% set anchortitle = module.get('anchortitle') %}
+{% set anchorslug = anchortitle|slugify() %}
 {% set body = module.get('body') %}
 {% set template = module.get('templates') %}
 {% set templatefile = 'modules/_' ~ template ~ '.twig' %}
@@ -92,6 +94,7 @@
 {% endspaceless %}
 <!-- loading templatefile for module: '{{ templatefile }}' or 'modules/_default.twig' -->
 {# automatically load module template #}
+{%- if anchortitle is not empty %}<a class="in-page-anchor" name="{{ anchorslug }}" data-anchor-title="{{ anchortitle }}"></a>{% endif -%}
 {% include [templatefile, 'modules/_default.twig'] with {
     'module': module,
     'title': title,

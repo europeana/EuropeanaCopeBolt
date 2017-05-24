@@ -262,6 +262,12 @@ pages:
           info: The subtitle is may be one short line of text
           placeholder: Optional short subtitle
           variant: inline
+        anchortitle:
+          type: text
+          label: Anchor Title (optional)
+          info: If you enter an anchor title, this module will get an in-page link with that title to jump to this module.
+          placeholder: Optional anchor title
+          variant: inline
         templates:
           type: select
           default: teasers
