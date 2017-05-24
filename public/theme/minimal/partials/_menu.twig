@@ -14,6 +14,7 @@
        invokes itself to insert the items of the submenus. #}
     {% macro display_menu_item(item, loop, withsubmenus, level) %}
         {% from _self import display_menu_item %}
+        {% from _self import is_current_url %}
         {% spaceless %}
             <li class="index-{{ loop.index -}}
                 {{ item.path|default('') == 'homepage' ? '' -}}
@@ -22,7 +23,8 @@
                 {{ loop.last ? ' last' -}}
                 {{ (level > 0) ? ' level-' ~ level -}}
                 {{ (item.submenu|default(false) and withsubmenus) ? ' is-parent' -}}
-                {{ item|current ? ' active' }}">
+                {{ item|current ? ' active' -}}
+                {{ is_current_url(item) -}}">
 
                 <a href="{{ item.link }}" title='{{ item.title|default('')|escape }}'>
                     {{- item.label|default('-') -}}
@@ -40,7 +42,19 @@
         {% endspaceless %}
     {% endmacro %}
 
-    {# Make the macro available for use #}
+    {% macro is_current_url(item) %}
+        {% spaceless %}
+            {% set currentfullpath = '/'~app.request.get('slug') %}
+            {% if item.path|default(false) == currentfullpath %}
+                active
+            {% elseif item.link|default(false) == currentfullpath %}
+                active
+            {% endif %}
+        {% endspaceless %}
+    {% endmacro %}
+
+    {# Make the macros available for use #}
+    {% from _self import is_current_url %}
     {% from _self import display_menu_item %}
 
     {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
