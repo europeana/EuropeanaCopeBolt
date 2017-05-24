@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b7b94728e59d275115e7e1b182630ae",
+    "content-hash": "f9196ec55e5d3d4ece91f4e0e9e45564",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -299,16 +299,16 @@
         },
         {
             "name": "twokings/hierarchical-routes",
-            "version": "v0.0.2",
+            "version": "v0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xiaohutai/bolt-hierarchicalroutes.git",
-                "reference": "8e9e908286ca5c1843b95ffa2d314d3cd358129e"
+                "reference": "0379cb2d4b2209f6f08d5137d816d86b40404fe6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xiaohutai/bolt-hierarchicalroutes/zipball/8e9e908286ca5c1843b95ffa2d314d3cd358129e",
-                "reference": "8e9e908286ca5c1843b95ffa2d314d3cd358129e",
+                "url": "https://api.github.com/repos/xiaohutai/bolt-hierarchicalroutes/zipball/0379cb2d4b2209f6f08d5137d816d86b40404fe6",
+                "reference": "0379cb2d4b2209f6f08d5137d816d86b40404fe6",
                 "shasum": ""
             },
             "require": {
@@ -362,10 +362,10 @@
                 "sub-page"
             ],
             "support": {
-                "source": "https://github.com/xiaohutai/bolt-hierarchicalroutes/tree/v0.0.2",
+                "source": "https://github.com/xiaohutai/bolt-hierarchicalroutes/tree/v0.0.4",
                 "issues": "https://github.com/xiaohutai/bolt-hierarchicalroutes/issues"
             },
-            "time": "2017-05-19T12:55:18+00:00"
+            "time": "2017-05-23T10:15:40+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
