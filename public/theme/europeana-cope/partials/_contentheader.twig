@@ -8,10 +8,10 @@
         </ul>
     </nav>
 
-
-    {# FIXME: Show this part on landing and homepage, not the rest #}
-    {% if app.request.get('_route') == 'homepage'
-       or ( record is defined and record.pagetype is not empty and record.pagetype == 'landingpage' )
+    {# highlight module setup #}
+    {%
+      if app.request.get('_route') == 'homepage'
+      or ( record is defined and record.pagetype is not empty and record.pagetype == 'landingpage' )
     %}
         {% set module = {} %}
         {% set template = 'highlightbar' %}
