@@ -39,7 +39,7 @@ jQuery.fn.extend(
                 viewblock.removeClass('master-switch-enabled');
                 viewblock.find('.repeater-field:not(.masterswitch)').hide();
             }
-            console.log('masterSwitcher triggered');
+            //console.log('masterSwitcher triggered');
             return viewblock;
         },
         templateSwitcher: function() {
@@ -69,7 +69,7 @@ jQuery.fn.extend(
                 orderselect.parents('.repeater-field').show();
             }
 
-            console.log('templatesSwitcher triggered', viewblock.data('templatevalue'));
+            //console.log('templatesSwitcher triggered', viewblock.data('templatevalue'));
             return viewblock;
         },
         orderSwitcher: function() {
@@ -99,7 +99,7 @@ jQuery.fn.extend(
                 categoryblock.parents('.repeater-field').hide();
             }
 
-            console.log('orderSwitcher triggered', viewblock.data('ordervalue'));
+            //console.log('orderSwitcher triggered', viewblock.data('ordervalue'));
             return viewblock;
         },
         filterSwitcher: function() {
@@ -207,6 +207,21 @@ jQuery.fn.extend(
             }
             return viewblock;
         },
+        highlightSwitcher: function() {
+            var highlightswitch = $(this);
+            $(highlightswitch).parents('fieldset').addClass('highlightswitch');
+
+            var highlightvalue = highlightswitch.val();
+            if(highlightvalue === 'landingpage') {
+                $('#highlightblock').addClass('highlight-switch-enabled');
+                $('#highlightblock').show();
+            } else {
+                $('#highlightblock').removeClass('highlight-switch-enabled');
+                $('#highlightblock').hide();
+            }
+            console.log('highlightSwitcher triggered', highlightvalue, $(this), highlightswitch);
+            return highlightswitch;
+        },
         onAvailable: function(fn){
             var sel = this.selector;
             var timer;
@@ -228,13 +243,13 @@ jQuery.fn.extend(
 
 
 jQuery(document).ready(function($) {
-    console.log('viewblocks js start');
+    //console.log('viewblocks js start');
 
     $('.repeater-slot .repeater-group').onAvailable(
         function() {
             //console.log('initializing viewblock for initial fields');
             $(this).each(function() {
-                console.log('initializing viewblocks for new field', $(this));
+                //console.log('initializing viewblocks for new field', $(this));
                 $(this).loadViewBlock();
             });
         }
@@ -245,7 +260,7 @@ jQuery(document).ready(function($) {
             function() {
                 $('.repeater-slot .repeater-group:not(.viewblocks)').onAvailable(
                     function() {
-                        console.log('initializing viewblocks for new fields', $(this));
+                        //console.log('initializing viewblocks for new fields', $(this));
                         $(this).loadViewBlock();
                     }
                 );
@@ -253,6 +268,32 @@ jQuery(document).ready(function($) {
             200
         );
     });
+
+    // add a collapsing block for the highlight bar in the back-end
+    if( $('.highlightgroup').is('*') ) {
+        var subs = $('<div>').attr({
+            'id': 'highlightblock',
+            'name': 'higlightblock',
+            'class': 'highlightblock'
+        });
+        subs.append($('#highlighttitle').parents('div[data-bolt-fieldset]'));
+        subs.append($('#highlightsources').parents('div[data-bolt-fieldset]'));
+        subs.append($('#highlightlink').parents('div[data-bolt-fieldset]'));
+        // console.log(subs);
+        $('#pagetype').parents('div[data-bolt-fieldset]').after(subs);
+        $('#pagetype').onAvailable(
+            function() {
+                //console.log('initializing highlightSwitcher for initial fields');
+                $(this).each(function() {
+                    //console.log('initializing highlightSwitcher for new field', $(this));
+                    $(this).highlightSwitcher();
+                });
+            }
+        );
+        $('#pagetype').on('change', function() {
+            $(this).highlightSwitcher();
+        });
+    }
 
     console.log('viewblocks js loaded');
 });

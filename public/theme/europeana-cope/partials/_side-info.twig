@@ -1,14 +1,19 @@
 {# SIDE-INFO #}
 
 <div class="side-info">
-    <p class="meta">
+    {% if record.contenttype.slug == 'pages'
+        and record.pagetype is defined
+        and not (record.pagetype == 'listing' or record.pagetype == 'landingpage')
+    %}
+        <p class="meta">
 
-        {% if record.contenttype.slug in ['posts', 'pages'] %}
-        {% include 'partials/_readtime.twig' %}
-        {% endif %}
+            {% if record.contenttype.slug in ['posts', 'pages'] %}
+            {% include 'partials/_readtime.twig' %}
+            {% endif %}
 
-        <span class="date">Posted at {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
-    </p>
+            <span class="date">Posted at {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+        </p>
+    {% endif %}
     {% include 'partials/_tags.twig' %}
 
     {% if record.team is not empty %}

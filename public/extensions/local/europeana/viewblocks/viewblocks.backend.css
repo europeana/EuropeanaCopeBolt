@@ -13,3 +13,10 @@ fieldset.bolt-field-repeater .viewblocks .repeater-field {
 .viewblocks .form-control {
     margin-bottom: 0.2em;
 }
+div.highlightblock {
+    border: 1px solid #ddd;
+    border-left-width: 6px;
+    border-right-width: 6px;
+    margin: 5px 0 15px 0;
+    padding: 10px;
+}
