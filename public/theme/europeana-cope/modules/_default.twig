@@ -26,7 +26,7 @@ Available variables
         {{ body|raw }}
     {% endif %}
 
-    {% if records is iterable %}
+    {% if records is iterable and records is not empty %}
         {% for record in records %}
             {% if record.id is defined %}
                 {% set templatefile =  'views/_' ~ template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
@@ -41,6 +41,12 @@ Available variables
         {% set pagername = records|first.contenttype.slug|default('') %}
         {% if pagername is not empty and allow_pager == true %}
             {{ pager( (pagername) ) }}
+        {% endif %}
+    {% else %}
+        {% if record is not empty and record.editlink() %}
+            <p class="warning">No published records were found, please <a href="{{ record.editlink() }}#modules">change the module settings</a>.</p>
+        {% else %}
+            <!-- no records were found for this module -->
         {% endif %}
     {% endif %}
 
