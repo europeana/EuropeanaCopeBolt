@@ -140,6 +140,7 @@ $(document).ready(function() {
         'extraclass': 'has-europeana-menu'
     });
 
+
     // a quick and dirty way to do inline page loads
     $('xx_dontuse_xx .play-menu .sub-menu a').each(function() {
         $(this).bind(

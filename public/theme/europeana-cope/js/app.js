@@ -16,7 +16,7 @@ $( document ).ready(function() {
         archiveText: ".main-column",        // if archive: true, time will be calteaserlated using text on div specified here. Defaults to ".text"
         anchor: "h2 a",             // external article anchor class. Defaults to ".article-link"
         label: " minutes to read"
-    }
+    };
 
     //  init for list views
     $(".teaser").minRead(options);
@@ -25,5 +25,24 @@ $( document ).ready(function() {
     options.archive = 0;
     $(".main-column").minRead(options);
 
+
+    // Add inline anchors to quicklinks
+    if( $('a.in-page-anchor').is('*') ) {
+        // if there are in page anchors, add a link to each of them in the quicklinks navigation
+        $('a.in-page-anchor').each(function() {
+            $('.quicklinks ul').append(
+                $('<li>').append(
+                    $('<a>').text(
+                        $(this).data('anchor-title')).attr(
+                            {
+                                'href': '#' + $(this).attr('name')
+                            }
+                        )
+                )
+            );
+        });
+        // remove the blank placeholder link if quicklinks were added
+        $('.in-page-blank-link').detach();
+    }
 });
 
