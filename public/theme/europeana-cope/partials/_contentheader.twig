@@ -8,10 +8,10 @@
         </ul>
     </nav>
 
-    {# highlight module setup #}
-    {%
-      if app.request.get('_route') == 'homepage'
-      or ( record is defined and record.pagetype is not empty and record.pagetype == 'landingpage' )
+
+    {# Show highlightbar on homepage and pages of type landingpage #}
+    {% if app.request.get('_route') == 'homepage'
+       or ( record is defined and record.pagetype is not empty and record.pagetype == 'landingpage' )
     %}
         {% set module = {} %}
         {% set template = 'highlightbar' %}
@@ -20,16 +20,19 @@
         {% set subtitle = '' %}
         {% set body = '' %}
         {% set sources = record.highlightsources|default('posts') %}
-        {% if sources == 'posts' and title == 'Latest Publications' %}
+        {% if (sources == 'posts' and title == 'Latest Publications') %}
             {% set filtername = 'posttype' %}
             {% set filtervalue = module.get('filter_posts')|default('publication') %}
-        {% if sources == 'posts' and title == 'Latest Pressreleases' %}
+        {% elseif sources == 'posts' and title == 'Latest Pressreleases' %}
             {% set filtername = 'posttype' %}
             {% set filtervalue = module.get('filter_posts')|default('pressrelease') %}
-        {% if sources == 'posts' and title == 'Latest Blogs' %}
+        {% elseif sources == 'posts' and title == 'Latest Blogs' %}
             {% set filtername = 'posttype' %}
             {% set filtervalue = module.get('filter_posts')|default('blog') %}
         {% else %}
+            {% if app.request.get('_route') == 'homepage'  %}
+                {% set title = 'Latest posts' %}
+            {% endif %}
             {% set filtername = 1 %}
             {% set filtervalue = 1 %}
         {% endif %}
@@ -38,7 +41,7 @@
         {% setcontent selected_records = sources where {(filtername): (filtervalue)} orderby '-datepublish' limit override_amount %}
         {% include [templatefile, 'modules/_default.twig'] with {
             'module': module,
-            'record': record,
+            'record': record|default(),
             'title': title,
             'body': body,
             'records': selected_records,

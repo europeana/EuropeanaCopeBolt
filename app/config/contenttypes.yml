@@ -277,7 +277,7 @@ pages:
     highlightlink:
       type: text
       label: Link (optional)
-      info: If present, the link will be used as the url for the more... link. If not present no more link will be displayed.
+      postfix: If present, this link will be used as the url for the <b>more</b> link. If not present no extra link will be displayed. The link should start with a slash "<b>/</b>" or with 'https://'
       placeholder: Optional higlights link
       variant: inline
       group: Modules

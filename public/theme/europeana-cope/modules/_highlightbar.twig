@@ -34,7 +34,7 @@
         {% endfor %}
         </ul>
     {% endif %}
-    {% if record is defined and record.highlightlink is not empty %}
+    {% if record is defined and record.highlightlink is defined and record.highlightlink is not empty %}
         <a class="readmore" href="{{ record.highlightlink }}">More</a>
     {% endif %}
     </div>
