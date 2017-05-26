@@ -14,7 +14,17 @@
         {% endif %}
 
         <div class="info-block">
-            <span class="info-type">Blog</span>
+            <span class="info-type">
+                {% if item.posttype == 'blog' %}
+                Blog
+                {% elseif item.posttype == 'pressrelease' %}
+                Pressrelease
+                {% elseif item.posttype == 'publication' %}
+                Publication
+                {% else %}
+                News
+                {% endif %}
+            </span>
             <span class="info-date">Created: {{ item.datepublish|localedatetime("%e %B  %Y") }}</span>
 
             {% if item.author is not empty %}

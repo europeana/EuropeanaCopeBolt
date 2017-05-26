@@ -40,3 +40,12 @@ SET email = 'lodewijk@twokings.nl',
   password = '$2y$08$mH4dP.5RizoZM4djZk7TKuamh2N7Ne6ll8e5YPw4d.aV6j57xhqlO'
 WHERE id = '1';
 
+UPDATE europeana_cope.bolt_posts SET posttype = 'pressrelease' WHERE subsite = 'pressreleases';
+UPDATE europeana_cope.bolt_posts SET posttype = 'publication' WHERE subsite = 'publications';
+UPDATE europeana_cope.bolt_posts SET posttype = 'blog' WHERE subsite = 'labs' OR subsite = 'pro' OR subsite = 'research' ;
+UPDATE europeana_cope.bolt_posts SET posttype = 'news' WHERE posttype = '';
+UPDATE europeana_cope.bolt_data SET datatype = 'Tool' WHERE subsite = 'apps';
+UPDATE europeana_cope.bolt_data SET datatype = 'API' WHERE subsite = 'api';
+UPDATE europeana_cope.bolt_data SET datatype = 'Documentation' WHERE subsite = 'research';
+UPDATE europeana_cope.bolt_data SET datatype = 'Data' WHERE subsite = 'labs';
+

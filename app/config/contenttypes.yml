@@ -740,7 +740,10 @@ projects:
       expanded: true
       default: "Project"
       label: "Project type"
-      values: [ "TaskForce", "WorkingGroup", "Project" ]
+      values:
+        "TaskForce": "TaskForce"
+        "WorkingGroup": "WorkingGroup"
+        "Project": "Project"
       postfix: "Select if this record is a project, a workinggroup or a taskforce"
     intro:
       type: html

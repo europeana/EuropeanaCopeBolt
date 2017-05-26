@@ -14,7 +14,19 @@
         {% endif %}
 
         <div class="info-block">
-            <span class="info-type">Dataset</span>
+            <span class="info-type">
+                {% if item.datatype == 'Data' %}
+                    Data
+                {% elseif item.datatype == 'Tool' %}
+                    Tool
+                {% elseif item.datatype == 'Showcase' %}
+                    Showcase
+                {% elseif item.datatype == 'API' %}
+                    API
+                {% else %}
+                    Documentation
+                {% endif %}
+            </span>
             <span class="info-date">Updated: {{ item.datechanged|localedatetime("%e %B  %Y") }}</span>
 
             {% if item.contact_record %}
