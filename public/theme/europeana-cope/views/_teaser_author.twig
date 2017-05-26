@@ -8,7 +8,7 @@
     </div>
     <div class="txt-container">
         <p class="name"><span>Created by</span> {{item.first_name}} {{item.last_name}}</p>
-        <p class="function">{{ item.job_title }}{% if item.company is not empty %}, {{ item.company }} {% endif %}</p>
+        <p class="function">{{ item.job_title }}{% if item.company is not empty %}{%- if item.job_title is not empty %}, {% endif %}{{ item.company }} {% endif %}</p>
 
 
         {% if record.contact_blurb %}
