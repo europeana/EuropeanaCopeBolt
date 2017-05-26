@@ -13,7 +13,7 @@
     <div class="highlight-bar">
 
     {% if title is not empty %}
-        <h2>{{ title|default('Latest publications') }}</h2>
+        <h2>{{ title }}</h2>
     {% endif %}
 
     {% if records is iterable and records is not empty %}
@@ -33,7 +33,9 @@
             </li>
         {% endfor %}
         </ul>
-        <a class="readmore" href="#">More</a>
+    {% endif %}
+    {% if record is defined and record.highlightlink is not empty %}
+        <a class="readmore" href="{{ record.highlightlink }}">More</a>
     {% endif %}
     </div>
 </div>

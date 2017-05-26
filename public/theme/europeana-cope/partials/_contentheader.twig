@@ -11,18 +11,24 @@
 
     {# FIXME: Show this part on landing and homepage, not the rest #}
     {% if app.request.get('_route') == 'homepage'
-       or ( record is defined and record.pagetype is not empty and record.pagetype == 'landing' )
+       or ( record is defined and record.pagetype is not empty and record.pagetype == 'landingpage' )
     %}
         {% set module = {} %}
-        {% set template = module.get('templates')|default('highlightbar') %}
+        {% set template = 'highlightbar' %}
         {% set templatefile = 'modules/_' ~ template ~ '.twig' %}
-        {% set title = module.get('title')|default('Latest posts') %}
+        {% set title = record.highlighttitle|default('') %}
         {% set subtitle = '' %}
         {% set body = '' %}
-        {% set sources = module.get('sources')|default('posts') %}
-        {% if sources == 'posts' and 'Publications' in title %}
+        {% set sources = record.highlightsources|default('posts') %}
+        {% if sources == 'posts' and title == 'Latest Publications' %}
             {% set filtername = 'posttype' %}
             {% set filtervalue = module.get('filter_posts')|default('publication') %}
+        {% if sources == 'posts' and title == 'Latest Pressreleases' %}
+            {% set filtername = 'posttype' %}
+            {% set filtervalue = module.get('filter_posts')|default('pressrelease') %}
+        {% if sources == 'posts' and title == 'Latest Blogs' %}
+            {% set filtername = 'posttype' %}
+            {% set filtervalue = module.get('filter_posts')|default('blog') %}
         {% else %}
             {% set filtername = 1 %}
             {% set filtervalue = 1 %}
@@ -32,6 +38,7 @@
         {% setcontent selected_records = sources where {(filtername): (filtervalue)} orderby '-datepublish' limit override_amount %}
         {% include [templatefile, 'modules/_default.twig'] with {
             'module': module,
+            'record': record,
             'title': title,
             'body': body,
             'records': selected_records,

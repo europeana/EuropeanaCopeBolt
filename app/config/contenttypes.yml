@@ -236,6 +236,51 @@ pages:
     body:
       type: html
       label: "Body (optional)"
+    pagefooter:
+      type: html
+      label: "Pagefooter (optional)"
+      height: 100px
+      postfix: "Shown on individual pages below the main body text"
+      group: Main
+    pagetype:
+      type: select
+      label: Type of page
+      default: page
+      required: true
+      values:
+        page: Normal page
+        landingpage: Landing page (with highlights)
+        splashpage: Splashpage
+      group: Modules
+    highlighttitle:
+      type: text
+      label: Title (optional)
+      info: The title will be shown as title for the highlights, if the title is empty the block will not have a title either
+      placeholder: Optional higlights title
+      variant: inline
+      group: Modules
+    highlightsources:
+      type: select
+      default: posts
+      info: Use this to select what contenttype the highlights will load
+      postfix: Use this to select what contenttype the highlights will load
+      values:
+        pages: Pages, Listings, Landingpages, Structures and Collections
+        persons: Persons
+        posts: Blogposts, Pressreleases, Publications and News
+        data: Data, Applications, Documentation
+        projects: Projects, Taskforces and Workinggroups
+        jobs: Jobs
+        events: Events
+        resources: Resource blocks
+      group: Modules
+    highlightlink:
+      type: text
+      label: Link (optional)
+      info: If present, the link will be used as the url for the more... link. If not present no more link will be displayed.
+      placeholder: Optional higlights link
+      variant: inline
+      group: Modules
     modules:
       label: Modules
       type: repeater
@@ -479,13 +524,6 @@ pages:
           variant: inline
           placeholder: If you need to add custom css classes you can enter them here
           info: If you need to add custom css classes you can enter them here
-      group: Main
-    pagefooter:
-      type: html
-      label: "Pagefooter (optional)"
-      height: 100px
-      postfix: "Shown on individual pages below the main body text"
-      group: Main
     <<: *teaser_defaults
     <<: *cta_defaults
     <<: *media_defaults
