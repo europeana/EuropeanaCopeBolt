@@ -208,18 +208,14 @@ jQuery.fn.extend(
             return viewblock;
         },
         highlightSwitcher: function() {
-            var highlightswitch = $(this);
-            $(highlightswitch).parents('fieldset').addClass('highlightswitch');
-
+            var highlightswitch = $('#pagetype');
             var highlightvalue = highlightswitch.val();
             if(highlightvalue === 'landingpage') {
-                $('#highlightblock').addClass('highlight-switch-enabled');
                 $('#highlightblock').show();
             } else {
-                $('#highlightblock').removeClass('highlight-switch-enabled');
                 $('#highlightblock').hide();
             }
-            console.log('highlightSwitcher triggered', highlightvalue, $(this), highlightswitch);
+            //console.log('highlightSwitcher triggered', highlightvalue);
             return highlightswitch;
         },
         onAvailable: function(fn){
@@ -270,7 +266,7 @@ jQuery(document).ready(function($) {
     });
 
     // add a collapsing block for the highlight bar in the back-end
-    if( $('.highlightgroup').is('*') ) {
+    if( $('#pagetype').is('*') ) {
         var subs = $('<div>').attr({
             'id': 'highlightblock',
             'name': 'higlightblock',
@@ -294,6 +290,7 @@ jQuery(document).ready(function($) {
             $(this).highlightSwitcher();
         });
     }
+
 
     console.log('viewblocks js loaded');
 });

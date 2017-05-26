@@ -18,5 +18,9 @@ div.highlightblock {
     border-left-width: 6px;
     border-right-width: 6px;
     margin: 5px 0 15px 0;
-    padding: 10px;
+    padding: 0 10px;
+}
+div.highlightblock div[data-bolt-fieldset]:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
 }

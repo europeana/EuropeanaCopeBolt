@@ -1,6 +1,14 @@
 {% extends 'partials/_master.twig' %}
 
-{% block bodyclass 'contentpage' %}
+{% block bodyclass -%}
+    {%- if record.pagetype is defined and record.pagetype == 'listing' -%}
+        listingpage
+    {%- elseif record.pagetype is defined and record.pagetype == 'landingpage' -%}
+        landingpage contentpage
+    {%- else -%}
+        contentpage
+    {%- endif -%}
+{%- endblock bodyclass %}
 
 {% block main %}
     <div class="debug">

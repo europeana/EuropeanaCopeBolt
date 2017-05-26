@@ -257,14 +257,16 @@ pages:
       type: text
       label: Title (optional)
       info: The title will be shown as title for the highlights, if the title is empty the block will not have a title either
+      postfix: The title will be shown as title for the highlights, if the title is empty the block will not have a title either. If the one of the keywords "Posts", "Pressreleases" or "Publications" is used and the selected source is "Blogposts, Pressreleases, Publications and News" the corresponding items will be filtered.
       placeholder: Optional higlights title
       variant: inline
       group: Modules
     highlightsources:
       type: select
+      label: Sources
       default: posts
       info: Use this to select what contenttype the highlights will load
-      postfix: Use this to select what contenttype the highlights will load
+      postfix: Use this to select what contenttype the highlights will load, the default is <b>posts</p> which should be the correct choice.
       values:
         pages: Pages, Listings, Landingpages, Structures and Collections
         persons: Persons
@@ -286,6 +288,7 @@ pages:
       label: Modules
       type: repeater
       separator: true
+      prefix: Modules are blocks of content from the other parts of the site. Use the modules to build elaborate landingpages.
       group: Modules
       fields:
         enabled:
