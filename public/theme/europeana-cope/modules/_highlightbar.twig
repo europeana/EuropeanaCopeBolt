@@ -1,0 +1,39 @@
+{% spaceless %}
+    {#
+    Available variables
+        'module':    the full module object
+        'title':     title of the module
+        'subtitle':  subtitle of the module
+        'body':      body of the module
+        'records':   array of (selected) records that belong to the module
+        'allow_pager': boolean to check is the pager is available
+    #}
+{% endspaceless %}
+<div class="inner-wrap">
+    <div class="highlight-bar">
+
+    {% if title is not empty %}
+        <h2>{{ title|default('Latest publications') }}</h2>
+    {% endif %}
+
+    {% if records is iterable and records is not empty %}
+        <ul class="group">
+        {% for item in records %}
+            <li>
+                <a href="{{ item.link() }}">
+                {% if item.teaser_image is defined and item.teaser_image is not empty %}
+                    <img src="{{ item.teaser_image|thumbnail(90,78,'c')}}" alt="{{ item.title }}"/>
+                {% elseif item.image is defined and item.image is not empty %}
+                    <img src="{{ item.image|thumbnail(90,78,'c')}}" alt="{{ item.title }}"/>
+                {% else %}
+                    <img src="/theme/europeana-cope/images/default.png" width="90" height="78" style="height:400px;" alt=""/>
+                {% endif %}
+                    {{ item.title }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+        <a class="readmore" href="#">More</a>
+    {% endif %}
+    </div>
+</div>
