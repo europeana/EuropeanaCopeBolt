@@ -12,7 +12,7 @@ Available variables
 {% set override_css_class = module.get('override_css_class') %}
 {% set template = module.get('templates') %}
 {% endspaceless %}
-<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module{%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module group {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
 
     {% if title is not empty %}
         <h2>{{ title }}</h2>

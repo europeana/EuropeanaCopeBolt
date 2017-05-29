@@ -1,0 +1,28 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+<div class="column fourth thumblink-fourcol thumblink-persons">
+    <a href="{{ item.link() }}">
+    {% if item.image is defined and item.image is not empty %}
+        <img class="round" src="{{ item.image|thumbnail(250,250,'c')}}" alt="{{ item.first_name }} {{ item.last_name }}"/>
+    {% else %}
+        <img class="round" src="/theme/europeana-cope/images/default.png" width="250" height="250" alt="{{ item.first_name }} {{ item.last_name }}"/>
+    {% endif %}
+    </a>
+
+    <h3>{{ item.first_name }} {{ item.last_name }}</h3>
+
+    {% if item.job_title %}
+    <p class="function">
+        {{ item.job_title }}
+    </p>
+    {% endif %}
+
+    {% if item.company %}
+    <p class="company">
+        {{ item.company }}
+    </p>
+    {% endif %}
+
+</div>

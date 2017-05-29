@@ -1805,6 +1805,16 @@ section.catstream {
   text-align: center; }
   .thumblink-fourcol h3 {
     margin: 1rem 0 .5rem; }
+  .thumblink-fourcol.thumblink-persons h3 {
+    text-transform: none; }
+  .thumblink-fourcol .function {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0; }
+  .thumblink-fourcol .company {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin-top: .5rem; }
 
 /*
 * WIDGET CALL TO ACTION FULL / HALF

@@ -574,6 +574,22 @@ section.catstream {
     h3 {
         margin: 1rem 0 .5rem;
     }
+
+    &.thumblink-persons h3 {
+        text-transform: none;
+    }
+
+    .function{
+        font-weight: 400;
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    .company {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        margin-top: .5rem;
+    }
 }
 
 
