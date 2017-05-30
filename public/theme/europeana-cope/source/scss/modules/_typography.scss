@@ -211,13 +211,18 @@ section {
 
     .inner-wrap > p {
         text-align: center;
-        margin: 0 0 3rem 0;
+        // margin: 0 0 3rem 0;
         letter-spacing: -.3px;
         font-size: 0.875rem; // Carlos wants 0.75rem, 2K Think that's too small.
 
         @include respond-to (medium-screens) {
             font-size: 1rem;
         }
+    }
+
+    .inner-wrap p + .items-container,
+    .inner-wrap h2 + .items-container {
+        margin-top: 3rem;
     }
 }
 

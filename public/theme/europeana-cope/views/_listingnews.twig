@@ -1,17 +1,37 @@
-<article class="column teaser record-{{ record.contenttype.slug  }}">
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+<article class="column half teaser-twocol teaser-{{ record.contenttype.slug  }} group">
     <div class="img-container">
-        <img src="{{ image(record.image, 600, 600) }}" alt="{{ record.image.title }}"/>
+        <a href="{{ item.link }}">
+        {% if item.teaser_image is defined and item.teaser_image is not empty %}
+            <img src="{{ item.teaser_image|thumbnail(600,600,'c')}}" alt="{{ item.title }}"/>
+        {% elseif item.image is defined and item.image is not empty %}
+            <img src="{{ item.image|thumbnail(600,600,'c')}}" alt="{{ item.title }}"/>
+        {% else %}
+            <img src="/theme/europeana-cope/images/default.png" width="600" height="600" alt="{{ item.title }}"/>
+        {% endif %}
+        </a>
+
         <p class="img-insert">
-        Created: <span class="date">5 November 2012</span>
+            Created: <span class="date">{{ item.datepublish|localedatetime("%e %B  %Y") }}</span>
         </p>
     </div>
-    <h3><a href="{{ record.link }}">{{ record.title }}</a></h3>
-    {% if record.teaser %}
-        {{ record.teaser }}
-    {% elseif record.intro %}
-        {{ record.intro }}
+
+    <h3><a href="{{ item.link }}">{{ item.title }}</a></h3>
+    <p class="meta">Created: <span class="date">5 November 2012</span></p>
+
+    {% include 'partials/_tags.twig' %}
+
+    {% if item.teaser is defined and item.teaser is not empty %}
+        {{ item.teaser }}
+    {% elseif item.intro is defined and item.intro is not empty %}
+        {{ item.intro }}
     {% else %}
-        <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+        <p>{{ item.excerpt(100, false, search|default('')) }}</p>
     {% endif %}
-    <a href="{{ record.link }}" class="readmore">Read more</a>
+
+    <a href="{{ item.link() }}" class="readmore">Read more</a>
 </article>
+

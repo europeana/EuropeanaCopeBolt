@@ -11,11 +11,11 @@
         <p class="function">{{ item.job_title }}{% if item.company is not empty %}{%- if item.job_title is not empty %}, {% endif %}{{ item.company }} {% endif %}</p>
 
 
-        {% if record.contact_blurb %}
+        {% if record.contact_blurb is defined and record.contact_blurb is not empty %}
             {{ record.contact_blurb }}
-        {% elseif item.teaser %}
+        {% elseif item.teaser is defined and item.teaser is not empty %}
             {{ item.teaser }}
-        {% elseif item.introduction %}
+        {% elseif item.introduction is defined and item.introduction is not empty %}
            {{ item.introduction|excerpt(300) }}
         {% else %}
             <p>{{ item.excerpt(300, false, search|default('')) }}</p>

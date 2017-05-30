@@ -44,9 +44,9 @@
 
     {% include 'partials/_tags.twig' %}
 
-    {% if item.teaser %}
+    {% if item.teaser is defined and item.teaser is not empty %}
         {{ item.teaser }}
-    {% elseif item.intro %}
+    {% elseif item.intro is defined and item.intro is not empty %}
         {{ item.intro }}
     {% else %}
         <p>{{ item.excerpt(150, false, search|default('')) }}</p>
