@@ -56,3 +56,8 @@
 
        </div>
     </section>
+
+
+    {% for module in record.modules %}
+        {{ include('partials/_default_module.twig', { 'module': module }) }}
+    {% endfor %}

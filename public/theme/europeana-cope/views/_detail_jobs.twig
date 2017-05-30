@@ -56,15 +56,12 @@
                     {% include 'views/_imagegallery.twig' %}
                 {% endif %}
 
-                {% for module in record.modules %}
-                    {{ include('partials/_default_module.twig', { 'module': module }) }}
-                {% endfor %}
-
-
-
             </article>
 
         </div>
     </section>
 
+    {% for module in record.modules %}
+        {{ include('partials/_default_module.twig', { 'module': module }) }}
+    {% endfor %}
 

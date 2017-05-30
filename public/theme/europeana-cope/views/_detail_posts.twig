@@ -44,20 +44,26 @@
                     </div>
                 {% endif %}
 
-                {% for module in record.modules %}
-                    {{ include('partials/_default_module.twig', { 'module': module }) }}
-                {% endfor %}
-
-                {% if record.pagefooter is defined %}
-                    <div class="body pagefooter">
-                        {{ record.pagefooter }}
-                    </div>
-                {% endif %}
-
             </article>
 
         </div>
     </section>
+
+    {% for module in record.modules %}
+        {{ include('partials/_default_module.twig', { 'module': module }) }}
+    {% endfor %}
+
+    {% if record.pagefooter is defined %}
+    <section>
+        <div class="inner-wrap">
+            <article class="column main-column">
+                <div class="body pagefooter">
+                    {{ record.pagefooter }}
+                </div>
+            </article>
+        </div>
+    </section>
+    {% endif %}
 
     <aside>
         <div class="inner-wrap">

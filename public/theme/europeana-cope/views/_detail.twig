@@ -39,20 +39,26 @@
                     </div>
                 {% endif %}
 
-                {% for module in record.modules %}
-                    {{ include('partials/_default_module.twig', { 'module': module }) }}
-                {% endfor %}
-
-                {% if record.pagefooter is defined %}
-                    <div class="body pagefooter">
-                        {{ record.pagefooter }}
-                    </div>
-                {% endif %}
-
             </article>
 
         </div>
     </section>
+
+    {% for module in record.modules %}
+        {{ include('partials/_default_module.twig', { 'module': module }) }}
+    {% endfor %}
+
+    {% if record.pagefooter is defined %}
+    <section>
+        <div class="inner-wrap">
+            <article class="column main-column">
+                <div class="body pagefooter">
+                    {{ record.pagefooter }}
+                </div>
+            </article>
+        </div>
+    </section>
+    {% endif %}
 
     <aside>
         <div class="inner-wrap">
@@ -75,36 +81,3 @@
 
     </aside>
 
-
-
-
-{# OUDE _DETAILS.TWIG#}
-
-{#
-<article class="snippet-details record-{{ record.contenttype.slug  }}">
-    <h1>{{ record.title }}</h1>
-
-    {{ record.teaser }}
-
-    {% if record.image %}
-    <a href="{{ image(record.image) }}">
-        <img src="{{ image(record.image, 740, 560)|default('https://unsplash.it/740/560') }}" />
-    </a>
-    {% endif %}
-
-    {{ record.body }}
-
-    {# If there are repeaters, we should output them.
-    {% for module in record.modules %}
-        {{ include('partials/_default_module.twig', { 'module': module }) }}
-    {% endfor %}
-
-    <!-- load other fields if any are available -->
-    {{ fields(common = false, extended = true, repeaters = false) }}
-
-    <!-- show a footer -->
-    {{ include('partials/_record_footer.twig', { 'record': record, 'extended': true }) }}
-
-</article>
-
-#}
