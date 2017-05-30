@@ -101,6 +101,16 @@ header {
 
 .highlight-bar {
 
+    ul {
+        display: flex;
+        wrap: no-wrap;
+        justify-content: space-around;
+
+        @include respond-to (large-screens) {
+
+        }
+    }
+
     h2 {
         text-transform: uppercase;
         font-size: 0.75rem;
@@ -109,18 +119,22 @@ header {
         @include respond-to (large-screens) {
             font-weight: 400;
             font-size: 1rem;
-            width: 130px;
+            width: 98px; // magic number: aligns on ipad with txt //130px;
             text-align: center;
             float: left;
             margin: 2rem 1rem  0 0;
             letter-spacing: 2px;
         }
+
+        @include respond-to (xlarge-screens) {
+            width: 162px; // magic number: aligns with txt
+        }
     }
 
     li {
         display: inline-block;
-        vertical-align: top;
-        width: 90px;
+        flex-grow: 1;
+        width: 30%;
         margin-right: .25rem;
 
         &:last-child {
@@ -134,9 +148,11 @@ header {
     }
 
     img {
+        margin-bottom: .3rem;
+
         @include respond-to (large-screens) {
             float: left;
-            margin-right: 1rem;
+            margin: 0 1rem 1rem 0;
         }
 
     }
@@ -146,8 +162,6 @@ header {
         line-height: 1.375;
         display: inline-block;
         font-size: 0.75rem;
-        max-height: 112px; //magic number: two lines of text
-        overflow: hidden;
 
         @include respond-to (large-screens) {
            font-size: 1rem;
