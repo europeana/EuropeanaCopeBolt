@@ -7,11 +7,11 @@
     {# get the manually set related records #}
     {% set records = record.related()|shuffle %}
 {% elseif record.taxonomy.categories is defined %}
-    {# get the automatically related records by category #}
-    {# {% setcontent records = record.contenttype.slug where { categories : record.taxonomy.categories } %} #}
-
     {# FIXME Extensie is nog stuk #}
     {# {% set records = relatedcontent(record) %} #}
+
+    {# get the automatically related records by category #}
+    {% setcontent records = record.contenttype.slug where { categories : record.taxonomy.categories|join(' || ') } %}
 {% endif %}
 
 {% if (records is defined) and (records is not empty) %}

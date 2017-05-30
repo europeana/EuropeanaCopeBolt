@@ -1216,7 +1216,7 @@ a.tag, a.team {
   .label + a.tag, .label + a.team {
     margin-left: .5rem; }
 
-a.phone {
+a.phone, a.tel {
   color: #4d4d4d;
   white-space: nowrap; }
 

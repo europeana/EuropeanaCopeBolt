@@ -476,7 +476,8 @@ a {
         }
     }
 
-    &.phone {
+    &.phone,
+    &.tel {
         color: $medium-gray;
         white-space: nowrap;
     }
