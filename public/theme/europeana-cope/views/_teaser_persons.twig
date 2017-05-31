@@ -32,24 +32,53 @@
 
     </div>
     <div class="txt-container">
-        <p class="function">
-            {% if item.job_title %}
-                {{ item.job_title }},
-            {% endif %}
-            {{ item.company }}</p>
 
-        {% if speaker|default(false) %}
-            {{ item.speaker_teaser }}
-        {% elseif item.teaser %}
-            {{ item.teaser }}
-        {% elseif item.introduction %}
-           {{ item.introduction|excerpt(300) }}
-        {% else %}
-            <p>{{ item.excerpt(300, false, search|default('')) }}</p>
+            {% if item.company %}
+                <p class="function">{{ item.company }}</p>
+            {% endif %}
+
+            {% if item.job_title %}
+                <p class="company">{{ item.job_title }}</p>
+            {% endif %}
+
+            {% if item.network_participation %}
+                <p class="networklevel">
+                    {% for netw in item.network_participation %}
+                    {{ netw }}{% if loop.last == false %} / {% endif %}
+                    {% endfor %}
+                </p>
+            {% endif %}
+
+
+        {% if short is not defined or short == false %}
+
+            {% if speaker|default(false) %}
+                {{ item.speaker_teaser }}
+            {% elseif item.teaser %}
+                {{ item.teaser }}
+            {% elseif item.introduction %}
+               {{ item.introduction|excerpt(300) }}
+            {% else %}
+                <p>{{ item.excerpt(300, false, search|default('')) }}</p>
+            {% endif %}
         {% endif %}
 
         <div class="contact">
-             {% if item.twitter is not empty %}
+            {% if item.email is not empty %}
+            <a href="mailto:{{ item.email }}" class="email">{{ item.email }}</a>
+            {% endif %}
+
+            {% if short is not defined or short == false %}
+                {% if item.phone is not empty %}
+                <a href="tel:{{ item.phone }}" class="phone">{{ item.phone }}</a>
+                {% endif %}
+            {% endif %}
+
+            {% if short is defined and short == true %}
+                <br />
+            {% endif %}
+
+            {% if item.twitter is not empty %}
             <a href="{{ item.twitter }}" class="tw">
                 <svg class="icon icon-twitter">
                     <use xlink:href="#icon-twitter"></use>
@@ -62,14 +91,6 @@
                     <use xlink:href="#icon-linkedin"></use>
                 </svg><span class="sr-only">{{ item.linkedin }}</span>
             </a>
-            {% endif %}
-
-            {% if item.email is not empty %}
-            <a href="mailto:{{ item.email }}" class="email">{{ item.email }}</a>
-            {% endif %}
-
-            {% if item.phone is not empty %}
-            <a href="tel:{{ item.phone }}" class="phone">{{ item.phone }}</a>
             {% endif %}
         </div>
     </div>

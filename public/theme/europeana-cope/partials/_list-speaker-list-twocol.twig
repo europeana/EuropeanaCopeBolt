@@ -1,0 +1,13 @@
+{# INFO LIST #}
+<ul class="info-list speaker-list info-list-twocol items-container">
+
+{% for item in items %}
+
+    <li class="column half">
+    {# PERSON #}
+        {% include 'views/_teaser_persons.twig' with { item : item , short : true } %}
+    </li>
+
+{% endfor %}
+
+</ul>

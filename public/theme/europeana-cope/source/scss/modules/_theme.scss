@@ -1389,6 +1389,13 @@ section.catstream {
         border-bottom: 2px solid $line-gray;
     }
 
+    &.info-list-twocol li {
+
+        @include respond-to(large-screens) {
+            padding: 2rem 0;
+        }
+    }
+
     .teaser {
         margin: 0;
     }
@@ -1475,6 +1482,12 @@ section.catstream {
 .teaser-persons {
     margin: 3rem 0;
 
+    .half & {
+        @include respond-to(large-screens) {
+            padding-right: 1rem;
+        }
+    }
+
     // Not used:
     // li {
     //     //border-bottom: 1px solid $line-gray;
@@ -1501,6 +1514,19 @@ section.catstream {
         }
     }
 
+    .half & .img-container {
+        // width: 95px;
+
+        @include respond-to(large-screens) {
+            margin: 0 1rem 1rem 0;
+            width: 95px;
+        }
+
+        @include respond-to(xlarge-screens) {
+            width: 175px;
+        }
+    }
+
     img {
         width: 95px;
         height: 95px;
@@ -1511,15 +1537,51 @@ section.catstream {
         }
     }
 
+    .half & img {
+
+        @include respond-to(large-screens) {
+            width: 95px;
+            height: 95px;
+        }
+
+        @include respond-to(xlarge-screens) {
+            width: 175px;
+            height: 175px;
+        }
+    }
+
     .txt-container {
-        padding: 0 0rem 0 112px;
+        padding: 0 0rem 0 0;
+
+        @include respond-to(medium-screens) {
+            padding: 0 0rem 0 112px;
+        }
 
         @include respond-to(large-screens) {
             padding: 0 0rem 0 236px;
         }
     }
 
+    .half & .txt-container {
+
+        @include respond-to(large-screens) {
+            padding: 0 0rem 0 111px;
+        }
+
+        @include respond-to(xlarge-screens) {
+            padding: 0 0rem 0 191px;
+        }
+    }
+
     p.function {
+        margin-top: 0;
+    }
+
+    p.company {
+        margin-top: -.5rem;
+    }
+
+    p.networklevel {
         margin-top: 0;
     }
 
@@ -1540,7 +1602,12 @@ section.catstream {
                 display: inline-block;
             }
         }
+
+        svg {
+            margin-right: 0;
+        }
     }
+
 
     .button {
         margin: 1rem 0;
@@ -1562,6 +1629,22 @@ section.catstream {
         svg:last-child {
             margin-right: 0;
         }
+    }
+
+    .half & {
+        p.company,
+        p.function {
+
+            @include respond-to(large-screens) {
+                font-size: 1rem;
+            }
+        }
+
+        a.email {
+            font-size: 0.875rem;
+        }
+
+
     }
 }
 

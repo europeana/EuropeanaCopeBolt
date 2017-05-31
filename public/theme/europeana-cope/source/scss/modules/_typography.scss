@@ -324,7 +324,21 @@ p {
         font-size: 1.125rem;
         font-weight: 700;
         color: $light-gray;
-        line-height: 1.125;
+        line-height: 1.4;
+    }
+
+    &.company {
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: $light-gray;
+        line-height: 1.4;
+    }
+
+    &.networklevel {
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: $light-gray;
+        line-height: 1.4;
     }
 
     &.name {

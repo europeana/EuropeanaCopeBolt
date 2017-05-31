@@ -1116,7 +1116,17 @@ p {
     font-size: 1.125rem;
     font-weight: 700;
     color: #777777;
-    line-height: 1.125; }
+    line-height: 1.4; }
+  p.company {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #777777;
+    line-height: 1.4; }
+  p.networklevel {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #777777;
+    line-height: 1.4; }
   p.name {
     font-size: 1.125rem;
     font-weight: 700;
@@ -2406,6 +2416,10 @@ section.catstream {
   padding: 2rem;
   border-bottom: 2px solid #cccccc; }
 
+@media only screen and (min-width: 47.9375em) {
+  .info-list.info-list-twocol li {
+    padding: 2rem 0; } }
+
 .info-list .teaser {
   margin: 0; }
 
@@ -2461,6 +2475,9 @@ section.catstream {
 
 .teaser-persons {
   margin: 3rem 0; }
+  @media only screen and (min-width: 47.9375em) {
+    .half .teaser-persons {
+      padding-right: 1rem; } }
   .teaser-persons .img-container {
     float: left;
     margin: 0 1rem 1rem 0;
@@ -2469,6 +2486,13 @@ section.catstream {
       .teaser-persons .img-container {
         margin: 0 2rem 1rem 0;
         width: 175px; } }
+  @media only screen and (min-width: 47.9375em) {
+    .half .teaser-persons .img-container {
+      margin: 0 1rem 1rem 0;
+      width: 95px; } }
+  @media only screen and (min-width: 80em) {
+    .half .teaser-persons .img-container {
+      width: 175px; } }
   .teaser-persons img {
     width: 95px;
     height: 95px; }
@@ -2476,12 +2500,33 @@ section.catstream {
       .teaser-persons img {
         width: 175px;
         height: 175px; } }
+  @media only screen and (min-width: 47.9375em) {
+    .half .teaser-persons img {
+      width: 95px;
+      height: 95px; } }
+  @media only screen and (min-width: 80em) {
+    .half .teaser-persons img {
+      width: 175px;
+      height: 175px; } }
   .teaser-persons .txt-container {
-    padding: 0 0rem 0 112px; }
+    padding: 0 0rem 0 0; }
+    @media only screen and (min-width: 24em) {
+      .teaser-persons .txt-container {
+        padding: 0 0rem 0 112px; } }
     @media only screen and (min-width: 47.9375em) {
       .teaser-persons .txt-container {
         padding: 0 0rem 0 236px; } }
+  @media only screen and (min-width: 47.9375em) {
+    .half .teaser-persons .txt-container {
+      padding: 0 0rem 0 111px; } }
+  @media only screen and (min-width: 80em) {
+    .half .teaser-persons .txt-container {
+      padding: 0 0rem 0 191px; } }
   .teaser-persons p.function {
+    margin-top: 0; }
+  .teaser-persons p.company {
+    margin-top: -.5rem; }
+  .teaser-persons p.networklevel {
     margin-top: 0; }
   .teaser-persons .contact a {
     margin-right: .5rem; }
@@ -2490,6 +2535,8 @@ section.catstream {
       @media only screen and (min-width: 47.9375em) {
         .teaser-persons .contact a.li, .teaser-persons .contact a.tw {
           display: inline-block; } }
+    .teaser-persons .contact a svg {
+      margin-right: 0; }
   .teaser-persons .button {
     margin: 1rem 0; }
   .teaser-persons .socials {
@@ -2503,6 +2550,12 @@ section.catstream {
       margin-right: 0.5rem; }
     .teaser-persons .socials svg:last-child {
       margin-right: 0; }
+  @media only screen and (min-width: 47.9375em) {
+    .half .teaser-persons p.company,
+    .half .teaser-persons p.function {
+      font-size: 1rem; } }
+  .half .teaser-persons a.email {
+    font-size: 0.875rem; }
 
 .link-list {
   margin: 2rem 0; }

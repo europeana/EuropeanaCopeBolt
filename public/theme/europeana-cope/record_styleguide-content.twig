@@ -67,6 +67,11 @@
                     {% include 'partials/_list-speaker-list.twig' with { items : speakers } %}
                 </section>
 
+                <section class="info-list-section">
+                    <h2>Members of the network members board</h2>
+                    {% setcontent speakers = 'persons/latest/4'%}
+                    {% include 'partials/_list-speaker-list-twocol.twig' with { items : speakers } %}
+                </section>
 
 
             </article>
