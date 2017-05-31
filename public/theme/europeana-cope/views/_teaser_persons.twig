@@ -51,7 +51,6 @@
 
 
         {% if short is not defined or short == false %}
-
             {% if speaker|default(false) %}
                 {{ item.speaker_teaser }}
             {% elseif item.teaser %}

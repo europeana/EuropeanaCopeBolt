@@ -1,13 +1,25 @@
-{# INFO LIST #}
-<ul class="info-list speaker-list info-list-twocol items-container">
+{# Setup this partial to act as a module, set module specs #}
 
-{% for item in items %}
-
-    <li class="column half">
-    {# PERSON #}
-        {% include 'views/_teaser_persons.twig' with { item : item , short : true } %}
-    </li>
-
-{% endfor %}
-
-</ul>
+    {% set module = {} %}
+    {% set template = 'list_teasers' %}
+    {% set templatefile = 'modules/_' ~ template ~ '.twig' %}
+    {% set title = title|default('') %}
+    {% set subtitle = '' %}
+    {% set body = '' %}
+    {% set sources = '' %}
+    {% set override_amount = '' %}
+    {% set allow_pager = false %}
+    {% set selected_records = items %}
+    {% set override_css_class = 'info-list-section' %}
+    {% set override_css_listclass = 'info-list info-list-twocol speaker-list items-container' %}
+    {% set override_css_itemclass = 'column half' %}
+    {% set override_css_id = '' %}
+    {% set short = true %}
+    {% include [templatefile, 'modules/_default.twig'] with {
+        'module': module,
+        'record': record|default(),
+        'title': title,
+        'body': body,
+        'records': selected_records,
+        'allow_pager': allow_pager
+    } %}

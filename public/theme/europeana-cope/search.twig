@@ -9,21 +9,6 @@
 
         <div class="column">
 
-            {# <div class="filter-listing">
-                <p>Categories:</p>
-                <ul>
-                    <li><a>cat 1</a></li>
-                    <li><a>cat 2</a></li>
-                    <li><a>cat 3</a></li>
-                    <li><a>cat 4</a></li>
-                    {# <li><a>Case Studies (123)</a></li>
-                </ul>
-            </div> #}
-
-            {# This template is used for search results. If 'search' is defined,
-               we display an appropriate title. The 'records' array contains all of the
-               records matching the current query. If there are no results, the
-               code in the 'else' part of the for-loop is used. #}
             <h1>
                 {% if search is not empty %}
                     {{ searchresult.no_of_results }} search results for "{{ search }}"
@@ -31,19 +16,22 @@
                     {{ __('general.phrase.search') }}
                 {% endif %}
             </h1>
-            {{ dump(records) }}
 
             <ul class="teaser-list">
             {% for record in records %}
+                <li>
                 {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
                 <!-- loading search listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
                 {% include [template, 'views/_teasers.twig', 'views/_fallback.twig'] with {item:record} %}
+                </li>
             {% else %}
-                <article>
-                    <p>
-                        {{ __('general.phrase.no-result-for-search-term', { '%SEARCHTERM%': search|escape }) }}
-                    </p>
-                </article>
+                <li>
+                    <article>
+                        <p>
+                            {{ __('general.phrase.no-result-for-search-term', { '%SEARCHTERM%': search|escape }) }}
+                        </p>
+                    </article>
+                </li>
             {% endfor %}
             </ul>
 

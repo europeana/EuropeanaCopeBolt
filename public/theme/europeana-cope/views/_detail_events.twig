@@ -47,10 +47,7 @@
 
             {% set speakers = record.related('persons') %}
             {% if speakers|length > 0 %}
-            <section class="info-list-section main-column">
-                <h2>Speakers for this event</h2>
-                {% include 'partials/_list-speaker-list.twig' with { items : speakers , speaker : true } %}
-            </section>
+                {% include 'partials/_list-speaker-list.twig' with { title : 'Speakers for this event', items : speakers , speaker : true } %}
             {% endif %}
 
 

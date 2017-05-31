@@ -61,17 +61,11 @@
 
                 {% include 'partials/_download-content.twig'%}
 
-                <section class="info-list-section">
-                    <h2>Speakers for this event</h2>
-                    {% setcontent speakers = 'persons/latest/4'%}
-                    {% include 'partials/_list-speaker-list.twig' with { items : speakers } %}
-                </section>
+                {% setcontent speakers = 'persons/latest/4'%}
+                {% include 'partials/_list-speaker-list.twig' with { title : 'Speakers for this event2', items : speakers , speaker : true } %}
 
-                <section class="info-list-section">
-                    <h2>Members of the network members board</h2>
-                    {% setcontent speakers = 'persons/latest/4'%}
-                    {% include 'partials/_list-speaker-list-twocol.twig' with { items : speakers } %}
-                </section>
+
+                {% include 'partials/_list-speaker-list-twocol.twig' with { title : 'Speakers for this event2', items : speakers , speaker : true } %}
 
 
             </article>
