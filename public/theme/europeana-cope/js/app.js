@@ -58,7 +58,6 @@ $( document ).ready(function() {
 
         if ( nav.hasClass('is-overlay') ){
             // Doe dicht
-            console.log('dicht!');
             iconclose.fadeOut('fast');
             iconmenu.fadeIn('fast');
             //inschuiven menu
@@ -73,8 +72,10 @@ $( document ).ready(function() {
 
         } else {
             // Doe open
-            console.log('open!');
-            nav.addClass('is-overlay').css('top', headerHeight).css('min-height', windowHeight).css('height', fullHeight);
+            nav.addClass('is-overlay').css({
+                'top': headerHeight,
+                'min-height': windowHeight,
+                'height': fullHeight });
             iconclose.fadeIn('fast');
             iconmenu.fadeOut('fast');
             //inschuiven menu
