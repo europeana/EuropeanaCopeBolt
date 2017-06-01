@@ -109,6 +109,43 @@ $( document ).ready(function() {
     });
 
 
+    /**
+    * Return of the header on scroll up
+    */
+
+    var previousScroll = 0;
+    headerOrgOffset = $('#header').offset().top;
+
+    // $('#header-wrap').height($('#header').height());
+
+
+    $(window).scroll(function() {
+        var currentScroll = $(this).scrollTop();
+        // console.log(currentScroll + " and " + previousScroll + " and " + headerOrgOffset);
+        if(currentScroll > headerOrgOffset) {
+            if (currentScroll > previousScroll) {
+                console.log('DOWN!')
+                // $('#header').fadeOut();
+                $('#header').animate({
+                top: '-82'
+                }, 100, function() {
+                // Animation complete.
+                });
+            } else {
+                console.log('UP!')
+                $('#header').addClass('fixed');
+                $('#header').animate({
+                top: '0'
+                }, 100, function() {
+                // Animation complete.
+                });
+            }
+        } else {
+             $('#header').removeClass('fixed');
+        }
+        previousScroll = currentScroll;
+    });
+
 
     //  init jQuery plugin "minRead"
     //  https://github.com/heyimjuani/minRead

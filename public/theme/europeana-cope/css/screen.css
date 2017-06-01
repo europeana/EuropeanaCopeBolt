@@ -330,7 +330,7 @@ input[type="number"]::-webkit-outer-spin-button {
  *    (include `-moz` to future-proof).
  */
 input[type="search"] {
-  -webkit-appearance: none;
+  -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
@@ -1473,7 +1473,8 @@ form button, form .button {
 * HEADER
 **/
 header {
-  position: relative; }
+  position: relative;
+  background: #fff; }
   header h1, header .home-link {
     margin: 1rem 0 0 0;
     display: block; }
@@ -1506,6 +1507,14 @@ header {
     @media only screen and (min-width: 60em) {
       header button.toggle {
         display: none; } }
+  header.fixed {
+    position: fixed;
+    top: -200px;
+    z-index: 100;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+    padding-bottom: 1rem; }
+    header.fixed .payoff {
+      display: none; }
 
 .mainlogo {
   position: relative;

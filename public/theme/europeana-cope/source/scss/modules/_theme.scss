@@ -4,6 +4,7 @@
 
 header {
     position: relative;
+    background: $white;
 
     h1, .home-link { //logo
         margin: 1rem 0 0 0;
@@ -52,6 +53,18 @@ header {
         }
 
         @include respond-to(menu-full) {
+            display: none;
+        }
+    }
+
+    &.fixed {
+        position: fixed;
+        top: -200px;
+        z-index: 100; //index($layers, header);
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.4);
+        padding-bottom: 1rem;
+
+        .payoff {
             display: none;
         }
     }
