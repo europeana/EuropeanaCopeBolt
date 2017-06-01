@@ -47,6 +47,65 @@ $( document ).ready(function() {
     * off-canvas menu on mobile
     */
 
+    $('.menu-toggle').on( "click", function(e) {
+        e.preventDefault();
+        var nav = $("nav.main-menu");
+        var headerHeight = $('header').height();
+        var windowHeight = (viewportSize.getHeight())
+        var fullHeight = ($('body').height())-headerHeight;
+        var iconmenu = $('svg.icon-menu', this);
+        var iconclose = $('svg.icon-delete', this);
+
+        if ( nav.hasClass('is-overlay') ){
+            // Doe dicht
+            console.log('dicht!');
+            iconclose.fadeOut('fast');
+            iconmenu.fadeIn('fast');
+            //inschuiven menu
+
+            nav.animate({
+                left: "-235"
+            }, 100, function() {
+            // Animation complete.
+            });
+            nav.removeClass('is-overlay');
+
+
+        } else {
+            // Doe open
+            console.log('open!');
+            nav.addClass('is-overlay').css('top', headerHeight).css('min-height', windowHeight).css('height', fullHeight);
+            iconclose.fadeIn('fast');
+            iconmenu.fadeOut('fast');
+            //inschuiven menu
+
+            nav.animate({
+                left: '+=235'
+            }, 100, function() {
+            // Animation complete.
+            });
+        }
+
+    });
+
+
+    /**
+    * show searchform on mobile
+    */
+
+    $('.search-toggle').on( "click", function(e) {
+        e.preventDefault();
+
+        var search = $('header .searchform')
+
+        if (search.hasClass('is-open')) {
+            //doe dicht
+            search.slideUp().removeClass('is-open');
+        } else {
+            //doe open
+            search.slideDown().addClass('is-open');
+        }
+    });
 
 
 
@@ -93,51 +152,6 @@ $( document ).ready(function() {
     }
 
 
-
-    $('.menu-toggle').on( "click", function(e) {
-        e.preventDefault();
-        var nav = $("nav.main-menu");
-        var headerHeight = $('header').height();
-        var windowHeight = (viewportSize.getHeight())
-        var fullHeight = ($('body').height())-headerHeight;
-        var iconmenu = $('svg.icon-menu', this);
-        var iconclose = $('svg.icon-delete', this);
-
-        if ( nav.hasClass('is-overlay') ){
-            // Doe dicht
-            console.log('dicht!');
-            iconclose.fadeOut('fast');
-            iconmenu.fadeIn('fast');
-            //inschuiven menu
-
-            nav.animate({
-                left: "-235"
-            }, 100, function() {
-            // Animation complete.
-            });
-            nav.removeClass('is-overlay');
-
-
-        } else {
-            // Doe open
-            console.log('open!');
-            nav.addClass('is-overlay').css('top', headerHeight).css('min-height', windowHeight).css('height', fullHeight);
-            iconclose.fadeIn('fast');
-            iconmenu.fadeOut('fast');
-            //inschuiven menu
-
-            nav.animate({
-                left: '+=235'
-            }, 100, function() {
-            // Animation complete.
-            });
-        }
-
-    });
-
-
-
-
     /**
          * preloadchecks function
          * checks viewport width and does some hides and show, and moves elements
@@ -152,10 +166,16 @@ $( document ).ready(function() {
         // } else {
         // };
 
+
+        if ( windowWidthEms < breakMenuFull ) {
+            $('header .searchform').hide();
+        }
+
         if ( windowWidthEms >= breakMenuFull ) {
             //remove all leftover inline styles from mobile view;
             $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
 
+            $('header .searchform').removeAttr('style');
         };
 
     };

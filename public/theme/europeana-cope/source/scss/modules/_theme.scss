@@ -56,17 +56,6 @@ header {
         }
     }
 
-    form {
-        display: none;
-        position: absolute;
-        top: 1rem;
-        right: 0.875rem;
-
-        @include respond-to (menu-full) {
-            display: block;
-        }
-    }
-
 }
 
 

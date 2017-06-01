@@ -330,7 +330,7 @@ input[type="number"]::-webkit-outer-spin-button {
  *    (include `-moz` to future-proof).
  */
 input[type="search"] {
-  -webkit-appearance: textfield;
+  -webkit-appearance: none;
   /* 1 */
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
@@ -1399,13 +1399,14 @@ a.button, .button, button {
 [type="email"],
 [type="number"],
 [type="tel"],
-[type="search"],
+input[type="search"],
 [type="time"],
 [type="url"],
 [type="color"],
 textarea {
   border: 1px solid #cccccc;
   border-radius: 5px;
+  -webkit-appearance: none;
   padding: .8rem 0.5rem;
   font-size: 1rem;
   margin: 0 0 1rem;
@@ -1414,7 +1415,7 @@ textarea {
   [type="email"], .calltoactionform
   [type="number"], .calltoactionform
   [type="tel"], .calltoactionform
-  [type="search"], .calltoactionform
+  input[type="search"], .calltoactionform
   [type="time"], .calltoactionform
   [type="url"], .calltoactionform
   [type="color"], .calltoactionform
@@ -1426,16 +1427,40 @@ textarea {
     height: 2.20rem;
     border: none; }
 
-form.searchform [type="search"] {
-  display: inline-block;
-  width: 300px;
-  vertical-align: middle;
-  margin: 0; }
-
-form.searchform button {
-  display: inline-block;
-  margin: 0;
-  vertical-align: middle; }
+form.searchform {
+  margin: 1rem 0;
+  text-align: right;
+  width: 100%; }
+  @media only screen and (min-width: 60em) {
+    form.searchform {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 0.875rem; } }
+  form.searchform input[type="search"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3% 0 0;
+    box-sizing: border-box;
+    width: 82%; }
+    @media only screen and (min-width: 24em) {
+      form.searchform input[type="search"] {
+        margin: 0 2% 0 0;
+        width: 90%; } }
+    @media only screen and (min-width: 60em) {
+      form.searchform input[type="search"] {
+        width: 300px; } }
+  form.searchform button {
+    width: 15%;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle; }
+    @media only screen and (min-width: 24em) {
+      form.searchform button {
+        width: 8%; } }
+    @media only screen and (min-width: 60em) {
+      form.searchform button {
+        width: 52px; } }
 
 form button, form .button {
   background-color: #293745;
@@ -1481,14 +1506,6 @@ header {
     @media only screen and (min-width: 60em) {
       header button.toggle {
         display: none; } }
-  header form {
-    display: none;
-    position: absolute;
-    top: 1rem;
-    right: 0.875rem; }
-    @media only screen and (min-width: 60em) {
-      header form {
-        display: block; } }
 
 .mainlogo {
   position: relative;

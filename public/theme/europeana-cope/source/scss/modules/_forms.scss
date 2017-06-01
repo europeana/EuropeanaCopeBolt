@@ -10,13 +10,14 @@
 [type="email"],
 [type="number"],
 [type="tel"],
-[type="search"],
+input[type="search"],
 [type="time"],
 [type="url"],
 [type="color"],
 textarea {
     border: 1px solid $line-gray;
     border-radius: 5px;
+    -webkit-appearance: none; // for iOS
     padding: .8rem 0.5rem;
     font-size: 1rem;
     margin: 0 0 1rem;
@@ -37,20 +38,53 @@ textarea {
 
 form.searchform {
 
+    margin: 1rem 0;
+    text-align: right;
+    width: 100%;
 
-    [type="search"] {
+    @include respond-to (menu-full) {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 0.875rem;
+
+    }
+
+    input[type="search"] {
         display: inline-block;
-        width: 300px;
         vertical-align: middle;
-        margin: 0;
+        margin: 0 3% 0 0;
+        box-sizing: border-box;
+        width: 82%;
+
+        @include respond-to (medium-screens) {
+            margin: 0 2% 0 0;
+            width: 90%;
+        }
+
+        @include respond-to (menu-full) {
+            width: 300px;
+        }
     }
 
     button {
+        width: 15%;
+        //max-width: 55px;
         display: inline-block;
         margin: 0;
         vertical-align: middle;
 
+
+        @include respond-to (medium-screens) {
+            width: 8%;
+        }
+
+        @include respond-to (menu-full) {
+            width: 52px;
+        }
+
     }
+
 }
 
 form {
