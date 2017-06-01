@@ -28,6 +28,19 @@ header {
 
         &.menu-toggle{
             left: 0rem;
+            width: 3.5rem;
+            height: 4rem;
+
+            svg {
+                position: absolute;
+                left: 1rem;
+                top: 1.3rem; //optical
+            }
+
+            svg.icon-delete {
+                display: none;
+            }
+
         }
 
         &.search-toggle {
@@ -55,6 +68,8 @@ header {
     }
 
 }
+
+
 
 .mainlogo {
     position: relative;
