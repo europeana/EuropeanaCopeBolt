@@ -32,6 +32,43 @@
 /***********************************************
 HULPJE
 ***********************************************/
+footer:after {
+  content: "content";
+  display: block;
+  height: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  font-size: 12px; }
+
+@media only screen and (min-width: 6.25em) {
+  footer:after {
+    content: "small-screens";
+    background-color: #0f9; } }
+
+@media only screen and (min-width: 24em) {
+  footer:after {
+    content: "medium-screens";
+    background-color: #f06; } }
+
+@media only screen and (min-width: 47.9375em) {
+  footer:after {
+    content: "large-screens";
+    background-color: #90f; } }
+
+@media only screen and (min-width: 80em) {
+  footer:after {
+    content: "xlarge-screens";
+    background-color: #903; } }
+
+@media only screen and (min-width: 90em) {
+  footer:after {
+    content: "wide-screens";
+    background-color: #906; } }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -690,6 +727,12 @@ footer {
 .contentpage .body blockquote {
   margin-left: 0; }
 
+.contentpage .info-list-section + .info-list-section {
+  margin-top: 2rem; }
+  @media only screen and (min-width: 47.9375em) {
+    .contentpage .info-list-section + .info-list-section {
+      margin-top: 4rem; } }
+
 .contentpage .info-list {
   padding: 0; }
   @media only screen and (min-width: 47.9375em) {
@@ -828,16 +871,25 @@ nav.quicklinks a {
 /*
 * MAIN MENU
 **/
+.menu-toggle svg.icon-delete {
+  display: none; }
+
+.menu-toggle svg {
+  position: absolute; }
+
 nav.main-menu {
   position: absolute;
   width: 235px;
-  top: 95px;
-  left: 0;
-  display: none;
-  background-color: #f1f1ee; }
+  top: 124px;
+  left: -235px;
+  z-index: 3;
+  background-color: #f1f1ee;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); }
   @media only screen and (min-width: 60em) {
     nav.main-menu {
-      display: block; } }
+      display: block;
+      top: 95px;
+      left: 0; } }
   nav.main-menu ul {
     padding: 0;
     background: #fff; }
@@ -861,9 +913,11 @@ nav.footer-menu a {
 
 .pagination {
   overflow: hidden;
-  margin: 4rem 0;
   text-align: center;
-  padding-left: 0; }
+  padding-left: 0;
+  margin: 4rem 0; }
+  section.module .pagination {
+    margin: 1rem 0 2rem; }
   .pagination li {
     display: inline-block;
     border-right: 1px solid #cccccc;
@@ -967,7 +1021,8 @@ h3, .gamma {
   .teaser-persons .gamma {
     font-size: 1rem;
     text-align: center;
-    padding-top: 1em; }
+    padding-top: 1em;
+    margin-bottom: 0; }
     @media only screen and (min-width: 47.9375em) {
       .speaker-list h3,
       .teaser-persons h3, .speaker-list .gamma,
@@ -2418,7 +2473,8 @@ section.catstream {
 
 @media only screen and (min-width: 47.9375em) {
   .info-list.info-list-twocol li {
-    padding: 2rem 0; } }
+    padding: 0;
+    border-bottom: none; } }
 
 .info-list .teaser {
   margin: 0; }
@@ -2480,11 +2536,11 @@ section.catstream {
       padding-right: 1rem; } }
   .teaser-persons .img-container {
     float: left;
-    margin: 0 1rem 1rem 0;
+    margin: 0 1rem 0rem 0;
     width: 95px; }
     @media only screen and (min-width: 47.9375em) {
       .teaser-persons .img-container {
-        margin: 0 2rem 1rem 0;
+        margin: 0 2rem 0rem 0;
         width: 175px; } }
   @media only screen and (min-width: 47.9375em) {
     .half .teaser-persons .img-container {

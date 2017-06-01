@@ -1391,8 +1391,11 @@ section.catstream {
 
     &.info-list-twocol li {
 
+        // padding: 0;
+
         @include respond-to(large-screens) {
-            padding: 2rem 0;
+            padding: 0;
+            border-bottom: none;
         }
     }
 
@@ -1505,11 +1508,11 @@ section.catstream {
 
     .img-container {
         float: left;
-        margin: 0 1rem 1rem 0;
+        margin: 0 1rem 0rem 0; // was margin: 0 1rem 1rem 0
         width: 95px;
 
         @include respond-to(large-screens) {
-            margin: 0 2rem 1rem 0;
+            margin: 0 2rem 0rem 0; // was margin: 0 2rem 1rem 0
             width: 175px;
         }
     }

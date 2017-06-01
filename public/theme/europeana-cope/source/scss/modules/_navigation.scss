@@ -43,17 +43,32 @@ nav.quicklinks {
 * MAIN MENU
 **/
 
+.menu-toggle {
+    svg.icon-delete {
+        display: none;
+    }
+
+    svg {
+        position: absolute;
+
+    }
+}
+
 
 nav.main-menu {
     position: absolute;
     width: 235px;
-    top: 95px; //magic number: height from topbar
-    left:0;
-    display: none;
+    top: 124px; //magic number: height from topbar
+    left:-235px;
+    //display: none; always on, because on mobile it's waiting to slide in.
+    z-index: index($layers, mobile-navigation);
     background-color: $off-white;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 
     @include respond-to(menu-full) {
         display: block; //check, medium or large?
+        top: 95px; //magic number: height from topbar
+        left: 0;
     }
 
     ul {
@@ -74,6 +89,12 @@ nav.main-menu {
     a {
         text-decoration: none;
         color: $black;
+    }
+
+
+    // CLASS OVERLAY NA TOGGLE
+    &.is-overlay {
+       //does not do anything here, but give the JS a detection that it's in overlay
     }
 }
 
@@ -100,9 +121,13 @@ nav.footer-menu {
 
 .pagination {
     overflow: hidden;
-    margin: 4rem 0;
     text-align: center;
     padding-left: 0;
+    margin: 4rem 0;
+
+    section.module & {
+        margin: 1rem 0 2rem;
+    }
 
     li {
         display: inline-block;

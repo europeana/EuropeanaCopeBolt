@@ -2,9 +2,56 @@
 $( document ).ready(function() {
 
 
+    /**
+    * vars
+    */
+
+    // Breakpoints, make same as base.css!!! In ems
+    var breakSmall = 6.25; // 100
+    var breakMedium = 24; // 384
+    var breakLarge = 47.9375; // 767
+    var breakXlarge = 80; // 1280
+    var breakWide = 90; // 1440
+    var breakXwide = 100; // 1600
+    // var breakXxwide = 100; // 1600
+    // var breakRUinsane = 115;
+
+    // custom breakpoints for menu, set to optimize menu
+    var breakMenuFull = 61.5; //960
+
+    var resizeId;
+
+    var windowWidth = viewportSize.getWidth(); //replaces buggy and unreliable $(window).width();
+    // assume base font size is 16px
+    var windowWidthEms = ((viewportSize.getWidth()) / 16);
+
+    //console.log(windowWidthEms);
+
+    /**
+     * initial checks for page setup. Checks the viewport width and does some
+     * actions for the UI based on screen size
+     */
+    preLoadChecks();
+
+    /**
+     * do some checks when window is resized
+     */
+    $(window).resize(function() {
+            clearTimeout(resizeId);
+            resizeId = setTimeout(preLoadChecks, 20);
+    });
+
+
+
+    /**
+    * off-canvas menu on mobile
+    */
+
+
+
+
     //  init jQuery plugin "minRead"
     //  https://github.com/heyimjuani/minRead
-
 
     //  check for read-time item
     if ( !$(".read-time").length ) return;
@@ -44,5 +91,75 @@ $( document ).ready(function() {
         // remove the blank placeholder link if quicklinks were added
         $('.in-page-blank-link').detach();
     }
+
+
+
+    $('.menu-toggle').on( "click", function(e) {
+        e.preventDefault();
+        var nav = $("nav.main-menu");
+        var headerHeight = $('header').height();
+        var windowHeight = (viewportSize.getHeight())
+        var fullHeight = ($('body').height())-headerHeight;
+        var iconmenu = $('svg.icon-menu', this);
+        var iconclose = $('svg.icon-delete', this);
+
+        if ( nav.hasClass('is-overlay') ){
+            // Doe dicht
+            console.log('dicht!');
+            iconclose.fadeOut('fast');
+            iconmenu.fadeIn('fast');
+            //inschuiven menu
+
+            nav.animate({
+                left: "-235"
+            }, 100, function() {
+            // Animation complete.
+            });
+            nav.removeClass('is-overlay');
+
+
+        } else {
+            // Doe open
+            console.log('open!');
+            nav.addClass('is-overlay').css('top', headerHeight).css('min-height', windowHeight).css('height', fullHeight);
+            iconclose.fadeIn('fast');
+            iconmenu.fadeOut('fast');
+            //inschuiven menu
+
+            nav.animate({
+                left: '+=235'
+            }, 100, function() {
+            // Animation complete.
+            });
+        }
+
+    });
+
+
+
+
+    /**
+         * preloadchecks function
+         * checks viewport width and does some hides and show, and moves elements
+         * based on design at viewport width
+         */
+    function preLoadChecks() {
+        // update window width
+        windowWidth = viewportSize.getWidth(); // $(window).width();
+        windowWidthEms = (viewportSize.getWidth()) / 16;
+
+        // if ( windowWidthEms > BREAKPOINT ) {
+        // } else {
+        // };
+
+        if ( windowWidthEms >= breakMenuFull ) {
+            //remove all leftover inline styles from mobile view;
+            $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
+
+        };
+
+    };
+
 });
+
 

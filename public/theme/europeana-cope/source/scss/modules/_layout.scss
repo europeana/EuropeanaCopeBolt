@@ -246,8 +246,12 @@ footer {
         margin-left: 0;
     }
 
-    .info-list-section {
+    .info-list-section + .info-list-section {
+        margin-top: 2rem;
 
+        @include respond-to(large-screens) {
+            margin-top: 4rem;
+        }
     }
 
     .info-list
