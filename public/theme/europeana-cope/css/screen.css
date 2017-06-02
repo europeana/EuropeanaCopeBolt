@@ -810,9 +810,16 @@ ul.teaser-list {
 /*
 * CONTENTHEADER
 **/
-nav.quicklinks ul {
+.topbar {
   background-color: #69737C;
-  text-align: center; }
+  min-height: 53px; }
+  @media only screen and (min-width: 24em) {
+    .topbar {
+      height: 53px; } }
+
+nav.quicklinks ul {
+  text-align: center;
+  padding: 10px 0; }
   @media only screen and (min-width: 24em) {
     nav.quicklinks ul {
       text-align: left; } }
@@ -829,7 +836,25 @@ nav.quicklinks a {
   @media only screen and (min-width: 24em) {
     nav.quicklinks a {
       font-size: 0.875rem;
-      padding: 1rem; } }
+      padding: 6px 1rem; } }
+
+.filter-listing {
+  font-size: 0.9375rem;
+  color: #fff; }
+  .filter-listing ul {
+    display: inline-block;
+    padding: 10px 0; }
+  .filter-listing p, .filter-listing a.reset {
+    display: inline-block;
+    font-size: 0.9375rem;
+    margin: 0;
+    border-right: 1px solid #fff; }
+  .filter-listing li {
+    display: inline-block; }
+  .filter-listing a {
+    display: block;
+    color: #fff;
+    padding: 6px 1rem; }
 
 /*
 * MAIN MENU
@@ -2479,23 +2504,6 @@ section.catstream {
 * LISTING PAGE
 ***********************************************************************
 **/
-.filter-listing {
-  border-bottom: 2px solid #cccccc;
-  font-size: 0.9375rem; }
-  .filter-listing ul {
-    display: inline-block; }
-  .filter-listing p {
-    display: inline-block;
-    font-size: 0.9375rem;
-    margin: 0;
-    color: #4d4d4d; }
-  .filter-listing li {
-    display: inline-block; }
-  .filter-listing a {
-    display: block;
-    color: #E11D53;
-    padding: 1rem; }
-
 .teaser {
   margin-bottom: 3.5rem; }
   .teaser .img-container {
@@ -2617,7 +2625,8 @@ section.catstream {
       color: #095f90;
       margin: 0 .5rem; }
 
-.skin-research nav.quicklinks ul {
+.skin-research nav.quicklinks ul,
+.skin-research .topbar {
   background-color: #7F3978; }
 
 .skin-research .colored-image {
@@ -2638,7 +2647,8 @@ section.catstream {
 .skin-research .searchform button {
   background-color: #293745; }
 
-.skin-labs nav.quicklinks ul {
+.skin-labs nav.quicklinks ul,
+.skin-labs .topbar {
   background-color: #37B98B; }
 
 .skin-labs .colored-image {

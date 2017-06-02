@@ -1,6 +1,7 @@
 .skin-research {
 
-    nav.quicklinks ul {
+    nav.quicklinks ul,
+    .topbar {
         background-color: $researchSkinColour;
     }
 
@@ -38,7 +39,8 @@
 
 .skin-labs {
 
-    nav.quicklinks ul {
+    nav.quicklinks ul,
+    .topbar {
         background-color: $labsSkinColour;
     }
 

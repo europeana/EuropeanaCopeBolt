@@ -9,11 +9,21 @@
 * CONTENTHEADER
 **/
 
+.topbar {
+    background-color: $quicklinks-bar;
+    min-height: 53px;
+
+    @include respond-to (medium-screens) {
+        height: 53px;
+    }
+}
+
 nav.quicklinks {
 
     ul {
-        background-color: $quicklinks-bar;
+        // background-color: $quicklinks-bar;
         text-align: center;
+        padding: 10px 0;
 
         @include respond-to (medium-screens) {
             text-align: left;
@@ -33,11 +43,39 @@ nav.quicklinks {
 
         @include respond-to (medium-screens) {
             font-size: 0.875rem;
-            padding: 1rem;
+            padding: 6px 1rem;
         }
     }
 }
 
+.filter-listing {
+
+    font-size: 0.9375rem;
+    color: $white;
+
+    ul{
+        display: inline-block;
+        padding: 10px 0;
+    }
+
+    p, a.reset {
+        display: inline-block;
+        font-size: 0.9375rem;
+        margin: 0;
+        border-right: 1px solid $white;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        color: $white;
+        padding: 6px 1rem;
+    }
+
+}
 
 /*
 * MAIN MENU

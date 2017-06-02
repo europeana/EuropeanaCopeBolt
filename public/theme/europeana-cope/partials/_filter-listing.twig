@@ -24,11 +24,14 @@
 
 <div class="filter-listing">
     {% if categories is not empty %}
-        <p>Categories:</p>
+        <a class="reset" href="#">Reset filter</a>
         <ul>
-            {% for item, catname in categories %}
+            {# {% for item, catname in categories %}
                 <li><a href="{{ contenttypepath ~ item|slugify }}">{{ catname }}</a></li>
-            {% endfor %}
+            {% endfor %} #}
+
+            <li><a href="">Filter by</a></li>
+            <li><a href="">by contenttype</a></li>
         </ul>
     {% endif %}
 </div>

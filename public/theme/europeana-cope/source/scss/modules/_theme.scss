@@ -1427,33 +1427,7 @@ section.catstream {
 ***********************************************************************
 **/
 
-.filter-listing {
 
-    border-bottom: 2px solid $line-gray;
-    font-size: 0.9375rem;
-
-    ul{
-        display: inline-block;
-    }
-
-    p {
-        display: inline-block;
-        font-size: 0.9375rem;
-        margin: 0;
-        color: $medium-gray;
-    }
-
-    li {
-        display: inline-block;
-    }
-
-    a {
-        display: block;
-        color: $baseFirstThemeColour;
-        padding: 1rem;
-    }
-
-}
 
 .teaser {
     margin-bottom: 3.5rem;
