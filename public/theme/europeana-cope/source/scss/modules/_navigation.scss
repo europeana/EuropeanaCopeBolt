@@ -58,6 +58,7 @@ nav.main-menu {
         display: block; //check, medium or large?
         top: 95px; //magic number: height from topbar
         left: 0;
+        box-shadow: none;
     }
 
     ul {
@@ -71,9 +72,9 @@ nav.main-menu {
         padding: 0.8125rem 0;
     }
 
-    // ul > li {
-    //     margin: 0 1.125rem 0 0.6875rem;
-    // }
+    .play-menu {
+        border-right: 1px solid $off-white;
+    }
 
     a {
         text-decoration: none;

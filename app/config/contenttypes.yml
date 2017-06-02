@@ -328,11 +328,9 @@ pages:
             listing:         "Listing of records (_listing.twig)"
             #listingexpander:  "Expander block with records - vertical accordeon (_listingexpander.twig)"
             listingnews:      "Two news postings and a link to more (_listingnews.twig)"
-            #listingpersons:   "Person listing (_listingpersons.twig)"
-            #listingevents:    "Event listing (_listingevents.twig)"
+            #listingpersons:   "Person listing (_listingpersons.twig)" #Tableversie
             listingsemistatic: "Three static intro items (_listingsemistatic.twig)"
             #listingstreamers: "Three column category streamers (_listingstreamers.twig)"
-            #listingfaces:     "Round images or photos with a link (_listingfaces.twig)"
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
             detail:          "Full details for single items (_detail.twig)"
             banner:          "Banner view (_banner.twig)"
@@ -343,6 +341,7 @@ pages:
             #filecontent:      "File content block (_filecontent.twig)"
             #fileslisting:     "File list block (_fileslisting.twig)"
             body:             "Module body field - for extra body blocks between modules (_body.twig)"
+            # collapsedcontent: "Collapsed content clicks open with click on header (_collapsedcontent.twig)"
         body:
           type: html
           label: "Module body (optional)"

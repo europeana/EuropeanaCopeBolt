@@ -304,15 +304,15 @@ secondary:
         path: homepage
         class: secondary
     -
-        link: pages/styleguide
+        path: pages/styleguide
         label: Styleguide
         class: secondary
     -
-        link: pages/styleguide-listing
+        path: pages/styleguide-listing
         label: Styleguide listing
         class: secondary
     -
-        link: pages/styleguide-content
+        path: pages/styleguide-content
         label: Styleguide content
         class: secondary
 

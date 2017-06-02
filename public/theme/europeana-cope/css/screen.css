@@ -846,13 +846,16 @@ nav.main-menu {
     nav.main-menu {
       display: block;
       top: 95px;
-      left: 0; } }
+      left: 0;
+      box-shadow: none; } }
   nav.main-menu ul {
     padding: 0;
     background: #fff; }
   nav.main-menu li {
     border-bottom: 1px solid #cccccc;
     padding: 0.8125rem 0; }
+  nav.main-menu .play-menu {
+    border-right: 1px solid #f1f1ee; }
   nav.main-menu a {
     text-decoration: none;
     color: #1a1a1a; }
