@@ -98,13 +98,28 @@ $( document ).ready(function() {
         e.preventDefault();
 
         var search = $('header .searchform')
+        var nav = $("nav.main-menu");
 
         if (search.hasClass('is-open')) {
             //doe dicht
             search.slideUp().removeClass('is-open');
+
+            if (nav.hasClass('is-overlay')){
+                nav.animate({
+                    top: '-=71'
+                });
+            }
+
         } else {
             //doe open
             search.slideDown().addClass('is-open');
+
+            if (nav.hasClass('is-overlay')) {
+                console.log('is-overlay');
+                nav.animate({
+                    top: '+=71'
+                });
+            }
         }
     });
 
@@ -124,19 +139,19 @@ $( document ).ready(function() {
         // console.log(currentScroll + " and " + previousScroll + " and " + headerOrgOffset);
         if(currentScroll > headerOrgOffset) {
             if (currentScroll > previousScroll) {
-                console.log('DOWN!')
+                console.log('GOING DOWN!')
                 // $('#header').fadeOut();
                 $('#header').animate({
                 top: '-82'
-                }, 100, function() {
+                }, 50, function() {
                 // Animation complete.
                 });
             } else {
-                console.log('UP!')
+                console.log('GOING UP!')
                 $('#header').addClass('fixed');
                 $('#header').animate({
                 top: '0'
-                }, 100, function() {
+                }, 50, function() {
                 // Animation complete.
                 });
             }
