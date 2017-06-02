@@ -173,7 +173,7 @@ jQuery.fn.extend(
             // dependent blocks for this switcher
             var parentblock = sourceselect.parents('.panel.viewblocks');
             var selectedamount = parentblock.find('input[name*="override_amount"]');
-            var selectedct = parentblock.find('select[name*="selected"]');
+            var selectedct = parentblock.find('.ajaxselector[name*="selected"], select[name*="selected"]');
             var amount =  selectedct.length;
             //console.log('selected content types', sourceselect, newvalue, parentblock, selectedct, amount);
 
