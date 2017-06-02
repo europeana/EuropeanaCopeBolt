@@ -1436,7 +1436,8 @@ form.searchform {
       display: block;
       position: absolute;
       top: 1rem;
-      right: 0.875rem; } }
+      right: 0.875rem;
+      width: 380px; } }
   form.searchform input[type="search"] {
     display: inline-block;
     vertical-align: middle;
