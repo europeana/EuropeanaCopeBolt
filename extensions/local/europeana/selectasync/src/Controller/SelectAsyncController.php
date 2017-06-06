@@ -87,6 +87,27 @@ class SelectAsyncController implements ControllerProviderInterface
         return $jsonResponse;
     }
 
+    /**
+     * Handles GET requests on /selectasync/in/controller
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function noAccess()
+    {
+        $message = 'No Access';
+        $status = 'error';
+
+        $jsonResponse = new JsonResponse();
+
+        $jsonResponse->setData([
+            'message' => $message,
+            'status' => $status
+        ]);
+
+        return $jsonResponse;
+    }
 
     /**
      * Handles GET requests on /selectasync/type/{type} and return with json.
@@ -102,9 +123,18 @@ class SelectAsyncController implements ControllerProviderInterface
         $results = [];
         $message = '';
         $status = 'ok';
+        $fields = null;
 
         $search = $request->query->get('search');
-        $fields = explode(',', $request->query->get('fields'));
+        $fieldstring = $request->query->get('fields');
+        if(!empty($fieldstring)) {
+          $fields = explode(',', $fieldstring);
+        }
+        if(!in_array($type, ['pages', 'posts', 'data', 'projects', 'events', 'persons', 'resources'])) {
+            // illegal type
+            return $this->noAccess();
+        }
+
         $results[$type] = $this->selectRecordsByType($type, $search, $fields);
 
         $jsonResponse = new JsonResponse();
@@ -133,11 +163,19 @@ class SelectAsyncController implements ControllerProviderInterface
         $results = [];
         $message = '';
         $status = 'ok';
+        $fields = null;
 
         $search = $request->query->get('search');
-        $fields = explode(',', $request->query->get('fields'));
+        $fieldstring = $request->query->get('fields');
+        if(!empty($fieldstring)) {
+          $fields = explode(',', $fieldstring);
+        }
         $types = explode(',', $types);
         foreach($types as $type) {
+          if(!in_array($type, ['pages', 'posts', 'data', 'projects', 'events', 'persons', 'resources'])) {
+              // illegal type
+              return $this->noAccess();
+          }
           $results[$type] = $this->selectRecordsByType($type, $search, $fields);
         }
 
@@ -153,10 +191,51 @@ class SelectAsyncController implements ControllerProviderInterface
         return $jsonResponse;
     }
 
-    private function selectRecordsByType($type, $search = '', $fields = ['id', 'title', 'status']) {
-      $entitysearch = $type . '/search';
-      $entries = $this->app['query']->getContent($entitysearch, ['filter' => $search ]);
+    /**
+     * Search the database for records in a type
+     * @param        $type
+     * @param string $search
+     * @param null   $fields
+     *
+     * @return array
+     */
+    private function selectRecordsByType($type, $search = '', $fields = null) {
 
-      return $entries;
+        $search = '%'.trim($search).'%';
+
+        $defaultfields = ['id', 'title', 'status'];
+        if(empty($fields)) {
+            $fields = $defaultfields;
+        }
+
+        $repo = $this->app['storage']->getRepository($type);
+        $qb = $repo->createQueryBuilder();
+
+        switch ($type) {
+            case 'persons':
+                $qb->select(['id', 'first_name', 'last_name', 'email', 'status']);
+                $qb->where(
+                    $qb->expr()->orX(
+                        $qb->expr()->like('first_name', $qb->createNamedParameter($search)),
+                        $qb->expr()->like('last_name', $qb->createNamedParameter($search)),
+                        $qb->expr()->like('email', $qb->createNamedParameter($search))
+                    )
+                );
+                $qb->orderBy('last_name', 'ASC');
+                break;
+            default:
+                $qb->select($fields);
+                $qb->where(
+                    $qb->expr()->like('title', $qb->createNamedParameter($search))
+                );
+                $qb->orderBy('datepublish', 'DESC');
+                break;
+        }
+
+        $qb->setMaxResults(10);
+
+        $entries = $qb->execute()->fetchAll();
+
+        return $entries;
     }
 }
