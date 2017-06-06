@@ -69,6 +69,10 @@ class SelectAsyncController implements ControllerProviderInterface
      */
     public function selectAsyncUrl(Request $request)
     {
+        $hasaccess = $this->checkAccess();
+        if(!$hasaccess) {
+            return $this->noAccess();
+        }
         $type = null;
         $results = [];
         $message = 'SelectAsync is working on this path.';
@@ -88,28 +92,6 @@ class SelectAsyncController implements ControllerProviderInterface
     }
 
     /**
-     * Handles GET requests on /selectasync/in/controller
-     *
-     * @param Request $request
-     *
-     * @return Response
-     */
-    public function noAccess()
-    {
-        $message = 'No Access';
-        $status = 'error';
-
-        $jsonResponse = new JsonResponse();
-
-        $jsonResponse->setData([
-            'message' => $message,
-            'status' => $status
-        ]);
-
-        return $jsonResponse;
-    }
-
-    /**
      * Handles GET requests on /selectasync/type/{type} and return with json.
      *
      * @param Request $request
@@ -119,7 +101,10 @@ class SelectAsyncController implements ControllerProviderInterface
      */
     public function selectAsyncUrlWithType(Request $request, $type)
     {
-
+        $hasaccess = $this->checkAccess();
+        if(!$hasaccess) {
+            return $this->noAccess();
+        }
         $results = [];
         $message = '';
         $status = 'ok';
@@ -159,7 +144,10 @@ class SelectAsyncController implements ControllerProviderInterface
      */
     public function selectAsyncUrlWithTypes(Request $request, $types)
     {
-
+        $hasaccess = $this->checkAccess();
+        if(!$hasaccess) {
+            return $this->noAccess();
+        }
         $results = [];
         $message = '';
         $status = 'ok';
@@ -237,5 +225,40 @@ class SelectAsyncController implements ControllerProviderInterface
         $entries = $qb->execute()->fetchAll();
 
         return $entries;
+    }
+
+    /**
+     * Check if a client is logged in and has access to the path
+     * Or basically - has the role editor
+     *
+     * @return bool
+     */
+    private function checkAccess()
+    {
+       $users = $this->app['users'];
+       //dump($users);
+       $hasaccess = $users->isAllowed('roles:editor');
+       //dump($hasaccess);
+       return $hasaccess;
+    }
+
+    /**
+     * Drops a user to the no access message
+     *
+     * @return JsonResponse
+     */
+    private function noAccess()
+    {
+        $message = 'No Access';
+        $status = 'error';
+
+        $jsonResponse = new JsonResponse();
+
+        $jsonResponse->setData([
+            'message' => $message,
+            'status' => $status
+        ]);
+
+        return $jsonResponse;
     }
 }
