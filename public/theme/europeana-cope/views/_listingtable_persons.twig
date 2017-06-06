@@ -1,0 +1,17 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+{# {{ dump(item) }} #}
+
+
+<tr>
+    <td><a href="{{ item.link() }}">{{ item.first_name }} {{ item.last_name }}</a></td>
+
+    <td> {{ item.company|default('Unknown') }} </td>
+
+    <td> {{ item.country|default('Unknown') }} </td>
+
+    <td> {{ item.sector|default('Other') }} </td>
+
+</tr>

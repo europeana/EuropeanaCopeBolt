@@ -176,7 +176,8 @@ nav.footer-menu {
         }
     }
 
-    .current a {
+    .current a,
+    .active a {
         color: $white;
         background: $medium-gray;
     }

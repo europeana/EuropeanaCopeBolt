@@ -1,0 +1,16 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+{# {{ dump(item) }} #}
+
+{# TEMP: Ontzettende defaultlijst, die niet ontworpen is, maar gewon een aantal dingen als default laat zien, naar Annke's idee #}
+
+<tr>
+    <td><a href="{{ item.link() }}">{{ item.title }}</a></td>
+
+    <td> Created: {{ item.datepublish|localedatetime("%e %B  %Y") }} </td>
+
+    <td> {{ item.contenttype.slug|capitalize }} </td>
+
+</tr>

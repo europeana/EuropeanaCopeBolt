@@ -1642,6 +1642,41 @@ section.catstream {
     }
 }
 
+/*
+***********************************************************************
+* LISTING TABLE
+***********************************************************************
+**/
+
+table.listingtable {
+    border-bottom: 1px solid $line-gray;
+    margin-top: 1rem;
+
+    thead {
+        box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
+    }
+
+    tr {
+        &:nth-child(even) {
+            background-color: $off-white;
+        }
+    }
+
+    td, th {
+        padding: 1rem;
+        border-right: 2px solid $line-gray;
+
+        &:first-of-type {
+            font-weight: 700;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+}
+
+
 
 .link-list {
     margin: 2rem 0;

@@ -328,7 +328,7 @@ pages:
             listing:         "Listing of records (_listing.twig)"
             #listingexpander:  "Expander block with records - vertical accordeon (_listingexpander.twig)"
             listingnews:      "Two news postings and a link to more (_listingnews.twig)"
-            #listingpersons:   "Person listing (_listingpersons.twig)" #Tableversie
+            listingtable:   "Person listing as a table (_listingtable.twig)" #Tableversie
             listingsemistatic: "Three static intro items (_listingsemistatic.twig)"
             #listingstreamers: "Three column category streamers (_listingstreamers.twig)"
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"

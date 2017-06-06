@@ -915,7 +915,8 @@ nav.footer-menu a {
     .pagination a:hover, .pagination a:active, .pagination a:focus {
       background-color: #f1f1ee;
       text-decoration: none; }
-  .pagination .current a {
+  .pagination .current a,
+  .pagination .active a {
     color: #fff;
     background: #4d4d4d; }
   .pagination .disabled a:hover, .pagination .disabled a:active, .pagination .disabled a:focus {
@@ -2615,6 +2616,26 @@ section.catstream {
       font-size: 1rem; } }
   .half .teaser-persons a.email {
     font-size: 0.875rem; }
+
+/*
+***********************************************************************
+* LISTING TABLE
+***********************************************************************
+**/
+table.listingtable {
+  border-bottom: 1px solid #cccccc;
+  margin-top: 1rem; }
+  table.listingtable thead {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4); }
+  table.listingtable tr:nth-child(even) {
+    background-color: #f1f1ee; }
+  table.listingtable td, table.listingtable th {
+    padding: 1rem;
+    border-right: 2px solid #cccccc; }
+    table.listingtable td:first-of-type, table.listingtable th:first-of-type {
+      font-weight: 700; }
+    table.listingtable td:last-child, table.listingtable th:last-child {
+      border-right: none; }
 
 .link-list {
   margin: 2rem 0; }
