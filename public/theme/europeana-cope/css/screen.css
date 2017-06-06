@@ -2626,16 +2626,33 @@ table.listingtable {
   border-bottom: 1px solid #cccccc;
   margin-top: 1rem; }
   table.listingtable thead {
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid #cccccc;
+    display: none; }
+    @media only screen and (min-width: 47.9375em) {
+      table.listingtable thead {
+        display: table-header-group; } }
   table.listingtable tr:nth-child(even) {
     background-color: #f1f1ee; }
   table.listingtable td, table.listingtable th {
-    padding: 1rem;
-    border-right: 2px solid #cccccc; }
+    padding: .5rem;
+    border-right: 2px solid #cccccc;
+    display: block;
+    width: 100%; }
+    @media only screen and (min-width: 47.9375em) {
+      table.listingtable td, table.listingtable th {
+        display: table-cell;
+        padding: 1rem;
+        width: auto; } }
     table.listingtable td:first-of-type, table.listingtable th:first-of-type {
       font-weight: 700; }
     table.listingtable td:last-child, table.listingtable th:last-child {
       border-right: none; }
+  table.listingtable .table-label {
+    font-weight: 700; }
+    @media only screen and (min-width: 47.9375em) {
+      table.listingtable .table-label {
+        display: none; } }
 
 .link-list {
   margin: 2rem 0; }
