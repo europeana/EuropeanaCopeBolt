@@ -265,6 +265,7 @@ jQuery(document).ready(function($) {
         );
     });
 
+    console.log('viewblocks js loaded');
     // add a collapsing block for the highlight bar in the back-end
     if( $('#pagetype').is('*') ) {
         var subs = $('<div>').attr({
@@ -290,6 +291,5 @@ jQuery(document).ready(function($) {
         });
     }
 
-
-    console.log('viewblocks js loaded');
+    console.log('highlightswitcher js loaded');
 });
