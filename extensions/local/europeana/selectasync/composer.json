@@ -1,6 +1,6 @@
 {
-    "name": "europeana/viewblocks",
-    "description": "Add back-end css and javascript files for the europeana display modules",
+    "name": "europeana/selectasync",
+    "description": "This extension sets up an async route for faux select fields.",
     "type": "bolt-extension",
     "keywords": [
     ],
@@ -18,11 +18,11 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Bolt\\Extension\\Europeana\\ViewBlocks\\": [ "src" ]
+            "Bolt\\Extension\\Europeana\\SelectAsync\\": "src"
         }
     },
     "extra": {
         "bolt-assets": "web",
-        "bolt-class": "Bolt\\Extension\\Europeana\\ViewBlocks\\ViewBlocksExtension"
+        "bolt-class": "Bolt\\Extension\\Europeana\\SelectAsync\\SelectAsyncExtension"
     }
 }
