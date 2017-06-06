@@ -20,10 +20,15 @@
         {% set override_amount = 100 %}
     {% endif %}
 
+
     {% set selected_records = [] %}
     {% if template != 'body' and ordering == 'specified' %}
         {% set field = 'selected_' ~ sources %}
         {% set ids = module.get(field) %}
+        {% if ids is not iterable %}
+            {# fix iterable ids if the content is json in a textfield #}
+            {% set ids = ids|json_decode() %}
+        {% endif %}
         {% if ids is iterable %}
             {% for id in ids %}
                 {% set contentquery = sources ~ '/' ~ id %}
