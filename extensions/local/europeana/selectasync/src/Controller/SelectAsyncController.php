@@ -1,0 +1,162 @@
+<?php
+
+namespace Bolt\Extension\Europeana\SelectAsync\Controller;
+
+use Silex\Application;
+use Silex\ControllerCollection;
+use Silex\ControllerProviderInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
+/**
+ * Controller class.
+ *
+ * @author Your Name <you@example.com>
+ */
+class SelectAsyncController implements ControllerProviderInterface
+{
+    /** @var array The extension's configuration parameters */
+    private $app;
+    private $config;
+
+    /**
+     * Initiate the controller with Bolt Application instance and extension config.
+     *
+     * @param array $config
+     */
+    public function __construct(\Bolt\Application $app, array $config)
+    {
+        $this->app = $app;
+        $this->config = $config;
+    }
+
+    /**
+     * Specify which method handles which route.
+     *
+     * Base route/path is '/selectasync'
+     *
+     * @param Application $app An Application instance
+     *
+     * @return ControllerCollection A ControllerCollection instance
+     */
+    public function connect(Application $app)
+    {
+        /** @var $ctr \Silex\ControllerCollection */
+        $ctr = $app['controllers_factory'];
+
+        // /selectasync/in/controller
+        $ctr->get('/', [$this, 'selectAsyncUrl'])
+            ->bind('select-async-url-controller');
+
+        // /selectasync/type/{type}
+        $ctr->get('/type/{type}', [$this, 'selectAsyncUrlWithType'])
+          ->bind('select-async-url-type');
+
+        // /selectasync/type/{type,type,..}
+        $ctr->get('/types/{types}', [$this, 'selectAsyncUrlWithTypes'])
+          ->bind('select-async-url-types');
+
+        return $ctr;
+    }
+
+    /**
+     * Handles GET requests on /selectasync/in/controller
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function selectAsyncUrl(Request $request)
+    {
+        $type = null;
+        $results = [];
+        $message = 'SelectAsync is working on this path.';
+        $status = 'ok';
+
+        $jsonResponse = new JsonResponse();
+
+        $jsonResponse->setData([
+            'query' => $request->query->all(),
+            'type' => $type,
+            'message' => $message,
+            'status' => $status,
+            'results' => $results
+        ]);
+
+        return $jsonResponse;
+    }
+
+
+    /**
+     * Handles GET requests on /selectasync/type/{type} and return with json.
+     *
+     * @param Request $request
+     * @param $id
+     *
+     * @return JsonResponse
+     */
+    public function selectAsyncUrlWithType(Request $request, $type)
+    {
+
+        $results = [];
+        $message = '';
+        $status = 'ok';
+
+        $search = $request->query->get('search');
+        $fields = explode(',', $request->query->get('fields'));
+        $results[$type] = $this->selectRecordsByType($type, $search, $fields);
+
+        $jsonResponse = new JsonResponse();
+        $jsonResponse->setData([
+            'query' => $request->query->all(),
+            'type' => $type,
+            'message' => $message,
+            'status' => $status,
+            'results' => $results
+        ]);
+
+        return $jsonResponse;
+    }
+
+    /**
+     * Handles GET requests on /selectasync/types/{type,type,..} and return with json.
+     *
+     * @param Request $request
+     * @param $id
+     *
+     * @return JsonResponse
+     */
+    public function selectAsyncUrlWithTypes(Request $request, $types)
+    {
+
+        $results = [];
+        $message = '';
+        $status = 'ok';
+
+        $search = $request->query->get('search');
+        $fields = explode(',', $request->query->get('fields'));
+        $types = explode(',', $types);
+        foreach($types as $type) {
+          $results[$type] = $this->selectRecordsByType($type, $search, $fields);
+        }
+
+        $jsonResponse = new JsonResponse();
+        $jsonResponse->setData([
+            'query' => $request->query->all(),
+            'types' => $types,
+            'message' => $message,
+            'status' => $status,
+            'results' => $results
+        ]);
+
+        return $jsonResponse;
+    }
+
+    private function selectRecordsByType($type, $search = '', $fields = ['id', 'title', 'status']) {
+      $entitysearch = $type . '/search';
+      $entries = $this->app['query']->getContent($entitysearch, ['filter' => $search ]);
+
+      return $entries;
+    }
+}
