@@ -1,6 +1,7 @@
 
 $( document ).ready(function() {
 
+    $('html').removeClass('no-js').addClass('js');
 
     /**
     * vars
@@ -88,6 +89,20 @@ $( document ).ready(function() {
         }
 
     });
+
+
+    /**
+    * submit sortform on click of icon
+    */
+
+    $('#sortbar button').hide();
+
+    $('#sortbar input[type=radio]').on('change', function() {
+        // console.log('KLIKKERDIEKLIK');
+        $('#sortbar').submit();
+    });
+
+
 
 
     /**

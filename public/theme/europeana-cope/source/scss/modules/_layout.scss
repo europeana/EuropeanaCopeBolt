@@ -87,6 +87,8 @@ section {
 }
 
 section.contentheader {
+    position: relative;
+
     > .inner-wrap {
         padding: 0 1rem;
     }

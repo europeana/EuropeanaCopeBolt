@@ -1,0 +1,41 @@
+
+{# Fallback for filtering is a neat HTML form #}
+<form method="GET" action="/search" class="sortform" id="sortbar">
+<legend class="sr-only">Sorting options</legend>
+    <input type='hidden' name="search" id="search" value="{{app.request.get('search')}}">
+
+    <input type='radio' name="sort" value="reldesc" id="sortreldesc" {% if (app.request.get('sort')=='reldesc') or (app.request.get('sort') is empty) %}checked{% endif %}>
+        <label for="sortreldesc" {% if (app.request.get('sort')=='reldesc') or (app.request.get('sort') is empty) %}class="active"{% endif %}>
+            <svg class="icon icon-sort_order_decrease">
+                <use xlink:href="#icon-sort_order_decrease"></use>
+            </svg>
+            <span>Most relevant results first</span>
+        </label>
+
+    <input type='radio' name="sort" value="relasc" id="sortrelasc" {% if app.request.get('sort')=='relasc' %}checked{% endif %}>
+        <label for="sortrelasc" {% if app.request.get('sort')=='relasc' %}class="active"{% endif %}>
+            <svg class="icon icon-sort_order_decrease">
+                <use xlink:href="#icon-sort_order_increase"></use>
+            </svg>
+            <span>Most relevant results last</span>
+        </label>
+
+    <input type='radio' name="sort" value="azasc" id="sortazasc" {% if app.request.get('sort')=='azasc' %}checked{% endif %}>
+        <label for="sortazasc" {% if app.request.get('sort')=='azasc' %}class="active"{% endif %}>
+            <svg class="icon icon-sort_alphabet_az">
+                <use xlink:href="#icon-sort_alphabet_az"></use>
+            </svg>
+            <span>A to Z</span>
+        </label>
+
+    <input type='radio' name="sort" value="azdesc" id="sortazdesc" {% if app.request.get('sort')=='azdesc' %}checked{% endif %}>
+        <label for="sortazdesc" {% if app.request.get('sort')=='azdesc' %}class="active"{% endif %}>
+            <svg class="icon icon-sort_alphabet_za">
+                <use xlink:href="#icon-sort_alphabet_za"></use>
+            </svg>
+            <span>Z to A</span>
+        </label>
+
+
+    <button type="submit">Filter</button>
+</form>

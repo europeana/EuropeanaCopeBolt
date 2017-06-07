@@ -8,7 +8,6 @@
     <div class="inner-wrap">
 
         <div class="column">
-
             <h1>
                 {% if search is not empty %}
                     {{ searchresult.no_of_results }} search results for "{{ search }}"
@@ -18,7 +17,23 @@
             </h1>
 
             <ul class="teaser-list">
+
+{#                 {{ app.request.get('search') }}
+            {% setcontent results = '(*)/search'  %}
+ #}
+
+            {% if app.request.get('sort') == 'relasc' %}
+                {% set records = records|reverse %}
+            {% elseif app.request.get('sort') == 'azasc' %}
+                {% set records = records|order('title') %}
+            {% elseif app.request.get('sort') == 'azdesc' %}
+                {% set records = records|order('-title') %}
+            {% else %} {# reldesc or default #}
+                {% set records = records %}
+            {% endif %}
+
             {% for record in records %}
+
                 <li>
                 {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
                 <!-- loading search listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
