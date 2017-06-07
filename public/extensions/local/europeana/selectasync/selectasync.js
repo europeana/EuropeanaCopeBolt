@@ -508,6 +508,7 @@ jQuery(document).ready(function($) {
         //console.log('selectasync element:', element, $(this).attr('class'));
 
         var dataclasses = $(this).attr('class').split(/\s/);
+        $(this).css({width: '100%'});
         $(this).data('contenttype',
             dataclasses.find(findCT).split('-').pop());
         $(this).data('contentfields',
@@ -515,36 +516,55 @@ jQuery(document).ready(function($) {
         $(this).data('contentkey',
             dataclasses.find(findKey).split('-').pop());
 
-        console.log('dataclasses', $(this).data());
+        //console.log('dataclasses', $(this).data());
+
+        var datakeys = $(this).val();
+        datavalues = [];
+        if(datakeys) {
+            datakeys = JSON.parse(datakeys);
+            datakeys.forEach(function(e) {
+                datavalues.push({ id: e, text: 'item '+ e});
+            });
+            console.log('selectasync for ' + $(this).attr('name'), datakeys, datavalues);
+        } else {
+            console.log('selectasync for ' + $(this).attr('name') + ' is empty');
+        }
 
         $(this).select2({
             placeholder: {
                 id: '-1', // the value of the option
                 text: 'Select from ' + $(this).data('contenttype')
             },
+            data: datavalues,
+            minimumInputLength: 2,
+            allowClear: true,
             ajax: {
                 url: "/bolt/selectasync/" + $(this).data('contenttype'),
                 dataType: 'json',
                 delay: 250,
                 data: function (params) {
-                    console.log('select2 data', params, $(this));
-                    var query = {
-                        search: params.term,
-                        fields: $(this).data('contentfields'),
-                        key: $(this).data('contentkey')
+                    console.log('selectasync select2 data', params, this);
+                    return  {
+                        q: params.term,
+                        text: params.text
                     };
-                    return query;
                 },
                 processResults: function (data, params) {
-                    console.log('select2 processResults', data, params);
+                    console.log('selectasync select2 processResults', data, params);
                     return {
                         results: data.results
                     };
-                },
-                cache: true
+                }
             },
             escapeMarkup: function (markup) { return markup; },
-            minimumInputLength: 2
+            xx_templateResult: function(result) {
+                console.log('selectasync templateResult', result);
+                return result;
+            },
+            xx_templateSelection: function (result) {
+                console.log('selectasync templateSelection', result);
+                return result.full_name || result.text;
+            }
         });
     });
 });
