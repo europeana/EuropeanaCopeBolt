@@ -1,5 +1,6 @@
 /***** Select 2 extension needs to be done before the extension is doing stuff ******/
 jQuery(document).ready(function($) {
+
     var S2Ext = jQuery.fn.select2.amd;
     console.log('select2 extension loading');
     //console.log(S2Ext);
@@ -516,7 +517,7 @@ jQuery(document).ready(function($) {
         $(this).data('contentkey',
             dataclasses.find(findKey).split('-').pop());
 
-        //console.log('dataclasses', $(this).data());
+        console.log('selectasync dataclasses', $(this).data());
 
         var datakeys = $(this).val();
         datavalues = [];
@@ -530,42 +531,53 @@ jQuery(document).ready(function($) {
             console.log('selectasync for ' + $(this).attr('name') + ' is empty');
         }
 
-        $(this).select2({
-            placeholder: {
-                id: '-1', // the value of the option
-                text: 'Select from ' + $(this).data('contenttype')
-            },
-            data: datavalues,
-            minimumInputLength: 2,
-            allowClear: true,
-            ajax: {
-                url: "/bolt/selectasync/" + $(this).data('contenttype'),
-                dataType: 'json',
-                delay: 250,
-                data: function (params) {
-                    console.log('selectasync select2 data', params, this);
-                    return  {
-                        q: params.term,
-                        text: params.text
-                    };
-                },
-                processResults: function (data, params) {
-                    console.log('selectasync select2 processResults', data, params);
-                    return {
-                        results: data.results
-                    };
+        var options = { create: true, sortfield: 'text', options: datavalues, items: datakeys };
+        $(this).selectize(options);
+
+        var newoptions = {
+            valueField: 'id',
+            labelField: 'title',
+            searchField: 'title',
+            create: false,
+            render: {
+                option: function(item, escape) {
+                    console.log('rendering', item, escape);
+                    return '<div>' +
+                        '<span class="title">' +
+                        '<span class="name"><i class="icon ' + (item.fork ? 'fork' : 'source') + '"></i>' + escape(item.name) + '</span>' +
+                        '<span class="by">' + escape(item.username) + '</span>' +
+                        '</span>' +
+                        '<span class="description">' + escape(item.description) + '</span>' +
+                        '<ul class="meta">' +
+                        (item.language ? '<li class="language">' + escape(item.language) + '</li>' : '') +
+                        '<li class="watchers"><span>' + escape(item.watchers) + '</span> watchers</li>' +
+                        '<li class="forks"><span>' + escape(item.forks) + '</span> forks</li>' +
+                        '</ul>' +
+                        '</div>';
                 }
             },
-            escapeMarkup: function (markup) { return markup; },
-            xx_templateResult: function(result) {
-                console.log('selectasync templateResult', result);
-                return result;
+            score: function(search) {
+                console.log('searching', search);
+                var score = this.getScoreFunction(search);
+                return function(item) {
+                    return score(item) * (1 + Math.min(item.watchers / 100, 1));
+                };
             },
-            xx_templateSelection: function (result) {
-                console.log('selectasync templateSelection', result);
-                return result.full_name || result.text;
+            load: function(query, callback) {
+                if (!query.length) return callback();
+                console.log('loading', query, callback);
+                $.ajax({
+                    url: '/admin/selectasync/type/posts' + encodeURIComponent(query),
+                    type: 'GET',
+                    error: function() {
+                        callback();
+                    },
+                    success: function(res) {
+                        callback(res.repositories.slice(0, 10));
+                    }
+                });
             }
-        });
+        };
     });
 });
 

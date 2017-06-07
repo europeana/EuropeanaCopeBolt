@@ -26,7 +26,8 @@ class SelectAsyncExtension extends SimpleExtension
         return [
             // Web assets that will be loaded in the backend
             (new Stylesheet('selectasync.css'))->setZone(Zone::BACKEND),
-            (new JavaScript('selectasync.js'))->setZone(Zone::BACKEND),
+            (new JavaScript('selectize.js'))->setLate(true)->setZone(Zone::BACKEND),
+            (new JavaScript('selectasync.js'))->setLate(true)->setZone(Zone::BACKEND),
         ];
     }
 
