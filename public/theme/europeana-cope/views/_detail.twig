@@ -48,7 +48,7 @@
         {{ include('partials/_default_module.twig', { 'module': module }) }}
     {% endfor %}
 
-    {% if record.pagefooter is defined %}
+    {% if record.pagefooter is defined and record.pagefooter is not empty %}
     <section>
         <div class="inner-wrap">
             <article class="column main-column">
