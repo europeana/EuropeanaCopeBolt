@@ -1,9 +1,9 @@
 {# set the contenttype if there is one #}
-    {% if records|first.contenttype is defined %}
-        {% set contenttype = records|first.contenttype %}
-    {% endif %}
-    {#{{ dump(contenttype) }}#}
+{% if records is defined and records|first.contenttype is defined %}
+    {% set contenttype = records|first.contenttype %}
+{% endif %}
 
+{% if contenttype is defined %}
     {# get main categorisation from contenttype #}
     {% if contenttype.slug == 'persons' %}
         {% set contenttypepath = '/' ~ contenttype.slug ~ '/network_participation/' %}
@@ -20,7 +20,9 @@
     {% else %}
         {% set categories = {} %}
     {% endif %}
-    {#{{ dump(categories) }}#}
+{% else %}
+    {% set categories = {} %}
+{% endif %}
 
 <div class="filter-listing">
     {% if categories is not empty %}
