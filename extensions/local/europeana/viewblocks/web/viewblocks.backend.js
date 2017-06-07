@@ -269,7 +269,6 @@ jQuery(document).ready(function($) {
     if( $('#pagetype').is('*') ) {
         var subs = $('<div>').attr({
             'id': 'highlightblock',
-            'name': 'higlightblock',
             'class': 'highlightblock'
         });
         subs.append($('#highlighttitle').parents('div[data-bolt-fieldset]'));
