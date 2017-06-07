@@ -6,6 +6,7 @@ Available variables
     'records':   array of (selected) records that belong to the module
 #}
 
+<section class="group">
 {% for record in records %}
     {% if record.id is defined %}
         <a class="banner third" href="{{ record.htmllink|default(record.link)|default('#') }}">
@@ -32,3 +33,4 @@ Available variables
         </a>
     {% endif %}
 {% endfor %}
+</section>
