@@ -341,7 +341,7 @@ pages:
             #filecontent:      "File content block (_filecontent.twig)"
             #fileslisting:     "File list block (_fileslisting.twig)"
             body:             "Module body field - for extra body blocks between modules (_body.twig)"
-            # collapsedcontent: "Collapsed content clicks open with click on header (_collapsedcontent.twig)"
+            collapsedcontent: "Collapsed content clicks open with click on header (_collapsedcontent.twig)"
         body:
           type: html
           label: "Module body (optional)"

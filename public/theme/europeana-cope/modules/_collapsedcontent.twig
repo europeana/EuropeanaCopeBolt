@@ -1,0 +1,51 @@
+{% spaceless %}
+{#
+Available variables
+    'module':    the full module object
+    'title':     title of the module
+    'subtitle':  subtitle of the module
+    'body':      body of the module
+    'records':   array of (selected) records that belong to the module
+    'allow_pager': boolean to check is the pager is available
+#}
+{% set override_css_id = module.get('override_css_id') %}
+{% set override_css_class = module.get('override_css_class') %}
+{% set template = module.get('templates') %}
+{% endspaceless %}
+
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="file-browser file-content-module {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+
+    <div class="collapse-header">
+            <p class="content-kind">
+            <svg class="icon icon-folder">
+                <use xlink:href="#icon-folder"></use>
+            </svg>
+            <span>Collapsed content</span>
+        </p>
+
+        {% if title is not empty %}
+        <h3>{{ title }}</h3>
+        {% endif %}
+
+        <a href="#">
+            <svg class="icon icon-navigate-up">
+                <use xlink:href="#icon-navigate-up"></use>
+            </svg>
+            <span class="sr-only">Open folder</span>
+        </a>
+    </div>
+
+    <div class="collapse-content">
+        {% if subtitle|default('') is not empty %}
+            <p>{{ subtitle }}</p>
+        {% endif %}
+
+        {% if body is not empty %}
+            {{ body|raw }}
+        {% else %}
+            <p class="warning">No body content was found, please <a href="{{ record.editlink() }}#modules">change the module content</a>.</p>
+        {% endif %}
+    </div>
+
+</section>
+
