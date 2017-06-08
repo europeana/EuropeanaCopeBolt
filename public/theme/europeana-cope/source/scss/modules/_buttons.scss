@@ -64,3 +64,29 @@ a.button, .button, button {
 
 }
 
+button.floating,
+.button.floating {
+    background-color: $white;
+    padding: 0.7rem 0.9rem;
+    text-align: center;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+
+    svg {
+        margin-right: 0;
+        fill: $medium-gray;
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    &:hover, &:active, &:focus {
+        background-color: $medium-gray;
+
+        svg {
+            fill: $white;
+        }
+    }
+
+}
+
+
+

@@ -1754,12 +1754,26 @@ table.listingtable {
         display: none;
     }
 
-
-
-
-
 }
 
+
+.button.backtotop {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 4rem;
+    z-index: index($layers, modals);
+    transition: background .25s ease-in-out;
+
+    &.fixed {
+        display: block;
+
+        @include respond-to(large-screens) {
+            display: none;
+        }
+    }
+
+}
 
 
 .link-list {

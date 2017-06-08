@@ -140,39 +140,40 @@ $( document ).ready(function() {
 
 
     /**
-    * Return of the header on scroll up
+    * Show 'back to top' button on scroll up
     */
-    // ^AW - Uitgezet omdat gedrag niet duidelijk is in combinatie met openklappend menu waar je ook doorheen moet scrollen.
 
-    // var previousScroll = 0;
-    // headerOrgOffset = $('#header').offset().top;
+    var previousScroll = 0;
+    headerHeight = $('#header').height();
 
-    // $(window).scroll(function() {
-    //     var currentScroll = $(this).scrollTop();
-    //     // console.log(currentScroll + " and " + previousScroll + " and " + headerOrgOffset);
-    //     if(currentScroll > headerOrgOffset) {
-    //         if (currentScroll > previousScroll) {
-    //             console.log('GOING DOWN!')
-    //             // $('#header').fadeOut();
-    //             $('#header').animate({
-    //             top: '-82'
-    //             }, 50, function() {
-    //             // Animation complete.
-    //             });
-    //         } else {
-    //             console.log('GOING UP!')
-    //             $('#header').addClass('fixed');
-    //             $('#header').animate({
-    //             top: '0'
-    //             }, 50, function() {
-    //             // Animation complete.
-    //             });
-    //         }
-    //     } else {
-    //          $('#header').removeClass('fixed');
-    //     }
-    //     previousScroll = currentScroll;
-    // });
+    $(window).scroll(function() {
+        var currentScroll = $(this).scrollTop();
+        // console.log(currentScroll + " and " + previousScroll + " and " + headerHeight);
+
+        if(currentScroll > headerHeight) {
+            if (currentScroll > previousScroll) {
+                // console.log('GOING DOWN!')
+                $('#backtotop').removeClass('fixed');
+                $('#backtotop').fadeOut('slow');
+
+            } else {
+                // console.log('GOING UP!')
+                $('#backtotop').addClass('fixed');
+                $('#backtotop').fadeIn('slow');
+            }
+        } else {
+             $('#backtotop').removeClass('fixed');
+        }
+        previousScroll = currentScroll;
+    });
+
+    $('#backtotop').on( "click", function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: '0px'}, 300);
+        $(this).blur();
+        $(this).trigger('touchend');
+
+    });
 
 
     //  init jQuery plugin "minRead"

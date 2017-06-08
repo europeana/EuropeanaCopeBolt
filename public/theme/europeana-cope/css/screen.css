@@ -1422,6 +1422,29 @@ a.button, .button, button {
       color: #E11D53;
       font-weight: 700; }
 
+button.floating,
+.button.floating {
+  background-color: #fff;
+  padding: 0.7rem 0.9rem;
+  text-align: center;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); }
+  button.floating svg,
+  .button.floating svg {
+    margin-right: 0;
+    fill: #4d4d4d;
+    width: 1.6rem;
+    height: 1.6rem; }
+  button.floating:hover, button.floating:active, button.floating:focus,
+  .button.floating:hover,
+  .button.floating:active,
+  .button.floating:focus {
+    background-color: #4d4d4d; }
+    button.floating:hover svg, button.floating:active svg, button.floating:focus svg,
+    .button.floating:hover svg,
+    .button.floating:active svg,
+    .button.floating:focus svg {
+      fill: #fff; }
+
 /**
  * File:        _forms.scss
  * Description: _forms.scss contains all form styles for makeitso
@@ -2677,6 +2700,19 @@ table.listingtable {
     fill: #fff; }
   .contentheader .sortform input[type='radio'] {
     display: none; }
+
+.button.backtotop {
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 4rem;
+  z-index: 4;
+  transition: background .25s ease-in-out; }
+  .button.backtotop.fixed {
+    display: block; }
+    @media only screen and (min-width: 47.9375em) {
+      .button.backtotop.fixed {
+        display: none; } }
 
 .link-list {
   margin: 2rem 0; }
