@@ -19,6 +19,9 @@ class SelectAsyncController implements ControllerProviderInterface
     /** @var array The extension's configuration parameters */
     private $app;
     private $config;
+    private $default_types;
+    private $default_fields;
+    private $default_person_fields;
 
     /**
      * Initiate the controller with Bolt Application instance and extension config.
@@ -29,6 +32,9 @@ class SelectAsyncController implements ControllerProviderInterface
     {
         $this->app = $app;
         $this->config = $config;
+        $this->default_types = ['pages', 'posts', 'data', 'projects', 'events', 'persons', 'resources'];
+        $this->default_fields = ['id', 'title', 'status'];
+        $this->default_person_fields = ['id', 'first_name', 'last_name', 'email', 'status'];
     }
 
     /**
@@ -56,6 +62,10 @@ class SelectAsyncController implements ControllerProviderInterface
         // /selectasync/type/{type,type,..}
         $ctr->get('/types/{types}', [$this, 'selectAsyncUrlWithTypes'])
           ->bind('select-async-url-types');
+
+        // /selectasync/type/{type,type,..}
+        $ctr->get('/load', [$this, 'selectAsyncUrlLoad'])
+        ->bind('select-async-load');
 
         return $ctr;
     }
@@ -111,13 +121,16 @@ class SelectAsyncController implements ControllerProviderInterface
         $fields = null;
 
         $search = $request->query->get('search');
+        if(!empty($search)) {
+            return $this->noAccess('No search given');
+        }
         $fieldstring = $request->query->get('fields');
         if(!empty($fieldstring)) {
           $fields = explode(',', $fieldstring);
         }
-        if(!in_array($type, ['pages', 'posts', 'data', 'projects', 'events', 'persons', 'resources'])) {
+        if(!in_array($type, $this->default_types)) {
             // illegal type
-            return $this->noAccess();
+            return $this->noAccess('Not valid type');
         }
 
         $results[$type] = $this->selectRecordsByType($type, $search, $fields);
@@ -154,17 +167,20 @@ class SelectAsyncController implements ControllerProviderInterface
         $fields = null;
 
         $search = $request->query->get('search');
+        if(!empty($search)) {
+            return $this->noAccess('No search given');
+        }
         $fieldstring = $request->query->get('fields');
         if(!empty($fieldstring)) {
-          $fields = explode(',', $fieldstring);
+            fields = explode(',', $fieldstring);
         }
         $types = explode(',', $types);
         foreach($types as $type) {
-          if(!in_array($type, ['pages', 'posts', 'data', 'projects', 'events', 'persons', 'resources'])) {
-              // illegal type
-              return $this->noAccess();
-          }
-          $results[$type] = $this->selectRecordsByType($type, $search, $fields);
+            if(!in_array($type, $this->default_types)) {
+                // illegal type
+                return $this->noAccess('Not valid type');
+            }
+            $results[$type] = $this->selectRecordsByType($type, $search, $fields);
         }
 
         $jsonResponse = new JsonResponse();
@@ -178,7 +194,54 @@ class SelectAsyncController implements ControllerProviderInterface
 
         return $jsonResponse;
     }
+    /**
+     * Handles GET requests on /selectasync/load and return with json.
+     *
+     * @param Request $request
+     *
+     * @return JsonResponse
+     */
+    public function selectAsyncUrlLoad(Request $request)
+    {
+        $hasaccess = $this->checkAccess();
+        if(!$hasaccess) {
+            return $this->noAccess();
+        }
+        $results = [];
+        $message = '';
+        $status = 'ok';
+        $fields = null;
 
+        $ids = $request->query->get('ids');
+        if(!empty($ids)) {
+            return $this->noAccess('No ids given');
+        }
+        $type = $request->query->get('type');
+        if(!empty($type)) {
+            return $this->noAccess('No type given');
+        }
+        $fieldstring = $request->query->get('fields');
+        if(!empty($fieldstring)) {
+            $fields = explode(',', $fieldstring);
+        }
+        if(!in_array($type, $this->default_types)) {
+          // illegal type
+            return $this->noAccess('Not valid type');
+        }
+
+        $results[$type] = $this->selectRecordsByTypeIds($type, $ids, $fields);
+
+        $jsonResponse = new JsonResponse();
+        $jsonResponse->setData([
+            'query' => $request->query->all(),
+            'type' => $type,
+            'message' => $message,
+            'status' => $status,
+            'results' => $results
+        ]);
+
+        return $jsonResponse;
+    }
     /**
      * Search the database for records in a type
      * @param        $type
@@ -191,9 +254,8 @@ class SelectAsyncController implements ControllerProviderInterface
 
         $search = '%'.trim($search).'%';
 
-        $defaultfields = ['id', 'title', 'status'];
         if(empty($fields)) {
-            $fields = $defaultfields;
+            $fields = $this->default_fields;
         }
 
         $repo = $this->app['storage']->getRepository($type);
@@ -201,7 +263,7 @@ class SelectAsyncController implements ControllerProviderInterface
 
         switch ($type) {
             case 'persons':
-                $qb->select(['id', 'first_name', 'last_name', 'email', 'status']);
+                $qb->select($this->default_person_fields);
                 $qb->where(
                     $qb->expr()->orX(
                         $qb->expr()->like('first_name', $qb->createNamedParameter($search)),
@@ -228,6 +290,47 @@ class SelectAsyncController implements ControllerProviderInterface
     }
 
     /**
+     * Fetch a few given records in a type
+     * @param        $type
+     * @param string|array $ids
+     * @param null   $fields
+     *
+     * @return array
+     */
+    private function selectRecordsByTypeIds($type, $ids, $fields = null) {
+
+        if(empty($fields)) {
+            $fields = $this->default_fields;
+        }
+
+        if(!empty($ids) && !is_array($ids)) {
+            //$ids = explode(',', $ids);
+            $ids = json_decode($ids);
+        }
+
+        $repo = $this->app['storage']->getRepository($type);
+        $qb = $repo->createQueryBuilder();
+
+        switch ($type) {
+            case 'persons':
+                $qb->select($this->default_person_fields);
+                $qb->where(
+                    $qb->expr()->in('id', $ids)
+                );
+                break;
+            default:
+                $qb->select($fields);
+                $qb->where(
+                    $qb->expr()->in('id', $ids)
+                );
+                break;
+        }
+
+        $entries = $qb->execute()->fetchAll();
+
+        return $entries;
+    }
+    /**
      * Check if a client is logged in and has access to the path
      * Or basically - has the role editor
      *
@@ -247,9 +350,8 @@ class SelectAsyncController implements ControllerProviderInterface
      *
      * @return JsonResponse
      */
-    private function noAccess()
+    private function noAccess($message = 'No access')
     {
-        $message = 'No Access';
         $status = 'error';
 
         $jsonResponse = new JsonResponse();
