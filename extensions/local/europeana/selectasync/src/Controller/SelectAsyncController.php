@@ -121,7 +121,7 @@ class SelectAsyncController implements ControllerProviderInterface
         $fields = null;
 
         $search = $request->query->get('search');
-        if(!empty($search)) {
+        if(empty($search)) {
             return $this->noAccess('No search given');
         }
         $fieldstring = $request->query->get('fields');
@@ -167,7 +167,7 @@ class SelectAsyncController implements ControllerProviderInterface
         $fields = null;
 
         $search = $request->query->get('search');
-        if(!empty($search)) {
+        if(empty($search)) {
             return $this->noAccess('No search given');
         }
         $fieldstring = $request->query->get('fields');
@@ -213,11 +213,11 @@ class SelectAsyncController implements ControllerProviderInterface
         $fields = null;
 
         $ids = $request->query->get('ids');
-        if(!empty($ids)) {
+        if(empty($ids)) {
             return $this->noAccess('No ids given');
         }
         $type = $request->query->get('type');
-        if(!empty($type)) {
+        if(empty($type)) {
             return $this->noAccess('No type given');
         }
         $fieldstring = $request->query->get('fields');
