@@ -172,7 +172,7 @@ class SelectAsyncController implements ControllerProviderInterface
         }
         $fieldstring = $request->query->get('fields');
         if(!empty($fieldstring)) {
-            fields = explode(',', $fieldstring);
+            $fields = explode(',', $fieldstring);
         }
         $types = explode(',', $types);
         foreach($types as $type) {
