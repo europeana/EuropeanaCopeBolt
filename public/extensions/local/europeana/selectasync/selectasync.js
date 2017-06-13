@@ -1,40 +1,95 @@
 /***** Your javascript can go below here ******/
 jQuery(document).ready(function($) {
+    var $selectors = [];
 
-    $('.ajaxselector').each(function(element) {
-        //console.log('selectasync element:', element, $(this).attr('class'));
+    $('.ajaxselector').each(function() {
+        //console.log('selectasync element:', $(this).attr('class'), $(this));
 
         var dataclasses = $(this).attr('class').split(/\s/);
         $(this).css({width: '100%'});
-        $(this).data('contenttype',
-            dataclasses.find(findCT).split('-').pop());
-        $(this).data('contentfields',
-            dataclasses.find(findFields).replace('fields-','').split('--'));
-        $(this).data('contentkey',
-            dataclasses.find(findKey).split('-').pop());
+        $(this).data(
+            'contenttype',
+            dataclasses.find(findCT).split('-').pop()
+        );
+        $(this).data(
+            'contentfields',
+            dataclasses.find(findFields).replace('fields-', '').split('--')
+        );
+        $(this).data(
+            'contentkey',
+            dataclasses.find(findKey).split('-').pop()
+        );
+        var newname = $(this).attr('name');
+        newname = newname.replace('modules', 'ajaxselector');
+        newname = newname.replace(']', '').replace('[', '-');
+        newname = newname.replace(']', '').replace('[', '-');
+        $(this).after(
+            $('<select>').attr({
+                'name': newname,
+                'id': newname
+            }).data({
+                'target': $(this).attr('name')
+            }).css({
+                'width': '100%',
+                'min-height': '2em'
+            }).addClass('selectizer')
+        );
+        $(this).hide();
+        // console.log('initialized selectasync:', newname);
+        // console.log('selectasync parent:', $(this));
+        // console.log('selectasync dataclasses:', $(this).data());
+    });
 
-        //console.log('selectasync dataclasses', $(this).data());
-
-        var datakeys = $(this).val();
+    $('.selectizer').each(function() {
+        // console.log('selectasync element:', $(this).attr('class'), $(this));
+        var target = $('input[name="'+ $(this).data('target') + '"]');
+        var datakeys = $(target).val();
+        // console.log('selectasync element:', element, target, datakeys);
         datavalues = [];
-        if(datakeys) {
+        if(datakeys && isJson(datakeys)) {
             datakeys = JSON.parse(datakeys);
-            console.log('datakeys', datakeys);
+            console.log('datakeys from json', datakeys);
             datakeys.forEach(function(e) {
-                datavalues.push({ id: e, text: 'item '+ e});
+                datavalues.push({ id: e, title: 'item '+ e});
             });
+            // preload options
             $.ajax({
                 url: '/admin/selectasync/load/',
                 type: 'GET',
                 dataType: "json",
                 data: {
                     ids: datakeys,
-                    fields: this.settings.contentfields.join(',')
+                    fields: target.settings.contentfields.join(',')
                 },
                 error: function(data) {
                     console.log('error', data);
                 },
                 success: function(data) {
+                    data.results.forEach(function(current) {
+                        datavalues.push(current);
+                    });
+                    console.log('result data', data.results, data);
+                }
+            });
+            console.log('selectasync for ' + $(this).attr('name'), datakeys, datavalues);
+        } else if(datakeys && !isJson(datakeys)) {
+            datakeys = datakeys.split(',');
+            console.log('datakeys from string', datakeys);
+            $.ajax({
+                url: '/admin/selectasync/load/',
+                type: 'GET',
+                dataType: "json",
+                data: {
+                    ids: datakeys,
+                    fields: target.settings.contentfields.join(',')
+                },
+                error: function(data) {
+                    console.log('error', data);
+                },
+                success: function(data) {
+                    data.results.forEach(function(current) {
+                        datavalues.push(current);
+                    });
                     console.log('result data', data.results, data);
                 }
             });
@@ -42,65 +97,64 @@ jQuery(document).ready(function($) {
         } else {
             // console.log('selectasync for ' + $(this).attr('name') + ' is empty');
         }
-
+        // console.log('target data', $(target).data());
         var options = {
-            valueField: '/admin/selectasync/',
-            labelField: 'name',
-            searchField: 'name',
+            contentselector: $(target).attr('name'),
+            contenttype: $(target).data('contenttype'),
+            contentfields: $(target).data('contentfields'),
+            contentkey: $(target).data('contentkey'),
+            valuefield: 'id',
+            labelField: 'title',
+            searchField: ['title'],
+            delimiter: ',',
+            maxItems: null,
             create: false,
-            contenttype: $(this).data('contenttype'),
-            contentfields: $(this).data('contentfields'),
-            contentkey: $(this).data('contentkey'),
             options: datavalues,
             items: datakeys,
             render: {
                 item: function(item, escape) {
                     console.log('render items', item, escape);
-                    return '<div>' +
-                        (item.id ? '<span class="id">' + escape(item.id) + '</span>' : '') +
+                    return '<div class="item">' +
                         (item.title ? '<span class="title">' + escape(item.title) + '</span>' : '') +
                         (item.status ? '<span class="status">' + escape(item.status) + '</span>' : '') +
                         '</div>';
                 },
                 option: function(item, escape) {
                     console.log('render options', item, escape);
-                    return '<div>' +
-                        (item.id ? '<span class="id">' + escape(item.id) + '</span>' : '') +
-                        (item.title ? '<span class="title">' + escape(item.title) + '</span>' : '') +
+                    return '<div class="option">' +
+                        (item.title ? '<span class="title">' + escape(item.title) + '</span>' : '-no title-') +
                         (item.status ? '<span class="status">' + escape(item.status) + '</span>' : '') +
                         '</div>';
                 }
             },
             load: function(query, callback) {
                 if (!query.length) return callback();
-                var config = this.settings;
-                //console.log('load function', query, config);
+                var settings = this.settings;
+                console.log('load ajax content for:', settings.contentselector, 'with search term:', query);
                 $.ajax({
-                    url: '/admin/selectasync/type/' + config.contenttype,
+                    url: '/admin/selectasync/type/' + settings.contenttype,
                     type: 'GET',
                     dataType: "json",
                     data: {
                         search: query,
-                        fields: config.contentfields.join(',')
+                        fields: settings.contentfields.join(','),
+                        type: settings.contenttype
                     },
                     error: function() {
                         callback();
                     },
                     success: function(data) {
-                        //console.log('result data from load function - callback:', callback, 'results:', data.results[data.type], 'data:', data);
-                        var results = data.results[data.type];
-                        var items = results.map(function(x) {
-                            return { value: x.id, text: x.title };
-                        });
-                        //console.log('result items', items);
-                        callback(items);
+                        callback(data.results[data.type]);
                     }
                 });
             }
         };
         // console.log('selectize initialization', options, $(this).data());
-        $(this).selectize(options);
+        $selectors.push($(this).selectize(options));
+        console.log('selectize initialization for:', $(this).attr('name'), $(target).attr('name'));
     });
+
+    console.log('all selectors', $selectors);
 });
 
 function findCT(keys) {
@@ -111,4 +165,12 @@ function findFields(keys) {
 }
 function findKey(keys) {
     return keys.match('key-');
+}
+function isJson(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
 }
