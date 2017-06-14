@@ -811,6 +811,10 @@ events:
       type: geolocation
       required: true
       label: "Location Place"
+    featured:
+      type: checkbox
+      label: "Make this event sticky"
+      postfix: "<small>One event only. Setting another event to sticky will uncheck this one.</small>"
     <<: *teaser_defaults
     <<: *cta_defaults
     start_event:
