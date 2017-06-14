@@ -1,4 +1,4 @@
-/***** Your javascript can go below here ******/
+/***** Load selectasync scripts ******/
 jQuery(document).ready(function($) {
     SA_loadNewAsyncSelectors();
 
@@ -73,7 +73,7 @@ function SA_loadNewAsyncSelectors() {
             'contentkey',
             dataclasses.find(SA_findKey).split('-').pop()
         );
-        divname = 'visible_' + $(this).attr('name');
+        var divname = 'visible_' + $(this).attr('name');
         // make a placeholder with working stuff
         divname = divname.replace('modules', '');
         divname = divname.replace(']', '').replace('[', '_');
@@ -93,7 +93,7 @@ function SA_loadNewAsyncSelectors() {
                 .sortable({
                     forceHelperSize: true,
                     forcePlaceholderSize: true,
-                    deactivate: function( event, ui ) {
+                    deactivate: function( ) {
                         SA_reCalculateIds($(this));
                     }
                 })
@@ -110,7 +110,6 @@ function SA_loadNewAsyncSelectors() {
         var placeholder = $(this);
         var datakeys = $(target).val();
         // console.log('selectasync element:', target, target.data(), datakeys);
-        datavalues = [];
         if(datakeys && SA_isJson(datakeys)) {
             datakeys = JSON.parse(datakeys);
         } else if(datakeys && !SA_isJson(datakeys)) {
