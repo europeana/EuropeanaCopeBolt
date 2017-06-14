@@ -1,6 +1,5 @@
 /***** Your javascript can go below here ******/
 jQuery(document).ready(function($) {
-    var $selectors = [];
 
     $('.ajaxselector').each(function() {
         //console.log('selectasync element:', $(this).attr('class'), $(this));
@@ -19,123 +18,155 @@ jQuery(document).ready(function($) {
             'contentkey',
             dataclasses.find(findKey).split('-').pop()
         );
-        var newname = $(this).attr('name');
-        newname = newname.replace('modules', 'ajaxselector');
-        newname = newname.replace(']', '').replace('[', '-');
-        newname = newname.replace(']', '').replace('[', '-');
+        divname = 'visible_' + $(this).attr('name');
+        // make a placeholder with working stuff
+        divname = divname.replace('modules', '');
+        divname = divname.replace(']', '').replace('[', '_');
+        divname = divname.replace(']', '').replace('[', '_');
+        divname = divname.replace('__', '_');
         $(this).after(
-            $('<select>').attr({
-                'name': newname,
-                'id': newname
-            }).data({
-                'target': $(this).attr('name')
-            }).css({
-                'width': '100%',
-                'min-height': '2em'
-            }).addClass('selectizer')
-        );
-        //$(this).hide();
-        // console.log('initialized selectasync:', newname);
-        // console.log('selectasync parent:', $(this));
-        // console.log('selectasync dataclasses:', $(this).data());
-
-        $('.selectizer').each(function() {
-            // console.log('selectasync element:', $(this).attr('class'), $(this));
-            var target = $('input[name="'+ $(this).data('target') + '"]');
-            var datakeys = $(target).val();
-            // console.log('selectasync element:', target, target.data(), datakeys);
-            datavalues = [];
-            if(datakeys && isJson(datakeys)) {
-                datakeys = JSON.parse(datakeys);
-            } else if(datakeys && !isJson(datakeys)) {
-                datakeys = datakeys.split(',');
-            } else {
-                // console.log('selectasync for ' + $(this).attr('name') + ' is empty');
-                datakeys = []
-            }
-            // preload options
-            $.ajax({
-                url: '/admin/selectasync/load/',
-                type: 'GET',
-                dataType: "json",
-                data: {
-                    ids: datakeys,
-                    type: target.data('contenttype'),
-                    fields: target.data('contentfields').join(',')
-                },
-                error: function(data) {
-                    console.log('error', data);
-                },
-                success: function(data) {
-                    if (data.results[data.type]) {
-                        data.results[data.type].forEach(function(e) {
-                            datavalues.push(e);
-                        });
-                    }
-                    console.log('result data', data.results[data.type], data, datavalues);
-                }
-            });
-
-            // console.log('target data', $(target).data());
-            var selectizeoptions = {
-                contentselector: $(target).attr('name'),
-                contenttype: $(target).data('contenttype'),
-                contentfields: $(target).data('contentfields'),
-                contentkey: $(target).data('contentkey'),
-                valuefield: 'id',
-                labelField: 'title',
-                searchField: ['title'],
-                delimiter: ',',
-                maxItems: null,
-                create: false,
-                options: datavalues,
-                items: datakeys,
-                render: {
-                    item: function(item, escape) {
-                        console.log('render items', item, escape);
-                        return '<div class="item">' +
-                            (item.title ? '<span class="title">' + escape(item.title) + '</span>' : '') +
-                            (item.status ? '<span class="status">' + escape(item.status) + '</span>' : '') +
-                            '</div>';
+            $('<div>').attr({
+                'name': divname,
+                'id': divname
+            })
+                .data({
+                    'target': $(this).attr('id')
+                })
+                .attr({
+                    'data-target': $(this).attr('id')
+                })
+                .addClass('selectasync-placeholder')
+                .sortable({
+                    forceHelperSize: true,
+                    forcePlaceholderSize: true,
+                    activate: function( event, ui ) {
+                        console.log('sorting activate');
                     },
-                    option: function(item, escape) {
-                        console.log('render options', item, escape);
-                        return '<div class="option">' +
-                            (item.title ? '<span class="title">' + escape(item.title) + '</span>' : '-no title-') +
-                            (item.status ? '<span class="status">' + escape(item.status) + '</span>' : '') +
-                            '</div>';
+                    deactivate: function( event, ui ) {
+                        console.log('deactivate');
+                        reCalculateIds($(this));
+                    },
+                    change: function( event, ui ) {
+                        console.log('change');
+                    },
+                    create: function( event, ui ) {
+                        console.log('sortcreate');
                     }
-                },
-                load: function(query, callback) {
-                    if (!query.length) return callback();
-                    var settings = this.settings;
-                    console.log('load ajax content for:', settings.contentselector, 'with search term:', query);
-                    $.ajax({
-                        url: '/admin/selectasync/type/' + settings.contenttype,
-                        type: 'GET',
-                        dataType: "json",
-                        data: {
-                            search: query,
-                            fields: settings.contentfields.join(','),
-                            type: settings.contenttype
-                        },
-                        error: function() {
-                            callback();
-                        },
-                        success: function(data) {
-                            callback(data.results[data.type]);
-                        }
+                })
+        );
+    });
+
+    $('div.selectasync-placeholder').each(function() {
+
+        // console.log('selectasync element:', $(this).attr('class'), $(this));
+        var target = $('#' + $(this).data('target'));
+        var placeholder = $(this);
+        var datakeys = $(target).val();
+        // console.log('selectasync element:', target, target.data(), datakeys);
+        datavalues = [];
+        if(datakeys && isJson(datakeys)) {
+            datakeys = JSON.parse(datakeys);
+        } else if(datakeys && !isJson(datakeys)) {
+            datakeys = datakeys.split(',');
+        } else {
+            // console.log('selectasync for ' + $(this).attr('name') + ' is empty');
+            datakeys = [];
+            return null;
+        }
+        // preload options
+        $.ajax({
+            url: '/admin/selectasync/load/',
+            type: 'GET',
+            dataType: "json",
+            context: placeholder,
+            data: {
+                ids: datakeys,
+                type: target.data('contenttype'),
+                fields: target.data('contentfields').join(',')
+            },
+            error: function(data) {
+                console.log('error', data);
+            },
+            success: function(data) {
+                var target = this;
+                var unsorted = [];
+                // console.log('result data', data.results[data.type], data, datavalues, target);
+                if (data.results[data.type]) {
+                    data.results[data.type].forEach(function(e, index) {
+                        // console.log('adding item', e, 'to', target);
+                        // console.log('original sortorder', datakeys);
+
+                        // make sure there is a key
+                        var key = (e.id)?e.id:index;
+                        // at what position is the key originally
+                        var datasort = datakeys.indexOf(key);
+                        // make sure there is a title
+                        var title = (e.title)?e.title:(e.last_name)?e.first_name + ' ' + e.last_name:'no title';
+                        // make sure there is a status
+                        var status = (e.status)?e.status:'draft';
+                        unsorted.push(
+                            $('<div>')
+                                .addClass('btn-group')
+                                .disableSelection()
+                                .data({
+                                    'for': key,
+                                    'id': key,
+                                    'status': status,
+                                    'title': title,
+                                    'sort': datasort
+                                }).attr({
+                                    'id': 'sortable-'+key,
+                                    'for': key,
+                                    'data-for': key,
+                                    'data-id': key,
+                                    'data-status': status,
+                                    'data-title': title,
+                                    'data-sort': datasort,
+                                    'title': title
+                                })
+                                .append(
+                                    $('<span>')
+                                        .text(title)
+                                        .addClass('btn btn-info btn-xs')
+                                )
+                                .append(
+                                    $('<span>')
+                                        .attr({'aria-label':"Close"})
+                                        .addClass('btn btn-warning btn-xs')
+                                        .html('<span aria-hidden="true">&times;</span>')
+                                        .on('click', function() {
+                                            var removable = $(this).parent();
+                                            var sorter = $(this).parent().parent();
+
+                                            console.log('remove element', $(removable), 'from', sorter, sorter.attr('id'));
+                                            // remove from visible list
+                                            $(removable).remove();
+                                            // remove from items
+                                            reCalculateIds(sorter);
+                                        })
+                                )
+                        )
                     });
                 }
-            };
-
-            // console.log('selectize initialization', options, $(this).data());
-            $selectors.push($(this).selectize(selectizeoptions));
-
-            console.log('selectize initialization for:', $(this).attr('name'), $(target).attr('name'));
+                // reorder elements
+                var orderedElements = unsorted;
+                orderedElements.sort(function(a, b) {
+                    // convert to integers from strings
+                    a = parseInt($(a).data("sort"));
+                    b = parseInt($(b).data("sort"));
+                    // compare
+                    if(a > b) {
+                        return 1;
+                    } else if(a < b) {
+                        return -1;
+                    } else {
+                        return 0;
+                    }
+                });
+                $(target).append(orderedElements);
+            }
         });
-
-        console.log('all selectors', $selectors);
+        console.log('selectasync initialization for:', $(this).attr('name'), $(target).attr('name'));
     });
 });
 
@@ -155,4 +186,15 @@ function isJson(str) {
         return false;
     }
     return true;
+}
+function reCalculateIds(item) {
+    var sortedIDs = [];
+    item.children('div.btn-group').each(
+        function(index, element) {
+            sortedIDs.push($(element).data('id'));
+        }
+    );
+    var target = item.data('target');
+    console.log('target', target);
+    $('#'+target).val(JSON.stringify(sortedIDs));
 }
