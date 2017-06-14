@@ -1,22 +1,77 @@
 /***** Your javascript can go below here ******/
 jQuery(document).ready(function($) {
+    SA_loadNewAsyncSelectors();
 
-    $('.ajaxselector').each(function() {
+    $('.bolt-field-repeater').on('click', '.add-button, .duplicate-button', function() {
+        SA_loadNewAsyncSelectors();
+        console.log('selectasync js refreshed for new repeaters');
+    });
+    console.log('selectasync js loaded');
+});
+
+/* helper to fetch the content type from the css classnames */
+function SA_findCT(keys) {
+    return keys.match('ct-');
+}
+/* helper to fetch the fieldnames from the css classnames */
+function SA_findFields(keys) {
+    return keys.match('fields-');
+}
+/* helper to fetch the select key field from the css classnames */
+function SA_findKey(keys) {
+    return keys.match('key-');
+}
+/* helper to check if a string is a json srting */
+function SA_isJson(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+/**
+ * Sets the value of the <input id="x"> to an array of id's
+ * where x = the data-target from the given item
+ *
+ * The array keys are generated from data-id from the children of
+ * the given item that have <div class="btn-group" data-id="n">
+ *
+ * @param item
+ */
+function SA_reCalculateIds(item) {
+    var sortedIDs = [];
+    item.children('div.btn-group').each(
+        function(index, element) {
+            sortedIDs.push($(element).data('id'));
+        }
+    );
+    var target = item.data('target');
+    console.log('target', target);
+    $('#'+target).val(JSON.stringify(sortedIDs));
+}
+/**
+ * SA_loadNewAsyncSelectors initializes all asyncselectors that don't have the class yet
+ *
+ * May be called again
+ *
+ */
+function SA_loadNewAsyncSelectors() {
+    $('.ajaxselector:not(.ispreloaded)').each(function() {
         //console.log('selectasync element:', $(this).attr('class'), $(this));
-
         var dataclasses = $(this).attr('class').split(/\s/);
         $(this).css({width: '100%'});
         $(this).data(
             'contenttype',
-            dataclasses.find(findCT).split('-').pop()
+            dataclasses.find(SA_findCT).split('-').pop()
         );
         $(this).data(
             'contentfields',
-            dataclasses.find(findFields).replace('fields-', '').split('--')
+            dataclasses.find(SA_findFields).replace('fields-', '').split('--')
         );
         $(this).data(
             'contentkey',
-            dataclasses.find(findKey).split('-').pop()
+            dataclasses.find(SA_findKey).split('-').pop()
         );
         divname = 'visible_' + $(this).attr('name');
         // make a placeholder with working stuff
@@ -26,7 +81,6 @@ jQuery(document).ready(function($) {
         divname = divname.replace('__', '_');
         $(this).after(
             $('<div>').attr({
-                'name': divname,
                 'id': divname
             })
                 .data({
@@ -39,24 +93,17 @@ jQuery(document).ready(function($) {
                 .sortable({
                     forceHelperSize: true,
                     forcePlaceholderSize: true,
-                    activate: function( event, ui ) {
-                        console.log('sorting activate');
-                    },
                     deactivate: function( event, ui ) {
-                        console.log('deactivate');
-                        reCalculateIds($(this));
-                    },
-                    change: function( event, ui ) {
-                        console.log('change');
-                    },
-                    create: function( event, ui ) {
-                        console.log('sortcreate');
+                        SA_reCalculateIds($(this));
                     }
                 })
         );
+        $(this).addClass('ispreloaded');
+
+        console.log('selectasync initialization for:', $(this).attr('name'));
     });
 
-    $('div.selectasync-placeholder').each(function() {
+    $('div.selectasync-placeholder:not(.ispreloaded)').each(function() {
 
         // console.log('selectasync element:', $(this).attr('class'), $(this));
         var target = $('#' + $(this).data('target'));
@@ -64,12 +111,12 @@ jQuery(document).ready(function($) {
         var datakeys = $(target).val();
         // console.log('selectasync element:', target, target.data(), datakeys);
         datavalues = [];
-        if(datakeys && isJson(datakeys)) {
+        if(datakeys && SA_isJson(datakeys)) {
             datakeys = JSON.parse(datakeys);
-        } else if(datakeys && !isJson(datakeys)) {
+        } else if(datakeys && !SA_isJson(datakeys)) {
             datakeys = datakeys.split(',');
         } else {
-            // console.log('selectasync for ' + $(this).attr('name') + ' is empty');
+            // console.log('empty keys for ' + $(this).attr('name'));
             datakeys = [];
             return null;
         }
@@ -115,34 +162,29 @@ jQuery(document).ready(function($) {
                                     'title': title,
                                     'sort': datasort
                                 }).attr({
-                                    'id': 'sortable-'+key,
-                                    'for': key,
-                                    'data-for': key,
-                                    'data-id': key,
-                                    'data-status': status,
-                                    'data-title': title,
-                                    'data-sort': datasort,
-                                    'title': title
-                                })
+                                'id': 'sortable-'+key,
+                                'for': key,
+                                'data-for': key,
+                                'data-id': key,
+                                'data-status': status,
+                                'data-title': title,
+                                'data-sort': datasort,
+                                'title': title
+                            })
                                 .append(
-                                    $('<span>')
-                                        .text(title)
-                                        .addClass('btn btn-info btn-xs')
+                                    $('<span>').text(title).addClass('btn btn-info btn-xs')
                                 )
                                 .append(
-                                    $('<span>')
-                                        .attr({'aria-label':"Close"})
-                                        .addClass('btn btn-warning btn-xs')
-                                        .html('<span aria-hidden="true">&times;</span>')
+                                    $('<span>').attr({'aria-label':"Close"}).addClass('btn btn-warning btn-xs').html('<span aria-hidden="true">&times;</span>')
                                         .on('click', function() {
                                             var removable = $(this).parent();
                                             var sorter = $(this).parent().parent();
 
-                                            console.log('remove element', $(removable), 'from', sorter, sorter.attr('id'));
+                                            // console.log('remove element', $(removable), 'from', sorter, sorter.attr('id'));
                                             // remove from visible list
                                             $(removable).remove();
                                             // remove from items
-                                            reCalculateIds(sorter);
+                                            SA_reCalculateIds(sorter);
                                         })
                                 )
                         )
@@ -164,37 +206,10 @@ jQuery(document).ready(function($) {
                     }
                 });
                 $(target).append(orderedElements);
+                $(target).addClass('.ispreloaded');
             }
         });
-        console.log('selectasync initialization for:', $(this).attr('name'), $(target).attr('name'));
-    });
-});
 
-function findCT(keys) {
-    return keys.match('ct-');
-}
-function findFields(keys) {
-    return keys.match('fields-');
-}
-function findKey(keys) {
-    return keys.match('key-');
-}
-function isJson(str) {
-    try {
-        JSON.parse(str);
-    } catch (e) {
-        return false;
-    }
-    return true;
-}
-function reCalculateIds(item) {
-    var sortedIDs = [];
-    item.children('div.btn-group').each(
-        function(index, element) {
-            sortedIDs.push($(element).data('id'));
-        }
-    );
-    var target = item.data('target');
-    console.log('target', target);
-    $('#'+target).val(JSON.stringify(sortedIDs));
+        // console.log('selectasync load data for:', $(this).attr('name'), $(target).attr('name'));
+    });
 }
