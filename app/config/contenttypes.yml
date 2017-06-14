@@ -1208,3 +1208,33 @@ resources:
 
 #################################
 #################################
+testpages:
+  name : Test Pages
+  singular_name: Test Page
+  slug: testpages
+  singular_slug: testpage
+  fields:
+    title:
+      type: text
+      label: "Title (required)"
+      group: "Content"
+    selected_pages:
+      type: text
+      label: "Select Pages"
+      variant: inline
+      class: 'ajaxselector ct-pages fields-id--title--status key-id'
+      data:
+        ct: pages
+        fields: [id, title, status]
+        key: id
+      group: "Content"
+    body:
+      type: html
+      label: "Block body"
+      height: 300px
+      group: "Content"
+    template:
+      type: templateselect
+      group: "Content"
+  icon_many: "fa:comments-o"
+  icon_one: "fa:comment-o"
