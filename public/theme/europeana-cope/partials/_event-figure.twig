@@ -1,6 +1,6 @@
 {# EVENT MAP #}
 
-<figure class="event-figure">
+<figure class="event-figure{% if record.author|length > 1 %} non-wide{% endif %}">
 
     <div class="add-calendar-wrapper">
         {% include 'partials/_add-to-calendar.twig'%}

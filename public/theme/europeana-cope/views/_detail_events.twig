@@ -8,24 +8,7 @@
 
                 {% include 'partials/_side-info.twig' %}
 
-                <div class="header-group">
-
-                    {% if record.contact_record %}
-                        {% setcontent author = 'persons' where { id : record.contact_record } returnsingle %}
-                        {% include 'views/_mini_persons.twig' with { item: author } %}
-                    {% endif %}
-
-                    <h1>{{ record.title }}</h1>
-
-                    <div class="introduction">
-                        {{ record.intro }}
-                    </div>
-
-                    <address>
-                        {{record.geolocation.formatted_address | replace({',': '<br/>'})|raw }}
-                    </address>
-
-                </div>
+                {% include 'partials/_header-group.twig' %}
 
                 {% include 'partials/_event-figure.twig' %}
 

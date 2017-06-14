@@ -658,6 +658,10 @@ footer {
     .contentpage figure,
     .contentpage .personal {
       margin: 2rem 4rem 4rem; } }
+  @media only screen and (min-width: 80em) {
+    .contentpage figure.non-wide,
+    .contentpage .personal.non-wide {
+      padding: 0 4rem; } }
 
 .contentpage .header-group,
 .contentpage .body,
@@ -2135,17 +2139,22 @@ section.catstream {
   .contentpage.detail-jobs .introduction, .contentpage.detail-projects .introduction {
     padding-right: 100px; } }
 
+@media only screen and (min-width: 47.9375em) {
+  .author-small-container {
+    position: absolute;
+    max-width: 100px;
+    left: -2.75rem;
+    top: 0; } }
+
+@media only screen and (min-width: 80em) {
+  .author-small-container {
+    left: -.5rem; } }
+
 .author-small {
   margin-bottom: 1rem; }
   @media only screen and (min-width: 47.9375em) {
     .author-small {
-      position: absolute;
-      max-width: 100px;
-      left: -2.75rem;
-      top: 0; } }
-  @media only screen and (min-width: 80em) {
-    .author-small {
-      left: -.5rem; } }
+      margin-bottom: 2rem; } }
   .author-small img {
     float: left;
     margin: 0 1rem 1rem 0; }

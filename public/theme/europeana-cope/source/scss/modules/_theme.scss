@@ -855,8 +855,7 @@ section.catstream {
     }
 }
 
-.author-small {
-    margin-bottom: 1rem;
+.author-small-container {
 
     @include respond-to(large-screens){
         position: absolute;
@@ -867,6 +866,14 @@ section.catstream {
 
     @include respond-to(xlarge-screens) {
         left: -.5rem;
+    }
+}
+
+.author-small {
+    margin-bottom: 1rem;
+
+    @include respond-to(large-screens) {
+        margin-bottom: 2rem;
     }
 
     img {
