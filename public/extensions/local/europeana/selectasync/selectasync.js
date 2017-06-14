@@ -120,6 +120,8 @@ function SA_loadNewAsyncSelectors() {
             datakeys = [];
             return null;
         }
+
+        console.log('loading data for selectasync element:', $(this).attr('id'), 'target:', $(this).data('target'));
         // preload options
         $.ajax({
             url: '/admin/selectasync/load/',
@@ -206,7 +208,7 @@ function SA_loadNewAsyncSelectors() {
                     }
                 });
                 $(target).append(orderedElements);
-                $(target).addClass('.ispreloaded');
+                $(placeholder).addClass('ispreloaded');
             }
         });
 
