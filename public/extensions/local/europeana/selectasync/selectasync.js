@@ -57,6 +57,8 @@ function SA_reCalculateIds(item) {
  *
  */
 function SA_loadNewAsyncSelectors() {
+    // iterate through all new ajaxselector fields
+    // and initialize the placeholder and select fields
     $('.ajaxselector:not(.ispreloaded)').each(function() {
         //console.log('selectasync element:', $(this).attr('class'), $(this));
         var dataclasses = $(this).attr('class').split(/\s/);
@@ -99,10 +101,31 @@ function SA_loadNewAsyncSelectors() {
                 })
         );
         $(this).addClass('ispreloaded');
+        selectname = divname.replace('visible_','selector_');
+        $(this).parent().append(
+            $('<div>')
+                .addClass('selectasync-select')
+                .append(
+                    $('<input type="text">')
+                        .attr({
+                            'id': selectname
+                        })
+                        .addClass('form-control')
+                        .data({
+                            'visible': divname,
+                            'target': $(this).attr('id')
+                        })
+                        .attr({
+                            'data-target': $(this).attr('id'),
+                            'placeholder': 'search in ' + $(this).data('contenttype') + ' for more items'
+                        })
+                )
+        );
 
         console.log('selectasync initialization for:', $(this).attr('name'));
     });
 
+    // prefill the placeholder field with an ajax call
     $('div.selectasync-placeholder:not(.ispreloaded)').each(function() {
 
         // console.log('selectasync element:', $(this).attr('class'), $(this));
@@ -120,7 +143,7 @@ function SA_loadNewAsyncSelectors() {
             return null;
         }
 
-        console.log('loading data for selectasync element:', $(this).attr('id'), 'target:', $(this).data('target'));
+        //console.log('loading data for selectasync element:', $(this).attr('id'), 'target:', $(this).data('target'));
         // preload options
         $.ajax({
             url: '/admin/selectasync/load/',
@@ -162,16 +185,17 @@ function SA_loadNewAsyncSelectors() {
                                     'status': status,
                                     'title': title,
                                     'sort': datasort
-                                }).attr({
-                                'id': 'sortable-'+key,
-                                'for': key,
-                                'data-for': key,
-                                'data-id': key,
-                                'data-status': status,
-                                'data-title': title,
-                                'data-sort': datasort,
-                                'title': title
-                            })
+                                })
+                                .attr({
+                                    'id': 'sortable-'+key,
+                                    'for': key,
+                                    'data-for': key,
+                                    'data-id': key,
+                                    'data-status': status,
+                                    'data-title': title,
+                                    'data-sort': datasort,
+                                    'title': title
+                                })
                                 .append(
                                     $('<span>').text(title).addClass('btn btn-info btn-xs')
                                 )
@@ -212,5 +236,95 @@ function SA_loadNewAsyncSelectors() {
         });
 
         // console.log('selectasync load data for:', $(this).attr('name'), $(target).attr('name'));
+    });
+
+    // set up the ajaxlookup for new items
+    $('div.selectasync-select:not(.ispreloaded) input').each(function() {
+        var target = $('#' + $(this).data('target'));
+        var selectholder = $(this);
+        console.log('ajaxselect element', $(selectholder).attr('id'));
+        console.log('ajaxselect target', $(target).attr('id'));
+        $('#' + $(selectholder).attr('id')).autocomplete({
+            source: function(request, response) {
+                //console.log('triggered', request, responsecallback);
+                $.ajax({
+                    url: '/admin/selectasync/type/' + target.data('contenttype'),
+                    type: 'GET',
+                    dataType: "json",
+                    context: $(selectholder),
+                    data: {
+                        search: request.term,
+                        type: target.data('contenttype'),
+                        fields: target.data('contentfields').join(',')
+                    },
+                    error: function(data) {
+                        console.log('error', data);
+                    },
+                    success: function(data) {
+                        //console.log('data', data.results[data.type], data);
+                        // console.log('response', response);
+                        var results = data.results[data.type];
+                        var ajaxcleaned = [];
+                        results.forEach(function(e, index) {
+                            ajaxcleaned.push({ 'value': e.id, 'label': e.title, 'full_item': e});
+                        });
+                        response( ajaxcleaned );
+                    }
+                });
+            },
+            minLength: 2,
+            delay: 200,
+            select: function( event, ui ) {
+                console.log('event:', event, 'ui:', ui);
+                var target = event.target;
+                console.log('target', $(target).data('visible'));
+                console.log( "Selected: " + ui.item.value + " aka " + ui.item.label, ui.item );
+                var key = ui.item.full_item.id;
+                var title = ui.item.full_item.title;
+                var status = ui.item.full_item.status;
+                var datasort = 'last';
+                /**/
+                var newElements = $('<div>')
+                    .addClass('btn-group')
+                    .disableSelection()
+                    .data({
+                        'for': key,
+                        'id': key,
+                        'status': status,
+                        'title': title,
+                        'sort': datasort
+                    })
+                    .attr({
+                        'id': 'sortable-'+key,
+                        'for': key,
+                        'data-for': key,
+                        'data-id': key,
+                        'data-status': status,
+                        'data-title': title,
+                        'data-sort': datasort,
+                        'title': title
+                    })
+                    .append(
+                        $('<span>').text(title).addClass('btn btn-info btn-xs')
+                    )
+                    .append(
+                        $('<span>').attr({'aria-label':"Close"}).addClass('btn btn-warning btn-xs').html('<span aria-hidden="true">&times;</span>')
+                            .on('click', function() {
+                                var removable = $(this).parent();
+                                var sorter = $(this).parent().parent();
+
+                                // console.log('remove element', $(removable), 'from', sorter, sorter.attr('id'));
+                                // remove from visible list
+                                $(removable).remove();
+                                // remove from items
+                                SA_reCalculateIds(sorter);
+                            })
+                    );
+                var sorter = '#'+ $(target).data('visible');
+                $(sorter).append(newElements);
+                SA_reCalculateIds($(sorter));
+                /**/
+            }
+        });
     });
 }
