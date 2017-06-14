@@ -411,7 +411,7 @@ input {
   -webkit-appearance: none;
   border-radius: 0; }
 
-.invisible-accessible, .sr-only, .contentheader .sortform label span {
+.invisible-accessible, .sr-only, .topbar .sortform label span {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
   -webkit-clip-path: inset(50%) !important;
@@ -556,6 +556,9 @@ body {
         height: 95px; } }
   body > main, body [role="main"] {
     position: relative; }
+
+.topbar {
+  position: relative; }
 
 .canvas {
   background-color: #fff; }
@@ -818,7 +821,8 @@ ul.teaser-list {
 **/
 .topbar {
   background-color: #69737C;
-  min-height: 53px; }
+  min-height: 53px;
+  z-index: 10; }
   @media only screen and (min-width: 24em) {
     .topbar {
       height: 53px; } }
@@ -2479,9 +2483,10 @@ section.catstream {
   .download-module li {
     position: relative;
     border-bottom: 1px solid #cccccc;
-    border-top: 1px solid #cccccc;
     padding: 1rem;
     font-size: 0.875rem; }
+    .download-module li:first-of-type {
+      border-top: 1px solid #cccccc; }
     @media only screen and (min-width: 24em) {
       .download-module li {
         font-size: 1rem; } }
@@ -2693,21 +2698,21 @@ table.listingtable {
 * SEARCH RESULTS SORTING
 ***********************************************************************
 **/
-.contentheader .sortform {
+.topbar .sortform {
   position: absolute;
   right: 2rem;
   top: 2px; }
-  .contentheader .sortform label {
+  .topbar .sortform label {
     padding: 10px 0 0 0;
     cursor: pointer;
     display: inline-block; }
-  .contentheader .sortform svg.icon {
+  .topbar .sortform svg.icon {
     width: 2rem;
     height: 2rem;
     vertical-align: middle; }
-  .contentheader .sortform .active svg.icon {
+  .topbar .sortform .active svg.icon {
     fill: #fff; }
-  .contentheader .sortform input[type='radio'] {
+  .topbar .sortform input[type='radio'] {
     display: none; }
 
 .button.backtotop {

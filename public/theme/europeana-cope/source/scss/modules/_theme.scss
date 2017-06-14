@@ -1329,9 +1329,12 @@ section.catstream {
     li {
         position: relative;
         border-bottom: 1px solid $line-gray;
-        border-top: 1px solid $line-gray;
         padding: 1rem;
         font-size: 0.875rem;
+
+        &:first-of-type {
+            border-top: 1px solid $line-gray;
+        }
 
         @include respond-to(medium-screens){
                 font-size: 1rem;
@@ -1717,7 +1720,7 @@ table.listingtable {
 ***********************************************************************
 **/
 
-.contentheader .sortform {
+.topbar .sortform {
 
     // .no-js & {
     //     padding: 1rem;

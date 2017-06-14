@@ -2,15 +2,18 @@
 
 <section class="download-module">
     <ul>
-        <li> <a href="#">
-            <svg class="icon icon-document">
-                <use xlink:href="#icon-document"></use>
+        {% for item in record.attachments %}
+        <li> <a href="{{ asset(item.filename, 'files') }}">
+            <svg class="icon icon-download">
+                <use xlink:href="#icon-download"></use>
             </svg>
-            This is a download
+            {{ item.title }}
             <div class="meta">
-                <span class="filesize">2.5 MB</span>
-                <span class="date-added">Added 12/25/16</span>
+                {% set fileinfo = imageinfo(item.filename) %}
+                <span class="filesize">{{ fileinfo.getSizeFormatted() }}</span>
+                <span class="date-added">Added {{ fileinfo.getTimestamp()|date()|localedatetime("%d/%m/%y") }}</span>
             </div>
-        </a>
+        </a></li>
+        {% endfor %}
     </ul>
 </section>

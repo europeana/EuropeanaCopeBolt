@@ -1,7 +1,6 @@
 <!-- Header bar -->
 {# the values in the 'app.config' object are taken directly from the file app/config/config.yml #}
-<section class="contentheader">
-    <div class="topbar">
+<div class="topbar" id="topbar">
 
     {# Show filtering on listings #}
     {% if record is not defined
@@ -25,8 +24,15 @@
 
     {% endif %}
 
+    {% if search is defined and search is not empty %}
+        {% include 'partials/_sort-listing.twig' %}
+    {% endif %}
 
-    </div>
+
+</div>
+
+<section class="contentheader">
+
 
     {# Show highlightbar on homepage and pages of type landingpage #}
     {% if (app.request.get('_route') is defined and app.request.get('_route') == 'homepage')
@@ -75,9 +81,7 @@
     {% endif %}
 
 
-{% if search is defined and search is not empty %}
-    {% include 'partials/_sort-listing.twig' %}
-{% endif %}
+
 
 
 

@@ -12,10 +12,12 @@
 .topbar {
     background-color: $quicklinks-bar;
     min-height: 53px;
+    z-index: 10; //for sticky
 
     @include respond-to (medium-screens) {
         height: 53px;
     }
+
 }
 
 nav.quicklinks {

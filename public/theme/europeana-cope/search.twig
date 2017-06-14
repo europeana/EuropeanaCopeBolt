@@ -31,7 +31,7 @@
             {% for record in records %}
 
                 <li>
-                    --{{ record.datepublish }}--
+                    {# --{{ record.datepublish }}-- #}
                 {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
                 <!-- loading search listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
                 {% include [template, 'views/_teasers.twig', 'views/_fallback.twig'] with {item:record} %}
