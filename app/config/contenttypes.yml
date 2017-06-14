@@ -404,7 +404,6 @@ pages:
         selected_pages:
           type: text
           label: "Select Pages"
-          variant: inline
           class: 'ajaxselector ct-pages fields-id--title--status key-id'
         filter_persons:
           type: select
@@ -417,7 +416,6 @@ pages:
         selected_persons:
           type: text
           label: "Select Persons"
-          variant: inline
           class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id'
         filter_posts:
           type: select
@@ -433,7 +431,6 @@ pages:
         selected_posts:
           type: text
           label: "Select Posts"
-          variant: inline
           class: 'ajaxselector ct-posts fields-id--title--status key-id'
         filter_data:
           type: select
@@ -450,7 +447,6 @@ pages:
         selected_data:
           type: text
           label: "Select data"
-          variant: inline
           class: 'ajaxselector ct-data fields-id--title--status key-id'
         filter_projects:
           type: select
@@ -465,7 +461,6 @@ pages:
         selected_projects:
           type: text
           label: "Select Projects"
-          variant: inline
           class: 'ajaxselector ct-projects fields-id--title--status key-id'
         selected_jobs:
           type: text
@@ -474,12 +469,10 @@ pages:
         selected_events:
           type: text
           label: "Select Events"
-          variant: inline
           class: 'ajaxselector ct-events fields-id--title--status key-id'
         selected_resources:
           type: text
           label: "Select Resource Blocks"
-          variant: inline
           class: 'ajaxselector ct-resources fields-id--title--status key-id'
         override_css_id:
           type: text
@@ -1221,7 +1214,6 @@ testpages:
     selected_pages:
       type: text
       label: "Select Pages"
-      variant: inline
       class: 'ajaxselector ct-pages fields-id--title--status key-id'
       data:
         ct: pages
