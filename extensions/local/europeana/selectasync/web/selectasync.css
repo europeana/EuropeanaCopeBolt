@@ -1,4 +1,21 @@
-fieldset.form-group div.ajaxselector {
-    padding: 0;
-    border: 0;
+.selectasync-placeholder {
+    width: 100%;
+    min-height: 5rem;
+    line-height: 2;
+    border: 2px solid #dedede;
+    background: #fff;
+    padding: 2px;
+    margin-bottom: 0.2rem;
+}
+.selectasync-search-label {
+    display: inline-block;
+    padding-right: 1rem;
+}
+.loadingspinner {
+    padding-right: 2rem;
+}
+input.ui-autocomplete-loading {
+    background-image: url('img/loading.gif');
+    background-position: center left;
+    background-repeat: no-repeat;
 }
