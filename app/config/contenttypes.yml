@@ -402,14 +402,9 @@ pages:
           placeholder: Enter a category slug here
           info: The selected category will be used to filter the records that are shown
         selected_pages:
-          type: select
-          default: ''
-          multiple: true
-          values: pages/id,title,status
-          keys: id
-          autocomplete: true
-          sortable: true
+          type: text
           label: "Select Pages"
+          class: 'ajaxselector ct-pages fields-id--title--status key-id'
         filter_persons:
           type: select
           required: false
@@ -419,14 +414,9 @@ pages:
           postfix: You can optionally choose one of the network participation levels to filter
           <<: *network_default_values
         selected_persons:
-          type: select
-          default: ''
-          multiple: true
-          values: persons/id,first_name,last_name,email,status
-          keys: id
-          autocomplete: true
-          sortable: true
+          type: text
           label: "Select Persons"
+          class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id'
         filter_posts:
           type: select
           required: false
@@ -439,14 +429,9 @@ pages:
             "Publication": "Publication"
             "News": "News"
         selected_posts:
-          type: select
-          default: ''
-          multiple: true
-          values: posts/id,title,status
-          keys: id
-          autocomplete: true
-          sortable: true
+          type: text
           label: "Select Posts"
+          class: 'ajaxselector ct-posts fields-id--title--status key-id'
         filter_data:
           type: select
           required: false
@@ -460,14 +445,9 @@ pages:
             "Documentation": "Documentation"
             "API": "API"
         selected_data:
-          type: select
-          default: ''
-          multiple: true
-          values: data/id,title,status
-          keys: id
-          autocomplete: true
-          sortable: true
+          type: text
           label: "Select data"
+          class: 'ajaxselector ct-data fields-id--title--status key-id'
         filter_projects:
           type: select
           required: false
@@ -479,41 +459,21 @@ pages:
             "WorkingGroup": "WorkingGroup"
             "Project": "Project"
         selected_projects:
-          type: select
-          default: ''
-          multiple: true
-          values: projects/id,title,status
-          keys: id
-          autocomplete: true
-          sortable: true
+          type: text
           label: "Select Projects"
+          class: 'ajaxselector ct-projects fields-id--title--status key-id'
         selected_jobs:
-          type: select
-          default: ''
-          multiple: true
-          values: jobs/id,title,status
-          keys: id
-          autocomplete: true
-          sortable: true
+          type: text
           label: "Select Jobs"
+          class: 'ajaxselector ct-jobs fields-id--title--status key-id'
         selected_events:
-          type: select
-          default: ''
-          multiple: true
-          values: events/id,title,status
-          keys: id
-          autocomplete: true
-          sortable: true
+          type: text
           label: "Select Events"
+          class: 'ajaxselector ct-events fields-id--title--status key-id'
         selected_resources:
-          type: select
-          default: ''
-          multiple: true
-          values: resources/id,title,status
-          keys: id
-          autocomplete: true
-          sortable: true
+          type: text
           label: "Select Resource Blocks"
+          class: 'ajaxselector ct-resources fields-id--title--status key-id'
         override_css_id:
           type: text
           label: DOM ID
@@ -1245,3 +1205,32 @@ resources:
 
 #################################
 #################################
+testpages:
+  name : Test Pages
+  singular_name: Test Page
+  slug: testpages
+  singular_slug: testpage
+  fields:
+    title:
+      type: text
+      label: "Title (required)"
+      group: "Content"
+    selected_pages:
+      type: text
+      label: "Select Pages"
+      class: 'ajaxselector ct-pages fields-id--title--status key-id'
+      data:
+        ct: pages
+        fields: [id, title, status]
+        key: id
+      group: "Content"
+    body:
+      type: html
+      label: "Block body"
+      height: 300px
+      group: "Content"
+    template:
+      type: templateselect
+      group: "Content"
+  icon_many: "fa:comments-o"
+  icon_one: "fa:comment-o"

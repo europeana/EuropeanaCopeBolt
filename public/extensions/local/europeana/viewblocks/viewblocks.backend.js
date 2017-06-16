@@ -173,7 +173,7 @@ jQuery.fn.extend(
             // dependent blocks for this switcher
             var parentblock = sourceselect.parents('.panel.viewblocks');
             var selectedamount = parentblock.find('input[name*="override_amount"]');
-            var selectedct = parentblock.find('select[name*="selected"]');
+            var selectedct = parentblock.find('.ajaxselector[name*="selected"], select[name*="selected"]');
             var amount =  selectedct.length;
             //console.log('selected content types', sourceselect, newvalue, parentblock, selectedct, amount);
 
@@ -265,6 +265,7 @@ jQuery(document).ready(function($) {
         );
     });
 
+    console.log('viewblocks js loaded');
     // add a collapsing block for the highlight bar in the back-end
     if( $('#pagetype').is('*') ) {
         var subs = $('<div>').attr({
@@ -290,6 +291,5 @@ jQuery(document).ready(function($) {
         });
     }
 
-
-    console.log('viewblocks js loaded');
+    console.log('highlightswitcher js loaded');
 });
