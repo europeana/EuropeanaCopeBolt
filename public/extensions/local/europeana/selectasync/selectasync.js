@@ -161,7 +161,7 @@ function SA_loadNewAsyncSelectors() {
             beforeSend: function() {
                 $(placeholder).append(
                     $('<div>')
-                        .addClass('loadingspinner')
+                        .addClass('loadingspinner btn btn-xs btn-warning')
                         .text('Loading..')
                 );
                 // console.log('beforeSend');

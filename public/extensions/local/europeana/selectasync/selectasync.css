@@ -11,3 +11,11 @@
     display: inline-block;
     padding-right: 1rem;
 }
+.loadingspinner {
+    padding-right: 2rem;
+}
+input.ui-autocomplete-loading {
+    background-image: url('img/loading.gif');
+    background-position: center left;
+    background-repeat: no-repeat;
+}
