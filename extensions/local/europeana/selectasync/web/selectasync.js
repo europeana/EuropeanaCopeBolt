@@ -196,6 +196,14 @@ function SA_loadNewAsyncSelectors() {
                         var title = (e.title)?e.title:(e.last_name)?e.first_name + ' ' + e.last_name:'no title';
                         // make sure there is a status
                         var status = (e.status)?e.status:'draft';
+                        var statusclass = 'btn-info';
+                        if(status != 'published') {
+                            statusclass = 'btn-default';
+                            title = title + ' (' + status + ')';
+                        }
+                        if (status == 'draft') {
+                            statusclass = 'btn-error';
+                        }
                         unsorted.push(
                             $('<div>')
                                 .addClass('btn-group')
@@ -218,7 +226,7 @@ function SA_loadNewAsyncSelectors() {
                                     'title': title
                                 })
                                 .append(
-                                    $('<span>').text(title).addClass('btn btn-info btn-xs')
+                                    $('<span>').text(title).addClass('btn btn-xs ' + statusclass)
                                 )
                                 .append(
                                     $('<span>').attr({'aria-label':"Close"}).addClass('btn btn-warning btn-xs').html('<span aria-hidden="true">&times;</span>')
@@ -307,7 +315,16 @@ function SA_loadNewAsyncSelectors() {
                 // console.log( "Selected: " + ui.item.value + " aka " + ui.item.label, ui.item );
                 var key = ui.item.full_item.id;
                 var title = ui.item.full_item.title;
+                // make sure there is a status
                 var status = ui.item.full_item.status;
+                var statusclass = 'btn-info';
+                if(status != 'published') {
+                    statusclass = 'btn-default';
+                    title = title + ' (' + status + ')';
+                }
+                if (status == 'draft') {
+                    statusclass = 'btn-error';
+                }
                 var datasort = 'last';
                 /**/
                 var newElements = $('<div>')
@@ -331,7 +348,7 @@ function SA_loadNewAsyncSelectors() {
                         'title': title
                     })
                     .append(
-                        $('<span>').text(title).addClass('btn btn-info btn-xs')
+                        $('<span>').text(title).addClass('btn btn-xs ' + statusclass)
                     )
                     .append(
                         $('<span>').attr({'aria-label':"Close"}).addClass('btn btn-warning btn-xs').html('<span aria-hidden="true">&times;</span>')
