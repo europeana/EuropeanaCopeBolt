@@ -47,7 +47,7 @@ function SA_reCalculateIds(item) {
         }
     );
     var target = item.data('target');
-    console.log('target', target);
+    // console.log('target', target);
     $('#'+target).val(JSON.stringify(sortedIDs));
 }
 /**
@@ -100,28 +100,31 @@ function SA_loadNewAsyncSelectors() {
                     }
                 })
         );
-        $(this).addClass('ispreloaded');
+        $(this).parent().addClass('selectasync-was-here form-inline well well-sm');
         selectname = divname.replace('visible_','selector_');
         $(this).parent().append(
             $('<div>')
-                .addClass('selectasync-select')
+                .addClass('selectasync-select pull-right')
+                .append(
+                    $('<span>')
+                        .addClass('selectasync-search-label')
+                        .text('Search in ' + $(this).data('contenttype') + ' and click on the title to add more items:')
+                )
                 .append(
                     $('<input type="text">')
-                        .attr({
-                            'id': selectname
-                        })
                         .addClass('form-control')
                         .data({
                             'visible': divname,
                             'target': $(this).attr('id')
                         })
                         .attr({
+                            'id': selectname,
                             'data-target': $(this).attr('id'),
-                            'placeholder': 'search in ' + $(this).data('contenttype') + ' for more items'
+                            'placeholder': 'type to search in ' + $(this).data('contenttype')
                         })
                 )
         );
-
+        $(this).addClass('ispreloaded').hide();
         console.log('selectasync initialization for:', $(this).attr('name'));
     });
 
@@ -155,8 +158,26 @@ function SA_loadNewAsyncSelectors() {
                 type: target.data('contenttype'),
                 fields: target.data('contentfields').join(',')
             },
+            beforeSend: function() {
+                $(placeholder).append(
+                    $('<div>')
+                        .addClass('loadingspinner')
+                        .text('Loading..')
+                );
+                // console.log('beforeSend');
+            },
+            complete: function() {
+                var spinners = $(placeholder).find('.loadingspinner');
+                $(spinners).detach();
+                // console.log('complete');
+            },
             error: function(data) {
                 console.log('error', data);
+                $(placeholder).after(
+                    $('<div>')
+                        .addClass('error')
+                        .text('There was an error preloading, please try refreshing this page..')
+                );
             },
             success: function(data) {
                 var target = this;
@@ -242,8 +263,8 @@ function SA_loadNewAsyncSelectors() {
     $('div.selectasync-select:not(.ispreloaded) input').each(function() {
         var target = $('#' + $(this).data('target'));
         var selectholder = $(this);
-        console.log('ajaxselect element', $(selectholder).attr('id'));
-        console.log('ajaxselect target', $(target).attr('id'));
+        // console.log('ajaxselect element', $(selectholder).attr('id'));
+        // console.log('ajaxselect target', $(target).attr('id'));
         $('#' + $(selectholder).attr('id')).autocomplete({
             source: function(request, response) {
                 //console.log('triggered', request, responsecallback);
@@ -259,6 +280,11 @@ function SA_loadNewAsyncSelectors() {
                     },
                     error: function(data) {
                         console.log('error', data);
+                        $(selectholder).after(
+                            $('<div>')
+                                .addClass('error')
+                                .text('There was an error loading data, please try refreshing this page..')
+                        );
                     },
                     success: function(data) {
                         //console.log('data', data.results[data.type], data);
@@ -275,10 +301,10 @@ function SA_loadNewAsyncSelectors() {
             minLength: 2,
             delay: 200,
             select: function( event, ui ) {
-                console.log('event:', event, 'ui:', ui);
+                // console.log('event:', event, 'ui:', ui);
                 var target = event.target;
-                console.log('target', $(target).data('visible'));
-                console.log( "Selected: " + ui.item.value + " aka " + ui.item.label, ui.item );
+                // console.log('target', $(target).data('visible'));
+                // console.log( "Selected: " + ui.item.value + " aka " + ui.item.label, ui.item );
                 var key = ui.item.full_item.id;
                 var title = ui.item.full_item.title;
                 var status = ui.item.full_item.status;
@@ -323,7 +349,11 @@ function SA_loadNewAsyncSelectors() {
                 var sorter = '#'+ $(target).data('visible');
                 $(sorter).append(newElements);
                 SA_reCalculateIds($(sorter));
-                /**/
+            },
+            close: function( event, ui ) {
+                var target = event.target;
+                // hide the selected value again after selector is closed
+                $(target).val('');
             }
         });
     });

@@ -1,7 +1,13 @@
 .selectasync-placeholder {
     width: 100%;
-    min-height: 5em;
+    min-height: 5rem;
     line-height: 2;
     border: 2px solid #dedede;
+    background: #fff;
     padding: 2px;
+    margin-bottom: 0.2rem;
+}
+.selectasync-search-label {
+    display: inline-block;
+    padding-right: 1rem;
 }
