@@ -14,8 +14,24 @@
 .loadingspinner {
     padding-right: 2rem;
 }
-input.ui-autocomplete-loading {
+.selectasync-select {
+    /* preload spinner */
     background-image: url('img/loading.gif');
-    background-position: center left;
+    background-position: -200px 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.selectasync-select input.form-control {
+    width: 20rem;
+}
+.selectasync-select input.ui-autocomplete-input {
+    background-image: url('img/keyboard.png');
+    background-position: 17.5rem 0.5rem;
+    background-repeat: no-repeat;
+    width: 20rem;
+}
+.selectasync-select input.ui-autocomplete-loading {
+    background-image: url('img/loading.gif');
+    background-position: 17.5rem 0.5rem;
     background-repeat: no-repeat;
 }
