@@ -321,7 +321,7 @@ pages:
           type: select
           default: teasers
           info: Use the template to select how the module will look
-          postfix: Use the template to select how the module will look
+          postfix: 'Use the template to select how the module will look <a class="cheatsheet btn btn-info btn-xs pull-right"><i class="fa fa-comment-o" aria-hidden="true"></i> view the template cheatsheet</a>'
           values:
             title:           "Title with a link (_title.twig)"
             teaser:          "Teaser view (_teaser.twig)"

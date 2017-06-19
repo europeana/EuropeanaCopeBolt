@@ -7,6 +7,50 @@ jQuery(document).ready(function($) {
         console.log('selectasync js refreshed for new repeaters');
     });
     console.log('selectasync js loaded');
+
+    // prepare modal dialog for cheatsheet
+    var SA_cheatsheet = $('<div>')
+    .addClass("modal fade bd-example-modal-lg")
+    .attr({
+        'id': "SA_cheatsheet",
+        'tabindex': "-1",
+        'role': "dialog",
+        'aria-labelledby': "SA_cheatsheet",
+        'aria-hidden': "true"
+    })
+    .append(
+        $('<div>')
+        .addClass("modal-dialog modal-lg")
+        .attr({
+            'role': 'document'
+        })
+        .append(
+            $('<div>')
+            .addClass("modal-content")
+            .append(
+                $('<div>')
+                .addClass('modal-header')
+                .html('<b class="modal-title"><i class="fa fa-comment-o" aria-hidden="true"></i> Template cheatsheet</b><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>')
+            )
+            .append(
+                $('<div>')
+                .addClass('modal-body')
+                .html('<div class="container-fluid"><div class="row"><div class="col-md-4 col-sm-4"><span>Test</span></div><div class="col-md-8 col-sm-8"><p>This is the cheatsheet.</p></div></div></div>')
+            )
+            .append(
+                $('<div>')
+                .addClass('modal-footer')
+                .html('<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>')
+            )
+        )
+    );
+    $('body').append(SA_cheatsheet);
+
+    // Fill modal with content from link href
+    $("#SA_cheatsheet").find(".modal-body")
+        .load('/extensions/local/europeana/selectasync/cheatsheet.html #container');
+    console.log('cheatsheet js loaded');
+
 });
 
 /* helper to fetch the content type from the css classnames */
@@ -57,6 +101,14 @@ function SA_reCalculateIds(item) {
  *
  */
 function SA_loadNewAsyncSelectors() {
+    // add cheatsheetpopup
+    $('a.cheatsheet:not(.haspopup)').each(function() {
+        $(this).on('click', function() {
+            $('#SA_cheatsheet').modal('show');
+            console.log('showing cheatsheet');
+        });
+        $(this).addClass('haspopup');
+    });
     // iterate through all new ajaxselector fields
     // and initialize the placeholder and select fields
     $('.ajaxselector:not(.ispreloaded)').each(function() {
@@ -183,8 +235,10 @@ function SA_loadNewAsyncSelectors() {
                 var target = this;
                 var unsorted = [];
                 // console.log('result data', data.results[data.type], data, datavalues, target);
-                if (data.results[data.type]) {
-                    data.results[data.type].forEach(function(e, index) {
+                if (data.status !== 'error' && data.results[data.type]) {
+
+                    var results = data.results[data.type];
+                    results.forEach(function(e, index) {
                         // console.log('adding item', e, 'to', target);
                         // console.log('original sortorder', datakeys);
 
@@ -243,6 +297,8 @@ function SA_loadNewAsyncSelectors() {
                                 )
                         )
                     });
+                } else {
+                    console.log('no data', data);
                 }
                 // reorder elements
                 var orderedElements = unsorted;
@@ -297,12 +353,17 @@ function SA_loadNewAsyncSelectors() {
                     success: function(data) {
                         //console.log('data', data.results[data.type], data);
                         // console.log('response', response);
-                        var results = data.results[data.type];
-                        var ajaxcleaned = [];
-                        results.forEach(function(e, index) {
-                            ajaxcleaned.push({ 'value': e.id, 'label': e.title, 'full_item': e});
-                        });
-                        response( ajaxcleaned );
+                        if (data.status !== 'error' && data.results[data.type]) {
+                            var results = data.results[data.type];
+                            var ajaxcleaned = [];
+                            results.forEach(function(e, index) {
+                                ajaxcleaned.push({'value': e.id, 'label': e.title, 'full_item': e});
+                            });
+                            response(ajaxcleaned);
+                        } else {
+                            console.log('no data', data);
+                            response([]);
+                        }
                     }
                 });
             },
@@ -318,11 +379,11 @@ function SA_loadNewAsyncSelectors() {
                 // make sure there is a status
                 var status = ui.item.full_item.status;
                 var statusclass = 'btn-info';
-                if(status != 'published') {
+                if(status !== 'published') {
                     statusclass = 'btn-default';
                     title = title + ' (' + status + ')';
                 }
-                if (status == 'draft') {
+                if (status === 'draft') {
                     statusclass = 'btn-error';
                 }
                 var datasort = 'last';
