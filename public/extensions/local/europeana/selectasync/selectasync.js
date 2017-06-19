@@ -183,8 +183,10 @@ function SA_loadNewAsyncSelectors() {
                 var target = this;
                 var unsorted = [];
                 // console.log('result data', data.results[data.type], data, datavalues, target);
-                if (data.results[data.type]) {
-                    data.results[data.type].forEach(function(e, index) {
+                if (data.status !== 'error' && data.results[data.type]) {
+
+                    var results = data.results[data.type];
+                    results.forEach(function(e, index) {
                         // console.log('adding item', e, 'to', target);
                         // console.log('original sortorder', datakeys);
 
@@ -243,6 +245,8 @@ function SA_loadNewAsyncSelectors() {
                                 )
                         )
                     });
+                } else {
+                    console.log('no data', data);
                 }
                 // reorder elements
                 var orderedElements = unsorted;
@@ -297,12 +301,17 @@ function SA_loadNewAsyncSelectors() {
                     success: function(data) {
                         //console.log('data', data.results[data.type], data);
                         // console.log('response', response);
-                        var results = data.results[data.type];
-                        var ajaxcleaned = [];
-                        results.forEach(function(e, index) {
-                            ajaxcleaned.push({ 'value': e.id, 'label': e.title, 'full_item': e});
-                        });
-                        response( ajaxcleaned );
+                        if (data.status !== 'error' && data.results[data.type]) {
+                            var results = data.results[data.type];
+                            var ajaxcleaned = [];
+                            results.forEach(function(e, index) {
+                                ajaxcleaned.push({'value': e.id, 'label': e.title, 'full_item': e});
+                            });
+                            response(ajaxcleaned);
+                        } else {
+                            console.log('no data', data);
+                            response([]);
+                        }
                     }
                 });
             },
@@ -318,11 +327,11 @@ function SA_loadNewAsyncSelectors() {
                 // make sure there is a status
                 var status = ui.item.full_item.status;
                 var statusclass = 'btn-info';
-                if(status != 'published') {
+                if(status !== 'published') {
                     statusclass = 'btn-default';
                     title = title + ' (' + status + ')';
                 }
-                if (status == 'draft') {
+                if (status === 'draft') {
                     statusclass = 'btn-error';
                 }
                 var datasort = 'last';
