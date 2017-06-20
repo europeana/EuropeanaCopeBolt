@@ -1,0 +1,11 @@
+<section class="group">
+{% for record in records %}
+    {% if record.id is defined %}
+
+        {% include "views/_breaker.twig" with { layoutclass : 'half' } %}
+
+    {% endif %}
+{% endfor %}
+</section>
+
+
