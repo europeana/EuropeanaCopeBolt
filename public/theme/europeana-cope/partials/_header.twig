@@ -38,7 +38,7 @@
     <p class="payoff">{{ app.config.get('general/payoff') }}</p>
 
     <form method="get" action="{{ path('search') }}" class="searchform" enctype="text/plain">
-        <input type="search" value="{% if search is defined %}{{ search|escape }}{% endif %}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="search"><button type="submit" class="button">
+        <input type="search" value="{% if q is defined %}{{ q|escape }}{% endif %}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="q"><button type="submit" class="button">
             <svg class="icon icon-calendar">
                 <use xlink:href="#icon-search"></use>
             </svg>

@@ -2,7 +2,7 @@
 {# Fallback for filtering is a neat HTML form #}
 <form method="GET" action="/search" class="sortform" id="sortbar">
 <legend class="sr-only">Sorting options</legend>
-    <input type='hidden' name="search" id="search" value="{{app.request.get('search')}}">
+    <input type='hidden' name="q" id="q" value="{{ search }}">
 
     <input type='radio' name="sort" value="reldesc" id="sortreldesc" {% if (app.request.get('sort')=='reldesc') or (app.request.get('sort') is empty) %}checked{% endif %}>
         <label for="sortreldesc" {% if (app.request.get('sort')=='reldesc') or (app.request.get('sort') is empty) %}class="active"{% endif %}>

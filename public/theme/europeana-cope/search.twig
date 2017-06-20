@@ -18,20 +18,23 @@
 
             <ul class="teaser-list">
 
-{#                 {{ app.request.get('search') }}
-            {% setcontent results = '(*)/search'  %}
- #}
+            {# custom search so we can change the order over multiple paginated pages #}
+            {% setcontent records = '(pages,posts,data,projects,events,jobs,persons)/search' where { filter: search } allowpaging order '-datepublish' %}
 
+            {# apply sorting #}
             {% if app.request.get('sort') == 'datedesc' %}
-                {% set records = records|order('-datepublish')%}
-            {% else %} {# reldesc = default #}
-                {% set records = records %}
+                {% set records = records|order('-datepublish') %}
             {% endif %}
 
+            {# apply pagination #}
+            {% set offset = (app.request.get('page_search')|default(1) - 1) * 10 %}
+            {% set records = records|slice(offset, 10) %}
+
+
+            {# display the results #}
             {% for record in records %}
 
                 <li>
-                    {# --{{ record.datepublish }}-- #}
                 {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
                 <!-- loading search listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
                 {% include [template, 'views/_teasers.twig', 'views/_fallback.twig'] with {item:record} %}

@@ -3,7 +3,7 @@
 <div class="topbar" id="topbar">
 
     {# Show filtering on listings #}
-    {% if record is not defined
+    {% if record is not defined and search is not defined
        or ( record is defined
             and record.pagetype is defined
             and record.pagetype is not empty
