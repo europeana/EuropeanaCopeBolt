@@ -24,6 +24,8 @@
             {# apply sorting #}
             {% if app.request.get('sort') == 'datedesc' %}
                 {% set records = records|order('-datepublish') %}
+            {% elseif app.request.get('sort') == 'dateasc' %}
+                {% set records = records|order('datepublish') %}
             {% endif %}
 
             {# apply pagination #}
