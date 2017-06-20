@@ -323,17 +323,19 @@ pages:
           info: Use the template to select how the module will look
           postfix: 'Use the template to select how the module will look <a class="cheatsheet btn btn-info btn-xs pull-right"><i class="fa fa-comment-o" aria-hidden="true"></i> view the template cheatsheet</a>'
           values:
+            banner:          "One wide banner view (_banner.twig)"
+            #bannerdouble:    "Two banners view (_bannerdouble.twig)"
+            bannertriple:     "Three banners view (_bannertriple.twig)"
             title:           "Title with a link (_title.twig)"
             teaser:          "Teaser view (_teaser.twig)"
             listing:         "Listing of records (_listing.twig)"
             #listingexpander:  "Expander block with records - vertical accordeon (_listingexpander.twig)"
             listingnews:      "Two news postings and a link to more (_listingnews.twig)"
-            listingtable:   "Person listing as a table (_listingtable.twig)" #Tableversie
+            listingtable:     "Person listing as a table (_listingtable.twig)" #Tableversie
             listingsemistatic: "Three static intro items (_listingsemistatic.twig)"
             #listingstreamers: "Three column category streamers (_listingstreamers.twig)"
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
             detail:          "Full details for single items (_detail.twig)"
-            banner:          "Banner view (_banner.twig)"
             #breakers:         "Section breakers, call to action (_breakers.twig)"
             calltoactionform: "Call to action form main page (_calltoactionform.twig)"
             calltoactionlink: "Call to action button main page (_calltoactionlinks.twig)"
