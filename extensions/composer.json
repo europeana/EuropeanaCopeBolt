@@ -1,7 +1,11 @@
 {
     "autoload": {
         "psr-4": {
-            "Bolt\\Composer\\EventListener\\": "../vendor/bolt/bolt/src/Composer/EventListener"
+            "Bolt\\Composer\\EventListener\\": "../vendor/bolt/bolt/src/Composer/EventListener",
+            "Bolt\\Extension\\Europeana\\ViewBlocks\\": "bundles/europeana/viewblocks/src",
+            "Bolt\\Extension\\Europeana\\ZohoImport\\": "bundles/europeana/zohoimport/src",
+            "Bolt\\Extension\\Europeana\\SelectAsync\\": "bundles/europeana/selectasync/src"
+
         }
     },
     "config": {
