@@ -384,7 +384,7 @@ pages:
             projects: Projects, Taskforces and Workinggroups
             jobs: Jobs
             events: Events
-            resources: Resource blocks
+            resources: Banners, Calls to action and Blocks
         override_amount:
           type: integer
           label: Amount
@@ -475,7 +475,7 @@ pages:
           class: 'ajaxselector ct-events fields-id--title--status key-id'
         selected_resources:
           type: text
-          label: "Select Resource Blocks"
+          label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id'
         override_css_id:
           type: text
@@ -1166,8 +1166,8 @@ persons:
 #
 #################################
 resources:
-  name : Resource blocks
-  singular_name: Resource block
+  name : Banners, Calls to action, Blocks
+  singular_name: Block
   slug: resources
   singular_slug: resource
   fields:
@@ -1204,7 +1204,7 @@ resources:
   sort: weight
   icon_many: "fa:tasks"
   icon_one: "fa:tasks"
-  show_in_menu: System
+  # show_in_menu: System
 
 #################################
 #################################
