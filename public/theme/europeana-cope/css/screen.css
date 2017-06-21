@@ -1846,27 +1846,28 @@ a.banner {
 /*
 * WIDGET CALL TO ACTION - READ MORE (hoort bij bovestaande NEWS)
 **/
-.calltoaction-readmore {
+div.calltoaction-readmore {
   padding: .75rem;
   display: flex;
   justify-content: center;
   align-items: center; }
   @media only screen and (min-width: 47.9375em) {
-    .calltoaction-readmore {
+    div.calltoaction-readmore {
       height: 55px; } }
-  .calltoaction-readmore .header-group {
+  div.calltoaction-readmore .header-group {
     text-align: center;
     width: 95%;
-    padding: 0; }
+    padding: 0;
+    margin-top: 0; }
     @media only screen and (min-width: 24em) {
-      .calltoaction-readmore .header-group {
+      div.calltoaction-readmore .header-group {
         width: 80%; } }
-  .calltoaction-readmore p {
+  div.calltoaction-readmore p {
     display: inline-block;
     color: #fff;
     font-size: 0.875rem;
     margin: 0.5rem 1rem 0.5rem 1rem; }
-  .calltoaction-readmore .button-link {
+  div.calltoaction-readmore .button-link {
     display: inline-block;
     margin-top: 0; }
 
@@ -2311,9 +2312,11 @@ div.calltoaction {
   .info-block .info-author {
     display: block;
     border-top: 1px solid #e7e7e7;
-    padding: 0.6em 0 0;
+    padding: 0.6em 0;
     font-size: 0.75rem;
     line-height: 1.4; }
+    .info-block .info-author:last-of-type {
+      padding-bottom: 0; }
     @media only screen and (min-width: 47.9375em) {
       .info-block .info-author {
         font-size: 0.8125rem; } }
@@ -2669,7 +2672,7 @@ table.listingtable {
   margin-top: 1rem; }
   table.listingtable thead {
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
-    border: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
     display: none; }
     @media only screen and (min-width: 47.9375em) {
       table.listingtable thead {
