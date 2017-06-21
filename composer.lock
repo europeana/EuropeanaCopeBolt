@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "77ff0effff2ce0afa33e227435c17898",
+    "content-hash": "37463af56101d8f65a2d09e94899444c",
     "packages": [
         {
             "name": "bolt/bolt",
@@ -173,6 +173,55 @@
             ],
             "description": "Object Orientated implementations of various collections",
             "time": "2017-05-27T00:54:47+00:00"
+        },
+        {
+            "name": "bolt/configuration-notices",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/configuration-notices.git",
+                "reference": "61cb63a243ca8f1556ac18a46338154b34327dda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/configuration-notices/zipball/61cb63a243ca8f1556ac18a46338154b34327dda",
+                "reference": "61cb63a243ca8f1556ac18a46338154b34327dda",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.3"
+            },
+            "type": "project",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\ConfigurationNotices\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gawain Lynch",
+                    "email": "gawain.lynch@gmail.com"
+                }
+            ],
+            "description": "Helper library to provide some helpful functionality to people, mostly by warning the user for common pitfalls and oversights in the basic configuration.",
+            "homepage": "http://bolt.cm",
+            "keywords": [
+                "bolt",
+                "configuration",
+                "extension",
+                "helper",
+                "notices"
+            ],
+            "time": "2017-05-25T15:06:09+00:00"
         },
         {
             "name": "bolt/filesystem",
