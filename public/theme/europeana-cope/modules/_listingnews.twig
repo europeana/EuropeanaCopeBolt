@@ -1,0 +1,89 @@
+{% spaceless %}
+{#
+Available variables
+    'module':    the full module object
+    'title':     title of the module
+    'subtitle':  subtitle of the module
+    'body':      body of the module
+    'records':   array of (selected) records that belong to the module
+    'allow_pager': boolean to check is the pager is available
+#}
+{% set override_css_id = module.get('override_css_id') %}
+{% set override_css_class = module.get('override_css_class') %}
+{% set template = module.get('templates') %}
+{% endspaceless %}
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module group {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+    <div class="inner-wrap">
+
+    {% if title is not empty %}
+        <h2>{{ title }}</h2>
+    {% endif %}
+
+    {% if subtitle|default('') is not empty %}
+        <p>{{ subtitle }}</p>
+    {% endif %}
+
+    {% if body is not empty %}
+        {{ body|raw }}
+    {% endif %}
+
+
+    {% if records is iterable and records is not empty %}
+
+        <div class="items-container">
+        {% for record in records %}
+            {% if record.id is defined %}
+                {% set templatefile =  'views/_' ~ template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
+                {% set defaulttemplatefile =  'views/_' ~ template ~ '.twig' %}
+                <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
+                {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
+            {% else %}
+                <!-- selected record is unpublished or otherwise unavailable -->
+            {% endif %}
+        {% endfor %}
+        </div>
+
+        {% set pagername = records|first.contenttype.slug|default('') %}
+        {% if pagername is not empty and allow_pager == true %}
+            {{ pager( (pagername) ) }}
+        {% endif %}
+    {% else %}
+        {% if record is not empty and record.editlink() %}
+            <p class="warning">No published records were found, please <a href="{{ record.editlink() }}#modules">change the module settings</a>.</p>
+        {% else %}
+            <!-- no records were found for this module -->
+        {% endif %}
+    {% endif %}
+
+    </div>
+
+
+    {# onderstaande Call to action hoort onder deze Two Column teasers #}
+
+    {% if records|first.posttype == 'Blog' %}
+        {% set type = 'blogs' %}
+    {% elseif records|first.posttype == 'Pressrelease' %}
+        {% set type = 'pressreleases' %}
+    {% elseif records|first.posttype == 'Publication' %}
+        {% set type = 'publications' %}
+    {% elseif records|first.posttype == 'News' %}
+        {% set type = 'news' %}
+    {% else %}
+         {% set type = 'posts' %}
+    {% endif %}
+
+    {% if records|first.image is not empty %}
+       <div class="calltoaction-readmore colored-image" style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})">
+    {% else %}
+        <div class="calltoaction-readmore colored-image" style="background-image: url('/theme/europeana-cope/images/default.png')">
+    {% endif %}
+
+        <div class="header-group">
+            <p>Find out what else has happened</p>
+            <a class="button-link" href="/posts/news">
+                See more {{ type }}
+            </a>
+        </div>
+    </div>
+
+</section>
