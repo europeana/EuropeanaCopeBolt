@@ -206,8 +206,8 @@ thumbnails:
     default_image: [ 1000, 750 ]
     quality: 80
     cropping: crop
-    notfound_image: theme://europeana-cope/images/notfound.png
-    error_image: theme://europeana-cope/images/notfound.png
+    notfound_image: theme://images/notfound.png
+    error_image: theme://images/notfound.png
     save_files: false
     allow_upscale: false
     exif_orientation: true
