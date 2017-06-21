@@ -20,7 +20,7 @@ class ZohoImportExtension extends SimpleExtension
   protected function registerBackendControllers()
   {
     return [
-      '/extend/zohoimport' => new Controller\Backend(),
+      '/extensions/zohoimport' => new Controller\Backend(),
     ];
   }
 
