@@ -1,0 +1,28 @@
+{# Call to action line - form #}
+{% spaceless %}
+{#
+Available variables
+    'module':    the full module object
+    'title':     title of the module
+    'subtitle':  subtitle of the module
+    'body':      body of the module
+    'records':   array of (selected) records that belong to the module
+    'allow_pager': boolean to check is the pager is available
+#}
+{% set override_css_id = module.get('override_css_id') %}
+{% set override_css_class = module.get('override_css_class') %}
+{% endspaceless %}
+
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module group {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+
+{% if records is iterable and records is not empty %}
+
+    {% for record in records %}
+
+        {% include 'views/_calltoactionform.twig' %}
+
+    {% endfor %}
+
+{% endif %}
+
+</section>

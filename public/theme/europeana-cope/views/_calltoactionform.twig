@@ -1,14 +1,25 @@
 {# Section breakers - Call to action FULL #}
-<div class="calltoaction">
-    <div class="colored-image" style="background-image: url({{ image(record.image, 1600, 350)|default('https://unsplash.it/1600/350') }})"></div>
-    <div class="header-group">
+ <div class="calltoactionform">
+
+        {% if record.image is not empty %}
+        <div class="colored-image" style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})"></div>
+        {% else %}
+            <div class="colored-image"
+                 style="background-image: url('/theme/europeana-cope/images/default.png')"></div>
+        {% endif %}
+
         <h3 class="widget">{{ record.title }}</h3>
         <form>
             <label for="email-signup" class="sr-only">E-mail address</label>
             {% spaceless %}
-                <input type="text" name="emailaddress" id="email-signup" placeholder="e-mailaddress">
-                <input class="button" value="Submit" type="submit">
+            <input type="text" name="emailaddress" id="email-signup" placeholder="e-mailaddress">
+            {# <input class="button" value="Submit" type="submit"> #}
+            <button type="submit" class="button">
+                <svg class="icon icon-check">
+                    <use xlink:href="#icon-check"></use>
+                </svg>
+                <span class="sr-only">{{ record.buttontext|default('Submit') }}</span>
+            </button>
             {% endspaceless %}
         </form>
     </div>
-</div>

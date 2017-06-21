@@ -30,7 +30,7 @@
         {% endif %}
 
         <a class="button-link" href="{{ record.htmllink|default(record.link)|default('#') }}">
-            Learn more
+            {{ record.buttontext|default('Learn more') }}
         </a>
     </div>
 
