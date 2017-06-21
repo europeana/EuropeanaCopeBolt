@@ -481,14 +481,13 @@ pages:
           type: text
           label: DOM ID
           variant: inline
-          placeholder: If you need to add a custom css ID you can enter that here
+          placeholder: custom css ID
           info: If you need to add a custom css ID you can enter that here
-          prefix: '<hr>'
         override_css_class:
           type: text
           label: CSS Class
           variant: inline
-          placeholder: If you need to add custom css classes you can enter them here
+          placeholder: custom css class
           info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
     <<: *cta_defaults
