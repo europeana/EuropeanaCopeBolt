@@ -445,6 +445,7 @@ a.banner {
     .header-group {
         text-align: center;
         width: 95%;
+        padding: 0;
 
         @include respond-to(medium-screens){
             width: 80%;
@@ -604,7 +605,7 @@ section.catstream {
 * WIDGET CALL TO ACTION FULL / HALF
 **/
 
-.calltoaction {
+div.calltoaction {  //little bit more specific to avoid issues with defaul header group
     height: 200px;
     position: relative;
     margin: 1rem 0;
@@ -616,6 +617,8 @@ section.catstream {
         color: $white;
         text-align: center;
         width: 70%;
+        padding: 0;
+        margin-top: 0;
 
 
         p {

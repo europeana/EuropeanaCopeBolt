@@ -1856,7 +1856,8 @@ a.banner {
       height: 55px; } }
   .calltoaction-readmore .header-group {
     text-align: center;
-    width: 95%; }
+    width: 95%;
+    padding: 0; }
     @media only screen and (min-width: 24em) {
       .calltoaction-readmore .header-group {
         width: 80%; } }
@@ -1955,18 +1956,20 @@ section.catstream {
 /*
 * WIDGET CALL TO ACTION FULL / HALF
 **/
-.calltoaction {
+div.calltoaction {
   height: 200px;
   position: relative;
   margin: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .calltoaction .header-group {
+  div.calltoaction .header-group {
     color: #fff;
     text-align: center;
-    width: 70%; }
-    .calltoaction .header-group p {
+    width: 70%;
+    padding: 0;
+    margin-top: 0; }
+    div.calltoaction .header-group p {
       font-size: 0.875rem;
       margin: 0 0 0.5em 0; }
 
