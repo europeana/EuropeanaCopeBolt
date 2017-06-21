@@ -1187,6 +1187,12 @@ resources:
     htmllink:
       type: text
       label: "Block HTML link (optional)"
+      postfix: "<small>E.g: /pages/this-is-my-page . </small>"
+      info: If you need your banner to link somewhere, use this field.
+    buttontext:
+      type: text
+      label: "Text on button (optional)"
+      info: If your banner has a button, you can add a custom text here.
     weight:
       type: integer
       label: "Weight"
