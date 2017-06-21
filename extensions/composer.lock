@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "409f625861b42cc7fa45842e0263fecb",
+    "content-hash": "fb7ed9f2b4045439e53a33c2fae88e8d",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -81,16 +81,16 @@
         },
         {
             "name": "bobdenotter/seo",
-            "version": "v0.14.2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobdenotter/seo.git",
-                "reference": "1d9bd647137124852c799470754b4054e3b88f99"
+                "reference": "49f0fa303c58dc5def77e2b3ea4b732599c2f139"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/1d9bd647137124852c799470754b4054e3b88f99",
-                "reference": "1d9bd647137124852c799470754b4054e3b88f99",
+                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/49f0fa303c58dc5def77e2b3ea4b732599c2f139",
+                "reference": "49f0fa303c58dc5def77e2b3ea4b732599c2f139",
                 "shasum": ""
             },
             "require": {
@@ -117,10 +117,10 @@
             ],
             "description": "An extension to easily manage SEO title, meta description and OG tags.",
             "support": {
-                "source": "https://github.com/bobdenotter/seo/tree/v0.14.2",
+                "source": "https://github.com/bobdenotter/seo/tree/master",
                 "issues": "https://github.com/bobdenotter/seo/issues"
             },
-            "time": "2017-04-06T15:36:42+00:00"
+            "time": "2017-05-29T13:19:54+00:00"
         },
         {
             "name": "bolt/jsonapi",
@@ -299,16 +299,16 @@
         },
         {
             "name": "twokings/hierarchical-routes",
-            "version": "v0.0.4",
+            "version": "v0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xiaohutai/bolt-hierarchicalroutes.git",
-                "reference": "0379cb2d4b2209f6f08d5137d816d86b40404fe6"
+                "reference": "cf79909c49c3118ea176e465da534a5cb22918c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xiaohutai/bolt-hierarchicalroutes/zipball/0379cb2d4b2209f6f08d5137d816d86b40404fe6",
-                "reference": "0379cb2d4b2209f6f08d5137d816d86b40404fe6",
+                "url": "https://api.github.com/repos/xiaohutai/bolt-hierarchicalroutes/zipball/cf79909c49c3118ea176e465da534a5cb22918c8",
+                "reference": "cf79909c49c3118ea176e465da534a5cb22918c8",
                 "shasum": ""
             },
             "require": {
@@ -326,12 +326,14 @@
                 "bolt-class": "Bolt\\Extension\\TwoKings\\HierarchicalRoutes\\HierarchicalRoutesExtension",
                 "bolt-icon": "bolt-icon.png",
                 "bolt-screenshots": [
-                    "screenshots/screenshot1.png"
+                    "screenshots/screenshot1.png",
+                    "screenshots/screenshot2.png"
                 ]
             },
             "autoload": {
                 "psr-4": {
-                    "Bolt\\Extension\\TwoKings\\HierarchicalRoutes\\": "src"
+                    "Bolt\\Extension\\TwoKings\\HierarchicalRoutes\\": "src",
+                    "PBergman\\": "lib/PBergman"
                 }
             },
             "autoload-dev": {
@@ -362,10 +364,10 @@
                 "sub-page"
             ],
             "support": {
-                "source": "https://github.com/xiaohutai/bolt-hierarchicalroutes/tree/v0.0.4",
+                "source": "https://github.com/xiaohutai/bolt-hierarchicalroutes/tree/master",
                 "issues": "https://github.com/xiaohutai/bolt-hierarchicalroutes/issues"
             },
-            "time": "2017-05-23T10:15:40+00:00"
+            "time": "2017-06-16T13:59:45+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
