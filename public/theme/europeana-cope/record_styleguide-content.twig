@@ -3,16 +3,52 @@
 {% block bodyclass 'contentpage' %}
 
 {% block main %}
-
+    {# {{dump(record)}} #}
     <section>
         <div class="inner-wrap">
 
             <article class="column main-column">
 
+                {# {% include 'partials/_side-info.twig' %} #}
+                <div class="side-info">
+                    <p class="meta">
+                        <span class="readtime">7 minutes to read</span>
+                        {# OPTIE <span class="location">Den Haag, The Netherlands</span> #}
+                        <span class="date">Posted at 11 oktober 2016</span>
+                    </p>
+                    <div class="label">Platform</div>
+                    <a class="tag" href="#">Management</a>
+                    <a class="tag" href="#">AGM</a>
+                    <a class="tag" href="#">Network</a>
 
-                {% include 'partials/_side-info.twig' %}
+                    {# OPTIE
+                     <span class="svg-link" href="#">
+                         <svg class="icon icon-users">
+                            <use xlink:href="#icon-users"></use>
+                        </svg>
+                        <a class="team">Collections Team</a>
+                    </span> #}
+                </div>
+                {# einde partial #}
 
-                {% include 'partials/_header-group.twig' %}
+                {# {% include 'partials/_header-group.twig' %} #}
+                <div class="header-group">
+                     <div class="author-small-container">
+                            <div class="author-small group">
+                            <img class="round" src="https://unsplash.it/72/72" alt="name"/>
+                            <p class="name">Victor-Jan Vos</p>
+                            <p class="function">Head of programmes, policy & research</p>
+                        </div>
+                    </div>
+
+                    <h1>This is the title of an article or blogpost</h1>
+
+                    <div class="introduction">
+                        <p>Merete Sanderhoff introduces the new Europeana Art History Collections advisory board. </p>
+                    </div>
+                </div>
+                {# einde partial #}
+
 
 
                 <figure>

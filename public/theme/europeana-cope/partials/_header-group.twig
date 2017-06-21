@@ -6,7 +6,7 @@
         <div class="author-small-container">
             {% include 'views/_mini_externalcontact.twig' %}
         </div>
-    {% elseif record.author is not empty %}
+    {% elseif record.author is defined and record.author is not empty %}
         <div class="author-small-container">
         {% for aut in record.author %}
             {% setcontent author = 'persons' where { id : aut } returnsingle %}
