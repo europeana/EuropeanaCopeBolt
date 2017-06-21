@@ -3,9 +3,9 @@
 <div class="calltoaction colored-image {{ layoutclass }}"
 
     {% if layoutclass == "half" %}
-    style="background-image: url({{ image(record.image, 800, 400)|default(notfound) }})"
+    style="background-image: url({{ image(record.image, 800, 400)|default('notfound') }})"
     {% else %}
-    style="background-image: url({{ image(record.image, 1600, 350)|default(notfound) }})"
+    style="background-image: url({{ image(record.image, 1600, 350)|default('notfound') }})"
     {% endif %}
 >
 

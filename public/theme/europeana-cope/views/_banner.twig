@@ -2,11 +2,11 @@
     {% if record.image is not empty %}
     <div class="colored-image"
         {% if layoutclass == 'third' %}
-            style="background-image: url({{ image(record.image, 600, 400)|default(notfound) }})"
+            style="background-image: url({{ image(record.image, 600, 400)|default('notfound') }})"
         {% elseif layoutclass == 'half' %}
-            style="background-image: url({{ image(record.image, 1000, 400)|default(notfound) }})"
+            style="background-image: url({{ image(record.image, 1000, 400)|default('notfound') }})"
         {% else %}
-            style="background-image: url({{ image(record.image, 1800, 400)|default(notfound) }})"
+            style="background-image: url({{ image(record.image, 1800, 400)|default('notfound') }})"
         {% endif %}
     >
     </div>
