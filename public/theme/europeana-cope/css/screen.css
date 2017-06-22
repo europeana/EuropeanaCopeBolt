@@ -579,7 +579,11 @@ section.image-gallery-section {
   margin: 4rem 0; }
 
 section.contentheader {
-  position: relative; }
+  position: relative;
+  margin: 1rem 0; }
+  @media only screen and (min-width: 47.9375em) {
+    section.contentheader {
+      margin: 0; } }
   section.contentheader > .inner-wrap {
     padding: 0 1rem; }
 
@@ -840,8 +844,8 @@ nav.quicklinks li {
 nav.quicklinks a {
   display: block;
   color: #fff;
-  padding: 1rem 0.5rem;
-  font-size: 0.875rem;
+  padding: 6px 0.5rem;
+  font-size: 0.75rem;
   line-height: 21px; }
   @media only screen and (min-width: 24em) {
     nav.quicklinks a {
@@ -874,7 +878,7 @@ nav.main-menu {
   width: 235px;
   top: 124px;
   left: -235px;
-  z-index: 3;
+  z-index: 15;
   background-color: #f1f1ee;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); }
   @media only screen and (min-width: 60em) {

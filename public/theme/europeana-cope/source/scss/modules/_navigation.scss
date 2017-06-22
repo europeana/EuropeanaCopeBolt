@@ -39,8 +39,8 @@ nav.quicklinks {
     a {
         display: block;
         color: $white;
-        padding: 1rem 0.5rem;
-        font-size: 0.875rem;
+        padding: 6px 0.5rem;
+        font-size: 0.75rem;
         line-height: 21px; // magic number: to align bar with menu on left
 
         @include respond-to (medium-screens) {
@@ -90,7 +90,7 @@ nav.main-menu {
     top: 124px; //magic number: height from topbar
     left:-235px;
     //display: none; always on, because on mobile it's waiting to slide in.
-    z-index: index($layers, mobile-navigation);
+    z-index: 15; //check if correct. Needed on mobile for hover over sticky bar.
     background-color: $off-white;
     box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 

@@ -89,6 +89,11 @@ section {
 
 section.contentheader {
     position: relative;
+    margin: 1rem 0;
+
+    @include respond-to(large-screens){
+        margin: 0;
+    }
 
     > .inner-wrap {
         padding: 0 1rem;
