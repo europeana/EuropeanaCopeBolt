@@ -305,6 +305,7 @@ pages:
           info: The title will be shown as title for the block, if the title is empty the block will not have a title either
           placeholder: Optional block title
           variant: inline
+          class: 'titletoggle'
         subtitle:
           type: text
           label: Subtitle (optional)

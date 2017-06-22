@@ -59,3 +59,8 @@ div.highlightblock div[data-bolt-fieldset] .postfix,
 .repeater-group div.repeater-field:last-child .col-sm-9 {
     width: 60%;
 }
+
+.showonlytitle .repeater-field:not(.titletoggleblock),
+.showonlytitle .repeater-field:not(.titletoggleblock) fieldset {
+    display: none;
+}
