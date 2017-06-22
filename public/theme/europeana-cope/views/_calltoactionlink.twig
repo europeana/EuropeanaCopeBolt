@@ -1,15 +1,16 @@
 {# Section breakers - Call to action LINK #}
  <div class="calltoactionlink">
-
     {% if record.image is not empty %}
-    <div class="colored-image" style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})"></div>
+        <div class="colored-image" style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})"></div>
     {% else %}
         <div class="colored-image"
              style="background-image: url('/theme/europeana-cope/images/default.png')"></div>
     {% endif %}
 
-
     <h3 class="widget">{{ record.title }}</h3>
-    <a href="{{ record.htmllink|default('#') }}" class="button actionbutton">{{ record.buttontext|default('Learn more') }}</a>
+
+    <a href="{{ record.htmllink|default(record.link)|default('#') }}" class="button actionbutton">
+        {{ record.buttontext|default('Learn more') }}
+    </a>
 </div>
 
