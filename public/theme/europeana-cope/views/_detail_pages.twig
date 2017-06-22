@@ -3,6 +3,12 @@
         <div class="inner-wrap">
             <article class="column main-column">
 
+                <script>
+
+                javascript:alert(navigator.appVersion);
+
+                </script>
+
                 {% include 'partials/_side-info.twig' %}
 
                 <div class="header-group">
@@ -52,6 +58,10 @@
     {% for module in record.modules %}
         {{ include('partials/_default_module.twig', { 'module': module }) }}
     {% endfor %}
+
+    {% if record.attachments is defined and record.attachments is not empty %}
+        {{ include('partials/_download-content.twig') }}
+    {% endif %}
 
     {% if record.pagefooter is defined and record.pagefooter is not empty %}
     <section>

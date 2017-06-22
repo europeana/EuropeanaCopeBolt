@@ -1671,11 +1671,28 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
 table.listingtable {
     border-bottom: 1px solid $line-gray;
     margin-top: 1rem;
+    width: 100%;
 
     thead {
         box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.3);
-        border-bottom: 1px solid $line-gray;
         display: none;
+
+
+        // Targetting safari 10.1+  - does not support box shadow
+        @media not all and (min-resolution:.001dpcm) {
+            @supports (-webkit-appearance:none) {
+                & {
+                    border: 1px solid $line-gray;
+                }
+            }
+        }
+
+        // Targetting safari 9  - does not support box shadow
+        @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+            & {
+                    border: 1px solid $line-gray;
+            }
+        }
 
         @include respond-to(large-screens) {
             display: table-header-group;
