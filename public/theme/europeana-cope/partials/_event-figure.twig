@@ -10,10 +10,10 @@
 
         {# HERE BE MAP #}
         {% if record.geolocation is not empty %}
-        <img width="640" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?center={{ record.geolocation.latitude }},{{ record.geolocation.longitude - 0.15}}&zoom=11&scale=2&size=640x400&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{{ record.geolocation.address }}" alt="Google Map of {{ record.geolocation.address }}">
+        <img width="640" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?key={{ app.config.get('general/google_api_key') -}}&center={{ record.geolocation.latitude }},{{ record.geolocation.longitude - 0.15}}&zoom=11&scale=2&size=640x400&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{{ record.geolocation.address }}" alt="Google Map of {{ record.geolocation.address }}">
 
         {% else %}
-            <img width="640" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?center=München&zoom=4&scale=2&size=640x400&maptype=roadmap&format=png&visual_refresh=true" alt="Google Map of Europa">
+            <img width="640" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?key={{ app.config.get('general/google_api_key') -}}&center=München&zoom=4&scale=2&size=640x400&maptype=roadmap&format=png&visual_refresh=true" alt="Google Map of Europa">
         {% endif %}
 
 

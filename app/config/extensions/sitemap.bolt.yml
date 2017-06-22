@@ -1,0 +1,22 @@
+# sitemap settings
+
+template: sitemap.twig
+xml_template: sitemap_xml.twig
+
+ignore:
+  - /page/home
+  - /page/error404
+  - /page/private
+  - /news/.*
+
+## ignore by "slug" of contenttype
+#ignore_contenttype:
+#  - pages
+
+## ignore listing templates
+#ignore_listing: true
+
+## when ignore_listing is not = true: listings templates may not exist yet may contain child pages.
+## add path will keep listing visible in tree but remove its link.
+#remove_link:
+#  - /pages
