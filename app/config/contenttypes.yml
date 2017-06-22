@@ -872,6 +872,15 @@ jobs:
       required: false
       label: "Deadline"
       group: "Job information"
+    teampage:
+      type: text
+      label: "Select Team page (optional)"
+      info: Select the page that displays the team (optional)
+      class: 'ajaxselector ct-pages fields-id--title--status key-id'
+      data:
+        ct: pages
+        fields: [id, title, status]
+        key: id
     <<: *media_defaults
     <<: *structure_defaults
     slug:
