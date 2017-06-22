@@ -1,0 +1,49 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+<article class="column catstream-threecol teaserstreamer-{{ record.contenttype.slug }}">
+    {% if item.teaser_image is defined and item.teaser_image is not empty %}
+        <img src="{{ item.teaser_image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
+    {% elseif item.image is defined and item.image is not empty %}
+        <img src="{{ item.image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
+    {% else %}
+        <img src="/theme/europeana-cope/images/default.png" width="768" height="435" alt="{{ item.title }}"/>
+    {% endif %}
+
+    <h3>{{ item.title }}</h3>
+
+    {% if item.teaser is defined and item.teaser is not empty %}
+        {{ item.teaser }}
+    {% elseif item.intro is defined and item.intro is not empty %}
+        {{ item.intro }}
+    {% else %}
+        <p>{{ item.excerpt(130, false, search|default('')) }}</p>
+    {% endif %}
+
+    <p class="meta">
+
+        {% if item.author is defined and item.author is not empty %}
+            {% for aut in item.author %}
+                {% setcontent author = 'persons' where { id : aut } returnsingle %}
+                {% if author is not empty %}
+                <span class="author">By:
+                    <a href="{{ author.link() }}">{{ author.first_name }} {{ author.last_name }}</a>
+                </span>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {% include 'partials/_readtime.twig' %}
+
+        <span class="caldate">
+            <svg class="icon icon-calendar">
+                <use xlink:href="#icon-calendar"></use>
+            </svg>
+            {{ item.datepublish|localedatetime("%e %B  %Y") }}
+        </span>
+
+    </p>
+</article>
+
+
