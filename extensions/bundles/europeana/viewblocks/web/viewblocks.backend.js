@@ -294,7 +294,7 @@ jQuery(document).ready(function($) {
     );
     $('a.titletogglebutton').each(function() { $(this).click(); });
 
-    $('.repeater-add button').on('click', function() {
+    $('.repeater-add button, button.duplicate-button').on('click', function() {
         //console.log('a repeater is added');
         setTimeout(
             function() {
