@@ -224,6 +224,31 @@ $( document ).ready(function() {
         $('.in-page-blank-link').detach();
     }
 
+    /**
+     * Merge streamer colums into the first
+     * Only works with 3 or 2 streamer columns per page.
+     */
+    var streamers = $('section.catstreamcontainer');
+    if( $(streamers).is('*') ) {
+        var amount = $(streamers).length;
+        var first = $(streamers[0]).find('section.catstream');
+        var mainwrap = $(streamers[0]).find('.inner-wrap');
+        //console.log('first streamer column', first, mainwrap);
+        if (amount > 1) {
+            $(first).addClass('double catstream-index1');
+            var second = $(streamers[1]).find('section.catstream').detach();
+            //console.log('second streamer', second);
+            $(mainwrap).append($(second).addClass('third catstream-index2'));
+            $(streamers[1]).detach();
+        }
+        if (amount > 2) {
+            $(first).addClass('third').removeClass('double');
+            var third = $(streamers[2]).find('section.catstream').detach();
+            //console.log('third streamer', third);
+            $(mainwrap).append($(third).addClass('third catstream-index3'));
+            $(streamers[2]).detach();
+        }
+    }
 
     /**
          * preloadchecks function

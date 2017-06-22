@@ -13,49 +13,53 @@ Available variables
 {% set override_css_class = module.get('override_css_class') %}
 {% set template = module.get('templates') %}
 {% endspaceless %}
-<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="third catstream catstream-index1 {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
-    <div class="column icon-threecol">
-        {% if title is not empty %}
-            <h3>{{ title }}</h3>
-        {% endif %}
-        {% if icon is defined and icon is not empty %}
-            <img class="round" src="{{ icon|thumbnail(300,300,'c')}}" alt="{{ title|default('Category icon') }}"/>
-        {% else %}
-            <img class="round" src="/theme/europeana-cope/images/default.png" alt="{{ title|default('Category icon') }}"/>
-        {% endif %}
-        {% if subtitle|default('') is not empty %}
-            <p>{{ subtitle }}</p>
-        {% endif %}
-        {% if body is not empty %}
-            {{ body|raw }}
-        {% endif %}
-    </div>
+<section class="catstreamcontainer">
+    <div class="inner-wrap">
+        <section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="catstream {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+            <div class="column icon-threecol">
+                {% if title is not empty %}
+                    <h3>{{ title }}</h3>
+                {% endif %}
+                {% if icon is defined and icon is not empty %}
+                    <img class="round" src="{{ icon|thumbnail(300,300,'c')}}" alt="{{ title|default('Category icon') }}"/>
+                {% else %}
+                    <img class="round" src="/theme/europeana-cope/images/default.png" alt="{{ title|default('Category icon') }}"/>
+                {% endif %}
+                {% if subtitle|default('') is not empty %}
+                    <p>{{ subtitle }}</p>
+                {% endif %}
+                {% if body is not empty %}
+                    {{ body|raw }}
+                {% endif %}
+            </div>
 
-    {% if records is iterable and records is not empty %}
+            {% if records is iterable and records is not empty %}
 
-        {% for record in records %}
-            {% if record.id is defined %}
-                {% set templateteaserfile =  'views/_teaserstreamer_' ~ record.contenttype.slug ~ '.twig' %}
-                {% set defaultteaserfile =  'views/_teaserstreamer.twig' %}
-                <!-- loading templatefile for record: '{{ templateteaserfile }}' or '{{ defaultteaserfile }}' or 'views/_fallback.twig' -->
-                {% include [templateteaserfile, defaultteaserfile, 'views/_fallback.twig'] with { item: record, template: template } %}
+                {% for record in records %}
+                    {% if record.id is defined %}
+                        {% set templateteaserfile =  'views/_teaserstreamer_' ~ record.contenttype.slug ~ '.twig' %}
+                        {% set defaultteaserfile =  'views/_teaserstreamer.twig' %}
+                        <!-- loading templatefile for record: '{{ templateteaserfile }}' or '{{ defaultteaserfile }}' or 'views/_fallback.twig' -->
+                        {% include [templateteaserfile, defaultteaserfile, 'views/_fallback.twig'] with { item: record, template: template } %}
+                    {% else %}
+                        <!-- selected record is unpublished or otherwise unavailable -->
+                    {% endif %}
+                {% endfor %}
+
+
+                {% set pagername = records|first.contenttype.slug|default('') %}
+                {% if pagername is not empty and allow_pager == true %}
+                    {{ pager( (pagername) ) }}
+                {% endif %}
             {% else %}
-                <!-- selected record is unpublished or otherwise unavailable -->
+                {% if record is not empty and record.editlink() %}
+                    <p class="warning">No published records were found, please <a href="{{ record.editlink() }}#modules">change the module settings</a>.</p>
+                {% else %}
+                    <!-- no records were found for this module -->
+                {% endif %}
             {% endif %}
-        {% endfor %}
 
-
-        {% set pagername = records|first.contenttype.slug|default('') %}
-        {% if pagername is not empty and allow_pager == true %}
-            {{ pager( (pagername) ) }}
-        {% endif %}
-    {% else %}
-        {% if record is not empty and record.editlink() %}
-            <p class="warning">No published records were found, please <a href="{{ record.editlink() }}#modules">change the module settings</a>.</p>
-        {% else %}
-            <!-- no records were found for this module -->
-        {% endif %}
-    {% endif %}
-
+        </section>
+    </div>
 </section>
 
