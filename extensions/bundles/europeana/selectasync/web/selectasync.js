@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
 
     // Fill modal with content from link href
     $("#SA_cheatsheet").find(".modal-body")
-        .load('/extensions/local/europeana/selectasync/cheatsheet.html #container');
+        .load('/Europeana/SelectAsync/cheatsheet.html #container');
     console.log('cheatsheet js loaded');
 
 });

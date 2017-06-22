@@ -1,0 +1,47 @@
+{#  Three-column category teaser #}
+<article class="column catstream-threecol record-{{ record.contenttype.slug }}">
+    <div class="img-container">
+
+        {% if item.teaser_image is defined and item.teaser_image is not empty %}
+            <img src="{{ item.teaser_image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+        {% elseif item.image is defined and item.image is not empty %}
+            <img src="{{ item.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+        {% else %}
+            <img src="/theme/europeana-cope/images/default.png" width="600" height="400" style="height:400px;" alt=""/>
+        {% endif %}
+
+        <div class="info-block">
+            <span class="info-date">Updated: {{ item.datechanged|localedatetime("%e %B  %Y") }}</span>
+
+            {% if item.contact_record %}
+                <span class="info-author">
+                {% setcontent author = 'persons' where { id : item.contact_record } returnsingle %}
+                    By <a href="{{ author.link() }}">{{ author.first_name }} {{ author.last_name }}</a>
+            </span>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <h2><a href="{{ item.link() }}">{{ item.title }}</a></h2>
+
+    {% include 'partials/_tags.twig' %}
+
+    {% if item.teaser is defined and item.teaser is not empty %}
+        {{ item.teaser }}
+    {% elseif item.intro is defined and item.intro is not empty %}
+        {{ item.intro }}
+    {% else %}
+        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+    {% endif %}
+
+    <div class="actions-footer">
+
+        {% include 'partials/_readtime.twig' %}
+        <a class="readmore" href="{{ item.link() }}">
+            Read more
+        </a>
+
+    </div>
+</article>

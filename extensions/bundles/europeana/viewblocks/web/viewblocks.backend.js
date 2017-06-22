@@ -7,6 +7,7 @@ jQuery.fn.extend(
             // prepare display according to current settings
             $(this)
                 .masterSwitcher()
+                .compressSwitcher()
                 .templateSwitcher()
                 .orderSwitcher()
                 .filterSwitcher()
@@ -40,6 +41,47 @@ jQuery.fn.extend(
                 viewblock.find('.repeater-field:not(.masterswitch)').hide();
             }
             //console.log('masterSwitcher triggered');
+            return viewblock;
+        },
+        compressSwitcher: function() {
+            var viewblock = $(this);
+            var titleblock = viewblock.find('.titletoggle');
+            $(titleblock).parents('.repeater-field').addClass('titletoggleblock');
+
+            console.log(viewblock);
+            $(viewblock)
+                .children('.panel-heading')
+                .append($('<a>')
+                    .attr({
+                        'title': 'Compress the form for this module'
+                    })
+                    .html('<i class="fa fa-compress"></i>')
+                    .addClass('btn btn-default btn-sm titletogglebutton')
+                    .on('click', function(element) {
+                        var titleviewblock = $(this).parents(".repeater-group");
+                        console.log('clicked toggle', $(this), element, titleviewblock);
+                        if($(titleviewblock).hasClass('showonlytitle')) {
+                            $(this).removeClass('btn-info')
+                                .addClass('btn-default')
+                                .attr({
+                                    'title': 'Compress the form for this module'
+                                })
+                                .html('<i class="fa fa-compress"></i>');
+                            $(titleviewblock).removeClass('showonlytitle');
+                        } else {
+                            $(this).addClass('btn-info')
+                                .removeClass('btn-default')
+                                .attr({
+                                    'title': 'Expand the form for this module'
+                                })
+                                .html('<i class="fa fa-expand"></i>');
+                            $(titleviewblock).addClass('showonlytitle');
+                        }
+                    })
+                );
+
+            console.log('titleswitcher loading');
+
             return viewblock;
         },
         templateSwitcher: function() {
@@ -250,7 +292,9 @@ jQuery(document).ready(function($) {
             });
         }
     );
-    $('.repeater-add button').on('click', function() {
+    $('a.titletogglebutton').each(function() { $(this).click(); });
+
+    $('.repeater-add button, button.duplicate-button').on('click', function() {
         //console.log('a repeater is added');
         setTimeout(
             function() {

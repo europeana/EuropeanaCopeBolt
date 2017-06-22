@@ -1,26 +1,66 @@
+div.highlightblock,
 fieldset.bolt-field-repeater .viewblocks {
+    border: 1px solid #dcdcdc;
     border-left-width: 6px;
     border-right-width: 6px;
+    border-radius: 6px;
     margin: 5px 0 15px 0;
+    width: auto;
+}
+div.highlightblock div[data-bolt-fieldset]:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
 }
 fieldset.bolt-field-repeater .viewblocks .panel-body {
     padding: 4px 0 15px 0;
 }
 fieldset.bolt-field-repeater .viewblocks .repeater-field {
     margin-top: 10px;
+    margin-bottom: 0;
 }
 .viewblocks .control-label,
 .viewblocks .form-control {
     margin-bottom: 0.2em;
 }
-div.highlightblock {
-    border: 1px solid #ddd;
-    border-left-width: 6px;
-    border-right-width: 6px;
-    margin: 5px 0 15px 0;
-    padding: 0 10px;
+div.highlightblock div[data-bolt-fieldset] fieldset,
+.viewblocks .repeater-field fieldset {
+    margin: 0 10px;
 }
-div.highlightblock div[data-bolt-fieldset]:last-child {
-    border-bottom: none;
+div.highlightblock div[data-bolt-fieldset] .postfix,
+.viewblocks .repeater-field .postfix {
+    margin: 0 15px;
+    padding: 0 10px 2px;
+}
+.viewblocks .repeater-field .well {
     margin-bottom: 0;
+}
+.viewblocks .repeater-field hr {
+    margin: 2px 10px 5px;
+}
+.repeater-group div.repeater-field:nth-last-child(2),
+.repeater-group div.repeater-field:last-child {
+    width: 47%;
+    padding: 5px;
+    margin-left: 10px;
+    border-top: 1px solid #dcdcdc;
+    background: #f5f5f5;
+}
+.repeater-group div.repeater-field:nth-last-child(2) .main,
+.repeater-group div.repeater-field:last-child .main,
+.repeater-group div.repeater-field:nth-last-child(2) .col-sm-9,
+.repeater-group div.repeater-field:last-child .col-sm-9 {
+    width: 40%;
+    padding-left: 0;
+    padding-right: 0;
+    color: #777;
+}
+
+.repeater-group div.repeater-field:nth-last-child(2) .col-sm-9,
+.repeater-group div.repeater-field:last-child .col-sm-9 {
+    width: 60%;
+}
+
+.showonlytitle .repeater-field:not(.titletoggleblock),
+.showonlytitle .repeater-field:not(.titletoggleblock) fieldset {
+    display: none;
 }

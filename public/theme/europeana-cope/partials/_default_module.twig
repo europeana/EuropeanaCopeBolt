@@ -11,6 +11,7 @@
     {% set anchorslug = anchortitle|slugify() %}
     {% set body = module.get('body') %}
     {% set template = module.get('templates') %}
+    {% set icon = module.get('icon') %}
     {% set templatefile = 'modules/_' ~ template ~ '.twig' %}
     {% set ordering = module.get('ordering') %}
     {% set sources = module.get('sources') %}
@@ -115,6 +116,7 @@
         'module': module,
         'title': title,
         'body': body,
+        'icon': icon,
         'records': selected_records,
         'allow_pager': allow_pager
     } %}
