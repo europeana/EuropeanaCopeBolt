@@ -34,20 +34,24 @@
 
             <ul class="teaser-list">
 
-            {# Lodewijk needs to do magic here  - FEATURED #}
-            {# {% for record in records if record.featured == true %}
+            {# FEATURED
+            Lodewijk needs to do magic here  Probleem: Hij kijkt nu alleen naar pagina 1. Dus oplossen op andere manier.
+            Vraag: Laat _aleen bij een eventslisting_ de featured bovenaan zien #}
+            {% for record in records if record.featured == true %}
                 {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
                 <!-- loading listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
 
                 {% include [template, 'views/_teaser.twig', 'views/_fallback.twig'] with { item : record } %}
-            {% endfor %} #}
+            {% endfor %}
 
 
             {% for record in records %}
-                {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
-                <!-- loading listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
+                {% if record.featured == false %}
+                    {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
+                    <!-- loading listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
 
-                {% include [template, 'views/_teaser.twig', 'views/_fallback.twig'] with { item : record } %}
+                    {% include [template, 'views/_teaser.twig', 'views/_fallback.twig'] with { item : record } %}
+                {% endif %}
             {% else %}
                 <article>
                     <h2>{{ __('general.phrase.no-content-found') }}</h2>
