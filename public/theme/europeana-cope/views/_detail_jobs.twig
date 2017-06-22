@@ -27,7 +27,19 @@
                         {% endif %}
 
                         {% if record.position_type is not empty %}
-                            Position type: {{ record.position_type }}
+                            Position type: {{ record.position_type }}<br />
+                        {% endif %}
+
+                         {% if record.teampage is not empty %}
+                            Team:
+                            {% set teamids = record.teampage|json_decode() %}
+
+                                {% for teamid in teamids %}
+                                    {% setcontent teampage = "pages" where { 'id': teamid } %}
+                                        <a href="{{ teampage.link() }}">{{ teampage.title }} </a>
+                                {% endfor %}
+
+
                         {% endif %}
                         </p>
                     </div>

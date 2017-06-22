@@ -23,16 +23,17 @@
     {% endif %}
 
     {% if team is defined and team is not empty %}
-    <span class="svg-link" href="#">
+
+    <span class="svg-link teamname" href="#">
         <svg class="icon icon-users">
             <use xlink:href="#icon-users"></use>
         </svg>
-        <a class="team" href="#">{{ team }}</a>
+        {{ team }}
     </span>
     {% endif %}
 
     {% if record.deadline is not empty %}
-    <br />{# dirty hack, Anke, works! #}
+    {# <br /> #} {#dirty hack, Anke, works! #}
     <div class="deadline-block">
         <div class="date-block">
             <span class="date-txt">Deadline</span>

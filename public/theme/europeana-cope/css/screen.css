@@ -2074,6 +2074,7 @@ div.calltoaction {
   padding: 0 0.875rem; }
   @media only screen and (min-width: 47.9375em) {
     .side-info {
+      text-align: center;
       position: absolute;
       z-index: 1;
       top: -7.5rem;
@@ -2083,10 +2084,18 @@ div.calltoaction {
     color: #777777; }
   .side-info .label {
     margin-top: 0; }
+  .side-info span.teamname {
+    display: block;
+    font-size: 0.75rem;
+    text-align: center; }
+    @media only screen and (min-width: 24em) {
+      .side-info span.teamname {
+        font-size: 0.9375rem;
+        text-align: right; } }
 
 .deadline-block {
   text-align: center;
-  margin: 2rem 0 1rem; }
+  margin: 0rem 0 1rem; }
   @media only screen and (min-width: 24em) {
     .deadline-block {
       display: inline-block; } }
