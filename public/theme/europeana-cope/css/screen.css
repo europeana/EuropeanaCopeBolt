@@ -1750,12 +1750,6 @@ img.round {
       font-size: 0.9375rem; } }
 
 /*
-* TEASERs
-**/
-.teaser {
-  width: 100%; }
-
-/*
 * WIDGET HERO BANNERS
 **/
 .banner,
@@ -2566,11 +2560,12 @@ div.calltoaction {
 
 /*
 ***********************************************************************
-* LISTING PAGE
+* LISTING PAGE + TEASERS
 ***********************************************************************
 **/
 .teaser {
-  margin-bottom: 3.5rem; }
+  margin-bottom: 3.5rem;
+  width: 100%; }
   .teaser .img-container {
     position: relative;
     margin-bottom: 2rem; }
@@ -2584,18 +2579,33 @@ div.calltoaction {
       position: absolute;
       top: 0;
       right: 0;
-      padding-top: 0; }
+      padding-top: .5rem; }
   .teaser .actions-footer {
     vertical-align: bottom;
     margin: 2rem 0 0 0; }
-    .teaser .actions-footer a.add-calendar {
-      color: #4d4d4d; }
     .teaser .actions-footer svg {
       fill: #E11D53; }
     .teaser .actions-footer .button-link,
     .teaser .actions-footer .cta-link {
       margin-top: 0;
       float: right; }
+  .teaser.featured {
+    background-color: #f1f1ee;
+    padding: 1rem; }
+    @media only screen and (min-width: 24em) {
+      .teaser.featured {
+        border: 1rem solid #f1f1ee;
+        margin: -1rem -1rem 3.5rem -1rem;
+        min-width: 100%;
+        width: auto;
+        padding: 0; } }
+  .teaser .featured-label {
+    display: block;
+    margin-top: 1rem;
+    color: #4d4d4d;
+    text-transform: uppercase; }
+    .teaser .featured-label svg {
+      margin-right: .5rem; }
 
 .teaser-persons {
   margin: 3rem 0; }

@@ -299,13 +299,7 @@ img.round {
     }
 }
 
-/*
-* TEASERs
-**/
 
-.teaser {
-    width: 100%; // CHECK OF DIT GOED GAAT. GEFIXT omdat teaser lists verschilden van formaat.
-}
 
 
 /*
@@ -1462,14 +1456,17 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
 
 /*
 ***********************************************************************
-* LISTING PAGE
+* LISTING PAGE + TEASERS
 ***********************************************************************
 **/
 
 
 
+
+
 .teaser {
     margin-bottom: 3.5rem;
+    width: 100%; // CHECK OF DIT GOED GAAT. GEFIXT omdat teaser lists verschilden van formaat.
 
 
     .img-container {
@@ -1487,7 +1484,7 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
             position: absolute;
             top: 0;
             right: 0;
-            padding-top: 0;
+            padding-top: .5rem;
         }
     }
 
@@ -1496,7 +1493,7 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
         margin: 2rem 0 0 0;
 
         a.add-calendar {
-            color: $medium-gray;
+            // color: $medium-gray; //confusing, cause its a link
         }
 
         svg {
@@ -1507,6 +1504,30 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
         .cta-link {
             margin-top: 0;
             float: right;
+        }
+    }
+
+    &.featured {
+        background-color: $off-white;
+        padding: 1rem;
+
+        @include respond-to(medium-screens){
+            border: 1rem solid $off-white;
+            margin: -1rem -1rem 3.5rem -1rem;
+            min-width: 100%;
+            width: auto;
+            padding: 0;
+        }
+    }
+
+    .featured-label {
+        display: block;
+        margin-top: 1rem;
+        color: $medium-gray;
+        text-transform: uppercase;
+
+        svg {
+            margin-right: .5rem;
         }
     }
 

@@ -2,7 +2,7 @@
     {% set item = record %}
 {% endif %}
 
-<article class="teaser teaser-events group">
+<article class="teaser teaser-events group {% if record.featured == true %}featured{% endif %}">
     <div class="img-container">
 
         {% if item.teaser_image is defined and item.teaser_image is not empty %}
@@ -45,6 +45,15 @@
         <a class="button-link" href="{{ item.link() }}">
             View event
         </a>
+
+        {% if record.featured == true %}
+            <span class="featured-label">
+                <svg class="icon icon-check">
+                    <use xlink:href="#icon-check"></use>
+                </svg>
+                featured
+            </span>
+        {% endif %}
 
     </div>
 
