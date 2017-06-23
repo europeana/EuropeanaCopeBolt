@@ -321,17 +321,18 @@ $( document ).ready(function() {
         };
 
 
-        if ( windowWidthEms >= breakLarge ) {
+        if ( windowWidthEms >= breakMenuFull ) {
 
-            /**
-             * Only stick when page anchors are present.
-             */
-            if( $('a.in-page-anchor').is('*') ) {
-                console.log('stickt u maar!');
-                $('#topbar').stick_in_parent();
-            }
+            // set sticky topbar and menu
+            $('#topbar').stick_in_parent();
+            $('nav.main-menu').stick_in_parent();
 
+        } else {
+           // remve stickyness when window is resized
+           $("#topbar").trigger("sticky_kit:detach");
+           $('nav.main-menu').trigger("sticky_kit:detach");
         }
+
 
 
 

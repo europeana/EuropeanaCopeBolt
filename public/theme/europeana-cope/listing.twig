@@ -37,13 +37,15 @@
             {# FEATURED
             Lodewijk needs to do magic here  Probleem: Hij kijkt nu alleen naar pagina 1. Dus oplossen op andere manier.
             Vraag: Laat _aleen bij een eventslisting_ de featured bovenaan zien #}
-            {% for record in records if record.featured == true %}
-                {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
-                <!-- loading listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
+            {% if records|first.contenttype.slug == 'events' %}
+                {% setcontent featured = 'events' where { 'featured' : true } %}
+                    {% for record in featured %}
+                    {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
+                    <!-- loading listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
 
-                {% include [template, 'views/_teaser.twig', 'views/_fallback.twig'] with { item : record } %}
-            {% endfor %}
-
+                    {% include [template, 'views/_teaser.twig', 'views/_fallback.twig'] with { item : record } %}
+                {% endfor %}
+            {% endif %}
 
             {% for record in records %}
                 {% if record.featured == false %}
