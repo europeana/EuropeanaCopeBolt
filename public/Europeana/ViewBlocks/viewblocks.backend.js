@@ -102,7 +102,7 @@ jQuery.fn.extend(
             var orderselect = viewblock.find('select[name*="ordering"]');
             var iconfield = viewblock.find('input[name*="icon"]');
 
-            if(templatevalue === 'body') {
+            if(templatevalue === 'body' || templatevalue === 'collapsedcontent') {
                 bodyblock.parents('.repeater-field').show();
                 sourceselect.parents('.repeater-field').hide();
                 orderselect.parents('.repeater-field').hide();
@@ -110,7 +110,7 @@ jQuery.fn.extend(
             } else if(templatevalue === 'streamercolumn') {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').hide();
-                orderselect.parents('.repeater-field').hide();
+                orderselect.parents('.repeater-field').show();
                 iconfield.parents('.repeater-field').show();
             } else {
                 bodyblock.parents('.repeater-field').hide();
