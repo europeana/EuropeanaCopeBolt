@@ -2414,6 +2414,13 @@ div.calltoaction {
         .file-content-module .collapse-header h3,
         .download-module .collapse-header h3 {
           font-size: 1rem; } }
+    .file-content-module .collapse-header svg.icon-facet_up,
+    .file-content-module .collapse-header svg.icon-facet_down,
+    .download-module .collapse-header svg.icon-facet_up,
+    .download-module .collapse-header svg.icon-facet_down {
+      position: absolute;
+      top: 20px;
+      right: 12px; }
     .file-content-module .collapse-header .content-kind,
     .download-module .collapse-header .content-kind {
       position: absolute;
@@ -2432,12 +2439,17 @@ div.calltoaction {
   .download-module .collapse-content {
     background-color: #f1f1ee;
     padding: 1rem;
+    padding-bottom: 0;
     color: #1a1a1a;
     font-size: 0.875rem; }
     @media only screen and (min-width: 24em) {
       .file-content-module .collapse-content,
       .download-module .collapse-content {
         font-size: 1rem; } }
+    .file-content-module .collapse-content > a,
+    .download-module .collapse-content > a {
+      display: inline-block;
+      padding-bottom: 1rem; }
     .file-content-module .collapse-content.has-sublist,
     .download-module .collapse-content.has-sublist {
       padding-bottom: 0; }
@@ -2478,7 +2490,7 @@ div.calltoaction {
   .download-module ul.sublist {
     background: #fff;
     padding: 0 .5rem;
-    margin: 1rem -1rem 0;
+    margin: 0rem -1rem 0;
     border-top: 1px solid #cccccc; }
     .file-content-module ul.sublist li,
     .download-module ul.sublist li {
