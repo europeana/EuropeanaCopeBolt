@@ -25,15 +25,42 @@
 {% endif %}
 
 <div class="filter-listing">
-    {% if categories is not empty %}
+    {# {% if categories is not empty %}
         <a class="reset" href="#">Reset filter</a>
         <ul>
-            {# {% for item, catname in categories %}
+            {% for item, catname in categories %}
                 <li><a href="{{ contenttypepath ~ item|slugify }}">{{ catname }}</a></li>
-            {% endfor %} #}
+            {% endfor %}
 
             <li><a href="">Filter by</a></li>
             <li><a href="">by contenttype</a></li>
         </ul>
-    {% endif %}
+    {% endif %} #}
+
+    <a class="reset" href="#">Reset filter</a>
+
+    <a href="">Filter by</a></li>
+    <a href="">Services: Campaigns</a></li>
+
+    <form method="GET" class="filterform" id="filterbar">
+        <fieldset>
+            <legend>Hoofdstuk A</legend>
+            <input type='radio' name="filterby" value='value1'>
+                <label for="#filterbyvalue1" >Value 1</label>
+            <input type='radio' name="filterby" value='value2'>
+                <label for="#filterbyvalue2" >Value 2</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Hoofdstuk B</legend>
+            <input type='radio' name="filterby" value='value3'>
+                <label for="#filterbyvalue3" >Value 3</label>
+            <input type='radio' name="filterby" value='value4'>
+                <label for="#filterbyvalue4" >Value 4</label>
+        </fieldset>
+
+        <button type="submit">Filter</button>
+    </form>
+
+
 </div>
