@@ -343,7 +343,7 @@ pages:
             calltoactionlink:  "Call to action button main page (_calltoactionlinks.twig)"
             calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
             #filecontent:       "File content block (_filecontent.twig)"
-            #fileslisting:      "File list block (_fileslisting.twig)"
+            fileslisting:      "File list block (_fileslisting.twig)"
             body:              "Module body field - for extra body blocks between modules (_body.twig)"
             collapsedcontent:  "Collapsed content clicks open with click on header (_collapsedcontent.twig)"
         body:

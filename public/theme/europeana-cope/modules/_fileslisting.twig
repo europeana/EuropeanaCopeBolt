@@ -1,0 +1,149 @@
+ {% spaceless %}
+{#
+Available variables
+    'module':    the full module object
+    'title':     title of the module
+    'subtitle':  subtitle of the module
+    'body':      body of the module
+    'records':   array of (selected) records that belong to the module
+    'allow_pager': boolean to check is the pager is available
+#}
+{% set override_css_id = module.get('override_css_id') %}
+{% set override_css_class = module.get('override_css_class') %}
+{% set template = module.get('templates') %}
+{% endspaceless %}
+
+{# ANKE INSERTS TEST OBJECT HERE - DELETE AFTER MAKING IT REAL! #}
+{% set item = {'filename': 'testfile'} %}
+
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="file-browser file-content-module {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+    <div class="collapse-header">
+        <p class="content-kind">
+            <svg class="icon icon-folder">
+                <use xlink:href="#icon-folder"></use>
+            </svg>
+            <span>Folder</span>
+        </p>
+
+        <h3 class="expand-toggle">{{ title }}</h3>
+        <a class="expand-toggle" href="#">
+            <svg class="icon icon-facet_up">
+                <use xlink:href="#icon-facet_up"></use>
+            </svg>
+            <span class="sr-only">Open folder</span>
+        </a>
+    </div>
+
+    <ul class="mainlist can-expand">
+        <li class="collapse-content has-sublist expand-toggle">
+            <a href="#">
+                <svg class="icon icon-folder">
+                    <use xlink:href="#icon-folder"></use>
+                </svg>
+                Council Conclusions Europeana Strategy Staff
+            </a>
+
+
+            <ul class="sublist can-expand">
+                <li class="">
+                    <a href="#">
+                    <svg class="icon icon-file">
+                        <use xlink:href="#icon-file"></use>
+                    </svg>
+
+                        Council Conclusions Europeana Strategy Staff
+                        <div class="meta">
+                            <span class="filesize">2.5 MB</span>
+                            <span class="date-added">Added 12/25/16</span>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                    <svg class="icon icon-file">
+                        <use xlink:href="#icon-file"></use>
+                    </svg>
+
+                        Council Conclusions Europeana Strategy Staff
+                        <div class="meta">
+                            <span class="filesize">2.5 MB</span>
+                            <span class="date-added">Added 12/25/16</span>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
+        <li class="collapse-content has-sublist expand-toggle">
+            <a href="#">
+                <svg class="icon icon-folder">
+                    <use xlink:href="#icon-folder"></use>
+                </svg>
+                Council Conclusions Europeana Strategy Staff
+            </a>
+
+
+            <ul class="sublist can-expand">
+                <li class="">
+                    <a href="#">
+                    <svg class="icon icon-file">
+                        <use xlink:href="#icon-file"></use>
+                    </svg>
+
+                        {{ item.filename }}
+                        <div class="meta">
+                            <span class="filesize">2.5 MB</span>
+                            <span class="date-added">Added 12/25/16</span>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                    <svg class="icon icon-file">
+                        <use xlink:href="#icon-file"></use>
+                    </svg>
+
+                        {{ item.filename }}
+                        <div class="meta">
+                            <span class="filesize">2.5 MB</span>
+                            <span class="date-added">Added 12/25/16</span>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
+
+        <li class="collapse-content">
+            <a href="{{ asset(item.filename, 'files') }}" download="{{ item.filename }}">
+                <svg class="icon icon-file">
+                    <use xlink:href="#icon-file"></use>
+                </svg>
+                {{ item.filename }}
+                <div class="meta">
+                    <span class="filesize">2.5 MB</span>
+                    <span class="date-added">Added 12/25/16</span>
+                </div>
+            </a>
+        </li>
+
+        <li class="collapse-content">
+            <a href="{{ asset(item.filename, 'files') }}" download="{{ item.filename }}">
+                <svg class="icon icon-file">
+                    <use xlink:href="#icon-file"></use>
+                </svg>
+                {{ item.filename }}
+                <div class="meta">
+                    <span class="filesize">2.5 MB</span>
+                    <span class="date-added">Added 12/25/16</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>

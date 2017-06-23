@@ -1240,6 +1240,13 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
 
         }
 
+        svg.icon-facet_up,
+        svg.icon-facet_down {
+            position: absolute;
+            top: 20px;
+            right: 12px;
+        }
+
         .content-kind {
             position: absolute;
             left: 1rem;
@@ -1255,11 +1262,13 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
                 }
             }
         }
+
     }
 
     .collapse-content {
         background-color: $off-white;
         padding: 1rem;
+        padding-bottom: 0;
         color: $black;
         font-size: 0.875rem;
 
@@ -1267,6 +1276,10 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
                 font-size: 1rem;
             }
 
+        > a {
+           display: inline-block;
+           padding-bottom: 1rem;
+        }
 
         &.has-sublist {
             padding-bottom: 0;
@@ -1320,7 +1333,7 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
         background: $white;
         padding: 0 .5rem;
         //margin-top: 1rem;
-        margin: 1rem -1rem 0;
+        margin: 0rem -1rem 0;
         border-top: 1px solid $line-gray;
 
         li {

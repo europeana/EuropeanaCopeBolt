@@ -224,6 +224,44 @@ $( document ).ready(function() {
         $('.in-page-blank-link').detach();
     }
 
+
+
+    /**
+    * Open en close filelistings
+    *
+    */
+
+    $('.can-expand').hide();
+
+    $('.expand-toggle').on('click', function(e) {
+        e.preventDefault();
+
+        var sublist = $(this).find('.can-expand');
+
+        if (sublist.length == 0) {
+            // if no sublist found, we open the main collapse-content
+            var sublist = $('section.file-browser ul.mainlist');
+        }
+
+
+        if ( sublist.hasClass('expanded') ) {
+            $(this).removeClass('expand-toggle-open')
+            sublist.removeClass('expanded').slideUp('fast');
+
+        }else {
+            sublist.addClass('expanded').slideDown();
+            $(this).addClass('expand-toggle-open');
+            // setTimeout(function() {
+            //     $(this).addClass('expand-toggle-open2');
+            //     console.log('tiktok');
+            // }, 1100 );
+
+        }
+
+
+    })
+
+
     /**
      * Merge streamer colums into the first
      * Only works with 3 or 2 streamer columns per page.
