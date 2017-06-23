@@ -3,7 +3,8 @@
 {% block bodyclass -%}
     {%- if record.pagetype is defined and record.pagetype == 'listing' -%}
         listingpage
-    {%- elseif record.pagetype is defined and record.pagetype == 'landingpage' -%}
+    {%- elseif record.pagetype is defined
+        and (record.pagetype == 'landingpage' or record.pagetype == 'landingpage-nohighlight') -%}
         landingpage contentpage
     {%- else -%}
         contentpage

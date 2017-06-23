@@ -12,6 +12,7 @@ Available variables
 {% set override_css_id = module.get('override_css_id') %}
 {% set override_css_class = module.get('override_css_class') %}
 {% set template = module.get('templates') %}
+{% set override_amount = module.get('override_amount') %}
 {% endspaceless %}
 <section class="catstreamcontainer">
     <div class="inner-wrap">
@@ -33,7 +34,9 @@ Available variables
                 {% endif %}
             </div>
 
-            {% if records is iterable and records is not empty %}
+            {% if override_amount == 0 %}
+                <!-- no records selected -->
+            {% elseif records is iterable and records is not empty %}
 
                 {% for record in records %}
                     {% if record.id is defined %}

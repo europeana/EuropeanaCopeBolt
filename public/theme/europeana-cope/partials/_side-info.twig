@@ -3,7 +3,7 @@
 <div class="side-info">
     {% if record.contenttype.slug == 'pages'
         and record.pagetype is defined
-        and not (record.pagetype == 'listing' or record.pagetype == 'landingpage')
+        and not (record.pagetype == 'listing' or record.pagetype == 'landingpage' or record.pagetype == 'landingpage-nohighlight')
     %}
         <p class="meta">
 

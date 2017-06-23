@@ -1,7 +1,6 @@
 <!-- Header bar -->
 {# the values in the 'app.config' object are taken directly from the file app/config/config.yml #}
 <div class="topbar" id="topbar">
-
     {# Show filtering on listings #}
     {% if record is not defined and search is not defined
        or ( record is defined
@@ -10,30 +9,22 @@
             and record.pagetype == 'listing'
        )
     %}
-
-    {% include '/partials/_filter-listing.twig' %}
-
+        {% include '/partials/_filter-listing.twig' %}
     {% else %}
-
-    <nav class="quicklinks">
-        <ul>
-            <li class="in-page-blank-link"><a>&nbsp;</a></li>
-            {# at least one empty link is needed for the layout at the moment #}
-        </ul>
-    </nav>
-
+        <nav class="quicklinks">
+            <ul>
+                <li class="in-page-blank-link"><a>&nbsp;</a></li>
+                {# at least one empty link is needed for the layout at the moment #}
+            </ul>
+        </nav>
     {% endif %}
 
     {% if search is defined and search is not empty %}
         {% include 'partials/_sort-listing.twig' %}
     {% endif %}
-
-
 </div>
 
 <section class="contentheader">
-
-
     {# Show highlightbar on homepage and pages of type landingpage #}
     {% if (app.request.get('_route') is defined and app.request.get('_route') == 'homepage')
        or ( record is defined
@@ -42,8 +33,6 @@
             and record.pagetype == 'landingpage'
        )
     %}
-
-
         {% set module = {} %}
         {% set template = 'highlightbar' %}
         {% set templatefile = 'modules/_' ~ template ~ '.twig' %}
@@ -79,11 +68,4 @@
             'allow_pager': allow_pager
         } %}
     {% endif %}
-
-
-
-
-
-
-
 </section>

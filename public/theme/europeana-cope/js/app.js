@@ -273,18 +273,24 @@ $( document ).ready(function() {
         var mainwrap = $(streamers[0]).find('.inner-wrap');
         //console.log('first streamer column', first, mainwrap);
         if (amount > 1) {
-            $(first).addClass('double catstream-index1');
+            $(first).addClass('catstream-index1');
             var second = $(streamers[1]).find('section.catstream').detach();
+
             //console.log('second streamer', second);
-            $(mainwrap).append($(second).addClass('third catstream-index2'));
+            $(mainwrap).append($(second).addClass('catstream-index2'));
             $(streamers[1]).detach();
-        }
-        if (amount > 2) {
-            $(first).addClass('third').removeClass('double');
-            var third = $(streamers[2]).find('section.catstream').detach();
-            //console.log('third streamer', third);
-            $(mainwrap).append($(third).addClass('third catstream-index3'));
-            $(streamers[2]).detach();
+            if (amount > 2) {
+                var third = $(streamers[2]).find('section.catstream').detach();
+                //console.log('third streamer', third);
+                $(mainwrap).append($(third).addClass('catstream-index3'));
+                $(streamers[2]).detach();
+                $(first).addClass('third');
+                $(second).addClass('third');
+                $(third).addClass('third');
+            } else {
+                $(first).addClass('half');
+                $(second).addClass('half');
+            }
         }
     }
 
