@@ -383,4 +383,16 @@ jQuery(document).ready(function($) {
     }
 
     console.log('highlightswitcher js loaded');
+
+    $('.fileselectbuttongroup').each(function() {
+        // console.log('uploadbutton hider', $(this));
+        $(this).children('.fileinput-button').each(function() {
+            $(this).hide();
+        });
+        $(this).append($('<a>').attr({
+            'href': 'https://www.dropbox.com',
+            'target': '_blank'
+        }).addClass('btn btn-primary btn-sm').html('<i class="fa fa-dropbox"></i> Upload files'));
+    });
+    console.log('uploadbuttons js loaded');
 });
