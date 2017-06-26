@@ -395,4 +395,56 @@ jQuery(document).ready(function($) {
         }).addClass('btn btn-primary btn-sm').html('<i class="fa fa-dropbox"></i> Upload files'));
     });
     console.log('uploadbuttons js loaded');
+
+    // prepare modal dialog for cheatsheet
+    var VB_cheatsheet = $('<div>')
+        .addClass("modal fade bd-example-modal-lg")
+        .attr({
+            'id': "VB_cheatsheet",
+            'tabindex': "-1",
+            'role': "dialog",
+            'aria-labelledby': "VB_cheatsheet",
+            'aria-hidden': "true"
+        })
+        .append(
+            $('<div>')
+                .addClass("modal-dialog modal-lg")
+                .attr({
+                    'role': 'document'
+                })
+                .append(
+                    $('<div>')
+                        .addClass("modal-content")
+                        .append(
+                            $('<div>')
+                                .addClass('modal-header')
+                                .html('<b class="modal-title"><i class="fa fa-comment-o" aria-hidden="true"></i> Template cheatsheet</b><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>')
+                        )
+                        .append(
+                            $('<div>')
+                                .addClass('modal-body')
+                                .html('<div class="container-fluid"><div class="row"><div class="col-md-4 col-sm-4"><span>Test</span></div><div class="col-md-8 col-sm-8"><p>This is the cheatsheet.</p></div></div></div>')
+                        )
+                        .append(
+                            $('<div>')
+                                .addClass('modal-footer')
+                                .html('<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>')
+                        )
+                )
+        );
+    $('body').append(VB_cheatsheet);
+
+    // Fill modal with content from link href
+    $("#VB_cheatsheet").find(".modal-body")
+        .load('/Europeana/ViewBlocks/cheatsheet.html #container');
+
+    // add cheatsheetpopup
+    $('a.cheatsheet:not(.haspopup)').each(function() {
+        $(this).on('click', function() {
+            $('#VB_cheatsheet').modal('show');
+            console.log('showing cheatsheet');
+        });
+        $(this).addClass('haspopup');
+    });
+    console.log('cheatsheet js loaded');
 });
