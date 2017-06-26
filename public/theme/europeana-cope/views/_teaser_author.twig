@@ -2,6 +2,7 @@
     {% set item = record %}
 {% endif %}
 
+{% if (item is not empty) and (item.last_name is not empty) %}
 <section class="author-big column group">
     <div class="img-container">
         <img class="round" src="{{ item.image|default('notfound')|thumbnail(144, 144, 'c') }}" alt="Portrait of {{item.first_name}} {{item.last_name}}"/>
@@ -47,3 +48,4 @@
         </div>
     </div>
 </section>
+{% endif %}

@@ -65,6 +65,10 @@ function SA_findFields(keys) {
 function SA_findKey(keys) {
     return keys.match('key-');
 }
+/* helper to fetch the limit key field from the css classnames */
+function SA_findLimit(keys) {
+    return keys.match('results-');
+}
 /* helper to check if a string is a json srting */
 function SA_isJson(str) {
     try {
@@ -114,6 +118,7 @@ function SA_loadNewAsyncSelectors() {
     $('.ajaxselector:not(.ispreloaded)').each(function() {
         //console.log('selectasync element:', $(this).attr('class'), $(this));
         var dataclasses = $(this).attr('class').split(/\s/);
+        //console.log('dataclasses', dataclasses);
         $(this).css({width: '100%'});
         $(this).data(
             'contenttype',
@@ -126,6 +131,10 @@ function SA_loadNewAsyncSelectors() {
         $(this).data(
             'contentkey',
             dataclasses.find(SA_findKey).split('-').pop()
+        );
+        $(this).data(
+            'limit',
+            dataclasses.find(SA_findLimit).split('-').pop()
         );
         var divname = 'visible_' + $(this).attr('name');
         // make a placeholder with working stuff
@@ -177,7 +186,7 @@ function SA_loadNewAsyncSelectors() {
                 )
         );
         $(this).addClass('ispreloaded').hide();
-        console.log('selectasync initialization for:', $(this).attr('name'));
+        //console.log('selectasync initialization for:', $(this).attr('name'));
     });
 
     // prefill the placeholder field with an ajax call
@@ -251,11 +260,11 @@ function SA_loadNewAsyncSelectors() {
                         // make sure there is a status
                         var status = (e.status)?e.status:'draft';
                         var statusclass = 'btn-info';
-                        if(status != 'published') {
+                        if(status !== 'published') {
                             statusclass = 'btn-default';
                             title = title + ' (' + status + ')';
                         }
-                        if (status == 'draft') {
+                        if (status === 'draft') {
                             statusclass = 'btn-error';
                         }
                         unsorted.push(
@@ -357,7 +366,12 @@ function SA_loadNewAsyncSelectors() {
                             var results = data.results[data.type];
                             var ajaxcleaned = [];
                             results.forEach(function(e, index) {
-                                ajaxcleaned.push({'value': e.id, 'label': e.title, 'full_item': e});
+                                var title = (e.title)?e.title:(e.last_name)?e.first_name + ' ' + e.last_name:'no title';
+                                ajaxcleaned.push({
+                                    'value': e.id,
+                                    'label': title,
+                                    'full_item': e
+                                });
                             });
                             response(ajaxcleaned);
                         } else {
@@ -375,7 +389,8 @@ function SA_loadNewAsyncSelectors() {
                 // console.log('target', $(target).data('visible'));
                 // console.log( "Selected: " + ui.item.value + " aka " + ui.item.label, ui.item );
                 var key = ui.item.full_item.id;
-                var title = ui.item.full_item.title;
+
+                var title = (ui.item.full_item.title)?ui.item.full_item.title:(ui.item.full_item.last_name)?ui.item.full_item.first_name + ' ' + ui.item.full_item.last_name:'no title';
                 // make sure there is a status
                 var status = ui.item.full_item.status;
                 var statusclass = 'btn-info';

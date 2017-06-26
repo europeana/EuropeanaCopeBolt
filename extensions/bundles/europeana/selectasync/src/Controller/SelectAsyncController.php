@@ -216,6 +216,10 @@ class SelectAsyncController implements ControllerProviderInterface
         if(empty($ids)) {
             return $this->noAccess('No ids given');
         }
+        if (!array_filter($ids, 'is_numeric')) {
+            return $this->noAccess('Not all ids are numerical');
+        }
+
         $type = $request->query->get('type');
         if(empty($type)) {
             return $this->noAccess('No type given');

@@ -7,11 +7,11 @@ jQuery.fn.extend(
             // prepare display according to current settings
             $(this)
                 .masterSwitcher()
-                .compressSwitcher()
                 .templateSwitcher()
                 .orderSwitcher()
                 .filterSwitcher()
-                .sourceSwitcher();
+                .sourceSwitcher()
+                .compressSwitcher();
 
             // add change handlers to block
             $(this).on('change', this.callChanges);
@@ -79,9 +79,7 @@ jQuery.fn.extend(
                         }
                     })
                 );
-
-            console.log('titleswitcher loading');
-
+            //console.log('titleswitcher loading');
             return viewblock;
         },
         templateSwitcher: function() {

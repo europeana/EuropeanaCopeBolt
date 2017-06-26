@@ -7,12 +7,19 @@
             {% include 'views/_mini_externalcontact.twig' %}
         </div>
     {% elseif record.author is defined and record.author is not empty %}
-        <div class="author-small-container">
-        {% for aut in record.author %}
-            {% setcontent author = 'persons' where { id : aut } returnsingle %}
-            {% include 'views/_mini_persons.twig' with { item: author } %}
-        {% endfor %}
-        </div>
+        {% set contacts = record.author %}
+        {% if contacts is not iterable %}
+            {# fix iterable ids if the content is json in a textfield #}
+            {% set contacts = record.author|json_decode() %}
+        {% endif %}
+        {% if contacts is iterable %}
+            <div class="author-small-container">
+            {% for contact_id in contacts %}
+                {% setcontent author = 'persons' where { id : contact_id } returnsingle %}
+                {% include 'views/_mini_persons.twig' with { item: author } %}
+            {% endfor %}
+            </div>
+        {% endif %}
     {% endif %}
 
     <h1>{{ record.title }}</h1>
