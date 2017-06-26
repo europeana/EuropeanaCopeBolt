@@ -242,6 +242,19 @@ function SA_loadNewAsyncSelectors() {
                                     $('<span>').text(title).addClass('btn btn-xs ' + statusclass)
                                 )
                                 .append(
+                                    $('<span>').attr({'aria-label':"Edit"}).addClass('btn btn-default btn-xs').html('<span aria-hidden="true"><i class="fa fa-edit"></i></span>')
+                                        .on('click', function() {
+                                            var editable = $(this).parent();
+                                            var sorter = $(this).parent().parent();
+                                            var sorterid = '#'+ $(sorter).data('target');
+                                            var contentdata = $(sorterid).data();
+                                            var targetid = $(editable).data('id');
+                                            var datatype = contentdata.contenttype;
+                                            // console.log('editable', targetid, datatype, $(sorter), contentdata);
+                                            location.replace('/admin/editcontent/'+datatype+'/'+ targetid);
+                                        })
+                                )
+                                .append(
                                     $('<span>').attr({'aria-label':"Close"}).addClass('btn btn-warning btn-xs').html('<span aria-hidden="true">&times;</span>')
                                         .on('click', function() {
                                             var removable = $(this).parent();
@@ -375,6 +388,19 @@ function SA_loadNewAsyncSelectors() {
                     })
                     .append(
                         $('<span>').text(title).addClass('btn btn-xs ' + statusclass)
+                    )
+                    .append(
+                        $('<span>').attr({'aria-label':"Edit"}).addClass('btn btn-default btn-xs').html('<span aria-hidden="true"><i class="fa fa-edit"></i></span>')
+                            .on('click', function() {
+                                var editable = $(this).parent();
+                                var sorter = $(this).parent().parent();
+                                var sorterid = '#'+ $(sorter).data('target');
+                                var contentdata = $(sorterid).data();
+                                var targetid = $(editable).data('id');
+                                var datatype = contentdata.contenttype;
+                                // console.log('editable', targetid, datatype, $(sorter), contentdata);
+                                location.replace('/admin/editcontent/'+datatype+'/'+ targetid);
+                            })
                     )
                     .append(
                         $('<span>').attr({'aria-label':"Close"}).addClass('btn btn-warning btn-xs').html('<span aria-hidden="true">&times;</span>')
