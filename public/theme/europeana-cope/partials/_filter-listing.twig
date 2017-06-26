@@ -37,14 +37,93 @@
         </ul>
     {% endif %} #}
 
-    <a class="reset" href="#">Reset filter</a>
+    <h2 class="sr-only">Filter this list</h2>
+    <div class="current-filters">
+        <a class="reset" href="#">Reset filter</a>
 
-    <a href="">Filter by</a></li>
-    <a href="">Services: Campaigns</a></li>
+        <a href="">Filter by</a></li>
+        <a href="">Services: Campaigns</a></li>
+    </div>
 
-    <form method="GET" class="filterform" id="filterbar">
-        <fieldset>
-            <legend>Hoofdstuk A</legend>
+    <div class="filter-container group">
+        <div class="arrow-up"></div>
+
+        <ul class="filter-chaptertitles">
+            <li><a>Markets<svg class="icon icon-next">
+                    <use xlink:href="#icon-next"></use>
+                </svg></a>
+            </li>
+            <li><a>Services<svg class="icon icon-next">
+                    <use xlink:href="#icon-next"></use>
+                </svg></a>
+            </li>
+            <li class="current"><a>Community<svg class="icon icon-next">
+                    <use xlink:href="#icon-next"></use>
+                </svg></a>
+            </li>
+            <li><a>Type<svg class="icon icon-next">
+                    <use xlink:href="#icon-next"></use>
+                </svg></a>
+            </li>
+        </ul>
+
+        <div class="filter-chapter filters-markets current" id="filters-markets">
+            <h3>Community</h3>
+            <ul class="filterlist" >
+                <li><a>Optie1 (30)</a></li>
+                <li><a>Optie2 (44)</a></li>
+                <li class="current"><a>Optie3 (6)</a></li>
+                <li><a>Optie4 (72)</a></li>
+                <li><a>Optie1 (30)</a></li>
+                <li><a>Optie2 (44)</a></li>
+                <li><a>Optie3 (6)</a></li>
+                <li><a>Optie4 (72)</a></li>
+                <li><a>Optie1 (30)</a></li>
+                <li><a>Optie2 (44)</a></li>
+                <li><a>Optie3 (6)</a></li>
+                <li><a>Optie4 (72)</a></li>
+                <li><a>Optie1 (30)</a></li>
+                <li><a>Optie2 (44)</a></li>
+                <li><a>Optie3 (6)</a></li>
+                <li><a>Optie4 (72)</a></li>
+            </ul>
+        </div>
+
+        <div class="filter-chapter filters-services" id="filters-services">
+            <h3>Services</h3>
+            <ul class="filterlist">
+                <li><a>Optie1 (30)</a></li>
+                <li><a>Optie2 (44)</a></li>
+                <li><a>Optie3 (6)</a></li>
+                <li><a>Optie4 (72)</a></li>
+            </ul>
+        </div>
+
+        <div class="filter-chapter filters-community" id="filters-community">
+            <h3>Community</h3>
+            <ul class="filterlist" >
+                <li><a>Optie1 (30)</a></li>
+                <li><a>Optie2 (44)</a></li>
+                <li><a>Optie3 (6)</a></li>
+                <li><a>Optie4 (72)</a></li>
+            </ul>
+        </div>
+
+        <div class="filter-chapter filters-type" id="filters-type">
+            <h3>Type</h3>
+            <ul class="filterlist">
+                <li><a>Optie1 (30)</a></li>
+                <li><a>Optie2 (44)</a></li>
+                <li><a>Optie3 (6)</a></li>
+                <li><a>Optie4 (72)</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    {# <form method="GET" class="filterform" id="filterbar">
+        <div>
+            <h3></h3>
             <input type='radio' name="filterby" value='value1'>
                 <label for="#filterbyvalue1" >Value 1</label>
             <input type='radio' name="filterby" value='value2'>
@@ -60,7 +139,7 @@
         </fieldset>
 
         <button type="submit">Filter</button>
-    </form>
+    </form> #}
 
 
 </div>

@@ -50,34 +50,8 @@ nav.quicklinks {
     }
 }
 
-.filter-listing {
 
-    font-size: 0.9375rem;
-    color: $white;
 
-    ul{
-        display: inline-block;
-        padding: 10px 0;
-    }
-
-    p, a.reset {
-        display: inline-block;
-        font-size: 0.9375rem;
-        margin: 0;
-        border-right: 1px solid $white;
-    }
-
-    li {
-        display: inline-block;
-    }
-
-    a {
-        display: block;
-        color: $white;
-        padding: 6px 1rem;
-    }
-
-}
 
 /*
 * MAIN MENU
@@ -189,4 +163,134 @@ nav.footer-menu {
         background-color: inherit;
        }
     }
+}
+
+
+/*
+***********************************************************************
+* LIST FILTERING
+***********************************************************************
+**/
+
+
+
+.filter-listing {
+    position: relative;
+    font-size: 0.9375rem;
+
+    .current-filters {
+        a {
+            color: $white;
+        }
+
+    }
+
+    .filter-container {
+        position: relative;
+        margin: 1.2rem 1rem 1rem ;
+        background: $white;
+        box-shadow: 1px 1px 5px rgba($black, 0.5);
+        display: inline-block;
+
+        > ul,
+        >.filter-chapter  {
+            padding: 1rem;
+        }
+    }
+
+    ul {
+
+    }
+
+    .filter-chaptertitles {
+        float: left;
+        width: 150px;
+
+        li {
+            width: 100%;
+        }
+
+        svg {
+            fill: $line-gray;
+            font-size: .75em;
+            vertical-align: middle;
+            float: right;
+            margin-top: .5em;
+            margin-right: 0;
+        }
+    }
+
+    .filter-chapter {
+        display: none;
+        margin-left: 150px;
+        //float: left;
+        border-left: 1px solid $line-gray;
+        padding: 0 1rem;
+        max-width: 800px; // looks good
+
+        &.current {
+            display: block;
+        }
+    }
+
+
+    ul.filterlist {
+
+
+        li {
+            width: 30%;
+            display: inline-block;
+            background-color: #f09;
+        }
+    }
+
+    h3 {
+        color: $baseFirstThemeColour;
+        font-weight: 400;
+        font-size: 1.25rem;
+    }
+
+    li {
+        margin-bottom: .5rem;
+    }
+
+    li.current a {
+        color: $baseFirstThemeColour;
+        font-weight: 700;
+
+        svg {
+            fill: $medium-gray;
+        }
+    }
+
+    a {
+      color: $medium-gray;
+    }
+
+    // color: $white;
+
+    // ul{
+    //     display: inline-block;
+    //     padding: 10px 0;
+    // }
+
+    // p, a.reset {
+    //     display: inline-block;
+    //     font-size: 0.9375rem;
+    //     margin: 0;
+    //     border-right: 1px solid $white;
+    // }
+
+    // li {
+    //     display: inline-block;
+    // }
+
+    // a {
+    //     display: block;
+    //     color: $white;
+    //     padding: 6px 1rem;
+    // }
+
+
+
 }

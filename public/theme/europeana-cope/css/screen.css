@@ -852,24 +852,6 @@ nav.quicklinks a {
       font-size: 0.875rem;
       padding: 6px 1rem; } }
 
-.filter-listing {
-  font-size: 0.9375rem;
-  color: #fff; }
-  .filter-listing ul {
-    display: inline-block;
-    padding: 10px 0; }
-  .filter-listing p, .filter-listing a.reset {
-    display: inline-block;
-    font-size: 0.9375rem;
-    margin: 0;
-    border-right: 1px solid #fff; }
-  .filter-listing li {
-    display: inline-block; }
-  .filter-listing a {
-    display: block;
-    color: #fff;
-    padding: 6px 1rem; }
-
 /*
 * MAIN MENU
 **/
@@ -935,6 +917,63 @@ nav.footer-menu a {
     background: #4d4d4d; }
   .pagination .disabled a:hover, .pagination .disabled a:active, .pagination .disabled a:focus {
     background-color: inherit; }
+
+/*
+***********************************************************************
+* LIST FILTERING
+***********************************************************************
+**/
+.filter-listing {
+  position: relative;
+  font-size: 0.9375rem; }
+  .filter-listing .current-filters a {
+    color: #fff; }
+  .filter-listing .filter-container {
+    position: relative;
+    margin: 1.2rem 1rem 1rem;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(26, 26, 26, 0.5);
+    display: inline-block; }
+    .filter-listing .filter-container > ul,
+    .filter-listing .filter-container > .filter-chapter {
+      padding: 1rem; }
+  .filter-listing .filter-chaptertitles {
+    float: left;
+    width: 150px; }
+    .filter-listing .filter-chaptertitles li {
+      width: 100%; }
+    .filter-listing .filter-chaptertitles svg {
+      fill: #cccccc;
+      font-size: .75em;
+      vertical-align: middle;
+      float: right;
+      margin-top: .5em;
+      margin-right: 0; }
+  .filter-listing .filter-chapter {
+    display: none;
+    margin-left: 150px;
+    border-left: 1px solid #cccccc;
+    padding: 0 1rem;
+    max-width: 800px; }
+    .filter-listing .filter-chapter.current {
+      display: block; }
+  .filter-listing ul.filterlist li {
+    width: 30%;
+    display: inline-block;
+    background-color: #f09; }
+  .filter-listing h3 {
+    color: #E11D53;
+    font-weight: 400;
+    font-size: 1.25rem; }
+  .filter-listing li {
+    margin-bottom: .5rem; }
+  .filter-listing li.current a {
+    color: #E11D53;
+    font-weight: 700; }
+    .filter-listing li.current a svg {
+      fill: #4d4d4d; }
+  .filter-listing a {
+    color: #4d4d4d; }
 
 /**
  * File:        _typography.scss
