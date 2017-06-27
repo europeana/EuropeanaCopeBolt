@@ -364,8 +364,14 @@ $( document ).ready(function() {
 
 
         if ( windowWidthEms >= breakLarge ) {
+
+            // set filters outside list for desktop.
+            // NOTE: Anke is lazy and has not coded for the edgecase where a Large window is resized to < Large.
+            // hardly ever occurs. If happens, slap Anke and fix it yourself.
             $('.filters-chapter').appendTo('.filter-container');
+
         }
+
 
 
     };
