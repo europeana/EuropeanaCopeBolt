@@ -5,7 +5,12 @@
 # ------------------------------------------------------------------------------
 # Place your own routes here, that have a HIGHER priority than the default routes.
 
-
+viewblocklisting:
+    path: /{contenttypeslug}/{slug}/{subtype}/{taxonomyname}/{taxonomyterm}
+    defaults:
+        _controller: controller.frontend:record
+    requirements:
+        contenttypeslug: controller.requirement:anyContentType
 
 # ------------------------------------------------------------------------------
 # These are the routes defining the default behaviour of Bolt's frontend.
@@ -52,8 +57,6 @@ contentlisting:
 
 # ------------------------------------------------------------------------------
 # Place your own routes here, that have a LOWER priority than the default routes.
-
-
 
 # ------------------------------------------------------------------------------
 # Routes examples:

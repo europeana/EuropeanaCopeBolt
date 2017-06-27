@@ -177,3 +177,86 @@ landingpages:
       group: Main
 ```
 
+### Subtypes
+
+```
+    pagetype:
+      page: Normal page
+      listing: Listing page
+      landingpage-nohighlight: Landing page (without highlights)
+      landingpage: Landing page (with highlights)
+      splashpage: Splashpage
+
+    network_participation:
+      "(not set)": "(not set)"
+      "Founding Member": "Founding Member"
+      "Governing Board": "Governing Board"
+      "Management Board": "Management Board"
+      "Members Council": "Members Council"
+      "Network Association Member": "Network Association Member"
+      "MC Election Candidate": "MC Election Candidate"
+      "Partner": "Partner"
+      "Not a Network member": "Not a Network member"
+      "Network Association Member": "Network Association Member"
+      "Members Council Member": "Members Council Member"
+      "Network Association Management Board Member": "Network Association Management Board Member"
+      "Member States Representative": "Member States Representative"
+      "Representative of Content Holder Associations": "Representative of Content Holder Associations"
+      "Representative of Specific Fields of Expertise": "Representative of Specific Fields of Expertise"
+      "MC Election Candidate": "MC Election Candidate"
+      "Observer": "Observer"
+      "Friend of Europeana": "Friend of Europeana"
+
+    posttype:
+      Blog: "Blog"
+      Pressrelease: "Pressrelease"
+      Publication: "Publication"
+      News: "News"
+
+    projecttype:
+      "TaskForce": "TaskForce"
+      "WorkingGroup": "WorkingGroup"
+      "Project": "Project"
+
+    events:
+      events: events
+
+    jobs:
+      jobs: jobs
+
+```
+
+### taxonomy name and taxonomy value
+
+```
+        communities:
+          tech: EuropeanaTech
+          ipr: EuropeanaIPR
+          education: Europeana4Education
+          research: Europeana Research
+          member_states: Member States
+          fashion: Europeana Fashion
+          art: Europeana Art
+          photo: Europeana Photography
+
+        markets:
+          academic_research: Academic Research
+          chis: Cultural Heritage Institutions
+          creative_industries: Creative industries
+          education: Education
+          culture_lover: Culture lover
+
+        categories:
+          advocacy: Advocacy
+          api: API
+          campaigns: Campaigns
+          collections: Collections
+          data_publication: Data publication
+          data_standards: Data standards
+          funding: Funding
+          impact_framework: Impact framework
+          legal_standards: Legal standards
+          network: Network
+          projects: Projects
+          statistics: Statistics
+```
