@@ -540,7 +540,11 @@ posts:
       expanded: true
       default: "Blog"
       label: "Post type"
-      values: [ "Blog", "Pressrelease", "Publication", "News" ]
+      values:
+        Blog: "Blog"
+        Pressrelease: "Pressrelease"
+        Publication: "Publication"
+        News: "News"
       postfix: "Select if this record is a Blog, Pressrelease, Publication or other News record"
     intro:
       type: html
