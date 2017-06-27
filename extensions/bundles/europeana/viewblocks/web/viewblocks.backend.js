@@ -7,11 +7,11 @@ jQuery.fn.extend(
             // prepare display according to current settings
             $(this)
                 .masterSwitcher()
-                .compressSwitcher()
                 .templateSwitcher()
                 .orderSwitcher()
                 .filterSwitcher()
-                .sourceSwitcher();
+                .sourceSwitcher()
+                .compressSwitcher();
 
             // add change handlers to block
             $(this).on('change', this.callChanges);
@@ -48,7 +48,7 @@ jQuery.fn.extend(
             var titleblock = viewblock.find('.titletoggle');
             $(titleblock).parents('.repeater-field').addClass('titletoggleblock');
 
-            console.log(viewblock);
+            //console.log(viewblock);
             $(viewblock)
                 .children('.panel-heading')
                 .append($('<a>')
@@ -59,7 +59,7 @@ jQuery.fn.extend(
                     .addClass('btn btn-default btn-sm titletogglebutton')
                     .on('click', function(element) {
                         var titleviewblock = $(this).parents(".repeater-group");
-                        console.log('clicked toggle', $(this), element, titleviewblock);
+                        //console.log('clicked toggle', $(this), element, titleviewblock);
                         if($(titleviewblock).hasClass('showonlytitle')) {
                             $(this).removeClass('btn-info')
                                 .addClass('btn-default')
@@ -79,9 +79,7 @@ jQuery.fn.extend(
                         }
                     })
                 );
-
-            console.log('titleswitcher loading');
-
+            //console.log('titleswitcher loading');
             return viewblock;
         },
         templateSwitcher: function() {
@@ -100,15 +98,23 @@ jQuery.fn.extend(
             var bodyblock = viewblock.find('textarea[name*="body"]');
             var sourceselect = viewblock.find('select[name*="sources"]');
             var orderselect = viewblock.find('select[name*="ordering"]');
+            var iconfield = viewblock.find('input[name*="icon"]');
 
-            if(templatevalue === 'body') {
+            if(templatevalue === 'body' || templatevalue === 'collapsedcontent') {
                 bodyblock.parents('.repeater-field').show();
                 sourceselect.parents('.repeater-field').hide();
                 orderselect.parents('.repeater-field').hide();
+                iconfield.parents('.repeater-field').hide();
+            } else if(templatevalue === 'streamercolumn') {
+                bodyblock.parents('.repeater-field').hide();
+                sourceselect.parents('.repeater-field').hide();
+                orderselect.parents('.repeater-field').show();
+                iconfield.parents('.repeater-field').show();
             } else {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').show();
                 orderselect.parents('.repeater-field').show();
+                iconfield.parents('.repeater-field').hide();
             }
 
             //console.log('templatesSwitcher triggered', viewblock.data('templatevalue'));
@@ -129,16 +135,25 @@ jQuery.fn.extend(
             // dependent blocks for this switcher
             var categoryblock = viewblock.find('input[name*="basecategory"]');
             var tagblock = viewblock.find('input[name*="basetag"]');
+            var selectedamount = viewblock.find('input[name*="override_amount"]');
+
 
             if(ordervalue === 'tag' || ordervalue === 'tag_unpaged') {
                 tagblock.parents('.repeater-field').show();
                 categoryblock.parents('.repeater-field').hide();
+                selectedamount.parents('.repeater-field').show();
             } else if(ordervalue === 'category' || ordervalue === 'category_unpaged') {
                 tagblock.parents('.repeater-field').hide();
                 categoryblock.parents('.repeater-field').show();
+                selectedamount.parents('.repeater-field').show();
+            } else if(ordervalue === 'specified') {
+                tagblock.parents('.repeater-field').hide();
+                categoryblock.parents('.repeater-field').hide();
+                selectedamount.parents('.repeater-field').hide();
             } else {
                 tagblock.parents('.repeater-field').hide();
                 categoryblock.parents('.repeater-field').hide();
+                selectedamount.parents('.repeater-field').show();
             }
 
             //console.log('orderSwitcher triggered', viewblock.data('ordervalue'));
@@ -294,6 +309,38 @@ jQuery(document).ready(function($) {
     );
     $('a.titletogglebutton').each(function() { $(this).click(); });
 
+    var repeaterblock = $('fieldset.bolt-field-repeater > label');
+    //console.log('repeater block', repeaterblock);
+    $(repeaterblock)
+        .after(
+            $('<a>')
+                .attr({
+                    'title': 'Expand all modules'
+                })
+                .html('<i class="fa fa-expand"></i> Expand All')
+                .addClass('btn btn-info btn-sm titletoggleallbutton pull-right')
+                .on('click', function(element) {
+                    //console.log('clicked toggle all', $(this), element, titleviewblock);
+                    if($(this).hasClass('btn-default')) {
+                        $(this).removeClass('btn-default')
+                            .addClass('btn-info')
+                            .attr({
+                                'title': 'Compress all modules'
+                            })
+                            .html('<i class="fa fa-expand"></i> Expand All');
+                        $('a.titletogglebutton.btn-default').each(function() { $(this).click(); });
+                    } else {
+                        $(this).addClass('btn-default')
+                            .removeClass('btn-info')
+                            .attr({
+                                'title': 'Expand all modules'
+                            })
+                            .html('<i class="fa fa-compress"></i> Close all');
+                        $('a.titletogglebutton.btn-info').each(function() { $(this).click(); });
+                    }
+                })
+        );
+
     $('.repeater-add button, button.duplicate-button').on('click', function() {
         //console.log('a repeater is added');
         setTimeout(
@@ -336,4 +383,68 @@ jQuery(document).ready(function($) {
     }
 
     console.log('highlightswitcher js loaded');
+
+    $('.fileselectbuttongroup').each(function() {
+        // console.log('uploadbutton hider', $(this));
+        $(this).children('.fileinput-button').each(function() {
+            $(this).hide();
+        });
+        $(this).append($('<a>').attr({
+            'href': 'https://www.dropbox.com',
+            'target': '_blank'
+        }).addClass('btn btn-primary btn-sm').html('<i class="fa fa-dropbox"></i> Upload files'));
+    });
+    console.log('uploadbuttons js loaded');
+
+    // prepare modal dialog for cheatsheet
+    var VB_cheatsheet = $('<div>')
+        .addClass("modal fade bd-example-modal-lg")
+        .attr({
+            'id': "VB_cheatsheet",
+            'tabindex': "-1",
+            'role': "dialog",
+            'aria-labelledby': "VB_cheatsheet",
+            'aria-hidden': "true"
+        })
+        .append(
+            $('<div>')
+                .addClass("modal-dialog modal-lg")
+                .attr({
+                    'role': 'document'
+                })
+                .append(
+                    $('<div>')
+                        .addClass("modal-content")
+                        .append(
+                            $('<div>')
+                                .addClass('modal-header')
+                                .html('<b class="modal-title"><i class="fa fa-comment-o" aria-hidden="true"></i> Template cheatsheet</b><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>')
+                        )
+                        .append(
+                            $('<div>')
+                                .addClass('modal-body')
+                                .html('<div class="container-fluid"><div class="row"><div class="col-md-4 col-sm-4"><span>Test</span></div><div class="col-md-8 col-sm-8"><p>This is the cheatsheet.</p></div></div></div>')
+                        )
+                        .append(
+                            $('<div>')
+                                .addClass('modal-footer')
+                                .html('<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>')
+                        )
+                )
+        );
+    $('body').append(VB_cheatsheet);
+
+    // Fill modal with content from link href
+    $("#VB_cheatsheet").find(".modal-body")
+        .load('/Europeana/ViewBlocks/cheatsheet.html #container');
+
+    // add cheatsheetpopup
+    $('a.cheatsheet:not(.haspopup)').each(function() {
+        $(this).on('click', function() {
+            $('#VB_cheatsheet').modal('show');
+            console.log('showing cheatsheet');
+        });
+        $(this).addClass('haspopup');
+    });
+    console.log('cheatsheet js loaded');
 });

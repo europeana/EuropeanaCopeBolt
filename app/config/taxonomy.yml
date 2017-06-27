@@ -16,13 +16,14 @@ communities:
     behaves_like: categories
     multiple: false
     options:
-        tech: Tech
-        ipr: IPR
-        education: Education
-        research: Research
+        tech: EuropeanaTech
+        ipr: EuropeanaIPR
+        education: Europeana4Education
+        research: Europeana Research
         member_states: Member States
-        fashion: Fashion
-        art: Art
+        fashion: Europeana Fashion
+        art: Europeana Art
+        photo: Europeana Photography
     postfix: "Select one of the communities to activate the branding for that community in the website."
 
 markets:
@@ -34,36 +35,42 @@ markets:
     multiple: true
     options:
         academic_research: Academic Research
-        chis: CHIs
+        chis: Cultural Heritage Institutions
         creative_industries: Creative industries
-        culture_lover: Culture lover
         education: Education
+        culture_lover: Culture lover
     postfix: "Select one or more markets"
 
 categories:
-    name: Categories
+    name: Service Categories
     slug: categories
-    singular_name: Category
+    singular_name: Service Category
     singular_slug: category
     behaves_like: categories
     multiple: true
     options:
-        legal_interoperability: Legal interoperability of data
-        impact_framework: Impact framework
-        crossdomain_exchange: Cross-domain data exchange of interoperability
-        statistics: Statistics
         advocacy: Advocacy
         api: API
-        thematic_collections: Thematic Collections
-        curated_datasets: Curated datasets
-        workshops: Workshops
-        funding: Funding
-        project_brokerage: EU project brokerage and support
-        collections_publication: Collections publication
-        virtual_ehibitions: Virtual Exhibitions
-        network_association: Network Association
         campaigns: Campaigns
-        year_of_cultural_heritage: Year of Cultural Heritage
+        collections: Collections
+        data_publication: Data publication
+        data_standards: Data standards
+        funding: Funding
+        impact_framework: Impact framework
+        legal_standards: Legal standards
+        network: Network
+        projects: Projects
+        statistics: Statistics
+#        legal_interoperability: Legal interoperability of data
+#        crossdomain_exchange: Cross-domain data exchange of interoperability
+#        thematic_collections: Thematic Collections
+#        curated_datasets: Curated datasets
+#        workshops: Workshops
+#        project_brokerage: EU project brokerage and support
+#        collections_publication: Collections publication
+#        virtual_ehibitions: Virtual Exhibitions
+#        network_association: Network Association
+#        year_of_cultural_heritage: Year of Cultural Heritage
     postfix: "Select one or more categories"
 
 ##############################################

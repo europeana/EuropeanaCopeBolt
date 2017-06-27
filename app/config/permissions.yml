@@ -72,7 +72,7 @@ global:
     fileedit: [ admin, developer ]
     files:config: [ developer ]
     files:theme: [ developer ]
-    files:uploads: [ admin, developer, chief-editor, editor ]
+    files:uploads: [ developer ]
     files: [ admin, developer, chief-editor, editor ]
     prefill: [ developer ]
     profile: [ everyone ] # edit own profile

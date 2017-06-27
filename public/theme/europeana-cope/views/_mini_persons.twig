@@ -1,7 +1,8 @@
-{% if item is not defined %}
+{% if item is not defined and record is defined %}
     {% set item = record %}
 {% endif %}
 
+{% if (item is not empty) and (item.last_name is not empty) %}
 <div class="author-small group">
     <img class="round" src="{{ item.image|default('notfound')|thumbnail(72, 72, 'c') }}" alt="portrait of {{ item.first_name }} {{ item.last_name }}"/>
     <p class="name">{{ item.first_name }} {{ item.last_name }}</p>
@@ -9,3 +10,4 @@
         {% if item.company is not empty %}{%- if item.job_title is not empty %}, {% endif %}{{ item.company }} {% endif %}
     </p>
 </div>
+{% endif %}

@@ -8,49 +8,6 @@ jQuery(document).ready(function($) {
     });
     console.log('selectasync js loaded');
 
-    // prepare modal dialog for cheatsheet
-    var SA_cheatsheet = $('<div>')
-    .addClass("modal fade bd-example-modal-lg")
-    .attr({
-        'id': "SA_cheatsheet",
-        'tabindex': "-1",
-        'role': "dialog",
-        'aria-labelledby': "SA_cheatsheet",
-        'aria-hidden': "true"
-    })
-    .append(
-        $('<div>')
-        .addClass("modal-dialog modal-lg")
-        .attr({
-            'role': 'document'
-        })
-        .append(
-            $('<div>')
-            .addClass("modal-content")
-            .append(
-                $('<div>')
-                .addClass('modal-header')
-                .html('<b class="modal-title"><i class="fa fa-comment-o" aria-hidden="true"></i> Template cheatsheet</b><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>')
-            )
-            .append(
-                $('<div>')
-                .addClass('modal-body')
-                .html('<div class="container-fluid"><div class="row"><div class="col-md-4 col-sm-4"><span>Test</span></div><div class="col-md-8 col-sm-8"><p>This is the cheatsheet.</p></div></div></div>')
-            )
-            .append(
-                $('<div>')
-                .addClass('modal-footer')
-                .html('<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>')
-            )
-        )
-    );
-    $('body').append(SA_cheatsheet);
-
-    // Fill modal with content from link href
-    $("#SA_cheatsheet").find(".modal-body")
-        .load('/Europeana/SelectAsync/cheatsheet.html #container');
-    console.log('cheatsheet js loaded');
-
 });
 
 /* helper to fetch the content type from the css classnames */
@@ -64,6 +21,10 @@ function SA_findFields(keys) {
 /* helper to fetch the select key field from the css classnames */
 function SA_findKey(keys) {
     return keys.match('key-');
+}
+/* helper to fetch the limit key field from the css classnames */
+function SA_findLimit(keys) {
+    return keys.match('results-');
 }
 /* helper to check if a string is a json srting */
 function SA_isJson(str) {
@@ -101,19 +62,13 @@ function SA_reCalculateIds(item) {
  *
  */
 function SA_loadNewAsyncSelectors() {
-    // add cheatsheetpopup
-    $('a.cheatsheet:not(.haspopup)').each(function() {
-        $(this).on('click', function() {
-            $('#SA_cheatsheet').modal('show');
-            console.log('showing cheatsheet');
-        });
-        $(this).addClass('haspopup');
-    });
+
     // iterate through all new ajaxselector fields
     // and initialize the placeholder and select fields
     $('.ajaxselector:not(.ispreloaded)').each(function() {
         //console.log('selectasync element:', $(this).attr('class'), $(this));
         var dataclasses = $(this).attr('class').split(/\s/);
+        //console.log('dataclasses', dataclasses);
         $(this).css({width: '100%'});
         $(this).data(
             'contenttype',
@@ -126,6 +81,10 @@ function SA_loadNewAsyncSelectors() {
         $(this).data(
             'contentkey',
             dataclasses.find(SA_findKey).split('-').pop()
+        );
+        $(this).data(
+            'limit',
+            dataclasses.find(SA_findLimit).split('-').pop()
         );
         var divname = 'visible_' + $(this).attr('name');
         // make a placeholder with working stuff
@@ -177,7 +136,7 @@ function SA_loadNewAsyncSelectors() {
                 )
         );
         $(this).addClass('ispreloaded').hide();
-        console.log('selectasync initialization for:', $(this).attr('name'));
+        //console.log('selectasync initialization for:', $(this).attr('name'));
     });
 
     // prefill the placeholder field with an ajax call
@@ -251,11 +210,11 @@ function SA_loadNewAsyncSelectors() {
                         // make sure there is a status
                         var status = (e.status)?e.status:'draft';
                         var statusclass = 'btn-info';
-                        if(status != 'published') {
+                        if(status !== 'published') {
                             statusclass = 'btn-default';
                             title = title + ' (' + status + ')';
                         }
-                        if (status == 'draft') {
+                        if (status === 'draft') {
                             statusclass = 'btn-error';
                         }
                         unsorted.push(
@@ -281,6 +240,19 @@ function SA_loadNewAsyncSelectors() {
                                 })
                                 .append(
                                     $('<span>').text(title).addClass('btn btn-xs ' + statusclass)
+                                )
+                                .append(
+                                    $('<span>').attr({'aria-label':"Edit"}).addClass('btn btn-default btn-xs').html('<span aria-hidden="true"><i class="fa fa-edit"></i></span>')
+                                        .on('click', function() {
+                                            var editable = $(this).parent();
+                                            var sorter = $(this).parent().parent();
+                                            var sorterid = '#'+ $(sorter).data('target');
+                                            var contentdata = $(sorterid).data();
+                                            var targetid = $(editable).data('id');
+                                            var datatype = contentdata.contenttype;
+                                            // console.log('editable', targetid, datatype, $(sorter), contentdata);
+                                            location.replace('/admin/editcontent/'+datatype+'/'+ targetid);
+                                        })
                                 )
                                 .append(
                                     $('<span>').attr({'aria-label':"Close"}).addClass('btn btn-warning btn-xs').html('<span aria-hidden="true">&times;</span>')
@@ -357,7 +329,12 @@ function SA_loadNewAsyncSelectors() {
                             var results = data.results[data.type];
                             var ajaxcleaned = [];
                             results.forEach(function(e, index) {
-                                ajaxcleaned.push({'value': e.id, 'label': e.title, 'full_item': e});
+                                var title = (e.title)?e.title:(e.last_name)?e.first_name + ' ' + e.last_name:'no title';
+                                ajaxcleaned.push({
+                                    'value': e.id,
+                                    'label': title,
+                                    'full_item': e
+                                });
                             });
                             response(ajaxcleaned);
                         } else {
@@ -375,7 +352,8 @@ function SA_loadNewAsyncSelectors() {
                 // console.log('target', $(target).data('visible'));
                 // console.log( "Selected: " + ui.item.value + " aka " + ui.item.label, ui.item );
                 var key = ui.item.full_item.id;
-                var title = ui.item.full_item.title;
+
+                var title = (ui.item.full_item.title)?ui.item.full_item.title:(ui.item.full_item.last_name)?ui.item.full_item.first_name + ' ' + ui.item.full_item.last_name:'no title';
                 // make sure there is a status
                 var status = ui.item.full_item.status;
                 var statusclass = 'btn-info';
@@ -410,6 +388,19 @@ function SA_loadNewAsyncSelectors() {
                     })
                     .append(
                         $('<span>').text(title).addClass('btn btn-xs ' + statusclass)
+                    )
+                    .append(
+                        $('<span>').attr({'aria-label':"Edit"}).addClass('btn btn-default btn-xs').html('<span aria-hidden="true"><i class="fa fa-edit"></i></span>')
+                            .on('click', function() {
+                                var editable = $(this).parent();
+                                var sorter = $(this).parent().parent();
+                                var sorterid = '#'+ $(sorter).data('target');
+                                var contentdata = $(sorterid).data();
+                                var targetid = $(editable).data('id');
+                                var datatype = contentdata.contenttype;
+                                // console.log('editable', targetid, datatype, $(sorter), contentdata);
+                                location.replace('/admin/editcontent/'+datatype+'/'+ targetid);
+                            })
                     )
                     .append(
                         $('<span>').attr({'aria-label':"Close"}).addClass('btn btn-warning btn-xs').html('<span aria-hidden="true">&times;</span>')

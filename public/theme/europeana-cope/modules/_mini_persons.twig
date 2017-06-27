@@ -1,0 +1,15 @@
+{% if record.contact_name is not empty %}
+    {% include 'views/_mini_externalcontact.twig' %}
+{% elseif record.contact_record %}
+    {% set contacts = record.contact_record %}
+    {% if contacts is not iterable %}
+        {# fix iterable ids if the content is json in a textfield #}
+        {% set contacts = record.contact_record|json_decode() %}
+    {% endif %}
+    {% if contacts is iterable %}
+        {% for contact_id in contacts %}
+            {% setcontent author = 'persons' where { id : contact_id } returnsingle %}
+            {% include 'views/_mini_persons.twig' with { item : author } %}
+        {% endfor %}
+    {% endif %}
+{% endif %}
