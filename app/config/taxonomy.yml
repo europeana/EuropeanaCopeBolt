@@ -42,9 +42,9 @@ markets:
     postfix: "Select one or more markets"
 
 categories:
-    name: Categories
+    name: Service Categories
     slug: categories
-    singular_name: Category
+    singular_name: Service Category
     singular_slug: category
     behaves_like: categories
     multiple: true
