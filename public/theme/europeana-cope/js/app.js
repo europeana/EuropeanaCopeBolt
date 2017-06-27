@@ -263,6 +263,34 @@ $( document ).ready(function() {
 
 
     /**
+    * Open en close filters
+    *
+    */
+
+
+    $('.toggle-filter').on('click',function(e){
+        e.preventDefault;
+
+        $('.filter-container').toggleClass('expanded');
+    })
+
+    $('.chapter-toggle').on('click', function(e){
+        e.preventDefault();
+
+        var chapter = $(this).text();
+        // console.log(chapter);
+
+        // toggle filterlists
+        $(this).parent('li').toggleClass('current');
+        $('.chapter-toggle').not('.chapter-toggle-'+chapter).parent('li').removeClass('current');
+
+        $('#filters-'+chapter).toggleClass('current');
+        $('.filters-chapter').not('#filters-'+chapter).removeClass('current');
+    })
+
+
+
+    /**
      * Merge streamer colums into the first
      * Only works with 3 or 2 streamer columns per page.
      */
@@ -328,12 +356,16 @@ $( document ).ready(function() {
             $('nav.main-menu').stick_in_parent();
 
         } else {
-           // remve stickyness when window is resized
+           // remove stickyness when window is resized
            $("#topbar").trigger("sticky_kit:detach");
            $('nav.main-menu').trigger("sticky_kit:detach");
         }
 
 
+
+        if ( windowWidthEms >= breakLarge ) {
+            $('.filters-chapter').appendTo('.filter-container');
+        }
 
 
     };

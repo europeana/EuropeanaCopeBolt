@@ -4,6 +4,7 @@
 {% if records is defined and records|first.contenttype is defined %}
    {% set contenttypeslug = records|first.contenttype.slug %}
 
+{# if the listing is made by a module, get that listing #}
 {% elseif record.modules is defined %}
     {% for module in record.modules %}
 
@@ -15,10 +16,9 @@
 
 {% endif %}
 
+{# get correct contenttype from slug #}
 {% set contenttype = app.config.get('contenttypes/' ~ contenttypeslug ) %}
-
 {% set filterchapters = [] %}
-
 
 {% if contenttype is defined %}
     {# get main categorisation from contenttype #}
@@ -26,39 +26,22 @@
         {% set contenttypepath = '/' ~ contenttypeslug ~ '/network_participation/' %}
         {% set categories = contenttype.fields.network_participation.values %}
     {% elseif contenttypeslug == 'projects' %}
-        {# Projects #}
-        {# filter by market or service #}
+        {# Projects: filter by market or service #}
+        {# Working groups: filter by market or service #}
+        {# Task force: filter by market or service #}
 
-        {# Working groups #}
-        {# filter by market or service #}
+        {% set filterchapters = ['Markets','Categories'] %}
 
-        {# Task force #}
-        {# filter by market or service #}
-
-        {% set contenttypepath = '/' ~ contenttypeslug ~ '/projecttype/' %}
-        {% set categories = contenttype.fields.projecttype.values %}
     {% elseif contenttypeslug == 'posts' %}
-        {# Pressreleases#}
-        {# filter by market or service #}
+        {# Pressreleases: filter by market or service #}
+        {# Publications: filter by market or service #}
 
-        {% set filterchapters = ['Markets','Categories'] %} {# filter by these taxonomies #}
-
-        {# Publications#}
-        {# filter by market or service #}
-
-        {# OLD #}
-        {# {% set contenttypepath = '/' ~ contenttype.slug ~ '/posttype/' %} #}
-        {# {% set categories = contenttype.fields.posttype.values %} #}
-
-
+        {% set filterchapters = ['Markets','Categories'] %}
 
     {% elseif contenttypeslug == 'data' %}
 
-        {# Dataset #}
-        {# native category #}
-
-        {# Apps #}
-        {#  appcategories #}
+        {# Dataset: filter by native category #}
+        {# Apps: filter by appcategories #}
 
         {% set contenttypepath = '/' ~ contenttypeslug ~ '/datatype/' %}
         {% set categories = contenttype.fields.datatype.values %}
@@ -90,7 +73,7 @@
             <span class="arrow-down"></span>
         </a>
 
-
+        {# TODO set current filter -- adh v routing #}
         <span class="this-filter">Services: Campaigns</span>
         <a class="reset-filter" href="#"><span class="sr-only">Reset filter</span>
             <svg class="icon icon-delete">
@@ -104,15 +87,27 @@
 
         <ul class="filter-chaptertitles">
             {% for chapter in filterchapters %}
-            <li><a href="#">{{ chapter }}<svg class="icon icon-next">
+            <li><a href="#" class="chapter-toggle chapter-toggle-{{ chapter }}">{{ chapter }}<svg class="icon icon-next">
                     <use xlink:href="#icon-next"></use>
                 </svg></a>
+
+                <div class="filters-chapter filters-{{chapter}}" id="filters-{{chapter}}">
+                    <h3>{{ chapter }}</h3>
+                    <ul class="filterlist" >
+                        {% set filters = app.config.get('taxonomy/'~ chapter|lower ~'/options') %}
+
+                        {% for filter, filtername in filters %}
+                        <li {% if false %} class="current"{% endif %}><a href="#">{{ filtername }} (x)</a></li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+
             </li>
             {% endfor %}
         </ul>
 
-        {% for chapter in filterchapters %}
-        <div class="filter-chapter filters-{{chapter|lower}} current" id="filters-{{chapter|lower}}">
+        {# <div class="filter-chapter filters-{{chapter|lower}} current" id="filters-{{chapter|lower}}">
             <h3>{{ chapter }}</h3>
             <ul class="filterlist" >
                 {% set filters = app.config.get('taxonomy/'~ chapter|lower ~'/options') %}
@@ -122,8 +117,8 @@
                 {% endfor %}
 
             </ul>
-        </div>
-        {% endfor %}
+        </div> #}
+
 
 
 

@@ -925,8 +925,12 @@ nav.footer-menu a {
 **/
 .filter-listing {
   position: relative;
-  font-size: 0.9375rem;
-  margin-left: 2rem; }
+  font-size: 0.875rem;
+  margin-left: 0; }
+  @media only screen and (min-width: 47.9375em) {
+    .filter-listing {
+      margin-left: 2rem;
+      font-size: 0.9375rem; } }
   .filter-listing .current-filters {
     padding: 10px 0; }
     .filter-listing .current-filters .toggle-filter, .filter-listing .current-filters .this-filter {
@@ -952,13 +956,18 @@ nav.footer-menu a {
       margin-left: -10px; }
   .filter-listing .filter-container {
     position: relative;
-    margin: -7px 2.7rem 1rem;
+    margin: 0 1rem 1rem;
     background: #fff;
     box-shadow: 1px 1px 5px rgba(26, 26, 26, 0.5);
     overflow: visible;
-    display: inline-block; }
+    display: none; }
+    .filter-listing .filter-container.expanded {
+      display: inline-block; }
+    @media only screen and (min-width: 47.9375em) {
+      .filter-listing .filter-container {
+        margin: -7px 2.7rem 1rem; } }
     .filter-listing .filter-container > ul,
-    .filter-listing .filter-container > .filter-chapter {
+    .filter-listing .filter-container > .filters-chapter {
       padding: 1rem; }
   .filter-listing .arrow-up {
     width: 0;
@@ -968,10 +977,17 @@ nav.footer-menu a {
     border-bottom: 10px solid #fff;
     position: absolute;
     top: -10px;
-    left: 2rem; }
+    left: 3.5rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .filter-listing .arrow-up {
+        left: 2rem; } }
   .filter-listing .filter-chaptertitles {
-    float: left;
-    width: 150px; }
+    min-width: 288px; }
+    @media only screen and (min-width: 47.9375em) {
+      .filter-listing .filter-chaptertitles {
+        float: left;
+        width: 150px;
+        min-width: 0; } }
     .filter-listing .filter-chaptertitles li {
       width: 100%; }
     .filter-listing .filter-chaptertitles svg {
@@ -980,17 +996,27 @@ nav.footer-menu a {
       float: right;
       margin-top: .5em;
       margin-right: 0; }
-  .filter-listing .filter-chapter {
+  .filter-listing .filters-chapter {
     display: none;
-    margin-left: 150px;
-    border-left: 1px solid #cccccc;
     padding: 0 1rem;
-    max-width: 800px; }
-    .filter-listing .filter-chapter.current {
+    max-width: 800px;
+    border-left: 1px solid #cccccc;
+    margin: 1rem 0; }
+    @media only screen and (min-width: 47.9375em) {
+      .filter-listing .filters-chapter {
+        border-left: 1px solid #cccccc;
+        margin: 0 0 0 150px; } }
+    .filter-listing .filters-chapter.current {
       display: block; }
-  .filter-listing ul.filterlist li {
-    width: 30%;
-    display: inline-block; }
+    .filter-listing .filters-chapter h3 {
+      display: none; }
+      @media only screen and (min-width: 47.9375em) {
+        .filter-listing .filters-chapter h3 {
+          display: block; } }
+  @media only screen and (min-width: 47.9375em) {
+    .filter-listing ul.filterlist li {
+      width: 30%;
+      display: inline-block; } }
   .filter-listing ul.filterlist li.current a {
     color: #4d4d4d;
     font-weight: 700; }
@@ -1000,11 +1026,15 @@ nav.footer-menu a {
     font-size: 1.25rem; }
   .filter-listing li {
     margin-bottom: .5rem; }
-  .filter-listing li.current a {
+  .filter-listing li.current > a {
     color: #E11D53;
     font-weight: 700; }
-    .filter-listing li.current a svg {
-      fill: #4d4d4d; }
+    .filter-listing li.current > a svg {
+      display: none; }
+      @media only screen and (min-width: 47.9375em) {
+        .filter-listing li.current > a svg {
+          display: inline-block;
+          fill: #4d4d4d; } }
   .filter-listing a {
     color: #4d4d4d; }
 

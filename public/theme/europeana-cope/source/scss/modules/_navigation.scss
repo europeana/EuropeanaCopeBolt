@@ -175,9 +175,15 @@ nav.footer-menu {
 
 
 .filter-listing {
+
     position: relative;
-    font-size: 0.9375rem;
-    margin-left: 2rem;
+    font-size: 0.875rem;
+    margin-left: 0;
+
+    @include respond-to(large-screens){
+        margin-left: 2rem;
+        font-size: 0.9375rem;
+    }
 
     .current-filters {
         padding: 10px 0;
@@ -219,14 +225,22 @@ nav.footer-menu {
 
     .filter-container {
         position: relative;
-        margin: -7px 2.7rem 1rem ;
+        margin: 0 1rem 1rem ;
         background: $white;
         box-shadow: 1px 1px 5px rgba($black, 0.5);
         overflow: visible;
-        display: inline-block;
+        display: none;
+
+        &.expanded {
+            display: inline-block;
+        }
+
+        @include respond-to(large-screens){
+            margin: -7px 2.7rem 1rem ;
+        }
 
         > ul,
-        >.filter-chapter  {
+        >.filters-chapter  {
             padding: 1rem;
         }
     }
@@ -240,12 +254,21 @@ nav.footer-menu {
 
         position: absolute;
         top: -10px;
-        left: 2rem;
+        left: 3.5rem;
+
+        @include respond-to(large-screens){
+            left: 2rem;
+        }
     }
 
     .filter-chaptertitles {
-        float: left;
-        width: 150px;
+        min-width: 288px;
+
+        @include respond-to(large-screens){
+             float: left;
+             width: 150px;
+             min-width: 0;
+        }
 
         li {
             width: 100%;
@@ -260,16 +283,28 @@ nav.footer-menu {
         }
     }
 
-    .filter-chapter {
+    .filters-chapter {
         display: none;
-        margin-left: 150px;
-        //float: left;
-        border-left: 1px solid $line-gray;
         padding: 0 1rem;
         max-width: 800px; // looks good
+        border-left: 1px solid $line-gray;
+        margin: 1rem 0;
+
+        @include respond-to(large-screens){
+            border-left: 1px solid $line-gray;
+            margin: 0 0 0 150px;
+        }
 
         &.current {
             display: block;
+        }
+
+        h3 {
+            display: none;
+
+            @include respond-to(large-screens) {
+                display: block;
+            }
         }
     }
 
@@ -278,8 +313,10 @@ nav.footer-menu {
 
 
         li {
-            width: 30%;
-            display: inline-block;
+            @include respond-to(large-screens){
+                width: 30%;
+                display: inline-block;
+            }
         }
 
         li.current a {
@@ -298,12 +335,17 @@ nav.footer-menu {
         margin-bottom: .5rem;
     }
 
-    li.current a {
+    li.current > a {
         color: $baseFirstThemeColour;
         font-weight: 700;
 
         svg {
-            fill: $medium-gray;
+            display:none;
+
+            @include respond-to(large-screens){
+                display: inline-block;
+                fill: $medium-gray;
+            }
         }
 
     }
