@@ -21,6 +21,19 @@
         {% set override_amount = 100 %}
     {% endif %}
 
+    {#
+    {{ dump(app.request, app.request.attributes.get('subtype', ''), app.request.attributes.get('taxonomyname', '') , app.request.attributes.get('taxonomyterm', '')) }}
+    #}
+
+    {% set subtype = app.request.attributes.get('subtype', '') %}
+    {% set taxonomyname = app.request.attributes.get('taxonomyname', '') %}
+    {% set taxonomyterm = app.request.attributes.get('taxonomyterm', '') %}
+    {% if taxonomyterm is empty or taxonomyname is empty %}
+        {% set taxonomyterm = 1 %}
+        {% set taxonomyname = 1 %}
+        {# TODO: if taxonomy term does not exist in taxonomy name #}
+        {# TODO: if taxonomy term does not exist #}
+    {% endif %}
 
     {% set selected_records = [] %}
     {% if template != 'body' and ordering == 'specified' %}
@@ -46,16 +59,16 @@
         {% set allow_pager = true %}
         {% if sources == 'persons'  %}
             {% set filtername = 'network_participation' %}
-            {% set filtervalue = module.get('filter_persons') %}
+            {% set filtervalue = subtype|default(module.get('filter_persons')) %}
         {% elseif sources == 'posts' %}
             {% set filtername = 'posttype' %}
-            {% set filtervalue = module.get('filter_posts') %}
+            {% set filtervalue = subtype|default(module.get('filter_posts')) %}
         {% elseif sources == 'data' %}
             {% set filtername = 'datatype' %}
-            {% set filtervalue = module.get('filter_data') %}
+            {% set filtervalue = subtype|default(module.get('filter_data')) %}
         {% elseif sources == 'projects' %}
             {% set filtername = 'projecttype' %}
-            {% set filtervalue = module.get('filter_projects') %}
+            {% set filtervalue = subtype|default(module.get('filter_projects')) %}
         {% else %}
             {% set filtername = 1 %}
             {% set filtervalue = 1 %}
@@ -68,14 +81,26 @@
         {% endif %}
 
         {% if ordering == 'latest' %}
-            {% setcontent selected_records = sources where {(filtername): (filtervalue)} orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+            {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                (taxonomyname): (taxonomyterm)
+            } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
         {% elseif ordering == 'latest_unpaged' %}
-            {% setcontent selected_records = sources where {(filtername): (filtervalue)} orderby '-datepublish' limit override_amount|default(10) %}
+            {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                (taxonomyname): (taxonomyterm)
+            } orderby '-datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
         {% elseif ordering == 'oldest' %}
-            {% setcontent selected_records = sources where {(filtername): (filtervalue)} orderby 'datepublish' limit override_amount|default(10) allowpaging %}
+            {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                (taxonomyname): (taxonomyterm)
+            } orderby 'datepublish' limit override_amount|default(10) allowpaging %}
         {% elseif ordering == 'oldest_unpaged' %}
-            {% setcontent selected_records = sources where {(filtername): (filtervalue)} orderby 'datepublish' limit override_amount|default(10) %}
+            {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                (taxonomyname): (taxonomyterm)
+            } orderby 'datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
         {% elseif ordering == 'alphabetical' %}
             {% if sources != 'persons' %}
@@ -85,17 +110,29 @@
             {% endif %}
         {% elseif ordering == 'tag' %}
             {% set basetag = module.get('basetag') %}
-            {% setcontent selected_records = sources where {(filtername): (filtervalue), tags: basetag} orderby '-datepublish' limit override_amount|default(10) allowpaging  %}
+            {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                tags: basetag
+            } orderby '-datepublish' limit override_amount|default(10) allowpaging  %}
         {% elseif ordering == 'tag_unpaged' %}
             {% set basetag = module.get('basetag') %}
-            {% setcontent selected_records = sources where {(filtername): (filtervalue), tags: basetag} orderby '-datepublish' limit override_amount|default(10)  %}
+            {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                tags: basetag
+            } orderby '-datepublish' limit override_amount|default(10)  %}
             {% set allow_pager = false %}
         {% elseif ordering == 'category' %}
             {% set basecategory = module.get('basecategory') %}
-            {% setcontent selected_records = sources where {(filtername): (filtervalue), categories: basecategory} orderby '-datepublish' limit override_amount|default(10) allowpaging  %}
+            {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                categories: basecategory
+            } orderby '-datepublish' limit override_amount|default(10) allowpaging  %}
         {% elseif ordering == 'category_unpaged' %}
             {% set basecategory = module.get('basecategory') %}
-            {% setcontent selected_records = sources where {(filtername): (filtervalue), categories: basecategory} orderby '-datepublish' limit override_amount|default(10)  %}
+            {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                categories: basecategory
+            } orderby '-datepublish' limit override_amount|default(10)  %}
             {% set allow_pager = false %}
         {% elseif ordering == 'calendar' %}
             {{ dump(module, template, ordering, override_amount) }}
@@ -122,3 +159,4 @@
     } %}
 {% endif %}
 {% endspaceless %}
+
