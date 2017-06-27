@@ -34,9 +34,7 @@
 
             <ul class="teaser-list">
 
-            {# FEATURED
-            Lodewijk needs to do magic here  Probleem: Hij kijkt nu alleen naar pagina 1. Dus oplossen op andere manier.
-            Vraag: Laat _aleen bij een eventslisting_ de featured bovenaan zien #}
+            {# FEATURED #}
             {% if records|first.contenttype.slug == 'events' %}
                 {% setcontent featured = 'events' where { 'featured' : true } %}
                     {% for record in featured %}
@@ -47,6 +45,7 @@
                 {% endfor %}
             {% endif %}
 
+            {# REGULAR LISTING #}
             {% for record in records %}
                 {% if record.featured == false %}
                     {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}

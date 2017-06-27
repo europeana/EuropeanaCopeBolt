@@ -50,34 +50,8 @@ nav.quicklinks {
     }
 }
 
-.filter-listing {
 
-    font-size: 0.9375rem;
-    color: $white;
 
-    ul{
-        display: inline-block;
-        padding: 10px 0;
-    }
-
-    p, a.reset {
-        display: inline-block;
-        font-size: 0.9375rem;
-        margin: 0;
-        border-right: 1px solid $white;
-    }
-
-    li {
-        display: inline-block;
-    }
-
-    a {
-        display: block;
-        color: $white;
-        padding: 6px 1rem;
-    }
-
-}
 
 /*
 * MAIN MENU
@@ -189,4 +163,153 @@ nav.footer-menu {
         background-color: inherit;
        }
     }
+}
+
+
+/*
+***********************************************************************
+* LIST FILTERING
+***********************************************************************
+**/
+
+
+
+.filter-listing {
+    position: relative;
+    font-size: 0.9375rem;
+    margin-left: 2rem;
+
+    .current-filters {
+        padding: 10px 0;
+
+        .toggle-filter, .this-filter {
+            display: inline-block;
+            color: $white;
+            padding: 6px 1rem;
+
+
+            &:first-child {
+                border-right: 1px solid $white;
+            }
+        }
+
+        .arrow-down {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid $white;
+            vertical-align: 2px;
+            margin: 0 0 0 5px;
+
+        }
+
+        svg {
+            fill: $white;
+            height: 1rem;
+            vertical-align: -3px;
+        }
+
+        a.reset-filter {
+            margin-left: -10px;
+        }
+
+    }
+
+    .filter-container {
+        position: relative;
+        margin: -7px 2.7rem 1rem ;
+        background: $white;
+        box-shadow: 1px 1px 5px rgba($black, 0.5);
+        overflow: visible;
+        display: inline-block;
+
+        > ul,
+        >.filter-chapter  {
+            padding: 1rem;
+        }
+    }
+
+    .arrow-up {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid $white;
+
+        position: absolute;
+        top: -10px;
+        left: 2rem;
+    }
+
+    .filter-chaptertitles {
+        float: left;
+        width: 150px;
+
+        li {
+            width: 100%;
+        }
+
+        svg {
+            fill: $line-gray;
+            font-size: .75em;
+            float: right;
+            margin-top: .5em;
+            margin-right: 0;
+        }
+    }
+
+    .filter-chapter {
+        display: none;
+        margin-left: 150px;
+        //float: left;
+        border-left: 1px solid $line-gray;
+        padding: 0 1rem;
+        max-width: 800px; // looks good
+
+        &.current {
+            display: block;
+        }
+    }
+
+
+    ul.filterlist {
+
+
+        li {
+            width: 30%;
+            display: inline-block;
+        }
+
+        li.current a {
+            color: $medium-gray;
+            font-weight: 700;
+        }
+    }
+
+    h3 {
+        color: $baseFirstThemeColour;
+        font-weight: 400;
+        font-size: 1.25rem;
+    }
+
+    li {
+        margin-bottom: .5rem;
+    }
+
+    li.current a {
+        color: $baseFirstThemeColour;
+        font-weight: 700;
+
+        svg {
+            fill: $medium-gray;
+        }
+
+    }
+
+    a {
+      color: $medium-gray;
+    }
+
 }
