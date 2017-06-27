@@ -925,18 +925,50 @@ nav.footer-menu a {
 **/
 .filter-listing {
   position: relative;
-  font-size: 0.9375rem; }
-  .filter-listing .current-filters a {
-    color: #fff; }
+  font-size: 0.9375rem;
+  margin-left: 2rem; }
+  .filter-listing .current-filters {
+    padding: 10px 0; }
+    .filter-listing .current-filters .toggle-filter, .filter-listing .current-filters .this-filter {
+      display: inline-block;
+      color: #fff;
+      padding: 6px 1rem; }
+      .filter-listing .current-filters .toggle-filter:first-child, .filter-listing .current-filters .this-filter:first-child {
+        border-right: 1px solid #fff; }
+    .filter-listing .current-filters .arrow-down {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #fff;
+      vertical-align: 2px;
+      margin: 0 0 0 5px; }
+    .filter-listing .current-filters svg {
+      fill: #fff;
+      height: 1rem;
+      vertical-align: -3px; }
+    .filter-listing .current-filters a.reset-filter {
+      margin-left: -10px; }
   .filter-listing .filter-container {
     position: relative;
-    margin: 1.2rem 1rem 1rem;
+    margin: -7px 2.7rem 1rem;
     background: #fff;
     box-shadow: 1px 1px 5px rgba(26, 26, 26, 0.5);
+    overflow: visible;
     display: inline-block; }
     .filter-listing .filter-container > ul,
     .filter-listing .filter-container > .filter-chapter {
       padding: 1rem; }
+  .filter-listing .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    top: -10px;
+    left: 2rem; }
   .filter-listing .filter-chaptertitles {
     float: left;
     width: 150px; }
@@ -945,7 +977,6 @@ nav.footer-menu a {
     .filter-listing .filter-chaptertitles svg {
       fill: #cccccc;
       font-size: .75em;
-      vertical-align: middle;
       float: right;
       margin-top: .5em;
       margin-right: 0; }
@@ -959,8 +990,10 @@ nav.footer-menu a {
       display: block; }
   .filter-listing ul.filterlist li {
     width: 30%;
-    display: inline-block;
-    background-color: #f09; }
+    display: inline-block; }
+  .filter-listing ul.filterlist li.current a {
+    color: #4d4d4d;
+    font-weight: 700; }
   .filter-listing h3 {
     color: #E11D53;
     font-weight: 400;

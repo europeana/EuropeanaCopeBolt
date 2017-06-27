@@ -1,22 +1,69 @@
+{% set contenttypeslug = 'pages' %}
+
 {# set the contenttype if there is one #}
 {% if records is defined and records|first.contenttype is defined %}
-    {% set contenttype = records|first.contenttype %}
+   {% set contenttypeslug = records|first.contenttype.slug %}
+
+{% elseif record.modules is defined %}
+    {% for module in record.modules %}
+
+        {% if module.get('templates') == 'listing' %}
+            {% set contenttypeslug = module.get('sources') %}
+        {% endif %}
+
+    {% endfor %}
+
 {% endif %}
+
+{% set contenttype = app.config.get('contenttypes/' ~ contenttypeslug ) %}
+
+{% set filterchapters = [] %}
+
 
 {% if contenttype is defined %}
     {# get main categorisation from contenttype #}
-    {% if contenttype.slug == 'persons' %}
-        {% set contenttypepath = '/' ~ contenttype.slug ~ '/network_participation/' %}
+    {% if contenttypeslug == 'persons' %}
+        {% set contenttypepath = '/' ~ contenttypeslug ~ '/network_participation/' %}
         {% set categories = contenttype.fields.network_participation.values %}
-    {% elseif contenttype.slug == 'projects' %}
-        {% set contenttypepath = '/' ~ contenttype.slug ~ '/projecttype/' %}
+    {% elseif contenttypeslug == 'projects' %}
+        {# Projects #}
+        {# filter by market or service #}
+
+        {# Working groups #}
+        {# filter by market or service #}
+
+        {# Task force #}
+        {# filter by market or service #}
+
+        {% set contenttypepath = '/' ~ contenttypeslug ~ '/projecttype/' %}
         {% set categories = contenttype.fields.projecttype.values %}
-    {% elseif contenttype.slug == 'posts' %}
-        {% set contenttypepath = '/' ~ contenttype.slug ~ '/posttype/' %}
-        {% set categories = contenttype.fields.posttype.values %}
-    {% elseif contenttype.slug == 'data' %}
-        {% set contenttypepath = '/' ~ contenttype.slug ~ '/datatype/' %}
+    {% elseif contenttypeslug == 'posts' %}
+        {# Pressreleases#}
+        {# filter by market or service #}
+
+        {% set filterchapters = ['Markets','Categories'] %} {# filter by these taxonomies #}
+
+        {# Publications#}
+        {# filter by market or service #}
+
+        {# OLD #}
+        {# {% set contenttypepath = '/' ~ contenttype.slug ~ '/posttype/' %} #}
+        {# {% set categories = contenttype.fields.posttype.values %} #}
+
+
+
+    {% elseif contenttypeslug == 'data' %}
+
+        {# Dataset #}
+        {# native category #}
+
+        {# Apps #}
+        {#  appcategories #}
+
+        {% set contenttypepath = '/' ~ contenttypeslug ~ '/datatype/' %}
         {% set categories = contenttype.fields.datatype.values %}
+
+
     {% else %}
         {% set categories = {} %}
     {% endif %}
@@ -39,107 +86,48 @@
 
     <h2 class="sr-only">Filter this list</h2>
     <div class="current-filters">
-        <a class="reset" href="#">Reset filter</a>
+        <a class="toggle-filter" href="#">Filter by
+            <span class="arrow-down"></span>
+        </a>
 
-        <a href="">Filter by</a></li>
-        <a href="">Services: Campaigns</a></li>
+
+        <span class="this-filter">Services: Campaigns</span>
+        <a class="reset-filter" href="#"><span class="sr-only">Reset filter</span>
+            <svg class="icon icon-delete">
+                <use xlink:href="#icon-delete"></use>
+            </svg>
+        </a>
     </div>
 
     <div class="filter-container group">
         <div class="arrow-up"></div>
 
         <ul class="filter-chaptertitles">
-            <li><a>Markets<svg class="icon icon-next">
+            {% for chapter in filterchapters %}
+            <li><a href="#">{{ chapter }}<svg class="icon icon-next">
                     <use xlink:href="#icon-next"></use>
                 </svg></a>
             </li>
-            <li><a>Services<svg class="icon icon-next">
-                    <use xlink:href="#icon-next"></use>
-                </svg></a>
-            </li>
-            <li class="current"><a>Community<svg class="icon icon-next">
-                    <use xlink:href="#icon-next"></use>
-                </svg></a>
-            </li>
-            <li><a>Type<svg class="icon icon-next">
-                    <use xlink:href="#icon-next"></use>
-                </svg></a>
-            </li>
+            {% endfor %}
         </ul>
 
-        <div class="filter-chapter filters-markets current" id="filters-markets">
-            <h3>Community</h3>
+        {% for chapter in filterchapters %}
+        <div class="filter-chapter filters-{{chapter|lower}} current" id="filters-{{chapter|lower}}">
+            <h3>{{ chapter }}</h3>
             <ul class="filterlist" >
-                <li><a>Optie1 (30)</a></li>
-                <li><a>Optie2 (44)</a></li>
-                <li class="current"><a>Optie3 (6)</a></li>
-                <li><a>Optie4 (72)</a></li>
-                <li><a>Optie1 (30)</a></li>
-                <li><a>Optie2 (44)</a></li>
-                <li><a>Optie3 (6)</a></li>
-                <li><a>Optie4 (72)</a></li>
-                <li><a>Optie1 (30)</a></li>
-                <li><a>Optie2 (44)</a></li>
-                <li><a>Optie3 (6)</a></li>
-                <li><a>Optie4 (72)</a></li>
-                <li><a>Optie1 (30)</a></li>
-                <li><a>Optie2 (44)</a></li>
-                <li><a>Optie3 (6)</a></li>
-                <li><a>Optie4 (72)</a></li>
-            </ul>
-        </div>
+                {% set filters = app.config.get('taxonomy/'~ chapter|lower ~'/options') %}
 
-        <div class="filter-chapter filters-services" id="filters-services">
-            <h3>Services</h3>
-            <ul class="filterlist">
-                <li><a>Optie1 (30)</a></li>
-                <li><a>Optie2 (44)</a></li>
-                <li><a>Optie3 (6)</a></li>
-                <li><a>Optie4 (72)</a></li>
-            </ul>
-        </div>
+                {% for filter, filtername in filters %}
+                <li {% if false %} class="current"{% endif %}><a href="#">{{ filtername }} (x)</a></li>
+                {% endfor %}
 
-        <div class="filter-chapter filters-community" id="filters-community">
-            <h3>Community</h3>
-            <ul class="filterlist" >
-                <li><a>Optie1 (30)</a></li>
-                <li><a>Optie2 (44)</a></li>
-                <li><a>Optie3 (6)</a></li>
-                <li><a>Optie4 (72)</a></li>
             </ul>
         </div>
+        {% endfor %}
 
-        <div class="filter-chapter filters-type" id="filters-type">
-            <h3>Type</h3>
-            <ul class="filterlist">
-                <li><a>Optie1 (30)</a></li>
-                <li><a>Optie2 (44)</a></li>
-                <li><a>Optie3 (6)</a></li>
-                <li><a>Optie4 (72)</a></li>
-            </ul>
-        </div>
+
 
     </div>
-
-    {# <form method="GET" class="filterform" id="filterbar">
-        <div>
-            <h3></h3>
-            <input type='radio' name="filterby" value='value1'>
-                <label for="#filterbyvalue1" >Value 1</label>
-            <input type='radio' name="filterby" value='value2'>
-                <label for="#filterbyvalue2" >Value 2</label>
-        </fieldset>
-
-        <fieldset>
-            <legend>Hoofdstuk B</legend>
-            <input type='radio' name="filterby" value='value3'>
-                <label for="#filterbyvalue3" >Value 3</label>
-            <input type='radio' name="filterby" value='value4'>
-                <label for="#filterbyvalue4" >Value 4</label>
-        </fieldset>
-
-        <button type="submit">Filter</button>
-    </form> #}
 
 
 </div>
