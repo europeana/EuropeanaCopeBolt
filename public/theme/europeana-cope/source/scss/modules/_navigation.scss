@@ -13,6 +13,7 @@
     background-color: $quicklinks-bar;
     min-height: 53px;
     z-index: 10; //for sticky
+    height: 53px; // to prevent filtering from pushing bar down. remove if it causes other problems!
 
     @include respond-to (medium-screens) {
         height: 53px;

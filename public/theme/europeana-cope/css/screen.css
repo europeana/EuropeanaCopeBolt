@@ -826,7 +826,8 @@ ul.teaser-list {
 .topbar {
   background-color: #69737C;
   min-height: 53px;
-  z-index: 10; }
+  z-index: 10;
+  height: 53px; }
   @media only screen and (min-width: 24em) {
     .topbar {
       height: 53px; } }
