@@ -2664,6 +2664,9 @@ div.calltoaction {
   .download-module svg {
     margin-right: .5rem; }
 
+.collapsed-content-module .collapse-content {
+  padding-bottom: 1rem; }
+
 .download-module {
   margin: 2rem 0; }
   @media only screen and (min-width: 24em) {
@@ -3044,6 +3047,18 @@ table.listingtable {
   /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; } }
+io.com/wiki/Printing_Tables
      */
   thead {
     display: table-header-group; }

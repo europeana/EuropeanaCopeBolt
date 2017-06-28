@@ -240,7 +240,8 @@ $( document ).ready(function() {
 
         if (sublist.length == 0) {
             // if no sublist found, we open the main collapse-content
-            var sublist = $('section.file-browser ul.mainlist');
+            var sublist = $(this).parent().next('.can-expand');
+            //var sublist = $('section.file-browser .can-expand');
         }
 
 
