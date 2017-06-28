@@ -14,6 +14,13 @@
         <div class="colored-image"
              style="background-image: url('/theme/europeana-cope/images/default.png')"></div>
     {% endif %}
+
+    <div class="ripple {{ record.ripplelocation | default('no-ripple') }} {{ record.ripplecolor | default('white') }} {{ record.rippleweight | default('full') }}">
+        <svg class="icon icon-ripple_thin_pro">
+            <use xlink:href="#icon-ripple_thin_pro"></use>
+        </svg>
+    </div>
+
     <div class="header-group">
         <h3 class="widget">{{ record.title }}</h3>
         {% if record.teaser %}

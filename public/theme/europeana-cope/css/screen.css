@@ -1907,6 +1907,58 @@ a.banner {
     a.banner.third .header-group p {
       font-size: 0.75rem; }
 
+.ripple {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  z-index: 30; }
+  .ripple svg {
+    width: 320px;
+    height: 320px;
+    display: block;
+    transform-origin: 0px 0px;
+    margin: 0;
+    padding: 0; }
+  .ripple use {
+    border: 1px solid #fff;
+    background-color: #f09; }
+  .ripple.white svg {
+    fill: #fff; }
+  .ripple.black svg {
+    fill: #1a1a1a; }
+  .ripple.no-ripple {
+    display: none; }
+  .ripple.pct25 {
+    opacity: 0.25; }
+  .ripple.pct50 {
+    opacity: 0.50; }
+  .ripple.pct75 {
+    opacity: 0.75; }
+  .ripple.ripple-topright {
+    right: 0;
+    top: 0;
+    left: auto;
+    bottom: auto;
+    transform: rotate(180deg); }
+  .ripple.ripple-topleft {
+    right: auto;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    transform: rotate(90deg); }
+  .ripple.ripple-bottomright {
+    right: 0;
+    top: auto;
+    left: auto;
+    bottom: 0;
+    transform: rotate(-90deg); }
+  .ripple.ripple-bottomleft {
+    right: auto;
+    top: auto;
+    left: 0;
+    bottom: 0; }
+
 /*
 * WIDGET TWO COLUMN TEASERS / NEWS
 **/

@@ -369,6 +369,94 @@ a.banner {
 
 }
 
+.ripple {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+
+    svg {
+        width: 320px;
+        height: 320px;
+        display: block;
+        transform-origin: 0px 0px;
+        margin: 0;
+        padding: 0;
+    }
+
+    use {
+        border: 1px solid #fff;
+        background-color: #f09;
+    }
+
+    &.white {
+        svg {
+            fill: $white;
+        }
+    }
+
+    &.black {
+        svg {
+            fill: $black;
+        }
+    }
+
+    &.no-ripple {
+        display: none;
+    }
+
+    &.pct25 {
+        opacity: 0.25;
+    }
+
+    &.pct50 {
+        opacity: 0.50;
+    }
+
+    &.pct75 {
+        opacity: 0.75;
+    }
+
+    &.ripple-topright {
+        right: 0;
+        top: 0;
+        left: auto;
+        bottom: auto;
+        transform: rotate(180deg);
+
+    }
+
+    &.ripple-topleft {
+        right: auto;
+        top: 0;
+        left: 0;
+        bottom: auto;
+        transform: rotate(90deg);
+
+
+    }
+
+    &.ripple-bottomright {
+        right: 0;
+        top: auto;
+        left: auto;
+        bottom: 0;
+        transform: rotate(-90deg);
+
+
+    }
+
+    &.ripple-bottomleft {
+        right: auto;
+        top: auto;
+        left: 0;
+        bottom: 0;
+    }
+
+
+}
+
 
 /*
 * WIDGET TWO COLUMN TEASERS / NEWS

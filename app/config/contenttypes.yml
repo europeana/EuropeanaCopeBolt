@@ -1225,6 +1225,31 @@ resources:
     cssid:
       type: text
       label: "CSS ID (optional)"
+    ripplelocation:
+      label: "Where to place the Europeana ripple? (optional)"
+      type: select
+      values:
+        ripple-topright : "Top right"
+        ripple-topleft : "Top left"
+        ripple-bottomright : "Bottom right"
+        ripple-bottomleft : "Bottom left"
+        ripple-no-ripple : "No ripple"
+      group: 'Image options'
+      prefix: "<small>If used in your template, you can set the style of the europeana ripple here.</small>"
+    ripplecolor:
+      label: "Ripple color (optional)"
+      type: select
+      values: [ black, white]
+      variant: inline
+    rippleweight:
+      label: "Transparency of ripple (optional)"
+      type: select
+      values:
+        pct25 : "25 percent transparent"
+        pct50 : "50 percent transparent"
+        pct75 : "75 percent transparent"
+        full : "Not transparent"
+      variant: inline
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   viewless: true
