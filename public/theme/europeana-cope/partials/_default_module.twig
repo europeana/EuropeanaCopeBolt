@@ -25,7 +25,24 @@
     {{ dump(app.request, app.request.attributes.get('subtype', ''), app.request.attributes.get('taxonomyname', '') , app.request.attributes.get('taxonomyterm', '')) }}
     #}
 
+    {% set subtypesslugs = [] %}
+    {% set allcontenttypes = app.config.get('contenttypes') %}
+    {% set subtypes = []|merge(allcontenttypes.pages.fields.pagetype.values)
+        |merge(allcontenttypes.posts.fields.posttype.values)
+        |merge(allcontenttypes.persons.fields.network_participation.values)
+        |merge(allcontenttypes.projects.fields.projecttype.values)
+    %}
+    {% for type, label in subtypes %}
+        {% set subtypesslugs = subtypesslugs|merge({ ((type)|slugify): type }) %}
+    {% endfor %}
+    {#{{ dump(subtypes, subtypesslugs) }}#}
+
     {% set subtype = app.request.attributes.get('subtype', '') %}
+
+    {% if subtypesslugs[subtype] is defined %}
+        {% set subtype = subtypesslugs[subtype] %}
+    {% endif %}
+
     {% set taxonomyname = app.request.attributes.get('taxonomyname', '') %}
     {% set taxonomyterm = app.request.attributes.get('taxonomyterm', '') %}
     {% if taxonomyterm is empty or taxonomyname is empty %}
@@ -34,6 +51,10 @@
         {# TODO: if taxonomy term does not exist in taxonomy name #}
         {# TODO: if taxonomy term does not exist #}
     {% endif %}
+
+    {# set default filtervalue and filtername #}
+    {% set filtername = 1 %}
+    {% set filtervalue = 1 %}
 
     {% set selected_records = [] %}
     {% if template != 'body' and ordering == 'specified' %}
@@ -57,7 +78,10 @@
         {% set allow_pager = false %}
     {% elseif template != 'body' %}
         {% set allow_pager = true %}
-        {% if sources == 'persons'  %}
+        {% if subtype == 'all'  %}
+            {% set filtername = 1 %}
+            {% set filtervalue = 1 %}
+        {% elseif sources == 'persons'  %}
             {% set filtername = 'network_participation' %}
             {% set filtervalue = subtype|default(module.get('filter_persons')) %}
         {% elseif sources == 'posts' %}
@@ -70,12 +94,6 @@
             {% set filtername = 'projecttype' %}
             {% set filtervalue = subtype|default(module.get('filter_projects')) %}
         {% else %}
-            {% set filtername = 1 %}
-            {% set filtervalue = 1 %}
-        {% endif %}
-
-        {# reset the filtervalue and filtername if the filtervalue is empty #}
-        {% if filtervalue == '' %}
             {% set filtername = 1 %}
             {% set filtervalue = 1 %}
         {% endif %}
@@ -104,35 +122,35 @@
             {% set allow_pager = false %}
         {% elseif ordering == 'alphabetical' %}
             {% if sources != 'persons' %}
-                {% setcontent selected_records = sources where { (filtername): '%' ~ (filtervalue) ~'%' } orderby 'title' limit override_amount|default(10) allowpaging  %}
+                {% setcontent selected_records = sources where { (filtername): '%' ~ (filtervalue) ~'%' } orderby 'title' limit override_amount|default(10) allowpaging %}
             {% else %}
-                {% setcontent selected_records = sources where { (filtername): '%' ~ (filtervalue) ~'%' } orderby 'last_name' limit override_amount|default(10) allowpaging  %}
+                {% setcontent selected_records = sources where { (filtername): '%' ~ (filtervalue) ~'%' } orderby 'last_name' limit override_amount|default(10) allowpaging %}
             {% endif %}
         {% elseif ordering == 'tag' %}
             {% set basetag = module.get('basetag') %}
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
                 tags: basetag
-            } orderby '-datepublish' limit override_amount|default(10) allowpaging  %}
+            } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
         {% elseif ordering == 'tag_unpaged' %}
             {% set basetag = module.get('basetag') %}
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
                 tags: basetag
-            } orderby '-datepublish' limit override_amount|default(10)  %}
+            } orderby '-datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
         {% elseif ordering == 'category' %}
             {% set basecategory = module.get('basecategory') %}
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
                 categories: basecategory
-            } orderby '-datepublish' limit override_amount|default(10) allowpaging  %}
+            } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
         {% elseif ordering == 'category_unpaged' %}
             {% set basecategory = module.get('basecategory') %}
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
                 categories: basecategory
-            } orderby '-datepublish' limit override_amount|default(10)  %}
+            } orderby '-datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
         {% elseif ordering == 'calendar' %}
             {{ dump(module, template, ordering, override_amount) }}

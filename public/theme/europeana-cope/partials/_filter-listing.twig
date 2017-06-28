@@ -1,5 +1,6 @@
-{% set contenttypeslug = 'pages' %}
-{% set subtype         = 'all' %}
+{% set contenttypeslug    = 'pages' %}
+{% set subtype            = 'all' %}
+{% set excludedcategories = app.config.get('general/europeana/excludedcategories') %}
 
 {# set the contenttype if there is one #}
 {% if records is defined and records|first.contenttype is defined %}
@@ -38,13 +39,11 @@
         {% set filterchapters = ['Markets','Categories'] %}
 
     {% elseif contenttypeslug == 'data' %}
-
         {# Dataset: filter by native category #}
         {# Apps: filter by appcategories #}
 
         {% set contenttypepath = '/' ~ contenttypeslug ~ '/datatype/' %}
         {% set categories = contenttype.fields.datatype.values %}
-
 
     {% else %}
         {% set categories = {} %}
@@ -54,18 +53,6 @@
 {% endif %}
 
 <div class="filter-listing">
-    {# {% if categories is not empty %}
-        <a class="reset" href="#">Reset filter</a>
-        <ul>
-            {% for item, catname in categories %}
-                <li><a href="{{ contenttypepath ~ item|slugify }}">{{ catname }}</a></li>
-            {% endfor %}
-
-            <li><a href="">Filter by</a></li>
-            <li><a href="">by contenttype</a></li>
-        </ul>
-    {% endif %} #}
-
     <h2 class="sr-only">Filter this list</h2>
     <div class="current-filters">
         <a class="toggle-filter" href="#">Filter by
@@ -77,57 +64,52 @@
             {% set taxonomyterm = app.request.attributes.get('taxonomyterm') %}
             {% set currenttaxonomy = app.config.get('taxonomy/' ~ taxonomyname) %}
 
-        <span class="this-filter">{{ currenttaxonomy.name }}: {{ currenttaxonomy.options[taxonomyterm] }}</span>
-        <a class="reset-filter" href="{{ record.link }}">
-            <span class="sr-only">Reset filter</span>
-            <svg class="icon icon-delete">
-                <use xlink:href="#icon-delete"></use>
-            </svg>
-        </a>
+            <span class="this-filter">{{ currenttaxonomy.name }}: {{ currenttaxonomy.options[taxonomyterm] }}</span>
+            <a class="reset-filter" href="{{ record.link }}">
+                <span class="sr-only">Reset filter</span>
+                <svg class="icon icon-delete">
+                    <use xlink:href="#icon-delete"></use>
+                </svg>
+            </a>
         {% endif %}
     </div>
-
 
     <div class="filter-container group">
         <div class="arrow-up"></div>
 
         <ul class="filter-chaptertitles">
-            {% for chapter in filterchapters %}
-            <li><a href="#" class="chapter-toggle chapter-toggle-{{ chapter }}">{{ chapter }}<svg class="icon icon-next">
-                    <use xlink:href="#icon-next"></use>
-                </svg></a>
+            {% for chapter in filterchapters%}
+            <li>
+                <a href="#" class="chapter-toggle chapter-toggle-{{- chapter -}}">
+                    {{- chapter -}}
+                    <svg class="icon icon-next">
+                        <use xlink:href="#icon-next"></use>
+                    </svg>
+                </a>
 
-                <div class="filters-chapter filters-{{chapter}}" id="filters-{{chapter}}">
+                <div class="filters-chapter filters-{{- chapter -}}" id="filters-{{- chapter -}}">
                     <h3>{{ chapter }}</h3>
                     <ul class="filterlist" >
                         {% set filters = app.config.get('taxonomy/'~ chapter|lower ~'/options') %}
-                        {% for filter, filtername in filters %}
+                        {% for filter, filtername in filters if filtername not in excludedcategories %}
+                            {# -- NOTE: slugified subtypes -- #}
+                            {# -- NOTE: the viewblocklisting route does not make use of the hierarchical routes -- #}
+                            {% set link = path('viewblocklisting', {
+                                contenttypeslug : record.contenttype.slug,
+                                slug            : record.slug,
+                                subtype         : subtype|slugify,
+                                taxonomyname    : chapter|lower,
+                                taxonomyterm    : filter
+                            }) %}
 
-                        {# -- NOTE: slugified subtypes -- #}
-                        {# -- NOTE: the viewblocklisting route does not make use of the hierarchical routes -- #}
-                        {% set link = path('viewblocklisting', {
-                            contenttypeslug : record.contenttype.slug,
-                            slug            : record.slug,
-                            subtype         : subtype|slugify,
-                            taxonomyname    : chapter|lower,
-                            taxonomyterm    : filter
-                        }) %}
-                        {# -- TODO: prooper counts -- #}
-                        {% set count = 0 %}
-
-                        <li{% if app.request.attributes.get('taxonomyterm', false) == filter %} class="current"{% endif %}>
-                            <a href="{{ link }}">{{ filtername }} ({{ count }})</a>
-                        </li>
+                            <li{% if app.request.attributes.get('taxonomyterm', false) == filter %} class="current"{% endif %}>
+                                <a href="{{ link }}">{{ filtername }}</a>
+                            </li>
                         {% endfor %}
-
                     </ul>
                 </div>
-
             </li>
             {% endfor %}
         </ul>
-
     </div>
-
-
 </div>
