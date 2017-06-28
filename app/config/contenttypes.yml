@@ -552,6 +552,209 @@ posts:
       height: 150px
       postfix: "Shown on individual pages before the main body text"
       group: Main
+    modules:
+      label: Modules
+      type: repeater
+      separator: true
+      prefix: Modules are blocks of content from the other parts of the site.
+      group: Modules
+      fields:
+        enabled:
+          type: select
+          label: Show or Hide
+          default: disabled
+          required: true
+          values:
+            enabled: Show this module
+            disabled: Do not show this module
+        title:
+          type: text
+          label: Title (optional)
+          info: The title will be shown as title for the block, if the title is empty the block will not have a title either
+          placeholder: Optional block title
+          variant: inline
+          class: 'titletoggle'
+        subtitle:
+          type: text
+          label: Subtitle (optional)
+          info: The subtitle is may be one short line of text
+          placeholder: Optional short subtitle
+          variant: inline
+        anchortitle:
+          type: text
+          label: Anchor Title (optional)
+          info: If you enter an anchor title, this module will get an in-page link with that title to jump to this module.
+          placeholder: Optional anchor title
+          variant: inline
+        templates:
+          type: select
+          default: teasers
+          info: Use the template to select how the module will look
+          postfix: 'Use the template to select how the module will look <a class="cheatsheet btn btn-info btn-xs pull-right"><i class="fa fa-comment-o" aria-hidden="true"></i> view the template cheatsheet</a>'
+          values:
+            body:              "Module body field - for extra body blocks between modules (_body.twig)"
+            collapsedcontent:  "Collapsed content clicks open with click on header (_collapsedcontent.twig)"
+            image:             "One wide image view (_image.twig)"
+            banner:            "One wide banner view (_banner.twig)"
+            #bannerdouble:      "Two banners view (_bannerdouble.twig)"
+            bannertriple:      "Three banners view (_bannertriple.twig)"
+            listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
+            listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
+            calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
+            #filecontent:       "File content block (_filecontent.twig)"
+            fileslisting:      "File list block (_fileslisting.twig)"
+        body:
+          type: html
+          label: "Module body (optional)"
+          height: 100px
+          postfix: "Shown in module blocks as body text"
+          class: 'showfortemplate-body'
+        image:
+          type: image
+          label: Image (optional)
+          attrib: title
+          info: Add image.
+          variant: inline
+          class: 'showfortemplate-image'
+        ordering:
+          type: select
+          label: Order- and filtering
+          default: latest
+          info: Use the ordering to select how the module will load records
+          postfix: Use the ordering and filtering to select how the module will load records
+          values:
+            specified: Select some records below
+            latest: The newest records first (with pagination)
+            latest_unpaged: The newest records first (without pagination)
+            tag: Tag (with pagination)
+            tag_unpaged: Tag (without pagination)
+            category: Category (with pagination)
+            category_unpaged: Category (without pagination)
+            oldest: Chronological with the oldest records first (with pagination)
+            oldest_unpaged: Chronological with the oldest records first (without pagination)
+            calendar: Calendar (based on start and end date)
+            calendar_upcoming: Calendar upcoming (based on start and end date)
+            calendar_archive: Calendar archive (based on start and end date)
+            alphabetical: Alphabetically ordered by title
+            random: A number of random records
+        sources:
+          type: select
+          default: posts
+          info: Use this to select what contenttype the module will load
+          postfix: Use this to select what contenttype the module will load
+          values:
+            pages: Pages, Listings, Landingpages, Structures and Collections
+            persons: Persons
+            posts: Blogposts, Pressreleases, Publications and News
+            data: Data, Applications, Documentation
+            projects: Projects, Taskforces and Workinggroups
+            jobs: Jobs
+            events: Events
+            resources: Banners, Calls to action and Blocks
+        override_amount:
+          type: integer
+          label: Amount
+          default: 3
+          variant: inline
+          info: "If this field is set this number will be used as the number of items in the listing"
+          prefix: '<hr>'
+        basetag:
+          type: text
+          label: Selected tag
+          variant: inline
+          placeholder: Enter a tag here
+          info: The selected tag will be used to filter the records that are shown
+        basecategory:
+          type: text
+          label: Selected category
+          variant: inline
+          placeholder: Enter a category slug here
+          info: The selected category will be used to filter the records that are shown
+        selected_pages:
+          type: text
+          label: "Select Pages"
+          class: 'ajaxselector ct-pages fields-id--title--status key-id results-auto'
+        filter_persons:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: Filter persons
+          postfix: You can optionally choose one of the network participation levels to filter
+          <<: *network_default_values
+        selected_persons:
+          type: text
+          label: "Select Persons"
+          class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
+        filter_posts:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter post type"
+          values:
+            "Blog": "Blog"
+            "Pressrelease": "Pressrelease"
+            "Publication": "Publication"
+            "News": "News"
+        selected_posts:
+          type: text
+          label: "Select Posts"
+          class: 'ajaxselector ct-posts fields-id--title--status key-id results-auto'
+        filter_data:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter data type"
+          values:
+            "Data": "Data"
+            "Tool": "Tool"
+            "Showcase": "Showcase"
+            "Documentation": "Documentation"
+            "API": "API"
+        selected_data:
+          type: text
+          label: "Select data"
+          class: 'ajaxselector ct-data fields-id--title--status key-id results-auto'
+        filter_projects:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter project type"
+          values:
+            "TaskForce": "TaskForce"
+            "WorkingGroup": "WorkingGroup"
+            "Project": "Project"
+        selected_projects:
+          type: text
+          label: "Select Projects"
+          class: 'ajaxselector ct-projects fields-id--title--status key-id results-auto'
+        selected_jobs:
+          type: text
+          label: "Select Jobs"
+          class: 'ajaxselector ct-jobs fields-id--title--status key-id results-auto'
+        selected_events:
+          type: text
+          label: "Select Events"
+          class: 'ajaxselector ct-events fields-id--title--status key-id results-auto'
+        selected_resources:
+          type: text
+          label: "Select Banners, Calls to action or Blocks"
+          class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        override_css_id:
+          type: text
+          label: DOM ID
+          variant: inline
+          placeholder: custom css ID
+          info: If you need to add a custom css ID you can enter that here
+        override_css_class:
+          type: text
+          label: CSS Class
+          variant: inline
+          placeholder: custom css class
+          info: If you need to add custom css classes you can enter them here
     body:
       type: html
       label: "Body (required)"
@@ -617,6 +820,209 @@ data:
       height: 300px
       postfix: "Shown on individual pages as main body text"
       group: Main
+    modules:
+      label: Modules
+      type: repeater
+      separator: true
+      prefix: Modules are blocks of content from the other parts of the site.
+      group: Modules
+      fields:
+        enabled:
+          type: select
+          label: Show or Hide
+          default: disabled
+          required: true
+          values:
+            enabled: Show this module
+            disabled: Do not show this module
+        title:
+          type: text
+          label: Title (optional)
+          info: The title will be shown as title for the block, if the title is empty the block will not have a title either
+          placeholder: Optional block title
+          variant: inline
+          class: 'titletoggle'
+        subtitle:
+          type: text
+          label: Subtitle (optional)
+          info: The subtitle is may be one short line of text
+          placeholder: Optional short subtitle
+          variant: inline
+        anchortitle:
+          type: text
+          label: Anchor Title (optional)
+          info: If you enter an anchor title, this module will get an in-page link with that title to jump to this module.
+          placeholder: Optional anchor title
+          variant: inline
+        templates:
+          type: select
+          default: teasers
+          info: Use the template to select how the module will look
+          postfix: 'Use the template to select how the module will look <a class="cheatsheet btn btn-info btn-xs pull-right"><i class="fa fa-comment-o" aria-hidden="true"></i> view the template cheatsheet</a>'
+          values:
+            body:              "Module body field - for extra body blocks between modules (_body.twig)"
+            collapsedcontent:  "Collapsed content clicks open with click on header (_collapsedcontent.twig)"
+            image:             "One wide image view (_image.twig)"
+            banner:            "One wide banner view (_banner.twig)"
+            #bannerdouble:      "Two banners view (_bannerdouble.twig)"
+            bannertriple:      "Three banners view (_bannertriple.twig)"
+            listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
+            listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
+            calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
+            #filecontent:       "File content block (_filecontent.twig)"
+            fileslisting:      "File list block (_fileslisting.twig)"
+        body:
+          type: html
+          label: "Module body (optional)"
+          height: 100px
+          postfix: "Shown in module blocks as body text"
+          class: 'showfortemplate-body'
+        image:
+          type: image
+          label: Image (optional)
+          attrib: title
+          info: Add image.
+          variant: inline
+          class: 'showfortemplate-image'
+        ordering:
+          type: select
+          label: Order- and filtering
+          default: latest
+          info: Use the ordering to select how the module will load records
+          postfix: Use the ordering and filtering to select how the module will load records
+          values:
+            specified: Select some records below
+            latest: The newest records first (with pagination)
+            latest_unpaged: The newest records first (without pagination)
+            tag: Tag (with pagination)
+            tag_unpaged: Tag (without pagination)
+            category: Category (with pagination)
+            category_unpaged: Category (without pagination)
+            oldest: Chronological with the oldest records first (with pagination)
+            oldest_unpaged: Chronological with the oldest records first (without pagination)
+            calendar: Calendar (based on start and end date)
+            calendar_upcoming: Calendar upcoming (based on start and end date)
+            calendar_archive: Calendar archive (based on start and end date)
+            alphabetical: Alphabetically ordered by title
+            random: A number of random records
+        sources:
+          type: select
+          default: posts
+          info: Use this to select what contenttype the module will load
+          postfix: Use this to select what contenttype the module will load
+          values:
+            pages: Pages, Listings, Landingpages, Structures and Collections
+            persons: Persons
+            posts: Blogposts, Pressreleases, Publications and News
+            data: Data, Applications, Documentation
+            projects: Projects, Taskforces and Workinggroups
+            jobs: Jobs
+            events: Events
+            resources: Banners, Calls to action and Blocks
+        override_amount:
+          type: integer
+          label: Amount
+          default: 3
+          variant: inline
+          info: "If this field is set this number will be used as the number of items in the listing"
+          prefix: '<hr>'
+        basetag:
+          type: text
+          label: Selected tag
+          variant: inline
+          placeholder: Enter a tag here
+          info: The selected tag will be used to filter the records that are shown
+        basecategory:
+          type: text
+          label: Selected category
+          variant: inline
+          placeholder: Enter a category slug here
+          info: The selected category will be used to filter the records that are shown
+        selected_pages:
+          type: text
+          label: "Select Pages"
+          class: 'ajaxselector ct-pages fields-id--title--status key-id results-auto'
+        filter_persons:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: Filter persons
+          postfix: You can optionally choose one of the network participation levels to filter
+          <<: *network_default_values
+        selected_persons:
+          type: text
+          label: "Select Persons"
+          class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
+        filter_posts:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter post type"
+          values:
+            "Blog": "Blog"
+            "Pressrelease": "Pressrelease"
+            "Publication": "Publication"
+            "News": "News"
+        selected_posts:
+          type: text
+          label: "Select Posts"
+          class: 'ajaxselector ct-posts fields-id--title--status key-id results-auto'
+        filter_data:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter data type"
+          values:
+            "Data": "Data"
+            "Tool": "Tool"
+            "Showcase": "Showcase"
+            "Documentation": "Documentation"
+            "API": "API"
+        selected_data:
+          type: text
+          label: "Select data"
+          class: 'ajaxselector ct-data fields-id--title--status key-id results-auto'
+        filter_projects:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter project type"
+          values:
+            "TaskForce": "TaskForce"
+            "WorkingGroup": "WorkingGroup"
+            "Project": "Project"
+        selected_projects:
+          type: text
+          label: "Select Projects"
+          class: 'ajaxselector ct-projects fields-id--title--status key-id results-auto'
+        selected_jobs:
+          type: text
+          label: "Select Jobs"
+          class: 'ajaxselector ct-jobs fields-id--title--status key-id results-auto'
+        selected_events:
+          type: text
+          label: "Select Events"
+          class: 'ajaxselector ct-events fields-id--title--status key-id results-auto'
+        selected_resources:
+          type: text
+          label: "Select Banners, Calls to action or Blocks"
+          class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        override_css_id:
+          type: text
+          label: DOM ID
+          variant: inline
+          placeholder: custom css ID
+          info: If you need to add a custom css ID you can enter that here
+        override_css_class:
+          type: text
+          label: CSS Class
+          variant: inline
+          placeholder: custom css class
+          info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
     <<: *cta_defaults
     provided_by:
@@ -746,6 +1152,209 @@ projects:
       variant: inline
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
+    modules:
+      label: Modules
+      type: repeater
+      separator: true
+      prefix: Modules are blocks of content from the other parts of the site.
+      group: Modules
+      fields:
+        enabled:
+          type: select
+          label: Show or Hide
+          default: disabled
+          required: true
+          values:
+            enabled: Show this module
+            disabled: Do not show this module
+        title:
+          type: text
+          label: Title (optional)
+          info: The title will be shown as title for the block, if the title is empty the block will not have a title either
+          placeholder: Optional block title
+          variant: inline
+          class: 'titletoggle'
+        subtitle:
+          type: text
+          label: Subtitle (optional)
+          info: The subtitle is may be one short line of text
+          placeholder: Optional short subtitle
+          variant: inline
+        anchortitle:
+          type: text
+          label: Anchor Title (optional)
+          info: If you enter an anchor title, this module will get an in-page link with that title to jump to this module.
+          placeholder: Optional anchor title
+          variant: inline
+        templates:
+          type: select
+          default: teasers
+          info: Use the template to select how the module will look
+          postfix: 'Use the template to select how the module will look <a class="cheatsheet btn btn-info btn-xs pull-right"><i class="fa fa-comment-o" aria-hidden="true"></i> view the template cheatsheet</a>'
+          values:
+            body:              "Module body field - for extra body blocks between modules (_body.twig)"
+            collapsedcontent:  "Collapsed content clicks open with click on header (_collapsedcontent.twig)"
+            image:             "One wide image view (_image.twig)"
+            banner:            "One wide banner view (_banner.twig)"
+            #bannerdouble:      "Two banners view (_bannerdouble.twig)"
+            bannertriple:      "Three banners view (_bannertriple.twig)"
+            listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
+            listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
+            calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
+            #filecontent:       "File content block (_filecontent.twig)"
+            fileslisting:      "File list block (_fileslisting.twig)"
+        body:
+          type: html
+          label: "Module body (optional)"
+          height: 100px
+          postfix: "Shown in module blocks as body text"
+          class: 'showfortemplate-body'
+        image:
+          type: image
+          label: Image (optional)
+          attrib: title
+          info: Add image.
+          variant: inline
+          class: 'showfortemplate-image'
+        ordering:
+          type: select
+          label: Order- and filtering
+          default: latest
+          info: Use the ordering to select how the module will load records
+          postfix: Use the ordering and filtering to select how the module will load records
+          values:
+            specified: Select some records below
+            latest: The newest records first (with pagination)
+            latest_unpaged: The newest records first (without pagination)
+            tag: Tag (with pagination)
+            tag_unpaged: Tag (without pagination)
+            category: Category (with pagination)
+            category_unpaged: Category (without pagination)
+            oldest: Chronological with the oldest records first (with pagination)
+            oldest_unpaged: Chronological with the oldest records first (without pagination)
+            calendar: Calendar (based on start and end date)
+            calendar_upcoming: Calendar upcoming (based on start and end date)
+            calendar_archive: Calendar archive (based on start and end date)
+            alphabetical: Alphabetically ordered by title
+            random: A number of random records
+        sources:
+          type: select
+          default: posts
+          info: Use this to select what contenttype the module will load
+          postfix: Use this to select what contenttype the module will load
+          values:
+            pages: Pages, Listings, Landingpages, Structures and Collections
+            persons: Persons
+            posts: Blogposts, Pressreleases, Publications and News
+            data: Data, Applications, Documentation
+            projects: Projects, Taskforces and Workinggroups
+            jobs: Jobs
+            events: Events
+            resources: Banners, Calls to action and Blocks
+        override_amount:
+          type: integer
+          label: Amount
+          default: 3
+          variant: inline
+          info: "If this field is set this number will be used as the number of items in the listing"
+          prefix: '<hr>'
+        basetag:
+          type: text
+          label: Selected tag
+          variant: inline
+          placeholder: Enter a tag here
+          info: The selected tag will be used to filter the records that are shown
+        basecategory:
+          type: text
+          label: Selected category
+          variant: inline
+          placeholder: Enter a category slug here
+          info: The selected category will be used to filter the records that are shown
+        selected_pages:
+          type: text
+          label: "Select Pages"
+          class: 'ajaxselector ct-pages fields-id--title--status key-id results-auto'
+        filter_persons:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: Filter persons
+          postfix: You can optionally choose one of the network participation levels to filter
+          <<: *network_default_values
+        selected_persons:
+          type: text
+          label: "Select Persons"
+          class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
+        filter_posts:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter post type"
+          values:
+            "Blog": "Blog"
+            "Pressrelease": "Pressrelease"
+            "Publication": "Publication"
+            "News": "News"
+        selected_posts:
+          type: text
+          label: "Select Posts"
+          class: 'ajaxselector ct-posts fields-id--title--status key-id results-auto'
+        filter_data:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter data type"
+          values:
+            "Data": "Data"
+            "Tool": "Tool"
+            "Showcase": "Showcase"
+            "Documentation": "Documentation"
+            "API": "API"
+        selected_data:
+          type: text
+          label: "Select data"
+          class: 'ajaxselector ct-data fields-id--title--status key-id results-auto'
+        filter_projects:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter project type"
+          values:
+            "TaskForce": "TaskForce"
+            "WorkingGroup": "WorkingGroup"
+            "Project": "Project"
+        selected_projects:
+          type: text
+          label: "Select Projects"
+          class: 'ajaxselector ct-projects fields-id--title--status key-id results-auto'
+        selected_jobs:
+          type: text
+          label: "Select Jobs"
+          class: 'ajaxselector ct-jobs fields-id--title--status key-id results-auto'
+        selected_events:
+          type: text
+          label: "Select Events"
+          class: 'ajaxselector ct-events fields-id--title--status key-id results-auto'
+        selected_resources:
+          type: text
+          label: "Select Banners, Calls to action or Blocks"
+          class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        override_css_id:
+          type: text
+          label: DOM ID
+          variant: inline
+          placeholder: custom css ID
+          info: If you need to add a custom css ID you can enter that here
+        override_css_class:
+          type: text
+          label: CSS Class
+          variant: inline
+          placeholder: custom css class
+          info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
     <<: *cta_defaults
     start_event:
@@ -790,6 +1399,209 @@ events:
       type: checkbox
       label: "Make this event sticky"
       postfix: "<small>One event only. Setting another event to sticky will uncheck this one.</small>"
+    modules:
+      label: Modules
+      type: repeater
+      separator: true
+      prefix: Modules are blocks of content from the other parts of the site.
+      group: Modules
+      fields:
+        enabled:
+          type: select
+          label: Show or Hide
+          default: disabled
+          required: true
+          values:
+            enabled: Show this module
+            disabled: Do not show this module
+        title:
+          type: text
+          label: Title (optional)
+          info: The title will be shown as title for the block, if the title is empty the block will not have a title either
+          placeholder: Optional block title
+          variant: inline
+          class: 'titletoggle'
+        subtitle:
+          type: text
+          label: Subtitle (optional)
+          info: The subtitle is may be one short line of text
+          placeholder: Optional short subtitle
+          variant: inline
+        anchortitle:
+          type: text
+          label: Anchor Title (optional)
+          info: If you enter an anchor title, this module will get an in-page link with that title to jump to this module.
+          placeholder: Optional anchor title
+          variant: inline
+        templates:
+          type: select
+          default: teasers
+          info: Use the template to select how the module will look
+          postfix: 'Use the template to select how the module will look <a class="cheatsheet btn btn-info btn-xs pull-right"><i class="fa fa-comment-o" aria-hidden="true"></i> view the template cheatsheet</a>'
+          values:
+            body:              "Module body field - for extra body blocks between modules (_body.twig)"
+            collapsedcontent:  "Collapsed content clicks open with click on header (_collapsedcontent.twig)"
+            image:             "One wide image view (_image.twig)"
+            banner:            "One wide banner view (_banner.twig)"
+            #bannerdouble:      "Two banners view (_bannerdouble.twig)"
+            bannertriple:      "Three banners view (_bannertriple.twig)"
+            listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
+            listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
+            calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
+            #filecontent:       "File content block (_filecontent.twig)"
+            fileslisting:      "File list block (_fileslisting.twig)"
+        body:
+          type: html
+          label: "Module body (optional)"
+          height: 100px
+          postfix: "Shown in module blocks as body text"
+          class: 'showfortemplate-body'
+        image:
+          type: image
+          label: Image (optional)
+          attrib: title
+          info: Add image.
+          variant: inline
+          class: 'showfortemplate-image'
+        ordering:
+          type: select
+          label: Order- and filtering
+          default: latest
+          info: Use the ordering to select how the module will load records
+          postfix: Use the ordering and filtering to select how the module will load records
+          values:
+            specified: Select some records below
+            latest: The newest records first (with pagination)
+            latest_unpaged: The newest records first (without pagination)
+            tag: Tag (with pagination)
+            tag_unpaged: Tag (without pagination)
+            category: Category (with pagination)
+            category_unpaged: Category (without pagination)
+            oldest: Chronological with the oldest records first (with pagination)
+            oldest_unpaged: Chronological with the oldest records first (without pagination)
+            calendar: Calendar (based on start and end date)
+            calendar_upcoming: Calendar upcoming (based on start and end date)
+            calendar_archive: Calendar archive (based on start and end date)
+            alphabetical: Alphabetically ordered by title
+            random: A number of random records
+        sources:
+          type: select
+          default: posts
+          info: Use this to select what contenttype the module will load
+          postfix: Use this to select what contenttype the module will load
+          values:
+            pages: Pages, Listings, Landingpages, Structures and Collections
+            persons: Persons
+            posts: Blogposts, Pressreleases, Publications and News
+            data: Data, Applications, Documentation
+            projects: Projects, Taskforces and Workinggroups
+            jobs: Jobs
+            events: Events
+            resources: Banners, Calls to action and Blocks
+        override_amount:
+          type: integer
+          label: Amount
+          default: 3
+          variant: inline
+          info: "If this field is set this number will be used as the number of items in the listing"
+          prefix: '<hr>'
+        basetag:
+          type: text
+          label: Selected tag
+          variant: inline
+          placeholder: Enter a tag here
+          info: The selected tag will be used to filter the records that are shown
+        basecategory:
+          type: text
+          label: Selected category
+          variant: inline
+          placeholder: Enter a category slug here
+          info: The selected category will be used to filter the records that are shown
+        selected_pages:
+          type: text
+          label: "Select Pages"
+          class: 'ajaxselector ct-pages fields-id--title--status key-id results-auto'
+        filter_persons:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: Filter persons
+          postfix: You can optionally choose one of the network participation levels to filter
+          <<: *network_default_values
+        selected_persons:
+          type: text
+          label: "Select Persons"
+          class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
+        filter_posts:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter post type"
+          values:
+            "Blog": "Blog"
+            "Pressrelease": "Pressrelease"
+            "Publication": "Publication"
+            "News": "News"
+        selected_posts:
+          type: text
+          label: "Select Posts"
+          class: 'ajaxselector ct-posts fields-id--title--status key-id results-auto'
+        filter_data:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter data type"
+          values:
+            "Data": "Data"
+            "Tool": "Tool"
+            "Showcase": "Showcase"
+            "Documentation": "Documentation"
+            "API": "API"
+        selected_data:
+          type: text
+          label: "Select data"
+          class: 'ajaxselector ct-data fields-id--title--status key-id results-auto'
+        filter_projects:
+          type: select
+          required: false
+          multiple: false
+          expanded: true
+          label: "Filter project type"
+          values:
+            "TaskForce": "TaskForce"
+            "WorkingGroup": "WorkingGroup"
+            "Project": "Project"
+        selected_projects:
+          type: text
+          label: "Select Projects"
+          class: 'ajaxselector ct-projects fields-id--title--status key-id results-auto'
+        selected_jobs:
+          type: text
+          label: "Select Jobs"
+          class: 'ajaxselector ct-jobs fields-id--title--status key-id results-auto'
+        selected_events:
+          type: text
+          label: "Select Events"
+          class: 'ajaxselector ct-events fields-id--title--status key-id results-auto'
+        selected_resources:
+          type: text
+          label: "Select Banners, Calls to action or Blocks"
+          class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        override_css_id:
+          type: text
+          label: DOM ID
+          variant: inline
+          placeholder: custom css ID
+          info: If you need to add a custom css ID you can enter that here
+        override_css_class:
+          type: text
+          label: CSS Class
+          variant: inline
+          placeholder: custom css class
+          info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
     <<: *cta_defaults
     start_event:
