@@ -13,6 +13,18 @@ database:
 sitename: Europeana
 payoff: Collecting, Preserving and Enriching Europe’s Digital Cultural Heritage
 
+europeana:
+    excludedcategories:
+        - 'Culture lover'
+        - 'some other hidden category'
+    excludedmapping:
+        culture_lover:
+            name: Culture lover
+            basepath: https://fashion.europeana.eu/blog/
+        other_hidden_cat:
+            name: 'some other hidden category'
+            baseurl: https://www.google.com/
+
 # The theme to use. Be sure to copy the {theme_path}/base-2016 folder, and
 # change the name here accordingly.
 #
