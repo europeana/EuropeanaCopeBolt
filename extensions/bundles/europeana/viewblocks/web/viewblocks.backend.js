@@ -381,6 +381,8 @@ jQuery(document).ready(function($) {
         });
         subs.append($('#highlighttitle').parents('div[data-bolt-fieldset]'));
         subs.append($('#highlightsources').parents('div[data-bolt-fieldset]'));
+        subs.append($('#highlightsubtype').parents('div[data-bolt-fieldset]'));
+        subs.append($('#highlightcategory').parents('div[data-bolt-fieldset]'));
         subs.append($('#highlightlink').parents('div[data-bolt-fieldset]'));
         // console.log(subs);
         $('#pagetype').parents('div[data-bolt-fieldset]').after(subs);

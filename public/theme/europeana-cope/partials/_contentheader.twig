@@ -40,25 +40,53 @@
         {% set subtitle = '' %}
         {% set body = '' %}
         {% set sources = record.highlightsources|default('posts') %}
-        {% if (sources == 'posts' and title == 'Latest Publications') %}
-            {% set filtername = 'posttype' %}
-            {% set filtervalue = module.get('filter_posts')|default('publication') %}
-        {% elseif sources == 'posts' and title == 'Latest Pressreleases' %}
-            {% set filtername = 'posttype' %}
-            {% set filtervalue = module.get('filter_posts')|default('pressrelease') %}
-        {% elseif sources == 'posts' and title == 'Latest Blogs' %}
-            {% set filtername = 'posttype' %}
-            {% set filtervalue = module.get('filter_posts')|default('blog') %}
+
+        {# filter subtypes #}
+        {% set filtername = 1 %}
+        {% set filtervalue = 1 %}
+        {% if record.highlightsubtype|default() is not empty %}
+            {% if sources == 'posts'  %}
+                {% set filtername = 'posttype' %}
+                {% set filtervalue = record.highlightsubtype  %}
+            {% elseif sources == 'persons'   %}
+                {% set filtername = 'network_participation' %}
+                {% set filtervalue = record.highlightsubtype %}
+            {% elseif sources == 'projects' %}
+                {% set filtername = 'projecttype' %}
+                {% set filtervalue = record.highlightsubtype %}
+            {% elseif sources == 'data' %}
+                {% set filtername = 'datatype' %}
+                {% set filtervalue = record.highlightsubtype %}
+            {% endif %}
         {% else %}
             {% if app.request.get('_route') == 'homepage'  %}
                 {% set title = 'Latest posts' %}
             {% endif %}
-            {% set filtername = 1 %}
-            {% set filtervalue = 1 %}
         {% endif %}
+
+        {# filter taxonomies #}
+        {% set taxonomyname = 1 %}
+        {% set taxonomyterm = 1 %}
+        {% if record.highlightcategory|default() is not empty %}
+            {% set taxonomyterm = ''~(record.highlightcategory) %}
+            {% if taxonomyterm in app.config.get('taxonomy')['communities']['options']|keys %}
+                {% set taxonomyname = 'communities' %}
+            {% elseif taxonomyterm in app.config.get('taxonomy')['markets']['options']|keys %}
+                {% set taxonomyname = 'markets' %}
+            {% elseif taxonomyterm in app.config.get('taxonomy')['categories']['options']|keys %}
+                {% set taxonomyname = 'categories' %}
+            {% endif %}
+        {% endif %}
+
+        {# set default amount #}
         {% set override_amount = module.get('override_amount')|default(3) %}
         {% set allow_pager = false %}
-        {% setcontent selected_records = sources where {(filtername): (filtervalue)} orderby '-datepublish' limit override_amount %}
+
+        {% setcontent selected_records = sources where {
+            (filtername): (filtervalue),
+            (taxonomyname): (taxonomyterm)
+        } orderby '-datepublish' limit override_amount %}
+
         {% include [templatefile, 'modules/_default.twig'] with {
             'module': module,
             'record': record|default(),
