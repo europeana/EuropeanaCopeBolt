@@ -11,11 +11,21 @@
                         {% include 'modules/_mini_persons.twig' with { record: record } %}
                     {% endif %}
 
-                    <h1>{{ record.title }}</h1>
+                    {% if record.pagetype is defined
+                        and not (
+                            record.pagetype == 'listing'
+                            or record.pagetype == 'landingpage'
+                            or record.pagetype == 'landingpage-nohighlight'
+                        )
+                    %}
+                        <h1>{{ record.title }}</h1>
+                    {% endif %}
 
-                    <div class="introduction">
-                        {{ record.intro }}
-                    </div>
+                    {% if record.intro is not empty %}
+                        <div class="introduction">
+                            {{ record.intro }}
+                        </div>
+                    {% endif %}
                 </div>
 
                 {% if record.image is defined and record.image is not empty %}
