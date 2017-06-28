@@ -9,6 +9,7 @@ Available variables
 {% set override_css_id = module.get('override_css_id') %}
 {% set override_css_class = module.get('override_css_class') %}
 {% set template = module.get('templates') %}
+{% set image = module.get('image') %}
 {% endspaceless %}
 <section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module{%- if override_css_class %} {{ override_css_class }}{% endif -%}">
 
@@ -20,10 +21,17 @@ Available variables
         <p>{{ subtitle }}</p>
     {% endif %}
 
-    {% if body is not empty %}
-        <div class="body"> {# can be multiple bodies #}
-            {{ body|raw }}
-        </div>
+    {% if image is not empty %}
+        <figure>
+            <img class="main-img" src="{{ image.file|thumbnail(1240, 600, 'c') }}" alt="{{ image.title|default('')  }}" />
+
+            {% if image.title|default('') is not empty %}
+                <figcaption>
+                    {{ image.title }}
+                </figcaption>
+            {% endif %}
+
+        </figure>
     {% endif %}
 
 </section>

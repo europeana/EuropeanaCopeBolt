@@ -13,6 +13,13 @@ jQuery.fn.extend(
                 .sourceSwitcher()
                 .compressSwitcher();
 
+            $('.fileselectbuttongroup').each(function() {
+                // console.log('uploadbutton hider', $(this));
+                $(this).children('.fileinput-button').each(function() {
+                    $(this).hide();
+                });
+            });
+
             // add change handlers to block
             $(this).on('change', this.callChanges);
 
@@ -99,22 +106,32 @@ jQuery.fn.extend(
             var sourceselect = viewblock.find('select[name*="sources"]');
             var orderselect = viewblock.find('select[name*="ordering"]');
             var iconfield = viewblock.find('input[name*="icon"]');
+            var imagefield = viewblock.find('input[name*="image"]');
 
             if(templatevalue === 'body' || templatevalue === 'collapsedcontent') {
                 bodyblock.parents('.repeater-field').show();
                 sourceselect.parents('.repeater-field').hide();
                 orderselect.parents('.repeater-field').hide();
                 iconfield.parents('.repeater-field').hide();
+                imagefield.parents('.repeater-field').hide();
             } else if(templatevalue === 'streamercolumn') {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').hide();
                 orderselect.parents('.repeater-field').show();
                 iconfield.parents('.repeater-field').show();
+                imagefield.parents('.repeater-field').hide();
+            } else if(templatevalue === 'image') {
+                bodyblock.parents('.repeater-field').hide();
+                sourceselect.parents('.repeater-field').hide();
+                orderselect.parents('.repeater-field').hide();
+                iconfield.parents('.repeater-field').hide();
+                imagefield.parents('.repeater-field').show();
             } else {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').show();
                 orderselect.parents('.repeater-field').show();
                 iconfield.parents('.repeater-field').hide();
+                imagefield.parents('.repeater-field').hide();
             }
 
             //console.log('templatesSwitcher triggered', viewblock.data('templatevalue'));
@@ -136,7 +153,6 @@ jQuery.fn.extend(
             var categoryblock = viewblock.find('input[name*="basecategory"]');
             var tagblock = viewblock.find('input[name*="basetag"]');
             var selectedamount = viewblock.find('input[name*="override_amount"]');
-
 
             if(ordervalue === 'tag' || ordervalue === 'tag_unpaged') {
                 tagblock.parents('.repeater-field').show();
@@ -166,6 +182,8 @@ jQuery.fn.extend(
                 return viewblock;
             }
 
+            var templatevalue = viewblock.data('templatevalue');
+
             var sourceselect = viewblock.find('select[name*="sources"]');
             var sourcevalue = sourceselect.val();
             viewblock.data('sourcevalue', sourcevalue);
@@ -182,17 +200,16 @@ jQuery.fn.extend(
             var selectedfilter = parentblock.find('select[name*="filter"]');
             var filteramount = selectedfilter.length;
 
+
             //console.log('filterSwitcher content types', sourceselect, sourcevalue, parentblock, ordervalue, orderselect, selectedfilter, filteramount);
 
-            var templatevalue = viewblock.data('templatevalue');
-            // if(templatevalue === 'body') {
+            // if(templatevalue === 'body' || templatevalue === 'image' || templatevalue === 'collapsedcontent') {
             //     sourceselect.parents('.repeater-field').hide();
             //     selectedamount.parents('.repeater-field').hide();
-            // } else {
-            //     sourceselect.parents('.repeater-field').show();
+            //     orderselect.parents('.repeater-field').hide();
+            //     console.log('hello', templatevalue);
             // }
 
-            var orderingvalue = viewblock.data('ordervalue');
             // if(orderingvalue === 'specified') {
             //     selectedamount.parents('.repeater-field').hide();
             // } else {
@@ -205,10 +222,12 @@ jQuery.fn.extend(
                 var filtername = currentfilter.attr('name') ? currentfilter.attr('name') : false;
                 var parentfilterset = $(currentfilter.parents('.repeater-field'));
                 parentfilterset.hide();
-                if (filtername.indexOf(sourcevalue) != -1
+                if (filtername.indexOf(sourcevalue) !== -1
                     && templatevalue !== 'body'
-                    && orderingvalue !== 'specified') {
-                    //console.log('enable', sourcevalue, 'filtername', filtername);
+                    && templatevalue !== 'image'
+                    && templatevalue !== 'collapsedcontent'
+                    && ordervalue !== 'specified') {
+                    // console.log('enable', sourcevalue, 'filtername', filtername);
                     parentfilterset.show();
                 }
             }
@@ -235,19 +254,14 @@ jQuery.fn.extend(
             //console.log('selected content types', sourceselect, newvalue, parentblock, selectedct, amount);
 
             var templatevalue = viewblock.data('templatevalue');
-            if(templatevalue === 'body') {
+            if(templatevalue === 'body' || templatevalue === 'image' || templatevalue === 'collapsedcontent') {
                 sourceselect.parents('.repeater-field').hide();
                 selectedamount.parents('.repeater-field').hide();
             } else {
                 sourceselect.parents('.repeater-field').show();
             }
 
-            var orderingvalue = viewblock.data('ordervalue');
-            if(orderingvalue === 'specified') {
-                selectedamount.parents('.repeater-field').hide();
-            } else {
-                selectedamount.parents('.repeater-field').show();
-            }
+            var ordervalue = viewblock.data('ordervalue');
 
             // loop through all options to hide the source selector
             for (var ct = 0; ct < amount; ct++) {
@@ -255,9 +269,11 @@ jQuery.fn.extend(
                 var ctname = currentct.attr('name') ? currentct.attr('name') : false;
                 var parentfieldset = $(currentct.parents('.repeater-field'));
                 parentfieldset.hide();
-                if (ctname.indexOf(newvalue) != -1
+                if (ctname.indexOf(newvalue) !== -1
                     && templatevalue !== 'body'
-                    && orderingvalue === 'specified') {
+                    && templatevalue !== 'image'
+                    && templatevalue !== 'collapsedcontent'
+                    && ordervalue !== 'specified') {
                     //console.log('enable', newvalue, 'ctname', ctname);
                     parentfieldset.show();
                 }
@@ -394,6 +410,7 @@ jQuery(document).ready(function($) {
             'target': '_blank'
         }).addClass('btn btn-primary btn-sm').html('<i class="fa fa-dropbox"></i> Upload files'));
     });
+
     console.log('uploadbuttons js loaded');
 
     // prepare modal dialog for cheatsheet
