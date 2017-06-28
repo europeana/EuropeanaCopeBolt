@@ -13,7 +13,7 @@ Available variables
 {% set template = module.get('templates') %}
 {% endspaceless %}
 
-<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="file-browser file-content-module {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="file-browser file-content-module collapsed-content-module {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
 
     <div class="collapse-header">
             <p class="content-kind">
@@ -24,18 +24,18 @@ Available variables
         </p>
 
         {% if title is not empty %}
-        <h3>{{ title }}</h3>
+        <h3 class="expand-toggle">{{ title }}</h3>
         {% endif %}
 
-        <a href="#">
-            <svg class="icon icon-navigate-up">
-                <use xlink:href="#icon-navigate-up"></use>
+        <a class="expand-toggle" href="#">
+            <svg class="icon icon-facet_up">
+                <use xlink:href="#icon-facet_up"></use>
             </svg>
             <span class="sr-only">Open folder</span>
         </a>
     </div>
 
-    <div class="collapse-content">
+    <div class="collapse-content can-expand">
         {% if subtitle|default('') is not empty %}
             <p>{{ subtitle }}</p>
         {% endif %}
