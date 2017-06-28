@@ -17,11 +17,13 @@
             <span class="info-type">Page</span>
             <span class="info-date">Created: {{ item.datepublish|localedatetime("%e %B  %Y") }}</span>
 
-            {% if item.contact_record %}
-            <span class="info-author">
+            {% if item.contact_record is not empty %}
                 {% setcontent author = 'persons' where { id : item.contact_record } returnsingle %}
-                By <a href="{{ author.link() }}">{{ author.first_name }} {{ author.last_name }}</a>
-            </span>
+                {% if author is not empty %}
+                <span class="info-author">
+                    By <a href="{{ author.link }}">{{ author.first_name }} {{ author.last_name }}</a>
+                </span>
+                {% endif %}
             {% endif %}
 
         </div>
