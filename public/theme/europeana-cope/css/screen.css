@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * File:        screen.scss
  * Description: Stylesheet for 'Make it so' base theme
@@ -718,7 +719,8 @@ footer {
     .contentpage .info-list {
       padding: 0 8rem; } }
 
-.body > * {
+.body > *,
+.collapsed-body > * {
   margin: 2rem 0; }
 
 ul.search-results,
@@ -881,7 +883,148 @@ nav.main-menu {
   nav.main-menu a {
     text-decoration: none;
     color: #1a1a1a; }
+  nav.main-menu li.is-parent {
+    position: relative; }
+  @media only screen and (min-width: 60em) {
+    nav.main-menu .sub-menu .sub-menu {
+      position: absolute;
+      left: 210px;
+      top: -6px;
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+      border: 1px solid #cccccc; } }
 
+#playmenu {
+  top: 0;
+  position: relative;
+  width: 100%;
+  z-index: 1; }
+
+#playmenu li.active.toplevel:not(.home) {
+  min-height: 26em;
+  margin-left: 0; }
+
+#playmenu li.last {
+  border-bottom: 0; }
+
+#playmenu li.active.toplevel > a {
+  min-height: 35px; }
+
+ul.play-menu > li:not(.home) {
+  margin-left: 0px;
+  padding-left: 35px; }
+
+ul.play-menu > li > .sub-menu {
+  min-height: 23em; }
+
+ul.play-menu .sub-menu .sub-menu {
+  display: none; }
+
+ul.play-menu .sub-menu li.active .sub-menu,
+ul.play-menu .sub-menu li:hover .sub-menu {
+  display: block; }
+
+/* main menu item colours */
+#playmenu .home,
+ul.play-menu li.active.toplevel {
+  padding-left: 0;
+  background: #c4c4ba; }
+
+#playmenu .home a,
+ul.play-menu li.active.toplevel > a {
+  color: #444;
+  text-align: center;
+  font-weight: normal;
+  display: block; }
+
+/* menu structure */
+ul.play-menu a {
+  display: block; }
+
+ul.play-menu li {
+  padding-left: 25px; }
+
+ul.play-menu li > .sub-menu {
+  margin: 5px 0 -12px 0;
+  padding-left: 25px;
+  border-left: none; }
+
+ul.play-menu li > .sub-menu .sub-menu {
+  margin-left: 0; }
+
+ul.play-menu .sub-menu li {
+  padding-left: 10px;
+  border-left: none; }
+
+ul.play-menu .sub-menu .sub-menu li {
+  padding: 2px 0;
+  border-bottom: none; }
+
+ul.play-menu li.level-2 a {
+  font-size: 90%; }
+
+/* mouseover thingies */
+ul.play-menu a:hover {
+  font-weight: bold;
+  letter-spacing: -0.5px; }
+
+.active > a {
+  font-weight: bold;
+  letter-spacing: -0.5px; }
+
+/* hackish way to add a marker
+    .active:not(.toplevel):not(.home) > a:after {
+        content: " ▶";
+    }
+    */
+/* the mouseover menu styles */
+nav #backlinks {
+  background: #bcbabc; }
+
+nav #backlinks:hover {
+  background: #fff; }
+
+#backlinks {
+  top: 3.25em;
+  position: absolute;
+  width: 25px;
+  overflow: hidden;
+  z-index: 10;
+  height: 22.75em;
+  -webkit-transition: width 0.2s ease-in-out;
+  -moz-transition: width 0.2s ease-in-out;
+  -o-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out; }
+
+#backlinks:before {
+  content: "❰";
+  font-weight: bold;
+  color: #fff;
+  top: 10em;
+  padding: 5px;
+  position: absolute; }
+
+#backlinks:hover {
+  -webkit-transition: width 0.2s ease-in-out;
+  -moz-transition: width 0.2s ease-in-out;
+  -o-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
+  width: 100%; }
+
+#backlinks li {
+  border-left: none;
+  margin-left: 25px;
+  padding-left: 10px; }
+
+#backlinks li.active {
+  display: none; }
+
+/*
+***********************************************************************
+* FOoter menu
+***********************************************************************
+**/
 nav.footer-menu li {
   display: inline-block; }
 
@@ -1244,21 +1387,34 @@ ul {
 
 .body p a,
 .body ul a,
-.body ol a {
-  text-decoration: underline; }
+.body ol a,
+.collapsed-body p a,
+.collapsed-body ul a,
+.collapsed-body ol a {
+  text-decoration: underline;
+  color: #095f90; }
 
-.body ul {
+.body ul,
+.collapsed-body ul {
   list-style: disc outside url("../images/list-dot.svg");
   padding-left: 40px; }
 
 .body ul li,
-.body ol li {
+.body ol li,
+.collapsed-body ul li,
+.collapsed-body ol li {
   margin-bottom: 1rem; }
 
-.body p, .body ul, .body ol {
+.body p, .body ul, .body ol,
+.collapsed-body p,
+.collapsed-body ul,
+.collapsed-body ol {
   font-size: 0.875rem; }
   @media only screen and (min-width: 24em) {
-    .body p, .body ul, .body ol {
+    .body p, .body ul, .body ol,
+    .collapsed-body p,
+    .collapsed-body ul,
+    .collapsed-body ol {
       font-size: 1rem; } }
 
 p {
@@ -1483,6 +1639,14 @@ p blockquote {
   padding: 1rem;
   border: 1px solid #de2d0f;
   background: #f79e8f; }
+
+mark {
+  background-color: #E11D53; }
+
+code, pre {
+  background-color: #f1f1ee; }
+  .file-content-module code, .file-content-module pre {
+    background-color: #fff; }
 
 /*
 * BUTTONS
@@ -3047,18 +3211,6 @@ table.listingtable {
   /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-  thead {
-    display: table-header-group; }
-  tr,
-  img {
-    page-break-inside: avoid; }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; } }
-io.com/wiki/Printing_Tables
      */
   thead {
     display: table-header-group; }

@@ -283,7 +283,8 @@ footer {
 
 }
 
-.body > * {
+.body > *,
+.collapsed-body > * {
     margin: 2rem 0;
 }
 

@@ -279,11 +279,13 @@ ul {
         }
 }
 
-.body {
+.body,
+.collapsed-body {
     p a,
     ul a,
     ol a {
         text-decoration: underline;
+        color: $link-blue;
     }
 
     ul {
@@ -632,9 +634,20 @@ p blockquote {
 }
 
 
-
 .error {
     padding: 1rem;
     border: 1px solid #de2d0f;
     background: lighten(#de2d0f, 30%);
+}
+
+mark {
+    background-color: $baseFirstThemeColour;
+}
+
+code, pre {
+    background-color: $off-white;
+
+    .file-content-module & {
+        background-color: $white;
+    }
 }
