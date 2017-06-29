@@ -65,7 +65,13 @@
             {% set currenttaxonomy = app.config.get('taxonomy/' ~ taxonomyname) %}
 
             <span class="this-filter">{{ currenttaxonomy.name }}: {{ currenttaxonomy.options[taxonomyterm] }}</span>
-            <a class="reset-filter" href="{{ record.link }}">
+
+            {% if records is defined %}
+                <a class="reset-filter" href="{{ path('contentlisting', { contenttypeslug: app.request.attributes.get('contenttypeslug') }) }}">
+            {% else %}
+                <a class="reset-filter" href="{{ record.link }}">
+            {% endif %}
+
                 <span class="sr-only">Reset filter</span>
                 <svg class="icon icon-delete">
                     <use xlink:href="#icon-delete"></use>
@@ -94,13 +100,22 @@
                         {% for filter, filtername in filters if filtername not in excludedcategories %}
                             {# -- NOTE: slugified subtypes -- #}
                             {# -- NOTE: the viewblocklisting route does not make use of the hierarchical routes -- #}
-                            {% set link = path('viewblocklisting', {
-                                contenttypeslug : record.contenttype.slug,
-                                slug            : record.slug,
-                                subtype         : subtype|slugify,
-                                taxonomyname    : chapter|lower,
-                                taxonomyterm    : filter
-                            }) %}
+                            {% if records is defined %}
+                                {% set link = path('contentlistingfiltered', {
+                                    contenttypeslug : records|first.contenttype.slug,
+                                    subtype         : subtype|slugify,
+                                    taxonomyname    : chapter|lower,
+                                    taxonomyterm    : filter
+                                }) %}
+                            {% else %}
+                                {% set link = path('viewblocklisting', {
+                                    contenttypeslug : record.contenttype.slug,
+                                    slug            : record.slug,
+                                    subtype         : subtype|slugify,
+                                    taxonomyname    : chapter|lower,
+                                    taxonomyterm    : filter
+                                }) %}
+                            {% endif %}
 
                             <li{% if app.request.attributes.get('taxonomyterm', false) == filter %} class="current"{% endif %}>
                                 <a href="{{ link }}">{{ filtername }}</a>

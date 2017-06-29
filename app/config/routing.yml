@@ -5,6 +5,13 @@
 # ------------------------------------------------------------------------------
 # Place your own routes here, that have a HIGHER priority than the default routes.
 
+contentlistingfiltered:
+    path: /{contenttypeslug}/{subtype}/{taxonomyname}/{taxonomyterm}
+    defaults:
+        _controller: controller.frontend:listing
+    requirements:
+        contenttypeslug: controller.requirement:pluralContentTypes
+
 viewblocklisting:
     path: /{contenttypeslug}/{slug}/{subtype}/{taxonomyname}/{taxonomyterm}
     defaults:
