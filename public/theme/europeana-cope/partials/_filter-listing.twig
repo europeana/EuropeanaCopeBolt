@@ -45,6 +45,11 @@
         {% set contenttypepath = '/' ~ contenttypeslug ~ '/datatype/' %}
         {% set categories = contenttype.fields.datatype.values %}
 
+    {% elseif contenttypeslug == 'events' %}
+        {# Events: filter by market or service #}
+
+        {% set filterchapters = ['Markets','Categories'] %}
+
     {% else %}
         {% set categories = {} %}
     {% endif %}
@@ -52,6 +57,7 @@
     {% set categories = {} %}
 {% endif %}
 
+{% if filterchapters is not empty %}
 <div class="filter-listing">
     <h2 class="sr-only">Filter this list</h2>
     <div class="current-filters">
@@ -128,3 +134,4 @@
         </ul>
     </div>
 </div>
+{% endif %}
