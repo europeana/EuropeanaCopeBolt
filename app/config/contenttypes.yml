@@ -811,8 +811,6 @@ posts:
       label: "Author(s)"
       type: text
       class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
-      prefix: '<div><h3>Support Contact</h3><p>The support contact is usually a europeana staff member who is designated as the primary contact about the current record.</p></div>'
-      postfix: '<p>Use this to select a contact to display along this record. If nothing is selected the contact for the parent structure will be selected</p>'
     isbn:
       label: "ISBN"
       type: text
