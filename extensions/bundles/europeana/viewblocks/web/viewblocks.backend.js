@@ -6,18 +6,17 @@ jQuery.fn.extend(
 
             // prepare display according to current settings
             $(this)
+                .compressSwitcher()
                 .masterSwitcher()
                 .templateSwitcher()
-                .orderSwitcher()
-                .filterSwitcher()
-                .sourceSwitcher()
-                .compressSwitcher();
+                .sourceSwitcher();
 
-            $('.fileselectbuttongroup').each(function() {
+            $('.fileselectbuttongroup:not(.hiddenbutton)').each(function() {
                 // console.log('uploadbutton hider', $(this));
                 $(this).children('.fileinput-button').each(function() {
                     $(this).hide();
                 });
+                $(this).addClass('hiddenbutton');
             });
 
             // add change handlers to block
@@ -30,25 +29,15 @@ jQuery.fn.extend(
             $(this)
                 .masterSwitcher()
                 .templateSwitcher()
-                .orderSwitcher()
-                .filterSwitcher()
                 .sourceSwitcher();
-        },
-        masterSwitcher: function() {
-            var viewblock = $(this);
-            var masterswitch = viewblock.find('select[name*="enabled"]');
-            $(masterswitch).parents('.repeater-field').addClass('masterswitch');
 
-            var mastervalue = masterswitch.val();
-            if(mastervalue === 'enabled') {
-                viewblock.addClass('master-switch-enabled');
-                viewblock.find('.repeater-field:not(.masterswitch)').show();
-            } else {
-                viewblock.removeClass('master-switch-enabled');
-                viewblock.find('.repeater-field:not(.masterswitch)').hide();
-            }
-            //console.log('masterSwitcher triggered');
-            return viewblock;
+            $('.fileselectbuttongroup:not(.hiddenbutton)').each(function() {
+                // console.log('uploadbutton hider', $(this));
+                $(this).children('.fileinput-button').each(function() {
+                    $(this).hide();
+                });
+                $(this).addClass('hiddenbutton');
+            });
         },
         compressSwitcher: function() {
             var viewblock = $(this);
@@ -87,6 +76,22 @@ jQuery.fn.extend(
                     })
                 );
             //console.log('titleswitcher loading');
+            return viewblock;
+        },
+        masterSwitcher: function() {
+            var viewblock = $(this);
+            var masterswitch = viewblock.find('select[name*="enabled"]');
+            $(masterswitch).parents('.repeater-field').addClass('masterswitch');
+
+            var mastervalue = masterswitch.val();
+            if(mastervalue === 'enabled') {
+                viewblock.addClass('master-switch-enabled');
+                viewblock.find('.repeater-field:not(.masterswitch)').show();
+            } else {
+                viewblock.removeClass('master-switch-enabled');
+                viewblock.find('.repeater-field:not(.masterswitch)').hide();
+            }
+            //console.log('masterSwitcher triggered');
             return viewblock;
         },
         templateSwitcher: function() {
@@ -134,103 +139,7 @@ jQuery.fn.extend(
                 imagefield.parents('.repeater-field').hide();
             }
 
-            //console.log('templatesSwitcher triggered', viewblock.data('templatevalue'));
-            return viewblock;
-        },
-        orderSwitcher: function() {
-            var viewblock = $(this);
-
-            if(!viewblock.hasClass('master-switch-enabled')) {
-                return viewblock;
-            }
-
-            // main block for this switcher
-            var orderselect = viewblock.find('select[name*="ordering"]');
-            var ordervalue = orderselect.val();
-            viewblock.data('ordervalue', ordervalue);
-
-            // dependent blocks for this switcher
-            var categoryblock = viewblock.find('input[name*="basecategory"]');
-            var tagblock = viewblock.find('input[name*="basetag"]');
-            var selectedamount = viewblock.find('input[name*="override_amount"]');
-
-            if(ordervalue === 'tag' || ordervalue === 'tag_unpaged') {
-                tagblock.parents('.repeater-field').show();
-                categoryblock.parents('.repeater-field').hide();
-                selectedamount.parents('.repeater-field').show();
-            } else if(ordervalue === 'category' || ordervalue === 'category_unpaged') {
-                tagblock.parents('.repeater-field').hide();
-                categoryblock.parents('.repeater-field').show();
-                selectedamount.parents('.repeater-field').show();
-            } else if(ordervalue === 'specified') {
-                tagblock.parents('.repeater-field').hide();
-                categoryblock.parents('.repeater-field').hide();
-                selectedamount.parents('.repeater-field').hide();
-            } else {
-                tagblock.parents('.repeater-field').hide();
-                categoryblock.parents('.repeater-field').hide();
-                selectedamount.parents('.repeater-field').show();
-            }
-
-            //console.log('orderSwitcher triggered', viewblock.data('ordervalue'));
-            return viewblock;
-        },
-        filterSwitcher: function() {
-            var viewblock = $(this);
-
-            if(!viewblock.hasClass('master-switch-enabled')) {
-                return viewblock;
-            }
-
-            var templatevalue = viewblock.data('templatevalue');
-
-            var sourceselect = viewblock.find('select[name*="sources"]');
-            var sourcevalue = sourceselect.val();
-            viewblock.data('sourcevalue', sourcevalue);
-
-            // main block for this switcher
-            var orderselect = viewblock.find('select[name*="ordering"]');
-            var ordervalue = orderselect.val();
-            viewblock.data('ordervalue', ordervalue);
-
-            // dependent blocks for this switcher
-            var parentblock = sourceselect.parents('.panel.viewblocks');
-            var selectedamount = parentblock.find('input[name*="override_amount"]');
-
-            var selectedfilter = parentblock.find('select[name*="filter"]');
-            var filteramount = selectedfilter.length;
-
-
-            //console.log('filterSwitcher content types', sourceselect, sourcevalue, parentblock, ordervalue, orderselect, selectedfilter, filteramount);
-
-            // if(templatevalue === 'body' || templatevalue === 'image' || templatevalue === 'collapsedcontent') {
-            //     sourceselect.parents('.repeater-field').hide();
-            //     selectedamount.parents('.repeater-field').hide();
-            //     orderselect.parents('.repeater-field').hide();
-            //     console.log('hello', templatevalue);
-            // }
-
-            // if(orderingvalue === 'specified') {
-            //     selectedamount.parents('.repeater-field').hide();
-            // } else {
-            //     selectedamount.parents('.repeater-field').show();
-            // }
-
-            // loop through all options to hide the filter selector
-            for (var ct = 0; ct < filteramount; ct++) {
-                var currentfilter = $(selectedfilter[ct]);
-                var filtername = currentfilter.attr('name') ? currentfilter.attr('name') : false;
-                var parentfilterset = $(currentfilter.parents('.repeater-field'));
-                parentfilterset.hide();
-                if (filtername.indexOf(sourcevalue) !== -1
-                    && templatevalue !== 'body'
-                    && templatevalue !== 'image'
-                    && templatevalue !== 'collapsedcontent'
-                    && ordervalue !== 'specified') {
-                    // console.log('enable', sourcevalue, 'filtername', filtername);
-                    parentfilterset.show();
-                }
-            }
+            //console.log('templatesSwitcher triggered', templatevalue);
             return viewblock;
         },
         sourceSwitcher: function() {
@@ -239,43 +148,104 @@ jQuery.fn.extend(
             if(!viewblock.hasClass('master-switch-enabled')) {
                 return viewblock;
             }
+            var templatevalue = viewblock.data('templatevalue');
 
-            // main block for this switcher
+            // switch the current ordering (selected items, latest, alphabetical etc.)
+            var orderselect = viewblock.find('select[name*="ordering"]');
+            var ordervalue = orderselect.val();
+            viewblock.data('ordervalue', ordervalue);
+
+            // select a content type for the source
             var sourceselect = viewblock.find('select[name*="sources"]');
-            var newvalue = sourceselect.val();
-            viewblock.data('sourcevalue', newvalue);
-            //console.log('sourceSwitcher triggered', newvalue, sourceselect);
+            var sourcevalue = sourceselect.val();
+            viewblock.data('sourcevalue', sourcevalue);
+            var parentblock = sourceselect.parents('.panel.viewblocks');
 
             // dependent blocks for this switcher
-            var parentblock = sourceselect.parents('.panel.viewblocks');
-            var selectedamount = parentblock.find('input[name*="override_amount"]');
-            var selectedct = parentblock.find('.ajaxselector[name*="selected"], select[name*="selected"]');
-            var amount =  selectedct.length;
-            //console.log('selected content types', sourceselect, newvalue, parentblock, selectedct, amount);
 
-            var templatevalue = viewblock.data('templatevalue');
+            // current selected content filter
+            var selectedfilter = parentblock.find('select[name*="filter"]');
+
+            // current selected content items
+            var selectedct = parentblock.find('.ajaxselector[name*="selected"], select[name*="selected"]');
+
+            // selected amount (not for ordervalue == selected)
+            var selectedamount = viewblock.find('input[name*="override_amount"]');
+
+            // selected category (only for ordervalue == *category)
+            var categoryblock = viewblock.find('input[name*="basecategory"]');
+
+            // selected category (only for ordervalue == *tag)
+            var tagblock = viewblock.find('input[name*="basetag"]');
+
+            // console.log('sourceSwitcher triggered', {
+            //     'templatevalue': ordervalue,
+            //     'order': ordervalue,
+            //     'source': sourcevalue
+            // } );
+
             if(templatevalue === 'body' || templatevalue === 'image' || templatevalue === 'collapsedcontent') {
+                console.log('hiding source, order, amount, selector, category and tags');
                 sourceselect.parents('.repeater-field').hide();
                 selectedamount.parents('.repeater-field').hide();
+                tagblock.parents('.repeater-field').hide();
+                categoryblock.parents('.repeater-field').hide();
+                selectedfilter.parents('.repeater-field').hide();
+                selectedct.parents('.repeater-field').hide();
             } else {
                 sourceselect.parents('.repeater-field').show();
-            }
+                orderselect.parents('.repeater-field').show();
 
-            var ordervalue = viewblock.data('ordervalue');
+                if(ordervalue !== 'specified') {
+                    // hide all source selector
+                    $(selectedct).each(function() {
+                        $(this).parents('.repeater-field').hide();
+                    });
 
-            // loop through all options to hide the source selector
-            for (var ct = 0; ct < amount; ct++) {
-                var currentct = $(selectedct[ct]);
-                var ctname = currentct.attr('name') ? currentct.attr('name') : false;
-                var parentfieldset = $(currentct.parents('.repeater-field'));
-                parentfieldset.hide();
-                if (ctname.indexOf(newvalue) !== -1
-                    && templatevalue !== 'body'
-                    && templatevalue !== 'image'
-                    && templatevalue !== 'collapsedcontent'
-                    && ordervalue !== 'specified') {
-                    //console.log('enable', newvalue, 'ctname', ctname);
-                    parentfieldset.show();
+                    // loop through all options to only show the current filter selector
+                    for (var fi = 0; fi < selectedfilter.length; fi++) {
+                        var currentfilter = $(selectedfilter[fi]);
+                        var filtername = currentfilter.attr('name') ? currentfilter.attr('name') : false;
+                        var parentfilterset = $(currentfilter.parents('.repeater-field'));
+                        parentfilterset.hide();
+                        if (filtername.indexOf(sourcevalue) !== -1) {
+                            // console.log('enable filter', sourcevalue, 'filtername', filtername);
+                            parentfilterset.show();
+                        }
+                    }
+                }
+
+                if(ordervalue === 'tag' || ordervalue === 'tag_unpaged') {
+                    tagblock.parents('.repeater-field').show();
+                    categoryblock.parents('.repeater-field').hide();
+                    selectedamount.parents('.repeater-field').show();
+                } else if(ordervalue === 'category' || ordervalue === 'category_unpaged') {
+                    tagblock.parents('.repeater-field').hide();
+                    categoryblock.parents('.repeater-field').show();
+                    selectedamount.parents('.repeater-field').show();
+                } else if(ordervalue === 'specified') {
+                    tagblock.parents('.repeater-field').hide();
+                    categoryblock.parents('.repeater-field').hide();
+                    selectedamount.parents('.repeater-field').hide();
+                    // hide all filters
+                    $(selectedfilter).each(function() {
+                        $(this).parents('.repeater-field').hide();
+                    });
+                    // loop through all options to only show the current source selector
+                    for (var ct = 0; ct < selectedct.length; ct++) {
+                        var currentct = $(selectedct[ct]);
+                        var ctname = currentct.attr('name') ? currentct.attr('name') : false;
+                        var parentfieldset = $(currentct.parents('.repeater-field'));
+                        parentfieldset.hide();
+                        if (ctname.indexOf(sourcevalue) !== -1) {
+                            console.log('enable', sourcevalue, 'ctname', ctname);
+                            parentfieldset.show();
+                        }
+                    }
+                } else {
+                    tagblock.parents('.repeater-field').hide();
+                    categoryblock.parents('.repeater-field').hide();
+                    selectedamount.parents('.repeater-field').show();
                 }
             }
             return viewblock;
@@ -294,7 +264,6 @@ jQuery.fn.extend(
         onAvailable: function(fn){
             var sel = this.selector;
             var timer;
-            var self = this;
             if (this.length > 0) {
                 fn.call(this);
             }
@@ -312,8 +281,6 @@ jQuery.fn.extend(
 
 
 jQuery(document).ready(function($) {
-    //console.log('viewblocks js start');
-
     $('.repeater-slot .repeater-group').onAvailable(
         function() {
             //console.log('initializing viewblock for initial fields');
@@ -357,6 +324,13 @@ jQuery(document).ready(function($) {
                 })
         );
 
+    // show the repeater if there is only one
+    var repeaters = $('fieldset.bolt-field-repeater div.repeater-group');
+    if(repeaters.length === 1) {
+        //console.log('show all repeaters because there is only one', repeaters.length, repeaters);
+        $('a.titletogglebutton.btn-info').each(function() { $(this).click(); });
+    }
+
     $('.repeater-add button, button.duplicate-button').on('click', function() {
         //console.log('a repeater is added');
         setTimeout(
@@ -379,6 +353,7 @@ jQuery(document).ready(function($) {
             'id': 'highlightblock',
             'class': 'highlightblock'
         });
+        // add highlight subs to the collapsible block
         subs.append($('#highlighttitle').parents('div[data-bolt-fieldset]'));
         subs.append($('#highlightsources').parents('div[data-bolt-fieldset]'));
         subs.append($('#highlightsubtype').parents('div[data-bolt-fieldset]'));
