@@ -885,6 +885,10 @@ nav.main-menu {
     color: #1a1a1a; }
   nav.main-menu li.is-parent {
     position: relative; }
+  nav.main-menu .cloned-current {
+    font-size: 90%;
+    font-weight: 700;
+    letter-spacing: -0.5px; }
   @media only screen and (min-width: 60em) {
     nav.main-menu .sub-menu .sub-menu {
       position: absolute;
@@ -921,7 +925,9 @@ ul.play-menu > li > .sub-menu {
 ul.play-menu .sub-menu .sub-menu {
   display: none; }
 
-ul.play-menu .sub-menu li.active .sub-menu,
+ul.play-menu .sub-menu li.active .sub-menu {
+  display: none; }
+
 ul.play-menu .sub-menu li:hover .sub-menu {
   display: block; }
 
@@ -966,11 +972,11 @@ ul.play-menu li.level-2 a {
 
 /* mouseover thingies */
 ul.play-menu a:hover {
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: -0.5px; }
 
 .active > a {
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: -0.5px; }
 
 /* hackish way to add a marker

@@ -141,6 +141,7 @@ $(document).ready(function() {
     });
 
 
+
     // a quick and dirty way to do inline page loads
     $('xx_dontuse_xx .play-menu .sub-menu a').each(function() {
         $(this).bind(
@@ -174,5 +175,20 @@ $(document).ready(function() {
             }
         );
     });
+
+     // custom breakpoints for menu, set to optimize menu
+    var breakMenuFull = 60; //960
+    console.log('break ',breakMenuFull);
+
+    var windowWidthEms = ((viewportSize.getWidth()) / 16);
+
+    if ( windowWidthEms >= breakMenuFull ) {
+
+    // clone current page to show in first level submenu
+    var thispage = $('li.level-2.active');
+    thispage.parents('li.level-1').append('<span class="cloned-current">' + thispage.text() + '</span>');
+
+    }
+
 });
 
