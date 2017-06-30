@@ -29,6 +29,7 @@
                 {% endif %}
             {% elseif contenttype is defined %}
                 {# this assumes the first record has the same contenttype as all the others #}
+                {{ dump(contenttype) }}
                 <h1>{{ contenttype.name|default('List') }}</h1>
             {% endif %}
 
