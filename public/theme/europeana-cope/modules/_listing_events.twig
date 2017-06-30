@@ -1,0 +1,77 @@
+{% spaceless %}
+{#
+Available variables
+    'module':    the full module object
+    'title':     title of the module
+    'subtitle':  subtitle of the module
+    'body':      body of the module
+    'records':   array of (selected) records that belong to the module
+    'allow_pager': boolean to check is the pager is available
+#}
+{% set override_css_id = module.get('override_css_id') %}
+{% set override_css_class = module.get('override_css_class') %}
+{% set template = module.get('templates') %}
+{% set pagerpage = app.request.get('page_events')|default(1) %}
+{% endspaceless %}
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module group {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+    <div class="inner-wrap">
+
+        {% if title is not empty %}
+            <h2>{{ title }}</h2>
+        {% endif %}
+
+        {% if subtitle|default('') is not empty %}
+            <p>{{ subtitle }}</p>
+        {% endif %}
+
+        {% if body is not empty %}
+            {{ body|raw }}
+        {% endif %}
+
+
+        {% if records is iterable and records is not empty %}
+
+            <ul class="teaser-list {%- if override_css_listclass|default('') %} {{ override_css_listclass }}{% endif -%}">
+
+            {# FEATURED #}
+            {% if pagerpage == 1 %}
+                {% setcontent featured = 'events' where { 'featured' : true } %}
+                    {% for record in featured %}
+                    <li class="{%- if override_css_itemclass|default('') %} {{ override_css_itemclass }}{% endif -%}">
+                        {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
+                    <!-- loading listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
+
+                    {% include [template, 'views/_teaser.twig', 'views/_fallback.twig'] with { item : record } %}
+                    </li>
+                {% endfor %}
+            {% endif %}
+
+
+            {% for record in records %}
+                {% if record.id is defined and (record.featured != true) %}
+                    <li class="{%- if override_css_itemclass|default('') %} {{ override_css_itemclass }}{% endif -%}">
+                    {% set templatefile =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
+                    {% set defaulttemplatefile =  'views/_teaser.twig' %}
+                    <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
+                    {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
+                    </li>
+                {% else %}
+                    <!-- selected record is unpublished or otherwise unavailable -->
+                {% endif %}
+            {% endfor %}
+            </ul>
+
+            {% set pagername = records|first.contenttype.slug|default('') %}
+            {% if pagername is not empty and allow_pager == true %}
+                {{ pager( (pagername) ) }}
+            {% endif %}
+        {% else %}
+            {% if record is not empty and record.editlink() %}
+                <p class="warning">No published records were found, please <a href="{{ record.editlink() }}#modules">change the module settings</a>.</p>
+            {% else %}
+                <!-- no records were found for this module -->
+            {% endif %}
+        {% endif %}
+
+    </div>
+</section>

@@ -15,6 +15,7 @@
     {% set templatefile = 'modules/_' ~ template ~ '.twig' %}
     {% set ordering = module.get('ordering') %}
     {% set sources = module.get('sources') %}
+    {% set sourcetemplatefile =  'modules/_' ~ template ~ '_' ~ sources ~ '.twig' %}
     {% set override_amount = module.get('override_amount') %}
     {% set allow_pager = false %}
     {% if override_amount == '' or override_amount == 0 %}
@@ -164,10 +165,10 @@
     {% else %}
         {% set allow_pager = false %}
     {% endif %}
-    <!-- loading templatefile for module: '{{ templatefile }}' or 'modules/_default.twig' -->
+    <!-- loading templatefile for module: '{{ sourcetemplatefile }}' or {{ templatefile }}' or 'modules/_default.twig' -->
     {# automatically load module template #}
     {%- if anchortitle is not empty %}<a class="in-page-anchor" name="{{ anchorslug }}" data-anchor-title="{{ anchortitle }}"></a>{% endif -%}
-    {% include [templatefile, 'modules/_default.twig'] with {
+    {% include [sourcetemplatefile, templatefile, 'modules/_default.twig'] with {
         'module': module,
         'title': title,
         'body': body,
