@@ -1,85 +1,85 @@
 main:
     -
         class: home
-        path: pages/1
+        path: pages/homepage
         label: Homepage
     -
         class: mission
-        path: pages/2
+        path: pages/our-mission
         label: 'Our mission'
         submenu:
             -
                 label: 'Our mission'
-                path: pages/2
+                path: pages/our-mission
             -
                 label: 'About us'
-                link: pages/about-us
+                path: pages/about-us
             -
                 label: 'Governing Board'
-                link: pages/governing-board
+                path: pages/governing-board
     -
         class: wwd
-        path: pages/3
+        path: pages/what-we-do
         label: 'What we do'
         submenu:
             -
                 label: Advocacy
-                path: pages/9
+                path: pages/advocacy
                 submenu:
                     -
-                        path: page/239
+                        path: pages/the-europeana-rights-statement-selection-tool
                         label: 'Copyright Reform'
                     -
                         label: 'Cultural awareness'
-                        path: pages/36
+                        path: pages/get-involved
                     -
                         label: 'Re-usable content'
-                        path: pages/37
+                        path: pages/use-our-data
                     -
                         label: 'Benefits of Digital Humanities Research for Society'
-                        path: pages/38
+                        path: pages/our-network
             -
                 label: Standardisation
-                path: pages/10
+                path: pages/standardisation
                 submenu:
                     -
                         label: 'Legal interoperability of data'
-                        link: pages/legal-interoperability-data
+                        path: pages/legal-interoperability-data
                     -
                         label: 'Impact framework'
-                        link: pages/impact-framework
+                        path: pages/impact-framework
                     -
                         label: 'Cross-domain data exchange and interoparability (EDM)'
                         path: pages/cross-domain-data-exchange
             -
                 label: Discovery
-                path: pages/11
+                path: pages/discovery
             -
                 label: 'Academic research'
-                path: pages/12
+                path: pages/academic-research
             -
                 label: 'Creative industries'
-                path: pages/13
+                path: pages/creative-industries
             -
                 label: CHIs
-                path: pages/14
+                path: pages/chis
             -
                 label: Education
-                path: pages/15
+                path: pages/education
             -
                 label: 'EU project brokerage and support'
-                path: pages/16
+                path: pages/project-brokerage-and-support
             -
                 label: Campaigns
-                path: pages/17
+                path: pages/campaigns
     -
         class: network
-        path: pages/4
+        path: pages/network
         label: Network
         submenu:
             -
                 label: 'About the network'
-                path: pages/18
+                path: pages/about-the-network
                 submenu:
                     -
                         label: 'Management board'
@@ -92,226 +92,221 @@ main:
                         path: pages/network-members
             -
                 label: 'Specialty communities'
-                path: pages/19
+                path: pages/specialty-communities
                 submenu:
                     -
                         label: EuropeanaTech
-                        path: community/tech
+                        path: pages/europeanatech
                     -
                         label: EuropeanaIPR
-                        path: community/ipr
+                        path: pages/europeanaipr
                     -
                         label: Europeana4Education
-                        path: community/education
+                        path: pages/europeana4education
                     -
                         label: 'Europeana Research'
-                        path: community/research
+                        path: pages/europeana-research
                     -
                         label: 'Member states'
-                        path: community/member-states
+                        path: pages/member-states
             -
                 label: 'Task forces'
-                path: pages/20
+                path: pages/task-forces
             -
                 label: 'Working groups'
-                path: pages/21
+                path: pages/working-groups
             -
                 label: Events
                 path: events
     -
         class: services
-        path: pages/5
+        path: pages/services
         label: Services
         submenu:
             -
                 label: 'Incubation services'
-                path: pages/22
+                path: pages/incubation-services
                 submenu:
                     -
                         label: 'Co-creation (Wotify)'
-                        link: /services/incubation/wotify
+                        link: pages/wotify
                     -
                         label: Funding
-                        link: /services/incubation/funding
+                        path: pages/funding
                         submenu:
                             -
                                 label: 'Crowd and match funding (Goteo)'
-                                link: /services/incubation/funding/goteo
+                                path: pages/goteo
                             -
                                 label: Grants
-                                link: /services/incubation/funding/grants
+                                path: pages/grants
                             -
                                 label: Challenges
-                                link: /services/incubation/funding/challenges
+                                path: pages/funding-challenges
                             -
                                 label: 'Investor Forum'
-                                link: /services/incubation/funding/investor-forum
+                                path: pages/investor-forum
             -
                 label: 'Publication services'
-                path: pages/23
+                path: pages/publication-services
                 submenu:
                     -
                         label: 'Collection publication'
-                        link: /services/publication/collection
+                        path: pages/collection-publication
                     -
                         label: 'Thematic collection publication'
-                        link: /services/publication/thematic-collection
+                        path: pages/thematic-collection
                     -
                         label: 'Virtual exhibit publication'
-                        link: /services/publication/virtual-exhibit
+                        path: pages/virtual-exhibit
                     -
                         label: 'Image service publication'
-                        link: /services/publication/image-service
+                        path: pages/image-service
                     -
                         label: 'Off Europeana publication'
-                        link: /services/publication/external
+                        path: pages/off-europeana-publication
                     -
                         label: 'Content marketing'
-                        link: /services/publication/content-marketing
+                        path: pages/content-marketing
     -
         class: resources
-        path: pages/6
+        path: pages/resources
         label: Resources
         submenu:
             -
                 label: Statistics
-                path: pages/24
+                path: pages/statistics
                 submenu:
                     -
                         label: 'Europeana statistics dashboard'
-                        link: /resources/statistics/statistics-dashboard
+                        path: pages/statistics-dashboard
                     -
                         label: Enumerate
-                        link: /resources/statistics/enumerate
+                        path: pages/enumerate
             -
                 label: Standardisation
-                path: pages/25
+                path: pages/resources-standardisation
                 submenu:
                     -
                         label: 'EDM documentation'
-                        link: /resources/standardisation/edm-documentation
+                        path: pages/edm-documentation
                     -
                         label: 'Europeana licencing framework'
-                        link: /resources/standardisation/europeana-licencing-framework
+                        path: pages/europeana-licencing-framework
                     -
                         label: 'International rightsstatements.org'
-                        link: /resources/standardisation/international-rightsstatements-org
+                        path: pages/international-rightsstatements-org
                     -
                         label: 'Framework documentation'
-                        link: /resources/standardisation/framework-documentation
+                        path: pages/framework-documentation
                     -
                         label: 'Case studies'
-                        link: /resources/standardisation/case-studies
+                        path: pages/standardisation-case-studies
                     -
                         label: 'Impact toolkit'
-                        link: /resources/standardisation/impact-toolkit
+                        path: pages/impact-toolkit
             -
                 label: Advocacy
-                path: pages/26
+                path: pages/resources-advocacy
                 submenu:
                     -
                         label: 'Public domain charter'
-                        link: /resources/advocacy/public-domain-charter
+                        path: pages/public-domain-charter
                     -
                         label: 'Europeana Publishing Framework'
-                        link: /resources/advocacy/europeana-publishing-framework
+                        path: pages/reuropeana-publishing-framework
             -
                 label: 'Developer services'
-                path: pages/27
+                path: pages/developer-services
                 submenu:
                     -
                         label: 'API consoles'
-                        link: /resources/developer-services/api-consoles
+                        path: pages/api-consoles
                     -
                         label: 'Swagger specifications'
-                        link: /resources/developer-services/swagger-specifications
+                        path: pages/swagger-specifications
                     -
                         label: 'API Documentation'
-                        link: /resources/developer-services/api-documentation
+                        path: pages/api-documentation
                     -
                         label: 'Software libraries'
-                        link: /resources/developer-services/software-libraries
+                        path: pages/software-libraries
             -
                 label: Datasets
-                path: pages/28
+                path: pages/datasets
                 submenu:
                     -
                         label: 'High resolution for creatives'
-                        link: /resources/datasets/high-resolution-for-creatives
+                        path: pages/high-resolution-for-creatives
                     -
                         label: 'Academic research'
-                        link: /resources/datasets/academic-research
+                        path: pages/academic-research
             -
                 label: 'Case studies'
-                path: pages/29
+                path: pages/case-studies
             -
                 label: 'Ingestion tools'
-                path: pages/30
+                path: pages/ingestion-tools
                 submenu:
                     -
                         label: Metis
-                        link: /resources/ingestion-tools/metis
+                        path: pages/metis
                     -
                         label: 'Operation direct'
-                        link: /resources/ingestion-tools/operation-direct
+                        path: pages/operation-direct
             -
                 label: 'Document archive'
-                path: pages/31
+                path: pages/document-archive
                 submenu:
                     -
                         label: Publications
-                        link: /resources/document-archive/publications
+                        path: /resources/document-archive/publications
                     -
                         label: 'Projects incl. documents'
-                        link: /resources/document-archive/projects
+                        path: /resources/document-archive/projects
                     -
                         label: 'Governance documents'
-                        link: /resources/document-archive/governance
+                        path: /resources/document-archive/governance
                     -
                         label: 'Network documents'
-                        link: /resources/document-archive/network
+                        path: /resources/document-archive/network
                     -
                         label: 'Task force recommentations'
-                        link: /resources/document-archive/task-force-recommendations
+                        path: /resources/document-archive/task-force-recommendations
             -
                 label: 'Europeana branding guidelines'
                 path: pages/32
+secondary:
     -
-        class: news
-        path: pages/7
         label: News
+        path: pages/news
+        class: secondary
         submenu:
             -
                 label: Blog
-                path: pages/33
+                class: secondary
+                path: pages/blog
             -
                 label: 'Press releases'
-                path: pages/34
+                class: secondary
+                path: pages/press-releases
             -
                 label: Publications
-                path: pages/35
+                class: secondary
+                path: pages/publications
     -
-        class: jobs
-        path: pages/8
+        label: Europeana.eu
+        class: secondary
+        link: https://www.europeana.eu
+    -
+        label: Join the network
+        class: secondary
+        path: pages/join-network
+    -
+        label: Get the API
+        class: secondary
+        path: pages/get-api
+    -
         label: Jobs
-secondary:
-    -
         class: secondary
-        path: visual-sitemap
-        label: Sitemap
-    -
-        class: secondary
-        path: homepage
-        label: Listings
-    -
-        class: secondary
-        label: Styleguide
-        path: pages/styleguide
-    -
-        class: secondary
-        label: 'Styleguide listing'
-        path: pages/styleguide-listing
-    -
-        class: secondary
-        label: 'Styleguide content'
-        path: pages/styleguide-content
+        path: pages/jobs

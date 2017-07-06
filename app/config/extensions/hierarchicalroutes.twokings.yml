@@ -3,7 +3,7 @@
 # The menu structure defined in `app/config/menu.yml` to use for hierarchical
 # routes. Use a name or an array of menu names.
 
-menu: main
+menu: [ main, secondary ]
 # menu: [ main, aside, footer ]
 
 
