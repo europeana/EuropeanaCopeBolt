@@ -9,9 +9,6 @@ main:
         label: 'Our mission'
         submenu:
             -
-                label: 'Our mission'
-                path: pages/our-mission
-            -
                 label: 'About us'
                 path: pages/about-us
             -
@@ -27,7 +24,7 @@ main:
                 path: pages/advocacy
                 submenu:
                     -
-                        path: pages/the-europeana-rights-statement-selection-tool
+                        path: pages/copyright-reform
                         label: 'Copyright Reform'
                     -
                         label: 'Cultural awareness'
@@ -37,7 +34,7 @@ main:
                         path: pages/use-our-data
                     -
                         label: 'Benefits of Digital Humanities Research for Society'
-                        path: pages/our-network
+                        path: pages/benefits-digital-humanities-research-society
             -
                 label: Standardisation
                 path: pages/standardisation
@@ -237,7 +234,7 @@ main:
                 submenu:
                     -
                         label: 'High resolution for creatives'
-                        path: pages/high-resolution-for-creatives
+                        path: pages/high-resolution-creatives
                     -
                         label: 'Academic research'
                         path: pages/academic-research
@@ -260,22 +257,22 @@ main:
                 submenu:
                     -
                         label: Publications
-                        path: /resources/document-archive/publications
+                        path: pages/publications-archive
                     -
                         label: 'Projects incl. documents'
-                        path: /resources/document-archive/projects
+                        path: pages/project-documents-archive
                     -
                         label: 'Governance documents'
-                        path: /resources/document-archive/governance
+                        path: pages/governance-documents
                     -
                         label: 'Network documents'
-                        path: /resources/document-archive/network
+                        path: pages/network-documents
                     -
                         label: 'Task force recommentations'
-                        path: /resources/document-archive/task-force-recommendations
+                        path: pages/task-force-recommendations
             -
                 label: 'Europeana branding guidelines'
-                path: pages/32
+                path: pages/europeana-branding-guidelines
 secondary:
     -
         label: News
