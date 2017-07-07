@@ -1,8 +1,17 @@
 {# SIDE-INFO #}
 
-<div class="side-info">
-    {% if record.contenttype.slug == 'pages'
-        and record.pagetype is defined
+{% set centerclass = '' %}
+{% if
+    (record.deadline is not empty) or
+    (record.start_event is not empty and record.contenttype.slug in ['projects']) %}
+
+    {% set centerclass='centered-info' %}
+
+{% endif %}
+
+
+<div class="side-info {{ centerclass }}">
+    {% if record.pagetype is defined
         and not (record.pagetype == 'listing' or record.pagetype == 'landingpage' or record.pagetype == 'landingpage-nohighlight')
     %}
         <p class="meta">
@@ -14,6 +23,7 @@
             <span class="date">Posted at {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
         </p>
     {% endif %}
+
     {% include 'partials/_tags.twig' %}
 
     {% if record.team is not empty %}
