@@ -273,10 +273,10 @@ footer {
         padding: 0 ;
 
         @include respond-to(large-screens) {
-            padding: 0 4rem;
+            padding: 0 2 rem; // 0 4rem;
         }
         @include respond-to(xlarge-screens) {
-            padding: 0 8rem;
+            padding: 0 4rem; // 0 8rem;
         }
     }
 

@@ -97,17 +97,19 @@
 
                 {% include 'partials/_download-content.twig'%}
 
-                {% setcontent speakers = 'persons/latest/4'%}
-                {% include 'partials/_list-speaker-list.twig' with { title : 'Speakers for this event2', items : speakers , speaker : true } %}
-
-
-                {% include 'partials/_list-speaker-list-twocol.twig' with { title : 'Speakers for this event2', items : speakers , speaker : true } %}
-
 
             </article>
 
         </div>
     </section>
+
+    {% setcontent speakers = 'persons/latest/4'%}
+    {% include 'partials/_list-speaker-list.twig' with { title : 'Speakers for this event2', items : speakers , speaker : true } %}
+
+
+    {% include 'partials/_list-speaker-list-twocol.twig' with { title : 'Speakers for this event2', items : speakers , speaker : true } %}
+
+
 
     <aside>
         <div class="inner-wrap">

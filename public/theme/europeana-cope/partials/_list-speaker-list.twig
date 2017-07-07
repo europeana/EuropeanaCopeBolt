@@ -1,7 +1,7 @@
 {# Setup this partial to act as a module, set module specs #}
 
     {% set module = {} %}
-    {% set template = 'list_teasers' %}
+    {% set template = 'listing' %}
     {% set templatefile = 'modules/_' ~ template ~ '.twig' %}
     {% set title = title|default('') %}
     {% set subtitle = '' %}
@@ -19,5 +19,7 @@
         'title': title,
         'body': body,
         'records': selected_records,
-        'allow_pager': allow_pager
+        'allow_pager': allow_pager,
+        'template' : template,
+        'templatefile' : templatefile
     } %}

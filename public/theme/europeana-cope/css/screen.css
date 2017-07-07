@@ -714,10 +714,10 @@ footer {
   padding: 0; }
   @media only screen and (min-width: 47.9375em) {
     .contentpage .info-list {
-      padding: 0 4rem; } }
+      padding: 0 2 rem; } }
   @media only screen and (min-width: 80em) {
     .contentpage .info-list {
-      padding: 0 8rem; } }
+      padding: 0 4rem; } }
 
 .body > *,
 .collapsed-body > * {
@@ -2401,11 +2401,13 @@ div.calltoaction {
   padding: 0 0.875rem; }
   @media only screen and (min-width: 47.9375em) {
     .side-info {
-      text-align: center;
       position: absolute;
       z-index: 1;
       top: -7.5rem;
       right: 0; } }
+  @media only screen and (min-width: 47.9375em) {
+    .side-info.centered-info {
+      text-align: center; } }
   .side-info p {
     margin-bottom: 0.5rem;
     color: #777777; }

@@ -27,16 +27,13 @@
 
             </article>
 
-
-            {% set speakers = record.related('persons') %}
-            {% if speakers|length > 0 %}
-                {% include 'partials/_list-speaker-list.twig' with { title : 'Speakers for this event', items : speakers , speaker : true } %}
-            {% endif %}
-
-
        </div>
     </section>
 
+    {% set speakers = record.related('persons') %}
+    {% if speakers|length > 0 %}
+        {% include 'partials/_list-speaker-list.twig' with { title : 'Speakers for this event', items : speakers , speaker : true } %}
+    {% endif %}
 
     {% for module in record.modules %}
         {{ include('partials/_default_module.twig', { 'module': module }) }}
