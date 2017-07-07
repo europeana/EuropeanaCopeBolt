@@ -20,7 +20,7 @@
             {% include 'partials/_readtime.twig' %}
             {% endif %}
 
-            <span class="date">Posted at {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+            <span class="date">Posted on {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
         </p>
     {% endif %}
 
