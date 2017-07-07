@@ -27,10 +27,6 @@
                     {% endif %}
                 </div>
 
-                {{ dump(record) }}
-
-                {{ dump(record.image) }}
-
                 {% if record.values.image is defined and record.values.image is not empty %}
                 {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
                 <figure>
