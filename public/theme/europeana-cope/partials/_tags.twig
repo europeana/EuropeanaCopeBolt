@@ -8,6 +8,14 @@
     {% endfor %}
 {% endif %}
 
+
+{% if item.taxonomy.markets is defined %}
+    {% for market, marketname in item.taxonomy.markets %}
+    <a class="label label-markets" href="{{ market }}">{{ marketname }}</a>
+    {% endfor %}
+{% endif %}
+
+
 {% if item.taxonomy.tags is defined %}
     {% for tag, tagname in item.taxonomy.tags %}
     <a class="tag" href="{{ tag }}">{{ tagname }}</a>

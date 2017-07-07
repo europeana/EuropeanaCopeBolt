@@ -2017,13 +2017,18 @@ img.round {
   .label:hover, .label:focus, .label:active {
     color: #E11D53;
     background: #fff;
-    font-weight: 700;
     text-decoration: none;
-    border: 1px solid #E11D53;
-    letter-spacing: -.5px; }
+    border: 1px solid #E11D53; }
   @media only screen and (min-width: 24em) {
     .label {
       font-size: 0.9375rem; } }
+  .label.label-markets {
+    background-color: #D9D4CA;
+    color: #4d4d4d; }
+    .label.label-markets:hover, .label.label-markets:focus, .label.label-markets:active {
+      color: #4d4d4d;
+      background: #fff;
+      border: 1px solid #4d4d4d; }
 
 /*
 * WIDGET HERO BANNERS

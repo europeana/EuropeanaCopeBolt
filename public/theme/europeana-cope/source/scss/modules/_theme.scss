@@ -292,14 +292,25 @@ img.round {
     &:hover, &:focus, &:active {
         color: $baseFirstThemeColour;
         background: $white;
-        font-weight: 700;
+        // font-weight: 700;
         text-decoration: none;
         border: 1px solid $baseFirstThemeColour;
-        letter-spacing: -.5px;
+        // letter-spacing: -.5px;
     }
 
     @include respond-to(medium-screens){
         font-size: 0.9375rem;
+    }
+
+    &.label-markets {
+        background-color: $paper;
+        color: $medium-gray;
+
+        &:hover, &:focus, &:active {
+            color: $medium-gray;
+            background: $white;
+            border: 1px solid $medium-gray;
+        }
     }
 }
 
