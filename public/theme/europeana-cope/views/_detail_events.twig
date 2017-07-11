@@ -35,6 +35,6 @@
         {% include 'partials/_list-speaker-list.twig' with { title : 'Speakers for this event', items : speakers , speaker : true } %}
     {% endif %}
 
-    {% for module in record.modules %}
+    {% for module in record.modules if (global.request.get('_route') != "preview") %}
         {{ include('partials/_default_module.twig', { 'module': module }) }}
     {% endfor %}
