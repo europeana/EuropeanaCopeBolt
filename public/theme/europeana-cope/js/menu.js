@@ -176,10 +176,8 @@ $(document).ready(function() {
         );
     });
 
-     // custom breakpoints for menu, set to optimize menu
+    // custom breakpoints for menu, set to optimize menu
     var breakMenuFull = 60; //960
-    console.log('break ',breakMenuFull);
-
     var windowWidthEms = ((viewportSize.getWidth()) / 16);
 
     if ( windowWidthEms >= breakMenuFull ) {
