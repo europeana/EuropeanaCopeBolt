@@ -58,7 +58,6 @@ nav.quicklinks {
 * MAIN MENU
 **/
 
-// Other styling in partials/_menu.twig, because temporary
 
 
 nav.main-menu {
@@ -89,9 +88,6 @@ nav.main-menu {
         padding: 0.8125rem 0;
     }
 
-    .play-menu {
-        border-right: 1px solid $off-white;
-    }
 
     a {
         text-decoration: none;
@@ -132,140 +128,428 @@ nav.main-menu {
 }
 
 
- #playmenu {
-        top: 0;
-        position: relative;
-        width: 100%;
-        z-index: 1;
-    }
-    #playmenu li.active.toplevel:not(.home) {
-        min-height: 26em;
-        margin-left: 0;
-    }
-    #playmenu li.last {
-        border-bottom: 0;
-    }
-    #playmenu li.active.toplevel > a {
-        min-height: 35px;
-    }
-    ul.play-menu > li:not(.home) {
-        margin-left: 0px;
-        padding-left: 35px;
-    }
-    ul.play-menu > li > .sub-menu {
-        min-height: 23em;
-    }
-    ul.play-menu .sub-menu .sub-menu {
-        display: none;
-    }
-    ul.play-menu .sub-menu li.active .sub-menu {
-        display: none;
+#playmenu {
+    top: 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    li {
+
+        &.last {
+             border-bottom: 0;
+        }
+
+        &.active.toplevel > a {
+            min-height: 35px;
+        }
+
+        &.active.toplevel:not(.home) {
+            min-height: 26em;
+            margin-left: 0;
+        }
     }
 
-    ul.play-menu .sub-menu li:hover .sub-menu {
-        display: block;
-    }
-    /* main menu item colours */
-    #playmenu .home,
-    ul.play-menu li.active.toplevel {
+    .home {
         padding-left: 0;
         background: #c4c4ba;
-    }
-    #playmenu .home a,
-    ul.play-menu li.active.toplevel > a {
-        color: #444;
-        text-align: center;
-        font-weight: normal;
-        display: block;
+
+        a {
+            color: #444;
+            text-align: center;
+            font-weight: 400;
+            display: block;
+        }
     }
 
-    /* menu structure */
-    ul.play-menu a           { display: block; }
-    ul.play-menu li          { padding-left: 25px; }
-    ul.play-menu li > .sub-menu {
-        margin: 5px 0 -12px 0;
-        padding-left: 25px;
-        border-left: none;
+}
+
+ul.play-menu {
+    border-right: 1px solid $off-white;
+
+
+    a {
+        display: block;
+
+        &:hover {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
     }
-    ul.play-menu li > .sub-menu .sub-menu {
-        margin-left: 0;
-    }
-    ul.play-menu .sub-menu li {
-        padding-left: 10px;
-        border-left: none;
-    }
-    ul.play-menu .sub-menu .sub-menu {
-        // padding-bottom: 10px;
-    }
-    ul.play-menu .sub-menu .sub-menu li {
-        padding: 2px 0;
-        border-bottom: none;
-    }
-    ul.play-menu li.level-2 a {
-        font-size: 90%;
-    }
-    /* mouseover thingies */
-    ul.play-menu a:hover {
-        font-weight: 700;
-        letter-spacing: -0.5px;
-    }
+
     .active > a {
         font-weight: 700;
         letter-spacing: -0.5px;
     }
+
+
+    li {
+        padding-left: 25px;
+
+        > .sub-menu {
+            margin: 5px 0 -12px 0;
+            padding-left: 25px;
+            border-left: none;
+        }
+
+        > .sub-menu .sub-menu {
+            margin-left: 0;
+        }
+
+        &.level-2 a {
+            font-size: 90%;
+        }
+
+    }
+
+    > li {
+        &:not(.home){
+            margin-left: 0px;
+            padding-left: 35px;
+        }
+
+        > .sub-menu {
+            min-height: 23em;
+        }
+    }
+
+    .sub-menu {
+        li {
+            padding-left: 10px;
+            border-left: none;
+        }
+    }
+
+    .sub-menu .sub-menu {
+        display: none;
+        background-color: #f09;
+
+        li {
+            padding: 2px 0;
+            border-bottom: none;
+        }
+    }
+
+    .sub-menu li.active .sub-menu {
+        display: none;
+    }
+
+    .sub-menu li:hover .sub-menu {
+        display: block;
+    }
+
+    li.active.toplevel {
+        padding-left: 0;
+        background: #c4c4ba;
+
+        > a {
+            color: #444;
+            text-align: center;
+            font-weight: 400;
+            display: block;
+        }
+    }
+}
+
+
+/* the mouseover menu styles */
+    nav ul.backlinks {
+        background: #bcbabc;
+
+        top: 3.25em;
+        position: absolute;
+        width: 25px;
+        overflow: hidden;
+        z-index: 10;
+        height: 22.75em; //make dynamic
+        -webkit-transition: width 0.2s ease-in-out;
+        -moz-transition: width 0.2s ease-in-out;
+        -o-transition: width 0.2s ease-in-out;
+        transition: width 0.2s ease-in-out;
+
+        &:hover {
+            background: #fff;
+            -webkit-transition: width 0.2s ease-in-out;
+            -moz-transition: width 0.2s ease-in-out;
+            -o-transition: width 0.2s ease-in-out;
+            transition: width 0.2s ease-in-out;
+            width: 100%;
+        }
+
+        &:before {
+            content: "❰";
+            font-weight: bold;
+            color: $white;
+            top: 10em;
+            padding: 5px;
+            position: absolute;
+        }
+
+        li {
+            border-left: none;
+            margin-left: 25px;
+            padding-left: 10px;
+
+            &.active {
+                display: none;
+            }
+        }
+    }
+
+
+ul.secondary-menu {
+
+    .first {
+        margin-top: 2em;
+    }
+
+    .last {
+        margin-bottom: 2em;
+    }
+
+    .secondary {
+        background-color: #f1f1ee;
+        color: #aaa;
+        border-bottom: none;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    li {
+        font-size: 90%;
+        padding-left: 25px;
+    }
+
+    a {
+        display: block;
+    }
+
+    li:hover a:hover {
+        font-weight: bold;
+        letter-spacing: -0.5px;
+    }
+
+    li.is-parent.current {
+        padding-bottom: 0;
+        padding-left: 0;
+    }
+
+    li.is-parent.current a {
+        margin-left: 10px;
+    }
+
+    li.current ul.sub-menu {
+        background-color: #fff;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    li.current ul li {
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        border: none;
+    }
+
+}
+
+//FIX THIS: Leftover from inline styles secondary menu
+
+/* secondary menu items */
+    // ul.secondary-menu .first {
+    //     margin-top: 2em;
+    // }
+    // ul.secondary-menu .last {
+    //     margin-bottom: 2em;
+    // }
+    // ul.secondary-menu .secondary {
+    //     background-color: #f1f1ee;
+    //     color: #aaa;
+    //     border-bottom: none;
+    //     padding-bottom: 5px;
+    //     padding-top: 5px;
+    // }
+    // ul.secondary-menu li {
+    //     font-size: 90%;
+    //     padding-left: 25px;
+    // }
+    // ul.secondary-menu a {
+    //     display: block;
+    // }
+    // /* mouseover thingies */
+    // ul.secondary-menu li:hover a:hover {
+    //     font-weight: bold;
+    //     letter-spacing: -0.5px;
+    // }
+    // ul.secondary-menu li.is-parent.current {
+    //     padding-bottom: 0;
+    //     padding-left: 0;
+    // }
+    // ul.secondary-menu li.is-parent.current a {
+    //     margin-left: 10px;
+    // }
+    // ul.secondary-menu li.current ul.sub-menu {
+    //     background-color: #fff;
+    //     padding-left: 0;
+    //     padding-right: 0;
+    //     margin-bottom: 0;
+    //     padding-bottom: 10px;
+    //     margin-top: 10px;
+    // }
+    // ul.secondary-menu li.current ul li {
+    //     padding-left: 0;
+    //     padding-bottom: 0;
+    //     padding-right: 0;
+    //     border: none;
+    // }
+
+
+/* mouseover thingies */
+    // ul.play-menu a:hover {
+    //     font-weight: 700;
+    //     letter-spacing: -0.5px;
+    // }
+    // .active > a {
+    //     font-weight: 700;
+    //     letter-spacing: -0.5px;
+    // }
+
+
+
+/* menu structure */
+    // ul.play-menu a           { display: block; }
+    // ul.play-menu li          { padding-left: 25px; }
+    // ul.play-menu li > .sub-menu {
+    //     margin: 5px 0 -12px 0;
+    //     padding-left: 25px;
+    //     border-left: none;
+    // }
+    // ul.play-menu li > .sub-menu .sub-menu {
+        // margin-left: 0;
+    // }
+    // ul.play-menu .sub-menu li {
+        // padding-left: 10px;
+        // border-left: none;
+    // }
+    // ul.play-menu .sub-menu .sub-menu {
+        // padding-bottom: 10px;
+    // }
+    // ul.play-menu .sub-menu .sub-menu li {
+        // padding: 2px 0;
+        // border-bottom: none;
+    // }
+    // ul.play-menu li.level-2 a {
+        // font-size: 90%;
+    // }
+
+
+ /* main menu item colours */
+    // #playmenu .home,
+    // ul.play-menu li.active.toplevel {
+    //     padding-left: 0;
+    //     background: #c4c4ba;
+    // }
+    // #playmenu .home a,
+    // ul.play-menu li.active.toplevel > a {
+    //     color: #444;
+    //     text-align: center;
+    //     font-weight: normal;
+    //     display: block;
+    // }
+
+
+
+// #playmenu {
+        // top: 0;
+        // position: relative;
+        // width: 100%;
+        // z-index: 1;
+    // }
+    // #playmenu li.active.toplevel:not(.home) {
+    //     min-height: 26em;
+    //     margin-left: 0;
+    // }
+    // #playmenu li.last {
+    //     border-bottom: 0;
+    // }
+    // #playmenu li.active.toplevel > a {
+    //
+        // min-height: 35px;
+    // }
+    // ul.play-menu > li:not(.home) {
+    //     margin-left: 0px;
+    //     padding-left: 35px;
+    // }
+    // ul.play-menu > li > .sub-menu {
+    //     min-height: 23em;
+    // }
+    // ul.play-menu .sub-menu .sub-menu {
+    //     display: none;
+    // }
+    // ul.play-menu .sub-menu li.active .sub-menu {
+    //     display: none;
+    // }
+
+    // ul.play-menu .sub-menu li:hover .sub-menu {
+    //     display: block;
+    // }
+
+
+
     /* hackish way to add a marker
     .active:not(.toplevel):not(.home) > a:after {
         content: " ▶";
     }
     */
 
-    /* the mouseover menu styles */
-    nav #backlinks {
-        background: #bcbabc;
-    }
-    nav #backlinks:hover {
-        background: #fff;
-    }
-    #backlinks {
-        top: 3.25em;
-        position: absolute;
-        width: 25px;
-        overflow: hidden;
-        z-index: 10;
-        height: 22.75em;
-        -webkit-transition: width 0.2s ease-in-out;
-        -moz-transition: width 0.2s ease-in-out;
-        -o-transition: width 0.2s ease-in-out;
-        transition: width 0.2s ease-in-out;
-    }
-    #backlinks:before {
-        content: "❰";
-        font-weight: bold;
-        color: #fff;
-        top: 10em;
-        padding: 5px;
-        position: absolute;
-    }
-    #backlinks:hover {
-        -webkit-transition: width 0.2s ease-in-out;
-        -moz-transition: width 0.2s ease-in-out;
-        -o-transition: width 0.2s ease-in-out;
-        transition: width 0.2s ease-in-out;
-        width: 100%;
-    }
-    #backlinks li {
-        border-left: none;
-        margin-left: 25px;
-        padding-left: 10px;
-    }
-    #backlinks li.active {
-        display: none;
-    }
+
+
+    // nav ul.backlinks:hover {
+
+    // }
+    // ul.backlinks {
+    //     top: 3.25em;
+    //     position: absolute;
+    //     width: 25px;
+    //     overflow: hidden;
+    //     z-index: 10;
+    //     height: 22.75em;
+    //     -webkit-transition: width 0.2s ease-in-out;
+    //     -moz-transition: width 0.2s ease-in-out;
+    //     -o-transition: width 0.2s ease-in-out;
+    //     transition: width 0.2s ease-in-out;
+    // }
+    // ul.backlinks:before {
+    //     content: "❰";
+    //     font-weight: bold;
+    //     color: #fff;
+    //     top: 10em;
+    //     padding: 5px;
+    //     position: absolute;
+    // }
+    // ul.backlinks:hover {
+    //     -webkit-transition: width 0.2s ease-in-out;
+    //     -moz-transition: width 0.2s ease-in-out;
+    //     -o-transition: width 0.2s ease-in-out;
+    //     transition: width 0.2s ease-in-out;
+    //     width: 100%;
+    // }
+    // ul.backlinks li {
+    //     border-left: none;
+    //     margin-left: 25px;
+    //     padding-left: 10px;
+    // }
+    // ul.backlinks li.active {
+    //     display: none;
+    // }
 
 
 /*
 ***********************************************************************
-* FOoter menu
+* Footer menu
 ***********************************************************************
 **/
 
