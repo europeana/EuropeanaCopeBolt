@@ -79,15 +79,7 @@ nav.main-menu {
 
     ul {
         padding: 0;
-        //padding: 0 1.125rem 0 0.6875rem;
-        background: $white;
     }
-
-    li {
-        border-bottom: 1px solid $line-gray;
-        padding: 0.8125rem 0;
-    }
-
 
     a {
         text-decoration: none;
@@ -105,28 +97,10 @@ nav.main-menu {
         position: relative;
     }
 
-    .cloned-current {
-        font-size: 90%;
-        font-weight: 700;
-        letter-spacing: -0.5px;
-    }
-
-    .sub-menu .sub-menu  {
-    // targets secondary level
-
-        @include respond-to(menu-full) {
-            position: absolute;
-            left: 210px; //width of li parent
-            top: -6px; //magic number: to align with top of li
-            width: 200px;
-            padding: 1rem;
-            box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-            border: 1px solid $line-gray;
-        }
-
-    }
 }
 
+
+// playmenu container styles
 
 #playmenu {
     top: 0;
@@ -134,25 +108,10 @@ nav.main-menu {
     width: 100%;
     z-index: 1;
 
-    li {
-
-        &.last {
-             border-bottom: 0;
-        }
-
-        &.active.toplevel > a {
-            min-height: 35px;
-        }
-
-        &.active.toplevel:not(.home) {
-            min-height: 26em;
-            margin-left: 0;
-        }
-    }
 
     .home {
         padding-left: 0;
-        background: #c4c4ba;
+        background: $paper;
 
         a {
             color: #444;
@@ -164,9 +123,11 @@ nav.main-menu {
 
 }
 
+// styling items in playmenu
+
 ul.play-menu {
     border-right: 1px solid $off-white;
-
+    background-color: $white;
 
     a {
         display: block;
@@ -180,122 +141,147 @@ ul.play-menu {
     .active > a {
         font-weight: 700;
         letter-spacing: -0.5px;
+        color: $dark-blue;
     }
 
+    // listitems toplevel and level 1
+    > li,
+    > li > .sub-menu > li {
+        padding: 0.8125rem 0;
+        border-bottom: 1px solid $line-gray;
 
-    li {
-        padding-left: 25px;
-
-        > .sub-menu {
-            margin: 5px 0 -12px 0;
-            padding-left: 25px;
-            border-left: none;
+        :last-child {
+             border-bottom: 0;
         }
 
-        > .sub-menu .sub-menu {
+        &.active.toplevel {
+            padding-left: 0;
+            background: $paper;
+
+            > a {
+                min-height: 35px;
+                color: #444;
+                text-align: center;
+                font-weight: 400;
+                display: block;
+            }
+        }
+
+
+        &.active.toplevel:not(.home) {
+            min-height: 26em;
             margin-left: 0;
         }
 
-        &.level-2 a {
-            font-size: 90%;
-        }
-
     }
 
-    > li {
-        &:not(.home){
-            margin-left: 0px;
-            padding-left: 35px;
-        }
-
-        > .sub-menu {
-            min-height: 23em;
-        }
+    >li:not(.home){
+        margin-left: 0px;
+        padding-left: 35px;
     }
 
     .sub-menu {
         li {
-            padding-left: 10px;
             border-left: none;
         }
     }
 
-    .sub-menu .sub-menu {
+    //targets level-1 (light brown level1)
+    .toplevel >.sub-menu {
+        margin: 5px 0 -12px 0;
+        padding: 0 1rem 0 2rem;
+        //border-left: none;
+        background-color: lighten($paper, 15%);
+        min-height: 23em;
+    }
+
+    // targets level-2 (floating side menus)
+    .level-1 >.sub-menu {
         display: none;
-        background-color: #f09;
+        margin-left: 0;
+        background-color: $white;
+
+        @include respond-to(menu-full) {
+            position: absolute;
+            left: 202px; //width of li parent
+            top: 0; //magic number: to align with top of li
+            width: 200px;
+            padding: 1rem;
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        }
 
         li {
             padding: 2px 0;
             border-bottom: none;
         }
+
+        a {
+            font-size: 90%;
+        }
     }
 
     .sub-menu li.active .sub-menu {
-        display: none;
+    // don't show submenu when active
+        display: block; //none;
     }
 
     .sub-menu li:hover .sub-menu {
-        display: block;
+    // do show submenu when hovered
+         display: block;
     }
 
-    li.active.toplevel {
-        padding-left: 0;
-        background: #c4c4ba;
-
-        > a {
-            color: #444;
-            text-align: center;
-            font-weight: 400;
-            display: block;
-        }
+    .cloned-current {
+        font-size: 90%;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        color: $dark-blue;
     }
 }
 
 
 /* the mouseover menu styles */
-    nav ul.backlinks {
-        background: #bcbabc;
+ul.backlinks.play-menu {
+    background: $white;
+    top: 53px; //magic number: bottom of sandcolored current item.
+    position: absolute;
+    width: 25px;
+    overflow: hidden;
+    z-index: 10;
+    height: 22.75em; //make dynamic
+    transition: width 0.2s ease-in-out;
 
-        top: 3.25em;
+
+    &:before {
+        content: "❰";
+        font-weight: bold;
+        color: $light-gray;
+        top: 10em;
+        padding: 5px;
         position: absolute;
-        width: 25px;
-        overflow: hidden;
-        z-index: 10;
-        height: 22.75em; //make dynamic
-        -webkit-transition: width 0.2s ease-in-out;
-        -moz-transition: width 0.2s ease-in-out;
-        -o-transition: width 0.2s ease-in-out;
-        transition: width 0.2s ease-in-out;
+    }
 
-        &:hover {
-            background: #fff;
-            -webkit-transition: width 0.2s ease-in-out;
-            -moz-transition: width 0.2s ease-in-out;
-            -o-transition: width 0.2s ease-in-out;
-            transition: width 0.2s ease-in-out;
-            width: 100%;
-        }
+    &:hover {
+        background: $white;
+        width: 100%;
 
         &:before {
-            content: "❰";
-            font-weight: bold;
-            color: $white;
-            top: 10em;
-            padding: 5px;
-            position: absolute;
-        }
-
-        li {
-            border-left: none;
-            margin-left: 25px;
-            padding-left: 10px;
-
-            &.active {
-                display: none;
-            }
+            content: "";
         }
     }
 
+
+    li {
+        margin-left: 25px;
+        padding-left: 10px;
+
+        &.active {
+            display: none;
+        }
+    }
+}
+
+
+// styling secondary menu
 
 ul.secondary-menu {
 
@@ -307,17 +293,16 @@ ul.secondary-menu {
         margin-bottom: 2em;
     }
 
-    .secondary {
-        background-color: #f1f1ee;
-        color: #aaa;
-        border-bottom: none;
-        padding-bottom: 5px;
-        padding-top: 5px;
-    }
-
     li {
         font-size: 90%;
         padding-left: 25px;
+    }
+
+    .secondary {
+        background-color: #f1f1ee;
+        color: #aaa;
+        padding-bottom: 5px;
+        padding-top: 5px;
     }
 
     a {
@@ -450,7 +435,7 @@ ul.secondary-menu {
     // #playmenu .home,
     // ul.play-menu li.active.toplevel {
     //     padding-left: 0;
-    //     background: #c4c4ba;
+    //     background: $paper;
     // }
     // #playmenu .home a,
     // ul.play-menu li.active.toplevel > a {
