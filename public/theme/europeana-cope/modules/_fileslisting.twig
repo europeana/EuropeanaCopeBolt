@@ -43,7 +43,7 @@ Available variables
         {% elseif type == 'file' and file.isFile() %}
 
             <li{% if firstIteration %} class="collapse-content"{% endif %}>
-                <a href="{{ asset(file.path, file.mountPoint) }}" download="{{ file.filename }}">
+                <a href="/files/{{ file.path }}" download="{{ file.filename }}">
                     <svg class="icon icon-file">
                         <use xlink:href="#icon-file"></use>
                     </svg>
