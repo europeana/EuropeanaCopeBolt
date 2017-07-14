@@ -222,7 +222,7 @@ ul.play-menu {
 
     .sub-menu li.active .sub-menu {
     // don't show submenu when active
-        display: block; //none;
+        display: none;
     }
 
     .sub-menu li:hover .sub-menu {

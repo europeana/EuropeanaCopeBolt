@@ -956,7 +956,7 @@ ul.play-menu {
     ul.play-menu .level-1 > .sub-menu a {
       font-size: 90%; }
   ul.play-menu .sub-menu li.active .sub-menu {
-    display: block; }
+    display: none; }
   ul.play-menu .sub-menu li:hover .sub-menu {
     display: block; }
   ul.play-menu .cloned-current {
