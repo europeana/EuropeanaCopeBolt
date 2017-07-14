@@ -252,6 +252,11 @@ $( document ).ready(function() {
             $sublist = $this.parent().next('.can-expand');
         }
 
+        // Otherwise get another one!
+        if ($sublist.length == 0) {
+            $sublist = $this.parent().find('> .can-expand');;
+        }
+
         if ($sublist.hasClass('expanded')) {
             $this.removeClass('expand-toggle-open')
             $sublist.removeClass('expanded').slideUp('fast');

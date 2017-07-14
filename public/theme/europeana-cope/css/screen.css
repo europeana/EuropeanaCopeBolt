@@ -2775,6 +2775,9 @@ div.calltoaction {
     .file-content-module .collapse-content.has-sublist,
     .download-module .collapse-content.has-sublist {
       padding-bottom: 0; }
+    .file-content-module .collapse-content.has-sublist > a,
+    .download-module .collapse-content.has-sublist > a {
+      display: block; }
     .file-content-module .collapse-content p,
     .download-module .collapse-content p {
       margin-top: 0; }

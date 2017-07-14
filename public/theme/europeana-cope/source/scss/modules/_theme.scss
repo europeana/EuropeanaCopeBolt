@@ -1393,6 +1393,10 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
             padding-bottom: 0;
         }
 
+        &.has-sublist > a {
+            display: block;
+        }
+
         p {
             margin-top: 0;
         }
