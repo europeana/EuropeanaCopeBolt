@@ -910,8 +910,8 @@ ul.play-menu {
   ul.play-menu > li > .sub-menu > li {
     padding: 0.8125rem 0;
     border-bottom: 1px solid #cccccc; }
-    ul.play-menu > li :last-child,
-    ul.play-menu > li > .sub-menu > li :last-child {
+    ul.play-menu > li:last-child,
+    ul.play-menu > li > .sub-menu > li:last-child {
       border-bottom: 0; }
     ul.play-menu > li.active.toplevel,
     ul.play-menu > li > .sub-menu > li.active.toplevel {
@@ -979,7 +979,8 @@ ul.backlinks.play-menu {
     content: "❰";
     font-weight: bold;
     color: #777777;
-    top: 10em;
+    top: 50%;
+    margin-top: -10px;
     padding: 5px;
     position: absolute; }
   ul.backlinks.play-menu:hover {
@@ -993,59 +994,25 @@ ul.backlinks.play-menu {
     ul.backlinks.play-menu li.active {
       display: none; }
 
-ul.secondary-menu .first {
-  margin-top: 2em; }
+nav ul.secondary-menu {
+  padding: 2rem 0; }
+  nav ul.secondary-menu li {
+    font-size: 90%;
+    padding-left: 25px; }
+  nav ul.secondary-menu .secondary {
+    color: #1a1a1a;
+    padding-bottom: 5px;
+    padding-top: 5px; }
+  nav ul.secondary-menu a {
+    display: block; }
+  nav ul.secondary-menu .active > a {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #293745; }
+  nav ul.secondary-menu li:hover a:hover {
+    font-weight: 700;
+    letter-spacing: -0.5px; }
 
-ul.secondary-menu .last {
-  margin-bottom: 2em; }
-
-ul.secondary-menu li {
-  font-size: 90%;
-  padding-left: 25px; }
-
-ul.secondary-menu .secondary {
-  background-color: #f1f1ee;
-  color: #aaa;
-  padding-bottom: 5px;
-  padding-top: 5px; }
-
-ul.secondary-menu a {
-  display: block; }
-
-ul.secondary-menu li:hover a:hover {
-  font-weight: bold;
-  letter-spacing: -0.5px; }
-
-ul.secondary-menu li.is-parent.current {
-  padding-bottom: 0;
-  padding-left: 0; }
-
-ul.secondary-menu li.is-parent.current a {
-  margin-left: 10px; }
-
-ul.secondary-menu li.current ul.sub-menu {
-  background-color: #fff;
-  padding-left: 0;
-  padding-right: 0;
-  margin-bottom: 0;
-  padding-bottom: 10px;
-  margin-top: 10px; }
-
-ul.secondary-menu li.current ul li {
-  padding-left: 0;
-  padding-bottom: 0;
-  padding-right: 0;
-  border: none; }
-
-/* secondary menu items */
-/* mouseover thingies */
-/* menu structure */
-/* main menu item colours */
-/* hackish way to add a marker
-    .active:not(.toplevel):not(.home) > a:after {
-        content: " ▶";
-    }
-    */
 /*
 ***********************************************************************
 * Footer menu
