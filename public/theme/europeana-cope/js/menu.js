@@ -140,6 +140,12 @@ $(document).ready(function() {
         'extraclass': 'has-europeana-menu'
     });
 
+    // calculate how high the left play-menu needs to be.
+
+    var level1Height = $('#playmenu li.toplevel.active').height()-28;
+    //28: magic number, height of top item minus paddings. don't need that.
+    console.log('this submenu is ',level1Height, 'px high');
+    $('ul#backlinks').height(level1Height);
 
 
     // a quick and dirty way to do inline page loads
