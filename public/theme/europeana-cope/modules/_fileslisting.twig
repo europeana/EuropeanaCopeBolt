@@ -11,10 +11,70 @@ Available variables
 {% set override_css_id = module.get('override_css_id') %}
 {% set override_css_class = module.get('override_css_class') %}
 {% set template = module.get('templates') %}
+
+{#
+    - @param filesystem       The filesystem to work on
+    - @param files            An array of `Directory` and `File` instances
+    - @param type             Either "dir" or "file", because by default files are sorted by name, not type
+    - @param firstIteration   true|false, something you want to add a class if it's the top-level
+#}
+{% macro makeFilelisting(filesystem, files, type, firstIteration = false) %}
+    {% for file in files %}
+        {% if type == 'dir' and file.isDir() %}
+
+            {% set dirFiles = filesystem.listContents( file.path ) %}
+            {% if dirFiles is not empty %}
+
+            <li class="collapse-content has-sublist expand-toggle">
+                <a href="#">
+                    <svg class="icon icon-folder">
+                        <use xlink:href="#icon-folder"></use>
+                    </svg>
+                    {{ file.filename }}
+                </a>
+                <ul class="sublist can-expand">
+                    {{ _self.makeFilelisting(filesystem, dirFiles, 'dir') }}
+                    {{ _self.makeFilelisting(filesystem, dirFiles, 'file') }}
+                </ul>
+            </li>
+
+            {% endif %}
+
+        {% elseif type == 'file' and file.isFile() %}
+
+            <li{% if firstIteration %} class="collapse-content"{% endif %}>
+                <a href="/files/{{ file.path }}" download="{{ file.filename }}">
+                    <svg class="icon icon-file">
+                        <use xlink:href="#icon-file"></use>
+                    </svg>
+                    {{ file.filename }}
+                    <div class="meta">
+                        <span class="filesize">{{ file.sizeFormatted }}</span>
+                        <span class="date-added">Added {{ file.carbon|localedatetime("%Y-%m-%d") }}</span>
+                    </div>
+                </a>
+            </li>
+
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
 {% endspaceless %}
 
-{# ANKE INSERTS TEST OBJECT HERE - DELETE AFTER MAKING IT REAL! #}
-{% set item = {'filename': 'testfile'} %}
+{#
+Xiao: Something needs to feed this the path, because we can't just do `record.filelist_downloads`.
+#}
+{% set path = 'Europeana_Professional/Advocacy' %}
+{% set files = [] %}
+{% set filesystem = app.filesystem.getFilesystem('files') %}
+{% if filesystem.has(path) %}
+    {# {% set directory = filesystem.get(path) %} #}
+    {% set files = filesystem.listContents(path) %}
+{% endif %}
+
+
+
+{% if files is not empty %}
 
 <section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="file-browser file-content-module {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
     <div class="collapse-header">
@@ -26,7 +86,7 @@ Available variables
         </p>
 
         {% if title is not empty %}
-        <h3 class="expand-toggle">{{ title }}</h3>
+            <h3 class="expand-toggle">{{ title }}</h3>
         {% endif %}
 
         <a class="expand-toggle" href="#">
@@ -36,117 +96,14 @@ Available variables
             <span class="sr-only">Open folder</span>
         </a>
     </div>
-
     <ul class="mainlist can-expand">
-        <li class="collapse-content has-sublist expand-toggle">
-            <a href="#">
-                <svg class="icon icon-folder">
-                    <use xlink:href="#icon-folder"></use>
-                </svg>
-                Council Conclusions Europeana Strategy Staff
-            </a>
-
-
-            <ul class="sublist can-expand">
-                <li class="">
-                    <a href="#">
-                    <svg class="icon icon-file">
-                        <use xlink:href="#icon-file"></use>
-                    </svg>
-
-                        Council Conclusions Europeana Strategy Staff
-                        <div class="meta">
-                            <span class="filesize">2.5 MB</span>
-                            <span class="date-added">Added 12/25/16</span>
-                        </div>
-
-                    </a>
-                </li>
-
-                <li class="">
-                    <a href="#">
-                    <svg class="icon icon-file">
-                        <use xlink:href="#icon-file"></use>
-                    </svg>
-
-                        Council Conclusions Europeana Strategy Staff
-                        <div class="meta">
-                            <span class="filesize">2.5 MB</span>
-                            <span class="date-added">Added 12/25/16</span>
-                        </div>
-                    </a>
-                </li>
-
-            </ul>
-        </li>
-
-        <li class="collapse-content has-sublist expand-toggle">
-            <a href="#">
-                <svg class="icon icon-folder">
-                    <use xlink:href="#icon-folder"></use>
-                </svg>
-                Council Conclusions Europeana Strategy Staff
-            </a>
-
-
-            <ul class="sublist can-expand">
-                <li class="">
-                    <a href="#">
-                    <svg class="icon icon-file">
-                        <use xlink:href="#icon-file"></use>
-                    </svg>
-
-                        {{ item.filename }}
-                        <div class="meta">
-                            <span class="filesize">2.5 MB</span>
-                            <span class="date-added">Added 12/25/16</span>
-                        </div>
-
-                    </a>
-                </li>
-
-                <li class="">
-                    <a href="#">
-                    <svg class="icon icon-file">
-                        <use xlink:href="#icon-file"></use>
-                    </svg>
-
-                        {{ item.filename }}
-                        <div class="meta">
-                            <span class="filesize">2.5 MB</span>
-                            <span class="date-added">Added 12/25/16</span>
-                        </div>
-                    </a>
-                </li>
-
-            </ul>
-        </li>
-
-
-        <li class="collapse-content">
-            <a href="{{ asset(item.filename, 'files') }}" download="{{ item.filename }}">
-                <svg class="icon icon-file">
-                    <use xlink:href="#icon-file"></use>
-                </svg>
-                {{ item.filename }}
-                <div class="meta">
-                    <span class="filesize">2.5 MB</span>
-                    <span class="date-added">Added 12/25/16</span>
-                </div>
-            </a>
-        </li>
-
-        <li class="collapse-content">
-            <a href="{{ asset(item.filename, 'files') }}" download="{{ item.filename }}">
-                <svg class="icon icon-file">
-                    <use xlink:href="#icon-file"></use>
-                </svg>
-                {{ item.filename }}
-                <div class="meta">
-                    <span class="filesize">2.5 MB</span>
-                    <span class="date-added">Added 12/25/16</span>
-                </div>
-            </a>
-        </li>
+        {{ _self.makeFilelisting(filesystem, files, 'dir', true) }}
+        {{ _self.makeFilelisting(filesystem, files, 'file', true) }}
     </ul>
 </section>
+
+{% else %}
+
+    {# ---  The field `filelist_downloads` has no files --- #}
+
+{% endif %}

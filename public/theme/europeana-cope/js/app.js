@@ -227,39 +227,40 @@ $( document ).ready(function() {
 
 
     /**
-    * Open en close filelistings
-    *
-    */
-
+     * Open and close filelistings.
+     *
+     * `e.stopPropagation` is needed because of potential nested folders in
+     * `_fileslisting.twig`.
+     *
+     * See these files that make use of `.expand-toggle`:
+     * - html/theme/europeana-cope/modules/_fileslisting.twig
+     * - html/theme/europeana-cope/modules/_collapsedcontent.twig
+     */
     $('.can-expand').hide();
-
     $('.expand-toggle').on('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
 
-        var sublist = $(this).find('.can-expand');
+        var $this = $(this);
 
-        if (sublist.length == 0) {
-            // if no sublist found, we open the main collapse-content
-            var sublist = $(this).parent().next('.can-expand');
-            //var sublist = $('section.file-browser .can-expand');
+        // For this case, only pick the direct children, in case of (multiple)
+        // nested `.expand-toggle` elements.
+        var $sublist = $this.find('> .can-expand');
+
+        // Otherwise get `$this`'s _uncle_, because of wrappers around `$this`.
+        if ($sublist.length == 0) {
+            $sublist = $this.parent().next('.can-expand');
         }
 
-
-        if ( sublist.hasClass('expanded') ) {
-            $(this).removeClass('expand-toggle-open')
-            sublist.removeClass('expanded').slideUp('fast');
-
-        }else {
-            sublist.addClass('expanded').slideDown();
-            $(this).addClass('expand-toggle-open');
-            // setTimeout(function() {
-            //     $(this).addClass('expand-toggle-open2');
-            //     console.log('tiktok');
-            // }, 1100 );
+        if ($sublist.hasClass('expanded')) {
+            $this.removeClass('expand-toggle-open')
+            $sublist.removeClass('expanded').slideUp('fast');
 
         }
-
-
+        else {
+            $sublist.addClass('expanded').slideDown();
+            $this.addClass('expand-toggle-open');
+        }
     })
 
 
