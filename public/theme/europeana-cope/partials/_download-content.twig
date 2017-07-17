@@ -3,17 +3,19 @@
 <section class="download-module">
     <ul>
         {% for item in record.attachments %}
-        <li> <a href="/files/{{ item.filename }}">
-            <svg class="icon icon-download">
-                <use xlink:href="#icon-download"></use>
-            </svg>
-            {{ item.title }}
-            <div class="meta">
-                {% set fileinfo = imageinfo(item.filename) %}
-                <span class="filesize">{{ fileinfo.getSizeFormatted() }}</span>
-                <span class="date-added">Added {{ fileinfo.getTimestamp()|date()|localedatetime("%d/%m/%y") }}</span>
-            </div>
-        </a></li>
+        <li>
+            {% set fileinfo = imageinfo(item.filename) %}
+            <a href="/files/{{ item.filename }}" download="{{ fileinfo.filename }}">
+                <svg class="icon icon-download">
+                    <use xlink:href="#icon-download"></use>
+                </svg>
+                    {{ item.title }}
+                <div class="meta">
+                    <span class="filesize">{{ fileinfo.getSizeFormatted() }}</span>
+                    <span class="date-added">Added {{ fileinfo.carbon|localedatetime("%Y-%m-%d") }}</span>
+                </div>
+            </a>
+        </li>
         {% endfor %}
     </ul>
 </section>
