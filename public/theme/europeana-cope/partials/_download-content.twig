@@ -3,7 +3,7 @@
 <section class="download-module">
     <ul>
         {% for item in record.attachments %}
-        <li> <a href="{{ asset(item.filename, 'files') }}">
+        <li> <a href="/files/{{ item.filename }}">
             <svg class="icon icon-download">
                 <use xlink:href="#icon-download"></use>
             </svg>
