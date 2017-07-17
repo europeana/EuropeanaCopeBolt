@@ -114,7 +114,7 @@ apptags:
 #   - spatialcoverage
 #   - country
 #   - timecoverage
-#
+#   - educationallevel
 
 itemtype:
     name: Item type
@@ -774,5 +774,20 @@ timecoverage:
         - "1900-1945"
         - "1945 Onwards"
         - "Multiple Eras"
+    multiple: true
+    autocomplete: true
+
+educationallevel:
+    name: Educational level
+    slug: educationallevel
+    singular_name: Educational level
+    singular_slug: educationallevel
+    behaves_like: categories
+    options:
+        - "Primary"
+        - "Secondary"
+        - "Post-secondary"
+        - "Higher education"
+        - "Teachers"
     multiple: true
     autocomplete: true
