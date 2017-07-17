@@ -284,7 +284,7 @@ $( document ).ready(function() {
     $('.chapter-toggle').on('click', function(e){
         e.preventDefault();
 
-        var chapter = $(this).text();
+        var chapter = $(this).attr('data-slug');
         // console.log(chapter);
 
         // toggle filterlists
