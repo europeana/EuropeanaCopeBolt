@@ -18,11 +18,20 @@
             <span class="info-date">Created: {{ item.datepublish|localedatetime("%e %B  %Y") }}</span>
 
             {% if item.contact_record is not empty %}
-                {% setcontent author = 'persons' where { id : item.contact_record } returnsingle %}
-                {% if author is not empty %}
-                <span class="info-author">
-                    By <a href="{{ author.link }}">{{ author.first_name }} {{ author.last_name }}</a>
-                </span>
+                {% set contacts = item.contact_record %}
+                {% if contacts is not iterable %}
+                    {# fix iterable ids if the content is json in a textfield #}
+                    {% set contacts = record.contact_record|json_decode() %}
+                {% endif %}
+                {% if contacts is iterable %}
+                    {% for contact_id in contacts %}
+                        {% setcontent author = 'persons' where { id : contact_id } returnsingle %}
+                        {% if author is not empty %}
+                        <span class="info-author">
+                            By <a href="{{ author.link }}">{{ author.first_name }} {{ author.last_name }}</a>
+                        </span>
+                        {% endif %}
+                    {% endfor %}
                 {% endif %}
             {% endif %}
 
