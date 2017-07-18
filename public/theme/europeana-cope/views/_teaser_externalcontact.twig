@@ -3,7 +3,7 @@
         {% if record.image %}
         <img class="round" src="{{ record.image|thumbnail(144, 144, 'c') }}" alt=""/>
         {% else %}
-        <img class="round" src="/theme/europeana-cope/images/default.png" width="144" width="144" alt=""/>
+        <img class="round" src="{{ 'web_assets/default.png'|thumbnail(144, 144, 'c') }}" alt=""/>
         {% endif %}
         <span class="letter-overlay">{{ record.contact_name|first }}</span>
     </div>

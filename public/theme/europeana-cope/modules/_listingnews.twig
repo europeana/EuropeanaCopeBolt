@@ -75,7 +75,7 @@ Available variables
     {% if records|first.image is not empty %}
        <div class="calltoaction-readmore colored-image" style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})">
     {% else %}
-        <div class="calltoaction-readmore colored-image" style="background-image: url('/theme/europeana-cope/images/default.png')">
+        <div class="calltoaction-readmore colored-image" style="background-image: url({{ image('web_assets/default.png', 900, 90) }})">
     {% endif %}
 
         <div class="header-group">

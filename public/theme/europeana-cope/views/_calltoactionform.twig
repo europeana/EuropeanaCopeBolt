@@ -5,7 +5,7 @@
         <div class="colored-image" style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})"></div>
         {% else %}
             <div class="colored-image"
-                 style="background-image: url('/theme/europeana-cope/images/default.png')"></div>
+                 style="background-image: url({{ image('web_assets/default.png', 900, 90)}}"></div>
         {% endif %}
 
         <h3 class="widget">{{ record.title }}</h3>

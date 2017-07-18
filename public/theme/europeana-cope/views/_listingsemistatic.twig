@@ -8,7 +8,7 @@
     {% elseif item.image is defined and item.image is not empty %}
         <img src="{{ item.image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
     {% else %}
-        <img src="/theme/europeana-cope/images/default.png" width="768" height="435" alt="{{ item.title }}"/>
+        <img src="{{ 'web_assets/default.png'|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
     {% endif %}
 
     <h3>{{ item.title }}</h3>

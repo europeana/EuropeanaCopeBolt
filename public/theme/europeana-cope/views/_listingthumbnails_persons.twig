@@ -7,7 +7,7 @@
     {% if item.image is defined and item.image is not empty %}
         <img class="round" src="{{ item.image|thumbnail(250,250,'c')}}" alt="{{ item.first_name }} {{ item.last_name }}"/>
     {% else %}
-        <img class="round" src="/theme/europeana-cope/images/default.png" width="250" height="250" alt="{{ item.first_name }} {{ item.last_name }}"/>
+         <img class="round" src="{{ 'web_assets/default.png'|thumbnail(250,250,'c')}}" alt="{{ item.first_name }} {{ item.last_name }}"/>
     {% endif %}
     </a>
 

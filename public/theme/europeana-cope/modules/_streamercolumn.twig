@@ -24,7 +24,7 @@ Available variables
                 {% if icon is defined and icon is not empty %}
                     <img class="round" src="{{ icon|thumbnail(300,300,'c')}}" alt="{{ title|default('Category icon') }}"/>
                 {% else %}
-                    <img class="round" src="/theme/europeana-cope/images/default.png" alt="{{ title|default('Category icon') }}"/>
+                    <img class="round" src="{{ '/web_assets/default.png'|thumbnail(300,300,'c')}}" alt="{{ title|default('Category icon') }}"/>
                 {% endif %}
                 {% if subtitle|default('') is not empty %}
                     <p>{{ subtitle }}</p>
