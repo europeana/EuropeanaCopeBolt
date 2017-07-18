@@ -167,12 +167,10 @@ ul.play-menu {
             }
         }
 
-
         &.active.toplevel:not(.home) {
             min-height: 26em;
             margin-left: 0;
         }
-
     }
 
     >li:not(.home){
@@ -189,10 +187,24 @@ ul.play-menu {
     //targets level-1 (light brown level1)
     .toplevel >.sub-menu {
         margin: 5px 0 -12px 0;
-        padding: 0 1rem 0 2rem;
+        padding: 0 0 0 2rem; //padding: 0 1rem 0 2rem;
         //border-left: none;
         background-color: lighten($paper, 15%);
         min-height: 23em;
+
+        // quick fix to make sure the borders end before the side, but the focus stays on the li.
+        >li {
+            padding-right: 1rem;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+        >li > a {
+            border-bottom: 1px solid $line-gray;
+            padding-bottom: 1rem;
+        }
+        >li:last-child > a {
+            border-bottom: 0;
+        }
     }
 
     // targets level-2 (floating side menus)
