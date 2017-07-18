@@ -26,7 +26,7 @@
                 {% elseif item.image is defined and item.image is not empty %}
                     <img src="{{ item.image|thumbnail(90,78,'c')}}" alt=""/>
                 {% else %}
-                    <img src="/theme/europeana-cope/images/default.png" width="90" height="78" alt=""/>
+                    <img src="{{ 'web_assets/default.png'|thumbnail(90,78,'c')}}" alt=""/>
                 {% endif %}
                     <span class="up-to-medium-screens">{{ item.title | excerpt(22) }}</span>
                     <span class="medium-screens-up">{{ item.title }}</span>
