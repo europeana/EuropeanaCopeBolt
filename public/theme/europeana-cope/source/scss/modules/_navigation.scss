@@ -508,13 +508,11 @@ nav.footer-menu {
         display: none;
 
         &.expanded {
-            display: inline-block;
+            display: inline-flex;
         }
 
         @include respond-to(large-screens){
             margin: -7px 2.7rem 1rem ;
-
-            display: inline-flex;
             align-items: stretch;
         }
 
