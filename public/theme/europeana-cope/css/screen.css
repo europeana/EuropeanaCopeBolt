@@ -935,9 +935,18 @@ ul.play-menu {
     border-left: none; }
   ul.play-menu .toplevel > .sub-menu {
     margin: 5px 0 -12px 0;
-    padding: 0 1rem 0 2rem;
+    padding: 0 0 0 2rem;
     background-color: #f9f8f7;
     min-height: 23em; }
+    ul.play-menu .toplevel > .sub-menu > li {
+      padding-right: 1rem;
+      padding-bottom: 0;
+      border-bottom: 0; }
+    ul.play-menu .toplevel > .sub-menu > li > a {
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 1rem; }
+    ul.play-menu .toplevel > .sub-menu > li:last-child > a {
+      border-bottom: 0; }
   ul.play-menu .level-1 > .sub-menu {
     display: none;
     margin-left: 0;
@@ -3217,6 +3226,25 @@ table.listingtable {
     content: ""; }
   abbr[title]:after {
     content: " (" attr(title) ")"; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; } }
+t: " (" attr(title) ")"; }
   pre,
   blockquote {
     border: 1px solid #999;
