@@ -46,6 +46,15 @@
         {% set contenttypepath = '/' ~ contenttypeslug ~ '/datatype/' %}
         {% set categories = contenttype.fields.datatype.values %}
 
+        {% set filterchapters = [
+          'Markets',
+          'Educational level',
+          'Item Types',
+          'Spatial coverage',
+          'Subjects',
+          'Time coverage'
+        ] %}
+
     {% elseif contenttypeslug == 'events' %}
         {# Events: filter by market or service #}
 
@@ -57,6 +66,17 @@
 {% else %}
     {% set categories = {} %}
 {% endif %}
+
+{# --- lookup table that maps from a title (see above) to a real taxonomy slug (see below) #}
+{% set lookuptable = {
+    'Markets'           : 'markets',
+    'Educational level' : 'educationallevel',
+    'Item Types'        : 'itemtype',
+    'Spatial coverage'  : 'spatialcoverage',
+    'Subjects'          : 'subjects',
+    'Time coverage'     : 'timecoverage',
+    'Categories'        : 'categories'
+} %}
 
 {% if filterchapters is not empty %}
 <div class="filter-listing">
@@ -91,46 +111,48 @@
         <div class="arrow-up"></div>
 
         <ul class="filter-chaptertitles">
-            {% for chapter in filterchapters%}
-            <li>
-                <a href="#" class="chapter-toggle chapter-toggle-{{- chapter -}}">
-                    {{- chapter -}}
-                    <svg class="icon icon-next">
-                        <use xlink:href="#icon-next"></use>
-                    </svg>
-                </a>
+            {% for chapter in filterchapters %}
+                {% set filters = app.config.get('taxonomy/'~ lookuptable[chapter] ~'/options', []) %}
+                {% if filters is not empty %}
+                    <li>
+                        <a href="#" class="chapter-toggle chapter-toggle-{{- chapter|slugify -}}" data-slug="{{- chapter|slugify -}}">
+                            {{- chapter -}}
+                            <svg class="icon icon-next">
+                                <use xlink:href="#icon-next"></use>
+                            </svg>
+                        </a>
 
-                <div class="filters-chapter filters-{{- chapter -}}" id="filters-{{- chapter -}}">
-                    <h3>{{ chapter }}</h3>
-                    <ul class="filterlist" >
-                        {% set filters = app.config.get('taxonomy/'~ chapter|lower ~'/options') %}
-                        {% for filter, filtername in filters if filtername not in excludedcategories %}
-                            {# -- NOTE: slugified subtypes -- #}
-                            {# -- NOTE: the viewblocklisting route does not make use of the hierarchical routes -- #}
-                            {% if records is defined %}
-                                {% set link = path('contentlistingfiltered', {
-                                    contenttypeslug : records|first.contenttype.slug,
-                                    subtype         : subtype|slugify,
-                                    taxonomyname    : chapter|lower,
-                                    taxonomyterm    : filter
-                                }) %}
-                            {% else %}
-                                {% set link = path('viewblocklisting', {
-                                    contenttypeslug : record.contenttype.slug,
-                                    slug            : record.slug,
-                                    subtype         : subtype|slugify,
-                                    taxonomyname    : chapter|lower,
-                                    taxonomyterm    : filter
-                                }) %}
-                            {% endif %}
+                        <div class="filters-chapter filters-{{- chapter|slugify -}}" id="filters-{{- chapter|slugify -}}">
+                            <h3>{{ chapter }}</h3>
+                            <ul class="filterlist" >
+                                {% for filter, filtername in filters if filtername not in excludedcategories %}
+                                    {# -- NOTE: slugified subtypes -- #}
+                                    {# -- NOTE: the viewblocklisting route does not make use of the hierarchical routes -- #}
+                                    {% if records is defined %}
+                                        {% set link = path('contentlistingfiltered', {
+                                            contenttypeslug : records|first.contenttype.slug,
+                                            subtype         : subtype|slugify,
+                                            taxonomyname    : lookuptable[chapter],
+                                            taxonomyterm    : filter
+                                        }) %}
+                                    {% else %}
+                                        {% set link = path('viewblocklisting', {
+                                            contenttypeslug : record.contenttype.slug,
+                                            slug            : record.slug,
+                                            subtype         : subtype|slugify,
+                                            taxonomyname    : lookuptable[chapter],
+                                            taxonomyterm    : filter
+                                        }) %}
+                                    {% endif %}
 
-                            <li{% if app.request.attributes.get('taxonomyterm', false) == filter %} class="current"{% endif %}>
-                                <a href="{{ link }}">{{ filtername }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </li>
+                                    <li{% if app.request.attributes.get('taxonomyterm', false) == filter %} class="current"{% endif %}>
+                                        <a href="{{ link }}">{{ filtername }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                {% endif %}
             {% endfor %}
         </ul>
     </div>
