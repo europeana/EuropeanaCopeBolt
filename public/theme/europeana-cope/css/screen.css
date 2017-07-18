@@ -1108,11 +1108,10 @@ nav.footer-menu a {
     overflow: visible;
     display: none; }
     .filter-listing .filter-container.expanded {
-      display: inline-block; }
+      display: inline-flex; }
     @media only screen and (min-width: 47.9375em) {
       .filter-listing .filter-container {
         margin: -7px 2.7rem 1rem;
-        display: inline-flex;
         align-items: stretch; } }
     .filter-listing .filter-container > ul,
     .filter-listing .filter-container > .filters-chapter {
