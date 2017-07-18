@@ -91,7 +91,7 @@
             {% set taxonomyterm = app.request.attributes.get('taxonomyterm') %}
             {% set currenttaxonomy = app.config.get('taxonomy/' ~ taxonomyname) %}
 
-            <span class="this-filter">{{ currenttaxonomy.name }}: {{ currenttaxonomy.options[taxonomyterm] }}</span>
+            <span class="this-filter"><span class="this-taxonomy">{{ currenttaxonomy.name }}:</span> {{ currenttaxonomy.options[taxonomyterm] }}</span>
 
             {% if records is defined %}
                 <a class="reset-filter" href="{{ path('contentlisting', { contenttypeslug: app.request.attributes.get('contenttypeslug') }) }}">
