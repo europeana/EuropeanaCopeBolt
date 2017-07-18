@@ -12,7 +12,7 @@
     </div>
     {% else %}
         <div class="colored-image"
-             style="background-image: url('/theme/europeana-cope/images/default.png')"></div>
+             style="background-image: url({{ image('/web_assets/default.png', 600, 400) }})"></div>
     {% endif %}
 
     <div class="ripple {{ record.ripplelocation | default('no-ripple') }} {{ record.ripplecolor | default('white') }} {{ record.rippleweight | default('full') }}">
