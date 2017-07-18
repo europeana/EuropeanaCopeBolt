@@ -1073,9 +1073,18 @@ nav.footer-menu a {
     .filter-listing .current-filters .toggle-filter, .filter-listing .current-filters .this-filter {
       display: inline-block;
       color: #fff;
-      padding: 6px 1rem; }
+      padding: 6px 1rem;
+      font-size: .75rem; }
+      @media only screen and (min-width: 47.9375em) {
+        .filter-listing .current-filters .toggle-filter, .filter-listing .current-filters .this-filter {
+          font-size: 0.9375rem; } }
       .filter-listing .current-filters .toggle-filter:first-child, .filter-listing .current-filters .this-filter:first-child {
         border-right: 1px solid #fff; }
+    .filter-listing .current-filters .this-taxonomy {
+      display: none; }
+      @media only screen and (min-width: 24em) {
+        .filter-listing .current-filters .this-taxonomy {
+          display: inline; } }
     .filter-listing .current-filters .arrow-down {
       display: inline-block;
       width: 0;
@@ -1102,7 +1111,9 @@ nav.footer-menu a {
       display: inline-block; }
     @media only screen and (min-width: 47.9375em) {
       .filter-listing .filter-container {
-        margin: -7px 2.7rem 1rem; } }
+        margin: -7px 2.7rem 1rem;
+        display: inline-flex;
+        align-items: stretch; } }
     .filter-listing .filter-container > ul,
     .filter-listing .filter-container > .filters-chapter {
       padding: 1rem; }
@@ -1122,17 +1133,16 @@ nav.footer-menu a {
     min-width: 288px; }
     @media only screen and (min-width: 47.9375em) {
       .filter-listing .filter-chaptertitles {
-        float: left;
-        width: 150px;
-        min-width: 0; } }
+        width: 180px;
+        min-width: 0;
+        flex: 0 0 auto; } }
     .filter-listing .filter-chaptertitles li {
       width: 100%; }
     .filter-listing .filter-chaptertitles svg {
       fill: #cccccc;
       font-size: .75em;
       float: right;
-      margin-top: .5em;
-      margin-right: 0; }
+      margin: .6em 0 0 0; }
   .filter-listing .filters-chapter {
     display: none;
     padding: 0 1rem;
@@ -1142,7 +1152,7 @@ nav.footer-menu a {
     @media only screen and (min-width: 47.9375em) {
       .filter-listing .filters-chapter {
         border-left: 1px solid #cccccc;
-        margin: 0 0 0 150px; } }
+        margin: 0 0; } }
     .filter-listing .filters-chapter.current {
       display: block; }
     .filter-listing .filters-chapter h3 {
@@ -1153,7 +1163,8 @@ nav.footer-menu a {
   @media only screen and (min-width: 47.9375em) {
     .filter-listing ul.filterlist li {
       width: 30%;
-      display: inline-block; } }
+      display: inline-block;
+      vertical-align: top; } }
   .filter-listing ul.filterlist li.current a {
     color: #4d4d4d;
     font-weight: 700; }
