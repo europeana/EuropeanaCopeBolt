@@ -1739,6 +1739,21 @@ button.floating,
     .button.floating:focus svg {
       fill: #fff; }
 
+button.image-info {
+  background-color: rgba(26, 26, 26, 0.85);
+  width: 40px;
+  height: 40px;
+  padding: 9px; }
+  button.image-info span {
+    border-radius: 50%;
+    display: block;
+    background-color: #fff;
+    width: 21px;
+    height: 21px;
+    color: #1a1a1a;
+    font-weight: 700;
+    line-height: 1.4; }
+
 /**
  * File:        _forms.scss
  * Description: _forms.scss contains all form styles for makeitso
@@ -2089,7 +2104,7 @@ a.banner {
   .banner.third .header-group,
   a.banner.third .header-group {
     left: 0;
-    width: 100%; }
+    width: 80%; }
     .banner.third .header-group p,
     a.banner.third .header-group p {
       font-size: 0.75rem; }
@@ -2145,6 +2160,30 @@ a.banner {
     top: auto;
     left: 0;
     bottom: 0; }
+
+.license-attribution button.image-info {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 50; }
+
+.license-attribution article {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(26, 26, 26, 0.95);
+  color: #fff;
+  border-radius: 5px;
+  padding: .5rem;
+  z-index: 50;
+  display: none; }
+  .license-attribution article.expanded {
+    display: block; }
+  .license-attribution article p {
+    margin: 0;
+    font-size: 0.6875rem; }
+  .license-attribution article span.image-license {
+    font-size: 0.6875rem; }
 
 /*
 * WIDGET TWO COLUMN TEASERS / NEWS
