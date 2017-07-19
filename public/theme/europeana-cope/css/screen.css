@@ -972,7 +972,10 @@ ul.play-menu {
     font-size: 90%;
     font-weight: 700;
     letter-spacing: -0.5px;
-    color: #293745; }
+    color: #293745;
+    display: inline-block;
+    cursor: default;
+    margin: 10px 0 0 0; }
 
 /* the mouseover menu styles */
 ul.backlinks.play-menu {
@@ -1872,7 +1875,7 @@ header {
   width: 185px; }
   @media only screen and (min-width: 60em) {
     .mainlogo {
-      margin: 0 0;
+      margin: 0 0 0 -1rem;
       width: 225px; } }
 
 .version-flag {
@@ -1895,7 +1898,7 @@ header {
   @media only screen and (min-width: 60em) {
     .payoff {
       text-align: left;
-      margin: -1.2rem 0 1.1rem 4rem; } }
+      margin: -1.2rem 0 1.1rem 4.3rem; } }
 
 /*
 * HIGHLIGHT-BAR
@@ -3226,25 +3229,6 @@ table.listingtable {
     content: ""; }
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-  /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-  thead {
-    display: table-header-group; }
-  tr,
-  img {
-    page-break-inside: avoid; }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; } }
-t: " (" attr(title) ")"; }
   pre,
   blockquote {
     border: 1px solid #999;
