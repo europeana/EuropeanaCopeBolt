@@ -371,7 +371,7 @@ a.banner {
 
     &.third .header-group {
         left: 0;
-        width: 100%;
+        width: 80%; // was 100, maar nu ruimte voor image attr knopje
 
         p {
             font-size: 0.75rem;
@@ -463,6 +463,44 @@ a.banner {
         top: auto;
         left: 0;
         bottom: 0;
+    }
+
+
+}
+
+.license-attribution {
+
+    button.image-info {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 50;
+    }
+
+    article {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        background: rgba($black, 0.95);
+        color: $white;
+        border-radius: 5px;
+        padding: .5rem;
+        z-index: 50;
+        display: none;
+
+        &.expanded {
+            display: block;
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.6875rem;
+
+        }
+
+        span.image-license {
+           font-size: 0.6875rem;
+        }
     }
 
 
