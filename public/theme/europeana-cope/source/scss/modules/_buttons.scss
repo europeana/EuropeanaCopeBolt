@@ -88,5 +88,23 @@ button.floating,
 
 }
 
+button.image-info {
+    background-color: rgba($black, 0.85);
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+
+    span {
+        border-radius: 50%;
+        display: block;
+        background-color: $white;
+        width: 21px;
+        height: 21px;
+        color: $black;
+        font-weight: 700;
+        line-height: 1.4;
+        }
+}
+
 
 

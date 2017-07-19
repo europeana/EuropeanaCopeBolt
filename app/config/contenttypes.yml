@@ -2109,6 +2109,11 @@ resources:
         pct75 : "75 percent transparent"
         full : "Not transparent"
       variant: inline
+    imagelicense:
+      label: "Image License"
+      type: select
+      values: [CC0, CC-BY, CC-BY-SA, CC-BY-NC, CC-BY-NC-SA]
+      prefix: "<hr />"
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   viewless: true

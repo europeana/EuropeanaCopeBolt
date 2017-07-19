@@ -268,6 +268,21 @@ $( document ).ready(function() {
         }
     })
 
+    /**
+    * Open en close image attribution
+    *
+    */
+
+    $('button.image-info').on('mouseenter', function(e){
+        $(this).siblings('article').addClass('expanded');
+        console.log('hover');
+    });
+
+    $('.license-attribution article').on('mouseleave', function(e){
+        $(this).removeClass('expanded');
+    });
+
+
 
     /**
     * Open en close filters

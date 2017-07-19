@@ -221,7 +221,7 @@ thumbnails:
     notfound_image: theme://images/notfound.png
     error_image: theme://images/notfound.png
     save_files: true
-    allow_upscale: false
+    allow_upscale: true
     exif_orientation: true
     only_aliases: false
 #    browser_cache_time: 2592000
