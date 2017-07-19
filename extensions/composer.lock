@@ -81,16 +81,16 @@
         },
         {
             "name": "bobdenotter/seo",
-            "version": "1.0.0",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobdenotter/seo.git",
-                "reference": "49f0fa303c58dc5def77e2b3ea4b732599c2f139"
+                "reference": "d16bc52d5647696454063b37e92febab1327f5d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/49f0fa303c58dc5def77e2b3ea4b732599c2f139",
-                "reference": "49f0fa303c58dc5def77e2b3ea4b732599c2f139",
+                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/d16bc52d5647696454063b37e92febab1327f5d4",
+                "reference": "d16bc52d5647696454063b37e92febab1327f5d4",
                 "shasum": ""
             },
             "require": {
@@ -117,23 +117,23 @@
             ],
             "description": "An extension to easily manage SEO title, meta description and OG tags.",
             "support": {
-                "source": "https://github.com/bobdenotter/seo/tree/master",
+                "source": "https://github.com/bobdenotter/seo/tree/1.0.3",
                 "issues": "https://github.com/bobdenotter/seo/issues"
             },
-            "time": "2017-05-29T13:19:54+00:00"
+            "time": "2017-07-04T09:49:10+00:00"
         },
         {
             "name": "bolt/jsonapi",
-            "version": "v3.0.13",
+            "version": "v3.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xiaohutai/jsonapi.git",
-                "reference": "8cc32d1330a5b1c6827a26e34f9ead61efa37fe2"
+                "reference": "45f0dbfa7ff3d0582191dad6de22440d45719a89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/8cc32d1330a5b1c6827a26e34f9ead61efa37fe2",
-                "reference": "8cc32d1330a5b1c6827a26e34f9ead61efa37fe2",
+                "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/45f0dbfa7ff3d0582191dad6de22440d45719a89",
+                "reference": "45f0dbfa7ff3d0582191dad6de22440d45719a89",
                 "shasum": ""
             },
             "require": {
@@ -179,10 +179,10 @@
                 "jsonapi"
             ],
             "support": {
-                "source": "https://github.com/xiaohutai/jsonapi/tree/v3.0.13",
+                "source": "https://github.com/xiaohutai/jsonapi/tree/v3.0.15",
                 "issues": "https://github.com/xiaohutai/jsonapi/issues"
             },
-            "time": "2017-06-06T19:40:55+00:00"
+            "time": "2017-07-12T14:29:17+00:00"
         },
         {
             "name": "bolt/sitemap",
@@ -371,16 +371,16 @@
         },
         {
             "name": "wikimedia/composer-merge-plugin",
-            "version": "v1.4.0",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wikimedia/composer-merge-plugin.git",
-                "reference": "ca453f9f13d8b05f86f20ea10be992a782e6f78c"
+                "reference": "81c6ac72a24a67383419c7eb9aa2b3437f2ab100"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/ca453f9f13d8b05f86f20ea10be992a782e6f78c",
-                "reference": "ca453f9f13d8b05f86f20ea10be992a782e6f78c",
+                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/81c6ac72a24a67383419c7eb9aa2b3437f2ab100",
+                "reference": "81c6ac72a24a67383419c7eb9aa2b3437f2ab100",
                 "shasum": ""
             },
             "require": {
@@ -424,10 +424,10 @@
             ],
             "description": "Composer plugin to merge multiple composer.json files",
             "support": {
-                "source": "https://github.com/wikimedia/composer-merge-plugin/tree/v1.4.0",
+                "source": "https://github.com/wikimedia/composer-merge-plugin/tree/master",
                 "issues": "https://github.com/wikimedia/composer-merge-plugin/issues"
             },
-            "time": "2017-03-13T16:52:55+00:00"
+            "time": "2017-04-25T02:31:25+00:00"
         }
     ],
     "packages-dev": [],
