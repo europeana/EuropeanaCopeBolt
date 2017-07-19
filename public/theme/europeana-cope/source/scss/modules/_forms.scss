@@ -36,6 +36,10 @@ textarea {
     }
 }
 
+input::placeholder {
+    color: $line-gray;
+}
+
 form.searchform {
 
     margin: 1rem 0;
@@ -45,9 +49,9 @@ form.searchform {
     @include respond-to (menu-full) {
         display: block;
         position: absolute;
-        top: 1rem;
+        top: 0.5rem; //1rem;
         right: 0.875rem;
-        width: 380px;
+        width: 380px; //650px;
 
     }
 
@@ -64,7 +68,7 @@ form.searchform {
         }
 
         @include respond-to (menu-full) {
-            width: 300px;
+            width: 300px; //580px;
         }
     }
 
