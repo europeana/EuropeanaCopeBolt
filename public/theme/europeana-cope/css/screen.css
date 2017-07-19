@@ -1775,6 +1775,9 @@ textarea {
     height: 2.20rem;
     border: none; }
 
+input::placeholder {
+  color: #cccccc; }
+
 form.searchform {
   margin: 1rem 0;
   text-align: right;
@@ -1783,7 +1786,7 @@ form.searchform {
     form.searchform {
       display: block;
       position: absolute;
-      top: 1rem;
+      top: 0.5rem;
       right: 0.875rem;
       width: 380px; } }
   form.searchform input[type="search"] {
