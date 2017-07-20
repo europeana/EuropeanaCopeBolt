@@ -87,6 +87,7 @@
             (taxonomyname): (taxonomyterm)
         } orderby '-datepublish' limit override_amount %}
 
+        {# actual include of highlightbar #}
         {% include [templatefile, 'modules/_default.twig'] with {
             'module': module,
             'record': record|default(),

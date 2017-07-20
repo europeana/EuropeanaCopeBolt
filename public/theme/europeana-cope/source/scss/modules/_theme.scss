@@ -351,7 +351,7 @@ a.banner {
         color: $white;
         padding: 1rem;
         left: 0;
-        width: 100%;
+        width: 80%; // was 100, maar nu ruimte voor image attr knopje
         text-shadow: 0px 0px 2px rgba($black, 0.5);
 
         @include respond-to(large-screens){
@@ -973,12 +973,26 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
     line-height: 1.4;
 
     @include respond-to(medium-screens){
-        font-size: 2.18rem;
         top: 7px; //magic number - optical nice space
     }
 
     @include respond-to(large-screens){
+        font-size: 2.18rem;
         top: -6rem;
+    }
+
+    .highlight-bar & {
+        position: static;
+        margin: 1rem 0;
+
+        @include respond-to(medium-screens){
+
+        }
+
+        @include respond-to(large-screens){
+            float: left;
+            margin: 1.6rem 0; //optical alignment
+        }
     }
 
 }
