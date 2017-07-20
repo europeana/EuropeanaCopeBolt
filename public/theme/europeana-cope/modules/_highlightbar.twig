@@ -9,8 +9,12 @@
         'allow_pager': boolean to check is the pager is available
     #}
 {% endspaceless %}
+
 <div class="inner-wrap">
     <div class="highlight-bar">
+
+    {% include 'partials/_community-info.twig' %}
+    {# Indien de communitybranding gevuld is, komt ie hier terug. #}
 
     {% if title is not empty %}
         <h2>{{ title }}</h2>

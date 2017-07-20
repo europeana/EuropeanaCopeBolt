@@ -16,14 +16,15 @@ communities:
     behaves_like: categories
     multiple: false
     options:
-        tech: EuropeanaTech
-        ipr: EuropeanaIPR
-        education: Europeana4Education
-        research: Europeana Research
+        tech: Tech
+        ipr: PR
+        education: 4Education
+        research: Research
         member-states: Member States
-        fashion: Europeana Fashion
-        art: Europeana Art
-        photo: Europeana Photography
+        fashion: Fashion
+        art: Art
+        photo: Photography
+        labs: Labs
     postfix: "Select one of the communities to activate the branding for that community in the website."
 
 markets:
