@@ -1,7 +1,17 @@
-
+    {% if record.pagetype is defined
+        and not (
+            record.pagetype == 'landingpage'
+            or record.pagetype == 'landingpage-nohighlight'
+        )
+    %}
+    {# HIDE this complete section on landingpages #}
     <section>
         <div class="inner-wrap">
             <article class="column main-column">
+
+                {% if record.pagetype != 'landingpage' %} {# als landingpage > branding in de highlights #}
+                    {% include 'partials/_community-info.twig' %}
+                {% endif %}
 
                 {% include 'partials/_side-info.twig' %}
 
@@ -55,6 +65,8 @@
 
         </div>
     </section>
+    {% endif %}
+
 
     {% for module in record.modules if (global.request.get('_route') != "preview") %}
         {{ include('partials/_default_module.twig', { 'module': module }) }}
