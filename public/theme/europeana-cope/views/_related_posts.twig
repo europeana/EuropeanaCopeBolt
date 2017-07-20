@@ -5,11 +5,11 @@
     <h3><a href="{{ item.link() }}">{{ item.title }}</a></h3>
 
     {% if item.teaser %}
-        {{ item.teaser }}
-    {% elseif item.introduction %}
-       {{ item.intro|excerpt(150) }}
+        {{ item.teaser|raw }}
+    {% elseif item.intro %}
+       <p>{{ item.intro|excerpt(170) }}</p>
     {% else %}
-        <p>{{ item.excerpt(150, false, search|default('')) }}</p>
+        <p>{{ item.body|excerpt(170) }}</p>
     {% endif %}
 
 </article>
