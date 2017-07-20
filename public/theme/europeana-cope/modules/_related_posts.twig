@@ -6,13 +6,15 @@
 {% if record.related() is not empty %}
     {# get the manually set related records #}
     {% set records = record.related()|shuffle %}
-{% elseif record.taxonomy.categories is defined %}
-    {# FIXME Extensie is nog stuk #}
-    {# {% set records = relatedcontent(record) %} #}
-
-    {# get the automatically related records by category #}
-    {% setcontent records = record.contenttype.slug where { categories : record.taxonomy.categories|join(' || ') } %}
+{% elseif
+    (record.taxonomy.categories is defined and record.taxonomy.categories is not empty)
+    or (record.taxonomy.tags is defined and record.taxonomy.tags is not empty) %}
+    {# get the automatically related records by category  - extension #}
+    {% set records = relatedcontent(record) %}
+{% else %}
+    <!-- No tags, no categories, so no related items -->
 {% endif %}
+
 
 {% if (records is defined) and (records is not empty) %}
 
