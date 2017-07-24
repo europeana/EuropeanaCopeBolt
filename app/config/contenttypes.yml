@@ -386,7 +386,7 @@ pages:
             calltoactionform:  "Call to action form main page (_calltoactionform.twig)"
             calltoactionlink:  "Call to action button main page (_calltoactionlinks.twig)"
             calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
-            #filecontent:       "File content block (_filecontent.twig)"
+            filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
             body:              "Module body field - for extra body blocks between modules (_body.twig)"
             collapsedcontent:  "Collapsed content clicks open with click on header (_collapsedcontent.twig)"
@@ -396,6 +396,25 @@ pages:
           height: 100px
           postfix: "Shown in module blocks as body text"
           class: 'showfortemplate-body'
+        image:
+          type: image
+          label: Image
+          attrib: title
+          info: Add image.
+          variant: inline
+          class: 'showfortemplate-image'
+        singlefile:
+          type: file
+          label: File
+          info: You may override the title with the module title.
+          variant: inline
+          class: 'showfortemplate-filecontent'
+        fileslistpath:
+          type: text
+          label: Folder
+          info: Enter a path within the files directory to use for the fileslisting.
+          variant: inline
+          class: 'showfortemplate-fileslisting'
         icon:
           type: image
           label: Streamer Icon (optional)
@@ -646,7 +665,7 @@ posts:
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
             calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
-            #filecontent:       "File content block (_filecontent.twig)"
+            filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
         body:
           type: html
@@ -661,6 +680,18 @@ posts:
           info: Add image.
           variant: inline
           class: 'showfortemplate-image'
+        singlefile:
+          type: file
+          label: File
+          info: You may override the title with the module title.
+          variant: inline
+          class: 'showfortemplate-filecontent'
+        fileslistpath:
+          type: text
+          label: Folder
+          info: Enter a path within the files directory to use for the fileslisting.
+          variant: inline
+          class: 'showfortemplate-fileslisting'
         ordering:
           type: select
           label: Order- and filtering
@@ -913,7 +944,7 @@ data:
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
             calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
-            #filecontent:       "File content block (_filecontent.twig)"
+            filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
         body:
           type: html
@@ -928,6 +959,18 @@ data:
           info: Add image.
           variant: inline
           class: 'showfortemplate-image'
+        singlefile:
+          type: file
+          label: File
+          info: You may override the title with the module title.
+          variant: inline
+          class: 'showfortemplate-filecontent'
+        fileslistpath:
+          type: text
+          label: Folder
+          info: Enter a path within the files directory to use for the fileslisting.
+          variant: inline
+          class: 'showfortemplate-fileslisting'
         ordering:
           type: select
           label: Order- and filtering
@@ -1246,7 +1289,7 @@ projects:
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
             calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
-            #filecontent:       "File content block (_filecontent.twig)"
+            filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
         body:
           type: html
@@ -1261,6 +1304,18 @@ projects:
           info: Add image.
           variant: inline
           class: 'showfortemplate-image'
+        singlefile:
+          type: file
+          label: File
+          info: You may override the title with the module title.
+          variant: inline
+          class: 'showfortemplate-filecontent'
+        fileslistpath:
+          type: text
+          label: Folder
+          info: Enter a path within the files directory to use for the fileslisting.
+          variant: inline
+          class: 'showfortemplate-fileslisting'
         ordering:
           type: select
           label: Order- and filtering
@@ -1494,7 +1549,7 @@ events:
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
             calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
-            #filecontent:       "File content block (_filecontent.twig)"
+            filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
         body:
           type: html
@@ -1509,6 +1564,18 @@ events:
           info: Add image.
           variant: inline
           class: 'showfortemplate-image'
+        singlefile:
+          type: file
+          label: File
+          info: You may override the title with the module title.
+          variant: inline
+          class: 'showfortemplate-filecontent'
+        fileslistpath:
+          type: text
+          label: Folder
+          info: Enter a path within the files directory to use for the fileslisting.
+          variant: inline
+          class: 'showfortemplate-fileslisting'
         ordering:
           type: select
           label: Order- and filtering

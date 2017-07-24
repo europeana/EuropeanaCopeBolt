@@ -1,4 +1,4 @@
- {% spaceless %}
+{% spaceless %}
 {#
 Available variables
     'module':    the full module object
@@ -11,6 +11,7 @@ Available variables
 {% set override_css_id = module.get('override_css_id') %}
 {% set override_css_class = module.get('override_css_class') %}
 {% set template = module.get('templates') %}
+{% set path = module.get('fileslistpath') %}
 
 {#
     - @param filesystem       The filesystem to work on
@@ -61,18 +62,12 @@ Available variables
 
 {% endspaceless %}
 
-{#
-Xiao: Something needs to feed this the path, because we can't just do `record.filelist_downloads`.
-#}
-{% set path = 'Europeana_Professional/Advocacy' %}
 {% set files = [] %}
 {% set filesystem = app.filesystem.getFilesystem('files') %}
 {% if filesystem.has(path) %}
     {# {% set directory = filesystem.get(path) %} #}
     {% set files = filesystem.listContents(path) %}
 {% endif %}
-
-
 
 {% if files is not empty %}
 

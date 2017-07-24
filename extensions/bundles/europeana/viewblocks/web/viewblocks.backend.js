@@ -112,6 +112,9 @@ jQuery.fn.extend(
             var orderselect = viewblock.find('select[name*="ordering"]');
             var iconfield = viewblock.find('input[name*="icon"]');
             var imagefield = viewblock.find('input[name*="image"]');
+            var filefield = viewblock.find('input[name*="singlefile"]');
+            var fileslistpathfield = viewblock.find('input[name*="fileslistpath"]');
+
 
             if(templatevalue === 'body' || templatevalue === 'collapsedcontent') {
                 bodyblock.parents('.repeater-field').show();
@@ -119,24 +122,48 @@ jQuery.fn.extend(
                 orderselect.parents('.repeater-field').hide();
                 iconfield.parents('.repeater-field').hide();
                 imagefield.parents('.repeater-field').hide();
+                filefield.parents('.repeater-field').hide();
+                fileslistpathfield.parents('.repeater-field').hide();
             } else if(templatevalue === 'streamercolumn') {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').hide();
                 orderselect.parents('.repeater-field').show();
                 iconfield.parents('.repeater-field').show();
                 imagefield.parents('.repeater-field').hide();
+                filefield.parents('.repeater-field').hide();
+                fileslistpathfield.parents('.repeater-field').hide();
             } else if(templatevalue === 'image') {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').hide();
                 orderselect.parents('.repeater-field').hide();
                 iconfield.parents('.repeater-field').hide();
                 imagefield.parents('.repeater-field').show();
+                filefield.parents('.repeater-field').hide();
+                fileslistpathfield.parents('.repeater-field').hide();
+            } else if(templatevalue === 'filecontent') {
+                bodyblock.parents('.repeater-field').hide();
+                sourceselect.parents('.repeater-field').hide();
+                orderselect.parents('.repeater-field').hide();
+                iconfield.parents('.repeater-field').hide();
+                imagefield.parents('.repeater-field').hide();
+                filefield.parents('.repeater-field').show();
+                fileslistpathfield.parents('.repeater-field').hide();
+            } else if(templatevalue === 'fileslisting') {
+                bodyblock.parents('.repeater-field').hide();
+                sourceselect.parents('.repeater-field').hide();
+                orderselect.parents('.repeater-field').hide();
+                iconfield.parents('.repeater-field').hide();
+                imagefield.parents('.repeater-field').hide();
+                filefield.parents('.repeater-field').hide();
+                fileslistpathfield.parents('.repeater-field').show();
             } else {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').show();
                 orderselect.parents('.repeater-field').show();
                 iconfield.parents('.repeater-field').hide();
                 imagefield.parents('.repeater-field').hide();
+                filefield.parents('.repeater-field').hide();
+                fileslistpathfield.parents('.repeater-field').hide();
             }
 
             //console.log('templatesSwitcher triggered', templatevalue);
@@ -184,7 +211,7 @@ jQuery.fn.extend(
             //     'source': sourcevalue
             // } );
 
-            if(templatevalue === 'body' || templatevalue === 'image' || templatevalue === 'collapsedcontent') {
+            if(templatevalue === 'body' || templatevalue === 'filecontent' || templatevalue === 'fileslisting' || templatevalue === 'image' || templatevalue === 'collapsedcontent') {
                 console.log('hiding source, order, amount, selector, category and tags');
                 sourceselect.parents('.repeater-field').hide();
                 selectedamount.parents('.repeater-field').hide();
