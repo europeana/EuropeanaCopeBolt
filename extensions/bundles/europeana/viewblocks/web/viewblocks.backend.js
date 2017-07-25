@@ -252,7 +252,7 @@ jQuery.fn.extend(
                     selectedamount.parents('.repeater-field').show();
                 } else if(ordervalue === 'calendar' || ordervalue === 'calendar_upcoming' || ordervalue === 'calendar_archive') {
                     sourceselect.parents('.repeater-field').hide();
-                    tagblock.parents('.repeater-field').hide();
+                    tagblock.parents('.repeater-field').show();
                     categoryblock.parents('.repeater-field').show();
                     selectedamount.parents('.repeater-field').show();
                 } else if(ordervalue === 'specified') {
