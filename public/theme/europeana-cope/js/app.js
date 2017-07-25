@@ -1,6 +1,4 @@
-
 $( document ).ready(function() {
-
     $('html').removeClass('no-js').addClass('js');
 
     //console.log("This JS file is engaged, captain. permission to fly?");
@@ -8,7 +6,6 @@ $( document ).ready(function() {
     /**
     * vars
     */
-
     // Breakpoints, make same as base.css!!! In ems
     var breakSmall = 6.25; // 100
     var breakMedium = 24; // 384
@@ -21,36 +18,29 @@ $( document ).ready(function() {
 
     // custom breakpoints for menu, set to optimize menu
     var breakMenuFull = 60; //960
-
     var resizeId;
-
     var windowWidth = viewportSize.getWidth(); //replaces buggy and unreliable $(window).width();
     // assume base font size is 16px
     var windowWidthEms = ((viewportSize.getWidth()) / 16);
-
     //console.log(windowWidthEms);
 
     /**
      * initial checks for page setup. Checks the viewport width and does some
      * actions for the UI based on screen size
      */
-
     preLoadChecks();
 
     /**
      * do some checks when window is resized
      */
     $(window).resize(function() {
-            clearTimeout(resizeId);
-            resizeId = setTimeout(preLoadChecks, 20);
+        clearTimeout(resizeId);
+        resizeId = setTimeout(preLoadChecks, 20);
     });
-
-
 
     /**
     * off-canvas menu on mobile
     */
-
     $('.menu-toggle').on( "click", function(e) {
         e.preventDefault();
         var nav = $("nav.main-menu");
@@ -64,58 +54,49 @@ $( document ).ready(function() {
             // Doe dicht
             iconclose.fadeOut('fast');
             iconmenu.fadeIn('fast');
-            //inschuiven menu
 
+            //inschuiven menu
             nav.animate({
                 left: "-235"
             }, 100, function() {
-            // Animation complete.
+                // Animation complete.
             });
             nav.removeClass('is-overlay');
-
-
         } else {
             // Doe open
             nav.addClass('is-overlay').css({
                 'top': headerHeight,
                 'min-height': windowHeight,
-                'height': fullHeight });
+                'height': fullHeight
+            });
             iconclose.fadeIn('fast');
             iconmenu.fadeOut('fast');
-            //inschuiven menu
 
+            //inschuiven menu
             nav.animate({
                 left: '+=235'
             }, 100, function() {
-            // Animation complete.
+                // Animation complete.
             });
         }
-
     });
-
 
     /**
     * submit sortform on click of icon
     */
-
     $('#sortbar button').hide();
-
     $('#sortbar input[type=radio]').on('change', function() {
         // console.log('KLIKKERDIEKLIK');
         $('#sortbar').submit();
     });
 
-
-
-
     /**
     * show searchform on mobile
     */
-
     $('.search-toggle').on( "click", function(e) {
         e.preventDefault();
 
-        var search = $('header .searchform')
+        var search = $('header .searchform');
         var nav = $("nav.main-menu");
 
         if (search.hasClass('is-open')) {
@@ -127,7 +108,6 @@ $( document ).ready(function() {
                     top: '-=71'
                 });
             }
-
         } else {
             //doe open
             search.slideDown().addClass('is-open');
@@ -145,10 +125,8 @@ $( document ).ready(function() {
     /**
     * Show 'back to top' button on scroll up
     */
-
     var previousScroll = 0;
     headerHeight = $('#header').height();
-
     $(window).scroll(function() {
         var currentScroll = $(this).scrollTop();
         // console.log(currentScroll + " and " + previousScroll + " and " + headerHeight);
@@ -156,13 +134,10 @@ $( document ).ready(function() {
         if(currentScroll > headerHeight) {
             if (currentScroll > previousScroll) {
                 // console.log('GOING DOWN!')
-                $('#backtotop').removeClass('fixed');
-                $('#backtotop').fadeOut('slow');
-
+                $('#backtotop').removeClass('fixed').fadeOut('slow');
             } else {
                 // console.log('GOING UP!')
-                $('#backtotop').addClass('fixed');
-                $('#backtotop').fadeIn('slow');
+                $('#backtotop').addClass('fixed').fadeIn('slow');
             }
         } else {
              $('#backtotop').removeClass('fixed');
@@ -175,11 +150,7 @@ $( document ).ready(function() {
         $('html, body').animate({scrollTop: '0px'}, 300);
         $(this).blur();
         $(this).trigger('touchend');
-
     });
-
-
-
 
     //  init jQuery plugin "minRead"
     //  https://github.com/heyimjuani/minRead
@@ -224,8 +195,6 @@ $( document ).ready(function() {
         $('.in-page-blank-link').detach();
     }
 
-
-
     /**
      * Open and close filelistings.
      *
@@ -248,17 +217,17 @@ $( document ).ready(function() {
         var $sublist = $this.find('> .can-expand');
 
         // Otherwise get `$this`'s _uncle_, because of wrappers around `$this`.
-        if ($sublist.length == 0) {
+        if ($sublist.length === 0) {
             $sublist = $this.parent().next('.can-expand');
         }
 
         // Otherwise get another one!
-        if ($sublist.length == 0) {
-            $sublist = $this.parent().find('> .can-expand');;
+        if ($sublist.length === 0) {
+            $sublist = $this.parent().find('> .can-expand');
         }
 
         if ($sublist.hasClass('expanded')) {
-            $this.removeClass('expand-toggle-open')
+            $this.removeClass('expand-toggle-open');
             $sublist.removeClass('expanded').slideUp('fast');
 
         }
@@ -266,13 +235,11 @@ $( document ).ready(function() {
             $sublist.addClass('expanded').slideDown();
             $this.addClass('expand-toggle-open');
         }
-    })
+    });
 
     /**
     * Open en close image attribution
-    *
     */
-
     $('button.image-info').on('mouseenter', function(e){
         $(this).siblings('article').addClass('expanded');
         console.log('hover');
@@ -282,19 +249,14 @@ $( document ).ready(function() {
         $(this).removeClass('expanded');
     });
 
-
-
     /**
     * Open en close filters
-    *
     */
-
-
     $('.toggle-filter').on('click',function(e){
-        e.preventDefault;
+        e.preventDefault();
 
         $('.filter-container').toggleClass('expanded');
-    })
+    });
 
     $('.chapter-toggle').on('click', function(e){
         e.preventDefault();
@@ -308,9 +270,7 @@ $( document ).ready(function() {
 
         $('#filters-'+chapter).toggleClass('current');
         $('.filters-chapter').not('#filters-'+chapter).removeClass('current');
-    })
-
-
+    });
 
     /**
      * Merge streamer colums into the first
@@ -345,10 +305,10 @@ $( document ).ready(function() {
     }
 
     /**
-         * preloadchecks function
-         * checks viewport width and does some hides and show, and moves elements
-         * based on design at viewport width
-         */
+     * preloadchecks function
+     * checks viewport width and does some hides and show, and moves elements
+     * based on design at viewport width
+     */
     function preLoadChecks() {
         // update window width
         windowWidth = viewportSize.getWidth(); // $(window).width();
@@ -358,7 +318,6 @@ $( document ).ready(function() {
         // } else {
         // };
 
-
         if ( windowWidthEms < breakMenuFull ) {
             $('header .searchform').hide();
         }
@@ -366,38 +325,24 @@ $( document ).ready(function() {
         if ( windowWidthEms >= breakMenuFull ) {
             //remove all leftover inline styles from mobile view;
             $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
-
             $('header .searchform').removeAttr('style');
-        };
-
+        }
 
         if ( windowWidthEms >= breakMenuFull ) {
-
             // set sticky topbar and menu
             $('#topbar').stick_in_parent();
             $('nav.main-menu').stick_in_parent();
-
         } else {
            // remove stickyness when window is resized
            $("#topbar").trigger("sticky_kit:detach");
            $('nav.main-menu').trigger("sticky_kit:detach");
         }
 
-
-
         if ( windowWidthEms >= breakLarge ) {
-
             // set filters outside list for desktop.
             // NOTE: Anke is lazy and has not coded for the edgecase where a Large window is resized to < Large.
             // hardly ever occurs. If happens, slap Anke and fix it yourself.
             $('.filters-chapter').appendTo('.filter-container');
-
         }
-
-
-
-    };
-
+    }
 });
-
-

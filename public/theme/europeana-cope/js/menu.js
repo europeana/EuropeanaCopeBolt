@@ -187,11 +187,9 @@ $(document).ready(function() {
     var windowWidthEms = ((viewportSize.getWidth()) / 16);
 
     if ( windowWidthEms >= breakMenuFull ) {
-
-    // clone current page to show in first level submenu
-    var thispage = $('li.level-2.active');
-    thispage.parents('li.level-1').children('a').append('<span class="cloned-current">' + thispage.text() + '</span>');
-
+        // clone current page to show in first level submenu
+        var thispage = $('li.level-2.active');
+        thispage.parents('li.level-1').children('a').append('<span class="cloned-current">' + thispage.text() + '</span>');
     }
 
 });
