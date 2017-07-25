@@ -11,7 +11,7 @@ use Bolt\Extension\Europeana\SelectAsync\Controller\SelectAsyncController;
 /**
  * ExtensionName extension class.
  *
- * @author Your Name <you@example.com>
+ * @author Lodewijk Evers <lodewijk@twokings.nl>
  */
 class SelectAsyncExtension extends SimpleExtension
 {

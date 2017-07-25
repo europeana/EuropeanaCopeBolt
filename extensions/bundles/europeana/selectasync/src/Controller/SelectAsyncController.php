@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Controller class.
  *
- * @author Your Name <you@example.com>
+ * @author Lodewijk Evers <lodewijk@twokings.nl>
  */
 class SelectAsyncController implements ControllerProviderInterface
 {
@@ -57,15 +57,15 @@ class SelectAsyncController implements ControllerProviderInterface
 
         // /selectasync/type/{type}
         $ctr->get('/type/{type}', [$this, 'selectAsyncUrlWithType'])
-          ->bind('select-async-url-type');
+            ->bind('select-async-url-type');
 
         // /selectasync/type/{type,type,..}
         $ctr->get('/types/{types}', [$this, 'selectAsyncUrlWithTypes'])
-          ->bind('select-async-url-types');
+            ->bind('select-async-url-types');
 
         // /selectasync/type/{type,type,..}
         $ctr->get('/load', [$this, 'selectAsyncUrlLoad'])
-        ->bind('select-async-load');
+            ->bind('select-async-load');
 
         return $ctr;
     }
