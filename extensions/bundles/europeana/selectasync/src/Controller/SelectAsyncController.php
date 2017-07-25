@@ -2,6 +2,7 @@
 
 namespace Bolt\Extension\Europeana\SelectAsync\Controller;
 
+use Bolt\Filesystem\Manager;
 use Silex\Application;
 use Silex\ControllerCollection;
 use Silex\ControllerProviderInterface;
@@ -22,6 +23,7 @@ class SelectAsyncController implements ControllerProviderInterface
     private $default_types;
     private $default_fields;
     private $default_person_fields;
+    private $directory_tree;
 
     /**
      * Initiate the controller with Bolt Application instance and extension config.
@@ -35,6 +37,7 @@ class SelectAsyncController implements ControllerProviderInterface
         $this->default_types = ['pages', 'posts', 'data', 'projects', 'events', 'persons', 'resources'];
         $this->default_fields = ['id', 'title', 'status'];
         $this->default_person_fields = ['id', 'first_name', 'last_name', 'email', 'status'];
+        $this->directory_tree = [];
     }
 
     /**
@@ -51,7 +54,7 @@ class SelectAsyncController implements ControllerProviderInterface
         /** @var $ctr \Silex\ControllerCollection */
         $ctr = $app['controllers_factory'];
 
-        // /selectasync/in/controller
+        // /selectasync/
         $ctr->get('/', [$this, 'selectAsyncUrl'])
             ->bind('select-async-url-controller');
 
@@ -67,7 +70,159 @@ class SelectAsyncController implements ControllerProviderInterface
         $ctr->get('/load', [$this, 'selectAsyncUrlLoad'])
             ->bind('select-async-load');
 
+        // /selectasync/categories/
+        $ctr->get('/categories', [$this, 'selectAsyncCategories'])
+            ->bind('select-async-categories');
+
+        // /selectasync/categories/{type}
+        $ctr->get('/categories/{type}', [$this, 'selectAsyncCategoriesType'])
+            ->bind('select-async-categories-type');
+
+        // /selectasync/directories
+        $ctr->get('/directories', [$this, 'selectAsyncDirectories'])
+            ->bind('select-async-directories');
+
         return $ctr;
+    }
+
+    /**
+     * Handles GET requests on /selectasync/categories
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function selectAsyncCategories(Request $request)
+    {
+        $hasaccess = $this->checkAccess();
+        if(!$hasaccess) {
+            return $this->noAccess();
+        }
+        $type = null;
+        $results = [];
+        $message = 'SelectAsync is working on this path.';
+        $status = 'ok';
+
+        $jsonResponse = new JsonResponse();
+
+        $jsonResponse->setData([
+            'query' => $request->query->all(),
+            'type' => $type,
+            'message' => $message,
+            'status' => $status,
+            'results' => $results
+        ]);
+
+        return $jsonResponse;
+    }
+
+    /**
+     * Handles GET requests on /selectasync/categories/{type} and return with json.
+     *
+     * @param Request $request
+     * @param $id
+     *
+     * @return JsonResponse
+     */
+    public function selectAsyncCategoriesType(Request $request, $type)
+    {
+        $hasaccess = $this->checkAccess();
+        if(!$hasaccess) {
+            return $this->noAccess();
+        }
+        $results = [];
+        $message = 'SelectAsync is working on this path.';
+        $status = 'ok';
+
+        $jsonResponse = new JsonResponse();
+
+        $jsonResponse->setData([
+            'query' => $request->query->all(),
+            'type' => $type,
+            'message' => $message,
+            'status' => $status,
+            'results' => $results
+        ]);
+
+        return $jsonResponse;
+    }
+
+    /**
+     * Handles GET requests on /selectasync/directories
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function selectAsyncDirectories(Request $request)
+    {
+        $hasaccess = $this->checkAccess();
+        if(!$hasaccess) {
+            return $this->noAccess();
+        }
+        $type = 'directorylist';
+        $message = '';
+        $status = 'ok';
+
+        $search = $request->query->get('search');
+        if(empty($search)) {
+            $search = '';
+        }
+
+        $filesystem = $this->app['filesystem'];
+        $this->selectAsyncRecursiveDirTree($filesystem, 'files', $search);
+
+        //dump('results', $this->directory_tree);
+        $jsonResponse = new JsonResponse();
+
+        $jsonResponse->setData([
+            'query' => $request->query->all(),
+            'type' => $type,
+            'message' => $message,
+            'status' => $status,
+            'results' => $this->directory_tree
+        ]);
+
+        return $jsonResponse;
+    }
+
+    /**
+     * Return a list of directories and subdirectories
+     * TODO: Test if this scales up to a a few thousand files
+     *
+     * @param \Bolt\Filesystem\Manager $filesystem
+     */
+    private function selectAsyncRecursiveDirTree(Manager $filesystem, $root, $search)
+    {
+        $files = $filesystem->getFilesystem($root);
+        $contents = $files->listContents(null, true);
+        // dump($directories, $contents);
+        foreach ($contents as $fileobject) {
+            if($fileobject->isDir() === true) {
+                //dump($fileobject->getFilename(), $fileobject->getPath());
+                if(!empty($search)) {
+                    if(stristr($fileobject->getPath(), $search)) {
+                        array_push(
+                            $this->directory_tree,
+                            [
+                                'id'    => $fileobject->getPath(),
+                                'title' => $fileobject->getPath()
+                            ]
+                        );
+                    }
+                } else {
+                  array_push(
+                      $this->directory_tree,
+                      [
+                          'id'    => $fileobject->getPath(),
+                          'title' => $fileobject->getPath()
+                      ]
+                  );
+                }
+
+                //array_push($this->directory_tree, $fileobject);
+            }
+        }
     }
 
     /**

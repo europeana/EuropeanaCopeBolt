@@ -414,7 +414,7 @@ pages:
           label: Folder
           info: Enter a path within the files directory to use for the fileslisting.
           variant: inline
-          class: 'showfortemplate-fileslisting'
+          class: 'showfortemplate-fileslisting directoryselect'
         icon:
           type: image
           label: Streamer Icon (optional)
@@ -691,7 +691,7 @@ posts:
           label: Folder
           info: Enter a path within the files directory to use for the fileslisting.
           variant: inline
-          class: 'showfortemplate-fileslisting'
+          class: 'showfortemplate-fileslisting directoryselect'
         ordering:
           type: select
           label: Order- and filtering
@@ -970,7 +970,7 @@ data:
           label: Folder
           info: Enter a path within the files directory to use for the fileslisting.
           variant: inline
-          class: 'showfortemplate-fileslisting'
+          class: 'showfortemplate-fileslisting directoryselect'
         ordering:
           type: select
           label: Order- and filtering
@@ -1315,7 +1315,7 @@ projects:
           label: Folder
           info: Enter a path within the files directory to use for the fileslisting.
           variant: inline
-          class: 'showfortemplate-fileslisting'
+          class: 'showfortemplate-fileslisting directoryselect'
         ordering:
           type: select
           label: Order- and filtering
@@ -1575,7 +1575,7 @@ events:
           label: Folder
           info: Enter a path within the files directory to use for the fileslisting.
           variant: inline
-          class: 'showfortemplate-fileslisting'
+          class: 'showfortemplate-fileslisting directoryselect'
         ordering:
           type: select
           label: Order- and filtering

@@ -1,9 +1,11 @@
 /***** Load selectasync scripts ******/
 jQuery(document).ready(function($) {
     SA_loadNewAsyncSelectors();
+    SA_loadNewAsyncDirs();
 
     $('.bolt-field-repeater').on('click', '.add-button, .duplicate-button', function() {
         SA_loadNewAsyncSelectors();
+        SA_loadNewAsyncDirs();
         console.log('selectasync js refreshed for new repeaters');
     });
     console.log('selectasync js loaded');
@@ -56,7 +58,7 @@ function SA_reCalculateIds(item) {
     $('#'+target).val(JSON.stringify(sortedIDs));
 }
 /**
- * SA_loadNewAsyncSelectors initializes all asyncselectors that don't have the class yet
+ * SA_loadNewAsyncSelectors initializes all asyncselectors for records that don't have the class yet
  *
  * May be called again
  *
@@ -425,5 +427,66 @@ function SA_loadNewAsyncSelectors() {
                 $(target).val('');
             }
         });
+    });
+}
+
+/**
+ * SA_loadNewAsyncDirs initializes all directoryselect for directories that don't have the class yet
+ *
+ * May be called again
+ *
+ */
+function SA_loadNewAsyncDirs() {
+    $('.directoryselect:not(.ispreloaded)').each(function() {
+        //console.log(this, $(this));
+
+        var selectholder = $(this);
+        //console.log('ajaxselect element', $(selectholder).attr('id'));
+
+        $('#' + $(selectholder).attr('id')).autocomplete({
+            source: function(request, response) {
+                //console.log('triggered', request, responsecallback);
+                $.ajax({
+                    url: '/admin/selectasync/directories',
+                    type: 'GET',
+                    dataType: "json",
+                    context: $(selectholder),
+                    data: {
+                        search: request.term
+                    },
+                    error: function(data) {
+                        console.log('error', data);
+                        $(selectholder).after(
+                            $('<div>')
+                                .addClass('error')
+                                .text('There was an error loading data, please try refreshing this page..')
+                        );
+                    },
+                    success: function(data) {
+                        //console.log('data', data.results, data);
+                        if (data.status !== 'error' && data.results) {
+                            var results = data.results;
+                            var ajaxcleaned = [];
+                            results.forEach(function(e, index) {
+                                ajaxcleaned.push({
+                                    'value': e.id,
+                                    'label': e.title,
+                                    'full_item': e
+                                });
+                            });
+                            response(ajaxcleaned);
+                        } else {
+                            console.log('no data', data);
+                            response([]);
+                        }
+                    }
+                });
+            },
+            minLength: 2,
+            delay: 200
+        });
+
+
+        $(this).addClass('ispreloaded');
     });
 }
