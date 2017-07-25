@@ -438,9 +438,9 @@ pages:
             category_unpaged: Category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
-            calendar: Calendar (based on start and end date)
-            calendar_upcoming: Calendar upcoming (based on start and end date)
-            calendar_archive: Calendar archive (based on start and end date)
+            calendar: Calendar (only for events, start date increasing)
+            calendar_upcoming: Calendar upcoming (only for events, start date increasing)
+            calendar_archive: Calendar archive (only for events, start date decreasing)
             alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:

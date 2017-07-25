@@ -154,11 +154,25 @@
             } orderby '-datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
         {% elseif ordering == 'calendar' %}
-            {{ dump(module, template, ordering, override_amount) }}
+            {% setcontent selected_records = 'events' where {
+                (filtername): (filtervalue),
+                (taxonomyname): (taxonomyterm)
+            } orderby 'start_event' limit override_amount|default(10) allowpaging %}
+            {% set allow_pager = true %}
         {% elseif ordering == 'calendar_upcoming' %}
-            {{ dump(module, template, ordering, override_amount) }}
+            {% setcontent selected_records = 'events' where {
+                (filtername): (filtervalue),
+                (taxonomyname): (taxonomyterm),
+                'start_event': '> yesterday'
+            } orderby 'start_event' limit override_amount|default(10) allowpaging %}
+            {% set allow_pager = true %}
         {% elseif ordering == 'calendar_archive' %}
-            {{ dump(module, template, ordering, override_amount) }}
+            {% setcontent selected_records = 'events' where {
+                (filtername): (filtervalue),
+                (taxonomyname): (taxonomyterm),
+                'end_event': '< tomorrow'
+            } orderby '-start_event' limit override_amount|default(10) allowpaging %}
+            {% set allow_pager = true %}
         {% else %}
             {{ dump(module, template, ordering, override_amount) }}
         {% endif %}
