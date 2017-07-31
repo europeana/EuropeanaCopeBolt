@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb7ed9f2b4045439e53a33c2fae88e8d",
+    "content-hash": "18cf6d6dddeedd091abec764780c0c13",
     "packages": [
         {
             "name": "bacboslab/menueditor",
-            "version": "3.2.1",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bacbos/bolt-menu-editor.git",
-                "reference": "c311963ad5dd8036b854061f436c6db7bdf6f90c"
+                "reference": "959e6064ab11a66e0bbc319fc7338812441b100a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bacbos/bolt-menu-editor/zipball/c311963ad5dd8036b854061f436c6db7bdf6f90c",
-                "reference": "c311963ad5dd8036b854061f436c6db7bdf6f90c",
+                "url": "https://api.github.com/repos/bacbos/bolt-menu-editor/zipball/959e6064ab11a66e0bbc319fc7338812441b100a",
+                "reference": "959e6064ab11a66e0bbc319fc7338812441b100a",
                 "shasum": ""
             },
             "require": {
@@ -74,10 +74,10 @@
                 "visual"
             ],
             "support": {
-                "source": "https://github.com/bacbos/bolt-menu-editor/tree/master",
+                "source": "https://github.com/bacbos/bolt-menu-editor/tree/3.2.2",
                 "issues": "https://github.com/bacbos/bolt-menu-editor/issues"
             },
-            "time": "2017-02-01T21:38:05+00:00"
+            "time": "2017-07-26T21:07:59+00:00"
         },
         {
             "name": "bobdenotter/seo",
