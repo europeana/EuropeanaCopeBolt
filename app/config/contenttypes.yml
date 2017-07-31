@@ -81,10 +81,8 @@ __nodes:
       postfix: "The site this content was imported from."
       prefix: "<div><h3>Site structure data</h3></div>"
     structure_parent:
-      type: select
+      type: text
       default: ''
-      values: structures/id,title
-      autocomplete: true
       label: "Select structure tree parent"
       group: meta
     structure_sortorder:
