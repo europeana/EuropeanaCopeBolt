@@ -12,7 +12,7 @@
                     {{ item.title }}
                 <div class="meta">
                     <span class="filesize">{{ fileinfo.getSizeFormatted() }}</span>
-                    <span class="date-added">Added {{ fileinfo.carbon|localedatetime("%Y-%m-%d") }}</span>
+                    <span class="date-added">Added {{ fileinfo.carbon|localedatetime("%d/%m/%Y") }}</span>
                 </div>
             </a>
         </li>

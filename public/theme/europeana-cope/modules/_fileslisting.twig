@@ -51,7 +51,7 @@ Available variables
                     {{ file.filename }}
                     <div class="meta">
                         <span class="filesize">{{ file.sizeFormatted }}</span>
-                        <span class="date-added">Added {{ file.carbon|localedatetime("%Y-%m-%d") }}</span>
+                        <span class="date-added">Added {{ file.carbon|localedatetime("%d/%m/%Y") }}</span>
                     </div>
                 </a>
             </li>
