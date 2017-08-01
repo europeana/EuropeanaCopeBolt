@@ -31,19 +31,6 @@ __nodes:
       type: image
       label: "Teaser image"
       postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers"
-  cta_defaults: &cta_defaults
-    button_text:
-      type: text
-      label: "Call to action button text"
-      group: "CTA"
-    button_link:
-      type: text
-      label: "Call to action button link"
-      group: "CTA"
-    button_intro:
-      type: text
-      label: "Optional prefix text for the call to action button"
-      group: "CTA"
   media_defaults: &media_defaults
     image:
       type: image
@@ -562,7 +549,6 @@ pages:
           placeholder: custom css class
           info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
-    <<: *cta_defaults
     <<: *media_defaults
     imagegallery:
       type: imagelist
@@ -845,7 +831,6 @@ posts:
       label: "ISBN"
       type: text
     <<: *teaser_defaults
-    <<: *cta_defaults
     <<: *support_defaults
     <<: *contact_defaults
     <<: *media_defaults
@@ -1111,7 +1096,6 @@ data:
           placeholder: custom css class
           info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
-    <<: *cta_defaults
     provided_by:
       type: text
       required: false
@@ -1456,7 +1440,6 @@ projects:
           placeholder: custom css class
           info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
-    <<: *cta_defaults
     start_event:
       type: datetime
       required: false
@@ -1716,7 +1699,6 @@ events:
           placeholder: custom css class
           info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
-    <<: *cta_defaults
     start_event:
       type: datetime
       required: false
