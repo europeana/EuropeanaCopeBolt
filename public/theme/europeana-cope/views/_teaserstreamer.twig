@@ -5,8 +5,8 @@
 <article class="column catstream-threecol teaserstreamer-{{ record.contenttype.slug }}">
     {% if item.teaser_image is defined and item.teaser_image is not empty %}
         <img src="{{ item.teaser_image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
-    {% elseif item.image is defined and item.image is not empty %}
-        <img src="{{ item.image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
+    {% elseif item.values.image is defined and item.values.image is not empty %}
+        <img src="{{ item.values.image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
     {% else %}
         <img src="{{ 'web_assets/default.png'|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
     {% endif %}

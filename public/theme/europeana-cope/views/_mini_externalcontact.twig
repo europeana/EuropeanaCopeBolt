@@ -1,8 +1,9 @@
 <div class="author-small group">
-    {% if record.image %}
-    <img class="round" src="{{ record.image|thumbnail(72, 72, 'c') }}" alt=""/>
+    {% if record.values.image is defined and record.values.image is not empty %}
+        {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
+        <img class="round" src="{{ record.values.image|thumbnail(72, 72, 'c') }}" alt=""/>
     {% else %}
-     <img class="round" src="{{ 'web_assets/default.png'|thumbnail(72, 72, 'c') }}" alt=""/>
+        <img class="round" src="{{ 'web_assets/default.png'|thumbnail(72, 72, 'c') }}" alt=""/>
     {% endif %}
     <span class="letter-overlay">{{ record.contact_name|first }}</span>
     <p class="name">{{ record.contact_name }}</p>

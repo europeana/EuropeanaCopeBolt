@@ -8,19 +8,16 @@
 
                 {% include 'partials/_header-group.twig' %}
 
-
-
-                {% if record.image is defined and record.image is not empty %}
-                <figure {% if record.author|length > 1 %}class="non-wide"{% endif %}>
-                    <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="" />
-
-                    {% if record.values.image.title is defined %}
-                        <figcaption>
-                            {{ record.values.image.title }}
-                        </figcaption>
-                    {% endif %}
-
-                </figure>
+                {% if record.values.image is defined and record.values.image is not empty %}
+                    {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
+                    <figure {% if record.author|length > 1 %}class="non-wide"{% endif %}>
+                        <img class="main-img" src="{{ record.values.image|thumbnail(1240, 600, 'c') }}" alt="" />
+                        {% if record.values.image.title is defined %}
+                            <figcaption>
+                                {{ record.values.image.title }}
+                            </figcaption>
+                        {% endif %}
+                    </figure>
                 {% endif %}
 
                 {% if record.body is not empty %}
