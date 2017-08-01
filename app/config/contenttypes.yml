@@ -39,18 +39,7 @@ __nodes:
       postfix: "The main image is displayed on individual pages."
       required: true
       extensions: [ gif, jpg, png ]
-      group: "Media"
-    attachments:
-      type: filelist
-      required: false
-      label: "Attachments (optional)"
-      group: "Media"
-    filelist_downloads:
-      type: text
-      class: narrow
-      label: "Document folder"
-      postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
-      group: "Media"
+      group: "Main"
   structure_defaults: &structure_defaults
     slug:
       type: slug
@@ -1996,26 +1985,6 @@ persons:
       type: text
       class: narrow
       variant: inline
-#    author_uid:
-#      type: text
-#      class: narrow
-#      variant: inline
-#    author_name:
-#      type: text
-#      class: narrow
-#      variant: inline
-#    modified_uid:
-#      type: text
-#      class: narrow
-#      variant: inline
-#    modified_name:
-#      type: text
-#      class: narrow
-#      variant: inline
-#    latime:
-#      type: text
-#      class: narrow
-#      variant: inline
     account_uid:
       type: text
       class: narrow
@@ -2024,37 +1993,11 @@ persons:
       type: text
       class: narrow
       variant: inline
-#    statutes_read:
-#      type: select
-#      required: false
-#      multiple: false
-#      label: "I have read & agree to the statutes"
-#      values:
-#        "(not set)": "(not set)"
-#        "false": "false"
-#        "true": "true"
-#    statutes_agree:
-#      type: select
-#      required: false
-#      multiple: false
-#      label: "I agree to statutes"
-#      values:
-#        "(not set)": "(not set)"
-#        "false": "false"
-#        "true": "true"
     <<: *structure_defaults
     slug:
       type: slug
       uses: [ first_name, last_name ]
-    subsite:
-      type: select
-      label: "Subsite"
-      values:
-        unknown: Unknown
-        pro: Europeana Pro
-        labs: Europeana Labs
-        research: Europeana Research
-        zoho: ZOHO CRM
+      prefix: "<div><h3>Site structure data</h3></div>"
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   sort: "last_name"
