@@ -1,0 +1,7 @@
+{# This file is inserted as the 'primary call to action' of each listed record. #}
+<div class="primary-call-to-action">
+    {% if record.button_intro is not empty %}
+        <p>{{ record.button_intro }}</p>
+    {% endif %}
+    <a class="button" href="{{ record.button_link }}">{{ record.button_text }}</a>
+</div>

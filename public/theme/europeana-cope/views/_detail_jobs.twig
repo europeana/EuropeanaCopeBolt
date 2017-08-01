@@ -75,3 +75,6 @@
         {{ include('partials/_default_module.twig', { 'module': module }) }}
     {% endfor %}
 
+    {% if record.button_link is defined and record.button_link is not empty %}
+        {% include 'partials/_record_cta.twig' %}
+    {% endif %}

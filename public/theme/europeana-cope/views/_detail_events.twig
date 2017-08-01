@@ -17,13 +17,8 @@
                     {{ record.body }}
                 </div>
 
-                {% if record.button_link is not empty %}
-                <div class="primary-call-to-action">
-                    {% if record.button_intro is not empty %}
-                        <p>{{ record.button_intro }}</p>
-                    {% endif %}
-                    <a class="button" href="{{ record.button_link }}">{{ record.button_text }}</a>
-                </div>
+                {% if record.button_link is defined and record.button_link is not empty %}
+                    {% include 'partials/_record_cta.twig' %}
                 {% endif %}
 
             </article>

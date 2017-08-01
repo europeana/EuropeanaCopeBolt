@@ -76,6 +76,10 @@
         {{ include('partials/_download-content.twig') }}
     {% endif %}
 
+    {% if record.button_link is defined and record.button_link is not empty %}
+        {% include 'partials/_record_cta.twig' %}
+    {% endif %}
+
     {% if record.pagefooter is defined and record.pagefooter is not empty %}
     <section>
         <div class="inner-wrap">

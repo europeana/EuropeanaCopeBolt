@@ -63,14 +63,18 @@
     </section>
     {% endif %}
 
-<aside>
-    <div class="inner-wrap">
+    {% if record.button_link is defined and record.button_link is not empty %}
+        {% include 'partials/_record_cta.twig' %}
+    {% endif %}
 
-        {# AUTHOR BIG #}
-        {% include 'modules/_teaser_author.twig' with { record : record } %}
+    <aside>
+        <div class="inner-wrap">
 
-        {# RELATED CONTENT #}
-        {% include 'modules/_related_posts.twig' with { record : record, title : 'Related' } %}
+            {# AUTHOR BIG #}
+            {% include 'modules/_teaser_author.twig' with { record : record } %}
 
-    </div>
-</aside>
+            {# RELATED CONTENT #}
+            {% include 'modules/_related_posts.twig' with { record : record, title : 'Related' } %}
+
+        </div>
+    </aside>
