@@ -52,6 +52,11 @@ __nodes:
       postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
       group: "Media"
   structure_defaults: &structure_defaults
+    slug:
+      type: slug
+      uses: title
+      group: meta
+      prefix: "<div><h3>Site structure data</h3></div>"
     subsite:
       type: select
       label: "Subsite"
@@ -66,35 +71,6 @@ __nodes:
         him: Heritage in motion
       group: meta
       postfix: "The site this content was imported from."
-      prefix: "<div><h3>Site structure data</h3></div>"
-    structure_parent:
-      type: text
-      default: ''
-      label: "Select structure tree parent"
-      group: meta
-    structure_sortorder:
-      type: integer
-      label: "Sort order in structure tree parent"
-      group: meta
-    slug:
-      type: slug
-      uses: title
-      group: meta
-    hide_list:
-      type: checkbox
-      label: "Hide from list views"
-      postfix: "Check to hide this page from listings."
-      group: meta
-    hide_related:
-      type: checkbox
-      label: "Hide from related content"
-      postfix: "Check to hide this page from related content sections."
-      group: meta
-    support_navigation:
-      type: checkbox
-      label: "Support navigation"
-      postfix: "Check to automatically generate support navigation from the headings in the main body text."
-      group: meta
     template: &template_defaults
       type: templateselect
       group: meta
