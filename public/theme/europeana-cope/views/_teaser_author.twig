@@ -18,8 +18,6 @@
             {{ item.teaser }}
         {% elseif item.introduction is defined and item.introduction is not empty %}
            {{ item.introduction|excerpt(300) }}
-        {% else %}
-            <p>{{ item.excerpt(300, false, search|default('')) }}</p>
         {% endif %}
 
         <div class="contact">
