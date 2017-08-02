@@ -1,19 +1,17 @@
 <a class="banner {{ layoutclass }}" href="{{ record.htmllink|default(record.link)|default('#') }}">
-    {% if record.image is not empty %}
     <div class="colored-image"
-        {% if layoutclass == 'third' %}
-            style="background-image: url({{ image(record.image, 600, 400)|default('notfound') }})"
-        {% elseif layoutclass == 'half' %}
-            style="background-image: url({{ image(record.image, 1000, 400)|default('notfound') }})"
+        {% if record.image is defined and record.image is not empty %}
+            {% if layoutclass == 'third' %}
+                style="background-image: url({{ image(record.image, 600, 400)|default('notfound') }})"
+            {% elseif layoutclass == 'half' %}
+                style="background-image: url({{ image(record.image, 1000, 400)|default('notfound') }})"
+            {% else %}
+                style="background-image: url({{ image(record.image, 1800, 400)|default('notfound') }})"
+            {% endif %}
         {% else %}
-            style="background-image: url({{ image(record.image, 1800, 400)|default('notfound') }})"
+             style="background-image: url({{ image('/web_assets/default.png', 600, 400) }})"
         {% endif %}
-    >
-    </div>
-    {% else %}
-        <div class="colored-image"
-             style="background-image: url({{ image('/web_assets/default.png', 600, 400) }})"></div>
-    {% endif %}
+    ></div>
 
     <div class="ripple {{ record.ripplelocation | default('no-ripple') }} {{ record.ripplecolor | default('white') }} {{ record.rippleweight | default('full') }}">
         <svg class="icon icon-ripple_thin_pro">

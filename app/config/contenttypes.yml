@@ -31,19 +31,6 @@ __nodes:
       type: image
       label: "Teaser image"
       postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers"
-  cta_defaults: &cta_defaults
-    button_text:
-      type: text
-      label: "Call to action button text"
-      group: "CTA"
-    button_link:
-      type: text
-      label: "Call to action button link"
-      group: "CTA"
-    button_intro:
-      type: text
-      label: "Optional prefix text for the call to action button"
-      group: "CTA"
   media_defaults: &media_defaults
     image:
       type: image
@@ -52,19 +39,13 @@ __nodes:
       postfix: "The main image is displayed on individual pages."
       required: true
       extensions: [ gif, jpg, png ]
-      group: "Media"
-    attachments:
-      type: filelist
-      required: false
-      label: "Attachments (optional)"
-      group: "Media"
-    filelist_downloads:
-      type: text
-      class: narrow
-      label: "Document folder"
-      postfix: "Add the name of the folder to show as a 'File browser' listing, relative to the base 'files/' folder. If left blank, no file-browser will be shown."
-      group: "Media"
+      group: "Main"
   structure_defaults: &structure_defaults
+    slug:
+      type: slug
+      uses: title
+      group: meta
+      prefix: "<div><h3>Site structure data</h3></div>"
     subsite:
       type: select
       label: "Subsite"
@@ -79,35 +60,6 @@ __nodes:
         him: Heritage in motion
       group: meta
       postfix: "The site this content was imported from."
-      prefix: "<div><h3>Site structure data</h3></div>"
-    structure_parent:
-      type: text
-      default: ''
-      label: "Select structure tree parent"
-      group: meta
-    structure_sortorder:
-      type: integer
-      label: "Sort order in structure tree parent"
-      group: meta
-    slug:
-      type: slug
-      uses: title
-      group: meta
-    hide_list:
-      type: checkbox
-      label: "Hide from list views"
-      postfix: "Check to hide this page from listings."
-      group: meta
-    hide_related:
-      type: checkbox
-      label: "Hide from related content"
-      postfix: "Check to hide this page from related content sections."
-      group: meta
-    support_navigation:
-      type: checkbox
-      label: "Support navigation"
-      postfix: "Check to automatically generate support navigation from the headings in the main body text."
-      group: meta
     template: &template_defaults
       type: templateselect
       group: meta
@@ -384,6 +336,7 @@ pages:
             calltoactionform:  "Call to action form main page (_calltoactionform.twig)"
             calltoactionlink:  "Call to action button main page (_calltoactionlinks.twig)"
             calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
+            calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
             body:              "Module body field - for extra body blocks between modules (_body.twig)"
@@ -561,7 +514,6 @@ pages:
           placeholder: custom css class
           info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
-    <<: *cta_defaults
     <<: *media_defaults
     imagegallery:
       type: imagelist
@@ -662,7 +614,7 @@ posts:
             bannertriple:      "Three banners view (_bannertriple.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
-            calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
+            calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
         body:
@@ -844,7 +796,6 @@ posts:
       label: "ISBN"
       type: text
     <<: *teaser_defaults
-    <<: *cta_defaults
     <<: *support_defaults
     <<: *contact_defaults
     <<: *media_defaults
@@ -941,7 +892,7 @@ data:
             bannertriple:      "Three banners view (_bannertriple.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
-            calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
+            calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
         body:
@@ -1110,7 +1061,6 @@ data:
           placeholder: custom css class
           info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
-    <<: *cta_defaults
     provided_by:
       type: text
       required: false
@@ -1286,7 +1236,7 @@ projects:
             bannertriple:      "Three banners view (_bannertriple.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
-            calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
+            calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
         body:
@@ -1455,7 +1405,6 @@ projects:
           placeholder: custom css class
           info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
-    <<: *cta_defaults
     start_event:
       type: datetime
       required: false
@@ -1546,7 +1495,7 @@ events:
             bannertriple:      "Three banners view (_bannertriple.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
-            calltoactionblog:  "Call to action blog page (_calltoactionblog.twig)"
+            calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
         body:
@@ -1715,7 +1664,6 @@ events:
           placeholder: custom css class
           info: If you need to add custom css classes you can enter them here
     <<: *teaser_defaults
-    <<: *cta_defaults
     start_event:
       type: datetime
       required: false
@@ -2037,26 +1985,6 @@ persons:
       type: text
       class: narrow
       variant: inline
-#    author_uid:
-#      type: text
-#      class: narrow
-#      variant: inline
-#    author_name:
-#      type: text
-#      class: narrow
-#      variant: inline
-#    modified_uid:
-#      type: text
-#      class: narrow
-#      variant: inline
-#    modified_name:
-#      type: text
-#      class: narrow
-#      variant: inline
-#    latime:
-#      type: text
-#      class: narrow
-#      variant: inline
     account_uid:
       type: text
       class: narrow
@@ -2065,37 +1993,11 @@ persons:
       type: text
       class: narrow
       variant: inline
-#    statutes_read:
-#      type: select
-#      required: false
-#      multiple: false
-#      label: "I have read & agree to the statutes"
-#      values:
-#        "(not set)": "(not set)"
-#        "false": "false"
-#        "true": "true"
-#    statutes_agree:
-#      type: select
-#      required: false
-#      multiple: false
-#      label: "I agree to statutes"
-#      values:
-#        "(not set)": "(not set)"
-#        "false": "false"
-#        "true": "true"
     <<: *structure_defaults
     slug:
       type: slug
       uses: [ first_name, last_name ]
-    subsite:
-      type: select
-      label: "Subsite"
-      values:
-        unknown: Unknown
-        pro: Europeana Pro
-        labs: Europeana Labs
-        research: Europeana Research
-        zoho: ZOHO CRM
+      prefix: "<div><h3>Site structure data</h3></div>"
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   sort: "last_name"
