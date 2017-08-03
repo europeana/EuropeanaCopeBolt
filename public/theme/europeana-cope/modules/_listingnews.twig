@@ -74,12 +74,13 @@ Available variables
              {% set type = 'posts' %}
         {% endif %}
 
+        <div class="calltoaction-readmore colored-image"
         {% if records|first.image is not empty %}
-           <div class="calltoaction-readmore colored-image" style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})">
+            style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})"
         {% else %}
-            <div class="calltoaction-readmore colored-image" style="background-image: url({{ image('web_assets/default.png', 900, 90) }})">
-        {% endif %}
-
+            style="background-image: url({{ image('web_assets/default.png', 900, 90) }})"
+        {% endif -%}
+        >
             <div class="header-group">
                 <p>Find out what else has happened</p>
                 <a class="button-link" href="/posts/news">
