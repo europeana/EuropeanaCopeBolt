@@ -3,9 +3,10 @@
 {% block bodyclass 'contentpage detail-'~record.contenttype.slug %}
 
 {% block main %}
+    {% set recordtemplate =  'views/_detail_' ~ record.slug ~ '.twig' %}
     {% set template =  'views/_detail_' ~ record.contenttype.slug ~ '.twig' %}
     <!-- loading templatefile for view: '{{ template }}' or 'views/_details.twig' or 'views/_fallback.twig' -->
-    {% include [template, 'views/_detail.twig', 'views/_fallback.twig'] with {record:record} %}
+    {% include [recordtemplate, template, 'views/_detail.twig', 'views/_fallback.twig'] with {record:record} %}
 
     {# uncomment this for more debug information #}
     {# {{ dump(record) }} #}
