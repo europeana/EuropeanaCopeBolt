@@ -60,30 +60,33 @@ Available variables
 
     {# onderstaande Call to action hoort onder deze Two Column teasers #}
 
-    {% if records|first.posttype == 'Blog' %}
-        {% set type = 'blogs' %}
-    {% elseif records|first.posttype == 'Pressrelease' %}
-        {% set type = 'pressreleases' %}
-    {% elseif records|first.posttype == 'Publication' %}
-        {% set type = 'publications' %}
-    {% elseif records|first.posttype == 'News' %}
-        {% set type = 'news' %}
-    {% else %}
-         {% set type = 'posts' %}
-    {% endif %}
+    {% if records is iterable and records is not empty %}
 
-    {% if records|first.image is not empty %}
-       <div class="calltoaction-readmore colored-image" style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})">
-    {% else %}
-        <div class="calltoaction-readmore colored-image" style="background-image: url({{ image('web_assets/default.png', 900, 90) }})">
-    {% endif %}
+        {% if records|first.posttype == 'Blog' %}
+            {% set type = 'blogs' %}
+        {% elseif records|first.posttype == 'Pressrelease' %}
+            {% set type = 'pressreleases' %}
+        {% elseif records|first.posttype == 'Publication' %}
+            {% set type = 'publications' %}
+        {% elseif records|first.posttype == 'News' %}
+            {% set type = 'news' %}
+        {% else %}
+             {% set type = 'posts' %}
+        {% endif %}
 
-        <div class="header-group">
-            <p>Find out what else has happened</p>
-            <a class="button-link" href="/posts/news">
-                See more {{ type }}
-            </a>
+        {% if records|first.image is not empty %}
+           <div class="calltoaction-readmore colored-image" style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})">
+        {% else %}
+            <div class="calltoaction-readmore colored-image" style="background-image: url({{ image('web_assets/default.png', 900, 90) }})">
+        {% endif %}
+
+            <div class="header-group">
+                <p>Find out what else has happened</p>
+                <a class="button-link" href="/posts/news">
+                    See more {{ type }}
+                </a>
+            </div>
         </div>
-    </div>
+    {% endif %}
 
 </section>
