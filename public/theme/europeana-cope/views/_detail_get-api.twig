@@ -49,11 +49,9 @@ or record.pagetype == 'landingpage-nohighlight'
                     </figure>
                 {% endif %}
 
-                {% if record.body is not empty %}
-                    <div class="body"> {# can be multiple bodies #}
-                        {{ apikeyform() }}
-                    </div>
-                {% endif %}
+                <div class="body"> {# can be multiple bodies #}
+                    {{ apikeyform() }}
+                </div>
 
                 {% if record.body is not empty %}
                     <div class="body"> {# can be multiple bodies #}
