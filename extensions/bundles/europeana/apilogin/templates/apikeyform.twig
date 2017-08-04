@@ -1,0 +1,46 @@
+<form action="{{ destination }}" class="{{ value.classes|default('contact-form') }}" method="POST">
+    <fieldset>
+        {% for key, value in fields %}
+            {% if key != 'recaptcha' %}
+                <div class="{{ value.classes|default('field-container') }}">
+                    <label for="{{ key }}"{% if value.error is not empty %} class="error"{% endif %}>{{ value.label }}{% if value.required == true %}
+                        <abbr title="Required">*</abbr>{% endif %}</label>
+                    <input
+                        id="{{ key }}"
+                        name="{{ key }}"
+                        type="{{ value.type }}"
+                        {% if value.postedValue is not empty %}
+                            value="{{ value.postedValue }}"
+                        {% else %}
+                            placeholder="{{ value.placeholder }}"
+                        {% endif %}
+                        {% if value.error is not empty %} class="is-error"{% endif %}
+                    />
+                    {% if value.error is not empty %}
+                    <p class="is-error">{{ value.error }}</p>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+        {% if config.recaptcha.enabled is defined and config.recaptcha.enabled == true %}
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <fieldset class="field-container recaptcha-container">
+            <div
+            {% if fields.recaptcha.error|default() is not empty %}
+               class="is_error" style="border: 1px solid #f00; padding: 2px;"
+            {% else %}
+                class="all_clear" style="padding: 3px;"
+            {% endif %}
+            >
+                <div class="g-recaptcha" data-sitekey="{{ config.recaptcha.sitekey }}"></div>
+            {% if fields.recaptcha.error|default() is not empty %}
+                <p class="is-error">{{ fields.recaptcha.error }}</p>
+            {% endif %}
+            </div>
+        </fieldset>
+        {% endif %}
+        <fieldset class="submit-contact">
+            <input type="submit" value="{{ submit.label }}" />
+        </fieldset>
+    </fieldset>
+</form>

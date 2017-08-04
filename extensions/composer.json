@@ -4,7 +4,8 @@
             "Bolt\\Composer\\EventListener\\": "../vendor/bolt/bolt/src/Composer/EventListener",
             "Bolt\\Extension\\Europeana\\ViewBlocks\\": "bundles/europeana/viewblocks/src",
             "Bolt\\Extension\\Europeana\\ZohoImport\\": "bundles/europeana/zohoimport/src",
-            "Bolt\\Extension\\Europeana\\SelectAsync\\": "bundles/europeana/selectasync/src"
+            "Bolt\\Extension\\Europeana\\SelectAsync\\": "bundles/europeana/selectasync/src",
+            "Bolt\\Extension\\Europeana\\ApiLogin\\": "bundles/europeana/apilogin/src"
         }
     },
     "config": {
