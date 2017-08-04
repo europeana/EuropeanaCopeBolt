@@ -25,6 +25,8 @@ form:
             required: false
     submit:
         label: Request key
+debug:
+    verbose: false
 credentials:
     base_uri: http://www.europeana.eu/api/
     login_url: http://www.europeana.eu/api/login.do

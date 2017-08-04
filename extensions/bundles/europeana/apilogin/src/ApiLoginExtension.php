@@ -14,6 +14,7 @@ class ApiLoginExtension extends SimpleExtension
 {
   private $app;
   private $config;
+  private $verbose = false;
   private $posted = false;
   private $valid_input = false;
   private $form_errors = array();
@@ -25,6 +26,9 @@ class ApiLoginExtension extends SimpleExtension
   {
     $this->app = $this->getContainer();
     $this->config = $this->getConfig();
+    if($this->config['debug']['verbose'] == true) {
+      $this->verbose = true;
+    }
     return [
       'apikeyform' => ['showApiKeyForm', ['is_safe' => ['html']]]
     ];
@@ -61,25 +65,35 @@ class ApiLoginExtension extends SimpleExtension
       $this->posted = true;
       $postvars = $this->app['request']->request->all();
       $this->validateInput($postvars);
-      //dump('posted is true', $postvars);
+      if($this->verbose) {
+        dump('posted is true', $postvars);
+      }
     }
 
     if($this->posted && $this->valid_input) {
       $results = $this->dispatchRemoteRequest();
-      //dump('remote request', $results);
+      if($this->verbose) {
+        dump('remote request', $results);
+      }
       if($results->success == true) {
-        //dump('dispatchRemoteRequest did something right', $results);
+        if($this->verbose) {
+          dump('dispatchRemoteRequest did something right', $results);
+        }
         $html = $this->renderTemplate($template_thanks, array(
           'config' => $this->config
         ));
         $this->app['logger.system']->info('Created API key.', array('event' => 'ApiKeyHelper'));
       } else {
         $html = "<p>There was an error requesting an API key. Please try again later.</p>";
-        //dump('dispatchRemoteRequest did something wrong', $results);
+        if($this->verbose) {
+          dump('dispatchRemoteRequest did something wrong', $results);
+        }
         $this->app['logger.system']->error('Failed to create an API key', array('event' => 'ApiKeyHelper'));
       }
     } else {
-      //dump('invalid or not posted', $this);
+      if($this->verbose) {
+        dump('invalid or not posted', $this);
+      }
       // add form error text to display
       if(!empty($this->form_errors)) {
         foreach($this->form_errors as $key => $value) {
@@ -117,9 +131,13 @@ class ApiLoginExtension extends SimpleExtension
     if($this->config['recaptcha']['enabled'] == true) {
       // request remote recaptcha
       $recaptcharesult = $this->dispatchRecaptchaRequest($postvars);
-      //dump('recaptcha result', $recaptcharesult->success);
+      if($this->verbose) {
+        dump('recaptcha result', $recaptcharesult);
+      }
       if($recaptcharesult->success != true || $recaptcharesult->success != 'true') {
-        //dump('recaptcha failed');
+        if($this->verbose) {
+          dump('recaptcha failed');
+        }
         $this->valid_input = false;
         $this->form_errors['recaptcha'] = 'Please complete the reCAPTCHA test.';
         $has_errors = true;
@@ -137,7 +155,9 @@ class ApiLoginExtension extends SimpleExtension
     }
 
     if($has_errors) {
-      //dump('validator has errors');
+      if($this->verbose) {
+        dump('validator has errors', $this->form_errors);
+      }
       $this->valid_input = false;
       return $this->valid_input;
     } else {
@@ -169,7 +189,9 @@ class ApiLoginExtension extends SimpleExtension
     } else {
       $checkvars['remoteip'] = $remote_ip;
     }
-    //dump('do dispatchRecaptchaRequest', $postvars, $request_url, $checkvars);
+    if($this->verbose) {
+      dump('do dispatchRecaptchaRequest', $request_url, $postvars, $checkvars);
+    }
 
     foreach ($checkvars as $key => $value) {
       $sendvars[$key] = $value;
@@ -179,13 +201,19 @@ class ApiLoginExtension extends SimpleExtension
       $response = $this->app['guzzle.client']->request('GET', $request_url, ['query' => $sendvars]);
       $returnvalue = $response->getBody()->getContents();
       $returnvaluej = json_decode($returnvalue);
+
+      if($this->verbose) {
+        dump('response dispatchRecaptchaRequest', $response, $returnvalue);
+      }
     } catch(RequestException $e) {
       $request = $e->getRequest();
       if ($e->hasResponse()) {
         $returnvalue = $e->getResponse();
         $returnvalue->returnstatus = $returnvalue->getStatusCode();
       }
-      //dump('error dispatchRemoteRequest', $request, $returnvalue);
+      if($this->verbose) {
+        dump('error dispatchRecaptchaRequest', $request, $returnvalue);
+      }
       $returnvalue->success = false;
       $returnvaluej = $returnvalue;
     }
@@ -201,7 +229,9 @@ class ApiLoginExtension extends SimpleExtension
 
     $request_url = 'http://'. $this->config['credentials']['fields']['j_username'] .':'. $this->config['credentials']['fields']['j_password'] .'@www.europeana.eu/api/admin/apikey';
 
-    //dump('start dispatchRemoteRequest postvars', $request_url);
+    if($this->verbose) {
+      dump('start dispatchRemoteRequest postvars', $request_url);
+    }
     $postvars = $this->app['request']->request->all();
     $valid_keys = ['email', 'firstName', 'lastName', 'company'];
     foreach ($postvars as $key => $value) {
@@ -209,13 +239,20 @@ class ApiLoginExtension extends SimpleExtension
         $sendvars[$key] = $value;
       }
     }
-    //dump('dispatchRemoteRequest sendvars', $sendvars);
+    if($this->verbose) {
+      dump('dispatchRemoteRequest sendvars', $sendvars);
+    }
 
     try {
       $response = $this->app['guzzle.client']->request(
         'POST',
         $request_url,
-        ['form_params' => $sendvars]
+        [
+          'json' => $sendvars,
+          'headers' => [
+            'Content-Type' => 'application/json',
+          ]
+        ]
       );
       $returncontent = $response->getBody()->getContents();
       if(is_string($returncontent)) {
@@ -225,13 +262,18 @@ class ApiLoginExtension extends SimpleExtension
       }
       $returnvalue->success = true;
       $returnvalue->returnstatus = $response->getStatusCode();
+      if($this->verbose) {
+        dump('resonse dispatchRemoteRequest', $response, $returncontent, $returnvalue);
+      }
     } catch(RequestException $e) {
       $request = $e->getRequest();
       if ($e->hasResponse()) {
         $returnvalue = $e->getResponse();
         $returnvalue->returnstatus = $returnvalue->getStatusCode();
       }
-      //dump('error dispatchRemoteRequest', $request, $returnvalue);
+      if($this->verbose) {
+        dump('error dispatchRemoteRequest', $e, $request, $returnvalue);
+      }
       $returnvalue->success = false;
     }
     // dump('end dispatchRemoteRequest', $returnstatus, $returnvalue);
