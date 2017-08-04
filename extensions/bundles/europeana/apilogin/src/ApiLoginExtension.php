@@ -177,7 +177,7 @@ class ApiLoginExtension extends SimpleExtension
 
     try {
       $response = $this->app['guzzle.client']->request('GET', $request_url, ['query' => $sendvars]);
-      $returnvalue = $response->getBody()->getContent();
+      $returnvalue = $response->getBody()->getContents();
       $returnvaluej = json_decode($returnvalue);
     } catch(RequestException $e) {
       $request = $e->getRequest();
@@ -217,7 +217,7 @@ class ApiLoginExtension extends SimpleExtension
         $request_url,
         ['form_params' => $sendvars]
       );
-      $returncontent = $response->getBody()->getContent();
+      $returncontent = $response->getBody()->getContents();
       if(is_string($returncontent)) {
         $returnvalue = json_decode($returncontent);
       } else {
