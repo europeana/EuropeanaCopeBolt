@@ -3,6 +3,7 @@
 namespace Bolt\Extension\Europeana\ApiLogin;
 
 use Bolt\Extension\SimpleExtension;
+use GuzzleHttp\Exception\RequestException;
 
 /**
  * ExtensionName extension class.
@@ -60,23 +61,25 @@ class ApiLoginExtension extends SimpleExtension
       $this->posted = true;
       $postvars = $this->app['request']->request->all();
       $this->validateInput($postvars);
+      dump('posted is true', $postvars);
     }
 
     if($this->posted && $this->valid_input) {
-      $temp = $this->dispatchRemoteRequest();
-      //dump($temp);
-      if($temp->success == true) {
+      $results = $this->dispatchRemoteRequest();
+      dump('remote request', $results);
+      if($results->success == true) {
+        dump('dispatchRemoteRequest did something right', $results);
         $html = $this->renderTemplate($template_thanks, array(
           'config' => $this->config
         ));
         $this->app['logger.system']->info('Created API key.', array('event' => 'ApiKeyHelper'));
       } else {
         $html = "<p>There was an error requesting an API key. Please try again later.</p>";
-        // dump('dispatchRemoteRequest did something wrong');
-        // dump($temp);
+        dump('dispatchRemoteRequest did something wrong', $results);
         $this->app['logger.system']->error('Failed to create an API key', array('event' => 'ApiKeyHelper'));
       }
     } else {
+      dump('invalid or not posted', $this);
       // add form error text to display
       if(!empty($this->form_errors)) {
         foreach($this->form_errors as $key => $value) {
@@ -114,10 +117,9 @@ class ApiLoginExtension extends SimpleExtension
     if($this->config['recaptcha']['enabled'] == true) {
       // request remote recaptcha
       $recaptcharesult = $this->dispatchRecaptchaRequest($postvars);
-      // dump('recaptcha result');
-      // dump($recaptcharesult->success);
+      dump('recaptcha result', $recaptcharesult->success);
       if($recaptcharesult->success != true || $recaptcharesult->success != 'true') {
-        // dump('recaptcha failed');
+        dump('recaptcha failed');
         $this->valid_input = false;
         $this->form_errors['recaptcha'] = 'Please complete the reCAPTCHA test.';
         $has_errors = true;
@@ -135,9 +137,11 @@ class ApiLoginExtension extends SimpleExtension
     }
 
     if($has_errors) {
+      dump('validator has errors');
       $this->valid_input = false;
       return $this->valid_input;
     } else {
+      dump('validator thinks this is ok');
       $this->valid_input = true;
       return $this->valid_input;
     }
@@ -150,14 +154,9 @@ class ApiLoginExtension extends SimpleExtension
    */
   protected function dispatchRecaptchaRequest($postvars)
   {
-    //dump('start dispatchRecaptchaRequest');
-    // dump($postvars);
-
     $checkvars = [];
 
-    $ch = curl_init();
     $request_url = $this->config['recaptcha']['remoteurl'];
-    //dump($request_url);
 
     $checkvars['secret'] = $this->config['recaptcha']['secret'];
     $checkvars['response'] = $postvars['g-recaptcha-response'];
@@ -170,28 +169,29 @@ class ApiLoginExtension extends SimpleExtension
     } else {
       $checkvars['remoteip'] = $remote_ip;
     }
-    // dump($checkvars);
+    dump('do dispatchRecaptchaRequest', $postvars, $request_url, $checkvars);
 
-    // format fields for curl request
-    $fields_count = 0;
-    foreach($checkvars as $key=>$value) {
-      $fields_arr[] = $key.'='.$value;
-      $fields_count++;
+    foreach ($checkvars as $key => $value) {
+      if (in_array($key, $valid_keys)) {
+        $sendvars[$key] = $value;
+      }
     }
-    $fields_string = join('&', $fields_arr);
 
-    curl_setopt($ch, CURLOPT_URL,            $request_url );
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
-    curl_setopt($ch, CURLOPT_HEADER,         false );
-    curl_setopt($ch, CURLOPT_POST,           $fields_count );
-    curl_setopt($ch, CURLOPT_POSTFIELDS,     $fields_string );
-    // dump($ch);
-
-    $returnvalue = curl_exec($ch);
-    //dump($returnvalue);
-    $returnvaluej = json_decode($returnvalue);
-    //dump($returnvaluej);
-    //dump('end dispatchRecaptchaRequest');
+    try {
+      $response = $this->app['guzzle.client']->request('GET', $request_url, ['query' => $sendvars]);
+      $returnvalue = $response->getBody()->getContent();
+      $returnvaluej = json_decode($returnvalue);
+    } catch(RequestException $e) {
+      $request = $e->getRequest();
+      if ($e->hasResponse()) {
+        $returnvalue = $e->getResponse();
+        $returnvalue->returnstatus = $returnvalue->getStatusCode();
+      }
+      dump('error dispatchRemoteRequest', $request, $returnvalue);
+      $returnvalue->success = false;
+      $returnvaluej = $returnvalue;
+    }
+    dump('end dispatchRecaptchaRequest', $returnvaluej, $returnvaluej);
     return $returnvaluej;
   }
 
@@ -200,35 +200,44 @@ class ApiLoginExtension extends SimpleExtension
    */
   protected function dispatchRemoteRequest()
   {
-    // dump('start dispatchRemoteRequest');
 
-    $ch = curl_init();
     $request_url = 'http://'. $this->config['credentials']['fields']['j_username'] .':'. $this->config['credentials']['fields']['j_password'] .'@www.europeana.eu/api/admin/apikey';
-    // dump($request_url);
 
+    //dump('start dispatchRemoteRequest postvars', $request_url);
     $postvars = $this->app['request']->request->all();
-
     $valid_keys = ['email', 'firstName', 'lastName', 'company'];
     foreach ($postvars as $key => $value) {
       if (in_array($key, $valid_keys)) {
         $sendvars[$key] = $value;
       }
     }
+    //dump('dispatchRemoteRequest sendvars', $sendvars);
 
-    // dump($sendvars);
-
-    curl_setopt($ch, CURLOPT_URL,            $request_url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
-    curl_setopt($ch, CURLOPT_HEADER,         false );
-    curl_setopt($ch, CURLOPT_POST,           1 );
-    curl_setopt($ch, CURLOPT_POSTFIELDS,     json_encode($sendvars, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) );
-    curl_setopt($ch, CURLOPT_HTTPHEADER,     array('Content-Type: application/json'));
-    //dump($ch);
-
-    $returnvalue = curl_exec($ch);
-    // dump($returnvalue);
-    // dump('end dispatchRemoteRequest');
-    return json_decode($returnvalue);
+    try {
+      $response = $this->app['guzzle.client']->request(
+        'POST',
+        $request_url,
+        ['form_params' => $sendvars]
+      );
+      $returncontent = $response->getBody()->getContent();
+      if(is_string($returncontent)) {
+        $returnvalue = json_decode($returncontent);
+      } else {
+        $returnvalue = $returncontent;
+      }
+      $returnvalue->success = true;
+      $returnvalue->returnstatus = $response->getStatusCode();
+    } catch(RequestException $e) {
+      $request = $e->getRequest();
+      if ($e->hasResponse()) {
+        $returnvalue = $e->getResponse();
+        $returnvalue->returnstatus = $returnvalue->getStatusCode();
+      }
+      dump('error dispatchRemoteRequest', $request, $returnvalue);
+      $returnvalue->success = false;
+    }
+    // dump('end dispatchRemoteRequest', $returnstatus, $returnvalue);
+    return $returnvalue;
   }
 
   /**
