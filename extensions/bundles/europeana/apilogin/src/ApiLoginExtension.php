@@ -172,9 +172,7 @@ class ApiLoginExtension extends SimpleExtension
     dump('do dispatchRecaptchaRequest', $postvars, $request_url, $checkvars);
 
     foreach ($checkvars as $key => $value) {
-      if (in_array($key, $valid_keys)) {
-        $sendvars[$key] = $value;
-      }
+      $sendvars[$key] = $value;
     }
 
     try {
