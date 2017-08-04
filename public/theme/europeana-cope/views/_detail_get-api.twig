@@ -1,0 +1,110 @@
+{% if record.pagetype is defined
+and not (
+record.pagetype == 'landingpage'
+or record.pagetype == 'landingpage-nohighlight'
+)
+%}
+    {# HIDE this complete section on landingpages #}
+    <section>
+        <div class="inner-wrap">
+            <article class="column main-column">
+
+                {% if record.pagetype != 'landingpage' %} {# als landingpage > branding in de highlights #}
+                    {% include 'partials/_community-info.twig' %}
+                {% endif %}
+
+                {% include 'partials/_side-info.twig' %}
+
+                <div class="header-group">
+
+                    {% if record.contact_name is not empty %}
+                        {% include 'modules/_mini_persons.twig' with { record: record } %}
+                    {% endif %}
+
+                    {% if record.pagetype is defined
+                    and not (
+                    record.pagetype == 'landingpage'
+                    or record.pagetype == 'landingpage-nohighlight'
+                    )
+                    %}
+                        <h1>{{ record.title }}</h1>
+                    {% endif %}
+
+                    {% if record.intro is not empty %}
+                        <div class="introduction">
+                            {{ record.intro }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                {% if record.values.image is defined and record.values.image is not empty %}
+                    {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
+                    <figure>
+                        <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="ALT" />
+                        {% if record.values.image.title is defined %}
+                            <figcaption>
+                                {{ record.values.image.title }}
+                            </figcaption>
+                        {% endif %}
+                    </figure>
+                {% endif %}
+
+                {% if record.body is not empty %}
+                    <div class="body"> {# can be multiple bodies #}
+                        {{ apikeyform() }}
+                    </div>
+                {% endif %}
+
+                {% if record.body is not empty %}
+                    <div class="body"> {# can be multiple bodies #}
+                        {{ record.body }}
+                    </div>
+                {% endif %}
+
+                {% if record.imagegallery is not empty %}
+                    {% include 'views/_imagegallery.twig' %}
+                {% endif %}
+
+            </article>
+
+        </div>
+    </section>
+{% endif %}
+
+
+    {% for module in record.modules if (global.request.get('_route') != "preview") %}
+        {{ include('partials/_default_module.twig', { 'module': module }) }}
+    {% endfor %}
+
+    {% if record.attachments is defined and record.attachments is not empty %}
+        {{ include('partials/_download-content.twig') }}
+    {% endif %}
+
+    {% if record.button_link is defined and record.button_link is not empty %}
+        {% include 'partials/_record_cta.twig' %}
+    {% endif %}
+
+    {% if record.pagefooter is defined and record.pagefooter is not empty %}
+        <section>
+            <div class="inner-wrap">
+                <article class="column main-column">
+                    <div class="body pagefooter">
+                        {{ record.pagefooter }}
+                    </div>
+                </article>
+            </div>
+        </section>
+    {% endif %}
+
+
+<aside>
+    <div class="inner-wrap">
+
+        {# AUTHOR BIG #}
+        {% include 'modules/_teaser_author.twig' with { record : record } %}
+
+        {# RELATED CONTENT #}
+        {% include 'modules/_related_posts.twig' with { record : record, title : 'Related' } %}
+
+    </div>
+</aside>
