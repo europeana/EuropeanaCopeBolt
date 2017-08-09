@@ -3,6 +3,7 @@
 {% endif %}
 
 <article class="teaser teaser-projects group">
+
         <div class="img-container">
 
         {% if item.teaser_image is defined and item.teaser_image is not empty %}
@@ -23,7 +24,14 @@
                     Project
                 {% endif %}
             </span>
-            <span class="info-date">Updated: {{ item.datechanged|localedatetime("%e %B  %Y") }}</span>
+            {% if item.projecttype == 'TaskForce' %}
+                {# {% include 'partials/_event-datetime.twig' %} #}
+                {% if item.start_event is defined and item.start_event is not empty %}
+                    <span class="info-date">{{ item.start_event|localedatetime("%e %B  %Y") }} - {{ item.end_event|localedatetime("%e %B  %Y") }}</span>
+                {% endif %}
+            {% else %}
+                <span class="info-date">Start: {{ item.datechanged|localedatetime("%e %B  %Y") }}</span>
+            {% endif %}
 
              {% if item.contact_record is not empty %}
                 {% set contacts = item.contact_record %}

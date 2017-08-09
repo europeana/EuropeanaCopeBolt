@@ -973,7 +973,7 @@ ul.play-menu {
     font-weight: 700;
     letter-spacing: -0.5px;
     color: #293745;
-    display: inline-block;
+    display: block;
     cursor: default;
     margin: 10px 0 0 0; }
 
@@ -3189,6 +3189,71 @@ table.listingtable {
       content: "|";
       color: #095f90;
       margin: 0 .5rem; }
+
+/* blue to raspberry gradient*/
+.grad_network .colored-image {
+  background-color: transparent; }
+  .grad_network .colored-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-210deg, rgba(9, 95, 144, 0.75) 0%, #E11D53 100%);
+    mix-blend-mode: multiply; }
+
+/* blue to green gradient */
+.grad_reuse .colored-image {
+  background-color: transparent; }
+  .grad_reuse .colored-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-197deg, rgba(26, 138, 199, 0.8) 0%, #37B98B 100%);
+    mix-blend-mode: multiply; }
+
+/* blue to purple gradient */
+.grad_research .colored-image {
+  background-color: transparent; }
+  .grad_research .colored-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-197deg, rgba(26, 138, 199, 0.8) 0%, #7F3978 100%);
+    mix-blend-mode: multiply; }
+
+/* blue to lighter blue gradient */
+.grad_collections .colored-image {
+  background-color: transparent; }
+  .grad_collections .colored-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(20deg, rgba(26, 138, 199, 0.75) 0%, #095F90 100%);
+    mix-blend-mode: multiply; }
+
+/* blue to orange gradient */
+.grad_orange .colored-image {
+  background-color: transparent; }
+  .grad_orange .colored-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-197deg, rgba(26, 138, 199, 0.8) 0%, #D43900 100%);
+    mix-blend-mode: multiply; }
 
 .skin-research nav.quicklinks ul,
 .skin-research .topbar {
