@@ -2091,3 +2091,161 @@ resources:
 
 #################################
 #################################
+#################################
+#
+# BLOG POST
+#
+# Notes:
+# If this is type authors is populated, then instead of showing [By Owner] eg, "By Dean Birkett" in the byline, it will show "By [Written by]"
+# Type Attachments should link directly with our DMS. This should allow for multiple files to be added, and not just one file
+# Type owner is not shown at all if the Written by section is populated; I think dependet choice list are not possible?
+#
+#################################
+blogposts:
+  name: 'Culturelover posts'
+  singular_name: 'Culturelover post'
+  slug: 'blogposts'
+  singular_slug: 'blogpost'
+  fields:
+    # Show on Blog list page, Blog page, Related items snippet, Home page
+    title:
+      type: text
+      required: true
+      label: "Title (required):"
+      group: "Blog post"
+    slug:
+      type: slug
+      uses: title
+    introduction:
+      type: text
+      required: false
+      label: "Introduction:"
+      postfix: "(One small sentence for overview pages)"
+    # Shown on Blog page
+    body:
+      type: html
+      required: false
+      label: "Body (required):"
+      height: 150px
+    # multiselect from dms
+    # Show on Blog list page, Related items snippet, Home page
+    image:
+      type: image
+      required: false
+      label: "Teaser image:"
+      attrib: title
+      extensions: [ gif, jpg, png ]
+    # Show on Blog page
+    attachments:
+      type: filelist
+      required: false
+      label: "Attachments:"
+    original_url:
+      type: text
+      postfix: "The original URL, as imported from Wordpress."
+    original_author:
+      type: text
+      postfix: "The original author, as imported from Wordpress."
+  # Show on Blog page
+  taxonomy: [ tags, blogs ]
+  relations:
+    persons:
+      label: "Author(s) Contacts"
+      multiple: true
+      format: "{{ item.last_name }}, {{ item.first_name }}"
+      order: last_name
+  recordsperpage: 50
+  icon_many: "fa:quote-left"
+  icon_one: "fa:quote-right"
+  viewless: true
+  sort: -datepublish
+
+#################################
+#
+# EVENT
+#
+# Notes:
+# Requirement: On occasion we will not know the exact dates of events, but we would like to announce them.
+# For the day / month fields, there should be a (not known) to allow the user control over this.
+# => Did not follow the date style with different text fields; If date fields are not filled out make them unknown
+# Documents folder: This is required, so that you can show the root folder where the event documentation is going to be
+# stored. This will be created in the DMS first, and the user can then select this folder.
+# The folder area will be shown on the single events page, and when files are uploaded into this area,
+# then the website will update automatically.
+#
+#################################
+blogevents:
+  name: 'Culturelover events'
+  singular_name: 'Culturelover event'
+  slug: 'blogevents'
+  singular_slug: 'blogevent'
+  fields:
+    # Show on Events list page, Events page, Home page
+    title:
+      type: text
+      required: true
+      label: "Title (required):"
+      variant: inline
+      group: "Event information"
+    slug:
+      type: slug
+      uses: title
+    start_event:
+      type: datetime
+      required: false
+      label: "Start:"
+    unconfirmed_start:
+      type: checkbox
+      required: false
+      label: "Unconfirmed:"
+    # If the end date and the start date are the same, then the end date will not show
+    # Show on Events list page, Events page, Home page
+    end_event:
+      type: datetime
+      required: false
+      label: "End:"
+    unconfirmed_end:
+      type: checkbox
+      required: false
+      label: "Unconfirmed:"
+    introduction:
+      type: text
+      required: false
+      label: "Introduction:"
+      postfix: "(One small sentence for overview pages)"
+    teaser:
+      type: html
+      required: true
+      label: "Teaser (required):"
+      height: 150px
+    # Show on Events list page, Events page, Home page
+    body:
+      type: html
+      required: true
+      label: "Body (required):"
+      height: 150px
+    # Shown on Individual pages, Lists, Overviews, Teasers
+    teaser_image:
+      type: image
+      required: false
+      label: "Teaser image:"
+    attachments:
+      type: filelist
+      required: false
+      label: "Attachments:"
+    # If this is checked, then the contact persons secondary email will be shown instead of their primary email in the contact block
+    original_url:
+      type: text
+      postfix: "The original URL, as imported from Wordpress."
+  taxonomy: [ tags ]
+  relations:
+    persons:
+      multiple: true
+      label: "Speakers (Contacts)"
+      order: last_name
+      format: "{{ item.last_name }}, {{ item.first_name }}"
+  recordsperpage: 50
+  icon_many: "fa:calendar"
+  icon_one: "fa:calendar"
+  viewless: true
+  sort: start_event

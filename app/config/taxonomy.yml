@@ -74,6 +74,23 @@ categories:
 #        year_of_cultural_heritage: Year of Cultural Heritage
     postfix: "Select one or more categories"
 
+blogs:
+    # these are needed for the blogpost content type and are filtered in listing.twig
+    slug: blogs
+    singular_slug: blog
+    behaves_like: grouping
+    has_sortorder: false
+    options:
+        europeana-blog: 'Europeana Blog'
+        europeana-cloud-blog: 'Europeana Cloud Blog'
+        heritage-in-motion-blog: 'Heritage in Motion Blog'
+        #europeana-test-blog: 'Europeana Test Blog'
+        #europeana-creative-blog: 'Europeana Creative Blog'
+        europeana-fashion: 'Europeana Fashion Blog'
+        europeana-enduser: 'Europeana Enduser Blog'
+        europeana-1418: 'Europeana 1914 - 1918'
+
+
 ##############################################
 # categorization for APP contenttype
 #   - appthemes
