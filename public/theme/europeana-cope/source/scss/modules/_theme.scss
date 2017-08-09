@@ -1965,6 +1965,40 @@ table.listingtable {
     }
 }
 
+/*
+***********************************************************************
+* Regular Tables by editors
+***********************************************************************
+**/
+
+div.body {
+    table  {
+        margin: 2rem 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid $line-gray;
+        width: 100%;
+        empty-cells: show;
+
+        thead {
+            background: $paper;
+            color: $black;
+            text-align: left;
+            vertical-align: bottom;
+        }
+
+        td, th {
+        border-left: 1px solid $line-gray;
+        border-left-width: 1px;
+        border-width: 0 0 0 1px;
+        padding: 0.5em;
+        // font-size: inherit;
+        // margin: 0;
+        // vertical-align: top;
+        // overflow: visible
+        }
+    }
+}
 
 /*
 ***********************************************************************

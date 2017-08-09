@@ -3148,6 +3148,29 @@ table.listingtable {
 
 /*
 ***********************************************************************
+* Regular Tables by editors
+***********************************************************************
+**/
+div.body table {
+  margin: 2rem 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #cccccc;
+  width: 100%;
+  empty-cells: show; }
+  div.body table thead {
+    background: #D9D4CA;
+    color: #1a1a1a;
+    text-align: left;
+    vertical-align: bottom; }
+  div.body table td, div.body table th {
+    border-left: 1px solid #cccccc;
+    border-left-width: 1px;
+    border-width: 0 0 0 1px;
+    padding: 0.5em; }
+
+/*
+***********************************************************************
 * SEARCH RESULTS SORTING
 ***********************************************************************
 **/
