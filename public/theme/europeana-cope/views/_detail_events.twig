@@ -34,3 +34,16 @@
     {% for module in record.modules if (global.request.get('_route') != "preview") %}
         {{ include('partials/_default_module.twig', { 'module': module }) }}
     {% endfor %}
+
+    <aside>
+        <div class="inner-wrap">
+
+            {# AUTHOR BIG #}
+            {% include 'modules/_teaser_author.twig' with { record : record } %}
+
+            {# RELATED CONTENT #}
+            {% include 'modules/_related_posts.twig' with { record : record, title : 'Related' } %}
+
+        </div>
+    </aside>
+
