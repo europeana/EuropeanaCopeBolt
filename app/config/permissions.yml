@@ -44,8 +44,8 @@ roles-hierarchy:
         admin: [ ]
         developer: [ admin ]
         chief-editor: [ admin, developer ]
-        editor: [ admin, developer, chief-editor ]
-        guest: [ admin, developer, chief-editor ]
+        editor: [ admin, developer ]
+        guest: [ admin, developer ]
 
 
 # Now we'll define some permissions. Each permission comes with a list of roles
@@ -147,20 +147,50 @@ global:
 #                     in ways that may not be immediately obvious.
 # - view: allows viewing records in the backend
 contenttype-all:
-    edit: [ developer, admin, chief-editor ]
-    create: [ developer, admin, chief-editor ]
-    publish: [ developer, admin, chief-editor ]
-    depublish: [ developer, admin, chief-editor ]
+    edit: [ developer, admin ]
+    create: [ developer, admin ]
+    publish: [ developer, admin ]
+    depublish: [ developer, admin ]
     delete: [ developer, admin ]
     change-ownership: [ developer, admin ]
 
 contenttype-default:
-    edit: [ editor ]
-    create: [ editor ]
-    change-ownership: [ owner ]
+    edit: [ developer, admin, owner ]
+    create: [ developer, admin, owner ]
+    change-ownership: [ developer, admin, owner ]
     view: [ anonymous ]
 
 contenttypes:
+    pages:
+        edit: [ chief-editor ]
+        create: [ developer, admin ]
+        publish: [ developer, admin ]
+        depublish: [ developer, admin ]
+        change-ownership: [ owner ]
+        view: [ chief-editor ]
+    posts:
+        edit: [ chief-editor, editor ]
+        create: [ chief-editor, editor ]
+        publish: [ chief-editor, editor ]
+        depublish: [ chief-editor, editor ]
+    data:
+        edit: [ chief-editor, editor ]
+        create: [ chief-editor, editor ]
+        publish: [ developer, admin ]
+        depublish: [ developer, admin ]
+    projects:
+        edit: [ chief-editor, editor ]
+        create: [ chief-editor, editor ]
+    events:
+        edit: [ chief-editor, editor ]
+        create: [ chief-editor, editor ]
+    jobs:
+        edit: [ chief-editor, editor ]
+        create: [ chief-editor, editor ]
+    banners:
+        edit: [ chief-editor, editor ]
+        create: [ chief-editor, editor ]
+
 
 # This is an example of how to define Contenttype specific permissions
 #
