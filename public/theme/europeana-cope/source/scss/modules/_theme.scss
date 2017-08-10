@@ -869,6 +869,26 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
 
 }
 
+
+/*
+* WIDGET CALL TO ACTION INLINE
+**/
+
+.calltoactioninline {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+
+
+    a.button {
+        padding: .5rem 4rem
+    }
+
+    p {
+        margin: 0 0 1rem;
+    }
+}
+
 /*
 ***********************************************************************
 * CONTENT PAGE

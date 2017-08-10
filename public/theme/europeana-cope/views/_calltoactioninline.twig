@@ -1,7 +1,13 @@
 {# This file is inserted as the 'primary call to action' of each listed record. #}
-<div class="calltoaction">
-    {% if record.body is not empty %}
-        <p>{{ record.body|striptags }}</p>
-    {% endif %}
-    <a class="button" href="{{ record.htmllink|default(record.link)|default('#') }}">{{ record.buttontext|default('Learn more') }}</a>
+<div class="calltoactioninline">
+    <div class="column">
+        {% if record.body is not empty %}
+
+            <div class="body">
+            {{ record.body|raw }}
+            </div>
+
+            {% endif %}
+        <a class="button" href="{{ record.htmllink|default(record.link)|default('#') }}">{{ record.buttontext|default('Learn more') }}</a>
+    </div>
 </div>
