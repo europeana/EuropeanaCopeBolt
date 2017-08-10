@@ -3167,7 +3167,19 @@ div.body table {
     border-left: 1px solid #cccccc;
     border-left-width: 1px;
     border-width: 0 0 0 1px;
-    padding: 0.5em; }
+    padding: 0.5em;
+    display: block;
+    width: 100%; }
+    @media only screen and (min-width: 24em) {
+      div.body table td, div.body table th {
+        display: table-cell;
+        width: auto; } }
+  div.body table tr {
+    border-bottom: 1px solid #cccccc;
+    border-bottom-width: 1px; }
+    @media only screen and (min-width: 24em) {
+      div.body table tr {
+        border-bottom: none; } }
 
 /*
 ***********************************************************************

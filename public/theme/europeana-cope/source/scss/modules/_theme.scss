@@ -1988,14 +1988,25 @@ div.body {
         }
 
         td, th {
-        border-left: 1px solid $line-gray;
-        border-left-width: 1px;
-        border-width: 0 0 0 1px;
-        padding: 0.5em;
-        // font-size: inherit;
-        // margin: 0;
-        // vertical-align: top;
-        // overflow: visible
+            border-left: 1px solid $line-gray;
+            border-left-width: 1px;
+            border-width: 0 0 0 1px;
+            padding: 0.5em;
+            display: block;
+            width: 100%;
+
+            @include respond-to(medium-screens) {
+                display: table-cell;
+                width: auto;
+            }
+        }
+
+        tr {
+            border-bottom: 1px solid $line-gray;
+            border-bottom-width: 1px;
+            @include respond-to(medium-screens) {
+                border-bottom: none;
+            }
         }
     }
 }
