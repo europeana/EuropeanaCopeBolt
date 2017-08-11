@@ -7,7 +7,9 @@
 {# Als speaker is set to true, the speaker_teaser is shown in this teaser, instead of the introduction
 #}
 
- <article class="teaser teaser-persons group">
+{% set filterpersons = (module.get('filter_persons'))|default('') %}
+
+<article class="teaser teaser-persons group">
     <div class="img-container">
         <img src="{{ item.values.image|default('notfound')|thumbnail(172,172,'c')}}" alt="Portrait of {{ item.first_name }} {{ item.last_name }}"/>
 
@@ -50,16 +52,26 @@
             {% endif %}
 
 
-        {% if short is not defined or short == false %}
-            {% if speaker|default(false) %}
-                {{ item.speaker_teaser }}
-            {% elseif item.teaser %}
-                {{ item.teaser }}
-            {% elseif item.introduction %}
-               {{ item.introduction|excerpt(300) }}
-            {% else %}
-                <p>{{ item.excerpt(300, false, search|default('')) }}</p>
+        {% if filterpersons == 'MC Election Candidate' %}
+            {# Als de listing van de kandidaten is, toon dan de candidacy teaser #}
+            {% if item.candidacy_teaser is defined and item.candidacy_teaser is not empty %}
+                {{ item.candidacy_teaser }}
             {% endif %}
+
+        {% else %}
+
+            {% if short is not defined or short == false %}
+                {% if speaker|default(false) %}
+                    {{ item.speaker_teaser }}
+                {% elseif item.teaser %}
+                    {{ item.teaser }}
+                {% elseif item.introduction %}
+                   {{ item.introduction|excerpt(300) }}
+                {% else %}
+                    <p>{{ item.excerpt(300, false, search|default('')) }}</p>
+                {% endif %}
+            {% endif %}
+
         {% endif %}
 
         <div class="contact">

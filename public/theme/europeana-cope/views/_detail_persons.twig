@@ -47,13 +47,6 @@
                             </a>
                             {% endif %}
 
-                            {# - we only have 1 phone field
-                            <a class="phone" href="07012345678">
-                                <svg class="icon icon-phone-mobile">
-                                    <use xlink:href="#icon-phone-mobile"></use>
-                                </svg>07012345678
-                            </a> #}
-
                         </p>
 
                         <div class="socials">
@@ -82,6 +75,12 @@
                     </div>
                 </div>{# /group #}
 
+                 {% if 'MC Election Candidate' in record.network_participation %}
+                    <blockquote>
+                        {{ record.candidacy_intro }}
+                    </blockquote>
+                {% endif %}
+
                 <div class="body">
                     {{ record.introduction }}
 
@@ -89,6 +88,8 @@
                         <li><a class="u-url" href="{{ record.company_url }}">{{ record.company_url }}</a></li>
                     </ul>
                 </div>
+
+
 
             </article>
 
