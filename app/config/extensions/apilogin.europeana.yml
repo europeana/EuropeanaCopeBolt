@@ -28,9 +28,9 @@ form:
 debug:
     verbose: false
 credentials:
-    base_uri: http://www.europeana.eu/api/
-    login_url: http://www.europeana.eu/api/login.do
-    destination: http://www.europeana.eu/api/apikey
+    base_uri: https://www.europeana.eu/api/
+    login_url: https://www.europeana.eu/api/login.do
+    destination: https://www.europeana.eu/api/apikey
     fields:
         j_username: 'override in deploy scripts'
         j_password: 'override in deploy scripts'
