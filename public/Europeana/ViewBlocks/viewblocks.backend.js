@@ -201,6 +201,7 @@ jQuery.fn.extend(
 
             // selected category (only for ordervalue == *category)
             var categoryblock = viewblock.find('input[name*="basecategory"]');
+            var marketblock = viewblock.find('input[name*="basemarket"]');
 
             // selected category (only for ordervalue == *tag)
             var tagblock = viewblock.find('input[name*="basetag"]');
@@ -217,6 +218,7 @@ jQuery.fn.extend(
                 selectedamount.parents('.repeater-field').hide();
                 tagblock.parents('.repeater-field').hide();
                 categoryblock.parents('.repeater-field').hide();
+                marketblock.parents('.repeater-field').hide();
                 selectedfilter.parents('.repeater-field').hide();
                 selectedct.parents('.repeater-field').hide();
             } else {
@@ -245,19 +247,28 @@ jQuery.fn.extend(
                 if(ordervalue === 'tag' || ordervalue === 'tag_unpaged') {
                     tagblock.parents('.repeater-field').show();
                     categoryblock.parents('.repeater-field').hide();
+                    marketblock.parents('.repeater-field').hide();
                     selectedamount.parents('.repeater-field').show();
                 } else if(ordervalue === 'category' || ordervalue === 'category_unpaged') {
                     tagblock.parents('.repeater-field').hide();
                     categoryblock.parents('.repeater-field').show();
+                    marketblock.parents('.repeater-field').hide();
                     selectedamount.parents('.repeater-field').show();
+                } else if(ordervalue === 'market' || ordervalue === 'market_unpaged') {
+                      tagblock.parents('.repeater-field').hide();
+                      categoryblock.parents('.repeater-field').hide();
+                      marketblock.parents('.repeater-field').show();
+                      selectedamount.parents('.repeater-field').show();
                 } else if(ordervalue === 'calendar' || ordervalue === 'calendar_upcoming' || ordervalue === 'calendar_archive') {
                     sourceselect.parents('.repeater-field').hide();
                     tagblock.parents('.repeater-field').show();
                     categoryblock.parents('.repeater-field').show();
+                    marketblock.parents('.repeater-field').hide();
                     selectedamount.parents('.repeater-field').show();
                 } else if(ordervalue === 'specified') {
                     tagblock.parents('.repeater-field').hide();
                     categoryblock.parents('.repeater-field').hide();
+                    marketblock.parents('.repeater-field').hide();
                     selectedamount.parents('.repeater-field').hide();
                     // hide all filters
                     $(selectedfilter).each(function() {
@@ -277,6 +288,7 @@ jQuery.fn.extend(
                 } else {
                     tagblock.parents('.repeater-field').hide();
                     categoryblock.parents('.repeater-field').hide();
+                    marketblock.parents('.repeater-field').hide();
                     selectedamount.parents('.repeater-field').show();
                 }
             }
