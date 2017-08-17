@@ -394,6 +394,8 @@ pages:
             tag_unpaged: Tag (without pagination)
             category: Category (with pagination)
             category_unpaged: Category (without pagination)
+            market: Market category (with pagination)
+            market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
             calendar: Calendar (only for events, start date increasing)
@@ -435,6 +437,13 @@ pages:
           placeholder: Enter a category slug here
           class: preload-categoryslug
           info: The selected category will be used to filter the records that are shown
+        basemarket:
+          type: text
+          label: Selected market category
+          variant: inline
+          placeholder: Enter a market category slug here
+          class: preload-marketslug
+          info: The selected market category will be used to filter the records that are shown
         selected_pages:
           type: text
           label: "Select Pages"
@@ -665,6 +674,8 @@ posts:
             tag_unpaged: Tag (without pagination)
             category: Category (with pagination)
             category_unpaged: Category (without pagination)
+            market: Market category (with pagination)
+            market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
             calendar: Calendar (based on start and end date)
@@ -706,6 +717,13 @@ posts:
           placeholder: Enter a category slug here
           class: preload-categoryslug
           info: The selected category will be used to filter the records that are shown
+        basemarket:
+          type: text
+          label: Selected market category
+          variant: inline
+          placeholder: Enter a market category slug here
+          class: preload-marketslug
+          info: The selected market category will be used to filter the records that are shown
         selected_pages:
           type: text
           label: "Select Pages"
@@ -951,6 +969,8 @@ data:
             tag_unpaged: Tag (without pagination)
             category: Category (with pagination)
             category_unpaged: Category (without pagination)
+            market: Market category (with pagination)
+            market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
             calendar: Calendar (based on start and end date)
@@ -992,6 +1012,13 @@ data:
           placeholder: Enter a category slug here
           class: preload-categoryslug
           info: The selected category will be used to filter the records that are shown
+        basemarket:
+          type: text
+          label: Selected market category
+          variant: inline
+          placeholder: Enter a market category slug here
+          class: preload-marketslug
+          info: The selected market category will be used to filter the records that are shown
         selected_pages:
           type: text
           label: "Select Pages"
@@ -1296,6 +1323,8 @@ projects:
             tag_unpaged: Tag (without pagination)
             category: Category (with pagination)
             category_unpaged: Category (without pagination)
+            market: Market category (with pagination)
+            market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
             calendar: Calendar (based on start and end date)
@@ -1337,6 +1366,13 @@ projects:
           placeholder: Enter a category slug here
           class: preload-categoryslug
           info: The selected category will be used to filter the records that are shown
+        basemarket:
+          type: text
+          label: Selected market category
+          variant: inline
+          placeholder: Enter a market category slug here
+          class: preload-marketslug
+          info: The selected market category will be used to filter the records that are shown
         selected_pages:
           type: text
           label: "Select Pages"
@@ -1556,6 +1592,8 @@ events:
             tag_unpaged: Tag (without pagination)
             category: Category (with pagination)
             category_unpaged: Category (without pagination)
+            market: Market category (with pagination)
+            market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
             calendar: Calendar (based on start and end date)
@@ -1597,6 +1635,13 @@ events:
           placeholder: Enter a category slug here
           class: preload-categoryslug
           info: The selected category will be used to filter the records that are shown
+        basemarket:
+          type: text
+          label: Selected market category
+          variant: inline
+          placeholder: Enter a market category slug here
+          class: preload-marketslug
+          info: The selected market category will be used to filter the records that are shown
         selected_pages:
           type: text
           label: "Select Pages"
