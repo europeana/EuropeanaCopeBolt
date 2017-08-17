@@ -153,14 +153,34 @@
                 categories: basecategory
             } orderby '-datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
+        {% elseif ordering == 'market' %}
+            {% set basemarket = module.get('basemarket') %}
+            {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                markets: basemarket
+            } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+        {% elseif ordering == 'market_unpaged' %}
+            {% set basemarket = module.get('basemarket') %}
+            {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                markets: basemarket
+            } orderby '-datepublish' limit override_amount|default(10) %}
+            {% set allow_pager = false %}
         {% elseif ordering == 'calendar' %}
-            {% set basecategory = module.get('basecategory') %}
-            {% set basetag = module.get('basetag') %}
+            {% set basecategory = module.get('basecategory')|default('') %}
+            {% set basetag = module.get('basetag')|default('') %}
+            {% set basemarket = module.get('basemarket')|default('') %}
             {% if basecategory != '' %}
                 {% setcontent selected_records = 'events' where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     categories: basecategory
+                } orderby 'start_event' limit override_amount|default(10) allowpaging %}
+            {% elseif basemarket != '' %}
+                {% setcontent selected_records = 'events' where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm),
+                    markets: basemarket
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% elseif basetag != '' %}
                 {% setcontent selected_records = 'events' where {
@@ -176,13 +196,21 @@
             {% endif %}
             {% set allow_pager = true %}
         {% elseif ordering == 'calendar_upcoming' %}
-            {% set basecategory = module.get('basecategory') %}
-            {% set basetag = module.get('basetag') %}
+            {% set basecategory = module.get('basecategory')|default('') %}
+            {% set basetag = module.get('basetag')|default('') %}
+            {% set basemarket = module.get('basemarket')|default('') %}
             {% if basecategory != '' %}
                 {% setcontent selected_records = 'events' where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     categories: basecategory,
+                    'start_event': '> yesterday'
+                } orderby 'start_event' limit override_amount|default(10) allowpaging %}
+            {% elseif basemarket != '' %}
+                {% setcontent selected_records = 'events' where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm),
+                    markets: basemarket,
                     'start_event': '> yesterday'
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% elseif basetag != '' %}
@@ -201,8 +229,9 @@
             {% endif %}
             {% set allow_pager = true %}
         {% elseif ordering == 'calendar_archive' %}
-            {% set basecategory = module.get('basecategory') %}
-            {% set basetag = module.get('basetag') %}
+            {% set basecategory = module.get('basecategory')|default('') %}
+            {% set basetag = module.get('basetag')|default('') %}
+            {% set basemarket = module.get('basemarket')|default('') %}
             {% if basecategory != '' %}
                 {% setcontent selected_records = 'events' where {
                     (filtername): (filtervalue),
@@ -210,6 +239,13 @@
                     categories: basecategory,
                     'end_event': '< tomorrow'
                 } orderby '-start_event' limit override_amount|default(10) allowpaging %}
+            {% elseif basemarket != '' %}
+                {% setcontent selected_records = 'events' where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm),
+                    markets: basemarket,
+                    'end_event': '< tomorrow'
+                } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% elseif basetag != '' %}
                 {% setcontent selected_records = 'events' where {
                     (filtername): (filtervalue),
