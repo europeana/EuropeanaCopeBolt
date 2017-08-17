@@ -194,3 +194,93 @@ $(document).ready(function() {
 
 });
 
+
+$(document).ready(function() {
+  // initialize links and bools
+  var referrerlink = document.createElement('a');
+  var backlink = $('<a>').text('Back').attr({'id': 'backlink', 'href': '#', 'class': 'back-link'});
+  var has_history = false;
+  //console.log('lets look in the history', window.history, document.referrer, document.location);
+  if(document.referrer) {
+    referrerlink.href = document.referrer;
+    //console.log('referrerlink:', referrerlink.hostname);
+  }
+  if(document.referrer && referrerlink.hostname === document.location.hostname && document.location.pathname !== '/') {
+    // we're in a local referrer and not on the homepage
+    has_history = true;
+    if (has_history) {
+      // if internal history - go back one level
+      backlink.attr('href', document.referrer);
+      backlink.on('click', function(e) {
+        e.preventDefault();
+        window.history.back();
+      });
+    }
+    var topbar = $('nav.quicklinks ul:first');
+    var filterbar = $('div.filter-listing:first .current-filters');
+    //console.log(' come on' , $(topbar).is('*'), $(filterbar).is('*'));
+    if(topbar.is('*') > 0 && backlink.attr('href')!=='') {
+      topbar.prepend(
+        $('<li>').css({
+          'border-right': '1px solid #fff'
+        }).addClass('has-border-right').append(backlink)
+      );
+    } else if (filterbar.is('*') > 0 && backlink.attr('href')!=='') {
+      filterbar.prepend(backlink);
+    } else {
+      $('#topbar').append(
+        $('<nav>').addClass('quicklinks').append(
+          $('<ul>').append(
+            $('<li>').append(backlink)
+          )
+        )
+      );
+    }
+  } else if(!document.referrer) {
+    // no history - fallback to parent overviews
+    console.log('were without a local history');
+    // check te pagetype
+    if($('body').hasClass('detail-posts')) {
+      // if post - go to toplevel listing
+      console.log('TODO: were on a post page');
+      backlink.attr('href', "#listing");
+    }
+    // check the landingtype
+    else if($('body').hasClass('landingpage')) {
+      // if sublanding - go to parent landing
+      console.log('TODO: were on a sublandingpage');
+      backlink.attr('href', "#parentlanding");
+    }
+    var topbar = $('nav.quicklinks ul:first');
+    var filterbar = $('div.filter-listing:first .current-filters');
+    //console.log(' come on' , $(topbar).is('*'), $(filterbar).is('*'));
+    if(topbar.is('*') > 0 && backlink.attr('href')!=='') {
+      topbar.prepend(
+          $('<li>').css({
+            'border-right': '1px solid #fff'
+          }).addClass('has-border-right').append(backlink)
+      );
+    } else if (filterbar.is('*') > 0 && backlink.attr('href')!=='') {
+      filterbar.prepend(backlink);
+    } else {
+      $('#topbar').append(
+          $('<nav>').addClass('quicklinks').append(
+              $('<ul>').append(
+                  $('<li>').append(backlink)
+              )
+          )
+      );
+    }
+  } else {
+    // we're on the homepage so don't add a back link
+    console.log('were on the homepage');
+    console.log('referrer', document.referrer);
+    console.log('location', document.location);
+  }
+  //console.log('how high', $('#topbar nav.quicklinks').height());
+  if($('#topbar nav.quicklinks').height() >= '25') {
+    //console.log('too high');
+    $('#topbar').css({'height': 'auto'});
+  }
+});
+
