@@ -341,6 +341,13 @@ function SA_loadNewAsyncSelectors() {
                             response(ajaxcleaned);
                         } else {
                             console.log('no data', data);
+                            if(data.message) {
+                                $(selectholder).after(
+                                    $('<div>')
+                                        .addClass('error')
+                                        .text('There was an error loading data, the message was: ' + data.message)
+                                );
+                            }
                             response([]);
                         }
                     }

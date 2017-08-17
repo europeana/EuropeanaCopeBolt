@@ -266,9 +266,9 @@ class SelectAsyncController implements ControllerProviderInterface
      */
     public function selectAsyncUrlWithType(Request $request, $type)
     {
-        $hasaccess = $this->checkAccess();
+        $hasaccess = $this->checkAccess($type);
         if(!$hasaccess) {
-            return $this->noAccess();
+          return $this->noAccess('No access to this type.');
         }
         $results = [];
         $message = '';
@@ -312,9 +312,9 @@ class SelectAsyncController implements ControllerProviderInterface
      */
     public function selectAsyncUrlWithTypes(Request $request, $types)
     {
-        $hasaccess = $this->checkAccess();
+        $hasaccess = $this->checkAccess($types);
         if(!$hasaccess) {
-            return $this->noAccess();
+          return $this->noAccess('No access to these types.');
         }
         $results = [];
         $message = '';
@@ -378,6 +378,10 @@ class SelectAsyncController implements ControllerProviderInterface
         $type = $request->query->get('type');
         if(empty($type)) {
             return $this->noAccess('No type given');
+        }
+        $hasaccess = $this->checkAccess($type);
+        if(!$hasaccess) {
+          return $this->noAccess('No load access to this type.');
         }
         $fieldstring = $request->query->get('fields');
         if(!empty($fieldstring)) {
@@ -490,17 +494,32 @@ class SelectAsyncController implements ControllerProviderInterface
         return $entries;
     }
     /**
-     * Check if a client is logged in and has access to the path
-     * Or basically - has the role editor
+     * Check if a client is logged in and has access to the content type
+     * TODO: double check if type is a valid contenttype
      *
      * @return bool
      */
-    private function checkAccess()
+    private function checkAccess($type = 'all')
     {
        $users = $this->app['users'];
-       //dump($users);
-       $hasaccess = $users->isAllowed('roles:editor');
-       //dump($hasaccess);
+       //dump('check access', $users);
+
+       if($type=='all') {
+         $contentquery = 'contentaction';
+       } elseif (is_array($type)) {
+         $contentquery = '';
+         foreach($type as $typeval) {
+           $contentquery .= 'contenttype:' . $typeval . ':view or contenttype:' . $typeval . ':edit';
+         }
+       } elseif (is_string($type)) {
+         $contentquery = 'contenttype:' . $type . ':view or contenttype:' . $type . ':edit';
+       } else {
+         $contentquery = 'dashboard';
+       }
+
+       $hasaccess = $users->isAllowed($contentquery);
+
+       //dump('check access', $contentquery, $hasaccess);
        return $hasaccess;
     }
 
