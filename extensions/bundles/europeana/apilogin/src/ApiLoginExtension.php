@@ -227,7 +227,7 @@ class ApiLoginExtension extends SimpleExtension
   protected function dispatchRemoteRequest()
   {
 
-    $request_url = 'http://'. $this->config['credentials']['fields']['j_username'] .':'. $this->config['credentials']['fields']['j_password'] .'@www.europeana.eu/api/admin/apikey';
+    $request_url = 'https://'. $this->config['credentials']['fields']['j_username'] .':'. $this->config['credentials']['fields']['j_password'] .'@www.europeana.eu/api/admin/apikey';
 
     if($this->verbose) {
       dump('start dispatchRemoteRequest postvars', $request_url);
@@ -332,9 +332,9 @@ class ApiLoginExtension extends SimpleExtension
         ),
       ),
       'credentials' => array(
-        'base_uri'  => 'http://europeana.eu/api/',
-        'login_url' => 'http://europeana.eu/api/login.do',
-        'destination' => 'http://europeana.eu/api/apikey',
+        'base_uri'  => 'https://europeana.eu/api/',
+        'login_url' => 'https://europeana.eu/api/login.do',
+        'destination' => 'https://europeana.eu/api/apikey',
         'fields' => array(
           'j_username' => null,
           'j_password' => null,
