@@ -257,6 +257,13 @@ pages:
         "MC Election Candidate": "MC Election Candidate"
         "Observer": "Observer"
         "Friend of Europeana": "Friend of Europeana"
+        datatype: '-** Datatype type **-'
+        "Data": "Data"
+        "Tool": "Tool"
+        "App": "App"
+        "Showcase": "Showcase"
+        "Documentation": "Documentation"
+        "API": "Api"
         projecttype: '-** Project type **-'
         "TaskForce": "TaskForce"
         "WorkingGroup": "WorkingGroup"
@@ -468,6 +475,7 @@ pages:
           values:
             "Data": "Data"
             "Tool": "Tool"
+            "App": "App"
             "Showcase": "Showcase"
             "Documentation": "Documentation"
             "API": "API"
@@ -738,6 +746,7 @@ posts:
           values:
             "Data": "Data"
             "Tool": "Tool"
+            "App": "App"
             "Showcase": "Showcase"
             "Documentation": "Documentation"
             "API": "API"
@@ -832,7 +841,13 @@ data:
       expanded: true
       default: "Data"
       label: "Data type"
-      values: [ "Data", "Tool", "Showcase", "Documentation", "API" ]
+      values:
+        "Data": "Data"
+        "Tool": "Tool"
+        "App": "App"
+        "Showcase": "Showcase"
+        "Documentation": "Documentation"
+        "API": "API"
       postfix: "Select if this record is a data, documentation, tool or API record"
     intro:
       type: html
@@ -1017,6 +1032,7 @@ data:
           values:
             "Data": "Data"
             "Tool": "Tool"
+            "App": "App"
             "Showcase": "Showcase"
             "Documentation": "Documentation"
             "API": "API"
@@ -1361,6 +1377,7 @@ projects:
           values:
             "Data": "Data"
             "Tool": "Tool"
+            "App": "App"
             "Showcase": "Showcase"
             "Documentation": "Documentation"
             "API": "API"
@@ -1620,6 +1637,7 @@ events:
           values:
             "Data": "Data"
             "Tool": "Tool"
+            "App": "App"
             "Showcase": "Showcase"
             "Documentation": "Documentation"
             "API": "API"
