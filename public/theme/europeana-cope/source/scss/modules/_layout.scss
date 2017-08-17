@@ -149,6 +149,10 @@ footer {
         padding-top: 4.75rem;
         margin-top: 8rem; // voor contentpages zo gedaan. snelle fix, vast mooi
     }
+
+    body.landingpage & {
+        margin-top: 0;
+    }
 }
 
 .inner-wrap {

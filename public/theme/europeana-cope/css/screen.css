@@ -613,6 +613,8 @@ footer {
     footer {
       padding-top: 4.75rem;
       margin-top: 8rem; } }
+  body.landingpage footer {
+    margin-top: 0; }
 
 .inner-wrap {
   margin: 0 auto;
