@@ -525,6 +525,7 @@ pages:
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   recordsperpage: 50
+  description: "Pages are the main content for the site. You can make different kinds of pages by selecting a type on the Modules tab."
   icon_many: "fa:files-o"
   icon_one: "fa:file"
 
@@ -803,6 +804,7 @@ posts:
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   recordsperpage: 100
+  description: "Posts are used as general messages, blogposts or pressreleases in the site."
   sort: -datepublish
   icon_many: "fa:quote-left"
   icon_one: "fa:quote-right"
@@ -1999,6 +2001,7 @@ persons:
       uses: [ first_name, last_name ]
       prefix: "<div><h3>Site structure data</h3></div>"
   taxonomy: [ communities, markets, categories, tags ]
+  title_format: [ first_name, last_name ]
   <<: *all_relations
   sort: "last_name"
   icon_many: "fa:users"
