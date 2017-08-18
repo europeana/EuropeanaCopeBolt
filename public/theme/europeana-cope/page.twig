@@ -12,9 +12,9 @@
 {%- endblock bodyclass %}
 
 {% block main %}
-    {% set recordtemplate =  'views/_detail_' ~ record.slug ~ '.twig' %}
+    {% set recordtemplate =  'views/_detail_' ~ record.contenttype.slug ~'_'~ record.slug ~ '.twig' %}
     {% set template =  'views/_detail_' ~ record.contenttype.slug ~ '.twig' %}
-    <!-- loading templatefile for view: '{{ template }}' or 'views/_details.twig' or 'views/_fallback.twig' -->
+    <!-- loading templatefile for view: '{{ recordtemplate }}' or '{{ template }}' or 'views/_details.twig' or 'views/_fallback.twig' -->
     {% include [recordtemplate, template, 'views/_detail.twig', 'views/_fallback.twig'] with {record:record} %}
 
     {# uncomment this for more debug information #}
