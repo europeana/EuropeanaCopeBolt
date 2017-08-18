@@ -232,7 +232,7 @@ $(document).ready(function() {
           )
       );
     }
-  } else if(!document.referrer || (referrerlink.hostname !== document.location.hostname)) {
+  } else if(!document.referrer || (referrerlink.hostname !== document.location.hostname) && document.location.pathname !== '/') {
     // no history - fallback to parent overviews
     console.log('were without (a local) history');
     // check te pagetype
