@@ -91,6 +91,13 @@
     {% endif %}
 
 
+    {% if record.pagetype is defined
+        and not (
+            record.pagetype == 'landingpage'
+            or record.pagetype == 'landingpage-nohighlight'
+        )
+    %}
+    {# HIDE this complete aside on landingpages #}
     <aside>
         <div class="inner-wrap">
 
@@ -102,3 +109,4 @@
 
         </div>
     </aside>
+{% endif %}
