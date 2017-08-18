@@ -2,29 +2,28 @@
 {% set template = 'related' %}
 {% endspaceless %}
 
-
 {% if record.related() is not empty %}
     {# get the manually set related records #}
-    {% set records = record.related()|shuffle %}
+    {% set relatedrecords = record.related()|shuffle %}
 {% elseif
     (record.taxonomy.categories is defined and record.taxonomy.categories is not empty)
     or (record.taxonomy.tags is defined and record.taxonomy.tags is not empty) %}
     {# get the automatically related records by category  - extension #}
-    {% set records = relatedcontent(record) %}
+    {% set relatedrecords = relatedcontent(record) %}
 {% else %}
     <!-- No tags, no categories, so no related items -->
+    {% set relatedrecords = false %}
 {% endif %}
 
 
-{% if (records is defined) and (records is not empty) %}
+{% if (relatedrecords is defined) and (relatedrecords is not empty) and relatedrecords is iterable %}
 
 <section class="related-content">
     <h2>{{ title|default('Related content') }}</h2>
 
     <div class="teaser-container">
 
-    {% if records is iterable %}
-        {% for record in records if record.contenttype.slug != 'persons' %}
+        {% for record in relatedrecords if record.contenttype.slug != 'persons' %}
             {% if loop.index <= 3 %}
                 {% set templatefile =  'views/_' ~  template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
                 {% set defaulttemplatefile =  'views/_' ~  template ~ '.twig' %}
@@ -34,7 +33,6 @@
                 <!-- selected record is unpublished or otherwise unavailable -->
             {% endif %}
         {% endfor %}
-    {% endif %}
 
     </div>
 </section>
