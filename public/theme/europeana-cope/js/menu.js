@@ -215,15 +215,17 @@ $(document).ready(function() {
     });
 
     //console.log(' come on' , $(topbar).is('*'), $(filterbar).is('*'));
-    if(topbar.is('*') > 0 && backlink.attr('href')!=='') {
+    if (topbar.is('*') > 0 && backlink.attr('href') !== '') {
       topbar.prepend(
           $('<li>').css({
             'border-right': '1px solid #fff'
           }).addClass('has-border-right').append(backlink)
       );
-    } else if (filterbar.is('*') > 0 && backlink.attr('href')!=='') {
+    }
+    else if (filterbar.is('*') > 0 && backlink.attr('href') !== '') {
       filterbar.prepend(backlink);
-    } else {
+    }
+    else {
       $('#topbar').append(
           $('<nav>').addClass('quicklinks').append(
               $('<ul>').append(
@@ -232,7 +234,12 @@ $(document).ready(function() {
           )
       );
     }
-  } else if(!document.referrer || (referrerlink.hostname !== document.location.hostname) && document.location.pathname !== '/') {
+  } else if(!document.referrer && document.location.pathname === '/') {
+    // we're on the homepage so don't add a back link
+    console.log("we're on the homepage, and we've forgot where we're from");
+    console.log('referrer', document.referrer);
+    console.log('location', document.location);
+  } else if(!document.referrer || (referrerlink.hostname !== document.location.hostname)) {
     // no history - fallback to parent overviews
     console.log('were without (a local) history');
     // check te pagetype
@@ -267,7 +274,7 @@ $(document).ready(function() {
     }
   } else {
     // we're on the homepage so don't add a back link
-    console.log('were on the homepage');
+    console.log("we're probably on the homepage, or everything else failed");
     console.log('referrer', document.referrer);
     console.log('location', document.location);
   }
