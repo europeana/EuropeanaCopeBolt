@@ -189,6 +189,7 @@ class SelectAsyncController implements ControllerProviderInterface
     /**
      * Return a list of directories and subdirectories
      * TODO: Test if this scales up to a a few thousand files
+     * TODO: Make this escape foldernames so foldernames with quotes in it won't break everything
      *
      * @param \Bolt\Filesystem\Manager $filesystem
      */
