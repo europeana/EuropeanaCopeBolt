@@ -3,6 +3,8 @@
 namespace Bolt\Extension\Europeana\SelectAsync\Controller;
 
 use Bolt\Filesystem\Manager;
+use Bolt\Filesystem\Exception\FileNotFoundException;
+use League\Flysystem\Exception;
 use Silex\Application;
 use Silex\ControllerCollection;
 use Silex\ControllerProviderInterface;
@@ -26,9 +28,11 @@ class SelectAsyncController implements ControllerProviderInterface
     private $directory_tree;
 
     /**
+     * Constructor.
      * Initiate the controller with Bolt Application instance and extension config.
      *
-     * @param array $config
+     * @param \Bolt\Application $app
+     * @param array             $config
      */
     public function __construct(\Bolt\Application $app, array $config)
     {
@@ -119,10 +123,10 @@ class SelectAsyncController implements ControllerProviderInterface
     /**
      * Handles GET requests on /selectasync/categories/{type} and return with json.
      *
-     * @param Request $request
-     * @param $id
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @param                                           $type
      *
-     * @return JsonResponse
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
     public function selectAsyncCategoriesType(Request $request, $type)
     {
@@ -189,39 +193,50 @@ class SelectAsyncController implements ControllerProviderInterface
     /**
      * Return a list of directories and subdirectories
      * TODO: Test if this scales up to a a few thousand files
-     * TODO: Make this escape foldernames so foldernames with quotes in it won't break everything
      *
      * @param \Bolt\Filesystem\Manager $filesystem
+     * @param                          $root
+     * @param                          $search
      */
     private function selectAsyncRecursiveDirTree(Manager $filesystem, $root, $search)
     {
         $files = $filesystem->getFilesystem($root);
         $contents = $files->listContents(null, true);
-        // dump($directories, $contents);
-        foreach ($contents as $fileobject) {
-            if($fileobject->isDir() === true) {
-                //dump($fileobject->getFilename(), $fileobject->getPath());
-                if(!empty($search)) {
-                    if(stristr($fileobject->getPath(), $search)) {
-                        array_push(
-                            $this->directory_tree,
-                            [
-                                'id'    => $fileobject->getPath(),
-                                'title' => $fileobject->getPath()
-                            ]
-                        );
-                    }
-                } else {
-                  array_push(
-                      $this->directory_tree,
-                      [
-                          'id'    => $fileobject->getPath(),
-                          'title' => $fileobject->getPath()
-                      ]
-                  );
-                }
 
-                //array_push($this->directory_tree, $fileobject);
+        foreach ($contents as $fileobject) {
+            $skip = false;
+
+            // try to access the file - and if it fails just skip it
+            // this prevents directories with broken filenames from appearing
+            try {
+              $fileobject->getType();
+            } catch(FileNotFoundException $e) {
+              $skip = true;
+            }
+
+            if(!$skip) {
+                if($fileobject->isDir() === true) {
+                    if(!empty($search)) {
+                        if(stristr($fileobject->getPath(), $search)) {
+                            array_push(
+                                $this->directory_tree,
+                                [
+                                    'id'    => $fileobject->getPath(),
+                                    'title' => $fileobject->getPath()
+                                ]
+                            );
+                        }
+                    } else {
+                      array_push(
+                          $this->directory_tree,
+                          [
+                              'id'    => $fileobject->getPath(),
+                              'title' => $fileobject->getPath()
+                          ]
+                      );
+                    }
+                    //array_push($this->directory_tree, $fileobject);
+                }
             }
         }
     }
@@ -260,10 +275,10 @@ class SelectAsyncController implements ControllerProviderInterface
     /**
      * Handles GET requests on /selectasync/type/{type} and return with json.
      *
-     * @param Request $request
-     * @param $id
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @param                                           $type
      *
-     * @return JsonResponse
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
     public function selectAsyncUrlWithType(Request $request, $type)
     {
@@ -306,10 +321,10 @@ class SelectAsyncController implements ControllerProviderInterface
     /**
      * Handles GET requests on /selectasync/types/{type,type,..} and return with json.
      *
-     * @param Request $request
-     * @param $id
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @param                                           $types
      *
-     * @return JsonResponse
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
     public function selectAsyncUrlWithTypes(Request $request, $types)
     {
@@ -498,6 +513,8 @@ class SelectAsyncController implements ControllerProviderInterface
      * Check if a client is logged in and has access to the content type
      * TODO: double check if type is a valid contenttype
      *
+     * @param string $type
+     *
      * @return bool
      */
     private function checkAccess($type = 'all')
@@ -527,7 +544,9 @@ class SelectAsyncController implements ControllerProviderInterface
     /**
      * Drops a user to the no access message
      *
-     * @return JsonResponse
+     * @param string $message
+     *
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
     private function noAccess($message = 'No access')
     {
