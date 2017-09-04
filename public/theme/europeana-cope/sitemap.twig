@@ -1,0 +1,29 @@
+{% extends 'partials/_master.twig' %}
+
+{% block bodyclass 'contentpage' %}
+
+{% setcontent record = 'blocks/sitemap' %}
+
+{% block title %}
+    {{ record.title|default('sitemap') }}
+{% endblock title %}
+
+
+{% block main %}
+
+<section>
+    <div class="inner-wrap">
+
+        <article class="column main-column">
+            <h1>{{ record.title|default('sitemap') }}</h1>
+
+
+            {% include '_sitemap_list.twig' %}
+
+         </article>
+    </div>
+</section>
+
+
+{% endblock main %}
+
