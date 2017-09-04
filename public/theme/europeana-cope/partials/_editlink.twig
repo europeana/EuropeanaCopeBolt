@@ -1,0 +1,24 @@
+{% if record.editlink is defined and record.editlink != '' %}
+<style>
+    a.editlink {
+        position: fixed;
+        bottom: .5rem;
+        left: .5rem;
+        z-index: 111;
+        padding: .3rem .5rem;
+    }
+    .editlink span {
+        display: none;
+    }
+    @media only screen and (min-width: 24em) {
+        .editlink span {
+            display: inline-block;
+        }
+    }
+</style>
+<a class="button editlink" id="editpage" href="{{ record.editlink() }}" target="_bolt" title="Edit {{ record.contenttype.slug }} #{{ record.id }} - {{ record.title }}">
+    <svg class="icon icon-star">
+        <use xlink:href="#icon-star"></use>
+    </svg><span>{{  __('Edit this page') }}</span>
+</a>
+{% endif %}
