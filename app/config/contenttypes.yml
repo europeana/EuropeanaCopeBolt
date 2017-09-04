@@ -2147,6 +2147,11 @@ resources:
       type: select
       values: [CC0, CC-BY, CC-BY-SA, CC-BY-NC, CC-BY-NC-SA]
       prefix: "<hr />"
+    slug:
+      type: slug
+      uses: title
+      postfix: "The slug for this content type is not used as a real url, but it needed to refer to this block in templates."
+      group: meta
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   viewless: true
