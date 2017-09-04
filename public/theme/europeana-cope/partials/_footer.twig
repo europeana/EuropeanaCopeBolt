@@ -22,11 +22,17 @@
                 </address>
             </div>
 
+            {% setcontent footermission = 'resources/footer-mission' %}
             <div class="footer-block footer-block-mission">
-                <h4>Our mission</h4>
-                <p>
-                    We transform the world with culture! We want to build on Europe’s rich heritage and make it easier for people to use, whether for work, for learning or just for fun.
-                </p>
+                {% if footermission is not empty %}
+                    <h4>{{ footermission.title }}</h4>
+                    {{ footermission.body }}
+                {% else %}
+                    <h4>Our mission</h4>
+                    <p>
+                        We transform the world with culture! We want to build on Europe’s rich heritage and make it easier for people to use, whether for work, for learning or just for fun.
+                    </p>
+                {% endif %}
             </div>
 
             <div class="footer-block footer-block-socials">
@@ -67,6 +73,12 @@
             {{ menu('footer', 'partials/_menu_footer.twig') }}
 
             <p class="copyright">Co-funded by the European Union.</p>
+            {% setcontent footerinfo = 'resources/footer-info' %}
+            <div class="footer-block footer-block-mission">
+                {% if footerinfo is not empty %}
+                    {{ footerinfo.body }}
+                {% endif %}
+            </div>
         </div>
 
     </div>
