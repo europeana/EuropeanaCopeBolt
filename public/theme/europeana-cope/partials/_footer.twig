@@ -74,11 +74,9 @@
 
             <p class="copyright">Co-funded by the European Union.</p>
             {% setcontent footerinfo = 'resources/footer-info' %}
-            <div class="footer-block footer-block-mission">
-                {% if footerinfo is not empty %}
-                    {{ footerinfo.body }}
-                {% endif %}
-            </div>
+            {% if footerinfo is not empty %}
+                {{ footerinfo.body }}
+            {% endif %}
         </div>
 
     </div>
