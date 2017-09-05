@@ -63,5 +63,7 @@
 ## Updating content for new posts and data in the database
 
 24. This is hard!
+    - Only update records in cope in the contenttypes: posts, data and projects if those records have been changed in pro, labs or research after the last time they were migrated.
+    - Match up the records based on slug, title, source subsite
 
 
