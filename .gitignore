@@ -11,6 +11,8 @@ public/thumbs/
 
 tools/*.sql
 tools/*/*.sql
+!tools/migration/*.sql
+
 
 # hide user submitted files
 public/files

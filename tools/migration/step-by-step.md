@@ -42,3 +42,26 @@
 
 17. You can now login to bolt on http://example.com/admin
 18. Bolt is now up to date and you can continue with the new site.
+
+## Post install
+
+19. Run `5-update-tweaks.sql` to do some updates to fields that are needed for the widgets.
+
+## The big refactor before live
+
+20. Re-import a new export of all old sites into the databases
+    - europeana_pro
+    - europeana_labs
+    - europeana_research
+21. Run the file `6-cleanup.sql` which drops all tables that are not used anymore after all the dus has settled, most of them are leftovers from the old sites
+
+## Culturelover import
+
+22. The culturelover blogs have a new content type. You've probably ran `php app/nut database:update` and have added those tables.
+23. Run `7-culturelover.sql` to import the lastest blogposts.
+
+## Updating content for new posts and data in the database
+
+24. This is hard!
+
+
