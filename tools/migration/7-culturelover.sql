@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS europeana_cope.bolt_blogevents (
   `attachments` longtext NULL,
   `original_url` varchar(256) DEFAULT '',
   `location_name` varchar(256) DEFAULT '',
-  `geolocation` longtext
+  `geolocation` longtext,
   PRIMARY KEY (`id`)
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
