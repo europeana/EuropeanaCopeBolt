@@ -11,6 +11,9 @@ Available variables
 {% set override_css_id = module.get('override_css_id') %}
 {% set override_css_class = module.get('override_css_class') %}
 {% set template = module.get('templates') %}
+{% set modulemorelink = module.get('modulemorelink')|default('') %}
+{% set modulemorelabel = module.get('modulemorelabel')|default('') %}
+{% set modulemoretext = module.get('modulemoretext')|default('') %}
 {% endspaceless %}
 <section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module group {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
     <div class="inner-wrap">
@@ -74,6 +77,7 @@ Available variables
              {% set type = 'posts' %}
         {% endif %}
 
+
         <div class="calltoaction-readmore colored-image"
         {% if records|first.image is not empty %}
             style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})"
@@ -82,10 +86,14 @@ Available variables
         {% endif -%}
         >
             <div class="header-group">
-                <p>Find out what else has happened</p>
-                <a class="button-link" href="/posts/news">
-                    See more {{ type }}
-                </a>
+                {% if modulemoretext is not empty %}
+                    <p>{{ modulemoretext }}</p>
+                {% endif %}
+                {% if modulemorelink is not empty %}
+                    <a class="button-link" href="{{ modulemorelink }}">
+                        {{ modulemorelabel|default('See more') }}
+                    </a>
+                {% endif %}
             </div>
         </div>
     {% endif %}

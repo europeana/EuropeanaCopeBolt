@@ -13,6 +13,9 @@ Available variables
 {% set override_css_class = module.get('override_css_class') %}
 {% set template = module.get('templates') %}
 {% set override_amount = module.get('override_amount') %}
+{% set modulemorelink = module.get('modulemorelink')|default('') %}
+{% set modulemorelabel = module.get('modulemorelabel')|default('') %}
+{% set modulemoretext = module.get('modulemoretext')|default('') %}
 {% endspaceless %}
 <section class="catstreamcontainer">
     <div class="inner-wrap">
@@ -62,13 +65,13 @@ Available variables
                 {% endif %}
             {% endif %}
 
-            {# TODO: This button needs a destination #}
-            {# TODO: This button needs a text #}
             {# TODO: This button needs to be centered #}
             <div class="actions-footer">
-                <a class="button-link" href="#TODO-link">
-                    TODO: label and link
-                </a>
+                {% if modulemorelink is not empty %}
+                    <a class="button-link" href="{{ modulemorelink }}">
+                        {{ modulemorelabel|default('See more') }}
+                    </a>
+                {% endif %}
             </div>
 
         </section>

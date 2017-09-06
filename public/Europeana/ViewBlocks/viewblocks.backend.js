@@ -114,6 +114,7 @@ jQuery.fn.extend(
             var imagefield = viewblock.find('input[name*="image"]');
             var filefield = viewblock.find('input[name*="singlefile"]');
             var fileslistpathfield = viewblock.find('input[name*="fileslistpath"]');
+            var modulelinkfields = viewblock.find('input.modulemorelink');
 
 
             if(templatevalue === 'body' || templatevalue === 'collapsedcontent') {
@@ -124,6 +125,16 @@ jQuery.fn.extend(
                 imagefield.parents('.repeater-field').hide();
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').hide();
+                modulelinkfields.parents('.repeater-field').hide();
+            } else if(templatevalue === 'listingnews') {
+                bodyblock.parents('.repeater-field').hide();
+                sourceselect.parents('.repeater-field').show();
+                orderselect.parents('.repeater-field').show();
+                iconfield.parents('.repeater-field').hide();
+                imagefield.parents('.repeater-field').hide();
+                filefield.parents('.repeater-field').hide();
+                fileslistpathfield.parents('.repeater-field').hide();
+                modulelinkfields.parents('.repeater-field').show();
             } else if(templatevalue === 'streamercolumn') {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').hide();
@@ -132,6 +143,7 @@ jQuery.fn.extend(
                 imagefield.parents('.repeater-field').hide();
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').hide();
+                modulelinkfields.parents('.repeater-field').show();
             } else if(templatevalue === 'image') {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').hide();
@@ -140,6 +152,7 @@ jQuery.fn.extend(
                 imagefield.parents('.repeater-field').show();
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').hide();
+                modulelinkfields.parents('.repeater-field').hide();
             } else if(templatevalue === 'filecontent') {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').hide();
@@ -148,6 +161,7 @@ jQuery.fn.extend(
                 imagefield.parents('.repeater-field').hide();
                 filefield.parents('.repeater-field').show();
                 fileslistpathfield.parents('.repeater-field').hide();
+                modulelinkfields.parents('.repeater-field').hide();
             } else if(templatevalue === 'fileslisting') {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').hide();
@@ -156,6 +170,7 @@ jQuery.fn.extend(
                 imagefield.parents('.repeater-field').hide();
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').show();
+                modulelinkfields.parents('.repeater-field').hide();
             } else {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').show();
@@ -164,6 +179,7 @@ jQuery.fn.extend(
                 imagefield.parents('.repeater-field').hide();
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').hide();
+                modulelinkfields.parents('.repeater-field').hide();
             }
 
             //console.log('templatesSwitcher triggered', templatevalue);

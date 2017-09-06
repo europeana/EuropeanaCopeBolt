@@ -518,6 +518,27 @@ pages:
           type: text
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        modulemorelink:
+          type: text
+          label: More link
+          variant: inline
+          placeholder: Enter a internal link here
+          postfix: If present, this link will be used as the url for the <b>more</b> link. If not present no extra link will be displayed. The link should start with a slash "<b>/</b>" or with 'https://'
+          class: 'modulemorelink'
+        modulemorelabel:
+          type: text
+          label: More link label
+          variant: inline
+          placeholder: Enter a label here
+          info: This text will be used as the link text for the more link
+          class: 'modulemorelink'
+        modulemoretext:
+          type: text
+          label: More link intro text
+          variant: inline
+          placeholder: Enter a short text here
+          info: This text will be added before the more link
+          class: 'modulemorelink'
         override_css_id:
           type: text
           label: DOM ID
@@ -798,6 +819,27 @@ posts:
           type: text
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        modulemorelink:
+          type: text
+          label: More link
+          variant: inline
+          placeholder: Enter a internal link here
+          postfix: If present, this link will be used as the url for the <b>more</b> link. If not present no extra link will be displayed. The link should start with a slash "<b>/</b>" or with 'https://'
+          class: 'modulemorelink'
+        modulemorelabel:
+          type: text
+          label: More link label
+          variant: inline
+          placeholder: Enter a label here
+          info: This text will be used as the link text for the more link
+          class: 'modulemorelink'
+        modulemoretext:
+          type: text
+          label: More link intro text
+          variant: inline
+          placeholder: Enter a short text here
+          info: This text will be added before the more link
+          class: 'modulemorelink'
         override_css_id:
           type: text
           label: DOM ID
@@ -1093,6 +1135,27 @@ data:
           type: text
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        modulemorelink:
+          type: text
+          label: More link
+          variant: inline
+          placeholder: Enter a internal link here
+          postfix: If present, this link will be used as the url for the <b>more</b> link. If not present no extra link will be displayed. The link should start with a slash "<b>/</b>" or with 'https://'
+          class: 'modulemorelink'
+        modulemorelabel:
+          type: text
+          label: More link label
+          variant: inline
+          placeholder: Enter a label here
+          info: This text will be used as the link text for the more link
+          class: 'modulemorelink'
+        modulemoretext:
+          type: text
+          label: More link intro text
+          variant: inline
+          placeholder: Enter a short text here
+          info: This text will be added before the more link
+          class: 'modulemorelink'
         override_css_id:
           type: text
           label: DOM ID
@@ -1447,6 +1510,27 @@ projects:
           type: text
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        modulemorelink:
+          type: text
+          label: More link
+          variant: inline
+          placeholder: Enter a internal link here
+          postfix: If present, this link will be used as the url for the <b>more</b> link. If not present no extra link will be displayed. The link should start with a slash "<b>/</b>" or with 'https://'
+          class: 'modulemorelink'
+        modulemorelabel:
+          type: text
+          label: More link label
+          variant: inline
+          placeholder: Enter a label here
+          info: This text will be used as the link text for the more link
+          class: 'modulemorelink'
+        modulemoretext:
+          type: text
+          label: More link intro text
+          variant: inline
+          placeholder: Enter a short text here
+          info: This text will be added before the more link
+          class: 'modulemorelink'
         override_css_id:
           type: text
           label: DOM ID
@@ -1716,6 +1800,27 @@ events:
           type: text
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        modulemorelink:
+          type: text
+          label: More link
+          variant: inline
+          placeholder: Enter a internal link here
+          postfix: If present, this link will be used as the url for the <b>more</b> link. If not present no extra link will be displayed. The link should start with a slash "<b>/</b>" or with 'https://'
+          class: 'modulemorelink'
+        modulemorelabel:
+          type: text
+          label: More link label
+          variant: inline
+          placeholder: Enter a label here
+          info: This text will be used as the link text for the more link
+          class: 'modulemorelink'
+        modulemoretext:
+          type: text
+          label: More link intro text
+          variant: inline
+          placeholder: Enter a short text here
+          info: This text will be added before the more link
+          class: 'modulemorelink'
         override_css_id:
           type: text
           label: DOM ID

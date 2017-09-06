@@ -18,6 +18,9 @@
     {% set sourcetemplatefile =  'modules/_' ~ template ~ '_' ~ sources ~ '.twig' %}
     {% set override_amount = module.get('override_amount') %}
     {% set allow_pager = false %}
+    {% set modulemorelink = module.get('modulemorelink')|default('') %}
+    {% set modulemorelabel = module.get('modulemorelabel')|default('') %}
+    {% set modulemoretext = module.get('modulemoretext')|default('') %}
     {% if override_amount == '' or override_amount == 0 %}
         {% set override_amount = 100 %}
     {% endif %}
