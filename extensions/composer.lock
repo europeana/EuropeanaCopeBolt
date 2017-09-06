@@ -241,16 +241,16 @@
         },
         {
             "name": "soapbox/relatedcontent",
-            "version": "1.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/graham73may/bolt-related-content.git",
-                "reference": "b4532382fcaf53a718f8fd898a0d7793e3383dbe"
+                "reference": "9a64abe11117b86e6e9fad42e60135304073872a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/graham73may/bolt-related-content/zipball/b4532382fcaf53a718f8fd898a0d7793e3383dbe",
-                "reference": "b4532382fcaf53a718f8fd898a0d7793e3383dbe",
+                "url": "https://api.github.com/repos/graham73may/bolt-related-content/zipball/9a64abe11117b86e6e9fad42e60135304073872a",
+                "reference": "9a64abe11117b86e6e9fad42e60135304073872a",
                 "shasum": ""
             },
             "require": {
@@ -295,7 +295,7 @@
                 "source": "https://github.com/graham73may/bolt-related-content/tree/master",
                 "issues": "https://github.com/graham73may/bolt-related-content/issues"
             },
-            "time": "2017-03-03T23:16:20+00:00"
+            "time": "2017-09-04T12:30:43+00:00"
         },
         {
             "name": "twokings/hierarchical-routes",
