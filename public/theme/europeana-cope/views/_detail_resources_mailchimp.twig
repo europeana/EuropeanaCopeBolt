@@ -1,11 +1,22 @@
 <section>
     <div class="inner-wrap">
         <article class="column main-column">
+
+            {% if record.body is not empty %}
+                <div class="body"> {# can be multiple bodies #}
+                    {# 'OMG MULTIPlE BODIES', sherlock said, looking at the massacre #}
+                    {{ record.body }}
+                </div>
+            {% endif %}
+
 <style type="text/css">
 .display_archive {font-family: arial,verdana; font-size: 12px;}
 .campaign {line-height: 125%; margin: 5px;}
 </style>
 <script language="javascript" src="//europeana.us3.list-manage.com/generate-js/?u=ad318b7566f97eccc895e014e&fid=8642&show=10" type="text/javascript"></script>
+
+
         </article>
     </div>
 </section>
+

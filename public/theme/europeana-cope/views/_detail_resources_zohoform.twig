@@ -1,11 +1,19 @@
 <section>
     <div class="inner-wrap">
         <article class="column main-column">
-<!-- Note :
-- You can modify the font style and form style to suit your website.
-- Code lines with comments ���Do not remove this code��� are required for the form to work properly, make sure that you do not remove these lines of code.
-- The Mandatory check script can modified as to suit your business needs.
-- It is important that you test the modified form before going live.-->
+
+            {% if record.body is not empty %}
+                <div class="body"> {# can be multiple bodies #}
+                    {# 'OMG MULTIPlE BODIES', sherlock said, looking at the massacre #}
+                    {{ record.body }}
+                </div>
+            {% endif %}
+
+            <!-- Note :
+            - You can modify the font style and form style to suit your website.
+            - Code lines with comments ���Do not remove this code��� are required for the form to work properly, make sure that you do not remove these lines of code.
+            - The Mandatory check script can modified as to suit your business needs.
+            - It is important that you test the modified form before going live.-->
 <div id='crmWebToEntityForm' style='width:600px;margin:auto;'>
     <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
     <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads1482250000001117001 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8'>
@@ -118,6 +126,9 @@
         </script>
     </form>
 </div>
+
+
         </article>
     </div>
 </section>
+
