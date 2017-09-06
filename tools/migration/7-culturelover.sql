@@ -72,6 +72,10 @@ INSERT INTO europeana_cope.bolt_blogposts
       WHERE t.contenttype = 'blogposts' AND t.slug IN ('europeana-fashion', 'europeana-enduser', 'europeana-1418')
     );
 
+
+
+UPDATE europeana_cope.bolt_blogposts set status = 'held' where status = 'trash';
+
 -- ##################################
 -- Create blogevents table
 -- ##################################
