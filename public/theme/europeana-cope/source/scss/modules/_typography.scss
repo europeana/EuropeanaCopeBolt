@@ -135,7 +135,7 @@ h4, .delta {
 
     footer & {
         font-size: 0.75rem;
-        color: $light-gray;
+        color: $line-gray;
         text-transform: uppercase;
 
         @include respond-to (medium-screens) {
@@ -401,7 +401,19 @@ footer {
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.6;
-    color: $black;
+    color: $white;
+
+
+    a svg {
+        fill: $line-gray;
+    }
+
+    a:hover svg,
+    a:active svg,
+    a:focus svg {
+        fill: $white;
+    }
+
 }
 
 .footer-block-mission p {

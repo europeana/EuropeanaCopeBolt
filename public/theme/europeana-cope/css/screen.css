@@ -605,7 +605,7 @@ aside {
         padding: 0rem 0 0; } }
 
 footer {
-  background: #e7e7e7;
+  background: #293745;
   border-top: 6px solid #293745;
   padding-top: 2rem;
   margin-top: 3rem; }
@@ -828,7 +828,7 @@ ul.teaser-list {
 * CONTENTHEADER
 **/
 .topbar {
-  background-color: #69737C;
+  background-color: #095F90;
   min-height: 53px;
   z-index: 10;
   height: 53px; }
@@ -889,9 +889,9 @@ nav.main-menu {
   z-index: 1; }
   #playmenu .home {
     padding-left: 0;
-    background: #D9D4CA; }
+    background: #293745; }
     #playmenu .home a {
-      color: #444;
+      color: #fff;
       text-align: center;
       font-weight: 400;
       display: block; }
@@ -1036,12 +1036,12 @@ nav.footer-menu li {
   display: inline-block; }
 
 nav.footer-menu a {
-  color: #1a1a1a;
+  color: #cccccc;
   text-decoration: none;
-  border-bottom: 1px dotted #293745;
+  border-bottom: 1px dotted #cccccc;
   margin-right: .8em; }
   nav.footer-menu a:hover, nav.footer-menu a:focus, nav.footer-menu a:active {
-    color: #095f90; }
+    color: #fff; }
 
 .pagination {
   overflow: hidden;
@@ -1302,7 +1302,7 @@ h4, .delta {
   margin-bottom: 0.8rem; }
   footer h4, footer .delta {
     font-size: 0.75rem;
-    color: #777777;
+    color: #cccccc;
     text-transform: uppercase; }
     @media only screen and (min-width: 24em) {
       footer h4, footer .delta {
@@ -1497,7 +1497,13 @@ footer {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.6;
-  color: #1a1a1a; }
+  color: #fff; }
+  footer a svg {
+    fill: #cccccc; }
+  footer a:hover svg,
+  footer a:active svg,
+  footer a:focus svg {
+    fill: #fff; }
 
 .footer-block-mission p {
   font-size: 0.875rem;

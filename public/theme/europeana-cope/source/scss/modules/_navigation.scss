@@ -10,7 +10,7 @@
 **/
 
 .topbar {
-    background-color: $quicklinks-bar;
+    background-color: $denim;
     min-height: 53px;
     z-index: 10; //for sticky
     height: 53px; // to prevent filtering from pushing bar down. remove if it causes other problems!
@@ -111,10 +111,10 @@ nav.main-menu {
 
     .home {
         padding-left: 0;
-        background: $paper;
+        background: $dark-blue;
 
         a {
-            color: #444;
+            color: $white;
             text-align: center;
             font-weight: 400;
             display: block;
@@ -383,13 +383,13 @@ nav.footer-menu {
     }
 
     a {
-        color: $black;
+        color: $line-gray;
         text-decoration: none;
-        border-bottom: 1px dotted $dark-blue;
+        border-bottom: 1px dotted $line-gray;
         margin-right: .8em;
 
         &:hover, &:focus, &:active {
-            color: $link-blue;
+            color: $white;
         }
     }
 }
