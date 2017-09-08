@@ -2287,7 +2287,7 @@ blogposts:
     title:
       type: text
       required: true
-      label: "Title (required):"
+      label: "Title (required)"
       group: "Blog post"
     slug:
       type: slug
@@ -2295,27 +2295,27 @@ blogposts:
     introduction:
       type: text
       required: false
-      label: "Introduction:"
+      label: "Introduction"
       postfix: "(One small sentence for overview pages)"
     # Shown on Blog page
     body:
       type: html
       required: false
-      label: "Body (required):"
+      label: "Body (required)"
       height: 150px
     # multiselect from dms
     # Show on Blog list page, Related items snippet, Home page
     image:
       type: image
       required: false
-      label: "Teaser image:"
+      label: "Teaser image"
       attrib: title
       extensions: [ gif, jpg, png ]
     # Show on Blog page
     attachments:
       type: filelist
       required: false
-      label: "Attachments:"
+      label: "Attachments"
     original_url:
       type: text
       postfix: "The original URL, as imported from Wordpress."
@@ -2360,59 +2360,80 @@ blogevents:
     title:
       type: text
       required: true
-      label: "Title (required):"
+      label: "Title (required)"
       variant: inline
       group: "Event information"
     slug:
       type: slug
       uses: title
+      group: "Event information"
     start_event:
       type: datetime
       required: false
-      label: "Start:"
+      label: "Start"
+      group: Events Schedule
     unconfirmed_start:
       type: checkbox
       required: false
-      label: "Unconfirmed:"
+      label: "Unconfirmed"
+      group: Events Schedule
     # If the end date and the start date are the same, then the end date will not show
     # Show on Events list page, Events page, Home page
     end_event:
       type: datetime
       required: false
-      label: "End:"
+      label: "End"
+      group: Events Schedule
     unconfirmed_end:
       type: checkbox
       required: false
-      label: "Unconfirmed:"
+      label: "Unconfirmed"
+      group: Events Schedule
+    location_name:
+      type: text
+      required: true
+      label: "Location Name"
+      group: "Location"
+    geolocation:
+      type: geolocation
+      required: true
+      label: "Location Place"
+      group: "Location"
     introduction:
       type: text
       required: false
-      label: "Introduction:"
+      label: "Introduction"
       postfix: "(One small sentence for overview pages)"
+      group: "Event information"
     teaser:
       type: html
       required: true
-      label: "Teaser (required):"
+      label: "Teaser (required)"
       height: 150px
+      group: "Teaser"
     # Show on Events list page, Events page, Home page
     body:
       type: html
       required: true
-      label: "Body (required):"
+      label: "Body (required)"
       height: 150px
+      group: "Event information"
     # Shown on Individual pages, Lists, Overviews, Teasers
     teaser_image:
       type: image
       required: false
-      label: "Teaser image:"
+      label: "Teaser image"
+      group: "Teaser"
     attachments:
       type: filelist
       required: false
-      label: "Attachments:"
+      label: "Attachments"
+      group: "Event information"
     # If this is checked, then the contact persons secondary email will be shown instead of their primary email in the contact block
     original_url:
       type: text
       postfix: "The original URL, as imported from Wordpress."
+      group: "Event information"
   taxonomy: [ tags ]
   relations:
     persons:
