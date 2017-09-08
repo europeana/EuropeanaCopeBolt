@@ -442,7 +442,7 @@ footer {
         font-size: 2rem;
         font-style: italic;
         line-height: 1.6;
-        color: $dark-blue;
+        color: $line-gray;
         text-decoration: none;
 
         @include respond-to (medium-screens) {
