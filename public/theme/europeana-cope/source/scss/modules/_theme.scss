@@ -897,19 +897,19 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
 * Collapse margins when a call to action follows a banner
 **/
 
-
+//regular one-banner
 .section-banner + .section-calltoactionform,
 .section-banner + .section-calltoactioninline,
 .section-banner + .section-calltoactionlink,
-
+//or when an in-page anchor is in between
 .section-banner + .in-page-anchor + .section-calltoactionform,
 .section-banner + .in-page-anchor + .section-calltoactioninline,
 .section-banner + .in-page-anchor + .section-calltoactionlink,
-
+// three banners next to another
 .section-bannertriple + .section-calltoactionform,
 .section-bannertriple + .section-calltoactioninline,
 .section-bannertriple + .section-calltoactionlink,
-
+//or when an in-page anchor is in between these
 .section-bannertriple + .in-page-anchor + .section-calltoactionform,
 .section-bannertriple + .in-page-anchor + .section-calltoactioninline,
 .section-bannertriple + .in-page-anchor + .section-calltoactionlink
