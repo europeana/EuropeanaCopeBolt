@@ -892,6 +892,30 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
     }
 }
 
+
+/*
+* Collapse margins when a call to action follows a banner
+**/
+
+
+.section-banner + .section-calltoactionform,
+.section-banner + .section-calltoactioninline,
+.section-banner + .section-calltoactionlink,
+.section-bannertriple + .section-calltoactionform,
+.section-bannertriple + .section-calltoactioninline,
+.section-bannertriple + .section-calltoactionlink {
+    overflow: visible;
+
+    .calltoactionform,
+    .calltoactionlink,
+    .calltoactioninline {
+        margin-top: -1rem;
+
+    }
+
+}
+
+
 /*
 ***********************************************************************
 * CONTENT PAGE

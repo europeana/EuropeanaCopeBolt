@@ -2468,6 +2468,36 @@ div.calltoaction {
     margin: 0 0 1rem; }
 
 /*
+* Collapse margins when a call to action follows a banner
+**/
+.section-banner + .section-calltoactionform,
+.section-banner + .section-calltoactioninline,
+.section-banner + .section-calltoactionlink,
+.section-bannertriple + .section-calltoactionform,
+.section-bannertriple + .section-calltoactioninline,
+.section-bannertriple + .section-calltoactionlink {
+  overflow: visible; }
+  .section-banner + .section-calltoactionform .calltoactionform,
+  .section-banner + .section-calltoactionform .calltoactionlink,
+  .section-banner + .section-calltoactionform .calltoactioninline,
+  .section-banner + .section-calltoactioninline .calltoactionform,
+  .section-banner + .section-calltoactioninline .calltoactionlink,
+  .section-banner + .section-calltoactioninline .calltoactioninline,
+  .section-banner + .section-calltoactionlink .calltoactionform,
+  .section-banner + .section-calltoactionlink .calltoactionlink,
+  .section-banner + .section-calltoactionlink .calltoactioninline,
+  .section-bannertriple + .section-calltoactionform .calltoactionform,
+  .section-bannertriple + .section-calltoactionform .calltoactionlink,
+  .section-bannertriple + .section-calltoactionform .calltoactioninline,
+  .section-bannertriple + .section-calltoactioninline .calltoactionform,
+  .section-bannertriple + .section-calltoactioninline .calltoactionlink,
+  .section-bannertriple + .section-calltoactioninline .calltoactioninline,
+  .section-bannertriple + .section-calltoactionlink .calltoactionform,
+  .section-bannertriple + .section-calltoactionlink .calltoactionlink,
+  .section-bannertriple + .section-calltoactionlink .calltoactioninline {
+    margin-top: -1rem; }
+
+/*
 ***********************************************************************
 * CONTENT PAGE
 ***********************************************************************
