@@ -2427,7 +2427,8 @@ div.calltoaction {
       margin: 1rem auto;
       display: block;
       width: 80%;
-      max-width: 250px; }
+      max-width: 250px;
+      z-index: 10; }
       @media only screen and (min-width: 47.9375em) {
         .calltoactionform .button.actionbutton,
         .calltoactionlink .button.actionbutton {

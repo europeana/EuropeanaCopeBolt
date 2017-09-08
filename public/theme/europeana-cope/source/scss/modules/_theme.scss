@@ -837,6 +837,7 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
             display: block;
             width: 80%;
             max-width: 250px;
+            z-index: 10;
 
         @include respond-to(large-screens) {
             display: inline-block;
