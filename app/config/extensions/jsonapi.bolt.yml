@@ -19,9 +19,9 @@ contenttypes:
         where-clause:
             status: 'published'
     blogevents:
-        list-fields: [ title, slug, datepublish, start_event, unconfirmed_start, end_event, unconfirmed_end, introduction, teaser, body,  teaser_image, image, structure_sortorder, structure_parent, tags, blogs, relations ]
-        item-fields: [ title, slug, datepublish, introduction, teaser, body, teaser_image, image, filelist, secondary_mail, structure_sortorder, structure_parent, tags, relations ]
-        allowed-fields: [ title, slug, datepublish, introduction, teaser, body, teaser_image, image, filelist, secondary_mail, structure_sortorder, structure_parent, tags, relations ]
+        list-fields: [ title, slug, datepublish, start_event, unconfirmed_start, end_event, unconfirmed_end, location_name, geolocation, introduction, teaser, body, teaser_image, attachments, original_url, tags, blogs, relations ]
+        item-fields: [ title, slug, datepublish, start_event, unconfirmed_start, end_event, unconfirmed_end, location_name, geolocation, introduction, teaser, body, teaser_image, attachments, original_url, tags, blogs, relations ]
+        allowed-fields: [ title, slug, datepublish, start_event, unconfirmed_start, end_event, unconfirmed_end, location_name, geolocation, introduction, teaser, body, teaser_image, attachments, original_url, tags, blogs, relations ]
         where-clause:
             status: 'published'
     persons:
@@ -45,7 +45,7 @@ headers:
 replacements:
     'src="//': 'src="http://'
     'href="//': 'href="http://'
-    
+
 # The base url where the API is accessible.
 base: '/json'
 
@@ -70,7 +70,7 @@ headers:
 replacements:
     'src="//': 'src="http://'
     'href="//': 'href="http://'
-    
+
 # The base url where the API is accessible.
 base: '/json'
 
