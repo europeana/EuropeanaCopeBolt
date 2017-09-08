@@ -859,6 +859,7 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
         width: 100%;
         padding: .5rem 0;
         text-align: center;
+        z-index: 10; // to float above colored gradients
 
         @include respond-to(large-screens) {
             float:left;
