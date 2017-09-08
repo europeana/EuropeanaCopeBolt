@@ -2250,7 +2250,7 @@ resources:
     imagelicense:
       label: "Image License"
       type: select
-      values: [CC0, CC-BY, CC-BY-SA, CC-BY-NC, CC-BY-NC-SA]
+      values: [Public Domain, CC0, CC BY, CC BY-SA, CC BY-NC, CC BY-NC-SA]
       prefix: "<hr />"
     slug:
       type: slug
