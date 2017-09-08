@@ -918,11 +918,11 @@ ul.play-menu {
     ul.play-menu > li.active.toplevel,
     ul.play-menu > li > .sub-menu > li.active.toplevel {
       padding-left: 0;
-      background: #D9D4CA; }
+      background: #293745; }
       ul.play-menu > li.active.toplevel > a,
       ul.play-menu > li > .sub-menu > li.active.toplevel > a {
         min-height: 35px;
-        color: #444;
+        color: #fff;
         text-align: center;
         font-weight: 400;
         display: block; }
@@ -1310,6 +1310,8 @@ h4, .delta {
 
 h5 {
   font-size: 1rem; }
+  footer h5 {
+    color: #cccccc; }
 
 h2.widget, h3.widget {
   font-size: 1rem;

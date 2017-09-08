@@ -156,11 +156,11 @@ ul.play-menu {
 
         &.active.toplevel {
             padding-left: 0;
-            background: $paper;
+            background: $dark-blue;
 
             > a {
                 min-height: 35px;
-                color: #444;
+                color: $white;
                 text-align: center;
                 font-weight: 400;
                 display: block;
