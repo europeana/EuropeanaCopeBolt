@@ -1900,11 +1900,14 @@ header {
   position: relative;
   padding-left: 1.5rem;
   margin: 0 auto;
-  width: 185px; }
+  width: 200px; }
+  @media only screen and (min-width: 24em) {
+    .mainlogo {
+      width: 265px; } }
   @media only screen and (min-width: 60em) {
     .mainlogo {
       margin: 0 0 0 -1rem;
-      width: 225px; } }
+      width: 265px; } }
 
 .version-flag {
   position: absolute;
