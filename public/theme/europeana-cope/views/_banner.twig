@@ -26,7 +26,10 @@
     <div class="license-attribution">
         <button class="image-info"><span>?</span></button>
         <article>
-            <p>{{ record.values.image.title }}</p>
+            {% if (record.values.image.title is defined and record.values.image.title is not empty) %}
+                <p>{{ record.values.image.title }}</p>
+            {% endif %}
+
             {% if (record.imagelicense is defined and record.imagelicense is not empty) %}
                 {% set labels = record.contenttype.fields.imagelicense.values %}
                 <span class="image-license">{{ labels[record.imagelicense] }}</span>
