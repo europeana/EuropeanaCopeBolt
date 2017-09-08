@@ -27,7 +27,10 @@
         <button class="image-info"><span>?</span></button>
         <article>
             <p>{{ record.values.image.title }}</p>
-            <span class="image-license">{{ record.imagelicense }}</span>
+            {% if (record.imagelicense is defined and record.imagelicense is not empty) %}
+                {% set labels = record.contenttype.fields.imagelicense.values %}
+                <span class="image-license">{{ labels[record.imagelicense] }}</span>
+            {% endif %}
         </article>
     </div>
     {% endif %}
