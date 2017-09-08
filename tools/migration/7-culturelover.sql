@@ -59,17 +59,17 @@ TRUNCATE europeana_cope.bolt_blogposts;
 -- ##################################
 
 -- pro
-INSERT INTO europeana_cope.bolt_blogposts 
-  ( id, subsite, subsite_id, slug, datecreated, datechanged, datepublish, 
-    datedepublish, username, ownerid, status, title, teaser, body, attachments, 
-        parents, image, structure_sortorder, structure_parent, templatefields ) 
-  SELECT b.id, 'pro', b.id, b.slug, b.datecreated, b.datechanged, b.datepublish, 
-    b.datedepublish, b.username, b.ownerid, b.status, b.title, b.teaser, b.body, b.attachments, 
+INSERT IGNORE INTO europeana_cope.bolt_blogposts
+  ( id, subsite, subsite_id, slug, datecreated, datechanged, datepublish,
+    datedepublish, username, ownerid, status, title, teaser, body, attachments,
+        parents, image, structure_sortorder, structure_parent, templatefields )
+  SELECT b.id, 'pro', b.id, b.slug, b.datecreated, b.datechanged, b.datepublish,
+    b.datedepublish, b.username, b.ownerid, b.status, b.title, b.teaser, b.body, b.attachments,
     b.parents, b.image, b.structure_sortorder, b.structure_parent, b.templatefields
-  FROM europeana_pro.bolt_blogposts b  
+  FROM europeana_pro.bolt_blogposts b
   WHERE b.id IN (
       SELECT distinct(t.content_id) FROM europeana_pro.bolt_taxonomy t
-      WHERE t.contenttype = 'blogposts' AND t.slug IN ('europeana-fashion', 'europeana-enduser', 'europeana-1418')
+      WHERE t.contenttype = 'blogposts' AND t.slug IN ('culturelover', 'culturelover-fashion', 'europeana-fashion', 'europeana-enduser', 'europeana-1418')
     );
 
 
@@ -121,28 +121,28 @@ CREATE INDEX `IDX_75BBACEE7B00651C` ON europeana_cope.bolt_blogevents (`status`)
 -- ##################################
 
 -- pro
-INSERT INTO europeana_cope.bolt_blogevents 
-  ( id, slug, datecreated, datechanged, datepublish, 
-    datedepublish, username, ownerid, status, title, start_event, unconfirmed_start, 
+INSERT IGNORE INTO europeana_cope.bolt_blogevents
+  ( id, slug, datecreated, datechanged, datepublish,
+    datedepublish, username, ownerid, status, title, start_event, unconfirmed_start,
     end_event, unconfirmed_end, teaser, body, introduction, teaser_image, attachments,
-    templatefields, location_name, geolocation ) 
-  SELECT e.id, e.slug, e.datecreated, e.datechanged, e.datepublish, 
-    e.datedepublish, e.username, e.ownerid, e.status, e.title, e.start_event, e.unconfirmed_start, 
-    e.end_event, e.unconfirmed_end, e.teaser, e.body, e.introduction, e.teaser_image, e.filelist, 
+    templatefields, location_name, geolocation )
+  SELECT e.id, e.slug, e.datecreated, e.datechanged, e.datepublish,
+    e.datedepublish, e.username, e.ownerid, e.status, e.title, e.start_event, e.unconfirmed_start,
+    e.end_event, e.unconfirmed_end, e.teaser, e.body, e.introduction, e.teaser_image, e.filelist,
     e.templatefields, l.title, l.geolocation
   FROM europeana_pro.bolt_events e
     JOIN europeana_pro.bolt_relations r
       ON r.from_id = e.id AND r.from_contenttype = 'events'
     JOIN europeana_pro.bolt_locations l
-      ON r.to_id = l.id AND r.to_contenttype = 'locations' 
+      ON r.to_id = l.id AND r.to_contenttype = 'locations'
   WHERE e.id IN (
     SELECT distinct(t.content_id) FROM europeana_pro.bolt_taxonomy t
     WHERE t.contenttype = 'events'
-    AND t.slug in ('europeana-fashion', 'europeana-enduser', 'europeana-1418')
+    AND t.slug in ('culturelover', 'culturelover-fashion', 'europeana-fashion', 'europeana-enduser', 'europeana-1418')
   );
 
 -- ##################################
--- Add all taxonomies for 
+-- Add all taxonomies for
 -- ##################################
 
 CREATE TABLE IF NOT EXISTS europeana_cope.bolt_taxonomy (
@@ -164,11 +164,11 @@ DELETE FROM europeana_cope.bolt_taxonomy WHERE contenttype = 'blogposts';
 INSERT INTO europeana_cope.bolt_taxonomy ( content_id, contenttype, taxonomytype, slug, name, sortorder
 ) SELECT t.content_id, t.contenttype, t.taxonomytype, t.slug, t.name, t.sortorder
     FROM europeana_pro.bolt_taxonomy t
-    JOIN europeana_pro.bolt_taxonomy cl 
+    JOIN europeana_pro.bolt_taxonomy cl
     ON (
           cl.content_id = t.content_id
           AND cl.contenttype = 'blogposts'
-          AND cl.slug in ('europeana-fashion', 'europeana-enduser', 'europeana-1418')
+          AND cl.slug in ('culturelover', 'culturelover-fashion', 'europeana-fashion', 'europeana-enduser', 'europeana-1418')
         )
     WHERE t.contenttype = 'blogposts'
     GROUP BY t.id;
@@ -179,11 +179,11 @@ DELETE FROM europeana_cope.bolt_taxonomy WHERE contenttype = 'blogevents';
 INSERT INTO europeana_cope.bolt_taxonomy ( content_id, contenttype, taxonomytype, slug, name, sortorder
 ) SELECT t.content_id, 'blogevents',  t.taxonomytype, t.slug, t.name, t.sortorder
     FROM europeana_pro.bolt_taxonomy t
-    JOIN europeana_pro.bolt_taxonomy cl 
+    JOIN europeana_pro.bolt_taxonomy cl
     ON (
           cl.content_id = t.content_id
           AND cl.contenttype = 'events'
-          AND cl.slug in ('europeana-fashion', 'europeana-enduser', 'europeana-1418')
+          AND cl.slug in ('culturelover', 'culturelover-fashion', 'europeana-fashion', 'europeana-enduser', 'europeana-1418')
         )
     WHERE t.contenttype = 'events'
     GROUP BY t.id;
@@ -199,48 +199,48 @@ DELETE FROM europeana_cope.bolt_relations WHERE from_contenttype = 'blogposts';
 DELETE FROM europeana_cope.bolt_relations WHERE from_contenttype = 'blogevents';
 
 -- pro
-INSERT INTO europeana_cope.bolt_relations 
-  ( from_contenttype, from_id, to_contenttype, to_id ) 
+INSERT INTO europeana_cope.bolt_relations
+  ( from_contenttype, from_id, to_contenttype, to_id )
   SELECT 'blogposts', r.from_id, 'persons', p.id
   FROM europeana_pro.bolt_relations r
   JOIN europeana_pro.bolt_network n ON n.id = r.to_id
   JOIN europeana_cope.bolt_persons p ON p.uid = n.uid
     WHERE
-      from_contenttype = 'blogposts' 
+      from_contenttype = 'blogposts'
       AND from_id IN (SELECT id FROM europeana_cope.bolt_blogposts)
       AND to_contenttype = 'network';
 
-INSERT INTO europeana_cope.bolt_relations 
-  ( from_contenttype, from_id, to_contenttype, to_id ) 
+INSERT INTO europeana_cope.bolt_relations
+  ( from_contenttype, from_id, to_contenttype, to_id )
   SELECT 'blogposts', r.from_id, 'persons', p.id
   FROM europeana_pro.bolt_relations r
   JOIN europeana_pro.bolt_network n ON n.id = r.to_id
   JOIN europeana_cope.bolt_persons p ON p.uid = n.uid
     WHERE
-      to_contenttype = 'blogposts' 
+      to_contenttype = 'blogposts'
       AND from_id IN (SELECT id FROM europeana_cope.bolt_blogposts)
       AND from_contenttype = 'network';
 
 -- pro
-INSERT INTO europeana_cope.bolt_relations 
-  ( from_contenttype, from_id, to_contenttype, to_id ) 
+INSERT INTO europeana_cope.bolt_relations
+  ( from_contenttype, from_id, to_contenttype, to_id )
   SELECT 'blogevents', r.from_id, 'persons', p.id
   FROM europeana_pro.bolt_relations r
   JOIN europeana_pro.bolt_network n ON n.id = r.to_id
   JOIN europeana_cope.bolt_persons p ON p.uid = n.uid
     WHERE
-      from_contenttype = 'blogevents' 
+      from_contenttype = 'blogevents'
       AND from_id IN (SELECT id FROM europeana_cope.bolt_blogposts)
       AND to_contenttype = 'network';
 
-INSERT INTO europeana_cope.bolt_relations 
-  ( from_contenttype, from_id, to_contenttype, to_id ) 
+INSERT INTO europeana_cope.bolt_relations
+  ( from_contenttype, from_id, to_contenttype, to_id )
   SELECT 'blogevents', r.from_id, 'persons', p.id
   FROM europeana_pro.bolt_relations r
   JOIN europeana_pro.bolt_network n ON n.id = r.to_id
   JOIN europeana_cope.bolt_persons p ON p.uid = n.uid
     WHERE
-      to_contenttype = 'blogevents' 
+      to_contenttype = 'blogevents'
       AND from_id IN (SELECT id FROM europeana_cope.bolt_blogposts)
       AND from_contenttype = 'network';
 
@@ -251,11 +251,11 @@ INSERT INTO europeana_cope.bolt_relations
 UPDATE europeana_cope.bolt_posts b SET b.status = 'held'
     WHERE b.id IN (
         SELECT distinct(t.content_id) FROM europeana_cope.bolt_taxonomy t
-        WHERE t.contenttype = 'posts' AND t.slug IN ('europeana-fashion', 'europeana-enduser', 'europeana-1418')
+        WHERE t.contenttype = 'posts' AND t.slug IN ('culturelover', 'culturelover-fashion', 'europeana-fashion', 'europeana-enduser', 'europeana-1418')
     );
 
 UPDATE europeana_cope.bolt_events e SET e.status = 'held'
     WHERE e.id IN (
         SELECT distinct(t.content_id) FROM europeana_cope.bolt_taxonomy t
-        WHERE t.contenttype = 'events' AND t.slug IN ('europeana-fashion', 'europeana-enduser', 'europeana-1418')
+        WHERE t.contenttype = 'events' AND t.slug IN ('culturelover', 'culturelover-fashion', 'europeana-fashion', 'europeana-enduser', 'europeana-1418')
     );
