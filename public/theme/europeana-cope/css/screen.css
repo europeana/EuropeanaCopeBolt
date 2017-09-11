@@ -1973,11 +1973,18 @@ header {
   @media only screen and (min-width: 47.9375em) {
     .highlight-bar img {
       float: left;
+      width: 90px;
       margin: 0 1rem 1rem 0; } }
+
+@media only screen and (min-width: 47.9375em) {
+  .highlight-bar .highlight-title {
+    padding-left: 90px;
+    min-width: 200px; } }
 
 .highlight-bar li a {
   color: #4d4d4d;
   line-height: 1.375;
+  vertical-align: top;
   display: inline-block;
   font-size: 0.75rem; }
   @media only screen and (min-width: 47.9375em) {

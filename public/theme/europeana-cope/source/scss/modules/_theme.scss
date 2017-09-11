@@ -176,20 +176,30 @@ header {
 
         @include respond-to (large-screens) {
             float: left;
+            width: 90px;
             margin: 0 1rem 1rem 0;
         }
 
     }
 
+    .highlight-title {
+        // color: #f09;
+
+        @include respond-to (large-screens) {
+            padding-left: 90px;
+            min-width: 200px;
+        }
+    }
+
     li a {
         color: $medium-gray;
         line-height: 1.375;
+        vertical-align: top;
         display: inline-block;
         font-size: 0.75rem;
 
         @include respond-to (large-screens) {
            font-size: 0.875rem;
-
         }
 
     }

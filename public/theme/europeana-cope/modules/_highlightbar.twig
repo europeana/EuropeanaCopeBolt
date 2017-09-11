@@ -32,8 +32,8 @@
                 {% else %}
                     <img src="{{ 'web_assets/default.png'|thumbnail(90,78,'c')}}" alt=""/>
                 {% endif %}
-                    <span class="up-to-medium-screens">{{ item.title | excerpt(22) }}</span>
-                    <span class="medium-screens-up">{{ item.title }}</span>
+                    <span class="highlight-title up-to-medium-screens">{{ item.title | excerpt(22) }}</span>
+                    <span class="highlight-title medium-screens-up">{{ item.title }}</span>
                 </a>
             </li>
         {% endfor %}
