@@ -13,6 +13,13 @@ database:
 sitename: Europeana
 payoff: Transforming the world with culture
 
+# maps api key
+google_api_key: AIzaSyAcehL3gt71s2zSwbyeQ5BSkUHf7LwdcCI
+# google analytics tracker key
+google_ua_key: UA-27537877-1
+# environment indicator
+environment: dev # options are prod, beta and enything you want basically
+
 # The theme to use. Be sure to copy the {theme_path}/base-2016 folder, and
 # change the name here accordingly.
 #
