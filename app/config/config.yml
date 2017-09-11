@@ -13,18 +13,6 @@ database:
 sitename: Europeana
 payoff: Transforming the world with culture
 
-europeana:
-    excludedcategories:
-        - 'Culture lover'
-        - 'some other hidden category'
-    excludedmapping:
-        culture_lover:
-            name: Culture lover
-            basepath: https://fashion.europeana.eu/blog/
-        other_hidden_cat:
-            name: 'some other hidden category'
-            baseurl: https://www.google.com/
-
 # The theme to use. Be sure to copy the {theme_path}/base-2016 folder, and
 # change the name here accordingly.
 #
@@ -35,6 +23,7 @@ theme: europeana-cope
 # The locale that'll be used by the application. If no locale is set the
 # fallback locale is 'en_GB'. For available options, see:
 # https://docs.bolt.cm/other/locales
+
 #
 # In some cases it may be needed to specify (non-standard) variations of the
 # locale to get everything to work as desired.
@@ -231,7 +220,7 @@ thumbnails:
 # left in the content that is shown to users. For example, tags like `<script>`
 # or `onclick`-attributes.
 htmlcleaner:
-    allowed_tags: [ div, span, p, br, hr, s, u, strong, em, i, b, li, ul, ol, mark, blockquote, pre, code, tt, h1, h2, h3, h4, h5, h6, dd, dl, dh, table, tbody, thead, tfoot, th, td, tr, a, img, address, abbr, iframe, caption ]
+    allowed_tags: [ div, span, p, br, hr, s, u, strong, em, i, b, li, ul, ol, mark, blockquote, pre, code, tt, h1, h2, h3, h4, h5, h6, dd, dl, dh, table, tbody, thead, tfoot, th, td, tr, a, img, address, abbr, iframe, caption, sub, super ]
     allowed_attributes: [ id, class, style, name, value, href, src, alt, title, width, height, frameborder, allowfullscreen, scrolling, target, colspan, rowspan ]
 
 # Uploaded file handling
@@ -277,8 +266,10 @@ branding:
 debug: false
 debug_show_loggedoff: false
 debug_permission_audit_mode: false
-debug_error_level: 0
+# debug_error_level: 8181           # equivalent to E_ALL &~ E_NOTICE &~ E_DEPRECATED &~ E_USER_DEPRECATED &~ E_WARNING
+debug_error_level: 0                # equivalent to E_ALL
 debug_error_use_symfony: false      # When set to true, Symfony Profiler will be used for exception display when possible
+debug_trace_argument_limit: 4       # Determine how many steps in the backtrace will show (dump) arguments.
 
 # error level when debug is disabled
 production_error_level: 8181 # = E_ALL &~ E_NOTICE &~ E_WARNING &~ E_DEPRECATED &~ E_USER_DEPRECATED
@@ -345,8 +336,8 @@ liveeditor: false
 # it, your mail might disappear into a black hole, without producing any errors.
 # Generally speaking, using 'smtp' is the better option, so use that if possible.
 #
-# Protip: If your webhost does not support SMTP, sign up for a (free) Sendgrid
-# account at https://sendgrid.com/free for sending emails reliably.
+# Protip: If your webhost does not support SMTP, sign up for a (free) Sparkpost
+# account at https://www.sparkpost.com/pricing/ for sending emails reliably.
 
 # mailoptions:
 #     transport: smtp
@@ -421,12 +412,12 @@ hash_strength: 10
 #         prefer-stable: true            # Prefer stable releases over development ones
 #         prefer-dist: true              # Forces installation from package dist even for dev versions.
 #         prefer-source: false           # Forces installation from package sources when possible, including VCS information.
-#         optimize-autoloader: false     # Optimize autoloader during autoloader dump.
-#         classmap-authoritative: false  # Autoload classes from the classmap only. Implicitly enables `optimize-autoloader`.
+#         config:
+#             optimize-autoloader: false     # Optimize autoloader during autoloader dump.
+#             classmap-authoritative: false  # Autoload classes from the classmap only. Implicitly enables `optimize-autoloader`.
 
-# Enforcing the use of SSL. If set, all but the front-end pages will enforce an
-# SSL connection (and redirect to HTTPS if you attempt to visit the backend over
-# plain HTTP).
+# Enforcing the use of SSL. If set, all pages will enforce an SSL connection,
+# and redirect to HTTPS if you attempt to visit plain HTTP pages.
 # enforce_ssl: true
 
 # If configured, Bolt will trust X-Forwarded-XXX headers from the listed IP
