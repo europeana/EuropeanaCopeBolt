@@ -30,9 +30,11 @@
 
         {% endif %}
 
+        {% if app.config.get('general/environment') != 'prod' %}
         <div class="version-flag">
-            beta
+            {{ app.config.get('general/environment')|default('beta') }}
         </div>
+        {% endif %}
     </div>
 
     <p class="payoff">{{ app.config.get('general/payoff') }}</p>
