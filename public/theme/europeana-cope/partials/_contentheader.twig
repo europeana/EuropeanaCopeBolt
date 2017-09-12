@@ -71,9 +71,15 @@
             {% set taxonomyterm = ''~(record.highlightcategory) %}
             {% if taxonomyterm in app.config.get('taxonomy')['communities']['options']|keys %}
                 {% set taxonomyname = 'communities' %}
+            {% elseif taxonomyterm in app.config.get('taxonomy')['communities']['options'] %}
+                {% set taxonomyname = 'communities' %}
             {% elseif taxonomyterm in app.config.get('taxonomy')['markets']['options']|keys %}
                 {% set taxonomyname = 'markets' %}
+            {% elseif taxonomyterm in app.config.get('taxonomy')['markets']['options'] %}
+                {% set taxonomyname = 'markets' %}
             {% elseif taxonomyterm in app.config.get('taxonomy')['categories']['options']|keys %}
+                {% set taxonomyname = 'categories' %}
+            {% elseif taxonomyterm in app.config.get('taxonomy')['categories']['options'] %}
                 {% set taxonomyname = 'categories' %}
             {% endif %}
         {% endif %}
