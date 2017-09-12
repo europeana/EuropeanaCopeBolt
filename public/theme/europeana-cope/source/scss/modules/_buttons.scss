@@ -47,8 +47,7 @@ a.button, .button, button {
     }
 
 
-    .calltoaction &,
-    .calltoaction-readmore & {
+    .calltoaction & {
         color: $white;
         border: 2px solid $white;
         font-weight: 400;
@@ -61,6 +60,11 @@ a.button, .button, button {
             font-weight: 700;
         }
     }
+
+    .calltoaction-readmore & {
+    }
+
+
 
 }
 

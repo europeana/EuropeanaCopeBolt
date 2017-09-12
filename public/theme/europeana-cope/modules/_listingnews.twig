@@ -78,13 +78,7 @@ Available variables
         {% endif %}
 
 
-        <div class="calltoaction-readmore colored-image"
-        {% if records|first.image is not empty %}
-            style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})"
-        {% else %}
-            style="background-image: url({{ image('web_assets/default.png', 900, 90) }})"
-        {% endif -%}
-        >
+        <div class="calltoaction-readmore">
             <div class="header-group">
                 {% if modulemoretext is not empty %}
                     <p>{{ modulemoretext }}</p>

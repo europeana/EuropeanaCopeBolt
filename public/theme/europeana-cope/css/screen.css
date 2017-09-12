@@ -1710,17 +1710,13 @@ a.button, .button, button {
     color: #fff;
     text-decoration: none;
     font-weight: 400; }
-  .calltoaction .button-link,
-  .calltoaction-readmore .button-link {
+  .calltoaction .button-link {
     color: #fff;
     border: 2px solid #fff;
     font-weight: 400;
     letter-spacing: 0;
     font-size: 0.75rem; }
-    .calltoaction .button-link:hover, .calltoaction .button-link:active, .calltoaction .button-link:focus,
-    .calltoaction-readmore .button-link:hover,
-    .calltoaction-readmore .button-link:active,
-    .calltoaction-readmore .button-link:focus {
+    .calltoaction .button-link:hover, .calltoaction .button-link:active, .calltoaction .button-link:focus {
       background-color: #fff;
       color: #E11D53;
       font-weight: 700; }
