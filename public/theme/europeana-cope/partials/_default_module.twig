@@ -145,28 +145,81 @@
             {% set allow_pager = false %}
         {% elseif ordering == 'category' %}
             {% set basecategory = module.get('basecategory') %}
+            {% if basecategory|default() is not empty %}
+                {% if basecategory in app.config.get('taxonomy')['categories']['options']|keys %}
+                    {% set basetaxonomyname = 'categories' %}
+                {% elseif basecategory in app.config.get('taxonomy')['categories']['options'] %}
+                    {% set basetaxonomyname = 'categories' %}
+                {% elseif basecategory in app.config.get('taxonomy')['communities']['options']|keys %}
+                    {% set basetaxonomyname = 'communities' %}
+                {% elseif basecategory in app.config.get('taxonomy')['communities']['options'] %}
+                    {% set basetaxonomyname = 'communities' %}
+                {% elseif basecategory in app.config.get('taxonomy')['markets']['options']|keys %}
+                    {% set basetaxonomyname = 'markets' %}
+                {% elseif basecategory in app.config.get('taxonomy')['markets']['options'] %}
+                    {% set basetaxonomyname = 'markets' %}
+                {% else %}
+                    {% set basetaxonomyname = 'categories' %}
+                {% endif %}
+            {% endif %}
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
-                categories: basecategory
+                (basetaxonomyname): (basecategory)
             } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
         {% elseif ordering == 'category_unpaged' %}
             {% set basecategory = module.get('basecategory') %}
+            {# filter taxonomies #}
+            {% if basecategory|default() is not empty %}
+                {% if basecategory in app.config.get('taxonomy')['categories']['options']|keys %}
+                    {% set basetaxonomyname = 'categories' %}
+                {% elseif basecategory in app.config.get('taxonomy')['categories']['options'] %}
+                    {% set basetaxonomyname = 'categories' %}
+                {% elseif basecategory in app.config.get('taxonomy')['communities']['options']|keys %}
+                    {% set basetaxonomyname = 'communities' %}
+                {% elseif basecategory in app.config.get('taxonomy')['communities']['options'] %}
+                    {% set basetaxonomyname = 'communities' %}
+                {% elseif basecategory in app.config.get('taxonomy')['markets']['options']|keys %}
+                    {% set basetaxonomyname = 'markets' %}
+                {% elseif basecategory in app.config.get('taxonomy')['markets']['options'] %}
+                    {% set basetaxonomyname = 'markets' %}
+                {% else %}
+                    {% set basetaxonomyname = 'categories' %}
+                {% endif %}
+            {% endif %}
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
-                categories: basecategory
+                (basetaxonomyname): (basecategory)
             } orderby '-datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
         {% elseif ordering == 'market' %}
             {% set basemarket = module.get('basemarket') %}
+
+            {% if basemarket in app.config.get('taxonomy')['markets']['options']|keys %}
+                {% set basetaxonomyname = 'markets' %}
+            {% elseif basemarket in app.config.get('taxonomy')['markets']['options'] %}
+                {% set basetaxonomyname = 'markets' %}
+            {% else %}
+                {% set basetaxonomyname = 'markets' %}
+            {% endif %}
+
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
-                markets: basemarket
+                (basetaxonomyname): (basemarket)
             } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
         {% elseif ordering == 'market_unpaged' %}
             {% set basemarket = module.get('basemarket') %}
+
+            {% if basemarket in app.config.get('taxonomy')['markets']['options']|keys %}
+                {% set basetaxonomyname = 'markets' %}
+            {% elseif basemarket in app.config.get('taxonomy')['markets']['options'] %}
+                {% set basetaxonomyname = 'markets' %}
+            {% else %}
+                {% set basetaxonomyname = 'markets' %}
+            {% endif %}
+
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
-                markets: basemarket
+                (basetaxonomyname): (basemarket)
             } orderby '-datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
         {% elseif ordering == 'calendar' %}
