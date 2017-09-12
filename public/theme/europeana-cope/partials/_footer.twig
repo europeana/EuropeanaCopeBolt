@@ -72,7 +72,9 @@
 
             {{ menu('footer', 'partials/_menu_footer.twig') }}
 
-            <p class="copyright">Co-funded by the European Union.</p>
+            <p class="copyright">
+                <img src="{{paths.theme}}images/flag_european_union.svg" width='40' />
+                Co-funded by the European Union.</p>
             {% setcontent footerinfo = 'resources/footer-info' %}
             {% if footerinfo is not empty %}
                 {{ footerinfo.body }}

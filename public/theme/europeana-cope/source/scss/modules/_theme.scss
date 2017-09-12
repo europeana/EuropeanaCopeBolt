@@ -264,6 +264,16 @@ footer {
 
 }
 
+p.copyright {
+    img {
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-right: .5rem;
+    }
+    font-size: 0.75rem;
+    color: $line-gray;
+}
+
 /*
 * WIDGET ELEMENTEN
 **/

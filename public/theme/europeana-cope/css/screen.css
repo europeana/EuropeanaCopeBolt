@@ -2031,6 +2031,14 @@ footer address {
 .footer-block-mission {
   margin-bottom: 2rem; }
 
+p.copyright {
+  font-size: 0.75rem;
+  color: #cccccc; }
+  p.copyright img {
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: .5rem; }
+
 /*
 * WIDGET ELEMENTEN
 **/
