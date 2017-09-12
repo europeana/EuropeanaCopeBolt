@@ -3387,6 +3387,9 @@ div.body table {
     background: linear-gradient(-197deg, rgba(26, 138, 199, 0.8) 0%, #D43900 100%);
     mix-blend-mode: multiply; }
 
+.grad_none .colored-image {
+  background-color: transparent; }
+
 .skin-research nav.quicklinks ul,
 .skin-research .topbar {
   background-color: #7F3978; }
