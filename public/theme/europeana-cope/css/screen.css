@@ -2400,7 +2400,7 @@ div.calltoaction {
 .calltoactionform,
 .calltoactionlink {
   position: relative;
-  background-color: #E11D53;
+  background-color: #cccccc;
   overflow: hidden;
   margin: 1rem 0; }
   @media only screen and (min-width: 47.9375em) {
@@ -2439,8 +2439,7 @@ div.calltoaction {
         width: auto; } }
   .calltoactionform .button,
   .calltoactionlink .button {
-    display: inline-block;
-    background-color: #700e29; }
+    display: inline-block; }
     .calltoactionform .button.actionbutton,
     .calltoactionlink .button.actionbutton {
       margin: 1rem auto;
