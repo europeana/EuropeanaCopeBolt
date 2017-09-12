@@ -805,7 +805,7 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
 .calltoactionform,
 .calltoactionlink {
     position: relative;
-    background-color: $baseFirstThemeColour;
+    background-color: $line-gray; //$baseFirstThemeColour;
     overflow: hidden;
     margin: 1rem 0;
 
@@ -850,7 +850,7 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
 
     .button {
         display: inline-block;
-        background-color: darken($baseFirstThemeColour, 25%);
+        // background-color: darken($baseFirstThemeColour, 25%);
 
 
         &.actionbutton {
