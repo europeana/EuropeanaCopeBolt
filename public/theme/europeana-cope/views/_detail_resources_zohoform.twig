@@ -9,12 +9,28 @@
                 </div>
             {% endif %}
 
-            <!-- Note :
-            - You can modify the font style and form style to suit your website.
-            - Code lines with comments ���Do not remove this code��� are required for the form to work properly, make sure that you do not remove these lines of code.
-            - The Mandatory check script can modified as to suit your business needs.
-            - It is important that you test the modified form before going live.-->
-<div id='crmWebToEntityForm' style='width:600px;margin:auto;'>
+<!-- Note :
+   - You can modify the font style and form style to suit your website.
+   - Code lines with comments ???Do not remove this code???  are required for the form to work properly, make sure that you do not remove these lines of code.
+   - The Mandatory check script can modified as to suit your business needs.
+   - It is important that you test the modified form before going live.-->
+<div id='crmWebToEntityForm'>
+    <style>
+        #zohotable tr td,
+        #zohotable tr th {
+            margin: 0.2em 0.1em;
+        }
+        #zohotable tr td:first-child {
+            text-align: right;
+            padding: 0.2em 0.5em;
+        }
+        #zohotable tr td.buttons {
+            text-align: center;
+        }
+        #zohotable tr td.buttons input {
+            margin-left: 1em;
+        }
+    </style>
     <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
     <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads1482250000001117001 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8'>
 
@@ -22,35 +38,34 @@
         <input type='text' style='display:none;' name='xnQsjsdp' value='c50096c169ca85883080b0c68d580d35df70e65a4004d20551df0b0a25ea005e'/>
         <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
         <input type='text' style='display:none;' name='xmIwtLD' value='47d808d3e8614a6fe8bf7efd0b5d0ae3b2d4911830669c10e64938c4cd3dce0c'/>
-        <input type='text' style='display:none;' name='actionType' value='TGVhZHM='/>
+        <input type='text' style='display:none;'  name='actionType' value='TGVhZHM='/>
 
-        <input type='text' style='display:none;' name='returnURL' value='http&#x3a;&#x2f;&#x2f;pro.europeana.eu&#x2f;page&#x2f;thank-you-for-your-registration' />
+        <input type='text' style='display:none;' name='returnURL' value='{{- app.request.server.get('REQUEST_SCHEME') -}}&#x3a;&#x2f;&#x2f;{{- app.request.server.get('HTTP_HOST') -}}&#x2f;page&#x2f;thank-you-for-your-registration' />
         <!-- Do not remove this code. -->
-        <style>
-            tr , td {
-                padding:6px;
-                border-spacing:0px;
-                border-width:0px;
-            }
-        </style>
-        <table style='width:600px;background-color:white;color:black'>
+        <table id="zohotable">
+            <tr><th colspan='2'>Register for the Network</th></tr>
 
-            <tr><td colspan='2' style='text-align:left;color:black;font-family:Arial;font-size:14px;'><strong>Register for the Network</strong></td></tr>
+            <tr><td>First Name <span style='color:red;'>*</span></td>
+                <td><input type='text' maxlength='40' name='First Name' /></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>First Name<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;' maxlength='40' name='First Name' /></td></tr>
+            <tr><td>Last Name <span style='color:red;'>*</span></td>
+                <td><input type='text' maxlength='80' name='Last Name' /></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>Last Name<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;' maxlength='80' name='Last Name' /></td></tr>
+            <tr><td>Email <span style='color:red;'>*</span></td><td>
+                    <input type='text' maxlength='100' name='Email' /></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>Email<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;' maxlength='100' name='Email' /></td></tr>
+            <tr><td>Company &#x28;in English&#x29; <span style='color:red;'>*</span></td>
+                <td><input type='text' maxlength='100' name='Company' /></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>Company &#x28;in English&#x29;<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;' maxlength='100' name='Company' /></td></tr>
+            <tr><td>Job title</td>
+                <td><input type='text' maxlength='100' name='Designation' /></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>Job title</td><td style='width:250px;' ><input type='text' style='width:250px;' maxlength='100' name='Designation' /></td></tr>
+            <tr><td>Country <span style='color:red;'>*</span></td>
+                <td><input type='text' maxlength='30' name='Country' /></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>Country<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;' maxlength='30' name='Country' /></td></tr>
-
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>Sector<span style='color:red;'>*</span></td><td style='width:250px;'>
-                    <select style='width:250px;' name='LEADCF3'>
+            <tr><td>Sector <span style='color:red;'>*</span></td>
+                <td>
+                    <select name='LEADCF3'>
                         <option value='-None-'>-None-</option>
                         <option value='Archive'>Archive</option>
                         <option value='Audio-visual&#x20;archive'>Audio-visual archive</option>
@@ -63,21 +78,27 @@
                         <option value='Other'>Other</option>
                     </select></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>I have read and agreed to the statutes and By Laws </td><td style='width:250px;' ><input type='checkbox' name='LEADCF102' checked='true'/></td></tr>
+            <tr><td>I have read and agreed to the statutes and By Laws </td>
+                <td><input type='checkbox' name='LEADCF102' checked='true'/></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>I am interested in Academic Research </td><td style='width:250px;' ><input type='checkbox' name='LEADCF108' /></td></tr>
+            <tr><td>I am interested in Academic Research </td>
+                <td><input type='checkbox' name='LEADCF108' /></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>I am interested in Data&#x2f;Content Provision </td><td style='width:250px;' ><input type='checkbox' name='LEADCF103' /></td></tr>
+            <tr><td>I am interested in Data&#x2f;Content Provision </td>
+                <td><input type='checkbox' name='LEADCF103' /></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>I am interested in Creative Re-use </td><td style='width:250px;' ><input type='checkbox' name='LEADCF104' /></td></tr>
+            <tr><td>I am interested in Creative Re-use </td>
+                <td><input type='checkbox' name='LEADCF104' /></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>I am interested in EuropeanaIPR </td><td style='width:250px;' ><input type='checkbox' name='LEADCF110' /></td></tr>
+            <tr><td>I am interested in EuropeanaIPR </td>
+                <td><input type='checkbox' name='LEADCF110' /></td></tr>
 
-            <tr><td style='nowrap:nowrap;text-align:right;font-size:12px;font-family:Arial;width:200px;'>I am interested in EuropeanaTech </td><td style='width:250px;' ><input type='checkbox' name='LEADCF106' /></td></tr>
+            <tr><td>I am interested in EuropeanaTech </td>
+                <td><input type='checkbox' name='LEADCF106' /></td></tr>
 
-            <tr><td colspan='2' style='text-align:center; padding-top:15px;'>
-                    <input style='font-size:12px;color:#131307' type='submit' value='Submit' />
-                    <input type='reset' style='font-size:12px;color:#131307' value='Reset' />
+            <tr><td colspan='2' class="buttons">
+                    <input type='submit' class="button primary" value='Submit' />
+                    <input type='reset' class="button disabled" value='Reset' />
                 </td>
             </tr>
         </table>
@@ -98,18 +119,18 @@
                     fieldObj.focus();
                     return false;
                   }
-                  alert(fldLangVal[i] +' cannot be empty');
+                  alert(fldLangVal[i] +' cannot be empty.');
                   fieldObj.focus();
                   return false;
-                } else if(fieldObj.nodeName=='SELECT') {
+                }  else if(fieldObj.nodeName=='SELECT') {
                   if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
-                    alert(fldLangVal[i] +' cannot be none');
+                    alert(fldLangVal[i] +' cannot be none.');
                     fieldObj.focus();
                     return false;
                   }
                 } else if(fieldObj.type =='checkbox'){
                   if(fieldObj.checked == false){
-                    alert('Please accept '+fldLangVal[i]);
+                    alert('Please accept  '+fldLangVal[i]);
                     fieldObj.focus();
                     return false;
                   }
