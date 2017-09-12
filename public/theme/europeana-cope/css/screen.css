@@ -856,6 +856,14 @@ nav.quicklinks a {
       font-size: 0.875rem;
       padding: 6px 1rem; } }
 
+a.back-link {
+  color: #fff;
+  line-height: 21px; }
+  .current-filters a.back-link {
+    color: #fff;
+    border-right: 1px solid #fff;
+    padding: 6px 1rem 6px 0rem; }
+
 /*
 * MAIN MENU
 **/
@@ -1079,8 +1087,8 @@ nav.footer-menu a {
   margin-left: 0; }
   @media only screen and (min-width: 47.9375em) {
     .filter-listing {
-      margin-left: 2rem;
-      font-size: 0.9375rem; } }
+      margin-left: 1rem;
+      font-size: 0.875rem; } }
   .filter-listing .current-filters {
     padding: 10px 0; }
     .filter-listing .current-filters .toggle-filter, .filter-listing .current-filters .this-filter {
