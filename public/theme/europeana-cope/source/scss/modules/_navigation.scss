@@ -137,6 +137,7 @@ nav.main-menu {
             text-align: center;
             font-weight: 400;
             display: block;
+            min-height: 27px; // quick fix for pixelproblem in chrome
         }
     }
 
