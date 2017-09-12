@@ -26,7 +26,7 @@
     {% endif %}
 
     {#
-    {{ dump(app.request, app.request.attributes.get('subtype', ''), app.request.attributes.get('taxonomyname', '') , app.request.attributes.get('taxonomyterm', '')) }}
+    {{ dump(app.request, 'subtype:' ~ app.request.attributes.get('subtype', ''), 'taxonomyname:' ~ app.request.attributes.get('taxonomyname', '') , 'taxonomyterm:' ~ app.request.attributes.get('taxonomyterm', '')) }}
     #}
 
     {% set subtypesslugs = [] %}
@@ -126,9 +126,15 @@
             {% set allow_pager = false %}
         {% elseif ordering == 'alphabetical' %}
             {% if sources != 'persons' %}
-                {% setcontent selected_records = sources where { (filtername): '%' ~ (filtervalue) ~'%' } orderby 'title' limit override_amount|default(10) allowpaging %}
+                {% setcontent selected_records = sources where {
+                    (filtername): '%' ~ (filtervalue) ~'%',
+                    (taxonomyname): (taxonomyterm)
+                } orderby 'title' limit override_amount|default(10) allowpaging %}
             {% else %}
-                {% setcontent selected_records = sources where { (filtername): '%' ~ (filtervalue) ~'%' } orderby 'last_name' limit override_amount|default(10) allowpaging %}
+                {% setcontent selected_records = sources where {
+                    (filtername): '%' ~ (filtervalue) ~'%',
+                    (taxonomyname): (taxonomyterm)
+                } orderby 'last_name' limit override_amount|default(10) allowpaging %}
             {% endif %}
         {% elseif ordering == 'tag' %}
             {% set basetag = module.get('basetag') %}
