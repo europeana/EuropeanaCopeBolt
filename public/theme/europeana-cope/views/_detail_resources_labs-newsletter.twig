@@ -1,0 +1,30 @@
+<section>
+    <div class="inner-wrap">
+        <article class="column main-column">
+
+            {% if record.body is not empty %}
+                <div class="body"> {# can be multiple bodies #}
+                    {# 'OMG MULTIPlE BODIES', sherlock said, looking at the massacre #}
+                    {{ record.body }}
+                </div>
+            {% endif %}
+
+            <div>TODO: Insert mailchimp form code here</div>
+
+            <form>
+                <label for="email-signup" class="sr-only">E-mail address</label>
+                {% spaceless %}
+                    <input type="text" name="emailaddress" id="email-signup" placeholder="e-mailaddress">
+                    {# <input class="button" value="Submit" type="submit"> #}
+                    <button type="submit" class="button">
+                        <svg class="icon icon-check">
+                            <use xlink:href="#icon-check"></use>
+                        </svg>
+                        <span class="sr-only">{{ record.buttontext|default('Submit') }}</span>
+                    </button>
+                {% endspaceless %}
+            </form>
+        </article>
+    </div>
+</section>
+

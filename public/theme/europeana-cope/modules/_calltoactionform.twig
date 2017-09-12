@@ -18,8 +18,15 @@ Available variables
 {% if records is iterable and records is not empty %}
 
     {% for record in records %}
-
-        {% include 'views/_calltoactionform.twig' %}
+        {% if record.id is defined %}
+            {% set templateslugfile =  'views/_calltoactionform_' ~ record.contenttype.slug ~ '_' ~ record.slug ~ '.twig' %}
+            {% set templatefile =  'views/_calltoactionform_' ~ record.contenttype.slug ~ '.twig' %}
+            {% set defaulttemplatefile =  'views/_calltoactionform.twig' %}
+            <!-- loading templatefile for record:  '{{ templateslugfile }}' or '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
+            {% include [templateslugfile, templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
+        {% else %}
+            <!-- selected record is unpublished or otherwise unavailable -->
+        {% endif %}
 
     {% endfor %}
 

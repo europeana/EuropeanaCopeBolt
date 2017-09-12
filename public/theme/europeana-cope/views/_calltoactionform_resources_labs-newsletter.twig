@@ -1,0 +1,29 @@
+{# Section breakers - Call to action FULL #}
+<div class="calltoactionform">
+    <div class="colored-image"
+        {% if record.image is not empty %}
+            style="background-image: url({{ image(record.image, 900, 90)|default('notfound') }})"
+        {% else %}
+            style="background-image: url({{ image('web_assets/default.png', 900, 90)}}"
+        {% endif %}
+    ></div>
+
+    <h3 class="widget">{{ record.title }}</h3>
+
+    <div>TODO: Insert mailchimp form code here</div>
+
+    <form>
+        <label for="email-signup" class="sr-only">E-mail address</label>
+        {% spaceless %}
+            <input type="text" name="emailaddress" id="email-signup" placeholder="e-mailaddress">
+            {# <input class="button" value="Submit" type="submit"> #}
+            <button type="submit" class="button">
+                <svg class="icon icon-check">
+                    <use xlink:href="#icon-check"></use>
+                </svg>
+                <span class="sr-only">{{ record.buttontext|default('Submit') }}</span>
+            </button>
+        {% endspaceless %}
+    </form>
+
+</div>
