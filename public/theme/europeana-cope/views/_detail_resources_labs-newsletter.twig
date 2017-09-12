@@ -9,21 +9,24 @@
                 </div>
             {% endif %}
 
-            <div>TODO: Insert mailchimp form code here</div>
 
-            <form>
-                <label for="email-signup" class="sr-only">E-mail address</label>
-                {% spaceless %}
-                    <input type="text" name="emailaddress" id="email-signup" placeholder="e-mailaddress">
-                    {# <input class="button" value="Submit" type="submit"> #}
-                    <button type="submit" class="button">
-                        <svg class="icon icon-check">
-                            <use xlink:href="#icon-check"></use>
-                        </svg>
-                        <span class="sr-only">{{ record.buttontext|default('Submit') }}</span>
-                    </button>
-                {% endspaceless %}
-            </form>
+        <form action="//europeana.us3.list-manage.com/subscribe/post?u=ad318b7566f97eccc895e014e&amp;id=935d4e98eb" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+        <label for="email-signup" class="sr-only">E-mail address</label>
+        {% spaceless %}
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+
+           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ad318b7566f97eccc895e014e_935d4e98eb" tabindex="-1" value=""></div>
+
+            <button type="submit" class="button">
+                <svg class="icon icon-check">
+                    <use xlink:href="#icon-check"></use>
+                </svg>
+                <span class="sr-only">{{ record.buttontext|default('Submit') }}</span>
+            </button>
+        {% endspaceless %}
+    </form>
         </article>
     </div>
 </section>
