@@ -101,30 +101,35 @@ blogs:
 #
 
 # TODO: Convert to datatype field
-appthemes:
-    slug: appthemes
-    name: Type
-    singular_slug: type
-    singular_name: Type
+apptypes:
+    slug: apptypes
+    name: App Types
+    singular_slug: apptype
+    singular_name: App Type
     behaves_like: categories
-    options: [Showcase, Tools]
+    options:
+        Showcase: Showcase
+        Tools: Tools
+        Annotation: Annotation
+        Discovery: Discovery
+        Games: Games
+        'Linked Data': 'Linked Data'
+        Maps: Maps
+        Search: Search
+        Timelines: Timelines
 
-# TODO: Convert to itemtype category
-appcategories:
-    name: Theme
-    slug: appcategories
-    singular_name: Theme
-    singular_slug: theme
+appmarkets:
+    name: App Markets
+    slug: appmarkets
+    singular_name: App Market
+    singular_slug: appmarket
     behaves_like: categories
-    multiple: 1
-    options: [API Implementation, Discovery, Hackathon Prototype, R&D Results, Curation/Annotation,Education, Client Library, Pilot, Gaming, Distribution, Tourism, Linked Open Data]
-
-# TODO: convert to plain tags
-apptags:
-    slug: apptags
-    name: Tags
-    singular_name: Tag
-    behaves_like: tags
+    multiple: true
+    options:
+        'academic-research': 'Academic Research'
+        'creative-industry': 'Creative industry'
+        'education': 'Education'
+        'tourism': 'Tourism'
 
 ##############################################
 # categorization for DATA contenttype

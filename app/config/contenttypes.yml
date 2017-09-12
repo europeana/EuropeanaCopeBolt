@@ -1234,7 +1234,7 @@ data:
     <<: *structure_defaults
     <<: *support_defaults
     <<: *contact_defaults
-  taxonomy: [ communities, markets, categories, tags, itemtype, languagecoverage, subjects, spatialcoverage, country, timecoverage, educationallevel ]
+  taxonomy: [ communities, markets, categories, tags, itemtype, appmarkets, apptypes, subjects, spatialcoverage, educationallevel, country, timecoverage, languagecoverage ]
   <<: *all_relations
   recordsperpage: 100
   icon_many: "fa:object-group"
