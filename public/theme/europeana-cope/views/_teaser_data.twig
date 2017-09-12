@@ -67,7 +67,7 @@
     <div class="actions-footer">
        <span class="read-time">10 minutes to read</span>
         <a class="button-link" href="{{ item.link() }}">
-            View dataset
+            View {{ item.datatype|default('Documentation') }}
         </a>
 
     </div>
