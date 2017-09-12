@@ -82,7 +82,10 @@
         {% set allow_pager = false %}
     {% elseif template != 'body' %}
         {% set allow_pager = true %}
-        {% if subtype == 'all'  %}
+        {% if subtype == ''  %}
+            {% set filtername = 1 %}
+            {% set filtervalue = 1 %}
+        {% elseif subtype == 'all'  %}
             {% set filtername = 1 %}
             {% set filtervalue = 1 %}
         {% elseif sources == 'persons'  %}
