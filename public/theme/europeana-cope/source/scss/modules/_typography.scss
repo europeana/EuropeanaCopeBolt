@@ -67,7 +67,7 @@ h3, .gamma {
     color: $medium-gray;
 
     @include respond-to (large-screens) {
-        font-size: 1.5rem;
+        // font-size: 1.5rem;
     }
 
     a {
@@ -500,9 +500,9 @@ a {
             border-bottom: 1px solid $link-blue;
         }
 
-        @include respond-to(medium-screens) {
-            font-size: 0.9375rem;
-        }
+        // @include respond-to(medium-screens) {
+        //     font-size: 0.9375rem;
+        // }
 
         .label + & {
             margin-left: .5rem;

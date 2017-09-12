@@ -1253,9 +1253,6 @@ h3, .gamma {
   font-size: 1.25rem;
   margin-bottom: .75rem;
   color: #4d4d4d; }
-  @media only screen and (min-width: 47.9375em) {
-    h3, .gamma {
-      font-size: 1.5rem; } }
   h3 a, .gamma a {
     color: #095f90;
     text-decoration: none; }
@@ -1567,9 +1564,6 @@ a.tag, a.team {
   a.tag:hover, a.tag:focus, a.tag:active, a.team:hover, a.team:focus, a.team:active {
     text-decoration: none;
     border-bottom: 1px solid #095f90; }
-  @media only screen and (min-width: 24em) {
-    a.tag, a.team {
-      font-size: 0.9375rem; } }
   .label + a.tag, .label + a.team {
     margin-left: .5rem; }
 
@@ -2088,6 +2082,9 @@ img.round {
       color: #4d4d4d;
       background: #fff;
       border: 1px solid #4d4d4d; }
+
+.tags {
+  margin-bottom: 1rem; }
 
 /*
 * WIDGET HERO BANNERS

@@ -2,16 +2,19 @@
     {% set item = record %}
 {% endif %}
 
+<div class="tags">
 {% if item.taxonomy.categories is defined %}
     {% for cat, catname in item.taxonomy.categories %}
-    <a class="label" href="{{ cat }}">{{ catname }}</a>
+    <a class="tag" href="{{ cat }}">{{ catname }}</a>
+    {# <a class="label" href="{{ cat }}">{{ catname }}</a> #}
     {% endfor %}
 {% endif %}
 
 
 {% if item.taxonomy.markets is defined %}
     {% for market, marketname in item.taxonomy.markets %}
-    <a class="label label-markets" href="{{ market }}">{{ marketname }}</a>
+    {# <a class="label label-markets" href="{{ market }}">{{ marketname }}</a> #}
+    <a class="tag" href="{{ market }}">{{ marketname }}</a>
     {% endfor %}
 {% endif %}
 
@@ -21,3 +24,5 @@
     <a class="tag" href="{{ tag }}">{{ tagname }}</a>
     {% endfor %}
 {% endif %}
+
+</div>
