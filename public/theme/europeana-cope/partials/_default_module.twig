@@ -82,28 +82,37 @@
         {% set allow_pager = false %}
     {% elseif template != 'body' %}
         {% set allow_pager = true %}
-        {% if subtype == ''  %}
-            {% set filtername = 1 %}
-            {% set filtervalue = 1 %}
-        {% elseif subtype == 'all'  %}
-            {% set filtername = 1 %}
-            {% set filtervalue = 1 %}
-        {% elseif sources == 'persons'  %}
-            {% set filtername = 'network_participation' %}
-            {% set filtervalue = subtype|default(module.get('filter_persons')) %}
+
+        {% set filtername = 1 %}
+        {% set filtervalue = 1 %}
+        {% if sources == 'persons'  %}
+            {% if subtype is not empty or module.get('filter_persons') is not empty %}
+                {% set filtername = 'network_participation' %}
+                {% set filtervalue = subtype|default(module.get('filter_persons')) %}
+            {% endif %}
         {% elseif sources == 'posts' %}
-            {% set filtername = 'posttype' %}
-            {% set filtervalue = subtype|default(module.get('filter_posts')) %}
+            {% if subtype is not empty or module.get('filter_posts') is not empty %}
+                {% set filtername = 'posttype' %}
+                {% set filtervalue = subtype|default(module.get('filter_posts')) %}
+            {% endif %}
         {% elseif sources == 'data' %}
-            {% set filtername = 'datatype' %}
-            {% set filtervalue = subtype|default(module.get('filter_data')) %}
+            {% if subtype is not empty or module.get('filter_data') is not empty %}
+                {% set filtername = 'datatype' %}
+                {% set filtervalue = subtype|default(module.get('filter_data')) %}
+            {% endif %}
         {% elseif sources == 'projects' %}
-            {% set filtername = 'projecttype' %}
-            {% set filtervalue = subtype|default(module.get('filter_projects')) %}
-        {% else %}
-            {% set filtername = 1 %}
-            {% set filtervalue = 1 %}
+            {% if subtype is not empty or module.get('filter_projects') is not empty %}
+                {% set filtername = 'projecttype' %}
+                {% set filtervalue = subtype|default(module.get('filter_projects')) %}
+            {% endif %}
         {% endif %}
+
+        {#
+        {{ dump( 'filtername: ' ~ filtername,
+                  'filtervalue: ' ~ filtervalue,
+                  'taxonomyname: ' ~ taxonomyname,
+                  'taxonomyterm: ' ~ taxonomyterm) }}
+        #}
 
         {% if ordering == 'latest' %}
             {% setcontent selected_records = sources where {
