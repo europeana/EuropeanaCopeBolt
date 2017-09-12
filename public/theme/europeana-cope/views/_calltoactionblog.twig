@@ -1,3 +1,4 @@
+{% if record is not empty %}
 {# Section breakers - Call to action FULL #}
 <div class="calltoaction">
     <div class="colored-image" style="background-image: url({{ image(record.image, 1600, 350)|default('notfound') }})"></div>
@@ -15,3 +16,7 @@
         </a>
     </div>
 </div>
+{% else %}
+    <!-- called calltoactionblog without a record -->
+{% endif %}
+

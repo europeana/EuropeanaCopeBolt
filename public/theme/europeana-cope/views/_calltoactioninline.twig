@@ -1,3 +1,4 @@
+{% if record is not empty %}
 {# This file is inserted as the 'primary call to action' of each listed record. #}
 <div class="calltoactioninline">
     <div class="column">
@@ -11,3 +12,6 @@
         <a class="button" href="{{ record.htmllink|default(record.link)|default('#') }}">{{ record.buttontext|default('Learn more') }}</a>
     </div>
 </div>
+{% else %}
+    <!-- called calltoactioninline without a record -->
+{% endif %}
