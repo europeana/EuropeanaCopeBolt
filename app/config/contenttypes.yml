@@ -63,6 +63,10 @@ __nodes:
     template: &template_defaults
       type: templateselect
       group: meta
+    seo:
+      type: seo
+      prefix: "<hr><div><h3>SEO Settings</h3></div>"
+      group: meta
   support_defaults: &support_defaults
     contact_record:
       type: text

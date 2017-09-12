@@ -14,10 +14,10 @@ keywords_length: 0 #255
 
 # Default values to consider for the title, meta description and meta keywords
 fields:
-    title: ['title', 'name']
-    description: ['introduction', 'teaser', 'description', 'body']
+    title: ['title', 'first_name', 'last_name', 'subtitle']
+    description: ['intro', 'teaser', 'body']
     keywords: []
-    image: ['image']    
+    image: ['image']
 
 # The default title and description. If these are left empty, the extension will use the
 # sitename and payoff, from the global config.yml
@@ -48,4 +48,4 @@ robot_override:
 #     meta: @bolt/_metatags.twig
 
 # Don't like the easter egg? Disable it here, if you wish.
-disableeasteregg: false
+disableeasteregg: true
