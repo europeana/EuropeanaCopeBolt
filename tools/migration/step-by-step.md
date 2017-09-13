@@ -1,5 +1,10 @@
 # Migration steps
 
+This migration needs to be done only once, in sequence.
+
+After that is done, just use the latest database dump form a working site.
+
+
 ## Check out the source
 
 1. Check out the source as per normal from gitlab
@@ -62,8 +67,6 @@
 
 ## Updating content for new posts and data in the database
 
-24. This is hard!
-    - Only update records in cope in the contenttypes: posts, data and projects if those records have been changed in pro, labs or research after the last time they were migrated.
-    - Match up the records based on slug, title, source subsite
-
+24. Run `9-gap.sql` to import missing posts beterrn 2016-09-21 and 19-04-2017 
+25. Run `10-missing` to import missing posts from after 19-04-2017
 
