@@ -11,7 +11,7 @@ remotes:
         source:
             url: https://crm.zoho.com/crm/private/json/Contacts/getRecords
             getparams:
-                authtoken: 'e95153d23c8b0d4a5eb5c885531f2d6b'
+                authtoken: '{{override in local config}}'
                 scope: crmapi
             loopparams:
                 counter: fromIndex
@@ -31,7 +31,7 @@ remotes:
             hookafterload:
                 image:
                     callback: downloadZohoPhotoFromURL
-                    source_url: 'https://crm.zoho.com/crm/private/xml/Contacts/downloadPhoto?authtoken=e95153d23c8b0d4a5eb5c885531f2d6b&scope=crmapi&id=CONTACTID'
+                    source_url: 'https://crm.zoho.com/crm/private/xml/Contacts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=CONTACTID'
                     source_field: CONTACTID
                     target_field: image
             mapping: # mappings in XPATH
