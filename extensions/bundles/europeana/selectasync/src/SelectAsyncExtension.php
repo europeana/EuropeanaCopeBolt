@@ -35,11 +35,11 @@ class SelectAsyncExtension extends SimpleExtension
      */
     protected function registerBackendControllers()
     {
-      $this->app = $this->getContainer();
-      $this->config = $this->getConfig();
+        $this->app = $this->getContainer();
+        $this->config = $this->getConfig();
 
-      return [
-        '/selectasync' => new SelectAsyncController($this->app, $this->config),
-      ];
+        return [
+            '/selectasync' => new SelectAsyncController($this->app, $this->config),
+        ];
     }
 }

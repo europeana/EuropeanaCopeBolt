@@ -17,101 +17,100 @@ class ZohoImportExtension extends SimpleExtension
   /**
    * {@inheritdoc}
    */
-  protected function registerBackendControllers()
-  {
-    return [
-      '/extensions/zohoimport' => new Controller\Backend(),
-    ];
-  }
+    protected function registerBackendControllers()
+    {
+        return [
+        '/extensions/zohoimport' => new Controller\Backend(),
+        ];
+    }
 
   /**
    * {@inheritdoc}
    */
-  public function getServiceProviders()
-  {
-    return [
-      $this,
-      new ZohoImportServiceProvider($this->getConfig())
-    ];
-  }
+    public function getServiceProviders()
+    {
+        return [
+        $this,
+        new ZohoImportServiceProvider($this->getConfig())
+        ];
+    }
 
   /**
    * {@inheritdoc}
    */
-  protected function registerMenuEntries()
-  {
-    $menu = new MenuEntry('zohoimport-menu', 'zohoimport');
-    $menu->setLabel('ZOHO import')
-      ->setIcon('fa:users')
-      ->setPermission('settings')
-    ;
+    protected function registerMenuEntries()
+    {
+        $menu = new MenuEntry('zohoimport-menu', 'zohoimport');
+        $menu->setLabel('ZOHO import')
+        ->setIcon('fa:users')
+        ->setPermission('settings')
+        ;
 
-    return [
-      $menu,
-    ];
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  protected function registerNutCommands(Container $container)
-  {
-    return [
-      new Console\ZohoImportCommand($container),
-    ];
-  }
+        return [
+        $menu,
+        ];
+    }
 
   /**
    * {@inheritdoc}
    */
-  protected function registerTwigPaths()
-  {
-    return ['templates'];
-  }
+    protected function registerNutCommands(Container $container)
+    {
+        return [
+        new Console\ZohoImportCommand($container),
+        ];
+    }
 
   /**
    * {@inheritdoc}
    */
-  protected function getDefaultConfig()
-  {
-    return [
-      'debug_mode' => 'false',
-      'image_path' => 'zoho_images',
-      'image_downloads' => true,
-      'remotes' => [
-        'atom_feed_example' => [
-          'enabled' => false,
-          'source' => [
-            'url' => 'http://example.com/atom',
-            'getparams' => [
-              'authtoken' => 'a-itis-a-me-a-mario',
-              'scope' => 'test',
-              'test' => 'test'
-            ],
-            'type' => 'xml'
-          ],
-          'target' => [
-            'contenttype' => 'partners',
-            'defaults' => [
-              'new' => 'published',
-              'updated' => 'published',
-              'removed' => 'unpublished',
-              'fields' => []
-            ],
-            'mapping' => [
-              'root' => '//feed/entry/id',
-              'fields' => [
-                'id' => 'guid',
-                'last_modified' => 'updated',
-                'title' => 'title',
-                'body' => 'item',
-                'type' => 'category::term'
-              ]
+    protected function registerTwigPaths()
+    {
+        return ['templates'];
+    }
+
+  /**
+   * {@inheritdoc}
+   */
+    protected function getDefaultConfig()
+    {
+        return [
+            'debug_mode' => 'false',
+            'image_path' => 'zoho_images',
+            'image_downloads' => true,
+            'remotes' => [
+                'atom_feed_example' => [
+                    'enabled' => false,
+                    'source' => [
+                        'url' => 'http://example.com/atom',
+                        'getparams' => [
+                            'authtoken' => 'a-itis-a-me-a-mario',
+                            'scope' => 'test',
+                            'test' => 'test'
+                        ],
+                        'type' => 'xml'
+                    ],
+                    'target' => [
+                        'contenttype' => 'partners',
+                        'defaults' => [
+                            'new' => 'published',
+                            'updated' => 'published',
+                            'removed' => 'unpublished',
+                            'fields' => []
+                        ],
+                        'mapping' => [
+                            'root' => '//feed/entry/id',
+                            'fields' => [
+                                'id' => 'guid',
+                                'last_modified' => 'updated',
+                                'title' => 'title',
+                                'body' => 'item',
+                                'type' => 'category::term'
+                            ]
+                        ]
+                    ]
+                ]
             ]
-          ]
-        ]
-      ]
-    ];
-  }
+        ];
+    }
 }
-

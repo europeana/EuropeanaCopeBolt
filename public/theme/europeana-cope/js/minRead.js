@@ -15,7 +15,11 @@
             if (settings.archive) {
                 var articleLink = element.find(settings.anchor);
                 var articleUrl = articleLink.attr("href");
+                if (typeof articleUrl == 'undefined') {
+                    return;
+                }
                 $.get(articleUrl, function(data){
+                    data = data.replace(/<img.+>/gi, "");
                     var text = $(data).find(settings.archiveText).text();
                     var archiveTime = calculateTime(text, settings);
                     element.find(settings.where).text(archiveTime + settings.label);
