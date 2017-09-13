@@ -369,6 +369,10 @@ a {
     &:hover, &:active, &.focus {
         text-decoration: underline;
     }
+
+    footer & {
+        color: $line-gray;
+    }
 }
 
 .introduction p, .introduction ul, .introduction ol, .introduction {
