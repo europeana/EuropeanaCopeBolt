@@ -1479,6 +1479,8 @@ a {
   text-decoration: none; }
   a:hover, a:active, a.focus {
     text-decoration: underline; }
+  footer a {
+    color: #cccccc; }
 
 .introduction p, .introduction ul, .introduction ol, .introduction {
   font-family: "Open Sans", Arial, Sans-serif;
