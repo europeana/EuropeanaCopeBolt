@@ -122,4 +122,4 @@ mailoptions:
 
 ## setting up the database migration
 
-Use the <a href="https://gitlab.com/twokings/289_europeana_cope/blob/master/tools/migration/step-by-step.md">step by step</a> instructions to setup the databases during development.
+Use the <a href="https://github.com/europeana/EuropeanaCopeBolt/blob/master/tools/migration/step-by-step.md">step by step</a> instructions to setup the databases during development.
