@@ -15,19 +15,19 @@ use Bolt\Extension\SimpleExtension;
 class ViewBlocksExtension extends SimpleExtension
 {
 
-  protected function registerAssets()
-  {
-    $backendCss = new Stylesheet();
-    $backendCss->setFileName('viewblocks.backend.css')->setZone(Zone::BACKEND)->setPriority(10);
+    protected function registerAssets()
+    {
+        $backendCss = new Stylesheet();
+        $backendCss->setFileName('viewblocks.backend.css')->setZone(Zone::BACKEND)->setPriority(10);
 
-    $backendJs = new JavaScript();
-    $backendJs->setFileName('viewblocks.backend.js')->setZone(Zone::BACKEND)->setPriority(15);
+        $backendJs = new JavaScript();
+        $backendJs->setFileName('viewblocks.backend.js')->setZone(Zone::BACKEND)->setPriority(15);
 
-    $assets = [
-      $backendCss,
-      $backendJs,
-    ];
+        $assets = [
+            $backendCss,
+            $backendJs,
+        ];
 
-    return $assets;
-  }
+        return $assets;
+    }
 }

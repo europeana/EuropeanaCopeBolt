@@ -99,7 +99,7 @@ class SelectAsyncController implements ControllerProviderInterface
     public function selectAsyncCategories(Request $request)
     {
         $hasaccess = $this->checkAccess();
-        if(!$hasaccess) {
+        if (!$hasaccess) {
             return $this->noAccess();
         }
         $type = null;
@@ -131,7 +131,7 @@ class SelectAsyncController implements ControllerProviderInterface
     public function selectAsyncCategoriesType(Request $request, $type)
     {
         $hasaccess = $this->checkAccess();
-        if(!$hasaccess) {
+        if (!$hasaccess) {
             return $this->noAccess();
         }
         $results = [];
@@ -161,7 +161,7 @@ class SelectAsyncController implements ControllerProviderInterface
     public function selectAsyncDirectories(Request $request)
     {
         $hasaccess = $this->checkAccess();
-        if(!$hasaccess) {
+        if (!$hasaccess) {
             return $this->noAccess();
         }
         $type = 'directorylist';
@@ -169,7 +169,7 @@ class SelectAsyncController implements ControllerProviderInterface
         $status = 'ok';
 
         $search = $request->query->get('search');
-        if(empty($search)) {
+        if (empty($search)) {
             $search = '';
         }
 
@@ -209,15 +209,15 @@ class SelectAsyncController implements ControllerProviderInterface
             // try to access the file - and if it fails just skip it
             // this prevents directories with broken filenames from appearing
             try {
-              $fileobject->getType();
-            } catch(FileNotFoundException $e) {
-              $skip = true;
+                $fileobject->getType();
+            } catch (FileNotFoundException $e) {
+                $skip = true;
             }
 
-            if(!$skip) {
-                if($fileobject->isDir() === true) {
-                    if(!empty($search)) {
-                        if(stristr($fileobject->getPath(), $search)) {
+            if (!$skip) {
+                if ($fileobject->isDir() === true) {
+                    if (!empty($search)) {
+                        if (stristr($fileobject->getPath(), $search)) {
                             array_push(
                                 $this->directory_tree,
                                 [
@@ -227,13 +227,13 @@ class SelectAsyncController implements ControllerProviderInterface
                             );
                         }
                     } else {
-                      array_push(
-                          $this->directory_tree,
-                          [
-                              'id'    => $fileobject->getPath(),
-                              'title' => $fileobject->getPath()
-                          ]
-                      );
+                        array_push(
+                            $this->directory_tree,
+                            [
+                                'id'    => $fileobject->getPath(),
+                                'title' => $fileobject->getPath()
+                            ]
+                        );
                     }
                     //array_push($this->directory_tree, $fileobject);
                 }
@@ -251,7 +251,7 @@ class SelectAsyncController implements ControllerProviderInterface
     public function selectAsyncUrl(Request $request)
     {
         $hasaccess = $this->checkAccess();
-        if(!$hasaccess) {
+        if (!$hasaccess) {
             return $this->noAccess();
         }
         $type = null;
@@ -283,8 +283,8 @@ class SelectAsyncController implements ControllerProviderInterface
     public function selectAsyncUrlWithType(Request $request, $type)
     {
         $hasaccess = $this->checkAccess($type);
-        if(!$hasaccess) {
-          return $this->noAccess('No access to this type.');
+        if (!$hasaccess) {
+            return $this->noAccess('No access to this type.');
         }
         $results = [];
         $message = '';
@@ -292,14 +292,14 @@ class SelectAsyncController implements ControllerProviderInterface
         $fields = null;
 
         $search = $request->query->get('search');
-        if(empty($search)) {
+        if (empty($search)) {
             return $this->noAccess('No search given');
         }
         $fieldstring = $request->query->get('fields');
-        if(!empty($fieldstring)) {
-          $fields = explode(',', $fieldstring);
+        if (!empty($fieldstring)) {
+            $fields = explode(',', $fieldstring);
         }
-        if(!in_array($type, $this->default_types)) {
+        if (!in_array($type, $this->default_types)) {
             // illegal type
             return $this->noAccess('Not valid type');
         }
@@ -329,8 +329,8 @@ class SelectAsyncController implements ControllerProviderInterface
     public function selectAsyncUrlWithTypes(Request $request, $types)
     {
         $hasaccess = $this->checkAccess($types);
-        if(!$hasaccess) {
-          return $this->noAccess('No access to these types.');
+        if (!$hasaccess) {
+            return $this->noAccess('No access to these types.');
         }
         $results = [];
         $message = '';
@@ -338,16 +338,16 @@ class SelectAsyncController implements ControllerProviderInterface
         $fields = null;
 
         $search = $request->query->get('search');
-        if(empty($search)) {
+        if (empty($search)) {
             return $this->noAccess('No search given');
         }
         $fieldstring = $request->query->get('fields');
-        if(!empty($fieldstring)) {
+        if (!empty($fieldstring)) {
             $fields = explode(',', $fieldstring);
         }
         $types = explode(',', $types);
-        foreach($types as $type) {
-            if(!in_array($type, $this->default_types)) {
+        foreach ($types as $type) {
+            if (!in_array($type, $this->default_types)) {
                 // illegal type
                 return $this->noAccess('Not valid type');
             }
@@ -375,7 +375,7 @@ class SelectAsyncController implements ControllerProviderInterface
     public function selectAsyncUrlLoad(Request $request)
     {
         $hasaccess = $this->checkAccess();
-        if(!$hasaccess) {
+        if (!$hasaccess) {
             return $this->noAccess();
         }
         $results = [];
@@ -384,7 +384,7 @@ class SelectAsyncController implements ControllerProviderInterface
         $fields = null;
 
         $ids = $request->query->get('ids');
-        if(empty($ids)) {
+        if (empty($ids)) {
             return $this->noAccess('No ids given');
         }
         if (!array_filter($ids, 'is_numeric')) {
@@ -392,19 +392,19 @@ class SelectAsyncController implements ControllerProviderInterface
         }
 
         $type = $request->query->get('type');
-        if(empty($type)) {
+        if (empty($type)) {
             return $this->noAccess('No type given');
         }
         $hasaccess = $this->checkAccess($type);
-        if(!$hasaccess) {
-          return $this->noAccess('No load access to this type.');
+        if (!$hasaccess) {
+            return $this->noAccess('No load access to this type.');
         }
         $fieldstring = $request->query->get('fields');
-        if(!empty($fieldstring)) {
+        if (!empty($fieldstring)) {
             $fields = explode(',', $fieldstring);
         }
-        if(!in_array($type, $this->default_types)) {
-          // illegal type
+        if (!in_array($type, $this->default_types)) {
+            // illegal type
             return $this->noAccess('Not valid type');
         }
 
@@ -429,11 +429,12 @@ class SelectAsyncController implements ControllerProviderInterface
      *
      * @return array
      */
-    private function selectRecordsByType($type, $search = '', $fields = null) {
+    private function selectRecordsByType($type, $search = '', $fields = null)
+    {
 
         $search = '%'.trim($search).'%';
 
-        if(empty($fields)) {
+        if (empty($fields)) {
             $fields = $this->default_fields;
         }
 
@@ -476,13 +477,14 @@ class SelectAsyncController implements ControllerProviderInterface
      *
      * @return array
      */
-    private function selectRecordsByTypeIds($type, $ids, $fields = null) {
+    private function selectRecordsByTypeIds($type, $ids, $fields = null)
+    {
 
-        if(empty($fields)) {
+        if (empty($fields)) {
             $fields = $this->default_fields;
         }
 
-        if(!empty($ids) && !is_array($ids)) {
+        if (!empty($ids) && !is_array($ids)) {
             //$ids = explode(',', $ids);
             $ids = json_decode($ids);
         }
@@ -519,26 +521,26 @@ class SelectAsyncController implements ControllerProviderInterface
      */
     private function checkAccess($type = 'all')
     {
-       $users = $this->app['users'];
-       //dump('check access', $users);
+        $users = $this->app['users'];
+        //dump('check access', $users);
 
-       if($type=='all') {
-         $contentquery = 'contentaction';
-       } elseif (is_array($type)) {
-         $contentquery = '';
-         foreach($type as $typeval) {
-           $contentquery .= 'contenttype:' . $typeval . ':view or contenttype:' . $typeval . ':edit';
-         }
-       } elseif (is_string($type)) {
-         $contentquery = 'contenttype:' . $type . ':view or contenttype:' . $type . ':edit';
-       } else {
-         $contentquery = 'dashboard';
-       }
+        if ($type=='all') {
+            $contentquery = 'contentaction';
+        } elseif (is_array($type)) {
+            $contentquery = '';
+            foreach ($type as $typeval) {
+                $contentquery .= 'contenttype:' . $typeval . ':view or contenttype:' . $typeval . ':edit';
+            }
+        } elseif (is_string($type)) {
+            $contentquery = 'contenttype:' . $type . ':view or contenttype:' . $type . ':edit';
+        } else {
+            $contentquery = 'dashboard';
+        }
 
-       $hasaccess = $users->isAllowed($contentquery);
+        $hasaccess = $users->isAllowed($contentquery);
 
-       //dump('check access', $contentquery, $hasaccess);
-       return $hasaccess;
+        //dump('check access', $contentquery, $hasaccess);
+        return $hasaccess;
     }
 
     /**
