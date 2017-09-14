@@ -20,6 +20,26 @@ __nodes:
       height: 300px
       postfix: "Shown on individual pages as main body text"
       group: Main
+  image_attribution: &image_attribution
+    attribution_title:
+      type: text
+      label: "Image attribution text"
+      class: 'attribution-group'
+    attribution_license:
+      label: "Image attribution license"
+      type: select
+      values:
+        'Public-Domain' : 'Public Domain'
+        'CC0' : 'CC0'
+        'CC-BY' : 'CC BY'
+        'CC-BY-SA' : 'CC BY-SA'
+        'CC-BY-NC' : 'CC BY-NC'
+        'CC-BY-NC-SA' : 'CC BY-NC-SA'
+      class: 'attribution-group'
+    attribution_link:
+      type: text
+      label: "Image attribution link"
+      class: 'attribution-group'
   teaser_defaults: &teaser_defaults
     teaser:
       type: html
@@ -31,6 +51,28 @@ __nodes:
       type: image
       label: "Teaser image"
       postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers"
+      class: 'teaser-attribution-group attribution-parent'
+    teaser_attribution_title:
+      type: text
+      label: "Image attribution title text"
+      variant: inline
+      class: 'teaser-attribution-group'
+    teaser_attribution_license:
+      label: "Image attribution license"
+      type: select
+      values:
+        'Public-Domain' : 'Public Domain'
+        'CC0' : 'CC0'
+        'CC-BY' : 'CC BY'
+        'CC-BY-SA' : 'CC BY-SA'
+        'CC-BY-NC' : 'CC BY-NC'
+        'CC-BY-NC-SA' : 'CC BY-NC-SA'
+      class: 'teaser-attribution-group'
+    teaser_attribution_link:
+      type: text
+      label: "Image attribution link"
+      variant: inline
+      class: 'teaser-attribution-group'
   media_defaults: &media_defaults
     image:
       type: image
@@ -40,6 +82,28 @@ __nodes:
       required: true
       extensions: [ gif, jpg, png ]
       group: "Main"
+      class: 'image-attribution-group attribution-parent'
+    image_attribution_title:
+      type: text
+      label: "Image attribution title text"
+      variant: inline
+      class: 'image-attribution-group'
+    image_attribution_license:
+      label: "Image attribution license"
+      type: select
+      values:
+        'Public-Domain' : 'Public Domain'
+        'CC0' : 'CC0'
+        'CC-BY' : 'CC BY'
+        'CC-BY-SA' : 'CC BY-SA'
+        'CC-BY-NC' : 'CC BY-NC'
+        'CC-BY-NC-SA' : 'CC BY-NC-SA'
+      class: 'image-attribution-group'
+    image_attribution_link:
+      type: text
+      label: "Image attribution link"
+      variant: inline
+      class: 'image-attribution-group'
   structure_defaults: &structure_defaults
     slug:
       type: slug
@@ -364,7 +428,28 @@ pages:
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image'
+          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
+        attribution_title:
+          type: text
+          label: "Image attribution text"
+          variant: inline
+          class: 'showfortemplate-image imagewidget attribution-group'
+        attribution_license:
+          label: "Image attribution license"
+          type: select
+          values:
+            'Public-Domain' : 'Public Domain'
+            'CC0' : 'CC0'
+            'CC-BY' : 'CC BY'
+            'CC-BY-SA' : 'CC BY-SA'
+            'CC-BY-NC' : 'CC BY-NC'
+            'CC-BY-NC-SA' : 'CC BY-NC-SA'
+          class: 'showfortemplate-image imagewidget attribution-group'
+        attribution_link:
+          type: text
+          label: "Image attribution link"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
         singlefile:
           type: file
           label: File
@@ -668,11 +753,32 @@ posts:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image (optional)
+          label: Image
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image'
+          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
+        attribution_title:
+          type: text
+          label: "Image attribution text"
+          variant: inline
+          class: 'showfortemplate-image imagewidget attribution-group'
+        attribution_license:
+          label: "Image attribution license"
+          type: select
+          values:
+            'Public-Domain' : 'Public Domain'
+            'CC0' : 'CC0'
+            'CC-BY' : 'CC BY'
+            'CC-BY-SA' : 'CC BY-SA'
+            'CC-BY-NC' : 'CC BY-NC'
+            'CC-BY-NC-SA' : 'CC BY-NC-SA'
+          class: 'showfortemplate-image imagewidget attribution-group'
+        attribution_link:
+          type: text
+          label: "Image attribution link"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
         singlefile:
           type: file
           label: File
@@ -984,11 +1090,32 @@ data:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image (optional)
+          label: Image
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image'
+          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
+        attribution_title:
+          type: text
+          label: "Image attribution text"
+          variant: inline
+          class: 'showfortemplate-image imagewidget attribution-group'
+        attribution_license:
+          label: "Image attribution license"
+          type: select
+          values:
+            'Public-Domain' : 'Public Domain'
+            'CC0' : 'CC0'
+            'CC-BY' : 'CC BY'
+            'CC-BY-SA' : 'CC BY-SA'
+            'CC-BY-NC' : 'CC BY-NC'
+            'CC-BY-NC-SA' : 'CC BY-NC-SA'
+          class: 'showfortemplate-image imagewidget attribution-group'
+        attribution_link:
+          type: text
+          label: "Image attribution link"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
         singlefile:
           type: file
           label: File
@@ -1359,11 +1486,32 @@ projects:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image (optional)
+          label: Image
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image'
+          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
+        attribution_title:
+          type: text
+          label: "Image attribution text"
+          variant: inline
+          class: 'showfortemplate-image imagewidget attribution-group'
+        attribution_license:
+          label: "Image attribution license"
+          type: select
+          values:
+            'Public-Domain' : 'Public Domain'
+            'CC0' : 'CC0'
+            'CC-BY' : 'CC BY'
+            'CC-BY-SA' : 'CC BY-SA'
+            'CC-BY-NC' : 'CC BY-NC'
+            'CC-BY-NC-SA' : 'CC BY-NC-SA'
+          class: 'showfortemplate-image imagewidget attribution-group'
+        attribution_link:
+          type: text
+          label: "Image attribution link"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
         singlefile:
           type: file
           label: File
@@ -1649,11 +1797,32 @@ events:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image (optional)
+          label: Image
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image'
+          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
+        attribution_title:
+          type: text
+          label: "Image attribution text"
+          variant: inline
+          class: 'showfortemplate-image imagewidget attribution-group'
+        attribution_license:
+          label: "Image attribution license"
+          type: select
+          values:
+            'Public-Domain' : 'Public Domain'
+            'CC0' : 'CC0'
+            'CC-BY' : 'CC BY'
+            'CC-BY-SA' : 'CC BY-SA'
+            'CC-BY-NC' : 'CC BY-NC'
+            'CC-BY-NC-SA' : 'CC BY-NC-SA'
+          class: 'showfortemplate-image imagewidget attribution-group'
+        attribution_link:
+          type: text
+          label: "Image attribution link"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
         singlefile:
           type: file
           label: File
@@ -2262,6 +2431,14 @@ resources:
         'CC-BY-NC' : 'CC BY-NC'
         'CC-BY-NC-SA' : 'CC BY-NC-SA'
       prefix: "<hr />"
+    image_attribution_title:
+      type: text
+      label: "Image attribution title text"
+      class: 'resource-attribution-group'
+    image_attribution_link:
+      type: text
+      label: "Image attribution link"
+      class: 'resource-attribution-group'
     slug:
       type: slug
       uses: title

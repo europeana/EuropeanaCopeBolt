@@ -112,6 +112,7 @@ jQuery.fn.extend(
             var orderselect = viewblock.find('select[name*="ordering"]');
             var iconfield = viewblock.find('input[name*="icon"]');
             var imagefield = viewblock.find('input[name*="image"]');
+            var imageattribution = viewblock.find('input.attribution-group');
             var filefield = viewblock.find('input[name*="singlefile"]');
             var fileslistpathfield = viewblock.find('input[name*="fileslistpath"]');
             var modulelinkfields = viewblock.find('input.modulemorelink');
@@ -123,6 +124,7 @@ jQuery.fn.extend(
                 orderselect.parents('.repeater-field').hide();
                 iconfield.parents('.repeater-field').hide();
                 imagefield.parents('.repeater-field').hide();
+                imageattribution.parents('.repeater-field').hide();
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').hide();
                 modulelinkfields.parents('.repeater-field').hide();
@@ -132,6 +134,7 @@ jQuery.fn.extend(
                 orderselect.parents('.repeater-field').show();
                 iconfield.parents('.repeater-field').hide();
                 imagefield.parents('.repeater-field').hide();
+                imageattribution.parents('.repeater-field').hide();
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').hide();
                 modulelinkfields.parents('.repeater-field').show();
@@ -141,6 +144,7 @@ jQuery.fn.extend(
                 orderselect.parents('.repeater-field').show();
                 iconfield.parents('.repeater-field').show();
                 imagefield.parents('.repeater-field').hide();
+                imageattribution.parents('.repeater-field').hide();
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').hide();
                 modulelinkfields.parents('.repeater-field').show();
@@ -150,6 +154,7 @@ jQuery.fn.extend(
                 orderselect.parents('.repeater-field').hide();
                 iconfield.parents('.repeater-field').hide();
                 imagefield.parents('.repeater-field').show();
+                imageattribution.parents('.repeater-field').show();
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').hide();
                 modulelinkfields.parents('.repeater-field').hide();
@@ -159,6 +164,7 @@ jQuery.fn.extend(
                 orderselect.parents('.repeater-field').hide();
                 iconfield.parents('.repeater-field').hide();
                 imagefield.parents('.repeater-field').hide();
+                imageattribution.parents('.repeater-field').hide();
                 filefield.parents('.repeater-field').show();
                 fileslistpathfield.parents('.repeater-field').hide();
                 modulelinkfields.parents('.repeater-field').hide();
@@ -168,6 +174,7 @@ jQuery.fn.extend(
                 orderselect.parents('.repeater-field').hide();
                 iconfield.parents('.repeater-field').hide();
                 imagefield.parents('.repeater-field').hide();
+                imageattribution.parents('.repeater-field').hide();
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').show();
                 modulelinkfields.parents('.repeater-field').hide();
@@ -177,6 +184,7 @@ jQuery.fn.extend(
                 orderselect.parents('.repeater-field').show();
                 iconfield.parents('.repeater-field').hide();
                 imagefield.parents('.repeater-field').hide();
+                imageattribution.parents('.repeater-field').hide();
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').hide();
                 modulelinkfields.parents('.repeater-field').hide();
