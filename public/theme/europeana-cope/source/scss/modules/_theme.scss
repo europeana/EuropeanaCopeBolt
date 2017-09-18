@@ -125,6 +125,8 @@ header {
 
 .highlight-bar {
 
+    margin-bottom: 1rem;
+
     ul {
         display: flex;
         wrap: no-wrap;
@@ -217,7 +219,7 @@ header {
 
         @include respond-to (large-screens) {
            top: auto;
-           bottom: 0;
+           bottom: 1rem;
         }
     }
 
@@ -357,6 +359,7 @@ a.banner {
         height: 20rem;
         margin: 1rem 0;
     }
+
 
     .colored-image {
         position: absolute;
@@ -949,6 +952,17 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
     }
 
 }
+
+/*
+* Collapse margins when a banner is the first item on a landingpage
+**/
+
+main .section-banner:first-child {
+    a.banner {
+        margin-top: 0px;
+    }
+}
+
 
 
 /*

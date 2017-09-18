@@ -1934,76 +1934,72 @@ header {
 /*
 * HIGHLIGHT-BAR
 **/
-.highlight-bar ul {
-  display: flex;
-  wrap: no-wrap;
-  justify-content: space-around; }
-
-.highlight-bar h2 {
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  margin: .5rem 0; }
+.highlight-bar {
+  margin-bottom: 1rem; }
+  .highlight-bar ul {
+    display: flex;
+    wrap: no-wrap;
+    justify-content: space-around; }
+  .highlight-bar h2 {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin: .5rem 0; }
+    @media only screen and (min-width: 47.9375em) {
+      .highlight-bar h2 {
+        font-weight: 400;
+        font-size: 1rem;
+        width: 98px;
+        text-align: center;
+        float: left;
+        margin: 2rem 1rem  0 0;
+        letter-spacing: 2px; } }
+    @media only screen and (min-width: 80em) {
+      .highlight-bar h2 {
+        width: 162px; } }
+  .highlight-bar li {
+    display: inline-block;
+    flex-grow: 1;
+    width: 30%;
+    margin-right: .25rem; }
+    .highlight-bar li:last-child {
+      margin-right: 0; }
+    @media only screen and (min-width: 47.9375em) {
+      .highlight-bar li {
+        width: 17rem;
+        margin-top: 1rem; } }
+  .highlight-bar img {
+    margin-bottom: .3rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .highlight-bar img {
+        float: left;
+        width: 90px;
+        margin: 0 1rem 1rem 0; } }
   @media only screen and (min-width: 47.9375em) {
-    .highlight-bar h2 {
-      font-weight: 400;
-      font-size: 1rem;
-      width: 98px;
-      text-align: center;
-      float: left;
-      margin: 2rem 1rem  0 0;
-      letter-spacing: 2px; } }
-  @media only screen and (min-width: 80em) {
-    .highlight-bar h2 {
-      width: 162px; } }
-
-.highlight-bar li {
-  display: inline-block;
-  flex-grow: 1;
-  width: 30%;
-  margin-right: .25rem; }
-  .highlight-bar li:last-child {
-    margin-right: 0; }
-  @media only screen and (min-width: 47.9375em) {
-    .highlight-bar li {
-      width: 17rem;
-      margin-top: 1rem; } }
-
-.highlight-bar img {
-  margin-bottom: .3rem; }
-  @media only screen and (min-width: 47.9375em) {
-    .highlight-bar img {
-      float: left;
-      width: 90px;
-      margin: 0 1rem 1rem 0; } }
-
-@media only screen and (min-width: 47.9375em) {
-  .highlight-bar .highlight-title {
-    padding-left: 90px;
-    min-width: 200px; } }
-
-.highlight-bar li a {
-  color: #4d4d4d;
-  line-height: 1.375;
-  vertical-align: top;
-  display: inline-block;
-  font-size: 0.75rem; }
-  @media only screen and (min-width: 47.9375em) {
-    .highlight-bar li a {
-      font-size: 0.875rem; } }
-
-.highlight-bar a.readmore {
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  margin: .5rem 0 0 0;
-  color: #095f90;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0.875rem; }
-  @media only screen and (min-width: 47.9375em) {
-    .highlight-bar a.readmore {
-      top: auto;
-      bottom: 0; } }
+    .highlight-bar .highlight-title {
+      padding-left: 90px;
+      min-width: 200px; } }
+  .highlight-bar li a {
+    color: #4d4d4d;
+    line-height: 1.375;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 0.75rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .highlight-bar li a {
+        font-size: 0.875rem; } }
+  .highlight-bar a.readmore {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin: .5rem 0 0 0;
+    color: #095f90;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0.875rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .highlight-bar a.readmore {
+        top: auto;
+        bottom: 1rem; } }
 
 /*
 * FOOTER
@@ -2540,6 +2536,12 @@ div.calltoaction {
   .section-bannertriple + .in-page-anchor + .section-calltoactionlink .calltoactionlink,
   .section-bannertriple + .in-page-anchor + .section-calltoactionlink .calltoactioninline {
     margin-top: -1rem; }
+
+/*
+* Collapse margins when a banner is the first item on a landingpage
+**/
+main .section-banner:first-child a.banner {
+  margin-top: 0px; }
 
 /*
 ***********************************************************************
