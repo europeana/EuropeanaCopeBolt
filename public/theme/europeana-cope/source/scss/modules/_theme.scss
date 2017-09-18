@@ -185,7 +185,6 @@ header {
     }
 
     .highlight-title {
-        // color: #f09;
 
         @include respond-to (large-screens) {
             padding-left: 90px;
@@ -426,7 +425,7 @@ a.banner {
 
     use {
         border: 1px solid #fff;
-        background-color: #f09;
+        // background-color: #f09;
     }
 
     &.white {
@@ -974,7 +973,10 @@ main .section-banner:first-child {
 .side-info {
     text-align: right;
     padding: 0 0.875rem;
-    // margin-bottom: 2rem;
+
+    @include respond-to(medium-screens) {
+        margin-left: 210px;
+    }
 
 
     @include respond-to(large-screens) {
@@ -983,6 +985,7 @@ main .section-banner:first-child {
         z-index: index($layers, higher-content);
         top: -7.5rem;
         right: 0;
+        margin-left: 330px;
     }
 
     &.centered-info {
@@ -1056,7 +1059,6 @@ main .section-banner:first-child {
 }
 
 .community-info {
-    position: absolute;
     top: 15px; //magic number - optical nice space
 
     font-size: 1.5rem;
@@ -1067,8 +1069,11 @@ main .section-banner:first-child {
     border-top: 4px solid $black;
     border-bottom: 4px solid $black;
     line-height: 1.4;
+    margin-bottom: 1rem;
 
     @include respond-to(medium-screens){
+        position: absolute;
+        margin-bottom: 0;
         top: 7px; //magic number - optical nice space
     }
 
@@ -1366,7 +1371,6 @@ main .section-banner:first-child {
         padding: 0.6em 0 ;
         font-size: 0.75rem;
         line-height: 1.4;
-        // background-color: #f09;
 
         &:last-of-type {
             padding-bottom: 0;

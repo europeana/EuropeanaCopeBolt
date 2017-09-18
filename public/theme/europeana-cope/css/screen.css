@@ -2150,8 +2150,7 @@ a.banner {
     margin: 0;
     padding: 0; }
   .ripple use {
-    border: 1px solid #fff;
-    background-color: #f09; }
+    border: 1px solid #fff; }
   .ripple.white svg {
     fill: #fff; }
   .ripple.black svg {
@@ -2551,12 +2550,16 @@ main .section-banner:first-child a.banner {
 .side-info {
   text-align: right;
   padding: 0 0.875rem; }
+  @media only screen and (min-width: 24em) {
+    .side-info {
+      margin-left: 210px; } }
   @media only screen and (min-width: 47.9375em) {
     .side-info {
       position: absolute;
       z-index: 1;
       top: -7.5rem;
-      right: 0; } }
+      right: 0;
+      margin-left: 330px; } }
   @media only screen and (min-width: 47.9375em) {
     .side-info.centered-info {
       text-align: center; } }
@@ -2604,7 +2607,6 @@ main .section-banner:first-child a.banner {
         font-size: 1.25rem; } }
 
 .community-info {
-  position: absolute;
   top: 15px;
   font-size: 1.5rem;
   display: inline-block;
@@ -2613,9 +2615,12 @@ main .section-banner:first-child a.banner {
   padding: 0 0.2em;
   border-top: 4px solid #1a1a1a;
   border-bottom: 4px solid #1a1a1a;
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin-bottom: 1rem; }
   @media only screen and (min-width: 24em) {
     .community-info {
+      position: absolute;
+      margin-bottom: 0;
       top: 7px; } }
   @media only screen and (min-width: 47.9375em) {
     .community-info {
