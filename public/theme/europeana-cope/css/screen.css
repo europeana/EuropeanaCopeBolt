@@ -2548,11 +2548,12 @@ main .section-banner:first-child a.banner {
 ***********************************************************************
 **/
 .side-info {
-  text-align: right;
-  padding: 0 0.875rem; }
+  padding: 0; }
   @media only screen and (min-width: 24em) {
     .side-info {
-      margin-left: 210px; } }
+      margin-left: 210px;
+      text-align: right;
+      padding: 0 0.875rem; } }
   @media only screen and (min-width: 47.9375em) {
     .side-info {
       position: absolute;

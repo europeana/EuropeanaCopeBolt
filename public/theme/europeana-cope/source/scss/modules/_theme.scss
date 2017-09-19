@@ -971,11 +971,13 @@ main .section-banner:first-child {
 **/
 
 .side-info {
-    text-align: right;
-    padding: 0 0.875rem;
+
+    padding: 0;
 
     @include respond-to(medium-screens) {
         margin-left: 210px;
+        text-align: right;
+        padding: 0 0.875rem;
     }
 
 
