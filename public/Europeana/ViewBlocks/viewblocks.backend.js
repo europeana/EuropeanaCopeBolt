@@ -112,7 +112,7 @@ jQuery.fn.extend(
             var orderselect = viewblock.find('select[name*="ordering"]');
             var iconfield = viewblock.find('input[name*="icon"]');
             var imagefield = viewblock.find('input[name*="image"]');
-            var imageattribution = viewblock.find('input.attribution-group');
+            var imageattribution = viewblock.find('input.attribution-group, select[name*="attribution"]');
             var filefield = viewblock.find('input[name*="singlefile"]');
             var fileslistpathfield = viewblock.find('input[name*="fileslistpath"]');
             var modulelinkfields = viewblock.find('input.modulemorelink');
