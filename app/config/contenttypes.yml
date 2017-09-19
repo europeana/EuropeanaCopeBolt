@@ -20,26 +20,6 @@ __nodes:
       height: 300px
       postfix: "Shown on individual pages as main body text"
       group: Main
-  image_attribution: &image_attribution
-    attribution_title:
-      type: text
-      label: "Image attribution text"
-      class: 'attribution-group'
-    attribution_license:
-      label: "Image attribution license"
-      type: select
-      values:
-        'Public-Domain' : 'Public Domain'
-        'CC0' : 'CC0'
-        'CC-BY' : 'CC BY'
-        'CC-BY-SA' : 'CC BY-SA'
-        'CC-BY-NC' : 'CC BY-NC'
-        'CC-BY-NC-SA' : 'CC BY-NC-SA'
-      class: 'attribution-group'
-    attribution_link:
-      type: text
-      label: "Image attribution link"
-      class: 'attribution-group'
   teaser_defaults: &teaser_defaults
     teaser:
       type: html
@@ -51,7 +31,7 @@ __nodes:
       type: image
       label: "Teaser image"
       postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers"
-      class: 'teaser-attribution-group attribution-parent'
+      class: 'image-attribution-group attribution-parent'
     teaser_attribution_title:
       type: text
       label: "Image attribution title text"
@@ -2559,7 +2539,6 @@ resources:
       label: "Image attribution title text"
       variant: inline
       class: 'image-attribution-group'
-      prefix: "<hr />"
     image_attribution_creator:
       type: text
       label: "Image creator"
