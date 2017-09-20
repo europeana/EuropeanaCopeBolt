@@ -732,6 +732,10 @@ posts:
         Publication: "Publication"
         News: "News"
       postfix: "Select if this record is a Blog, Pressrelease, Publication or other News record"
+    featured:
+      type: checkbox
+      label: "Make this post sticky"
+      postfix: "<small>One post only. Setting another post to sticky will uncheck this one.</small>"
     intro:
       type: html
       label: "Intro"

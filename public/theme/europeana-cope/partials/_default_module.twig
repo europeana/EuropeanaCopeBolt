@@ -85,6 +85,8 @@
 
         {% set filtername = 1 %}
         {% set filtervalue = 1 %}
+        {% set featuredfilter = false %}
+        {% set featuredtype = 0 %}
         {% if sources == 'persons'  %}
             {% if subtype is not empty or module.get('filter_persons') is not empty %}
                 {% set filtername = 'network_participation' %}
@@ -95,6 +97,8 @@
                 {% set filtername = 'posttype' %}
                 {% set filtervalue = subtype|default(module.get('filter_posts')) %}
             {% endif %}
+            {% set featuredfilter = true %}
+            {% set featuredtype = 'posts' %}
         {% elseif sources == 'data' %}
             {% if subtype is not empty or module.get('filter_data') is not empty %}
                 {% set filtername = 'datatype' %}
@@ -105,8 +109,10 @@
                 {% set filtername = 'projecttype' %}
                 {% set filtervalue = subtype|default(module.get('filter_projects')) %}
             {% endif %}
+        {% elseif sources == 'events' %}
+            {% set featuredfilter = true %}
+            {% set featuredtype = 'events' %}
         {% endif %}
-
         {#
         {{ dump( 'filtername: ' ~ filtername,
                   'filtervalue: ' ~ filtervalue,
@@ -115,10 +121,24 @@
         #}
 
         {% if ordering == 'latest' %}
-            {% setcontent selected_records = sources where {
-                (filtername): (filtervalue),
-                (taxonomyname): (taxonomyterm)
-            } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+            {% if featuredfilter == true %}
+                {% setcontent featured_records = sources where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm),
+                    'featured': true
+                } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+                {% setcontent selected_records = sources where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm),
+                    'featured': false
+                } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+                {% set selected_records = featured_records|merge(selected_records) %}
+            {% else %}
+                {% setcontent selected_records = sources where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm)
+                } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+            {% endif %}
         {% elseif ordering == 'latest_unpaged' %}
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
