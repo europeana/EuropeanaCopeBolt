@@ -43,9 +43,10 @@ __nodes:
       variant: inline
       class: 'image-attribution-group'
     teaser_attribution_date:
-      type: date
+      type: text
       label: "Image attribution date"
       variant: inline
+      postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
       class: 'image-attribution-group'
     teaser_attribution_holder:
       type: text
@@ -94,9 +95,10 @@ __nodes:
       variant: inline
       class: 'image-attribution-group'
     image_attribution_date:
-      type: date
+      type: text
       label: "Image attribution date"
       variant: inline
+      postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
       class: 'image-attribution-group'
     image_attribution_holder:
       type: text
@@ -463,9 +465,10 @@ pages:
           variant: inline
           class: 'showfortemplate-image attribution-group'
         attribution_date:
-          type: date
+          type: text
           label: "Image attribution date"
           variant: inline
+          postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
           class: 'showfortemplate-image attribution-group'
         attribution_holder:
           type: text
@@ -818,9 +821,10 @@ posts:
           variant: inline
           class: 'showfortemplate-image attribution-group'
         attribution_date:
-          type: date
+          type: text
           label: "Image attribution date"
           variant: inline
+          postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
           class: 'showfortemplate-image attribution-group'
         attribution_holder:
           type: text
@@ -1177,9 +1181,10 @@ data:
           variant: inline
           class: 'showfortemplate-image attribution-group'
         attribution_date:
-          type: date
+          type: text
           label: "Image attribution date"
           variant: inline
+          postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
           class: 'showfortemplate-image attribution-group'
         attribution_holder:
           type: text
@@ -1595,9 +1600,10 @@ projects:
           variant: inline
           class: 'showfortemplate-image attribution-group'
         attribution_date:
-          type: date
+          type: text
           label: "Image attribution date"
           variant: inline
+          postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
           class: 'showfortemplate-image attribution-group'
         attribution_holder:
           type: text
@@ -1928,9 +1934,10 @@ events:
           variant: inline
           class: 'showfortemplate-image attribution-group'
         attribution_date:
-          type: date
+          type: text
           label: "Image attribution date"
           variant: inline
+          postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
           class: 'showfortemplate-image attribution-group'
         attribution_holder:
           type: text
@@ -2565,9 +2572,10 @@ resources:
       variant: inline
       class: 'image-attribution-group'
     image_attribution_date:
-      type: date
+      type: text
       label: "Image attribution date"
       variant: inline
+      postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
       class: 'image-attribution-group'
     image_attribution_holder:
       type: text
