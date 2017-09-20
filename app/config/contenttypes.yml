@@ -1511,7 +1511,7 @@ projects:
     url:
       type: text
       required: false
-      label: "Link to projects website:"
+      label: "Link to projects website"
       variant: inline
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
