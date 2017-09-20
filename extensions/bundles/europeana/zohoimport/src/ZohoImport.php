@@ -184,10 +184,10 @@ class ZohoImport
   /**
    * Overview page
    */
-    public function zohoImportOverview()
+    public function zohoImportOverview($on_console = false, $output = null)
     {
         $config = $this->config;
-        $output = [];
+        $messages = [];
         //dump($config);
         foreach ($config['remotes'] as $remotekey => $remote) {
             //dump($remotekey, $remote);
@@ -209,33 +209,41 @@ class ZohoImport
                 $num_unpublished_records = $this->getUnpublishedRecords($localconfig);
 
                 $table = [
-                'head' => [ 'Import', 'amount' ],
-                'data' => [
-                  [ 'last run', $lastimportdate ],
-                  //[ 'items', $num_imported_items ],
-                  //[ 'remote requests', $num_remote_request ],
-                  [ 'published records', $num_published_records ],
-                  [ 'unpublished records', $num_unpublished_records ]
-                ]
+                  'head' => [ 'Import', 'amount' ],
+                  'data' => [
+                    [ 'last run', $lastimportdate ],
+                    //[ 'items', $num_imported_items ],
+                    //[ 'remote requests', $num_remote_request ],
+                    [ 'published records', $num_published_records ],
+                    [ 'unpublished records', $num_unpublished_records ]
+                  ]
                 ];
                 $rowoutput = $tableoutput = '';
                 foreach ($table['head'] as $cell) {
-                    $rowoutput .= '<th>' . $cell . '</th>';
+                    $rowoutput .= '<th>' . $cell . ' </th>';
                 }
-                $tableoutput .= '<tr>'.$rowoutput.'</tr>';
+                $tableoutput .= '<tr>'.$rowoutput."</tr>\n";
                 foreach ($table['data'] as $key => $row) {
                     $rowoutput = '';
                     foreach ($row as $cell) {
-                        $rowoutput .= '<td>' . $cell . '</td>';
+                        $rowoutput .= '<td>' . $cell . ' </td>';
                     }
-                    $tableoutput .= '<tr>'.$rowoutput.'</tr>';
+                    $tableoutput .= '<tr>'.$rowoutput."</tr>\n";
                 }
-                $output[$remotekey] = '<h3>remote: '.$remotekey.'</h3><table class="table-striped dashboardlisting">'.$tableoutput.'</table>';
+                $messages[$remotekey] = '<h3>remote: '.$remotekey.'</h3>
+                    <table class="table-striped dashboardlisting">'.$tableoutput."</table>\n";
             }
         }
         //dump($this->app);
 
-        return join('', $output);
+        if($on_console === true && $output !== null) {
+          foreach($messages as $text) {
+            $output->writeln(strip_tags(str_replace('</td>', "\t|\t</td>", $text)));
+          }
+          return null;
+        } else {
+          return join('', $messages);
+        }
     }
 
   /**
