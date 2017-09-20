@@ -20,14 +20,11 @@ class FeaturedItemsExtension extends SimpleExtension
    */
   protected function subscribe(EventDispatcherInterface $dispatcher) {
     $config = $this->getConfig();
-    $featuredItems = new FeaturedItemsListener($config);
+    $app = $this->getContainer();
+    $featuredItems = new FeaturedItemsListener($app, $config);
     $dispatcher->addListener(
       StorageEvents::PRE_SAVE,
       [$featuredItems, 'onItemSave']
-    );
-    $dispatcher->addListener(
-      StorageEvents::POST_SAVE,
-      [$featuredItems, 'onItemSaved']
     );
   }
 
