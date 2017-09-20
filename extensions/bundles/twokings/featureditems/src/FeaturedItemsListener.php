@@ -1,6 +1,6 @@
 <?php
 
-namespace Bolt\Extension\Bolt\FeaturedItems;
+namespace Bolt\Extension\TwoKings\FeaturedItems;
 
 use Bolt\Events\StorageEvent;
 use Bolt\Events\StorageEvents;

@@ -1,5 +1,5 @@
 {
-    "name": "bolt/featureditems",
+    "name": "twokings/featureditems",
     "description": "This extension provides event handlers for managing a chosen amount of featured items in bolt.",
     "type": "bolt-extension",
     "keywords": [
@@ -22,10 +22,10 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Bolt\\Extension\\Bolt\\FeaturedItems\\": "src"
+            "Bolt\\Extension\\TwoKings\\FeaturedItems\\": "src"
         }
     },
     "extra": {
-        "bolt-class": "Bolt\\Extension\\Bolt\\FeaturedItems\\FeaturedItemsExtension"
+        "bolt-class": "Bolt\\Extension\\TwoKings\\FeaturedItems\\FeaturedItemsExtension"
     }
 }
