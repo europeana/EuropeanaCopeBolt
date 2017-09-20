@@ -12,7 +12,8 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
  *
  * @author Lodewijk Evers <lodewijk@twokings.nl>
  */
-class FeaturedItemsExtension extends SimpleExtension {
+class FeaturedItemsExtension extends SimpleExtension
+{
 
   /**
    * @param \Symfony\Component\EventDispatcher\EventDispatcherInterface $dispatcher
@@ -21,11 +22,11 @@ class FeaturedItemsExtension extends SimpleExtension {
     $config = $this->getConfig();
     $featuredItems = new FeaturedItemsListener($config);
     $dispatcher->addListener(
-      StorageEvent::PRE_SAVE,
+      StorageEvents::PRE_SAVE,
       [$featuredItems, 'onItemSave']
     );
     $dispatcher->addListener(
-      StorageEvent::POST_SAVE,
+      StorageEvents::POST_SAVE,
       [$featuredItems, 'onItemSaved']
     );
   }
