@@ -43,7 +43,7 @@ class ZohoImportExtension extends SimpleExtension
         $menu = new MenuEntry('zohoimport-menu', 'zohoimport');
         $menu->setLabel('ZOHO import')
         ->setIcon('fa:users')
-        ->setPermission('settings')
+        ->setPermission('extensions')
         ;
 
         return [

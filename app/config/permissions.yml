@@ -1,21 +1,4 @@
 # This file defines role-based access control for your Bolt site.
-# Before making any modifications to this file, make sure you've thoroughly read
-# the documentation at https://docs.bolt.cm/content/permissions, and understand the
-# consequences of making uninformed changes to the roles and permissions.
-
-# First, we need to define some roles. There are three built-in roles that you
-# should never add manually:
-# - 'root', the "superuser" role; Bolt will automatically grant all permissions
-#   to this role. Manually adding it to any permission is pointless, because it
-#   implicitly grants every permission anyway.
-# - 'everyone', the "base" role; every logged-in user automatically has this
-#   role. Adding the 'everyone' role to any permission will grant it to all
-#   users (but not to unauthenticated users).
-# - 'owner': this role is only valid in the context of an individual content
-#   item, and the user who "owns" the item (usually the person who created it)
-#   will be in the 'owner' role.
-# - 'anonymous': this role is automatically assigned at all times, even when
-#   no user is logged in at all.
 roles:
     editor:
         description: This user can edit some content.
@@ -29,17 +12,12 @@ roles:
     developer:
         description: Developer access. Only required to change system-level settings.
         label: Developer
-    guest:
-        description: This user can log on, but is not allowed to edit any content.
-        label: Guest Editor
+#    guest:
+#        description: This user can log on, but is not allowed to edit any content.
+#        label: Guest Editor
 
 # Role hierarchy settings
 roles-hierarchy:
-    # This will restrict users from being able to add, edit, enable, disable
-    # and delete users with the same or higher role than their own.
-    # For example:
-    # Users with a role of developer can only be added, edited, enabled, disabled
-    # and deleted by [ root, admin ] roles.
     manipulate:
         admin: [ ]
         developer: [ admin ]
@@ -47,32 +25,20 @@ roles-hierarchy:
         editor: [ admin, developer ]
         guest: [ admin, developer ]
 
-
-# Now we'll define some permissions. Each permission comes with a list of roles
-# that grant access.
-
-# The first set of permissions are the 'global' permissions; these are not tied
-# to any content types, but rather apply to global, non-content activity in
-# Bolt's backend. Most of these permissions map directly to backend routes;
-# keep in mind, however, that routes do not always correspond to URL paths 1:1.
-# The default set defined here is appropriate for most sites, so most likely,
-# you will not have to change it.
-# Also note that the 'editcontent' and 'overview' routes are special-cased
-# inside the code, so they don't appear here.
 global:
     about: [ everyone ] # view the 'About Bolt' page
-    clearcache: [ admin, developer ]
-    contentaction: [ editor, admin, developer ]
+    clearcache: [ developer ]
+    contentaction: [ admin, developer ]
     dashboard: [ everyone ]
-    dbcheck: [ admin, developer ]
-    dbupdate: [ admin, developer ]
-    dbupdate_result: [ admin, developer ]
+    dbcheck: [ developer ]
+    dbupdate: [ developer ]
+    dbupdate_result: [ developer ]
     extensions: [ developer ]
     extensions:config: [ developer ]
     fileedit: [ admin, developer ]
     files:config: [ developer ]
     files:theme: [ developer ]
-    files:uploads: [ developer ]
+    files:uploads: [ admin, developer, chief-editor ]
     files: [ admin, developer, chief-editor, editor ]
     prefill: [ developer ]
     profile: [ everyone ] # edit own profile
@@ -85,8 +51,8 @@ global:
     maintenance-mode: [ everyone ] # view the frontend when in maintenance mode
     omnisearch: [ everyone ]
     # Access to the various logs
-    changelog: [ admin, developer, chief-editor ]
-    systemlog: [ admin, developer ]
+    changelog: [ developer ]
+    systemlog: [ developer ]
     # The following permissions are particularly important: login and postLogin
     # determine who may see and use the login form. If you set them to anything
     # but 'anonymous', only users will be able to log in that are logged in
@@ -97,55 +63,6 @@ global:
     # cannot log out anymore.
     logout: [ everyone ]
 
-# For content type related actions, permissions can be set individually for
-# each content type. For this, we define three groups of permission sets.
-# The 'contenttype-all' permission sets *overrides*; any roles specified here
-# will grant a permission for all content types, regardless of the rest of this
-# section.
-# The 'contenttype-default' contains rules that are used when the desired
-# content type does not define a rule for this permission itself.
-# The 'contenttypes' section specifies permissions for individual content
-# types.
-#
-# To understand how this works, it may be best to follow the permission checker
-# through its decision-making process.
-#
-# First, it checks whether the current user is in the "root" role; if so, it
-# short-circuits and always grants anything unconditionally.
-#
-# Otherwise, it checks whether any of the current user's roles match any of the
-# roles in contenttype-all/{permission}. If so, the search is over, and the
-# permission can be granted.
-#
-# The next step is to find contenttypes/{contenttype}/{permission}. If it is
-# found, then the permission can be granted if and only if any of the user's
-# roles match any role in contenttypes/{contenttype}/{permission}.
-#
-# If either contenttypes/{contenttype} or
-# contenttypes/{contenttype}/{permission} is absent, the permission checker
-# uses contenttype-default/{permission} instead. If any role exists in both the
-# user's roles and contenttype-default/{permission}, the permission can be
-# granted.
-#
-# Note especially that an *empty* set of roles in the contenttype section means
-# something else than the *absence* of the permission. If the permission is
-# defined with an empty role list, it overrides the role list in
-# contenttype-default; but if the permission is not mentioned, the
-# corresponding entry in contenttype-default applies.
-#
-# The following permissions are available on a per-contenttype basis:
-#
-# - edit: allows updating existing records
-# - create: allows creating new records
-# - publish: allows changing the status of a record to "published", as well as
-#            scheduling a record for future publishing
-# - depublish: allows changing the status of a record from "published"
-# - delete: allows (hard) deletion of records
-# - change-ownership: allows changing a record's owner. Note that ownership may
-#                     grant additional permissions on a record, so this
-#                     permission can indirectly enable users more permissions
-#                     in ways that may not be immediately obvious.
-# - view: allows viewing records in the backend
 contenttype-all:
     edit: [ developer, admin ]
     create: [ developer, admin ]
@@ -158,57 +75,55 @@ contenttype-default:
     edit: [ developer, admin, owner ]
     create: [ developer, admin, owner ]
     change-ownership: [ developer, admin, owner ]
+    depublish: [ developer, admin, owner ]
+    delete: [ developer, admin ]
     view: [ anonymous ]
 
 contenttypes:
     pages:
-        edit: [ chief-editor ]
+        edit: [ developer, admin ]
         create: [ developer, admin ]
         publish: [ developer, admin ]
         depublish: [ developer, admin ]
         change-ownership: [ owner ]
         view: [ chief-editor ]
     posts:
+        edit: [ chief-editor ]
+        create: [ chief-editor ]
+        publish: [ chief-editor ]
+        depublish: [ chief-editor ]
+    data:
+        edit: [ chief-editor ]
+        create: [ chief-editor ]
+        publish: [ chief-editor ]
+        depublish: [ chief-editor ]
+    projects:
+        edit: [ chief-editor ]
+        create: [ chief-editor ]
+        publish: [ chief-editor ]
+        depublish: [ chief-editor ]
+    events:
+        edit: [ chief-editor ]
+        create: [ chief-editor ]
+        publish: [ chief-editor ]
+        depublish: [ chief-editor ]
+    jobs:
+        edit: [ chief-editor ]
+        create: [ chief-editor ]
+        publish: [ chief-editor ]
+        depublish: [ chief-editor ]
+    banners:
+        edit: [ chief-editor ]
+        create: [ chief-editor ]
+        publish: [ chief-editor ]
+        depublish: [ chief-editor ]
+    blogposts:
         edit: [ chief-editor, editor ]
         create: [ chief-editor, editor ]
         publish: [ chief-editor, editor ]
         depublish: [ chief-editor, editor ]
-    data:
+    blogevents:
         edit: [ chief-editor, editor ]
         create: [ chief-editor, editor ]
-        publish: [ developer, admin ]
-        depublish: [ developer, admin ]
-    projects:
-        edit: [ chief-editor, editor ]
-        create: [ chief-editor, editor ]
-    events:
-        edit: [ chief-editor, editor ]
-        create: [ chief-editor, editor ]
-    jobs:
-        edit: [ chief-editor, editor ]
-        create: [ chief-editor, editor ]
-    banners:
-        edit: [ chief-editor, editor ]
-        create: [ chief-editor, editor ]
-
-
-# This is an example of how to define Contenttype specific permissions
-#
-# contenttypes:
-#    # Keys in this dictionary map to keys in the contenttypes.yml specification.
-#    showcases:
-#        # Rules defined here *override* rules defined in contenttype-default,
-#        # but *add* to rules in contenttype-all. This means that permissions
-#        # granted through contenttype-all cannot be revoked here, merely
-#        # amended.
-#
-#        # Only the Admin and Chief Editor are allowed to edit records
-#        edit: [ admin, chief-editor ]
-#        create: [ admin, chief-editor ]
-#        publish: [ admin, chief-editor ]
-#        depublish: [ admin, chief-editor ]
-#        delete: [ admin, chief-editor ]
-#        # Roles that can see the area in the admin section
-#        view: [ developer, admin, chief-editor ]
-#        # Do not expose this content type on the front-end unless user is
-#        logged into the backend
+        publish: [ chief-editor, editor ]
+        depublish: [ chief-editor, editor ]
