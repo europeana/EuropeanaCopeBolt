@@ -38,39 +38,146 @@ class FeaturedItemsListener
       $itemid = $itemcontent->get('id');
       $itemfeaturedstatus = $itemcontent->get('featured');
 
-      // TODO: remove debug dump
-      dump($itemtype, $itemid, $itemfeaturedstatus, $currenttypeconfig);
+      //dump($itemtype, $itemid, $itemfeaturedstatus, $currenttypeconfig);
 
       if($itemfeaturedstatus == 1) {
-        $this->depublishOtherItems($currenttypeconfig, $itemid);
+        $this->deFeatureOtherItems($currenttypeconfig, $itemtype, $itemid);
+      } else {
+        $this->deFeatureCurrentItem($currenttypeconfig, $itemtype, $itemid);
       }
     }
-    // TODO: remove the die() statement
-    die();
+    // die();
+  }
+
+  /**
+   * Unset featured flag for current item
+   *
+   * @param $currenttypeconfig
+   * @param $itemtype
+   * @param $itemid
+   */
+  function deFeatureCurrentItem($currenttypeconfig, $itemtype, $itemid) {
+    if ($currenttypeconfig['maxfeatured'] > 1) {
+      // don't use the native bolt item save, because that will trigger the storage save event again
+      // get content type table from bolt
+      $prefix = $this->app['config']->get('general/database/prefix');
+      $table = $this->app['config']->get(
+        'contenttypes/' . $itemtype . '/tablename'
+      );
+      $tablename = $prefix . $table;
+
+      // get the field from the config
+      $featuredfield = ($currenttypeconfig['field']) ?
+        $currenttypeconfig['field'] : 'featured';
+
+      // assume the row identifier field is named id
+
+      $db = $this->app['db'];
+
+      // check if current item was featured
+      $qb = $db->createQueryBuilder();
+      $qb->select($tablename, array('id', $itemid));
+      $q0 = $qb->__toString();
+      $r0 = $qb->execute();
+
+      //$query = 'UPDATE %contentype SET %featured = 0 WHERE id = %itemid';
+      $qb1 = $db->createQueryBuilder();
+      $qb1->update($tablename)
+        ->set($featuredfield, 0)
+        ->where(
+          $qb1->expr()->eq('id', $itemid)
+        )
+      ;
+      $q1 = $qb1->__toString();
+      $r1 = $qb1->execute();
+
+      dump($q0, $r0, $q1, $r1);
+    }
+    return 1;
   }
 
   /**
    * Unset featured flag for other items
    *
    * @param $currenttypeconfig
+   * @param $itemtype
    * @param $itemid
    */
-  function depublishOtherItems($currenttypeconfig, $itemid) {
-    $contenttype = $this->app->get('contenttypes');
-
-    dump($contenttype);
+  function deFeatureOtherItems($currenttypeconfig, $itemtype, $itemid) {
     if($currenttypeconfig['maxfeatured'] == 0) {
-      return;
-    } elseif($currenttypeconfig['maxfeatured'] == 1) {
+      return 1;
+    } else {
       // don't use the native bolt item save, because that will trigger the storage save event again
       // get content type table from bolt
-      // get the field from the config
-      // assume the row identifier field is named id
-      $query = 'UPDATE %contentype SET %featured = 0 WHERE id != %itemid';
+      $prefix = $this->app['config']->get('general/database/prefix');
+      $table = $this->app['config']->get('contenttypes/'.$itemtype.'/tablename');
+      $tablename = $prefix . $table;
 
-    } else {
-      // TODO: handle greater than one
-      dump('nope');
+      // get the field from the config
+      $featuredfield = ($currenttypeconfig['field']) ?
+        $currenttypeconfig['field'] : 'featured';
+
+      // assume the row identifier field is named id
+
+      $db = $this->app['db'];
+
+      if ($currenttypeconfig['maxfeatured'] === 1) {
+        //$query = 'UPDATE %contentype SET %featured = 0 WHERE id != %itemid';
+        $qb = $db->createQueryBuilder();
+        $qb->update($tablename)
+          ->set($featuredfield, 0)
+          ->where(
+            'id != ' .  $qb->createNamedParameter($itemid)
+          );
+        return $qb->execute();
+      }
+      else {
+
+        // increment all the current one
+        // not needed if not die-ing
+        //$query = 'UPDATE %contentype SET %featured = 1 WHERE id = %itemid';
+        //$qb = $db->createQueryBuilder();
+        //$qb->update($tablename)
+        //  ->set($featuredfield, 1)
+        //  ->where(
+        //    $qb->expr()->eq('id', $itemid)
+        //  );
+        ////$q0 = $qb->__toString();
+        //$r0 = $qb->execute();
+
+        // increment all featured posts except the current one
+        //$query = 'UPDATE %contentype SET %featured =  %featured + 1 WHERE %featured > 0 AND id != %itemid';
+        $qb1 = $db->createQueryBuilder();
+        $qb1->update($tablename)
+          ->set($featuredfield, $featuredfield . '+1')
+          ->where(
+            $qb1->expr()->andX(
+              $qb1->expr()->gt($featuredfield, 0),
+              $qb1->expr()->neq('id', $itemid)
+            )
+          )
+        ;
+        //$q1 = $qb1->__toString();
+        $r1 = $qb1->execute();
+
+        // kill all featured posts that were featuree flags are too old
+        //$query = 'UPDATE %contentype SET %featured = 0 WHERE %featured > %maxfeatured';
+        $qb2 = $db->createQueryBuilder();
+        $qb2->update($tablename)
+          ->set($featuredfield, 0)
+          ->where(
+            $qb2->expr()->gt(
+              $featuredfield,
+              $currenttypeconfig['maxfeatured']
+            )
+          )
+        ;
+        //$q2 = $qb2->__toString();
+        $r2 = $qb2->execute();
+
+        //dump($q0, $r0, $q1, $r1, $q2, $r2);
+        return 1;
+      }
     }
   }
 
