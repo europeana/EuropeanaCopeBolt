@@ -24,16 +24,20 @@
                     Project
                 {% endif %}
             </span>
-            {% if item.projecttype == 'TaskForce' %}
-                {# {% include 'partials/_event-datetime.twig' %} #}
-                {% if item.start_event is defined and item.start_event is not empty %}
+
+            {# {% include 'partials/_event-datetime.twig' %} #}
+            {% if item.start_event is defined and item.start_event is not empty %}
+                {% if item.end_event is defined and item.end_event is not empty %}
                     <span class="info-date">{{ item.start_event|localedatetime("%e %B  %Y") }} - {{ item.end_event|localedatetime("%e %B  %Y") }}</span>
+                {% else %}
+                    <span class="info-date">{{ item.start_event|localedatetime("%e %B  %Y") }}</span>
                 {% endif %}
             {% else %}
-                <span class="info-date">Start: {{ item.datechanged|localedatetime("%e %B  %Y") }}</span>
+                <span class="info-date">{{ item.datepublish|localedatetime("%e %B  %Y") }}</span>
             {% endif %}
 
-             {% if item.contact_record is not empty %}
+
+            {% if item.contact_record is not empty %}
                 {% set contacts = item.contact_record %}
                 {% if contacts is not iterable %}
                     {# fix iterable ids if the content is json in a textfield #}

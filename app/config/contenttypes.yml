@@ -527,9 +527,10 @@ pages:
             market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
-            calendar: Calendar (only for events, start date increasing)
-            calendar_upcoming: Calendar upcoming (only for events, start date increasing)
-            calendar_archive: Calendar archive (only for events, start date decreasing)
+            calendar: Calendar (only for events and projects, start date increasing)
+            calendar_active: Calendar active (only for events and projects, start date increasing)
+            calendar_upcoming: Calendar upcoming (only for events and projects, start date increasing)
+            calendar_archive: Calendar archive (only for events and projects, start date decreasing)
             alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:
@@ -869,9 +870,10 @@ posts:
             market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
-            calendar: Calendar (based on start and end date)
-            calendar_upcoming: Calendar upcoming (based on start and end date)
-            calendar_archive: Calendar archive (based on start and end date)
+            calendar: Calendar (only for events and projects, based on start and end date)
+            calendar_active: Calendar active (only for events and projects, start date increasing)
+            calendar_upcoming: Calendar upcoming (only for events and projects, based on start and end date)
+            calendar_archive: Calendar archive (only for events and projects, based on start and end date)
             alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:
@@ -1226,9 +1228,10 @@ data:
             market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
-            calendar: Calendar (based on start and end date)
-            calendar_upcoming: Calendar upcoming (based on start and end date)
-            calendar_archive: Calendar archive (based on start and end date)
+            calendar: Calendar (only for events and projects, based on start and end date)
+            calendar_active: Calendar active (only for events and projects, start date increasing)
+            calendar_upcoming: Calendar upcoming (only for events and projects, based on start and end date)
+            calendar_archive: Calendar archive (only for events and projects, based on start and end date)
             alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:
@@ -1642,9 +1645,10 @@ projects:
             market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
-            calendar: Calendar (based on start and end date)
-            calendar_upcoming: Calendar upcoming (based on start and end date)
-            calendar_archive: Calendar archive (based on start and end date)
+            calendar: Calendar (only for events and projects, based on start and end date)
+            calendar_active: Calendar active (only for events and projects, start date increasing)
+            calendar_upcoming: Calendar upcoming (only for events and projects, based on start and end date)
+            calendar_archive: Calendar archive (only for events and projects, based on start and end date)
             alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:
@@ -1967,9 +1971,10 @@ events:
             market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
-            calendar: Calendar (based on start and end date)
-            calendar_upcoming: Calendar upcoming (based on start and end date)
-            calendar_archive: Calendar archive (based on start and end date)
+            calendar: Calendar (only for events and projects, based on start and end date)
+            calendar_active: Calendar active (only for events and projects, start date increasing)
+            calendar_upcoming: Calendar upcoming (only for events and projects, based on start and end date)
+            calendar_archive: Calendar archive (only for events and projects, based on start and end date)
             alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:
