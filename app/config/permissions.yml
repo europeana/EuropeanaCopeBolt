@@ -81,12 +81,12 @@ contenttype-default:
 
 contenttypes:
     pages:
-        edit: [ developer, admin ]
+        edit: [ developer, admin, chief-editor ]
         create: [ developer, admin ]
-        publish: [ developer, admin ]
-        depublish: [ developer, admin ]
+        publish: [ developer, admin, chief-editor ]
+        depublish: [ developer, admin, chief-editor ]
         change-ownership: [ owner ]
-        view: [ chief-editor ]
+        view: [ developer, admin, chief-editor ]
     posts:
         edit: [ chief-editor ]
         create: [ chief-editor ]
@@ -112,7 +112,7 @@ contenttypes:
         create: [ chief-editor ]
         publish: [ chief-editor ]
         depublish: [ chief-editor ]
-    banners:
+    resources:
         edit: [ chief-editor ]
         create: [ chief-editor ]
         publish: [ chief-editor ]
