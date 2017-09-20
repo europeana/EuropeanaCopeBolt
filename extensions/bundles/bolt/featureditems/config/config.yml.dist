@@ -1,0 +1,10 @@
+# Default configuration for featureditems extension
+contenttypes:
+    pages:
+        hasfeatured: false      # this is the default
+        maxfeatured: 1          # you may also have more than one
+        field: featured         # the field in the content type that will be used as flag
+    events:
+        hasfeatured: true
+        maxfeatured: 1
+        field: featured
