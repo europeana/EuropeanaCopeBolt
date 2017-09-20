@@ -2161,14 +2161,15 @@ jobs:
       required: true
       label: "Position (required)"
       variant: inline
+      postfix: "The main title is shown on individual pages as the page title and on listings. Also used for related content teasers"
       class: wide
-      group: "Job information"
+      group: "Main"
     body:
       type: html
       label: "Body (required)"
       height: 300px
       postfix: "Shown on individual pages as main body text"
-      group: "Job information"
+      group: "Main"
     department:
       type: select
       required: false
@@ -2187,32 +2188,32 @@ jobs:
         - 'Software Development'
         - 'Infrastructure'
         - 'The European Library'
-      group: "Job information"
+      group: "Main"
     position_type:
       type: select
       required: false
       label: "Contract type"
       values: [ "Full time", "Part time", "Internship", "Full time (Maternity cover)", "Full time (Temp)", "Part time (Temp)" ]
-      group: "Job information"
+      group: "Main"
     salary_eur:
       type: text
       required: false
       variant: inline
       label: "Monthly salary (EUR)"
       index: true
-      group: "Job information"
+      group: "Main"
     scale_eur:
       type: text
       required: false
       variant: inline
       label: "Scale (EUR)"
       index: true
-      group: "Job information"
+      group: "Main"
     deadline:
       type: date
       required: false
       label: "Deadline"
-      group: "Job information"
+      group: "Main"
     teampage:
       type: text
       label: "Select Team page (optional)"
@@ -2222,11 +2223,14 @@ jobs:
         ct: pages
         fields: [id, title, status]
         key: id
+      group: "Main"
+    <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
     slug:
       type: slug
       uses: position
+      group: "meta"
     <<: *support_defaults
     <<: *contact_defaults
   taxonomy: [ communities, markets, categories, tags ]
