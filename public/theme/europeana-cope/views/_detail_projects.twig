@@ -3,8 +3,8 @@
         <div class="inner-wrap">
             <article class="column main-column">
 
-               {% include 'partials/_community-info.twig' %}
-               {% include 'partials/_side-info.twig' %}
+                {% include 'partials/_community-info.twig' %}
+                {% include 'partials/_side-info.twig' %}
 
                 <div class="header-group">
 
@@ -13,6 +13,10 @@
                     {% endif %}
 
                     <h1>{{ record.title }}</h1>
+
+                    {% if record.subtitle is not empty %}
+                        <h2>{{ record.subtitle }}</h2>
+                    {% endif %}
 
                     <div class="introduction">
                         {{ record.intro }}
