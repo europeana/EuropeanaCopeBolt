@@ -117,7 +117,6 @@ jQuery.fn.extend(
             var fileslistpathfield = viewblock.find('input[name*="fileslistpath"]');
             var modulelinkfields = viewblock.find('input.modulemorelink');
 
-
             if(templatevalue === 'body' || templatevalue === 'collapsedcontent') {
                 bodyblock.parents('.repeater-field').show();
                 sourceselect.parents('.repeater-field').hide();
@@ -279,12 +278,12 @@ jQuery.fn.extend(
                     marketblock.parents('.repeater-field').hide();
                     selectedamount.parents('.repeater-field').show();
                 } else if(ordervalue === 'market' || ordervalue === 'market_unpaged') {
-                      tagblock.parents('.repeater-field').hide();
-                      categoryblock.parents('.repeater-field').hide();
-                      marketblock.parents('.repeater-field').show();
-                      selectedamount.parents('.repeater-field').show();
+                    tagblock.parents('.repeater-field').hide();
+                    categoryblock.parents('.repeater-field').hide();
+                    marketblock.parents('.repeater-field').show();
+                    selectedamount.parents('.repeater-field').show();
                 } else if(ordervalue === 'calendar' || ordervalue === 'calendar_upcoming' || ordervalue === 'calendar_archive') {
-                    sourceselect.parents('.repeater-field').hide();
+                    sourceselect.parents('.repeater-field').show();
                     tagblock.parents('.repeater-field').show();
                     categoryblock.parents('.repeater-field').show();
                     marketblock.parents('.repeater-field').hide();
@@ -359,6 +358,16 @@ jQuery(document).ready(function($) {
         }
     );
     $('a.titletogglebutton').each(function() { $(this).click(); });
+
+    $('.repeater-slot .repeater-group, .tab-pane').onAvailable(
+        function() {
+            //console.log('initializing viewblock for initial fields');
+            $(this).each(function() {
+                $(this).find('input.attribution-group, select[name*="attribution"]').parents('.repeater-field').addClass('image-attribution');
+              $(this).find('input.image-attribution-group, select[name*="attribution"]').parents('.tab-pane div[data-bolt-fieldset]').addClass('image-attribution');
+            });
+        }
+    );
 
     var repeaterblock = $('fieldset.bolt-field-repeater > label');
     //console.log('repeater block', repeaterblock);

@@ -31,6 +31,49 @@ __nodes:
       type: image
       label: "Teaser image"
       postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers"
+      class: 'image-attribution-group attribution-parent'
+    teaser_attribution_title:
+      type: text
+      label: "Image attribution title text"
+      variant: inline
+      class: 'image-attribution-group'
+    teaser_attribution_creator:
+      type: text
+      label: "Image creator"
+      variant: inline
+      class: 'image-attribution-group'
+    teaser_attribution_date:
+      type: text
+      label: "Image attribution date"
+      variant: inline
+      postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
+      class: 'image-attribution-group'
+    teaser_attribution_holder:
+      type: text
+      label: "Image attribution Holding Institution"
+      variant: inline
+      class: 'image-attribution-group'
+    teaser_attribution_country:
+      type: text
+      label: "Image attribution country"
+      variant: inline
+      class: 'image-attribution-group'
+    teaser_attribution_license:
+      label: "Image attribution copyright status"
+      type: select
+      values:
+        'Public-Domain' : 'Public Domain'
+        'CC0' : 'CC0'
+        'CC-BY' : 'CC BY'
+        'CC-BY-SA' : 'CC BY-SA'
+        'CC-BY-NC' : 'CC BY-NC'
+        'CC-BY-NC-SA' : 'CC BY-NC-SA'
+      class: 'image-attribution-group'
+    teaser_attribution_link:
+      type: text
+      label: "Image link on europeana"
+      variant: inline
+      class: 'image-attribution-group'
   media_defaults: &media_defaults
     image:
       type: image
@@ -40,6 +83,49 @@ __nodes:
       required: true
       extensions: [ gif, jpg, png ]
       group: "Main"
+      class: 'image-attribution-group attribution-parent'
+    image_attribution_title:
+      type: text
+      label: "Image attribution title text"
+      variant: inline
+      class: 'image-attribution-group'
+    image_attribution_creator:
+      type: text
+      label: "Image creator"
+      variant: inline
+      class: 'image-attribution-group'
+    image_attribution_date:
+      type: text
+      label: "Image attribution date"
+      variant: inline
+      postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
+      class: 'image-attribution-group'
+    image_attribution_holder:
+      type: text
+      label: "Image attribution Holding Institution"
+      variant: inline
+      class: 'image-attribution-group'
+    image_attribution_country:
+      type: text
+      label: "Image attribution country"
+      variant: inline
+      class: 'image-attribution-group'
+    image_attribution_license:
+      label: "Image attribution copyright status"
+      type: select
+      values:
+        'Public-Domain' : 'Public Domain'
+        'CC0' : 'CC0'
+        'CC-BY' : 'CC BY'
+        'CC-BY-SA' : 'CC BY-SA'
+        'CC-BY-NC' : 'CC BY-NC'
+        'CC-BY-NC-SA' : 'CC BY-NC-SA'
+      class: 'image-attribution-group'
+    image_attribution_link:
+      type: text
+      label: "Image link on europeana"
+      variant: inline
+      class: 'image-attribution-group'
   structure_defaults: &structure_defaults
     slug:
       type: slug
@@ -353,6 +439,9 @@ pages:
             fileslisting:      "File list block (_fileslisting.twig)"
             body:              "Module body field - for extra body blocks between modules (_body.twig)"
             collapsedcontent:  "Collapsed content clicks open with click on header (_collapsedcontent.twig)"
+            image:             "One wide image view (_image.twig)"
+            filecontent:       "Single file attachement block (_filecontent.twig)"
+            fileslisting:      "File list block (_fileslisting.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -365,7 +454,49 @@ pages:
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image'
+          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
+        attribution_title:
+          type: text
+          label: "Image attribution title text"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_creator:
+          type: text
+          label: "Image creator"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_date:
+          type: text
+          label: "Image attribution date"
+          variant: inline
+          postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
+          class: 'showfortemplate-image attribution-group'
+        attribution_holder:
+          type: text
+          label: "Image attribution Holding Institution"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_country:
+          type: text
+          label: "Image attribution country"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_license:
+          label: "Image attribution copyright status"
+          type: select
+          values:
+            'Public-Domain' : 'Public Domain'
+            'CC0' : 'CC0'
+            'CC-BY' : 'CC BY'
+            'CC-BY-SA' : 'CC BY-SA'
+            'CC-BY-NC' : 'CC BY-NC'
+            'CC-BY-NC-SA' : 'CC BY-NC-SA'
+          class: 'showfortemplate-image attribution-group'
+        attribution_link:
+          type: text
+          label: "Image link on europeana"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
         singlefile:
           type: file
           label: File
@@ -403,9 +534,10 @@ pages:
             market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
-            calendar: Calendar (only for events, start date increasing)
-            calendar_upcoming: Calendar upcoming (only for events, start date increasing)
-            calendar_archive: Calendar archive (only for events, start date decreasing)
+            calendar: Calendar (only for events and projects, start date increasing)
+            calendar_active: Calendar active (only for events and projects, start date increasing)
+            calendar_upcoming: Calendar upcoming (only for events and projects, start date increasing)
+            calendar_archive: Calendar archive (only for events and projects, start date decreasing)
             alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:
@@ -604,6 +736,10 @@ posts:
         Publication: "Publication"
         News: "News"
       postfix: "Select if this record is a Blog, Pressrelease, Publication or other News record"
+    featured:
+      type: checkbox
+      label: "Make this post sticky"
+      postfix: "<small>One post only. Setting another post to sticky will uncheck this one.</small>"
     intro:
       type: html
       label: "Intro"
@@ -656,6 +792,7 @@ posts:
             banner:            "One wide banner view (_banner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
+            listing:           "Listing of records (_listing.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
@@ -669,11 +806,53 @@ posts:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image (optional)
+          label: Image
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image'
+          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
+        attribution_title:
+          type: text
+          label: "Image attribution title text"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_creator:
+          type: text
+          label: "Image creator"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_date:
+          type: text
+          label: "Image attribution date"
+          variant: inline
+          postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
+          class: 'showfortemplate-image attribution-group'
+        attribution_holder:
+          type: text
+          label: "Image attribution Holding Institution"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_country:
+          type: text
+          label: "Image attribution country"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_license:
+          label: "Image attribution copyright status"
+          type: select
+          values:
+            'Public-Domain' : 'Public Domain'
+            'CC0' : 'CC0'
+            'CC-BY' : 'CC BY'
+            'CC-BY-SA' : 'CC BY-SA'
+            'CC-BY-NC' : 'CC BY-NC'
+            'CC-BY-NC-SA' : 'CC BY-NC-SA'
+          class: 'showfortemplate-image attribution-group'
+        attribution_link:
+          type: text
+          label: "Image link on europeana"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
         singlefile:
           type: file
           label: File
@@ -704,9 +883,10 @@ posts:
             market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
-            calendar: Calendar (based on start and end date)
-            calendar_upcoming: Calendar upcoming (based on start and end date)
-            calendar_archive: Calendar archive (based on start and end date)
+            calendar: Calendar (only for events and projects, based on start and end date)
+            calendar_active: Calendar active (only for events and projects, start date increasing)
+            calendar_upcoming: Calendar upcoming (only for events and projects, based on start and end date)
+            calendar_archive: Calendar archive (only for events and projects, based on start and end date)
             alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:
@@ -972,6 +1152,7 @@ data:
             banner:            "One wide banner view (_banner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
+            listing:           "Listing of records (_listing.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
@@ -985,11 +1166,53 @@ data:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image (optional)
+          label: Image
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image'
+          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
+        attribution_title:
+          type: text
+          label: "Image attribution title text"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_creator:
+          type: text
+          label: "Image creator"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_date:
+          type: text
+          label: "Image attribution date"
+          variant: inline
+          postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
+          class: 'showfortemplate-image attribution-group'
+        attribution_holder:
+          type: text
+          label: "Image attribution Holding Institution"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_country:
+          type: text
+          label: "Image attribution country"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_license:
+          label: "Image attribution copyright status"
+          type: select
+          values:
+            'Public-Domain' : 'Public Domain'
+            'CC0' : 'CC0'
+            'CC-BY' : 'CC BY'
+            'CC-BY-SA' : 'CC BY-SA'
+            'CC-BY-NC' : 'CC BY-NC'
+            'CC-BY-NC-SA' : 'CC BY-NC-SA'
+          class: 'showfortemplate-image attribution-group'
+        attribution_link:
+          type: text
+          label: "Image link on europeana"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
         singlefile:
           type: file
           label: File
@@ -1020,9 +1243,10 @@ data:
             market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
-            calendar: Calendar (based on start and end date)
-            calendar_upcoming: Calendar upcoming (based on start and end date)
-            calendar_archive: Calendar archive (based on start and end date)
+            calendar: Calendar (only for events and projects, based on start and end date)
+            calendar_active: Calendar active (only for events and projects, start date increasing)
+            calendar_upcoming: Calendar upcoming (only for events and projects, based on start and end date)
+            calendar_archive: Calendar archive (only for events and projects, based on start and end date)
             alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:
@@ -1297,7 +1521,7 @@ projects:
     url:
       type: text
       required: false
-      label: "Link to projects website:"
+      label: "Link to projects website"
       variant: inline
       prefix: "<em>URL has to start with http:// or https://</em>"
       pattern: url
@@ -1347,6 +1571,7 @@ projects:
             banner:            "One wide banner view (_banner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
+            listing:           "Listing of records (_listing.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
@@ -1360,11 +1585,53 @@ projects:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image (optional)
+          label: Image
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image'
+          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
+        attribution_title:
+          type: text
+          label: "Image attribution title text"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_creator:
+          type: text
+          label: "Image creator"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_date:
+          type: text
+          label: "Image attribution date"
+          variant: inline
+          postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
+          class: 'showfortemplate-image attribution-group'
+        attribution_holder:
+          type: text
+          label: "Image attribution Holding Institution"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_country:
+          type: text
+          label: "Image attribution country"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_license:
+          label: "Image attribution copyright status"
+          type: select
+          values:
+            'Public-Domain' : 'Public Domain'
+            'CC0' : 'CC0'
+            'CC-BY' : 'CC BY'
+            'CC-BY-SA' : 'CC BY-SA'
+            'CC-BY-NC' : 'CC BY-NC'
+            'CC-BY-NC-SA' : 'CC BY-NC-SA'
+          class: 'showfortemplate-image attribution-group'
+        attribution_link:
+          type: text
+          label: "Image link on europeana"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
         singlefile:
           type: file
           label: File
@@ -1395,9 +1662,10 @@ projects:
             market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
-            calendar: Calendar (based on start and end date)
-            calendar_upcoming: Calendar upcoming (based on start and end date)
-            calendar_archive: Calendar archive (based on start and end date)
+            calendar: Calendar (only for events and projects, based on start and end date)
+            calendar_active: Calendar active (only for events and projects, start date increasing)
+            calendar_upcoming: Calendar upcoming (only for events and projects, based on start and end date)
+            calendar_archive: Calendar archive (only for events and projects, based on start and end date)
             alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:
@@ -1637,6 +1905,7 @@ events:
             banner:            "One wide banner view (_banner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
+            listing:           "Listing of records (_listing.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
@@ -1650,17 +1919,53 @@ events:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image (optional)
+          label: Image
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image'
-        singlefile:
-          type: file
-          label: File
-          info: You may override the title with the module title.
+          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
+        attribution_title:
+          type: text
+          label: "Image attribution title text"
           variant: inline
-          class: 'showfortemplate-filecontent'
+          class: 'showfortemplate-image attribution-group'
+        attribution_creator:
+          type: text
+          label: "Image creator"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_date:
+          type: text
+          label: "Image attribution date"
+          variant: inline
+          postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
+          class: 'showfortemplate-image attribution-group'
+        attribution_holder:
+          type: text
+          label: "Image attribution Holding Institution"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_country:
+          type: text
+          label: "Image attribution country"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
+        attribution_license:
+          label: "Image attribution copyright status"
+          type: select
+          values:
+            'Public-Domain' : 'Public Domain'
+            'CC0' : 'CC0'
+            'CC-BY' : 'CC BY'
+            'CC-BY-SA' : 'CC BY-SA'
+            'CC-BY-NC' : 'CC BY-NC'
+            'CC-BY-NC-SA' : 'CC BY-NC-SA'
+          class: 'showfortemplate-image attribution-group'
+        attribution_link:
+          type: text
+          label: "Image link on europeana"
+          variant: inline
+          class: 'showfortemplate-image attribution-group'
         fileslistpath:
           type: text
           label: Folder
@@ -1685,9 +1990,10 @@ events:
             market_unpaged: Market category (without pagination)
             oldest: Chronological with the oldest records first (with pagination)
             oldest_unpaged: Chronological with the oldest records first (without pagination)
-            calendar: Calendar (based on start and end date)
-            calendar_upcoming: Calendar upcoming (based on start and end date)
-            calendar_archive: Calendar archive (based on start and end date)
+            calendar: Calendar (only for events and projects, based on start and end date)
+            calendar_active: Calendar active (only for events and projects, start date increasing)
+            calendar_upcoming: Calendar upcoming (only for events and projects, based on start and end date)
+            calendar_archive: Calendar archive (only for events and projects, based on start and end date)
             alphabetical: Alphabetically ordered by title
             random: A number of random records
         sources:
@@ -1879,14 +2185,15 @@ jobs:
       required: true
       label: "Position (required)"
       variant: inline
+      postfix: "The main title is shown on individual pages as the page title and on listings. Also used for related content teasers"
       class: wide
-      group: "Job information"
+      group: "Main"
     body:
       type: html
       label: "Body (required)"
       height: 300px
       postfix: "Shown on individual pages as main body text"
-      group: "Job information"
+      group: "Main"
     department:
       type: select
       required: false
@@ -1905,32 +2212,32 @@ jobs:
         - 'Software Development'
         - 'Infrastructure'
         - 'The European Library'
-      group: "Job information"
+      group: "Main"
     position_type:
       type: select
       required: false
       label: "Contract type"
       values: [ "Full time", "Part time", "Internship", "Full time (Maternity cover)", "Full time (Temp)", "Part time (Temp)" ]
-      group: "Job information"
+      group: "Main"
     salary_eur:
       type: text
       required: false
       variant: inline
       label: "Monthly salary (EUR)"
       index: true
-      group: "Job information"
+      group: "Main"
     scale_eur:
       type: text
       required: false
       variant: inline
       label: "Scale (EUR)"
       index: true
-      group: "Job information"
+      group: "Main"
     deadline:
       type: date
       required: false
       label: "Deadline"
-      group: "Job information"
+      group: "Main"
     teampage:
       type: text
       label: "Select Team page (optional)"
@@ -1940,11 +2247,14 @@ jobs:
         ct: pages
         fields: [id, title, status]
         key: id
+      group: "Main"
+    <<: *teaser_defaults
     <<: *media_defaults
     <<: *structure_defaults
     slug:
       type: slug
       uses: position
+      group: "meta"
     <<: *support_defaults
     <<: *contact_defaults
   taxonomy: [ communities, markets, categories, tags ]
@@ -2252,8 +2562,34 @@ resources:
         pct75 : "75 percent transparent"
         full : "Not transparent"
       variant: inline
+    image_attribution_title:
+      type: text
+      label: "Image attribution title text"
+      variant: inline
+      class: 'image-attribution-group'
+    image_attribution_creator:
+      type: text
+      label: "Image creator"
+      variant: inline
+      class: 'image-attribution-group'
+    image_attribution_date:
+      type: text
+      label: "Image attribution date"
+      variant: inline
+      postfix: "Use this field to enter a date. Please use the format YYYY-MM-DD. If the exact date is unknown use 'circa 1786' or '1505-1545'."
+      class: 'image-attribution-group'
+    image_attribution_holder:
+      type: text
+      label: "Image attribution Holding Institution"
+      variant: inline
+      class: 'image-attribution-group'
+    image_attribution_country:
+      type: text
+      label: "Image attribution country"
+      variant: inline
+      class: 'image-attribution-group'
     imagelicense:
-      label: "Image License"
+      label: "Image attribution copyright status"
       type: select
       values:
         'Public-Domain' : 'Public Domain'
@@ -2262,7 +2598,12 @@ resources:
         'CC-BY-SA' : 'CC BY-SA'
         'CC-BY-NC' : 'CC BY-NC'
         'CC-BY-NC-SA' : 'CC BY-NC-SA'
-      prefix: "<hr />"
+      class: 'image-attribution-group'
+    image_attribution_link:
+      type: text
+      label: "Image link on europeana"
+      variant: inline
+      class: 'image-attribution-group'
     slug:
       type: slug
       uses: title

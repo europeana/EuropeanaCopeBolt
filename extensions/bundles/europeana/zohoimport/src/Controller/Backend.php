@@ -66,7 +66,7 @@ class Backend implements ControllerProviderInterface
             <div class="panel-heading"><h2>Manual control</h2></div>
             <div class="panel-body">
                 <p>Please run the importer on the console with <tt>php app/nut zoho:import full</tt></p>
-                <p>You can try a <a href="/admin/extensions/zohoimport/full">full import</a>, 
+                <p>You can try a  &quot;/admin/extensions/zohoimport/full&quot; full import</a>, 
                    but that will stall because the process takes to long for the web interface.</p>
             </div><div class="panel-footer"></div></div>';
                 $type = 'test';
@@ -75,9 +75,9 @@ class Backend implements ControllerProviderInterface
         $app['zohoimport']->logger('info', $text, 'zoho-backend-'.$type, $request);
 
         $html = $app['twig']->render('overview.twig', [
-        'title' => 'ZOHO Import overview',
-        'text' => $text,
-        'zohoconfig' => $app['zohoimport.config']
+          'title' => 'ZOHO Import overview',
+          'text' => $text,
+          'zohoconfig' => $app['zohoimport.config']
         ]);
 
         return $html;

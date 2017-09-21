@@ -2,7 +2,7 @@
     {% set item = record %}
 {% endif %}
 
-<article class="teaser teaser-posts group">
+<article class="teaser teaser-posts group {% if record.featured == true %}featured{% endif %}">
     <div class="img-container">
 
         {% if item.teaser_image is defined and item.teaser_image is not empty %}

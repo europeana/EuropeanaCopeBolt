@@ -74,7 +74,7 @@ class ZohoImportCommand extends BaseCommand
                     str_replace(
                         '</td><td>',
                         ': </td><td>',
-                        $this->app['zohoimport']->zohoImportOverview()
+                        $this->app['zohoimport']->zohoImportOverview(true, $output)
                     )
                 )
             );

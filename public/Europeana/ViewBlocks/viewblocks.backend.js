@@ -117,7 +117,6 @@ jQuery.fn.extend(
             var fileslistpathfield = viewblock.find('input[name*="fileslistpath"]');
             var modulelinkfields = viewblock.find('input.modulemorelink');
 
-
             if(templatevalue === 'body' || templatevalue === 'collapsedcontent') {
                 bodyblock.parents('.repeater-field').show();
                 sourceselect.parents('.repeater-field').hide();
@@ -284,7 +283,7 @@ jQuery.fn.extend(
                     marketblock.parents('.repeater-field').show();
                     selectedamount.parents('.repeater-field').show();
                 } else if(ordervalue === 'calendar' || ordervalue === 'calendar_upcoming' || ordervalue === 'calendar_archive') {
-                    sourceselect.parents('.repeater-field').hide();
+                    sourceselect.parents('.repeater-field').show();
                     tagblock.parents('.repeater-field').show();
                     categoryblock.parents('.repeater-field').show();
                     marketblock.parents('.repeater-field').hide();

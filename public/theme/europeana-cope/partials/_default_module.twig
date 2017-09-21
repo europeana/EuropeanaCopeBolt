@@ -85,6 +85,8 @@
 
         {% set filtername = 1 %}
         {% set filtervalue = 1 %}
+        {% set featuredfilter = false %}
+        {% set featuredtype = 0 %}
         {% if sources == 'persons'  %}
             {% if subtype is not empty or module.get('filter_persons') is not empty %}
                 {% set filtername = 'network_participation' %}
@@ -95,6 +97,8 @@
                 {% set filtername = 'posttype' %}
                 {% set filtervalue = subtype|default(module.get('filter_posts')) %}
             {% endif %}
+            {% set featuredfilter = true %}
+            {% set featuredtype = 'posts' %}
         {% elseif sources == 'data' %}
             {% if subtype is not empty or module.get('filter_data') is not empty %}
                 {% set filtername = 'datatype' %}
@@ -105,8 +109,10 @@
                 {% set filtername = 'projecttype' %}
                 {% set filtervalue = subtype|default(module.get('filter_projects')) %}
             {% endif %}
+        {% elseif sources == 'events' %}
+            {% set featuredfilter = true %}
+            {% set featuredtype = 'events' %}
         {% endif %}
-
         {#
         {{ dump( 'filtername: ' ~ filtername,
                   'filtervalue: ' ~ filtervalue,
@@ -115,10 +121,24 @@
         #}
 
         {% if ordering == 'latest' %}
-            {% setcontent selected_records = sources where {
-                (filtername): (filtervalue),
-                (taxonomyname): (taxonomyterm)
-            } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+            {% if featuredfilter == true %}
+                {% setcontent featured_records = sources where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm),
+                    'featured': true
+                } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+                {% setcontent selected_records = sources where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm),
+                    'featured': false
+                } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+                {% set selected_records = featured_records|merge(selected_records) %}
+            {% else %}
+                {% setcontent selected_records = sources where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm)
+                } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
+            {% endif %}
         {% elseif ordering == 'latest_unpaged' %}
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
@@ -240,95 +260,128 @@
                 (basetaxonomyname): (basemarket)
             } orderby '-datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
-        {% elseif ordering == 'calendar' %}
+        {% elseif ordering == 'calendar' and sources in ['events', 'projects'] %}
             {% set basecategory = module.get('basecategory')|default('') %}
             {% set basetag = module.get('basetag')|default('') %}
             {% set basemarket = module.get('basemarket')|default('') %}
             {% if basecategory != '' %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     categories: basecategory
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% elseif basemarket != '' %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     markets: basemarket
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% elseif basetag != '' %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     tags: basetag
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% else %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm)
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% endif %}
             {% set allow_pager = true %}
-        {% elseif ordering == 'calendar_upcoming' %}
+        {% elseif ordering == 'calendar_active' and sources in ['events', 'projects'] %}
             {% set basecategory = module.get('basecategory')|default('') %}
             {% set basetag = module.get('basetag')|default('') %}
             {% set basemarket = module.get('basemarket')|default('') %}
             {% if basecategory != '' %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                (taxonomyname): (taxonomyterm),
+                categories: basecategory,
+                'end_event': '> yesterday'
+                } orderby 'start_event' limit override_amount|default(10) allowpaging %}
+            {% elseif basemarket != '' %}
+                {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                (taxonomyname): (taxonomyterm),
+                markets: basemarket,
+                'end_event': '> yesterday'
+                } orderby 'start_event' limit override_amount|default(10) allowpaging %}
+            {% elseif basetag != '' %}
+                {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                (taxonomyname): (taxonomyterm),
+                tags: basetag,
+                'end_event': '> yesterday'
+                } orderby 'start_event' limit override_amount|default(10) allowpaging %}
+            {% else %}
+                {% setcontent selected_records = sources where {
+                (filtername): (filtervalue),
+                (taxonomyname): (taxonomyterm),
+                'end_event': '> yesterday'
+                } orderby 'start_event' limit override_amount|default(10) allowpaging %}
+            {% endif %}
+            {% set allow_pager = true %}
+        {% elseif ordering == 'calendar_upcoming' and sources in ['events', 'projects'] %}
+            {% set basecategory = module.get('basecategory')|default('') %}
+            {% set basetag = module.get('basetag')|default('') %}
+            {% set basemarket = module.get('basemarket')|default('') %}
+            {% if basecategory != '' %}
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     categories: basecategory,
                     'start_event': '> yesterday'
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% elseif basemarket != '' %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     markets: basemarket,
                     'start_event': '> yesterday'
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% elseif basetag != '' %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     tags: basetag,
                     'start_event': '> yesterday'
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% else %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     'start_event': '> yesterday'
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% endif %}
             {% set allow_pager = true %}
-        {% elseif ordering == 'calendar_archive' %}
+        {% elseif ordering == 'calendar_archive' and sources in ['events', 'projects'] %}
             {% set basecategory = module.get('basecategory')|default('') %}
             {% set basetag = module.get('basetag')|default('') %}
             {% set basemarket = module.get('basemarket')|default('') %}
             {% if basecategory != '' %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     categories: basecategory,
                     'end_event': '< tomorrow'
                 } orderby '-start_event' limit override_amount|default(10) allowpaging %}
             {% elseif basemarket != '' %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     markets: basemarket,
                     'end_event': '< tomorrow'
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% elseif basetag != '' %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     tags: basetag,
                     'end_event': '< tomorrow'
                 } orderby 'start_event' limit override_amount|default(10) allowpaging %}
             {% else %}
-                {% setcontent selected_records = 'events' where {
+                {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
                     'end_event': '< tomorrow'

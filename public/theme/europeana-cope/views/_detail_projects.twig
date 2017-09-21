@@ -3,8 +3,8 @@
         <div class="inner-wrap">
             <article class="column main-column">
 
-               {% include 'partials/_community-info.twig' %}
-               {% include 'partials/_side-info.twig' %}
+                {% include 'partials/_community-info.twig' %}
+                {% include 'partials/_side-info.twig' %}
 
                 <div class="header-group">
 
@@ -13,6 +13,10 @@
                     {% endif %}
 
                     <h1>{{ record.title }}</h1>
+
+                    {% if record.subtitle is not empty %}
+                        <h2>{{ record.subtitle }}</h2>
+                    {% endif %}
 
                     <div class="introduction">
                         {{ record.intro }}
@@ -64,6 +68,14 @@
     {% if record.button_link is defined and record.button_link is not empty %}
         {% include 'partials/_record_cta.twig' %}
     {% endif %}
+
+    {% if record.url is defined and record.url is not empty %}
+        {# This file is inserted as the 'primary call to action' of each listed record. #}
+        <div class="primary-call-to-action">
+            <a class="button" href="{{ record.url }}">Project website.</a>
+        </div>
+    {% endif %}
+
 
     <aside>
         <div class="inner-wrap">
