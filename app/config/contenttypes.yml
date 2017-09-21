@@ -31,48 +31,6 @@ __nodes:
       type: image
       label: "Teaser image"
       postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers"
-      class: 'image-attribution-group attribution-parent'
-    teaser_attribution_title:
-      type: text
-      label: "Image attribution title text"
-      variant: inline
-      class: 'image-attribution-group'
-    teaser_attribution_creator:
-      type: text
-      label: "Image creator"
-      variant: inline
-      class: 'image-attribution-group'
-    teaser_attribution_date:
-      type: date
-      label: "Image attribution date"
-      variant: inline
-      class: 'image-attribution-group'
-    teaser_attribution_holder:
-      type: text
-      label: "Image attribution Holding Institution"
-      variant: inline
-      class: 'image-attribution-group'
-    teaser_attribution_country:
-      type: text
-      label: "Image attribution country"
-      variant: inline
-      class: 'image-attribution-group'
-    teaser_attribution_license:
-      label: "Image attribution copyright status"
-      type: select
-      values:
-        'Public-Domain' : 'Public Domain'
-        'CC0' : 'CC0'
-        'CC-BY' : 'CC BY'
-        'CC-BY-SA' : 'CC BY-SA'
-        'CC-BY-NC' : 'CC BY-NC'
-        'CC-BY-NC-SA' : 'CC BY-NC-SA'
-      class: 'image-attribution-group'
-    teaser_attribution_link:
-      type: text
-      label: "Image link on europeana"
-      variant: inline
-      class: 'image-attribution-group'
   media_defaults: &media_defaults
     image:
       type: image
@@ -82,48 +40,6 @@ __nodes:
       required: true
       extensions: [ gif, jpg, png ]
       group: "Main"
-      class: 'image-attribution-group attribution-parent'
-    image_attribution_title:
-      type: text
-      label: "Image attribution title text"
-      variant: inline
-      class: 'image-attribution-group'
-    image_attribution_creator:
-      type: text
-      label: "Image creator"
-      variant: inline
-      class: 'image-attribution-group'
-    image_attribution_date:
-      type: date
-      label: "Image attribution date"
-      variant: inline
-      class: 'image-attribution-group'
-    image_attribution_holder:
-      type: text
-      label: "Image attribution Holding Institution"
-      variant: inline
-      class: 'image-attribution-group'
-    image_attribution_country:
-      type: text
-      label: "Image attribution country"
-      variant: inline
-      class: 'image-attribution-group'
-    image_attribution_license:
-      label: "Image attribution copyright status"
-      type: select
-      values:
-        'Public-Domain' : 'Public Domain'
-        'CC0' : 'CC0'
-        'CC-BY' : 'CC BY'
-        'CC-BY-SA' : 'CC BY-SA'
-        'CC-BY-NC' : 'CC BY-NC'
-        'CC-BY-NC-SA' : 'CC BY-NC-SA'
-      class: 'image-attribution-group'
-    image_attribution_link:
-      type: text
-      label: "Image link on europeana"
-      variant: inline
-      class: 'image-attribution-group'
   structure_defaults: &structure_defaults
     slug:
       type: slug
@@ -422,6 +338,7 @@ pages:
             #listingexpander:   "Expander block with records - vertical accordeon (_listingexpander.twig)"
             listingnews:       "Two news postings and a link to more (_listingnews.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
+            listingtwocol:     "Person listing over two columns (_listingtwocol.twig)"
             listingsemistatic: "Three static intro items (_listingsemistatic.twig)"
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
             detail:            "Full details for single items (_detail.twig)"
@@ -448,48 +365,7 @@ pages:
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
-        attribution_title:
-          type: text
-          label: "Image attribution title text"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_creator:
-          type: text
-          label: "Image creator"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_date:
-          type: date
-          label: "Image attribution date"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_holder:
-          type: text
-          label: "Image attribution Holding Institution"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_country:
-          type: text
-          label: "Image attribution country"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_license:
-          label: "Image attribution copyright status"
-          type: select
-          values:
-            'Public-Domain' : 'Public Domain'
-            'CC0' : 'CC0'
-            'CC-BY' : 'CC BY'
-            'CC-BY-SA' : 'CC BY-SA'
-            'CC-BY-NC' : 'CC BY-NC'
-            'CC-BY-NC-SA' : 'CC BY-NC-SA'
-          class: 'showfortemplate-image attribution-group'
-        attribution_link:
-          type: text
-          label: "Image link on europeana"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
+          class: 'showfortemplate-image'
         singlefile:
           type: file
           label: File
@@ -793,52 +669,11 @@ posts:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image
+          label: Image (optional)
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
-        attribution_title:
-          type: text
-          label: "Image attribution title text"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_creator:
-          type: text
-          label: "Image creator"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_date:
-          type: date
-          label: "Image attribution date"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_holder:
-          type: text
-          label: "Image attribution Holding Institution"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_country:
-          type: text
-          label: "Image attribution country"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_license:
-          label: "Image attribution copyright status"
-          type: select
-          values:
-            'Public-Domain' : 'Public Domain'
-            'CC0' : 'CC0'
-            'CC-BY' : 'CC BY'
-            'CC-BY-SA' : 'CC BY-SA'
-            'CC-BY-NC' : 'CC BY-NC'
-            'CC-BY-NC-SA' : 'CC BY-NC-SA'
-          class: 'showfortemplate-image attribution-group'
-        attribution_link:
-          type: text
-          label: "Image link on europeana"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
+          class: 'showfortemplate-image'
         singlefile:
           type: file
           label: File
@@ -1150,52 +985,11 @@ data:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image
+          label: Image (optional)
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
-        attribution_title:
-          type: text
-          label: "Image attribution title text"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_creator:
-          type: text
-          label: "Image creator"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_date:
-          type: date
-          label: "Image attribution date"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_holder:
-          type: text
-          label: "Image attribution Holding Institution"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_country:
-          type: text
-          label: "Image attribution country"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_license:
-          label: "Image attribution copyright status"
-          type: select
-          values:
-            'Public-Domain' : 'Public Domain'
-            'CC0' : 'CC0'
-            'CC-BY' : 'CC BY'
-            'CC-BY-SA' : 'CC BY-SA'
-            'CC-BY-NC' : 'CC BY-NC'
-            'CC-BY-NC-SA' : 'CC BY-NC-SA'
-          class: 'showfortemplate-image attribution-group'
-        attribution_link:
-          type: text
-          label: "Image link on europeana"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
+          class: 'showfortemplate-image'
         singlefile:
           type: file
           label: File
@@ -1566,52 +1360,11 @@ projects:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image
+          label: Image (optional)
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
-        attribution_title:
-          type: text
-          label: "Image attribution title text"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_creator:
-          type: text
-          label: "Image creator"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_date:
-          type: date
-          label: "Image attribution date"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_holder:
-          type: text
-          label: "Image attribution Holding Institution"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_country:
-          type: text
-          label: "Image attribution country"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_license:
-          label: "Image attribution copyright status"
-          type: select
-          values:
-            'Public-Domain' : 'Public Domain'
-            'CC0' : 'CC0'
-            'CC-BY' : 'CC BY'
-            'CC-BY-SA' : 'CC BY-SA'
-            'CC-BY-NC' : 'CC BY-NC'
-            'CC-BY-NC-SA' : 'CC BY-NC-SA'
-          class: 'showfortemplate-image attribution-group'
-        attribution_link:
-          type: text
-          label: "Image link on europeana"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
+          class: 'showfortemplate-image'
         singlefile:
           type: file
           label: File
@@ -1897,52 +1650,17 @@ events:
           class: 'showfortemplate-body'
         image:
           type: image
-          label: Image
+          label: Image (optional)
           attrib: title
           info: Add image.
           variant: inline
-          class: 'showfortemplate-image imagewidget attribution-group attribution-parent'
-        attribution_title:
-          type: text
-          label: "Image attribution title text"
+          class: 'showfortemplate-image'
+        singlefile:
+          type: file
+          label: File
+          info: You may override the title with the module title.
           variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_creator:
-          type: text
-          label: "Image creator"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_date:
-          type: date
-          label: "Image attribution date"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_holder:
-          type: text
-          label: "Image attribution Holding Institution"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_country:
-          type: text
-          label: "Image attribution country"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
-        attribution_license:
-          label: "Image attribution copyright status"
-          type: select
-          values:
-            'Public-Domain' : 'Public Domain'
-            'CC0' : 'CC0'
-            'CC-BY' : 'CC BY'
-            'CC-BY-SA' : 'CC BY-SA'
-            'CC-BY-NC' : 'CC BY-NC'
-            'CC-BY-NC-SA' : 'CC BY-NC-SA'
-          class: 'showfortemplate-image attribution-group'
-        attribution_link:
-          type: text
-          label: "Image link on europeana"
-          variant: inline
-          class: 'showfortemplate-image attribution-group'
+          class: 'showfortemplate-filecontent'
         fileslistpath:
           type: text
           label: Folder
@@ -2534,33 +2252,8 @@ resources:
         pct75 : "75 percent transparent"
         full : "Not transparent"
       variant: inline
-    image_attribution_title:
-      type: text
-      label: "Image attribution title text"
-      variant: inline
-      class: 'image-attribution-group'
-    image_attribution_creator:
-      type: text
-      label: "Image creator"
-      variant: inline
-      class: 'image-attribution-group'
-    image_attribution_date:
-      type: date
-      label: "Image attribution date"
-      variant: inline
-      class: 'image-attribution-group'
-    image_attribution_holder:
-      type: text
-      label: "Image attribution Holding Institution"
-      variant: inline
-      class: 'image-attribution-group'
-    image_attribution_country:
-      type: text
-      label: "Image attribution country"
-      variant: inline
-      class: 'image-attribution-group'
     imagelicense:
-      label: "Image attribution copyright status"
+      label: "Image License"
       type: select
       values:
         'Public-Domain' : 'Public Domain'
@@ -2569,12 +2262,7 @@ resources:
         'CC-BY-SA' : 'CC BY-SA'
         'CC-BY-NC' : 'CC BY-NC'
         'CC-BY-NC-SA' : 'CC BY-NC-SA'
-      class: 'image-attribution-group'
-    image_attribution_link:
-      type: text
-      label: "Image link on europeana"
-      variant: inline
-      class: 'image-attribution-group'
+      prefix: "<hr />"
     slug:
       type: slug
       uses: title

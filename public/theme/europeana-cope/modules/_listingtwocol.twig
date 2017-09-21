@@ -1,0 +1,93 @@
+{# Setup this partial to act as a module, set module specs #}
+
+{#     {% set template = 'list_teasers' %}
+    {% set templatefile = 'modules/_' ~ template ~ '.twig' %}
+    {% set title = title|default('') %}
+    {% set subtitle = '' %}
+    {% set body = '' %}
+    {% set sources = '' %}
+    {% set override_amount = '' %}
+    {% set allow_pager = false %}
+    {% set selected_records = items %}
+    {% set override_css_listclass = 'info-list info-list-twocol speaker-list items-container' %}
+    {% set override_css_itemclass = 'column half' %}
+    {% set override_css_id = '' %}
+    {% set short = true %}
+    {% include [templatefile, 'modules/_default.twig'] with {
+        'module': module,
+        'record': record|default(),
+        'title': title,
+        'body': body,
+        'records': selected_records,
+        'allow_pager': allow_pager
+    } %} #}
+
+
+{% spaceless %}
+{#
+Available variables
+    'module':    the full module object
+    'title':     title of the module
+    'subtitle':  subtitle of the module
+    'body':      body of the module
+    'records':   array of (selected) records that belong to the module
+    'allow_pager': boolean to check is the pager is available
+#}
+{% set override_css_id = module.get('override_css_id')|default('') %}
+{% set override_css_class = module.get('override_css_class')|default('') %}
+{% set template = 'teaser' %}
+{% set modulemorelink = module.get('modulemorelink')|default('') %}
+{% set modulemorelabel = module.get('modulemorelabel')|default('') %}
+{% set modulemoretext = module.get('modulemoretext')|default('') %}
+{% set short = true %}
+{% endspaceless %}
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module group info-list-section {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+    <div class="inner-wrap">
+
+    {% if title is not empty %}
+        <h2>{{ title }}</h2>
+    {% endif %}
+
+    {% if subtitle|default('') is not empty %}
+        <p>{{ subtitle }}</p>
+    {% endif %}
+
+    {% if body is not empty %}
+        {{ body|raw }}
+    {% endif %}
+
+
+    {% if records is iterable and records is not empty %}
+
+        {# <div class="items-container"> #}
+
+        <ul class="teaser-list info-list info-list-twocol speaker-list items-container">
+        {% for record in records %}
+            <li class="column half">
+            {% if record.id is defined %}
+                {% set templateslugfile =  'views/_' ~ template ~ '_' ~ record.contenttype.slug ~ '_' ~ record.slug ~ '.twig' %}
+                {% set templatefile =  'views/_' ~ template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
+                {% set defaulttemplatefile =  'views/_' ~ template ~ '.twig' %}
+                <!-- loading templatefile for record:  '{{ templateslugfile }}' or '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
+                {% include [templateslugfile, templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
+            {% else %}
+                <!-- selected record is unpublished or otherwise unavailable -->
+            {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+
+        {% set pagername = records|first.contenttype.slug|default('') %}
+        {% if pagername is not empty and allow_pager == true %}
+            {{ pager( (pagername) ) }}
+        {% endif %}
+    {% else %}
+        {% if record is not empty and record.editlink() %}
+            <p class="warning">No published records were found, please <a href="{{ record.editlink() }}#modules">change the module settings</a>.</p>
+        {% else %}
+            <!-- no records were found for this module -->
+        {% endif %}
+    {% endif %}
+
+    </div>
+</section>
