@@ -71,27 +71,46 @@ class FeaturedItemsListener
         $currenttypeconfig['field'] : 'featured';
 
       // assume the row identifier field is named id
-
       $db = $this->app['db'];
 
       // check if current item was featured
       $qb = $db->createQueryBuilder();
-      $qb->select($tablename, array('id', $itemid));
-      $q0 = $qb->__toString();
+      $qb->select($featuredfield)
+        ->from($tablename)
+        ->where('id = ?')
+        ->setParameter(0, $itemid);
+      //$q0 = $qb->__toString();
       $r0 = $qb->execute();
+      $post0 = $r0->fetch();
 
-      //$query = 'UPDATE %contentype SET %featured = 0 WHERE id = %itemid';
-      $qb1 = $db->createQueryBuilder();
-      $qb1->update($tablename)
-        ->set($featuredfield, 0)
-        ->where(
-          $qb1->expr()->eq('id', $itemid)
-        )
-      ;
-      $q1 = $qb1->__toString();
-      $r1 = $qb1->execute();
+      if(array_key_exists('featured', $post0) && $post0[$featuredfield] == 1) {
+        // item was featured
+        //$query = 'UPDATE %contentype SET %featured = 0 WHERE id = %itemid';
+        $qb1 = $db->createQueryBuilder();
+        $qb1->update($tablename)
+          ->set($featuredfield, 0)
+          ->where(
+            $qb1->expr()->eq('id', $itemid)
+          )
+        ;
+        //$q1 = $qb1->__toString();
+        $r1 = $qb1->execute();
 
-      dump($q0, $r0, $q1, $r1);
+        // decrease featured flag for all featured items.
+        //$query = 'UPDATE %contentype SET %featured =  %featured + 1 WHERE %featured > 0 AND id != %itemid';
+        $qb2 = $db->createQueryBuilder();
+        $qb2->update($tablename)
+          ->set($featuredfield, $featuredfield . '-1')
+          ->where(
+            $qb2->expr()->gt($featuredfield, 1)
+          )
+        ;
+        //$q2 = $qb2->__toString();
+        $r2 = $qb2->execute();
+
+      }
+      //dump($q0, $r0, $post0, $q1, $r1, $q2, $r2);
+      //dump($post0);
     }
     return 1;
   }
@@ -121,15 +140,30 @@ class FeaturedItemsListener
 
       $db = $this->app['db'];
 
+      // check if current item was featured
+      $qb0 = $db->createQueryBuilder();
+      $qb0->select($featuredfield)
+        ->from($tablename)
+        ->where('id = ?')
+        ->setParameter(0, $itemid);
+      //$q0 = $qb->__toString();
+      $r0 = $qb0->execute();
+      $post0 = $r0->fetch();
+
+      // if it was featured - do nothing
+      if(array_key_exists('featured', $post0) && $post0[$featuredfield] == 1) {
+        return 1;
+      }
+
       if ($currenttypeconfig['maxfeatured'] === 1) {
         //$query = 'UPDATE %contentype SET %featured = 0 WHERE id != %itemid';
-        $qb = $db->createQueryBuilder();
-        $qb->update($tablename)
+        $qbonly = $db->createQueryBuilder();
+        $qbonly->update($tablename)
           ->set($featuredfield, 0)
           ->where(
-            'id != ' .  $qb->createNamedParameter($itemid)
+            'id != ' .  $qbonly->createNamedParameter($itemid)
           );
-        return $qb->execute();
+        return $qbonly->execute();
       }
       else {
 
