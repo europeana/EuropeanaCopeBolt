@@ -83,6 +83,7 @@ class FeaturedItemsListener
       $r0 = $qb->execute();
       $post0 = $r0->fetch();
 
+      // TODO: this needs to be tweaked to handle the unpublishing when multiple items are sticky
       if(array_key_exists('featured', $post0) && $post0[$featuredfield] == 1) {
         // item was featured
         //$query = 'UPDATE %contentype SET %featured = 0 WHERE id = %itemid';
