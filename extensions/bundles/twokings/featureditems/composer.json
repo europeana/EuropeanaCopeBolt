@@ -1,0 +1,31 @@
+{
+    "name": "twokings/featureditems",
+    "description": "This extension provides event handlers for managing a chosen amount of featured items in bolt.",
+    "type": "bolt-extension",
+    "keywords": [
+        "content",
+        "highlight",
+        "featured",
+        "promoted"
+    ],
+    "require": {
+        "bolt/bolt": "^3.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lodewijk Evers",
+            "email": "lodewijk@twokings.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Bolt\\Extension\\TwoKings\\FeaturedItems\\": "src"
+        }
+    },
+    "extra": {
+        "bolt-class": "Bolt\\Extension\\TwoKings\\FeaturedItems\\FeaturedItemsExtension"
+    }
+}

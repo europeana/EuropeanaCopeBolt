@@ -1,0 +1,10 @@
+# Default configuration for featureditems extension
+contenttypes:
+    posts:
+        hasfeatured: true
+        maxfeatured: 1
+        field: featured
+    events:
+        hasfeatured: true
+        maxfeatured: 1
+        field: featured
