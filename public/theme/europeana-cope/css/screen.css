@@ -2306,15 +2306,15 @@ aside .teaser-threecol {
   aside .teaser-threecol p {
     margin-bottom: 1.5rem; }
 
-.related-events {
+.related-item {
   position: relative; }
-  .related-events .info-block {
+  .related-item .info-block {
     position: absolute;
     right: 0;
     top: 0;
     width: 145px; }
     @media only screen and (min-width: 24em) {
-      .related-events .info-block {
+      .related-item .info-block {
         width: 172px; } }
 
 /*
