@@ -125,7 +125,7 @@
                 {% setcontent featured_records = sources where {
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm),
-                    'featured': true
+                    'featured': '>= 1'
                 } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
                 {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
