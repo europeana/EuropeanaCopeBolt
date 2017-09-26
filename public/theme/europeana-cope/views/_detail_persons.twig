@@ -1,7 +1,6 @@
 {# {% block bodyclass 'contentpage' %} #}
-{#
-uses microformat classes http://microformats.org/wiki/microformats2#h-card
-#}
+{# uses microformat classes http://microformats.org/wiki/microformats2#h-card #}
+{{ dump(person) }}
 
     <section>
         <div class="inner-wrap">
@@ -21,8 +20,11 @@ uses microformat classes http://microformats.org/wiki/microformats2#h-card
                         <h1 class="beta p-name">{{ record.first_name }} {{ record.last_name }}</h1>
 
                         <div class="personal-network">
+                            {% if record.boardposition is not empty %}
+                                <span>{{ record.boardposition }}</span>
+                            {% endif %}
                             {% for item in record.network_participation %}
-                            <span>{{ item }}</span>
+                                <span>{{ item }}</span>
                             {% endfor %}
                         </div>
 
