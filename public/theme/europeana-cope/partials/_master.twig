@@ -24,7 +24,9 @@
     {% endblock headincludes %}
 </head>
 <body class="{% block bodyclass %}{% endblock bodyclass %}">
-{# Bodyclass-> Add skin-labs of skin-research to change skin-color #}
+    {# Bodyclass-> Add skin-labs of skin-research to change skin-color #}
+
+    <div> {# Needed for the sticking of main-menu #}
 
     {{ include('partials/_svg_library.twig') }}
 
@@ -90,5 +92,7 @@
           ga('send', 'pageview');
         </script>
     {% endblock trackingcodes %}
+
+    </div>
 </body>
 </html>

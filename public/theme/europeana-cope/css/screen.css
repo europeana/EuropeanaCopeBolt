@@ -538,23 +538,23 @@ a.external:after {
 html {
   height: 100%; }
 
-body {
+body > div {
   min-height: 100%;
   margin: 0;
   position: relative;
   padding: 0; }
-  body > header, body footer, body main, body [role="main"] {
+  body > div > header, body > div footer, body > div main, body > div [role="main"] {
     width: 100%;
     display: block;
     overflow: hidden;
     z-index: 2;
     position: relative; }
-  body > header {
+  body > div > header {
     padding: 0 0.875rem; }
     @media only screen and (min-width: 60em) {
-      body > header {
+      body > div > header {
         height: 95px; } }
-  body > main, body [role="main"] {
+  body > div > main, body > div [role="main"] {
     position: relative; }
 
 .topbar {
@@ -580,7 +580,7 @@ section.image-gallery-section {
 
 section.contentheader {
   position: relative;
-  margin: 0; }
+  margin: 1rem 0; }
   @media only screen and (min-width: 47.9375em) {
     section.contentheader {
       margin: 0; } }
