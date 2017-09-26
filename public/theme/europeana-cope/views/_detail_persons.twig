@@ -1,6 +1,7 @@
 {# {% block bodyclass 'contentpage' %} #}
-
-{# uses microformat classes http://microformats.org/wiki/microformats2#h-card #}
+{#
+uses microformat classes http://microformats.org/wiki/microformats2#h-card
+#}
 
     <section>
         <div class="inner-wrap">
@@ -96,44 +97,43 @@
             <section class="teaser-list-section">
                 <div class="main-column">
 
-                {% set relatedevents = record.related('events') %}
-
+                {# {% set relatedevents = record.related('events') %} #}
+                {% setcontent relatedevents = 'events' where { 'contact_record' : '%"' ~ record.id ~ '"%' } %}
                 {% if relatedevents|length > 0 %}
                     <h2>Speaking at</h2>
                     {% include 'partials/_list-teaser-list.twig' with { items : relatedevents } %}
                 {% endif %}
 
-                {% set relatedposts = record.related('posts') %}
-
+                {# {% set relatedposts = record.related('posts') %} #}
+                {% setcontent relatedposts = 'posts' where { 'author' : '%"' ~ record.id ~ '"%' } %}
                 {% if relatedposts|length > 0 %}
                     <h2>Blogposts</h2>
                     {% include 'partials/_list-teaser-list.twig' with { items : relatedposts } %}
                 {% endif %}
 
-                {% set relatedpages = record.related('pages') %}
+                {# {% set relatedpages = record.related('pages') %} #}
+                {% setcontent relatedpages = 'pages' where { 'contact_record' : '%"' ~ record.id ~ '"%' } %}
                 {% if relatedpages|length > 0 %}
                     <h2>Pages</h2>
                     {% include 'partials/_list-teaser-list.twig' with { items : relatedpages } %}
                 {% endif %}
 
-                {% set relateddata = record.related('data') %}
+                {# {% set relateddata = record.related('data') %} #}
+                {% setcontent relateddata = 'data' where { 'contact_record' : '%"' ~ record.id ~ '"%' } %}
                 {% if relateddata|length > 0 %}
                     <h2>Datasets</h2>
                     {% include 'partials/_list-teaser-list.twig' with { items : relateddata } %}
                 {% endif %}
 
-                {% set relatedprojects = record.related('projects') %}
+                {# {% set relatedprojects = record.related('projects') %} #}
+                {% setcontent relatedprojects = 'projects' where { 'contact_record' : '%"' ~ record.id ~ '"%' } %}
                 {% if relatedprojects|length > 0 %}
                     <h2>Projects</h2>
                     {% include 'partials/_list-teaser-list.twig' with { items : relatedprojects } %}
                 {% endif %}
 
-
-            </div> {# /column #}
-        </section>
-
-
-
+                </div>{# /column #}
+            </section>
 
        </div>
     </section>
