@@ -78,3 +78,12 @@
     {% if record.button_link is defined and record.button_link is not empty %}
         {% include 'partials/_record_cta.twig' %}
     {% endif %}
+
+    <aside>
+        <div class="inner-wrap">
+
+            {# AUTHOR BIG #}
+            {% include 'modules/_teaser_contact.twig' with { record : record } %}
+
+        </div>
+    </aside>

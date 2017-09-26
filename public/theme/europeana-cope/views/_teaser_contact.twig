@@ -1,0 +1,49 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+{% if (item is not empty) and (item.last_name is not empty) %}
+<section class="author-big column group">
+    <div class="img-container">
+        <img class="round" src="{{ item.values.image|default('notfound')|thumbnail(144, 144, 'c') }}" alt="Portrait of {{item.first_name}} {{item.last_name}}"/>
+    </div>
+    <div class="txt-container">
+        <p class="name"><span>Contact</span> {{item.first_name}} {{item.last_name}}</p>
+        <p class="function">{{ item.job_title }}{% if item.company is not empty %}{%- if item.job_title is not empty %}, {% endif %}{{ item.company }} {% endif %}</p>
+
+
+        {% if record.contact_blurb is defined and record.contact_blurb is not empty %}
+            {{ record.contact_blurb }}
+        {% elseif item.teaser is defined and item.teaser is not empty %}
+            {{ item.teaser }}
+        {% elseif item.introduction is defined and item.introduction is not empty %}
+           {{ item.introduction|excerpt(300) }}
+        {% endif %}
+
+        <div class="contact">
+        {% if item.twitter is not empty %}
+            <a href="{{ item.twitter }}" class="tw">
+                <svg class="icon icon-twitter">
+                    <use xlink:href="#icon-twitter"></use>
+                </svg><span class="sr-only">{{ item.twitter }}</span>
+            </a>
+        {% endif %}
+        {% if item.linkedin is not empty %}
+            <a href="{{ item.linkedin }}" class="li">
+                <svg class="icon icon-linkedin">
+                    <use xlink:href="#icon-linkedin"></use>
+                </svg><span class="sr-only">{{ item.linkedin }}</span>
+            </a>
+        {% endif %}
+
+        {% if item.email is not empty %}
+            <a href="mailto:{{ item.email }}" class="email">{{ item.email }}</a>
+        {% endif %}
+
+        {% if item.phone is not empty %}
+            <a href="tel:{{ item.phone }}" class="phone">{{ item.phone }}</a>
+        {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}

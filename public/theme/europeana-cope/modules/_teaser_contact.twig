@@ -1,0 +1,35 @@
+{# AUTHOR BIG #}
+{% if record.author is not empty %}
+    {% set contacts = record.author %}
+    {% if contacts is not iterable %}
+        {# fix iterable ids if the content is json in a textfield #}
+        {% set contacts = record.author|json_decode() %}
+    {% endif %}
+    {% if contacts is iterable %}
+        {% for contact_id in contacts %}
+            {% setcontent author = 'persons' where { id : contact_id } returnsingle %}
+            {% include 'views/_teaser_contact.twig' with { item : author } %}
+        {% endfor %}
+    {% endif %}
+
+{% elseif record.contact_name is not empty %}
+    {# external contact #}
+    {% include 'views/_teaser_externalcontact.twig' %}
+
+{% elseif record.contact_record is not empty %}
+    {# internal support #}
+
+    {% set contacts = record.contact_record %}
+    {% if contacts is not iterable %}
+        {# fix iterable ids if the content is json in a textfield #}
+        {% set contacts = record.contact_record|json_decode() %}
+    {% endif %}
+    {% if contacts is iterable %}
+        {% for contact_id in contacts %}
+            {% setcontent author = 'persons' where { id : contact_id } returnsingle %}
+            {% include 'views/_teaser_contact.twig' with { item : author } %}
+        {% endfor %}
+    {% endif %}
+
+
+{% endif %}
