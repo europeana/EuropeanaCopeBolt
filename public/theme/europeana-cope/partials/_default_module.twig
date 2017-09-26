@@ -389,7 +389,7 @@
             {% endif %}
             {% set allow_pager = true %}
         {% else %}
-            {{ dump(module, template, ordering, override_amount) }}
+            {# {{ dump(module, template, ordering, override_amount) }} #}
         {% endif %}
     {% else %}
         {% set allow_pager = false %}

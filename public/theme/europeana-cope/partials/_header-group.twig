@@ -29,7 +29,7 @@
     </div>
 
     {% if record.contenttype.slug in ['events'] and record.geolocation is not empty %}
-        <address>
+        <address class="h-adr">
             {{record.geolocation.formatted_address | replace({',': '<br/>'})|raw }}
         </address>
     {% endif %}
