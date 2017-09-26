@@ -5,8 +5,8 @@
 <div class="tags">
 {% if item.taxonomy.categories is defined %}
     {% for cat, catname in item.taxonomy.categories %}
-    <a class="tag" href="{{ cat }}">{{ catname }}</a>
     {# <a class="label" href="{{ cat }}">{{ catname }}</a> #}
+    <a class="tag" href="{{ cat }}">{{ catname }}</a>
     {% endfor %}
 {% endif %}
 
@@ -24,5 +24,19 @@
     <a class="tag" href="{{ tag }}">{{ tagname }}</a>
     {% endfor %}
 {% endif %}
+
+
+{# Data and app specific taxonomies, display as tags for now #}
+
+{% for taxslug in ['apptypes','appmarkets','itemtype','languagecoverage','subjects', 'spatialcoverage', 'country', 'timecoverage','educationallevel'] %}
+
+    {% if attribute(item.taxonomy, taxslug) is defined %}
+        {% for tag, tagname in attribute(item.taxonomy, taxslug) %}
+        <a class="tag" href="{{ tag }}">{{ tagname }}</a>
+        {% endfor %}
+    {% endif %}
+
+{% endfor %}
+
 
 </div>
