@@ -11,27 +11,30 @@ Available variables
 {% set template = module.get('templates') %}
 {% set image = module.get('image') %}
 {% endspaceless %}
-<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module{%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="section-image module{%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+    <div class="inner-wrap">
+        <div class="column">
 
-    {% if title is not empty %}
-        <h2>{{ title }}</h2>
-    {% endif %}
+        {% if title is not empty %}
+            <h2>{{ title }}</h2>
+        {% endif %}
 
-    {% if subtitle is defined and subtitle is not empty %}
-        <p>{{ subtitle }}</p>
-    {% endif %}
+        {% if subtitle is defined and subtitle is not empty %}
+            <p>{{ subtitle }}</p>
+        {% endif %}
 
-    {% if image is not empty %}
-        <figure>
-            <img class="main-img" src="{{ image.file|thumbnail(1240, 600, 'c') }}" alt="{{ image.title|default('')  }}" />
+        {% if image is not empty %}
+            <figure>
+                <img class="main-img" src="{{ image.file|thumbnail(1240, 600, 'c') }}" alt="{{ image.title|default('')  }}" />
 
-            {% if image.title|default('') is not empty %}
-                <figcaption>
-                    {{ image.title }}
-                </figcaption>
-            {% endif %}
+                {% if image.title|default('') is not empty %}
+                    <figcaption>
+                        {{ image.title }}
+                    </figcaption>
+                {% endif %}
 
-        </figure>
-    {% endif %}
-
+            </figure>
+        {% endif %}
+        </div>
+    </div>
 </section>
