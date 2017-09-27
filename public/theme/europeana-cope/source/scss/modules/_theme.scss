@@ -500,15 +500,16 @@ a.banner {
     button.image-info {
         position: absolute;
         bottom: 1rem;
-        right: 1rem;
+        left: 1rem;
         z-index: 50;
     }
 
     article {
         position: absolute;
         bottom: 1rem;
-        right: 1rem;
+        left: 1rem;
         background: rgba($black, 0.95);
+        width: 33%;
         color: $white;
         border-radius: 5px;
         padding: .5rem;
@@ -527,6 +528,10 @@ a.banner {
 
         span.image-license {
            font-size: 0.6875rem;
+        }
+
+        svg {
+            fill: $white;
         }
     }
 

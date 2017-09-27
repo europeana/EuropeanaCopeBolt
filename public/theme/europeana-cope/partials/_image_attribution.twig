@@ -1,0 +1,146 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+
+{% if parentitem == 'banner' or parentitem == 'mainimage' %}
+
+{#
+- banners / blocks
+    - image_attribution_title
+    - image_attribution_date
+    - image_attribution_creator
+    - image_attribution_holder
+    - image_attribution_country
+    - image_attribution_link
+    - imagelicense
+
+- mainimage
+    - image_attribution_title
+    - image_attribution_date
+    - image_attribution_creator
+    - image_attribution_holder
+    - image_attribution_country
+    - image_attribution_link
+    - image_attribution_license
+#}
+
+    {% set attribution_title     = item.image_attribution_title %}
+    {% set attribution_date      = item.image_attribution_date %}
+    {% set attribution_creator   = item.image_attribution_creator %}
+    {% set attribution_holder    = item.image_attribution_holder %}
+    {% set attribution_country   = item.image_attribution_country %}
+    {% set attribution_link      = item.image_attribution_link %}
+    {% if item.imagelicense is defined %}
+        {% set attribution_license = item.imagelicense %}
+    {% else %}
+        {% set attribution_license = item.image_attribution_license %}
+    {% endif %}
+
+{% elseif parentitem == 'teaser' %}
+
+    {#
+- teasers
+    - teaser_attribution_title
+    - teaser_attribution_date
+    - teaser_attribution_creator
+    - teaser_attribution_holder
+    - teaser_attribution_country
+    - teaser_attribution_link
+    - teaser_attribution_license
+#}
+    {% set attribution_title     = item.teaser_attribution_title %}
+    {% set attribution_date      = item.teaser_attribution_date %}
+    {% set attribution_creator   = item.teaser_attribution_creator %}
+    {% set attribution_holder    = item.teaser_attribution_holder %}
+    {% set attribution_country   = item.teaser_attribution_country %}
+    {% set attribution_link      = item.teaser_attribution_link %}
+    {% set attribution_license   = item.teaser_attribution_license %}
+
+
+{% elseif parentitem == 'repeater' %}
+
+    {#
+- repeaters
+    - attribution_title
+    - attribution_date
+    - attribution_creator
+    - attribution_holder
+    - attribution_country
+    - attribution_link
+    - attribution_license
+#}
+
+    {% set attribution_title     = item.attribution_title %}
+    {% set attribution_date      = item.attribution_date %}
+    {% set attribution_creator   = item.attribution_creator %}
+    {% set attribution_holder    = item.attribution_holder %}
+    {% set attribution_country   = item.attribution_country %}
+    {% set attribution_link      = item.attribution_link %}
+    {% set attribution_license   = item.attribution_license %}
+{% endif %}
+
+
+{% if (item.imagelicense is defined and item.imagelicense is not empty)
+       or (item.values.image.title is defined and item.values.image.title is not empty) %}
+
+    <div class="license-attribution">
+        {# TODO: add CC icon in button #}
+        <button class="image-info">
+            <svg class="icon icon-cc_publicdomain">
+                <use xlink:href="#icon-cc_publicdomain"></use>
+            </svg>
+        </button>
+
+        <article class="expanded">
+            <p>{{ attribution_title }} - {{ attribution_creator }}</p>
+            <p>{{ attribution_date }}</p>
+            <p>{{ attribution_holder }}</p>
+            <p>{{ attribution_country }}</p>
+
+            {% if (attribution_license is defined and attribution_license is not empty) %}
+
+                {# Showing the correct icons #}
+
+                {% if attribution_license == 'Public-Domain' %}
+                    <svg class="icon icon-cc_publicdomain">
+                        <use xlink:href="#icon-cc_publicdomain"></use>
+                    </svg>
+                {% elseif attribution_license == 'CC0' %}
+                    <svg class="icon icon-cc">
+                        <use xlink:href="#icon-cc_zero"></use>
+                    </svg>
+                {% else %}
+                    <svg class="icon icon-cc">
+                        <use xlink:href="#icon-cc"></use>
+                    </svg>
+
+                    {% if 'BY' in attribution_license %}
+                        <svg class="icon icon-cc_by">
+                            <use xlink:href="#icon-cc_by"></use>
+                        </svg>
+                    {% endif %}
+
+                    {% if 'NC' in attribution_license %}
+                        <svg class="icon icon-cc_nc">
+                            <use xlink:href="#icon-cc_nc"></use>
+                        </svg>
+                    {% endif %}
+
+                    {% if 'SA' in attribution_license %}
+                        <svg class="icon icon-cc_sa">
+                            <use xlink:href="#icon-cc_sa"></use>
+                        </svg>
+                    {% endif %}
+
+                {% endif %}
+
+                {% set labels = config.get('contenttypes/pages/fields/image_attribution_license/values') %}
+
+                <span class="image-license">{{ labels[attribution_license] }}</span>
+
+            {% endif %}
+
+        </article>
+    </div>
+    {% endif %}

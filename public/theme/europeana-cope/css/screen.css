@@ -2190,14 +2190,15 @@ a.banner {
 .license-attribution button.image-info {
   position: absolute;
   bottom: 1rem;
-  right: 1rem;
+  left: 1rem;
   z-index: 50; }
 
 .license-attribution article {
   position: absolute;
   bottom: 1rem;
-  right: 1rem;
+  left: 1rem;
   background: rgba(26, 26, 26, 0.95);
+  width: 33%;
   color: #fff;
   border-radius: 5px;
   padding: .5rem;
@@ -2210,6 +2211,8 @@ a.banner {
     font-size: 0.6875rem; }
   .license-attribution article span.image-license {
     font-size: 0.6875rem; }
+  .license-attribution article svg {
+    fill: #fff; }
 
 /*
 * WIDGET TWO COLUMN TEASERS / NEWS
