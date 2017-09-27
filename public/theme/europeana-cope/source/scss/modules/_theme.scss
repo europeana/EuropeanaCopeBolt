@@ -1118,19 +1118,19 @@ main .section-banner:first-child {
         .header-group h1 {
 
             @include respond-to(large-screens) {
-                padding-right: 150px; // magic number, to avoid problems with abs pos time block
+                padding-right: 180px; // magic number, to avoid problems with abs pos time block
             }
             @include respond-to(xlarge-screens) {
-                padding-right: 100px;
+                padding-right: 120px;
             }
         }
 
         .introduction {
            @include respond-to(large-screens) {
-                padding-right: 150px; // magic number, to avoid problems with abs pos time block
+                padding-right: 180px; // magic number, to avoid problems with abs pos time block
             }
              @include respond-to(xlarge-screens) {
-                padding-right: 100px;
+                padding-right: 120px;
             }
         }
     }
