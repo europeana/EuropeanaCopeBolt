@@ -240,13 +240,13 @@ $( document ).ready(function() {
     /**
     * Open en close image attribution
     */
-    // $('button.image-info').on('mouseenter', function(e){
-    //     $(this).siblings('article').addClass('expanded');
-    // });
+    $('button.image-info').on('mouseenter', function(e){
+        $(this).siblings('article').addClass('expanded');
+    });
 
-    // $('.license-attribution article').on('mouseleave', function(e){
-    //     $(this).removeClass('expanded');
-    // });
+    $('.license-attribution article').on('mouseleave', function(e){
+        $(this).removeClass('expanded');
+    });
 
     /**
     * Open en close filters

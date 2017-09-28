@@ -93,21 +93,36 @@ button.floating,
 }
 
 button.image-info {
-    background-color: rgba($black, 0.85);
+    background-color: rgba($black, 0.8);
     width: 40px;
     height: 40px;
     padding: 9px;
 
-    span {
-        border-radius: 50%;
-        display: block;
-        background-color: $white;
-        width: 21px;
-        height: 21px;
-        color: $black;
-        font-weight: 700;
-        line-height: 1.4;
-        }
+    // > span {
+    //     border-radius: 50%;
+    //     display: block;
+    //     width: 24px;
+    //     height: 24px;
+    //     border: 2px solid $white;
+    //     color: $white;
+    //     text-align: center;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+
+    // }
+
+    // span > span {
+    //     display: inline;
+    //     text-align: center;
+    //     font-size: 1.1rem;
+    //     font-family: 'helvetica', 'Helvetica Neue', 'Arial';
+    //     margin: 0;
+    //     padding: 0;
+    //     width: auto;
+    //     margin-top: -2px;
+    // }
+
 }
 
 

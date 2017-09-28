@@ -25,16 +25,16 @@
     - image_attribution_license
 #}
 
-    {% set attribution_title     = item.image_attribution_title %}
-    {% set attribution_date      = item.image_attribution_date %}
-    {% set attribution_creator   = item.image_attribution_creator %}
-    {% set attribution_holder    = item.image_attribution_holder %}
-    {% set attribution_country   = item.image_attribution_country %}
-    {% set attribution_link      = item.image_attribution_link %}
+    {% set attribution_title     = item.image_attribution_title|default('') %}
+    {% set attribution_date      = item.image_attribution_date|default('') %}
+    {% set attribution_creator   = item.image_attribution_creator|default('') %}
+    {% set attribution_holder    = item.image_attribution_holder|default('') %}
+    {% set attribution_country   = item.image_attribution_country|default('') %}
+    {% set attribution_link      = item.image_attribution_link|default('') %}
     {% if item.imagelicense is defined %}
-        {% set attribution_license = item.imagelicense %}
+        {% set attribution_license = item.imagelicense|default('') %}
     {% else %}
-        {% set attribution_license = item.image_attribution_license %}
+        {% set attribution_license = item.image_attribution_license|default('') %}
     {% endif %}
 
 {% elseif parentitem == 'teaser' %}
@@ -49,17 +49,16 @@
     - teaser_attribution_link
     - teaser_attribution_license
 #}
-    {% set attribution_title     = item.teaser_attribution_title %}
-    {% set attribution_date      = item.teaser_attribution_date %}
-    {% set attribution_creator   = item.teaser_attribution_creator %}
-    {% set attribution_holder    = item.teaser_attribution_holder %}
-    {% set attribution_country   = item.teaser_attribution_country %}
-    {% set attribution_link      = item.teaser_attribution_link %}
-    {% set attribution_license   = item.teaser_attribution_license %}
+    {% set attribution_title     = item.teaser_attribution_title|default('') %}
+    {% set attribution_date      = item.teaser_attribution_date|default('') %}
+    {% set attribution_creator   = item.teaser_attribution_creator|default('') %}
+    {% set attribution_holder    = item.teaser_attribution_holder|default('') %}
+    {% set attribution_country   = item.teaser_attribution_country|default('') %}
+    {% set attribution_link      = item.teaser_attribution_link|default('') %}
+    {% set attribution_license   = item.teaser_attribution_license|default('') %}
 
 
-{% elseif parentitem == 'repeater' %}
-
+{% elseif parentitem == 'module' %}
     {#
 - repeaters
     - attribution_title
@@ -71,32 +70,35 @@
     - attribution_license
 #}
 
-    {% set attribution_title     = item.attribution_title %}
-    {% set attribution_date      = item.attribution_date %}
-    {% set attribution_creator   = item.attribution_creator %}
-    {% set attribution_holder    = item.attribution_holder %}
-    {% set attribution_country   = item.attribution_country %}
-    {% set attribution_link      = item.attribution_link %}
-    {% set attribution_license   = item.attribution_license %}
+    {% set attribution_title     = module.get('attribution_title')|default('') %}
+    {% set attribution_date      = module.get('attribution_date')|default('') %}
+    {% set attribution_creator   = module.get('attribution_creator')|default('') %}
+    {% set attribution_holder    = module.get('attribution_holder')|default('') %}
+    {% set attribution_country   = module.get('attribution_country')|default('') %}
+    {% set attribution_link      = module.get('attribution_link')|default('') %}
+    {% set attribution_license   = module.get('attribution_license')|default('') %}
 {% endif %}
 
-
-{% if (item.imagelicense is defined and item.imagelicense is not empty)
-       or (item.values.image.title is defined and item.values.image.title is not empty) %}
+{% if (attribution_license is defined and attribution_license is not empty)
+       or (attribution_title is defined and attribution_title is not empty) %}
 
     <div class="license-attribution">
-        {# TODO: add CC icon in button #}
         <button class="image-info">
-            <svg class="icon icon-cc_publicdomain">
-                <use xlink:href="#icon-cc_publicdomain"></use>
+            {# <span><span>c</span></span> #}
+
+            <svg class="icon icon-copyright">
+                <use xlink:href="#icon-copyright"></use>
             </svg>
         </button>
 
-        <article class="expanded">
+        <article>
             <p>{{ attribution_title }} - {{ attribution_creator }}</p>
             <p>{{ attribution_date }}</p>
             <p>{{ attribution_holder }}</p>
             <p>{{ attribution_country }}</p>
+            {% if attribution_link %}
+                {# <p><a href="{{ attribution_link }}">Source</a></p> BREAKS LAYOUT, BECAUSE a in a #}
+            {% endif %}
 
             {% if (attribution_license is defined and attribution_license is not empty) %}
 

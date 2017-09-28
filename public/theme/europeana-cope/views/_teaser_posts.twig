@@ -13,6 +13,8 @@
              <img src="{{ 'web_assets/default.png'|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
         {% endif %}
 
+        {% include 'partials/_image_attribution.twig' with { parentitem: 'teaser' } %}
+
         <div class="info-block">
             <span class="info-type">
                 {{ item.posttype|default('News') }}

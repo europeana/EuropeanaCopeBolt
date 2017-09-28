@@ -495,53 +495,6 @@ a.banner {
 
 }
 
-.license-attribution {
-
-    button.image-info {
-        position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-        z-index: 50;
-    }
-
-    article {
-        position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-        background: rgba($black, 0.95);
-        width: 33%;
-        color: $white;
-        border-radius: 5px;
-        padding: .5rem;
-        z-index: 50;
-        display: none;
-
-        &.expanded {
-            display: block;
-        }
-
-        p {
-            margin: 0;
-            font-size: 0.6875rem;
-
-        }
-
-        span.image-license {
-           font-size: 0.6875rem;
-        }
-
-        svg {
-            fill: $white;
-        }
-    }
-
-
-}
-
-
-/*
-* WIDGET TWO COLUMN TEASERS / NEWS
-**/
 
 .teaser-twocol {
 
@@ -683,6 +636,10 @@ div.calltoaction-readmore {
 .related-item
  {
     position: relative;
+
+    .img-container {
+        position: relative;
+    }
 
     .info-block {
         position: absolute;
@@ -1478,6 +1435,16 @@ main .section-banner:first-child {
     }
 }
 
+// Image module
+
+
+.section-image {
+    .img-container {
+        position: relative;
+    }
+}
+
+
 // COLLAPSSIBLE CONTENT
 
 .file-content-module,
@@ -2205,7 +2172,144 @@ div.body {
     }
 }
 
-// Gradients for images. Classes will be set in the custom class field in the module
+
+/*
+***********************************************************************
+* Image attribution vlakken
+***********************************************************************
+**/
+
+
+.license-attribution {
+
+    button.image-info {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        z-index: 50;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: $white;
+        }
+    }
+
+    article {
+        position: absolute;
+        bottom: 0 ;
+        left: 0 ;
+        width: 100%;
+        background: rgba($black, 0.95);
+        color: $white;
+        padding: .5rem;
+        z-index: 50;
+        display: none;
+
+        &.expanded {
+            display: block;
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.6875rem;
+            color: $white;
+            padding: 0;
+            max-width: 500px;
+
+        }
+
+        span.image-license {
+           font-size: 0.6875rem;
+        }
+
+        svg {
+            fill: $white;
+            margin-right: .5rem;
+        }
+
+        a {
+            color: $white;
+            border-bottom: 1px dotted $white;
+
+            &:hover {
+               border-bottom: 1px solid $white;
+               text-decoration: none;
+            }
+        }
+    }
+
+
+    //positionering article in banner
+    .banner & {
+
+        button.image-info {
+            bottom: 1rem;
+            left: auto;
+            right: 1rem;
+
+            @include respond-to(large-screens) {
+                left: 1rem;
+                right: auto;
+            }
+        }
+
+        article {
+            bottom: 1rem ;
+            left: 5% ;
+            border-radius: 5px;
+            width: 90%;
+
+            @include respond-to(medium-screens) {
+                width: 50%;
+                left: auto;
+                right: 1rem;
+            }
+
+            @include respond-to(large-screens) {
+                width: 33%;
+                left: 1rem;
+            }
+        }
+
+    }
+
+    .banner.third & {
+
+        button.image-info {
+            bottom: 1rem;
+            left: auto;
+            right: 1rem;
+
+        }
+
+        article {
+
+            left:0;
+            width: 100%;
+            bottom: 0;
+            border-radius: 0;
+
+            @include respond-to(large-screens) {
+                width: 100%;
+                left: 0;
+            }
+        }
+
+
+    }
+
+
+
+}
+
+/*
+***********************************************************************
+* Gradients for images.
+* Classes will be set in the custom class field in the module
+***********************************************************************
+**/
+
 
 /* blue to raspberry gradient*/
 .grad_network .colored-image {
