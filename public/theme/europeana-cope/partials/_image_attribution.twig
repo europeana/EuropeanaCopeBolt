@@ -31,7 +31,7 @@
     {% set attribution_holder    = item.image_attribution_holder|default('') %}
     {% set attribution_country   = item.image_attribution_country|default('') %}
     {% set attribution_link      = item.image_attribution_link|default('') %}
-    {% if item.imagelicense is defined %}
+    {% if item.imagelicense is defined and item.imagelicense is not empty %}
         {% set attribution_license = item.imagelicense|default('') %}
     {% else %}
         {% set attribution_license = item.image_attribution_license|default('') %}

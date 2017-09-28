@@ -658,7 +658,8 @@ footer {
 
 .contentpage figure,
 .contentpage .personal {
-  margin: 1rem 0rem; }
+  margin: 1rem 0rem;
+  position: relative; }
   @media only screen and (min-width: 24em) {
     .contentpage figure,
     .contentpage .personal {

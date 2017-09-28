@@ -216,6 +216,7 @@ footer {
     figure,
     .personal {
         margin: 1rem 0rem; //1rem 2rem;
+        position: relative;
 
         @include respond-to(medium-screens) {
              margin: 2rem 2rem 2rem;
