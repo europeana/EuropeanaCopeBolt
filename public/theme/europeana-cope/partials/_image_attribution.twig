@@ -84,15 +84,15 @@
 
     <div class="license-attribution">
         <button class="image-info">
-            {# <span><span>c</span></span> #}
-
             <svg class="icon icon-copyright">
                 <use xlink:href="#icon-copyright"></use>
             </svg>
         </button>
 
         <article>
-            <p>{{ attribution_title }} - {{ attribution_creator }}</p>
+            <p>{{ attribution_title }}
+                {% if (attribution_title is not empty) and (attribution_creator is not empty) %} - {% endif %}
+                {{ attribution_creator }}</p>
             <p>{{ attribution_date }}</p>
             <p>{{ attribution_holder }}</p>
             <p>{{ attribution_country }}</p>
