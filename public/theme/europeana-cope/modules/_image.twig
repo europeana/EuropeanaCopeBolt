@@ -25,8 +25,12 @@ Available variables
 
         {% if image is not empty %}
             <figure>
-                <img class="main-img" src="{{ image.file|thumbnail(1240, 600, 'c') }}" alt="{{ image.title|default('')  }}" />
+                <div class="img-container">
+                    <img class="main-img" src="{{ image.file|thumbnail(1240, 600, 'c') }}" alt="{{ image.title|default('')  }}" />
 
+                    {% include 'partials/_image_attribution.twig' with { parentitem: 'module' } %}
+
+                </div>
                 {% if image.title|default('') is not empty %}
                     <figcaption>
                         {{ image.title }}

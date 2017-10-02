@@ -47,6 +47,9 @@
                     {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
                     <figure>
                         <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="ALT" />
+
+                        {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
+
                         {% if record.values.image.title is defined %}
                             <figcaption>
                                 {{ record.values.image.title }}

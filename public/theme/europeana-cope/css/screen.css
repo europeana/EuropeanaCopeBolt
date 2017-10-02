@@ -658,7 +658,8 @@ footer {
 
 .contentpage figure,
 .contentpage .personal {
-  margin: 1rem 0rem; }
+  margin: 1rem 0rem;
+  position: relative; }
   @media only screen and (min-width: 24em) {
     .contentpage figure,
     .contentpage .personal {
@@ -1750,19 +1751,10 @@ button.floating,
       fill: #fff; }
 
 button.image-info {
-  background-color: rgba(26, 26, 26, 0.85);
+  background-color: rgba(26, 26, 26, 0.8);
   width: 40px;
   height: 40px;
   padding: 9px; }
-  button.image-info span {
-    border-radius: 50%;
-    display: block;
-    background-color: #fff;
-    width: 21px;
-    height: 21px;
-    color: #1a1a1a;
-    font-weight: 700;
-    line-height: 1.4; }
 
 /**
  * File:        _forms.scss
@@ -2187,33 +2179,6 @@ a.banner {
     left: 0;
     bottom: 0; }
 
-.license-attribution button.image-info {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  z-index: 50; }
-
-.license-attribution article {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  background: rgba(26, 26, 26, 0.95);
-  color: #fff;
-  border-radius: 5px;
-  padding: .5rem;
-  z-index: 50;
-  display: none; }
-  .license-attribution article.expanded {
-    display: block; }
-  .license-attribution article p {
-    margin: 0;
-    font-size: 0.6875rem; }
-  .license-attribution article span.image-license {
-    font-size: 0.6875rem; }
-
-/*
-* WIDGET TWO COLUMN TEASERS / NEWS
-**/
 .teaser-twocol .img-container {
   width: 27.5%;
   float: left;
@@ -2308,6 +2273,8 @@ aside .teaser-threecol {
 
 .related-item {
   position: relative; }
+  .related-item .img-container {
+    position: relative; }
   .related-item .info-block {
     position: absolute;
     right: 0;
@@ -2889,6 +2856,9 @@ main .section-banner:first-child a.banner {
         right: 0;
         top: 0; } }
 
+.section-image .img-container {
+  position: relative; }
+
 .file-content-module,
 .download-module {
   margin: 2rem 0; }
@@ -3332,6 +3302,96 @@ div.body table {
       color: #095f90;
       margin: 0 .5rem; }
 
+/*
+***********************************************************************
+* Image attribution vlakken
+***********************************************************************
+**/
+.license-attribution button.image-info {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 50; }
+  .license-attribution button.image-info svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff; }
+
+.license-attribution article {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(26, 26, 26, 0.95);
+  color: #fff;
+  padding: .5rem;
+  z-index: 50;
+  display: none; }
+  .license-attribution article.expanded {
+    display: block; }
+  .license-attribution article p {
+    margin: 0;
+    font-size: 0.6875rem;
+    color: #fff;
+    padding: 0;
+    max-width: 500px; }
+  .license-attribution article span.image-license {
+    font-size: 0.6875rem; }
+  .license-attribution article svg {
+    fill: #fff;
+    margin-right: .5rem; }
+  .license-attribution article a {
+    color: #fff;
+    border-bottom: 1px dotted #fff; }
+    .license-attribution article a:hover {
+      border-bottom: 1px solid #fff;
+      text-decoration: none; }
+
+.banner .license-attribution button.image-info {
+  bottom: 1rem;
+  left: auto;
+  right: 1rem; }
+  @media only screen and (min-width: 47.9375em) {
+    .banner .license-attribution button.image-info {
+      left: 1rem;
+      right: auto; } }
+
+.banner .license-attribution article {
+  bottom: 1rem;
+  left: 5%;
+  border-radius: 5px;
+  width: 90%; }
+  @media only screen and (min-width: 24em) {
+    .banner .license-attribution article {
+      width: 50%;
+      left: auto;
+      right: 1rem; } }
+  @media only screen and (min-width: 47.9375em) {
+    .banner .license-attribution article {
+      width: 33%;
+      left: 1rem; } }
+
+.banner.third .license-attribution button.image-info {
+  bottom: 1rem;
+  left: auto;
+  right: 1rem; }
+
+.banner.third .license-attribution article {
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  border-radius: 0; }
+  @media only screen and (min-width: 47.9375em) {
+    .banner.third .license-attribution article {
+      width: 100%;
+      left: 0; } }
+
+/*
+***********************************************************************
+* Gradients for images.
+* Classes will be set in the custom class field in the module
+***********************************************************************
+**/
 /* blue to raspberry gradient*/
 .grad_network .colored-image {
   background-color: transparent; }

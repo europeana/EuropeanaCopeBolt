@@ -19,24 +19,7 @@
         </svg>
     </div>
 
-
-    {% if (record.imagelicense is defined and record.imagelicense is not empty)
-       or (record.values.image.title is defined and record.values.image.title is not empty) %}
-
-    <div class="license-attribution">
-        <button class="image-info"><span>?</span></button>
-        <article>
-            {% if (record.values.image.title is defined and record.values.image.title is not empty) %}
-                <p>{{ record.values.image.title }}</p>
-            {% endif %}
-
-            {% if (record.imagelicense is defined and record.imagelicense is not empty) %}
-                {% set labels = record.contenttype.fields.imagelicense.values %}
-                <span class="image-license">{{ labels[record.imagelicense] }}</span>
-            {% endif %}
-        </article>
-    </div>
-    {% endif %}
+    {% include 'partials/_image_attribution.twig' with { parentitem: 'banner'} %}
 
     <div class="header-group">
         <h3 class="widget">{{ record.title }}</h3>

@@ -26,6 +26,9 @@
                 {% if record.values.image is defined and record.values.image is not empty %}
                     <figure>
                         <img class="main-img" src="{{ record.values.image|thumbnail(1240, 600, 'c') }}" alt="ALT" />
+
+                        {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
+
                         {% if record.values.image.title is defined %}
                             <figcaption>
                                 {{ record.values.image.title }}

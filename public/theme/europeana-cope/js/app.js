@@ -242,7 +242,6 @@ $( document ).ready(function() {
     */
     $('button.image-info').on('mouseenter', function(e){
         $(this).siblings('article').addClass('expanded');
-        console.log('hover');
     });
 
     $('.license-attribution article').on('mouseleave', function(e){
