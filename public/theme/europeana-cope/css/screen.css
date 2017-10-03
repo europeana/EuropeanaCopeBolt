@@ -3335,7 +3335,7 @@ div.body table {
   @media only screen and (min-width: 80em) {
     figure.non-wide .license-attribution article {
       left: 4rem;
-      width: calc( 100% - 4rem); } }
+      width: calc( 100% - 8rem); } }
   .license-attribution article p {
     margin: 0;
     font-size: 0.6875rem;

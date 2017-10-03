@@ -2222,7 +2222,7 @@ div.body {
 
             @include respond-to(xlarge-screens) {
                 left: 4rem;
-                width: calc( 100% - 4rem);
+                width: calc( 100% - 8rem);
             }
 
         }
