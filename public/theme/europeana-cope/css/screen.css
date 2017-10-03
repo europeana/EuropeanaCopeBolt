@@ -3316,6 +3316,9 @@ div.body table {
     width: 24px;
     height: 24px;
     fill: #fff; }
+  @media only screen and (min-width: 80em) {
+    figure.non-wide .license-attribution button.image-info {
+      left: 5rem; } }
 
 .license-attribution article {
   position: absolute;
@@ -3329,6 +3332,10 @@ div.body table {
   display: none; }
   .license-attribution article.expanded {
     display: block; }
+  @media only screen and (min-width: 80em) {
+    figure.non-wide .license-attribution article {
+      left: 4rem;
+      width: calc( 100% - 4rem); } }
   .license-attribution article p {
     margin: 0;
     font-size: 0.6875rem;

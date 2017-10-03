@@ -2193,6 +2193,14 @@ div.body {
             height: 24px;
             fill: $white;
         }
+
+        figure.non-wide & {  // Specific exception for blog with multiple authors
+
+            @include respond-to(xlarge-screens) {
+                left: 5rem;
+            }
+
+        }
     }
 
     article {
@@ -2208,6 +2216,15 @@ div.body {
 
         &.expanded {
             display: block;
+        }
+
+        figure.non-wide & {  // Specific exception for blog with multiple authors
+
+            @include respond-to(xlarge-screens) {
+                left: 4rem;
+                width: calc( 100% - 4rem);
+            }
+
         }
 
         p {
