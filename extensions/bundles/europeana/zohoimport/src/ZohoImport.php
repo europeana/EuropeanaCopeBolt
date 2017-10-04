@@ -266,6 +266,7 @@ class ZohoImport
         foreach ($inputrecords as $inputrecord) {
             $uid = $config['target']['mapping']['fields']['uid'];
 
+            //dump('importing:'. $uid);
             // clear previous record
             if ($record && $record->values) {
                 unset($record->values);
@@ -273,23 +274,25 @@ class ZohoImport
             unset($record);
             unset($items);
 
+            //dump('checking:'. $inputrecord[$uid] );
             // check existing
-            $record = $this->app['storage']->getContent(
-                $config['target']['contenttype'],
-                array(
-                    'uid' => $inputrecord[$uid],
-                    'returnsingle' => true,
-                    'status' => '!undefined'
-                )
+            $repository = $this->app['storage']->getRepository($config['target']['contenttype']);
+            $record = $repository->findOneBy(
+                ['uid' => $inputrecord[$uid]]
             );
 
+
             if (!$record) {
+                  //dump('creating new: '.$inputrecord[$uid]);
                   $logmessage = $name
                     . ' - preparing a new record: ' . $inputrecord[$uid];
                   $this->logger('debug', $logmessage, 'zohoimport');
-                  $record = $this->app['storage']->getEmptyContent($config['target']['contenttype']);
+                  $repository = $this->app['storage']->getRepository($config['target']['contenttype']);
+                  $record = $repository->create();
+                  // dump($record);
                   $items['status'] = $config['target']['defaults']['new'];
             } else {
+                  //dump('updating: '. $record->getUid() );
                   $logmessage = $name
                     . ' - updating existing record: ' . $inputrecord[$uid];
                   $this->logger('debug', $logmessage, 'zohoimport');
@@ -299,10 +302,12 @@ class ZohoImport
             // update the new values
             foreach ($config['target']['mapping']['fields'] as $key => $value) {
                 if (!array_key_exists($value, $inputrecord)) {
-                    $record->values[$value] = '';
+                    // $record->values[$value] = '';
+                    $record->$value = '';
                     $inputrecord[$value] = '';
                 }
-                  $items[$key] = $inputrecord[$value];
+                //echo 'value:' . $value . ' - ' . $inputrecord[$value] . "\n";
+                $items[$key] = $inputrecord[$value];
             }
 
             // add default field values from config
@@ -311,13 +316,11 @@ class ZohoImport
                     $items[$defaultfield] = $defaultvalue;
                 }
             }
-
-            if (empty($items['status'])) {
-                  $items['status'] = 'draft';
-            }
-
+            //dump('updating: '. $record->getUid() );
             if (array_key_exists('hookafterload', $config['target']) && is_array($config['target']['hookafterload'])) {
+
                 foreach ($config['target']['hookafterload'] as $key => $hookparams) {
+                    //dump('intheloop: '. $key);
                     if ($on_console && $key == 'image') {
                         //echo "hookafterload: ". $key . " - " .$hookparams['callback'] . " | check for: '" . $inputrecord['public_photo'] . "' - " . $inputrecord['source_url'] . "\n";
 
@@ -358,6 +361,8 @@ class ZohoImport
                     }
                 }
             }
+
+            //dump('sanitaiton please');
             $sanitize = true;
             if ($sanitize) {
                   $items['structure_sortorder'] = 0;
@@ -388,11 +393,13 @@ class ZohoImport
                 }
             }
 
-            //dump('items and record:', $items, $record);
+            //dump('items and record:', $items);
             // Store the data array into the record
             $record->setValues($items);
 
-            $this->app['storage']->saveContent($record);
+            //dump('values set');
+            //$this->app['storage']->saveContent($record);
+            $this->app['storage']->save($record);
         }
     }
 
@@ -508,10 +515,30 @@ class ZohoImport
         }
 
         // prevent hammering the limits of zoho by only fetching images after minimum of 36 hours
+        //dump('here?');
         $existing_image = $target_record->get('image');
+        //dump('there! ', $existing_image);
         if (empty($existing_image)) {
             $existing_image['file'] = $params['name'] . '.png';
         }
+
+        if(!is_array($existing_image)) {
+          $existing_image_tmp = json_decode($existing_image);
+          if(is_array($existing_image_tmp)) {
+            $existing_image['file'] = $existing_image_tmp['file'];
+            $existing_image['title'] = $existing_image_tmp['title'];
+          } elseif (property_exists($existing_image_tmp, 'file')) {
+            //dump('maybe fail', $existing_image, $existing_image_tmp);
+            $existing_image_array['file'] = $existing_image_tmp->file;
+            $existing_image_array['title'] = $existing_image_tmp->title;
+            //dump('maybe fail after', $existing_image_array);
+            $existing_image = $existing_image_array;
+          } else {
+            dump('big fail', $existing_image, $existing_image_tmp);
+            return null;
+          }
+        }
+        //dump('there again! ', $existing_image);
 
         if ($existing_image && array_key_exists('file', $existing_image)) {
             $existing_image_path = $this->app['paths']['filespath'] . '/'. $existing_image['file'];
