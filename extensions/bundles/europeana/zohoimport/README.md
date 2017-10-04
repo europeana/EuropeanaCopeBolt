@@ -26,3 +26,8 @@ For example, #2 would do the following:
 - Finally, delete (or unpublish) items that are no longer present in the CRM.
 
 For more info <a href="https://www.zoho.com/crm/help/api/api-methods.html">ZOHO API documentation</a>
+
+
+## API limits
+
+Check the api limits on the <a href="https://crm.zoho.com/crm/ShowSetup.do?tab=devSpace&subTab=api&action=developerapi">ZOHO CRM API</a> page.

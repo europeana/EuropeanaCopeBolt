@@ -253,6 +253,9 @@ class ZohoImport
     {
         $inputrecords = $this->resourcedata[$name];
 
+        $starttime = time();
+        $date = date('Y-m-d H:i:s', $starttime);
+
         if ($config['on_console']) {
             $on_console = $config['on_console'];
         } else {
@@ -281,9 +284,9 @@ class ZohoImport
                 ['uid' => $inputrecord[$uid]]
             );
 
-
             if (!$record) {
-                  //dump('creating new: '.$inputrecord[$uid]);
+                  dump('creating new: '.$inputrecord[$uid]);
+                  $existing_id = false;
                   $logmessage = $name
                     . ' - preparing a new record: ' . $inputrecord[$uid];
                   $this->logger('debug', $logmessage, 'zohoimport');
@@ -291,17 +294,29 @@ class ZohoImport
                   $record = $repository->create();
                   // dump($record);
                   $items['status'] = $config['target']['defaults']['new'];
+
+                  // update datecreated, may be redundant, but lets do it anyway
+                  $items['datecreated'] = $date;
+                  // update datechanged, may be redundant, but lets do it anyway
+                  $items['datechanged'] = $date;
             } else {
-                  //dump('updating: '. $record->getUid() );
+                  dump('updating: '. $record->getUid() );
+                  $existing_id = $record->getId();
                   $logmessage = $name
                     . ' - updating existing record: ' . $inputrecord[$uid];
                   $this->logger('debug', $logmessage, 'zohoimport');
                   $items['status'] = $config['target']['defaults']['updated'];
+
+                  // update datechanged, may be redundant, but lets do it anyway
+                  $items['datechanged'] = $date;
             }
 
+            //dump('working for: ' . $record->getId() . ' - ' . $record->getUid());
             // update the new values
             foreach ($config['target']['mapping']['fields'] as $key => $value) {
-                if (!array_key_exists($value, $inputrecord)) {
+                $tmpout = (array_key_exists($value, $inputrecord)? $inputrecord[$value]:'empty');
+                //echo 'key: ' . $key . ' - value:' . $value . ' - ' . $tmpout . "\n";
+                if (!array_key_exists($value, $inputrecord) && $key != 'id') {
                     // $record->values[$value] = '';
                     $record->$value = '';
                     $inputrecord[$value] = '';
@@ -395,10 +410,16 @@ class ZohoImport
 
             //dump('items and record:', $items);
             // Store the data array into the record
+            // reset the existing id if it was there before
+            if($existing_id) {
+              $items['id'] = $existing_id;
+            }
             $record->setValues($items);
 
             //dump('values set');
             //$this->app['storage']->saveContent($record);
+
+            //dump('storing record: ' . $record->getId() . '/' . $existing_id . ' - ' . $record->getUid());
             $this->app['storage']->save($record);
         }
     }
