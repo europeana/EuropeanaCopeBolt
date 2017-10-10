@@ -73,9 +73,9 @@ class FileFetcher
 
         try {
             if (!isset($this->app['deprecated.php']) || $this->app['deprecated.php']) {
-                $data = $this->app['guzzle.client']->get($url, null, $curlOptions)->send()->getBody(true);
+                $data = $this->app['guzzle.client']->get($url, null, $curlOptions)->send()->getBody(true)->getContents();
             } else {
-                $data = $this->app['guzzle.client']->get($url, array(), $curlOptions)->getBody(true);
+                $data = $this->app['guzzle.client']->get($url, array(), $curlOptions)->getBody(true)->getContents();
             }
 
             $this->countRemoteRequest(); // count remote requests to determine if we hit a limit yet
