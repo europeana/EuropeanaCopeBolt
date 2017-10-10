@@ -522,7 +522,7 @@ class ZohoImport
    * @param $target_record
    * @param $params
    *
-   * @return string
+   * @return mixed
    */
     public function downloadZohoPhotoFromURL($source_record, $target_record, $params)
     {
@@ -544,7 +544,7 @@ class ZohoImport
 
         // only fetch photos from contacts that need it
         if (array_key_exists("Show photo on europeana site", $source_record) && $source_record["Show photo on europeana site"] == 'true') {
-            $logmessage = 'public photo set:'  . $params['source_url'];
+            $logmessage = 'show public photo from: ' . $params['source_url'];
             $this->logger('debug', $logmessage, 'zohoimport');
         } elseif ($source_record["Show photo on europeana site"] == false || $source_record["Show photo on europeana site"] == 'false') {
             //$logmessage = 'no remote photo needed for: ' . $params['source_url'];
@@ -560,6 +560,7 @@ class ZohoImport
         //dump('here?');
         $existing_image = $target_record->get('image');
         //dump('there! ', $existing_image);
+
         if (empty($existing_image)) {
             $existing_image['file'] = $params['name'] . '.png';
         }
@@ -668,10 +669,16 @@ class ZohoImport
 
         // move the file to real directory
         $imagefile = new File($image['tmpname']);
-        $newfile = $imagefile->move($image['target_dir'], $image['target_name']);
+        $imagefile->move($image['target_dir'], $image['target_name']);
 
+        unset($imagefile);
+
+        $outimage = array('file' => $image['target_dbname'], 'title' => $image['id']);
+
+        $logmessage = 'photo: ' . json_encode($outimage);
+        $this->logger('debug', $logmessage, 'zohoimport');
         // return the filename for record
-        return json_encode(array('file' => $image['target_dbname'], 'title' => $image['id']));
+        return $outimage;
     }
 
   /**
