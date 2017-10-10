@@ -8,6 +8,7 @@ class ZohoImport
 {
     private $app;
     private $config;
+    private $ffwd;
     private $resourcedata;
     private $filedata;
     private $enabledsources;
@@ -85,6 +86,10 @@ class ZohoImport
                 $localconfig['source']['getparams'][$counter] = $start;
                 $localconfig['source']['getparams'][$stepper] = $size;
                 $looper = 1; // just a counter to see how far we are
+                if($this->ffwd != null) {
+                  // TODO: fast forward to step $this->ffwd
+                  // $looper = $this->looper;
+                }
                 $numrecords = 0;
 
                 $localconfig['on_console'] = $on_console;
