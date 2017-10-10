@@ -630,27 +630,26 @@ class ZohoImport
             $this->logger('info', $logmessage, 'zohoimport');
 
             // really fetch the file
-            $this->filedata = $this->app['zohoimport.filefetcher']->fetchRemoteResource($params['source_url']);
+            $imagedata = $this->app['zohoimport.filefetcher']->fetchRemoteResource($params['source_url']);
 
             // no file
-            if (empty($this->filedata[$params['name']])) {
+            if (empty($imagedata)) {
                 $logmessage = "empty image: ". $params['source_url'] ;
                 $this->logger('error', $logmessage, 'zohoimport');
                 return false;
             }
 
             // no valid image
-            if (stristr($this->filedata[$params['name']], 'No photo attached to this record id')) {
-                unset($this->filedata[$params['name']]);
+            if (stristr($imagedata, 'No photo attached to this record id')) {
+                unset($imagedata);
 
                 $logmessage = 'no remote photo found for:' . $params['name'] . ' at url: ' . $params['source_url'];
                 $this->logger('error', $logmessage, 'zohoimport');
                 return false;
             }
 
-            $image['size'] = file_put_contents($image['tmpname'], $this->filedata[$params['name']]);
-
-            unset($this->filedata[$params['name']]);
+            $image['size'] = file_put_contents($image['tmpname'], $imagedata);
+            unset($imagedata);
         } else {
             // there was a tempfile already
             // it will be cleaned up soon
