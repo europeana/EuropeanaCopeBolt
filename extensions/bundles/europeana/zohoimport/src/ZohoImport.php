@@ -18,6 +18,8 @@ class ZohoImport
     private $workingrepository;
     private $on_console;
     private $consoleoutput;
+    private $lastbatchtime;
+    private $lastbatchmem;
     private $endcondition = false;
 
     public function __construct($app)
@@ -50,6 +52,8 @@ class ZohoImport
         $this->remote_request_counter = 0;
         $starttime = time();
         $batchdate = date('Y-m-d H:i:s', $starttime);
+        $this->lastbatchmem = round((memory_get_peak_usage() / 1024) / 1024);
+        $this->lastbatchtime = time();
 
         $logmessage = 'started import at ' . $batchdate;
         $this->logger('info', $logmessage, 'zohoimport');
@@ -109,8 +113,18 @@ class ZohoImport
                         $numrecords += count($this->resourcedata);
                         $this->saveRecords($name, $localconfig);
 
-                        $logmessage = $name . ' - step '. $looper. ": " . $localconfig['source']['getparams'][$counter]. ' - '. $localconfig['source']['getparams'][$stepper].' completed.';
+
+                        $time_usage = time();
+                        $deltatime = $time_usage - $this->lastbatchtime;
+                        $memory_usage = round((memory_get_peak_usage() / 1024) / 1024);
+                        $deltamem = $memory_usage - $this->lastbatchmem;
+                        $logmessage = $name . ' - step '. $looper. ": " . $localconfig['source']['getparams'][$counter]. ' - '. $localconfig['source']['getparams'][$stepper].' completed. [total '. $memory_usage .' MB] [delta '.$deltamem.' MB] [time '. $deltatime . ' sec]';
                         $this->logger('info', $logmessage, 'zohoimport');
+
+                        $this->lastbatchtime = time();
+                        $this->lastbatchmem = $memory_usage;
+                        // run garbage collection
+                        gc_collect_cycles();
                     }
 
                     // get the last index
