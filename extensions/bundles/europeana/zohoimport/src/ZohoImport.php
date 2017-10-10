@@ -631,7 +631,7 @@ class ZohoImport
 
             // really fetch the file
             $this->app['zohoimport.filefetcher']->fetchRemoteResource($params['source_url']);
-            $imagedata = $this->latestfile;
+            $imagedata = $this->app['zohoimport.filefetcher']->latestFile();
 
             // no file
             if (empty($imagedata)) {
