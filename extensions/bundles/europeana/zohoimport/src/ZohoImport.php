@@ -349,10 +349,7 @@ class ZohoImport
             if (array_key_exists('hookafterload', $config['target']) && is_array($config['target']['hookafterload'])) {
 
                 foreach ($config['target']['hookafterload'] as $key => $hookparams) {
-                    //dump('intheloop: '. $key);
                     if ($on_console && $key == 'image') {
-                        //echo "hookafterload: ". $key . " - " .$hookparams['callback'] . " | check for: '" . $inputrecord['public_photo'] . "' - " . $inputrecord['source_url'] . "\n";
-
                         $hookparams['on_console'] = true;
                     }
 
@@ -362,11 +359,13 @@ class ZohoImport
                         $tempvalue = $this->$callbackname($inputrecord, $this->currentrecord, $hookparams);
 
                         if ($tempvalue) {
-                           // set the new value only if there is a result for the callback
-                           $logmessage = $name
-                             . ' hookafterload new value ' . $key . ': '. $tempvalue;
-                           $this->logger('debug', $logmessage, 'zohoimport');
-                           $items[$key] = $tempvalue;
+                            // set the new value only if there is a result for the callback
+                            $logmessage = $name . ' hookafterload new value ' . $key;
+                            if(is_string($tempvalue)) {
+                               $logmessage .= ' - ' .$tempvalue;
+                            }
+                            $this->logger('debug', $logmessage, 'zohoimport');
+                            $items[$key] = $tempvalue;
                         }
                     } else {
                         // it is an existing value for the items
@@ -374,8 +373,10 @@ class ZohoImport
 
                         // set the new value if it is different
                         if ($tempvalue != $items[$key]) {
-                            $logmessage = $name
-                              . ' hookafterload existing value ' . $key . ': '. $tempvalue;
+                            $logmessage = $name . ' hookafterload existing value ' . $key;
+                            if(is_string($tempvalue)) {
+                              $logmessage .= ' - ' .$tempvalue;
+                            }
                             $this->logger('debug', $logmessage, 'zohoimport');
                             $items[$key] = $tempvalue;
                         }
