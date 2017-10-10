@@ -27,7 +27,7 @@ remotes:
             defaults:
                 new: 'published'       # may also be any valid status
                 updated: 'published'   # may also be any valid status
-                removed: 'unpublished' # may also be any valid status
+                removed: 'held' # may also be any valid status
             hookafterload:
                 image:
                     callback: downloadZohoPhotoFromURL

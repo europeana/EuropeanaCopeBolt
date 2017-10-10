@@ -4,9 +4,9 @@ namespace Bolt\Extension\Europeana\ZohoImport\Parser;
 
 class FileFetcher
 {
-    private $filedata;
-    private $remote_request_counter;
     private $app;
+    private $latestfile;
+    private $remote_request_counter;
     private $errormessage;
 
     public function __construct($app)
@@ -19,18 +19,14 @@ class FileFetcher
   /**
    * Check if the resource is a local file or a remote file and fetch it
    */
-    public function fetchAnyResource($name, $enabled)
+    public function fetchAnyResource($enabled)
     {
-        if ($enabled['on_console']) {
-            $on_console = $enabled['on_console'];
-        } else {
-            $on_console = false;
-        }
 
         if (array_key_exists('file', $enabled['source'])) {
             $source = __DIR__."/".$enabled['source']['file'];
+            $this->app['zohoimport']->logger('debug', 'fetching local file: ' . $source, 'zohoimport');
             if (file_exists($source)) {
-                $this->fetchLocalResource($name, $source);
+                $this->fetchLocalResource($source);
             }
         } else {
             $source = $enabled['source']['url'];
@@ -42,29 +38,30 @@ class FileFetcher
                 }
                 $source .= "?" . join('&', $gkeys);
             }
-
-            $this->fetchRemoteResource($name, $source);
+            $this->app['zohoimport']->logger('debug', 'fetching remote file: ' . $source, 'zohoimport');
+            $this->fetchRemoteResource($source);
         }
-        return $this->filedata;
+        return true;
     }
 
   /**
    * Fetch a local file resource
    */
-    private function fetchLocalResource($name, $url)
+    private function fetchLocalResource($url)
     {
         try {
             $data = file_get_contents($url);
-            $this->filedata[$name] = $data;
+            $this->latestfile = $data;
         } catch (RequestException $e) {
-            $this->errormessage = 'Error occurred during fetch: ' . $e->getMessage();
+            $this->errormessage = 'Error occurred during local fetch: ' . $e->getMessage();
+            $this->latestfile = false;
         }
     }
 
   /**
    * Fetch a remote url resource
    */
-    public function fetchRemoteResource($name, $url)
+    public function fetchRemoteResource($url)
     {
         $curlOptions = array('CURLOPT_CONNECTTIMEOUT' => 5);
         // Set cURL proxy options if there's a proxy
@@ -81,29 +78,33 @@ class FileFetcher
                 $data = $this->app['guzzle.client']->get($url, array(), $curlOptions)->getBody(true);
             }
 
-            $this->countRemoteRequest('image'); // count remote requests to determine if we hit a limit yet
+            $this->countRemoteRequest(); // count remote requests to determine if we hit a limit yet
 
-            $this->filedata[$name] = $data;
+            $this->latestfile = $data;
         } catch (RequestException $e) {
-            $this->errormessage = 'Error occurred during fetch: ' . $e->getMessage();
-            // make sure we can use this key later
-            $this->filedata[$name] = false;
+            $this->errormessage = 'Error occurred during remote fetch: ' . $e->getMessage();
+            $this->latestfile = false;
         }
 
-        return $this->filedata;
+        return true;
     }
 
   /**
    * increment remote request counter
    */
-    public function countRemoteRequest($name = 'unknown')
+    public function countRemoteRequest()
     {
         $this->remote_request_counter++;
     }
 
-    public function remoteRequestCount($name = 'unknown')
+    public function remoteRequestCount()
     {
         return $this->remote_request_counter;
+    }
+
+    public function latestFile()
+    {
+      return $this->latestfile;
     }
 
     public function errors()
