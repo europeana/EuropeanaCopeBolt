@@ -20,7 +20,7 @@ class ZohoImportExtension extends SimpleExtension
     protected function registerBackendControllers()
     {
         return [
-        '/extensions/zohoimport' => new Controller\Backend(),
+          '/extensions/zohoimport' => new Controller\Backend(),
         ];
     }
 
@@ -30,8 +30,8 @@ class ZohoImportExtension extends SimpleExtension
     public function getServiceProviders()
     {
         return [
-        $this,
-        new ZohoImportServiceProvider($this->getConfig())
+          $this,
+          new ZohoImportServiceProvider($this->getConfig())
         ];
     }
 
@@ -42,12 +42,12 @@ class ZohoImportExtension extends SimpleExtension
     {
         $menu = new MenuEntry('zohoimport-menu', 'zohoimport');
         $menu->setLabel('ZOHO import')
-        ->setIcon('fa:users')
-        ->setPermission('extensions')
-        ;
+          ->setIcon('fa:users')
+          ->setPermission('extensions')
+          ;
 
         return [
-        $menu,
+          $menu,
         ];
     }
 
@@ -57,7 +57,7 @@ class ZohoImportExtension extends SimpleExtension
     protected function registerNutCommands(Container $container)
     {
         return [
-        new Console\ZohoImportCommand($container),
+          new Console\ZohoImportCommand($container),
         ];
     }
 

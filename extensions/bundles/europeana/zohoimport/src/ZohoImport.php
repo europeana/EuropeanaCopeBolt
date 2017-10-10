@@ -15,8 +15,12 @@ class ZohoImport
     private $enabledsources;
     private $debug_mode;
     private $remote_request_counter;
+    private $currentrecord;
+    private $emptyrecord;
+    private $workingrepository;
     private $on_console;
     private $consoleoutput;
+    private $endcondition = false;
 
     public function __construct($app)
     {
@@ -33,16 +37,12 @@ class ZohoImport
     public function importJob($on_console = false, $output = null)
     {
         //dump($this->config);
-        if ($this->debug_mode) {
-            dump($on_console, $this->config);
-        }
         if ($on_console) {
             $this->on_console = $on_console;
             $this->consoleoutput = $output;
         }
 
         $this->getEnabledSources();
-
 
         $this->remote_request_counter = 0;
         $starttime = time();
@@ -56,6 +56,9 @@ class ZohoImport
                 $logmessage = $name . ' - importing extra images is disabled';
                 $this->logger('info', $logmessage, 'zohoimport');
             }
+
+            $this->workingrepository = $this->app['storage']->getRepository($config['target']['contenttype']);
+            $this->emptyrecord = $this->workingrepository->create();
 
             $logmessage = $name . ' - started import - batch: '. $batchdate . ' - '
             . $config['source']['type'];
@@ -77,15 +80,11 @@ class ZohoImport
 
                 $localconfig['on_console'] = $on_console;
 
-                if ($this->debug_mode) {
-                    dump($localconfig);
-                }
-
-                while ($this->endcondition == false) {
-                    $logmessage = $name . ' - step ' . $looper
-                    . ': ' . $localconfig['source']['getparams'][$counter]
-                    . ' - ' . $localconfig['source']['getparams'][$stepper] . ' starting.';
-                    $this->logger('info', $logmessage, 'zohoimport');
+                while ($this->endcondition === false) {
+                    //$logmessage = $name . ' - step ' . $looper
+                    //. ': ' . $localconfig['source']['getparams'][$counter]
+                    //. ' - ' . $localconfig['source']['getparams'][$stepper] . ' starting.';
+                    //$this->logger('info', $logmessage, 'zohoimport');
 
                     $this->fileFetcher($name, $localconfig);
 
@@ -97,14 +96,14 @@ class ZohoImport
 
                         $logmessage = $name . ' -  limit reached - 100 iterations are a bit much, please try to modify this import';
                         $this->logger('warning', $logmessage, 'zohoimport');
-                    } elseif ($this->resourcedata[$name]=='nodata') {
+                    } elseif ($this->resourcedata=='nodata') {
                         $this->endcondition = true;
 
                         $logmessage = $name . ' - found end of data for import';
                         $this->logger('info', $logmessage, 'zohoimport');
                     } else {
                         $this->saveRecords($name, $localconfig);
-                        $numrecords += count($this->resourcedata[$name]);
+                        $numrecords = $numrecords + count($this->resourcedata);
 
                         $logmessage = $name . ' - step '. $looper. ": " . $localconfig['source']['getparams'][$counter]. ' - '. $localconfig['source']['getparams'][$stepper].' completed.';
                         $this->logger('info', $logmessage, 'zohoimport');
@@ -116,6 +115,7 @@ class ZohoImport
                     $localconfig['source']['getparams'][$stepper] = $localconfig['source']['getparams'][$stepper] + $size;
 
                     $looper++;
+                    $normalizer = null;
                 }
 
                 $logmessage = $name . ' - imported ~ '. $numrecords .' records from paged resource..';
@@ -136,10 +136,11 @@ class ZohoImport
                     $normalizer = new Normalizer($name, $this->filedata, $localconfig);
                     $this->resourcedata = $normalizer->normalizeInput($name);
 
-                    if ($this->resourcedata[$name]!='nodata') {
+                    if ($this->resourcedata!='nodata') {
                         $this->saveRecords($name, $localconfig);
                     }
-                    $numrecords += count($this->resourcedata[$name]);
+                    $numrecords += count($this->resourcedata);
+                    $normalizer = null;
                 }
 
 
@@ -152,23 +153,29 @@ class ZohoImport
                 $normalizer = new Normalizer($name, $this->filedata, $config);
                 $this->resourcedata = $normalizer->normalizeInput($name);
 
-                if ($this->resourcedata[$name]!='nodata') {
+                if ($this->resourcedata!='nodata') {
                     $this->saveRecords($name, $config);
                 }
-                $numrecords = count($this->resourcedata[$name]);
+                $numrecords = count($this->resourcedata);
 
                 $logmessage = $name . ' - imported '. $numrecords .' records from short resource..';
                 $this->logger('info', $logmessage, 'zohoimport');
+                $normalizer = null;
             }
             $this->depublishRemovedRecords($name, $config, $batchdate);
 
             $logmessage = $name . ' - completed import';
             $this->logger('info', $logmessage, 'zohoimport');
+
+            // clear some memory;
+            unset($this->resourcedata);
+            unset($this->filedata);
         }
 
         $endtime = time();
         $batchendtime = date('Y-m-d H:i:s', $endtime);
         $batchdelta = $endtime - $starttime;
+        $this->remote_request_counter = $this->app['zohoimport.filefetcher']->remoteRequestCount();
 
         $messages[] = 'depublished removed records..';
         $messages[] = 'finished import at ' . $batchendtime;
@@ -177,7 +184,7 @@ class ZohoImport
         foreach ($messages as $logmessage) {
             $this->logger('info', $logmessage, 'zohoimport');
         }
-
+        unset($messages);
         return $output;
     }
 
@@ -251,7 +258,7 @@ class ZohoImport
    */
     private function saveRecords($name, $config)
     {
-        $inputrecords = $this->resourcedata[$name];
+        $inputrecords = $this->resourcedata;
 
         $starttime = time();
         $date = date('Y-m-d H:i:s', $starttime);
@@ -261,37 +268,36 @@ class ZohoImport
         } else {
             $on_console = false;
         }
-        $record = false;
+        $this->currentrecord = false;
 
         $logmessage = 'processing import: '. $name;
         $this->logger('debug', $logmessage, 'zohoimport');
+
 
         foreach ($inputrecords as $inputrecord) {
             $uid = $config['target']['mapping']['fields']['uid'];
 
             //dump('importing:'. $uid);
             // clear previous record
-            if ($record && $record->values) {
-                unset($record->values);
+            if ($this->currentrecord && $this->currentrecord->values) {
+                unset($this->currentrecord->values);
             }
-            unset($record);
+            unset($this->currentrecord);
             unset($items);
 
             //dump('checking:'. $inputrecord[$uid] );
             // check existing
-            $repository = $this->app['storage']->getRepository($config['target']['contenttype']);
-            $record = $repository->findOneBy(
+            $this->currentrecord = $this->workingrepository->findOneBy(
                 ['uid' => $inputrecord[$uid]]
             );
 
-            if (!$record) {
-                  dump('creating new: '.$inputrecord[$uid]);
+            if (!$this->currentrecord) {
+                  // dump('creating new: '.$inputrecord[$uid]);
                   $existing_id = false;
                   $logmessage = $name
                     . ' - preparing a new record: ' . $inputrecord[$uid];
                   $this->logger('debug', $logmessage, 'zohoimport');
-                  $repository = $this->app['storage']->getRepository($config['target']['contenttype']);
-                  $record = $repository->create();
+                  $this->currentrecord = clone $this->emptyrecord;
                   // dump($record);
                   $items['status'] = $config['target']['defaults']['new'];
 
@@ -300,8 +306,8 @@ class ZohoImport
                   // update datechanged, may be redundant, but lets do it anyway
                   $items['datechanged'] = $date;
             } else {
-                  dump('updating: '. $record->getUid() );
-                  $existing_id = $record->getId();
+                  // dump('updating: '. $record->getUid() );
+                  $existing_id = $this->currentrecord->getId();
                   $logmessage = $name
                     . ' - updating existing record: ' . $inputrecord[$uid];
                   $this->logger('debug', $logmessage, 'zohoimport');
@@ -318,7 +324,7 @@ class ZohoImport
                 //echo 'key: ' . $key . ' - value:' . $value . ' - ' . $tmpout . "\n";
                 if (!array_key_exists($value, $inputrecord) && $key != 'id') {
                     // $record->values[$value] = '';
-                    $record->$value = '';
+                    $this->currentrecord->$value = '';
                     $inputrecord[$value] = '';
                 }
                 //echo 'value:' . $value . ' - ' . $inputrecord[$value] . "\n";
@@ -345,7 +351,7 @@ class ZohoImport
                     if (!array_key_exists($key, $items) || empty($items[$key])) {
                         // it is a new value for the $items
                         $callbackname = $hookparams['callback'];
-                        $tempvalue = $this->$callbackname($inputrecord, $record, $hookparams);
+                        $tempvalue = $this->$callbackname($inputrecord, $this->currentrecord, $hookparams);
                         // set the new value only if there is a result for the callback
                         if (0 && $this->debug_mode) {
                             dump('tempvalue ' . $key . ': '. $tempvalue);
@@ -360,7 +366,7 @@ class ZohoImport
                         }
                     } else {
                         // it is an existing value for the items
-                        $tempvalue = $this->$hookparams['callback']($inputrecord, $record, $hookparams);
+                        $tempvalue = $this->$hookparams['callback']($inputrecord, $this->currentrecord, $hookparams);
                         if (0 && $this->debug_mode) {
                             dump('tempvalue ' . $key . ': '. $tempvalue);
                         }
@@ -414,19 +420,25 @@ class ZohoImport
             if($existing_id) {
               $items['id'] = $existing_id;
             }
-            $record->setValues($items);
+            $this->currentrecord->setValues($items);
+            $this->currentrecord->setDateChanged($date);
 
             //dump('values set');
             //$this->app['storage']->saveContent($record);
 
-            //dump('storing record: ' . $record->getId() . '/' . $existing_id . ' - ' . $record->getUid());
-            $this->app['storage']->save($record);
+            // dump('storing record: ' . $record->getId() . '/' . $existing_id . ' - ' . $record->getUid() . ' > ' . $record->getDateChanged() . ' - ' . $date);
+            $this->app['storage']->save($this->currentrecord);
+
+            // make the things smaller for the memory footprint
+            $inputrecord = null;
+            $items = null;
+            $this->currentrecord = null;
         }
     }
 
-  /**
-   * Depublish all records in a contenttype if they are not present in the current feed
-   */
+    /**
+     * Depublish all records in a contenttype if they are not present in the current feed
+     */
     private function depublishRemovedRecords($name, $config, $date)
     {
         $logmessage = $name . ' - depublishing all removed records on date: ' . $date;
@@ -555,7 +567,8 @@ class ZohoImport
             //dump('maybe fail after', $existing_image_array);
             $existing_image = $existing_image_array;
           } else {
-            dump('big fail', $existing_image, $existing_image_tmp);
+            $logmessage = "downloading image has failed, " . $existing_image . ' - '. $existing_image_tmp;
+            $this->logger('error', $logmessage, 'zohoimport');
             return null;
           }
         }
@@ -593,9 +606,7 @@ class ZohoImport
             $this->logger('info', $logmessage, 'zohoimport');
 
             // really fetch the file
-            $filefetcher = new FileFetcher($this->app);
-            $this->filedata = $filefetcher->fetchRemoteResource($params['name'], $params['source_url']);
-            $this->remote_request_counter += $filefetcher->remoteRequestCount('image');
+            $this->filedata = $this->app['zohoimport.filefetcher']->fetchRemoteResource($params['name'], $params['source_url']);
 
             // no file
             if (empty($this->filedata[$params['name']])) {
@@ -619,9 +630,6 @@ class ZohoImport
         } else {
             // there was a tempfile already
             // it will be cleaned up soon
-            if ($this->debug_mode) {
-                dump('dangling tempfile');
-            }
             $logmessage = 'dangling tempfile for:' . $params['name'] . ' - it will be cleaned up soon';
             $this->logger('info', $logmessage, 'zohoimport');
         }
@@ -692,17 +700,12 @@ class ZohoImport
    */
     private function fileFetcher($name, $localconfig)
     {
-        $filefetcher = new FileFetcher($this->app);
+        $this->app['zohoimport.filefetcher']->fetchAnyResource($name, $localconfig);
+        $this->filedata = $this->app['zohoimport.filefetcher']->latestFile();
 
-        $this->logger('info', 'fetching remote file: ' . $name);
-
-        $this->filedata = $filefetcher->fetchAnyResource($name, $localconfig);
-
-        if ($errormessage = $filefetcher->errors()) {
+        if ($errormessage = $this->app['zohoimport.filefetcher']->errors()) {
             $this->logger('error', $errormessage, 'zohoimport');
         }
-
-        $this->remote_request_counter += $filefetcher->remoteRequestCount();
     }
 
   /**

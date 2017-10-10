@@ -2,9 +2,11 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport\Provider;
 
+use Bolt\Extension\Europeana\ZohoImport\Parser\Normalizer;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 use Bolt\Extension\Europeana\ZohoImport\ZohoImport;
+use Bolt\Extension\Europeana\ZohoImport\Parser\FileFetcher;
 
 /**
  * ZohoImport service provider.
@@ -35,6 +37,11 @@ class ZohoImportServiceProvider implements ServiceProviderInterface
             function ($app) {
                 return new ZohoImport($app);
             }
+        );
+        $app['zohoimport.filefetcher'] = $app->share(
+          function ($app) {
+            return new FileFetcher($app);
+          }
         );
         $app['zohoimport.config'] = $app->share(
             function () {

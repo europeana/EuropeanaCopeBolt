@@ -53,7 +53,7 @@ class Normalizer
    */
     private function normalizeFromJson($name)
     {
-        $doc = json_decode($this->filedata[$name]);
+        $doc = json_decode($this->filedata);
 
         $items = TypeConverter::toArray($doc);
 
@@ -76,7 +76,7 @@ class Normalizer
             }
             $items = $values;
         }
-        $this->data[$name] = $items;
+        $this->data = $items;
         return $doc;
     }
 
@@ -85,7 +85,7 @@ class Normalizer
    */
     private function normalizeFromZohoJson($name)
     {
-        $doc = json_decode($this->filedata[$name]);
+        $doc = json_decode($this->filedata);
 
         //dump($name, $doc, $this);
 
@@ -95,12 +95,6 @@ class Normalizer
                 dump($doc);
             }
             die();
-        }
-
-        if ($this->config['on_console']) {
-            $on_console = $this->config['on_console'];
-        } else {
-            $on_console = false;
         }
 
         $items = TypeConverter::toArray($doc);
@@ -114,7 +108,7 @@ class Normalizer
         }
 
         if (array_key_exists('nodata', $items['response']) && is_array($items['response']['nodata'])) {
-            $this->data[$name] = 'nodata';
+            $this->data = 'nodata';
             return $doc;
         }
 
@@ -147,7 +141,7 @@ class Normalizer
             }
         }
 
-        $this->data[$name] = $outrows;
+        $this->data = $outrows;
         return $doc;
     }
 
@@ -157,7 +151,7 @@ class Normalizer
    */
     private function normalizeFromXml($name)
     {
-        $doc = new SimpleXMLElement($this->filedata[$name]);
+        $doc = new SimpleXMLElement($this->filedata);
 
         $items = TypeConverter::xmlToArray($doc, TypeConverter::XML_MERGE);
 
@@ -169,7 +163,7 @@ class Normalizer
         }
 
         if (array_key_exists('nodata', $items['response']) && is_array($items['response']['nodata'])) {
-            $this->data[$name] = 'nodata';
+            $this->data = 'nodata';
             return $doc;
         }
 
@@ -179,7 +173,7 @@ class Normalizer
 
         $items = $this->flattenZOHO($items);
 
-        $this->data[$name] = $items;
+        $this->data = $items;
         return $doc;
     }
 
@@ -218,10 +212,10 @@ class Normalizer
    */
     private function normalizeFromSimpleXML($name, $input = '')
     {
-        $doc = new SimpleXMLElement($this->filedata[$name]);
+        $doc = new SimpleXMLElement($this->filedata);
         $root = $this->config['target']['mapping']['root'];
         $items = $doc->xpath($root);
-        $this->data[$name] = $items;
+        $this->data = $items;
         return $doc;
     }
 

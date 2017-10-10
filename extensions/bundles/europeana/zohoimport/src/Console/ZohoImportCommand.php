@@ -54,20 +54,20 @@ class ZohoImportCommand extends BaseCommand
                 $type = 'test';
                 break;
         }
-        $text = "<info>" . $text . "</info>\n";
+        $output->writeln( "<info>" . $text . "</info>" );
 
         if ($type == 'full') {
             //$on_console = true;
             //$text .= $this->app['extensions.ZohoImport']->importJob($on_console);
 
-            $text .= "\n" . $this->app['zohoimport']->importJob(true, $output);
+            $this->app['zohoimport']->importJob(true, $output);
         } elseif ($type == 'update') {
             // do stuff
         } elseif ($type == 'imageonly') {
             // do stuff
         } else {
             // do stuff
-            $text .= "\n" . strip_tags(
+            $text = "\n" . strip_tags(
                 str_replace(
                     '<tr>',
                     "\n<tr>",
@@ -78,15 +78,13 @@ class ZohoImportCommand extends BaseCommand
                     )
                 )
             );
+            $output->writeln($text);
         }
-
-        $this->app['zohoimport']->logger('info', $text, 'zoho-console-'.$type, ['input'=>$input, 'output'=>$output]);
 
         if ($input->getOption('summary')) {
-            $num = 12;
-            $text .= sprintf("<comment>Imported %d contacts</comment>", $num);
+            $text = sprintf("<comment>Imported %d contacts</comment>", $num);
+            $output->writeln($text);
         }
 
-        $output->writeln($text);
     }
 }
