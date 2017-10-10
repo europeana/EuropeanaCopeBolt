@@ -2,7 +2,6 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport;
 
-use Bolt\Extension\Europeana\ZohoImport\Parser\Normalizer;
 use Symfony\Component\HttpFoundation\File\File;
 
 class ZohoImport
@@ -17,7 +16,6 @@ class ZohoImport
     private $currentrecord;
     private $emptyrecord;
     private $workingrepository;
-    private $normalizer;
     private $on_console;
     private $consoleoutput;
     private $endcondition = false;
@@ -66,9 +64,6 @@ class ZohoImport
             $this->workingrepository = $this->app['storage']->getRepository($config['target']['contenttype']);
             // initialize empty record for cloning
             $this->emptyrecord = $this->workingrepository->create();
-
-            // setup normalizer
-            $this->normalizer = $this->app['zohoimport.normalizer'];
 
             $logmessage = $name . ' - started import - batch: '. $batchdate . ' - '
             . $config['source']['type'];
@@ -294,42 +289,39 @@ class ZohoImport
             );
 
             if (!$this->currentrecord) {
-                  // dump('creating new: '.$inputrecord[$uid]);
                   $existing_id = false;
+
                   $logmessage = $name
                     . ' - preparing a new record: ' . $inputrecord[$uid];
                   $this->logger('debug', $logmessage, 'zohoimport');
-                  $this->currentrecord = clone $this->emptyrecord;
-                  // dump($record);
-                  $items['status'] = $config['target']['defaults']['new'];
 
+                  $this->currentrecord = clone $this->emptyrecord;
+
+                  $items['status'] = $config['target']['defaults']['new'];
                   // update datecreated, may be redundant, but lets do it anyway
                   $items['datecreated'] = $date;
                   // update datechanged, may be redundant, but lets do it anyway
                   $items['datechanged'] = $date;
             } else {
-                  // dump('updating: '. $record->getUid() );
                   $existing_id = $this->currentrecord->getId();
+
                   $logmessage = $name
                     . ' - updating existing record: ' . $inputrecord[$uid];
                   $this->logger('debug', $logmessage, 'zohoimport');
+
                   $items['status'] = $config['target']['defaults']['updated'];
 
                   // update datechanged, may be redundant, but lets do it anyway
                   $items['datechanged'] = $date;
             }
 
-            //dump('working for: ' . $record->getId() . ' - ' . $record->getUid());
             // update the new values
             foreach ($config['target']['mapping']['fields'] as $key => $value) {
-                $tmpout = (array_key_exists($value, $inputrecord)? $inputrecord[$value]:'empty');
-                //echo 'key: ' . $key . ' - value:' . $value . ' - ' . $tmpout . "\n";
+                // make sure empty values are written
                 if (!array_key_exists($value, $inputrecord) && $key != 'id') {
-                    // $record->values[$value] = '';
                     $this->currentrecord->$value = '';
                     $inputrecord[$value] = '';
                 }
-                //echo 'value:' . $value . ' - ' . $inputrecord[$value] . "\n";
                 $items[$key] = $inputrecord[$value];
             }
 
@@ -339,7 +331,7 @@ class ZohoImport
                     $items[$defaultfield] = $defaultvalue;
                 }
             }
-            //dump('updating: '. $record->getUid() );
+
             if (array_key_exists('hookafterload', $config['target']) && is_array($config['target']['hookafterload'])) {
 
                 foreach ($config['target']['hookafterload'] as $key => $hookparams) {
@@ -354,31 +346,23 @@ class ZohoImport
                         // it is a new value for the $items
                         $callbackname = $hookparams['callback'];
                         $tempvalue = $this->$callbackname($inputrecord, $this->currentrecord, $hookparams);
-                        // set the new value only if there is a result for the callback
-                        if (0 && $this->debug_mode) {
-                            dump('tempvalue ' . $key . ': '. $tempvalue);
-                        }
-
-                        if (0 && $on_console && $key == 'image' && $tempvalue) {
-                            echo "hookafterload new value: ". $tempvalue . "\n";
-                        }
 
                         if ($tempvalue) {
-                            $items[$key] = $tempvalue;
+                           // set the new value only if there is a result for the callback
+                           $logmessage = $name
+                             . ' hookafterload new value ' . $key . ': '. $tempvalue;
+                           $this->logger('debug', $logmessage, 'zohoimport');
+                           $items[$key] = $tempvalue;
                         }
                     } else {
                         // it is an existing value for the items
                         $tempvalue = $this->$hookparams['callback']($inputrecord, $this->currentrecord, $hookparams);
-                        if (0 && $this->debug_mode) {
-                            dump('tempvalue ' . $key . ': '. $tempvalue);
-                        }
-
-                        if (0 && $on_console && $key == 'image' && $tempvalue) {
-                            echo "hookafterload existing: ". $tempvalue . "\n";
-                        }
 
                         // set the new value if it is different
                         if ($tempvalue != $items[$key]) {
+                            $logmessage = $name
+                              . ' hookafterload existing value ' . $key . ': '. $tempvalue;
+                            $this->logger('debug', $logmessage, 'zohoimport');
                             $items[$key] = $tempvalue;
                         }
                     }
@@ -416,7 +400,6 @@ class ZohoImport
                 }
             }
 
-            //dump('items and record:', $items);
             // Store the data array into the record
             // reset the existing id if it was there before
             if($existing_id) {
@@ -425,10 +408,11 @@ class ZohoImport
             $this->currentrecord->setValues($items);
             $this->currentrecord->setDateChanged($date);
 
-            //dump('values set');
-            //$this->app['storage']->saveContent($record);
+            $logmessage = $name
+              . ' - storing record: ' . $existing_id . ' - ' . $inputrecord[$uid] . ' on: ' . $date;
+            $this->logger('debug', $logmessage, 'zohoimport');
 
-            // dump('storing record: ' . $record->getId() . '/' . $existing_id . ' - ' . $record->getUid() . ' > ' . $record->getDateChanged() . ' - ' . $date);
+            // use storage engine
             $this->app['storage']->save($this->currentrecord);
 
             // make the things smaller for the memory footprint
@@ -742,7 +726,7 @@ class ZohoImport
    * @param $localconfig
    */
     private function fileNormalizer($localconfig) {
-      $this->resourcedata = $this->normalizer->normalizeInput($localconfig, $this->latestfile);
+      $this->resourcedata = $this->app['zohoimport.normalizer']->normalizeInput($localconfig, $this->app['zohoimport.filefetcher']->latestFile());
     }
 
   /**
