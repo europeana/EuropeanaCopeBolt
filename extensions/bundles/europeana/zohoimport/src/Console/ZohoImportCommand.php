@@ -31,6 +31,12 @@ class ZohoImportCommand extends BaseCommand
             InputOption::VALUE_NONE,
             'Display final summary output after update.'
         )
+        ->addOption(
+            'fast-forward',
+            null,
+            InputOption::VALUE_REQUIRED,
+            'Jump to step X in the import process - only works in full or update. Defaults to empty.'
+        )
         ;
     }
 
@@ -56,10 +62,15 @@ class ZohoImportCommand extends BaseCommand
         }
         $output->writeln( "<info>" . $text . "</info>" );
 
+        if($input->getOption('fast-forward')) {
+          $ffwd = $input->getOption('fast-forward');
+          $output->writeln( "<info>fast forwarding to: " . $ffwd . "</info>" );
+          $this->app['zohoimport']->step = $ffwd;
+        }
+
         if ($type == 'full') {
             //$on_console = true;
             //$text .= $this->app['extensions.ZohoImport']->importJob($on_console);
-
             $this->app['zohoimport']->importJob(true, $output);
         } elseif ($type == 'update') {
             // do stuff
