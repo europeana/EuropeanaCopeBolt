@@ -626,7 +626,7 @@ class ZohoImport
         $image['id'] = $params['name'];
 
         if (!file_exists($image['tmpname'])) {
-            $logmessage = "fetching remote image for: " . $params['name'] .' - url: '. $params['source_url'] ;
+            $logmessage = "fetched remote image for: " . $params['name'] .' - url: '. $params['source_url'] ;
             $this->logger('info', $logmessage, 'zohoimport');
 
             // really fetch the file
@@ -641,8 +641,6 @@ class ZohoImport
 
             // no valid image
             if (stristr($imagedata, 'No photo attached to this record id')) {
-                unset($imagedata);
-
                 $logmessage = 'no remote photo found for:' . $params['name'] . ' at url: ' . $params['source_url'];
                 $this->logger('error', $logmessage, 'zohoimport');
                 return false;
@@ -653,8 +651,9 @@ class ZohoImport
         } else {
             // there was a tempfile already
             // it will be cleaned up soon
-            $logmessage = 'dangling tempfile for:' . $params['name'] . ' - it will be cleaned up soon';
+            $logmessage = 'dangling tempfile for:' . $params['name'] . ' - it should be cleaned up before the next import [' . $image['tmpname'] .']';
             $this->logger('info', $logmessage, 'zohoimport');
+            return false;
         }
 
         $image['type'] = exif_imagetype($image['tmpname']);
