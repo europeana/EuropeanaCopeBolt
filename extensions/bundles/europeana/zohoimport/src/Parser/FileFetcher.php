@@ -4,9 +4,9 @@ namespace Bolt\Extension\Europeana\ZohoImport\Parser;
 
 class FileFetcher
 {
+    private $app;
     private $latestfile;
     private $remote_request_counter;
-    private $app;
     private $errormessage;
 
     public function __construct($app)
@@ -19,14 +19,14 @@ class FileFetcher
   /**
    * Check if the resource is a local file or a remote file and fetch it
    */
-    public function fetchAnyResource($name, $enabled)
+    public function fetchAnyResource($enabled)
     {
 
         if (array_key_exists('file', $enabled['source'])) {
             $source = __DIR__."/".$enabled['source']['file'];
             $this->app['zohoimport']->logger('info', 'fetching local file: ' . $source, 'zohoimport');
             if (file_exists($source)) {
-                $this->fetchLocalResource($name, $source);
+                $this->fetchLocalResource($source);
             }
         } else {
             $source = $enabled['source']['url'];
@@ -39,7 +39,7 @@ class FileFetcher
                 $source .= "?" . join('&', $gkeys);
             }
             $this->app['zohoimport']->logger('info', 'fetching remote file: ' . $source, 'zohoimport');
-            $this->fetchRemoteResource($name, $source);
+            $this->fetchRemoteResource($source);
         }
         return true;
     }
@@ -47,7 +47,7 @@ class FileFetcher
   /**
    * Fetch a local file resource
    */
-    private function fetchLocalResource($name, $url)
+    private function fetchLocalResource($url)
     {
         try {
             $data = file_get_contents($url);
@@ -61,7 +61,7 @@ class FileFetcher
   /**
    * Fetch a remote url resource
    */
-    public function fetchRemoteResource($name, $url)
+    public function fetchRemoteResource($url)
     {
         $curlOptions = array('CURLOPT_CONNECTTIMEOUT' => 5);
         // Set cURL proxy options if there's a proxy
@@ -102,7 +102,7 @@ class FileFetcher
         return $this->remote_request_counter;
     }
 
-    public function latestFile($name = 'unknown')
+    public function latestFile()
     {
       return $this->latestfile;
     }

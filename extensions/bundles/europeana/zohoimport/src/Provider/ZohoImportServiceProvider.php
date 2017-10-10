@@ -43,6 +43,11 @@ class ZohoImportServiceProvider implements ServiceProviderInterface
             return new FileFetcher($app);
           }
         );
+        $app['zohoimport.normalizer'] = $app->share(
+          function ($app) {
+            return new Normalizer($app);
+          }
+        );
         $app['zohoimport.config'] = $app->share(
             function () {
                 return $this->config;
