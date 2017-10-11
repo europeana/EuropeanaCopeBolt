@@ -500,7 +500,8 @@ class ZohoImport
       // save the timestamp to the 'app/config/extensions/zohoimport_lock_local.yml' file
       $filesystem = $this->app['filesystem']->getFilesystem('extensions_config');
       $path = 'zohoimport_lock_local.yml';
-      if ($filesystem->has($path)) {
+      $file = $filesystem->getFile($path);
+      if ($file->exists($path)) {
         $filesystem->put($path, $timestamp);
       } else {
         $filesystem->write($path, $timestamp);
@@ -520,22 +521,14 @@ class ZohoImport
       $timestamp = null;
       $filesystem = $this->app['filesystem']->getFilesystem('extensions_config');
       $path = 'zohoimport_lock_local.yml';
-      if ($filesystem->has($path)) {
+      $file = $filesystem->getFile($path);
+      if ($file->exists($path)) {
         $timestamp = $filesystem->read($path);
       } else {
         $timestamp = date('Y-m-d H:i:s', time());
       }
 
       return $timestamp;
-        //
-        //$contenttype = $config['target']['contenttype'];
-        //$prefix = $this->app['config']->get('general/database/prefix');
-        //$tablename = $prefix . $contenttype;
-        //$query = "SELECT max(datechanged) as maxdate FROM $tablename";
-        //$stmt = $this->app['db']->prepare($query);
-        //$res = $stmt->execute();
-        //$result = $stmt->fetch();
-        //return $result['maxdate'];
     }
 
 
