@@ -284,9 +284,6 @@ class ZohoImport
         //dump($this->app);
 
         if($on_console === true && $output !== null) {
-          foreach($messages as $text) {
-            $output->writeln(strip_tags(str_replace('</td>', "\t|\t</td>", $text)));
-          }
           return null;
         } else {
           return join('', $messages);
@@ -494,10 +491,16 @@ class ZohoImport
   /**
    * setLastImportDate saves the last successfull import to the current start of the batch
    */
-    private function setLastImportDate($batchdate)
+    private function setLastImportDate($timestamp)
     {
-
-
+      // save the timestamp to the 'app/config/extensions/zohoimport_lock_local.yml' file
+      $filesystem = $this->app['filesystem']->getFilesystem('extensions_config');
+      $path = 'zohoimport_lock_local.yml';
+      if ($filesystem->has($path)) {
+        $filesystem->put($path, $timestamp);
+      } else {
+        $filesystem->write($path, $timestamp);
+      }
     }
 
   /**
@@ -509,14 +512,26 @@ class ZohoImport
    */
     private function getLastImportDate($config)
     {
-        $contenttype = $config['target']['contenttype'];
-        $prefix = $this->app['config']->get('general/database/prefix');
-        $tablename = $prefix . $contenttype;
-        $query = "SELECT max(datechanged) as maxdate FROM $tablename";
-        $stmt = $this->app['db']->prepare($query);
-        $res = $stmt->execute();
-        $result = $stmt->fetch();
-        return $result['maxdate'];
+      // save the timestamp to the 'app/config/extensions/zohoimport_lock_local.yml' file
+      $timestamp = null;
+      $filesystem = $this->app['filesystem']->getFilesystem('extensions_config');
+      $path = 'zohoimport_lock_local.yml';
+      if ($filesystem->has($path)) {
+        $timestamp = $filesystem->read($path);
+      } else {
+        $timestamp = date('Y-m-d H:i:s', time());
+      }
+
+      return $timestamp;
+        //
+        //$contenttype = $config['target']['contenttype'];
+        //$prefix = $this->app['config']->get('general/database/prefix');
+        //$tablename = $prefix . $contenttype;
+        //$query = "SELECT max(datechanged) as maxdate FROM $tablename";
+        //$stmt = $this->app['db']->prepare($query);
+        //$res = $stmt->execute();
+        //$result = $stmt->fetch();
+        //return $result['maxdate'];
     }
 
 
