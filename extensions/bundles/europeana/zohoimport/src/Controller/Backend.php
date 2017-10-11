@@ -68,6 +68,11 @@ class Backend implements ControllerProviderInterface
                 <p>Please run the importer on the console with <tt>php app/nut zoho:import full</tt></p>
                 <p>You can try a  &quot;/admin/extensions/zohoimport/full&quot; full import</a>, 
                    but that will stall because the process takes to long for the web interface.</p>
+            </div>
+            <div class="panel-body">
+                <p>If a batch has crashed you can fast forward and continue where you have left off.</p>
+                <p>To continue you can use the <tt>--fast-forward</tt> option with the number of the last step that you can see in the <a href="/admin/systemlog">system log</a>.</p>
+                <p>The full command would look something like: <tt>php app/nut zoho:import full --fast-forward=11</tt></p>
             </div><div class="panel-footer"></div></div>';
                 $type = 'test';
                 break;
