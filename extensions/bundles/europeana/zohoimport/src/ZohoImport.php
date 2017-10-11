@@ -37,7 +37,11 @@ class ZohoImport
    */
     public function setFfwd($ffwd)
     {
-      $this->ffwd = $ffwd;
+      if($ffwd > 0) {
+        // pesky off by ones in the steps
+        $ffwd = $ffwd - 1;
+        $this->ffwd = $ffwd;
+      }
     }
   /**
    * Run the importer (with debug stuff for development)
@@ -93,7 +97,7 @@ class ZohoImport
                 $size = $config['source']['loopparams']['size'];
                 $localconfig['source']['getparams'][$counter] = $start;
                 $localconfig['source']['getparams'][$stepper] = $size;
-                if($this->ffwd != null) {
+                if($this->ffwd != null && $this->ffwd >= 1) {
                   // TODO: fast forward to step $this->ffwd
                   $logmessage = $name . ' - fast forward to ' . $this->ffwd  . ' set.';
                   $this->logger('info', $logmessage, 'zohoimport');
