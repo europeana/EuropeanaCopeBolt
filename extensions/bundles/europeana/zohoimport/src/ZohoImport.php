@@ -100,7 +100,11 @@ class ZohoImport
                 if($this->ffwd != null && $this->ffwd >= 1) {
                   // TODO: fast forward to step $this->ffwd
                   $looper = $this->ffwd +1;
-                  $logmessage = $name . ' - fast forward to ' . $looper . '.';
+                  $previousbatchdate = $this->getLastImportDate($localconfig);
+                  $starttime = strtotime($previousbatchdate);
+                  $batchdate = $previousbatchdate;
+                  $logmessage = $name . ' - fast forward to ' . $looper . '. - batch: '. $batchdate . ' - '
+                    . $config['source']['type'];
                   $this->logger('info', $logmessage, 'zohoimport');
                   // $looper = $this->looper;
                   $start = ($this->ffwd * $size) + 1;
@@ -198,6 +202,7 @@ class ZohoImport
                 $logmessage = $name . ' - imported '. $numrecords .' records from short resource..';
                 $this->logger('info', $logmessage, 'zohoimport');
             }
+
             $this->depublishRemovedRecords($name, $config, $batchdate);
 
             $logmessage = $name . ' - completed import';
@@ -219,7 +224,7 @@ class ZohoImport
         $messages[] = 'depublished removed records..';
         $messages[] = 'finished import at ' . $batchendtime;
         $messages[] = 'the import did ' . $this->remote_request_counter . " remote requests.";
-        $messages[] = 'import took ~ ' . $batchdelta . " seconds";
+        $messages[] = 'import took ~ ' . $batchdelta . " seconds - including broken batches";
         foreach ($messages as $logmessage) {
             $this->logger('info', $logmessage, 'zohoimport');
         }
@@ -516,7 +521,7 @@ class ZohoImport
    *
    * @return mixed
    */
-    private function getLastImportDate($config)
+    private function getLastImportDate($config = false)
     {
       // save the timestamp to the 'app/config/extensions/zohoimport_lock_local.yml' file
       $timestamp = null;
