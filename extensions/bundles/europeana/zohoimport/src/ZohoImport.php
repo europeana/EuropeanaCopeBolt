@@ -33,6 +33,13 @@ class ZohoImport
     }
 
   /**
+   * @param $ffwd
+   */
+    public function setFfwd($ffwd)
+    {
+      $this->ffwd = $ffwd;
+    }
+  /**
    * Run the importer (with debug stuff for development)
    *
    * @param bool $on_console
@@ -77,6 +84,7 @@ class ZohoImport
             if (is_array($config['source']['loopparams'])) {
                 // the import has paging so lets use that
                 $this->endcondition = false;
+                $looper = 1; // just a counter to see how far we are
                 $localconfig = $config;
 
                 $counter = $config['source']['loopparams']['counter'];
@@ -85,20 +93,25 @@ class ZohoImport
                 $size = $config['source']['loopparams']['size'];
                 $localconfig['source']['getparams'][$counter] = $start;
                 $localconfig['source']['getparams'][$stepper] = $size;
-                $looper = 1; // just a counter to see how far we are
                 if($this->ffwd != null) {
                   // TODO: fast forward to step $this->ffwd
+                  $logmessage = $name . ' - fast forward to ' . $this->ffwd  . ' set.';
+                  $this->logger('info', $logmessage, 'zohoimport');
                   // $looper = $this->looper;
+                  $start = ($this->ffwd * $size) + 1;
+                  $end = ($this->ffwd * $size) + $size;
+                  $localconfig['source']['getparams'][$counter] = $start;
+                  $localconfig['source']['getparams'][$stepper] = $end;
                 }
                 $numrecords = 0;
 
                 $localconfig['on_console'] = $on_console;
 
                 while ($this->endcondition === false) {
-                    //$logmessage = $name . ' - step ' . $looper
-                    //. ': ' . $localconfig['source']['getparams'][$counter]
-                    //. ' - ' . $localconfig['source']['getparams'][$stepper] . ' starting.';
-                    //$this->logger('info', $logmessage, 'zohoimport');
+                    $logmessage = $name . ' - step ' . $looper
+                    . ': ' . $localconfig['source']['getparams'][$counter]
+                    . ' - ' . $localconfig['source']['getparams'][$stepper] . ' starting.';
+                    $this->logger('info', $logmessage, 'zohoimport');
 
                     $this->fileFetcher($localconfig);
 
@@ -183,6 +196,9 @@ class ZohoImport
             $this->depublishRemovedRecords($name, $config, $batchdate);
 
             $logmessage = $name . ' - completed import';
+
+            $this->setLastImportDate($batchdate);
+
             $this->logger('info', $logmessage, 'zohoimport');
 
             // clear some memory;
@@ -475,6 +491,14 @@ class ZohoImport
         return true;
     }
 
+  /**
+   * setLastImportDate saves the last successfull import to the current start of the batch
+   */
+    private function setLastImportDate($batchdate)
+    {
+
+
+    }
 
   /**
    * getLastImportDate
