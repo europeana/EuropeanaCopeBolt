@@ -33,6 +33,13 @@ class ZohoImport
     }
 
   /**
+   * @param $ffwd
+   */
+    public function setFfwd($ffwd)
+    {
+      $this->ffwd = $ffwd;
+    }
+  /**
    * Run the importer (with debug stuff for development)
    *
    * @param bool $on_console
@@ -77,6 +84,7 @@ class ZohoImport
             if (is_array($config['source']['loopparams'])) {
                 // the import has paging so lets use that
                 $this->endcondition = false;
+                $looper = 1; // just a counter to see how far we are
                 $localconfig = $config;
 
                 $counter = $config['source']['loopparams']['counter'];
@@ -85,20 +93,25 @@ class ZohoImport
                 $size = $config['source']['loopparams']['size'];
                 $localconfig['source']['getparams'][$counter] = $start;
                 $localconfig['source']['getparams'][$stepper] = $size;
-                $looper = 1; // just a counter to see how far we are
                 if($this->ffwd != null) {
                   // TODO: fast forward to step $this->ffwd
+                  $logmessage = $name . ' - fast forward to ' . $this->ffwd  . ' set.';
+                  $this->logger('info', $logmessage, 'zohoimport');
                   // $looper = $this->looper;
+                  $start = ($this->ffwd * $size) + 1;
+                  $end = ($this->ffwd * $size) + $size;
+                  $localconfig['source']['getparams'][$counter] = $start;
+                  $localconfig['source']['getparams'][$stepper] = $end;
                 }
                 $numrecords = 0;
 
                 $localconfig['on_console'] = $on_console;
 
                 while ($this->endcondition === false) {
-                    //$logmessage = $name . ' - step ' . $looper
-                    //. ': ' . $localconfig['source']['getparams'][$counter]
-                    //. ' - ' . $localconfig['source']['getparams'][$stepper] . ' starting.';
-                    //$this->logger('info', $logmessage, 'zohoimport');
+                    $logmessage = $name . ' - step ' . $looper
+                    . ': ' . $localconfig['source']['getparams'][$counter]
+                    . ' - ' . $localconfig['source']['getparams'][$stepper] . ' starting.';
+                    $this->logger('info', $logmessage, 'zohoimport');
 
                     $this->fileFetcher($localconfig);
 
@@ -183,6 +196,9 @@ class ZohoImport
             $this->depublishRemovedRecords($name, $config, $batchdate);
 
             $logmessage = $name . ' - completed import';
+
+            $this->setLastImportDate($batchdate);
+
             $this->logger('info', $logmessage, 'zohoimport');
 
             // clear some memory;
@@ -268,9 +284,6 @@ class ZohoImport
         //dump($this->app);
 
         if($on_console === true && $output !== null) {
-          foreach($messages as $text) {
-            $output->writeln(strip_tags(str_replace('</td>', "\t|\t</td>", $text)));
-          }
           return null;
         } else {
           return join('', $messages);
@@ -475,6 +488,20 @@ class ZohoImport
         return true;
     }
 
+  /**
+   * setLastImportDate saves the last successfull import to the current start of the batch
+   */
+    private function setLastImportDate($timestamp)
+    {
+      // save the timestamp to the 'app/config/extensions/zohoimport_lock_local.yml' file
+      $filesystem = $this->app['filesystem']->getFilesystem('extensions_config');
+      $path = 'zohoimport_lock_local.yml';
+      if ($filesystem->has($path)) {
+        $filesystem->put($path, $timestamp);
+      } else {
+        $filesystem->write($path, $timestamp);
+      }
+    }
 
   /**
    * getLastImportDate
@@ -485,14 +512,26 @@ class ZohoImport
    */
     private function getLastImportDate($config)
     {
-        $contenttype = $config['target']['contenttype'];
-        $prefix = $this->app['config']->get('general/database/prefix');
-        $tablename = $prefix . $contenttype;
-        $query = "SELECT max(datechanged) as maxdate FROM $tablename";
-        $stmt = $this->app['db']->prepare($query);
-        $res = $stmt->execute();
-        $result = $stmt->fetch();
-        return $result['maxdate'];
+      // save the timestamp to the 'app/config/extensions/zohoimport_lock_local.yml' file
+      $timestamp = null;
+      $filesystem = $this->app['filesystem']->getFilesystem('extensions_config');
+      $path = 'zohoimport_lock_local.yml';
+      if ($filesystem->has($path)) {
+        $timestamp = $filesystem->read($path);
+      } else {
+        $timestamp = date('Y-m-d H:i:s', time());
+      }
+
+      return $timestamp;
+        //
+        //$contenttype = $config['target']['contenttype'];
+        //$prefix = $this->app['config']->get('general/database/prefix');
+        //$tablename = $prefix . $contenttype;
+        //$query = "SELECT max(datechanged) as maxdate FROM $tablename";
+        //$stmt = $this->app['db']->prepare($query);
+        //$res = $stmt->execute();
+        //$result = $stmt->fetch();
+        //return $result['maxdate'];
     }
 
 

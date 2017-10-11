@@ -65,7 +65,7 @@ class ZohoImportCommand extends BaseCommand
         if($input->getOption('fast-forward')) {
           $ffwd = $input->getOption('fast-forward');
           $output->writeln( "<info>fast forwarding to: " . $ffwd . "</info>" );
-          $this->app['zohoimport']->step = $ffwd;
+          $this->app['zohoimport']->setFfwd($ffwd);
         }
 
         if ($type == 'full') {
