@@ -104,6 +104,7 @@ class ZohoImport
                   // $looper = $this->looper;
                   $start = ($this->ffwd * $size) + 1;
                   $end = ($this->ffwd * $size) + $size;
+                  $looper = $this->ffwd;
                   $localconfig['source']['getparams'][$counter] = $start;
                   $localconfig['source']['getparams'][$stepper] = $end;
                 }
