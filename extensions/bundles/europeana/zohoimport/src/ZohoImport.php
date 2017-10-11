@@ -99,12 +99,12 @@ class ZohoImport
                 $localconfig['source']['getparams'][$stepper] = $size;
                 if($this->ffwd != null && $this->ffwd >= 1) {
                   // TODO: fast forward to step $this->ffwd
-                  $logmessage = $name . ' - fast forward to ' . $this->ffwd  . ' set.';
+                  $looper = $this->ffwd +1;
+                  $logmessage = $name . ' - fast forward to ' . $looper . '.';
                   $this->logger('info', $logmessage, 'zohoimport');
                   // $looper = $this->looper;
                   $start = ($this->ffwd * $size) + 1;
                   $end = ($this->ffwd * $size) + $size;
-                  $looper = $this->ffwd;
                   $localconfig['source']['getparams'][$counter] = $start;
                   $localconfig['source']['getparams'][$stepper] = $end;
                 }
