@@ -63,22 +63,29 @@ class Backend implements ControllerProviderInterface
             ' . $app['zohoimport']->zohoImportOverview() . '
             </div><div class="panel-footer"></div></div>';
                 $text .= '<div class="panel">
-            <div class="panel-heading"><h2>Manual control</h2></div>
+            <div class="panel-heading"><h2>Overview</h2></div>
             <div class="panel-body">
-                <p>Please run the importer on the console with <tt>php app/nut zoho:import full</tt></p>
-                <p>You can try a  &quot;/admin/extensions/zohoimport/full&quot; full import</a>, 
-                   but that will stall because the process takes to long for the web interface.</p>
+                <p>Running the importer on the console with <tt>php app/nut zoho:import</tt> returns an overview of all imported items.</p>
+            </div><div class="panel-heading"><h2>Manual control</h2></div>
+            <div class="panel-body">
+                <p>Running the importer on the console with <tt>php app/nut zoho:import</tt> returns an overview of all imported items.</p>
+                <p>Please run the batch importer on the console with <tt>php app/nut zoho:import full</tt></p>
+            </div><div class="panel-heading"><h2>Fast forward control</h2></div>
+            <div class="panel-body">
+                <p>If a batch has crashed you can fast forward and continue where you have left off.</p>
+                <p>To continue you can use the <tt>--fast-forward</tt> option with the number of the last step that you can see in the <a href="/admin/systemlog">system log</a>.</p>
+                <p>The full command would look something like: <tt>php app/nut zoho:import full --fast-forward=11</tt></p>
             </div><div class="panel-footer"></div></div>';
-                $type = 'test';
                 break;
         }
-        $app['zohoimport']->logger('info', $text, 'zoho-backend-'.$type, $request);
+        // $app['zohoimport']->logger('info', $text, 'zoho-backend-'.$type, $request);
 
         $html = $app['twig']->render('overview.twig', [
           'title' => 'ZOHO Import overview',
           'text' => $text,
           'zohoconfig' => $app['zohoimport.config']
         ]);
+
 
         return $html;
     }
