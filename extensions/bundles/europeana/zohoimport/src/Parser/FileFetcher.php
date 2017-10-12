@@ -16,9 +16,9 @@ class FileFetcher
         $this->errormessage = false;
     }
 
-  /**
-   * Check if the resource is a local file or a remote file and fetch it
-   */
+    /**
+     * Check if the resource is a local file or a remote file and fetch it
+     */
     public function fetchAnyResource($enabled)
     {
 
@@ -44,9 +44,9 @@ class FileFetcher
         return true;
     }
 
-  /**
-   * Fetch a local file resource
-   */
+    /**
+     * Fetch a local file resource
+     */
     private function fetchLocalResource($url)
     {
         try {
@@ -58,9 +58,9 @@ class FileFetcher
         }
     }
 
-  /**
-   * Fetch a remote url resource
-   */
+    /**
+     * Fetch a remote url resource
+     */
     public function fetchRemoteResource($url)
     {
         $curlOptions = array('CURLOPT_CONNECTTIMEOUT' => 5);
@@ -89,9 +89,9 @@ class FileFetcher
         return true;
     }
 
-  /**
-   * increment remote request counter
-   */
+    /**
+     * increment remote request counter
+     */
     public function countRemoteRequest()
     {
         $this->remote_request_counter++;
@@ -104,7 +104,7 @@ class FileFetcher
 
     public function latestFile()
     {
-      return $this->latestfile;
+        return $this->latestfile;
     }
 
     public function errors()

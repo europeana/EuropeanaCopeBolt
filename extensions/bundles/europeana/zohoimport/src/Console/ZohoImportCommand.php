@@ -60,12 +60,12 @@ class ZohoImportCommand extends BaseCommand
                 $type = 'test';
                 break;
         }
-        $output->writeln( "<info>" . $text . "</info>" );
+        $output->writeln("<info>" . $text . "</info>");
 
-        if($input->getOption('fast-forward')) {
-          $ffwd = $input->getOption('fast-forward');
-          $output->writeln( "<info>fast forwarding to: " . $ffwd . "</info>" );
-          $this->app['zohoimport']->setFfwd($ffwd);
+        if ($input->getOption('fast-forward')) {
+            $ffwd = $input->getOption('fast-forward');
+            $output->writeln("<info>fast forwarding to: " . $ffwd . "</info>");
+            $this->app['zohoimport']->setFfwd($ffwd);
         }
 
         if ($type == 'full') {
@@ -96,6 +96,5 @@ class ZohoImportCommand extends BaseCommand
             $text = sprintf("<comment>Imported %d contacts</comment>", $num);
             $output->writeln($text);
         }
-
     }
 }

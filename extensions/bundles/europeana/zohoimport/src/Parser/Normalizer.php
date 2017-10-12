@@ -12,7 +12,7 @@ class Normalizer
     private $config;
     private $debug_mode;
 
-    function __construct($app)
+    public function __construct($app)
     {
         $this->app = $app;
         $this->config = $this->app['zohoimport.config'];
@@ -20,13 +20,13 @@ class Normalizer
         require_once (dirname(__DIR__) . '/TypeConverter/TypeConverter.php');
     }
 
-  /**
-   * Parse a string into a usable php structure
-   *
-   * @param $filedata
-   *
-   * @return mixed
-   */
+    /**
+     * Parse a string into a usable php structure
+     *
+     * @param $filedata
+     *
+     * @return mixed
+     */
     public function normalizeInput($localconfig, $filedata)
     {
         $this->config = $localconfig;
@@ -52,13 +52,13 @@ class Normalizer
         // dump($this->resourcedata[$name]);
     }
 
-  /**
-   * Parse a nice json string into a usable php structure
-   *
-   * @param $filedata
-   *
-   * @return mixed
-   */
+    /**
+     * Parse a nice json string into a usable php structure
+     *
+     * @param $filedata
+     *
+     * @return mixed
+     */
     private function normalizeFromJson($filedata)
     {
         $doc = json_decode($filedata);
@@ -88,13 +88,13 @@ class Normalizer
         return $doc;
     }
 
-  /**
-   * Parse a json string into a usable php structure
-   *
-   * @param $filedata
-   *
-   * @return mixed
-   */
+    /**
+     * Parse a json string into a usable php structure
+     *
+     * @param $filedata
+     *
+     * @return mixed
+     */
     private function normalizeFromZohoJson($filedata)
     {
         $doc = json_decode($filedata);
@@ -158,13 +158,13 @@ class Normalizer
     }
 
 
-  /**
-   * Parse an xml string into a usable php structure
-   *
-   * @param $filedata
-   *
-   * @return mixed
-   */
+    /**
+     * Parse an xml string into a usable php structure
+     *
+     * @param $filedata
+     *
+     * @return mixed
+     */
     private function normalizeFromXml($filedata)
     {
         $doc = new SimpleXMLElement($filedata);
@@ -193,21 +193,21 @@ class Normalizer
         return $doc;
     }
 
-  /**
-   * Flatten the array values in a record that comes from ZOHO
-   *
-   * This specifically gets the key => data pairs
-   * in the subkey FL to the top level of a row
-   *
-   * from
-   *   $array[$i]['FL'][$j][val=>'key',(value|content)=>'data']
-   * into
-   *   $array[$i][key]=data
-   *
-   * @param $inarray
-   *
-   * @return array
-   */
+    /**
+     * Flatten the array values in a record that comes from ZOHO
+     *
+     * This specifically gets the key => data pairs
+     * in the subkey FL to the top level of a row
+     *
+     * from
+     *   $array[$i]['FL'][$j][val=>'key',(value|content)=>'data']
+     * into
+     *   $array[$i][key]=data
+     *
+     * @param $inarray
+     *
+     * @return array
+     */
     private function flattenZOHO($inarray)
     {
         $test = reset($inarray);
@@ -225,13 +225,13 @@ class Normalizer
         return $outarray;
     }
 
-  /**
-   * Parse an xml string into a usable php structure with simplexml
-   *
-   * @param $filedata
-   *
-   * @return \SimpleXMLElement
-   */
+    /**
+     * Parse an xml string into a usable php structure with simplexml
+     *
+     * @param $filedata
+     *
+     * @return \SimpleXMLElement
+     */
     private function normalizeFromSimpleXML($filedata)
     {
         $doc = new SimpleXMLElement($filedata);
@@ -241,11 +241,11 @@ class Normalizer
         return $doc;
     }
 
-  /**
-   * @param $array
-   *
-   * @return mixed
-   */
+    /**
+     * @param $array
+     *
+     * @return mixed
+     */
     public function convertNulls($array)
     {
         foreach ($array as $key => $value) {

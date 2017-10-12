@@ -15,22 +15,22 @@ use Bolt\Extension\Europeana\ZohoImport\Parser\FileFetcher;
  */
 class ZohoImportServiceProvider implements ServiceProviderInterface
 {
-  /** @var array */
+    /** @var array */
     private $config;
 
-  /**
-   * Constructor.
-   *
-   * @param array $config
-   */
+    /**
+     * Constructor.
+     *
+     * @param array $config
+     */
     public function __construct(array $config)
     {
         $this->config = $config;
     }
 
-  /**
-   * {@inheritdoc}
-   */
+    /**
+     * {@inheritdoc}
+     */
     public function register(Application $app)
     {
         $app['zohoimport'] = $app->share(
@@ -39,14 +39,14 @@ class ZohoImportServiceProvider implements ServiceProviderInterface
             }
         );
         $app['zohoimport.filefetcher'] = $app->share(
-          function ($app) {
-            return new FileFetcher($app);
-          }
+            function ($app) {
+                return new FileFetcher($app);
+            }
         );
         $app['zohoimport.normalizer'] = $app->share(
-          function ($app) {
-            return new Normalizer($app);
-          }
+            function ($app) {
+                return new Normalizer($app);
+            }
         );
         $app['zohoimport.config'] = $app->share(
             function () {
@@ -55,9 +55,9 @@ class ZohoImportServiceProvider implements ServiceProviderInterface
         );
     }
 
-  /**
-   * {@inheritdoc}
-   */
+    /**
+     * {@inheritdoc}
+     */
     public function boot(Application $app)
     {
     }

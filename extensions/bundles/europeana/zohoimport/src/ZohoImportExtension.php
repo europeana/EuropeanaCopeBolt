@@ -14,9 +14,9 @@ use Bolt\Extension\Europeana\ZohoImport\Provider\ZohoImportServiceProvider;
  */
 class ZohoImportExtension extends SimpleExtension
 {
-  /**
-   * {@inheritdoc}
-   */
+    /**
+     * {@inheritdoc}
+     */
     protected function registerBackendControllers()
     {
         return [
@@ -24,9 +24,9 @@ class ZohoImportExtension extends SimpleExtension
         ];
     }
 
-  /**
-   * {@inheritdoc}
-   */
+    /**
+     * {@inheritdoc}
+     */
     public function getServiceProviders()
     {
         return [
@@ -35,9 +35,9 @@ class ZohoImportExtension extends SimpleExtension
         ];
     }
 
-  /**
-   * {@inheritdoc}
-   */
+    /**
+     * {@inheritdoc}
+     */
     protected function registerMenuEntries()
     {
         $menu = new MenuEntry('zohoimport-menu', 'zohoimport');
@@ -51,9 +51,9 @@ class ZohoImportExtension extends SimpleExtension
         ];
     }
 
-  /**
-   * {@inheritdoc}
-   */
+    /**
+     * {@inheritdoc}
+     */
     protected function registerNutCommands(Container $container)
     {
         return [
@@ -61,17 +61,17 @@ class ZohoImportExtension extends SimpleExtension
         ];
     }
 
-  /**
-   * {@inheritdoc}
-   */
+    /**
+     * {@inheritdoc}
+     */
     protected function registerTwigPaths()
     {
         return ['templates'];
     }
 
-  /**
-   * {@inheritdoc}
-   */
+    /**
+     * {@inheritdoc}
+     */
     protected function getDefaultConfig()
     {
         return [
