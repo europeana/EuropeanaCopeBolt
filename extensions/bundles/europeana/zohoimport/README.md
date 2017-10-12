@@ -9,7 +9,11 @@ To use this extension it needs to be placed in the `extensions/local/europeana/z
 
 What resources will be loaded can be configured in the `zohoimport.europeana.yml` in the extension configuration directory.
 
-When everything is configured the import can be performed with the following nut command: `php app/nut zoho:import`
+When everything is configured an overview can be displayed with the following nut command: `php app/nut zoho:import`
+
+When everything is configured the import can be performed with the following nut command: `php app/nut zoho:import full`
+
+If an import has stalled, failed or was otherwise aborted the import can be continued with the following nut command: `php app/nut zoho:import full --fast-forward=5`
 
 ## More information
 
