@@ -244,7 +244,7 @@ $( document ).ready(function() {
         $(this).siblings('article').addClass('expanded');
     });
 
-    $('.license-attribution article').on('mouseleave', function(e){
+    $('.license-attribution article').not('.always-expanded').on('mouseleave', function(e){
         $(this).removeClass('expanded');
     });
 

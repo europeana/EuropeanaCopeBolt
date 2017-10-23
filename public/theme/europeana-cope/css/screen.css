@@ -3393,6 +3393,12 @@ div.body table {
       width: 100%;
       left: 0; } }
 
+@media only screen and (min-width: 47.9375em) {
+  .license-attribution.always-expanded button.image-info {
+    display: none; }
+  .license-attribution.always-expanded article {
+    display: block; } }
+
 /*
 ***********************************************************************
 * Gradients for images.

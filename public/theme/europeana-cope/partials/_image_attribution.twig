@@ -2,6 +2,12 @@
     {% set item = record %}
 {% endif %}
 
+{# expanded = true in include: Attribution always open #}
+
+{% if expanded is not defined %}
+    {% set expanded = false %}
+{% endif %}
+
 
 {% if parentitem == 'banner' or parentitem == 'mainimage' %}
 
@@ -82,7 +88,9 @@
 {% if (attribution_license is defined and attribution_license is not empty)
        or (attribution_title is defined and attribution_title is not empty) %}
 
-    <div class="license-attribution">
+
+        <div class="license-attribution{% if expanded == true %} always-expanded{% endif %}">
+
         <button class="image-info">
             <svg class="icon icon-info">
                 <use xlink:href="#icon-info"></use>

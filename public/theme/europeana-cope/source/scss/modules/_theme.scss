@@ -2218,6 +2218,7 @@ div.body {
             display: block;
         }
 
+
         figure.non-wide & {  // Specific exception for blog with multiple authors
 
             @include respond-to(xlarge-screens) {
@@ -2254,6 +2255,7 @@ div.body {
                text-decoration: none;
             }
         }
+
     }
 
 
@@ -2313,10 +2315,23 @@ div.body {
             }
         }
 
-
     }
 
 
+    &.always-expanded {
+        // == always expanded on desktop
+
+        @include respond-to(large-screens) {
+
+            button.image-info {
+                display: none;
+            }
+
+            article {
+                display: block;
+            }
+        }
+    }
 
 }
 
