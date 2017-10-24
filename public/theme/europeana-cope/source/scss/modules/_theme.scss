@@ -2210,7 +2210,7 @@ div.body {
         width: 100%;
         background: rgba($black, 0.95);
         color: $white;
-        padding: .5rem;
+        padding: .55rem;
         z-index: 50;
         display: none;
 
@@ -2295,7 +2295,7 @@ div.body {
 
         article {
             bottom: 1rem ;
-            left: 5% ;
+            left: 0 ;
             border-radius: 5px;
             width: 90%;
 
@@ -2307,7 +2307,9 @@ div.body {
 
             @include respond-to(large-screens) {
                 width: 33%;
-                left: 1rem;
+                left: 0;
+                border-radius: 0 5px 5px 0;
+
             }
         }
 

@@ -3327,7 +3327,7 @@ div.body table {
   width: 100%;
   background: rgba(26, 26, 26, 0.95);
   color: #fff;
-  padding: .5rem;
+  padding: .55rem;
   z-index: 50;
   display: none; }
   .license-attribution article.expanded {
@@ -3375,7 +3375,7 @@ div.body table {
 
 .banner .license-attribution article {
   bottom: 1rem;
-  left: 5%;
+  left: 0;
   border-radius: 5px;
   width: 90%; }
   @media only screen and (min-width: 24em) {
@@ -3386,7 +3386,8 @@ div.body table {
   @media only screen and (min-width: 47.9375em) {
     .banner .license-attribution article {
       width: 33%;
-      left: 1rem; } }
+      left: 0;
+      border-radius: 0 5px 5px 0; } }
 
 .banner.third .license-attribution button.image-info {
   bottom: 1rem;
