@@ -3354,6 +3354,11 @@ div.body table {
       border-bottom: 1px solid #fff;
       text-decoration: none; }
 
+.teaser .license-attribution button.image-info {
+  bottom: 1rem;
+  left: auto;
+  right: 1rem; }
+
 .banner .license-attribution button.image-info {
   bottom: 1rem;
   left: auto;
