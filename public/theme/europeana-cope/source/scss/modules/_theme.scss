@@ -2258,12 +2258,23 @@ div.body {
 
     }
 
+    //positionering knop in teaser
     .teaser & {
 
         button.image-info {
             bottom: 1rem;
             left: auto;
             right: 1rem;
+        }
+    }
+
+    //positionering knop in related
+    .related-item & {
+
+        button.image-info {
+            bottom: .5rem;
+            left: auto;
+            right: .5rem;
         }
     }
 
