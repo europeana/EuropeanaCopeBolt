@@ -250,6 +250,7 @@ footer {
 
 .sub-footer {
     border-top: 1px solid $line-gray;
+    position: relative;
 }
 
 .footer-block-address {
@@ -273,6 +274,19 @@ p.copyright {
     }
     font-size: 0.75rem;
     color: $line-gray;
+}
+
+.extra-logo {
+
+    img {
+        margin: 1rem auto;
+    }
+
+    @include respond-to(large-screens){
+        margin: 0;
+        float: right;
+        margin-top: -100px;
+    }
 }
 
 /*

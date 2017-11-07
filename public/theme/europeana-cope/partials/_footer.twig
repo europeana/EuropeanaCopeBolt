@@ -73,8 +73,11 @@
             {{ menu('footer', 'partials/_menu_footer.twig') }}
 
             <p class="copyright">
-                {# <img src="{{paths.theme}}images/en_cef_white.png" width='250' alt="Co-financed by the European union. Connecting Europe Facility."/> #}
                 <img src="{{paths.theme}}images/eu_flag_cef_white.svg" width='250' alt="Co-financed by the European Union. Connecting Europe Facility."/>
+            </p>
+            <div class="extra-logo">
+                <img src="{{paths.theme}}images/2018_eych_purple_logo.png"  alt="2018 European year of cultural heritage. #EuropeForCulture"/>
+            </div>
             {% setcontent footerinfo = 'resources/footer-info' %}
             {% if footerinfo is not empty %}
                 {{ footerinfo.body }}

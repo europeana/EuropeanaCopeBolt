@@ -2010,7 +2010,8 @@ footer address {
   display: inline-block; }
 
 .sub-footer {
-  border-top: 1px solid #cccccc; }
+  border-top: 1px solid #cccccc;
+  position: relative; }
 
 .footer-block-address {
   margin-bottom: 2rem; }
@@ -2027,6 +2028,15 @@ p.copyright {
     display: inline-block;
     vertical-align: text-bottom;
     margin-right: .5rem; }
+
+.extra-logo img {
+  margin: 1rem auto; }
+
+@media only screen and (min-width: 47.9375em) {
+  .extra-logo {
+    margin: 0;
+    float: right;
+    margin-top: -100px; } }
 
 /*
 * WIDGET ELEMENTEN
