@@ -935,7 +935,7 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
 }
 
 /*
-* Collapse margins when a banner is the first item on a landingpage
+* Collapse margins when a banner or call to action is the first item on a landingpage
 **/
 
 main .section-banner:first-child {
@@ -944,7 +944,30 @@ main .section-banner:first-child {
     }
 }
 
+main .section-calltoactionform:first-child {
+    .calltoactionform {
+        margin-top: 0px;
+    }
+}
 
+
+main .section-calltoactioninline:first-child {
+    .calltoactioninline {
+        margin-top: 0px;
+    }
+}
+
+main .section-calltoactionlink:first-child {
+    .calltoactionlink {
+        margin-top: 0px;
+    }
+}
+
+main .section-calltoactionlink:first-child {
+    .calltoactionlink {
+        margin-top: 0px;
+    }
+}
 
 /*
 ***********************************************************************
