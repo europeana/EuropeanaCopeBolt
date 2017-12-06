@@ -101,6 +101,8 @@ or record.pagetype == 'landingpage-nohighlight'
 <aside>
     <div class="inner-wrap">
 
+        {% include 'partials/_addthis-widget.twig' %}
+
         {# AUTHOR BIG #}
         {% include 'modules/_teaser_author.twig' with { record : record } %}
 

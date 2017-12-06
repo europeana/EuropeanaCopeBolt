@@ -43,32 +43,28 @@
     {% endif %}
 
     {% if record.deadline is not empty %}
-    {# <br /> #} {#dirty hack, Anke, works! #}
-    <div class="deadline-block">
-        <div class="date-block">
-            <span class="date-txt">Deadline</span>
-            <span class="date">{{ record.deadline|localedatetime("%e %B %Y") }}</span>
+        {# <br /> #} {#dirty hack, Anke, works! #}
+        <div class="deadline-block">
+            <div class="date-block">
+                <span class="date-txt">Deadline</span>
+                <span class="date">{{ record.deadline|localedatetime("%e %B %Y") }}</span>
+            </div>
+
+            {% include 'partials/_add-to-calendar.twig' with { singledate : record.deadline } %}
         </div>
-
-        {% include 'partials/_add-to-calendar.twig' with { singledate : record.deadline } %}
-
-    </div>
     {% endif %}
 
     {% if record.start_event is not empty and record.contenttype.slug in ['projects'] %}
-    <br />{# dirty hack, Anke, works! #}
-    <div class="deadline-block">
-        <div class="date-block">
-            <span class="date">{{ record.start_event|localedatetime("%e %B %Y") }}</span>
-            <span class="date-txt">to</span>
-            <span class="date">{{ record.end_event|localedatetime("%e %B %Y") }}</span>
-        </div>
+        <br />{# dirty hack, Anke, works! #}
+        <div class="deadline-block">
+            <div class="date-block">
+                <span class="date">{{ record.start_event|localedatetime("%e %B %Y") }}</span>
+                <span class="date-txt">to</span>
+                <span class="date">{{ record.end_event|localedatetime("%e %B %Y") }}</span>
+            </div>
 
-        {% include 'partials/_add-to-calendar.twig' %}
-
+            {% include 'partials/_add-to-calendar.twig' %}
         </div>
     {% endif %}
 
-    {# addthis placeholder #}
-    <div class="addthis_inline_share_toolbox"></div>
 </div>
