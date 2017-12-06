@@ -310,7 +310,22 @@ ul.teaser-list {
 }
 
 
+.group.content-right {
+    padding: 1rem 0;
 
+    & > * {
+        float: right;
+    }
+}
+
+
+.group.content-left {
+    padding: 1rem 0;
+
+    & > * {
+        float: left;
+    }
+}
 
 // column classes. Half is 50%, Third 33%, TwoThirds 66%..... such wows...
 // very column. such grid
