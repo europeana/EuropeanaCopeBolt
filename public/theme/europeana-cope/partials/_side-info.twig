@@ -52,7 +52,7 @@
 
         {% include 'partials/_add-to-calendar.twig' with { singledate : record.deadline } %}
 
-        </div>
+    </div>
     {% endif %}
 
     {% if record.start_event is not empty and record.contenttype.slug in ['projects'] %}
@@ -69,5 +69,6 @@
         </div>
     {% endif %}
 
-
+    {# addthis placeholder #}
+    <div class="addthis_inline_share_toolbox"></div>
 </div>
