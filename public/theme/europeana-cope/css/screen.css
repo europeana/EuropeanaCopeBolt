@@ -737,6 +737,16 @@ ul.teaser-list {
     ul.teaser-list {
       margin: 4rem 4rem; } }
 
+.group.content-right {
+  padding: 1rem 0; }
+  .group.content-right > * {
+    float: right; }
+
+.group.content-left {
+  padding: 1rem 0; }
+  .group.content-left > * {
+    float: left; }
+
 .fourth {
   width: 50%;
   float: left; }
