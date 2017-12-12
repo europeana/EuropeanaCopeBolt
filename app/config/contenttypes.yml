@@ -14,12 +14,18 @@ __nodes:
       height: 150px
       postfix: "Shown on individual pages before the main body text"
       group: Main
+      options:
+        ckeditor:
+          removePlugins: 'image'
     body:
       type: html
       label: "Body"
       height: 300px
       postfix: "Shown on individual pages as main body text"
       group: Main
+      options:
+        ckeditor:
+          removePlugins: 'image'
   teaser_defaults: &teaser_defaults
     teaser:
       type: html
@@ -27,6 +33,9 @@ __nodes:
       height: 150px
       postfix: "The teaser is shown on listing pages instead of the intro and body fields. Also used for related content teasers"
       group: Teaser
+      options:
+        ckeditor:
+          removePlugins: 'image'
     teaser_image:
       type: image
       label: "Teaser image"
@@ -168,6 +177,9 @@ __nodes:
       height: 150px
       postfix: '<p>Use this field to override the introduction from the contact record with a custom blurb.</p>'
       group: Support contact
+      options:
+        ckeditor:
+          removePlugins: 'image'
   contact_defaults: &contact_defaults
     contact_name:
       type: text
@@ -281,6 +293,9 @@ pages:
       height: 100px
       postfix: "Shown on individual pages below the main body text"
       group: Main
+      options:
+        ckeditor:
+          removePlugins: 'image'
     pagetype:
       type: select
       label: Type of page
@@ -448,6 +463,9 @@ pages:
           height: 100px
           postfix: "Shown in module blocks as body text"
           class: 'showfortemplate-body'
+          options:
+            ckeditor:
+              removePlugins: 'image'
         image:
           type: image
           label: Image
@@ -746,6 +764,9 @@ posts:
       height: 150px
       postfix: "Shown on individual pages before the main body text"
       group: Main
+      options:
+        ckeditor:
+          removePlugins: 'image'
     modules:
       label: Modules
       type: repeater
@@ -805,6 +826,9 @@ posts:
           height: 100px
           postfix: "Shown in module blocks as body text"
           class: 'showfortemplate-body'
+          options:
+            ckeditor:
+              removePlugins: 'image'
         image:
           type: image
           label: Image
@@ -1044,6 +1068,9 @@ posts:
       height: 300px
       postfix: "Shown on individual pages as main body text"
       group: Main
+      options:
+        ckeditor:
+          removePlugins: 'image'
     author:
       label: "Author(s)"
       type: text
@@ -1101,12 +1128,18 @@ data:
       height: 150px
       postfix: "Shown on individual pages before the main body text"
       group: Main
+      options:
+        ckeditor:
+          removePlugins: 'image'
     body:
       type: html
       label: "Body (required)"
       height: 300px
       postfix: "Shown on individual pages as main body text"
       group: Main
+      options:
+        ckeditor:
+          removePlugins: 'image'
     modules:
       label: Modules
       type: repeater
@@ -1166,6 +1199,9 @@ data:
           height: 100px
           postfix: "Shown in module blocks as body text"
           class: 'showfortemplate-body'
+          options:
+            ckeditor:
+              removePlugins: 'image'
         image:
           type: image
           label: Image
@@ -1510,12 +1546,18 @@ projects:
       height: 150px
       postfix: "Shown on individual pages before the main body text"
       group: Main
+      options:
+        ckeditor:
+          removePlugins: 'image'
     body:
       type: html
       label: "Body (required)"
       height: 300px
       postfix: "Shown on individual pages as main body text"
       group: Main
+      options:
+        ckeditor:
+          removePlugins: 'image'
     department:
       type: select
       label: "Department"
@@ -1586,6 +1628,9 @@ projects:
           height: 100px
           postfix: "Shown in module blocks as body text"
           class: 'showfortemplate-body'
+          options:
+            ckeditor:
+              removePlugins: 'image'
         image:
           type: image
           label: Image
@@ -1921,6 +1966,9 @@ events:
           height: 100px
           postfix: "Shown in module blocks as body text"
           class: 'showfortemplate-body'
+          options:
+            ckeditor:
+              removePlugins: 'image'
         image:
           type: image
           label: Image
@@ -2198,6 +2246,9 @@ jobs:
       height: 300px
       postfix: "Shown on individual pages as main body text"
       group: "Main"
+      options:
+        ckeditor:
+          removePlugins: 'image'
     department:
       type: select
       required: false
@@ -2333,11 +2384,17 @@ persons:
       label: "Teaser"
       height: 150px
       postfix: "The teaser is shown on listing pages instead of the intro and body fields. Also used for related content teasers"
+      options:
+        ckeditor:
+          removePlugins: 'image'
     introduction:
       type: html
       label: "Introduction (Main Bio)"
       height: 200px
       group: "Personal"
+      options:
+        ckeditor:
+          removePlugins: 'image'
     speaker_teaser:
       type: html
       required: false
@@ -2345,12 +2402,18 @@ persons:
       height: 100px
       group: "Personal"
       prefix: "<div><h3>Speaker introduction</h3><p>Enter a short introduction for use on event pages where this person is a speaker.</p><br></div>"
+      options:
+        ckeditor:
+          removePlugins: 'image'
     speaker_intro:
       type: html
       required: false
       label: "Speaker Introduction"
       height: 200px
       group: "Personal"
+      options:
+        ckeditor:
+          removePlugins: 'image'
     company:
       type: text
       required: false
@@ -2458,12 +2521,18 @@ persons:
       height: 100px
       group: "Europeana Networks"
       prefix: "<div><h3>MC Election Candidacy</h3><p>Enter a short introduction for use on membership election pages where this person is a elegible.</p><br></div>"
+      options:
+        ckeditor:
+          removePlugins: 'image'
     candidacy_intro:
       type: html
       required: false
       label: "Candicacy Introduction"
       height: 200px
       group: "Europeana Networks"
+      options:
+        ckeditor:
+          removePlugins: 'image'
     uid:
       type: text
       class: narrow
@@ -2521,11 +2590,17 @@ resources:
       type: html
       label: "Block body"
       height: 300px
+      options:
+        ckeditor:
+          removePlugins: 'image'
     htmllink:
       type: text
       label: "Block HTML link (optional)"
       postfix: "<small>E.g: /pages/this-is-my-page . </small>"
       info: If you need your banner to link somewhere, use this field.
+      options:
+        ckeditor:
+          removePlugins: 'image'
     buttontext:
       type: text
       label: "Text on button (optional)"
@@ -2767,6 +2842,9 @@ blogevents:
       label: "Teaser (required)"
       height: 150px
       group: "Teaser"
+      options:
+        ckeditor:
+          removePlugins: 'image'
     # Show on Events list page, Events page, Home page
     body:
       type: html
@@ -2774,6 +2852,9 @@ blogevents:
       label: "Body (required)"
       height: 150px
       group: "Event information"
+      options:
+        ckeditor:
+          removePlugins: 'image'
     # Shown on Individual pages, Lists, Overviews, Teasers
     teaser_image:
       type: image

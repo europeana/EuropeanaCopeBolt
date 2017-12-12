@@ -305,7 +305,7 @@ strict_variables: false
 # enable them for your editors, please instruct them thoroughly on their
 # responsibility not to break the layout.
 wysiwyg:
-    images: false            # Allow users to insert images in the content.
+    images: true            # Allow users to insert images in the content.
     anchor: false            # Adds a button to create internal anchors to link to.
     tables: false            # Adds a button to insert and modify tables in the content.
     fontcolor: false         # Allow users to mess around with font coloring.
