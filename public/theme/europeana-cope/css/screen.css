@@ -2140,12 +2140,12 @@ a.banner {
         .banner .header-group p,
         a.banner .header-group p {
           font-size: 0.875rem; } }
-  .banner.third .header-group,
-  a.banner.third .header-group {
+  .third .banner .header-group, .third
+  a.banner .header-group {
     left: 0;
     width: 80%; }
-    .banner.third .header-group p,
-    a.banner.third .header-group p {
+    .third .banner .header-group p, .third
+    a.banner .header-group p {
       font-size: 0.75rem; }
 
 .ripple {
@@ -3445,6 +3445,9 @@ div.body table {
   bottom: 0;
   left: 0;
   width: 100%; }
+  .banner-container.third .license-attribution,
+  .banner-container.double .license-attribution {
+    bottom: 1rem; }
   .license-attribution button.image-info {
     position: absolute;
     bottom: 1rem;
@@ -3500,36 +3503,26 @@ div.body table {
     bottom: .5rem;
     left: auto;
     right: .5rem; }
-  .section-banner .license-attribution button.image-info,
-  .section-bannerdouble .license-attribution button.image-info,
-  .section-bannertriple .license-attribution button.image-info {
+  .section-banner .license-attribution button.image-info {
     bottom: 1rem;
     left: auto;
     right: 1rem; }
     @media only screen and (min-width: 47.9375em) {
-      .section-banner .license-attribution button.image-info,
-      .section-bannerdouble .license-attribution button.image-info,
-      .section-bannertriple .license-attribution button.image-info {
+      .section-banner .license-attribution button.image-info {
         left: 1rem;
         right: auto; } }
-  .section-banner .license-attribution article,
-  .section-bannerdouble .license-attribution article,
-  .section-bannertriple .license-attribution article {
+  .section-banner .license-attribution article {
     bottom: 1rem;
     left: 0;
     border-radius: 5px;
     width: 90%; }
     @media only screen and (min-width: 24em) {
-      .section-banner .license-attribution article,
-      .section-bannerdouble .license-attribution article,
-      .section-bannertriple .license-attribution article {
+      .section-banner .license-attribution article {
         width: 50%;
         left: auto;
         right: 1rem; } }
     @media only screen and (min-width: 47.9375em) {
-      .section-banner .license-attribution article,
-      .section-bannerdouble .license-attribution article,
-      .section-bannertriple .license-attribution article {
+      .section-banner .license-attribution article {
         width: 33%;
         left: 0;
         border-radius: 0 5px 5px 0; } }

@@ -410,7 +410,7 @@ a.banner {
         }
     }
 
-    &.third .header-group {
+    .third & .header-group {
         left: 0;
         width: 80%; // was 100, maar nu ruimte voor image attr knopje
 
@@ -2239,6 +2239,11 @@ div.body {
     left: 0;
     width: 100%;
 
+    .banner-container.third &,
+    .banner-container.double & {
+        bottom: 1rem;
+    }
+
     button.image-info {
         position: absolute;
         bottom: 1rem;
@@ -2343,9 +2348,7 @@ div.body {
 
 
     //positionering article in banner
-    .section-banner &,
-    .section-bannerdouble &,
-    .section-bannertriple & {
+    .section-banner & {
 
         button.image-info {
             bottom: 1rem;
