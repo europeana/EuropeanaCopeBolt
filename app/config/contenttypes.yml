@@ -80,7 +80,7 @@ __nodes:
       class: 'image-attribution-group'
     teaser_attribution_link:
       type: text
-      label: "Image link on europeana"
+      label: "Image link on europeana - including http"
       variant: inline
       class: 'image-attribution-group'
   media_defaults: &media_defaults
@@ -132,7 +132,7 @@ __nodes:
       class: 'image-attribution-group'
     image_attribution_link:
       type: text
-      label: "Image link on europeana"
+      label: "Image link on europeana - including http"
       variant: inline
       class: 'image-attribution-group'
   structure_defaults: &structure_defaults
@@ -512,7 +512,7 @@ pages:
           class: 'showfortemplate-image attribution-group'
         attribution_link:
           type: text
-          label: "Image link on europeana"
+          label: "Image link on europeana - including http"
           variant: inline
           class: 'showfortemplate-image attribution-group'
         singlefile:
@@ -875,7 +875,7 @@ posts:
           class: 'showfortemplate-image attribution-group'
         attribution_link:
           type: text
-          label: "Image link on europeana"
+          label: "Image link on europeana - including http"
           variant: inline
           class: 'showfortemplate-image attribution-group'
         singlefile:
@@ -1248,7 +1248,7 @@ data:
           class: 'showfortemplate-image attribution-group'
         attribution_link:
           type: text
-          label: "Image link on europeana"
+          label: "Image link on europeana - including http"
           variant: inline
           class: 'showfortemplate-image attribution-group'
         singlefile:
@@ -1677,7 +1677,7 @@ projects:
           class: 'showfortemplate-image attribution-group'
         attribution_link:
           type: text
-          label: "Image link on europeana"
+          label: "Image link on europeana - including http"
           variant: inline
           class: 'showfortemplate-image attribution-group'
         singlefile:
@@ -2015,7 +2015,7 @@ events:
           class: 'showfortemplate-image attribution-group'
         attribution_link:
           type: text
-          label: "Image link on europeana"
+          label: "Image link on europeana - including http"
           variant: inline
           class: 'showfortemplate-image attribution-group'
         fileslistpath:
@@ -2680,7 +2680,7 @@ resources:
       class: 'image-attribution-group'
     image_attribution_link:
       type: text
-      label: "Image link on europeana"
+      label: "Image link on europeana - including http"
       variant: inline
       class: 'image-attribution-group'
     slug:

@@ -100,17 +100,30 @@
         <article>
             <p>{{ attribution_title }}
                 {% if (attribution_title is not empty) and (attribution_creator is not empty) %} - {% endif %}
-                {{ attribution_creator }}</p>
+                {{ attribution_creator }}
+                {% if attribution_link  is not empty %}
+                    <a class='sourcelink' href="{{ attribution_link }}">(Source)</a>
+                {% endif %}
+            </p>
             <p>{{ attribution_date }}</p>
             <p>{{ attribution_holder }}</p>
             <p>{{ attribution_country }}</p>
-            {% if attribution_link %}
-                {# <p><a href="{{ attribution_link }}">Source</a></p> BREAKS LAYOUT, BECAUSE a in a #}
-            {% endif %}
 
             {% if (attribution_license is defined and attribution_license is not empty) %}
 
-                {# Showing the correct icons #}
+                {# Showing the correct icons + link #}
+                {% set iconlinks = {
+                    'Public-Domain' : 'https://creativecommons.org/publicdomain/mark/1.0/',
+                    'CC0' : 'https://creativecommons.org/publicdomain/zero/1.0/',
+                    'CC-BY' : 'https://creativecommons.org/licenses/by/1.0/',
+                    'CC-BY-SA' : 'https://creativecommons.org/licenses/by-sa/1.0/',
+                    'CC-BY-NC' : 'https://creativecommons.org/licenses/by-nc/1.0/',
+                    'CC-BY-NC-SA' : 'https://creativecommons.org/licenses/by-nc-sa/1.0/'
+                    }
+                %}
+
+
+                <a class="attributionlink" href="{{ iconlinks[attribution_license] }}" target="_blank">
 
                 {% if attribution_license == 'Public-Domain' %}
                     <svg class="icon icon-cc_publicdomain">
@@ -148,6 +161,8 @@
                 {% set labels = config.get('contenttypes/pages/fields/image_attribution_license/values') %}
 
                 <span class="image-license">{{ labels[attribution_license] }}</span>
+
+                </a>
 
             {% endif %}
 

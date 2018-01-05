@@ -928,7 +928,14 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
     .calltoactionlink,
     .calltoactioninline,
     .calltoaction {
-        margin-top: -1rem;
+
+
+        margin-top: 0 rem; // needs check, gaat dit altijd goed? - AW
+
+        @include respond-to(large-screens){
+            margin-top: -1rem;
+        }
+
 
     }
 
@@ -2221,8 +2228,16 @@ div.body {
 ***********************************************************************
 **/
 
+.banner-container {
+    position: relative;
+}
 
 .license-attribution {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 
     button.image-info {
         position: absolute;
@@ -2290,11 +2305,17 @@ div.body {
 
         a {
             color: $white;
+
+            &:hover {
+               text-decoration: none;
+            }
+        }
+
+        a.sourcelink {
             border-bottom: 1px dotted $white;
 
             &:hover {
-               border-bottom: 1px solid $white;
-               text-decoration: none;
+               border-bottom: 1px dotted $white;
             }
         }
 
@@ -2322,7 +2343,7 @@ div.body {
 
 
     //positionering article in banner
-    .banner & {
+    .section-banner & {
 
         button.image-info {
             bottom: 1rem;
