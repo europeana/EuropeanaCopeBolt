@@ -2553,7 +2553,73 @@ div.calltoaction {
   .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoactionlink,
   .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoactioninline,
   .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoaction {
-    margin-top: -1rem; }
+    margin-top: 0 rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .section-banner + .section-calltoactionform .calltoactionform,
+      .section-banner + .section-calltoactionform .calltoactionlink,
+      .section-banner + .section-calltoactionform .calltoactioninline,
+      .section-banner + .section-calltoactionform .calltoaction,
+      .section-banner + .section-calltoactioninline .calltoactionform,
+      .section-banner + .section-calltoactioninline .calltoactionlink,
+      .section-banner + .section-calltoactioninline .calltoactioninline,
+      .section-banner + .section-calltoactioninline .calltoaction,
+      .section-banner + .section-calltoactionlink .calltoactionform,
+      .section-banner + .section-calltoactionlink .calltoactionlink,
+      .section-banner + .section-calltoactionlink .calltoactioninline,
+      .section-banner + .section-calltoactionlink .calltoaction,
+      .section-banner + .section-calltoaction .calltoactionform,
+      .section-banner + .section-calltoaction .calltoactionlink,
+      .section-banner + .section-calltoaction .calltoactioninline,
+      .section-banner + .section-calltoaction .calltoaction,
+      .section-banner + .in-page-anchor + .section-calltoactionform .calltoactionform,
+      .section-banner + .in-page-anchor + .section-calltoactionform .calltoactionlink,
+      .section-banner + .in-page-anchor + .section-calltoactionform .calltoactioninline,
+      .section-banner + .in-page-anchor + .section-calltoactionform .calltoaction,
+      .section-banner + .in-page-anchor + .section-calltoactioninline .calltoactionform,
+      .section-banner + .in-page-anchor + .section-calltoactioninline .calltoactionlink,
+      .section-banner + .in-page-anchor + .section-calltoactioninline .calltoactioninline,
+      .section-banner + .in-page-anchor + .section-calltoactioninline .calltoaction,
+      .section-banner + .in-page-anchor + .section-calltoactionlink .calltoactionform,
+      .section-banner + .in-page-anchor + .section-calltoactionlink .calltoactionlink,
+      .section-banner + .in-page-anchor + .section-calltoactionlink .calltoactioninline,
+      .section-banner + .in-page-anchor + .section-calltoactionlink .calltoaction,
+      .section-banner + .in-page-anchor + .section-calltoaction .calltoactionform,
+      .section-banner + .in-page-anchor + .section-calltoaction .calltoactionlink,
+      .section-banner + .in-page-anchor + .section-calltoaction .calltoactioninline,
+      .section-banner + .in-page-anchor + .section-calltoaction .calltoaction,
+      .section-bannertriple + .section-calltoactionform .calltoactionform,
+      .section-bannertriple + .section-calltoactionform .calltoactionlink,
+      .section-bannertriple + .section-calltoactionform .calltoactioninline,
+      .section-bannertriple + .section-calltoactionform .calltoaction,
+      .section-bannertriple + .section-calltoactioninline .calltoactionform,
+      .section-bannertriple + .section-calltoactioninline .calltoactionlink,
+      .section-bannertriple + .section-calltoactioninline .calltoactioninline,
+      .section-bannertriple + .section-calltoactioninline .calltoaction,
+      .section-bannertriple + .section-calltoactionlink .calltoactionform,
+      .section-bannertriple + .section-calltoactionlink .calltoactionlink,
+      .section-bannertriple + .section-calltoactionlink .calltoactioninline,
+      .section-bannertriple + .section-calltoactionlink .calltoaction,
+      .section-bannertriple + .section-calltoaction .calltoactionform,
+      .section-bannertriple + .section-calltoaction .calltoactionlink,
+      .section-bannertriple + .section-calltoaction .calltoactioninline,
+      .section-bannertriple + .section-calltoaction .calltoaction,
+      .section-bannertriple + .in-page-anchor + .section-calltoactionform .calltoactionform,
+      .section-bannertriple + .in-page-anchor + .section-calltoactionform .calltoactionlink,
+      .section-bannertriple + .in-page-anchor + .section-calltoactionform .calltoactioninline,
+      .section-bannertriple + .in-page-anchor + .section-calltoactionform .calltoaction,
+      .section-bannertriple + .in-page-anchor + .section-calltoactioninline .calltoactionform,
+      .section-bannertriple + .in-page-anchor + .section-calltoactioninline .calltoactionlink,
+      .section-bannertriple + .in-page-anchor + .section-calltoactioninline .calltoactioninline,
+      .section-bannertriple + .in-page-anchor + .section-calltoactioninline .calltoaction,
+      .section-bannertriple + .in-page-anchor + .section-calltoactionlink .calltoactionform,
+      .section-bannertriple + .in-page-anchor + .section-calltoactionlink .calltoactionlink,
+      .section-bannertriple + .in-page-anchor + .section-calltoactionlink .calltoactioninline,
+      .section-bannertriple + .in-page-anchor + .section-calltoactionlink .calltoaction,
+      .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoactionform,
+      .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoactionlink,
+      .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoactioninline,
+      .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoaction {
+        margin-top: -1rem; } }
 
 /*
 * Collapse margins when a banner or call to action is the first item on a landingpage
@@ -3371,108 +3437,120 @@ div.body table {
 * Image attribution vlakken
 ***********************************************************************
 **/
-.license-attribution button.image-info {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  z-index: 50; }
-  .license-attribution button.image-info svg {
-    width: 26px;
-    height: 26px;
-    fill: #fff; }
-  @media only screen and (min-width: 80em) {
-    figure.non-wide .license-attribution button.image-info {
-      left: 5rem; } }
+.banner-container {
+  position: relative; }
 
-.license-attribution article {
+.license-attribution {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  background: rgba(26, 26, 26, 0.95);
-  color: #fff;
-  padding: .55rem;
-  z-index: 50;
-  display: none; }
-  .license-attribution article.expanded {
-    display: block; }
-  @media only screen and (min-width: 80em) {
-    figure.non-wide .license-attribution article {
-      left: 4rem;
-      width: calc( 100% - 8rem); } }
-  .license-attribution article p {
-    margin: 0;
-    font-size: 0.6875rem;
+  width: 100%; }
+  .license-attribution button.image-info {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 50; }
+    .license-attribution button.image-info svg {
+      width: 26px;
+      height: 26px;
+      fill: #fff; }
+    @media only screen and (min-width: 80em) {
+      figure.non-wide .license-attribution button.image-info {
+        left: 5rem; } }
+  .license-attribution article {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.95);
     color: #fff;
-    padding: 0;
-    max-width: 500px; }
-  .license-attribution article span.image-license {
-    font-size: 0.6875rem; }
-  .license-attribution article svg {
-    fill: #fff;
-    margin-right: .5rem; }
-  .license-attribution article a {
-    color: #fff;
-    border-bottom: 1px dotted #fff; }
-    .license-attribution article a:hover {
-      border-bottom: 1px solid #fff;
-      text-decoration: none; }
-
-.teaser .license-attribution button.image-info {
-  bottom: 1rem;
-  left: auto;
-  right: 1rem; }
-
-.related-item .license-attribution button.image-info {
-  bottom: .5rem;
-  left: auto;
-  right: .5rem; }
-
-.banner .license-attribution button.image-info {
-  bottom: 1rem;
-  left: auto;
-  right: 1rem; }
-  @media only screen and (min-width: 47.9375em) {
-    .banner .license-attribution button.image-info {
-      left: 1rem;
-      right: auto; } }
-
-.banner .license-attribution article {
-  bottom: 1rem;
-  left: 0;
-  border-radius: 5px;
-  width: 90%; }
-  @media only screen and (min-width: 24em) {
-    .banner .license-attribution article {
-      width: 50%;
-      left: auto;
-      right: 1rem; } }
-  @media only screen and (min-width: 47.9375em) {
-    .banner .license-attribution article {
-      width: 33%;
-      left: 0;
-      border-radius: 0 5px 5px 0; } }
-
-.banner.third .license-attribution button.image-info {
-  bottom: 1rem;
-  left: auto;
-  right: 1rem; }
-
-.banner.third .license-attribution article {
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  border-radius: 0; }
-  @media only screen and (min-width: 47.9375em) {
-    .banner.third .license-attribution article {
-      width: 100%;
-      left: 0; } }
-
-@media only screen and (min-width: 47.9375em) {
-  .license-attribution.always-expanded button.image-info {
+    padding: .55rem;
+    z-index: 50;
     display: none; }
-  .license-attribution.always-expanded article {
-    display: block; } }
+    .license-attribution article.expanded {
+      display: block; }
+    @media only screen and (min-width: 80em) {
+      figure.non-wide .license-attribution article {
+        left: 4rem;
+        width: calc( 100% - 8rem); } }
+    .license-attribution article p {
+      margin: 0;
+      font-size: 0.6875rem;
+      color: #fff;
+      padding: 0;
+      max-width: 500px; }
+    .license-attribution article span.image-license {
+      font-size: 0.6875rem; }
+    .license-attribution article svg {
+      fill: #fff;
+      margin-right: .5rem; }
+    .license-attribution article a {
+      color: #fff; }
+      .license-attribution article a:hover {
+        text-decoration: none; }
+    .license-attribution article a.sourcelink {
+      border-bottom: 1px dotted #fff; }
+      .license-attribution article a.sourcelink:hover {
+        border-bottom: 1px dotted #fff; }
+  .teaser .license-attribution button.image-info {
+    bottom: 1rem;
+    left: auto;
+    right: 1rem; }
+  .related-item .license-attribution button.image-info {
+    bottom: .5rem;
+    left: auto;
+    right: .5rem; }
+  .section-banner .license-attribution button.image-info,
+  .section-bannerdouble .license-attribution button.image-info,
+  .section-bannertriple .license-attribution button.image-info {
+    bottom: 1rem;
+    left: auto;
+    right: 1rem; }
+    @media only screen and (min-width: 47.9375em) {
+      .section-banner .license-attribution button.image-info,
+      .section-bannerdouble .license-attribution button.image-info,
+      .section-bannertriple .license-attribution button.image-info {
+        left: 1rem;
+        right: auto; } }
+  .section-banner .license-attribution article,
+  .section-bannerdouble .license-attribution article,
+  .section-bannertriple .license-attribution article {
+    bottom: 1rem;
+    left: 0;
+    border-radius: 5px;
+    width: 90%; }
+    @media only screen and (min-width: 24em) {
+      .section-banner .license-attribution article,
+      .section-bannerdouble .license-attribution article,
+      .section-bannertriple .license-attribution article {
+        width: 50%;
+        left: auto;
+        right: 1rem; } }
+    @media only screen and (min-width: 47.9375em) {
+      .section-banner .license-attribution article,
+      .section-bannerdouble .license-attribution article,
+      .section-bannertriple .license-attribution article {
+        width: 33%;
+        left: 0;
+        border-radius: 0 5px 5px 0; } }
+  .banner.third .license-attribution button.image-info {
+    bottom: 1rem;
+    left: auto;
+    right: 1rem; }
+  .banner.third .license-attribution article {
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    border-radius: 0; }
+    @media only screen and (min-width: 47.9375em) {
+      .banner.third .license-attribution article {
+        width: 100%;
+        left: 0; } }
+  @media only screen and (min-width: 47.9375em) {
+    .license-attribution.always-expanded button.image-info {
+      display: none; }
+    .license-attribution.always-expanded article {
+      display: block; } }
 
 /*
 ***********************************************************************

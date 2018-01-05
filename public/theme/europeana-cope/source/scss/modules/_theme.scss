@@ -2343,7 +2343,9 @@ div.body {
 
 
     //positionering article in banner
-    .section-banner & {
+    .section-banner &,
+    .section-bannerdouble &,
+    .section-bannertriple & {
 
         button.image-info {
             bottom: 1rem;

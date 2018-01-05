@@ -1,5 +1,5 @@
-<div class="banner-container">
-    <a class="banner {{ layoutclass }}" href="{{ record.htmllink|default(record.link)|default('#') }}">
+<div class="banner-container {{ layoutclass }}">
+    <a class="banner" href="{{ record.htmllink|default(record.link)|default('#') }}">
         <div class="colored-image"
             {% if record.image is defined and record.image is not empty %}
                 {% if layoutclass == 'third' %}
