@@ -2986,6 +2986,9 @@ main .section-calltoactionlink:first-child .calltoactionlink {
         right: 0;
         top: 0; } }
 
+figure .main-img-container {
+  position: relative; }
+
 .section-image .img-container {
   position: relative; }
 
@@ -3445,9 +3448,10 @@ div.body table {
   bottom: 0;
   left: 0;
   width: 100%; }
-  .banner-container.third .license-attribution,
-  .banner-container.double .license-attribution {
-    bottom: 1rem; }
+  @media only screen and (min-width: 47.9375em) {
+    .banner-container.third .license-attribution,
+    .banner-container.double .license-attribution {
+      bottom: 1rem; } }
   .license-attribution button.image-info {
     position: absolute;
     bottom: 1rem;

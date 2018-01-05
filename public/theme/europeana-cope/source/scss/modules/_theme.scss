@@ -1484,6 +1484,12 @@ main .section-calltoactionlink:first-child {
     }
 }
 
+figure {
+    .main-img-container {
+        position: relative;
+    }
+}
+
 // Image module
 
 
@@ -2241,7 +2247,9 @@ div.body {
 
     .banner-container.third &,
     .banner-container.double & {
-        bottom: 1rem;
+        @include respond-to(large-screens) {
+            bottom: 1rem;
+        }
     }
 
     button.image-info {
