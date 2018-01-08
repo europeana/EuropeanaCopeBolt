@@ -61,7 +61,6 @@ form.searchform {
     }
 
 
-
     input[type="search"] {
         display: inline-block;
         vertical-align: middle;
@@ -76,6 +75,14 @@ form.searchform {
 
         @include respond-to (menu-full) {
             width: 300px; //580px;
+        }
+
+        article & {
+
+            @include respond-to (large-screens){
+                width: 90%;
+                max-width: 530px;
+            }
         }
     }
 

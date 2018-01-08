@@ -1830,6 +1830,10 @@ form.searchform input[type="search"] {
   @media only screen and (min-width: 60em) {
     form.searchform input[type="search"] {
       width: 300px; } }
+  @media only screen and (min-width: 47.9375em) {
+    article form.searchform input[type="search"] {
+      width: 90%;
+      max-width: 530px; } }
 
 form.searchform button {
   width: 15%;
