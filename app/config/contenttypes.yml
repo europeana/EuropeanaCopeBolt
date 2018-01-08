@@ -2883,3 +2883,41 @@ blogevents:
   icon_one: "fa:calendar"
   viewless: true
   sort: start_event
+
+#################################
+#
+# Status messages
+#
+# Only used as block texts on status pages, such as empty listings etc.
+# restricted for admins only
+#
+#################################
+
+statusmessages:
+  name: 'Status messages'
+  singular_name: 'Status message'
+  slug: 'statusmessages'
+  singular_slug: 'statusmessage'
+  fields:
+    title:
+      type: text
+      required: true
+      label: "Title - used in Bolt only (required)"
+      group: "Content"
+    contenttitle:
+      type: text
+      required: true
+      label: "Heading - used on site (required)"
+      variant: inline
+      prefix: '<hr />'
+    contenttext:
+      type: html
+      label: "Text - used on site"
+      height: 150px
+    slug:
+      type: slug
+      uses: title
+      group: meta
+  viewless: true
+  icon_many: "fa:commenting-o"
+  icon_one: "fa:commenting-o"

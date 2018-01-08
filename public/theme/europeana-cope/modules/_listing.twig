@@ -51,10 +51,20 @@ Available variables
                 {{ pager( (pagername) ) }}
             {% endif %}
         {% else %}
-            {% if record is not empty and record.editlink() %}
-                <p class="warning">No published records were found, please <a href="{{ record.editlink() }}#modules">change the module settings</a>.</p>
+            {% if record is not empty %}
+
+                <article class="column">
+                    <div class="body">
+                        {% setcontent statusmessage = 'statusmessages/empty-listing' %}
+
+                        {% if statusmessage is not empty %}
+                            <h2 class="gamma">{{ statusmessage.contenttitle }}</h2>
+                            {{ statusmessage.contenttext }}
+                        {% endif %}
+                    </div>
+                </article>
             {% else %}
-                <!-- no records were found for this module -->
+                <!-- no records found -->
             {% endif %}
         {% endif %}
 

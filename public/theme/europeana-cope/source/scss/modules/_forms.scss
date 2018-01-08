@@ -42,18 +42,25 @@ input::placeholder {
 
 form.searchform {
 
-    margin: 1rem 0;
-    text-align: right;
-    width: 100%;
 
-    @include respond-to (menu-full) {
-        display: block;
-        position: absolute;
-        top: 0.5rem; //1rem;
-        right: 0.875rem;
-        width: 380px; //650px;
+    header & {
+
+        margin: 1rem 0;
+        text-align: right;
+        width: 100%;
+
+        @include respond-to (menu-full) {
+            display: block;
+            position: absolute;
+            top: 0.5rem; //1rem;
+            right: 0.875rem;
+            width: 380px; //650px;
+
+        }
 
     }
+
+
 
     input[type="search"] {
         display: inline-block;

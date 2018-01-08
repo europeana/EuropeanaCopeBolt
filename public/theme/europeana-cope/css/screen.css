@@ -1805,41 +1805,43 @@ textarea {
 input::placeholder {
   color: #cccccc; }
 
-form.searchform {
+header form.searchform {
   margin: 1rem 0;
   text-align: right;
   width: 100%; }
   @media only screen and (min-width: 60em) {
-    form.searchform {
+    header form.searchform {
       display: block;
       position: absolute;
       top: 0.5rem;
       right: 0.875rem;
       width: 380px; } }
-  form.searchform input[type="search"] {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 3% 0 0;
-    box-sizing: border-box;
-    width: 82%; }
-    @media only screen and (min-width: 24em) {
-      form.searchform input[type="search"] {
-        margin: 0 2% 0 0;
-        width: 90%; } }
-    @media only screen and (min-width: 60em) {
-      form.searchform input[type="search"] {
-        width: 300px; } }
-  form.searchform button {
-    width: 15%;
-    display: inline-block;
-    margin: 0;
-    vertical-align: middle; }
-    @media only screen and (min-width: 24em) {
-      form.searchform button {
-        width: 8%; } }
-    @media only screen and (min-width: 60em) {
-      form.searchform button {
-        width: 52px; } }
+
+form.searchform input[type="search"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 3% 0 0;
+  box-sizing: border-box;
+  width: 82%; }
+  @media only screen and (min-width: 24em) {
+    form.searchform input[type="search"] {
+      margin: 0 2% 0 0;
+      width: 90%; } }
+  @media only screen and (min-width: 60em) {
+    form.searchform input[type="search"] {
+      width: 300px; } }
+
+form.searchform button {
+  width: 15%;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle; }
+  @media only screen and (min-width: 24em) {
+    form.searchform button {
+      width: 8%; } }
+  @media only screen and (min-width: 60em) {
+    form.searchform button {
+      width: 52px; } }
 
 form button, form .button {
   background-color: #293745;

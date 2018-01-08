@@ -41,16 +41,27 @@
                 <!-- loading search listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
                 {% include [template, 'views/_teasers.twig', 'views/_fallback.twig'] with {item:record} %}
                 </li>
-            {% else %}
-                <li>
-                    <article>
-                        <p>
-                            {{ __('general.phrase.no-result-for-search-term', { '%SEARCHTERM%': search|escape }) }}
-                        </p>
-                    </article>
-                </li>
+
             {% endfor %}
             </ul>
+
+            {% if records is empty %}
+
+                <article class="column">
+                    <h2 class="gamma">Try another search</h2>
+                    {% include 'partials/_searchform.twig' %}
+
+                    <div class="body">
+                        {% setcontent statusmessage = 'statusmessages/empty-search-results' %}
+
+                        {% if statusmessage is not empty %}
+                            <h3 class="gamma">{{ statusmessage.contenttitle }}</h2>
+                            {{ statusmessage.contenttext }}
+                        {% endif %}
+                    </div>
+                </article>
+
+            {% endif %}
 
             {# If there are more records than will fit on one page, the pager is shown. #}
             {{ pager(template = 'partials/_pager.twig') }}
