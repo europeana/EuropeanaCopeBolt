@@ -26,7 +26,7 @@
                 {% if record.values.image is defined and record.values.image is not empty %}
                     <figure>
                         <div class="main-img-container">
-                            <img class="main-img" src="{{ record.values.image|thumbnail(1240, 600, 'c') }}" alt="ALT" />
+                            <img class="main-img" src="{{ record.values.image|thumbnail(1240, 600, 'c') }}" alt="{{ record.values.image.alt|default('main image') }}" />
 
                             {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
                         </div>

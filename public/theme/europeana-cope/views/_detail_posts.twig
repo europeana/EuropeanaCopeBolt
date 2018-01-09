@@ -23,7 +23,7 @@
 
                     <figure {% if contacts|length > 1 %}class="non-wide"{% endif %}>
                         <div class="main-img-container">
-                            <img class="main-img" src="{{ record.values.image|thumbnail(1240, 600, 'c') }}" alt="" />
+                            <img class="main-img" src="{{ record.values.image|thumbnail(1240, 600, 'c') }}" alt="{{ record.values.image.alt|default('main image') }}" />
 
                             {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
                         </div>

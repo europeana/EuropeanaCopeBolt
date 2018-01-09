@@ -47,7 +47,7 @@
                     {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
                     <figure>
                         <div class="main-img-container">
-                            <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="ALT" />
+                            <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="{{ record.values.image.alt|default('main image') }}" />
 
                             {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
                         </div>

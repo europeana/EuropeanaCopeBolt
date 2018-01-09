@@ -87,7 +87,7 @@ __nodes:
     image:
       type: image
       label: "Main image"
-      attrib: title
+      attrib: [title, alt]
       postfix: "The main image is displayed on individual pages."
       required: true
       extensions: [ gif, jpg, png ]
