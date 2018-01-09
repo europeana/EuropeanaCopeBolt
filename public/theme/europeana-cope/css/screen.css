@@ -673,6 +673,10 @@ footer {
     .contentpage .personal.non-wide {
       padding: 0 4rem; } }
 
+.contentpage .half figure {
+  margin: 1rem 0rem;
+  position: relative; }
+
 .contentpage .header-group,
 .contentpage .body,
 .contentpage .file-content-module,
@@ -1805,47 +1809,34 @@ textarea {
 input::placeholder {
   color: #cccccc; }
 
-header form.searchform {
-  margin: 1rem 0;
-  text-align: right;
-  width: 100%; }
-  @media only screen and (min-width: 60em) {
-    header form.searchform {
-      display: block;
-      position: absolute;
-      top: 0.5rem;
-      right: 0.875rem;
-      width: 380px; } }
-
-form.searchform input[type="search"] {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 3% 0 0;
-  box-sizing: border-box;
-  width: 82%; }
-  @media only screen and (min-width: 24em) {
-    form.searchform input[type="search"] {
-      margin: 0 2% 0 0;
-      width: 90%; } }
-  @media only screen and (min-width: 60em) {
-    form.searchform input[type="search"] {
-      width: 300px; } }
-  @media only screen and (min-width: 47.9375em) {
-    article form.searchform input[type="search"] {
-      width: 90%;
-      max-width: 530px; } }
-
-form.searchform button {
-  width: 15%;
-  display: inline-block;
-  margin: 0;
-  vertical-align: middle; }
-  @media only screen and (min-width: 24em) {
-    form.searchform button {
-      width: 8%; } }
-  @media only screen and (min-width: 60em) {
-    form.searchform button {
-      width: 52px; } }
+form.searchform {
+  display: flex; }
+  header form.searchform {
+    margin: 1rem 0;
+    text-align: right; }
+    @media only screen and (min-width: 60em) {
+      header form.searchform {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.875rem;
+        min-width: 380px;
+        width: 50%; } }
+  article p + form.searchform {
+    margin-top: 2rem; }
+  form.searchform input[type="search"] {
+    margin: 0 .8rem 0 0;
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0; }
+    @media only screen and (min-width: 24em) {
+      form.searchform input[type="search"] {
+        margin: 0 .8rem 0 0; } }
+    @media only screen and (min-width: 47.9375em) {
+      article form.searchform input[type="search"] {
+        max-width: 530px; } }
+  form.searchform button {
+    width: 52px;
+    margin: 0; }
 
 form button, form .button {
   background-color: #293745;

@@ -41,65 +41,66 @@ input::placeholder {
 }
 
 form.searchform {
-
+    display: flex;
 
     header & {
-
         margin: 1rem 0;
         text-align: right;
-        width: 100%;
+        // width: 100%;
 
         @include respond-to (menu-full) {
-            display: block;
+            //display: block;
             position: absolute;
             top: 0.5rem; //1rem;
             right: 0.875rem;
-            width: 380px; //650px;
-
+            min-width: 380px;
+            width: 50%;
         }
 
     }
 
+    article p + & {
+        margin-top: 2rem;
+    }
+
 
     input[type="search"] {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 3% 0 0;
+        margin: 0 .8rem 0 0;
         box-sizing: border-box;
-        width: 82%;
+        flex-grow: 1;
+        min-width: 0;
+        //width: 82%;
 
         @include respond-to (medium-screens) {
-            margin: 0 2% 0 0;
-            width: 90%;
+            margin: 0 .8rem 0 0;
+            // width: 90%;
         }
 
         @include respond-to (menu-full) {
-            width: 300px; //580px;
+            // width: 300px; //580px;
         }
 
         article & {
 
             @include respond-to (large-screens){
-                width: 90%;
                 max-width: 530px;
             }
         }
     }
 
     button {
-        width: 15%;
-        //max-width: 55px;
-        display: inline-block;
+        //width: 15%;
+        width: 52px;
+        //display: inline-block;
         margin: 0;
-        vertical-align: middle;
 
 
         @include respond-to (medium-screens) {
-            width: 8%;
+            //width: 8%;
         }
 
         @include respond-to (menu-full) {
-            width: 52px;
+            //width: 52px;
         }
 
     }

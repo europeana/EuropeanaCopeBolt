@@ -2914,6 +2914,7 @@ statusmessages:
       type: html
       label: "Text - used on site"
       height: 150px
+    <<: *media_defaults
     slug:
       type: slug
       uses: title

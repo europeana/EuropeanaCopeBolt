@@ -233,6 +233,12 @@ footer {
         }
     }
 
+    .half figure {
+        margin: 1rem 0rem; //1rem 2rem;
+        position: relative;
+        // uitvullen op halve kolom
+    }
+
     .header-group,
     .body,
     .file-content-module,

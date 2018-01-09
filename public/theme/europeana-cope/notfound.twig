@@ -2,8 +2,6 @@
 
 {% block bodyclass 'contentpage' %}
 
-{% setcontent record = 'resources/404-not-found' %}
-
 {% block title %}
     {{ record.title|default('404 not found') }}
 {% endblock title %}
@@ -14,18 +12,53 @@
 <section>
     <div class="inner-wrap">
 
-        <article class="column main-column">
+        <div class="main-column items-container">
+
+            <article class="half column">
+
+            {% setcontent statusmessage = 'statusmessages/404-message' %}
+
+            {% if statusmessage is not empty %}
+                <h1>{{ statusmessage.contenttitle }}</h1>
+                {{ statusmessage.contenttext }}
+
+            {% else %}
             <h1>{{ record.title|default('404 not found') }}</h1>
 
-            {% if fields(record) %}
-                {{ fields(record) }}
-            {% else %}
                 <p>
                 {{ __("Unfortunately, this page is not available. Try another page, or go to the <a href=\"%paths_root%\">homepage</a>.", {'%paths_root%': path('homepage')} ) }}
                 </p>
+
             {% endif %}
 
+            {% include 'partials/_searchform.twig' %}
+
          </article>
+
+         <article class="half column">
+
+            {% if statusmessage.values.image is defined and statusmessage.values.image is not empty %}
+
+                    <figure>
+                        <div class="main-img-container">
+                            <img class="main-img" src="{{ statusmessage.image|thumbnail(800, 1200, 'r') }}" alt="" />
+
+                            {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage', item: statusmessage } %}
+                        </div>
+
+                        {% if statusmessage.values.image.title is defined %}
+                            <figcaption>
+                                {{ statusmessage.values.image.title }}
+                            </figcaption>
+                        {% endif %}
+                    </figure>
+                {% endif %}
+
+         </article>
+
+        </div>
+
+
     </div>
 </section>
 
