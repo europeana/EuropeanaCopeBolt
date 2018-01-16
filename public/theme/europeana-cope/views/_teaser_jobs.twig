@@ -17,7 +17,10 @@
 
         <div class="info-block">
             <span class="info-type">Job</span>
+
+            {% if item.deadline is not empty %}
             <span class="info-date">Deadline: {{ item.deadline|localedatetime("%e %B  %Y") }}</span>
+            {% endif %}
 
             {% if item.contact_record is not empty %}
                 {% set contacts = item.contact_record %}
