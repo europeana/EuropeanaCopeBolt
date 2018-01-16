@@ -14,7 +14,7 @@ keywords_length: 0 #255
 
 # Default values to consider for the title, meta description and meta keywords
 fields:
-    title: ['title', 'first_name', 'last_name', 'subtitle']
+    title: ['title', 'first_name', 'last_name', 'subtitle', 'position']
     description: ['intro', 'teaser', 'body']
     keywords: []
     image: ['image']
