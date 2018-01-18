@@ -1,13 +1,13 @@
 {# SIDE-INFO #}
 
 {% set centerclass = '' %}
-{% if
+{# {% if
     (record.deadline is not empty) or
     (record.start_event is not empty and record.contenttype.slug in ['projects']) %}
 
     {% set centerclass='centered-info' %}
 
-{% endif %}
+{% endif %} #}
 
 
 <div class="side-info {{ centerclass }}">
