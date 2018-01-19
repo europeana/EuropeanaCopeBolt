@@ -664,7 +664,7 @@ pages:
         selected_jobs:
           type: text
           label: "Select Jobs"
-          class: 'ajaxselector ct-jobs fields-id--title--status key-id results-auto'
+          class: 'ajaxselector ct-jobs fields-id--position--status key-id results-auto'
         selected_events:
           type: text
           label: "Select Events"
@@ -1020,7 +1020,7 @@ posts:
         selected_jobs:
           type: text
           label: "Select Jobs"
-          class: 'ajaxselector ct-jobs fields-id--title--status key-id results-auto'
+          class: 'ajaxselector ct-jobs fields-id--position--status key-id results-auto'
         selected_events:
           type: text
           label: "Select Events"
@@ -1393,7 +1393,7 @@ data:
         selected_jobs:
           type: text
           label: "Select Jobs"
-          class: 'ajaxselector ct-jobs fields-id--title--status key-id results-auto'
+          class: 'ajaxselector ct-jobs fields-id--position--status key-id results-auto'
         selected_events:
           type: text
           label: "Select Events"
@@ -1822,7 +1822,7 @@ projects:
         selected_jobs:
           type: text
           label: "Select Jobs"
-          class: 'ajaxselector ct-jobs fields-id--title--status key-id results-auto'
+          class: 'ajaxselector ct-jobs fields-id--position--status key-id results-auto'
         selected_events:
           type: text
           label: "Select Events"
@@ -2154,7 +2154,7 @@ events:
         selected_jobs:
           type: text
           label: "Select Jobs"
-          class: 'ajaxselector ct-jobs fields-id--title--status key-id results-auto'
+          class: 'ajaxselector ct-jobs fields-id--position--status key-id results-auto'
         selected_events:
           type: text
           label: "Select Events"
