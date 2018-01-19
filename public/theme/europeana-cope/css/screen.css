@@ -3269,7 +3269,8 @@ figure .main-img-container {
       position: absolute;
       top: 0;
       right: 0;
-      padding-top: .5rem; }
+      padding-top: .5rem;
+      min-width: 10.85rem; }
   .teaser .actions-footer {
     vertical-align: bottom;
     margin: 2rem 0 0 0; }
