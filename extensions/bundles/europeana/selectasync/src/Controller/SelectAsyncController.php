@@ -38,7 +38,7 @@ class SelectAsyncController implements ControllerProviderInterface
     {
         $this->app = $app;
         $this->config = $config;
-        $this->default_types = ['pages', 'posts', 'data', 'projects', 'events', 'persons', 'resources'];
+        $this->default_types = ['pages', 'posts', 'data', 'projects', 'events', 'persons', 'resources', 'jobs'];
         $this->default_fields = ['id', 'title', 'status'];
         $this->default_person_fields = ['id', 'first_name', 'last_name', 'email', 'status'];
         $this->directory_tree = [];
