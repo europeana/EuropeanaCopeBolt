@@ -59,7 +59,7 @@
                 {% set filtervalue = record.highlightsubtype %}
             {% endif %}
         {% else %}
-            {% if app.request.get('_route') == 'homepage'  %}
+            {% if app.request.get('_route') == 'homepage' and title == '' %}
                 {% set title = 'Latest posts' %}
             {% endif %}
         {% endif %}
