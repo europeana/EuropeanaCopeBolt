@@ -41,6 +41,7 @@ class SelectAsyncController implements ControllerProviderInterface
         $this->default_types = ['pages', 'posts', 'data', 'projects', 'events', 'persons', 'resources', 'jobs'];
         $this->default_fields = ['id', 'title', 'status'];
         $this->default_person_fields = ['id', 'first_name', 'last_name', 'email', 'status'];
+        $this->default_job_fields = ['id', 'position', 'status'];
         $this->directory_tree = [];
     }
 
@@ -453,6 +454,13 @@ class SelectAsyncController implements ControllerProviderInterface
                 );
                 $qb->orderBy('last_name', 'ASC');
                 break;
+            case 'jobs':
+                $qb->select($fields);
+                $qb->where(
+                    $qb->expr()->like('position', $qb->createNamedParameter($search))
+                );
+                $qb->orderBy('datepublish', 'DESC');
+                break;
             default:
                 $qb->select($fields);
                 $qb->where(
@@ -495,6 +503,12 @@ class SelectAsyncController implements ControllerProviderInterface
         switch ($type) {
             case 'persons':
                 $qb->select($this->default_person_fields);
+                $qb->where(
+                    $qb->expr()->in('id', $ids)
+                );
+                break;
+            case 'jobs':
+                $qb->select($this->default_job_fields);
                 $qb->where(
                     $qb->expr()->in('id', $ids)
                 );
