@@ -566,6 +566,19 @@ a.banner {
         }
     }
 
+    .info-block {
+        position: absolute;
+        right: 1rem;
+        top: -2rem;
+        z-index: 20;
+
+        @include respond-to(large-screens){
+            left: auto;
+            right: 0;
+            top: 0;
+        }
+    }
+
 
 }
 
@@ -945,7 +958,6 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
         @include respond-to(large-screens){
             margin-top: -1rem;
         }
-
 
     }
 

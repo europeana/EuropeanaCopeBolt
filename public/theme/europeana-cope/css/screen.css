@@ -2239,6 +2239,17 @@ a.banner {
     .teaser-twocol a.readmore {
       display: block; } }
 
+.teaser-twocol .info-block {
+  position: absolute;
+  right: 1rem;
+  top: -2rem;
+  z-index: 20; }
+  @media only screen and (min-width: 47.9375em) {
+    .teaser-twocol .info-block {
+      left: auto;
+      right: 0;
+      top: 0; } }
+
 /*
 * WIDGET CALL TO ACTION - READ MORE (hoort bij bovestaande NEWS)
 **/
