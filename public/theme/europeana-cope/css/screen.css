@@ -2484,7 +2484,15 @@ div.calltoaction {
 .section-bannertriple + .in-page-anchor + .section-calltoactionform,
 .section-bannertriple + .in-page-anchor + .section-calltoactioninline,
 .section-bannertriple + .in-page-anchor + .section-calltoactionlink,
-.section-bannertriple + .in-page-anchor + .section-calltoaction {
+.section-bannertriple + .in-page-anchor + .section-calltoaction,
+.section-calltoaction + .section-calltoactionform,
+.section-calltoaction + .section-calltoactioninline,
+.section-calltoaction + .section-calltoactionlink,
+.section-calltoaction + .section-calltoaction,
+.section-calltoaction + .in-page-anchor + .section-calltoactionform,
+.section-calltoaction + .in-page-anchor + .section-calltoactioninline,
+.section-calltoaction + .in-page-anchor + .section-calltoactionlink,
+.section-calltoaction + .in-page-anchor + .section-calltoaction {
   overflow: visible; }
   .section-banner + .section-calltoactionform .calltoactionform,
   .section-banner + .section-calltoactionform .calltoactionlink,
@@ -2549,7 +2557,39 @@ div.calltoaction {
   .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoactionform,
   .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoactionlink,
   .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoactioninline,
-  .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoaction {
+  .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoaction,
+  .section-calltoaction + .section-calltoactionform .calltoactionform,
+  .section-calltoaction + .section-calltoactionform .calltoactionlink,
+  .section-calltoaction + .section-calltoactionform .calltoactioninline,
+  .section-calltoaction + .section-calltoactionform .calltoaction,
+  .section-calltoaction + .section-calltoactioninline .calltoactionform,
+  .section-calltoaction + .section-calltoactioninline .calltoactionlink,
+  .section-calltoaction + .section-calltoactioninline .calltoactioninline,
+  .section-calltoaction + .section-calltoactioninline .calltoaction,
+  .section-calltoaction + .section-calltoactionlink .calltoactionform,
+  .section-calltoaction + .section-calltoactionlink .calltoactionlink,
+  .section-calltoaction + .section-calltoactionlink .calltoactioninline,
+  .section-calltoaction + .section-calltoactionlink .calltoaction,
+  .section-calltoaction + .section-calltoaction .calltoactionform,
+  .section-calltoaction + .section-calltoaction .calltoactionlink,
+  .section-calltoaction + .section-calltoaction .calltoactioninline,
+  .section-calltoaction + .section-calltoaction .calltoaction,
+  .section-calltoaction + .in-page-anchor + .section-calltoactionform .calltoactionform,
+  .section-calltoaction + .in-page-anchor + .section-calltoactionform .calltoactionlink,
+  .section-calltoaction + .in-page-anchor + .section-calltoactionform .calltoactioninline,
+  .section-calltoaction + .in-page-anchor + .section-calltoactionform .calltoaction,
+  .section-calltoaction + .in-page-anchor + .section-calltoactioninline .calltoactionform,
+  .section-calltoaction + .in-page-anchor + .section-calltoactioninline .calltoactionlink,
+  .section-calltoaction + .in-page-anchor + .section-calltoactioninline .calltoactioninline,
+  .section-calltoaction + .in-page-anchor + .section-calltoactioninline .calltoaction,
+  .section-calltoaction + .in-page-anchor + .section-calltoactionlink .calltoactionform,
+  .section-calltoaction + .in-page-anchor + .section-calltoactionlink .calltoactionlink,
+  .section-calltoaction + .in-page-anchor + .section-calltoactionlink .calltoactioninline,
+  .section-calltoaction + .in-page-anchor + .section-calltoactionlink .calltoaction,
+  .section-calltoaction + .in-page-anchor + .section-calltoaction .calltoactionform,
+  .section-calltoaction + .in-page-anchor + .section-calltoaction .calltoactionlink,
+  .section-calltoaction + .in-page-anchor + .section-calltoaction .calltoactioninline,
+  .section-calltoaction + .in-page-anchor + .section-calltoaction .calltoaction {
     margin-top: 0 rem; }
     @media only screen and (min-width: 47.9375em) {
       .section-banner + .section-calltoactionform .calltoactionform,
@@ -2615,7 +2655,39 @@ div.calltoaction {
       .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoactionform,
       .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoactionlink,
       .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoactioninline,
-      .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoaction {
+      .section-bannertriple + .in-page-anchor + .section-calltoaction .calltoaction,
+      .section-calltoaction + .section-calltoactionform .calltoactionform,
+      .section-calltoaction + .section-calltoactionform .calltoactionlink,
+      .section-calltoaction + .section-calltoactionform .calltoactioninline,
+      .section-calltoaction + .section-calltoactionform .calltoaction,
+      .section-calltoaction + .section-calltoactioninline .calltoactionform,
+      .section-calltoaction + .section-calltoactioninline .calltoactionlink,
+      .section-calltoaction + .section-calltoactioninline .calltoactioninline,
+      .section-calltoaction + .section-calltoactioninline .calltoaction,
+      .section-calltoaction + .section-calltoactionlink .calltoactionform,
+      .section-calltoaction + .section-calltoactionlink .calltoactionlink,
+      .section-calltoaction + .section-calltoactionlink .calltoactioninline,
+      .section-calltoaction + .section-calltoactionlink .calltoaction,
+      .section-calltoaction + .section-calltoaction .calltoactionform,
+      .section-calltoaction + .section-calltoaction .calltoactionlink,
+      .section-calltoaction + .section-calltoaction .calltoactioninline,
+      .section-calltoaction + .section-calltoaction .calltoaction,
+      .section-calltoaction + .in-page-anchor + .section-calltoactionform .calltoactionform,
+      .section-calltoaction + .in-page-anchor + .section-calltoactionform .calltoactionlink,
+      .section-calltoaction + .in-page-anchor + .section-calltoactionform .calltoactioninline,
+      .section-calltoaction + .in-page-anchor + .section-calltoactionform .calltoaction,
+      .section-calltoaction + .in-page-anchor + .section-calltoactioninline .calltoactionform,
+      .section-calltoaction + .in-page-anchor + .section-calltoactioninline .calltoactionlink,
+      .section-calltoaction + .in-page-anchor + .section-calltoactioninline .calltoactioninline,
+      .section-calltoaction + .in-page-anchor + .section-calltoactioninline .calltoaction,
+      .section-calltoaction + .in-page-anchor + .section-calltoactionlink .calltoactionform,
+      .section-calltoaction + .in-page-anchor + .section-calltoactionlink .calltoactionlink,
+      .section-calltoaction + .in-page-anchor + .section-calltoactionlink .calltoactioninline,
+      .section-calltoaction + .in-page-anchor + .section-calltoactionlink .calltoaction,
+      .section-calltoaction + .in-page-anchor + .section-calltoaction .calltoactionform,
+      .section-calltoaction + .in-page-anchor + .section-calltoaction .calltoactionlink,
+      .section-calltoaction + .in-page-anchor + .section-calltoaction .calltoactioninline,
+      .section-calltoaction + .in-page-anchor + .section-calltoaction .calltoaction {
         margin-top: -1rem; } }
 
 /*
@@ -3703,30 +3775,6 @@ div.body table {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: ""; }
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-  /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-  thead {
-    display: table-header-group; }
-  tr,
-  img {
-    page-break-inside: avoid; }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; } }
-
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }

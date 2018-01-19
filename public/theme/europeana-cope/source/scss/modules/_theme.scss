@@ -920,7 +920,17 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
 .section-bannertriple + .in-page-anchor + .section-calltoactionform,
 .section-bannertriple + .in-page-anchor + .section-calltoactioninline,
 .section-bannertriple + .in-page-anchor + .section-calltoactionlink,
-.section-bannertriple + .in-page-anchor + .section-calltoaction
+.section-bannertriple + .in-page-anchor + .section-calltoaction,
+// call to action banner
+.section-calltoaction + .section-calltoactionform,
+.section-calltoaction + .section-calltoactioninline,
+.section-calltoaction + .section-calltoactionlink,
+.section-calltoaction + .section-calltoaction,
+//or when an in-page anchor is in between these
+.section-calltoaction + .in-page-anchor + .section-calltoactionform,
+.section-calltoaction + .in-page-anchor + .section-calltoactioninline,
+.section-calltoaction + .in-page-anchor + .section-calltoactionlink,
+.section-calltoaction + .in-page-anchor + .section-calltoaction
  {
     overflow: visible;
 
