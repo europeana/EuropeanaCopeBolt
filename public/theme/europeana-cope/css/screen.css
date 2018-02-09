@@ -2242,6 +2242,18 @@ a.banner {
     .teaser-twocol .img-container {
       width: 50%; } }
 
+.teaser-twocol.teaser-events .img-container {
+  float: none;
+  width: 100%; }
+  @media only screen and (min-width: 24em) {
+    .teaser-twocol.teaser-events .img-container {
+      float: left;
+      width: 50%; } }
+  @media only screen and (min-width: 47.9375em) {
+    .teaser-twocol.teaser-events .img-container {
+      float: none;
+      width: 100%; } }
+
 .teaser-twocol .img-insert {
   position: absolute;
   padding: .75rem 0.875rem;
@@ -2983,6 +2995,13 @@ main .section-calltoactionlink:first-child .calltoactionlink {
         width: 200px; } }
   .teaser .info-block {
     width: auto; }
+  .teaser-events .info-block {
+    width: 10.85rem;
+    top: 0;
+    right: 0; }
+    @media only screen and (min-width: 24em) {
+      .teaser-events .info-block {
+        width: 50%; } }
   .info-block .event-days {
     display: block;
     letter-spacing: -0.05em;

@@ -523,6 +523,22 @@ a.banner {
         }
     }
 
+    &.teaser-events .img-container {
+        float: none;
+        width: 100%;
+        
+        @include respond-to(medium-screens){
+            float: left;
+            width: 50%;
+        }
+
+        @include respond-to(large-screens){
+            float: none;
+            width: 100%;
+        }
+
+    }
+
     .img-insert {
         position: absolute;
         padding: .75rem 0.875rem;
@@ -578,6 +594,8 @@ a.banner {
             top: 0;
         }
     }
+
+    
 
 
 }
@@ -1326,6 +1344,15 @@ main .section-calltoactionlink:first-child {
         width: auto;
     }
 
+    .teaser-events & {
+        width: 10.85rem;
+        top: 0;
+        right: 0;
+        
+        @include respond-to(medium-screens){
+            width: 50%;
+        }
+    }
 
     .event-days{
         display: block;
@@ -1335,7 +1362,6 @@ main .section-calltoactionlink:first-child {
         @include respond-to(large-screens){
             font-size: 2rem;
         }
-
     }
 
     .event-month {
