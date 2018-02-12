@@ -1,0 +1,46 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+<article class="column half teaser-twocol teaser-{{ item.contenttype.slug  }} group">
+    <div class="img-container">
+        <a href="{{ item.link }}">
+        {% if item.teaser_image is defined and item.teaser_image is not empty %}
+            <img src="{{ item.teaser_image|thumbnail(600,600,'c')}}" alt="{{ item.title }}"/>
+        {% elseif item.values.image is defined and item.values.image is not empty %}
+            <img src="{{ item.values.image|thumbnail(600,600,'c')}}" alt="{{ item.title }}"/>
+        {% else %}
+            <img src="{{ 'web_assets/default.png'|thumbnail(600,600,'c')}}" alt="{{ item.title }}"/>
+        {% endif %}
+        </a>
+
+        <div class="info-block">
+            {% include 'partials/_event-datetime.twig' %}
+
+            {% if item.location_name is not empty %}
+                <span class="event-location">
+                <svg class="icon icon-location">
+                    <use xlink:href="#icon-location"></use>
+                </svg>
+                {{ item.location_name }}
+            </span>
+            {% endif %}
+        </div>
+    </div>
+
+    <h3><a href="{{ item.link }}">{{ item.title }}</a></h3>
+    
+
+    {% include 'partials/_tags.twig' %}
+
+    {% if item.teaser is defined and item.teaser is not empty %}
+        {{ item.teaser }}
+    {% elseif item.intro is defined and item.intro is not empty %}
+        {{ item.intro }}
+    {% else %}
+        <p>{{ item.excerpt(100, false, search|default('')) }}</p>
+    {% endif %}
+
+    <a href="{{ item.link() }}" class="readmore">Read more</a>
+</article>
+

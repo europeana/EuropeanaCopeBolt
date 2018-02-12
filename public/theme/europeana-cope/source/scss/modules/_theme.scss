@@ -523,6 +523,30 @@ a.banner {
         }
     }
 
+    &.teaser-events .img-container {
+        float: none;
+        width: 100%;
+        margin-bottom: 1rem;
+        
+        @include respond-to(medium-screens){
+            float: left;
+            width: 50%;
+            //max-width: 300px;
+        }
+
+        @include respond-to(large-screens){
+            float: none;
+            width: 100%;
+            max-width: none;
+        }
+
+        @include respond-to(xlarge-screens){
+            float: left;
+            width: 50%;
+        }
+
+    }
+
     .img-insert {
         position: absolute;
         padding: .75rem 0.875rem;
@@ -565,6 +589,21 @@ a.banner {
             display: block;
         }
     }
+
+    .info-block {
+        position: absolute;
+        right: 1rem;
+        top: -2rem;
+        z-index: 20;
+
+        @include respond-to(large-screens){
+            left: auto;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    
 
 
 }
@@ -946,7 +985,6 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
             margin-top: -1rem;
         }
 
-
     }
 
 }
@@ -1314,6 +1352,19 @@ main .section-calltoactionlink:first-child {
         width: auto;
     }
 
+    .teaser-events & {
+        width: 10.85rem;
+        top: 0;
+        right: 0;
+        
+        @include respond-to(medium-screens){
+            width: 50%;
+        }
+
+        @include respond-to(large-screens){
+            width: auto;
+        }
+    }
 
     .event-days{
         display: block;
@@ -1323,7 +1374,6 @@ main .section-calltoactionlink:first-child {
         @include respond-to(large-screens){
             font-size: 2rem;
         }
-
     }
 
     .event-month {
