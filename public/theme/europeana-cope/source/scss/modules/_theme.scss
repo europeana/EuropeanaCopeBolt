@@ -526,15 +526,23 @@ a.banner {
     &.teaser-events .img-container {
         float: none;
         width: 100%;
+        margin-bottom: 1rem;
         
         @include respond-to(medium-screens){
             float: left;
             width: 50%;
+            //max-width: 300px;
         }
 
         @include respond-to(large-screens){
             float: none;
             width: 100%;
+            max-width: none;
+        }
+
+        @include respond-to(xlarge-screens){
+            float: left;
+            width: 50%;
         }
 
     }
@@ -1351,6 +1359,10 @@ main .section-calltoactionlink:first-child {
         
         @include respond-to(medium-screens){
             width: 50%;
+        }
+
+        @include respond-to(large-screens){
+            width: auto;
         }
     }
 
