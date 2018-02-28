@@ -1,45 +1,65 @@
-var gulp = require('gulp');
-var $    = require('gulp-load-plugins')();
-var argv = require('yargs').argv;
+var gulp            = require('gulp');
+// load 'em all'
+var plugins         = require('gulp-load-plugins')();
+//
+// load specifics
+var gutil           = require('gulp-util');
+var sass            = require('gulp-sass');
+var autoprefixer    = require('gulp-autoprefixer');
+var runSequence     = require('run-sequence');
+var cleanCss        = require('gulp-clean-css');
+var sourcemaps      = require('gulp-sourcemaps');
 
-// Check for --production flag
-var isProduction = !!(argv.production);
+// Allows gulp --dev to be run for a more verbose output.
+// So if you want readable css, do "gulp --dev"
+var isProduction = true;
+var sassStyle = 'compressed';
 
-gulp.task('sass', function() {
+if (gutil.env.dev === true) {
+  sassStyle = 'expanded';
+  isProduction = false;
+}
 
-    var minifycss = $.if(isProduction, $.minifyCss());
+var jsFiles = [
+    '../js/lib/jquery.min.js',
+    '../js/lib/minRead.js',
+    '../js/lib/viewportSize.min.js',
+    '../js/lib/sticky-kit.min.js',
+    '../js/app.js',
+    '../js/menu.js'
+];
 
-    return gulp.src('scss/**/*.scss')
-    .pipe($.sass()) // Using gulp-sass
-    .pipe(minifycss)
-    .pipe(gulp.dest('../css'))
-    // .pipe(browserSync.reload({
-    //   stream: true
-    // }))
+var jsDest = '../js/';
+
+gulp.task('scripts', function() {
+    return gulp.src(jsFiles)
+    .pipe(plugins.concat('scripts.min.js'))
+    .pipe(gulp.dest(jsDest))
+    .pipe(plugins.uglify())
+    .pipe(gulp.dest(jsDest));
 });
 
-gulp.task('watch', function (){
+gulp.task('watch', function() {
     gulp.watch('scss/**/*.scss', ['sass']);
     gulp.watch('../*.css', ['autoprefixer']);
+    gulp.watch('../js/**/*.js', ['scripts']);
 });
 
-gulp.task('autoprefixer', function (){
-    gulp.src('../css/screen.css')
-        .pipe($.autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('../css'))
+gulp.task('sass', function() {
+    return gulp.src('scss/**/*.scss')
+    .pipe(plugins.sourcemaps.init())
+    .pipe(plugins.sass({
+        outputStyle: sassStyle
+    }))
+    .pipe(plugins.autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(isProduction ? plugins.cleanCss() : gutil.noop())
+    .pipe(plugins.sourcemaps.write())
+    .pipe(gulp.dest('../css/'))
 });
 
-gulp.task('minifycss', function(){
-    return gulp.src('../css/**/*.css')
-    .pipe(gulpIf('../*.css', cssnano()))
-    .pipe(gulp.dest('../css'))
-});
-
-gulp.task('default', ['sass', 'autoprefixer', 'watch']);
-
-gulp.task('build', function(){
-    gulp.watch('../css/**/*.css', ['minifycss']);
-});
+gulp.task('default', function(callback) {
+    runSequence('sass', 'watch', callback);
+})
