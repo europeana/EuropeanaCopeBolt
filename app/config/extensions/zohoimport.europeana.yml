@@ -86,3 +86,90 @@ remotes:
                     # community: "Interested in..."           # example: "Data partner;EuropeanaTech (R&D)
                     public_photo: "Show photo on europeana site"
                                                             # example: "true"
+    zoho_json_remote_orgs:
+        enabled: true
+        source:
+            url: https://crm.zoho.com/crm/private/json/Accounts/getRecords
+            getparams:
+                authtoken: '{{override in local config}}'
+                scope: crmapi
+            loopparams:
+                counter: fromIndex
+                stepper: toIndex
+                start: 1       # start at this (should be 1)
+                size: 100      # number of records to fetch per iteration
+            # generate a token by going to
+            # https://accounts.zoho.com/apiauthtoken/create?SCOPE=ZohoCRM/crmapi
+            # file: examples/Contacts-Timothy.json
+            type: json
+        target:
+            contenttype: organisations
+            defaults:
+                new: 'published'       # may also be any valid status
+                updated: 'published'   # may also be any valid status
+                removed: 'held' # may also be any valid status
+            mapping: # mappings in XPATH
+                root: 'response.result.Organisations.row'
+                fields:
+                    # bolt_col: "ZOHO Field name"           # example: "Example value"
+                    uid: "ACCOUNTID"                        # example: "1482250000000152005"
+                    europeana_id: "ID"                      # default: "EL30MC"
+                    org_uid: "ACCOUNTID"                # example: "1482250000000152017"
+                    datecreated: "Created Time"             # example: "2015-06-04 16:37:25"
+                    datechanged: "Modified Time"            # example: "2015-06-09 14:44:58"
+                    # last_activity: "Last Activity Time"     # example: "2018-03-12 14:44:00"
+                    # modified_date: "MODIFIEDBY"             # example: "1482250000004056005"
+                    # modified_by: "Modified By"              # example: "DPS Team"
+                    # smuid: "SMOWNERID"                      # example: "1482250000004056005"
+                    # account_owner: "Account Owner"          # example: "DPS Team"
+
+                    name: "Account Name"                    # example: "Slovak National Museum"
+                    name_lang: "Lang Organisation Name"     # example: "EN(English)"
+                    name_alt1: "Alternative 1"              # example: "Slovenské Národné Múzeum"
+                    name_alt1_lang: "Lang Alternative 1"    # example: "SK(Slovak)"
+                    name_alt2: "Alternative 2"              # example: "Slovenské Národné Múzeum"
+                    name_alt2_lang: "Lang Alternative 2"    # example: "SK(Slovak)"
+                    acronym: "Acronym"                      # example: "Slovak National Museum"
+                    acronym_lang: "Lang Acronym"            # example: "SK(Slovak)"
+
+                    org_country: "Organisation Country"     # example: "Slovakia, SK"
+                    org_role: "Organisation Role"           # example: "Example value"
+
+
+                    website: "Website"                      # example: "http://www.snm.sk"
+                    logo_url: "Logo (link to WikimediaCommons)"
+                                                            # example: "http://example.com/logo.gif"
+
+                    domain: "Domain"                        # example: "Museum"
+                    scope: "Scope"                          # example: "European scope"
+                    sector: "Sector"                        # example: "European scope"
+
+                    city: "City"                            # example: "Slovakia"
+                    street: "Street"                        # example: "Slovakia"
+                    zipcode: "ZIP code"                     # example: "Slovakia"
+                    po_box: "PO box"
+                    country: "Country"                      # example: "Slovakia"
+
+                    description: "Description"             # example: "<p>Long text</p>"
+
+                    # val: "Image service Opt-in"             # example: "false"
+                    # val: "DEA Sent"                         # example: "true"
+                    # val: "DEA Notes"                        # example: "Long story"
+                    # val: "DEA Signed"                       # example: "true"
+                    # val: "Data provider"                    # example: "true"
+                    # val: "Data Partner"                     # example: "false"
+
+                    # Aggregator
+                    # Alternative 3
+                    # Alternative 4
+                    # Alternative 5
+                    # Geographic Level
+                    # Lang Alternative 3
+                    # Lang Alternative 4
+                    # Lang Alternative 5
+                    # Organisation-eigenaar
+                    # Organisationnaam
+                    # Provides to
+                    # SameAs 1
+                    # SameAs 2
+                    # SameAs 3

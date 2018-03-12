@@ -2563,6 +2563,163 @@ persons:
   icon_many: "fa:users"
   icon_one: "fa:user"
 
+organisations:
+  name: Organisations
+  singular_name: Organisation
+  slug: organisations
+  singular_slug: organisation
+  fields:
+    # uid: "ACCOUNTID"                        # example: "1482250000000152005"
+    # datecreated: "Created Time"             # example: "2015-06-04 16:37:25"
+    # datechanged: "Modified Time"            # example: "2015-06-09 14:44:58"
+    # last_activity: "Last Activity Time"     # example: "2018-03-12 14:44:00"
+    # modified_date: "MODIFIEDBY"             # example: "1482250000004056005"
+    # modified_by: "Modified By"              # example: "DPS Team"
+    # smuid: "SMOWNERID"                      # example: "1482250000004056005"
+    # account_owner: "Account Owner"          # example: "DPS Team"
+    name:
+      type: text
+      label: "Account Name"
+      group: "Organisation"
+    name_alt1:
+      type: text
+      label: "Alternative 1"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    name_alt2:
+      type: text
+      label: "Alternative 2"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    acronym:
+      type: text
+      label: "Acronym"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    org_country:
+      type: text
+      label: "Organisation Country"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    org_role:
+      type: text
+      label: "Organisation Role"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    website:
+      type: text
+      label: "Website"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    domain:
+      type: text
+      label: "Domain"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    scope:
+      type: text
+      label: "Scope"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    sector:
+      type: text
+      label: "Sector"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    description:
+      type: html
+      height: 300px
+      label: "Beschrijving"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    logo_url:
+      type: text
+      label: "Logo (link to WikimediaCommons)"
+      variant: inline
+      class: narrow
+      group: "Media"
+    city:
+      type: text
+      label: "City"
+      variant: inline
+      class: narrow
+      group: "Address"
+    street:
+      type: text
+      label: "Street"
+      variant: inline
+      class: narrow
+      group: "Address"
+    zipcode:
+      type: text
+      label: "ZIP code"
+      variant: inline
+      class: narrow
+      group: "Address"
+    po_box:
+      type: text
+      label: "PO box"
+      variant: inline
+      class: narrow
+      group: "Address"
+    country:
+      type: text
+      label: "Country"
+      variant: inline
+      class: narrow
+      group: "Address"
+    uid:
+      type: text
+      class: narrow
+      variant: inline
+      group: meta
+      prefix: "<div><h3>Zoho data</h3></div>"
+    europeana_id:
+      type: text
+      class: narrow
+      variant: inline
+    org_uid:
+      type: text
+      class: narrow
+      variant: inline
+    name_lang:
+      type: text
+      label: "Lang Organisation Name"
+      variant: inline
+      class: narrow
+    name_alt1_lang:
+      type: text
+      label: "Lang Alternative 1"
+      variant: inline
+      class: narrow
+    name_alt2_lang:
+      type: text
+      label: "Lang Alternative 2"
+      variant: inline
+      class: narrow
+    acronym_lang:
+      type: text
+      label: "Lang Acronym"
+      variant: inline
+      class: narrow
+  taxonomy: [ tags ]
+  title_format: [ name, acronym ]
+  <<: *all_relations
+  sort: "name"
+  icon_many: "fa:tasks"
+  icon_one: "fa:tasks"
+
+
 #################################
 #
 # RESOURCES
