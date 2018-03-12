@@ -1,0 +1,89 @@
+{
+  "response": {
+    "result": {
+      "Accounts": {
+        "row": [
+          {
+            "no": "1",
+            "FL": [
+              { "val": "ACCOUNTID", "content": "1482250000004671122" },
+              { "val": "SMOWNERID", "content": "1482250000004056005" },
+              { "val": "Account Owner", "content": "DPS Team" },
+              {
+                "val": "Account Name",
+                "content": "Federacja Bibliotek Cyfrowych"
+              },
+              { "val": "MODIFIEDBY", "content": "1482250000004056005" },
+              { "val": "Modified By", "content": "DPS Team" },
+              { "val": "Created Time", "content": "2017-12-14 14:57:22" },
+              { "val": "Modified Time", "content": "2018-03-12 14:18:56" },
+              {
+                "val": "Description",
+                "content":
+                  "Federacja Bibliotek Cyfrowych (FBC) is the only national cross-domain aggregator in Poland. It currently works with 45 Polish data providers that give FBC more automated access to their data via mechanisms like OAI-PMH. These providers are mostly regional digital libraries, which are hosting data for tens of institutions from their region. FBC is one of the largest aggregators for Europeana, currently providing more than 1.5 million records to Europeana from hundreds of individual institutions."
+              },
+              { "val": "Last Activity Time", "content": "2018-03-12 14:18:56" },
+              { "val": "Country", "content": "Poland" },
+              { "val": "DEA Sent", "content": "false" },
+              { "val": "Scope", "content": "Cross" },
+              { "val": "DEA Signed", "content": "false" },
+              { "val": "Image service Opt-in", "content": "false" },
+              {
+                "val": "Organisation Role",
+                "content": "Accredited aggregator"
+              },
+              { "val": "Geographic Level", "content": "National" },
+              { "val": "Data provider", "content": "false" },
+              { "val": "Data Partner", "content": "true" },
+              { "val": "Acronym", "content": "FBC" },
+              { "val": "Aggregator", "content": "Active" }
+            ]
+          },
+          {
+            "no": "2",
+            "FL": [
+              { "val": "ACCOUNTID", "content": "1482250000000361585" },
+              { "val": "SMOWNERID", "content": "1482250000000164005" },
+              { "val": "Account Owner", "content": "Luis Ramos Pinto" },
+              { "val": "Account Name", "content": "German Digital Library" },
+              {
+                "val": "Website",
+                "content": "www.deutsche-digitale-bibliothek.de"
+              },
+              { "val": "MODIFIEDBY", "content": "1482250000004056005" },
+              { "val": "Modified By", "content": "DPS Team" },
+              { "val": "Created Time", "content": "2015-08-17 16:51:46" },
+              { "val": "Modified Time", "content": "2018-03-12 14:02:00" },
+              {
+                "val": "Description",
+                "content":
+                  "The goal of the Deutsche Digitale Bibliothek (DDB) is to offer everyone unrestricted access to Germany’s cultural and scientific heritage, that is, access to millions of books, archived items, images, sculptures, pieces of music and other sound documents, as well as films and scores, from all over Germany. As a central, national portal, the DDB is aiming to bring together and network digital content from all of Germany’s cultural and scientific institutions. The DDB should secure Germany’s connectivity and competitiveness in the areas of science, research and education, but also make it possible for anyone to access Germany’s unique cultural heritage and knowledge conveniently via one central point of entry. The fact that this entire wealth of information is now at our fingertips, centrally accessible to anyone who can use a PC workstation with an Internet connection, independent of time and location, constitutes a fundamental improvement to our opportunities in the areas of research, education and the economy.\n\nWe have some way to go until this vision is realized in its full potential. The digitisation of Germany’s cultural and scientific heritage is a process which will unfold over many years.\n\nThe first, publicly available beta version of the DDB went online in November 2012 and the first fully-fledged version will be launched on 31st March 2014. New functions are continually being added to the portal.  The number of participating cultural and scientific institutions - and with them, the amount of accessible virtual content - is set to rise steadily."
+              },
+              { "val": "Last Activity Time", "content": "2018-03-12 14:02:00" },
+              { "val": "Domain", "content": "Library" },
+              { "val": "Country", "content": "Germany" },
+              { "val": "DEA Sent", "content": "false" },
+              { "val": "DEA Signed", "content": "false" },
+              { "val": "Image service Opt-in", "content": "false" },
+              {
+                "val": "Organisation Role",
+                "content": "Accredited aggregator"
+              },
+              { "val": "Geographic Level", "content": "National" },
+              { "val": "Data provider", "content": "true" },
+              { "val": "Data Partner", "content": "true" },
+              { "val": "Acronym", "content": "DDB" },
+              {
+                "val": "Logo (link to WikimediaCommons)",
+                "content":
+                  "https://upload.wikimedia.org/wikipedia/commons/5/50/Logo_Deutsche_Digitale_Bibliothek.svg"
+              },
+              { "val": "Aggregator", "content": "Active" }
+            ]
+          }
+        ]
+      }
+    },
+    "uri": "/crm/private/json/Accounts/searchRecords"
+  }
+}

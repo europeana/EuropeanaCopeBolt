@@ -89,10 +89,13 @@ remotes:
     zoho_json_remote_orgs:
         enabled: true
         source:
-            url: https://crm.zoho.com/crm/private/json/Accounts/getRecords
+            url: https://crm.zoho.com/crm/private/json/Accounts/searchRecords
             getparams:
                 authtoken: '{{override in local config}}'
                 scope: crmapi
+                criteria: '((Organisation role:Accredited Aggregator)AND(Aggregator:Active))'
+                # 1. Organisation role: *Accredited Aggregator*
+                # 2. Aggregator: *Active*
             loopparams:
                 counter: fromIndex
                 stepper: toIndex
@@ -135,7 +138,6 @@ remotes:
                     org_country: "Organisation Country"     # example: "Slovakia, SK"
                     org_role: "Organisation Role"           # example: "Example value"
 
-
                     website: "Website"                      # example: "http://www.snm.sk"
                     logo_url: "Logo (link to WikimediaCommons)"
                                                             # example: "http://example.com/logo.gif"
@@ -150,7 +152,7 @@ remotes:
                     po_box: "PO box"
                     country: "Country"                      # example: "Slovakia"
 
-                    description: "Description"             # example: "<p>Long text</p>"
+                    description: "Description"              # example: "<p>Long text</p>"
 
                     # val: "Image service Opt-in"             # example: "false"
                     # val: "DEA Sent"                         # example: "true"
