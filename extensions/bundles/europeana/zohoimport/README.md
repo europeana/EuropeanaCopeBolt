@@ -29,9 +29,14 @@ For example, #2 would do the following:
    - If there is a new photo, that photo will be fetched from ZOHO
 - Finally, delete (or unpublish) items that are no longer present in the CRM.
 
-For more info <a href="https://www.zoho.com/crm/help/api/api-methods.html">ZOHO API documentation</a>
+For more info <a href="https://www.zoho.com/crm/help/api/">ZOHO API documentation</a>
+
+Note, the version 1.0 API is deprecated, the V2.0 api should be used soon: <a href="https://www.zoho.com/crm/help/api/v2/">ZOHO API V2 documentation</a>
 
 
 ## API limits
 
-Check the api limits on the <a href="https://crm.zoho.com/crm/ShowSetup.do?tab=devSpace&subTab=api&action=developerapi">ZOHO CRM API</a> page.
+Check the api limits on the <a href="https://crm.zoho.com/crm/ShowSetup.do?tab=devSpace&subTab=api&action=developerapi">ZOHO CRM API top usage</a> or the <a href="https://crm.zoho.com/crm/ShowSetup.do?tab=devSpace&subTab=api&action=topUsage">ZOHO CRM API </a> page.
+
+
+https://crm.zoho.com/crm/private/json/Accounts/searchRecords?authtoken=e95153d23c8b0d4a5eb5c885531f2d6b&scope=crmapi&criteria=((Organisation%20role:Accredited%20Aggregator)AND(Aggregator:Active))
