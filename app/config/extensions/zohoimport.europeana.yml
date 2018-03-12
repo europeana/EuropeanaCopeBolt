@@ -112,7 +112,7 @@ remotes:
                 updated: 'published'   # may also be any valid status
                 removed: 'held' # may also be any valid status
             mapping: # mappings in XPATH
-                root: 'response.result.Organisations.row'
+                root: 'response.result.Accounts.row'
                 fields:
                     # bolt_col: "ZOHO Field name"           # example: "Example value"
                     uid: "ACCOUNTID"                        # example: "1482250000000152005"
