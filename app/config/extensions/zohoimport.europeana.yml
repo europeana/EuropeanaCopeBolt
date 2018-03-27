@@ -90,10 +90,11 @@ remotes:
         enabled: true
         source:
             url: https://crm.zoho.com/crm/private/json/Accounts/searchRecords
+            # https://crm.zoho.com/crm/private/json/Accounts/searchRecords?authtoken=e95153d23c8b0d4a5eb5c885531f2d6b&scope=crmapi&criteria=%28%28Organisation+role%3AAccredited+Aggregator%29AND%28Aggregator%3AActive%29%29&fromIndex=1&toIndex=100
             getparams:
                 authtoken: '{{override in local config}}'
                 scope: crmapi
-                criteria: '((Organisation role:Accredited Aggregator)AND(Aggregator:Active))'
+                criteria: '(Organisation_role:Accredited Aggregator)'
                 # 1. Organisation role: *Accredited Aggregator*
                 # 2. Aggregator: *Active*
             loopparams:
