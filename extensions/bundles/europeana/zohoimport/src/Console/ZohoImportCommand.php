@@ -37,6 +37,12 @@ class ZohoImportCommand extends BaseCommand
             InputOption::VALUE_REQUIRED,
             'Jump to step X in the import process - only works in full or update. Defaults to empty.'
         )
+        ->addOption(
+            'ffwdsource',
+            null,
+            InputOption::VALUE_REQUIRED,
+            'Contenttype slug of the contenttype to import - if not the first defined one is desired'
+        )
         ;
     }
 
@@ -65,7 +71,17 @@ class ZohoImportCommand extends BaseCommand
         if ($input->getOption('fast-forward')) {
             $ffwd = $input->getOption('fast-forward');
             $output->writeln("<info>fast forwarding to: " . $ffwd . "</info>");
-            $this->app['zohoimport']->setFfwd($ffwd);
+            if ($input->getOption('ffwdsource')) {
+                $ffwdsource = $input->getOption('ffwdsource');
+                $output->writeln("<info>fast forwarding to source: " . $ffwdsource . "</info>");
+                $this->app['zohoimport']->setFfwd($ffwd, $ffwdsource);
+            } else {
+              $this->app['zohoimport']->setFfwd($ffwd);
+            }
+        } else if ($input->getOption('ffwdsource')) {
+            $ffwdsource = $input->getOption('ffwdsource');
+            $output->writeln("<info>fast forwarding to source: " . $ffwdsource . "</info>");
+            $this->app['zohoimport']->setFfwdSource($ffwdsource);
         }
 
         if ($type == 'full') {

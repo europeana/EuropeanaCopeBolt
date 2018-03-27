@@ -9,6 +9,7 @@ class ZohoImport
     private $app;
     private $config;
     private $ffwd;
+    private $ffwdsource;
     private $resourcedata;
     private $filedata;
     private $enabledsources;
@@ -16,6 +17,7 @@ class ZohoImport
     private $remote_request_counter;
     private $currentrecord;
     private $emptyrecord;
+    private $workingtype;
     private $workingrepository;
     private $on_console;
     private $consoleoutput;
@@ -35,15 +37,30 @@ class ZohoImport
     /**
      * @param $ffwd
      */
-    public function setFfwd($ffwd)
+    public function setFfwd($ffwd, $ffwdsource = null)
     {
         if ($ffwd > 0) {
             // pesky off by ones in the steps
             $ffwd = $ffwd - 1;
             $this->ffwd = $ffwd;
+
+            $this->setFfwdSource($ffwdsource);
         }
     }
-        
+    /**
+     * @param $ffwd
+     */
+    public function setFfwdSource($ffwdsource)
+    {
+      if ($ffwdsource !== null) {
+        $this->ffwdsource = $ffwdsource;
+      } else {
+        $this->getEnabledSources();
+        $firstconfig = reset($this->enabledsources);
+        $this->ffwdsource = $firstconfig['target']['contenttype'];
+      }
+    }
+
     /**
      * Run the importer (with debug stuff for development)
      *
@@ -72,13 +89,28 @@ class ZohoImport
         $this->logger('info', $logmessage, 'zohoimport');
 
         foreach ($this->enabledsources as $name => $config) {
+            $this->workingtype = $config['target']['contenttype'];
+
+            // if ffwdsource is set and not the one in this loop iteration
+            // continue with the next loop iteration
+            if(isset($this->ffwdsource) && $this->ffwdsource === $this->workingtype) {
+              $logmessage = $name . ' - ffwd content type to import is: '. $this->workingtype;
+              $this->logger('info', $logmessage, 'zohoimport');
+            } else if (isset($this->ffwdsource) && $this->ffwdsource !== $this->workingtype) {
+              $logmessage = $name . ' - ffwd skipping content type: '. $this->workingtype;
+              $this->logger('info', $logmessage, 'zohoimport');
+
+              continue;
+            }
+
+            // test if image downloads should be activated
             if ($this->config['image_downloads'] !== true) {
                 $logmessage = $name . ' - importing extra images is disabled';
                 $this->logger('info', $logmessage, 'zohoimport');
             }
 
             // initialize content repository
-            $this->workingrepository = $this->app['storage']->getRepository($config['target']['contenttype']);
+            $this->workingrepository = $this->app['storage']->getRepository($this->workingtype);
             // initialize empty record for cloning
             $this->emptyrecord = $this->workingrepository->create();
 
@@ -104,7 +136,7 @@ class ZohoImport
                     $previousbatchdate = $this->getLastImportDate($localconfig);
                     $starttime = strtotime($previousbatchdate);
                     $batchdate = $previousbatchdate;
-                    $logmessage = $name . ' - fast forward to ' 
+                    $logmessage = $name . ' - fast forward to '
                         . $looper . '. - batch: '. $batchdate . ' - '
                         . $config['source']['type'];
                     $this->logger('info', $logmessage, 'zohoimport');
@@ -133,7 +165,7 @@ class ZohoImport
 
                         $logmessage = $name . ' -  limit reached - 100 iterations are a bit much, please try to modify this import';
                         $this->logger('warning', $logmessage, 'zohoimport');
-                    } elseif ($this->resourcedata=='nodata') {
+                    } elseif ($this->resourcedata == 'nodata') {
                         $this->endcondition = true;
 
                         $logmessage = $name . ' - found end of data for import';
@@ -625,6 +657,7 @@ class ZohoImport
         //dump('there! ', $existing_image);
 
         if (empty($existing_image)) {
+            $existing_image = [];
             $existing_image['file'] = $params['name'] . '.png';
         }
 
