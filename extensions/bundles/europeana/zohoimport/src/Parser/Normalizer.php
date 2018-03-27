@@ -155,7 +155,9 @@ class Normalizer
 
         // Modify deep nested json objects
         $test = reset($items);
-        if (!is_array($test)) {
+        //print_r($test);
+        //print_r($items);
+        if (!is_array($test) && !array_key_exists('no', $items)) {
             foreach ($items as $rawzohoitem) {
                 if (isset($rawzohoitem->FL) && is_array($rawzohoitem->FL)) {
                     $currentrow = $rawzohoitem->FL;
@@ -167,10 +169,19 @@ class Normalizer
                 $outrows[] = $outrow;
                 unset($outrow);
             }
+        } else {
+          // echo "only one item";
+          $currentrow = $items['FL'];
+          // print_r($currentrow);
+          foreach ($currentrow as $rowitem) {
+            $outrow[$rowitem->val] = $rowitem->content;
+          }
+          $outrows[] = $outrow;
         }
 
         $this->data = $outrows;
         return $doc;
+
     }
 
 
