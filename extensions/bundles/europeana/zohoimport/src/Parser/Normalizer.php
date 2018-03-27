@@ -124,8 +124,22 @@ class Normalizer
             return $doc;
         }
 
+        if (array_key_exists('error', $items['response'])) {
+            // we might get an error code https://www.zoho.com/crm/help/api/error-messages.html
+            if ($this->debug_mode) {
+                dump('error in $items');
+                dump($doc);
+                dump($items);
+            }
+            // exit the importer gracefully
+            $this->data = 'nodata';
+            return $doc;
+        }
+
         foreach ($elements as $elm) {
-            $items = $items[$elm];
+            if(array_key_exists($elm, $items)) {
+                $items = $items[$elm];
+            }
         }
 
         if (empty($items)) {
@@ -134,7 +148,9 @@ class Normalizer
                 dump($doc);
                 dump($items);
             }
-            die();
+            // exit the importer gracefully
+            $this->data = 'nodata';
+            return $doc;
         }
 
         // Modify deep nested json objects
