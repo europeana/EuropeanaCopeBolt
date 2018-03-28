@@ -2648,6 +2648,11 @@ organisations:
       variant: inline
       class: narrow
       group: "Media"
+    image:
+      type: image
+      label: "Logo"
+      attrib: title
+      extensions: [ gif, jpg, png ]
     city:
       type: text
       label: "City"
