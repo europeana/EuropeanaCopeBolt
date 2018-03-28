@@ -12,9 +12,15 @@
         {% endif %}
 
         <div class="info-block">
-
-            <span class="info-type">{{ item.org_role}}</span>
             
+            {% if item.org_role is not empty %}
+                <span class="info-type">
+                    {% for role in item.org_role %}
+                    {{ role }}{% if loop.last == false %} / {% endif %}
+                    {% endfor %}
+                </span>
+            {% endif %}
+
             {% if (item.city is not empty) or (item.country is not empty) %}
             <span class="organisation-location">
                 <svg class="icon icon-location">
@@ -38,9 +44,11 @@
     {% include 'partials/_tags.twig' %}
 
     <div class="tags">
-        {# fake 'tags' in organisation #}
-        {% if item.org_role is not empty %}
-        <a class="tag" href="#">{{ item.org_role }}</a>
+
+        {% if item.org_role is not empty%}
+            {% for role in item.org_role %}
+                <a class="tag" href="#">{{ role }}</a>
+            {% endfor %}  
         {% endif %}
 
         {% if item.scope is not empty %}
