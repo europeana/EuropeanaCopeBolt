@@ -657,9 +657,9 @@ class ZohoImport
 
         echo('TODO: Figure out what to do with the following relations .. ');
         $results = json_decode($relationsdata);
-        print_r($results);
+        // print_r($results);
 
-        $logmessage = 'photo: ' . json_encode($results);
+        $logmessage = 'loadZohoRelatedRecords: ' . json_encode($results);
         $this->logger('debug', $logmessage, 'zohoimport');
         // return the filename for record
         return $results;
@@ -782,11 +782,12 @@ class ZohoImport
                 return false;
             }
 
-            $jsonresults = json_decode($imagedata);
-            if ($jsonresults) {
+            $imagejsonerror = json_decode($imagedata);
+            if (!empty($imagejsonerror) && $imagejsonerror !== false) {
                 $logmessage = "remote resource is not an image for: " . $params['name'] .' - url: '. $params['source_url'] ;
                 $this->logger('info', $logmessage, 'zohoimport');
-                print_r($jsonresults);
+                $logmessage = 'loadZohoRelatedRecords: ' . json_encode($imagejsonerror);
+                $this->logger('debug', $logmessage, 'zohoimport');
                 return false;
             }
             //echo('not empty.. ');
