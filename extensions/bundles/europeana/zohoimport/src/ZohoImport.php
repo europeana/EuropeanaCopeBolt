@@ -463,9 +463,9 @@ class ZohoImport
                     $items['network_participation'] = explode(";", $items['network_participation']);
                 }
 
-                //if (!empty($items['org_role'])) {
-                //    $items['org_role'] = explode(";", $items['org_role']);
-                //}
+                if (!empty($items['org_role'])) {
+                    $items['org_role'] = explode(";", $items['org_role']);
+                }
 
 
                 if (!empty($items['community'])) {

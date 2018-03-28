@@ -2630,26 +2630,22 @@ organisations:
       variant: inline
       class: narrow
       group: "Organisation"
-    org_role:
-      type: text
-      label: "Organisation Role"
-      variant: inline
-      class: narrow
-      group: "Organisation"
 #    org_role:
-#      type: select
-#      required: false
-#      multiple: true
+#      type: text
 #      label: "Organisation Role"
-#      values:
-#        "(not set)": "(not set)"
-#        "Academic research": "Academic research"
-#        "Data partner": "Data partner"
-#        "EuropeanaIPR": "EuropeanaIPR"
-#        "EuropeanaTech (R&D)": "EuropeanaTech (R&D)"
-#        "EuropeanaTech": "EuropeanaTech"
-#        "Cultural creative": "Cultural creative"
-#        "Innovation": "Innovation"
+#      variant: inline
+#      class: narrow
+#      group: "Organisation"
+    org_role:
+      type: select
+      required: false
+      multiple: true
+      label: "Organisation Role"
+      values:
+        "(not set)": "(not set)"
+        "Aggregator": "Aggregator"
+        "Data Provider": "Data Provider"
+        "Provider": "Provider"
     website:
       type: text
       label: "Website"
