@@ -638,17 +638,20 @@ class ZohoImport
         }
 
         // only fetch photos from contacts that need it
-        if (array_key_exists("Show photo on europeana site", $source_record) && $source_record["Show photo on europeana site"] == 'true') {
+        // if we're looking at the contacts
+        if (array_key_exists("Show photo on europeana site", $source_record)) {
+          if ($source_record["Show photo on europeana site"] == 'true') {
             $logmessage = 'show public photo from: ' . $params['source_url'];
             $this->logger('debug', $logmessage, 'zohoimport');
-        } elseif ($source_record["Show photo on europeana site"] == false || $source_record["Show photo on europeana site"] == 'false') {
+          } elseif ($source_record["Show photo on europeana site"] == FALSE || $source_record["Show photo on europeana site"] == 'false') {
             //$logmessage = 'no remote photo needed for: ' . $params['source_url'];
             //$this->logger('debug', $logmessage, 'zohoimport');
-            return false;
-        } else {
+            return FALSE;
+          } else {
             //$logmessage = 'no public photo at: ' . $params['source_url'];
             //$this->logger('debug', $logmessage, 'zohoimport');
-            return false;
+            return FALSE;
+          }
         }
 
         // prevent hammering the limits of zoho by only fetching images after minimum of 36 hours
