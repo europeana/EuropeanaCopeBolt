@@ -710,7 +710,12 @@ class ZohoImport
         $image['tmpname'] = $cachepath . '/'. $params['name'];
         $image['id'] = $params['name'];
 
-        if (!file_exists($image['tmpname'])) {
+        if (json_decode($image['tmpname']) !== null) {
+          $logmessage = "remote image is not an image for: " . $params['name'] .' - url: '. $params['source_url'] ;
+          $this->logger('info', $logmessage, 'zohoimport');
+          print_r(json_decode($image['tmpname']));
+
+        } elseif (!file_exists($image['tmpname'])) {
             $logmessage = "fetched remote image for: " . $params['name'] .' - url: '. $params['source_url'] ;
             $this->logger('info', $logmessage, 'zohoimport');
 
@@ -726,9 +731,16 @@ class ZohoImport
                 return false;
             }
 
+            $jsonresults = json_decode($imagedata);
+
             //echo('not empty.. ');
             // no valid image
-            if (stristr($imagedata, 'No photo attached to this record id')) {
+            if ($jsonresults !== null &&
+              (
+                stristr($imagedata, 'No photo attached to this record id')
+                || stristr($imagedata, 'Unable to process your request')
+              )
+            ) {
                 $logmessage = 'no remote photo found for:' . $params['name'] . ' at url: ' . $params['source_url'];
                 $this->logger('error', $logmessage, 'zohoimport');
                 return false;
