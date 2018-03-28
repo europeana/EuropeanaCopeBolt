@@ -94,7 +94,7 @@ remotes:
             getparams:
                 authtoken: '{{override in local config}}'
                 scope: crmapi
-                criteria: '(Organisation Role:Accredited Aggregator)'
+                criteria: '(Organisation Role:Aggregator)'
                 # criteria: '(Organisation Role:Data Provider)'
                 # 1. Organisation role: *Accredited Aggregator*
                 # 2. Aggregator: *Active*
