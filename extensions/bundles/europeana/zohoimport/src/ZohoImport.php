@@ -655,10 +655,10 @@ class ZohoImport
         }
         //echo('not nophoto.. ');
 
-        echo('TODO: Figure out what to do with the following relations .. ');
-        $results = json_decode($relationsdata);
-        // print_r($results);
+        $logmessage = 'TODO: Figure out what to do with the following relations .. ';
+        $this->logger('info', $logmessage, 'zohoimport');
 
+        $results = json_decode($relationsdata);
         $logmessage = 'loadZohoRelatedRecords: ' . json_encode($results);
         $this->logger('debug', $logmessage, 'zohoimport');
         // return the filename for record
