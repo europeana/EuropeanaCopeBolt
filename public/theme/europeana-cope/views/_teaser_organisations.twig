@@ -1,0 +1,68 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+<article class="teaser group">
+    <div class="img-container">
+
+        {% if item.values.image is defined and item.values.image is not empty %}
+            <img src="{{ item.values.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+        {% else %}
+             <img src="{{ 'web_assets/default.png'|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+        {% endif %}
+
+        <div class="info-block">
+
+            <span class="info-type">{{ item.org_role}}</span>
+            
+            {% if (item.city is not empty) or (item.country is not empty) %}
+            <span class="organisation-location">
+                <svg class="icon icon-location">
+                    <use xlink:href="#icon-location"></use>
+                </svg>
+
+                {{ item.city -}}
+                {% if item.city is not empty and item.country is not empty %}
+                ,
+                {% endif %}
+                {{- item.country }}
+            </span>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <h2><a href="{{ item.link() }}">{{ item.title }}</a></h2>
+
+    {% include 'partials/_tags.twig' %}
+
+    <div class="tags">
+        {# fake 'tags' in organisation #}
+        {% if item.org_role is not empty %}
+        <a class="tag" href="#">{{ item.org_role }}</a>
+        {% endif %}
+
+        {% if item.scope is not empty %}
+        <a class="tag" href="#">{{ item.scope }}</a>
+        {% endif %}
+
+        {% if item.domain is not empty %}
+        <a class="tag" href="#">{{ item.domain }}</a>
+        {% endif %}
+    </div>
+    
+
+    {% if item.description is not empty %}
+        {{ item.description|excerpt(150) }}
+    {% endif %}
+
+    <div class="actions-footer">
+
+        <a class="readmore" href="{{ item.link() }}">
+            Read more
+        </a>
+
+    </div>
+
+</article>
