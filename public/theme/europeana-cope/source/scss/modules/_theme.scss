@@ -1163,7 +1163,7 @@ main .section-calltoactionlink:first-child {
 
 .contentpage {
     .header-group,
-    .personal {
+    .card {
         position: relative;
         margin-top: 2rem;
 
@@ -1741,7 +1741,7 @@ figure {
 }
 
 
-.personal {
+.card {
 
     // Te veel uitzonderingen
     // + blockquote {
@@ -1766,7 +1766,7 @@ figure {
 
 }
 
-.personal-img {
+.card-img {
 
     @include respond-to(large-screens){
         float:left;
@@ -1774,7 +1774,7 @@ figure {
     }
 }
 
-.personal-details {
+.card-details {
     color: $medium-gray;
 
     @include respond-to(large-screens){
@@ -1784,12 +1784,12 @@ figure {
     }
 }
 
-.personal-network {
+.card-network {
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
-.personal-function {
+.card-function {
     font-size: 0.875rem;
     margin-bottom: 1rem;
 
@@ -1798,7 +1798,7 @@ figure {
     }
 }
 
-.personal-contact {
+.card-contact {
     a {
         display: block;
         margin-bottom: 0.5rem;

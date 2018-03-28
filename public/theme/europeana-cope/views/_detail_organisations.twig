@@ -5,11 +5,11 @@
 
             <article class="column main-column">
 
-                <div class="group card personal h-card">
-                    <img class="card-img personal-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}" />
+                <div class="group card organisation h-card">
+                    <img class="organisation-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}" />
 
 
-                    <div class="card-details personal-details">
+                    <div class="card-details organisation-details">
 
                         <h2 class="alpha">
                             {% include 'partials/_main-network-participation.twig' %}
@@ -17,7 +17,7 @@
 
                         <h1 class="beta p-name">{{ record.first_name }} {{ record.last_name }}</h1>
 
-                        <div class="card-network personal-network">
+                        <div class="card-network organisation-network">
                             {% if record.boardposition is not empty %}
                                 <span>{{ record.boardposition }}</span>
                             {% endif %}
@@ -26,14 +26,14 @@
                             {% endfor %}
                         </div>
 
-                        <div class="card-function personal-function">
+                        <div class="card-function organisation-function">
                             <span class="p-job-title">{{ record.job_title }}</span>
                             <span class="p-org">{{ record.company }}</span>
                             <span class="p-country-name">{{ record.country }}</span>
                             <span>{{ record.sector }}</span>
                         </div>
 
-                        <p class="card-contact personal-contact">
+                        <p class="card-contact organisation-contact">
                             {% if record.email is not empty %}
                             <a class="email u-email" href="mailto:{{ record.email }}">
                                 <svg class="icon icon-sendemail">
