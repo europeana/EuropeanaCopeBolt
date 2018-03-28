@@ -38,10 +38,11 @@ class SelectAsyncController implements ControllerProviderInterface
     {
         $this->app = $app;
         $this->config = $config;
-        $this->default_types = ['pages', 'posts', 'data', 'projects', 'events', 'persons', 'resources', 'jobs'];
+        $this->default_types = ['pages', 'posts', 'data', 'projects', 'events', 'persons', 'resources', 'jobs', 'organisations'];
         $this->default_fields = ['id', 'title', 'status'];
         $this->default_person_fields = ['id', 'first_name', 'last_name', 'email', 'status'];
         $this->default_job_fields = ['id', 'position', 'status'];
+        $this->default_organisation_fields = ['id', 'name', 'status'];
         $this->directory_tree = [];
     }
 
@@ -453,6 +454,20 @@ class SelectAsyncController implements ControllerProviderInterface
                     )
                 );
                 $qb->orderBy('last_name', 'ASC');
+                break;
+            case 'organisations':
+                $qb->select($fields);
+                $qb->where(
+                  $qb->expr()->orX(
+                    $qb->expr()->like('name', $qb->createNamedParameter($search)),
+                    $qb->expr()->like('name_alt1', $qb->createNamedParameter($search)),
+                    $qb->expr()->like('name_alt2', $qb->createNamedParameter($search)),
+                    $qb->expr()->like('acronym', $qb->createNamedParameter($search)),
+                    $qb->expr()->like('city', $qb->createNamedParameter($search)),
+                    $qb->expr()->like('country', $qb->createNamedParameter($search))
+                  )
+                );
+                $qb->orderBy('datepublish', 'DESC');
                 break;
             case 'jobs':
                 $qb->select($fields);

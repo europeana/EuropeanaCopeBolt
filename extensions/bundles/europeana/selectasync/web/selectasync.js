@@ -208,7 +208,7 @@ function SA_loadNewAsyncSelectors() {
             // at what position is the key originally
             var datasort = datakeys.indexOf(key);
             // make sure there is a title
-            var title = (e.title)?e.title:(e.last_name)?e.first_name + ' ' + e.last_name:(e.position)?e.position:'no title';
+            var title = (e.title)?e.title:(e.last_name)?e.first_name + ' ' + e.last_name:(e.position)?e.position:(e.name)?e.name:'no title';
             // make sure there is a status
             var status = (e.status)?e.status:'draft';
             var statusclass = 'btn-info';
@@ -331,7 +331,7 @@ function SA_loadNewAsyncSelectors() {
               var results = data.results[data.type];
               var ajaxcleaned = [];
               results.forEach(function(e, index) {
-                var title = (e.title)?e.title:(e.last_name)?e.first_name + ' ' + e.last_name:(e.position)?e.position:'no title';
+                var title = (e.title)?e.title:(e.last_name)?e.first_name + ' ' + e.last_name:(e.position)?e.position:(e.name)?e.name:'no title';
                 ajaxcleaned.push({
                   'value': e.id,
                   'label': title,
@@ -362,7 +362,7 @@ function SA_loadNewAsyncSelectors() {
         console.log( "Selected: " + ui.item.value + " aka " + ui.item.label, ui.item );
         var key = ui.item.full_item.id;
 
-        var title = (ui.item.full_item.title)?ui.item.full_item.title:(ui.item.full_item.last_name)?ui.item.full_item.first_name + ' ' + ui.item.full_item.last_name:(ui.full_item.position)?ui.full_item.position:'no title';
+        var title = (ui.item.full_item.title)?ui.item.full_item.title:(ui.item.full_item.last_name)?ui.item.full_item.first_name + ' ' + ui.item.full_item.last_name:(ui.full_item.position)?ui.full_item.position:(ui.full_item.name)?ui.full_item.name:'no title';
         // make sure there is a status
         var status = ui.item.full_item.status;
         var statusclass = 'btn-info';

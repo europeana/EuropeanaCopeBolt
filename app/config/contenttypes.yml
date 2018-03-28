@@ -677,7 +677,7 @@ pages:
         selected_organisations:
           type: text
           label: "Select Organisations"
-          class: 'ajaxselector ct-organisations fields-id--title--status key-id results-auto'
+          class: 'ajaxselector ct-organisations fields-id--name--status key-id results-auto'
         modulemorelink:
           type: text
           label: More link
@@ -1038,7 +1038,7 @@ posts:
         selected_organisations:
           type: text
           label: "Select Organisations"
-          class: 'ajaxselector ct-organisations fields-id--title--status key-id results-auto'
+          class: 'ajaxselector ct-organisations fields-id--name--status key-id results-auto'
         modulemorelink:
           type: text
           label: More link
@@ -1416,7 +1416,7 @@ data:
         selected_organisations:
           type: text
           label: "Select Organisations"
-          class: 'ajaxselector ct-organisations fields-id--title--status key-id results-auto'
+          class: 'ajaxselector ct-organisations fields-id--name--status key-id results-auto'
         modulemorelink:
           type: text
           label: More link
@@ -1850,7 +1850,7 @@ projects:
         selected_organisations:
           type: text
           label: "Select Organisations"
-          class: 'ajaxselector ct-organisations fields-id--title--status key-id results-auto'
+          class: 'ajaxselector ct-organisations fields-id--name--status key-id results-auto'
         modulemorelink:
           type: text
           label: More link
@@ -2187,7 +2187,7 @@ events:
         selected_organisations:
           type: text
           label: "Select Organisations"
-          class: 'ajaxselector ct-organisations fields-id--title--status key-id results-auto'
+          class: 'ajaxselector ct-organisations fields-id--name--status key-id results-auto'
         modulemorelink:
           type: text
           label: More link
