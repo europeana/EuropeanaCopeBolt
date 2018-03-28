@@ -63,6 +63,7 @@
                                 or (record.zipcode is not empty)
                                 or (record.country is not empty)
                             %}
+                                {# Only show location icon if any location info #}
                                 <svg class="icon icon-location">
                                     <use xlink:href="#icon-location"></use>
                                 </svg>
@@ -85,18 +86,8 @@
                             {% endif %}
                         </p>
 
-                    
-
-                        
-
                     </div>
                 </div>{# /group #}
-
-                 {% if 'MC Election Candidate' in record.network_participation %}
-                    <blockquote>
-                        {{ record.candidacy_intro }}
-                    </blockquote>
-                {% endif %}
 
                 <div class="body">
                     {{ record.description }}
