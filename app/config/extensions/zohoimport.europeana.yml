@@ -31,7 +31,7 @@ remotes:
             hookafterload:
                 image:
                     callback: downloadZohoPhotoFromURL
-                    source_url: 'https://crm.zoho.com/crm/private/xml/Contacts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=CONTACTID'
+                    source_url: 'https://crm.zoho.com/crm/private/json/Contacts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=CONTACTID'
                     source_field: CONTACTID
                     target_field: image
             mapping: # mappings in XPATH
@@ -116,7 +116,7 @@ remotes:
             hookafterload:
                 image:
                     callback: downloadZohoPhotoFromURL
-                    source_url: 'https://crm.zoho.com/crm/private/xml/Accounts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=ACCOUNTID'
+                    source_url: 'https://crm.zoho.com/crm/private/json/Accounts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=ACCOUNTID'
                     source_field: ACCOUNTID
                     target_field: image
                 relations:
