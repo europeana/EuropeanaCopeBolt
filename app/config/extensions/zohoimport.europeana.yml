@@ -3,7 +3,7 @@ debug_mode: false
 # the path for downloads images in hookafterload
 image_path: 'zoho_images'
 # set image_downloads to true for the hookafterload images
-image_downloads: false
+image_downloads: true
 
 remotes:
     zoho_json_remote:
@@ -31,7 +31,7 @@ remotes:
             hookafterload:
                 image:
                     callback: downloadZohoPhotoFromURL
-                    source_url: 'https://crm.zoho.com/crm/private/xml/Contacts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=CONTACTID'
+                    source_url: 'https://crm.zoho.com/crm/private/json/Contacts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=CONTACTID'
                     source_field: CONTACTID
                     target_field: image
             mapping: # mappings in XPATH
@@ -113,12 +113,22 @@ remotes:
                 new: 'published'       # may also be any valid status
                 updated: 'published'   # may also be any valid status
                 removed: 'held' # may also be any valid status
-#            hookafterload:
+            hookafterload:
 #                image:
 #                    callback: downloadZohoPhotoFromURL
-#                    source_url: 'https://crm.zoho.com/crm/private/xml/Accounts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=ACCOUNTID'
+#                    source_url: 'https://crm.zoho.com/crm/private/json/Accounts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=ACCOUNTID'
 #                    source_field: ACCOUNTID
 #                    target_field: image
+                image:
+                    callback: downloadZohoPhotoFromURL
+                    source_url: "Logo (link to WikimediaCommons)"
+                    source_field: "Logo (link to WikimediaCommons)"
+                    target_field: image
+                relations:
+                    callback: loadZohoRelatedRecords
+                    source_url: https://crm.zoho.com/crm/private/json/Accounts/getRelatedRecords?authtoken={{override in local config}}&scope=crmapi&parentModule=Contacts&id=ACCOUNTID
+                    source_field: ACCOUNTID
+                    target_field: null
             mapping: # mappings in XPATH
                 root: 'response.result.Accounts.row'
                 fields:

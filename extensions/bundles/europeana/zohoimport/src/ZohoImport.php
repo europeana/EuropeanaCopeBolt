@@ -610,6 +610,68 @@ class ZohoImport
     }
 
     /**
+     * HOOKAFTERLOAD: Get a related records from ZOHO
+     * Save it to the filesystem and return the url
+     *
+     * @param $source_record
+     * @param $target_record
+     * @param $params
+     *
+     * @return mixed
+     */
+    public function loadZohoRelatedRecords($source_record, $target_record, $params) {
+
+        //prepare url
+        if (array_key_exists($params['source_field'], $source_record) && !empty($source_record[$params['source_field']])) {
+          $params['name'] = $source_record[$params['source_field']];
+          $params['source_url'] = str_replace($params['source_field'], $params['name'], $params['source_url']);
+          if ($params['name'] == $params['source_url']) {
+              $params['name'] = md5($params['name']);
+          }
+        } else {
+          $logmessage = "loadZohoRelatedRecords has bad config";
+          $this->logger('error', $logmessage, 'zohoimport');
+          $logmessage = "config: " . json_encode($params);
+          $this->logger('error', $logmessage, 'zohoimport');
+          return false;
+        }
+
+        // really fetch the file
+        $this->app['zohoimport.filefetcher']->fetchRemoteResource($params['source_url']);
+        $relationsdata = $this->app['zohoimport.filefetcher']->latestFile();
+
+        $logmessage = "relations data url: ". $params['source_url'] ;
+        $this->logger('info', $logmessage, 'zohoimport');
+
+        //echo('image.. ');
+        // no file
+        if (empty($relationsdata)) {
+            $logmessage = "empty relations data: ". $params['source_url'] ;
+            $this->logger('error', $logmessage, 'zohoimport');
+            return false;
+        }
+
+        //echo('not empty.. ');
+        // no valid image
+        if (stristr($relationsdata, 'No photo attached to this record id')
+          || stristr($relationsdata, 'Unable to process your request')) {
+            $logmessage = 'no remote relations data found for:' . $params['name'] . ' at url: ' . $params['source_url'];
+            $this->logger('error', $logmessage, 'zohoimport');
+            return false;
+        }
+        //echo('not nophoto.. ');
+
+        $logmessage = 'TODO: Figure out what to do with the following relations .. ';
+        $this->logger('info', $logmessage, 'zohoimport');
+
+        $results = json_decode($relationsdata);
+        $logmessage = 'loadZohoRelatedRecords result: ' . json_encode($results);
+        $this->logger('debug', $logmessage, 'zohoimport');
+        // return the filename for record
+        return $results;
+    }
+
+    /**
      * HOOKAFTERLOAD: Get a photo from ZOHO
      * Save it to the filesystem and return the url
      *
@@ -632,23 +694,32 @@ class ZohoImport
         if (array_key_exists($params['source_field'], $source_record) && !empty($source_record[$params['source_field']])) {
             $params['name'] = $source_record[$params['source_field']];
             $params['source_url'] = str_replace($params['source_field'], $params['name'], $params['source_url']);
+            if ($params['name'] == $params['source_url']) {
+                $params['name'] = md5($params['name']);
+            }
         } else {
             $logmessage = "downloadZohoPhotoFromURL has bad config";
             $this->logger('error', $logmessage, 'zohoimport');
+            $logmessage = "config: " . json_encode($params);
+            $this->logger('error', $logmessage, 'zohoimport');
+            return false;
         }
 
         // only fetch photos from contacts that need it
-        if (array_key_exists("Show photo on europeana site", $source_record) && $source_record["Show photo on europeana site"] == 'true') {
+        // if we're looking at the contacts
+        if (array_key_exists("Show photo on europeana site", $source_record)) {
+          if ($source_record["Show photo on europeana site"] == 'true') {
             $logmessage = 'show public photo from: ' . $params['source_url'];
             $this->logger('debug', $logmessage, 'zohoimport');
-        } elseif ($source_record["Show photo on europeana site"] == false || $source_record["Show photo on europeana site"] == 'false') {
+          } elseif ($source_record["Show photo on europeana site"] == FALSE || $source_record["Show photo on europeana site"] == 'false') {
             //$logmessage = 'no remote photo needed for: ' . $params['source_url'];
             //$this->logger('debug', $logmessage, 'zohoimport');
-            return false;
-        } else {
+            return FALSE;
+          } else {
             //$logmessage = 'no public photo at: ' . $params['source_url'];
             //$this->logger('debug', $logmessage, 'zohoimport');
-            return false;
+            return FALSE;
+          }
         }
 
         // prevent hammering the limits of zoho by only fetching images after minimum of 36 hours
@@ -715,6 +786,15 @@ class ZohoImport
             $this->app['zohoimport.filefetcher']->fetchRemoteResource($params['source_url']);
             $imagedata = $this->app['zohoimport.filefetcher']->latestFile();
 
+            $imagejsonerror = json_decode($imagedata);
+            if (!empty($imagejsonerror) && $imagejsonerror !== false) {
+                $logmessage = "remote resource is not an image for: " . $params['name'] .' - url: '. $params['source_url'] ;
+                $this->logger('info', $logmessage, 'zohoimport');
+                $logmessage = 'downloadZohoPhotoFromURL result: ' . json_encode($imagejsonerror);
+                $this->logger('debug', $logmessage, 'zohoimport');
+                return false;
+            }
+
             //echo('image.. ');
             // no file
             if (empty($imagedata)) {
@@ -722,10 +802,10 @@ class ZohoImport
                 $this->logger('error', $logmessage, 'zohoimport');
                 return false;
             }
-
             //echo('not empty.. ');
             // no valid image
-            if (stristr($imagedata, 'No photo attached to this record id')) {
+            if (stristr($imagedata, 'No photo attached to this record id')
+                || stristr($imagedata, 'Unable to process your request')) {
                 $logmessage = 'no remote photo found for:' . $params['name'] . ' at url: ' . $params['source_url'];
                 $this->logger('error', $logmessage, 'zohoimport');
                 return false;
