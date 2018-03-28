@@ -9,9 +9,13 @@
 
                     <div class="card-details organisation-details">
 
-                        <h2 class="alpha">
-                           {{ record.org_role }} 
-                        </h2>
+                        {% if record.org_role is not empty %}
+                            <h2 class="alpha">
+                                {% for role in record.org_role %}
+                                {{ role }}{% if loop.last == false %} / {% endif %}
+                                {% endfor %}
+                            </h2>
+                        {% endif %}
 
                         <h1 class="beta p-name">
                             {{ record.name }}
