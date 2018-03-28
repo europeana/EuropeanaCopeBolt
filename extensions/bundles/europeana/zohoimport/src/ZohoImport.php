@@ -659,7 +659,7 @@ class ZohoImport
         $this->logger('info', $logmessage, 'zohoimport');
 
         $results = json_decode($relationsdata);
-        $logmessage = 'loadZohoRelatedRecords: ' . json_encode($results);
+        $logmessage = 'loadZohoRelatedRecords result: ' . json_encode($results);
         $this->logger('debug', $logmessage, 'zohoimport');
         // return the filename for record
         return $results;
@@ -774,16 +774,11 @@ class ZohoImport
             $this->app['zohoimport.filefetcher']->fetchRemoteResource($params['source_url']);
             $imagedata = $this->app['zohoimport.filefetcher']->latestFile();
 
-            print('$imagedata');
-            print_r($imagedata);
             $imagejsonerror = json_decode($imagedata);
-            print('$imagejsonerror');
-            print_r($imagejsonerror);
-
             if (!empty($imagejsonerror) && $imagejsonerror !== false) {
                 $logmessage = "remote resource is not an image for: " . $params['name'] .' - url: '. $params['source_url'] ;
                 $this->logger('info', $logmessage, 'zohoimport');
-                $logmessage = 'loadZohoRelatedRecords: ' . json_encode($imagejsonerror);
+                $logmessage = 'downloadZohoPhotoFromURL result: ' . json_encode($imagejsonerror);
                 $this->logger('debug', $logmessage, 'zohoimport');
                 return false;
             }
