@@ -6,7 +6,7 @@
             <article class="column main-column">
                 {{ dump(record) }}
                 <div class="group card organisation h-card">
-                    <img class="card-img organisation-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}" />
+                    <img class="card-img organisation-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Logo of {{ record.name }}" />
 
                     <div class="card-details organisation-details">
 
@@ -55,18 +55,21 @@
                                 </svg>{{ record.website }}
                             </a>
                         {% endif %}
-                        
-
-                        <div class="card-function organisation-function">
-                            
-                        </div>
 
                         <p class="card-contact organisation-contact">
-                            {% if record.street is not empty %}
+                            {% if (record.street is not empty) 
+                                or (record.po_box is not empty)
+                                or (record.city is not empty)
+                                or (record.zipcode is not empty)
+                                or (record.country is not empty)
+                            %}
                                 <svg class="icon icon-location">
                                     <use xlink:href="#icon-location"></use>
                                 </svg>
-                    <span class="p-street-address">{{ record.street }}</span>
+                            {% endif %}
+                            
+                            {% if record.street is not empty %}
+                                <span class="p-street-address">{{ record.street }}</span>
                             {% endif %}
                             {% if record.po_box is not empty %}
                                 <span class="p-post-office-box">{{ record.po_box }}</span>
@@ -79,9 +82,12 @@
                             {% endif %} 
                             {% if record.country is not empty %}
                                 <span class="p-country-name">{{ record.country }}</span>
-                            {% endif %}  
-
+                            {% endif %}
                         </p>
+
+                    
+
+                        
 
                     </div>
                 </div>{# /group #}

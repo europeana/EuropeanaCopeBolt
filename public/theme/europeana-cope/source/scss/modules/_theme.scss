@@ -1803,9 +1803,20 @@ figure {
         display: block;
         margin-bottom: 0.5rem;
     }
+    
+    svg {
+        display: inline-block;
+    }
+
+    svg + span {
+        display: inline;
+    }
+
     span {
         display: block;
+        text-indent: 23px;
     }
+    
 }
 
 
