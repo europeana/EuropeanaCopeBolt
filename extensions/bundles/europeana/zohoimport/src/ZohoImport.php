@@ -783,6 +783,8 @@ class ZohoImport
             }
 
             $imagejsonerror = json_decode($imagedata);
+            print('$imagejsonerror');
+            print_r($imagejsonerror);
             if (!empty($imagejsonerror) && $imagejsonerror !== false) {
                 $logmessage = "remote resource is not an image for: " . $params['name'] .' - url: '. $params['source_url'] ;
                 $this->logger('info', $logmessage, 'zohoimport');
