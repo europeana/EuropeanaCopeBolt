@@ -114,10 +114,15 @@ remotes:
                 updated: 'published'   # may also be any valid status
                 removed: 'held' # may also be any valid status
             hookafterload:
+#                image:
+#                    callback: downloadZohoPhotoFromURL
+#                    source_url: 'https://crm.zoho.com/crm/private/json/Accounts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=ACCOUNTID'
+#                    source_field: ACCOUNTID
+#                    target_field: image
                 image:
                     callback: downloadZohoPhotoFromURL
-                    source_url: 'https://crm.zoho.com/crm/private/json/Accounts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=ACCOUNTID'
-                    source_field: ACCOUNTID
+                    source_url: "Logo (link to WikimediaCommons)"
+                    source_field: "Logo (link to WikimediaCommons)"
                     target_field: image
                 relations:
                     callback: loadZohoRelatedRecords
