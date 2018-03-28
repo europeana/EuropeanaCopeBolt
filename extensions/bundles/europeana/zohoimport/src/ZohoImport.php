@@ -628,6 +628,9 @@ class ZohoImport
         } else {
           $logmessage = "loadZohoRelatedRecords has bad config";
           $this->logger('error', $logmessage, 'zohoimport');
+          $logmessage = "config: " . json_encode($params);
+          $this->logger('error', $logmessage, 'zohoimport');
+          return false;
         }
 
         // really fetch the file
@@ -691,6 +694,9 @@ class ZohoImport
         } else {
             $logmessage = "downloadZohoPhotoFromURL has bad config";
             $this->logger('error', $logmessage, 'zohoimport');
+            $logmessage = "config: " . json_encode($params);
+            $this->logger('error', $logmessage, 'zohoimport');
+            return false;
         }
 
         // only fetch photos from contacts that need it
