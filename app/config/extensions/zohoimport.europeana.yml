@@ -113,12 +113,17 @@ remotes:
                 new: 'published'       # may also be any valid status
                 updated: 'published'   # may also be any valid status
                 removed: 'held' # may also be any valid status
-#            hookafterload:
-#                image:
-#                    callback: downloadZohoPhotoFromURL
-#                    source_url: 'https://crm.zoho.com/crm/private/xml/Accounts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=ACCOUNTID'
-#                    source_field: ACCOUNTID
-#                    target_field: image
+            hookafterload:
+                image:
+                    callback: downloadZohoPhotoFromURL
+                    source_url: 'https://crm.zoho.com/crm/private/xml/Accounts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=ACCOUNTID'
+                    source_field: ACCOUNTID
+                    target_field: image
+                relations:
+                    callback: loadZohoRelatedRecords
+                    source_url: https://crm.zoho.com/crm/private/json/Accounts/getRelatedRecords?authtoken={{override in local config}}&scope=crmapi&parentModule=Contacts&id=ACCOUNTID
+                    source_field: ACCOUNTID
+                    target_field: null
             mapping: # mappings in XPATH
                 root: 'response.result.Accounts.row'
                 fields:
