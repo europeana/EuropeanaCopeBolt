@@ -624,10 +624,10 @@ class ZohoImport
         //prepare url
         if (array_key_exists($params['source_field'], $source_record) && !empty($source_record[$params['source_field']])) {
           $params['name'] = $source_record[$params['source_field']];
-          if ($params['name'] == $params['source_url']) {
-            $params['name'] = md5($params['name']);
-          }
           $params['source_url'] = str_replace($params['source_field'], $params['name'], $params['source_url']);
+          if ($params['name'] == $params['source_url']) {
+              $params['name'] = md5($params['name']);
+          }
         } else {
           $logmessage = "loadZohoRelatedRecords has bad config";
           $this->logger('error', $logmessage, 'zohoimport');
@@ -693,10 +693,10 @@ class ZohoImport
         //prepare url
         if (array_key_exists($params['source_field'], $source_record) && !empty($source_record[$params['source_field']])) {
             $params['name'] = $source_record[$params['source_field']];
-            if ($params['name'] == $params['source_url']) {
-              $params['name'] = md5($params['name']);
-            }
             $params['source_url'] = str_replace($params['source_field'], $params['name'], $params['source_url']);
+            if ($params['name'] == $params['source_url']) {
+                $params['name'] = md5($params['name']);
+            }
         } else {
             $logmessage = "downloadZohoPhotoFromURL has bad config";
             $this->logger('error', $logmessage, 'zohoimport');
