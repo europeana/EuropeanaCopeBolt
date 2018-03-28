@@ -31,5 +31,13 @@
         {% endfor %}
     {% endif %}
 
+{% elseif record.related('persons') is not empty and record.contenttype.singular_slug == 'organisation' %}
+    {# organization: related person #}
+    {% set contacts = record.related('persons') %}
+    {# {{ dump(contacts) }} #}
+    {% for contact in contacts %}
+        {% include 'views/_teaser_contact.twig' with { item : contact } %}
+    {% endfor %}
+
 
 {% endif %}

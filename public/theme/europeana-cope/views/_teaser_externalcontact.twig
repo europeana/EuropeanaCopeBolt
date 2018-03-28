@@ -1,23 +1,27 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
 <section class="author-big column group">
     <div class="img-container">
-        {% if record.values.image %}
-            <img class="round" src="{{ record.values.image|thumbnail(144, 144, 'c') }}" alt=""/>
+        {% if item.values.image %}
+            <img class="round" src="{{ item.values.image|thumbnail(144, 144, 'c') }}" alt=""/>
         {% else %}
             <img class="round" src="{{ 'web_assets/default.png'|thumbnail(144, 144, 'c') }}" alt=""/>
         {% endif %}
-        <span class="letter-overlay">{{ record.contact_name|first }}</span>
+        <span class="letter-overlay">{{ item.contact_name|first }}</span>
     </div>
     <div class="txt-container">
-        <p class="name">{{ record.contact_name }}</p>
+        <p class="name">{{ item.contact_name }}</p>
 
         <div class="contact">
 
-        {% if record.contact_email is not empty %}
-            <a href="mailto:{{ record.contact_email }}" class="email">{{ record.contact_email }}</a>
+        {% if item.contact_email is not empty %}
+            <a href="mailto:{{ item.contact_email }}" class="email">{{ item.contact_email }}</a>
         {% endif %}
 
-        {% if record.contact_website is not empty %}
-            <a href="{{ record.contact_website }}" class="url">{{ record.contact_website }}</a>
+        {% if item.contact_website is not empty %}
+            <a href="{{ item.contact_website }}" class="url">{{ item.contact_website }}</a>
         {% endif %}
         </div>
     </div>

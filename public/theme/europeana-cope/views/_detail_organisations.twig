@@ -4,74 +4,84 @@
         <div class="inner-wrap">
 
             <article class="column main-column">
-
+                {{ dump(record) }}
                 <div class="group card organisation h-card">
-                    <img class="organisation-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}" />
-
+                    <img class="card-img organisation-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}" />
 
                     <div class="card-details organisation-details">
 
                         <h2 class="alpha">
-                            {% include 'partials/_main-network-participation.twig' %}
+                           {{ record.org_role }} 
                         </h2>
 
-                        <h1 class="beta p-name">{{ record.first_name }} {{ record.last_name }}</h1>
+                        <h1 class="beta p-name">
+                            {{ record.name }}
+                        </h1>
 
                         <div class="card-network organisation-network">
-                            {% if record.boardposition is not empty %}
-                                <span>{{ record.boardposition }}</span>
+                            {% if record.name_alt1 is not empty %}
+                                <span>{{ record.name_alt1 }}</span>
                             {% endif %}
-                            {% for item in record.network_participation %}
-                                <span>{{ item }}</span>
-                            {% endfor %}
+                            {% if record.name_alt2 is not empty %}
+                                <span>{{ record.name_alt2 }}</span>
+                            {% endif %}
+                            {% if record.acronym is not empty %}
+                                <span>{{ record.acronym }}</span>
+                            {% endif %}  
                         </div>
 
+                        {% if record.scope is not empty %}
+                            <p>
+                                <svg class="icon icon-crosshair">
+                                    <use xlink:href="#icon-crosshair"></use>
+                                </svg>
+                                {{ record.scope }}
+                            </p>
+                        {% endif %}
+
+                        {% if record.domain is not empty %}
+                            <p>
+                                <svg class="icon icon-piechart">
+                                    <use xlink:href="#icon-piechart"></use>
+                                </svg>
+                                {{ record.domain }}
+                            </p>
+                        {% endif %}
+
+                        {% if record.website is not empty %}
+                            <a class="u-url" href="{{ record.website }}">
+                                <svg class="icon icon-link">
+                                    <use xlink:href="#icon-link"></use>
+                                </svg>{{ record.website }}
+                            </a>
+                        {% endif %}
+                        
+
                         <div class="card-function organisation-function">
-                            <span class="p-job-title">{{ record.job_title }}</span>
-                            <span class="p-org">{{ record.company }}</span>
-                            <span class="p-country-name">{{ record.country }}</span>
-                            <span>{{ record.sector }}</span>
+                            
                         </div>
 
                         <p class="card-contact organisation-contact">
-                            {% if record.email is not empty %}
-                            <a class="email u-email" href="mailto:{{ record.email }}">
-                                <svg class="icon icon-sendemail">
-                                    <use xlink:href="#icon-sendemail"></use></svg>{{ record.email }}
-                            </a>
+                            {% if record.street is not empty %}
+                                <svg class="icon icon-location">
+                                    <use xlink:href="#icon-location"></use>
+                                </svg>
+                    <span class="p-street-address">{{ record.street }}</span>
                             {% endif %}
-
-                            {% if record.phone is not empty %}
-                            <a class="phone p-tel" href="{{ record.phone }}">
-                                <svg class="icon icon-phone-work">
-                                    <use xlink:href="#icon-phone-work"></use></svg>{{ record.phone }}
-                            </a>
-                            {% endif %}
+                            {% if record.po_box is not empty %}
+                                <span class="p-post-office-box">{{ record.po_box }}</span>
+                            {% endif %}  
+                            {% if record.city is not empty %}
+                                <span class="p-locality">{{ record.city }}</span>
+                            {% endif %} 
+                            {% if record.zipcode is not empty %}
+                                <span class="p-postal-code">{{ record.zipcode }}</span>
+                            {% endif %} 
+                            {% if record.country is not empty %}
+                                <span class="p-country-name">{{ record.country }}</span>
+                            {% endif %}  
 
                         </p>
-
-                        <div class="socials">
-                            {% if record.twitter is not empty %}
-                            <a class="tw" href="{{ record.twitter }}">
-                                <svg class="icon icon-twitter">
-                                    <use xlink:href="#icon-twitter"></use>
-                                </svg><span class="sr-only">Twitter</span></a>
-                            {% endif %}
-
-                            {% if record.skype is not empty %}
-                            <a class="sk" href="skype:{{ record.skype }}?userinfo">
-                                <svg class="icon icon-skype">
-                                    <use xlink:href="#icon-skype"></use>
-                                </svg><span class="sr-only">Skype</span></a>
-                            {% endif %}
-
-                            {% if record.linkedin is not empty %}
-                            <a class="li" href="{{ record.linkedin }}">
-                                <svg class="icon icon-linkedin">
-                                    <use xlink:href="#icon-linkedin"></use>
-                                </svg><span class="sr-only">LinkedIn</span></a>
-                            {% endif %}
-                        </div>
 
                     </div>
                 </div>{# /group #}
@@ -83,57 +93,21 @@
                 {% endif %}
 
                 <div class="body">
-                    {{ record.introduction }}
+                    {{ record.description }}
 
                     <ul class="link-list">
-                        <li><a class="u-url" href="{{ record.company_url }}">{{ record.company_url }}</a></li>
+                        <li><a class="u-url" href="{{ record.website }}">{{ record.website }}</a></li>
                     </ul>
                 </div>
-
-
-
             </article>
-
-            <section class="teaser-list-section">
-                <div class="main-column">
-
-                {# {% set relatedevents = record.related('events') %} #}
-                {% setcontent relatedevents = 'events' where { 'contact_record' : '%"' ~ record.id ~ '"%' } %}
-                {% if relatedevents|length > 0 %}
-                    <h2>Speaking at</h2>
-                    {% include 'partials/_list-teaser-list.twig' with { items : relatedevents } %}
-                {% endif %}
-
-                {# {% set relatedposts = record.related('posts') %} #}
-                {% setcontent relatedposts = 'posts' where { 'author' : '%"' ~ record.id ~ '"%' } %}
-                {% if relatedposts|length > 0 %}
-                    <h2>Blogposts</h2>
-                    {% include 'partials/_list-teaser-list.twig' with { items : relatedposts } %}
-                {% endif %}
-
-                {# {% set relatedpages = record.related('pages') %} #}
-                {% setcontent relatedpages = 'pages' where { 'contact_record' : '%"' ~ record.id ~ '"%' } %}
-                {% if relatedpages|length > 0 %}
-                    <h2>Pages</h2>
-                    {% include 'partials/_list-teaser-list.twig' with { items : relatedpages } %}
-                {% endif %}
-
-                {# {% set relateddata = record.related('data') %} #}
-                {% setcontent relateddata = 'data' where { 'contact_record' : '%"' ~ record.id ~ '"%' } %}
-                {% if relateddata|length > 0 %}
-                    <h2>Datasets</h2>
-                    {% include 'partials/_list-teaser-list.twig' with { items : relateddata } %}
-                {% endif %}
-
-                {# {% set relatedprojects = record.related('projects') %} #}
-                {% setcontent relatedprojects = 'projects' where { 'contact_record' : '%"' ~ record.id ~ '"%' } %}
-                {% if relatedprojects|length > 0 %}
-                    <h2>Projects</h2>
-                    {% include 'partials/_list-teaser-list.twig' with { items : relatedprojects } %}
-                {% endif %}
-
-                </div>{# /column #}
-            </section>
-
        </div>
     </section>
+
+    <aside>
+        <div class="inner-wrap">
+
+            {# AUTHOR BIG #}
+            {% include 'modules/_teaser_contact.twig' with { record : record } %}
+
+        </div>
+    </aside>
