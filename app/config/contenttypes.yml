@@ -572,6 +572,7 @@ pages:
             jobs: Jobs
             events: Events
             resources: Banners, Calls to action and Blocks
+            organisations: Organisations
         override_amount:
           type: integer
           label: Amount
@@ -673,6 +674,10 @@ pages:
           type: text
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        selected_organisations:
+          type: text
+          label: "Select Organisations"
+          class: 'ajaxselector ct-organisations fields-id--title--status key-id results-auto'
         modulemorelink:
           type: text
           label: More link
@@ -928,6 +933,7 @@ posts:
             jobs: Jobs
             events: Events
             resources: Banners, Calls to action and Blocks
+            organisations: Organisations
         override_amount:
           type: integer
           label: Amount
@@ -1029,6 +1035,10 @@ posts:
           type: text
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        selected_organisations:
+          type: text
+          label: "Select Organisations"
+          class: 'ajaxselector ct-organisations fields-id--title--status key-id results-auto'
         modulemorelink:
           type: text
           label: More link
@@ -1301,6 +1311,7 @@ data:
             jobs: Jobs
             events: Events
             resources: Banners, Calls to action and Blocks
+            organisations: Organisations
         override_amount:
           type: integer
           label: Amount
@@ -1402,6 +1413,10 @@ data:
           type: text
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        selected_organisations:
+          type: text
+          label: "Select Organisations"
+          class: 'ajaxselector ct-organisations fields-id--title--status key-id results-auto'
         modulemorelink:
           type: text
           label: More link
@@ -1730,6 +1745,7 @@ projects:
             jobs: Jobs
             events: Events
             resources: Banners, Calls to action and Blocks
+            organisations: Organisations
         override_amount:
           type: integer
           label: Amount
@@ -1831,6 +1847,10 @@ projects:
           type: text
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        selected_organisations:
+          type: text
+          label: "Select Organisations"
+          class: 'ajaxselector ct-organisations fields-id--title--status key-id results-auto'
         modulemorelink:
           type: text
           label: More link
@@ -2062,6 +2082,7 @@ events:
             jobs: Jobs
             events: Events
             resources: Banners, Calls to action and Blocks
+            organisations: Organisations
         override_amount:
           type: integer
           label: Amount
@@ -2163,6 +2184,10 @@ events:
           type: text
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
+        selected_organisations:
+          type: text
+          label: "Select Organisations"
+          class: 'ajaxselector ct-organisations fields-id--title--status key-id results-auto'
         modulemorelink:
           type: text
           label: More link
