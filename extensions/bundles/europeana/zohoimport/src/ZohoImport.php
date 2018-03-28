@@ -827,6 +827,19 @@ class ZohoImport
         $image['gisz'] = getimagesize($image['tmpname']);
         $image['mime'] = image_type_to_mime_type($image['type']);
 
+        if (strrchr($params['source_url'], '.') == '.svg'
+          || pathinfo(parse_url($params['source_url'])['path'], PATHINFO_EXTENSION) == 'svg'
+        ) {
+          $image['type'] = 0;
+          $image['gisz'] = array(
+            'width' => '1',
+            'height' => '1',
+            'type' => 0,
+            'attr' => 'width="1" height="1"'
+          );
+          $image['mime'] = 'image/svg+xml';
+        }
+
         switch ($image['mime']) {
             case 'image/gif':
                 $image['extension'] = '.gif';
@@ -836,6 +849,9 @@ class ZohoImport
                 break;
             case 'image/jpg':
                 $image['extension'] = '.jpg';
+                break;
+            case 'image/svg+xml':
+                $image['extension'] = '.svg';
                 break;
             default:
                 $image['extension'] = '.jpg';
