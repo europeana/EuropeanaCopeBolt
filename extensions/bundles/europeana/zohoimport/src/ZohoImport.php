@@ -404,6 +404,16 @@ class ZohoImport
             // add default field values from config
             if (!empty($config['target']['defaults']['fields'])) {
                 foreach ($config['target']['defaults']['fields'] as $defaultfield => $defaultvalue) {
+                    // if zoho returns a text with double linebreaks
+                    // split the text up into paragraphs
+                    if (strpos($defaultvalue. "\n\n") !== false) {
+                      $defaultvalue = "<p>" . str_replace("\n\n", "</p><p>", $defaultvalue) . "</p>";
+                    }
+                    // if single linebreaks are left, convert them to <br>
+                    if (strpos($defaultvalue. "\n") !== false) {
+                      $defaultvalue = str_replace("\n", "<br>", $defaultvalue);
+                    }
+
                     $items[$defaultfield] = $defaultvalue;
                 }
             }
