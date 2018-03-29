@@ -464,9 +464,13 @@ class ZohoImport
                 $items['support_navigation'] = 0;
                 // clean up some variables for inserting
                 if (!empty($items['first_name']) || !empty($items['last_name'])) {
-                    $items['slug'] = $this->app['slugify']->slugify($items['first_name'] ." ". $items['last_name']);
+                  $items['slug'] = $this->app['slugify']->slugify($items['first_name'] . " " . $items['last_name']);
+                } elseif (!empty($items['name'])) {
+                    $items['slug'] = $this->app['slugify']->slugify($items['name']);
                 } elseif (!empty($items['title']) || !empty($items['locationtitle'])) {
                     $items['slug'] = $this->app['slugify']->slugify($items['title'] ."-". $items['locationtitle']);
+                } else {
+                  $items['slug'] = $this->app['slugify']->slugify($items['uid']);
                 }
 
                 if (!empty($items['network_participation'])) {
