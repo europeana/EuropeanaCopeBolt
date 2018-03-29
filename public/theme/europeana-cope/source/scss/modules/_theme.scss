@@ -769,7 +769,8 @@ section.catstream {
         margin: 1rem 0 .5rem;
     }
 
-    &.thumblink-persons h3 {
+    &.thumblink-persons h3,
+    &.thumblink-organisations h3 {
         text-transform: none;
     }
 
@@ -779,7 +780,8 @@ section.catstream {
         margin-bottom: 0;
     }
 
-    .company {
+    .company,
+    .country {
         text-transform: uppercase;
         font-size: 0.75rem;
         margin-top: .5rem;

@@ -334,7 +334,8 @@ p {
         line-height: 1.4;
     }
 
-    &.company {
+    &.company,
+    &.country {
         font-size: 1.125rem;
         font-weight: 400;
         color: $light-gray;
