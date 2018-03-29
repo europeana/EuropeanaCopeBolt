@@ -400,11 +400,11 @@ class ZohoImport
                 }
                 // if zoho returns a text with double linebreaks
                 // split the text up into paragraphs
-                if (strpos($inputrecord[$value]. "\n\n") !== false) {
+                if (strpos($inputrecord[$value], "\n\n") !== false) {
                     $inputrecord[$value] = "<p>" . str_replace("\n\n", "</p><p>", $inputrecord[$value]) . "</p>";
                 }
                 // if single linebreaks are left, convert them to <br>
-                if (strpos($inputrecord[$value]. "\n") !== false) {
+                if (strpos($inputrecord[$value], "\n") !== false) {
                     $inputrecord[$value] = str_replace("\n", "<br>", $inputrecord[$value]e);
                 }
 
