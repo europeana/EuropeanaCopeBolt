@@ -157,21 +157,21 @@
             } orderby 'datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
         {% elseif ordering == 'alphabetical' %}
-            {% if sources != 'persons' %}
-                {% setcontent selected_records = sources where {
-                    (filtername): '%' ~ (filtervalue) ~'%',
-                    (taxonomyname): (taxonomyterm)
-                } orderby 'title' limit override_amount|default(10) allowpaging %}
-            {% elseif sources != 'organisations' %}
+            {% if sources == 'organisations' %}
                 {% setcontent selected_records = sources where {
                     (filtername): '%' ~ (filtervalue) ~'%',
                     (taxonomyname): (taxonomyterm)
                 } orderby 'name' limit override_amount|default(10) allowpaging %}
-            {% else %}
+            {% elseif sources == 'persons' %}
                 {% setcontent selected_records = sources where {
                     (filtername): '%' ~ (filtervalue) ~'%',
                     (taxonomyname): (taxonomyterm)
                 } orderby 'last_name' limit override_amount|default(10) allowpaging %}
+            {% else %}
+                {% setcontent selected_records = sources where {
+                    (filtername): '%' ~ (filtervalue) ~'%',
+                    (taxonomyname): (taxonomyterm)
+                } orderby 'title' limit override_amount|default(10) allowpaging %}
             {% endif %}
         {% elseif ordering == 'tag' %}
             {% set basetag = module.get('basetag') %}
