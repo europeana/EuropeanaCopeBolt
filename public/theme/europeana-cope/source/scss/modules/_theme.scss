@@ -310,6 +310,7 @@ img.round {
 
 }
 
+
 .colored-image {
     display: block;
     height: 100%;
@@ -785,6 +786,11 @@ section.catstream {
         text-transform: uppercase;
         font-size: 0.75rem;
         margin-top: .5rem;
+    }
+
+    &.thumblink-organisations img.round {
+        background-blend-mode: multiply;
+        background: $off-white;
     }
 }
 
@@ -1782,6 +1788,11 @@ figure {
         float:left;
         width: 45%;
     }
+
+    &.organisation-img {
+        background-blend-mode: multiply;
+        background: $off-white;
+    }
 }
 
 .card-details {
@@ -2102,6 +2113,18 @@ figure {
 
 
     }
+}
+
+.teaser-organisations {
+
+    .img-container {
+        img {
+            background-blend-mode: multiply;
+            background: $off-white;
+        }
+    }
+
+
 }
 
 /*
