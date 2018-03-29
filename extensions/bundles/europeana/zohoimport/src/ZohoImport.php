@@ -643,10 +643,19 @@ class ZohoImport
           if ($params['name'] == $params['source_url']) {
               $params['name'] = md5($params['name']);
           }
+        } elseif (array_key_exists($params['source_field'], $source_record) && empty($source_record[$params['source_field']])) {
+          // empty source value - ignore this field
+          $logmessage = "loadZohoRelatedRecords has empty value";
+          $this->logger('info', $logmessage, 'zohoimport');
+          return false;
         } else {
           $logmessage = "loadZohoRelatedRecords has bad config";
           $this->logger('error', $logmessage, 'zohoimport');
-          $logmessage = "config: " . json_encode($params);
+          $logmessage = "source record: " . json_encode($source_record);
+          $this->logger('error', $logmessage, 'zohoimport');
+          $logmessage = "target record: " . json_encode($target_record);
+          $this->logger('error', $logmessage, 'zohoimport');
+          $logmessage = "params: " . json_encode($params);
           $this->logger('error', $logmessage, 'zohoimport');
           return false;
         }
@@ -707,11 +716,20 @@ class ZohoImport
 
         //prepare url
         if (array_key_exists($params['source_field'], $source_record) && !empty($source_record[$params['source_field']])) {
-            $params['name'] = $source_record[$params['source_field']];
-            $params['source_url'] = str_replace($params['source_field'], $params['name'], $params['source_url']);
-            if ($params['name'] == $params['source_url']) {
-                $params['name'] = md5($params['name']);
-            }
+          $params['name'] = $source_record[$params['source_field']];
+          $params['source_url'] = str_replace(
+            $params['source_field'],
+            $params['name'],
+            $params['source_url']
+          );
+          if ($params['name'] == $params['source_url']) {
+            $params['name'] = md5($params['name']);
+          }
+        } elseif (array_key_exists($params['source_field'], $source_record) && empty($source_record[$params['source_field']])) {
+            // empty source value - ignore this field
+            $logmessage = "downloadZohoPhotoFromURL has empty value";
+            $this->logger('info', $logmessage, 'zohoimport');
+            return false;
         } else {
             $logmessage = "downloadZohoPhotoFromURL has bad config";
             $this->logger('error', $logmessage, 'zohoimport');
