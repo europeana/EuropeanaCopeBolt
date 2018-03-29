@@ -715,7 +715,11 @@ class ZohoImport
         } else {
             $logmessage = "downloadZohoPhotoFromURL has bad config";
             $this->logger('error', $logmessage, 'zohoimport');
-            $logmessage = "config: " . json_encode($params);
+            $logmessage = "source record: " . json_encode($source_record);
+            $this->logger('error', $logmessage, 'zohoimport');
+            $logmessage = "target record: " . json_encode($target_record);
+            $this->logger('error', $logmessage, 'zohoimport');
+            $logmessage = "params: " . json_encode($params);
             $this->logger('error', $logmessage, 'zohoimport');
             return false;
         }
