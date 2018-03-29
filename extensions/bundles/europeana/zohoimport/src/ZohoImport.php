@@ -405,7 +405,7 @@ class ZohoImport
                 }
                 // if single linebreaks are left, convert them to <br>
                 if (strpos($inputrecord[$value], "\n") !== false) {
-                    $inputrecord[$value] = str_replace("\n", "<br>", $inputrecord[$value]e);
+                    $inputrecord[$value] = str_replace("\n", "<br>", $inputrecord[$value]);
                 }
 
                 $items[$key] = $inputrecord[$value];
