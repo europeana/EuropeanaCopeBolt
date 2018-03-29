@@ -2718,6 +2718,11 @@ organisations:
       variant: inline
       class: narrow
       group: "Address"
+    slug:
+      type: slug
+      uses: name
+      group: meta
+      prefix: "<div><h3>Site structure data</h3></div>"
     uid:
       type: text
       class: narrow
