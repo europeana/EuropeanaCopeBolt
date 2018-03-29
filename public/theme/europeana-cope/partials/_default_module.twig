@@ -162,6 +162,11 @@
                     (filtername): '%' ~ (filtervalue) ~'%',
                     (taxonomyname): (taxonomyterm)
                 } orderby 'title' limit override_amount|default(10) allowpaging %}
+            {% else if sources != 'organisations' %}
+                {% setcontent selected_records = sources where {
+                    (filtername): '%' ~ (filtervalue) ~'%',
+                    (taxonomyname): (taxonomyterm)
+                } orderby 'name' limit override_amount|default(10) allowpaging %}
             {% else %}
                 {% setcontent selected_records = sources where {
                     (filtername): '%' ~ (filtervalue) ~'%',
