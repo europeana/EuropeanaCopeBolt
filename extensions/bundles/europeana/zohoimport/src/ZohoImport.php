@@ -398,22 +398,22 @@ class ZohoImport
                     $this->currentrecord->$value = '';
                     $inputrecord[$value] = '';
                 }
+                // if zoho returns a text with double linebreaks
+                // split the text up into paragraphs
+                if (strpos($inputrecord[$value]. "\n\n") !== false) {
+                    $inputrecord[$value] = "<p>" . str_replace("\n\n", "</p><p>", $inputrecord[$value]) . "</p>";
+                }
+                // if single linebreaks are left, convert them to <br>
+                if (strpos($inputrecord[$value]. "\n") !== false) {
+                    $inputrecord[$value] = str_replace("\n", "<br>", $inputrecord[$value]e);
+                }
+
                 $items[$key] = $inputrecord[$value];
             }
 
             // add default field values from config
             if (!empty($config['target']['defaults']['fields'])) {
                 foreach ($config['target']['defaults']['fields'] as $defaultfield => $defaultvalue) {
-                    // if zoho returns a text with double linebreaks
-                    // split the text up into paragraphs
-                    if (strpos($defaultvalue. "\n\n") !== false) {
-                      $defaultvalue = "<p>" . str_replace("\n\n", "</p><p>", $defaultvalue) . "</p>";
-                    }
-                    // if single linebreaks are left, convert them to <br>
-                    if (strpos($defaultvalue. "\n") !== false) {
-                      $defaultvalue = str_replace("\n", "<br>", $defaultvalue);
-                    }
-
                     $items[$defaultfield] = $defaultvalue;
                 }
             }
@@ -458,11 +458,11 @@ class ZohoImport
             //dump('sanitaiton please');
             $sanitize = true;
             if ($sanitize) {
-                  $items['structure_sortorder'] = 0;
-                  $items['hide_list'] = 0;
-                  $items['hide_related'] = 0;
-                  $items['support_navigation'] = 0;
-                  // clean up some variables for inserting
+                $items['structure_sortorder'] = 0;
+                $items['hide_list'] = 0;
+                $items['hide_related'] = 0;
+                $items['support_navigation'] = 0;
+                // clean up some variables for inserting
                 if (!empty($items['first_name']) || !empty($items['last_name'])) {
                     $items['slug'] = $this->app['slugify']->slugify($items['first_name'] ." ". $items['last_name']);
                 } elseif (!empty($items['title']) || !empty($items['locationtitle'])) {
