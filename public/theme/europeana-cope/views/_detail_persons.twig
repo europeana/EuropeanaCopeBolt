@@ -6,8 +6,9 @@
             <article class="column main-column">
 
                 <div class="group card personal h-card">
-                    <img class="card-img personal-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}" />
-
+                    <div class="img-container">
+                        <img class="card-img personal-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}" />
+                    </div>
 
                     <div class="card-details personal-details">
 

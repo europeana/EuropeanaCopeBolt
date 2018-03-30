@@ -293,7 +293,8 @@ p.copyright {
 * WIDGET ELEMENTEN
 **/
 
-img.round {
+img.round,
+.img-container.round {
     border-radius: 50%;
 
     .fourth & {
@@ -310,6 +311,9 @@ img.round {
 
 }
 
+.img-container {
+    position: relative;
+}
 
 .colored-image {
     display: block;
@@ -317,6 +321,26 @@ img.round {
     background-color: $baseFirstThemeColour;
     background-blend-mode: multiply;
 }
+
+
+.offwhite-logo {
+    // used in teaser_organisations, detail_organisations 
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        mix-blend-mode: multiply;
+        background: $off-white;
+    }
+    
+    &.round:before {
+        border-radius: 50%;
+    }
+}
+
 
 .label {
     display: inline-block;
@@ -786,11 +810,6 @@ section.catstream {
         text-transform: uppercase;
         font-size: 0.75rem;
         margin-top: .5rem;
-    }
-
-    &.thumblink-organisations img.round {
-        background-blend-mode: multiply;
-        background: $off-white;
     }
 }
 
@@ -1780,20 +1799,17 @@ figure {
 
     }
 
-}
+    .img-container {
+        position: relative;
 
-.card-img {
+        @include respond-to(large-screens){
+            float:left;
+            width: 45%;
+        }
 
-    @include respond-to(large-screens){
-        float:left;
-        width: 45%;
-    }
-
-    &.organisation-img {
-        background-blend-mode: multiply;
-        background: $off-white;
     }
 }
+
 
 .card-details {
     color: $medium-gray;
@@ -2113,18 +2129,6 @@ figure {
 
 
     }
-}
-
-.teaser-organisations {
-
-    .img-container {
-        img {
-            background-blend-mode: multiply;
-            background: $off-white;
-        }
-    }
-
-
 }
 
 /*

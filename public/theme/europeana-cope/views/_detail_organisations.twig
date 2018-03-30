@@ -5,8 +5,12 @@
 
             <article class="column main-column">
                 <div class="group card organisation h-card">
-                    <img class="card-img organisation-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Logo of {{ record.name }}" />
+                    <div class="img-container offwhite-logo">
+                        
+                        <img class="card-img organisation-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Logo of {{ record.name }}" />
 
+                    </div>
+                    
                     <div class="card-details organisation-details">
 
                         {% if record.org_role is not empty %}
