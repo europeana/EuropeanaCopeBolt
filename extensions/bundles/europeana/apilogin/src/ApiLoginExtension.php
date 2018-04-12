@@ -292,6 +292,9 @@ class ApiLoginExtension extends SimpleExtension
                 'apikeyform' => 'apikeyform.twig',
                 'thankspage' => 'thankspage.twig',
             ),
+            'debug' => array (
+                'verbose' => true
+            ),
             'form' => array(
                 'fields'      => array(
                     'email' => array(

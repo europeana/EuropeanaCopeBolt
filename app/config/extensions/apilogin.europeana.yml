@@ -1,6 +1,8 @@
 templates:
     apikeyform: apikeyform.twig
     thankspage: thankspage.twig
+debug:
+    verbose: true
 form:
     fields:
         email:
