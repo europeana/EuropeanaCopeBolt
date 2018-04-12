@@ -408,7 +408,7 @@ jQuery(document).ready(function($) {
         $('a.titletogglebutton.btn-info').each(function() { $(this).click(); });
     }
 
-    $('.repeater-add button, button.duplicate-button').on('click', function() {
+    $('.bolt-field-repeater').on('click', '.add-button, .duplicate-button', function() {
         //console.log('a repeater is added');
         setTimeout(
             function() {
