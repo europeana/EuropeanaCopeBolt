@@ -5,7 +5,7 @@
     "license": "MIT",
     "require": {
         "php": "^5.5.9 || ^7.0",
-        "bolt/bolt": "^3.3@beta",
+        "bolt/bolt": "^3.4.10",
         "passwordlib/passwordlib": "^1.0@beta",
         "bolt/configuration-notices": "^1.0"
     },
@@ -24,10 +24,5 @@
             "Bolt\\Composer\\ScriptHandler::installThemesAndFiles",
             "nut extensions:setup"
         ]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-release/3.3": "3.3.x-dev"
-        }
     }
 }
