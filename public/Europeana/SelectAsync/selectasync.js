@@ -222,7 +222,7 @@ function SA_loadNewAsyncSelectors() {
             unsorted.push(
                 $('<div>')
                     .addClass('btn-group')
-                    .disableSelection()
+                    //.disableSelection()
                     .data({
                       'for': key,
                       'id': key,
@@ -377,7 +377,7 @@ function SA_loadNewAsyncSelectors() {
         /**/
         var newElements = $('<div>')
             .addClass('btn-group')
-            .disableSelection()
+            //.disableSelection()
             .data({
               'for': key,
               'id': key,
