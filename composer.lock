@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c24a4ec0ba6a914649cb17f88c553e26",
+    "content-hash": "94a2d13bdf3dfe1c73618e27077be62e",
     "packages": [
         {
             "name": "bolt/bolt",
-            "version": "v3.4.10",
+            "version": "v3.5.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/bolt.git",
-                "reference": "53aee0c9d564c7fac6e12ddf545894892343dcd1"
+                "reference": "a4f5a46fdb227a5ca9a4eaf332c34d6b1fdeb868"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/bolt/zipball/53aee0c9d564c7fac6e12ddf545894892343dcd1",
-                "reference": "53aee0c9d564c7fac6e12ddf545894892343dcd1",
+                "url": "https://api.github.com/repos/bolt/bolt/zipball/a4f5a46fdb227a5ca9a4eaf332c34d6b1fdeb868",
+                "reference": "a4f5a46fdb227a5ca9a4eaf332c34d6b1fdeb868",
                 "shasum": ""
             },
             "require": {
@@ -27,7 +27,7 @@
                 "bolt/pathogen": "~0.6",
                 "bolt/requirements": "^1.0.2",
                 "bolt/session": "^1.0",
-                "bolt/themes": "^1.0",
+                "bolt/themes": "^2.0",
                 "bolt/thumbs": "^3.1.1",
                 "brandonwamboldt/utilphp": "^1.0",
                 "carbondate/carbon": "^1.20",
@@ -35,7 +35,7 @@
                 "composer/composer": "^1.2",
                 "doctrine/cache": "^1.5",
                 "doctrine/dbal": "^2.5",
-                "embed/embed": "^3.0",
+                "embed/embed": "^3.2",
                 "erusev/parsedown-extra": "~0.7",
                 "ext-curl": "*",
                 "ext-exif": "*",
@@ -110,11 +110,6 @@
                 "app/nut"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.4": "3.4.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Bolt\\": "src"
@@ -135,7 +130,7 @@
                 "silex",
                 "symfony"
             ],
-            "time": "2018-03-16T08:30:00+00:00"
+            "time": "2018-04-01T10:31:02+00:00"
         },
         {
             "name": "bolt/collection",
@@ -533,23 +528,23 @@
         },
         {
             "name": "bolt/themes",
-            "version": "v1.0.4",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/themes.git",
-                "reference": "7f3732452b64072a7004b6fbd64b3b1be71bd054"
+                "reference": "2965e3466d3bc717dff0ec5ce2c36dd15dd95586"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/themes/zipball/7f3732452b64072a7004b6fbd64b3b1be71bd054",
-                "reference": "7f3732452b64072a7004b6fbd64b3b1be71bd054",
+                "url": "https://api.github.com/repos/bolt/themes/zipball/2965e3466d3bc717dff0ec5ce2c36dd15dd95586",
+                "reference": "2965e3466d3bc717dff0ec5ce2c36dd15dd95586",
                 "shasum": ""
             },
             "require": {
                 "twig/twig": "^1.32 || ^2.0"
             },
             "conflict": {
-                "bolt/bolt": "< 3.3"
+                "bolt/bolt": "< 3.5"
             },
             "type": "library",
             "extra": {
@@ -567,7 +562,7 @@
                 "cms",
                 "twig"
             ],
-            "time": "2017-11-09T19:16:29+00:00"
+            "time": "2018-04-09T11:33:57+00:00"
         },
         {
             "name": "bolt/thumbs",
@@ -5549,6 +5544,7 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
+        "bolt/bolt": 10,
         "passwordlib/passwordlib": 10
     },
     "prefer-stable": true,
