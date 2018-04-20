@@ -38,12 +38,12 @@
         }
     },
     "require": {
-        "bacboslab/menueditor": "^3.2",
-        "bobdenotter/seo": "^1.0",
-        "bolt/jsonapi": "^3.0",
-        "bolt/sitemap": "^2.1",
-        "soapbox/relatedcontent": "^1.0",
-        "twokings/hierarchical-routes": "^0.1.1",
+        "bacboslab/menueditor": "^3",
+        "bobdenotter/seo": "^1",
+        "bolt/jsonapi": "^3",
+        "bolt/sitemap": "^2",
+        "soapbox/relatedcontent": "^1",
+        "twokings/hierarchical-routes": "^0.2",
         "wikimedia/composer-merge-plugin": "^1.3"
     },
     "scripts": {
