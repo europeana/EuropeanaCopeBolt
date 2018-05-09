@@ -124,16 +124,16 @@
         },
         {
             "name": "bolt/jsonapi",
-            "version": "v3.0.18",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xiaohutai/jsonapi.git",
-                "reference": "571d9b41ccdee2230cb744dc4f407e6c977b3877"
+                "reference": "f5772a24cd946f87f9b005fa6f0ecc91f20b1ed7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/571d9b41ccdee2230cb744dc4f407e6c977b3877",
-                "reference": "571d9b41ccdee2230cb744dc4f407e6c977b3877",
+                "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/f5772a24cd946f87f9b005fa6f0ecc91f20b1ed7",
+                "reference": "f5772a24cd946f87f9b005fa6f0ecc91f20b1ed7",
                 "shasum": ""
             },
             "require": {
@@ -182,7 +182,7 @@
                 "source": "https://github.com/xiaohutai/jsonapi/tree/master",
                 "issues": "https://github.com/xiaohutai/jsonapi/issues"
             },
-            "time": "2018-04-20T13:36:58+00:00"
+            "time": "2018-04-23T07:49:56+00:00"
         },
         {
             "name": "bolt/sitemap",
