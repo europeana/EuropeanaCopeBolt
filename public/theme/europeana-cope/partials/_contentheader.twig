@@ -69,23 +69,23 @@
         {% set taxonomyterm = 1 %}
         {% if record.highlightcategory|default() is not empty %}
             {% set taxonomyterm = ''~(record.highlightcategory) %}
-            {% if taxonomyterm in app.config.get('taxonomy')['communities']['options']|keys %}
+            {% if taxonomyterm in app.config.taxonomy['communities']['options']|keys %}
                 {% set taxonomyname = 'communities' %}
-            {% elseif taxonomyterm in app.config.get('taxonomy')['communities']['options'] %}
+            {% elseif taxonomyterm in app.config.taxonomy['communities']['options'] %}
                 {% set taxonomyname = 'communities' %}
-            {% elseif taxonomyterm in app.config.get('taxonomy')['markets']['options']|keys %}
+            {% elseif taxonomyterm in app.config.taxonomy['markets']['options']|keys %}
                 {% set taxonomyname = 'markets' %}
-            {% elseif taxonomyterm in app.config.get('taxonomy')['markets']['options'] %}
+            {% elseif taxonomyterm in app.config.taxonomy['markets']['options'] %}
                 {% set taxonomyname = 'markets' %}
-            {% elseif taxonomyterm in app.config.get('taxonomy')['categories']['options']|keys %}
+            {% elseif taxonomyterm in app.config.taxonomy['categories']['options']|keys %}
                 {% set taxonomyname = 'categories' %}
-            {% elseif taxonomyterm in app.config.get('taxonomy')['categories']['options'] %}
+            {% elseif taxonomyterm in app.config.taxonomy['categories']['options'] %}
                 {% set taxonomyname = 'categories' %}
             {% endif %}
         {% endif %}
 
         {# set default amount #}
-        {% set override_amount = module.get('override_amount')|default(3) %}
+        {% set override_amount = module.override_amount|default(3) %}
         {% set allow_pager = false %}
 
         {% setcontent selected_records = sources where {

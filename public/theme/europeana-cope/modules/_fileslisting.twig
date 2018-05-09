@@ -8,10 +8,10 @@ Available variables
     'records':   array of (selected) records that belong to the module
     'allow_pager': boolean to check is the pager is available
 #}
-{% set override_css_id = module.get('override_css_id') %}
-{% set override_css_class = module.get('override_css_class') %}
-{% set template = module.get('templates') %}
-{% set path = module.get('fileslistpath') %}
+{% set override_css_id = module.override_css_id %}
+{% set override_css_class = module.override_css_class %}
+{% set template = module.templates %}
+{% set path = module.fileslistpath %}
 
 {#
     - @param filesystem       The filesystem to work on

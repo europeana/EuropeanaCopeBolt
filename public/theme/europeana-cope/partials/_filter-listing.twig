@@ -9,8 +9,8 @@
 {# if the listing is made by a module, get that listing #}
 {% elseif record.modules is defined %}
     {% for module in record.modules if (global.request.get('_route') != "preview") %}
-        {% if module.get('templates') in ['listing', 'teaser']  %}
-            {% set contenttypeslug = module.get('sources') %}
+        {% if module.templates in ['listing', 'teaser']  %}
+            {% set contenttypeslug = module.sources %}
             {% set subtype = module.get('filter_' ~ contenttypeslug)|default('all') %}
         {% endif %}
     {% endfor %}

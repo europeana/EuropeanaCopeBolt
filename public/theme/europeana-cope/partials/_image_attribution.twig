@@ -76,13 +76,13 @@
     - attribution_license
 #}
 
-    {% set attribution_title     = module.get('attribution_title')|default('') %}
-    {% set attribution_date      = module.get('attribution_date')|default('') %}
-    {% set attribution_creator   = module.get('attribution_creator')|default('') %}
-    {% set attribution_holder    = module.get('attribution_holder')|default('') %}
-    {% set attribution_country   = module.get('attribution_country')|default('') %}
-    {% set attribution_link      = module.get('attribution_link')|default('') %}
-    {% set attribution_license   = module.get('attribution_license')|default('') %}
+    {% set attribution_title     = module.attribution_title|default('') %}
+    {% set attribution_date      = module.attribution_date|default('') %}
+    {% set attribution_creator   = module.attribution_creator|default('') %}
+    {% set attribution_holder    = module.attribution_holder|default('') %}
+    {% set attribution_country   = module.attribution_country|default('') %}
+    {% set attribution_link      = module.attribution_link|default('') %}
+    {% set attribution_license   = module.attribution_license|default('') %}
 {% endif %}
 
 {% if (attribution_license is defined and attribution_license is not empty)

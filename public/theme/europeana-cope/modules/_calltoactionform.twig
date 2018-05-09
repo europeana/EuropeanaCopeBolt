@@ -9,8 +9,8 @@ Available variables
     'records':   array of (selected) records that belong to the module
     'allow_pager': boolean to check is the pager is available
 #}
-{% set override_css_id = module.get('override_css_id') %}
-{% set override_css_class = module.get('override_css_class') %}
+{% set override_css_id = module.override_css_id %}
+{% set override_css_class = module.override_css_class %}
 {% endspaceless %}
 
 <section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module group section-calltoactionform {%- if override_css_class %} {{ override_css_class }}{% endif -%}">

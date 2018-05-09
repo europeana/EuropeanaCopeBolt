@@ -8,12 +8,12 @@ Available variables
     'records':   array of (selected) records that belong to the module
     'allow_pager': boolean to check is the pager is available
 #}
-{% set override_css_id = module.get('override_css_id')|default('') %}
-{% set override_css_class = module.get('override_css_class')|default('') %}
-{% set template = module.get('templates')|default('') %}
-{% set modulemorelink = module.get('modulemorelink')|default('') %}
-{% set modulemorelabel = module.get('modulemorelabel')|default('') %}
-{% set modulemoretext = module.get('modulemoretext')|default('') %}
+{% set override_css_id = module.override_css_id|default('') %}
+{% set override_css_class = module.override_css_class|default('') %}
+{% set template = module.templates|default('') %}
+{% set modulemorelink = module.modulemorelink|default('') %}
+{% set modulemorelabel = module.modulemorelabel|default('') %}
+{% set modulemoretext = module.modulemoretext|default('') %}
 {% endspaceless %}
 <section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module group {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
     <div class="inner-wrap">

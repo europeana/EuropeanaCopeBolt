@@ -3,24 +3,24 @@
     This should not be edited.
 #}
 {% spaceless %}
-{% set modulestatus = module.get('enabled') %}
+{% set modulestatus = module.enabled %}
 {% if modulestatus == 'enabled' %}
-    {% set title = module.get('title') %}
-    {% set subtitle = module.get('subtitle') %}
-    {% set anchortitle = module.get('anchortitle') %}
+    {% set title = module.title %}
+    {% set subtitle = module.subtitle %}
+    {% set anchortitle = module.anchortitle %}
     {% set anchorslug = anchortitle|slugify() %}
-    {% set body = module.get('body') %}
-    {% set template = module.get('templates') %}
-    {% set icon = module.get('icon') %}
+    {% set body = module.body %}
+    {% set template = module.templates %}
+    {% set icon = module.icon %}
     {% set templatefile = 'modules/_' ~ template ~ '.twig' %}
-    {% set ordering = module.get('ordering') %}
-    {% set sources = module.get('sources') %}
+    {% set ordering = module.ordering %}
+    {% set sources = module.sources %}
     {% set sourcetemplatefile =  'modules/_' ~ template ~ '_' ~ sources ~ '.twig' %}
-    {% set override_amount = module.get('override_amount') %}
+    {% set override_amount = module.override_amount %}
     {% set allow_pager = false %}
-    {% set modulemorelink = module.get('modulemorelink')|default('') %}
-    {% set modulemorelabel = module.get('modulemorelabel')|default('') %}
-    {% set modulemoretext = module.get('modulemoretext')|default('') %}
+    {% set modulemorelink = module.modulemorelink|default('') %}
+    {% set modulemorelabel = module.modulemorelabel|default('') %}
+    {% set modulemoretext = module.modulemoretext|default('') %}
     {% if override_amount == '' or override_amount == 0 %}
         {% set override_amount = 100 %}
     {% endif %}
@@ -63,7 +63,9 @@
     {% set selected_records = [] %}
     {% if template != 'body' and ordering == 'specified' %}
         {% set field = 'selected_' ~ sources %}
-        {% set ids = module.get(field) %}
+        {#{{ dump(field) }}#}
+        {#{{ dump(module) }}#}
+        {% set ids = module[field] %}
         {% if ids is not iterable %}
             {# fix iterable ids if the content is json in a textfield #}
             {% set ids = ids|json_decode() %}
@@ -88,26 +90,26 @@
         {% set featuredfilter = false %}
         {% set featuredtype = 0 %}
         {% if sources == 'persons'  %}
-            {% if subtype is not empty or module.get('filter_persons') is not empty %}
+            {% if subtype is not empty or module.filter_persons is not empty %}
                 {% set filtername = 'network_participation' %}
-                {% set filtervalue = subtype|default(module.get('filter_persons')) %}
+                {% set filtervalue = subtype|default(module.filter_persons) %}
             {% endif %}
         {% elseif sources == 'posts' %}
-            {% if subtype is not empty or module.get('filter_posts') is not empty %}
+            {% if subtype is not empty or module.filter_posts is not empty %}
                 {% set filtername = 'posttype' %}
-                {% set filtervalue = subtype|default(module.get('filter_posts')) %}
+                {% set filtervalue = subtype|default(module.filter_posts) %}
             {% endif %}
             {% set featuredfilter = true %}
             {% set featuredtype = 'posts' %}
         {% elseif sources == 'data' %}
-            {% if subtype is not empty or module.get('filter_data') is not empty %}
+            {% if subtype is not empty or module.filter_data is not empty %}
                 {% set filtername = 'datatype' %}
-                {% set filtervalue = subtype|default(module.get('filter_data')) %}
+                {% set filtervalue = subtype|default(module.filter_data) %}
             {% endif %}
         {% elseif sources == 'projects' %}
-            {% if subtype is not empty or module.get('filter_projects') is not empty %}
+            {% if subtype is not empty or module.filter_projects is not empty %}
                 {% set filtername = 'projecttype' %}
-                {% set filtervalue = subtype|default(module.get('filter_projects')) %}
+                {% set filtervalue = subtype|default(module.filter_projects) %}
             {% endif %}
         {% elseif sources == 'events' %}
             {% set featuredfilter = true %}
@@ -174,32 +176,32 @@
                 } orderby 'title' limit override_amount|default(10) allowpaging %}
             {% endif %}
         {% elseif ordering == 'tag' %}
-            {% set basetag = module.get('basetag') %}
+            {% set basetag = module.basetag %}
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
                 tags: basetag
             } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
         {% elseif ordering == 'tag_unpaged' %}
-            {% set basetag = module.get('basetag') %}
+            {% set basetag = module.basetag %}
             {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
                 tags: basetag
             } orderby '-datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
         {% elseif ordering == 'category' %}
-            {% set basecategory = module.get('basecategory') %}
+            {% set basecategory = module.basecategory %}
             {% if basecategory|default() is not empty %}
-                {% if basecategory in app.config.get('taxonomy')['categories']['options']|keys %}
+                {% if basecategory in app.config.taxonomy['categories']['options']|keys %}
                     {% set basetaxonomyname = 'categories' %}
-                {% elseif basecategory in app.config.get('taxonomy')['categories']['options'] %}
+                {% elseif basecategory in app.config.taxonomy['categories']['options'] %}
                     {% set basetaxonomyname = 'categories' %}
-                {% elseif basecategory in app.config.get('taxonomy')['communities']['options']|keys %}
+                {% elseif basecategory in app.config.taxonomy['communities']['options']|keys %}
                     {% set basetaxonomyname = 'communities' %}
-                {% elseif basecategory in app.config.get('taxonomy')['communities']['options'] %}
+                {% elseif basecategory in app.config.taxonomy['communities']['options'] %}
                     {% set basetaxonomyname = 'communities' %}
-                {% elseif basecategory in app.config.get('taxonomy')['markets']['options']|keys %}
+                {% elseif basecategory in app.config.taxonomy['markets']['options']|keys %}
                     {% set basetaxonomyname = 'markets' %}
-                {% elseif basecategory in app.config.get('taxonomy')['markets']['options'] %}
+                {% elseif basecategory in app.config.taxonomy['markets']['options'] %}
                     {% set basetaxonomyname = 'markets' %}
                 {% else %}
                     {% set basetaxonomyname = 'categories' %}
@@ -210,20 +212,20 @@
                 (basetaxonomyname): (basecategory)
             } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
         {% elseif ordering == 'category_unpaged' %}
-            {% set basecategory = module.get('basecategory') %}
+            {% set basecategory = module.basecategory %}
             {# filter taxonomies #}
             {% if basecategory|default() is not empty %}
-                {% if basecategory in app.config.get('taxonomy')['categories']['options']|keys %}
+                {% if basecategory in app.config.taxonomy['categories']['options']|keys %}
                     {% set basetaxonomyname = 'categories' %}
-                {% elseif basecategory in app.config.get('taxonomy')['categories']['options'] %}
+                {% elseif basecategory in app.config.taxonomy['categories']['options'] %}
                     {% set basetaxonomyname = 'categories' %}
-                {% elseif basecategory in app.config.get('taxonomy')['communities']['options']|keys %}
+                {% elseif basecategory in app.config.taxonomy['communities']['options']|keys %}
                     {% set basetaxonomyname = 'communities' %}
-                {% elseif basecategory in app.config.get('taxonomy')['communities']['options'] %}
+                {% elseif basecategory in app.config.taxonomy['communities']['options'] %}
                     {% set basetaxonomyname = 'communities' %}
-                {% elseif basecategory in app.config.get('taxonomy')['markets']['options']|keys %}
+                {% elseif basecategory in app.config.taxonomy['markets']['options']|keys %}
                     {% set basetaxonomyname = 'markets' %}
-                {% elseif basecategory in app.config.get('taxonomy')['markets']['options'] %}
+                {% elseif basecategory in app.config.taxonomy['markets']['options'] %}
                     {% set basetaxonomyname = 'markets' %}
                 {% else %}
                     {% set basetaxonomyname = 'categories' %}
@@ -235,11 +237,11 @@
             } orderby '-datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
         {% elseif ordering == 'market' %}
-            {% set basemarket = module.get('basemarket') %}
+            {% set basemarket = module.basemarket %}
 
-            {% if basemarket in app.config.get('taxonomy')['markets']['options']|keys %}
+            {% if basemarket in app.config.taxonomy['markets']['options']|keys %}
                 {% set basetaxonomyname = 'markets' %}
-            {% elseif basemarket in app.config.get('taxonomy')['markets']['options'] %}
+            {% elseif basemarket in app.config.taxonomy['markets']['options'] %}
                 {% set basetaxonomyname = 'markets' %}
             {% else %}
                 {% set basetaxonomyname = 'markets' %}
@@ -250,11 +252,11 @@
                 (basetaxonomyname): (basemarket)
             } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
         {% elseif ordering == 'market_unpaged' %}
-            {% set basemarket = module.get('basemarket') %}
+            {% set basemarket = module.basemarket %}
 
-            {% if basemarket in app.config.get('taxonomy')['markets']['options']|keys %}
+            {% if basemarket in app.config.taxonomy['markets']['options']|keys %}
                 {% set basetaxonomyname = 'markets' %}
-            {% elseif basemarket in app.config.get('taxonomy')['markets']['options'] %}
+            {% elseif basemarket in app.config.taxonomy['markets']['options'] %}
                 {% set basetaxonomyname = 'markets' %}
             {% else %}
                 {% set basetaxonomyname = 'markets' %}
@@ -266,9 +268,9 @@
             } orderby '-datepublish' limit override_amount|default(10) %}
             {% set allow_pager = false %}
         {% elseif ordering == 'calendar' and sources in ['events', 'projects'] %}
-            {% set basecategory = module.get('basecategory')|default('') %}
-            {% set basetag = module.get('basetag')|default('') %}
-            {% set basemarket = module.get('basemarket')|default('') %}
+            {% set basecategory = module.basecategory|default('') %}
+            {% set basetag = module.basetag|default('') %}
+            {% set basemarket = module.basemarket|default('') %}
             {% if basecategory != '' %}
                 {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
@@ -295,9 +297,9 @@
             {% endif %}
             {% set allow_pager = true %}
         {% elseif ordering == 'calendar_active' and sources in ['events', 'projects'] %}
-            {% set basecategory = module.get('basecategory')|default('') %}
-            {% set basetag = module.get('basetag')|default('') %}
-            {% set basemarket = module.get('basemarket')|default('') %}
+            {% set basecategory = module.basecategory|default('') %}
+            {% set basetag = module.basetag|default('') %}
+            {% set basemarket = module.basemarket|default('') %}
             {% if basecategory != '' %}
                 {% setcontent selected_records = sources where {
                 (filtername): (filtervalue),
@@ -328,9 +330,9 @@
             {% endif %}
             {% set allow_pager = true %}
         {% elseif ordering == 'calendar_upcoming' and sources in ['events', 'projects'] %}
-            {% set basecategory = module.get('basecategory')|default('') %}
-            {% set basetag = module.get('basetag')|default('') %}
-            {% set basemarket = module.get('basemarket')|default('') %}
+            {% set basecategory = module.basecategory|default('') %}
+            {% set basetag = module.basetag|default('') %}
+            {% set basemarket = module.basemarket|default('') %}
             {% if basecategory != '' %}
                 {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
@@ -361,9 +363,9 @@
             {% endif %}
             {% set allow_pager = true %}
         {% elseif ordering == 'calendar_archive' and sources in ['events', 'projects'] %}
-            {% set basecategory = module.get('basecategory')|default('') %}
-            {% set basetag = module.get('basetag')|default('') %}
-            {% set basemarket = module.get('basemarket')|default('') %}
+            {% set basecategory = module.basecategory|default('') %}
+            {% set basetag = module.basetag|default('') %}
+            {% set basemarket = module.basemarket|default('') %}
             {% if basecategory != '' %}
                 {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),

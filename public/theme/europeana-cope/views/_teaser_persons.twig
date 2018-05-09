@@ -7,7 +7,7 @@
 {# Als speaker is set to true, the speaker_teaser is shown in this teaser, instead of the introduction
 #}
 
-{% set filterpersons = (module.get('filter_persons'))|default('') %}
+{% set filterpersons = (module.filter_persons)|default('') %}
 
 <article class="teaser teaser-persons group">
     <div class="img-container">

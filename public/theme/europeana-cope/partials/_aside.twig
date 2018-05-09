@@ -2,7 +2,7 @@ NOTE - Not used in cope def theme - Anke 10 mei 2017
 
 <!-- Sidebar -->
 <aside>
-    {%- for ct in app.config.get('contenttypes') if not ct.viewless|default(false) -%}
+    {%- for ct in app.config.contenttypes if not ct.viewless|default(false) -%}
         {%- setcontent records = ct.slug ~ "/latest/3" -%}
         <h5>{{ __('contenttypes.generic.recent', {'%contenttypes%': ct.slug}) }}</h5>
         <ul>{% for record in records %}
