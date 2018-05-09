@@ -191,17 +191,17 @@
         {% elseif ordering == 'category' %}
             {% set basecategory = module.basecategory %}
             {% if basecategory|default() is not empty %}
-                {% if basecategory in app.config.taxonomy['categories']['options']|keys %}
+                {% if basecategory in app.config.get('taxonomy')['categories']['options']|keys %}
                     {% set basetaxonomyname = 'categories' %}
-                {% elseif basecategory in app.config.taxonomy['categories']['options'] %}
+                {% elseif basecategory in app.config.get('taxonomy')['categories']['options'] %}
                     {% set basetaxonomyname = 'categories' %}
-                {% elseif basecategory in app.config.taxonomy['communities']['options']|keys %}
+                {% elseif basecategory in app.config.get('taxonomy')['communities']['options']|keys %}
                     {% set basetaxonomyname = 'communities' %}
-                {% elseif basecategory in app.config.taxonomy['communities']['options'] %}
+                {% elseif basecategory in app.config.get('taxonomy')['communities']['options'] %}
                     {% set basetaxonomyname = 'communities' %}
-                {% elseif basecategory in app.config.taxonomy['markets']['options']|keys %}
+                {% elseif basecategory in app.config.get('taxonomy')['markets']['options']|keys %}
                     {% set basetaxonomyname = 'markets' %}
-                {% elseif basecategory in app.config.taxonomy['markets']['options'] %}
+                {% elseif basecategory in app.config.get('taxonomy')['markets']['options'] %}
                     {% set basetaxonomyname = 'markets' %}
                 {% else %}
                     {% set basetaxonomyname = 'categories' %}
@@ -215,17 +215,17 @@
             {% set basecategory = module.basecategory %}
             {# filter taxonomies #}
             {% if basecategory|default() is not empty %}
-                {% if basecategory in app.config.taxonomy['categories']['options']|keys %}
+                {% if basecategory in app.config.get('taxonomy')['categories']['options']|keys %}
                     {% set basetaxonomyname = 'categories' %}
-                {% elseif basecategory in app.config.taxonomy['categories']['options'] %}
+                {% elseif basecategory in app.config.get('taxonomy')['categories']['options'] %}
                     {% set basetaxonomyname = 'categories' %}
-                {% elseif basecategory in app.config.taxonomy['communities']['options']|keys %}
+                {% elseif basecategory in app.config.get('taxonomy')['communities']['options']|keys %}
                     {% set basetaxonomyname = 'communities' %}
-                {% elseif basecategory in app.config.taxonomy['communities']['options'] %}
+                {% elseif basecategory in app.config.get('taxonomy')['communities']['options'] %}
                     {% set basetaxonomyname = 'communities' %}
-                {% elseif basecategory in app.config.taxonomy['markets']['options']|keys %}
+                {% elseif basecategory in app.config.get('taxonomy')['markets']['options']|keys %}
                     {% set basetaxonomyname = 'markets' %}
-                {% elseif basecategory in app.config.taxonomy['markets']['options'] %}
+                {% elseif basecategory in app.config.get('taxonomy')['markets']['options'] %}
                     {% set basetaxonomyname = 'markets' %}
                 {% else %}
                     {% set basetaxonomyname = 'categories' %}
@@ -239,9 +239,9 @@
         {% elseif ordering == 'market' %}
             {% set basemarket = module.basemarket %}
 
-            {% if basemarket in app.config.taxonomy['markets']['options']|keys %}
+            {% if basemarket in app.config.get('taxonomy')['markets']['options']|keys %}
                 {% set basetaxonomyname = 'markets' %}
-            {% elseif basemarket in app.config.taxonomy['markets']['options'] %}
+            {% elseif basemarket in app.config.get('taxonomy')['markets']['options'] %}
                 {% set basetaxonomyname = 'markets' %}
             {% else %}
                 {% set basetaxonomyname = 'markets' %}
@@ -254,9 +254,9 @@
         {% elseif ordering == 'market_unpaged' %}
             {% set basemarket = module.basemarket %}
 
-            {% if basemarket in app.config.taxonomy['markets']['options']|keys %}
+            {% if basemarket in app.config.get('taxonomy')['markets']['options']|keys %}
                 {% set basetaxonomyname = 'markets' %}
-            {% elseif basemarket in app.config.taxonomy['markets']['options'] %}
+            {% elseif basemarket in app.config.get('taxonomy')['markets']['options'] %}
                 {% set basetaxonomyname = 'markets' %}
             {% else %}
                 {% set basetaxonomyname = 'markets' %}
