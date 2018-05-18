@@ -26,6 +26,7 @@ node_modules
 bower_components
 npm-debug.log
 .sass-cache
+public/theme/europeana-cope/source/package-lock\.json
 
 # File-system cruft and temporary files
 composer.phar
@@ -49,3 +50,4 @@ Vagrantfile
 
 app/config/extensions/menu_backups/
 app/config/extensions/hierarchicalroutes/
+
