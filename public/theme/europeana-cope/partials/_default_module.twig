@@ -5,18 +5,18 @@
 {% spaceless %}
 {% set modulestatus = module.enabled %}
 {% if modulestatus == 'enabled' %}
-    {% set title = module.title %}
-    {% set subtitle = module.subtitle %}
-    {% set anchortitle = module.anchortitle %}
+    {% set title = module.title|default('') %}
+    {% set subtitle = module.subtitle|default('') %}
+    {% set anchortitle = module.anchortitle|default('') %}
     {% set anchorslug = anchortitle|slugify() %}
-    {% set body = module.body %}
-    {% set template = module.templates %}
-    {% set icon = module.icon %}
+    {% set body = module.body|default('') %}
+    {% set template = module.templates|default('') %}
+    {% set icon = module.icon|default('') %}
     {% set templatefile = 'modules/_' ~ template ~ '.twig' %}
-    {% set ordering = module.ordering %}
-    {% set sources = module.sources %}
+    {% set ordering = module.ordering|default('') %}
+    {% set sources = module.sources|default('') %}
     {% set sourcetemplatefile =  'modules/_' ~ template ~ '_' ~ sources ~ '.twig' %}
-    {% set override_amount = module.override_amount %}
+    {% set override_amount = module.override_amount|default('') %}
     {% set allow_pager = false %}
     {% set modulemorelink = module.modulemorelink|default('') %}
     {% set modulemorelabel = module.modulemorelabel|default('') %}
