@@ -38,7 +38,7 @@ Available variables
                     <th>Name</th>
                     <th>Company</th>
                     <th>Country</th>
-                    <th>Sector</th>
+                    <th>Domain</th>
                 </tr>
             </thead>
             {% endif %}
@@ -52,7 +52,7 @@ Available variables
                     <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
                     {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
                 {% else %}
-                   w <!-- selected record is unpublished or otherwise unavailable -->
+                    <!-- selected record is unpublished or otherwise unavailable -->
                 {% endif %}
             {% endfor %}
             </tbody>

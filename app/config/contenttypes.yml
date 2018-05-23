@@ -2477,6 +2477,12 @@ persons:
       class: narrow
       variant: inline
       label: "Sector"
+    domain:
+      type: text
+      required: false
+      class: narrow
+      variant: inline
+      label: "Domain"
     team:
       type: select
       required: false
