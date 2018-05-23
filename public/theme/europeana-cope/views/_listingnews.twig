@@ -14,6 +14,7 @@
         {% endif %}
         </a>
 
+        {% include 'partials/_image_attribution.twig' with { parentitem: 'teaser' } %}
         <p class="img-insert">
             Created: <span class="date">{{ item.datepublish|localedatetime("%e %B  %Y") }}</span>
         </p>

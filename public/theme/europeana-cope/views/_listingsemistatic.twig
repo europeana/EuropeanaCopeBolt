@@ -3,13 +3,18 @@
 {% endif %}
 
 <article class="column third teaser-threecol teaser-{{ record.contenttype.slug }}">
-    {% if item.teaser_image is defined and item.teaser_image is not empty %}
-        <img src="{{ item.teaser_image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
-    {% elseif item.image is defined and item.image is not empty %}
-        <img src="{{ item.image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
-    {% else %}
-        <img src="{{ 'web_assets/default.png'|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
-    {% endif %}
+    <div class="img-container">
+        {% if item.teaser_image is defined and item.teaser_image is not empty %}
+            <img src="{{ item.teaser_image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
+        {% elseif item.image is defined and item.image is not empty %}
+            <img src="{{ item.image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
+        {% else %}
+            <img src="{{ 'web_assets/default.png'|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
+        {% endif %}
+
+        {% include 'partials/_image_attribution.twig' with { parentitem: 'teaser' } %}
+    </div>
+
 
     <h3>{{ item.title }}</h3>
 
