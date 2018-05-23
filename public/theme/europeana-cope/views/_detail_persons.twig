@@ -31,7 +31,10 @@
                             <span class="p-job-title">{{ record.job_title }}</span>
                             <span class="p-org">{{ record.company }}</span>
                             <span class="p-country-name">{{ record.country }}</span>
-                            <span>{{ record.sector }}</span>
+                            {# <span>{{ record.sector }}</span> #}
+                            {% if record.domain is not empty %}
+                            <span>{{ record.domain }}</span>
+                            {% endif %}
                         </div>
 
                         <p class="card-contact personal-contact">
