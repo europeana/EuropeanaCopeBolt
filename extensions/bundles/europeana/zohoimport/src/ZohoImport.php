@@ -740,16 +740,7 @@ class ZohoImport
 
         // clear contacts for ACCOUNTID
         $conn = $this->app['db'];
-        // $conn->beginTransaction();
-        //
-        //  dump($conn->getHost());
-        //  dump($conn->getDatabase());
-        //  dump($conn->isAutoCommit());
-        //  dump($conn->isConnected());
-        //
-        //
-        //die();
-        //
+
         $deletesql = "DELETE FROM `bolt_relations` WHERE `from_id` = :parent_organisation AND `from_contenttype` = :parent_type";
         $deleted = $conn->executeUpdate($deletesql,
           [
@@ -761,43 +752,9 @@ class ZohoImport
         $logmessage = $accountid . ' - refreshing relations for current organisation id: ' . $parent_organisation . ' [' . $deleted . ']';
         $this->logger('debug', $logmessage, 'zohoimport');
 
-        $deleted = $conn->executeUpdate($deletesql,
-          [
-            "parent_organisation" => 123,
-            "parent_type" =>  $parent_type
-          ]
-        );
-
-        $deleted = $conn->executeUpdate($deletesql,
-          [
-            "parent_organisation" => 456,
-            "parent_type" =>  $parent_type
-          ]
-        );
-
-        $insertrows = $conn->insert('bolt_relations',
-          [
-            "from_id" => 123,
-            "from_contenttype" => $parent_type,
-            "to_contenttype" => $target_type,
-            "to_id" => 321
-          ]
-        );
-        $insertrows = $conn->insert('bolt_relations',
-          [
-            "from_id" => 456,
-            "from_contenttype" => $parent_type,
-            "to_contenttype" => $target_type,
-            "to_id" => 654
-          ]
-        );
-
         foreach($relationsdatanormalized as $contact) {
             $target_person_uid = $contact['CONTACTID'];
 
-            //$logmessage = $accountid . ' - related contact id ' . $target_contact;
-            //$this->logger('debug', $logmessage, 'zohoimport');
-            //dump('checking:'. $inputrecord[$uid] );
             // get contact from database by CONTACTID
             $target_record = $relatedrepository->findOneBy(
               ['uid' => $target_person_uid]
@@ -806,48 +763,31 @@ class ZohoImport
             if ($target_record) {
                 $target_record_id = $target_record->id;
                 // insert relation into database
-                //$insertsql = "INSERT INTO `bolt_relations` (`from_id`, `from_contenttype`, `to_id`, `to_contenttype`)
-                //                                  VALUES (:parent_organisation, :parent_type, :target_id, :target_type)";
-                //$insertrows = $conn->executeUpdate($insertsql,
-                //  [
-                //    "parent_organisation" => $parent_organisation,
-                //    "parent_type" => $parent_type,
-                //    "target_type" => $target_type,
-                //    "target_id" => $contact_record->id
-                //  ]
-                //);
-                $conn = $this->app['db'];
-                $conn->insert('bolt_relations',
-                  [
-                    "from_id" => (int) $parent_organisation,
-                    "from_contenttype" => $parent_type,
-                    "to_contenttype" => $target_type,
-                    "to_id" => (int) $target_record_id
-                  ]
-                );
-                $errorcode = $conn->errorCode();
-                //dump(                  [
-                //  "from_id" => $parent_organisation,
-                //  "from_contenttype" => $parent_type,
-                //  "to_contenttype" => $target_type,
-                //  "to_id" => $contact_record->id
-                //]);
-                $logmessage = $accountid . ' - adding related person ' . $target_person_uid . ': ' . $target_record_id . ' == ' . $errorcode;
-                $this->logger('debug', $logmessage, 'zohoimport');
-
+                $this->insertImportedRelation($parent_organisation, $parent_type, $target_type, $target_record_id);
             }
-            //else {
-            //  $logmessage = $accountid . ' - related person ' . $target_person_uid . ' does not exist';
-            //  $this->logger('debug', $logmessage, 'zohoimport');
-            //}
         }
-        // $conn->commit();
-
-        // $conn->close();
         $results = 'hoi';
 
         // return the filename for record
         return $results;
+    }
+
+    public function insertImportedRelation($parent_organisation, $parent_type, $target_type, $target_record_id) {
+
+      $conn = $this->app['db'];
+      $result = $conn->insert('bolt_relations',
+        [
+          "from_id" => $parent_organisation,
+          "from_contenttype" => $parent_type,
+          "to_contenttype" => $target_type,
+          "to_id" => $target_record_id
+        ]
+      );
+
+      $logmessage = $parent_organisation . ' - adding related person: ' . $target_record_id . ' == ' . $result;
+      $this->logger('debug', $logmessage, 'zohoimport');
+
+      return $result;
     }
 
     /**
