@@ -629,7 +629,7 @@ class ZohoImport
     }
 
     /**
-     * HOOKAFTERLOAD: Get a related records from ZOHO
+     * HOOKAFTERLOAD: Get related records from ZOHO
      * Save it to the filesystem and return the url
      *
      * @param $source_record
@@ -668,22 +668,23 @@ class ZohoImport
         $this->app['zohoimport.filefetcher']->fetchRemoteResource($params['source_url']);
         $relationsdata = $this->app['zohoimport.filefetcher']->latestFile();
 
-        $logmessage = "relations data url: ". $params['source_url'] ;
+        $accountid = $source_record[$params['source_field']];
+        $logmessage = $accountid . " - relations data url: ". $params['source_url'] ;
         $this->logger('info', $logmessage, 'zohoimport');
 
         //echo('image.. ');
         // no file
         if (empty($relationsdata)) {
-            $logmessage = "empty relations data: ". $params['source_url'] ;
+            $logmessage = $accountid . " - empty relations data: ". $params['source_url'] ;
             $this->logger('error', $logmessage, 'zohoimport');
             return false;
         }
 
         //echo('not empty.. ');
         // no valid image
-        if (stristr($relationsdata, 'No photo attached to this record id')
+        if (stristr($relationsdata, 'No records attached to this record id')
           || stristr($relationsdata, 'Unable to process your request')) {
-            $logmessage = 'no remote relations data found for:' . $params['name'] . ' at url: ' . $params['source_url'];
+            $logmessage = $accountid . ' - no remote relations data found for:' . $params['name'] . ' at url: ' . $params['source_url'];
             $this->logger('error', $logmessage, 'zohoimport');
             return false;
         }
@@ -693,8 +694,74 @@ class ZohoImport
         $this->logger('info', $logmessage, 'zohoimport');
 
         $results = json_decode($relationsdata);
-        $logmessage = 'loadZohoRelatedRecords result: ' . json_encode($results);
+        //$logmessage = 'loadZohoRelatedRecords result: ' . json_encode($results);
+        //$this->logger('debug', $logmessage, 'zohoimport');
+
+        //$relationsdatanormalized = $this->app['zohoimport.normalizer']->normalizeFromZohoJson($relationsdata);
+        $localconfig = [];
+        $localconfig['source']['type'] = 'json';
+        $localconfig['target']['mapping']['root'] = 'response.result.Contacts.row';
+        $relationsdatanormalized = $this->app['zohoimport.normalizer']->normalizeInput($localconfig, $relationsdata);
+
+        // double check if there are any records
+        if ($relationsdatanormalized == 'nodata') {
+          $logmessage = $accountid . ' - loadZohoRelatedRecords result: ' . json_encode($relationsdatanormalized);
+          $this->logger('debug', $logmessage, 'zohoimport');
+          // no records means return something and get out
+          return [];
+        }
+
+        // load a repository
+        if (!$this->workingrepository) {
+            $this->workingrepository = $this->app['storage']->getRepository('organisations');
+        }
+
+        if (!$this->currentrecord->id) {
+            //dump('checking:'. $inputrecord[$uid] );
+            // check existing
+            $this->currentrecord = $this->workingrepository->findOneBy(
+              ['uid' => $accountid]
+            );
+        }
+
+        $logmessage = $accountid . ' - current account id: ' . $this->currentrecord->id;
         $this->logger('debug', $logmessage, 'zohoimport');
+
+        //$logmessage = $accountid . ' - loadZohoRelatedRecords result: ' . json_encode($relationsdatanormalized);
+        //$this->logger('debug', $logmessage, 'zohoimport');
+
+        // load a repository
+        $relatedrepository = $this->app['storage']->getRepository('persons');
+
+        // get account from database by ACCOUNTID
+        $parent_organisation = $accountid;
+        $parent_type = 'organisation';
+
+        // clear contacts for ACCOUNTID
+        foreach($relationsdatanormalized as $contact) {
+            $target_contact = $contact['CONTACTID'];
+            $target_type = 'person';
+
+            $logmessage = $accountid . ' - related contact id ' . $target_contact;
+            $this->logger('debug', $logmessage, 'zohoimport');
+            //dump('checking:'. $inputrecord[$uid] );
+            // check existing
+            $contact_record = $relatedrepository->findOneBy(
+              ['uid' => $target_contact]
+            );
+
+            if ($contact_record) {
+                $logmessage = $accountid . ' - related contact result: ' . json_encode($contact_record->id);
+                $this->logger('debug', $logmessage, 'zohoimport');
+                // get contact from database by CONTACTID
+                // insert relation into database
+                    // if contact exists do nothing
+                    // if contact does not exist create it
+            }
+        }
+
+        $results = $relationsdatanormalized;
+
         // return the filename for record
         return $results;
     }
