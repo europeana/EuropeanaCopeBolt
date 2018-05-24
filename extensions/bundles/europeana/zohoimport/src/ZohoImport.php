@@ -739,10 +739,6 @@ class ZohoImport
         // clear contacts for ACCOUNTID
         $conn = $this->app['db'];
         $deletesql = "DELETE FROM bolt_relations WHERE from_id = :parent_organisation AND from_contenttype = :parent_type";
-        //$deletestmt = $conn->prepare($deletesql);
-        //$deletestmt->bindValue("parent_organisation", $parent_organisation);
-        //$deletestmt->bindValue("parent_type", $parent_type);
-        //$deleted = $deletestmt->execute();
         $deleted = $conn->executeUpdate($deletesql,
           [
             "parent_organisation" => $parent_organisation,
@@ -779,16 +775,7 @@ class ZohoImport
                 );
                 $logmessage = $accountid . ' - adding related person ' . $target_contact . ': ' . $contact_record->id ;
                 $this->logger('debug', $logmessage, 'zohoimport');
-                //$insertstmt = $conn->prepare($insertsql);
-                //$insertstmt->bindValue("parent_organisation", $parent_organisation);
-                //$insertstmt->bindValue("parent_type", $parent_type);
-                //$insertstmt->bindValue("target_type", $target_type);
-                //$insertstmt->bindValue("target_id", $contact_record->id);
-                //$inserted = $insertstmt->execute();
-                //$conn->executeUpdate($insertstmt);
-                //$insertednum = $insertstmt->rowCount();
-                //$logmessage = $accountid . ' - adding related person ' . $target_contact . ': ' . $contact_record->id . ' [' . $inserted . ' - ' . $insertednum . ']';
-                //$this->logger('debug', $logmessage, 'zohoimport');
+
             } else {
               $logmessage = $accountid . ' - related person ' . $target_contact . ' does not exist';
               $this->logger('debug', $logmessage, 'zohoimport');
