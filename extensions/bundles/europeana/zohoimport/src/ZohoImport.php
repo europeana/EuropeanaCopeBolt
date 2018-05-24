@@ -724,8 +724,6 @@ class ZohoImport
             );
         }
 
-        $logmessage = $accountid . ' - current account id: ' . $this->currentrecord->id;
-        $this->logger('debug', $logmessage, 'zohoimport');
 
         //$logmessage = $accountid . ' - loadZohoRelatedRecords result: ' . json_encode($relationsdatanormalized);
         //$this->logger('debug', $logmessage, 'zohoimport');
@@ -734,29 +732,66 @@ class ZohoImport
         $relatedrepository = $this->app['storage']->getRepository('persons');
 
         // get account from database by ACCOUNTID
-        $parent_organisation = $accountid;
-        $parent_type = 'organisation';
+        $parent_organisation = $this->currentrecord->id;
+        $parent_type = 'organisations';
+        $target_type = 'persons';
 
         // clear contacts for ACCOUNTID
+        $conn = $this->app['db'];
+        $deletesql = "DELETE FROM bolt_relations WHERE from_id = :parent_organisation AND from_contenttype = :parent_type";
+        //$deletestmt = $conn->prepare($deletesql);
+        //$deletestmt->bindValue("parent_organisation", $parent_organisation);
+        //$deletestmt->bindValue("parent_type", $parent_type);
+        //$deleted = $deletestmt->execute();
+        $deleted = $conn->executeUpdate($deletesql,
+          [
+            "parent_organisation" => $parent_organisation,
+            "parent_type" =>  $parent_type
+          ]
+        );
+
+        $logmessage = $accountid . ' - refreshing relations for current organisation id: ' . $parent_organisation . ' [' . $deleted . ']';
+        $this->logger('debug', $logmessage, 'zohoimport');
+
+
         foreach($relationsdatanormalized as $contact) {
             $target_contact = $contact['CONTACTID'];
-            $target_type = 'person';
 
-            $logmessage = $accountid . ' - related contact id ' . $target_contact;
-            $this->logger('debug', $logmessage, 'zohoimport');
+            //$logmessage = $accountid . ' - related contact id ' . $target_contact;
+            //$this->logger('debug', $logmessage, 'zohoimport');
             //dump('checking:'. $inputrecord[$uid] );
-            // check existing
+            // get contact from database by CONTACTID
             $contact_record = $relatedrepository->findOneBy(
               ['uid' => $target_contact]
             );
 
             if ($contact_record) {
-                $logmessage = $accountid . ' - related contact result: ' . json_encode($contact_record->id);
-                $this->logger('debug', $logmessage, 'zohoimport');
-                // get contact from database by CONTACTID
                 // insert relation into database
-                    // if contact exists do nothing
-                    // if contact does not exist create it
+                $insertsql = "INSERT INTO bolt_relations (from_id, from_contenttype, to_id, to_contenttype) 
+                                                  VALUES (:parent_organisation, :parent_type, :target_id, :target_type)";
+                $conn->executeUpdate($insertsql,
+                  [
+                    "parent_organisation" => $parent_organisation,
+                    "parent_type" => $parent_type,
+                    "target_type" => $target_type,
+                    "target_id" => $contact_record->id
+                  ]
+                );
+                $logmessage = $accountid . ' - adding related person ' . $target_contact . ': ' . $contact_record->id ;
+                $this->logger('debug', $logmessage, 'zohoimport');
+                //$insertstmt = $conn->prepare($insertsql);
+                //$insertstmt->bindValue("parent_organisation", $parent_organisation);
+                //$insertstmt->bindValue("parent_type", $parent_type);
+                //$insertstmt->bindValue("target_type", $target_type);
+                //$insertstmt->bindValue("target_id", $contact_record->id);
+                //$inserted = $insertstmt->execute();
+                //$conn->executeUpdate($insertstmt);
+                //$insertednum = $insertstmt->rowCount();
+                //$logmessage = $accountid . ' - adding related person ' . $target_contact . ': ' . $contact_record->id . ' [' . $inserted . ' - ' . $insertednum . ']';
+                //$this->logger('debug', $logmessage, 'zohoimport');
+            } else {
+              $logmessage = $accountid . ' - related person ' . $target_contact . ' does not exist';
+              $this->logger('debug', $logmessage, 'zohoimport');
             }
         }
 
