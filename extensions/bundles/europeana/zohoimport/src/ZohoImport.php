@@ -738,19 +738,8 @@ class ZohoImport
         $parent_type = 'organisations';
         $target_type = 'persons';
 
-        // clear contacts for ACCOUNTID
-        $conn = $this->app['db'];
-
-        $deletesql = "DELETE FROM `bolt_relations` WHERE `from_id` = :parent_organisation AND `from_contenttype` = :parent_type";
-        $deleted = $conn->executeUpdate($deletesql,
-          [
-            "parent_organisation" => (int) $parent_organisation,
-            "parent_type" => $parent_type
-          ]
-        );
-
-        $logmessage = $accountid . ' - refreshing relations for current organisation id: ' . $parent_organisation . ' [' . $deleted . ']';
-        $this->logger('debug', $logmessage, 'zohoimport');
+        // delete existing relations
+        $this->deleteImportedRelations($parent_organisation, $parent_type, $target_type);
 
         foreach($relationsdatanormalized as $contact) {
             $target_person_uid = $contact['CONTACTID'];
@@ -766,28 +755,56 @@ class ZohoImport
                 $this->insertImportedRelation($parent_organisation, $parent_type, $target_type, $target_record_id);
             }
         }
-        $results = 'hoi';
+        // $results = 'hoi';
+
 
         // return the filename for record
         return $results;
     }
 
-    public function insertImportedRelation($parent_organisation, $parent_type, $target_type, $target_record_id) {
-
+    public function deleteImportedRelations($parent_organisation, $parent_type, $target_type) {
+      // clear contacts for ACCOUNTID
       $conn = $this->app['db'];
-      $result = $conn->insert('bolt_relations',
+
+      $deletesql = "DELETE FROM `bolt_relations` WHERE `from_id` = :parent_organisation AND `from_contenttype` = :parent_type AND `to_contenttype` = :target_type";
+      $stmt = $conn->executeUpdate($deletesql,
         [
-          "from_id" => $parent_organisation,
-          "from_contenttype" => $parent_type,
-          "to_contenttype" => $target_type,
-          "to_id" => $target_record_id
+          "parent_organisation" => (int) $parent_organisation,
+          "parent_type" => $parent_type,
+          "target_type" => $target_type
         ]
       );
 
-      $logmessage = $parent_organisation . ' - adding related person: ' . $target_record_id . ' == ' . $result;
+      $deleted = $stmt->execute();
+
+      $logmessage = $parent_organisation . ' - refreshing relations for current organisation id: ' . $parent_organisation . ' [' . $deleted . ']';
       $this->logger('debug', $logmessage, 'zohoimport');
 
-      return $result;
+      return $deleted;
+    }
+
+    public function insertImportedRelation($parent_organisation, $parent_type, $target_type, $target_record_id) {
+
+      $conn = $this->app['db'];
+      $insertsql = "INSERT INTO bolt_relations (from_id, from_contenttype, to_id, to_contenttype)  
+                                                  VALUES (:parent_organisation, :parent_type, :target_record_id, :target_type)";
+      $stmt = $conn->executeQuery($insertsql,
+        [
+          "parent_organisation" => $parent_organisation,
+          "parent_type" => $parent_type,
+          "target_type" => $target_type,
+          "target_record_id" => $target_record_id
+        ]
+      );
+
+      $inserted = $stmt->execute();
+      //$conn->persist($result);
+      //$this->app['db']->flush();
+
+      $logmessage = $parent_organisation . ' - adding related person: ' . $target_record_id . ' == ' . $inserted;
+      $this->logger('debug', $logmessage, 'zohoimport');
+
+      return $inserted;
     }
 
     /**
