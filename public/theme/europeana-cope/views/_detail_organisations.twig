@@ -6,11 +6,15 @@
             <article class="column main-column">
                 <div class="group card organisation h-card">
                     <div class="img-container offwhite-logo">
-                        
-                        <img class="card-img organisation-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Logo of {{ record.name }}" />
+
+                        {% if record.values.image is defined and record.values.image is not empty and record.values.image.file|default() != "" %}
+                            <img class="card-img organisation-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Logo of {{ record.name }}" />
+                        {% else %}
+                            <img class="card-img organisation-img u-photo" src="{{ 'web_assets/default.png'|thumbnail(450, 450, 'c')}}" alt="Logo of {{ record.name }}" />
+                        {% endif %}
 
                     </div>
-                    
+
                     <div class="card-details organisation-details">
 
                         {% if record.org_role is not empty %}
@@ -34,7 +38,7 @@
                             {% endif %}
                             {% if record.acronym is not empty %}
                                 <span>{{ record.acronym }}</span>
-                            {% endif %}  
+                            {% endif %}
                         </div>
 
                         {% if record.scope is not empty %}
@@ -64,7 +68,7 @@
                         {% endif %}
 
                         <p class="card-contact organisation-contact">
-                            {% if (record.street is not empty) 
+                            {% if (record.street is not empty)
                                 or (record.po_box is not empty)
                                 or (record.city is not empty)
                                 or (record.zipcode is not empty)
@@ -75,19 +79,19 @@
                                     <use xlink:href="#icon-location"></use>
                                 </svg>
                             {% endif %}
-                            
+
                             {% if record.street is not empty %}
                                 <span class="p-street-address">{{ record.street }}</span>
                             {% endif %}
                             {% if record.po_box is not empty %}
                                 <span class="p-post-office-box">{{ record.po_box }}</span>
-                            {% endif %}  
+                            {% endif %}
                             {% if record.city is not empty %}
                                 <span class="p-locality">{{ record.city }}</span>
-                            {% endif %} 
+                            {% endif %}
                             {% if record.zipcode is not empty %}
                                 <span class="p-postal-code">{{ record.zipcode }}</span>
-                            {% endif %} 
+                            {% endif %}
                             {% if record.country is not empty %}
                                 <span class="p-country-name">{{ record.country }}</span>
                             {% endif %}
