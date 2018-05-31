@@ -12,7 +12,7 @@
             <img src="{{ 'web_assets/default.png'|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
         {% endif %}
 
-        {% include 'partials/_image_attribution.twig' with { parentitem: 'teaser' } %}
+        {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
     </div>
 
     <h3>{{ item.title }}</h3>
