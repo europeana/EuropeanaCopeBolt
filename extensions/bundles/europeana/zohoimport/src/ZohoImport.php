@@ -8,6 +8,7 @@ class ZohoImport
 {
     private $app;
     private $config;
+    private $connection;
     private $ffwd;
     private $ffwdsource;
     private $resourcedata;
@@ -32,6 +33,7 @@ class ZohoImport
         $this->config = $this->app['zohoimport.config'];
         $this->debug_mode = $this->config['debug_mode'];
         $this->remote_request_counter = 0;
+        $this->connection = $this->app['db'];
     }
 
     /**
@@ -452,6 +454,12 @@ class ZohoImport
                             $items[$key] = $tempvalue;
                         }
                     }
+                    $logmessage = $name . ' hookafterload refreshing local value ' . $key;
+                    $this->logger('debug', $logmessage, 'zohoimport');
+                    // check existing
+                    $this->currentrecord = $this->workingrepository->findOneBy(
+                       ['uid' => $inputrecord[$uid]]
+                    );
                 }
             }
 
@@ -541,7 +549,7 @@ class ZohoImport
 
         // dont depublish records that are already depublished
         $query = "UPDATE $tablename SET status = :status WHERE datechanged < :datechanged AND status != :status";
-        $stmt = $this->app['db']->prepare($query);
+        $stmt = $this->connection->prepare($query);
         $stmt->bindValue('status', $unpublished_status);
         $stmt->bindValue('datechanged', $date);
         $res = $stmt->execute();
@@ -603,7 +611,7 @@ class ZohoImport
         $prefix = $this->app['config']->get('general/database/prefix');
         $tablename = $prefix . $contenttype;
         $query = "SELECT count(id) as published FROM $tablename WHERE status = 'published'";
-        $stmt = $this->app['db']->prepare($query);
+        $stmt = $this->connection->prepare($query);
         $res = $stmt->execute();
         $result = $stmt->fetch();
         return $result['published'];
@@ -622,14 +630,14 @@ class ZohoImport
         $prefix = $this->app['config']->get('general/database/prefix');
         $tablename = $prefix . $contenttype;
         $query = "SELECT count(id) as unpublished FROM $tablename WHERE status <> 'published'";
-        $stmt = $this->app['db']->prepare($query);
+        $stmt = $this->connection->prepare($query);
         $res = $stmt->execute();
         $result = $stmt->fetch();
         return $result['unpublished'];
     }
 
     /**
-     * HOOKAFTERLOAD: Get a related records from ZOHO
+     * HOOKAFTERLOAD: Get related records from ZOHO
      * Save it to the filesystem and return the url
      *
      * @param $source_record
@@ -668,22 +676,23 @@ class ZohoImport
         $this->app['zohoimport.filefetcher']->fetchRemoteResource($params['source_url']);
         $relationsdata = $this->app['zohoimport.filefetcher']->latestFile();
 
-        $logmessage = "relations data url: ". $params['source_url'] ;
+        $accountid = $source_record[$params['source_field']];
+        $logmessage = $accountid . " - relations data url: ". $params['source_url'] ;
         $this->logger('info', $logmessage, 'zohoimport');
 
         //echo('image.. ');
         // no file
         if (empty($relationsdata)) {
-            $logmessage = "empty relations data: ". $params['source_url'] ;
+            $logmessage = $accountid . " - empty relations data: ". $params['source_url'] ;
             $this->logger('error', $logmessage, 'zohoimport');
             return false;
         }
 
         //echo('not empty.. ');
         // no valid image
-        if (stristr($relationsdata, 'No photo attached to this record id')
+        if (stristr($relationsdata, 'No records attached to this record id')
           || stristr($relationsdata, 'Unable to process your request')) {
-            $logmessage = 'no remote relations data found for:' . $params['name'] . ' at url: ' . $params['source_url'];
+            $logmessage = $accountid . ' - no remote relations data found for:' . $params['name'] . ' at url: ' . $params['source_url'];
             $this->logger('error', $logmessage, 'zohoimport');
             return false;
         }
@@ -693,10 +702,126 @@ class ZohoImport
         $this->logger('info', $logmessage, 'zohoimport');
 
         $results = json_decode($relationsdata);
-        $logmessage = 'loadZohoRelatedRecords result: ' . json_encode($results);
-        $this->logger('debug', $logmessage, 'zohoimport');
+        //$logmessage = 'loadZohoRelatedRecords result: ' . json_encode($results);
+        //$this->logger('debug', $logmessage, 'zohoimport');
+
+        //$relationsdatanormalized = $this->app['zohoimport.normalizer']->normalizeFromZohoJson($relationsdata);
+        $localconfig = [];
+        $localconfig['source']['type'] = 'json';
+        $localconfig['target']['mapping']['root'] = 'response.result.Contacts.row';
+        $relationsdatanormalized = $this->app['zohoimport.normalizer']->normalizeInput($localconfig, $relationsdata);
+
+        // double check if there are any records
+        if ($relationsdatanormalized == 'nodata') {
+          $logmessage = $accountid . ' - loadZohoRelatedRecords result: ' . json_encode($relationsdatanormalized);
+          $this->logger('debug', $logmessage, 'zohoimport');
+          // no records means return something and get out
+          return [];
+        }
+
+        // load a repository
+        if (!$this->workingrepository) {
+            $this->workingrepository = $this->app['storage']->getRepository('organisations');
+        }
+
+        if (!$this->currentrecord->id) {
+            //dump('checking:'. $inputrecord[$uid] );
+            // check existing
+            $this->currentrecord = $this->workingrepository->findOneBy(
+              ['uid' => $accountid]
+            );
+        }
+        // load a repository
+        // $relationsrepository = $this->app['storage']->getRepository('relations');
+        //dump($relationsrepository);
+        //die();
+        //$logmessage = $accountid . ' - loadZohoRelatedRecords result: ' . json_encode($relationsdatanormalized);
+        //$this->logger('debug', $logmessage, 'zohoimport');
+
+        // load a repository
+        $relatedrepository = $this->app['storage']->getRepository('persons');
+
+        // get account from database by ACCOUNTID
+        $parent_organisation = $this->currentrecord->id;
+        $parent_type = 'organisations';
+        $target_type = 'persons';
+
+        // delete existing relations
+        $this->deleteImportedRelations($parent_organisation, $parent_type, $target_type);
+
+        foreach($relationsdatanormalized as $contact) {
+            $target_person_uid = $contact['CONTACTID'];
+
+            // get contact from database by CONTACTID
+            $target_record = $relatedrepository->findOneBy(
+              ['uid' => $target_person_uid]
+            );
+
+            if ($target_record) {
+                $target_record_id = $target_record->id;
+                // insert relation into database
+                $this->insertImportedRelation($parent_organisation, $parent_type, $target_type, $target_record_id);
+            }
+        }
+        // $results = 'hoi';
+
         // return the filename for record
         return $results;
+    }
+
+    public function deleteImportedRelations($parent_organisation, $parent_type, $target_type) {
+      // clear contacts for ACCOUNTID
+
+      $deletesql = "DELETE FROM bolt_relations WHERE from_id = :parent_organisation AND from_contenttype = :parent_type AND to_contenttype = :target_type";
+
+      $deletevalues = [
+        "parent_organisation" => $parent_organisation,
+        "parent_type" => $parent_type,
+        "target_type" => $target_type
+      ];
+
+      $stmt = $this->connection->prepare($deletesql);
+
+      foreach($deletevalues as $label => $value) {
+        $stmt->bindValue($label, $value);
+      }
+
+      $deleted = $stmt->execute();
+
+      $logmessage = $parent_organisation . ' - refreshing relations for current organisation id: ' . $parent_organisation . ' [' . $deleted . ']';
+      $this->logger('debug', $logmessage, 'zohoimport');
+
+      return $deleted;
+    }
+
+    public function insertImportedRelation($parent_organisation, $parent_type, $target_type, $target_record_id) {
+
+      $insertsql = "INSERT INTO bolt_relations (from_id, from_contenttype, to_id, to_contenttype) VALUES (:parent_organisation, :parent_type, :target_record_id, :target_type)";
+
+      $insertvalues = [
+        "parent_organisation" => $parent_organisation,
+        "parent_type" => $parent_type,
+        "target_type" => $target_type,
+        "target_record_id" => $target_record_id
+      ];
+
+      //dump($insertvalues);
+
+      $stmt = $this->connection->prepare($insertsql);
+
+      foreach($insertvalues as $label => $value) {
+        $stmt->bindValue($label, $value);
+      }
+
+      // dump($stmt);
+
+      $inserted = $stmt->execute();
+      // $conn->flush();
+
+      $logmessage = $parent_organisation . ' - adding related person: ' . $target_record_id . ' == ' . $inserted;
+      $this->logger('debug', $logmessage, 'zohoimport');
+
+      return $inserted;
     }
 
     /**

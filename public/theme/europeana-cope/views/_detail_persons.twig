@@ -7,7 +7,11 @@
 
                 <div class="group card personal h-card">
                     <div class="img-container">
-                        <img class="card-img personal-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}" />
+                        {% if record.values.image is defined and record.values.image is not empty and record.values.image.file|default() != "" %}
+                            <img class="card-img personal-img u-photo" src="{{ record.values.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}" />
+                        {% else %}
+                            <img class="card-img personal-img u-photo" src="{{ 'web_assets/default.png'|thumbnail(450, 450, 'c')}}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}"/>
+                        {% endif %}
                     </div>
 
                     <div class="card-details personal-details">

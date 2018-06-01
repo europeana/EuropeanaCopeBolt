@@ -4,7 +4,11 @@
 
 {% if (item is not empty) and (item.last_name is not empty) %}
 <div class="author-small group">
-    <img class="round" src="{{ item.values.image|default('notfound')|thumbnail(72, 72, 'c') }}" alt="portrait of {{ item.first_name }} {{ item.last_name }}"/>
+    {% if item.values.image is defined and item.values.image is not empty and item.values.image.file|default() != "" %}
+        <img class="round" src="{{ item.values.image|default('notfound')|thumbnail(72, 72, 'c') }}" alt="portrait of {{ item.first_name }} {{ item.last_name }}"/>
+    {% else %}
+        <img class="round" src="{{ 'web_assets/default.png'|thumbnail(72, 72, 'c')}}" alt="portrait of {{ item.first_name }} {{ item.last_name }}"/>
+    {% endif %}
     <p class="name">{{ item.first_name }} {{ item.last_name }}</p>
     <p class="function">{{ item.job_title }}
         {% if item.company is not empty %}{%- if item.job_title is not empty %}, {% endif %}{{ item.company }} {% endif %}

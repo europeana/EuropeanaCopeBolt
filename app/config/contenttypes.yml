@@ -2483,6 +2483,22 @@ persons:
       class: narrow
       variant: inline
       label: "Domain"
+#      values:
+#        "Archive": "Archive"
+#        "Creative industries": "Creative industries"
+#        "Audio-visual archive": "Audio-visual archive"
+#        "Research institute": "Research institute"
+#        "Academic Research": "Academic Research"
+#        "School/University": "School/University"
+#        "Gallery": "Gallery"
+#        "Library": "Library"
+#        "Museum": "Museum"
+#        "Education": "Education"
+#        "GLAM": "GLAM"
+#        "Government": "Government"
+#        "Other": "Other"
+#        "(not set)": "(not set)"
+#        "-None-": "-None-"
     team:
       type: select
       required: false
@@ -2665,9 +2681,26 @@ organisations:
       group: "Organisation"
     domain:
       type: text
+      required: false
       label: "Domain"
       variant: inline
       class: narrow
+#      values:
+#        "Archive": "Archive"
+#        "Creative industries": "Creative industries"
+#        "Audio-visual archive": "Audio-visual archive"
+#        "Research institute": "Research institute"
+#        "Academic Research": "Academic Research"
+#        "School/University": "School/University"
+#        "Gallery": "Gallery"
+#        "Library": "Library"
+#        "Museum": "Museum"
+#        "Education": "Education"
+#        "GLAM": "GLAM"
+#        "Government": "Government"
+#        "Other": "Other"
+#        "(not set)": "(not set)"
+#        "-None-": "-None-"
       group: "Organisation"
     scope:
       type: text
