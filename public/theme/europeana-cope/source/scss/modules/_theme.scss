@@ -324,7 +324,7 @@ img.round,
 
 
 .offwhite-logo {
-    // used in teaser_organisations, detail_organisations 
+    // used in teaser_organisations, detail_organisations
     &:before {
         content: "";
         width: 100%;
@@ -335,7 +335,7 @@ img.round,
         mix-blend-mode: multiply;
         background: $off-white;
     }
-    
+
     &.round:before {
         border-radius: 50%;
     }
@@ -552,7 +552,7 @@ a.banner {
         float: none;
         width: 100%;
         margin-bottom: 1rem;
-        
+
         @include respond-to(medium-screens){
             float: left;
             width: 50%;
@@ -628,7 +628,7 @@ a.banner {
         }
     }
 
-    
+
 
 
 }
@@ -1383,7 +1383,7 @@ main .section-calltoactionlink:first-child {
         width: 10.85rem;
         top: 0;
         right: 0;
-        
+
         @include respond-to(medium-screens){
             width: 50%;
         }
@@ -1824,6 +1824,11 @@ figure {
 .card-network {
     font-weight: 700;
     margin-bottom: 1rem;
+
+    .mc-term {
+        color: $light-gray;
+        font-weight: normal;
+    }
 }
 
 .card-function {
@@ -1840,7 +1845,7 @@ figure {
         display: block;
         margin-bottom: 0.5rem;
     }
-    
+
     svg {
         display: inline-block;
     }
@@ -1853,7 +1858,7 @@ figure {
         display: block;
         text-indent: 23px;
     }
-    
+
 }
 
 

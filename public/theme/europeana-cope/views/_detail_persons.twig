@@ -29,19 +29,23 @@
                             {% for item in record.network_participation %}
                                 <span>{{ item }}</span>
                             {% endfor %}
+
                             {% if record.membership_council_term is not empty %}
                                 <span class="mc-term">
                                     <svg class="icon icon-calendar-mc">
-                                        <use xlink:href="#icon-calendar-mc"></use></svg>MC Term: {{ record.membership_council_term }}</span>
+                                        <use xlink:href="#icon-calendar-mc"></use></svg>
+                                    MC Term: {{ record.membership_council_term }}
+                                </span>
                             {% endif %}
                         </div>
+
 
                         <div class="card-function personal-function">
                             <span class="p-job-title">{{ record.job_title }}</span>
                             <span class="p-org">{{ record.company }}</span>
                             <span class="p-country-name">{{ record.country }}</span>
                             {# <span>{{ record.sector }}</span> #}
-                            {% if record.domain is not empty %}
+                            {% if record.domain is not empty %}>
                             <span>{{ record.domain }}</span>
                             {% endif %}
                         </div>

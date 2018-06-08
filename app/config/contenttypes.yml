@@ -2599,9 +2599,16 @@ persons:
       group: meta
       prefix: "<div><h3>Zoho data</h3></div>"
     hide_on_pro:
-      type: text
+      type: select
+      label: "Don't show this contact on Europeana Pro"
       class: narrow
       variant: inline
+      required: false
+      multiple: false
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
     europeana_id:
       type: text
       class: narrow
