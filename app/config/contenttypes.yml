@@ -2585,6 +2585,13 @@ persons:
       options:
         ckeditor:
           removePlugins: 'image'
+    membership_council_term:
+      type: text
+      required: false
+      label: "Membership Council Term"
+      class: narrow
+      variant: inline
+      group: "Europeana Networks"
     uid:
       type: text
       class: narrow
