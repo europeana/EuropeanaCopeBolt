@@ -2598,6 +2598,10 @@ persons:
       variant: inline
       group: meta
       prefix: "<div><h3>Zoho data</h3></div>"
+    hide_on_pro:
+      type: text
+      class: narrow
+      variant: inline
     europeana_id:
       type: text
       class: narrow

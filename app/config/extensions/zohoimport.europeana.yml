@@ -68,7 +68,8 @@ remotes:
                     country: "Country"
                     boardposition: "Europeana Foundation Board position"
 
-                    membership_council_term: "MC_term"
+                    membership_council_term: "MC term"
+                    hide_on_pro: "Don't show this contact on Europeana Pro"
 
                     # fields that can safely be ignored
                     europeana_id: "ID"                      # default: "EL30MC"
