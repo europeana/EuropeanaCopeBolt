@@ -460,6 +460,33 @@ class ZohoImport
                     $this->currentrecord = $this->workingrepository->findOneBy(
                        ['uid' => $inputrecord[$uid]]
                     );
+
+                    if (!$this->currentrecord) {
+                        $existing_id = false;
+
+                        $logmessage = $name
+                          . ' - preparing a new record in hookafterload: ' . $inputrecord[$uid];
+                        $this->logger('debug', $logmessage, 'zohoimport');
+
+                        $this->currentrecord = clone $this->emptyrecord;
+
+                        $items['status'] = $config['target']['defaults']['new'];
+                        // update datecreated, may be redundant, but lets do it anyway
+                        $items['datecreated'] = $date;
+                        // update datechanged, may be redundant, but lets do it anyway
+                        $items['datechanged'] = $date;
+                    } else {
+                        $existing_id = $this->currentrecord->getId();
+
+                        $logmessage = $name
+                          . ' - updating existing record in hookafterload: ' . $inputrecord[$uid];
+                        $this->logger('debug', $logmessage, 'zohoimport');
+
+                        $items['status'] = $config['target']['defaults']['updated'];
+
+                        // update datechanged, may be redundant, but lets do it anyway
+                        $items['datechanged'] = $date;
+                    }
                 }
             }
 
@@ -508,7 +535,16 @@ class ZohoImport
             if ($existing_id) {
                 $items['id'] = $existing_id;
             }
-            $this->currentrecord->setValues($items);
+            if($this->currentrecord && is_array($items)) {
+              $this->currentrecord->setValues($items);
+            } else {
+              print "oops";
+              print_r($items);
+              var_dump($this->currentrecord);
+              die();
+
+            }
+
             $this->currentrecord->setDateChanged($date);
 
             $logmessage = $name
