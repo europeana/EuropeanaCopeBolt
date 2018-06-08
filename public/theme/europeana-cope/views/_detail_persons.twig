@@ -29,6 +29,11 @@
                             {% for item in record.network_participation %}
                                 <span>{{ item }}</span>
                             {% endfor %}
+                            {% if record.mc_term is not empty %}
+                                <span class="mc-term">
+                                    <svg class="icon icon-calendar-mc">
+                                        <use xlink:href="#icon-calendar-mc"></use></svg>MC Term: {{ record.mc_term }}</span>
+                            {% endif %}
                         </div>
 
                         <div class="card-function personal-function">
