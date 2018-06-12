@@ -433,7 +433,7 @@ class ZohoImport
 
                         if ($tempvalue) {
                             // set the new value only if there is a result for the callback
-                            $logmessage = $name . ' hookafterload new value ' . $key;
+                            $logmessage = $name . ' - hookafterload new value ' . $key;
                             if (is_string($tempvalue)) {
                                 $logmessage .= ' - ' .$tempvalue;
                             }
@@ -446,7 +446,7 @@ class ZohoImport
 
                         // set the new value if it is different
                         if ($tempvalue != $items[$key]) {
-                            $logmessage = $name . ' hookafterload existing value ' . $key;
+                            $logmessage = $name . ' - hookafterload existing value ' . $key;
                             if (is_string($tempvalue)) {
                                 $logmessage .= ' - ' .$tempvalue;
                             }
@@ -454,7 +454,7 @@ class ZohoImport
                             $items[$key] = $tempvalue;
                         }
                     }
-                    $logmessage = $name . ' hookafterload refreshing local value ' . $key;
+                    $logmessage = $name . ' - hookafterload refreshing local value ' . $key;
                     $this->logger('debug', $logmessage, 'zohoimport');
                     // check existing
                     $this->currentrecord = $this->workingrepository->findOneBy(
@@ -490,7 +490,15 @@ class ZohoImport
                 }
             }
 
-            //dump('sanitaiton please');
+            // if a record has the hide on pro flag set - depublish it by default
+            if (array_key_exists('hide_on_pro', $items) && $items['hide_on_pro'] === "true") {
+                $items['status'] = 'held';
+                $logmessage = $name
+                  . ' - hiding record on pro: ' . $existing_id . ' - ' . $inputrecord[$uid];
+                $this->logger('debug', $logmessage, 'zohoimport');
+            }
+
+            //dump('sanitation please');
             $sanitize = true;
             if ($sanitize) {
                 $items['structure_sortorder'] = 0;
@@ -499,13 +507,13 @@ class ZohoImport
                 $items['support_navigation'] = 0;
                 // clean up some variables for inserting
                 if (!empty($items['first_name']) || !empty($items['last_name'])) {
-                  $items['slug'] = $this->app['slugify']->slugify($items['first_name'] . " " . $items['last_name']);
+                    $items['slug'] = $this->app['slugify']->slugify($items['first_name'] . " " . $items['last_name']);
                 } elseif (!empty($items['name'])) {
                     $items['slug'] = $this->app['slugify']->slugify($items['name']);
                 } elseif (!empty($items['title']) || !empty($items['locationtitle'])) {
                     $items['slug'] = $this->app['slugify']->slugify($items['title'] ."-". $items['locationtitle']);
                 } else {
-                  $items['slug'] = $this->app['slugify']->slugify($items['uid']);
+                    $items['slug'] = $this->app['slugify']->slugify($items['uid']);
                 }
 
                 if (!empty($items['network_participation'])) {
@@ -538,12 +546,14 @@ class ZohoImport
             if($this->currentrecord && is_array($items)) {
               $this->currentrecord->setValues($items);
             } else {
-              print "oops";
+              $logmessage = $name
+                . ' - Sorry, the import can not save an empty record: ' . $existing_id . ' - ' . $inputrecord[$uid] . ' exiting import.';
+              $this->logger('warning', $logmessage, 'zohoimport');
               print_r($items);
               var_dump($this->currentrecord);
               die();
-
             }
+
 
             $this->currentrecord->setDateChanged($date);
 
