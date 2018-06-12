@@ -23,7 +23,7 @@ class ZohoImportCommand extends BaseCommand
         ->addArgument(
             'type',
             InputArgument::OPTIONAL,
-            'What type of import should be done: test, full, update, imageonly. Defaults to test'
+            'What type of import should be done: test, full, imageonly. Defaults to test'
         )
         ->addOption(
             'summary',
@@ -41,7 +41,7 @@ class ZohoImportCommand extends BaseCommand
             'ffwdsource',
             null,
             InputOption::VALUE_REQUIRED,
-            'Contenttype slug of the contenttype to import - if not the first defined one is desired'
+            'Contenttype slug of the contenttype to import - if not set all enabled sources will be used'
         )
         ;
     }
@@ -53,9 +53,6 @@ class ZohoImportCommand extends BaseCommand
         switch ($type) {
             case 'full':
                 $text = 'Running full import';
-                break;
-            case 'update':
-                $text = 'Running update';
                 break;
             case 'imageonly':
                 $text = 'Running image only import';
@@ -88,8 +85,6 @@ class ZohoImportCommand extends BaseCommand
             //$on_console = true;
             //$text .= $this->app['extensions.ZohoImport']->importJob($on_console);
             $this->app['zohoimport']->importJob(true, $output);
-        } elseif ($type == 'update') {
-            // do stuff
         } elseif ($type == 'imageonly') {
             // do stuff
         } else {
