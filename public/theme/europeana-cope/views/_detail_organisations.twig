@@ -97,6 +97,15 @@
                             {% endif %}
                         </p>
 
+
+                        {% if record.email is not empty %}
+                        <p class="card-contact personal-contact">
+                            <a class="email u-email" href="mailto:{{ record.email }}">
+                                <svg class="icon icon-sendemail">
+                                    <use xlink:href="#icon-sendemail"></use></svg>{{ record.email }}
+                            </a>
+                        </p>
+                        {% endif %}
                     </div>
                 </div>{# /group #}
 
