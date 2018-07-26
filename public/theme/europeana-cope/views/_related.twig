@@ -6,7 +6,7 @@
 
         {% include 'partials/_image_attribution.twig' with { parentitem: 'teaser' } %}
         <div class="info-block">
-            {% if item.posttype|default('News') is defined %}
+            {% if item.posttype is defined and item.posttype is not empty %}
                 <span class="info-type">
                     {{ item.posttype|default('News') }}
                 </span>
