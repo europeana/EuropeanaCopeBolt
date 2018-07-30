@@ -128,11 +128,11 @@ remotes:
                     source_url: "Logo (link to WikimediaCommons)"
                     source_field: "Logo (link to WikimediaCommons)"
                     target_field: image
-                relations:
-                    callback: loadZohoRelatedRecords
-                    source_url: https://crm.zoho.com/crm/private/json/Contacts/getRelatedRecords?authtoken={{override in local config}}&scope=crmapi&parentModule=Accounts&id=ACCOUNTID
-                    source_field: ACCOUNTID
-                    target_field: null
+#                relations:
+#                    callback: loadZohoRelatedRecords
+#                    source_url: https://crm.zoho.com/crm/private/json/Contacts/getRelatedRecords?authtoken={{override in local config}}&scope=crmapi&parentModule=Accounts&id=ACCOUNTID
+#                    source_field: ACCOUNTID
+#                    target_field: null
             mapping: # mappings in XPATH
                 root: 'response.result.Accounts.row'
                 fields:
