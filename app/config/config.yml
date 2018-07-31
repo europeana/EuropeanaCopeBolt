@@ -381,6 +381,12 @@ cookies_use_httphost: true
 # The default is 1209600 (two weeks, in seconds).
 cookies_lifetime: 1209600
 
+# 2018-07-31 lodewijk@twokings.nl
+# this is a testcase for the csrf token that seems to timeout on long editing times
+# if this has no sideeffects it can be kept to this setting by default
+session:
+    cookie_lifetime: 0
+
 # Set the session cookie to a specific domain. Leave blank, unless you know what
 # you're doing.
 #
