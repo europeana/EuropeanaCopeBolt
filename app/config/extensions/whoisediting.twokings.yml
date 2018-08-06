@@ -1,0 +1,9 @@
+# This value sets the time-interval for the widget to update.
+# Note that the time value is in miliseconds. 1000 miliseconds = 1 second.
+# Time interval will default to 3 seconds if no other value is given
+timeInterval: 3000
+
+# This option will show the actions made by the editors in the last 'x' hours.
+# You can use any value from 0 to 24 to show the actions of the last 'x' hours.
+# By default the value is 3.
+lastActions: 3

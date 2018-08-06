@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "991cfa59352790b1086d67372dfb246f",
+    "content-hash": "d78e20f78c1e0832b79bb1e643e1da48",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -299,6 +299,60 @@
                 "issues": "https://github.com/graham73may/bolt-related-content/issues"
             },
             "time": "2017-09-04T12:30:43+00:00"
+        },
+        {
+            "name": "twokings/bolt-extension-who-is-editing",
+            "version": "v1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nestordedios/bolt-extension-who-is-editing.git",
+                "reference": "cd858b5326b5536f04f6cf2b959de67430aa70e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nestordedios/bolt-extension-who-is-editing/zipball/cd858b5326b5536f04f6cf2b959de67430aa70e3",
+                "reference": "cd858b5326b5536f04f6cf2b959de67430aa70e3",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\TwoKings\\WhoIsEditing\\WhoIsEditingExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\TwoKings\\WhoIsEditing\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Néstor de Dios Fernández",
+                    "email": "nestor@twokings.nl"
+                }
+            ],
+            "description": "This extension shows you who is editing the content you might want to simultaneously edit",
+            "keywords": [
+                "content",
+                "edit",
+                "editing",
+                "editor",
+                "record",
+                "simultaneously"
+            ],
+            "support": {
+                "source": "https://github.com/nestordedios/bolt-extension-who-is-editing/tree/v1.8.1",
+                "issues": "https://github.com/nestordedios/bolt-extension-who-is-editing/issues"
+            },
+            "time": "2018-05-21T07:54:56+00:00"
         },
         {
             "name": "twokings/hierarchical-routes",
