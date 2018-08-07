@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "853ac7c5671b2a54e15182c1d93682fb",
+    "content-hash": "62e16a84c4b6d81c0404aec60aa452c2",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -302,16 +302,16 @@
         },
         {
             "name": "twokings/bolt-extension-who-is-editing",
-            "version": "dev-master",
+            "version": "v1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nestordedios/bolt-extension-who-is-editing.git",
-                "reference": "ea76ba44b2d26fdc59d73fa705aeda65c86691dd"
+                "reference": "cd858b5326b5536f04f6cf2b959de67430aa70e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nestordedios/bolt-extension-who-is-editing/zipball/ea76ba44b2d26fdc59d73fa705aeda65c86691dd",
-                "reference": "ea76ba44b2d26fdc59d73fa705aeda65c86691dd",
+                "url": "https://api.github.com/repos/nestordedios/bolt-extension-who-is-editing/zipball/cd858b5326b5536f04f6cf2b959de67430aa70e3",
+                "reference": "cd858b5326b5536f04f6cf2b959de67430aa70e3",
                 "shasum": ""
             },
             "require": {
@@ -349,10 +349,10 @@
                 "simultaneously"
             ],
             "support": {
-                "source": "https://github.com/nestordedios/bolt-extension-who-is-editing/tree/master",
+                "source": "https://github.com/nestordedios/bolt-extension-who-is-editing/tree/v1.8.1",
                 "issues": "https://github.com/nestordedios/bolt-extension-who-is-editing/issues"
             },
-            "time": "2018-07-27T07:41:21+00:00"
+            "time": "2018-05-21T07:54:56+00:00"
         },
         {
             "name": "twokings/hierarchical-routes",
@@ -490,9 +490,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "twokings/bolt-extension-who-is-editing": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
