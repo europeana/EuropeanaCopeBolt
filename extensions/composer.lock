@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d78e20f78c1e0832b79bb1e643e1da48",
+    "content-hash": "853ac7c5671b2a54e15182c1d93682fb",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -124,16 +124,16 @@
         },
         {
             "name": "bolt/jsonapi",
-            "version": "v3.2.0",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xiaohutai/jsonapi.git",
-                "reference": "f5772a24cd946f87f9b005fa6f0ecc91f20b1ed7"
+                "reference": "ffba4a26e05f5a10e2337c8ddbe51f1f46c37644"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/f5772a24cd946f87f9b005fa6f0ecc91f20b1ed7",
-                "reference": "f5772a24cd946f87f9b005fa6f0ecc91f20b1ed7",
+                "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/ffba4a26e05f5a10e2337c8ddbe51f1f46c37644",
+                "reference": "ffba4a26e05f5a10e2337c8ddbe51f1f46c37644",
                 "shasum": ""
             },
             "require": {
@@ -182,7 +182,7 @@
                 "source": "https://github.com/xiaohutai/jsonapi/tree/master",
                 "issues": "https://github.com/xiaohutai/jsonapi/issues"
             },
-            "time": "2018-04-23T07:49:56+00:00"
+            "time": "2018-08-02T10:09:55+00:00"
         },
         {
             "name": "bolt/sitemap",
@@ -302,16 +302,16 @@
         },
         {
             "name": "twokings/bolt-extension-who-is-editing",
-            "version": "v1.8.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nestordedios/bolt-extension-who-is-editing.git",
-                "reference": "cd858b5326b5536f04f6cf2b959de67430aa70e3"
+                "reference": "ea76ba44b2d26fdc59d73fa705aeda65c86691dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nestordedios/bolt-extension-who-is-editing/zipball/cd858b5326b5536f04f6cf2b959de67430aa70e3",
-                "reference": "cd858b5326b5536f04f6cf2b959de67430aa70e3",
+                "url": "https://api.github.com/repos/nestordedios/bolt-extension-who-is-editing/zipball/ea76ba44b2d26fdc59d73fa705aeda65c86691dd",
+                "reference": "ea76ba44b2d26fdc59d73fa705aeda65c86691dd",
                 "shasum": ""
             },
             "require": {
@@ -349,10 +349,10 @@
                 "simultaneously"
             ],
             "support": {
-                "source": "https://github.com/nestordedios/bolt-extension-who-is-editing/tree/v1.8.1",
+                "source": "https://github.com/nestordedios/bolt-extension-who-is-editing/tree/master",
                 "issues": "https://github.com/nestordedios/bolt-extension-who-is-editing/issues"
             },
-            "time": "2018-05-21T07:54:56+00:00"
+            "time": "2018-07-27T07:41:21+00:00"
         },
         {
             "name": "twokings/hierarchical-routes",
@@ -490,7 +490,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "twokings/bolt-extension-who-is-editing": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
