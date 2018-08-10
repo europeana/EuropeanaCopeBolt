@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62e16a84c4b6d81c0404aec60aa452c2",
+    "content-hash": "4be6a1f90626e2fc2758975f64ede94d",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -302,16 +302,16 @@
         },
         {
             "name": "twokings/bolt-extension-who-is-editing",
-            "version": "v1.8.1",
+            "version": "v1.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nestordedios/bolt-extension-who-is-editing.git",
-                "reference": "cd858b5326b5536f04f6cf2b959de67430aa70e3"
+                "reference": "193ec23349875995b367e548486d46ef1169ca0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nestordedios/bolt-extension-who-is-editing/zipball/cd858b5326b5536f04f6cf2b959de67430aa70e3",
-                "reference": "cd858b5326b5536f04f6cf2b959de67430aa70e3",
+                "url": "https://api.github.com/repos/nestordedios/bolt-extension-who-is-editing/zipball/193ec23349875995b367e548486d46ef1169ca0c",
+                "reference": "193ec23349875995b367e548486d46ef1169ca0c",
                 "shasum": ""
             },
             "require": {
@@ -349,10 +349,10 @@
                 "simultaneously"
             ],
             "support": {
-                "source": "https://github.com/nestordedios/bolt-extension-who-is-editing/tree/v1.8.1",
+                "source": "https://github.com/nestordedios/bolt-extension-who-is-editing/tree/master",
                 "issues": "https://github.com/nestordedios/bolt-extension-who-is-editing/issues"
             },
-            "time": "2018-05-21T07:54:56+00:00"
+            "time": "2018-08-08T13:33:47+00:00"
         },
         {
             "name": "twokings/hierarchical-routes",
