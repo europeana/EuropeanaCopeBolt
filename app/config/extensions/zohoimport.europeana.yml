@@ -175,7 +175,8 @@ remotes:
                     po_box: "PO box"
                     country: "Country"                      # example: "Slovakia"
 
-                    description: "Description"              # example: "<p>Long text</p>"
+                    # Do not import description
+                    # description: "Description"              # example: "<p>Long text</p>"
 
                     # val: "Image service Opt-in"             # example: "false"
                     # val: "DEA Sent"                         # example: "true"
