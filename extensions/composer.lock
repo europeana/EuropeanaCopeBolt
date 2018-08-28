@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "4be6a1f90626e2fc2758975f64ede94d",
@@ -356,16 +356,16 @@
         },
         {
             "name": "twokings/hierarchical-routes",
-            "version": "v0.2.3",
+            "version": "v0.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xiaohutai/bolt-hierarchicalroutes.git",
-                "reference": "5634c9d8b99c8c6d72e41657065e70d1f1097e7c"
+                "reference": "96f1b683eb53c7ff9471c276725c37146155d147"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xiaohutai/bolt-hierarchicalroutes/zipball/5634c9d8b99c8c6d72e41657065e70d1f1097e7c",
-                "reference": "5634c9d8b99c8c6d72e41657065e70d1f1097e7c",
+                "url": "https://api.github.com/repos/xiaohutai/bolt-hierarchicalroutes/zipball/96f1b683eb53c7ff9471c276725c37146155d147",
+                "reference": "96f1b683eb53c7ff9471c276725c37146155d147",
                 "shasum": ""
             },
             "require": {
@@ -424,7 +424,7 @@
                 "source": "https://github.com/xiaohutai/bolt-hierarchicalroutes/tree/master",
                 "issues": "https://github.com/xiaohutai/bolt-hierarchicalroutes/issues"
             },
-            "time": "2018-01-04T13:37:17+00:00"
+            "time": "2018-08-21T11:39:51+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
