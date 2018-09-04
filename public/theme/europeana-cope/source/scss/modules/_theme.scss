@@ -285,7 +285,20 @@ p.copyright {
     @include respond-to(large-screens){
         margin: 0;
         float: right;
-        margin-top: -100px;
+        margin-top: -58px;
+    }
+}
+
+.eu-disclaimer {
+    font-size: 10px;
+    color: $white;
+    margin-top: 1rem;
+
+    @include respond-to(large-screens){
+        width: 50%;
+        max-width: 500px;
+        float:left;
+        margin-bottom: 2rem;
     }
 }
 
