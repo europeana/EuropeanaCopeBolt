@@ -147,7 +147,7 @@ jQuery.fn.extend(
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').hide();
                 modulelinkfields.parents('.repeater-field').show();
-            } else if(templatevalue === 'image') {
+            } else if(templatevalue === 'image' || templatevalue === 'image_full') {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').hide();
                 orderselect.parents('.repeater-field').hide();
