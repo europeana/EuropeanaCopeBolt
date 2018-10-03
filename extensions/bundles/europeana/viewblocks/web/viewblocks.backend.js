@@ -147,7 +147,7 @@ jQuery.fn.extend(
                 filefield.parents('.repeater-field').hide();
                 fileslistpathfield.parents('.repeater-field').hide();
                 modulelinkfields.parents('.repeater-field').show();
-            } else if(templatevalue === 'image') {
+            } else if(templatevalue === 'image' || templatevalue === 'image_full') {
                 bodyblock.parents('.repeater-field').hide();
                 sourceselect.parents('.repeater-field').hide();
                 orderselect.parents('.repeater-field').hide();
@@ -412,12 +412,12 @@ jQuery(document).ready(function($) {
         //console.log('a repeater is added');
         setTimeout(
             function() {
-                $('.repeater-slot .repeater-group:not(.viewblocks)').onAvailable(
-                    function() {
-                        //console.log('initializing viewblocks for new fields', $(this));
-                        $(this).loadViewBlock();
-                    }
-                );
+              $('.repeater-slot .repeater-group:not(.viewblocks)').onAvailable(
+                  function() {
+                    //console.log('initializing viewblocks for new fields', $(this));
+                    $(this).loadViewBlock();
+                  }
+              );
             },
             200
         );
