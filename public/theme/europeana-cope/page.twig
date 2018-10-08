@@ -4,7 +4,7 @@
     {%- if record.pagetype is defined and record.pagetype == 'listing' -%}
         listingpage
     {%- elseif record.pagetype is defined
-    and (record.pagetype == 'landingpage' or record.pagetype == 'landingpage-nohighlight') -%}
+        and (record.pagetype == 'landingpage' or record.pagetype == 'landingpage-nohighlight') -%}
         landingpage contentpage
     {%- else -%}
         contentpage

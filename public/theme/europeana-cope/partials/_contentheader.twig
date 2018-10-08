@@ -25,14 +25,13 @@
 </div>
 
 <section class="contentheader">
-    {# Show highlightbar on homepage and pages of type landingpage #}
-    {% if (app.request.get('_route') is defined and app.request.get('_route') == 'homepage')
-       or ( record is defined
+    {# Show highlightbar on pages of type landingpage #}
+    {# This used to be always on on the homepage too #}
+    {% if ( record is defined
             and record.pagetype is defined
             and record.pagetype is not empty
             and record.pagetype == 'landingpage'
-       )
-    %}
+       ) %}
         {% set module = {} %}
         {% set template = 'highlightbar' %}
         {% set templatefile = 'modules/_' ~ template ~ '.twig' %}
