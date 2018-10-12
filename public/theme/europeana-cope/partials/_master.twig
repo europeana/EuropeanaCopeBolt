@@ -43,6 +43,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     {{ include('partials/_cookiebar.twig') }}
     
+{% block splashpage %}
     <div> {# Needed for the sticking of main-menu #}
 
     {% block header %}
@@ -73,6 +74,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             {{ include('partials/_footer.twig') }}
         {% endblock footer %}
     </div>
+
+    {% endblock splashpage %}
 
     {% block bottomincludes %}
     {% endblock bottomincludes %}
