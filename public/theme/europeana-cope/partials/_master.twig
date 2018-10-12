@@ -39,7 +39,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     {# Bodyclass-> Add skin-labs of skin-research to change skin-color #}
-
+{% block splashpage %}
     <div> {# Needed for the sticking of main-menu #}
 
     {{ include('partials/_svg_library.twig') }}
@@ -72,6 +72,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             {{ include('partials/_footer.twig') }}
         {% endblock footer %}
     </div>
+
+    {% endblock splashpage %}
 
     {% block bottomincludes %}
     {% endblock bottomincludes %}
