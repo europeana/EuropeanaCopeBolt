@@ -1,0 +1,94 @@
+// SPLASHPAGE 10 years Europeana Pro
+
+.splashpage-ten-years {
+    header,
+    footer {
+        background-color: $black;
+    }
+}
+
+.wheel-section {
+    background: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wheel {
+        width: 530px;
+        height: 530px;
+        position: relative;
+    }
+
+    .center {
+        width: 475px;
+        height: 475px;
+        border-radius: 50%;
+        background: $white;
+        position: absolute;
+        top: 26px;
+        left: 26px;
+        z-index: 3;
+    }
+
+    article {
+        transform-origin: bottom center;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 182px;
+
+        > * {
+            display: none;
+        }
+
+        > svg {
+            display: block;
+        }
+
+        &.article-1 {
+            transform: rotate(0deg);
+        }
+        &.article-2 {
+            transform: rotate(36deg);
+        }
+        &.article-3 {
+            transform: rotate(72deg);
+        }
+        &.article-4 {
+            transform: rotate(108deg);
+        }
+        &.article-5 {
+            transform: rotate(144deg);
+        }
+        &.article-6 {
+            transform: rotate(180deg);
+        }
+        &.article-7 {
+            transform: rotate(216deg);
+        }
+        &.article-8 {
+            transform: rotate(252deg);
+        }
+        &.article-9 {
+            transform: rotate(288deg);
+        }
+        &.article-10 {
+            transform: rotate(324deg);
+        }
+
+    }
+}
+
+
+section.heritage-specialists {
+    background: sandybrown;
+    h2 {
+        text-transform: none;
+        color: $baseFirstThemeColour;
+        font-size: 2.5rem;
+        text-align: left;
+        font-weight: 400;
+    }
+}
+
+

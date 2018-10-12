@@ -8,7 +8,7 @@
         landingpage contentpage
     {%- elseif record.pagetype is defined
         and record.pagetype == 'splashpage' -%}
-        splashpage
+        splashpage splashpage-{{ record.slug}}
     {%- else -%}
         contentpage
     {%- endif -%}
