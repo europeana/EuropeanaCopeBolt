@@ -1,1 +1,183 @@
+<header id="header">
+    <div class="mainlogo">
+        <h1 class="">
+            <img src="{{ paths.theme }}images/europeana_pro_logo.svg" alt="Europeana" />
+        </h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="">10 Perspectives</a></li>
+            <li><a href="">10 Heritage Specialists</a></li>
+        </ul>
+    </nav>
+    
+    <a class="button external" href="/">Learn More on Pro</a>
+</header>
+
+
+{% for feature in record.modules %}
+    {{feature.selected_persons}}
+    {% set persons = feature.selected_persons|split(',') %}
+    {{ dump(persons) }}
+{% endfor %}
+
+
+
+<main>
+    <section class="wheel-section group">
+        <h2 class="sr-only">Explore our specialists</h2>
+        <div class="wheel">
+            <div class="center">
+                <span class="number">10</span>
+                <p>Perspectives on digital transformation with culture</p>
+            </div>
+
+            {% set items = 10 %}
+
+            {% for i in range(1, items) %}
+            <article class="article-{{i}}">
+                <svg viewBox="0 0 167 260" width="167" height="260" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <clipPath id="mask">
+                        <polygon points="0,0 167,0 83,260" />
+                        </clipPath>
+                    </defs>
+                    <image xlink:href="http://placekitten.com/180/280" clip-path="url(#mask)" width="180" height="280"></image>
+                </svg>
+
+                <h2 class="number">1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non est igitur voluptas bonum. </p>
+                <div class="thumblink-fourcol thumblink-persons">
+                    <a href="#">
+                        <img class="round" src="http://placekitten.com/300/300" alt="Firstname Lastname"/>
+                        {# { item.values.image|thumbnail(250,250,'c')}} #}
+                    </a>
+                    <h3>Firstname Lastname</h3>
+                    <p class="function">Director, Europeana Foundation</p>
+                    <p class="company">Netherlands</p>
+                </div>
+
+            </article>
+            {% endfor %}
+            
+        </div>{# /wheel #}
+        
+    </section>
+
+    <section class="heritage-specialists group module">
+        <div class="inner-wrap">
+            <h2>Our International Heritage Specialists</h2>
+            <div class="items-container">
+            
+                {# TODO dynamically load 10 persons? #}
+                <div class="column fifth thumblink-fivecol thumblink-persons">
+                    <a href="#">
+                        <img class="round" src="http://placekitten.com/300/300" alt="Firstname Lastname"/>
+                        {# { item.values.image|thumbnail(250,250,'c')}} #}
+                    </a>
+                    <h3>Firstname Lastname</h3>
+                    <p class="function">Director, Europeana Foundation</p>
+                    <p class="company">Netherlands</p>
+                </div>
+
+                <div class="column fifth thumblink-fivecol thumblink-persons">
+                    <a href="#">
+                        <img class="round" src="http://placekitten.com/300/300" alt="Firstname Lastname"/>
+                        {# { item.values.image|thumbnail(250,250,'c')}} #}
+                    </a>
+                    <h3>Firstname Lastname</h3>
+                    <p class="function">Director, Europeana Foundation</p>
+                    <p class="company">Netherlands</p>
+                </div>
+
+                <div class="column fifth thumblink-fivecol thumblink-persons">
+                    <a href="#">
+                        <img class="round" src="http://placekitten.com/300/300" alt="Firstname Lastname"/>
+                        {# { item.values.image|thumbnail(250,250,'c')}} #}
+                    </a>
+                    <h3>Firstname Lastname</h3>
+                    <p class="function">Director, Europeana Foundation</p>
+                    <p class="company">Netherlands</p>
+                </div>
+
+                <div class="column fifth thumblink-fivecol thumblink-persons">
+                    <a href="#">
+                        <img class="round" src="http://placekitten.com/300/300" alt="Firstname Lastname"/>
+                        {# { item.values.image|thumbnail(250,250,'c')}} #}
+                    </a>
+                    <h3>Firstname Lastname</h3>
+                    <p class="function">Director, Europeana Foundation</p>
+                    <p class="company">Netherlands</p>
+                </div>
+
+                <div class="column fifth thumblink-fivecol thumblink-persons">
+                    <a href="#">
+                        <img class="round" src="http://placekitten.com/300/300" alt="Firstname Lastname"/>
+                        {# { item.values.image|thumbnail(250,250,'c')}} #}
+                    </a>
+                    <h3>Firstname Lastname</h3>
+                    <p class="function">Director, Europeana Foundation</p>
+                    <p class="company">Netherlands</p>
+                </div>
+
+                <div class="column fifth thumblink-fivecol thumblink-persons">
+                    <a href="#">
+                        <img class="round" src="http://placekitten.com/300/300" alt="Firstname Lastname"/>
+                        {# { item.values.image|thumbnail(250,250,'c')}} #}
+                    </a>
+                    <h3>Firstname Lastname</h3>
+                    <p class="function">Director, Europeana Foundation</p>
+                    <p class="company">Netherlands</p>
+                </div>
+
+                <div class="column fifth thumblink-fivecol thumblink-persons">
+                    <a href="#">
+                        <img class="round" src="http://placekitten.com/300/300" alt="Firstname Lastname"/>
+                        {# { item.values.image|thumbnail(250,250,'c')}} #}
+                    </a>
+                    <h3>Firstname Lastname</h3>
+                    <p class="function">Director, Europeana Foundation</p>
+                    <p class="company">Netherlands</p>
+                </div>
+
+                <div class="column fifth thumblink-fivecol thumblink-persons">
+                    <a href="#">
+                        <img class="round" src="http://placekitten.com/300/300" alt="Firstname Lastname"/>
+                        {# { item.values.image|thumbnail(250,250,'c')}} #}
+                    </a>
+                    <h3>Firstname Lastname</h3>
+                    <p class="function">Director, Europeana Foundation</p>
+                    <p class="company">Netherlands</p>
+                </div>
+
+                <div class="column fifth thumblink-fivecol thumblink-persons">
+                    <a href="#">
+                        <img class="round" src="http://placekitten.com/300/300" alt="Firstname Lastname"/>
+                        {# { item.values.image|thumbnail(250,250,'c')}} #}
+                    </a>
+                    <h3>Firstname Lastname</h3>
+                    <p class="function">Director, Europeana Foundation</p>
+                    <p class="company">Netherlands</p>
+                </div>
+
+                <div class="column fifth thumblink-fivecol thumblink-persons">
+                    <a href="#">
+                        <img class="round" src="http://placekitten.com/300/300" alt="Firstname Lastname"/>
+                        {# { item.values.image|thumbnail(250,250,'c')}} #}
+                    </a>
+                    <h3>Firstname Lastname</h3>
+                    <p class="function">Director, Europeana Foundation</p>
+                    <p class="company">Netherlands</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    {# TODO Include / inline alternative footer #}
+    {{ include('partials/_footer.twig') }}
+
+</main>
+
 This is the splashpage for {{ record.title }}

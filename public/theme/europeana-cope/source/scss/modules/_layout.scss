@@ -336,6 +336,23 @@ ul.teaser-list {
 // column classes. Half is 50%, Third 33%, TwoThirds 66%..... such wows...
 // very column. such grid
 
+.fifth {
+    width: 50%;
+    float: left;
+
+    @include respond-to(medium-screens) {
+        width: 33%;
+    }
+
+    @include respond-to(large-screens) {
+        width: 25%;
+    }
+
+    @include respond-to(xlarge-screens) {
+        width: 20%;
+    }
+}
+
 .fourth {
     width: 50%;
     float: left;
