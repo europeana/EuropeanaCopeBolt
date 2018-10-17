@@ -17,14 +17,6 @@
 
                     <div class="card-details organisation-details">
 
-                        {% if record.org_role is not empty %}
-                            <h2 class="alpha">
-                                {% for role in record.org_role %}
-                                {{ role }}{% if loop.last == false %} / {% endif %}
-                                {% endfor %}
-                            </h2>
-                        {% endif %}
-
                         <h1 class="beta p-name">
                             {{ record.name }}
                         </h1>
@@ -40,6 +32,40 @@
                                 <span>{{ record.acronym }}</span>
                             {% endif %}
                         </div>
+
+                        {% if record.geographical_reach is not empty
+                            or record.content_themes is not empty
+                            or record.working_languages is not empty
+                            or record.content_languages is not empty
+                        %}
+                            <div class="card-aggregator">
+                                {# new fields for 20181017 #}
+                                {% if record.geographical_reach is not empty %}
+                                    <div class="aggregator-item">
+                                        <b class="aggregator-label">Geographical reach:</b>
+                                        <span class="aggregator-field">{{ record.geographical_reach }}</span>
+                                    </div>
+                                {% endif %}
+                                {% if record.content_themes is not empty %}
+                                    <div class="aggregator-item">
+                                        <b class="aggregator-label">Themes:</b>
+                                        <span class="aggregator-field">{{ record.content_themes }}</span>
+                                    </div>
+                                {% endif %}
+                                {% if record.working_languages is not empty %}
+                                    <div class="aggregator-item">
+                                        <b class="aggregator-label">Working language(s):</b>
+                                        <span class="aggregator-field">{{ record.working_languages }}</span>
+                                    </div>
+                                {% endif %}
+                                {% if record.content_languages is not empty %}
+                                    <div class="aggregator-item">
+                                        <b class="aggregator-label">Content language:</b>
+                                        <span class="aggregator-field">{{ record.content_languages }}</span>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endif %}
 
                         {% if record.scope is not empty %}
                             <p>

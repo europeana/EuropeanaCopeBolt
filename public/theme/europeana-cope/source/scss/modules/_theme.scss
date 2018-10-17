@@ -1844,6 +1844,24 @@ figure {
     }
 }
 
+.card-aggregator {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+
+    .aggregator-item {
+        display: flex;
+    }
+
+    .aggregator-label {
+        margin-right: 0.5rem;
+    }
+
+    .aggregator-field {
+        font-weight: normal;
+    }
+}
+
 .card-function {
     font-size: 0.875rem;
     margin-bottom: 1rem;
