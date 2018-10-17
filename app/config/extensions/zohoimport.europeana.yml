@@ -175,6 +175,16 @@ remotes:
                     po_box: "PO box"
                     country: "Country"                      # example: "Slovakia"
 
+                    # new fields for 20181017
+                    # Geographical reach - Geographical reach (zoho crm field) (new field)
+                    geographical_reach: "Geographical reach"
+                    # Themes - Themes (zoho crm field) (new field)
+                    content_themes: "Themes"
+                    # Working languages - Working languages (zoho crm field) (new field)
+                    working_languages: "Working language"
+                    # Content language - Content language (zoho crm field) (new field)
+                    content_languages: "Content language"
+
                     # Do not import description
                     # description: "Description"              # example: "<p>Long text</p>"
 
