@@ -2751,6 +2751,35 @@ organisations:
       variant: inline
       class: narrow
       group: "Organisation"
+    # new fields for 20181017
+    # Geographical reach - Geographical reach (zoho crm field) (new field)
+    geographical_reach:
+      type: text
+      label: "Geographical reach"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    # Themes - Themes (zoho crm field) (new field)
+    content_themes:
+      type: text
+      label: "Themes"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    # Working languages - Working languages (zoho crm field) (new field)
+    working_languages:
+      type: text
+      label: "Working languages"
+      variant: inline
+      class: narrow
+      group: "Organisation"
+    # Content language - Content language (zoho crm field) (new field)
+    content_languages:
+      type: text
+      label: "Content language"
+      variant: inline
+      class: narrow
+      group: "Organisation"
     logo_url:
       type: text
       label: "Logo (link to WikimediaCommons)"
