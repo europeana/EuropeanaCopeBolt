@@ -17,14 +17,6 @@
 
                     <div class="card-details organisation-details">
 
-                        {% if record.org_role is not empty %}
-                            <h2 class="alpha">
-                                {% for role in record.org_role %}
-                                {{ role }}{% if loop.last == false %} / {% endif %}
-                                {% endfor %}
-                            </h2>
-                        {% endif %}
-
                         <h1 class="beta p-name">
                             {{ record.name }}
                         </h1>
