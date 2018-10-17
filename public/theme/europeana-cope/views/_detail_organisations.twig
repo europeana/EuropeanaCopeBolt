@@ -46,30 +46,30 @@
                             or record.working_languages is not empty
                             or record.content_languages is not empty
                         %}
-                            <div>
+                            <div class="card-aggregator">
                                 {# new fields for 20181017 #}
                                 {% if record.geographical_reach is not empty %}
-                                    <div>
-                                        <b>Geographical reach:</b>
-                                        <p class="left-aligned-inline-block">{{ record.geographical_reach }}</p>
+                                    <div class="aggregator-item">
+                                        <b class="aggregator-label">Geographical reach:</b>
+                                        <span class="aggregator-field">{{ record.geographical_reach }}</span>
                                     </div>
                                 {% endif %}
                                 {% if record.content_themes is not empty %}
-                                    <div>
-                                        <b>Themes:</b>
-                                        <p class="left-aligned-inline-block">{{ record.content_themes }}</p>
+                                    <div class="aggregator-item">
+                                        <b class="aggregator-label">Themes:</b>
+                                        <span class="aggregator-field">{{ record.content_themes }}</span>
                                     </div>
                                 {% endif %}
                                 {% if record.working_languages is not empty %}
-                                    <div>
-                                        <b>Working language(s):</b>
-                                        <p class="left-aligned-inline-block">{{ record.working_languages }}</p>
+                                    <div class="aggregator-item">
+                                        <b class="aggregator-label">Working language(s):</b>
+                                        <span class="aggregator-field">{{ record.working_languages }}</span>
                                     </div>
                                 {% endif %}
                                 {% if record.content_languages is not empty %}
-                                    <div>
-                                        <b>Content language:</b>
-                                        <p class="left-aligned-inline-block">{{ record.content_languages }}</p>
+                                    <div class="aggregator-item">
+                                        <b class="aggregator-label">Content language:</b>
+                                        <span class="aggregator-field">{{ record.content_languages }}</span>
                                     </div>
                                 {% endif %}
                             </div>
