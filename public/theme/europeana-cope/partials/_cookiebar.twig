@@ -1,0 +1,15 @@
+{% setcontent cookiemessage = 'resource/cookie-message' %}
+
+<div id="cookiebar" class="cookiebar topmessage">
+    <div class="inner group">
+        {{ cookiemessage.body }}
+        <button class="ok">OK</button>
+    </div>
+
+    <button class="simple close">
+        <svg class="icon icon-delete">
+            <use xlink:href="#icon-close"></use>
+        </svg>
+    </button>
+
+</div>
