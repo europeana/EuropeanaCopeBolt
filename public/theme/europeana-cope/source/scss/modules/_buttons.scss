@@ -17,6 +17,15 @@ a.button, .button, button {
     }
 }
 
+// one class to reset a button if needed
+button.simple,
+.button.simple {
+    border-radius: none;
+    background: none;
+    padding: 0 5px;
+    color: $black;
+}
+
 .button-link {
     border: 3px solid $dark-blue;
     display: block;
