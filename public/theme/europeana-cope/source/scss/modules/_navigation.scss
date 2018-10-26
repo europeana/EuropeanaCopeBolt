@@ -673,3 +673,102 @@ nav.footer-menu {
     }
 
 }
+
+// Cookiebar. 
+// Topmessage is general styles, cookiebar is specific for a specific message on top of the site
+
+.topmessage {
+    padding: 25px;
+    position: relative;
+
+    p {
+        font-size: .875rem;
+    }
+    a {
+        border-bottom: 1px dashed currentcolor;
+        
+        &:hover, &:focus, &:active {
+            border-bottom: 1px solid currentcolor;
+            text-decoration: none;    
+        }
+    }
+    
+    .inner {
+        width: 100%;
+        margin: 0 auto;
+
+        @include respond-to(large-screens){
+            width: 85%;
+        }
+
+        @include respond-to(wide-screens){
+            width: 75%;
+        }
+    }
+
+    button.close {
+        position: absolute;
+        top: 0;
+        right: 6px; //optical
+
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+.cookiebar{
+    background: $footer-gray;
+    display:none;
+    
+    p {
+        color: $medium-gray;
+        margin: 0;
+        
+        @include respond-to(large-screens) {
+            width: 85%;
+            float: left;
+        }
+
+        @include respond-to(wide-screens) {
+            width: auto;
+        }
+
+    }
+
+    a {
+        color: $medium-gray;
+        &:hover, &:focus, &:active {
+            color: $dark-blue;   
+        }
+    }
+
+    svg {
+        fill: $medium-gray;
+    }
+
+    button.ok {
+        background: none;
+        border: 1px solid $medium-gray;
+        color: $medium-gray;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 1rem;
+
+        @include respond-to(large-screens) {
+            float: right;
+            margin: 0 25px 0 0;
+        }
+
+        @include respond-to(wide-screens) {
+            float: left;
+            margin: 0 25px;
+        }
+
+        &:hover, &:focus, &:active {
+            background: $dark-blue;
+            color: $white;
+        }
+    }
+}
