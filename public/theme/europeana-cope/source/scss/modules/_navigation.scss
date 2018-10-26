@@ -696,6 +696,7 @@ nav.footer-menu {
     .inner {
         width: 100%;
         margin: 0 auto;
+        // background: #f70;
 
         @include respond-to(large-screens){
             width: 85%;
@@ -721,10 +722,11 @@ nav.footer-menu {
 .cookiebar{
     background: $footer-gray;
     display:none;
-    
+
     p {
         color: $medium-gray;
         margin: 0;
+        // background: #f09;
         
         @include respond-to(large-screens) {
             width: 85%;
@@ -732,7 +734,7 @@ nav.footer-menu {
         }
 
         @include respond-to(wide-screens) {
-            width: auto;
+            width: 90%;
         }
 
     }
