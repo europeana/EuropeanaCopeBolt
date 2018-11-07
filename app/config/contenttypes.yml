@@ -2361,6 +2361,8 @@ jobs:
 persons:
   name: Persons
   singular_name: Person
+  slug: persons
+  singular_slug: person
   fields:
     first_name:
       type: text
