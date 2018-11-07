@@ -561,8 +561,37 @@ class ZohoImport
               . ' - storing record: ' . $existing_id . ' - ' . $inputrecord[$uid] . ' on: ' . $date;
             $this->logger('debug', $logmessage, 'zohoimport');
 
-            // use storage engine
+            // save relations for after the save because the save action will try to invert it partially
+            $relations = [];
+            $tmprel = [];
+            if ($this->currentrecord->relation) {
+                foreach ($this->currentrecord->relation as $relation) {
+                    $relation_id_before = $relation->getId();
+                    $tmprel = [
+                        'from_contenttype' => $relation->from_contenttype,
+                        'from_id' => $relation->from_id,
+                        'to_contenttype' => $relation->to_contenttype,
+                        'to_id' => $relation->to_id
+                    ];
+                    $relations[$relation_id_before] = $tmprel;
+                }
+            }
+
+            // use storage engine entity manager
             $this->app['storage']->save($this->currentrecord);
+
+            // update the broken relations after the save so everything is correct again
+            if (!empty($relations)) {
+                foreach ($relations as $relation_id => $relation) {
+                    //print("\nupdating relation " . $relation_id . "\n");
+                    //print_r($relation);
+                    $res = $this->app['db']->update('bolt_relations', $relation, array('id' => $relation_id));
+                    //print_r($res);
+                    //print("\nupdated relation " . $relation_id . "\n");
+                }
+            }
+            $relations = [];
+            $tmprel = [];
 
             // make the things smaller for the memory footprint
             $inputrecord = null;
