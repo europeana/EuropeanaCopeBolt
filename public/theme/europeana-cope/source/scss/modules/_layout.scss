@@ -500,6 +500,18 @@ ul.teaser-list {
         }
     }
 
+    &.footer-block-moreinfo {
+
+        @include respond-to(large-screens) {
+            width: 39%;
+            padding-left: 2rem;
+        }
+
+        @include respond-to(xlarge-screens) {
+            width: 24%;
+        }
+    }
+
 }
 
 .sub-footer {

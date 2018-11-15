@@ -8,7 +8,7 @@
 
 {{ seo.metatags() }}
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800&subset=latin,greek,cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&subset=latin,greek,cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/screen.css', 'theme') }}">
 
     <link rel="Shortcut Icon" href="{{ asset('images/favicons/favicon.ico', 'theme') }}" />
@@ -37,6 +37,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPHB4DK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    {{ include('partials/_svg_library.twig') }}
 
     {# Bodyclass-> Add skin-labs of skin-research to change skin-color #}
     {{ include('partials/_svg_library.twig') }}
