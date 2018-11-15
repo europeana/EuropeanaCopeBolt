@@ -41,6 +41,40 @@
                             {% endif %}
                         </div>
 
+                        {% if record.geographical_reach is not empty
+                            or record.content_themes is not empty
+                            or record.working_languages is not empty
+                            or record.content_languages is not empty
+                        %}
+                            <div>
+                                {# new fields for 20181017 #}
+                                {% if record.geographical_reach is not empty %}
+                                    <div>
+                                        <b>Geographical reach:</b>
+                                        <p class="left-aligned-inline-block">{{ record.geographical_reach }}</p>
+                                    </div>
+                                {% endif %}
+                                {% if record.content_themes is not empty %}
+                                    <div>
+                                        <b>Themes:</b>
+                                        <p class="left-aligned-inline-block">{{ record.content_themes }}</p>
+                                    </div>
+                                {% endif %}
+                                {% if record.working_languages is not empty %}
+                                    <div>
+                                        <b>Working language(s):</b>
+                                        <p class="left-aligned-inline-block">{{ record.working_languages }}</p>
+                                    </div>
+                                {% endif %}
+                                {% if record.content_languages is not empty %}
+                                    <div>
+                                        <b>Content language:</b>
+                                        <p class="left-aligned-inline-block">{{ record.content_languages }}</p>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+
                         {% if record.scope is not empty %}
                             <p>
                                 <svg class="icon icon-crosshair">
