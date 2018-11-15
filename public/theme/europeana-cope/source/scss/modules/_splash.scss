@@ -1,17 +1,46 @@
 // SPLASHPAGE 10 years Europeana Pro
 
-.splashpage-ten-years {
-    header,
-    footer {
-        background-color: $black;
+.splashpage-ten-years header {
+    background-color: $white;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    .mainlogo {
+        img {
+            width: 165px;
+            height: auto;
+        }
+    }
+
+    nav {
+        
+        ul {
+            display: flex;
+            padding: 1.5rem 0;
+        }
+
+        a {
+            font-weight: 700;
+            color: $black;
+            padding: 0 1.5rem 0 0;
+        }
+    }
+
+    a.button {
+        padding: 1rem;
+        margin-right: 1rem;
+        margin-left: auto;
     }
 }
+    
 
 .wheel-section {
-    background: $black;
+    background: $white;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 7.5rem 0;
 
     .wheel {
         width: 530px;
@@ -20,15 +49,37 @@
     }
 
     .center {
-        width: 475px;
-        height: 475px;
+        width: 480px;
+        height: 480px;
         border-radius: 50%;
         background: $white;
         position: absolute;
-        top: 26px;
-        left: 26px;
+        top: 20px;
+        left: 25px;
         z-index: 3;
+        text-align: center;
     }
+
+    .mainnumber {
+        padding-top: 60px;
+        display: inline-block;
+        margin-left: -55px; //optical
+
+        font-size: 16.875rem;
+        font-weight: 600;
+        letter-spacing: -0.17em;
+        line-height: .9;
+    }
+
+    .slogan {
+        padding-left: 170px;
+        width: 370px;
+        text-align: left;
+        margin: 0;
+        font-size: 1.125rem;
+        line-height: 1.2;
+    }
+
 
     article {
         transform-origin: bottom center;
@@ -81,13 +132,54 @@
 
 
 section.heritage-specialists {
-    background: sandybrown;
+    background: url('../images/splash_tenyears/bg_beige.png');
+    
     h2 {
         text-transform: none;
         color: $baseFirstThemeColour;
         font-size: 2.5rem;
         text-align: left;
         font-weight: 400;
+    }
+
+    h3 {
+        color: $black;
+        font-size: 1.175rem;
+        font-weight: 600;
+        margin-bottom: .2rem;
+    }
+    p.function {
+        color: $black;
+        font-size: 0.83rem;
+        margin-top: 0;
+    }
+    p.country {
+        font-weight: bold;
+        font-size: 0.625rem;
+    }
+
+    img.round {
+        filter: grayscale(100%);
+    }
+
+
+}
+
+.splashpage-ten-years footer {
+    margin-top: 0;
+    
+    .sub-footer {
+        margin-top: 0;
+    }
+
+    .copyright {
+        float: left;
+    }
+
+    .eu-disclaimer {
+        float: right;
+        max-width: 700px;
+        width: 56%; //optical
     }
 }
 

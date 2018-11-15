@@ -1,0 +1,84 @@
+<!-- Start Footer -->
+
+<a class="button floating backtotop" id="backtotop" href="#header">
+    {% spaceless %}
+    <svg class="icon icon-facet_up">
+        <use xlink:href="#icon-facet_up"></use>
+    </svg><span class="sr-only">top</span>
+    {% endspaceless %}
+</a>
+
+<footer>
+    <div class="inner-wrap">
+
+        <div class="group">
+
+            {% setcontent footermission = 'resources/footer-mission' %}
+            <div class="footer-block footer-block-mission">
+                {% if footermission is not empty %}
+                    <h4>{{ footermission.title }}</h4>
+                    {{ footermission.body }}
+                {% else %}
+                    <h4>Our mission</h4>
+                    <p>
+                        We transform the world with culture! We want to build on Europe’s rich heritage and make it easier for people to use, whether for work, for learning or just for fun.
+                    </p>
+                {% endif %}
+            </div>
+
+            <div class="footer-block footer-block-moreinfo">
+                <h4>More info</h4>
+                <p><a href="">Europeana Pro</a></p>
+                <p><a href="">Europeana Collections</a></p>
+            </div>
+
+
+            <div class="footer-block footer-block-socials">
+                <h4>Find us elsewhere</h4>
+                <div class="socials">
+                    <a href="https://twitter.com/EuropeanaEU" class="tw">
+                        <svg class="icon icon-twitter">
+                            <use xlink:href="#icon-twitter"> </use>
+                        </svg> <span class="sr-only">twitter</span>
+                    </a>
+                    <a href="https://www.facebook.com/Europeana" class="fb">
+                         <svg class="icon icon-facebook">
+                            <use xlink:href="#icon-facebook"> </use>
+                        </svg> <span class="sr-only">facebook</span>
+                    </a>
+                    <a href="https://plus.google.com/+europeana/posts" class="gp">
+                         <svg class="icon icon-googleplus">
+                            <use xlink:href="#icon-googleplus"> </use>
+                        </svg> <span class="sr-only">Google Plus</span>
+                    </a>
+                    <a href="https://www.linkedin.com/groups/Europeana-134927/about" class="li">
+                         <svg class="icon icon-linkedin">
+                            <use xlink:href="#icon-linkedin"> </use>
+                        </svg> <span class="sr-only">Linked In</span>
+                    </a>
+                    <a href="https://github.com/europeana" class="gh">
+                         <svg class="icon icon-github">
+                            <use xlink:href="#icon-github"> </use>
+                        </svg> <span class="sr-only">Github</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sub-footer group">
+
+            <p class="copyright">
+                <img src="{{paths.theme}}images/eu_flag_new_cef_white.svg" width='250' alt="Funded by the European Union. Connecting Europe Facility."/>
+            </p>
+            <p class="eu-disclaimer">
+                This website is developed and maintained on behalf of the European Commission by the consortium led by Europeana Foundation. The European Commission goal is to keep information provided at this website accurate. However, the Commission does not guarantee the accuracy of the information and accepts no responsibility or liability whatsoever with regard to the information on this site. Neither the Commission nor any person acting on the Commission’s behalf may be held responsible for the use which may be made of the information contained therein.
+            </p>
+            
+        </div>
+
+    </div>
+</footer>
+{% block editlink %}
+    {{ include('partials/_editlink.twig') }}
+{% endblock editlink %}

@@ -6,7 +6,7 @@
 
 
 
-// Gebruikte fonts zijn Open Sans 400, 400i, 700 (bold), 800 (extra-bold).
+// Gebruikte fonts zijn Open Sans 400, 400i, 600 (semibold, incidentally used), 700 (bold), 800 (extra-bold).
 // Geladen via Google fonts
 
 
@@ -456,6 +456,14 @@ footer {
         }
     }
 
+}
+
+.footer-block-moreinfo {
+    a {
+        color: $white;
+        font-size: 1.0625rem;
+        font-weight: 700;
+    }
 }
 
 .img-insert {
