@@ -1,35 +1,76 @@
 // SPLASHPAGE 10 years Europeana Pro
 
+/* separate breakpoint for this splash: 600px */
+@media only screen and (min-width: 37.5em) {
+// here be stuff for the big screen
+}
+
+
 .splashpage-ten-years header {
     background-color: $white;
-    display: flex;
-    align-content: center;
-    align-items: center;
+    padding: 1rem;
+
+    @include respond-to(large-screens) {
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
 
     .mainlogo {
+        // width: 100%;
+        padding-left: 0;
+        margin: 0 auto;
+        text-align: center;
+        width: 165px;
+
+        @include respond-to(large-screens) {
+            width: 165px;
+            margin: 0 1rem 0 0;
+        }
+
         img {
             width: 165px;
             height: auto;
         }
+
+        h1 {
+
+        }
+
     }
 
     nav {
-        
+        flex-grow: 1;
+        display: flex;
+        padding: 0;
+        margin-top: 1.5rem;
+        align-items: flex-start;
+        // background: #f70;
+              
+        @include respond-to(large-screens) {
+            padding-left: 1.5rem;
+            margin-top: 0;
+        }
+
         ul {
-            display: flex;
-            padding: 1.5rem 0;
+            // background: #f07;
+        }
+
+        li {
+            display: inline-block;
+            padding: 1rem 1rem 0 0;
         }
 
         a {
             font-weight: 700;
             color: $black;
-            padding: 0 1.5rem 0 0;
+            
+            // padding: 0 1.5rem 0 0;
         }
     }
 
     a.button {
         padding: 1rem;
-        margin-right: 1rem;
         margin-left: auto;
     }
 }
@@ -40,44 +81,93 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 7.5rem 0;
+    padding: 7.5rem 1rem;
+    width: 100%;
+    transition:  background-color 0.1s ease-out;
+
+    // > 600px
+    @media only screen and (min-width: 37.5em) {
+        padding: 7.5rem 0;
+        width: 100%;       
+    }
+    
+    .wheel-container {
+        max-width: 530px;
+        max-height: 530px;
+        width: 100%;
+        height: 100%;
+        // background: #f07;
+
+        // > 600px
+        @media only screen and (min-width: 37.5em) {
+            
+        }
+    }
 
     .wheel {
-        width: 530px;
-        height: 530px;
+        width: 100%;
+        padding-bottom: 100%;
         position: relative;
+        // background: #f09;
+
+        // > 600px
+        @media only screen and (min-width: 37.5em) {
+        
+        }
+
     }
 
     .center {
-        width: 480px;
-        height: 480px;
+        width: 90%;
+        height: 90%;
         border-radius: 50%;
         background: $white;
+        // opacity: 0.5;
         position: absolute;
-        top: 20px;
-        left: 25px;
+        top: 4%;
+        left: 5%;
         z-index: 3;
         text-align: center;
+
+        // > 600px
+        @media only screen and (min-width: 37.5em) {
+            top: 5%;
+            left: 5%;
+            width: 90%;
+            height: 90%;  
+        }
     }
 
     .mainnumber {
-        padding-top: 60px;
+        padding-top: 15vw;
         display: inline-block;
-        margin-left: -55px; //optical
-
-        font-size: 16.875rem;
+        margin-left: -10vw; //optical and responsive
+        font-size: 42vw; //responsive font size
         font-weight: 600;
         letter-spacing: -0.17em;
         line-height: .9;
+
+        // > 600px
+        @media only screen and (min-width: 37.5em) {
+            font-size: 16.875rem;
+            margin-left: -55px; //optical
+            padding-top: 60px;
+        }
     }
 
     .slogan {
-        padding-left: 170px;
+        padding-left: 30vw;
+        font-size: 3vw; //responsive font size
         width: 370px;
         text-align: left;
         margin: 0;
-        font-size: 1.125rem;
         line-height: 1.2;
+
+        // > 600px
+        @media only screen and (min-width: 37.5em) {
+            font-size: 1.125rem;
+            padding-left: 170px;
+        }
     }
 
 
@@ -86,7 +176,17 @@
         position: absolute;
         z-index: 1;
         top: 0;
-        left: 182px;
+        left: 34%;  //why?
+        width: 32%;
+        height: 49%;
+        // display: none;
+
+        // > 600px
+        @media only screen and (min-width: 37.5em) {
+            display: block;
+            width: 172px;
+            height: 265px;
+        }
 
         > * {
             display: none;
@@ -94,6 +194,8 @@
 
         > svg {
             display: block;
+            // width: 25%;
+            // height: 25%;
         }
 
         &.article-1 {
@@ -137,9 +239,18 @@ section.heritage-specialists {
     h2 {
         text-transform: none;
         color: $baseFirstThemeColour;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         text-align: left;
+        padding: 0 1rem;
         font-weight: 400;
+
+        @include respond-to(medium-screens) {
+            font-size: 2rem;
+        }
+
+        @include respond-to(large-screens) {
+            font-size: 2.5rem;
+        }
     }
 
     h3 {
@@ -169,17 +280,22 @@ section.heritage-specialists {
     margin-top: 0;
     
     .sub-footer {
-        margin-top: 0;
+        margin-top: 2rem;
     }
 
     .copyright {
-        float: left;
+        @include respond-to(large-screens) {
+            float: left;
+        }
     }
 
     .eu-disclaimer {
-        float: right;
-        max-width: 700px;
-        width: 56%; //optical
+        @include respond-to(large-screens) {
+            float: right;
+            max-width: 700px;
+            width: 56%; //optical
+        }
+        
     }
 }
 
