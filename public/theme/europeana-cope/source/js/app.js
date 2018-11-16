@@ -346,4 +346,24 @@ $( document ).ready(function() {
             $('.filters-chapter').appendTo('.filter-container');
         }
     }
+
+    // Splashpage 10years
+    
+    var article = $('.splashpage-ten-years .wheel article');
+    var section = $('.splashpage-ten-years .wheel-section')
+
+    console.log(article);
+    
+    article.on('mouseenter touchstart', function(){
+        $(this).addClass('highlight');
+        article.not('.highlight').fadeOut('fast');
+        section.css("background-color", $(this).data('bgcolor'));
+        console.log('over');
+    });
+    article.on('mouseleave touchend', function(){
+        $(this).removeClass('highlight');
+        article.show();
+        section.css("background-color", "");
+        console.log('out');
+    });
 });
