@@ -372,12 +372,14 @@ $( document ).ready(function() {
     
     article.on('mouseenter touchstart', function(){
         $(this).addClass('highlight');
+        $(this).find('.center').show();
         article.not('.highlight').fadeOut('fast');
         section.css("background-color", $(this).data('bgcolor'));
         console.log('over');
     });
     article.on('mouseleave touchend', function(){
         $(this).removeClass('highlight');
+        $(this).find('.center').hide();
         article.show();
         section.css("background-color", "");
         console.log('out');

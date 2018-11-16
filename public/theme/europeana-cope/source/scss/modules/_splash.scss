@@ -118,14 +118,14 @@
     }
 
     .center {
-        width: 90%;
-        height: 90%;
+        width: 88%;
+        height: 88%;
         border-radius: 50%;
         background: $white;
         // opacity: 0.5;
         position: absolute;
-        top: 4%;
-        left: 5%;
+        top: 5%;
+        left: 6%;
         z-index: 3;
         text-align: center;
 
@@ -172,61 +172,108 @@
 
 
     article {
-        transform-origin: bottom center;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 34%;  //why?
-        width: 32%;
-        height: 49%;
+        .handle { //the form thingie that gets hovered!
+            transform-origin: bottom center;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 34%;  //why?
+            width: 32%;
+            height: 49%;
+
+            @media only screen and (min-width: 37.5em) {
+                display: block;
+                width: 172px;
+                height: 265px;
+            }
+
+            > svg {
+                display: block;
+                // width: 25%;
+                // height: 25%;
+            }
+
+            &.handle-1 {
+                transform: rotate(0deg);
+            }
+            &.handle-2 {
+                transform: rotate(36deg);
+            }
+            &.handle-3 {
+                transform: rotate(72deg);
+            }
+            &.handle-4 {
+                transform: rotate(108deg);
+            }
+            &.handle-5 {
+                transform: rotate(144deg);
+            }
+            &.handle-6 {
+                transform: rotate(180deg);
+            }
+            &.handle-7 {
+                transform: rotate(216deg);
+            }
+            &.handle-8 {
+                transform: rotate(252deg);
+            }
+            &.handle-9 {
+                transform: rotate(288deg);
+            }
+            &.handle-10 {
+                transform: rotate(324deg);
+            }
+        }
+        
         // display: none;
 
         // > 600px
-        @media only screen and (min-width: 37.5em) {
-            display: block;
-            width: 172px;
-            height: 265px;
-        }
+        
 
-        > * {
+        > .center { //all other centers
             display: none;
+            text-align: center;
         }
 
-        > svg {
-            display: block;
-            // width: 25%;
-            // height: 25%;
+        h2.mainnumber {
+            margin-bottom: 0;
+            padding-top: 20px;
         }
 
-        &.article-1 {
-            transform: rotate(0deg);
+        .statement {
+            font-size: 3vw; //responsive font size
+            width: 60%;
+            margin: 1rem auto;
+            
+            @media only screen and (min-width: 37.5em) {
+                font-size: 1.125rem;
+            }    
         }
-        &.article-2 {
-            transform: rotate(36deg);
+
+        .thumblink-persons {
+            a {
+                display: inline-block;
+            }
+            h3 {
+                font-size: 0.75rem; 
+                margin: 0;  
+            }
+            p.function {
+                font-size: 0.55rem;
+                color: $black;
+                margin: 0;
+            }
+            p.country {
+                font-size: 0.40rem;
+                color: $black;
+                margin: 0;
+            }
         }
-        &.article-3 {
-            transform: rotate(72deg);
-        }
-        &.article-4 {
-            transform: rotate(108deg);
-        }
-        &.article-5 {
-            transform: rotate(144deg);
-        }
-        &.article-6 {
-            transform: rotate(180deg);
-        }
-        &.article-7 {
-            transform: rotate(216deg);
-        }
-        &.article-8 {
-            transform: rotate(252deg);
-        }
-        &.article-9 {
-            transform: rotate(288deg);
-        }
-        &.article-10 {
-            transform: rotate(324deg);
+
+        img.round {
+            filter: grayscale(100%);
+            width: 48px;
+            height: 48px;
         }
 
     }
