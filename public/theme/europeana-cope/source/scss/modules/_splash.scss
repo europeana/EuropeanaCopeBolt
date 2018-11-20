@@ -78,12 +78,20 @@
 
 .wheel-section {
     background: $white;
+    // background: $white url('../images/splash_tenyears/decahedron_background_pattern.png');
+    background-size: 35px 24px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 7.5rem 1rem;
     width: 100%;
-    transition:  background-color 0.1s ease-out;
+    // transition:  background 0.1s ease-out; // background image cannot have transition ... causes flickering ^AW
+
+    &.hashighlight {
+        background: $white url('../images/splash_tenyears/decahedron_background_pattern.png');
+        background-size: 35px 24px;    
+    }
 
     // > 600px
     @media only screen and (min-width: 37.5em) {
@@ -118,40 +126,58 @@
     }
 
     .center {
-        width: 88%;
-        height: 88%;
+        width: 86%;
+        height: 86%;
         border-radius: 50%;
         background: $white;
         // opacity: 0.5;
         position: absolute;
-        top: 5%;
-        left: 6%;
+        top: 6%;
+        left: 7%;
         z-index: 3;
         text-align: center;
 
         // > 600px
         @media only screen and (min-width: 37.5em) {
-            top: 5%;
-            left: 5%;
-            width: 90%;
-            height: 90%;  
+            top: 6%;
+            left: 6%;
+            width: 88%;
+            height: 88%;  
         }
     }
 
-    .mainnumber {
+    .gates {
         padding-top: 15vw;
-        display: inline-block;
+        margin: 0;
+        
+        color: $baseFirstThemeColour;
+        text-transform: uppercase;
+        letter-spacing: .3px;
+        font-size: 2.3vw;
+        font-weight: 700;
+       
+        @media only screen and (min-width: 37.5em) {
+            padding-top: 90px;
+            font-size: 0.8625rem;
+        }
+        
+    }
+
+    .mainnumber {
+        // padding-top: 15vw;
+        margin-top: -15px;
         margin-left: -10vw; //optical and responsive
-        font-size: 42vw; //responsive font size
+        font-size: 40vw; //responsive font size
         font-weight: 600;
         letter-spacing: -0.17em;
         line-height: .9;
+        margin-bottom: 0;
 
         // > 600px
         @media only screen and (min-width: 37.5em) {
-            font-size: 16.875rem;
-            margin-left: -55px; //optical
-            padding-top: 60px;
+            font-size: 15.125rem;
+            margin-left: -68px; //optical
+            // padding-top: 60px;
         }
     }
 
@@ -166,7 +192,7 @@
         // > 600px
         @media only screen and (min-width: 37.5em) {
             font-size: 1.125rem;
-            padding-left: 170px;
+            padding-left: 166px;
         }
     }
 
@@ -192,6 +218,8 @@
                 // width: 25%;
                 // height: 25%;
             }
+
+            
 
             &.handle-1 {
                 transform: rotate(0deg);
@@ -238,15 +266,22 @@
         h2.mainnumber {
             margin-bottom: 0;
             padding-top: 20px;
+            text-align: center;
+            margin-left: 0;
+            letter-spacing: 0;
+            // margin-left: -38px;
         }
 
         .statement {
             font-size: 3vw; //responsive font size
-            width: 60%;
+            line-height: 1.2;
+            width: 90%;
             margin: 1rem auto;
+            height: 50px;
             
             @media only screen and (min-width: 37.5em) {
                 font-size: 1.125rem;
+                height: 80px; // set height for equal quotes
             }    
         }
 
@@ -261,7 +296,9 @@
             p.function {
                 font-size: 0.55rem;
                 color: $black;
-                margin: 0;
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
             }
             p.country {
                 font-size: 0.40rem;
@@ -271,7 +308,6 @@
         }
 
         img.round {
-            filter: grayscale(100%);
             width: 48px;
             height: 48px;
         }
@@ -281,7 +317,9 @@
 
 
 section.heritage-specialists {
-    background: url('../images/splash_tenyears/bg_beige.png');
+    background: $paper url('../images/splash_tenyears/decahedron_background_pattern.png');
+    background-size: 35px 24px;
+
     
     h2 {
         text-transform: none;
@@ -317,7 +355,8 @@ section.heritage-specialists {
     }
 
     img.round {
-        filter: grayscale(100%);
+        width: 116px;
+        height: 116px;
     }
 
 
