@@ -120,7 +120,7 @@
 
         // > 600px
         @media only screen and (min-width: 37.5em) {
-        
+    
         }
 
     }
@@ -137,6 +137,7 @@
         z-index: 3;
         text-align: center;
 
+
         // > 600px
         @media only screen and (min-width: 37.5em) {
             top: 6%;
@@ -147,8 +148,9 @@
     }
 
     .gates {
-        padding-top: 15vw;
-        margin: 0;
+        // margin-top: 15vw;
+        width: 50%;
+        margin: 15vw auto 0;
         
         color: $baseFirstThemeColour;
         text-transform: uppercase;
@@ -157,27 +159,36 @@
         font-weight: 700;
        
         @media only screen and (min-width: 37.5em) {
-            padding-top: 90px;
+            margin-top: 90px;
             font-size: 0.8625rem;
         }
         
     }
 
     .mainnumber {
-        // padding-top: 15vw;
-        margin-top: -15px;
-        margin-left: -10vw; //optical and responsive
+        // margin-top: -15px;
+        // margin-left: -10vw; //optical and responsive
         font-size: 40vw; //responsive font size
         font-weight: 600;
         letter-spacing: -0.17em;
         line-height: .9;
-        margin-bottom: 0;
+        width: 50%;
+        margin: 0 auto;
 
         // > 600px
         @media only screen and (min-width: 37.5em) {
             font-size: 15.125rem;
-            margin-left: -68px; //optical
-            // padding-top: 60px;
+            // margin-left: -68px; //optical
+            margin: 0 auto;
+        }
+
+        & span {
+            display: block;
+            margin-left: -10vw;
+
+            @media only screen and (min-width: 37.5em) {
+                margin-left: -68px;
+            }
         }
     }
 
@@ -218,8 +229,6 @@
                 // width: 25%;
                 // height: 25%;
             }
-
-            
 
             &.handle-1 {
                 transform: rotate(0deg);
@@ -265,21 +274,34 @@
 
         h2.mainnumber {
             margin-bottom: 0;
-            padding-top: 20px;
+            padding-top: 6vw;
+            padding-bottom: 1vw;
+
             text-align: center;
-            margin-left: 0;
             letter-spacing: 0;
-            // margin-left: -38px;
+            font-size: 30vw;
+
+            @media only screen and (min-width: 37.5em) {
+                font-size: 13rem;
+                padding-top: 30px;
+                padding-bottom: 10px;
+            }
+            
+            span {
+                margin-left: 0;
+            }
         }
 
         .statement {
             font-size: 3vw; //responsive font size
             line-height: 1.2;
             width: 90%;
-            margin: 1rem auto;
-            height: 50px;
+            margin: 1rem auto 0;
+            // height: 50px;
+            
             
             @media only screen and (min-width: 37.5em) {
+                font-weight: 300;
                 font-size: 1.125rem;
                 height: 80px; // set height for equal quotes
             }    
@@ -299,6 +321,12 @@
                 width: 50%;
                 margin: 0 auto;
                 text-align: center;
+
+                display: none;
+                
+                @media only screen and (min-width: 37.5em) {
+                    display: block;
+                }
             }
             p.country {
                 font-size: 0.40rem;
@@ -312,6 +340,18 @@
             height: 48px;
         }
 
+        &.article-8 {  //styles to fix the offset of the numer '10' in articles
+            
+            h2.mainnumber {
+                letter-spacing: -0.17em;
+                
+                span {
+                    display: block;
+                    margin-left: -56px;
+                }  
+            }
+            
+        }
     }
 }
 
@@ -324,10 +364,10 @@ section.heritage-specialists {
     h2 {
         text-transform: none;
         color: $baseFirstThemeColour;
+        font-weight: 300;
         font-size: 1.5rem;
         text-align: left;
         padding: 0 1rem;
-        font-weight: 400;
 
         @include respond-to(medium-screens) {
             font-size: 2rem;

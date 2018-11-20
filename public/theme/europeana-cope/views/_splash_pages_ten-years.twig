@@ -1,3 +1,9 @@
+<style>
+    /* load semibold and light for this page only */
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+</style>
+
+
 {# Information on page #}
 {% set themepath = '/theme/europeana-cope/images/splash_tenyears/' %}
 
@@ -143,7 +149,7 @@ in the future?’',
             <div class="wheel">
                 <div class="center">
                     <p class="gates">The gates are open</p>
-                    <p class="mainnumber">10</p>
+                    <p class="mainnumber"><span>10<span></p>
                     <p class="slogan">Visions of the future<br /> of digital culture</p>
                 </div>
 
@@ -160,12 +166,12 @@ in the future?’',
                                 <polygon points="0,0 167,0 83,260" />
                                 </clipPath>
                             </defs>
-                            <image xlink:href="http://placekitten.com/280/280" clip-path="url(#mask-{{loop.index}})" width="280" height="280"></image>
+                            <image xlink:href="http://placekitten.com/180/280" clip-path="url(#mask-{{loop.index}})" width="180" height="280"></image>
                         </svg>
                     </div>
 
                     <div class="center">
-                        <h2 class="mainnumber" style="color: {{ person.color }}">{{ person.number}}</h2>
+                        <h2 class="mainnumber" style="color: {{ person.color }}"><span>{{ person.number}}</span></h2>
 
                         <p class="statement">{{ person.title|raw }}</p>
                         <div class="thumblink-fourcol thumblink-persons">
