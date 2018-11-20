@@ -15,7 +15,7 @@
             'function' : 'Executive Director of the Wikimedia Foundation',
             'color' : '#7F3978',
             'portrait' : themepath ~'Katherine@2x.png',
-            'imgsrc' : 'image_piet.png'
+            'image' : themepath ~'decahedron_Katherine.png',
         },
         '2' : {
             'number' : '7',
@@ -24,7 +24,7 @@
             'function' : 'Digital Humanities Chair at École Polytechnique, Fédérale de Lausanne',
             'color' : '#FFAE00',
             'portrait' : themepath ~'Frederic@2x.png',
-            'imgsrc' : 'image_piet.png'
+            'image' : themepath ~'decahedron_Frederic.png',
         },
         '3' : {
             'number' : '8',
@@ -33,7 +33,7 @@
             'function' : 'President of the National Library of France',
             'color' : '#37B98B',
             'portrait' : themepath ~'Laurence@2x.png',
-            'imgsrc' : 'image_x.png'
+            'image' : themepath ~'decahedron_Laurence.png',
         },
         '4' : {
             'number' : '2',
@@ -42,7 +42,7 @@
             'function' : 'Professor of Cultural Economics and Deputy Rector for International Relations at IULM University, Milan',
             'color' : '#FFAE00',
             'portrait' : themepath ~'Pier@2x.png',
-            'imgsrc' : 'image_x.png'
+            'image' : themepath ~'decahedron_Pier.png',
         },
         '5' : {
             'number' : '5',
@@ -51,7 +51,7 @@
             'function' : 'Professor of Digital Cultural Heritage at the University of Edinburgh’s College of Arts, Humanities, and Social Sciences',
             'color' : '#1c8ac7',
             'portrait' : themepath ~'Melissa@2x.png',
-            'imgsrc' : 'image_x.png'
+            'image' : themepath ~'decahedron_Melissa.png',
         },
         '6' : {
             'number' : '6',
@@ -60,7 +60,7 @@
             'function' : 'CEO, Creative Commons',
             'color' : '#E11D53',
             'portrait' : themepath ~'Ryan@2x.png',
-            'imgsrc' : 'image_x.png'
+            'image' : themepath ~'decahedron_Ryan.png',
         },
         '7' : {
             'number' : '1',
@@ -70,7 +70,7 @@ in the future?’',
             'function' : 'Co-founder of the Museum for the United Nations — UN Live',
             'color' : '#E11D53',
             'portrait' : themepath ~'Michael@2x.png',
-            'imgsrc' : 'image_x.png'
+            'image' : themepath ~'decahedron_Michael.png',
         },
         '8' : {
             'number' : '10',
@@ -79,7 +79,7 @@ in the future?’',
             'function' : 'Founder and CEO, Museum in a Box',
             'color' : '#1c8ac7',
             'portrait' : themepath ~'George@2x.png',
-            'imgsrc' : 'image_x.png'
+            'image' : themepath ~'decahedron_George.png',
         },
         '9' : {
             'number' : '3',
@@ -88,7 +88,7 @@ in the future?’',
             'function' : 'Director, Mauritshuis',
             'color' : '#37B98B',
             'portrait' : themepath ~'Emilie@2x.png',
-            'imgsrc' : 'image_x.png'
+            'image' : themepath ~'decahedron_Emilie.png',
         },
         '10' : {
             'number' : '4',
@@ -97,7 +97,7 @@ in the future?’',
             'function' : 'Vice Provost for Information Collaboration, Dean of the Libraries, and Professor of History at Northeastern University, Massachusetts',
             'color' : '#7F3978',
             'portrait' : themepath ~'Dan@2x.png',
-            'imgsrc' : 'image_x.png'
+            'image' : themepath ~'decahedron_Dan.png',
         }
         
         
@@ -158,15 +158,9 @@ in the future?’',
                     {# {% set personstyle = personinfo[person.id] %} #}
 
                 <article class="article-{{loop.index}}"
-                    data-bgcolor="{{ person.color }}"> {# TODO - juiste bg color inladen #}
+                    data-bgcolor="{{ person.color }}"> 
                     <div class="handle handle-{{loop.index}}">
-                        <svg viewBox="0 0 167 260" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <defs>
-                                <clipPath id="mask-{{loop.index}}">
-                                <polygon points="0,0 167,0 83,260" />
-                                </clipPath>
-                            </defs>
-                            <image xlink:href="http://placekitten.com/180/280" clip-path="url(#mask-{{loop.index}})" width="180" height="280"></image>
+                            <img src="{{ person.image }}"></img>
                         </svg>
                     </div>
 
