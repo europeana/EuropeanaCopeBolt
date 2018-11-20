@@ -366,22 +366,22 @@ $( document ).ready(function() {
     // Splashpage 10years
     
     var article = $('.splashpage-ten-years .wheel article');
-    var section = $('.splashpage-ten-years .wheel-section')
-
-    console.log(article);
+    var section = $('.splashpage-ten-years .wheel-section');
     
     article.on('mouseenter touchstart', function(){
         $(this).addClass('highlight');
         $(this).find('.center').show();
         article.not('.highlight').fadeOut('fast');
-        section.css("background-color", $(this).data('bgcolor'));
+        section.css("background-color" , $(this).data('bgcolor'));
+        section.addClass('hashighlight');
         console.log('over');
     });
     article.on('mouseleave touchend', function(){
         $(this).removeClass('highlight');
         $(this).find('.center').hide();
         article.show();
-        section.css("background-color", "");
+        section.removeClass('hashighlight');
+        section.css("background", "");
         console.log('out');
     });
 });
