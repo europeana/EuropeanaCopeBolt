@@ -5,6 +5,10 @@
 // here be stuff for the big screen
 }
 
+/* splashpage colors */
+$tyblack:             #231F20;
+$tydarkgrey:          #404042;
+
 
 .splashpage-ten-years header {
     background-color: $white;
@@ -168,6 +172,7 @@
     .mainnumber {
         // margin-top: -15px;
         // margin-left: -10vw; //optical and responsive
+        color: $tyblack;
         font-size: 40vw; //responsive font size
         font-weight: 600;
         letter-spacing: -0.17em;
@@ -199,6 +204,7 @@
         text-align: left;
         margin: 0;
         line-height: 1.2;
+        color: $tyblack;
 
         // > 600px
         @media only screen and (min-width: 37.5em) {
@@ -297,6 +303,7 @@
             line-height: 1.2;
             width: 90%;
             margin: 1rem auto 0;
+            color: $tyblack;
             // height: 50px;
             
             
@@ -317,7 +324,7 @@
             }
             p.function {
                 font-size: 0.55rem;
-                color: $black;
+                color: $tydarkgrey;
                 width: 50%;
                 margin: 0 auto;
                 text-align: center;
@@ -379,13 +386,13 @@ section.heritage-specialists {
     }
 
     h3 {
-        color: $black;
+        color: $tyblack;
         font-size: 1.175rem;
         font-weight: 600;
         margin-bottom: .2rem;
     }
     p.function {
-        color: $black;
+        color: $tydarkgrey;
         font-size: 0.83rem;
         margin-top: 0;
     }
