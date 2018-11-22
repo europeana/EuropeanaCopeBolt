@@ -352,20 +352,28 @@ $( document ).ready(function() {
     var article = $('.splashpage-ten-years .wheel article');
     var section = $('.splashpage-ten-years .wheel-section');
     
-    article.on('mouseenter touchstart', function(){
+    article.on('mouseenter', function(){
         $(this).addClass('highlight');
         $(this).find('.center').show();
         article.not('.highlight').fadeOut('fast');
         section.css("background-color" , $(this).data('bgcolor'));
         section.addClass('hashighlight');
-        console.log('over');
+        console.log('over ' + $(this).attr("class"));
     });
-    article.on('mouseleave touchend', function(){
+    article.on('mouseleave', function(){
         $(this).removeClass('highlight');
         $(this).find('.center').hide();
         article.show();
-        section.removeClass('hashighlight');
         section.css("background", "");
-        console.log('out');
+        section.removeClass('hashighlight');
+        console.log('out ' + $(this).attr("class"));
+    });
+    
+    //reset all als erbuiten geklikt
+    section.on('click',function(){
+        article.find('.center').hide(); 
+        article.show();
+        section.css("background", "");
+        section.removeClass('hashighlight');
     });
 });

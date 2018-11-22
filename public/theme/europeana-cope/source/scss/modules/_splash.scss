@@ -44,38 +44,50 @@ $tydarkgrey:          #404042;
     }
 
     nav {
-        flex-grow: 1;
-        display: flex;
         padding: 0;
         margin-top: 1.5rem;
-        align-items: flex-start;
         // background: #f70;
-              
+        
+        @media only screen and (min-width: 420px) {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
         @include respond-to(large-screens) {
+            flex-grow: 1;
             padding-left: 1.5rem;
             margin-top: 0;
         }
 
         ul {
             // background: #f07;
+            margin-bottom: 1rem;
+            @media only screen and (min-width: 420px) {
+                margin-bottom: 0;
+                flex: 1; //magic thingy to prevent this element from being too wide
+                
+            }
         }
 
         li {
-            display: inline-block;
             padding: 1rem 1rem 0 0;
+            display: inline-block;
         }
 
         a {
             font-weight: 700;
             color: $black;
-            
-            // padding: 0 1.5rem 0 0;
         }
     }
 
     a.button {
-        padding: 1rem;
+        padding: .5rem 1rem;
         margin-left: auto;
+        
+        @include respond-to(large-screens) {
+            padding: 1rem;
+        }
     }
 }
     
@@ -145,9 +157,9 @@ $tydarkgrey:          #404042;
         // > 600px
         @media only screen and (min-width: 37.5em) {
             top: 6%;
-            left: 6%;
-            width: 88%;
-            height: 88%;  
+            left: 7%;
+            width: 86%;
+            height: 86%;  
         }
     }
 
@@ -163,7 +175,7 @@ $tydarkgrey:          #404042;
         font-weight: 700;
        
         @media only screen and (min-width: 37.5em) {
-            margin-top: 90px;
+            margin-top: 87px;
             font-size: 0.8625rem;
         }
         
@@ -209,7 +221,7 @@ $tydarkgrey:          #404042;
         // > 600px
         @media only screen and (min-width: 37.5em) {
             font-size: 1.125rem;
-            padding-left: 166px;
+            padding-left: 163px;
         }
     }
 
@@ -226,8 +238,8 @@ $tydarkgrey:          #404042;
 
             @media only screen and (min-width: 37.5em) {
                 display: block;
-                width: 172px;
-                height: 265px;
+                width: 170px;
+                height: 260px;
             }
 
             > svg {
