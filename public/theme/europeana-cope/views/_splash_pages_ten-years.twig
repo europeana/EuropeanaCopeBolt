@@ -10,60 +10,73 @@
 {% set personinfo = {
         '1' : {
             'number' : '9',
+            'personid' : 'xxx',
             'title' : 'We must explore what it means to integrate digital culture with social action',
             'name' : 'Katherine Maher',
             'function' : 'Executive Director of the Wikimedia Foundation',
             'color' : '#7F3978',
             'portrait' : themepath ~'Katherine@2x.png',
             'image' : themepath ~'decahedron_Katherine.png',
+            'articlelink' : '650'
         },
         '2' : {
             'number' : '7',
+            'personid' : '4960',
             'title' : 'The AI race is not lost.<br />It has just begun',
             'name' : 'Frédéric Kaplan',
             'function' : 'Digital Humanities Chair at École Polytechnique, Fédérale de Lausanne',
             'color' : '#FFAE00',
             'portrait' : themepath ~'Frederic@2x.png',
             'image' : themepath ~'decahedron_Frederic.png',
+            'articlelink' : '648'
         },
         '3' : {
             'number' : '8',
+            'personid' : '1501',
             'title' : 'Libraries must affirm and cultivate their differences',
             'name' : 'Laurence Engel',
             'function' : 'President of the National Library of France',
             'color' : '#37B98B',
             'portrait' : themepath ~'Laurence@2x.png',
             'image' : themepath ~'decahedron_Laurence.png',
+            'articlelink' : '649'
         },
         '4' : {
             'number' : '2',
+            'personid' : '2424',
             'title' : 'The future is not just about more content, but about new types of content and expression',
             'name' : 'Pier Luigi Sacco',
             'function' : 'Professor of Cultural Economics and Deputy Rector for International Relations at IULM University, Milan',
             'color' : '#FFAE00',
             'portrait' : themepath ~'Pier@2x.png',
             'image' : themepath ~'decahedron_Pier.png',
+            'articlelink' : '645'
         },
         '5' : {
             'number' : '5',
+            'personid' : '1357',
             'title' : 'We must continue to ensure that our cultural history is part of our complex, fleeting, data present',
             'name' : 'Melissa Terras',
             'function' : 'Professor of Digital Cultural Heritage at the University of Edinburgh’s College of Arts, Humanities, and Social Sciences',
             'color' : '#1c8ac7',
             'portrait' : themepath ~'Melissa@2x.png',
             'image' : themepath ~'decahedron_Melissa.png',
+            'articlelink' : '646'
         },
         '6' : {
             'number' : '6',
+            'personid' : 'xxx',
             'title' : 'The internet is the most powerful platform for communication and collaboration in history',
             'name' : 'Ryan Merkley',
             'function' : 'CEO, Creative Commons',
             'color' : '#E11D53',
             'portrait' : themepath ~'Ryan@2x.png',
             'image' : themepath ~'decahedron_Ryan.png',
+            'articlelink' : '647'
         },
         '7' : {
             'number' : '1',
+            'personid' : 'xxx',
             'title' : '‘Do they know about Europeana <br />
 in the future?’',
             'name' : 'Michael Peter Edson',
@@ -71,33 +84,40 @@ in the future?’',
             'color' : '#E11D53',
             'portrait' : themepath ~'Michael@2x.png',
             'image' : themepath ~'decahedron_Michael.png',
+            'articlelink' : 'xxx'
         },
         '8' : {
             'number' : '10',
+            'personid' : '4914',
             'title' : 'The gates are already open',
             'name' : 'George Oates',
             'function' : 'Founder and CEO, Museum in a Box',
             'color' : '#1c8ac7',
             'portrait' : themepath ~'George@2x.png',
             'image' : themepath ~'decahedron_George.png',
+            'articlelink' : '651'
         },
         '9' : {
             'number' : '3',
+            'personid' : '4953',
             'title' : 'Augmented and virtual reality will increasingly make it possible to enjoy high-quality reproductions of works of art',
             'name' : 'Emilie Gordenker',
             'function' : 'Director, Mauritshuis',
             'color' : '#37B98B',
             'portrait' : themepath ~'Emilie@2x.png',
             'image' : themepath ~'decahedron_Emilie.png',
+            'articlelink' : 'xxx'
         },
         '10' : {
             'number' : '4',
+            'personid' : '1562',
             'title' : 'Access at scale was only the start',
             'name' : 'Dan Cohen',
             'function' : 'Vice Provost for Information Collaboration, Dean of the Libraries, and Professor of History at Northeastern University, Massachusetts',
             'color' : '#7F3978',
             'portrait' : themepath ~'Dan@2x.png',
             'image' : themepath ~'decahedron_Dan.png',
+            'articlelink' : 'xxx'
         }
         
         
@@ -153,26 +173,26 @@ in the future?’',
                 </div>
 
                 {# {% for person in persons %} #}
-                {% for person in personinfo %}
+                {% for personstyle in personinfo %}
                     {# {% set personstyle = personinfo[person.id] %} #}
 
                 <article class="article-{{loop.index}}"
-                    data-bgcolor="{{ person.color }}"> 
+                    data-bgcolor="{{ personstyle.color }}"> 
                     <div class="handle handle-{{loop.index}}">
-                            <img src="{{ person.image }}"></img>
+                            <img src="{{ personstyle.image }}"></img>
                         </svg>
                     </div>
 
                     <div class="center">
-                        <h2 class="mainnumber" style="color: {{ person.color }}"><span>{{ person.number}}</span></h2>
+                        <h2 class="mainnumber" style="color: {{ personstyle.color }}"><span>{{ personstyle.number}}</span></h2>
 
-                        <p class="statement">{{ person.title|raw }}</p>
+                        <p class="statement"><a href="/page/{{ personstyle.articlelink }}">{{ personstyle.title|raw }}</a></p>
                         <div class="thumblink-fourcol thumblink-persons">
                             <a href="#">
-                                <img class="round" src="{{ person.portrait }}" alt="{{ person.name }}"/>
+                                <img class="round" src="{{ personstyle.portrait }}" alt="{{ personstyle.name }}"/>
                             </a>
-                            <h3>{{ person.name }}</h3>
-                            <p class="function">{{ person.function }}</p>
+                            <h3>{{ personstyle.name }}</h3>
+                            <p class="function">{{ personstyle.function }}</p>
                             {# <p class="country">{{ person.country }}</p> #}
                         </div>
                     </div>
@@ -194,7 +214,7 @@ in the future?’',
                 
                 {% set person = personinfo[orderid] %}
                 <article class="column fifth thumblink-fivecol thumblink-persons">
-                    <a href="#">
+                    <a href="/person/{{ person.personid }}">
                         <img class="round" src="{{ person.portrait }}" alt="{{ person.name }}"/>
                     </a>
                     <h3>{{ person.name }}</h3>

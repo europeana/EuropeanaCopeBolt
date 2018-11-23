@@ -315,7 +315,13 @@ $tydarkgrey:          #404042;
             line-height: 1.2;
             width: 90%;
             margin: 1rem auto 0;
-            color: $tyblack;
+            a {
+                color: $tyblack;
+                
+                &:hover, &:active, &:focus {
+                    color: $baseFirstThemeColour;
+                }
+            }
             // height: 50px;
             
             
