@@ -352,7 +352,11 @@ $( document ).ready(function() {
     var article = $('.splashpage-ten-years .wheel article');
     var section = $('.splashpage-ten-years .wheel-section');
     
+
     article.on('mouseenter', function(){
+        section.removeClass('hashighlight');
+        article.removeClass('highlight');
+        
         $(this).addClass('highlight');
         $(this).find('.center').show();
         article.not('.highlight').fadeOut('fast');
@@ -363,9 +367,13 @@ $( document ).ready(function() {
     article.on('mouseleave', function(){
         $(this).removeClass('highlight');
         $(this).find('.center').hide();
-        article.show();
         section.css("background", "");
         section.removeClass('hashighlight');
+        // article.fadeIn('slow');
+        setTimeout(function(){
+            article.show();    
+        }, 10)
+        
         console.log('out ' + $(this).attr("class"));
     });
     
