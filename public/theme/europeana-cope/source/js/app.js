@@ -351,31 +351,34 @@ $( document ).ready(function() {
     
     var article = $('.splashpage-ten-years .wheel article');
     var section = $('.splashpage-ten-years .wheel-section');
-    
 
-    article.on('mouseenter', function(){
-        section.removeClass('hashighlight');
-        article.removeClass('highlight');
-        
-        $(this).addClass('highlight');
-        $(this).find('.center').show();
-        article.not('.highlight').fadeOut('fast');
-        section.css("background-color" , $(this).data('bgcolor'));
-        section.addClass('hashighlight');
-        console.log('over ' + $(this).attr("class"));
-    });
-    article.on('mouseleave', function(){
-        $(this).removeClass('highlight');
-        $(this).find('.center').hide();
-        section.css("background", "");
-        section.removeClass('hashighlight');
-        // article.fadeIn('slow');
-        setTimeout(function(){
-            article.show();    
-        }, 10)
-        
-        console.log('out ' + $(this).attr("class"));
-    });
+    article
+        .on('mouseenter', function(){
+            section.addClass('hashighlight');
+            $(this).addClass('highlight');
+            $(this).find('.center').show();
+            section.css("background-color" , $(this).data('bgcolor'));
+
+            article.stop();
+            $(this).show();
+
+            article.not( $(this) ).fadeOut({
+                duration: 200,
+                queue: false
+            });
+
+            // console.log('over ' + $(this).attr("class"));
+        })
+        .on('mouseleave', function(){
+            section.removeClass('hashighlight')
+            $(this).removeClass('highlight');
+            $(this).find('.center').hide();
+            section.css("background", "");
+
+            article.stop().fadeIn({ duration: 0 });
+
+            // console.log('leave ' + $(this).attr("class"));
+        });
     
     //reset all als erbuiten geklikt
     section.on('click',function(){

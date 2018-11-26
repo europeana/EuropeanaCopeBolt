@@ -17,7 +17,7 @@
             'color' : '#7F3978',
             'portrait' : themepath ~'Katherine@2x.png',
             'image' : themepath ~'decahedron_Katherine.png',
-            'articlelink' : '650'
+            'articlelink' : '/page/650'
         },
         '2' : {
             'number' : '7',
@@ -28,7 +28,7 @@
             'color' : '#FFAE00',
             'portrait' : themepath ~'Frederic@2x.png',
             'image' : themepath ~'decahedron_Frederic.png',
-            'articlelink' : '648'
+            'articlelink' : '/page/648'
         },
         '3' : {
             'number' : '8',
@@ -39,7 +39,7 @@
             'color' : '#37B98B',
             'portrait' : themepath ~'Laurence@2x.png',
             'image' : themepath ~'decahedron_Laurence.png',
-            'articlelink' : '649'
+            'articlelink' : '/page/649'
         },
         '4' : {
             'number' : '2',
@@ -50,7 +50,7 @@
             'color' : '#FFAE00',
             'portrait' : themepath ~'Pier@2x.png',
             'image' : themepath ~'decahedron_Pier.png',
-            'articlelink' : '645'
+            'articlelink' : '/page/645'
         },
         '5' : {
             'number' : '5',
@@ -61,7 +61,7 @@
             'color' : '#1c8ac7',
             'portrait' : themepath ~'Melissa@2x.png',
             'image' : themepath ~'decahedron_Melissa.png',
-            'articlelink' : '646'
+            'articlelink' : '/page/646'
         },
         '6' : {
             'number' : '6',
@@ -72,7 +72,7 @@
             'color' : '#E11D53',
             'portrait' : themepath ~'Ryan@2x.png',
             'image' : themepath ~'decahedron_Ryan.png',
-            'articlelink' : '647'
+            'articlelink' : '/page/647'
         },
         '7' : {
             'number' : '1',
@@ -84,7 +84,7 @@ in the future?’',
             'color' : '#E11D53',
             'portrait' : themepath ~'Michael@2x.png',
             'image' : themepath ~'decahedron_Michael.png',
-            'articlelink' : 'xxx'
+            'articlelink' : '/page/xxx'
         },
         '8' : {
             'number' : '10',
@@ -95,7 +95,7 @@ in the future?’',
             'color' : '#1c8ac7',
             'portrait' : themepath ~'George@2x.png',
             'image' : themepath ~'decahedron_George.png',
-            'articlelink' : '651'
+            'articlelink' : '/page/651'
         },
         '9' : {
             'number' : '3',
@@ -106,7 +106,7 @@ in the future?’',
             'color' : '#37B98B',
             'portrait' : themepath ~'Emilie@2x.png',
             'image' : themepath ~'decahedron_Emilie.png',
-            'articlelink' : 'xxx'
+            'articlelink' : '/page/xxx'
         },
         '10' : {
             'number' : '4',
@@ -117,7 +117,7 @@ in the future?’',
             'color' : '#7F3978',
             'portrait' : themepath ~'Dan@2x.png',
             'image' : themepath ~'decahedron_Dan.png',
-            'articlelink' : 'xxx'
+            'articlelink' : '/page/xxx'
         }
         
         
@@ -186,7 +186,7 @@ in the future?’',
                     <div class="center">
                         <h2 class="mainnumber" style="color: {{ personstyle.color }}"><span>{{ personstyle.number}}</span></h2>
 
-                        <p class="statement"><a href="/page/{{ personstyle.articlelink }}">{{ personstyle.title|raw }} → </a></p>
+                        <p class="statement"><a href="{{ personstyle.articlelink }}">{{ personstyle.title|raw }} → </a></p>
                         <div class="thumblink-fourcol thumblink-persons">
                             <a href="#">
                                 <img class="round" src="{{ personstyle.portrait }}" alt="{{ personstyle.name }}"/>
