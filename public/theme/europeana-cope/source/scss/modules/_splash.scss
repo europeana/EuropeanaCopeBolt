@@ -212,7 +212,7 @@ $tydarkgrey:          #404042;
     .slogan {
         padding-left: 30vw;
         font-size: 3vw; //responsive font size
-        width: 370px;
+        width: 70vw;
         text-align: left;
         margin: 0;
         line-height: 1.2;
@@ -222,6 +222,8 @@ $tydarkgrey:          #404042;
         @media only screen and (min-width: 37.5em) {
             font-size: 1.125rem;
             padding-left: 163px;
+            width: 370px;
+        
         }
     }
 
