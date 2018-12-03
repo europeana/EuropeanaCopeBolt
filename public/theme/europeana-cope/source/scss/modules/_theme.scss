@@ -261,7 +261,8 @@ footer {
     }
 }
 
-.footer-block-mission {
+.footer-block-mission,
+.footer-block-moreinfo {
     margin-bottom: 2rem;
 
 }
@@ -310,15 +311,21 @@ img.round,
 .img-container.round {
     border-radius: 50%;
 
+    .third & {
+        width: 164px;
+        height: 164px;
+        margin: 0 auto;
+    }
+    
     .fourth & {
         width: 108px;
         height: 108px;
         margin: 0 auto;
     }
 
-    .third & {
-        width: 164px;
-        height: 164px;
+    .fifth & {
+        width: 108px;
+        height: 108px;
         margin: 0 auto;
     }
 
@@ -800,7 +807,8 @@ section.catstream {
 * WIDGET FOUR COLUMN THUMBNAILED LINKS
 **/
 
-.thumblink-fourcol {
+.thumblink-fourcol,
+.thumblink-fivecol {
     text-align: center;
 
     h3 {
