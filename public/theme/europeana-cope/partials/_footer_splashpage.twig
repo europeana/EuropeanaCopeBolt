@@ -12,15 +12,6 @@
     <div class="inner-wrap">
 
         <div class="group">
-            <div class="footer-block footer-block-address h-card">
-                <img class="logo-small u-logo" src="{{ paths.theme }}images/europeana_logo_footer_white.png" alt="Europeana"/>
-                <address>
-                    <span class="p-name">Europeana Foundation</span>
-                    <br /><span class="p-street-address">Prins Willem-Alexanderhof 5</span>
-                    <br /><span class="p-postal-code">2595 BE</span> <span class="p-locality">Den Haag</span>
-                    <br /><span class="p-country-name">Netherlands</span>
-                </address>
-            </div>
 
             {% setcontent footermission = 'resources/footer-mission' %}
             <div class="footer-block footer-block-mission">
@@ -35,6 +26,13 @@
                 {% endif %}
             </div>
 
+            <div class="footer-block footer-block-moreinfo">
+                <h4>More info</h4>
+                <p><a href="https://pro.europeana.eu">Europeana Pro</a></p>
+                <p><a href="https://europeana.eu">Europeana Collections</a></p>
+            </div>
+
+
             <div class="footer-block footer-block-socials">
                 <h4>Find us elsewhere</h4>
                 <div class="socials">
@@ -48,29 +46,17 @@
                             <use xlink:href="#icon-facebook"> </use>
                         </svg> <span class="sr-only">facebook</span>
                     </a>
-                    <a href="https://plus.google.com/+europeana/posts" class="gp">
-                         <svg class="icon icon-googleplus">
-                            <use xlink:href="#icon-googleplus"> </use>
-                        </svg> <span class="sr-only">Google Plus</span>
-                    </a>
                     <a href="https://www.linkedin.com/groups/Europeana-134927/about" class="li">
                          <svg class="icon icon-linkedin">
                             <use xlink:href="#icon-linkedin"> </use>
                         </svg> <span class="sr-only">Linked In</span>
-                    </a>
-                    <a href="https://github.com/europeana" class="gh">
-                         <svg class="icon icon-github">
-                            <use xlink:href="#icon-github"> </use>
-                        </svg> <span class="sr-only">Github</span>
                     </a>
                 </div>
             </div>
 
         </div>
 
-        <div class="sub-footer">
-
-            {{ menu('footer', 'partials/_menu_footer.twig') }}
+        <div class="sub-footer group">
 
             <p class="copyright">
                 <img src="{{paths.theme}}images/eu_flag_co-financed_white.svg" width='250' alt="Funded by the European Union. Connecting Europe Facility."/>
@@ -78,13 +64,7 @@
             <p class="eu-disclaimer">
                 This website is developed and maintained on behalf of the European Commission by the consortium led by Europeana Foundation. The European Commission goal is to keep information provided at this website accurate. However, the Commission does not guarantee the accuracy of the information and accepts no responsibility or liability whatsoever with regard to the information on this site. Neither the Commission nor any person acting on the Commission’s behalf may be held responsible for the use which may be made of the information contained therein.
             </p>
-            <div class="extra-logo">
-                <img src="{{paths.theme}}images/2018_eych_purple_logo.png"  alt="2018 European year of cultural heritage. #EuropeForCulture"/>
-            </div>
-            {% setcontent footerinfo = 'resources/footer-info' %}
-            {% if footerinfo is not empty %}
-                {{ footerinfo.body }}
-            {% endif %}
+            
         </div>
 
     </div>

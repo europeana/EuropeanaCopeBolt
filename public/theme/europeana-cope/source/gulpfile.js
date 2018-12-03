@@ -21,12 +21,12 @@ if (gutil.env.dev === true) {
 }
 
 var jsFiles = [
-    '../js/lib/jquery.min.js',
-    '../js/lib/minRead.js',
-    '../js/lib/viewportSize.min.js',
-    '../js/lib/sticky-kit.min.js',
-    '../js/app.js',
-    '../js/menu.js'
+    'js/lib/jquery.min.js',
+    'js/lib/minRead.js',
+    'js/lib/viewportSize.min.js',
+    'js/lib/sticky-kit.min.js',
+    'js/app.js',
+    'js/menu.js'
 ];
 
 var jsDest = '../js/';
@@ -41,7 +41,7 @@ gulp.task('scripts', gulp.series(function() {
 
 gulp.task('watch', gulp.series(function() {
     gulp.watch('scss/**/*.scss', gulp.series('sass'));
-    gulp.watch('../js/**/*.js', gulp.series('scripts'));
+    gulp.watch('js/**/*.js', gulp.series('scripts'));
 }));
 
 gulp.task('sass', gulp.series(function() {

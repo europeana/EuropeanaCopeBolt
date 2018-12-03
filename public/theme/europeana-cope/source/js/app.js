@@ -362,8 +362,48 @@ $( document ).ready(function() {
             $('.filters-chapter').appendTo('.filter-container');
         }
     }
-});
 
+    // Splashpage 10years
+    
+    var article = $('.splashpage-ten-years .wheel article');
+    var section = $('.splashpage-ten-years .wheel-section');
+
+    article
+        .on('mouseenter', function(){
+            section.addClass('hashighlight');
+            $(this).addClass('highlight');
+            $(this).find('.center').show();
+            section.css("background-color" , $(this).data('bgcolor'));
+
+            article.stop();
+            $(this).show();
+
+            article.not( $(this) ).fadeOut({
+                duration: 200,
+                queue: false
+            });
+
+            // console.log('over ' + $(this).attr("class"));
+        })
+        .on('mouseleave', function(){
+            section.removeClass('hashighlight')
+            $(this).removeClass('highlight');
+            $(this).find('.center').hide();
+            section.css("background", "");
+
+            article.stop().fadeIn({ duration: 0 });
+
+            // console.log('leave ' + $(this).attr("class"));
+        });
+    
+    //reset all als erbuiten geklikt
+    section.on('click',function(){
+        article.find('.center').hide(); 
+        article.show();
+        section.css("background", "");
+        section.removeClass('hashighlight');
+    });
+});
 
 function setCookie(name,value,days) {
     var expires = "";

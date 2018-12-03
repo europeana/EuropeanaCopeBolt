@@ -134,5 +134,21 @@ button.image-info {
 
 }
 
+button.outline,
+.button.outline {
+    background: none;
+    border: 1px solid $black;
+    color: $black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+
+    &:hover {
+        background: $baseFirstThemeColour;
+        color: $white;
+        border-color: $baseFirstThemeColour;
+    }
+}
+
 
 
