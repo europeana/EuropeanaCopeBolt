@@ -6,6 +6,9 @@
     {%- elseif record.pagetype is defined
         and (record.pagetype == 'landingpage' or record.pagetype == 'landingpage-nohighlight') -%}
         landingpage contentpage
+    {%- elseif record.pagetype is defined
+        and record.pagetype == 'splashpage' -%}
+        splashpage
     {%- else -%}
         contentpage
     {%- endif -%}

@@ -38,11 +38,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    {# Bodyclass-> Add skin-labs of skin-research to change skin-color #}
     {{ include('partials/_svg_library.twig') }}
 
     {{ include('partials/_cookiebar.twig') }}
     
+{% block splashpage %}
     <div> {# Needed for the sticking of main-menu #}
 
     {% block header %}
@@ -74,14 +74,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         {% endblock footer %}
     </div>
 
+    {% endblock splashpage %}
+
     {% block bottomincludes %}
     {% endblock bottomincludes %}
-    {# <script src="{{ asset('js/jquery.min.js', 'theme') }}"></script>
-    <script src="{{ asset('js/minRead.js', 'theme') }}"></script>
-    <script src="{{ asset('js/viewportSize.min.js', 'theme') }}"></script>
-    <script src="{{ asset('js/sticky-kit.min.js', 'theme') }}"></script>
-    <script src="{{ asset('js/app.js', 'theme') }}"></script>
-    <script src="{{ asset('js/menu.js', 'theme') }}"></script> #}
     <script src="{{ asset('js/scripts.min.js', 'theme') }}"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     {# addthis utility script #}

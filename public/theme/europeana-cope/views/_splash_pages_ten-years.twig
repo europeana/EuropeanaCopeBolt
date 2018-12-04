@@ -1,0 +1,234 @@
+<style>
+    /* load semibold and light for this page only */
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+</style>
+
+
+{# Information on page #}
+{% set themepath = '/theme/europeana-cope/images/splash_tenyears/' %}
+
+{% set personinfo = {
+        '1' : {
+            'number' : '9',
+            'personid' : 'katherine-maher',
+            'title' : 'We must explore what it means to integrate digital culture with social action',
+            'name' : 'Katherine Maher',
+            'function' : 'Executive Director of the Wikimedia Foundation',
+            'color' : '#7F3978',
+            'portrait' : themepath ~'Katherine@2x.png',
+            'image' : themepath ~'decahedron_Katherine.png',
+            'articlelink' : '/page/650'
+        },
+        '2' : {
+            'number' : '7',
+            'personid' : 'frederic-kaplan',
+            'title' : 'The AI race is not lost.<br />It has just begun',
+            'name' : 'Frédéric Kaplan',
+            'function' : 'Digital Humanities Chair at École Polytechnique, Fédérale de Lausanne',
+            'color' : '#FFAE00',
+            'portrait' : themepath ~'Frederic@2x.png',
+            'image' : themepath ~'decahedron_Frederic.png',
+            'articlelink' : '/page/648'
+        },
+        '3' : {
+            'number' : '8',
+            'personid' : 'laurence-engel',
+            'title' : 'Libraries must affirm and cultivate their differences',
+            'name' : 'Laurence Engel',
+            'function' : 'President of the National Library of France',
+            'color' : '#37B98B',
+            'portrait' : themepath ~'Laurence@2x.png',
+            'image' : themepath ~'decahedron_Laurence.png',
+            'articlelink' : '/page/649'
+        },
+        '4' : {
+            'number' : '2',
+            'personid' : 'pier-luigi-sacco',
+            'title' : 'The future is not just about more content, but about new types of content and expression',
+            'name' : 'Pier Luigi Sacco',
+            'function' : 'Professor of Cultural Economics and Deputy Rector for International Relations at IULM University, Milan',
+            'color' : '#FFAE00',
+            'portrait' : themepath ~'Pier@2x.png',
+            'image' : themepath ~'decahedron_Pier.png',
+            'articlelink' : '/page/645'
+        },
+        '5' : {
+            'number' : '5',
+            'personid' : 'melissa-terras',
+            'title' : 'We must continue to ensure that our cultural history is part of our complex, fleeting, data present',
+            'name' : 'Melissa Terras',
+            'function' : 'Professor of Digital Cultural Heritage at the University of Edinburgh’s College of Arts, Humanities, and Social Sciences',
+            'color' : '#1c8ac7',
+            'portrait' : themepath ~'Melissa@2x.png',
+            'image' : themepath ~'decahedron_Melissa.png',
+            'articlelink' : '/page/646'
+        },
+        '6' : {
+            'number' : '6',
+            'personid' : 'ryan-merkley',
+            'title' : 'The internet is the most powerful platform for communication and collaboration in history',
+            'name' : 'Ryan Merkley',
+            'function' : 'CEO, Creative Commons',
+            'color' : '#E11D53',
+            'portrait' : themepath ~'Ryan@2x.png',
+            'image' : themepath ~'decahedron_Ryan.png',
+            'articlelink' : '/page/647'
+        },
+        '7' : {
+            'number' : '1',
+            'personid' : 'michael-edson',
+            'title' : '‘Do they know about Europeana <br />
+in the future?’',
+            'name' : 'Michael Peter Edson',
+            'function' : 'Co-founder of the Museum for the United Nations — UN Live',
+            'color' : '#E11D53',
+            'portrait' : themepath ~'Michael@2x.png',
+            'image' : themepath ~'decahedron_Michael.png',
+            'articlelink' : '/page/641'
+        },
+        '8' : {
+            'number' : '10',
+            'personid' : 'george-oates',
+            'title' : 'The gates are already open',
+            'name' : 'George Oates',
+            'function' : 'Founder and CEO, Museum in a Box',
+            'color' : '#1c8ac7',
+            'portrait' : themepath ~'George@2x.png',
+            'image' : themepath ~'decahedron_George.png',
+            'articlelink' : '/page/651'
+        },
+        '9' : {
+            'number' : '3',
+            'personid' : 'emilie-gordenker',
+            'title' : 'Augmented and virtual reality will increasingly make it possible to enjoy high-quality reproductions of works of art',
+            'name' : 'Emilie Gordenker',
+            'function' : 'Director, Mauritshuis',
+            'color' : '#37B98B',
+            'portrait' : themepath ~'Emilie@2x.png',
+            'image' : themepath ~'decahedron_Emilie.png',
+            'articlelink' : '/page/635'
+        },
+        '10' : {
+            'number' : '4',
+            'personid' : 'dan-cohen',
+            'title' : 'Access at scale was only the start',
+            'name' : 'Dan Cohen',
+            'function' : 'Vice Provost for Information Collaboration, Dean of the Libraries, and Professor of History at Northeastern University, Massachusetts',
+            'color' : '#7F3978',
+            'portrait' : themepath ~'Dan@2x.png',
+            'image' : themepath ~'decahedron_Dan.png',
+            'articlelink' : '/page/636'
+        }
+        
+        
+    }
+%}
+
+
+
+<header id="header" class="">
+    <div class="mainlogo">
+        <a href="/">
+            <img src="{{ asset( 'images/splash_tenyears/logo_10thanniversary.svg','theme') }}" alt="Europeana - 10th anniversary" />
+        </a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#perspectives">10 perspectives</a></li>
+            <li><a href="#heritage-specialists">10 cultural innovators</a></li>
+        </ul>
+    </nav>
+    
+    
+</header>
+
+{% set personids = [] %}
+{% set persons = [] %}
+
+{# Set persons for wheel #}
+{% for feature in record.modules %}
+    {# {{feature.selected_persons}} #}
+    {% set personids = feature.selected_persons|json_decode() %}
+    {# {{ dump(personids) }} #}
+
+    {% for personid in personids %}
+        {% setcontent person = 'persons' where { id : personid } %}
+        {% set persons = persons|merge([person]) %}
+    {% endfor %}
+{% endfor %}
+
+{# {{ dump(persons) }} #}
+{# {{ dump(personinfo.373.color) }}  #}
+
+<main>
+    <section class="wheel-section group" id="perspectives">
+        <h2 class="sr-only">Explore our specialists</h2>
+        <div class="wheel-container">
+            <div class="wheel">
+                <div class="center">
+                    <p class="gates">The gates are open</p>
+                    <p class="mainnumber"><span>10<span></p>
+                    <p class="slogan">perspectives on the future of digital culture</p>
+                </div>
+
+                {# {% for person in persons %} #}
+                {% for personstyle in personinfo %}
+                    {# {% set personstyle = personinfo[person.id] %} #}
+
+                <article class="article-{{loop.index}}"
+                    data-bgcolor="{{ personstyle.color }}"> 
+                    <div class="handle handle-{{loop.index}}">
+                            <img src="{{ personstyle.image }}"></img>
+                        </svg>
+                    </div>
+
+                    <div class="center">
+                        <h2 class="mainnumber" style="color: {{ personstyle.color }}"><span>{{ personstyle.number}}</span></h2>
+
+                        <p class="statement"><a href="{{ personstyle.articlelink }}">{{ personstyle.title|raw }} → </a></p>
+                        <div class="thumblink-fourcol thumblink-persons">
+                            <a href="#">
+                                <img class="round" src="{{ personstyle.portrait }}" alt="{{ personstyle.name }}"/>
+                            </a>
+                            <h3>{{ personstyle.name }}</h3>
+                            <p class="function">{{ personstyle.function }}</p>
+                            {# <p class="country">{{ person.country }}</p> #}
+                        </div>
+                    </div>
+
+                </article>
+                {% endfor %}
+                
+            </div>{# /wheel #}
+        </div>
+    </section>
+
+    <section class="heritage-specialists group module" id="heritage-specialists">
+        <div class="inner-wrap">
+            <h2>Our cultural innovators</h2>
+            <div class="items-container">
+
+                {% set orderedpersons = [7,4,9,10,5,6,2,3,1,8] %}
+                {% for orderid in orderedpersons %}
+                
+                {% set person = personinfo[orderid] %}
+                <article class="column fifth thumblink-fivecol thumblink-persons">
+                    <a href="/person/{{ person.personid }}">
+                        <img class="round" src="{{ person.portrait }}" alt="{{ person.name }}"/>
+                    </a>
+                    <h3>{{ person.name }}</h3>
+                    <p class="function">{{ person.function }}</p>
+                    {# <p class="country">{{ person.country }}</p> #}
+                </article>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    {# TODO Include / inline alternative footer #}
+    {{ include('partials/_footer_splashpage.twig') }}
+
+</main>
