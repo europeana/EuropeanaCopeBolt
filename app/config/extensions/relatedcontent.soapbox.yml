@@ -1,5 +1,5 @@
 # Limit the number of items returned
-limit : 3
+limit : 10
 
 # Content types to look for related content in
 contenttypes: [ pages, posts, events, data, projects ]

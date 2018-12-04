@@ -9,7 +9,7 @@
     (record.taxonomy.categories is defined and record.taxonomy.categories is not empty)
     or (record.taxonomy.tags is defined and record.taxonomy.tags is not empty) %}
     {# get the automatically related records by category  - extension #}
-    {% set relatedrecords = relatedcontent(record) %}
+    {% set relatedrecords = relatedcontent(record)|shuffle %}
 {% else %}
     <!-- No tags, no categories, so no related items -->
     {% set relatedrecords = false %}
@@ -17,7 +17,6 @@
 
 
 {% if (relatedrecords is defined) and (relatedrecords is not empty) and relatedrecords is iterable %}
-
 <section class="related-content">
     <h2>{{ title|default('Related content') }}</h2>
 
