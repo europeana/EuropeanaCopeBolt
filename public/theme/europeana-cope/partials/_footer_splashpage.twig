@@ -57,10 +57,11 @@
         </div>
 
         <div class="sub-footer group">
+
             {% setcontent footereu = 'resources/footer-eu' %}
-            {% if footereu is not empty %}
+            {% if footereu is not empty and footereu.values.image.file is not empty %}
                 <p class="copyright {{ footereu.cssclass|default() }}">
-                    <img src="{{ footereu.values.image|image()|default(paths.theme ~ 'images/eu_flag_co-financed_white.svg') }}" width='250' alt="{{ footereu.values.image.title|default(footereu.buttontext|default('Funded by the European Union. Connecting Europe Facility.')) }}"/>
+                    <img src="/files/{{ footereu.values.image.file }}" width='250' alt="{{ footereu.values.image.title|default(footereu.buttontext|default('Funded by the European Union. Connecting Europe Facility.')) }}"/>
                 </p>
             {% else %}
                 <p class="copyright fallback">

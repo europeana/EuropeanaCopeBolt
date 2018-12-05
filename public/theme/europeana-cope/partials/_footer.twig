@@ -73,9 +73,9 @@
             {{ menu('footer', 'partials/_menu_footer.twig') }}
 
             {% setcontent footereu = 'resources/footer-eu' %}
-            {% if footereu is not empty %}
+            {% if footereu is not empty and footereu.values.image.file is not empty %}
                 <p class="copyright {{ footereu.cssclass|default() }}">
-                    <img src="{{ footereu.values.image|image()|default(paths.theme ~ 'images/eu_flag_co-financed_white.svg') }}" width='250' alt="{{ footereu.values.image.title|default(footereu.buttontext|default('Funded by the European Union. Connecting Europe Facility.')) }}"/>
+                    <img src="/files/{{ footereu.values.image.file }}" width='250' alt="{{ footereu.values.image.title|default(footereu.buttontext|default('Funded by the European Union. Connecting Europe Facility.')) }}"/>
                 </p>
             {% else %}
                 <p class="copyright fallback">
@@ -95,9 +95,9 @@
             {% endif %}
 
             {% setcontent footerextralogo = 'resources/footer-extralogo' %}
-            {% if footerextralogo is not empty %}
-                <div class="extra-logo  {{ footerextralogo.cssclass|default() }}">
-                    <img src="{{ footerextralogo.values.image|image()|default(paths.theme ~ 'images/eu_flag_co-2018_eych_purple_logo.png') }}" width='250' alt="{{ footerextralogo.values.image.title|default(footerextralogo.buttontext|default('2018 European year of cultural heritage. #EuropeForCulture')) }}"/>
+            {% if footerextralogo is not empty and footerextralogo.values.image.file is not empty %}
+                <div class="extra-logo {{ footerextralogo.cssclass|default() }}">
+                    <img src="/files/{{ footereu.values.image.file }}"  width='250' alt="{{ footerextralogo.values.image.title|default(footerextralogo.buttontext|default('2018 European year of cultural heritage. #EuropeForCulture')) }}"/>
                 </div>
             {% else %}
                 <div class="extra-logo">
