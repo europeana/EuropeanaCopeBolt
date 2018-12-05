@@ -57,14 +57,27 @@
         </div>
 
         <div class="sub-footer group">
+            {% setcontent footereu = 'resources/footer-eu' %}
+            {% if footereu is not empty %}
+                <p class="copyright {{ footereu.cssclass|default() }}">
+                    <img src="{{ image(footereu.image|default(paths.theme ~ 'images/eu_flag_co-financed_white.svg')) }}" width='250' alt="{{ footereu.values.image.title|default(footereu.buttontext|default('Funded by the European Union. Connecting Europe Facility.')) }}"/>
+                </p>
+            {% else %}
+                <p class="copyright fallback">
+                    <img src="{{paths.theme}}images/eu_flag_co-financed_white.svg" width='250' alt="Funded by the European Union. Connecting Europe Facility."/>
+                </p>
+            {% endif %}
 
-            <p class="copyright">
-                <img src="{{paths.theme}}images/eu_flag_co-financed_white.svg" width='250' alt="Funded by the European Union. Connecting Europe Facility."/>
-            </p>
-            <p class="eu-disclaimer">
-                This website is developed and maintained on behalf of the European Commission by the consortium led by Europeana Foundation. The European Commission goal is to keep information provided at this website accurate. However, the Commission does not guarantee the accuracy of the information and accepts no responsibility or liability whatsoever with regard to the information on this site. Neither the Commission nor any person acting on the Commission’s behalf may be held responsible for the use which may be made of the information contained therein.
-            </p>
-            
+            {% setcontent footerdisclaimer = 'resources/footer-disclaimer' %}
+            {% if footerdisclaimer is not empty %}
+                <p class="eu-disclaimer {{ footerdisclaimer.cssclass|default() }}">
+                   {{ footerdisclaimer.body|default('This website is developed and maintained on behalf of the European Commission by the consortium led by Europeana Foundation. The European Commission goal is to keep information provided at this website accurate. However, the Commission does not guarantee the accuracy of the information and accepts no responsibility or liability whatsoever with regard to the information on this site. Neither the Commission nor any person acting on the Commission’s behalf may be held responsible for the use which may be made of the information contained therein.')|striptags('<a> <b> <strong> <i> <em>')|raw|nl2br }}
+                </p>
+            {% else %}
+                <p class="eu-disclaimer fallback">
+                    This website is developed and maintained on behalf of the European Commission by the consortium led by Europeana Foundation. The European Commission goal is to keep information provided at this website accurate. However, the Commission does not guarantee the accuracy of the information and accepts no responsibility or liability whatsoever with regard to the information on this site. Neither the Commission nor any person acting on the Commission’s behalf may be held responsible for the use which may be made of the information contained therein.
+                </p>
+            {% endif %}
         </div>
 
     </div>
