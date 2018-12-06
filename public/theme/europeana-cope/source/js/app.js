@@ -369,7 +369,7 @@ $( document ).ready(function() {
     var section = $('.splashpage-ten-years .wheel-section');
 
     article
-        .on('mouseenter', function(){
+        .on('mouseenter touchend', function(e){
             section.addClass('hashighlight');
             $(this).addClass('highlight');
             $(this).find('.center').show();
@@ -382,8 +382,9 @@ $( document ).ready(function() {
                 duration: 200,
                 queue: false
             });
+            e.preventDefault();
+            return false;           
 
-            // console.log('over ' + $(this).attr("class"));
         })
         .on('mouseleave', function(){
             section.removeClass('hashighlight')
@@ -393,15 +394,17 @@ $( document ).ready(function() {
 
             article.stop().fadeIn({ duration: 0 });
 
-            // console.log('leave ' + $(this).attr("class"));
         });
     
     //reset all als erbuiten geklikt
-    section.on('click',function(){
-        article.find('.center').hide(); 
-        article.show();
-        section.css("background", "");
+    section.on('click touchend',function(){
         section.removeClass('hashighlight');
+        article.removeClass('highlight');
+        article.find('.center').hide(); 
+        section.css("background", "");
+        
+        article.stop().fadeIn({ duration: 0 });
+        
     });
 });
 
