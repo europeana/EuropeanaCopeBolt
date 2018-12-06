@@ -25,15 +25,16 @@
                             {% for item in record.network_participation %}
                                 <span>{{ item }}</span>
                             {% endfor %}
-
-                            {% if record.membership_council_term is not empty %}
+                        </div>
+                        {% if record.membership_council_term is not empty %}
+                            <div class="card-network personal-network">
                                 <span class="mc-term">
                                     <svg class="icon icon-calendar-mc">
                                         <use xlink:href="#icon-calendar-mc"></use></svg>
-                                    MC Term: {{ record.membership_council_term }}
+                                    <strong>MC Term</strong>: {{ record.membership_council_term }}
                                 </span>
-                            {% endif %}
-                        </div>
+                            </div>
+                        {% endif %}
 
 
                         <div class="card-function personal-function">
