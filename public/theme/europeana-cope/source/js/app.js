@@ -367,6 +367,8 @@ $( document ).ready(function() {
     
     var article = $('.splashpage-ten-years .wheel article');
     var section = $('.splashpage-ten-years .wheel-section');
+    var handle = $('.splashpage-ten-years .wheel article .handle'); 
+    var anchor = $('.splashpage-ten-years .wheel article a');
 
     article
         .on('mouseenter touchend', function(e){
@@ -382,8 +384,11 @@ $( document ).ready(function() {
                 duration: 200,
                 queue: false
             });
+            // alert('klik'); 
             e.preventDefault();
-            return false;           
+            e.stopPropagation();
+            // return false;     
+                 
 
         })
         .on('mouseleave', function(){
@@ -396,6 +401,31 @@ $( document ).ready(function() {
 
         });
     
+    // handle.on('touchend', function() {
+    //     section.addClass('hashighlight');
+    //     $(this).parent().addClass('highlight');
+    //     $(this).parent().find('.center').show();
+    //     section.css("background-color" , $(this).parent().data('bgcolor'));
+
+    //     article.stop();
+    //     $(this).parent().show();
+
+    //     article.not( $(this).parent() ).fadeOut({
+    //         duration: 200,
+    //         queue: false
+    //     });
+    //     // alert('klak'); 
+    //     // e.preventDefault();
+    //     return false;     
+    // });
+
+    anchor.on('click touchend', function(e) {
+        window.location = $(this).attr('href');
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    });
+
     //reset all als erbuiten geklikt
     section.on('click touchend',function(){
         section.removeClass('hashighlight');
@@ -405,6 +435,7 @@ $( document ).ready(function() {
         
         article.stop().fadeIn({ duration: 0 });
         
+        // alert('kla0k'); 
     });
 });
 
