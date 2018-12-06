@@ -2459,6 +2459,13 @@ persons:
       variant: inline
       class: narrow
       group: "Company"
+    industry:
+      type: text
+      required: false
+      label: "Industry"
+      variant: inline
+      class: narrow
+      group: "Company"
     job_title:
       type: text
       label: "Job Title"
@@ -2573,6 +2580,24 @@ persons:
         "(not set)": "(not set)"
         "false": "false"
         "true": "true"
+    gb_role:
+      type: text
+      label: "Governing board role"
+      required: false
+      class: narrow
+      variant: inline
+    na_role:
+      type: text
+      label: "Network Association role / Europeana Foundation team"
+      required: false
+      class: narrow
+      variant: inline
+    na_community_role:
+      type: text
+      label: "Network Association community role"
+      required: false
+      class: narrow
+      variant: inline
     candidacy_teaser:
       type: html
       required: false

@@ -44,6 +44,9 @@ remotes:
 
                     first_name: "First Name"                # example: "Timothy"
                     last_name: "Last Name"                  # example: "Test"
+                    job_title: "Title"                      # example: "Tester"
+                    company: "Account Name"                 # example: "Test"
+                    industry: "Industry"                    # example: "Test"
 
                     email: "Public email"                   # example: "test@browsercheck.nl"
                     phone: "Public phone"                          # example: "0703457628"
@@ -54,14 +57,14 @@ remotes:
 
                     introduction: "Description"             # example: "Test record"
 
-                    company: "Account Name"                 # example: "Test"
-                    job_title: "Title"                      # example: "Tester"
-
                     network_participation: "Participation level"
                                                             # example: "Governing Board;Association Members Council"
                     community: "Member of community"        # example: "Data partner;EuropeanaTech (R&D)"
                     community_role: "Community role"        # example: "Test"
                     europeana_tech: "Member of EuropeanaTech"
+                    gb_role: "Governing Board role"        # example: "Test"
+                    na_role: "Network Association role/Europeana Foundation team"
+                    na_community_role: "NA Community role"
 
                     sector: "Sector"
                     domain: "Domain"
