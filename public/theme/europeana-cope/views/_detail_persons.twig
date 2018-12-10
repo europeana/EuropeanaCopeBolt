@@ -19,15 +19,26 @@
                         <h1 class="beta p-name">{{ record.first_name }} {{ record.last_name }}</h1>
 
                         <div class="card-network personal-network">
+                            {% if record.gb_role is not empty %}
+                                <span title="Governing Board Role: {{ record.gb_role }}">{{ record.gb_role }}</span>
+                            {% endif %}
+                            {% if record.na_role is not empty %}
+                                <span title="Network Association role / Europeana Foundation team: {{ record.na_role }}">{{ record.na_role }}</span>
+                            {% endif %}
+                            {% if record.na_community_role is not empty %}
+                                <span title="Network Association Community role: {{ record.na_community_role }}">{{ record.na_community_role }}</span>
+                            {% endif %}
+                            {#
                             {% if record.boardposition is not empty %}
                                 <span>{{ record.boardposition }}</span>
                             {% endif %}
                             {% for item in record.network_participation %}
                                 <span>{{ item }}</span>
                             {% endfor %}
+                            #}
                         </div>
                         {% if record.membership_council_term is not empty %}
-                            <div class="card-network personal-network">
+                            <div class="card-network personal-network network-mc-council">
                                 <span class="mc-term">
                                     <svg class="icon icon-calendar-mc">
                                         <use xlink:href="#icon-calendar-mc"></use></svg>
@@ -35,7 +46,6 @@
                                 </span>
                             </div>
                         {% endif %}
-
 
                         <div class="card-function personal-function">
                             <span class="p-job-title">{{ record.job_title }}</span>
