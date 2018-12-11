@@ -139,6 +139,11 @@
                     'featured': false
                 } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
                 {% set selected_records = featured_records|merge(selected_records) %}
+            {% elseif sources == 'persons' %}
+                {% setcontent selected_records = sources where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm)
+                } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
             {% else %}
                 {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
@@ -170,7 +175,7 @@
                 } orderby 'name' limit override_amount|default(10) allowpaging %}
             {% elseif sources == 'persons' %}
                 {% setcontent selected_records = sources where {
-                    (filtername): '%' ~ (filtervalue) ~'%',
+                    (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm)
                 } orderby 'last_name' limit override_amount|default(10) allowpaging %}
             {% else %}
