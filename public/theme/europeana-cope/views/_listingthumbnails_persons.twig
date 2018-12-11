@@ -13,16 +13,27 @@
 
     <h3>{{ item.first_name }} {{ item.last_name }}</h3>
 
+    {% if item.company %}
+    <p class="company">
+        {{ item.company }}
+    </p>
+    {% endif %}
+
+    {% if item.gb_role is not empty %}
+    <span title="Governing Board Role: {{ item.gb_role }}">{{ item.gb_role }}</span>
+    {% endif %}
+    {% if item.na_role is not empty %}
+    <span title="Network Association role / Europeana Foundation team: {{ item.na_role }}">{{ item.na_role }}</span>
+    {% endif %}
+    {% if item.na_community_role is not empty %}
+    <span title="Network Association Community role: {{ item.na_community_role }}">{{ item.na_community_role }}</span>
+    {% endif %}
+
     {% if item.job_title %}
     <p class="function">
         {{ item.job_title }}
     </p>
     {% endif %}
 
-    {% if item.company %}
-    <p class="company">
-        {{ item.company }}
-    </p>
-    {% endif %}
 
 </div>
