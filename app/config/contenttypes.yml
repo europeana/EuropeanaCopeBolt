@@ -205,18 +205,23 @@ __nodes:
       "(not set)": "(not set)"
       "Founding Member": "Founding Member"
       "Governing Board": "Governing Board"
-      "Management Board": "Management Board"
-      "Members Council": "Members Council"
+      "Europeana Staff": "Europeana Staff"
+      #"Management Board": "Management Board"  # this one is empty - see Network Association Management Board Member
+      #"Members Council": "Members Council" # this one is empty - see Members Council
       "Network Association Member": "Network Association Member"
       "MC Election Candidate": "MC Election Candidate"
-      "Partner": "Partner"
+      #"Partner": "Partner" # this one is empty - see Business Partner
+      "Business Partner": "Business Partner"
       "Members Council Member": "Members Council Member"
       "Network Association Management Board Member": "Network Association Management Board Member"
-      "Member States Representative": "Member States Representative"
+      #"Member States Representative": "Member States Representative" # this one is empty - see Member States
+      "Member States": "Member States"
+      "Member States Representative on Governing Board": "Member States Representative on Governing Board"
       "Representative of Content Holder Associations": "Representative of Content Holder Associations"
       "Representative of Specific Fields of Expertise": "Representative of Specific Fields of Expertise"
       "Observer": "Observer"
       "Friend of Europeana": "Friend of Europeana"
+      "Speaker": "Speaker"
       "Not a Network member": "Not a Network member (empty)"
   relation_pages: &relation_pages
     pages:
@@ -345,19 +350,24 @@ pages:
         network_participation: '-** Network Participation **-'
         "Founding Member": "Founding Member"
         "Governing Board": "Governing Board"
-        "Management Board": "Management Board"
-        "Members Council": "Members Council"
+        "Europeana Staff": "Europeana Staff"
+        #"Management Board": "Management Board"  # this one is empty - see Network Association Management Board Member
+        #"Members Council": "Members Council" # this one is empty - see Members Council
         "Network Association Member": "Network Association Member"
         "MC Election Candidate": "MC Election Candidate"
-        "Partner": "Partner"
-        "Not a Network member": "Not a Network member"
+        #"Partner": "Partner" # this one is empty - see Business Partner
+        "Business Partner": "Business Partner"
         "Members Council Member": "Members Council Member"
         "Network Association Management Board Member": "Network Association Management Board Member"
-        "Member States Representative": "Member States Representative"
+        #"Member States Representative": "Member States Representative" # this one is empty - see Member States
+        "Member States": "Member States"
+        "Member States Representative on Governing Board": "Member States Representative on Governing Board"
         "Representative of Content Holder Associations": "Representative of Content Holder Associations"
         "Representative of Specific Fields of Expertise": "Representative of Specific Fields of Expertise"
         "Observer": "Observer"
         "Friend of Europeana": "Friend of Europeana"
+        "Speaker": "Speaker"
+        "Not a Network member": "Not a Network member (empty)"
         datatype: '-** Datatype type **-'
         "Data": "Data"
         "Tool": "Tool"
