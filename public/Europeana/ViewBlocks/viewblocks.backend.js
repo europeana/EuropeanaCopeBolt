@@ -41,12 +41,13 @@ jQuery.fn.extend(
         },
         compressSwitcher: function() {
             var viewblock = $(this);
+            var viewblockheader = viewblock.find('.panel-heading .row .text-right');
             var titleblock = viewblock.find('.titletoggle');
             $(titleblock).parents('.repeater-field').addClass('titletoggleblock');
 
-            //console.log(viewblock);
-            $(viewblock)
-                .children('.panel-heading')
+            //console.log('hi' , viewblock);
+            $(viewblockheader)
+                //.children('.panel-heading')
                 .append($('<a>')
                     .attr({
                         'title': 'Compress the form for this module'
