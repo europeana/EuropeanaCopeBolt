@@ -92,7 +92,7 @@
         {% if sources == 'persons'  %}
             {% if subtype is not empty or module.filter_persons is not empty %}
                 {% set filtername = 'network_participation' %}
-                {% set filtervalue = subtype|default(module.filter_persons) %}
+                {% set filtervalue = '%"' ~ subtype|default(module.filter_persons) ~ '"%' %}
             {% endif %}
         {% elseif sources == 'posts' %}
             {% if subtype is not empty or module.filter_posts is not empty %}
