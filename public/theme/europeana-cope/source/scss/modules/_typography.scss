@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5 {
     margin-top:0;
     font-weight: 700;
     font-style: normal;
-    line-height: 1.125;
+    line-height: 1.2;
 }
 
 h1, .alpha {
@@ -71,13 +71,17 @@ h3, .gamma {
     }
 
     a {
-        color: $link-blue;
+        // color: $link-blue;
+        color: $medium-gray; //assumption for whole site, seeing the module restyling
         text-decoration: none;
     }
 
     .teaser-twocol & {
-        color: $dark-blue;
+        color: $medium-gray;
         margin-bottom: .75rem;
+
+        font-weight: 500;
+        font-size: 1.375rem;
     }
 
     .teaser-threecol &,
@@ -501,7 +505,6 @@ a {
 
     &.tag,
     &.team {
-        border-bottom: 1px dotted $link-blue;
         font-size: 0.75rem;
         margin-right: .5rem;
 
@@ -511,7 +514,7 @@ a {
 
         &:hover, &:focus, &:active {
             text-decoration: none;
-            border-bottom: 1px solid $link-blue;
+            border-bottom: 1px dotted $link-blue;
         }
 
         // @include respond-to(medium-screens) {
@@ -562,7 +565,8 @@ p.meta {
     font-size: 0.75rem;
 
     @include respond-to(large-screens) {
-        font-size: 0.875rem;
+        //font-size: 0.875rem;
+        font-size: 0.75rem
     }
 
     span {

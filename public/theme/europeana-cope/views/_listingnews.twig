@@ -15,16 +15,12 @@
         </a>
 
         {% include 'partials/_image_attribution.twig' with { parentitem: 'teaser' } %}
-        <p class="img-insert">
-            Created: <span class="date">{{ item.datepublish|localedatetime("%e %B  %Y") }}</span>
-        </p>
     </div>
 
     <h3><a href="{{ item.link }}">{{ item.title }}</a></h3>
     <p class="meta">Created: <span class="date">{{ item.datepublish|localedatetime("%e %B  %Y") }}</span></p>
 
-    {% include 'partials/_tags.twig' %}
-
+   
     {% if item.teaser is defined and item.teaser is not empty %}
         {{ item.teaser }}
     {% elseif item.intro is defined and item.intro is not empty %}
@@ -33,6 +29,7 @@
         <p>{{ item.excerpt(100, false, search|default('')) }}</p>
     {% endif %}
 
-    <a href="{{ item.link() }}" class="readmore">Read more</a>
+    {% include 'partials/_tags.twig' %}
+
 </article>
 

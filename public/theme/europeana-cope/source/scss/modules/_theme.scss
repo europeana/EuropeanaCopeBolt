@@ -592,39 +592,21 @@ a.banner {
 
     }
 
-    .img-insert {
-        position: absolute;
-        padding: .75rem 0.875rem;
-        margin: 0;
-        top: 0;
-        right: 0;
-        background: $white;
-        display: none;
-
-        @include respond-to(large-screens){
-        display: block;
-        }
-    }
-
     .label {
         margin: 0 0 0.75rem 0;
     }
 
-    p {
+    p:not(.meta) {
         margin: 0 0 .5rem;
         font-size: 0.875rem;
 
         @include respond-to(medium-screens){
-            font-size: 1rem;
+            // font-size: 1rem;
         }
     }
 
     p.meta {
-        display: block;
-
-        @include respond-to(large-screens){
-            display: none;
-        }
+        
     }
 
     a.readmore {
