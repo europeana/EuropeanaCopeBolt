@@ -556,16 +556,21 @@ a.banner {
 
 
 .teaser-twocol {
+    // @extend %rounded-card;
 
     .img-container {
         width: 27.5%;
         float: left;
         position: relative;
-        margin-right: .875rem;
+        margin-right: 1.5rem;
 
         @include respond-to(large-screens){
             width: 50%;
         }
+    }
+
+    .txt-container {
+        padding: .75rem 1.5rem;
     }
 
     &.teaser-events .img-container {
@@ -606,7 +611,7 @@ a.banner {
     }
 
     p.meta {
-        
+        margin: .5rem 0;   
     }
 
     a.readmore {
