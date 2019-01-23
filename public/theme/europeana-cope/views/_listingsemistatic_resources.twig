@@ -3,35 +3,31 @@
 {% endif %}
 
 <article class="column third teaser-threecol teaser-{{ record.contenttype.slug }}">
-    <div class="img-container">
-        {% if item.teaser_image is defined and item.teaser_image is not empty %}
-            <img src="{{ item.teaser_image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
-        {% elseif item.image is defined and item.image is not empty %}
-            <img src="{{ item.image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
+    <div class="rounded-card">
+        <div class="img-container">
+            <a href="{{ item.link() }}">
+            {% if item.teaser_image is defined and item.teaser_image is not empty %}
+                <img src="{{ item.teaser_image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
+            {% elseif item.image is defined and item.image is not empty %}
+                <img src="{{ item.image|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
+            {% else %}
+                <img src="{{ 'web_assets/default.png'|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
+            {% endif %}
+            </a>
+            {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
+        </div>
+
+         <div class="txt-container">
+        <h3><a href="{{ item.link() }}">{{ item.title }}</a></h3>
+
+        {% if item.teaser is defined and item.teaser is not empty %}
+            {{ item.teaser }}
+        {% elseif item.intro is defined and item.intro is not empty %}
+            {{ item.intro }}
         {% else %}
-            <img src="{{ 'web_assets/default.png'|thumbnail(768,435,'c')}}" alt="{{ item.title }}"/>
+            <p>{{ item.excerpt(130, false, search|default('')) }}</p>
         {% endif %}
 
-        {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
+        </div>
     </div>
-
-    <h3>{{ item.title }}</h3>
-
-    {% if item.teaser is defined and item.teaser is not empty %}
-        {{ item.teaser }}
-    {% elseif item.intro is defined and item.intro is not empty %}
-        {{ item.intro }}
-    {% else %}
-        <p>{{ item.excerpt(130, false, search|default('')) }}</p>
-    {% endif %}
-
-    {% if item.htmllink is defined and item.htmllink != '' %}
-        <a class="button-link" href="{{ item.htmllink }}">
-            {{ item.buttontext|default('See more') }}
-        </a>
-    {% else %}
-        <a class="button-link" href="{{ item.link() }}">
-            {{ item.buttontext|default('See more') }}
-        </a>
-    {% endif %}
 </article>

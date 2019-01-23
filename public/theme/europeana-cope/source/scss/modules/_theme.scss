@@ -569,10 +569,6 @@ a.banner {
         }
     }
 
-    .txt-container {
-        padding: .75rem 1.5rem;
-    }
-
     &.teaser-events .img-container {
         float: none;
         width: 100%;
@@ -1446,7 +1442,7 @@ main .section-calltoactionlink:first-child {
         max-width: 150px;
 
         @include respond-to(large-screens){
-            font-size: 1rem;
+            font-size: 0.875rem;
             max-width: 200px;
         }
 
@@ -2404,14 +2400,8 @@ div.body {
     button.image-info {
         position: absolute;
         bottom: 1rem;
-        left: 1rem;
+        right: 1rem;
         z-index: 50;
-
-        svg {
-            width: 26px;
-            height: 26px;
-            fill: $white;
-        }
 
         figure.non-wide & {  // Specific exception for blog with multiple authors
 

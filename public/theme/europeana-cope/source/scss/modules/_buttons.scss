@@ -102,35 +102,19 @@ button.floating,
 }
 
 button.image-info {
-    background-color: rgba($black, 0.8);
-    width: 40px;
-    height: 40px;
-    padding: 9px;
+    background-color: $white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid $black;
+    padding: 0;
 
-    // > span {
-    //     border-radius: 50%;
-    //     display: block;
-    //     width: 24px;
-    //     height: 24px;
-    //     border: 2px solid $white;
-    //     color: $white;
-    //     text-align: center;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-
-    // }
-
-    // span > span {
-    //     display: inline;
-    //     text-align: center;
-    //     font-size: 1.1rem;
-    //     font-family: 'helvetica', 'Helvetica Neue', 'Arial';
-    //     margin: 0;
-    //     padding: 0;
-    //     width: auto;
-    //     margin-top: -2px;
-    // }
+    svg {
+        width: 4px;
+        height: 15px;
+        fill: $black;
+        vertical-align: 2px;
+    }
 
 }
 
