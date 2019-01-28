@@ -484,7 +484,6 @@ a.banner {
 
     use {
         border: 1px solid #fff;
-        // background-color: #f09;
     }
 
     &.white {
@@ -556,41 +555,26 @@ a.banner {
 
 
 .teaser-twocol {
-    // @extend %rounded-card;
+    overflow: visible; // to make sure the shadows are not cut off.
+   
+    &:not(.teaser-events) .rounded-card {
+        display: flex;
+    }
 
     .img-container {
         width: 27.5%;
-        float: left;
+        // float: left;
         position: relative;
         margin-right: 1.5rem;
 
         @include respond-to(large-screens){
-            width: 50%;
+            width: 48%;
         }
     }
 
-    &.teaser-events .img-container {
-        float: none;
-        width: 100%;
-        margin-bottom: 1rem;
-
-        @include respond-to(medium-screens){
-            float: left;
-            width: 50%;
-            //max-width: 300px;
-        }
-
-        @include respond-to(large-screens){
-            float: none;
-            width: 100%;
-            max-width: none;
-        }
-
-        @include respond-to(xlarge-screens){
-            float: left;
-            width: 50%;
-        }
-
+    .txt-container {
+        padding-left: 0;
+        width: 50%;
     }
 
     .label {
@@ -600,14 +584,23 @@ a.banner {
     p:not(.meta) {
         margin: 0 0 .5rem;
         font-size: 0.875rem;
+        display: none;
 
-        @include respond-to(medium-screens){
-            // font-size: 1rem;
+        @include respond-to(large-screens){
+            display: block;
         }
     }
 
     p.meta {
         margin: .5rem 0;   
+    }
+
+    .tags {
+        display: none;
+
+        @include respond-to(large-screens){
+            display: block;
+        }
     }
 
     a.readmore {
@@ -631,7 +624,37 @@ a.banner {
         }
     }
 
+    &.teaser-events {
 
+        .img-container {
+            float: none;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            @include respond-to(medium-screens){
+                float: left;
+                width: 50%;
+                //max-width: 300px;
+            }
+
+            @include respond-to(large-screens){
+                float: none;
+                width: 100%;
+                max-width: none;
+            }
+
+            @include respond-to(xlarge-screens){
+                float: left;
+                width: 50%;
+            }
+        }
+
+        .txt-container {
+            width: 100%;
+            padding-left: 1.5rem;
+        }
+
+    }
 
 
 }
