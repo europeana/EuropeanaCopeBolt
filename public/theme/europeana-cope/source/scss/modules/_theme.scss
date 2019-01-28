@@ -409,12 +409,12 @@ img.round,
 .banner,
 a.banner {
     display: block;
-    height: 16rem;
+    height: 22rem;
     position: relative;
     margin:  0;
 
     @include respond-to(large-screens){
-        height: 20rem;
+        height: 32em;
         margin: 1rem 0;
     }
 
@@ -433,7 +433,7 @@ a.banner {
 
     .header-group {
         position: absolute;
-        bottom: 0;
+        bottom: 1rem;
         color: $white;
         padding: 1rem;
         left: 0;
@@ -461,6 +461,14 @@ a.banner {
 
         p {
             font-size: 0.75rem;
+        }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        svg.icon-cutoff {
+            fill: $white;
         }
     }
 
@@ -1628,13 +1636,21 @@ figure {
 
 }
 
-svg.icon-cutoff {
+svg.icon-cutoff,
+svg.icon-cutoff.left {
     position: absolute;
     left: 0;
     bottom: -1px;
     height: 145px;
     width: 60px;
     fill: $white;
+    margin: 0;
+}
+
+svg.icon-cutoff.right {
+    transform: scaleX(-1); // flip svg
+    left: auto;
+    right: 0px;
 }
 
 
@@ -2545,9 +2561,9 @@ div.body {
     .section-banner & {
 
         button.image-info {
-            bottom: 1rem;
-            left: auto;
-            right: 1rem;
+            bottom: .5rem;
+            right: auto;
+            left: 1rem;
 
             @include respond-to(large-screens) {
                 left: 1rem;
@@ -2556,23 +2572,32 @@ div.body {
         }
 
         article {
-            bottom: 1rem ;
-            left: 0 ;
-            border-radius: 5px;
+            bottom: 0;
+            left: 1rem;
+            border-radius: 4px 4px 0 0;
             width: 90%;
+            padding: .3em .55em .5em;
+            line-height: 1.2;
+
+            background: $white;
 
             @include respond-to(medium-screens) {
                 width: 50%;
-                left: auto;
-                right: 1rem;
             }
 
             @include respond-to(large-screens) {
                 width: 33%;
-                left: 0;
-                border-radius: 0 5px 5px 0;
 
             }
+        }
+
+        p, a {
+            color: $black;
+            font-size: 0.625rem;
+        }
+
+        svg {
+            fill: $black;
         }
 
     }
