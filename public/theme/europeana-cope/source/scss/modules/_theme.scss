@@ -421,7 +421,7 @@ a.banner {
 
     @include respond-to(large-screens){
         height: 32em;
-        margin: 1rem 0;
+        margin: 0;
     }
 
 
@@ -869,10 +869,10 @@ section.catstream {
 * WIDGET CALL TO ACTION FULL / HALF
 **/
 
-div.calltoaction {  //little bit more specific to avoid issues with defaul header group
+div.calltoaction {  //little bit more specific to avoid issues with default header group
     height: 200px;
     position: relative;
-    margin: 1rem 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1014,93 +1014,42 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
 }
 
 
-/*
-* Collapse margins when a call to action follows a banner
-**/
 
-//regular one-banner
-.section-banner + .section-calltoactionform,
-.section-banner + .section-calltoactioninline,
-.section-banner + .section-calltoactionlink,
-.section-banner + .section-calltoaction,
-//or when an in-page anchor is in between
-.section-banner + .in-page-anchor + .section-calltoactionform,
-.section-banner + .in-page-anchor + .section-calltoactioninline,
-.section-banner + .in-page-anchor + .section-calltoactionlink,
-.section-banner + .in-page-anchor + .section-calltoaction,
-// three banners next to another
-.section-bannertriple + .section-calltoactionform,
-.section-bannertriple + .section-calltoactioninline,
-.section-bannertriple + .section-calltoactionlink,
-.section-bannertriple + .section-calltoaction,
-//or when an in-page anchor is in between these
-.section-bannertriple + .in-page-anchor + .section-calltoactionform,
-.section-bannertriple + .in-page-anchor + .section-calltoactioninline,
-.section-bannertriple + .in-page-anchor + .section-calltoactionlink,
-.section-bannertriple + .in-page-anchor + .section-calltoaction,
-// call to action banner
-.section-calltoaction + .section-calltoactionform,
-.section-calltoaction + .section-calltoactioninline,
-.section-calltoaction + .section-calltoactionlink,
-.section-calltoaction + .section-calltoaction,
-//or when an in-page anchor is in between these
-.section-calltoaction + .in-page-anchor + .section-calltoactionform,
-.section-calltoaction + .in-page-anchor + .section-calltoactioninline,
-.section-calltoaction + .in-page-anchor + .section-calltoactionlink,
-.section-calltoaction + .in-page-anchor + .section-calltoaction
- {
-    overflow: visible;
-
-    .calltoactionform,
-    .calltoactionlink,
-    .calltoactioninline,
-    .calltoaction {
-
-
-        margin-top: 0 rem; // needs check, gaat dit altijd goed? - AW
-
-        @include respond-to(large-screens){
-            margin-top: -1rem;
-        }
-
-    }
-
-}
 
 /*
 * Collapse margins when a banner or call to action is the first item on a landingpage
 **/
 
-main .section-banner:first-child {
-    a.banner {
-        margin-top: 0px;
-    }
-}
+// main .section-banner:first-child {
+//     a.banner {
+//         margin-top: 0px;
+//     }
+// }
 
-main .section-calltoactionform:first-child {
-    .calltoactionform {
-        margin-top: 0px;
-    }
-}
+// main .section-calltoactionform:first-child {
+//     .calltoactionform {
+//         margin-top: 0px;
+//     }
+// }
 
 
-main .section-calltoactioninline:first-child {
-    .calltoactioninline {
-        margin-top: 0px;
-    }
-}
+// main .section-calltoactioninline:first-child {
+//     .calltoactioninline {
+//         margin-top: 0px;
+//     }
+// }
 
-main .section-calltoactionlink:first-child {
-    .calltoactionlink {
-        margin-top: 0px;
-    }
-}
+// main .section-calltoactionlink:first-child {
+//     .calltoactionlink {
+//         margin-top: 0px;
+//     }
+// }
 
-main .section-calltoactionlink:first-child {
-    .calltoactionlink {
-        margin-top: 0px;
-    }
-}
+// main .section-calltoactionlink:first-child {
+//     .calltoactionlink {
+//         margin-top: 0px;
+//     }
+// }
 
 /*
 ***********************************************************************
