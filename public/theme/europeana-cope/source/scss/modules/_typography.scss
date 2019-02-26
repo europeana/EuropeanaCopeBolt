@@ -166,6 +166,10 @@ h2.widget, h3.widget { //HEADERS IN BANNERS / CALL TO ACTIONS
     font-weight: 400;
     letter-spacing: 1.5px;
     color: $white;
+
+    @include respond-to (medium-screens) {
+        font-size: 1.625rem;
+    }
 }
 
 section {
