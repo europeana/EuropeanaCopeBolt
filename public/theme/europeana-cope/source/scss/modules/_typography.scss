@@ -226,10 +226,10 @@ section {
         text-align: center;
         // margin: 0 0 3rem 0;
         letter-spacing: -.3px;
-        font-size: 0.875rem; // Carlos wants 0.75rem, 2K Think that's too small.
+        font-size: 1rem; 
 
         @include respond-to (medium-screens) {
-            font-size: 1rem;
+            font-size: 1.25rem; // redesign: all text should be 20px
         }
     }
 
@@ -270,6 +270,10 @@ ul {
 }
 
 .introduction {
+    font-family:$base-font-family;
+    font-weight: 400;
+    color: $light-gray;
+    
     p a,
     ul a,
     ol a {
@@ -277,22 +281,27 @@ ul {
     }
 
     p {
-        font-size: 1.125rem;
+        font-size: 1rem;
 
-        @include respond-to (large-screens){
-            font-size: 1.5rem;
+        @include respond-to (medium-screens){
+            font-size: 1.25rem;
         }
     }
 
-    font-size: 1.125rem;
+    font-size: 1rem;
 
-        @include respond-to (large-screens){
-            font-size: 1.5rem;
-        }
+        @include respond-to (medium-screens){
+            font-size: 1.25rem;
+        }   
+        
 }
 
 .body,
 .collapsed-body {
+    font-family:$base-font-family;
+    font-weight: 400;
+    color: $light-gray;
+    
     p a,
     ul a,
     ol a {
@@ -313,12 +322,14 @@ ul {
     }
 
     p, ul, ol {
-    font-size: 0.875rem;
+    font-size: 1rem;
 
         @include respond-to (medium-screens){
-            font-size: 1rem;
+            font-size: 1.25rem;
         }
     }
+
+   
 }
 
 p {
@@ -384,16 +395,7 @@ a {
     }
 }
 
-.introduction p, .introduction ul, .introduction ol, .introduction {
-    font-family:$base-font-family;
-    font-weight: 400;
-    color: $medium-gray;
-}
 
-.body p, .body ul, .body ol, .body  {
-    font-family:$base-font-family;
-    font-weight: 400;
-}
 
 address {
     font-family: $base-font-family;
