@@ -1107,7 +1107,6 @@ main .section-calltoactionlink:first-child {
     padding: 0;
 
     @include respond-to(medium-screens) {
-        margin-left: 210px;
         text-align: right;
         padding: 0 0.875rem;
     }
@@ -1115,6 +1114,7 @@ main .section-calltoactionlink:first-child {
 
     @include respond-to(large-screens) {
         // margin-bottom: 2rem;
+        margin-left: 210px;
         position: absolute;
         z-index: index($layers, higher-content);
         top: -7.5rem;
