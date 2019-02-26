@@ -41,6 +41,10 @@ body > div {
         position: relative;
     }
     > header {
+        position: sticky;
+        top: 0px;
+        z-index: 20;
+        
         padding: 0 0.875rem;
             @include respond-to(menu-full){
                 height: 95px;

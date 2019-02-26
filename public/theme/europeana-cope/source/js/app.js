@@ -319,6 +319,7 @@ $( document ).ready(function() {
         }
     }
 
+    
     /**
      * preloadchecks function
      * checks viewport width and does some hides and show, and moves elements
@@ -344,14 +345,9 @@ $( document ).ready(function() {
         }
 
         if ( windowWidthEms >= breakMenuFull ) {
-            // set sticky topbar and menu
-            $('#mainmenu').stick_in_parent();
-            $('#topbar').stick_in_parent();
+
 
         } else {
-           // remove stickyness when window is resized
-           $("#topbar").trigger("sticky_kit:detach");
-           $("#mainmenu").trigger("sticky_kit:detach");
 
         }
 
