@@ -44,7 +44,7 @@ body > div {
         position: sticky;
         top: 0px;
         z-index: 20;
-        
+
         padding: 0 0.875rem;
             @include respond-to(menu-full){
                 height: 95px;
@@ -145,7 +145,7 @@ aside {
 
 footer {
     background: $dark-blue;//$denim;
-    border-top: 6px solid $dark-blue;
+    // border-top: 6px solid $dark-blue;
     padding-top: 2rem;
     margin-top: 3rem; // voor contentpages zo gedaan. snelle fix, vast mooi
 
@@ -471,8 +471,10 @@ ul.teaser-list {
     }
 
     &.footer-block-address {
+        padding-right: 40px; // make room for cutoff
 
         @include respond-to(large-screens) {
+            padding-right: 0;
             width: 39%;
         }
 

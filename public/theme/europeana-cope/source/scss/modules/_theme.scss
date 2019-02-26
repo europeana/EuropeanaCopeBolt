@@ -246,6 +246,12 @@ footer {
     address {
         display: inline-block;
     }
+
+    svg.icon-cutoff.right {
+
+    }
+
+
 }
 
 .sub-footer {
@@ -1651,6 +1657,14 @@ svg.icon-cutoff.right {
     transform: scaleX(-1); // flip svg
     left: auto;
     right: 0px;
+}
+
+svg.icon-cutoff.top.right {
+    transform: scaleX(-1) scaleY(-1); // flip svg
+    left: auto;
+    right: 0px;
+    bottom: auto;
+    top: 0;
 }
 
 
