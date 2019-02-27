@@ -11,14 +11,14 @@ header {
     background: $white;
 
     h1, .home-link { //logo
-        margin: 1rem 0 0 0;
+        margin: 1.5rem 0 0 0;
         display: block;
 
         img {
-           height: 50px;
+        //    height: 50px;
 
            @include respond-to(medium-screens) {
-            height: 65px;
+            // height: 65px;
            }
         }
     }
@@ -346,6 +346,7 @@ img.round,
     height: 100%;
     background-color: $denim;
     background-blend-mode: multiply;
+    // background-size: cover;
 
     &:before {
             content: '';
