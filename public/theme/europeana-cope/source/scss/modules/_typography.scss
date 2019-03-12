@@ -90,7 +90,7 @@ h3, .gamma {
         margin: .75rem 0 0.5rem; //optically even
 
         font-weight: 500;
-        
+
         @include respond-to (medium-screens) {
             font-size: 1.375rem;
             min-height: 65px;
@@ -170,6 +170,13 @@ h2.widget, h3.widget { //HEADERS IN BANNERS / CALL TO ACTIONS
     @include respond-to (medium-screens) {
         font-size: 1.625rem;
     }
+
+    .section-banner & {
+
+        @include respond-to (medium-screens) {
+            font-size: 1.375rem;
+        }
+    }
 }
 
 section {
@@ -230,7 +237,7 @@ section {
         text-align: center;
         // margin: 0 0 3rem 0;
         letter-spacing: -.3px;
-        font-size: 1rem; 
+        font-size: 1rem;
 
         @include respond-to (medium-screens) {
             font-size: 1.25rem; // redesign: all text should be 20px
@@ -277,7 +284,7 @@ ul {
     font-family:$base-font-family;
     font-weight: 400;
     color: $light-gray;
-    
+
     p a,
     ul a,
     ol a {
@@ -296,8 +303,8 @@ ul {
 
         @include respond-to (medium-screens){
             font-size: 1.25rem;
-        }   
-        
+        }
+
 }
 
 .body,
@@ -305,7 +312,7 @@ ul {
     font-family:$base-font-family;
     font-weight: 400;
     color: $light-gray;
-    
+
     p a,
     ul a,
     ol a {
@@ -333,7 +340,7 @@ ul {
         }
     }
 
-   
+
 }
 
 p {
