@@ -5,9 +5,9 @@
                 {% if layoutclass == 'third' %}
                     style="background-image: url({{ image(record.image, 800, 1000)|default('notfound') }})"
                 {% elseif layoutclass == 'half' %}
-                    style="background-image: url({{ image(record.image)|default('notfound') }})"
+                    style="background-image: url({{ image(record.image, 1500, 1000, 'r')|default('notfound') }})"
                 {% else %}
-                    style="background-image: url({{ image(record.image)|default('notfound') }})"
+                    style="background-image: url({{ image(record.image, 1500, 1000, 'r')|default('notfound') }})"
                 {% endif %}
             {% else %}
                  style="background-image: url({{ image('/web_assets/default.png', 600, 400) }})"
