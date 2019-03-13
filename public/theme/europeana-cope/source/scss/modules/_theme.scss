@@ -882,6 +882,16 @@ section.catstream {
     }
 
     .company,
+    .roles {
+        color: $medium-gray;
+        font-size: 0.8rem;
+        margin-top: .5rem;
+    }
+
+    .network {
+        text-transform: uppercase;
+    }
+
     .country {
         text-transform: uppercase;
         font-size: 0.75rem;
