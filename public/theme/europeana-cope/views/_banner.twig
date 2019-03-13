@@ -3,11 +3,11 @@
         <div class="colored-image"
             {% if record.image is defined and record.image is not empty %}
                 {% if layoutclass == 'third' %}
-                    style="background-image: url({{ image(record.image, 600, 765)|default('notfound') }})"
+                    style="background-image: url({{ image(record.image, 800, 1000)|default('notfound') }})"
                 {% elseif layoutclass == 'half' %}
-                    style="background-image: url({{ image(record.image, 1000, 765)|default('notfound') }})"
+                    style="background-image: url({{ image(record.image)|default('notfound') }})"
                 {% else %}
-                    style="background-image: url({{ image(record.image, 1800, 765)|default('notfound') }})"
+                    style="background-image: url({{ image(record.image)|default('notfound') }})"
                 {% endif %}
             {% else %}
                  style="background-image: url({{ image('/web_assets/default.png', 600, 400) }})"

@@ -348,7 +348,8 @@ img.round,
     height: 100%;
     background-color: $denim;
     background-blend-mode: multiply;
-    // background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
 
     &:before {
         content: '';
@@ -364,10 +365,9 @@ img.round,
 
     // exception for section banner
     .section-banner & {
-        background: none;
+        background-color: transparent;
 
         &:before {
-            background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%, rgba(255,255,255,0.5)),color-stop(100%, rgba(19,19,19,0.65)));
             background-image:  linear-gradient(to bottom, rgba(255,255,255,0.65) 0%, rgba(19,19,19,1) 100%);
             mix-blend-mode: multiply;
         }
