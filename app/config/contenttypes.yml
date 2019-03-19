@@ -206,18 +206,14 @@ __nodes:
       "Founding Member": "Founding Member"
       "Governing Board": "Governing Board"
       "Europeana Staff": "Europeana Staff"
-      #"Management Board": "Management Board"  # this one is empty - see Network Association Management Board Member
-      #"Members Council": "Members Council" # this one is empty - see Members Council
       "Network Association Member": "Network Association Member"
       "Foundation Governing Board Member": "Foundation Governing Board Member"
       "Europeana Alumni": "Europeana Alumni"
       "MC Election Candidate": "MC Election Candidate"
       "MB Election Candidate": "MB Election Candidate"
-      #"Partner": "Partner" # this one is empty - see Business Partner
       "Business Partner": "Business Partner"
       "Members Council Member": "Members Council Member"
       "Network Association Management Board Member": "Network Association Management Board Member"
-      #"Member States Representative": "Member States Representative" # this one is empty - see Member States
       "Member States": "Member States"
       "Member States Representative on Governing Board": "Member States Representative on Governing Board"
       "Representative of Content Holder Associations": "Representative of Content Holder Associations"
@@ -226,6 +222,10 @@ __nodes:
       "Friend of Europeana": "Friend of Europeana"
       "Speaker": "Speaker"
       "Not a Network member": "Not a Network member (empty)"
+      #"Management Board": "Management Board"  # this one is empty - see Network Association Management Board Member
+      #"Members Council": "Members Council" # this one is empty - see Members Council
+      #"Partner": "Partner" # this one is empty - see Business Partner
+      #"Member States Representative": "Member States Representative" # this one is empty - see Member States
   relation_pages: &relation_pages
     pages:
       label: "Pages"
