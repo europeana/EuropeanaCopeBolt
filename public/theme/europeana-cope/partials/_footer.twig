@@ -70,7 +70,7 @@
 
         <div class="sub-footer">
 
-            {{ menu('footer', 'partials/_menu_footer.twig') }}
+            {# {{ menu('footer', 'partials/_menu_footer.twig') }} #}
 
             {% setcontent footereu = 'resources/footer-eu' %}
             {% if footereu is not empty and footereu.values.image.file is not empty %}
@@ -101,7 +101,7 @@
                 </div>
             {% else %}
                 <div class="extra-logo">
-                    <img src="{{paths.theme}}images/2018_eych_purple_logo.png"  alt="2018 European year of cultural heritage. #EuropeForCulture"/>
+
                 </div>
             {% endif %}
 
