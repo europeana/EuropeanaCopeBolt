@@ -10,458 +10,391 @@ $bizblack:             #231F20;
 $bizdarkgrey:          #595959;
 
 
-.splashpage-bizplan2019 header {
-    background-color: $white;
-    padding: 1rem;
+.splashpage-bizplan2019 {
 
-    @include respond-to(large-screens) {
-        display: flex;
-        align-content: center;
-        align-items: center;
-    }
-
-    .mainlogo {
-        // width: 100%;
-        padding-left: 0;
-        margin: 0 auto;
-        text-align: center;
-        width: 165px;
+    header {
+        background-color: $white;
+        padding: 1rem;
 
         @include respond-to(large-screens) {
-            width: 165px;
-            margin: 0 1rem 0 0;
+            display: flex;
+            align-content: center;
+            align-items: center;
         }
 
-        img {
+        .mainlogo {
+            // width: 100%;
+            padding-left: 0;
+            margin: 0 auto;
+            text-align: center;
             width: 165px;
-            height: auto;
+
+            @include respond-to(large-screens) {
+                width: 165px;
+                margin: 0 1rem 0 0;
+            }
+
+            img {
+                width: 165px;
+                height: auto;
+            }
+
+            h1 {
+
+            }
+
+        }
+
+        nav {
+            padding: 0;
+            margin-top: 1.5rem;
+            // background: #f70;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            @media only screen and (min-width: 420px) {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
+            @include respond-to(large-screens) {
+                flex-grow: 1;
+                padding-left: 1.5rem;
+                margin-top: 0;
+                justify-content: flex-start;
+            }
+
+
+            ul {
+                // background: #f07;
+                margin-bottom: 1rem;
+                @media only screen and (min-width: 420px) {
+                    margin-bottom: 0;
+                    flex: 1; //magic thingy to prevent this element from being too wide
+
+                }
+            }
+
+            li {
+                padding: 1rem 1rem 0 0;
+                display: inline-block;
+                font-size: .875rem;
+
+                &:first-child {
+                    padding-right: 1rem;
+                }
+
+                @media only screen and (min-width: 420px) {
+                    font-size: 1rem;
+                }
+            }
+
+            a {
+                font-weight: 700;
+                color: $black;
+            }
+
+            a.button {
+                padding: .5rem 1rem;
+                margin-left: auto;
+
+                @include respond-to(large-screens) {
+                    padding: 1rem;
+                }
+            }
+        }
+
+    }
+
+
+    .wheel-section {
+        // background: $white;
+        background: $paper url('../images/splash_bizplan2019/decahedron_background_pattern.png');
+        background-size: 35px 24px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 7.5rem 1rem;
+        width: 100%;
+        // transition:  background 0.1s ease-out; // background image cannot have transition ... causes flickering ^AW
+
+        &.hashighlight {
+            background: $white url('../images/splash_bizplan2019/decahedron_background_pattern.png');
+            background-size: 35px 24px;
+        }
+
+        // > 600px
+        @media only screen and (min-width: 37.5em) {
+            padding: 7.5rem 0;
+            width: 100%;
+        }
+
+        .wheel-container {
+            max-width: 530px;
+            max-height: 530px;
+            width: 100%;
+            height: 100%;
+            // background: #f07;
+
+            // > 600px
+            @media only screen and (min-width: 37.5em) {
+
+            }
+        }
+
+        .wheel {
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+            // background: #f09;
+
+            // > 600px
+            @media only screen and (min-width: 37.5em) {
+
+            }
+
+        }
+
+        .center {
+            width: 86%;
+            height: 86%;
+            border-radius: 50%;
+            background: $white;
+            // opacity: 0.5;
+            position: absolute;
+            top: 6%;
+            left: 7%;
+            z-index: 3;
+            text-align: center;
+
+
+            // > 600px
+            @media only screen and (min-width: 37.5em) {
+                top: 6%;
+                left: 7%;
+                width: 86%;
+                height: 86%;
+            }
         }
 
         h1 {
+            width: 80%;
+            margin: 15vw auto 0;
 
-        }
-
-    }
-
-    nav {
-        padding: 0;
-        margin-top: 1.5rem;
-        // background: #f70;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-
-        @media only screen and (min-width: 420px) {
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
-
-        @include respond-to(large-screens) {
-            flex-grow: 1;
-            padding-left: 1.5rem;
-            margin-top: 0;
-            justify-content: flex-start;
-        }
-
-
-        ul {
-            // background: #f07;
-            margin-bottom: 1rem;
-            @media only screen and (min-width: 420px) {
-                margin-bottom: 0;
-                flex: 1; //magic thingy to prevent this element from being too wide
-
-            }
-        }
-
-        li {
-            padding: 1rem 1rem 0 0;
-            display: inline-block;
-            font-size: .875rem;
-
-            &:first-child {
-                padding-right: 1rem;
-            }
-
-            @media only screen and (min-width: 420px) {
-                font-size: 1rem;
-            }
-        }
-
-        a {
-            font-weight: 700;
-            color: $black;
-        }
-
-        a.button {
-            padding: .5rem 1rem;
-            margin-left: auto;
-
-            @include respond-to(large-screens) {
-                padding: 1rem;
-            }
-        }
-    }
-
-}
-
-
-.wheel-section {
-    // background: $white;
-    background: $paper url('../images/splash_bizplan2019/decahedron_background_pattern.png');
-    background-size: 35px 24px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 7.5rem 1rem;
-    width: 100%;
-    // transition:  background 0.1s ease-out; // background image cannot have transition ... causes flickering ^AW
-
-    &.hashighlight {
-        background: $white url('../images/splash_bizplan2019/decahedron_background_pattern.png');
-        background-size: 35px 24px;
-    }
-
-    // > 600px
-    @media only screen and (min-width: 37.5em) {
-        padding: 7.5rem 0;
-        width: 100%;
-    }
-
-    .wheel-container {
-        max-width: 530px;
-        max-height: 530px;
-        width: 100%;
-        height: 100%;
-        // background: #f07;
-
-        // > 600px
-        @media only screen and (min-width: 37.5em) {
-
-        }
-    }
-
-    .wheel {
-        width: 100%;
-        padding-bottom: 100%;
-        position: relative;
-        // background: #f09;
-
-        // > 600px
-        @media only screen and (min-width: 37.5em) {
-
-        }
-
-    }
-
-    .center {
-        width: 86%;
-        height: 86%;
-        border-radius: 50%;
-        background: $white;
-        // opacity: 0.5;
-        position: absolute;
-        top: 6%;
-        left: 7%;
-        z-index: 3;
-        text-align: center;
-
-
-        // > 600px
-        @media only screen and (min-width: 37.5em) {
-            top: 6%;
-            left: 7%;
-            width: 86%;
-            height: 86%;
-        }
-    }
-
-    .gates {
-        // margin-top: 15vw;
-        width: 50%;
-        margin: 15vw auto 0;
-
-        color: $baseFirstThemeColour;
-        text-transform: uppercase;
-        letter-spacing: .3px;
-        font-size: 2.3vw;
-        font-weight: 700;
-
-        @media only screen and (min-width: 37.5em) {
-            margin-top: 87px;
-            font-size: 0.8625rem;
-        }
-
-    }
-
-    .mainnumber {
-        // margin-top: -15px;
-        // margin-left: -10vw; //optical and responsive
-        color: $bizblack;
-        font-size: 40vw; //responsive font size
-        font-weight: 600;
-        letter-spacing: -0.17em;
-        line-height: .9;
-        width: 50%;
-        margin: 0 auto;
-
-        // > 600px
-        @media only screen and (min-width: 37.5em) {
-            font-size: 15.125rem;
-            // margin-left: -68px; //optical
-            margin: 0 auto;
-        }
-
-        & span {
-            display: block;
-            margin-left: -10vw;
+            color: $baseFirstThemeColour;
+            text-transform: uppercase;
+            letter-spacing: .3px;
+            font-size: 1.56rem;
+            // font-size: 2.3vw;
+            font-weight: 500;
+            text-align: left;
 
             @media only screen and (min-width: 37.5em) {
-                margin-left: -68px;
+                margin-top: 130px; //optical
+                font-size: 1.56rem;
+                width: 280px;
+                // background: #f60;
             }
-        }
-    }
-
-    .slogan {
-        padding-left: 29vw;
-        font-size: 3vw; //responsive font size
-        width: 63vw;
-        text-align: left;
-        margin: 0;
-        line-height: 1.2;
-        color: $bizblack;
-
-        // > 600px
-        @media only screen and (min-width: 37.5em) {
-            font-size: 1.125rem;
-            padding-left: 163px;
-            width: 370px;
 
         }
-    }
 
+        .slogan {
+            width: 80%;
+            margin: 3vw auto;
 
-    article {
-        .handle { //the form thingie that gets hovered!
-            transform-origin: bottom center;
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 34%;  //why?
-            width: 32%;
-            height: 49%;
-
-            @media only screen and (min-width: 37.5em) {
-                display: block;
-                width: 170px;
-                height: 260px;
-            }
-
-            > svg {
-                display: block;
-                // width: 25%;
-                // height: 25%;
-            }
-
-            &.handle-1 {
-                transform: rotate(0deg);
-            }
-            &.handle-2 {
-                transform: rotate(36deg);
-            }
-            &.handle-3 {
-                transform: rotate(72deg);
-            }
-            &.handle-4 {
-                transform: rotate(108deg);
-            }
-            &.handle-5 {
-                transform: rotate(144deg);
-            }
-            &.handle-6 {
-                transform: rotate(180deg);
-            }
-            &.handle-7 {
-                transform: rotate(216deg);
-            }
-            &.handle-8 {
-                transform: rotate(252deg);
-            }
-            &.handle-9 {
-                transform: rotate(288deg);
-            }
-            &.handle-10 {
-                transform: rotate(324deg);
-            }
-        }
-
-        // display: none;
-
-        // > 600px
-
-
-        > .center { //all other centers
-            display: none;
-            text-align: center;
-        }
-
-        h2.mainnumber {
-            margin-bottom: 0;
-            padding-top: 6vw;
-            padding-bottom: 1vw;
-
-            text-align: center;
-            letter-spacing: 0;
-            font-size: 30vw;
-
-            @media only screen and (min-width: 37.5em) {
-                font-size: 13rem;
-                padding-top: 30px;
-                padding-bottom: 10px;
-            }
-
-            span {
-                margin-left: 0;
-            }
-        }
-
-        .statement {
-            font-size: 3vw; //responsive font size
+            font-size: 1.56rem;
+            // font-size: 2.3vw;
+            font-weight: 800;
+            text-align: left;
             line-height: 1.2;
-            width: 90%;
-            margin: 1rem auto 0;
-            a {
-                color: $bizblack;
+            color: $bizblack;
 
-                &:hover, &:active, &:focus {
-                    color: $baseFirstThemeColour;
-                }
-            }
-            // height: 50px;
-
-
+            // > 600px
             @media only screen and (min-width: 37.5em) {
-                font-weight: 300;
-                font-size: 1.125rem;
-                height: 80px; // set height for equal quotes
+                font-size: 2.3rem;
+                width: 280px;
+                // background: #f09;
             }
         }
 
-        .thumblink-persons {
-            a {
-                display: inline-block;
-            }
-            h3 {
-                font-size: 0.75rem;
-                margin: 0;
-            }
-            p.function {
-                font-size: 0.55rem;
-                color: $bizdarkgrey;
-                width: 50%;
-                margin: 0 auto;
-                text-align: center;
 
-                display: none;
+        article {
+            .handle { //the form thingie that gets hovered!
+                transform-origin: bottom center;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 34%;  //why?
+                width: 32%;
+                height: 49%;
+
 
                 @media only screen and (min-width: 37.5em) {
                     display: block;
+                    width: 170px;
+                    height: 260px;
+                }
+
+                &:hover {
+                    background: $baseFirstThemeColour;
+                }
+
+                &.handle-1 {
+                    transform: rotate(0deg);
+                }
+                &.handle-2 {
+                    transform: rotate(36deg);
+                }
+                &.handle-3 {
+                    transform: rotate(72deg);
+                }
+                &.handle-4 {
+                    transform: rotate(108deg);
+                }
+                &.handle-5 {
+                    transform: rotate(144deg);
+                }
+                &.handle-6 {
+                    transform: rotate(180deg);
+                }
+                &.handle-7 {
+                    transform: rotate(216deg);
+                }
+                &.handle-8 {
+                    transform: rotate(252deg);
+                }
+                &.handle-9 {
+                    transform: rotate(288deg);
+                }
+                &.handle-10 {
+                    transform: rotate(324deg);
                 }
             }
-            p.country {
-                font-size: 0.40rem;
-                color: $black;
-                margin: 0;
+
+            > .center { //all other centers
+                // display: none;
+                padding-top: 60px; //optical
+                // position: relative;
+
+                text-align: center;
+                background: $baseFirstThemeColour;
+                color: $white;
             }
-        }
 
-        img.round {
-            width: 48px;
-            height: 48px;
-        }
+            svg.icon {
+                fill: $white;
+                width: 125px;
+                height: 125px;
+                margin-bottom: 3vw;
+            }
 
-        &.article-8 {  //styles to fix the offset of the numer '10' in articles
+            h3.title {
+                color: $white;
+                font-size: 1.25rem;
+                text-transform: uppercase;
+                font-weight: 300;
+                margin-bottom: 3vw;
+            }
 
-            h2.mainnumber {
-                letter-spacing: -0.17em;
+            .teaser {
+                font-size: 3vw; //responsive font size
+                line-height: 1.6;
+                width: 40%;
+                margin: 1rem auto 0;
+                a {
+                    color: $white;
 
-                span {
-                    display: block;
-                    margin-left: -56px;
+                    &:hover, &:active, &:focus {
+                        color: $bizblack;
+                    }
+                }
+
+                @media only screen and (min-width: 37.5em) {
+                    font-size: 0.75rem;
                 }
             }
 
-        }
-    }
-}
+            .cta {
+                font-size: .75rem;
+                position: absolute;
+                bottom: 1rem;
 
+                left: 50%;
+                width: 200px;
+                margin-left: -100px;
+            }
 
-section.report-highlights {
-    background: $white;
-    background-size: 35px 24px;
-
-
-    h2 {
-        text-transform: none;
-        color: $baseFirstThemeColour;
-        font-weight: 300;
-        font-size: 1.5rem;
-        text-align: left;
-        padding: 0 1rem;
-
-        @include respond-to(medium-screens) {
-            font-size: 2rem;
-        }
-
-        @include respond-to(large-screens) {
-            font-size: 3rem;
         }
     }
 
-    h3 {
-        color: $bizblack;
-        font-size: 1.175rem;
-        font-weight: 600;
-        margin-bottom: .2rem;
+
+    section.report-highlights {
+        background: $white;
+        background-size: 35px 24px;
+
+
+        h2 {
+            text-transform: none;
+            color: $baseFirstThemeColour;
+            font-weight: 300;
+            font-size: 1.5rem;
+            text-align: left;
+            padding: 0 1rem;
+
+            @include respond-to(medium-screens) {
+                font-size: 2rem;
+            }
+
+            @include respond-to(large-screens) {
+                font-size: 3rem;
+            }
+        }
+
+        h3 {
+            color: $bizblack;
+            font-size: 1.175rem;
+            font-weight: 600;
+            margin-bottom: .2rem;
+        }
+        p.teaser {
+            color: $bizdarkgrey;
+            font-size: 0.83rem;
+            margin-top: 0;
+        }
+
+        svg.icon {
+            height: 105px;
+            width: 105px; // anders wordt ie vreemd groot. TODO: nog oplossen.
+            margin: 0;
+            fill: $bizdarkgrey;
+        }
+
     }
-    p.teaser {
-        color: $bizdarkgrey;
-        font-size: 0.83rem;
+
+    footer {
         margin-top: 0;
-    }
 
-    svg.icon {
-        height: 105px;
-        width: 105px; // anders wordt ie vreemd groot. TODO: nog oplossen.
-        margin: 0;
-        fill: $bizdarkgrey;
-    }
-
-}
-
-.splashpage-ten-years footer {
-    margin-top: 0;
-
-    .sub-footer {
-        margin-top: 2rem;
-    }
-
-    .copyright {
-        @include respond-to(large-screens) {
-            float: left;
-        }
-    }
-
-    .eu-disclaimer {
-        @include respond-to(large-screens) {
-            float: right;
-            max-width: 700px;
-            width: 56%; //optical
+        .sub-footer {
+            margin-top: 2rem;
         }
 
+        .copyright {
+            @include respond-to(large-screens) {
+                float: left;
+            }
+        }
+
+        .eu-disclaimer {
+            @include respond-to(large-screens) {
+                float: right;
+                max-width: 700px;
+                width: 56%; //optical
+            }
+
+        }
     }
 }
-
 

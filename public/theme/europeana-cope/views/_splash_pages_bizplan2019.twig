@@ -86,8 +86,8 @@
         'articlelink' : '/page/pagename'
         },
     '10' : {
-        'title' : 'This is the title',
-        'teaser' : 'This is the teaser for this page.',
+        'title' : 'Personal Stories',
+        'teaser' : 'Participants share 600 personal stories with Europeana Migration',
         'image' : 'icon-biz-people',
         'articlelink' : '/page/pagename'
         }
@@ -119,37 +119,32 @@
 
 <main>
     <section class="wheel-section group" id="perspectives">
-        <h2 class="sr-only">Explore our specialists</h2>
+        <h2 class="sr-only">Explore the insights</h2>
         <div class="wheel-container">
             <div class="wheel">
                 <div class="center">
-                    <p class="gates">The gates are open</p>
-                    <p class="mainnumber"><span>10<span></p>
-                    <p class="slogan">perspectives on the future of digital culture</p>
+                    <h1>Annual Report 2018</h1>
+                    <p class="slogan">A decade of democratising culture</p>
                 </div>
 
                 {# {% for person in persons %} #}
-                {% for pagestyle in pageinfo %}
+                {% for item in pageinfo %}
                     {# {% set personstyle = pageinfo[person.id] %} #}
 
-                <article class="article-{{loop.index}}"
+                <article class="article-{{ loop.index }}"
                     data-bgcolor="#ff0099">
-                    <div class="handle handle-{{loop.index}}">
-                            <img src="{{ pagestyle.image }}"></img>
+                    <div class="handle handle-{{ loop.index }}">
+
                         </svg>
                     </div>
 
                     <div class="center">
-                        <h2 class="mainnumber" style="color: #ff0099"><span>NUMBER</span></h2>
-
-                        <p class="statement"><a href="{{ pagestyle.articlelink }}">{{ pagestyle.title|raw }} → </a></p>
-                        <div class="thumblink-fourcol thumblink-persons">
-                            <a href="#">
-                                <img class="round" src="{{ pagestyle.title }}" alt="{{ pagestyle.title }}"/>
-                            </a>
-                            <h3>{{ pagestyle.title }}</h3>
-                            <p class="function">{{ pagestyle.teaser }}</p>
-                        </div>
+                        <svg class="icon">
+                            <use xlink:href="#{{ item.image }}"></use>
+                        </svg>
+                        <h3 class="title">{{ item.title }} ({{ loop.index }})</h3>
+                        <p class="teaser">{{ item.teaser }}</p>
+                        <p class="cta">Call to action</p>
                     </div>
 
                 </article>
