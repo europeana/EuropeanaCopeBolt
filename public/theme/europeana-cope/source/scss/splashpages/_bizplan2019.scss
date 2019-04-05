@@ -1,7 +1,7 @@
 // SPLASHPAGE 10 years Europeana Pro
 
-/* separate breakpoint for this splash: 600px */
-@media only screen and (min-width: 37.5em) {
+/* separate breakpoint for this splash: 560px */
+@media only screen and (min-width: 35em) {
 // here be stuff for the big screen
 }
 
@@ -120,8 +120,8 @@ $bizdarkgrey:          #595959;
         padding: 7.5rem 1rem;
         width: 100%;
 
-        // > 600px
-        @media only screen and (min-width: 37.5em) {
+        // > 560px
+        @media only screen and (min-width: 35em) {
             padding: 7.5rem 0;
             width: 100%;
         }
@@ -166,8 +166,8 @@ $bizdarkgrey:          #595959;
             height: 100%;
             // background: #f07;
 
-            // > 600px
-            @media only screen and (min-width: 37.5em) {
+            // > 560px
+            @media only screen and (min-width: 35em) {
 
             }
         }
@@ -178,8 +178,8 @@ $bizdarkgrey:          #595959;
             position: relative;
             // background: #f09;
 
-            // > 600px
-            @media only screen and (min-width: 37.5em) {
+            // > 560px
+            @media only screen and (min-width: 35em) {
 
             }
 
@@ -188,17 +188,16 @@ $bizdarkgrey:          #595959;
         .center {
             width: 86%;
             height: 86%;
+            top: 7.358%;
+            left: 7%;
             border-radius: 50%;
             background: rgba($white,0.84);
             position: absolute;
-            top: 6%;
-            left: 7%;
             z-index: 3;
             text-align: center;
 
-
-            // > 600px
-            @media only screen and (min-width: 37.5em) {
+            // > 560px
+            @media only screen and (min-width: 35em) {
                 top: 39px; //optical
                 left: 7%;
                 width: 86%;
@@ -207,18 +206,17 @@ $bizdarkgrey:          #595959;
         }
 
         h1 {
-            width: 80%;
-            margin: 15vw auto 0;
-
+            width: 60%;
+            margin: 22vw auto 0;
             color: $baseFirstThemeColour;
             text-transform: uppercase;
             letter-spacing: .3px;
-            font-size: 1.56rem;
-            // font-size: 2.3vw;
+
+            font-size: 4vw;
             font-weight: 500;
             text-align: left;
 
-            @media only screen and (min-width: 37.5em) {
+            @media only screen and (min-width: 35em) {
                 margin-top: 130px; //optical
                 font-size: 1.56rem;
                 width: 280px;
@@ -228,20 +226,19 @@ $bizdarkgrey:          #595959;
         }
 
         .slogan {
-            width: 80%;
-            margin: 3vw auto;
-
-            font-size: 1.56rem;
-            // font-size: 2.3vw;
+            width: 60%;
+            margin: 6.67vw auto;
+            font-size: 6vw;
             font-weight: 800;
             text-align: left;
             line-height: 1.2;
             color: $bizblack;
 
-            // > 600px
-            @media only screen and (min-width: 37.5em) {
+            // > 560px
+            @media only screen and (min-width: 35em) {
                 font-size: 2.3rem;
                 width: 280px;
+                margin-top: 2.5rem;
                 // background: #f09;
             }
         }
@@ -259,7 +256,7 @@ $bizdarkgrey:          #595959;
                 clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 
 
-                @media only screen and (min-width: 37.5em) {
+                @media only screen and (min-width: 35em) {
                     display: block;
                     width: 170px;
                     height: 265px;
@@ -338,7 +335,7 @@ $bizdarkgrey:          #595959;
                     }
                 }
 
-                @media only screen and (min-width: 37.5em) {
+                @media only screen and (min-width: 35em) {
                     font-size: 0.75rem;
                 }
             }

@@ -18,6 +18,7 @@ article
             duration: 200,
             queue: false
         });
+        $('#maincenter').hide();
         // alert('klik');
         e.preventDefault();
         e.stopPropagation();
@@ -29,7 +30,7 @@ article
         section.removeClass('hashighlight')
         $(this).removeClass('highlight');
         $(this).find('.center').hide();
-        section.css("background", "");
+        $('#maincenter').show();
 
         article.stop().fadeIn({ duration: 0 });
 
