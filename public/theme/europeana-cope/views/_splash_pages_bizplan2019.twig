@@ -3,8 +3,6 @@
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
 </style>
 
-
-
 {# <svg class="icon icon-folder">
         <use xlink:href="#icon-folder"></use>
     </svg>
@@ -122,7 +120,12 @@
             <li><a href="#perspectives">Annual Report 2018</a></li>
             <li><a href="#report-highlights">Report Highlights</a></li>
         </ul>
-        <a class="button outline" href="/">Download pdf</a>
+        <a class="button outline" href="/">
+            Download pdf
+             <svg class="icon icon-folder">
+                <use xlink:href="#icon-biz-download"></use>
+            </svg>
+        </a>
     </nav>
 
 
@@ -142,11 +145,7 @@
                     <p class="slogan">A decade of democratising culture</p>
                 </div>
 
-
-
-                {# {% for person in persons %} #}
                 {% for item in pageinfo %}
-                    {# {% set personstyle = pageinfo[person.id] %} #}
 
                 <article class="article-{{ loop.index }}">
                     <div class="handle handle-{{ loop.index }}">
@@ -178,18 +177,17 @@
                 {% set orderedpages = [1,2,3,4,5,6,7,8,9,10] %}
                 {% for orderid in orderedpages %}
 
-                {% set page = pageinfo[orderid] %}
+                {% set item = pageinfo[orderid] %}
                 <article class="column fifth thumblink-fivecol thumblink-persons">
-                    <a href="{{ page.articlelink }}">
+                    <a href="{{ item.articlelink }}">
                         <svg class="icon icon-folder">
-                            <use xlink:href="#{{ page.image }}"></use>
+                            <use xlink:href="#{{ item.image }}"></use>
                         </svg>
 
-                    <h3>{{ page.title }}</h3>
-                    <p class="teaser">{{ page.teaser }}</p>
+                    <h3>{{ item.title }}</h3>
+                    <p class="teaser">{{ item.teaser }}</p>
                     </a>
                 </article>
-
                 {% endfor %}
 
             </div>

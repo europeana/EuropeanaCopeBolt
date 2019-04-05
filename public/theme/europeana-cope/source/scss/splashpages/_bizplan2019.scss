@@ -103,6 +103,7 @@ $bizdarkgrey:          #595959;
                 @include respond-to(large-screens) {
                     padding: 1rem;
                 }
+
             }
         }
 
@@ -126,22 +127,9 @@ $bizdarkgrey:          #595959;
             width: 100%;
         }
 
-        // .poly {
-        //     transform: skewX(18deg) scaleY(.95);
-        //     width: 20em; height: 20em;
-        //     background: #f09;
-
-        //      * {
-        //          transform: scaleY(1.05) skewX(-18deg)
-        //         rotate(144deg)
-        //         skewX(18deg) scaleY(.95);
-
-        //      }
-        // }
-
         .poly {
             position: absolute;
-            // top: -5px;
+            max-width: 96%;
             clip-path: polygon(
                 34.54915% 2.44717%,
                 65.45085% 2.44717%,
@@ -153,9 +141,7 @@ $bizdarkgrey:          #595959;
                 9.54915% 79.38926%,
                 0% 50%,
                 9.54915% 20.61074%
-                )
-
-            // clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+                );
         }
 
 
