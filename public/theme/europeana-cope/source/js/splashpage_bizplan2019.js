@@ -1,16 +1,15 @@
 // Splashpage 10years
 
-var article = $('.splashpage-ten-years .wheel article');
-var section = $('.splashpage-ten-years .wheel-section');
-var handle = $('.splashpage-ten-years .wheel article .handle');
-var anchor = $('.splashpage-ten-years .wheel article a');
+var article = $('.splashpage-bizplan2019 .wheel article');
+var section = $('.splashpage-bizplan2019 .wheel-section');
+var handle = $('.splashpage-bizplan2019 .wheel article .handle');
+var anchor = $('.splashpage-bizplan2019 .wheel article a');
 
 article
     .on('mouseenter touchend', function(e){
         section.addClass('hashighlight');
         $(this).addClass('highlight');
         $(this).find('.center').show();
-        section.css("background-color" , $(this).data('bgcolor'));
 
         article.stop();
         $(this).show();

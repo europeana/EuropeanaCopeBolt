@@ -112,25 +112,52 @@ $bizdarkgrey:          #595959;
     .wheel-section {
         // background: $white;
         background: $paper url('../images/splash_bizplan2019/decahedron_background_pattern.png');
-        background-size: 35px 24px;
+        background-size: 23px 16px;
 
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 7.5rem 1rem;
         width: 100%;
-        // transition:  background 0.1s ease-out; // background image cannot have transition ... causes flickering ^AW
-
-        &.hashighlight {
-            background: $white url('../images/splash_bizplan2019/decahedron_background_pattern.png');
-            background-size: 35px 24px;
-        }
 
         // > 600px
         @media only screen and (min-width: 37.5em) {
             padding: 7.5rem 0;
             width: 100%;
         }
+
+        // .poly {
+        //     transform: skewX(18deg) scaleY(.95);
+        //     width: 20em; height: 20em;
+        //     background: #f09;
+
+        //      * {
+        //          transform: scaleY(1.05) skewX(-18deg)
+        //         rotate(144deg)
+        //         skewX(18deg) scaleY(.95);
+
+        //      }
+        // }
+
+        .poly {
+            position: absolute;
+            // top: -5px;
+            clip-path: polygon(
+                34.54915% 2.44717%,
+                65.45085% 2.44717%,
+                90.45085% 20.61074%,
+                100% 50%,
+                90.45085% 79.38926%,
+                65.45085% 97.55283%,
+                34.54915% 97.55283%,
+                9.54915% 79.38926%,
+                0% 50%,
+                9.54915% 20.61074%
+                )
+
+            // clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+        }
+
 
         .wheel-container {
             max-width: 530px;
@@ -162,8 +189,7 @@ $bizdarkgrey:          #595959;
             width: 86%;
             height: 86%;
             border-radius: 50%;
-            background: $white;
-            // opacity: 0.5;
+            background: rgba($white,0.84);
             position: absolute;
             top: 6%;
             left: 7%;
@@ -173,7 +199,7 @@ $bizdarkgrey:          #595959;
 
             // > 600px
             @media only screen and (min-width: 37.5em) {
-                top: 6%;
+                top: 39px; //optical
                 left: 7%;
                 width: 86%;
                 height: 86%;
@@ -228,14 +254,15 @@ $bizdarkgrey:          #595959;
                 z-index: 1;
                 top: 0;
                 left: 34%;  //why?
-                width: 32%;
-                height: 49%;
+                // width: 32%;
+                height: 50%;
+                clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 
 
                 @media only screen and (min-width: 37.5em) {
                     display: block;
                     width: 170px;
-                    height: 260px;
+                    height: 265px;
                 }
 
                 &:hover {
@@ -275,9 +302,8 @@ $bizdarkgrey:          #595959;
             }
 
             > .center { //all other centers
-                // display: none;
+                display: none;
                 padding-top: 60px; //optical
-                // position: relative;
 
                 text-align: center;
                 background: $baseFirstThemeColour;

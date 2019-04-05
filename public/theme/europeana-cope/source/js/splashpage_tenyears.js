@@ -1,9 +1,9 @@
 // Splashpage 10years
 
-var article = $('.splashpage-bizplan2019 .wheel article');
-var section = $('.splashpage-bizplan2019 .wheel-section');
-var handle = $('.splashpage-bizplan2019 .wheel article .handle');
-var anchor = $('.splashpage-bizplan2019 .wheel article a');
+var article = $('.splashpage-ten-years .wheel article');
+var section = $('.splashpage-ten-years .wheel-section');
+var handle = $('.splashpage-ten-years .wheel article .handle');
+var anchor = $('.splashpage-ten-years .wheel article a');
 
 article
     .on('mouseenter touchend', function(e){
