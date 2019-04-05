@@ -13,25 +13,28 @@ article
         article.stop();
         $(this).show();
 
-        article.not( $(this) ).fadeOut({
+        article.not( $(this) ).find('.center').fadeOut({
             duration: 200,
             queue: false
         });
+
+        article.not( $(this) ).removeClass('highlight');
         $('#maincenter').hide();
-        // alert('klik');
+
         e.preventDefault();
         e.stopPropagation();
         // return false;
 
+        // console.log('going in!');
 
     })
-    .on('mouseleave', function(){
+    .on('mouseleave', function(){  // not triggered on touch
         $(this).removeClass('highlight');
         $(this).find('.center').hide();
         $('#maincenter').show();
 
         article.stop().fadeIn({ duration: 0 });
-
+        // console.log('... and leaving.');
     });
 
 
@@ -50,5 +53,5 @@ section.on('click touchend',function(){
 
     article.stop().fadeIn({ duration: 0 });
 
-    // alert('kla0k');
+    // console.log('reset all the things');
 });
