@@ -123,13 +123,17 @@ $bizdarkgrey:          #595959;
         padding: 7.5rem 1rem;
         width: 100%;
 
+            // -ms-flex-pack: center;
+            // -ms-flex-align:center;
+            // flex: 1;
+
         // > 560px
         @media only screen and (min-width: 35em) {
             padding: 7.5rem 0;
             width: 100%;
         }
 
-        .poly {
+        .poly { //modern browsers
             position: absolute;
             max-width: 96%;
             clip-path: polygon(
@@ -144,6 +148,27 @@ $bizdarkgrey:          #595959;
                 0% 50%,
                 9.54915% 20.61074%
                 );
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                display:none; //IE11
+            }
+            @supports (position:-ms-page) {
+                display:none; //EDGE
+            }
+        }
+
+        .non-poly { // Edge en IE
+            display:none;
+            position: absolute;
+            max-width: 96%;
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                display:block; //IE11
+                -ms-transform: translateY(-50%) translateX(-2.42%);
+            }
+            @supports (position:-ms-page) {
+                display:block; //EDGE
+            }
         }
 
 
@@ -152,7 +177,6 @@ $bizdarkgrey:          #595959;
             max-height: 530px;
             width: 100%;
             height: 100%;
-            // background: #f07;
 
             // > 560px
             @media only screen and (min-width: 35em) {
