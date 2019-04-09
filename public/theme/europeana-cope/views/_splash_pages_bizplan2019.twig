@@ -120,12 +120,13 @@
             <li><a href="#perspectives">Annual Report 2018</a></li>
             <li><a href="#report-highlights">Report Highlights</a></li>
         </ul>
-        <a class="button outline" href="/">
+        <a class="button outline iframe-popup" href="/files/2014-07/Europeana_Strategy_2020.pdf">
             Download pdf
-             <svg class="icon icon-folder">
+            <svg class="icon icon-folder">
                 <use xlink:href="#icon-biz-download"></use>
             </svg>
         </a>
+        <a href="/files/2014-07/Europeana_Strategy_2020.pdf"> Normal pdf behaviour</a>
     </nav>
 
 
@@ -149,8 +150,6 @@
 
                 <article class="article-{{ loop.index }}">
                     <div class="handle handle-{{ loop.index }}">
-
-                        </svg>
                     </div>
 
                     <div class="center">
@@ -172,6 +171,7 @@
     <section class="report-highlights group module" id="report-highlights">
         <div class="inner-wrap">
             <h2>Report Highlights</h2>
+
             <div class="items-container">
 
                 {% set orderedpages = [1,2,3,4,5,6,7,8,9,10] %}
@@ -196,5 +196,7 @@
 
     {# TODO Include / inline alternative footer #}
     {{ include('partials/_footer_splashpage.twig') }}
+
+
 
 </main>

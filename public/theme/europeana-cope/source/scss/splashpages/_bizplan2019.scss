@@ -1,5 +1,7 @@
 // SPLASHPAGE 10 years Europeana Pro
 
+@import "lib/_magnific-popup.scss";
+
 /* separate breakpoint for this splash: 560px */
 @media only screen and (min-width: 35em) {
 // here be stuff for the big screen
@@ -379,8 +381,8 @@ $bizdarkgrey:          #595959;
         }
 
         svg.icon {
-            height: 105px;
-            width: 105px; // anders wordt ie vreemd groot. TODO: nog oplossen.
+            height: 80px;
+            width: 80px; // anders wordt ie vreemd groot. TODO: nog oplossen.
             margin: 0;
             fill: $bizdarkgrey;
         }
