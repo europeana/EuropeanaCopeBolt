@@ -34,6 +34,8 @@
 
     <symbol id="icon-biz-creatives" viewBox="0 0 90 93"><path d="M66.176 45.171c0-11.72-9.5-21.257-21.176-21.257-11.677 0-21.177 9.536-21.177 21.257 0 7.545 4.058 14.59 10.591 18.39a2.654 2.654 0 0 1 1.321 2.299v5.883h18.53V65.86c0-.949.503-1.824 1.32-2.298 6.533-3.8 10.591-10.846 10.591-18.39m5.295 0c0 8.914-4.528 17.27-11.912 22.168v7.06a2.653 2.653 0 0 1-2.647 2.657H33.088a2.653 2.653 0 0 1-2.647-2.657v-7.06C23.057 62.442 18.53 54.086 18.53 45.171 18.53 30.52 30.404 18.6 45 18.6c14.597 0 26.472 11.92 26.472 26.571m6.286-31.55a2.64 2.64 0 0 0-3.743 0L68.4 19.255a2.664 2.664 0 0 0 0 3.758 2.638 2.638 0 0 0 3.742 0l5.616-5.636a2.663 2.663 0 0 0 0-3.758m-22.17 66.094H34.413a2.653 2.653 0 0 0-2.647 2.658 2.653 2.653 0 0 0 2.647 2.656h21.176a2.653 2.653 0 0 0 2.647-2.656 2.653 2.653 0 0 0-2.647-2.658m31.765-37.2h-7.941a2.653 2.653 0 0 0-2.647 2.657 2.653 2.653 0 0 0 2.647 2.657h7.94A2.653 2.653 0 0 0 90 45.171a2.653 2.653 0 0 0-2.647-2.657M45 13.285a2.653 2.653 0 0 0 2.647-2.657V2.657A2.653 2.653 0 0 0 45 0a2.653 2.653 0 0 0-2.647 2.657v7.971A2.653 2.653 0 0 0 45 13.285m-34.412 29.23h-7.94A2.652 2.652 0 0 0 0 45.17a2.653 2.653 0 0 0 2.647 2.657h7.941a2.653 2.653 0 0 0 2.647-2.657 2.653 2.653 0 0 0-2.647-2.657m42.648 45.172H36.764a2.653 2.653 0 0 0-2.648 2.657A2.653 2.653 0 0 0 36.764 93h16.47a2.653 2.653 0 0 0 2.65-2.657 2.653 2.653 0 0 0-2.648-2.657M17.86 23.014l-5.615-5.636a2.664 2.664 0 0 1 0-3.758 2.64 2.64 0 0 1 3.743-.001l5.616 5.637a2.663 2.663 0 0 1-.001 3.758 2.64 2.64 0 0 1-3.743 0"/></symbol>
 
+    <symbol id="icon-handle" viewbox= "0 0 170 265"><path d="M85 265L170 0H0z" /></symbol>
+
 </svg>
 
 
@@ -129,19 +131,33 @@
         <a href="/files/2014-07/Europeana_Strategy_2020.pdf"> Normal pdf behaviour</a>
     </nav>
 
-
 </header>
 
-
-
-
+ {# <svg class="handle-svg">
+                            <use xlink:href="#icon-handle"></use>
+                        </svg> #}
 
 <main>
     <section class="wheel-section group" id="perspectives">
         <h2 class="sr-only">Explore the insights</h2>
 
-        <img class="poly" src="{{ asset('images/splash_bizplan2019/EU_annualreport_herobanner_1200px_square.jpg', 'theme') }}" width='557' height='557' />
-        <img class="non-poly" src="{{ asset('images/splash_bizplan2019/EU_annualreport_herobanner_masked.png', 'theme') }}" width='557' height='557' />
+        <svg class="svg-graphic" width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <g>
+            <clipPath id="poly-mask">
+                <polygon points="34.54915 2.44717,
+                        65.45085 2.44717,
+                        90.45085 20.61074,
+                        100 50,
+                        90.45085 79.38926,
+                        65.45085 97.55283,
+                        34.54915 97.55283,
+                        9.54915 79.38926,
+                        0 50,
+                        9.54915 20.61074" />
+            </clipPath>
+            </g>
+            <image clip-path="url(#poly-mask)" height="100%" width="100%" xlink:href="{{ asset('images/splash_bizplan2019/EU_annualreport_herobanner_1200px_square.jpg', 'theme') }}" />
+        </svg>
 
         <div class="wheel-container">
             <div class="wheel">
@@ -154,6 +170,9 @@
 
                 <article class="article-{{ loop.index }}">
                     <div class="handle handle-{{ loop.index }}">
+                        <svg class="handle-svg">
+                            <use xlink:href="#icon-handle"></use>
+                        </svg>
                     </div>
 
                     <div class="center">

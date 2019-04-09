@@ -123,9 +123,6 @@ $bizdarkgrey:          #595959;
         padding: 7.5rem 1rem;
         width: 100%;
 
-            // -ms-flex-pack: center;
-            // -ms-flex-align:center;
-            // flex: 1;
 
         // > 560px
         @media only screen and (min-width: 35em) {
@@ -133,44 +130,21 @@ $bizdarkgrey:          #595959;
             width: 100%;
         }
 
-        .poly { //modern browsers
+        .svg-graphic {
             position: absolute;
             max-width: 96%;
-            clip-path: polygon(
-                34.54915% 2.44717%,
-                65.45085% 2.44717%,
-                90.45085% 20.61074%,
-                100% 50%,
-                90.45085% 79.38926%,
-                65.45085% 97.55283%,
-                34.54915% 97.55283%,
-                9.54915% 79.38926%,
-                0% 50%,
-                9.54915% 20.61074%
-                );
 
-            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-                display:none; //IE11
+            // > 560px
+            @media only screen and (min-width: 35em) {
+                max-width: 557px;
             }
-            @supports (position:-ms-page) {
-                display:none; //EDGE
-            }
-        }
-
-        .non-poly { // Edge en IE
-            display:none;
-            position: absolute;
-            max-width: 96%;
 
             @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                 display:block; //IE11
                 -ms-transform: translateY(-50%) translateX(-2.42%);
             }
-            @supports (position:-ms-page) {
-                display:block; //EDGE
-            }
-        }
 
+        }
 
         .wheel-container {
             max-width: 530px;
@@ -265,10 +239,7 @@ $bizdarkgrey:          #595959;
                 z-index: 1;
                 top: 0;
                 left: 34%;  //why?
-                // width: 32%;
                 height: 50%;
-                clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-                // background: rgba(#f09, 0.2);
 
                 @media only screen and (min-width: 35em) {
                     display: block;
@@ -308,6 +279,8 @@ $bizdarkgrey:          #595959;
                 }
             }
 
+
+
             > .center { //all other centers
                 display: none;
                 padding-top: 60px; //optical
@@ -322,6 +295,12 @@ $bizdarkgrey:          #595959;
                 width: 125px;
                 height: 125px;
                 margin-bottom: 3vw;
+            }
+
+            svg.handle-svg {
+                fill: transparent;
+                width: 172px;
+                height: 265px;
             }
 
             h3.title {
@@ -361,8 +340,8 @@ $bizdarkgrey:          #595959;
             }
 
             &.highlight {
-                .handle {
-                    background: $baseFirstThemeColour;
+                svg.handle-svg {
+                    fill: $baseFirstThemeColour;
                 }
             }
 
