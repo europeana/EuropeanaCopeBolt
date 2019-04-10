@@ -4,6 +4,7 @@ $(document).ready(function() {
         type: 'iframe'
     });
 
+    $('.handle').show();
 
     // Splashpage BIZ PLAN 2019 (Annual Report)
 
