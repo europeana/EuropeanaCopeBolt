@@ -39,22 +39,21 @@
 
     </div>
     <div class="txt-container">
+        {% if item.company %}
+            <p class="function">{{ item.company }}</p>
+        {% endif %}
 
-            {% if item.company %}
-                <p class="function">{{ item.company }}</p>
-            {% endif %}
+        {% if item.job_title %}
+            <p class="company">{{ item.job_title }}</p>
+        {% endif %}
 
-            {% if item.job_title %}
-                <p class="company">{{ item.job_title }}</p>
-            {% endif %}
-
-            {% if item.network_participation %}
-                <p class="networklevel">
-                    {% for netw in item.network_participation %}
-                    {{ netw }}{% if loop.last == false %} / {% endif %}
-                    {% endfor %}
-                </p>
-            {% endif %}
+        {% if item.network_participation %}
+            <p class="networklevel">
+                {% for netw in item.network_participation %}
+                {{ netw }}{% if loop.last == false %} / {% endif %}
+                {% endfor %}
+            </p>
+        {% endif %}
 
 
         {% if filterpersons == 'MC Election Candidate' %}
@@ -68,7 +67,7 @@
             {% if short is not defined or short == false %}
                 {% if speaker|default(false) %}
                     {{ item.speaker_teaser }}
-                {% elseif item.teaser %}
+                {% elseif item.teaser is not empty %}
                     {{ item.teaser }}
                 {% elseif item.introduction %}
                    {{ item.introduction|excerpt(300) }}
