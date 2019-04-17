@@ -22,8 +22,8 @@
             {# for breakers we do not want an excerpt unless really necessary #}
             <p>{{ record.excerpt(300, false, search|default('')) }}</p>
         {% endif %}
-
-        <a class="button-link" href="{{ record.htmllink|default(record.link)|default('#') }}">
+        <hr>
+        <a class="button href="{{ record.htmllink|default(record.link)|default('#') }}">
             {{ record.buttontext|default('Learn more') }}
         </a>
     </div>

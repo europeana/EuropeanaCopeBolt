@@ -3,6 +3,7 @@
 {% endif %}
 
 <article class="column half teaser-twocol teaser-{{ item.contenttype.slug  }} group">
+    <div class="rounded-card">
     <div class="img-container">
         <a href="{{ item.link }}">
         {% if item.teaser_image is defined and item.teaser_image is not empty %}
@@ -15,24 +16,22 @@
         </a>
 
         {% include 'partials/_image_attribution.twig' with { parentitem: 'teaser' } %}
-        <p class="img-insert">
-            Created: <span class="date">{{ item.datepublish|localedatetime("%e %B  %Y") }}</span>
-        </p>
     </div>
+    <div class="txt-container">
+        <h3><a href="{{ item.link }}">{{ item.title }}</a></h3>
+        <p class="meta">Created: <span class="date">{{ item.datepublish|localedatetime("%e %B  %Y") }}</span></p>
 
-    <h3><a href="{{ item.link }}">{{ item.title }}</a></h3>
-    <p class="meta">Created: <span class="date">{{ item.datepublish|localedatetime("%e %B  %Y") }}</span></p>
+    
+        {% if item.teaser is defined and item.teaser is not empty %}
+            {{ item.teaser }}
+        {% elseif item.intro is defined and item.intro is not empty %}
+            {{ item.intro }}
+        {% else %}
+            <p>{{ item.excerpt(100, false, search|default('')) }}</p>
+        {% endif %}
 
-    {% include 'partials/_tags.twig' %}
-
-    {% if item.teaser is defined and item.teaser is not empty %}
-        {{ item.teaser }}
-    {% elseif item.intro is defined and item.intro is not empty %}
-        {{ item.intro }}
-    {% else %}
-        <p>{{ item.excerpt(100, false, search|default('')) }}</p>
-    {% endif %}
-
-    <a href="{{ item.link() }}" class="readmore">Read more</a>
+        {% include 'partials/_tags.twig' %}
+        </div>
+    </div>
 </article>
 

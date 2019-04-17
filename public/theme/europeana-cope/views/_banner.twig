@@ -3,16 +3,20 @@
         <div class="colored-image"
             {% if record.image is defined and record.image is not empty %}
                 {% if layoutclass == 'third' %}
-                    style="background-image: url({{ image(record.image, 600, 400)|default('notfound') }})"
+                    style="background-image: url({{ image(record.image, 800, 1000)|default('notfound') }})"
                 {% elseif layoutclass == 'half' %}
-                    style="background-image: url({{ image(record.image, 1000, 400)|default('notfound') }})"
+                    style="background-image: url({{ image(record.image, 1500, 1000, 'r')|default('notfound') }})"
                 {% else %}
-                    style="background-image: url({{ image(record.image, 1800, 400)|default('notfound') }})"
+                    style="background-image: url({{ image(record.image, 1500, 1000, 'r')|default('notfound') }})"
                 {% endif %}
             {% else %}
                  style="background-image: url({{ image('/web_assets/default.png', 600, 400) }})"
             {% endif %}
         ></div>
+
+        <svg class="icon icon-cutoff right">
+            <use xlink:href="#icon-cutoff"></use>
+        </svg>
 
         <div class="ripple {{ record.ripplelocation | default('no-ripple') }} {{ record.ripplecolor | default('white') }} {{ record.rippleweight | default('full') }}">
             <svg class="icon icon-ripple_thin_pro">
