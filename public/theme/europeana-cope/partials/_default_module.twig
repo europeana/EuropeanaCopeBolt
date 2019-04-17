@@ -92,7 +92,11 @@
         {% if sources == 'persons'  %}
             {% if subtype is not empty or module.filter_persons is not empty %}
                 {% set filtername = 'network_participation' %}
-                {% set filtervalue = subtype|default(module.filter_persons) %}
+                {% set filtervalue = '%"' ~ subtype|default(module.filter_persons) ~ '"%' %}
+                {% if subtype|default(module.filter_persons) == '(not set)' %}
+                    {% set filtername = 1 %}
+                    {% set filtervalue = 1 %}
+                {% endif %}
             {% endif %}
         {% elseif sources == 'posts' %}
             {% if subtype is not empty or module.filter_posts is not empty %}
@@ -135,6 +139,11 @@
                     'featured': false
                 } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
                 {% set selected_records = featured_records|merge(selected_records) %}
+            {% elseif sources == 'persons' %}
+                {% setcontent selected_records = sources where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm)
+                } orderby '-datepublish' limit override_amount|default(10) allowpaging %}
             {% else %}
                 {% setcontent selected_records = sources where {
                     (filtername): (filtervalue),
@@ -166,7 +175,7 @@
                 } orderby 'name' limit override_amount|default(10) allowpaging %}
             {% elseif sources == 'persons' %}
                 {% setcontent selected_records = sources where {
-                    (filtername): '%' ~ (filtervalue) ~'%',
+                    (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm)
                 } orderby 'last_name' limit override_amount|default(10) allowpaging %}
             {% else %}

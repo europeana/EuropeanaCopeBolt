@@ -11,17 +11,44 @@
     {% endif %}
     </a>
 
+    {# name #}
     <h3>{{ item.first_name }} {{ item.last_name }}</h3>
 
+    {# job title #}
     {% if item.job_title %}
     <p class="function">
         {{ item.job_title }}
     </p>
     {% endif %}
 
+    {# organisation #}
     {% if item.company %}
     <p class="company">
         {{ item.company }}
+    </p>
+    {% endif %}
+
+
+    {# governing board role #}
+    {% if item.gb_role is not empty %}
+    <p class="roles" title="Governing Board Role: {{ item.gb_role }}">
+        {{ item.gb_role }}
+    </p>
+    {% endif %}
+
+    {# network association member role - europeana foundation team #}
+    {% if item.na_role is not empty %}
+    <p class="roles network" title="Network Association role / Europeana Foundation team: {{ item.na_role }}">
+        <svg class="icon icon-users">
+            <use xlink:href="#icon-users"></use></svg>
+        {{ item.na_role }}
+    </p>
+    {% endif %}
+
+    {# en - community role #}
+    {% if item.na_community_role is not empty %}
+    <p class="roles" title="Network Association Community role: {{ item.na_community_role }}">
+        {{ item.na_community_role }}
     </p>
     {% endif %}
 

@@ -47,14 +47,32 @@
             <p class="company">{{ item.job_title }}</p>
         {% endif %}
 
-        {% if item.network_participation %}
-            <p class="networklevel">
-                {% for netw in item.network_participation %}
-                {{ netw }}{% if loop.last == false %} / {% endif %}
-                {% endfor %}
-            </p>
-        {% endif %}
 
+        <p class="networklevel">
+            {# governing board role #}
+            {% if item.gb_role is not empty %}
+            <span title="Governing Board Role: {{ item.gb_role }}">
+                {{ item.gb_role }}
+            </span>
+            {% endif %}
+            {% if item.gb_role is not empty and
+                ( item.na_role is not empty or item.na_community_role is not empty ) %} | {% endif %}
+
+            {# network association member role - europeana foundation team #}
+            {% if item.na_role is not empty %}
+            <span title="Network Association role / Europeana Foundation team: {{ item.na_role }}">
+                {{ item.na_role }}
+            </span>
+            {% endif %}
+            {% if item.na_role is not empty and item.na_community_role is not empty %} | {% endif %}
+
+            {# en - community role #}
+            {% if item.na_community_role is not empty %}
+            <span title="Network Association Community role: {{ item.na_community_role }}">
+                {{ item.na_community_role }}
+            </span>
+            {% endif %}
+        </p>
 
         {% if filterpersons == 'MC Election Candidate' %}
             {# Als de listing van de kandidaten is, toon dan de candidacy teaser #}

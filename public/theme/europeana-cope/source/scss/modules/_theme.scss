@@ -823,10 +823,21 @@ section.catstream {
     .function{
         font-weight: 400;
         font-size: 1rem;
-        margin-bottom: 0;
+        margin: 1.25em 0 0 0;
     }
 
     .company,
+    .roles,
+    .network {
+        color: $medium-gray;
+        font-size: 0.75rem;
+        margin: .5em 0;
+    }
+
+    .network {
+        text-transform: uppercase;
+    }
+
     .country {
         text-transform: uppercase;
         font-size: 0.75rem;
