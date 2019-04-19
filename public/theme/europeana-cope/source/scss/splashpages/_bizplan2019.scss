@@ -346,10 +346,6 @@ $bizdarkgrey:          #595959;
                 margin: 1rem auto 0;
                 a {
                     color: $white;
-
-                    &:hover, &:active, &:focus {
-                        color: $bizblack;
-                    }
                 }
 
                 @media only screen and (min-width: 35em) {
@@ -362,10 +358,14 @@ $bizdarkgrey:          #595959;
                 font-size: .75rem;
                 position: absolute;
                 bottom: 1rem;
+                font-weight: 800;
 
                 left: 50%;
                 width: 200px;
                 margin-left: -100px;
+                a {
+                    color: $white;
+                }
             }
 
             &.highlight {
@@ -404,7 +404,7 @@ $bizdarkgrey:          #595959;
             }
         }
 
-        h3 {
+        h3, h3 a {
             color: $bizblack;
             font-size: 1.175rem;
             font-weight: 600;

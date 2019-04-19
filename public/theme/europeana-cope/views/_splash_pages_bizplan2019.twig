@@ -48,61 +48,61 @@
         'title' : 'Personal Stories',
         'teaser' : 'Participants share 600 personal stories with Europeana Migration',
         'image' : 'icon-biz-people',
-        'articlelink' : '/page/pagename'
+        'articlelink' : 'https://pro.europeana.eu/page/annual-report-2018-a-decade-of-democratising-culture#1'
         },
     '2' : {
         'title' : 'WW1 transcribed',
         'teaser' : 'Public transcribes 2,800 First World War handwritten documents',
         'image' : 'icon-biz-transcribe',
-        'articlelink' : '/page/pagename'
+        'articlelink' : 'https://pro.europeana.eu/page/annual-report-2018-a-decade-of-democratising-culture#2'
         },
     '3' : {
         'title' : 'Ingestion transformed',
         'teaser' : 'New aggregation workflow transforms data ingestion process',
         'image' : 'icon-biz-ingestion',
-        'articlelink' : '/page/pagename'
+        'articlelink' : 'https://pro.europeana.eu/page/annual-report-2018-a-decade-of-democratising-culture#3'
         },
     '4' : {
         'title' : 'Specialist communities',
         'teaser' : 'Europeana Network Associtation launches six specialist communities',
         'image' : 'icon-biz-communities',
-        'articlelink' : '/page/pagename'
+        'articlelink' : 'https://pro.europeana.eu/page/annual-report-2018-a-decade-of-democratising-culture#4'
         },
     '5' : {
         'title' : 'Future of digital',
         'teaser' : 'EuropeanaTech inspires innovators to forge the future of digital',
         'image' : 'icon-biz-future',
-        'articlelink' : '/page/pagename'
+        'articlelink' : 'https://pro.europeana.eu/page/annual-report-2018-a-decade-of-democratising-culture#5'
         },
     '6' : {
         'title' : 'Discoverable content',
         'teaser' : 'Europeana Collections updates make content more discoverable',
         'image' : 'icon-biz-content',
-        'articlelink' : '/page/pagename'
+        'articlelink' : 'https://pro.europeana.eu/page/annual-report-2018-a-decade-of-democratising-culture#6'
         },
     '7' : {
         'title' : 'Impact Playbook',
         'teaser' : 'Evidence of transformative cultral heritage shapes Impact Playbook',
         'image' : 'icon-biz-impact',
-        'articlelink' : '/page/pagename'
+        'articlelink' : 'https://pro.europeana.eu/page/annual-report-2018-a-decade-of-democratising-culture#7'
         },
     '8' : {
         'title' : 'Scholars research WW1',
         'teaser' : 'Scholars harness digital cultural heritage in the First World War research projects',
         'image' : 'icon-biz-research',
-        'articlelink' : '/page/pagename'
+        'articlelink' : 'https://pro.europeana.eu/page/annual-report-2018-a-decade-of-democratising-culture#8'
         },
     '9' : {
         'title' : 'Europeana MOOC',
         'teaser' : '2,000 teachers upskill with \'europeana in the classroom\' MOOC',
         'image' : 'icon-biz-education',
-        'articlelink' : '/page/pagename'
+        'articlelink' : 'https://pro.europeana.eu/page/annual-report-2018-a-decade-of-democratising-culture#9'
         },
     '10' : {
         'title' : 'Playful creatives',
         'teaser' : 'Creatives get playful with digital culture',
         'image' : 'icon-biz-creatives',
-        'articlelink' : '/page/pagename'
+        'articlelink' : 'https://pro.europeana.eu/page/annual-report-2018-a-decade-of-democratising-culture#10'
         }
 
     }
@@ -181,7 +181,7 @@
                         </svg>
                         <h3 class="title">{{ item.title }}</h3>
                         <p class="teaser">{{ item.teaser }}</p>
-                        <p class="cta">Call to action</p>
+                        <p class="cta"><a href="{{ item.articlelink }}">Read more <span class="sr-only">on '{{item.title}}'</a></p>
                     </div>
 
                 </article>
@@ -197,19 +197,16 @@
 
             <div class="items-container">
 
-                {% set orderedpages = [1,2,3,4,5,6,7,8,9,10] %}
-                {% for orderid in orderedpages %}
-
-                {% set item = pageinfo[orderid] %}
+                {% for item in pageinfo %}
                 <article class="column fifth thumblink-fivecol thumblink-persons">
                     <a href="{{ item.articlelink }}">
                         <svg class="icon icon-folder">
                             <use xlink:href="#{{ item.image }}"></use>
                         </svg>
-
-                    <h3>{{ item.title }}</h3>
-                    <p class="teaser">{{ item.teaser }}</p>
                     </a>
+                    <h3><a href="{{ item.articlelink }}">{{ item.title }}</a></h3>
+                    <p class="teaser">{{ item.teaser }}</p>
+
                 </article>
                 {% endfor %}
 
