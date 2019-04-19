@@ -1,8 +1,5 @@
 
 $(document).ready(function() {
-    $('.iframe-popup').magnificPopup({
-        type: 'iframe'
-    });
 
     $('.handle').show();
 
