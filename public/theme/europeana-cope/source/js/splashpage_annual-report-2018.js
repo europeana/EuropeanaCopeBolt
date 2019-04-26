@@ -5,10 +5,10 @@ $(document).ready(function() {
 
     // Splashpage BIZ PLAN 2019 (Annual Report)
 
-    var article = $('.splashpage-bizplan2019 .wheel article');
-    var section = $('.splashpage-bizplan2019 .wheel-section');
-    var handle = $('.splashpage-bizplan2019 .wheel article .handle');
-    var anchor = $('.splashpage-bizplan2019 .wheel article a');
+    var article = $('.splashpage-annual-report-2018 .wheel article');
+    var section = $('.splashpage-annual-report-2018 .wheel-section');
+    var handle = $('.splashpage-annual-report-2018 .wheel article .handle');
+    var anchor = $('.splashpage-annual-report-2018 .wheel article a');
 
     article
         .on('mouseenter touchend', function(e){

@@ -28,7 +28,7 @@ var jsFiles = [
     'js/app.js',
     'js/menu.js',
     'js/splashpage_tenyears.js',
-    'js/splashpage_bizplan2019.js'
+    'js/splashpage_annual-report-2018.js'
 ];
 
 var jsDest = '../js/';

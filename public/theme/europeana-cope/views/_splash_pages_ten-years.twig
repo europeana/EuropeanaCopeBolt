@@ -1,3 +1,6 @@
+<div class="splashpage-ten-years">
+{# Set general container for specific classes #}
+
 <style>
     /* load semibold and light for this page only */
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
@@ -119,8 +122,8 @@ in the future?’',
             'image' : themepath ~'decahedron_Dan.png',
             'articlelink' : '/page/ten-perspectives-on-the-future-of-digital-culture-dan-cohen'
         }
-        
-        
+
+
     }
 %}
 
@@ -139,8 +142,8 @@ in the future?’',
             <li><a href="#heritage-specialists">10 cultural innovators</a></li>
         </ul>
     </nav>
-    
-    
+
+
 </header>
 
 {% set personids = [] %}
@@ -177,7 +180,7 @@ in the future?’',
                     {# {% set personstyle = personinfo[person.id] %} #}
 
                 <article class="article-{{loop.index}}"
-                    data-bgcolor="{{ personstyle.color }}"> 
+                    data-bgcolor="{{ personstyle.color }}">
                     <div class="handle handle-{{loop.index}}">
                             <img src="{{ personstyle.image }}"></img>
                         </svg>
@@ -199,7 +202,7 @@ in the future?’',
 
                 </article>
                 {% endfor %}
-                
+
             </div>{# /wheel #}
         </div>
     </section>
@@ -211,7 +214,7 @@ in the future?’',
 
                 {% set orderedpersons = [7,4,9,10,5,6,2,3,1,8] %}
                 {% for orderid in orderedpersons %}
-                
+
                 {% set person = personinfo[orderid] %}
                 <article class="column fifth thumblink-fivecol thumblink-persons">
                     <a href="/person/{{ person.personid }}">
@@ -232,3 +235,4 @@ in the future?’',
     {{ include('partials/_footer_splashpage.twig') }}
 
 </main>
+</div>
