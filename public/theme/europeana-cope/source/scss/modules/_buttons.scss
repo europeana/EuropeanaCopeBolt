@@ -143,10 +143,21 @@ button.outline,
     text-transform: uppercase;
     font-size: 0.875rem;
 
+    svg {
+        width: .9em;
+        height: .9em;
+        margin-left: .5em;
+        vertical-align: baseline;
+    }
+
     &:hover {
         background: $baseFirstThemeColour;
         color: $white;
         border-color: $baseFirstThemeColour;
+
+        svg {
+            fill: $white;
+        }
     }
 }
 

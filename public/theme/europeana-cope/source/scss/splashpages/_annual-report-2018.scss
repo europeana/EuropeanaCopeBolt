@@ -1,0 +1,447 @@
+// SPLASHPAGE 10 years Europeana Pro
+
+@import "lib/_magnific-popup.scss";
+
+/* separate breakpoint for this splash: 560px */
+@media only screen and (min-width: 35em) {
+// here be stuff for the big screen
+}
+
+/* splashpage colors */
+$bizblack:             #231F20;
+$bizdarkgrey:          #595959;
+
+
+// Not used bc not asked for and some issues
+// - needs opacity declaration on each handle ( .handle4 etc) on highlight
+@keyframes subtle-hint {
+    50%, 100% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+}
+
+.splashpage-annual-report-2018{
+
+    header {
+        background-color: $white;
+        padding: 1rem;
+
+        @include respond-to(large-screens) {
+            display: flex;
+            align-content: center;
+            align-items: center;
+        }
+
+        .mainlogo {
+            // width: 100%;
+            padding-left: 0;
+            margin: 0 auto;
+            text-align: center;
+            width: 165px;
+
+            @include respond-to(large-screens) {
+                width: 165px;
+                margin: 0 1rem 0 0;
+            }
+
+            img {
+                width: 165px;
+                height: auto;
+            }
+
+        }
+
+        nav {
+            padding: 0;
+            margin-top: 1.5rem;
+            // background: #f70;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            @media only screen and (min-width: 420px) {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
+            @include respond-to(large-screens) {
+                flex-grow: 1;
+                padding-left: 1.5rem;
+                margin-top: 0;
+                justify-content: flex-start;
+            }
+
+
+            ul {
+                // background: #f07;
+                margin-bottom: 1rem;
+                @media only screen and (min-width: 420px) {
+                    margin-bottom: 0;
+                    flex: 1; //magic thingy to prevent this element from being too wide
+
+                }
+            }
+
+            li {
+                padding: 1rem 1rem 0 0;
+                display: inline-block;
+                font-size: .875rem;
+
+                &:first-child {
+                    padding-right: 1rem;
+                }
+
+                @media only screen and (min-width: 420px) {
+                    font-size: 1rem;
+                }
+            }
+
+            a {
+                font-weight: 700;
+                color: $black;
+            }
+
+            a.button {
+                padding: .5rem 1rem;
+                margin-left: auto;
+
+                @include respond-to(large-screens) {
+                    padding: 1rem;
+                }
+
+            }
+        }
+
+    }
+
+
+    .wheel-section {
+        // background: $white;
+        background: $paper url('../images/splash_annual-report-2018/decahedron_background_pattern.png');
+        background-size: 23px 16px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 7.5rem 1rem;
+        width: 100%;
+
+        // > 560px
+        @media only screen and (min-width: 35em) {
+            padding: 7.5rem 0;
+            width: 100%;
+        }
+
+        .svg-graphic {
+            position: absolute;
+            max-width: 96%;
+
+            // > 560px
+            @media only screen and (min-width: 35em) {
+                max-width: 557px;
+            }
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                display:block; //IE11
+                -ms-transform: translateY(-50%) translateX(-2.42%);
+            }
+
+        }
+
+        .wheel-container {
+            max-width: 530px;
+            max-height: 530px;
+            width: 100%;
+            height: 100%;
+
+            // > 560px
+            @media only screen and (min-width: 35em) {
+
+            }
+        }
+
+        .wheel {
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+            // background: #f09;
+
+            // > 560px
+            @media only screen and (min-width: 35em) {
+
+            }
+
+        }
+
+        .center {
+            width: 86%;
+            height: 86%;
+            top: 7.358%;
+            left: 7%;
+            border-radius: 50%;
+            background: rgba($white,0.84);
+            position: absolute;
+            z-index: 3;
+            text-align: center;
+
+            clip-path: circle(50% at center); // prevent deadzones on hover
+
+            // > 560px
+            @media only screen and (min-width: 35em) {
+                top: 39px; //optical
+                left: 7%;
+                width: 86%;
+                height: 86%;
+            }
+        }
+
+        h1 {
+            width: 60%;
+            margin: 22vw auto 0;
+            color: $baseFirstThemeColour;
+            text-transform: uppercase;
+            letter-spacing: .3px;
+
+            font-size: 4vw;
+            font-weight: 500;
+            text-align: left;
+
+            @media only screen and (min-width: 35em) {
+                margin-top: 130px; //optical
+                font-size: 1.56rem;
+                width: 280px;
+            }
+
+        }
+
+        .slogan {
+            width: 60%;
+            margin: 6.67vw auto;
+            font-size: 6vw;
+            font-weight: 800;
+            text-align: left;
+            line-height: 1.2;
+            color: $bizblack;
+
+            // > 560px
+            @media only screen and (min-width: 35em) {
+                font-size: 2.3rem;
+                width: 280px;
+                margin-top: 2.5rem;
+            }
+        }
+
+
+        article {
+            .handle { //the form thingie that gets hovered!
+                transform-origin: bottom center;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 34%;  //why?
+                height: 50%;
+                opacity: 0;
+
+                @media only screen and (min-width: 35em) {
+                    display: block;
+                    width: 170px;
+                    height: 265px;
+                }
+
+                &.handle-1 {
+                    transform: rotate(0deg);
+                    // animation: subtle-hint 3s ease forwards;
+                }
+                &.handle-2 {
+                    transform: rotate(36deg);
+                    // animation: subtle-hint 3s ease forwards;
+                    // animation-delay: .2s;
+                }
+                &.handle-3 {
+                    transform: rotate(72deg);
+                    // animation: subtle-hint 3s ease forwards;
+                    // animation-delay: .4s;
+                }
+                &.handle-4 {
+                    transform: rotate(108deg);
+                }
+                &.handle-5 {
+                    transform: rotate(144deg);
+                }
+                &.handle-6 {
+                    transform: rotate(180deg);
+                }
+                &.handle-7 {
+                    transform: rotate(216deg);
+                }
+                &.handle-8 {
+                    transform: rotate(252deg);
+                }
+                &.handle-9 {
+                    transform: rotate(288deg);
+                }
+                &.handle-10 {
+                    transform: rotate(324deg);
+                }
+            }
+
+
+
+            > .center { //all other centers
+                display: none;
+                padding-top: 15%;  //optical
+                text-align: center;
+                background: $baseFirstThemeColour;
+                color: $white;
+            }
+
+            svg.icon {
+                fill: $white;
+                width: 17vw;
+                height: 17vw;
+                margin-bottom: 3vw;
+
+                @media only screen and (min-width: 35em) {
+                    width: 125px;
+                    height: 125px;
+                }
+            }
+
+            svg.handle-svg {
+                fill: $baseFirstThemeColour;
+                width: 30vw;
+                height: 46vw;
+
+                 // > 560px
+                @media only screen and (min-width: 35em) {
+                    width: 172px;
+                    height: 265px;
+                }
+            }
+
+            h3.title {
+                color: $white;
+                font-size: 5vw;
+                text-transform: uppercase;
+                font-weight: 300;
+                margin-bottom: 3vw;
+
+                @media only screen and (min-width: 35em) {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .teaser {
+                font-size: 3vw; //responsive font size
+                line-height: 1.6;
+                width: 60%;
+                margin: 1rem auto 0;
+                a {
+                    color: $white;
+                }
+
+                @media only screen and (min-width: 35em) {
+                    font-size: 0.75rem;
+                    width: 40%
+                }
+            }
+
+            .cta {
+                font-size: .75rem;
+                position: absolute;
+                bottom: 1rem;
+                font-weight: 700;
+
+                left: 50%;
+                width: 200px;
+                margin-left: -100px;
+                a {
+                    color: $white;
+                }
+            }
+
+            &.highlight {
+                .handle {
+                    opacity: 1;
+                }
+                // .handle,
+                // .handle.handle-1, .handle.handle-2, .handle.handle-3 {
+                //     opacity: 1;
+                // }
+            }
+
+        }
+    }
+
+
+    section.report-highlights {
+        background: $white;
+        background-size: 35px 24px;
+
+
+        h2 {
+            text-transform: none;
+            color: $baseFirstThemeColour;
+            font-weight: 300;
+            font-size: 1.5rem;
+            text-align: left;
+            padding: 0 1rem;
+
+            @include respond-to(medium-screens) {
+                font-size: 2rem;
+            }
+
+            @include respond-to(large-screens) {
+                font-size: 3rem;
+            }
+        }
+
+        h3, h3 a {
+            color: $bizblack;
+            font-size: 1.175rem;
+            font-weight: 600;
+            margin-bottom: .2rem;
+        }
+        p.teaser {
+            color: $bizdarkgrey;
+            font-size: 0.83rem;
+            margin-top: 0;
+        }
+
+        svg.icon {
+            height: 80px;
+            width: 80px; // anders wordt ie vreemd groot. TODO: nog oplossen.
+            margin: 0;
+            fill: $bizdarkgrey;
+        }
+
+    }
+
+    footer {
+        margin-top: 0;
+
+        .sub-footer {
+            margin-top: 2rem;
+        }
+
+        .copyright {
+            @include respond-to(large-screens) {
+                float: left;
+            }
+        }
+
+        .eu-disclaimer {
+            @include respond-to(large-screens) {
+                float: right;
+                max-width: 700px;
+                width: 56%; //optical
+            }
+
+        }
+    }
+}
+

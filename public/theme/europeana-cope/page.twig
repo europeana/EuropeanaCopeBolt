@@ -8,13 +8,14 @@
         landingpage contentpage
     {%- elseif record.pagetype is defined
         and record.pagetype == 'splashpage' -%}
-        splashpage splashpage-{{ record.slug}}
+        splashpage
+        {# splashpage-{{ record.slug}} #}
     {%- else -%}
         contentpage
     {%- endif -%}
 {%- endblock bodyclass %}
 
-{% block splashpage %}     
+{% block splashpage %}
 {# if splashpage, then override the full page (= block splashpage) #}
 {%- if record.pagetype is defined and record.pagetype == 'splashpage' -%}
     {% set recordtemplate =  'views/_splash_' ~ record.contenttype.slug ~'_'~ record.slug ~ '.twig' %}
@@ -26,7 +27,7 @@
 {% endif %}
 
 {% endblock splashpage %}
-    
+
 {% block main %}
     {% set recordtemplate =  'views/_detail_' ~ record.contenttype.slug ~'_'~ record.slug ~ '.twig' %}
     {% set template =  'views/_detail_' ~ record.contenttype.slug ~ '.twig' %}

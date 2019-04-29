@@ -26,7 +26,9 @@ var jsFiles = [
     'js/lib/viewportSize.min.js',
     'js/lib/sticky-kit.min.js',
     'js/app.js',
-    'js/menu.js'
+    'js/menu.js',
+    'js/splashpage_tenyears.js',
+    'js/splashpage_annual-report-2018.js'
 ];
 
 var jsDest = '../js/';
