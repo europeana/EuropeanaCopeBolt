@@ -316,7 +316,7 @@ img.round,
         height: 164px;
         margin: 0 auto;
     }
-    
+
     .fourth & {
         width: 108px;
         height: 108px;
@@ -2263,6 +2263,25 @@ table.listingtable {
         }
     }
 }
+
+/*
+**********************************************************************
+* Logolisting
+**********************************************************************
+**/
+
+
+
+.logo-img {
+    filter: grayscale(1);
+    margin-bottom: 2rem;
+
+    @include respond-to(large-screens) {
+        margin-bottom: 4rem;
+    }
+}
+
+
 
 /*
 ***********************************************************************

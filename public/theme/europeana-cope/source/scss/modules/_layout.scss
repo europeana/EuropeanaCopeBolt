@@ -82,9 +82,13 @@ section {
     }
 
     &.image-gallery-section {
-        margin: 4rem 0
+        margin: 4rem 0;
     }
 
+    &.logolisting-section {
+        background: $footer-gray;
+        padding: 4rem 0;
+    }
 }
 
 section.contentheader {
@@ -449,6 +453,10 @@ ul.teaser-list {
 
     > .column {
         float: none;
+    }
+
+    &.items-container-centered {
+        justify-content: space-around;
     }
 
 }
