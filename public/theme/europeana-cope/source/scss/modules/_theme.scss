@@ -418,7 +418,6 @@ a.banner {
         margin: 1rem 0;
     }
 
-
     .colored-image {
         position: absolute;
         width: 100%;
@@ -652,6 +651,42 @@ a.banner {
 
 
 }
+
+/*
+* WIDGET EVENTBANNER
+**/
+
+// used for splashpage event, as a new module
+
+.banner.event-banner,
+a.banner.event-banner {
+    height: 22rem;
+    @include respond-to(large-screens){
+        height: 32rem;
+    }
+}
+
+.event-banner {
+    .header-group {
+        height: 100%;
+        text-align: right;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .colored-image {
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+}
+
+
 
 /*
 * WIDGET CALL TO ACTION - READ MORE (hoort bij bovestaande NEWS)
