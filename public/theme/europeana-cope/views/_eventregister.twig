@@ -1,0 +1,57 @@
+<div class="eventregister">
+    <div class="dates">
+        <div class="info-block">
+            {% include 'partials/_event-datetime.twig' %}
+        </div>
+    </div>
+
+    <div class="location">
+        <div class="map">
+
+        {# HERE BE MAP #}
+            {% if record.geolocation is not empty %}
+            <img width="345" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?key={{ app.config.get('general/google_api_key') -}}&center={{ record.geolocation.latitude }},{{ record.geolocation.longitude}}&zoom=11&scale=2&size=345x105&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{{ record.geolocation.address }}" alt="Google Map of {{ record.geolocation.address }}">
+
+            {% else %}
+                <img width="345" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?key={{ app.config.get('general/google_api_key') -}}&center=München&zoom=4&scale=2&size=345x105&maptype=roadmap&format=png&visual_refresh=true" alt="Google Map of Europa">
+            {% endif %}
+
+            <div class="tooltip">
+                 <p class="location-name">{{ record.location_name }}</p>
+                 <p class="location-address">{{ record.geolocation.address }}</p>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="register">
+        <a class="button">
+            Register today
+        </a>
+
+        <div class="socials">
+            <a href="https://twitter.com/EuropeanaEU" class="tw">
+                <svg class="icon icon-twitter">
+                    <use xlink:href="#icon-twitter"> </use>
+                </svg> <span class="sr-only">twitter</span>
+            </a>
+            <a href="https://www.facebook.com/Europeana" class="fb">
+                    <svg class="icon icon-facebook">
+                    <use xlink:href="#icon-facebook"> </use>
+                </svg> <span class="sr-only">facebook</span>
+            </a>
+            <a href="https://www.linkedin.com/groups/Europeana-134927/about" class="li">
+                    <svg class="icon icon-linkedin">
+                    <use xlink:href="#icon-linkedin"> </use>
+                </svg> <span class="sr-only">Linked In</span>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+    {# {{ dump(record) }} #}

@@ -468,7 +468,8 @@ pages:
             image_full:        "One full image view (_image_full.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
-            logolisting:    "Logo listing (_logolisting.twig)"
+            logolisting:       "Logo listing (_logolisting.twig)"
+            eventregister:     "Event info + register (_eventregister.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -841,7 +842,8 @@ posts:
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
-            logolisting:    "Logo listing (_logolisting.twig)"
+            logolisting:       "Logo listing (_logolisting.twig)"
+            eventregister:     "Event info + register (_eventregister.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -1224,7 +1226,8 @@ data:
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
-            logolisting:    "Logo listing (_logolisting.twig)"
+            logolisting:       "Logo listing (_logolisting.twig)"
+            eventregister:     "Event info + register (_eventregister.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -1663,7 +1666,8 @@ projects:
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
-            logolisting:    "Logo listing (_logolisting.twig)"
+            logolisting:       "Logo listing (_logolisting.twig)"
+            eventregister:     "Event info + register (_eventregister.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -2011,7 +2015,8 @@ events:
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
-            logolisting:    "Logo listing (_logolisting.twig)"
+            logolisting:       "Logo listing (_logolisting.twig)"
+            eventregister:     "Event info + register (_eventregister.twig)"
         body:
           type: html
           label: "Module body (optional)"
