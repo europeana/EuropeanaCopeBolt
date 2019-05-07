@@ -5,9 +5,8 @@
 <article class="fifth">
     <div class="img-container">
 
-        {% if item.teaser_image is defined and item.teaser_image is not empty %}
-            <img class="logo-img" src="{{ item.teaser_image|thumbnail(600,400,'r')}}" alt="{{ item.title }}"/>
-        {% elseif item.values.image is defined and item.values.image is not empty %}
+        {% if item.values.image is defined and item.values.image is not empty %}
+            {# LOGO #}
             <img class="logo-img" src="{{ item.values.image|thumbnail(600,400,'r')}}" alt="{{ item.title }}"/>
         {% else %}
              <img class="logo-img" src="{{ 'web_assets/default.png'|thumbnail(600,400,'r')}}" alt="{{ item.title }}"/>

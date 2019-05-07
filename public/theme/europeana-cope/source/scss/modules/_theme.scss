@@ -2270,14 +2270,26 @@ table.listingtable {
 **********************************************************************
 **/
 
+.logolisting-section {
+    .items-container {
 
+    }
+
+    .items-container > * {
+        margin: 0 1rem 2rem;
+
+        @include respond-to(medium-screens) {
+            margin: 0 1rem 2rem;
+        }
+    }
+}
 
 .logo-img {
     filter: grayscale(1);
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
 
     @include respond-to(large-screens) {
-        margin-bottom: 4rem;
+        // margin-bottom: 4rem;
     }
 }
 
