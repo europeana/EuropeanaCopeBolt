@@ -697,11 +697,76 @@ a.banner.event-banner {
     justify-content: center;
     align-items: center;
 
-    @include respond-to(medium-screens){
+    > * {
+        margin: 1rem 0;
+    }
+
+    @include respond-to(large-screens){
         flex-direction: row;
 
         > * {
             margin: 0 2rem;
+        }
+    }
+
+    .dates {
+       display: flex;
+       align-items: center;
+       color: $white;
+    }
+
+    .divider {
+        margin: 0 .5rem;
+    }
+
+    .calendar-block {
+        border-radius: 4px;
+        width: 111px;
+        height: 103px;
+        position: relative;
+        color: $white;
+        text-transform: uppercase;
+
+        .icon-calendarsheet {
+            fill: $denim;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .calendar-text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            padding: 1rem .5rem 0 .5rem;
+            text-align: center;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.1;
+
+        }
+
+        .calendar-month {
+            font-size: 1.2rem;
+        }
+
+        .calendar-day {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        .calendar-time {
+            font-size: .75rem;
+            margin-top: .2em;
+            letter-spacing: .3px;
         }
     }
 
@@ -746,6 +811,20 @@ a.banner.event-banner {
         }
     }
 
+    .socials {
+        text-align: center;
+        margin: 1rem 0 0 0;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            fill: $baseFirstThemeColour;
+
+            &:hover {
+                fill: $white;
+            }
+        }
+    }
 }
 
 

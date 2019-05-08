@@ -109,8 +109,9 @@ section.contentheader {
     }
 }
 
-header {
-    //background: #f60;
+header.splashpage,
+body.splashpage header {
+    padding: 1rem;
 }
 
 article {

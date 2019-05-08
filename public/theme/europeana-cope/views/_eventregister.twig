@@ -1,8 +1,52 @@
 <div class="eventregister">
     <div class="dates">
-        <div class="info-block">
+        {# <div class="info-block">
             {% include 'partials/_event-datetime.twig' %}
+        </div> #}
+
+        {% if record.start_event is defined and record.start_event is not empty %}
+
+        <div class="calendar-block">
+            <svg class="icon icon-calendarsheet">
+                <use xlink:href="#icon-calendarsheet"></use>
+            </svg>
+            <div class="calendar-text">
+                <p class="calendar-month">
+                    {{ record.start_event|localedatetime("%b") }}.
+                </p>
+                <p class="calendar-day">
+                    {{record.start_event|localedatetime("%e")}}
+                </p>
+
+                {% if (record.start_event|localedatetime("%H:%M") != '00:00') and (record.end_event|localedatetime("%H:%M") != '00:00') %}
+                    <p class="calendar-time">{{ item.start_event|localedatetime("%H:%M") }}</p>
+                {% endif %}
+            </div>
         </div>
+
+        <p class="divider"> — </p>
+
+        <div class="calendar-block">
+             <svg class="icon icon-calendarsheet">
+                <use xlink:href="#icon-calendarsheet"></use>
+            </svg>
+
+            <div class="calendar-text">
+                <p class="calendar-month">
+                    {{ record.end_event|localedatetime("%b") }}.
+                </p>
+                <p class="calendar-day">
+                    {{record.end_event|localedatetime("%e")}}
+                </p>
+
+                {% if (record.start_event|localedatetime("%H:%M") != '00:00') and (record.end_event|localedatetime("%H:%M") != '00:00') %}
+                    <p class="calendar-time">{{ item.end_event|localedatetime("%H:%M") }}</p>
+                {% endif %}
+            </div>
+        </div>
+
+        {% endif %}
+
     </div>
 
     <div class="location">
