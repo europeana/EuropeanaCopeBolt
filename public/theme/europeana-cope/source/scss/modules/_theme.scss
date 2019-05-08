@@ -415,7 +415,8 @@ a.banner {
 
     @include respond-to(large-screens){
         height: 20rem;
-        margin: 1rem 0;
+        // margin: 1rem 0;
+        margin: 0;
     }
 
     .colored-image {
@@ -777,9 +778,19 @@ a.banner.event-banner {
             border-radius: 4px;
         }
 
+        .overlay {
+            background: #A2AEBC; // best color for map overlay
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: color;
+        }
+
         .tooltip {
             position: absolute;
-            top: 2rem;
+            top: 2.5rem;
             left: 50%;
             margin-left: -97px;
             border-radius: 4px;
@@ -808,6 +819,17 @@ a.banner.event-banner {
         p.location-name {
             font-weight: 700;
             font-size:  0.75rem;
+        }
+
+        .marker {
+            position: absolute;
+            left: 50%;
+            top: .5rem;
+            margin-left: -.5em;
+
+            svg {
+                fill: $baseFirstThemeColour;
+            }
         }
     }
 
@@ -1031,7 +1053,8 @@ section.catstream {
 div.calltoaction {  //little bit more specific to avoid issues with defaul header group
     height: 200px;
     position: relative;
-    margin: 1rem 0;
+    // margin: 1rem 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1216,10 +1239,10 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
     .calltoaction {
 
 
-        margin-top: 0 rem; // needs check, gaat dit altijd goed? - AW
+        // margin-top: 0 rem; // needs check, gaat dit altijd goed? - AW
 
         @include respond-to(large-screens){
-            margin-top: -1rem;
+            // margin-top: -1rem;
         }
 
     }
