@@ -1,0 +1,29 @@
+{# GENERAL splashpage for contenttype 'pages' and pagetype 'splashpage' #}
+
+<div class="splashpage">
+{# Set general container for specific classes #}
+
+<style>
+    /* load semibold and light for this page only */
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+</style>
+
+
+<header id="header" class="">
+    <div class="mainlogo">
+        <a href="/">
+            <img src="{{ asset( 'images/splash_tenyears/logo_10thanniversary.svg','theme') }}" alt="Europeana - 10th anniversary" />
+        </a>
+    </div>
+</header>
+
+
+<main>
+    {% for module in record.modules if (global.request.get('_route') != "preview") %}
+        {{ include('partials/_default_module.twig', { 'module': module }) }}
+    {% endfor %}
+
+    {{ include('partials/_footer_splashpage.twig') }}
+
+</main>
+</div>
