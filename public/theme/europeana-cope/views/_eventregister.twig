@@ -39,10 +39,13 @@
     </div>
 
     <div class="register">
-        <a class="button">
+        {% if record.registerlink is defined and record.registerlink is not empty %}
+        <a class="button" href="{{ record.registerlink }}" >
             Register today
         </a>
+        {% endif %}
 
+        {# HIDDEN because no social info is available yet on each event
         <div class="socials">
             <a href="https://twitter.com/EuropeanaEU" class="tw">
                 <svg class="icon icon-twitter">
@@ -59,7 +62,7 @@
                     <use xlink:href="#icon-linkedin"> </use>
                 </svg> <span class="sr-only">Linked In</span>
             </a>
-        </div>
+        </div> #}
 
     </div>
 

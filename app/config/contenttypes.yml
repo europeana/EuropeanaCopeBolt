@@ -1958,6 +1958,10 @@ events:
       type: checkbox
       label: "Make this event sticky"
       postfix: "<small>One event only. Setting another event to sticky will uncheck this one.</small>"
+    registerlink:
+      type: text
+      label: "Link to register (Eventbrite etc) - optional"
+      postfix: "<small>Include https:// of http:// </small>"
     modules:
       label: Modules
       type: repeater
