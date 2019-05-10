@@ -347,11 +347,13 @@ $( document ).ready(function() {
             // set sticky topbar and menu
             $('#mainmenu').stick_in_parent();
             $('#topbar').stick_in_parent();
+            $('.sticky-header').stick_in_parent();
 
         } else {
            // remove stickyness when window is resized
            $("#topbar").trigger("sticky_kit:detach");
            $("#mainmenu").trigger("sticky_kit:detach");
+           $(".sticky-header").trigger("sticky_kit:detach");
 
         }
 

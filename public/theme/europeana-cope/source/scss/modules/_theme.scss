@@ -2,6 +2,7 @@ body {
     background-color: $off-white;
 }
 
+
 /*
 * HEADER
 **/
@@ -2950,4 +2951,17 @@ div.body {
 }
 
 
+
+/*  Special styles for 2019 event splash ( old style, but partly restyling) */
+
+.logo2019 {
+   margin: 7px 1rem  0 0;
+}
+.splashpage header {
+    height: 90px;
+}
+
+.sticky-header {
+    z-index: 10;
+}
 
