@@ -242,9 +242,9 @@ $(document).ready(function() {
   } else if(!document.referrer && document.location.pathname === '/') {
 
     // we're on the homepage so don't add a back link
-    console.log("we're on the homepage, and we've forgot where we're from");
-    console.log('referrer', document.referrer);
-    console.log('location', document.location);
+    // console.log("we're on the homepage, and we've forgot where we're from");
+    // console.log('referrer', document.referrer);
+    // console.log('location', document.location);
 
   } else if (
     (!document.referrer || (referrerlink.hostname !== document.location.hostname)) &&
