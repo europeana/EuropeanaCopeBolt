@@ -704,7 +704,7 @@ a.event-banner {
 **/
 
 .eventregister {
-    margin: 2rem 0;
+    margin: 3rem 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -717,6 +717,7 @@ a.event-banner {
     }
 
     @include respond-to(large-screens){
+        margin: 3rem 0 0;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
