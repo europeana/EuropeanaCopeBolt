@@ -196,17 +196,21 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
+
   // initialize links and bools
   var referrerlink = document.createElement('a');
   var backlink = $('<a>').text('Back').attr({'id': 'backlink', 'href': '/', 'class': 'back-link'});
   var topbar = $('nav.quicklinks ul:first');
   var filterbar = $('div.filter-listing:first .current-filters');
   //console.log('lets look in the history', window.history, document.referrer, document.location);
+
   if(document.referrer) {
     referrerlink.href = document.referrer;
     //console.log('referrerlink:', referrerlink.hostname);
   }
+
   if(document.referrer && referrerlink.hostname === document.location.hostname && document.location.pathname !== '/') {
+
     // we're in a local referrer and not on the homepage
     backlink.attr('href', document.referrer);
     backlink.on('click', function(e) {
@@ -234,12 +238,19 @@ $(document).ready(function() {
           )
       );
     }
+
   } else if(!document.referrer && document.location.pathname === '/') {
+
     // we're on the homepage so don't add a back link
     console.log("we're on the homepage, and we've forgot where we're from");
     console.log('referrer', document.referrer);
     console.log('location', document.location);
-  } else if(!document.referrer || (referrerlink.hostname !== document.location.hostname)) {
+
+  } else if (
+    (!document.referrer || (referrerlink.hostname !== document.location.hostname)) &&
+    !$('body').hasClass('splashpage')
+    ) {
+
     // no history - fallback to parent overviews
     console.log('were without (a local) history');
     // check te pagetype

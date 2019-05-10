@@ -697,16 +697,19 @@ a.banner.event-banner {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 .875rem;
 
     > * {
         margin: 1rem 0;
+        // border: 1px dotted #f09;
     }
 
     @include respond-to(large-screens){
         flex-direction: row;
+        flex-wrap: wrap;
 
         > * {
-            margin: 0 2rem;
+            margin: 0 1rem 2rem;
         }
     }
 
@@ -832,6 +835,10 @@ a.banner.event-banner {
                 fill: $baseFirstThemeColour;
             }
         }
+    }
+
+    .button {
+        // margin: 2rem 0 0;
     }
 
     .socials {

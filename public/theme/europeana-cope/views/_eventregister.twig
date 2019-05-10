@@ -45,24 +45,23 @@
         </a>
         {% endif %}
 
-        {# HIDDEN because no social info is available yet on each event
         <div class="socials">
-            <a href="https://twitter.com/EuropeanaEU" class="tw">
+            <a href="https://twitter.com/intent/tweet?url={{ paths.current }}" class="tw" title="Share on twitter">
                 <svg class="icon icon-twitter">
                     <use xlink:href="#icon-twitter"> </use>
-                </svg> <span class="sr-only">twitter</span>
+                </svg> <span class="sr-only">Share on twitter</span>
             </a>
-            <a href="https://www.facebook.com/Europeana" class="fb">
+            <a href="https://www.facebook.com/sharer.php?u={{ paths.current }}" class="fb" title="Share on facebook">
                     <svg class="icon icon-facebook">
                     <use xlink:href="#icon-facebook"> </use>
-                </svg> <span class="sr-only">facebook</span>
+                </svg> <span class="sr-only">Share on facebook</span>
             </a>
-            <a href="https://www.linkedin.com/groups/Europeana-134927/about" class="li">
+            <a href="https://www.linkedin.com/shareArticle?url={{ paths.current }}&title={{ record.title }}" class="li" title="Share on LinkedIn">
                     <svg class="icon icon-linkedin">
                     <use xlink:href="#icon-linkedin"> </use>
-                </svg> <span class="sr-only">Linked In</span>
+                </svg> <span class="sr-only">Share on Linked In</span>
             </a>
-        </div> #}
+        </div>
 
     </div>
 

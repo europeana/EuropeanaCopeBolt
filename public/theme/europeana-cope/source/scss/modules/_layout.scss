@@ -112,6 +112,11 @@ section.contentheader {
 header.splashpage,
 body.splashpage header {
     padding: 1rem;
+
+    @include respond-to(large-screens){
+        display: flex;
+    }
+
 }
 
 article {
