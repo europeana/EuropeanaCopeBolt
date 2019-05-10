@@ -719,6 +719,7 @@ a.event-banner {
     @include respond-to(large-screens){
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
 
         > * {
             margin: 0 1rem 2rem;
@@ -850,16 +851,20 @@ a.event-banner {
     }
 
     .button {
-        // margin: 2rem 0 0;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        letter-spacing: .5px;
+        font-weight: 500;
     }
 
     .socials {
         text-align: center;
-        margin: 1rem 0 0 0;
+        margin: .75rem 0 0 0;
 
         svg {
-            width: 2rem;
-            height: 2rem;
+            // width: 2rem;
+            // height: 2rem;
             fill: $baseFirstThemeColour;
 
             &:hover {

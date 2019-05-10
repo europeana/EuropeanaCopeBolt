@@ -46,21 +46,26 @@
         {% endif %}
 
         <div class="socials">
-            <a href="https://twitter.com/intent/tweet?url={{ paths.current }}" class="tw" title="Share on twitter">
-                <svg class="icon icon-twitter">
-                    <use xlink:href="#icon-twitter"> </use>
+            <a href="https://twitter.com/intent/tweet?url={{ paths.current }}" class="tw roundsocial" title="Share on twitter">
+                <svg class="icon icon-twitter-alt">
+                    <use xlink:href="#icon-twitter-alt"> </use>
                 </svg> <span class="sr-only">Share on twitter</span>
             </a>
-            <a href="https://www.facebook.com/sharer.php?u={{ paths.current }}" class="fb" title="Share on facebook">
-                    <svg class="icon icon-facebook">
-                    <use xlink:href="#icon-facebook"> </use>
+            <a href="https://www.facebook.com/sharer.php?u={{ paths.current }}" class="fb roundsocial" title="Share on facebook">
+                <svg class="icon icon-facebook-alt">
+                    <use xlink:href="#icon-facebook-alt"> </use>
                 </svg> <span class="sr-only">Share on facebook</span>
             </a>
-            <a href="https://www.linkedin.com/shareArticle?url={{ paths.current }}&title={{ record.title }}" class="li" title="Share on LinkedIn">
-                    <svg class="icon icon-linkedin">
-                    <use xlink:href="#icon-linkedin"> </use>
-                </svg> <span class="sr-only">Share on Linked In</span>
+            <a href="https://www.linkedin.com/shareArticle?url={{ paths.current }}&title={{ record.title }}" class="li roundsocial" title="Share on LinkedIn">
+                    <svg class="icon icon-linkedin-alt">
+                    <use xlink:href="#icon-linkedin-alt"> </use>
+                </svg> <span class="sr-only">Share on LinkedIn</span>
             </a>
+            {# <a href="https://www.linkedin.com/shareArticle?url={{ paths.current }}&title={{ record.title }}" class="ig roundsocial" title="Share on LinkedIn">
+                    <svg class="icon icon-instagram-alt">
+                    <use xlink:href="#icon-instagram-alt"> </use>
+                </svg> <span class="sr-only">Share on Instagram</span>
+            </a> #}
         </div>
 
     </div>
