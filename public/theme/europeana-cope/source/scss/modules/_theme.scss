@@ -667,14 +667,25 @@ a.banner.event-banner {
     }
 }
 
-.event-banner {
+a.event-banner {
     .header-group {
         height: 100%;
         text-align: right;
+        right: 0;
+        left: auto;
 
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
+        @include respond-to(large-screens){
+            width: 50%;
+        }
+
+        @include respond-to(xlarge-screens){
+            width: 33%;
+            right: 2rem;
+        }
     }
 
     h2 {
