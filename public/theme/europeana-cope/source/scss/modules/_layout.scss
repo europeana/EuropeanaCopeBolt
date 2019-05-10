@@ -119,6 +119,7 @@ body.splashpage header {
 
 }
 
+
 article {
     //background: #40e; //blue
 }
@@ -128,7 +129,10 @@ article {
 }
 
 main {
-    // background: #9f6;
+
+    body.splashpage & {
+        background: $white;
+    }
 }
 
 aside {
