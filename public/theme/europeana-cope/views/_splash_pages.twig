@@ -1,0 +1,37 @@
+{# GENERAL splashpage for contenttype 'pages' and pagetype 'splashpage' #}
+
+<div class="splashpage">
+{# Set general container for specific classes #}
+
+<style>
+    /* load semibold and light for this page only */
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+</style>
+
+
+<header id="header" class="sticky-header">
+    <div class="mainlogo">
+        <a href="/">
+            <img class="logo2019" src="{{ asset( 'images/europeana_pro_logo_2019.svg','theme') }}" alt="Europeana Pro" />
+        </a>
+    </div>
+
+    <nav class="quicklinks">
+        <ul>
+            <li class="in-page-blank-link"><a>&nbsp;</a></li>
+            {# at least one empty link is needed for the layout at the moment #}
+        </ul>
+    </nav>
+
+</header>
+
+
+<main>
+    {% for module in record.modules if (global.request.get('_route') != "preview") %}
+        {{ include('partials/_default_module.twig', { 'module': module }) }}
+    {% endfor %}
+
+    {{ include('partials/_footer_splashpage.twig') }}
+
+</main>
+</div>

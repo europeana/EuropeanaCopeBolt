@@ -319,6 +319,17 @@ $( document ).ready(function() {
         }
     }
 
+    /* Add button to splashpage header _if_ a registerbutton is there. */
+
+    var registerlink = $('.eventregister .button').attr('href');
+    console.log(registerlink);
+
+    if (registerlink && $('body').hasClass('splashpage')) {
+        var ticketbutton = $('<a>').text('Buy tickets').attr({'href': registerlink, 'class': 'button outline header-action'});
+
+        $('header').append(ticketbutton);
+    }
+
     /**
      * preloadchecks function
      * checks viewport width and does some hides and show, and moves elements
@@ -347,11 +358,13 @@ $( document ).ready(function() {
             // set sticky topbar and menu
             $('#mainmenu').stick_in_parent();
             $('#topbar').stick_in_parent();
+            $('.sticky-header').stick_in_parent();
 
         } else {
            // remove stickyness when window is resized
            $("#topbar").trigger("sticky_kit:detach");
            $("#mainmenu").trigger("sticky_kit:detach");
+           $(".sticky-header").trigger("sticky_kit:detach");
 
         }
 

@@ -82,9 +82,18 @@ section {
     }
 
     &.image-gallery-section {
-        margin: 4rem 0
+        margin: 4rem 0;
     }
 
+    &.logolisting-section {
+        background: $footer-gray;
+        // padding: 0 0 4rem 0;
+    }
+
+    &.eventregister-section {
+        background: $dark-blue;
+        // padding: 0 0 4rem 0;
+    }
 }
 
 section.contentheader {
@@ -100,9 +109,33 @@ section.contentheader {
     }
 }
 
-header {
-    //background: #f60;
+header.splashpage,
+body.splashpage header {
+    padding: 1rem;
+    text-align: center;
+
+    @include respond-to(large-screens){
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    @include respond-to(menu-full){
+        height: 90px;
+    }
+
+    .button.header-action {
+        margin-left: auto;
+        padding: 1rem;
+        display: none;
+
+        @include respond-to(large-screens){
+            display: inline-block;
+        }
+    }
+
 }
+
 
 article {
     //background: #40e; //blue
@@ -113,7 +146,10 @@ article {
 }
 
 main {
-    // background: #9f6;
+
+    body.splashpage & {
+        background: $white;
+    }
 }
 
 aside {
@@ -449,6 +485,10 @@ ul.teaser-list {
 
     > .column {
         float: none;
+    }
+
+    &.items-container-centered {
+        justify-content: space-around;
     }
 
 }

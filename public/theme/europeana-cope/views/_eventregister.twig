@@ -1,0 +1,75 @@
+<div class="eventregister">
+    <div class="dates">
+        {# <div class="info-block">
+            {% include 'partials/_event-datetime.twig' %}
+        </div> #}
+
+        {% include 'partials/_event_datetime-calendarsheet.twig' %}
+
+    </div>
+
+    <div class="location">
+        <div class="map">
+
+        {# HERE BE MAP #}
+            {% if record.geolocation is not empty %}
+            <img width="345" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?key={{ app.config.get('general/google_api_key') -}}&center={{ record.geolocation.latitude - 0.01}},{{ record.geolocation.longitude }}&zoom=11&scale=2&size=345x105&maptype=roadmap&format=png&visual_refresh=true" alt="Google Map of {{ record.geolocation.address }}">
+
+            {% else %}
+                <img width="345" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?key={{ app.config.get('general/google_api_key') -}}&center=München&zoom=4&scale=2&size=345x105&maptype=roadmap&format=png&visual_refresh=true" alt="Google Map of Europa">
+            {% endif %}
+
+            <div class="overlay"></div>
+
+            <div class="marker">
+                <svg class="icon icon-location">
+                    <use xlink:href="#icon-location"></use>
+                </svg>
+            </div>
+
+            <div class="tooltip">
+                 <p class="location-name">{{ record.location_name }}</p>
+                 <p class="location-address">{{ record.geolocation.address }}</p>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="register">
+        {% if record.registerlink is defined and record.registerlink is not empty %}
+        <a class="button" href="{{ record.registerlink }}" >
+            Register today
+        </a>
+        {% endif %}
+
+        <div class="socials">
+            <a href="https://twitter.com/intent/tweet?url={{ paths.current }}" class="tw roundsocial" title="Share on twitter">
+                <svg class="icon icon-twitter-alt">
+                    <use xlink:href="#icon-twitter-alt"> </use>
+                </svg> <span class="sr-only">Share on twitter</span>
+            </a>
+            <a href="https://www.facebook.com/sharer.php?u={{ paths.current }}" class="fb roundsocial" title="Share on facebook">
+                <svg class="icon icon-facebook-alt">
+                    <use xlink:href="#icon-facebook-alt"> </use>
+                </svg> <span class="sr-only">Share on facebook</span>
+            </a>
+            <a href="https://www.linkedin.com/shareArticle?url={{ paths.current }}&title={{ record.title }}" class="li roundsocial" title="Share on LinkedIn">
+                    <svg class="icon icon-linkedin-alt">
+                    <use xlink:href="#icon-linkedin-alt"> </use>
+                </svg> <span class="sr-only">Share on LinkedIn</span>
+            </a>
+            {# <a href="https://www.linkedin.com/shareArticle?url={{ paths.current }}&title={{ record.title }}" class="ig roundsocial" title="Share on LinkedIn">
+                    <svg class="icon icon-instagram-alt">
+                    <use xlink:href="#icon-instagram-alt"> </use>
+                </svg> <span class="sr-only">Share on Instagram</span>
+            </a> #}
+        </div>
+
+    </div>
+
+</div>
+
+    {# {{ dump(record) }} #}

@@ -2,6 +2,7 @@ body {
     background-color: $off-white;
 }
 
+
 /*
 * HEADER
 **/
@@ -316,7 +317,7 @@ img.round,
         height: 164px;
         margin: 0 auto;
     }
-    
+
     .fourth & {
         width: 108px;
         height: 108px;
@@ -415,9 +416,9 @@ a.banner {
 
     @include respond-to(large-screens){
         height: 20rem;
-        margin: 1rem 0;
+        // margin: 1rem 0;
+        margin: 0;
     }
-
 
     .colored-image {
         position: absolute;
@@ -654,6 +655,231 @@ a.banner {
 }
 
 /*
+* WIDGET EVENTBANNER
+**/
+
+// used for splashpage event, as a new module
+
+.banner.event-banner,
+a.banner.event-banner {
+    height: 22rem;
+    @include respond-to(large-screens){
+        height: 32rem;
+    }
+}
+
+a.event-banner {
+    .header-group {
+        height: 100%;
+        text-align: right;
+        right: 0;
+        left: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @include respond-to(large-screens){
+            width: 50%;
+        }
+
+        @include respond-to(xlarge-screens){
+            width: 33%;
+            right: 2rem;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .colored-image {
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+}
+
+/*
+** Register Widget EVENT
+**/
+
+.eventregister {
+    margin: 3rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .875rem;
+
+    > * {
+        margin: 1rem 0;
+        // border: 1px dotted #f09;
+    }
+
+    @include respond-to(large-screens){
+        margin: 3rem 0 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        > * {
+            margin: 0 1rem 2rem;
+        }
+    }
+
+    .dates {
+       display: flex;
+       align-items: center;
+       color: $white;
+    }
+
+    .divider {
+        margin: 0 .5rem;
+    }
+
+    .calendar-block {
+        border-radius: 4px;
+        width: 111px;
+        height: 103px;
+        position: relative;
+        color: $white;
+        text-transform: uppercase;
+
+        .icon-calendarsheet {
+            fill: $denim;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .calendar-text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            padding: 1rem .5rem 0 .5rem;
+            text-align: center;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.1;
+
+        }
+
+        .calendar-month {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .calendar-day {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        .calendar-time {
+            font-size: .75rem;
+            margin-top: .2em;
+            letter-spacing: .3px;
+        }
+    }
+
+    .map {
+        position: relative;
+
+        > img {
+            border-radius: 4px;
+        }
+
+        .overlay {
+            background: #A2AEBC; // best color for map overlay
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: color;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: 2.5rem;
+            left: 50%;
+            margin-left: -97px;
+            border-radius: 4px;
+            background: $white;
+            padding: .2rem 1rem;
+            width: 195px; //from mockup
+            box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+
+            &:before { //arrow
+                content: "";
+                position: absolute;
+                top: -7px;
+                left: 50%;
+                margin-left: -5px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 5px 7px 5px;
+                border-color: transparent transparent $white;
+            }
+        }
+        p {
+           font-size:  0.625rem;
+           margin: 0;
+        }
+        p.location-name {
+            font-weight: 700;
+            font-size:  0.75rem;
+        }
+
+        .marker {
+            position: absolute;
+            left: 50%;
+            top: .5rem;
+            margin-left: -.5em;
+
+            svg {
+                fill: $baseFirstThemeColour;
+            }
+        }
+    }
+
+    .button {
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        letter-spacing: .5px;
+        font-weight: 700;
+    }
+
+    .socials {
+        text-align: center;
+        margin: .75rem 0 0 0;
+
+        svg {
+            // width: 2rem;
+            // height: 2rem;
+            fill: $baseFirstThemeColour;
+
+            &:hover {
+                fill: $white;
+            }
+        }
+    }
+}
+
+
+
+
+
+/*
 * WIDGET CALL TO ACTION - READ MORE (hoort bij bovestaande NEWS)
 **/
 
@@ -853,7 +1079,8 @@ section.catstream {
 div.calltoaction {  //little bit more specific to avoid issues with defaul header group
     height: 200px;
     position: relative;
-    margin: 1rem 0;
+    // margin: 1rem 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1038,10 +1265,10 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
     .calltoaction {
 
 
-        margin-top: 0 rem; // needs check, gaat dit altijd goed? - AW
+        // margin-top: 0 rem; // needs check, gaat dit altijd goed? - AW
 
         @include respond-to(large-screens){
-            margin-top: -1rem;
+            // margin-top: -1rem;
         }
 
     }
@@ -2265,6 +2492,37 @@ table.listingtable {
 }
 
 /*
+**********************************************************************
+* Logolisting
+**********************************************************************
+**/
+
+.logolisting-section {
+    .items-container {
+
+    }
+
+    .items-container > * {
+        margin: 0 1rem 2rem;
+
+        @include respond-to(medium-screens) {
+            margin: 0 1rem 2rem;
+        }
+    }
+}
+
+.logo-img {
+    filter: grayscale(1);
+    // margin-bottom: 2rem;
+
+    @include respond-to(large-screens) {
+        // margin-bottom: 4rem;
+    }
+}
+
+
+
+/*
 ***********************************************************************
 * Regular Tables by editors
 ***********************************************************************
@@ -2699,4 +2957,18 @@ div.body {
 }
 
 
+
+/*  Special styles for 2019 event splash ( old style, but partly restyling) */
+
+.logo2019 {
+   margin: 7px 1rem  0 0;
+}
+.splashpage header {
+    // height: 90px;
+
+}
+
+.sticky-header {
+    z-index: 10;
+}
 

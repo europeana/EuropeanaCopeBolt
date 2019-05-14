@@ -1,0 +1,19 @@
+{#
+Available variables
+    'module':    the full module object
+    'title':     title of the module
+    'subtitle':  title of the module
+    'body':      body of the module
+    'records':   array of (selected) records that belong to the module
+#}
+{% set override_css_class = module.override_css_class|default('') %}
+
+<section class="group section-banner {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+{% for record in records %}
+    {% if record.id is defined %}
+
+        {% include "views/_eventbanner.twig" with { layoutclass : '' } %}
+
+    {% endif %}
+{% endfor %}
+</section>

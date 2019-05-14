@@ -1,0 +1,19 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+<article class="fifth">
+    <div class="img-container">
+
+        {% if item.values.image is defined and item.values.image is not empty %}
+            {# LOGO #}
+            <img class="logo-img" src="{{ item.values.image|thumbnail(600,400,'r')}}" alt="{{ item.title }}"/>
+        {% else %}
+             <img class="logo-img" src="{{ 'web_assets/default.png'|thumbnail(600,400,'r')}}" alt="{{ item.title }}"/>
+        {% endif %}
+
+    </div>
+
+
+
+</article>

@@ -161,6 +161,21 @@ h2.widget, h3.widget { //HEADERS IN BANNERS / CALL TO ACTIONS
     color: $white;
 }
 
+h2.widget-emph,
+h3.widget-emph {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: $white;
+
+    @include respond-to (medium-screens) {
+        font-size: 3rem;
+    }
+
+
+}
+
 section {
     > h2, //temp
     > .inner-wrap > h2 {
