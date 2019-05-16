@@ -189,6 +189,10 @@ footer {
     body.landingpage & {
         margin-top: 2rem;
     }
+
+    body.splashpage & {
+        margin-top: 0;
+    }
 }
 
 .inner-wrap {
