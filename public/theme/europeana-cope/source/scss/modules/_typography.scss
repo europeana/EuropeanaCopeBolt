@@ -240,7 +240,7 @@ section {
         font-size: 1rem;
 
         @include respond-to (medium-screens) {
-            font-size: 1.25rem; // redesign: all text should be 20px
+            font-size: 1.125rem; // redesign: all text should be 18px
         }
     }
 
@@ -295,14 +295,14 @@ ul {
         font-size: 1rem;
 
         @include respond-to (medium-screens){
-            font-size: 1.25rem;
+            font-size: 1.125rem;
         }
     }
 
     font-size: 1rem;
 
         @include respond-to (medium-screens){
-            font-size: 1.25rem;
+            font-size: 1.125rem;
         }
 
 }
@@ -336,7 +336,7 @@ ul {
     font-size: 1rem;
 
         @include respond-to (medium-screens){
-            font-size: 1.25rem;
+            font-size: 1.125rem;
         }
     }
 
