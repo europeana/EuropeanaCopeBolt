@@ -1,0 +1,37 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+<article class="tile"
+    {% if item.values.image is defined and item.values.image is not empty %}
+        style="background-image: url({{ image(item.image, 600, 400) }})"
+    {% else %}
+        style="background-image: url(web_assets/default.png)"
+    {% endif %}>
+
+    <div class="tile-front">
+        <div class="icon">
+            {# ICON - IMAGE #}
+            <img src="{{ asset('images/europeana_pro_logo.svg', 'theme') }}" alt=""/>
+        </div>
+        <a href="{{ item.htmllink }}"><h3>{{ item.title }}</h3></a>
+    </div>
+
+    <div class="tile-back">
+
+        <div class="intro">
+            <div class="icon">
+                {# ICON - IMAGE #}
+               <img src="{{ asset('images/europeana_pro_logo.svg', 'theme') }}" alt=""/>
+            </div>
+            <p>Several tracks with topics that matter</p>
+        </div>
+        <p>A nice short paragraph buildig on the teaser title that shouldn't be any longer than 150 chars long so it fits nice and snuggly in the containers.</p>
+    </div>
+
+</article>
+
+<script>
+
+
+</script>
