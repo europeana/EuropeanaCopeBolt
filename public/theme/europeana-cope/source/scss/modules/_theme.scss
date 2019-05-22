@@ -2524,6 +2524,10 @@ div.body {
             padding: 0;
             max-width: 500px;
 
+            @include respond-to(large-screens) {
+                margin: 0 1em 0 0;
+                display: inline-block;
+            }
         }
 
         span.image-license {
