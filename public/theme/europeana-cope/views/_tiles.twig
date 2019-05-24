@@ -14,7 +14,7 @@
         <div class="icon">
             {# ICON - IMAGE #}
             {% if item.icon is not empty %}
-                <img src="{{ image(item.icon) }}" alt=""/>
+                <img src="/files/{{ item.icon }}" alt=""/>
              {% endif %}
         </div>
 
@@ -29,7 +29,7 @@
             <div class="icon">
                 {# ICON - IMAGE #}
                 {# <img src="{{ asset('images/icons/test-icon.svg', 'theme') }}" alt=""/> #}
-                <img src="{{ image(item.icon) }}" alt=""/>
+                <img src="/files/{{item.icon}}" alt=""/>
             </div>
             {% endif %}
 
