@@ -24,9 +24,9 @@
                 {# ICON - IMAGE #}
                <img src="{{ asset('images/europeana_pro_logo.svg', 'theme') }}" alt=""/>
             </div>
-            <p>Several tracks with topics that matter</p>
+            <p>{{ item.title }}</p>
         </div>
-        <p>A nice short paragraph buildig on the teaser title that shouldn't be any longer than 150 chars long so it fits nice and snuggly in the containers.</p>
+        {{item.body}}
     </div>
 
 </article>
