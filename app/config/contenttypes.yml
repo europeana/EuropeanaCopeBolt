@@ -2954,6 +2954,10 @@ resources:
       type: image
       label: "Block image"
       attrib: title
+    icon:
+      type: image
+      label: "Icon"
+      placeholder: "Preferably SVG - used in tiles"
     body:
       type: html
       label: "Block body"

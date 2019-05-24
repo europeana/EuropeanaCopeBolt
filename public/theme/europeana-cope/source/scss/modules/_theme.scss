@@ -2572,11 +2572,12 @@ table.listingtable {
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-bottom: .5rem;
         }
 
         img {
-            width: 135px;
-            height: 135px;
+            // width: 135px;
+            height: 130px;
         }
     }
 
@@ -2585,7 +2586,7 @@ table.listingtable {
 
         .icon {
             height: 40px;
-            width: 40px;
+            // width: 40px;
             display: inline-block;
             margin-right: 1rem;
         }

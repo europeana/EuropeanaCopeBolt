@@ -10,20 +10,29 @@
     {% endif %}>
 
     <div class="tile-front">
+
         <div class="icon">
             {# ICON - IMAGE #}
-            <img src="{{ asset('images/icons/test-icon.svg', 'theme') }}" alt=""/>
+            {% if item.icon is not empty %}
+                <img src="{{ image(item.icon) }}" alt=""/>
+             {% endif %}
         </div>
+
         <a href="{{ item.htmllink }}"><h3>{{ item.title }}</h3></a>
     </div>
 
     <div class="tile-back">
 
         <div class="intro">
+
+           {% if item.icon is not empty %}
             <div class="icon">
                 {# ICON - IMAGE #}
-               <img src="{{ asset('images/icons/test-icon.svg', 'theme') }}" alt=""/>
+                {# <img src="{{ asset('images/icons/test-icon.svg', 'theme') }}" alt=""/> #}
+                <img src="{{ image(item.icon) }}" alt=""/>
             </div>
+            {% endif %}
+
             <p>{{ item.title }}</p>
         </div>
         {{item.body}}
