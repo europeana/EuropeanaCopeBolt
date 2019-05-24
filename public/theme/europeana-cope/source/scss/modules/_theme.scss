@@ -2565,7 +2565,15 @@ table.listingtable {
 
         .icon {
             height: 150px;
-            padding-top: 3rem;
+            // padding-top: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 135px;
+            height: 135px;
         }
     }
 
@@ -2577,6 +2585,11 @@ table.listingtable {
             width: 40px;
             display: inline-block;
             margin-right: 1rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
         }
 
         .intro {
