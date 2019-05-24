@@ -295,11 +295,13 @@ $( document ).ready(function() {
     $(".tile").on('mouseover', function(e){
         $(this).find(".tile-front").hide();
         $(this).find(".tile-back").fadeIn();
+        // console.log('OVER');
     });
 
     $(".tile").on('mouseleave', function(e){
-        $(this).find(".tile-back").hide();
+        $(".tile-back").stop().hide();
         $(this).find(".tile-front").fadeIn();
+        // console.log('... en uit');
     });
 
     /**
