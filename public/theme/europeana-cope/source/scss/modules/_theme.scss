@@ -2537,6 +2537,11 @@ table.listingtable {
     .subtitle {
         text-align: center;
     }
+
+    .wrapped {
+        display: flex;
+        flex-wrap: no-wrap;
+    }
 }
 
 .tiles-module.wide-spaced {

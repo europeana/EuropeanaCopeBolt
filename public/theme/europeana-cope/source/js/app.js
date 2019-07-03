@@ -304,6 +304,10 @@ $( document ).ready(function() {
         // console.log('... en uit');
     });
 
+    $('.tile:nth-last-child(2), .tile:nth-last-child(1)').wrapAll('<div class="wrapped" />');
+
+
+
     /**
      * Merge streamer colums into the first
      * Only works with 3 or 2 streamer columns per page.
