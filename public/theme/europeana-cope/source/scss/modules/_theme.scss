@@ -2521,6 +2521,129 @@ table.listingtable {
 }
 
 
+/*
+**********************************************************************
+* Tiles module
+**********************************************************************
+**/
+
+
+.tiles-module {
+    .items-container {
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    .subtitle {
+        text-align: center;
+    }
+
+    .wrapped {
+        display: flex;
+        flex-wrap: no-wrap;
+    }
+}
+
+.tiles-module.wide-spaced {
+    .tile {
+        margin: 0 12px 24px 12px;
+    }
+}
+
+.tile {
+    width: 287px;
+    height: 287px;
+    margin: 0 2px 4px 2px;
+    position: relative;
+    padding: 1rem;
+
+    background-blend-mode: overlay;
+    background-color: $footer-gray;
+        // background-blend-mode: soft-light;
+        // background-color: $link-blue;
+
+    &:hover {
+        background-blend-mode: soft-light;
+        background-color: $link-blue;
+    }
+
+
+    .tile-front {
+        display: block;
+
+        .icon {
+            height: 150px;
+            // padding-top: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: .5rem;
+        }
+
+        img {
+            // width: 135px;
+            height: 130px;
+        }
+    }
+
+    .tile-back {
+        display: none;
+
+        .icon {
+            height: 40px;
+            // width: 40px;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+
+        .intro {
+            display: flex;
+            margin: 1rem 0 2rem 0;
+
+            p {
+                letter-spacing: 1.5px;
+            }
+        }
+
+        p {
+            margin: 0;
+            color: $white;
+        }
+
+        svg, img {
+            filter: invert(100%);
+        }
+    }
+
+    a:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    h3 {
+        color: $baseFirstThemeColour;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 1.125rem;
+    }
+}
+
+
+
+
+
+
+
 
 /*
 ***********************************************************************
