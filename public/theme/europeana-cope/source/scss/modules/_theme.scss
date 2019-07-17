@@ -2,6 +2,7 @@ body {
     background-color: $off-white;
 }
 
+
 /*
 * HEADER
 **/
@@ -446,7 +447,12 @@ a.banner {
     margin:  0;
 
     @include respond-to(large-screens){
+<<<<<<< HEAD
         height: 32em;
+=======
+        height: 20rem;
+        // margin: 1rem 0;
+>>>>>>> feature/tiles
         margin: 0;
     }
 
@@ -709,6 +715,231 @@ a.banner {
 }
 
 /*
+* WIDGET EVENTBANNER
+**/
+
+// used for splashpage event, as a new module
+
+.banner.event-banner,
+a.banner.event-banner {
+    height: 22rem;
+    @include respond-to(large-screens){
+        height: 32rem;
+    }
+}
+
+a.event-banner {
+    .header-group {
+        height: 100%;
+        text-align: right;
+        right: 0;
+        left: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @include respond-to(large-screens){
+            width: 50%;
+        }
+
+        @include respond-to(xlarge-screens){
+            width: 33%;
+            right: 2rem;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .colored-image {
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+}
+
+/*
+** Register Widget EVENT
+**/
+
+.eventregister {
+    margin: 3rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .875rem;
+
+    > * {
+        margin: 1rem 0;
+        // border: 1px dotted #f09;
+    }
+
+    @include respond-to(large-screens){
+        margin: 3rem 0 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        > * {
+            margin: 0 1rem 2rem;
+        }
+    }
+
+    .dates {
+       display: flex;
+       align-items: center;
+       color: $white;
+    }
+
+    .divider {
+        margin: 0 .5rem;
+    }
+
+    .calendar-block {
+        border-radius: 4px;
+        width: 111px;
+        height: 103px;
+        position: relative;
+        color: $white;
+        text-transform: uppercase;
+
+        .icon-calendarsheet {
+            fill: $denim;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .calendar-text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            padding: 1rem .5rem 0 .5rem;
+            text-align: center;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.1;
+
+        }
+
+        .calendar-month {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .calendar-day {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        .calendar-time {
+            font-size: .75rem;
+            margin-top: .2em;
+            letter-spacing: .3px;
+        }
+    }
+
+    .map {
+        position: relative;
+
+        > img {
+            border-radius: 4px;
+        }
+
+        .overlay {
+            background: #A2AEBC; // best color for map overlay
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: color;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: 2.5rem;
+            left: 50%;
+            margin-left: -97px;
+            border-radius: 4px;
+            background: $white;
+            padding: .2rem 1rem;
+            width: 195px; //from mockup
+            box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+
+            &:before { //arrow
+                content: "";
+                position: absolute;
+                top: -7px;
+                left: 50%;
+                margin-left: -5px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 5px 7px 5px;
+                border-color: transparent transparent $white;
+            }
+        }
+        p {
+           font-size:  0.625rem;
+           margin: 0;
+        }
+        p.location-name {
+            font-weight: 700;
+            font-size:  0.75rem;
+        }
+
+        .marker {
+            position: absolute;
+            left: 50%;
+            top: .5rem;
+            margin-left: -.5em;
+
+            svg {
+                fill: $baseFirstThemeColour;
+            }
+        }
+    }
+
+    .button {
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        letter-spacing: .5px;
+        font-weight: 700;
+    }
+
+    .socials {
+        text-align: center;
+        margin: .75rem 0 0 0;
+
+        svg {
+            // width: 2rem;
+            // height: 2rem;
+            fill: $baseFirstThemeColour;
+
+            &:hover {
+                fill: $white;
+            }
+        }
+    }
+}
+
+
+
+
+
+/*
 * WIDGET CALL TO ACTION - READ MORE (hoort bij bovestaande NEWS)
 **/
 
@@ -908,6 +1139,10 @@ section.catstream {
 div.calltoaction {  //little bit more specific to avoid issues with default header group
     min-height: 200px;
     position: relative;
+<<<<<<< HEAD
+=======
+    // margin: 1rem 0;
+>>>>>>> feature/tiles
     margin: 0;
     display: flex;
     justify-content: center;
@@ -1068,6 +1303,59 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
 }
 
 
+<<<<<<< HEAD
+=======
+/*
+* Collapse margins when a call to action follows a banner
+**/
+
+//regular one-banner
+.section-banner + .section-calltoactionform,
+.section-banner + .section-calltoactioninline,
+.section-banner + .section-calltoactionlink,
+.section-banner + .section-calltoaction,
+//or when an in-page anchor is in between
+.section-banner + .in-page-anchor + .section-calltoactionform,
+.section-banner + .in-page-anchor + .section-calltoactioninline,
+.section-banner + .in-page-anchor + .section-calltoactionlink,
+.section-banner + .in-page-anchor + .section-calltoaction,
+// three banners next to another
+.section-bannertriple + .section-calltoactionform,
+.section-bannertriple + .section-calltoactioninline,
+.section-bannertriple + .section-calltoactionlink,
+.section-bannertriple + .section-calltoaction,
+//or when an in-page anchor is in between these
+.section-bannertriple + .in-page-anchor + .section-calltoactionform,
+.section-bannertriple + .in-page-anchor + .section-calltoactioninline,
+.section-bannertriple + .in-page-anchor + .section-calltoactionlink,
+.section-bannertriple + .in-page-anchor + .section-calltoaction,
+// call to action banner
+.section-calltoaction + .section-calltoactionform,
+.section-calltoaction + .section-calltoactioninline,
+.section-calltoaction + .section-calltoactionlink,
+.section-calltoaction + .section-calltoaction,
+//or when an in-page anchor is in between these
+.section-calltoaction + .in-page-anchor + .section-calltoactionform,
+.section-calltoaction + .in-page-anchor + .section-calltoactioninline,
+.section-calltoaction + .in-page-anchor + .section-calltoactionlink,
+.section-calltoaction + .in-page-anchor + .section-calltoaction
+ {
+    overflow: visible;
+
+    .calltoactionform,
+    .calltoactionlink,
+    .calltoactioninline,
+    .calltoaction {
+
+
+        // margin-top: 0 rem; // needs check, gaat dit altijd goed? - AW
+
+        @include respond-to(large-screens){
+            // margin-top: -1rem;
+        }
+
+    }
+>>>>>>> feature/tiles
 
 
 /*
@@ -2317,6 +2605,160 @@ table.listingtable {
 }
 
 /*
+**********************************************************************
+* Logolisting
+**********************************************************************
+**/
+
+.logolisting-section {
+    .items-container {
+
+    }
+
+    .items-container > * {
+        margin: 0 1rem 2rem;
+
+        @include respond-to(medium-screens) {
+            margin: 0 1rem 2rem;
+        }
+    }
+}
+
+.logo-img {
+    filter: grayscale(1);
+    // margin-bottom: 2rem;
+
+    @include respond-to(large-screens) {
+        // margin-bottom: 4rem;
+    }
+}
+
+
+/*
+**********************************************************************
+* Tiles module
+**********************************************************************
+**/
+
+
+.tiles-module {
+    .items-container {
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    .subtitle {
+        text-align: center;
+    }
+
+    .wrapped {
+        display: flex;
+        flex-wrap: no-wrap;
+    }
+}
+
+.tiles-module.wide-spaced {
+    .tile {
+        margin: 0 12px 24px 12px;
+    }
+}
+
+.tile {
+    width: 287px;
+    height: 287px;
+    margin: 0 2px 4px 2px;
+    position: relative;
+    padding: 1rem;
+
+    background-blend-mode: overlay;
+    background-color: $footer-gray;
+        // background-blend-mode: soft-light;
+        // background-color: $link-blue;
+
+    &:hover {
+        background-blend-mode: soft-light;
+        background-color: $link-blue;
+    }
+
+
+    .tile-front {
+        display: block;
+
+        .icon {
+            height: 150px;
+            // padding-top: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: .5rem;
+        }
+
+        img {
+            // width: 135px;
+            height: 130px;
+        }
+    }
+
+    .tile-back {
+        display: none;
+
+        .icon {
+            height: 40px;
+            // width: 40px;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+
+        .intro {
+            display: flex;
+            margin: 1rem 0 2rem 0;
+
+            p {
+                letter-spacing: 1.5px;
+            }
+        }
+
+        p {
+            margin: 0;
+            color: $white;
+        }
+
+        svg, img {
+            filter: invert(100%);
+        }
+    }
+
+    a:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    h3 {
+        color: $baseFirstThemeColour;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 1.125rem;
+    }
+}
+
+
+
+
+
+
+
+
+/*
 ***********************************************************************
 * Regular Tables by editors
 ***********************************************************************
@@ -2763,4 +3205,18 @@ div.body {
 }
 
 
+
+/*  Special styles for 2019 event splash ( old style, but partly restyling) */
+
+.logo2019 {
+   margin: 7px 1rem  0 0;
+}
+.splashpage header {
+    // height: 90px;
+
+}
+
+.sticky-header {
+    z-index: 10;
+}
 

@@ -127,7 +127,7 @@ $( document ).ready(function() {
 
     var cookiebar = $('#cookiebar');
     var hasCookie = getCookie('epro_cookieconsent');
-    
+
     if (!hasCookie){
         cookiebar.show();
         cookiebar.find('button').on('click', function(){
@@ -287,6 +287,27 @@ $( document ).ready(function() {
         $('.filters-chapter').not('#filters-'+chapter).removeClass('current');
     });
 
+
+    /**
+     * TILES
+     */
+
+    $(".tile").on('mouseover', function(e){
+        $(this).find(".tile-front").hide();
+        $(this).find(".tile-back").fadeIn();
+        // console.log('OVER');
+    });
+
+    $(".tile").on('mouseleave', function(e){
+        $(".tile-back").stop().hide();
+        $(this).find(".tile-front").fadeIn();
+        // console.log('... en uit');
+    });
+
+    $('.tile:nth-last-child(2), .tile:nth-last-child(1)').wrapAll('<div class="wrapped" />');
+
+
+
     /**
      * Merge streamer colums into the first
      * Only works with 3 or 2 streamer columns per page.
@@ -319,7 +340,17 @@ $( document ).ready(function() {
         }
     }
 
-    
+    /* Add button to splashpage header _if_ a registerbutton is there. */
+
+    var registerlink = $('.eventregister .button').attr('href');
+    console.log(registerlink);
+
+    if (registerlink && $('body').hasClass('splashpage')) {
+        var ticketbutton = $('<a>').text('Buy tickets').attr({'href': registerlink, 'class': 'button outline header-action'});
+
+        $('header').append(ticketbutton);
+    }
+
     /**
      * preloadchecks function
      * checks viewport width and does some hides and show, and moves elements
@@ -345,9 +376,16 @@ $( document ).ready(function() {
         }
 
         if ( windowWidthEms >= breakMenuFull ) {
-
+            // set sticky topbar and menu
+            $('#mainmenu').stick_in_parent();
+            $('#topbar').stick_in_parent();
+            $('.sticky-header').stick_in_parent();
 
         } else {
+           // remove stickyness when window is resized
+           $("#topbar").trigger("sticky_kit:detach");
+           $("#mainmenu").trigger("sticky_kit:detach");
+           $(".sticky-header").trigger("sticky_kit:detach");
 
         }
 
@@ -359,80 +397,6 @@ $( document ).ready(function() {
         }
     }
 
-    // Splashpage 10years
-    
-    var article = $('.splashpage-ten-years .wheel article');
-    var section = $('.splashpage-ten-years .wheel-section');
-    var handle = $('.splashpage-ten-years .wheel article .handle'); 
-    var anchor = $('.splashpage-ten-years .wheel article a');
-
-    article
-        .on('mouseenter touchend', function(e){
-            section.addClass('hashighlight');
-            $(this).addClass('highlight');
-            $(this).find('.center').show();
-            section.css("background-color" , $(this).data('bgcolor'));
-
-            article.stop();
-            $(this).show();
-
-            article.not( $(this) ).fadeOut({
-                duration: 200,
-                queue: false
-            });
-            // alert('klik'); 
-            e.preventDefault();
-            e.stopPropagation();
-            // return false;     
-                 
-
-        })
-        .on('mouseleave', function(){
-            section.removeClass('hashighlight')
-            $(this).removeClass('highlight');
-            $(this).find('.center').hide();
-            section.css("background", "");
-
-            article.stop().fadeIn({ duration: 0 });
-
-        });
-    
-    // handle.on('touchend', function() {
-    //     section.addClass('hashighlight');
-    //     $(this).parent().addClass('highlight');
-    //     $(this).parent().find('.center').show();
-    //     section.css("background-color" , $(this).parent().data('bgcolor'));
-
-    //     article.stop();
-    //     $(this).parent().show();
-
-    //     article.not( $(this).parent() ).fadeOut({
-    //         duration: 200,
-    //         queue: false
-    //     });
-    //     // alert('klak'); 
-    //     // e.preventDefault();
-    //     return false;     
-    // });
-
-    anchor.on('click touchend', function(e) {
-        window.location = $(this).attr('href');
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
-    });
-
-    //reset all als erbuiten geklikt
-    section.on('click touchend',function(){
-        section.removeClass('hashighlight');
-        article.removeClass('highlight');
-        article.find('.center').hide(); 
-        section.css("background", "");
-        
-        article.stop().fadeIn({ duration: 0 });
-        
-        // alert('kla0k'); 
-    });
 });
 
 function setCookie(name,value,days) {
@@ -454,6 +418,6 @@ function getCookie(name) {
     }
     return null;
 }
-function eraseCookie(name) {   
-    document.cookie = name+'=; Max-Age=-99999999;';  
+function eraseCookie(name) {
+    document.cookie = name+'=; Max-Age=-99999999;';
 }

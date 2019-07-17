@@ -21,7 +21,7 @@
 
 }
 
-nav.quicklinks {
+nav.quicklinks { // regular page quicklinks
 
     ul {
         // background-color: $quicklinks-bar;
@@ -50,8 +50,27 @@ nav.quicklinks {
         }
     }
 
+    body.splashpage & {  //splashpage quicklinks (in white header bar)
 
+        ul {
+            text-align: center;
+            @include respond-to (large-screens) {
+                text-align: left;
+            }
+        }
+
+        a {
+            color: $black;
+            font-weight: 700;
+
+            @include respond-to (medium-screens) {
+            font-size: 1rem;
+            }
+        }
+    }
 }
+
+
 
 
 a.back-link {
@@ -674,7 +693,7 @@ nav.footer-menu {
 
 }
 
-// Cookiebar. 
+// Cookiebar.
 // Topmessage is general styles, cookiebar is specific for a specific message on top of the site
 
 .topmessage {
@@ -686,13 +705,13 @@ nav.footer-menu {
     }
     a {
         border-bottom: 1px dashed currentcolor;
-        
+
         &:hover, &:focus, &:active {
             border-bottom: 1px solid currentcolor;
-            text-decoration: none;    
+            text-decoration: none;
         }
     }
-    
+
     .inner {
         width: 100%;
         margin: 0 auto;
@@ -727,7 +746,7 @@ nav.footer-menu {
         color: $medium-gray;
         margin: 0;
         // background: #f09;
-        
+
         @include respond-to(large-screens) {
             width: 85%;
             float: left;
@@ -742,7 +761,7 @@ nav.footer-menu {
     a {
         color: $medium-gray;
         &:hover, &:focus, &:active {
-            color: $dark-blue;   
+            color: $dark-blue;
         }
     }
 

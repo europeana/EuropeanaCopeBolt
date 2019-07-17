@@ -443,6 +443,7 @@ pages:
             banner:            "One wide banner view (_banner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
+            eventbanner:       "One wide eventbanner view (_eventbanner.twig)"
             title:             "Title with a link (_title.twig)"
             teaser:            "Teaser view (_teaser.twig)"
             listing:           "Listing of records (_listing.twig)"
@@ -452,7 +453,11 @@ pages:
             listingtwocol:     "Person listing over two columns (_listingtwocol.twig)"
             listingsemistatic: "Three static intro items (_listingsemistatic.twig)"
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
+<<<<<<< HEAD
             listingthumbnailsthree: "Three columns with round thumbnailed links (_listingthumbnailsthree.twig)"
+=======
+            listingthumbnailsfive: "Five columns with round thumbnailed links (_listingthumbnailsfive.twig)"
+>>>>>>> feature/tiles
             detail:            "Full details for single items (_detail.twig)"
             breaker:           "One Section breaker, call to action (_breaker.twig)"
             breakerdouble:     "Two Section breakers, call to action (_breakerdouble.twig)"
@@ -467,6 +472,9 @@ pages:
             image_full:        "One full image view (_image_full.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
+            logolisting:       "Logo listing (_logolisting.twig)"
+            eventregister:     "Event info + register (_eventregister.twig)"
+            tiles:     "1-10 tiles on a grid (_tiles.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -828,16 +836,24 @@ posts:
             image:             "One wide image view (_image.twig)"
             image_full:        "One full image view (_image_full.twig)"
             banner:            "One wide banner view (_banner.twig)"
+            eventbanner:       "One wide eventbanner view (_eventbanner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
             listing:           "Listing of records (_listing.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingtwocol:     "Person listing over two columns (_listingtwocol.twig)"
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
+<<<<<<< HEAD
             listingthumbnailsthree: "Three columns with round thumbnailed links (_listingthumbnailsthree.twig)"
+=======
+            listingthumbnailsfive: "Five columns with round thumbnailed links (_listingthumbnailsfive.twig)"
+>>>>>>> feature/tiles
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
+            logolisting:       "Logo listing (_logolisting.twig)"
+            eventregister:     "Event info + register (_eventregister.twig)"
+            tiles:     "1-10 tiles on a grid (_tiles.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -1209,16 +1225,24 @@ data:
             image:             "One wide image view (_image.twig)"
             image_full:        "One full image view (_image_full.twig)"
             banner:            "One wide banner view (_banner.twig)"
+            eventbanner:       "One wide eventbanner view (_eventbanner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
             listing:           "Listing of records (_listing.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingtwocol:     "Person listing over two columns (_listingtwocol.twig)"
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
+<<<<<<< HEAD
             listingthumbnailsthree: "Three columns with round thumbnailed links (_listingthumbnailsthree.twig)"
+=======
+            listingthumbnailsfive: "Five columns with round thumbnailed links (_listingthumbnailsfive.twig)"
+>>>>>>> feature/tiles
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
+            logolisting:       "Logo listing (_logolisting.twig)"
+            eventregister:     "Event info + register (_eventregister.twig)"
+            tiles:     "1-10 tiles on a grid (_tiles.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -1646,16 +1670,24 @@ projects:
             image:             "One wide image view (_image.twig)"
             image_full:        "One full image view (_image_full.twig)"
             banner:            "One wide banner view (_banner.twig)"
+            eventbanner:       "One wide eventbanner view (_eventbanner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
             listing:           "Listing of records (_listing.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingtwocol:     "Person listing over two columns (_listingtwocol.twig)"
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
+<<<<<<< HEAD
             listingthumbnailsthree: "Three columns with round thumbnailed links (_listingthumbnailsthree.twig)"
+=======
+            listingthumbnailsfive: "Five columns with round thumbnailed links (_listingthumbnailsfive.twig)"
+>>>>>>> feature/tiles
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
+            logolisting:       "Logo listing (_logolisting.twig)"
+            eventregister:     "Event info + register (_eventregister.twig)"
+            tiles:     "1-10 tiles on a grid (_tiles.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -1946,6 +1978,10 @@ events:
       type: checkbox
       label: "Make this event sticky"
       postfix: "<small>One event only. Setting another event to sticky will uncheck this one.</small>"
+    registerlink:
+      type: text
+      label: "Link to register (Eventbrite etc) - optional"
+      postfix: "<small>Include https:// of http:// </small>"
     modules:
       label: Modules
       type: repeater
@@ -1992,16 +2028,24 @@ events:
             image:             "One wide image view (_image.twig)"
             image_full:        "One full image view (_image_full.twig)"
             banner:            "One wide banner view (_banner.twig)"
+            eventbanner:       "One wide eventbanner view (_eventbanner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
             listing:           "Listing of records (_listing.twig)"
             listingtable:      "Person listing as a table (_listingtable.twig)" #Tableversie
             listingtwocol:     "Person listing over two columns (_listingtwocol.twig)"
             listingthumbnails: "Four columns with round thumbnailed links (_listingthumbnails.twig)"
+<<<<<<< HEAD
             listingthumbnailsthree: "Three columns with round thumbnailed links (_listingthumbnailsthree.twig)"
+=======
+            listingthumbnailsfive: "Five columns with round thumbnailed links (_listingthumbnailsfive.twig)"
+>>>>>>> feature/tiles
             calltoactioninline:  "Primary call to action (_calltoactioninline.twig)"
             filecontent:       "Single file attachement block (_filecontent.twig)"
             fileslisting:      "File list block (_fileslisting.twig)"
+            logolisting:       "Logo listing (_logolisting.twig)"
+            eventregister:     "Event info + register (_eventregister.twig)"
+            tiles:     "1-10 tiles on a grid (_tiles.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -2930,6 +2974,10 @@ resources:
       type: image
       label: "Block image"
       attrib: title
+    icon:
+      type: image
+      label: "Icon"
+      placeholder: "Preferably SVG - used in tiles"
     body:
       type: html
       label: "Block body"

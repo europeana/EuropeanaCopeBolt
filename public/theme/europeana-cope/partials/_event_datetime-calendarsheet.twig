@@ -1,0 +1,63 @@
+{% if item is  not defined %}
+    {% set item = record %}
+{% endif %}
+
+{% set singledayevent = 0 %}
+
+{% if (item.start_event|localedatetime("%e %B")) == (item.end_event|localedatetime("%e %B")) %}
+    {% set singledayevent = 1 %}
+{% else %}
+    {% set singledayevent = 0 %}
+{% endif %}
+
+{# als start en eind op zelfde dag: 1 datum + 2 tijden #}
+{# als start en eind op verschillende dag: 2 data + 2 tijden #}
+
+{% if item.start_event is defined and item.start_event is not empty %}
+
+    <div class="calendar-block">
+        <svg class="icon icon-calendarsheet">
+            <use xlink:href="#icon-calendarsheet"></use>
+        </svg>
+        <div class="calendar-text">
+            <p class="calendar-month">
+                {{ item.start_event|localedatetime("%b") }}.
+            </p>
+            <p class="calendar-day">
+                {{item.start_event|localedatetime("%e")}}
+            </p>
+
+            {% if (item.start_event|localedatetime("%H:%M") != '00:00') and (item.end_event|localedatetime("%H:%M") != '00:00') %}
+                <p class="calendar-time">{{ item.start_event|localedatetime("%H:%M") }}
+                {% if singledayevent == 1 %}
+                   - {{ item.end_event|localedatetime("%H:%M") }}
+                {% endif %}
+                </p>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if singledayevent == 0 %}
+    <p class="divider"> — </p>
+
+    <div class="calendar-block">
+            <svg class="icon icon-calendarsheet">
+            <use xlink:href="#icon-calendarsheet"></use>
+        </svg>
+
+        <div class="calendar-text">
+            <p class="calendar-month">
+                {{ item.end_event|localedatetime("%b") }}.
+            </p>
+            <p class="calendar-day">
+                {{item.end_event|localedatetime("%e")}}
+            </p>
+
+            {% if (item.start_event|localedatetime("%H:%M") != '00:00') and (item.end_event|localedatetime("%H:%M") != '00:00') %}
+                <p class="calendar-time">{{ item.end_event|localedatetime("%H:%M") }}</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+{% endif %}

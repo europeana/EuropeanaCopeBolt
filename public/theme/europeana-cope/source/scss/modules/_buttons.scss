@@ -132,12 +132,38 @@ button.outline,
     text-transform: uppercase;
     font-size: 0.875rem;
 
+    svg {
+        width: .9em;
+        height: .9em;
+        margin-left: .5em;
+        vertical-align: baseline;
+    }
+
     &:hover {
         background: $baseFirstThemeColour;
         color: $white;
         border-color: $baseFirstThemeColour;
+
+        svg {
+            fill: $white;
+        }
     }
 }
 
+a.roundsocial {
+    border-radius: 50%;
+    display: inline-block;
+    height: 2.25rem;
+    width: 2.25rem;
+    background: rgba($white,0.1);
+    margin-right: .5rem;
+    padding: 3px 0 0 1px;
+
+    svg {
+        margin-right: 0;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
 
 
