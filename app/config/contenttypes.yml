@@ -470,6 +470,7 @@ pages:
             fileslisting:      "File list block (_fileslisting.twig)"
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
+            tiles:     "1-10 tiles on a grid (_tiles.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -844,6 +845,7 @@ posts:
             fileslisting:      "File list block (_fileslisting.twig)"
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
+            tiles:     "1-10 tiles on a grid (_tiles.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -1228,6 +1230,7 @@ data:
             fileslisting:      "File list block (_fileslisting.twig)"
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
+            tiles:     "1-10 tiles on a grid (_tiles.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -1668,6 +1671,7 @@ projects:
             fileslisting:      "File list block (_fileslisting.twig)"
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
+            tiles:     "1-10 tiles on a grid (_tiles.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -2021,6 +2025,7 @@ events:
             fileslisting:      "File list block (_fileslisting.twig)"
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
+            tiles:     "1-10 tiles on a grid (_tiles.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -2949,6 +2954,10 @@ resources:
       type: image
       label: "Block image"
       attrib: title
+    icon:
+      type: image
+      label: "Icon"
+      placeholder: "Preferably SVG - used in tiles"
     body:
       type: html
       label: "Block body"
