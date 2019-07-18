@@ -1,4 +1,20 @@
-{# CONTACT BIG #}
+{# CONTACT BIG: Show support contact #}
+
+{# Used in:
+- _detail_posts.twig
+- _detail_jobs.twig
+- _detail_organisations.twig
+#}
+
+{#
+Fields:
+    - record.contact_name       \
+    - record.contact_email       | -> External contact (1st prio)
+    - record.contact_website    /
+
+    - record.contact_record     \
+    - record.contact_blurb      /  -> Support contact (selectbox)  (2nd prio)
+#}
 
 {% if record.contact_name is not empty %}
     {# external contact #}

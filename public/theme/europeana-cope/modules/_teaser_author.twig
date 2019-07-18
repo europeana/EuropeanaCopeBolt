@@ -1,4 +1,26 @@
-{# AUTHOR BIG #}
+{# AUTHOR BIG: Show author, fallback to supportcontact #}
+
+{# Used in:
+- _detail_data.twig
+- _detail_events.twig
+- _detail_pages.twig
+- _detail_pages_get-api.twig
+- _detail_projects.twig
+- _detail.twig
+#}
+
+{#
+Fields:
+    - record.author             |  -> Author (selectbox) (1st prio)
+
+    - record.contact_name       \
+    - record.contact_email       | -> External contact (2nd prio)
+    - record.contact_website    /
+
+    - record.contact_record     \
+    - record.contact_blurb      /  -> Support contact (selectbox)  (3rd prio)
+#}
+
 {% if record.author is not empty %}
     {% set contacts = record.author %}
     {% if contacts is not iterable %}
