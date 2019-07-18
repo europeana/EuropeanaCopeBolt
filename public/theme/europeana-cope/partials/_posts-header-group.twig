@@ -2,11 +2,7 @@
 
 <div class="header-group">
 
-    {% if record.contact_name is defined and record.contact_name is not empty %}
-        <div class="author-small-container">
-            {% include 'views/_mini_externalcontact.twig' %}
-        </div>
-    {% elseif record.author is defined and record.author is not empty %}
+    {% if record.author is defined and record.author is not empty %}
         {% set contacts = record.author %}
         {% if contacts is not iterable %}
             {# fix iterable ids if the content is json in a textfield #}
