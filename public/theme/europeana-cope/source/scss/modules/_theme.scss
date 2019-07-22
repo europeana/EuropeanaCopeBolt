@@ -447,13 +447,9 @@ a.banner {
     margin:  0;
 
     @include respond-to(large-screens){
-<<<<<<< HEAD
         height: 32em;
-=======
-        height: 20rem;
-        // margin: 1rem 0;
->>>>>>> feature/tiles
         margin: 0;
+        background: #f09;
     }
 
     .colored-image {
@@ -1139,10 +1135,6 @@ section.catstream {
 div.calltoaction {  //little bit more specific to avoid issues with default header group
     min-height: 200px;
     position: relative;
-<<<<<<< HEAD
-=======
-    // margin: 1rem 0;
->>>>>>> feature/tiles
     margin: 0;
     display: flex;
     justify-content: center;
@@ -1301,61 +1293,6 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
         margin: 0 0 1rem;
     }
 }
-
-
-<<<<<<< HEAD
-=======
-/*
-* Collapse margins when a call to action follows a banner
-**/
-
-//regular one-banner
-.section-banner + .section-calltoactionform,
-.section-banner + .section-calltoactioninline,
-.section-banner + .section-calltoactionlink,
-.section-banner + .section-calltoaction,
-//or when an in-page anchor is in between
-.section-banner + .in-page-anchor + .section-calltoactionform,
-.section-banner + .in-page-anchor + .section-calltoactioninline,
-.section-banner + .in-page-anchor + .section-calltoactionlink,
-.section-banner + .in-page-anchor + .section-calltoaction,
-// three banners next to another
-.section-bannertriple + .section-calltoactionform,
-.section-bannertriple + .section-calltoactioninline,
-.section-bannertriple + .section-calltoactionlink,
-.section-bannertriple + .section-calltoaction,
-//or when an in-page anchor is in between these
-.section-bannertriple + .in-page-anchor + .section-calltoactionform,
-.section-bannertriple + .in-page-anchor + .section-calltoactioninline,
-.section-bannertriple + .in-page-anchor + .section-calltoactionlink,
-.section-bannertriple + .in-page-anchor + .section-calltoaction,
-// call to action banner
-.section-calltoaction + .section-calltoactionform,
-.section-calltoaction + .section-calltoactioninline,
-.section-calltoaction + .section-calltoactionlink,
-.section-calltoaction + .section-calltoaction,
-//or when an in-page anchor is in between these
-.section-calltoaction + .in-page-anchor + .section-calltoactionform,
-.section-calltoaction + .in-page-anchor + .section-calltoactioninline,
-.section-calltoaction + .in-page-anchor + .section-calltoactionlink,
-.section-calltoaction + .in-page-anchor + .section-calltoaction
- {
-    overflow: visible;
-
-    .calltoactionform,
-    .calltoactionlink,
-    .calltoactioninline,
-    .calltoaction {
-
-
-        // margin-top: 0 rem; // needs check, gaat dit altijd goed? - AW
-
-        @include respond-to(large-screens){
-            // margin-top: -1rem;
-        }
-
-    }
->>>>>>> feature/tiles
 
 
 /*
