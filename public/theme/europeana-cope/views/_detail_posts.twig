@@ -6,7 +6,7 @@
                 {% include 'partials/_side-info.twig' %}
                 {% include 'partials/_community-info.twig' %}
 
-                {% include 'partials/_header-group.twig' %}
+                {% include 'partials/_posts-header-group.twig' %}
 
                 {% if record.values.image is defined and record.values.image is not empty %}
                     {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
@@ -76,8 +76,8 @@
 
             {% include 'partials/_addthis-widget.twig' %}
 
-            {# AUTHOR BIG #}
-            {% include 'modules/_teaser_author.twig' with { record : record } %}
+            {# CONTACT BIG #}
+            {% include 'modules/_teaser_contact.twig' with { record : record } %}
 
             {# RELATED CONTENT #}
             {% include 'modules/_related_posts.twig' with { record : record, title : 'Related' } %}
