@@ -23,7 +23,7 @@
             {% endif %}
         {% endfor %}
         {% if config.recaptcha.enabled is defined and config.recaptcha.enabled == true %}
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
         <fieldset class="field-container recaptcha-container">
             <div
             {% if fields.recaptcha.error|default() is not empty %}
