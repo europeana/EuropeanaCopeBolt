@@ -414,6 +414,7 @@ a {
 
     &:hover, &:active, &.focus {
         text-decoration: underline;
+        color: $innovationblue-dark;
     }
 
     footer & {
@@ -546,6 +547,7 @@ a {
         &:hover, &:focus, &:active {
             text-decoration: none;
             border-bottom: 1px dotted $innovationblue-dark;
+            color: $innovationblue-dark;
         }
 
         // @include respond-to(medium-screens) {
