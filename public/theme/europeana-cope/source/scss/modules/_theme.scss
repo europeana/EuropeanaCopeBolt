@@ -335,14 +335,11 @@ img.round,
         height: 108px;
         margin: 0 auto;
     }
-
 }
 
 .img-container {
     position: relative;
 }
-
-
 
 .colored-image {
     display: block;
@@ -2562,7 +2559,7 @@ table.listingtable {
 }
 
 .logo-img {
-    filter: grayscale(1);
+    // filter: grayscale(1);
     // margin-bottom: 2rem;
 
     @include respond-to(large-screens) {
