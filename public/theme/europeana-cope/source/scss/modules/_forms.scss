@@ -50,11 +50,9 @@ form.searchform {
 
         @include respond-to (menu-full) {
             //display: block;
-            position: absolute;
-            top: 0.5rem; //1rem;
-            right: 0.875rem;
-            min-width: 380px;
-            width: 50%;
+            margin-top: 0.5rem; //1rem;
+            // min-width: 380px;
+            // width: 50%;
         }
 
     }

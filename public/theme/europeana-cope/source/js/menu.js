@@ -135,6 +135,7 @@
 }(jQuery, window, document));
 
 $(document).ready(function() {
+
   // attach the plugin to an element
   $('#playmenu').findActivePath().europeanaMenu({
     'extraclass': 'has-europeana-menu'

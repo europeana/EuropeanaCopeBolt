@@ -121,7 +121,6 @@ nav.main-menu {
 
     a {
         text-decoration: none;
-        color: $black;
     }
 
 
@@ -137,203 +136,285 @@ nav.main-menu {
 
 }
 
+// new menu (2019) styles
+.toplayer-menu { // in topbar
+    height: 100%;
+    display: flex;
+    flex-direction: row; // setting default for completeness
+    align-items: stretch;
+    padding: 0 1rem;
 
-// playmenu container styles
-
-#playmenu {
-    top: 0;
-    position: relative;
-    width: 100%;
-    z-index: 1;
-
-
-    .home {
-        padding-left: 0;
-        background: $dark-blue;
-
-        a {
-            color: $white;
-            text-align: center;
-            font-weight: 400;
-            display: block;
-            min-height: 27px; // quick fix for pixelproblem in chrome
-        }
+    li {
+        vertical-align: middle;
     }
-
-}
-
-// styling items in playmenu
-
-ul.play-menu {
-    border-right: 1px solid $off-white;
-    background-color: $white;
 
     a {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        height: 100%;
+
+        color: $medium-gray;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        text-shadow: 7px 2px 0 0 $white;
+        padding: 0 .8em 0 .8em;
+        line-height: 1.2;
+        // text-align: center;
+
+        span {
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        &:first-child {
+            // margin-left: 1rem;
+        }
 
         &:hover {
+            background: rgba($innovationblue, 0.1);
+            text-decoration: none;
+        }
+
+        &.active {
             font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-    }
+            // border-bottom: 3px solid $innovationblue;
 
-    .active > a {
-        font-weight: 700;
-        letter-spacing: -0.5px;
-        color: $dark-blue;
-    }
-
-    // listitems toplevel and level 1
-    > li,
-    > li > .sub-menu > li {
-        padding: 0.8125rem 0;
-        border-bottom: 1px solid $line-gray;
-
-        &:last-child {
-            border-bottom: 0;
-        }
-
-        &.active.toplevel {
-            padding-left: 0;
-            background: $dark-blue;
-
-            > a {
-                min-height: 35px;
-                color: $white;
-                text-align: center;
-                font-weight: 400;
+            &:after {
+                content: "";
                 display: block;
+                margin-top: auto;
+                height: 3px;
+                width: 100%;
+                // margin: 0 .8em;
+                background: $innovationblue;
+                align-self: flex-end;
+                flex-grow: 0;
             }
         }
 
-        &.active.toplevel:not(.home) {
-            min-height: 26em;
-            margin-left: 0;
-        }
-    }
-
-    >li:not(.home){
-        margin-left: 0px;
-        padding-left: 35px;
-    }
-
-    .sub-menu {
-        li {
-            border-left: none;
-        }
-    }
-
-    //targets level-1 (light brown level1)
-    .toplevel >.sub-menu {
-        margin: 5px 0 -12px 0;
-        padding: 0 0 0 2rem; //padding: 0 1rem 0 2rem;
-        //border-left: none;
-        background-color: lighten($paper, 15%);
-        min-height: 23em;
-
-        // quick fix to make sure the borders end before the side, but the focus stays on the li.
-        >li {
-            padding-right: 1rem;
-            padding-bottom: 0;
-            border-bottom: 0;
-        }
-        >li > a {
-            border-bottom: 1px solid $line-gray;
-            padding-bottom: 1rem;
-        }
-        >li:last-child > a {
-            border-bottom: 0;
-        }
-    }
-
-    // targets level-2 (floating side menus)
-    .level-1 >.sub-menu {
-        display: none;
-        margin-left: 0;
-        background-color: $white;
-
-        @include respond-to(menu-full) {
-            position: absolute;
-            left: 202px; //width of li parent
-            top: 0; //magic number: to align with top of li
-            width: 200px;
-            padding: 1rem;
-            box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-        }
-
-        li {
-            padding: 2px 0;
-            border-bottom: none;
-        }
-
-        a {
-            font-size: 90%;
-        }
-    }
-
-    .sub-menu li.active .sub-menu {
-    // don't show submenu when active
-        display: none;
-    }
-
-    .sub-menu li:hover .sub-menu {
-    // do show submenu when hovered
-         display: block;
-    }
-
-    .cloned-current {
-        font-size: 90%;
-        font-weight: 700;
-        letter-spacing: -0.5px;
-        color: $dark-blue;
-        display: block;
-        cursor: default;
-        margin: 10px 0 0 0;
     }
 }
 
-
-/* the mouseover menu styles */
-ul.backlinks.play-menu {
-    background: $white;
-    top: 53px; //magic number: bottom of sandcolored current item.
-    position: absolute;
-    width: 25px;
-    overflow: hidden;
-    z-index: 10;
-    height: 22.75em; //make dynamic
-    transition: width 0.2s ease-in-out;
-
-
-    &:before {
-        content: "❰";
-        font-weight: bold;
+.primary-menu {
+    a {
         color: $light-gray;
-        top: 50%;
-        margin-top:-10px;
-        padding: 5px;
-        position: absolute;
-    }
+        font-size: 1.125rem;
+        padding: 0.1em 0 0.1em 2rem;
+        border-radius: 0 18px 18px 0;
+        margin-right: 1.125rem;
+        display: block;
+        transition: background-color .25s ease-in .1s;
 
-    &:hover {
-        background: $white;
-        width: 100%;
-
-        &:before {
-            content: "";
+        &:hover, &:focus, &:active {
+            background: rgba($innovationblue, 0.1);
         }
-    }
 
-
-    li {
-        margin-left: 25px;
-        padding-left: 10px;
-
-        &.active {
-            display: none;
+        &:active {
+            background: $innovationblue;
         }
     }
 }
+
+
+// playmenu container styles
+
+// #playmenu {
+//     top: 0;
+//     position: relative;
+//     width: 100%;
+//     z-index: 1;
+
+
+//     .home {
+//         padding-left: 0;
+//         background: $dark-blue;
+
+//         a {
+//             color: $white;
+//             text-align: center;
+//             font-weight: 400;
+//             display: block;
+//             min-height: 27px; // quick fix for pixelproblem in chrome
+//         }
+//     }
+
+// }
+
+// styling items in playmenu
+
+// ul.play-menu {
+//     border-right: 1px solid $off-white;
+//     background-color: $white;
+
+//     a {
+//         display: block;
+
+//         &:hover {
+//             font-weight: 700;
+//             letter-spacing: -0.5px;
+//         }
+//     }
+
+//     .active > a {
+//         font-weight: 700;
+//         letter-spacing: -0.5px;
+//         color: $dark-blue;
+//     }
+
+//     // listitems toplevel and level 1
+//     > li,
+//     > li > .sub-menu > li {
+//         padding: 0.8125rem 0;
+//         border-bottom: 1px solid $line-gray;
+
+//         &:last-child {
+//             border-bottom: 0;
+//         }
+
+//         &.active.toplevel {
+//             padding-left: 0;
+//             background: $dark-blue;
+
+//             > a {
+//                 min-height: 35px;
+//                 color: $white;
+//                 text-align: center;
+//                 font-weight: 400;
+//                 display: block;
+//             }
+//         }
+
+//         &.active.toplevel:not(.home) {
+//             min-height: 26em;
+//             margin-left: 0;
+//         }
+//     }
+
+//     >li:not(.home){
+//         margin-left: 0px;
+//         padding-left: 35px;
+//     }
+
+//     .sub-menu {
+//         li {
+//             border-left: none;
+//         }
+//     }
+
+//     //targets level-1 (light brown level1)
+//     .toplevel >.sub-menu {
+//         margin: 5px 0 -12px 0;
+//         padding: 0 0 0 2rem; //padding: 0 1rem 0 2rem;
+//         //border-left: none;
+//         background-color: lighten($paper, 15%);
+//         min-height: 23em;
+
+//         // quick fix to make sure the borders end before the side, but the focus stays on the li.
+//         >li {
+//             padding-right: 1rem;
+//             padding-bottom: 0;
+//             border-bottom: 0;
+//         }
+//         >li > a {
+//             border-bottom: 1px solid $line-gray;
+//             padding-bottom: 1rem;
+//         }
+//         >li:last-child > a {
+//             border-bottom: 0;
+//         }
+//     }
+
+//     // targets level-2 (floating side menus)
+//     .level-1 >.sub-menu {
+//         display: none;
+//         margin-left: 0;
+//         background-color: $white;
+
+//         @include respond-to(menu-full) {
+//             position: absolute;
+//             left: 202px; //width of li parent
+//             top: 0; //magic number: to align with top of li
+//             width: 200px;
+//             padding: 1rem;
+//             box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+//         }
+
+//         li {
+//             padding: 2px 0;
+//             border-bottom: none;
+//         }
+
+//         a {
+//             font-size: 90%;
+//         }
+//     }
+
+//     .sub-menu li.active .sub-menu {
+//     // don't show submenu when active
+//         display: none;
+//     }
+
+//     .sub-menu li:hover .sub-menu {
+//     // do show submenu when hovered
+//          display: block;
+//     }
+
+//     .cloned-current {
+//         font-size: 90%;
+//         font-weight: 700;
+//         letter-spacing: -0.5px;
+//         color: $dark-blue;
+//         display: block;
+//         cursor: default;
+//         margin: 10px 0 0 0;
+//     }
+// }
+
+
+// /* the mouseover menu styles */
+// ul.backlinks.play-menu {
+//     background: $white;
+//     top: 53px; //magic number: bottom of sandcolored current item.
+//     position: absolute;
+//     width: 25px;
+//     overflow: hidden;
+//     z-index: 10;
+//     height: 22.75em; //make dynamic
+//     transition: width 0.2s ease-in-out;
+
+
+//     &:before {
+//         content: "❰";
+//         font-weight: bold;
+//         color: $light-gray;
+//         top: 50%;
+//         margin-top:-10px;
+//         padding: 5px;
+//         position: absolute;
+//     }
+
+//     &:hover {
+//         background: $white;
+//         width: 100%;
+
+//         &:before {
+//             content: "";
+//         }
+//     }
+
+
+//     li {
+//         margin-left: 25px;
+//         padding-left: 10px;
+
+//         &.active {
+//             display: none;
+//         }
+//     }
+// }
 
 
 // styling secondary menu

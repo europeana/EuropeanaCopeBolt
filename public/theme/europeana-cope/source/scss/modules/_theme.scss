@@ -11,6 +11,7 @@ header {
     position: relative;
     background: $white;
 
+
     h1, .home-link { //logo
         margin: 1.5rem 0 0 0;
         display: block;
@@ -23,6 +24,11 @@ header {
            }
         }
     }
+
+    @include respond-to(medium-screens) {
+        display: flex;
+    }
+
 
     button.toggle {
         background: none;
