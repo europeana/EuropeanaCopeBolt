@@ -145,7 +145,6 @@ class ZohoImport
                         . $looper . '. - batch: '. $batchdate . ' - '
                         . $config['source']['type'];
                     $this->logger('info', $logmessage, 'zohoimport');
-                    // $looper = $this->looper;
                     $start = ($this->ffwd * $size) + 1;
                     $end = ($this->ffwd * $size) + $size;
                     $localconfig['source']['getparams'][$counter] = $start;
@@ -633,11 +632,7 @@ class ZohoImport
             // update the broken relations after the save so everything is correct again
             if (!empty($relations)) {
                 foreach ($relations as $relation_id => $relation) {
-                    //print("\nupdating relation " . $relation_id . "\n");
-                    //print_r($relation);
                     $res = $this->app['db']->update('bolt_relations', $relation, array('id' => $relation_id));
-                    //print_r($res);
-                    //print("\nupdated relation " . $relation_id . "\n");
                 }
             }
             $relations = [];
@@ -802,7 +797,6 @@ class ZohoImport
         $logmessage = $accountid . " - relations data url: ". $params['source_url'] ;
         $this->logger('info', $logmessage, 'zohoimport');
 
-        //echo('image.. ');
         // no file
         if (empty($relationsdata)) {
             $logmessage = $accountid . " - empty relations data: ". $params['source_url'] ;
@@ -810,7 +804,6 @@ class ZohoImport
             return false;
         }
 
-        //echo('not empty.. ');
         // no valid image
         if (stristr($relationsdata, 'No records attached to this record id')
           || stristr($relationsdata, 'Unable to process your request')) {
@@ -818,16 +811,12 @@ class ZohoImport
             $this->logger('error', $logmessage, 'zohoimport');
             return false;
         }
-        //echo('not nophoto.. ');
 
         $logmessage = 'TODO: Figure out what to do with the following relations .. ';
         $this->logger('info', $logmessage, 'zohoimport');
 
         $results = json_decode($relationsdata);
-        //$logmessage = 'loadZohoRelatedRecords result: ' . json_encode($results);
-        //$this->logger('debug', $logmessage, 'zohoimport');
 
-        //$relationsdatanormalized = $this->app['zohoimport.normalizer']->normalizeFromZohoJson($relationsdata);
         $localconfig = [];
         $localconfig['source']['type'] = 'json';
         $localconfig['target']['mapping']['root'] = 'response.result.Contacts.row';
@@ -852,10 +841,6 @@ class ZohoImport
               ['uid' => $accountid]
             );
         }
-        // load a repository
-        // $relationsrepository = $this->app['storage']->getRepository('relations');
-        //$logmessage = $accountid . ' - loadZohoRelatedRecords result: ' . json_encode($relationsdatanormalized);
-        //$this->logger('debug', $logmessage, 'zohoimport');
 
         // load a repository
         $relatedrepository = $this->app['storage']->getRepository('persons');
@@ -882,7 +867,6 @@ class ZohoImport
                 $this->insertImportedRelation($parent_organisation, $parent_type, $target_type, $target_record_id);
             }
         }
-        // $results = 'hoi';
 
         // return the filename for record
         return $results;
@@ -931,7 +915,6 @@ class ZohoImport
       }
 
       $inserted = $stmt->execute();
-      // $conn->flush();
 
       $logmessage = $parent_organisation . ' - adding related person: ' . $target_record_id . ' == ' . $inserted;
       $this->logger('debug', $logmessage, 'zohoimport');
@@ -953,8 +936,6 @@ class ZohoImport
     {
 
         if ($this->config['image_downloads'] != true) {
-            //$logmessage = "download not enabled: " . $this->config['image_downloads'];
-            //$this->logger('debug', $logmessage, 'zohoimport');
             return false;
         }
 
@@ -1057,8 +1038,6 @@ class ZohoImport
             $this->app['zohoimport.filefetcher']->fetchRemoteResource($params['source_url']);
             $imagedata = $this->app['zohoimport.filefetcher']->latestFile();
 
-            sleep(0.5);
-
             $imagejsonerror = json_decode($imagedata);
             if (!empty($imagejsonerror) && $imagejsonerror !== false) {
                 $logmessage = "remote resource is not an image for: " . $params['name'] .' - url: '. $params['source_url'] ;
@@ -1068,14 +1047,13 @@ class ZohoImport
                 return false;
             }
 
-            //echo('image.. ');
             // no file
             if (empty($imagedata)) {
                 $logmessage = "empty image: ". $params['source_url'] ;
                 $this->logger('error', $logmessage, 'zohoimport');
                 return false;
             }
-            //echo('not empty.. ');
+
             // no valid image
             if (stristr($imagedata, 'No photo attached to this record id')
                 || stristr($imagedata, 'Unable to process your request')) {
@@ -1083,10 +1061,9 @@ class ZohoImport
                 $this->logger('error', $logmessage, 'zohoimport');
                 return false;
             }
-            //echo('not nophoto.. ');
 
             $image['size'] = file_put_contents($image['tmpname'], $imagedata);
-            //echo($image['size'] . ' size.. ');
+            
             unset($imagedata);
         } else {
             // there was a tempfile already
