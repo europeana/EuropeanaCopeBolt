@@ -10,10 +10,10 @@ body {
 header {
     position: relative;
     background: $white;
-
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
 
     h1, .home-link { //logo
-        margin: 1.5rem 0 0 0;
+        margin: 1.125rem 0 0 0;
         display: block;
 
         img {
@@ -91,11 +91,10 @@ header {
     width: 200px;
 
     @include respond-to (medium-screens) {
-        width: 265px;
+        width: 232px;
     }
     @include respond-to (menu-full) {
         margin: 0 0 0 -1rem;
-        width: 265px;
     }
 }
 

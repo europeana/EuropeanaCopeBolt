@@ -169,6 +169,16 @@ nav.main-menu {
             align-items: center;
         }
 
+        &:after {
+            content: "";
+            display: block;
+            margin-top: auto;
+            height: 3px;
+            width: 100%;
+            background: transparent;
+            flex-grow: 0;
+        }
+
         &:first-child {
             // margin-left: 1rem;
         }
@@ -183,15 +193,7 @@ nav.main-menu {
             // border-bottom: 3px solid $innovationblue;
 
             &:after {
-                content: "";
-                display: block;
-                margin-top: auto;
-                height: 3px;
-                width: 100%;
-                // margin: 0 .8em;
                 background: $innovationblue;
-                align-self: flex-end;
-                flex-grow: 0;
             }
         }
 

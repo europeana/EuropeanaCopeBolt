@@ -47,7 +47,7 @@ body > div {
 
         padding: 0 0.875rem;
             @include respond-to(menu-full){
-                height: 95px;
+                height: 75px;
             }
     }
     > main,[role="main"] {
