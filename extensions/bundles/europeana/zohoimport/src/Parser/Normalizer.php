@@ -97,9 +97,11 @@ class Normalizer
      */
     private function normalizeFromZohoJson($filedata)
     {
+        // dump('$filedata', $filedata);
         $doc = json_decode($filedata);
+        // dump('$doc', $doc);
         $outrows = $outrow = [];
-        //dump($name, $doc, $this);
+        // dump($name, $doc, $this);
 
         if (empty($doc)) {
             if ($this->debug_mode) {
@@ -110,21 +112,21 @@ class Normalizer
         }
 
         $items = TypeConverter::toArray($doc);
-
+// dump('$items', $items);
         // get down into the root element
         $root = $this->config['target']['mapping']['root'];
         $elements = explode('.', $root);
 
-        if ($elements[0] == 'response' && !$items['response']) {
+        if ($elements[0] == 'response' && !$items['data']) {
             array_shift($elements);
         }
 
-        if (array_key_exists('nodata', $items['response']) && is_array($items['response']['nodata'])) {
+        if (array_key_exists('nodata', $items['data']) && is_array($items['data']['nodata'])) {
             $this->data = 'nodata';
             return $doc;
         }
 
-        if (array_key_exists('error', $items['response'])) {
+        if (array_key_exists('error', $items['data'])) {
             // we might get an error code https://www.zoho.com/crm/help/api/error-messages.html
             if ($this->debug_mode) {
                 dump('error in $items');
@@ -154,33 +156,33 @@ class Normalizer
         }
 
         // Modify deep nested json objects
-        $test = reset($items);
-        //print_r($test);
-        //print_r($items);
-        if (!is_array($test) && !array_key_exists('no', $items)) {
-            foreach ($items as $rawzohoitem) {
-                if (isset($rawzohoitem->FL) && is_array($rawzohoitem->FL)) {
-                    $currentrow = $rawzohoitem->FL;
-                    foreach ($currentrow as $rowitem) {
-                        $outrow[$rowitem->val] = $rowitem->content;
-                    }
-                }
+        // $test = reset($items);
+        // //print_r($test);
+        // //print_r($items);
+        // if (!is_array($test) && !array_key_exists('no', $items)) {
+        //     foreach ($items as $rawzohoitem) {
+        //         if (isset($rawzohoitem->FL) && is_array($rawzohoitem->FL)) {
+        //             $currentrow = $rawzohoitem->FL;
+        //             foreach ($currentrow as $rowitem) {
+        //                 $outrow[$rowitem->val] = $rowitem->content;
+        //             }
+        //         }
 
-                $outrows[] = $outrow;
-                unset($outrow);
-            }
-        } else {
-          // echo "only one item";
-          $currentrow = $items['FL'];
-          // print_r($currentrow);
-          foreach ($currentrow as $rowitem) {
-            $outrow[$rowitem->val] = $rowitem->content;
-          }
-          $outrows[] = $outrow;
-        }
-
-        $this->data = $outrows;
-        return $doc;
+        //         $outrows[] = $outrow;
+        //         unset($outrow);
+        //     }
+        // } else {
+        //   // echo "only one item";
+        //   $currentrow = $items['FL'];
+        //   // print_r($currentrow);
+        //   foreach ($currentrow as $rowitem) {
+        //     $outrow[$rowitem->val] = $rowitem->content;
+        //   }
+        //   $outrows[] = $outrow;
+        // }
+// dump('$items', $items);
+        $this->data = $items;
+        return $this->data;
 
     }
 
