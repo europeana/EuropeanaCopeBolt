@@ -49,7 +49,6 @@ class Normalizer
         }
 
         return $this->data;
-        // dump($this->resourcedata[$name]);
     }
 
     /**
@@ -97,22 +96,17 @@ class Normalizer
      */
     private function normalizeFromZohoJson($filedata)
     {
-        // dump('$filedata', $filedata);
         $doc = json_decode($filedata);
-        // dump('$doc', $doc);
         $outrows = $outrow = [];
-        // dump($name, $doc, $this);
 
         if (empty($doc)) {
             if ($this->debug_mode) {
-                dump('empty $doc');
-                dump($doc);
             }
             die();
         }
 
         $items = TypeConverter::toArray($doc);
-// dump('$items', $items);
+
         // get down into the root element
         $root = $this->config['target']['mapping']['root'];
         $elements = explode('.', $root);
@@ -180,7 +174,7 @@ class Normalizer
         //   }
         //   $outrows[] = $outrow;
         // }
-// dump('$items', $items);
+
         $this->data = $items;
         return $this->data;
 

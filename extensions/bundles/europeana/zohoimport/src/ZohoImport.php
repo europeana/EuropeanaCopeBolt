@@ -73,7 +73,6 @@ class ZohoImport
      */
     public function importJob($on_console = false, $output = null)
     {
-        //dump($this->config);
         if ($on_console) {
             $this->on_console = $on_console;
             $this->consoleoutput = $output;
@@ -315,9 +314,7 @@ class ZohoImport
         $num_remote_request = 'n/a';
 
         $messages = [];
-        //dump($config);
         foreach ($config['remotes'] as $remotekey => $remote) {
-            //dump($remotekey, $remote);
             if ($remote['enabled']) {
                 $localconfig = $remote;
                 // show date of last import
@@ -355,7 +352,6 @@ class ZohoImport
                     <table class="table-striped dashboardlisting">'.$tableoutput."</table>\n";
             }
         }
-        //dump($this->app);
 
         if ($on_console === true && $output !== null) {
             return null;
@@ -410,11 +406,7 @@ class ZohoImport
             unset($this->currentrecord);
             unset($items);
 
-            //dump('checking:'. $inputrecord->{$uid} );
             // check existing
-            // dump('$this->resourcedata', $this->resourcedata);
-//             dump('$inputrecord', $inputrecord);
-//             die();
             $this->currentrecord = $this->workingrepository->findOneBy(
                 ['uid' => $inputrecord->{$uid}]
             );
@@ -457,13 +449,10 @@ class ZohoImport
 //                    $var = '';
 //                }
                 if (is_array($var)){
-//                    dump("isArray");
                     $var = implode(';', $var);
                 }
                 // if zoho returns a text with double linebreaks
                 // split the text up into paragraphs
-//                dump('Field name', $value);
-//                dump('$inputrecord->'. "{$value}" , $inputrecord->{"$value"});
                 if (strpos($var, "\n\n") !== false) {
                     $var = "<p>" . str_replace("\n\n", "</p><p>", $var) . "</p>";
                 }
@@ -560,7 +549,6 @@ class ZohoImport
                 $this->logger('debug', $logmessage, 'zohoimport');
             }
 
-            //dump('sanitation please');
             $sanitize = true;
             if ($sanitize) {
                 $items['structure_sortorder'] = 0;
@@ -676,8 +664,6 @@ class ZohoImport
         $logmessage = $name . ' - depublishing all removed records on date: ' . $date;
         $this->logger('info', $logmessage, 'zohoimport');
 
-        //dump($config);
-
         $contenttype = $config['target']['contenttype'];
         $unpublished_status = $config['target']['defaults']['removed'];
 
@@ -691,7 +677,6 @@ class ZohoImport
         $stmt->bindValue('datechanged', $date);
         $res = $stmt->execute();
 
-        //dump($res);
         return true;
     }
 
@@ -862,7 +847,6 @@ class ZohoImport
         }
 
         if (!$this->currentrecord->id) {
-            //dump('checking:'. $inputrecord->{$uid} );
             // check existing
             $this->currentrecord = $this->workingrepository->findOneBy(
               ['uid' => $accountid]
@@ -870,8 +854,6 @@ class ZohoImport
         }
         // load a repository
         // $relationsrepository = $this->app['storage']->getRepository('relations');
-        //dump($relationsrepository);
-        //die();
         //$logmessage = $accountid . ' - loadZohoRelatedRecords result: ' . json_encode($relationsdatanormalized);
         //$this->logger('debug', $logmessage, 'zohoimport');
 
@@ -942,15 +924,11 @@ class ZohoImport
         "target_record_id" => $target_record_id
       ];
 
-      //dump($insertvalues);
-
       $stmt = $this->connection->prepare($insertsql);
 
       foreach($insertvalues as $label => $value) {
         $stmt->bindValue($label, $value);
       }
-
-      // dump($stmt);
 
       $inserted = $stmt->execute();
       // $conn->flush();
@@ -979,14 +957,6 @@ class ZohoImport
             //$this->logger('debug', $logmessage, 'zohoimport');
             return false;
         }
-//dump('$params[\'source_field\']', $params['source_field']);
-//dump('$source_record', $source_record);
-//dump('$params[\'source_field\']', $params['source_field']);
-//dump('$source_record[$params[\'source_field\']]', $source_record->{$params['source_field']});
-
-//        printf("\n\n %s \n\n", $source_record->Full_Name );
-
-
 
         //prepare url
         if (property_exists($source_record, $params['source_field']) && !empty($source_record->{$params['source_field']})) {
@@ -1034,9 +1004,7 @@ class ZohoImport
         }
 
         // prevent hammering the limits of zoho by only fetching images after minimum of 36 hours
-        //dump('here?');
         $existing_image = $target_record->get('image');
-        //dump('there! ', $existing_image);
 
         if (empty($existing_image)) {
             $existing_image = [];
@@ -1049,10 +1017,8 @@ class ZohoImport
                 $existing_image['file'] = $existing_image_tmp['file'];
                 $existing_image['title'] = $existing_image_tmp['title'];
             } elseif (property_exists($existing_image_tmp, 'file')) {
-                //dump('maybe fail', $existing_image, $existing_image_tmp);
                 $existing_image_array['file'] = $existing_image_tmp->file;
                 $existing_image_array['title'] = $existing_image_tmp->title;
-                //dump('maybe fail after', $existing_image_array);
                 $existing_image = $existing_image_array;
             } else {
                 $logmessage = "downloading image has failed, " . $existing_image . ' - '. $existing_image_tmp;
@@ -1060,16 +1026,10 @@ class ZohoImport
                 return null;
             }
         }
-        //dump('there again! ', $existing_image);
 
         if ($existing_image && array_key_exists('file', $existing_image)) {
             $existing_image_path = $this->app['paths']['filespath'] . '/'. $existing_image['file'];
             if (file_exists($existing_image_path)) {
-                //$existing_file = new File($existing_image_path);
-                //dump($existing_file);
-                //$existing_image_info['type'] = exif_imagetype($existing_image_path);
-                //$existing_image_info['gisz'] = getimagesize($existing_image_path);
-                //$existing_image_info['mime'] = image_type_to_mime_type($existing_image_info['type']);
                 $existing_image_age = time() - filemtime($existing_image_path);
                 if ($existing_image_age < (60*60*36)) {
                     $logmessage = "existing image is still fresh: " . $existing_image_age . " : " . $existing_image_path;
