@@ -108,13 +108,14 @@ nav.main-menu {
     //display: none; always on, because on mobile it's waiting to slide in.
     z-index: 15; //check if correct. Needed on mobile for hover over sticky bar.
     background-color: $menu-grey;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5), 0 4px 4px 0 rgba(0,0,0,0.2);
+    box-shadow: none;
+
 
     @include respond-to(menu-full) {
         display: block; //check, medium or large?
         top: 75px; //magic number: height from topbar
         left: 0;
-        box-shadow: none;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
 
     ul {
@@ -128,17 +129,21 @@ nav.main-menu {
 
     // CLASS OVERLAY NA TOGGLE
     &.is-overlay {
-       //does not do anything here, but give the JS a detection that it's in overlay
-    }
-
-
-    li.is-parent {
-        position: relative;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        //does not do anything here, but give the JS a detection that it's in overlay
     }
 
 }
 
 // new menu (2019) styles
+
+nav.toplayer {
+    display: none;
+    @include respond-to(menu-full){
+        display: block;
+    }
+}
+
 .toplayer-menu { // in topbar
     height: 100%;
     display: flex;
@@ -206,15 +211,50 @@ nav.main-menu {
     li + li  {
         margin-top: 4px;
     }
+    li.level-0 {
+        // margin: 1.5rem 0;
+        // padding: 1.5rem 0;
 
-     a {
+        & > a { //top levels
+            color: $medium-gray;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+            text-shadow: 7px 2px 0 0 $white;
+            line-height: 1.2;
+            padding: 1.2rem 0 1.2rem 1.875rem;
+
+            @include respond-to(menu-full){
+                display: none;
+            }
+        }
+
+        &.active {
+            // margin: 1.5rem 0;
+        }
+
+        &.active > a {
+            font-weight: 700;
+            border-bottom: 3px solid $innovationblue;
+            padding-bottom: .5em;
+        }
+
+        ul {
+            margin-top: .7rem;
+        }
+
+    }
+
+    a {
         color: $light-gray;
         font-size: 1.125rem;
         padding: 0.1em 0 0.1em 1.875rem;
-        border-radius: 0 18px 18px 0;
         margin-right: 1.125rem;
         display: block;
         transition: background-color .25s ease-in .1s;
+
+        @include respond-to(menu-full){
+            border-radius: 0 18px 18px 0;
+        }
 
         &:hover, &:focus, &:active {
             background: rgba($innovationblue, 0.1);
@@ -223,6 +263,10 @@ nav.main-menu {
         &:active {
             background: $innovationblue;
         }
+    }
+
+    .sub-menu a {
+        border-radius: 0 18px 18px 0;
     }
 }
 

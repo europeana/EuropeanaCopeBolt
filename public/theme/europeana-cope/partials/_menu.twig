@@ -12,7 +12,7 @@
 
     {# The 'recursive' macro, for inserting one menu item. If it has a submenu, it
        invokes itself to insert the items of the submenus. #}
-    {% macro display_menu_item(item, loop, withsubmenus, level) %}
+    {% macro display_menu_item(item, loop, withsubmenus, level, parentLinks) %}
         {% from _self import display_menu_item %}
         {% from _self import is_current_url %}
         {% spaceless %}
@@ -21,7 +21,7 @@
                 {{ ' ' ~ item.class|default('') -}}
                 {{ loop.first ? ' first' -}}
                 {{ loop.last ? ' last' -}}
-                {{ (level > 0) ? ' level-' ~ level -}}
+                {{ ' level-' ~ level -}}
                 {{ (item.submenu|default(false) and withsubmenus) ? ' is-parent' -}}
                 {{ item|current ? ' active' -}}
                 {{ is_current_url(item) -}}">
@@ -30,11 +30,13 @@
                     {{- item.label|default('-') -}}
                 </a>
 
+                {% set withsubmenus = item.link in parentLinks %}
+
                 {% if item.submenu is defined and withsubmenus %}
                     <ul class="sub-menu" data-submenu>
                         {% set sublevel = level+1 %}
                         {% for submenu in item.submenu %}
-                            {{ display_menu_item(submenu, loop, withsubmenus, sublevel) }}
+                            {{ display_menu_item(submenu, loop, withsubmenus, sublevel, parentLinks) }}
                         {% endfor %}
                     </ul>
                 {% endif %}
@@ -57,12 +59,22 @@
     {% from _self import is_current_url %}
     {% from _self import display_menu_item %}
 
+    {% set parents = getParents(record) %}
+    {% set parentLinks = [] %}
+
+    {% for parent in parents %}
+        {% set parentLinks = parentLinks|merge([ parent.link ]) %}
+    {% endfor %}
+
+    {% set parentLinks = parentLinks|merge([ record.link ]) %}
+
+
     {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
     {# we need all these classes for the jquery interactivity #}
     <ul class="primary-menu" id="primary-menu">
         {% for item in menu %}
             {% if item.label is defined %}
-                {{ display_menu_item(item, loop, withsubmenus, 0) }}
+                {{ display_menu_item(item, loop, withsubmenus, 0, parentLinks) }}
             {% endif %}
         {% endfor %}
     </ul>

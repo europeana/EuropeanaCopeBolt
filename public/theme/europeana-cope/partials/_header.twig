@@ -37,13 +37,7 @@
         {% endif %}
     </div>
 
-    <nav>
-        <ul class="toplayer-menu">
-            <li><a class="active" href=""><span>Cultural institutions</span></a></li>
-            <li><a href=""><span>Network associations</span></a></li>
-            <li><a href=""><span>Aggregators forum</span></a></li>
-        </ul>
-    </nav>
+    {{ menu('main', 'partials/_menu_toplayer.twig') }}
 
     {% include 'partials/_searchform.twig' %}
 
