@@ -51,3 +51,6 @@ Vagrantfile
 app/config/extensions/menu_backups/
 app/config/extensions/hierarchicalroutes/
 
+# Ignore Zoho CRM Authtokens file
+zcrm_oauthtokens.txt
+
