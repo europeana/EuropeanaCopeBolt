@@ -11,7 +11,6 @@
 
 
 .topbar {
-    background-color: $denim;
     min-height: 53px;
     z-index: 10; //for sticky
     height: 53px; // to prevent filtering from pushing bar down. remove if it causes other problems!
@@ -23,6 +22,9 @@
 }
 
 nav.quicklinks { // regular page quicklinks
+    margin: 0 1.5rem;
+    border-bottom: 1px solid $line-gray;
+
 
     ul {
         // background-color: $quicklinks-bar;
@@ -40,14 +42,14 @@ nav.quicklinks { // regular page quicklinks
 
     a {
         display: block;
-        color: $white;
+        color: $light-gray;
         padding: 6px 0.5rem;
-        font-size: 0.75rem;
+        font-size: 0.875rem;
         line-height: 21px; // magic number: to align bar with menu on left
 
         @include respond-to (medium-screens) {
-            font-size: 0.875rem;
             padding: 6px 1rem;
+            font-size: 1rem;
         }
     }
 
