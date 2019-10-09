@@ -1,38 +1,41 @@
 <header id="header">
 
-    <button class="toggle menu-toggle">
-        <svg class="icon icon-menu">
-            <use xlink:href="#icon-menu"></use>
-        </svg>
-        <svg class="icon icon-delete">
-            <use xlink:href="#icon-delete"></use>
-        </svg>
-    </button>
+    <div class="headercontainer">
+        <button class="toggle menu-toggle">
+            <svg class="icon icon-menu">
+                <use xlink:href="#icon-menu"></use>
+            </svg>
+            <svg class="icon icon-delete">
+                <use xlink:href="#icon-delete"></use>
+            </svg>
+        </button>
 
 
-    <div class="mainlogo">
-        {% if app.request.get('_route') == 'homepage' %}
-        <h1 class="">
-            <img src="{{ paths.theme }}images/europeana_pro_logo.svg" alt="Europeana" />
-        </h1>
-        {% else %}
+        <div class="mainlogo">
+            {% if app.request.get('_route') == 'homepage' %}
+            <h1 class="">
+                <img src="{{ paths.theme }}images/europeana_pro_logo.svg" alt="Europeana" />
+            </h1>
+            {% else %}
 
-        <a class="home-link" href="/">
-            <img src="{{ paths.theme }}images/europeana_pro_logo.svg" alt="Europeana" />
-        </a>
+            <a class="home-link" href="/">
+                <img src="{{ paths.theme }}images/europeana_pro_logo.svg" alt="Europeana" />
+            </a>
 
-        {% endif %}
+            {% endif %}
 
+        </div>
+
+        {{ menu('main', 'partials/_menu_toplayer.twig') }}
+
+        <button class="toggle search-toggle">
+            <svg class="icon icon-search">
+                <use xlink:href="#icon-search"></use>
+            </svg>
+        </button>
     </div>
 
-    {{ menu('main', 'partials/_menu_toplayer.twig') }}
-
-    <button class="toggle search-toggle">
-        <svg class="icon icon-search">
-            <use xlink:href="#icon-search"></use>
-        </svg>
-    </button>
-
-    {% include 'partials/_searchform.twig' %}
+    {% include 'partials/_searchform.twig' with {id : 'headersearch'} %}
 
 </header>
+

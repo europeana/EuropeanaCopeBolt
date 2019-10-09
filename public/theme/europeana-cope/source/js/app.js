@@ -96,12 +96,12 @@ $( document ).ready(function() {
     $('.search-toggle').on( "click", function(e) {
         e.preventDefault();
 
-        var search = $('header .searchform');
+        var search = $('#headersearch');
         var nav = $("nav.main-menu");
 
         if (search.hasClass('is-open')) {
             //doe dicht
-            search.slideUp().removeClass('is-open');
+            search.slideUp('fast').removeClass('is-open');
 
             if (nav.hasClass('is-overlay')){
                 nav.animate({
@@ -110,7 +110,7 @@ $( document ).ready(function() {
             }
         } else {
             //doe open
-            search.slideDown().addClass('is-open');
+            search.slideDown('fast').addClass('is-open');
 
             if (nav.hasClass('is-overlay')) {
                 console.log('is-overlay');
@@ -366,13 +366,15 @@ $( document ).ready(function() {
         // };
 
         if ( windowWidthEms < breakMenuFull ) {
-            $('header .searchform').hide();
+            $('#headersearch').hide();
         }
 
         if ( windowWidthEms >= breakMenuFull ) {
             //remove all leftover inline styles from mobile view;
             $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
-            $('header .searchform').removeAttr('style');
+            $('#headersearch').removeAttr('style');
+            // stick it _in_ the header
+            $('#headersearch').appendTo('.headercontainer');
         }
 
         if ( windowWidthEms >= breakMenuFull ) {

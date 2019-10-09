@@ -45,13 +45,15 @@ form.searchform {
     display: flex;
 
     header & {
-        margin: 0;
+        // margin: 0;
         text-align: right;
         height: 2.65rem;
         flex: 1 1 auto;
+        margin: 1rem;
 
         @include respond-to (menu-full) {
             margin-top: 1rem;
+            padding: 0;
         }
 
     }
