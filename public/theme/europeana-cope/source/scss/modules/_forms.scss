@@ -48,7 +48,7 @@ form.searchform {
         margin: 0;
         text-align: right;
         height: 2.65rem;
-        flex-grow: 1;
+        flex: 1 1 auto;
 
         @include respond-to (menu-full) {
             margin-top: 1rem;
@@ -65,8 +65,9 @@ form.searchform {
         margin: 0;
         box-sizing: border-box;
         border-radius: 6px 0 0 6px;
-        flex-grow: 1;
+        flex: 1 1 auto;
         min-width: 0;
+        width: 100%;
 
         @include respond-to (medium-screens) {
 

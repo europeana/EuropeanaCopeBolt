@@ -9,13 +9,6 @@
         </svg>
     </button>
 
-    <button class="toggle search-toggle">
-        <svg class="icon icon-search">
-            <use xlink:href="#icon-search"></use>
-        </svg>
-    </button>
-
-
 
     <div class="mainlogo">
         {% if app.request.get('_route') == 'homepage' %}
@@ -30,14 +23,15 @@
 
         {% endif %}
 
-        {% if app.config.get('general/environment') != 'prod' %}
-        <div class="version-flag">
-            {{ app.config.get('general/environment')|default('beta') }}
-        </div>
-        {% endif %}
     </div>
 
     {{ menu('main', 'partials/_menu_toplayer.twig') }}
+
+    <button class="toggle search-toggle">
+        <svg class="icon icon-search">
+            <use xlink:href="#icon-search"></use>
+        </svg>
+    </button>
 
     {% include 'partials/_searchform.twig' %}
 

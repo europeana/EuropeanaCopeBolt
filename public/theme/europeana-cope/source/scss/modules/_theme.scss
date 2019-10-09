@@ -11,30 +11,28 @@ header {
     position: relative;
     background: $white;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     h1, .home-link { //logo
-        margin: 1.125rem 0 0 0;
         display: block;
 
-        img {
-        //    height: 50px;
-
-           @include respond-to(medium-screens) {
-            // height: 65px;
-           }
+        @include respond-to(menu-full){
+            margin: 1.125rem 0 0 0;
         }
     }
 
-    @include respond-to(medium-screens) {
-        display: flex;
+    @include respond-to(menu-full) {
+        align-items: stretch; // default
     }
 
 
     button.toggle {
         background: none;
         border: none;
-        position: absolute;
-        top: 1rem;
+        // position: absolute;
+        // top: 1rem;
         padding: 1rem;
         font-size: 1.25rem;
 
@@ -42,12 +40,6 @@ header {
             left: 0rem;
             width: 3.5rem;
             height: 4rem;
-
-            svg {
-                position: absolute;
-                left: 1rem;
-                top: 1.3rem; //optical
-            }
 
             svg.icon-delete {
                 display: none;
@@ -86,8 +78,6 @@ header {
 
 .mainlogo {
     position: relative;
-    padding-left: 1.875rem;
-    margin: 0 auto 1rem;
     width: 200px;
 
     @include respond-to (medium-screens) {
@@ -95,21 +85,8 @@ header {
     }
     @include respond-to (menu-full) {
         margin: 0 0 0 -1rem;
-    }
-}
-
-.version-flag {
-    position: absolute; //0 - 0
-    top: 0;
-    left: 0;
-    color: $white;
-    background-color: $version-flag;
-    text-transform: uppercase;
-    padding: 0em .5em;
-    font-size: 0.6875rem;
-
-    @include respond-to (medium-screens) {
-        font-size: 0.75rem;
+        padding-left: 1.875rem;
+        flex-shrink: 0;
     }
 }
 
