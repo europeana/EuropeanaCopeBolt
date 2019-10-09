@@ -68,6 +68,13 @@ body > div {
     @include respond-to(menu-full){
         margin-left: 235px;
     }
+
+    body.homepage & {
+        // no menu on homepage
+        @include respond-to(menu-full){
+            margin-left: 0;
+        }
+    }
 }
 
 section {

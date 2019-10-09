@@ -9,6 +9,7 @@
 * CONTENTHEADER
 **/
 
+
 .topbar {
     background-color: $denim;
     min-height: 53px;
@@ -117,6 +118,13 @@ nav.main-menu {
         left: 0;
         box-shadow: 0 2px 4px rgba(0,0,0,0.5);
         height: calc(100% - 75px);
+    }
+
+    body.homepage & {
+        // no menu on homepage
+        @include respond-to(menu-full) {
+            display: none;
+        }
     }
 
     ul {

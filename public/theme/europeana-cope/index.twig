@@ -1,18 +1,19 @@
 {% extends 'partials/_master.twig' %}
 
-{% block bodyclass -%}
+{% block bodyclass %}
     {%- if record.pagetype is defined and record.pagetype == 'listing' -%}
-        listingpage
+        homepage listingpage
     {%- elseif record.pagetype is defined
         and (record.pagetype == 'landingpage' or record.pagetype == 'landingpage-nohighlight') -%}
-        landingpage contentpage
+        homepage landingpage contentpage
     {%- elseif record.pagetype is defined
         and record.pagetype == 'splashpage' -%}
-        splashpage
+        homepage splashpage
     {%- else -%}
-        contentpage
+        homepage contentpage
     {%- endif -%}
-{%- endblock bodyclass %}
+
+{% endblock bodyclass %}
 
 {% block main %}
     {% set recordtemplate =  'views/_detail_' ~ record.contenttype.slug ~'_'~ record.slug ~ '.twig' %}
