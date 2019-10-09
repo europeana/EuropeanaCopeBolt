@@ -195,6 +195,7 @@ $( document ).ready(function() {
     // Add inline anchors to quicklinks
     if( $('a.in-page-anchor').is('*') ) {
         // if there are in page anchors, add a link to each of them in the quicklinks navigation
+        $('.quicklinks').show();
 
         $('a.in-page-anchor').each(function() {
             $('.quicklinks ul').append(
@@ -208,8 +209,7 @@ $( document ).ready(function() {
                 )
             );
         });
-        // remove the blank placeholder link if quicklinks were added
-        $('.in-page-blank-link').detach();
+
     }
 
     /**

@@ -24,7 +24,7 @@
 nav.quicklinks { // regular page quicklinks
     margin: 0 1.5rem;
     border-bottom: 1px solid $line-gray;
-
+    display: none; // js sets it to show() when links are present
 
     ul {
         // background-color: $quicklinks-bar;
