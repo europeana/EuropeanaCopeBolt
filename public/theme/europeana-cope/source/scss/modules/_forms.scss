@@ -55,13 +55,11 @@ form.searchform {
             margin-top: 1rem;
             padding: 0;
         }
-
     }
 
     article p + & {
         margin-top: 2rem;
     }
-
 
     input[type="search"] {
         margin: 0;
@@ -70,14 +68,6 @@ form.searchform {
         flex: 1 1 auto;
         min-width: 0;
         width: 100%;
-
-        @include respond-to (medium-screens) {
-
-        }
-
-        @include respond-to (menu-full) {
-            // width: 300px; //580px;
-        }
 
         article & {
 

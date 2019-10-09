@@ -52,7 +52,7 @@ $( document ).ready(function() {
 
         if ( nav.hasClass('is-overlay') ){
             // Doe dicht
-            iconclose.fadeOut('fast');
+            iconclose.hide();
             iconmenu.fadeIn('fast');
 
             //inschuiven menu
@@ -69,8 +69,9 @@ $( document ).ready(function() {
                 'min-height': windowHeight,
                 'height': fullHeight
             });
+            iconmenu.hide();
             iconclose.fadeIn('fast');
-            iconmenu.fadeOut('fast');
+
 
             //inschuiven menu
             nav.animate({
