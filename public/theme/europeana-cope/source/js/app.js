@@ -367,6 +367,7 @@ $( document ).ready(function() {
 
         if ( windowWidthEms < breakMenuFull ) {
             $('#headersearch').hide();
+            $('#headersearch').appendTo('header'); // put it back, if coming from large
         }
 
         if ( windowWidthEms >= breakMenuFull ) {
