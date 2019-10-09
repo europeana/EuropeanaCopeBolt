@@ -218,7 +218,7 @@ nav.toplayer {
 
 .primary-menu {
     li + li  {
-        margin-top: 4px;
+        margin-top: 6px;
     }
     li.level-0 {
         // margin: 1.5rem 0;
@@ -253,6 +253,15 @@ nav.toplayer {
 
     }
 
+    li.level-1.active {
+        // active level 1 items
+        a {
+            background: $innovationblue;
+            color: $white;
+            font-weight: 400;
+        }
+    }
+
     a {
         color: $light-gray;
         font-size: 1.125rem;
@@ -269,9 +278,6 @@ nav.toplayer {
             background: rgba($innovationblue, 0.1);
         }
 
-        &:active {
-            background: $innovationblue;
-        }
     }
 
     .sub-menu a {

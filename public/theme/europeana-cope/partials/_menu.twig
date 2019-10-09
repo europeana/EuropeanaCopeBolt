@@ -32,7 +32,7 @@
 
                 {% set withsubmenus = item.link in parentLinks %}
 
-                {% if item.submenu is defined and withsubmenus %}
+                {% if item.submenu is defined and withsubmenus and level < 1 %}
                     <ul class="sub-menu" data-submenu>
                         {% set sublevel = level+1 %}
                         {% for submenu in item.submenu %}
