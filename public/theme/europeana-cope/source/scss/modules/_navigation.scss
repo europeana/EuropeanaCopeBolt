@@ -166,6 +166,15 @@ nav.toplayer {
         vertical-align: middle;
     }
 
+    li.active {
+        a {
+            font-weight: 700;
+            &:after {
+                background: $innovationblue;
+            }
+        }
+    }
+
     a {
         display: flex;
         flex-direction: column;
@@ -204,15 +213,6 @@ nav.toplayer {
         &:hover {
             background: rgba($innovationblue, 0.1);
             text-decoration: none;
-        }
-
-        &.active {
-            font-weight: 700;
-            // border-bottom: 3px solid $innovationblue;
-
-            &:after {
-                background: $innovationblue;
-            }
         }
 
     }
