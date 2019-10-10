@@ -11,13 +11,14 @@
 
 
 .topbar {
-    min-height: 53px;
+    // min-height: 53px;
     z-index: 10; //for sticky
-    height: 53px; // to prevent filtering from pushing bar down. remove if it causes other problems!
+    // height: 53px; // to prevent filtering from pushing bar down. remove if it causes other problems!
+    height: auto;
 
-    @include respond-to (medium-screens) {
-        height: 53px;
-    }
+    // @include respond-to (medium-screens) {
+        height: auto;
+    // }
 
 }
 
