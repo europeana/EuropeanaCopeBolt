@@ -90,7 +90,7 @@ class ZohoImport
         $this->logger('info', $logmessage, 'zohoimport');
 
         //Authenticate before starting import of resources
-        $this->app['zohoimport.oauth']->authenticate($this->config['oauth']);
+        $this->app['zohoimport.oauth']->authenticate();
 
         foreach ($this->enabledsources as $name => $config) {
             $this->workingtype = $config['target']['contenttype'];
@@ -1063,7 +1063,7 @@ class ZohoImport
             }
 
             $image['size'] = file_put_contents($image['tmpname'], $imagedata);
-            
+
             unset($imagedata);
         } else {
             // there was a tempfile already

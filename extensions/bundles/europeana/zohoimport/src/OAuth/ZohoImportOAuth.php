@@ -22,7 +22,7 @@ class ZohoImportOAuth
         $this->oAuthConfiguration = $oAuthConfiguration;
     }
 
-    public function authenticate($oAuthConfiguration)
+    public function authenticate()
     {
         $authenticatedDateTime = new \DateTime('now');
 

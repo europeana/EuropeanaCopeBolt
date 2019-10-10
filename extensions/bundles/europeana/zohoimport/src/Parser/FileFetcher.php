@@ -76,8 +76,6 @@ class FileFetcher
             $curlOptions['CURLOPT_PROXYUSERPWD'] = $this->app['config']->get('general/httpProxy/user') . ':' . $this->app['config']->get('general/httpProxy/password');
         }
 
-//        'token_persistence_path' => dirname(dirname(__DIR__ )) . '/TokenStorage'
-
         // When token has expired reauthenticate
         if($this->app['zohoimport.oauth']->getExpiresInDatetime() <= new \DateTime('now')){
             echo "oAuthToken has expired. Reauthenticate";
