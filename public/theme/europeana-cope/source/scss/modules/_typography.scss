@@ -260,7 +260,8 @@ section {
     }
 
     .inner-wrap p + .items-container,
-    .inner-wrap h2 + .items-container {
+    .inner-wrap h2 + .items-container,
+    &.tiles-module h2 + .items-container {
         margin-top: 3rem;
     }
 }
