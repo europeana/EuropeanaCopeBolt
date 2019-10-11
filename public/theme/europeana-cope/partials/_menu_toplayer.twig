@@ -29,15 +29,17 @@
     {# Make the macro available for use #}
     {% from _self import display_menu_item %}
 
-    {% set parents = getParents(record) %}
     {% set parentLinks = [] %}
 
-    {% for parent in parents %}
-        {% set parentLinks = parentLinks|merge([ parent.link ]) %}
-    {% endfor %}
+    {% if record is defined %}
+        {% set parents = getParents(record) %}
 
-    {% set parentLinks = parentLinks|merge([ record.link ]) %}
+        {% for parent in parents %}
+            {% set parentLinks = parentLinks|merge([ parent.link ]) %}
+        {% endfor %}
 
+        {% set parentLinks = parentLinks|merge([ record.link ]) %}
+    {% endif %}
 
     <!-- start subnav -->
     <nav class="toplayer">
