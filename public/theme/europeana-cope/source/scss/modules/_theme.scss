@@ -966,6 +966,10 @@ div.calltoaction-readmore {
 
 .teaser-threecol {
 
+    .rounded-card {
+        height: 100%; // fill out flex box
+    }
+
     p {
         margin: 0 0 .5rem;
         font-size: 0.875rem;
