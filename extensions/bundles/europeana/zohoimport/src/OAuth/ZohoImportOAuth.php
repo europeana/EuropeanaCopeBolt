@@ -31,13 +31,16 @@ class ZohoImportOAuth
 
         $extensionsDir = $this->app['path_resolver']->resolve('extensions');
         $this->oAuthConfiguration['token_persistence_path'] = $extensionsDir . $this->oAuthConfiguration['token_persistence_path'];
-
         ZCRMRestClient::initialize($this->oAuthConfiguration);
         $oAuthClient = ZohoOAuth::getClientInstance();
         $refreshToken = $this->oAuthConfiguration['refresh_token'];
         $userIdentifier = $this->oAuthConfiguration['current_user_email'];
+        // Include the TokenStorage path to handle zcrm_oauthtokens.txt
+        ini_set('include_path', $this->oAuthConfiguration['token_persistence_path']);
+        
         $oAuthTokens = $oAuthClient->generateAccessTokenFromRefreshToken($refreshToken, $userIdentifier);
         $this->oAuthToken = $oAuthClient->getAccessToken($userIdentifier);
+        ini_restore('include_path');
     }
 
     public function getExpiresInDatetime(){
