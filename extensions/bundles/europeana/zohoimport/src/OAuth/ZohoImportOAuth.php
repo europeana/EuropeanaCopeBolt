@@ -36,8 +36,7 @@ class ZohoImportOAuth
         $refreshToken = $this->oAuthConfiguration['refresh_token'];
         $userIdentifier = $this->oAuthConfiguration['current_user_email'];
         // Include the TokenStorage path to handle zcrm_oauthtokens.txt
-        ini_set('include_path', $this->oAuthConfiguration['token_persistence_path']);
-        
+        ini_set('include_path', '.;' . $this->oAuthConfiguration['token_persistence_path']);
         $oAuthTokens = $oAuthClient->generateAccessTokenFromRefreshToken($refreshToken, $userIdentifier);
         $this->oAuthToken = $oAuthClient->getAccessToken($userIdentifier);
         ini_restore('include_path');
