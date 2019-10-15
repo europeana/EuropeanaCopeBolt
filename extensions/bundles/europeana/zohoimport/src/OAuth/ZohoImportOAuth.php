@@ -29,8 +29,9 @@ class ZohoImportOAuth
         // Token expires in 1 hour
         $this->oAuthTokenExpiresInDatetime = $authenticatedDateTime->add(new \DateInterval('PT1H'));
 
-        $extensionsDir = $this->app['path_resolver']->resolve('extensions');
-        $this->oAuthConfiguration['token_persistence_path'] = $extensionsDir . $this->oAuthConfiguration['token_persistence_path'];
+        $pathToExtensionsDir = $this->app['path_resolver']->resolve('extensions');
+        $pathToTokenStorageDir = $pathToExtensionsDir . $this->app['zohoimport.config']['oauth']['token_persistence_path'];
+        $this->oAuthConfiguration['token_persistence_path'] = $pathToTokenStorageDir;
 
         dump($this->oAuthConfiguration['token_persistence_path']);
 
