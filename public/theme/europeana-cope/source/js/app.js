@@ -381,7 +381,9 @@ $( document ).ready(function() {
 
         if ( windowWidthEms >= breakMenuFull ) {
             // set sticky topbar and menu
-            $('#mainmenu').stick_in_parent();
+            $('#mainmenu').stick_in_parent({
+                offset_top: 75
+            });
             $('#topbar').stick_in_parent();
             $('.sticky-header').stick_in_parent();
 

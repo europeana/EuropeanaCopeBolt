@@ -119,8 +119,8 @@ nav.main-menu {
         display: block; //check, medium or large?
         top: 75px; //magic number: height from topbar
         left: 0;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        height: calc(100% - 75px);
+        // box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        // height: 100vh; // No height: fucks with stcky-kit js
     }
 
     body.homepage & {
