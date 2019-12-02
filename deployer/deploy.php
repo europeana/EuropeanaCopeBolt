@@ -238,8 +238,8 @@ task('bolt:keepfiles', function() {
         }
     }
 
-    // run('chmod 777 {{release_path}}/extensions/bundles/europeana/zohoimport/TokenStorage/zcrm_oauthtokens.txt');
-    // run('chmod 777 {{release_path}}/vendor/zohocrm/php-sdk/src/oauth/utility/');
+    run('chmod 777 {{release_path}}/extensions/bundles/europeana/zohoimport/TokenStorage/zcrm_oauthtokens.txt');
+    run('chmod 777 {{release_path}}/vendor/zohocrm/php-sdk/src/oauth/utility/');
 })->desc('Keep some files along releases');
 
 
