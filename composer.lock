@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "17aac827ebc3b0e5357034280d73c8c3",
+    "content-hash": "04f30caaebb68619c11348d820bdadea",
     "packages": [
         {
             "name": "bolt/bolt",
@@ -5753,6 +5753,45 @@
             ],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
             "time": "2015-12-17T08:42:14+00:00"
+        },
+        {
+            "name": "zohocrm/php-sdk",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zoho/zcrm-php-sdk.git",
+                "reference": "fb1f546e15bb8ce13571e488bf773c53f77d00cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zoho/zcrm-php-sdk/zipball/fb1f546e15bb8ce13571e488bf773c53f77d00cf",
+                "reference": "fb1f546e15bb8ce13571e488bf773c53f77d00cf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=5.7"
+            },
+            "type": "sdk",
+            "autoload": {
+                "psr-4": {
+                    "zcrmsdk\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Zoho CRM API Team",
+                    "email": "support@zohocrm.com",
+                    "homepage": "https://www.zoho.com/crm/help/customer-support.html",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Zoho CRM API SDK for PHP",
+            "homepage": "https://github.com/zoho/zcrm-php-sdk",
+            "time": "2019-09-13T13:02:09+00:00"
         }
     ],
     "packages-dev": [],

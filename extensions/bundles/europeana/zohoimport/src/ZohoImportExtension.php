@@ -2,6 +2,7 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport;
 
+use Bolt\Extension\Europeana\ZohoImport\Provider\ZohoImportOAuthProvider;
 use Bolt\Extension\SimpleExtension;
 use Bolt\Menu\MenuEntry;
 use Pimple as Container;
@@ -31,7 +32,8 @@ class ZohoImportExtension extends SimpleExtension
     {
         return [
           $this,
-          new ZohoImportServiceProvider($this->getConfig())
+          new ZohoImportServiceProvider($this->getConfig()),
+          new ZohoImportOAuthProvider($this->getConfig())
         ];
     }
 
