@@ -1,105 +1,93 @@
 # debug mode will make this process a lot slower
 debug_mode: false
+
 # the path for downloads images in hookafterload
 image_path: 'zoho_images'
+
 # set image_downloads to true for the hookafterload images
 image_downloads: true
+
+# Generate authtoken. Use Postman to send requests and generate authtoken.
+# This is required to be done once. Then we can use refresh_token to regenerate authtoken
+# Go to https://www.zoho.com/crm/developer/docs/api/oauth-overview.html
+# Zoho CRM Developer Console:
+# Go to https://accounts.zoho.com/developerconsole to manage your client ids
+oauth:
+  # When generating grant token this are the scopes used. This value is not used by the extension,
+  # is here for extra information
+  scopes: 'ZohoCRMmodules.contacts.read,ZohoCRM.modules.accounts.read'
+  client_id:              '{{ override in config/extensions/zohoimport_local.yml }}'  #  Client ID in Zoho CRM Developer Console (e.g, 'xxxx.9EIMxxxxNRT8xxxx3KE0xxxxHSxxxx')
+  client_secret:          '{{ override in config/extensions/zohoimport_local.yml }}'  #  Client secret ID in Zoho CRM Developer Console (e.g, 'xxxx9887xxxxd5679xxxxa1fxxxx8fxxxx20f8xxxx')
+  refresh_token:          '{{ override in config/extensions/zohoimport_local.yml }}'  #  Refresh Token in Authentication Response (e.g, 'xxxx.3dxxxxc3248xxxxf52cxxxx16916xxxx.704ff3f686xxxx86bd718xxxx73exxxx')
+  redirect_uri:           '{{ override in config/extensions/zohoimport_local.yml }}'  #  Absolute URL used when creating client id in Zoho CRM Developer Console (e.g, 'https://europena.nestor.twokings.eu')
+  current_user_email:     '{{ override in config/extensions/zohoimport_local.yml }}'  #  Email used when creating client id in Zoho CRM Developer Console (e.g, 'nestor@twokings.nl')
+  token_persistence_path: '{{ override in config/extensions/zohoimport_local.yml }}'  # '/bundles/europeana/zohoimport/TokenStorage'  TokenStorage is the required directory where new Tokens are store
 
 remotes:
   zoho_json_remote:
     enabled: true
     source:
-      url: https://crm.zoho.com/crm/private/json/Contacts/getRecords
-
-      # https://crm.zoho.com/crm/private/json/Contacts/getRecords?authtoken=e95153d23c8b0d4a5eb5c885531f2d6b&scope=crmapi&id=1482250000000338829
-      getparams:
-        authtoken: '{{override in local config}}'
-        scope: crmapi
-      loopparams:
-        counter: fromIndex
-        stepper: toIndex
-        start: 1       # start at this (should be 1)
-        size: 100      # number of records to fetch per iteration
-      # generate a token by going to
-      # https://accounts.zoho.com/apiauthtoken/create?SCOPE=ZohoCRM/crmapi
-      # file: examples/Contacts-Timothy.json
+      # https://www.zohoapis.com/crm/v2/Contacts
+      url: https://www.zohoapis.com/crm/v2/Contacts
+      pagination: true                                                      # Use pagination to import all data
       type: json
     target:
       contenttype: persons
       defaults:
-        new: 'published'       # may also be any valid status
-        updated: 'published'   # may also be any valid status
-        removed: 'held' # may also be any valid status
+        new: 'published'                                                    # may also be any valid status
+        updated: 'published'                                                # may also be any valid status
+        removed: 'held'                                                     # may also be any valid status
       hookafterload:
         image:
           callback: downloadZohoPhotoFromURL
-          source_url: 'https://crm.zoho.com/crm/private/json/Contacts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=CONTACTID'
-          source_field: CONTACTID
+          source_url: 'https://www.zohoapis.com/crm/v2/Contacts/id/photo'
+          source_field: id
           target_field: image
       mapping: # mappings in XPATH
-        root: 'response.result.Contacts.row'
+        root: 'data'
         fields:
-          # bolt_col: "ZOHO Field name"           # example: "Example value"
-          uid: "CONTACTID"                        # example: "1482250000000152005"
-          datecreated: "Created Time"             # example: "2015-06-04 16:37:25"
-          datechanged: "Modified Time"            # example: "2015-06-09 14:44:58"
-
-          first_name: "First Name"                # example: "Timothy"
-          last_name: "Last Name"                  # example: "Test"
-          job_title: "Title"                      # example: "Tester"
-          company: "Account Name"                 # example: "Test"
-          industry: "Industry"                    # example: "Test"
-
-          email: "Public email"                   # example: "test@browsercheck.nl"
-          phone: "Public phone"                          # example: "0703457628"
-
-          twitter: "Twitter"                      # example: "twokings"
-          linkedin: "LinkedIn profile"            # example: "https://linkedin.com/in/twokings"
-          skype: "Skype ID"                       # example: "example"
-
-          introduction: "Description"             # example: "Test record"
-
-          network_participation: "Participation level"
+          # bolt_col: "ZOHO Field name"                                     # example: "Example value"
+          uid: "id"                                                         # example: "1482250000000152005"
+          datecreated: "Created_Time"                                       # example: "2015-06-04 16:37:25"
+          datechanged: "Modified_Time"                                      # example: "2015-06-09 14:44:58"
+          first_name: "First_Name"                                          # example: "Timothy"
+          last_name: "Last_Name"                                            # example: "Test"
+          job_title: "Title"                                                # example: "Tester"
+          company: "Account_Name->name"                                     # example: "Test"
+          industry: "Industry"                                              # example: "Test"
+          email: "Public_email"                                             # example: "test@browsercheck.nl"
+          phone: "Public_phone"                                             # example: "0703457628"
+          twitter: "Twitter"                                                # example: "twokings"
+          linkedin: "LinkedIn_profile"                                      # example: "https://linkedin.com/in/twokings"
+          skype: "Skype_ID"                                                 # example: "example"
+          introduction: "Description"                                       # example: "Test record"
+          network_participation: "Participation_level"
           # example: "Governing Board;Association Members Council"
-          community: "Member of community"        # example: "Data partner;EuropeanaTech (R&D)"
-          community_role: "Community role"        # example: "Test"
-          europeana_tech: "Member of EuropeanaTech"
-          gb_role: "Governing Board role"        # example: "Test"
-          na_role: "Network Association role/Europeana Foundation team"
-          na_community_role: "NA Community role"
-
-          sector: "Sector"
+          # community: "Member of community"                                # example: "Data partner;EuropeanaTech (R&D)"
+          community_role: "Community_role"                                  # example: "Test"
+          europeana_tech: "Member_of_EuropeanaTech"
+          gb_role: "Governing_Board_role"                                   # example: "Test"
+          na_role: "Network_Association_role_Europeana_Foundation_team"
+          na_community_role: "NA_Community_role"
+          # sector: "Sector"
           domain: "Domain"
           country: "Country"
-          boardposition: "Europeana Foundation Board position"
-
-          membership_council_term: "MC term"
-          hide_on_pro: "Don't show this contact on Europeana Pro"
-          public_photo: "Show photo on europeana site"
+          boardposition: "Europeana_Foundation_Board_position"
+          membership_council_term: "MC_term"
+          hide_on_pro: "Don_t_show_this_contact_on_Europeana_Pro"
+          public_photo: "Show_photo_on_europeana_site"
           # example: "true"
-          account_uid: "ACCOUNTID"                # example: "1482250000000152017"
-          europeana_id: "ID"                      # default: "EL30MC"
+          account_uid: "Account_Name->id"                                   # example: "1482250000000152017"
+          europeana_id: "Membership_no"                                     # default: "EL30MC"
 
   zoho_json_remote_orgs:
     enabled: true
     source:
-      url: https://crm.zoho.com/crm/private/json/Accounts/searchRecords
-      # https://crm.zoho.com/crm/private/json/Accounts/searchRecords?authtoken=e95153d23c8b0d4a5eb5c885531f2d6b&scope=crmapi&criteria=%28%28Organisation+role%3AAccredited+Aggregator%29AND%28Aggregator%3AActive%29%29&fromIndex=1&toIndex=100
+      # https://www.zohoapis.com/crm/v2/Accounts/search
+      url: https://www.zohoapis.com/crm/v2/Accounts/search
+      pagination: true                                                      # Use pagination to import all data
       getparams:
-        authtoken: '{{override in local config}}'
-        scope: crmapi
-        criteria: '(Organisation Role:Aggregator)'
-        # criteria: '(Organisation Role:Data Provider)'
-        # 1. Organisation role: *Accredited Aggregator*
-        # 2. Aggregator: *Active*
-      loopparams:
-        counter: fromIndex
-        stepper: toIndex
-        start: 1       # start at this (should be 1)
-        size: 100      # number of records to fetch per iteration
-      # generate a token by going to
-      # https://accounts.zoho.com/apiauthtoken/create?SCOPE=ZohoCRM/crmapi
-      # file: examples/Contacts-Timothy.json
+        criteria: '((Organisation_Role2:equals:Aggregator))'
       type: json
     target:
       contenttype: organisations
@@ -108,94 +96,51 @@ remotes:
         updated: 'published'   # may also be any valid status
         removed: 'held' # may also be any valid status
       hookafterload:
-        #                image:
-        #                    callback: downloadZohoPhotoFromURL
-        #                    source_url: 'https://crm.zoho.com/crm/private/json/Accounts/downloadPhoto?authtoken={{override in local config}}&scope=crmapi&id=ACCOUNTID'
-        #                    source_field: ACCOUNTID
-        #                    target_field: image
         image:
           callback: downloadZohoPhotoFromURL
-          source_url: "Logo (link to WikimediaCommons)"
-          source_field: "Logo (link to WikimediaCommons)"
+          source_url: "Logo_link_to_WikimediaCommons"
+          source_field: "Logo_link_to_WikimediaCommons"
           target_field: image
-      #                relations:
-      #                    callback: loadZohoRelatedRecords
-      #                    source_url: https://crm.zoho.com/crm/private/json/Contacts/getRelatedRecords?authtoken={{override in local config}}&scope=crmapi&parentModule=Accounts&id=ACCOUNTID
-      #                    source_field: ACCOUNTID
-      #                    target_field: null
       mapping: # mappings in XPATH
-        root: 'response.result.Accounts.row'
+        root: 'data'
         fields:
-          # bolt_col: "ZOHO Field name"           # example: "Example value"
-          uid: "ACCOUNTID"                        # example: "1482250000000152005"
-          europeana_id: "ID"                      # default: "EL30MC"
-          org_uid: "ACCOUNTID"                # example: "1482250000000152017"
-          datecreated: "Created Time"             # example: "2015-06-04 16:37:25"
-          datechanged: "Modified Time"            # example: "2015-06-09 14:44:58"
-          # last_activity: "Last Activity Time"     # example: "2018-03-12 14:44:00"
-          # modified_date: "MODIFIEDBY"             # example: "1482250000004056005"
-          # modified_by: "Modified By"              # example: "DPS Team"
-          # smuid: "SMOWNERID"                      # example: "1482250000004056005"
-          # account_owner: "Account Owner"          # example: "DPS Team"
-
-          name: "Account Name"                    # example: "Slovak National Museum"
-          name_lang: "Lang Organisation Name"     # example: "EN(English)"
-          name_alt1: "Alternative 1"              # example: "Slovenské Národné Múzeum"
-          name_alt1_lang: "Lang Alternative 1"    # example: "SK(Slovak)"
-          name_alt2: "Alternative 2"              # example: "Slovenské Národné Múzeum"
-          name_alt2_lang: "Lang Alternative 2"    # example: "SK(Slovak)"
-          acronym: "Acronym"                      # example: "Slovak National Museum"
-          acronym_lang: "Lang Acronym"            # example: "SK(Slovak)"
-
-          org_country: "Organisation Country"     # example: "Slovakia, SK"
-          org_role: "Organisation Role"           # example: "Example value"
-
-          website: "Website"                      # example: "http://www.snm.sk"
-          logo_url: "Logo (link to WikimediaCommons)"
+          # bolt_col: "ZOHO Field name"               # example: "Example value"
+          uid: "id"                                   # example: "1482250000000152005"
+#          europeana_id: "ID"                         # default: "EL30MC"
+          org_uid: "id"                               # example: "1482250000000152017"
+          datecreated: "Created_Time"                 # example: "2015-06-04 16:37:25"
+          datechanged: "Modified_Time"                # example: "2015-06-09 14:44:58"
+          # last_activity: "Last Activity Time"       # example: "2018-03-12 14:44:00"
+          # modified_date: "MODIFIEDBY"               # example: "1482250000004056005"
+          # modified_by: "Modified By"                # example: "DPS Team"
+          # smuid: "SMOWNERID"                        # example: "1482250000004056005"
+          # account_owner: "Account Owner"            # example: "DPS Team"
+          name: "Account_Name"                        # example: "Slovak National Museum"
+          name_lang: "Lang_Organisation_Name"         # example: "EN(English)"
+          name_alt1: "Alternative_1"                  # example: "Slovenské Národné Múzeum"
+          name_alt1_lang: "Lang_Alternative_1"        # example: "SK(Slovak)"
+          name_alt2: "Alternative_2"                  # example: "Slovenské Národné Múzeum"
+          name_alt2_lang: "Lang_Alternative_2"        # example: "SK(Slovak)"
+          acronym: "Acronym"                          # example: "Slovak National Museum"
+          acronym_lang: "Lang_Acronym"                # example: "SK(Slovak)"
+          org_country: "Country"                      # example: "Slovakia, SK"
+          org_role: "Organisation_Role2"              # example: "Example value"
+          website: "Website"                          # example: "http://www.snm.sk"
+          logo_url: "Logo_link_to_WikimediaCommons"
           # example: "http://example.com/logo.gif"
           email: "Email"
-
-          domain: "Domain"                        # example: "Museum"
-          scope: "Scope"                          # example: "European scope"
-          sector: "Sector"                        # example: "European scope"
-
-          city: "City"                            # example: "Slovakia"
-          street: "Street"                        # example: "Slovakia"
-          zipcode: "ZIP code"                     # example: "Slovakia"
-          po_box: "PO box"
-          country: "Country"                      # example: "Slovakia"
-
+          domain: "Industry"                          # example: "Museum"
+#          scope: "Scope"                             # example: "European scope"
+          sector: "Sector"                            # example: "European scope"
+          city: "City"                                # example: "Slovakia"
+          street: "Street"                            # example: "Slovakia"
+          zipcode: "ZIP_code"                         # example: "Slovakia"
+          po_box: "PO_box"
+          country: "Country"                          # example: "Slovakia"
           # new fields for 20181017
-          # Geographical reach - Geographical reach (zoho crm field) (new field)
-          geographical_reach: "Geographical reach"
-          # Themes - Themes (zoho crm field) (new field)
+#          geographical_reach: "Geographical reach"
           content_themes: "Themes"
-          # Working languages - Working languages (zoho crm field) (new field)
-          working_languages: "Working language"
-          # Content language - Content language (zoho crm field) (new field)
-          content_languages: "Content language"
-
+          working_languages: "Working_Language"
+          content_languages: "Content_Language"
           # Do not import description
-          # description: "Description"              # example: "<p>Long text</p>"
-
-          # val: "Image service Opt-in"             # example: "false"
-          # val: "DEA Sent"                         # example: "true"
-          # val: "DEA Notes"                        # example: "Long story"
-          # val: "DEA Signed"                       # example: "true"
-          # val: "Data provider"                    # example: "true"
-          # val: "Data Partner"                     # example: "false"
-
-          # Aggregator
-          # Alternative 3
-          # Alternative 4
-          # Alternative 5
-          # Geographic Level
-          # Lang Alternative 3
-          # Lang Alternative 4
-          # Lang Alternative 5
-          # Organisation-eigenaar
-          # Organisationnaam
-          # Provides to
-          # SameAs 1
-          # SameAs 2
-          # SameAs 3
+          # description: "Description"                # example: "<p>Long text</p>"
