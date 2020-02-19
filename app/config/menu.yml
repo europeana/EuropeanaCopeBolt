@@ -1,9 +1,5 @@
 main:
     -
-        class: home
-        path: pages/home
-        label: Homepage
-    -
         class: mission
         path: pages/our-mission
         label: 'Our mission '
@@ -111,6 +107,10 @@ main:
             -
                 path: page/23
                 label: 'Data publication'
+                submenu:
+                    -
+                        path: page/547
+                        label: 'Europeana Aggregators'
             -
                 label: Discovery
                 path: pages/discovery

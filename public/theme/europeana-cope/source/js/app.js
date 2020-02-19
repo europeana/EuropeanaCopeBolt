@@ -366,41 +366,91 @@ $( document ).ready(function() {
         // } else {
         // };
 
-        if ( windowWidthEms < breakMenuFull ) {
-            $('#headersearch').hide();
-            $('#headersearch').appendTo('header'); // put it back, if coming from large
-        }
-
-        if ( windowWidthEms >= breakMenuFull ) {
-            //remove all leftover inline styles from mobile view;
-            $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
-            $('#headersearch').removeAttr('style');
-            // stick it _in_ the header
-            $('#headersearch').appendTo('.headercontainer');
-        }
-
-        if ( windowWidthEms >= breakMenuFull ) {
-            // set sticky topbar and menu
-            $('#mainmenu').stick_in_parent({
-                offset_top: 75
-            });
-            $('#topbar').stick_in_parent();
-            $('.sticky-header').stick_in_parent();
-
+        if ( windowWidthEms < breakLarge ) { // less then 767
+            $("#topbar").trigger("sticky_kit:detach");
+            $("#mainmenu").trigger("sticky_kit:detach");
+            $(".sticky-header").trigger("sticky_kit:detach");
+            // console.log(windowWidthEms, breakLarge, 'A')
         } else {
-           // remove stickyness when window is resized
-           $("#topbar").trigger("sticky_kit:detach");
-           $("#mainmenu").trigger("sticky_kit:detach");
-           $(".sticky-header").trigger("sticky_kit:detach");
-
-        }
-
-        if ( windowWidthEms >= breakLarge ) {
             // set filters outside list for desktop.
             // NOTE: Anke is lazy and has not coded for the edgecase where a Large window is resized to < Large.
             // hardly ever occurs. If happens, slap Anke and fix it yourself.
             $('.filters-chapter').appendTo('.filter-container');
+
         }
+
+        if (( windowWidthEms >= breakLarge ) && ( windowWidthEms < breakMenuFull )) {
+            $('#topbar').stick_in_parent({
+                offset_top: 64
+            });
+        }
+
+        if ( windowWidthEms < breakMenuFull ) { // less then 960
+            // $('#headersearch').hide();
+            $('#headersearch').appendTo('header'); // put it back, if coming from large
+            console.log('X');
+        } else {
+             //remove all leftover inline styles from mobile view;
+             $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
+             $('#headersearch').removeAttr('style');
+             // stick it _in_ the header
+             $('#headersearch').appendTo('.headercontainer');
+             console.log(windowWidthEms, 'Y');
+
+             // set sticky topbar and menu
+             $('#mainmenu').stick_in_parent({
+                 offset_top: 75
+             });
+             $('#topbar').stick_in_parent({
+                offset_top: 75
+            });
+            $('.sticky-header').stick_in_parent();
+        }
+
+
+
+
+        // if ( windowWidthEms >= breakLarge ) {
+        //     // set filters outside list for desktop.
+        //     // NOTE: Anke is lazy and has not coded for the edgecase where a Large window is resized to < Large.
+        //     // hardly ever occurs. If happens, slap Anke and fix it yourself.
+        //     $('.filters-chapter').appendTo('.filter-container');
+
+        //     $('#topbar').stick_in_parent({
+        //         offset_top: 64
+        //     });
+        // } else {
+
+        // }
+
+        // if ( windowWidthEms < breakMenuFull ) {
+        //     $('#headersearch').hide();
+        //     $('#headersearch').appendTo('header'); // put it back, if coming from large
+        // }
+
+        // if ( windowWidthEms >= breakMenuFull ) {
+        //     //remove all leftover inline styles from mobile view;
+        //     $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
+        //     $('#headersearch').removeAttr('style');
+        //     // stick it _in_ the header
+        //     $('#headersearch').appendTo('.headercontainer');
+
+        //     // set sticky topbar and menu
+        //     $('#mainmenu').stick_in_parent({
+        //         offset_top: 75
+        //     });
+
+        //     $('.sticky-header').stick_in_parent();
+
+        // } else {
+        //    // remove stickyness when window is resized
+        //    $("#topbar").trigger("sticky_kit:detach");
+        //    $("#mainmenu").trigger("sticky_kit:detach");
+        //    $(".sticky-header").trigger("sticky_kit:detach");
+
+        // }
+
+
     }
 
 });

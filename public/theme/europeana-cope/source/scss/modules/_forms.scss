@@ -44,6 +44,13 @@ input::placeholder {
 form.searchform {
     display: flex;
 
+    .js header & {
+        display: none;
+        @include respond-to (menu-full) {
+        display: flex;
+        }
+    }
+
     header & {
         // margin: 0;
         text-align: right;
