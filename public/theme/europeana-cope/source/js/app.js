@@ -388,14 +388,14 @@ $( document ).ready(function() {
         if ( windowWidthEms < breakMenuFull ) { // less then 960
             // $('#headersearch').hide();
             $('#headersearch').appendTo('header'); // put it back, if coming from large
-            console.log('X');
+
         } else {
              //remove all leftover inline styles from mobile view;
              $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
              $('#headersearch').removeAttr('style');
              // stick it _in_ the header
              $('#headersearch').appendTo('.headercontainer');
-             console.log(windowWidthEms, 'Y');
+
 
              // set sticky topbar and menu
              $('#mainmenu').stick_in_parent({

@@ -9,7 +9,7 @@
     {% endif %}
 
     <h3 class="widget">{{ record.title|default('') }}</h3>
-    <hr>
+    {# <hr> #}
     <a href="{{ record.htmllink|default(record.link|default(''))|default('#') }}" class="button actionbutton">
         {{ record.buttontext|default('Learn more') }}
     </a>

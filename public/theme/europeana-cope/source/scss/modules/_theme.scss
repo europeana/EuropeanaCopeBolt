@@ -433,7 +433,6 @@ a.banner {
     @include respond-to(large-screens){
         height: 32em;
         margin: 0;
-        background: #f09;
     }
 
     .colored-image {
@@ -1166,7 +1165,7 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
     position: relative;
     background-color: $line-gray; //$baseFirstThemeColour;
     overflow: hidden;
-    margin: 1rem 0;
+    margin: 0;
 
 
     @include respond-to(large-screens) {
@@ -1193,7 +1192,7 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
         margin: 0 1rem 0 0;
         color: $white;
         text-transform: none;
-        top: 1.1rem;
+        top: 0.7rem;
         text-align: center;
         width: 100%;
         left: 0;
@@ -1258,8 +1257,6 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
         }
 
     }
-
-
 }
 
 
@@ -1271,7 +1268,6 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
     width: 100%;
     text-align: center;
     margin: 1rem 0;
-
 
     a.button {
         padding: .75rem 1.5rem
@@ -1317,6 +1313,9 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
 //         margin-top: 0px;
 //     }
 // }
+
+// Hoe wordt de spacing tussen secties gedaan?
+// -> https://codepen.io/ankedsgn/pen/zYGKOdm via de div erbinnenin
 
 /*
 ***********************************************************************

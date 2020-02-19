@@ -259,9 +259,13 @@ section {
         }
     }
 
-    .inner-wrap p + .items-container,
-    .inner-wrap h2 + .items-container,
-    &.tiles-module h2 + .items-container {
+    // .inner-wrap p + .items-container,
+    // .inner-wrap h2 + .items-container,
+    // &.tiles-module h2 + .items-container {
+    //     margin-top: 3rem;
+    // }
+
+    .items-container { // opdat er ook marge is _zonder_ titel. check of dit goed blijft gaan.
         margin-top: 3rem;
     }
 }
