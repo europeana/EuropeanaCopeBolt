@@ -319,12 +319,15 @@ nav ul.secondary-menu {
 
 
 nav.footer-menu {
+    margin-bottom: 2rem;
+
     ul {
 
     }
 
     li {
-        display: inline-block;
+        // display: inline-block;
+        margin-top: 4px;
     }
 
     a {
@@ -332,6 +335,7 @@ nav.footer-menu {
         text-decoration: none;
         border-bottom: 1px dotted $line-gray;
         margin-right: .8em;
+        font-size: .8125rem;
 
         &:hover, &:focus, &:active {
             color: $white;
