@@ -111,7 +111,14 @@ $( document ).ready(function() {
             }
         } else {
             //doe open
-            search.slideDown('fast').addClass('is-open');
+            // search.slideDown('fast').addClass('is-open');
+
+            search.slideDown('fast', function () {
+                  $(this).css({
+                    display: "flex"
+                  })
+                }
+              ).addClass('is-open');
 
             if (nav.hasClass('is-overlay')) {
                 console.log('is-overlay');
