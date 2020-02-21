@@ -83,6 +83,14 @@ $( document ).ready(function() {
     });
 
     /**
+    * breadcrumbs / history path
+    */
+    breadcrumbStateSaver(document.location.href, document.title);
+    showBreadCrumb();
+
+
+
+    /**
     * submit sortform on click of icon
     */
     $('#sortbar button').hide();
@@ -462,6 +470,8 @@ $( document ).ready(function() {
 
 });
 
+
+
 function setCookie(name,value,days) {
     var expires = "";
     if (days) {
@@ -483,4 +493,32 @@ function getCookie(name) {
 }
 function eraseCookie(name) {
     document.cookie = name+'=; Max-Age=-99999999;';
+}
+
+
+//breadcrumbs -> https://stackoverflow.com/questions/18998797/create-breadcrumbs-dynamically-on-client-side-using-javascript
+function bindEventToNavigation(){
+    $.each($("#primary-menu li a"), function(index, element){
+        $(element).click(function(event){
+            breadcrumbStateSaver($(this).attr('href'), $(this).text());
+            showBreadCrumb();
+        });
+    });
+}
+
+function breadcrumbStateSaver(link, text) {
+    if (typeof (Storage) != "undefined") {
+        text = text.split('|')[0];
+        var items = [];
+        if (sessionStorage.breadcrumb) {
+            items = JSON.parse(sessionStorage.breadcrumb);
+        }
+        items.push("<a href='" + link + "'>" + text + "</a>");
+        sessionStorage.breadcrumb = JSON.stringify(items);
+    }
+}
+
+function showBreadCrumb(){
+     var breadcrumbs = JSON.parse(sessionStorage.breadcrumb);
+     $("#breadcrumbs").html(breadcrumbs.slice(-4,-1).join(' &raquo; '));   
 }
