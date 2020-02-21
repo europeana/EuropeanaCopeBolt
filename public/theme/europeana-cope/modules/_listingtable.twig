@@ -54,7 +54,7 @@ This query has as exception an extra sontent set: all_records. since records is 
     {# Collecting all countries for selectbox from the unpaginated records #}
     {% set allCountries = [] %}
     {% for record in allrecords|order('country') %}
-        {% if record.values.country not in allCountries %}
+        {% if record.values.country not in allCountries and record.values.country is not empty %}
            {% set allCountries = allCountries|merge([record.values.country]) %}
         {% endif %}
     {% endfor %}
@@ -62,7 +62,7 @@ This query has as exception an extra sontent set: all_records. since records is 
     {# Collecting all domains for selectbox from the unpaginated records #}
     {% set allDomains = [] %}
     {% for record in allrecords|order('domain') %}
-        {% if record.values.domain not in allDomains %}
+        {% if record.values.domain not in allDomains and record.values.domain is not empty %}
             {% set allDomains = allDomains|merge([record.values.domain]) %}
         {% endif %}
     {% endfor %}
