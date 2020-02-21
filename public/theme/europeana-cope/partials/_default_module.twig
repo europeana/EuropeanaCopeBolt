@@ -61,6 +61,8 @@
     {% set filtervalue = 1 %}
 
     {% set selected_records = [] %}
+    {% set all_records = [] %}
+
     {% if template != 'body' and ordering == 'specified' %}
         {% set field = 'selected_' ~ sources %}
         {#{{ dump(field) }}#}
@@ -178,6 +180,11 @@
                     (filtername): (filtervalue),
                     (taxonomyname): (taxonomyterm)
                 } orderby 'last_name' limit override_amount|default(10) allowpaging %}
+                {# extra hack: we need the unpaginated records as well in module _listingtable.twig #}
+                {% setcontent all_records = sources where {
+                    (filtername): (filtervalue),
+                    (taxonomyname): (taxonomyterm)
+                } orderby 'last_name' %}
             {% else %}
                 {% setcontent selected_records = sources where {
                     (filtername): '%' ~ (filtervalue) ~'%',
@@ -419,6 +426,7 @@
         'body': body,
         'icon': icon,
         'records': selected_records,
+        'allrecords': all_records,
         'allow_pager': allow_pager
     } %}
 {% endif %}

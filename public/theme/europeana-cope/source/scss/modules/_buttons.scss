@@ -78,8 +78,6 @@ button.simple,
     .calltoaction-readmore & {
     }
 
-
-
 }
 
 button.floating,
@@ -125,7 +123,7 @@ button.image-info {
 
 button.outline,
 .button.outline {
-    background: none;
+    background-color: $white;
     border: 1px solid $black;
     color: $black;
     font-weight: 700;
@@ -140,7 +138,7 @@ button.outline,
     }
 
     &:hover {
-        background: $baseFirstThemeColour;
+        background-color: $baseFirstThemeColour;
         color: $white;
         border-color: $baseFirstThemeColour;
 
@@ -148,6 +146,17 @@ button.outline,
             fill: $white;
         }
     }
+}
+
+select.button {  // yes! that happens on the members _listingtable.twig :)
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('../images/icons/caret_down.svg');
+    background-size: 1em 1em;
+    background-position: top 52% right 1em;
+    background-repeat: no-repeat;
+    padding-right: 2.5em;
 }
 
 a.roundsocial {

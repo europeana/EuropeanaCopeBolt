@@ -2456,6 +2456,47 @@ svg.icon-cutoff.top.right {
 ***********************************************************************
 **/
 
+.table-actions {
+    margin: 1rem 0;
+    padding: 0 .875rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include respond-to(large-screens) { 
+        padding: 0;
+    }
+
+    span {
+        width: 100%;
+        display: block;
+        margin-bottom: 1rem;
+        @include respond-to(large-screens) {
+            width: auto;
+            display: inline-block;
+        }
+        @include respond-to(menu-full) {
+            width: 100%;
+            display: block;
+        }
+        @include respond-to(wide-screens) {
+            width: auto;
+            display: inline-block;
+        }
+    }
+
+    select.button {
+        margin: 0 .5rem 1rem;
+        width: 290px; // optical: 'Bosnia Herzegovina' fits now.
+        &:hover, &:active {
+            background-color: $white;
+            color: $black;
+        }
+    }
+    button {
+        margin: 0 .5rem;
+    }
+}
+
 table.listingtable {
     border-bottom: 1px solid $line-gray;
     margin-top: 1rem;
