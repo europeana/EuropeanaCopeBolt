@@ -50,12 +50,6 @@ debug(TypeConverter::is($xml));
 // Validate against all types
 foreach (array('isArray', 'isObject', 'isJson', 'isSerialized', 'isXml') as $method) {
 	debug('TypeConverter::'. $method .'()');
-
-	dump('array', TypeConverter::$method($array));
-	dump('object', TypeConverter::$method($object));
-	dump('json', TypeConverter::$method($json));
-	dump('serialize', TypeConverter::$method($ser));
-	dump('xml', TypeConverter::$method($xml));
 }
 
 // Convert all the types

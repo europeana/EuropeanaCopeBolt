@@ -1107,11 +1107,29 @@ section.catstream {
         text-transform: uppercase;
     }
 
-    .country {
+    .country,
+    .theme {
         text-transform: uppercase;
         font-size: 0.75rem;
         margin-top: .5rem;
     }
+
+    .theme {
+        display: none;
+    }
+
+
+    // default: show country
+    // if 'variant-theme' is set as custom css class in module: country hides, theme shows.
+    .variant-theme & {
+        .country {
+            display: none;
+        }
+        .theme {
+            display: block;
+        }
+    }
+
 }
 
 

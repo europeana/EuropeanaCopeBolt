@@ -2,12 +2,17 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport\Parser;
 
+use zcrmsdk\crm\crud\ZCRMModule;
+use zcrmsdk\crm\setup\restclient\ZCRMRestClient;
+use zcrmsdk\oauth\ZohoOAuth;
+
 class FileFetcher
 {
     private $app;
     private $latestfile;
     private $remote_request_counter;
     private $errormessage;
+    private $responseData;
 
     public function __construct($app)
     {
@@ -22,7 +27,7 @@ class FileFetcher
     public function fetchAnyResource($enabled)
     {
 
-        if (array_key_exists('file', $enabled['source'])) {
+        if (isset($enabled['source']['file'])) {
             $source = __DIR__."/".$enabled['source']['file'];
             $this->app['zohoimport']->logger('debug', 'fetching local file: ' . $source, 'zohoimport');
             if (file_exists($source)) {
@@ -63,7 +68,7 @@ class FileFetcher
      */
     public function fetchRemoteResource($url)
     {
-        $curlOptions = array('CURLOPT_CONNECTTIMEOUT' => 5);
+        // $curlOptions = array('CURLOPT_CONNECTTIMEOUT' => 5);
         // Set cURL proxy options if there's a proxy
         if ($this->app['config']->get('general/httpProxy')) {
             $curlOptions['CURLOPT_PROXY'] = $this->app['config']->get('general/httpProxy/host');
@@ -71,15 +76,24 @@ class FileFetcher
             $curlOptions['CURLOPT_PROXYUSERPWD'] = $this->app['config']->get('general/httpProxy/user') . ':' . $this->app['config']->get('general/httpProxy/password');
         }
 
+        // When token has expired reauthenticate
+        if($this->app['zohoimport.oauth']->getExpiresInDatetime() <= new \DateTime('now')){
+            echo "oAuthToken has expired. Reauthenticate";
+            $this->app['zohoimport.oauth']->authenticate();
+        }
+
+        $curlOptions['headers'] = [
+            'Authorization' => 'Zoho-oauthtoken ' . $this->app['zohoimport.oauth']->getOAuthToken()
+        ];
+
         try {
             if (!isset($this->app['deprecated.php']) || $this->app['deprecated.php']) {
-                $data = $this->app['guzzle.client']->get($url, null, $curlOptions)->send()->getBody(true)->getContents();
+                $data = $this->app['guzzle.client']->request('GET', $url, $curlOptions)->getBody(true)->getContents();
             } else {
-                $data = $this->app['guzzle.client']->get($url, array(), $curlOptions)->getBody(true)->getContents();
+                $data = $this->app['guzzle.client']->request('GET', $url, $curlOptions)->getBody(true)->getContents();
             }
 
             $this->countRemoteRequest(); // count remote requests to determine if we hit a limit yet
-
             $this->latestfile = $data;
         } catch (RequestException $e) {
             $this->errormessage = 'Error occurred during remote fetch: ' . $e->getMessage();

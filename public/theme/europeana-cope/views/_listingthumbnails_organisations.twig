@@ -21,6 +21,12 @@
     </p>
     {% endif %}
 
+    {% if item.content_themes %}
+    <p class="theme">
+        {{ item.content_themes }}
+    </p>
+    {% endif %}
+
     <a href="{{ item.link() }}" class="button-link">
         Learn more
     </a>

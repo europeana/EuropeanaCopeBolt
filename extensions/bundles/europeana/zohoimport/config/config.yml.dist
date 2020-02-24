@@ -4,6 +4,12 @@ debug_mode: false
 image_path: 'zoho_images'
 # set image_downloads to true for the hookafterload images
 image_downloads: true
+oauth:
+    client_id:              {{override in local config}}
+    client_secret:          {{override in local config}}
+    redirect_uri:           {{override in local config}}
+    current_user_email:     {{override in local config}}
+    token_persistence_path: {{override in local config}}
 
 remotes:
     zoho:
