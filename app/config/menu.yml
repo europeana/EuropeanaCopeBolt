@@ -1,286 +1,286 @@
 main:
     -
-        class: mission
-        path: pages/our-mission
         label: 'Our mission '
+        path: page/our-mission
+        class: mission
         submenu:
             -
-                label: 'About us'
                 path: pages/about-us
+                label: 'About us'
             -
-                label: History
                 path: page/454
+                label: History
             -
-                label: 'Who we are'
                 path: page/453
+                label: 'Who we are'
             -
-                label: 'Governing Board'
                 path: pages/foundation-governing-board
+                label: 'Governing Board'
             -
-                path: page/455
                 label: Staff
+                path: page/455
     -
-        class: wwd
-        path: pages/what-we-do
         label: 'Priorities '
+        path: pages/what-we-do
+        class: wwd
         submenu:
             -
-                label: 'Academic Research'
                 path: pages/academic-research
+                label: 'Academic Research'
             -
-                label: 'Creative industries'
                 path: pages/creative-industries
+                label: 'Creative industries'
             -
-                label: 'Cultural Heritage Institutions'
                 path: pages/cultural-heritage-institutions
+                label: 'Cultural Heritage Institutions'
             -
-                label: Education
                 path: pages/education
+                label: Education
             -
-                label: Advocacy
                 path: pages/advocacy
+                label: Advocacy
             -
-                label: 'Member States'
                 path: pages/member-states
+                label: 'Member States'
             -
-                path: page/533
                 label: 'Impact framework '
+                path: page/533
             -
-                label: Campaigns
                 path: pages/campaigns
+                label: Campaigns
             -
-                label: Standardization
                 path: pages/standardisation
-            -
-                label: Projects
-                path: pages/projects
-    -
-        class: network
-        path: page/network-association
-        label: 'Network Association'
-        submenu:
-            -
-                label: 'About the Association'
-                path: page/about-our-network
-            -
-                label: 'Join our Association'
-                path: page/sign-up
-            -
-                label: 'Management Board'
-                path: pages/management-board
-            -
-                label: 'Members Council'
-                path: pages/members-council
-            -
-                label: 'Association Members'
-                path: pages/network-members
-            -
-                label: 'Special interest groups'
-                path: pages/special-interest-groups
-                submenu:
-                    -
-                        label: EuropeanaTech
-                        path: pages/europeanatech
-                    -
-                        label: 'Europeana Education'
-                        path: pages/europeana-education
-                    -
-                        path: page/540
-                        label: 'Europeana Research '
-                    -
-                        path: page/347
-                        label: 'Europeana Art Advisory Board'
-            -
-                label: 'Task Forces'
-                path: pages/task-forces
-            -
-                label: 'Working Groups'
-                path: pages/working-groups
-            -
-                label: Events
-                path: page/events
-    -
-        class: services
-        path: pages/services
-        label: Services
-        submenu:
-            -
-                path: page/23
-                label: 'Data publication'
-                submenu:
-                    -
-                        path: page/547
-                        label: 'Europeana Aggregators'
-            -
-                label: Discovery
-                path: pages/discovery
-                submenu:
-                    -
-                        label: Collections
-                        path: pages/collections
-                    -
-                        label: 'Thematic Collections'
-                        path: pages/thematic-collections
-                    -
-                        label: 'Online Exhibitions'
-                        path: pages/online-exhibitions
-            -
-                label: 'Incubation services'
-                path: pages/incubation-services
-                submenu:
-                    -
-                        label: 'Crowd and match funding (Goteo)'
-                        path: page/crowd-and-matchfunding
-                    -
-                        path: page/121
-                        label: 'Co-creation (Wotify)'
-                    -
-                        label: Grants
-                        path: page/grants-programme
-                    -
-                        label: Challenges
-                        path: page/take-the-challenge
-    -
-        class: secondary
-        path: pages/resources
-        label: Resources
-        submenu:
-            -
-                label: 'Europeana brand'
-                path: page/europeana-brand
-                submenu:
-                    -
-                        path: page/458
-                        label: Values
-                    -
-                        path: page/459
-                        label: Guidelines
-                    -
-                        path: page/460
-                        label: Templates
-                    -
-                        path: page/457
-                        label: Skins
-            -
-                label: Apps
-                path: pages/apps
-            -
-                path: page/509
-                label: Tools
-            -
-                label: 'Curated datasets'
-                path: pages/datasets
-            -
-                label: APIs
-                path: pages/apis
-                submenu:
-                    -
-                        label: 'REST API'
-                        path: page/495
-                    -
-                        path: page/496
-                        label: 'Annotations API '
-                    -
-                        link: page/oai-pmh-service
-                        label: OAI-PMH
-                    -
-                        label: 'Linked Open Data '
-                        path: page/499
-                    -
-                        label: 'Image similarity API'
-                        path: page/504
-            -
-                label: 'Document archive'
-                path: pages/document-archive
-                submenu:
-                    -
-                        label: Publications
-                        path: pages/publications
-                    -
-                        path: page/46
-                        label: 'Press releases'
-                    -
-                        label: 'Project documents'
-                        path: pages/project-list
-                    -
-                        label: 'Governance documents'
-                        path: page/governing-board-papers-documents
-                    -
-                        label: 'Network documents'
-                        path: page/newsletters-and-updates
-                    -
-                        label: 'Task force recommentations'
-                        path: pages/task-force-recommendations
-                    -
-                        label: 'R&D recommendations'
-                        path: page/479
-                    -
-                        label: 'Europeana in the news'
-                        path: page/164
-            -
                 label: Standardization
-                path: pages/resources-standardisation
-                submenu:
-                    -
-                        label: 'EDM documentation'
-                        path: pages/edm-documentation
-                    -
-                        label: 'Europeana Licencing Framework'
-                        path: page/the-licensing-framework
-                    -
-                        label: Rightsstatements.org
-                        path: page/rightsstatements-org
-                    -
-                        path: page/257
-                        label: 'Public Domain calculator'
-                    -
-                        label: 'Glossary of Terms'
-                        path: page/220
             -
-                label: Statistics
-                path: pages/statistics
+                path: pages/projects
+                label: Projects
+    -
+        label: 'Network Association'
+        path: page/network-association
+        class: network
+        submenu:
+            -
+                path: page/about-our-network
+                label: 'About the Association'
+            -
+                path: page/sign-up
+                label: 'Join our Association'
+            -
+                path: pages/management-board
+                label: 'Management Board'
+            -
+                path: pages/members-council
+                label: 'Members Council'
+            -
+                path: pages/network-members
+                label: 'Association Members'
+            -
+                path: pages/special-interest-groups
+                label: 'Special interest groups'
                 submenu:
                     -
-                        label: 'Usage statistics'
-                        path: pages/europeana-usage-statistics
+                        path: pages/europeanatech
+                        label: EuropeanaTech
                     -
-                        label: Enumerate
+                        path: pages/europeana-education
+                        label: 'Europeana Education'
+                    -
+                        label: 'Europeana Research '
+                        path: page/540
+                    -
+                        label: 'Europeana Art Advisory Board'
+                        path: page/347
+            -
+                path: pages/task-forces
+                label: 'Task Forces'
+            -
+                path: pages/working-groups
+                label: 'Working Groups'
+            -
+                path: page/events
+                label: Events
+    -
+        label: Services
+        path: pages/services
+        class: services
+        submenu:
+            -
+                label: 'Data publication'
+                path: page/23
+                submenu:
+                    -
+                        label: 'Europeana Aggregators'
+                        path: page/547
+            -
+                path: pages/discovery
+                label: Discovery
+                submenu:
+                    -
+                        path: pages/collections
+                        label: Collections
+                    -
+                        path: pages/thematic-collections
+                        label: 'Thematic Collections'
+                    -
+                        path: pages/online-exhibitions
+                        label: 'Online Exhibitions'
+            -
+                path: pages/incubation-services
+                label: 'Incubation services'
+                submenu:
+                    -
+                        path: page/crowd-and-matchfunding
+                        label: 'Crowd and match funding (Goteo)'
+                    -
+                        label: 'Co-creation (Wotify)'
+                        path: page/121
+                    -
+                        path: page/grants-programme
+                        label: Grants
+                    -
+                        path: page/take-the-challenge
+                        label: Challenges
+    -
+        label: Resources
+        path: pages/resources
+        class: secondary
+        submenu:
+            -
+                path: page/europeana-brand
+                label: 'Europeana brand'
+                submenu:
+                    -
+                        label: Values
+                        path: page/458
+                    -
+                        label: Guidelines
+                        path: page/459
+                    -
+                        label: Templates
+                        path: page/460
+                    -
+                        label: Skins
+                        path: page/457
+            -
+                path: pages/apps
+                label: Apps
+            -
+                label: Tools
+                path: page/509
+            -
+                path: pages/datasets
+                label: 'Curated datasets'
+            -
+                path: pages/apis
+                label: APIs
+                submenu:
+                    -
+                        path: page/495
+                        label: 'REST API'
+                    -
+                        label: 'Annotations API '
+                        path: page/496
+                    -
+                        label: OAI-PMH
+                        link: page/oai-pmh-service
+                    -
+                        path: page/499
+                        label: 'Linked Open Data '
+                    -
+                        path: page/504
+                        label: 'Image similarity API'
+            -
+                path: pages/document-archive
+                label: 'Document archive'
+                submenu:
+                    -
+                        path: pages/publications
+                        label: Publications
+                    -
+                        label: 'Press releases'
+                        path: page/46
+                    -
+                        path: pages/project-list
+                        label: 'Project documents'
+                    -
+                        path: page/governing-board-papers-documents
+                        label: 'Governance documents'
+                    -
+                        path: page/newsletters-and-updates
+                        label: 'Network documents'
+                    -
+                        path: pages/task-force-recommendations
+                        label: 'Task force recommentations'
+                    -
+                        path: page/479
+                        label: 'R&D recommendations'
+                    -
+                        path: page/164
+                        label: 'Europeana in the news'
+            -
+                path: pages/resources-standardisation
+                label: Standardization
+                submenu:
+                    -
+                        path: pages/edm-documentation
+                        label: 'EDM documentation'
+                    -
+                        path: page/the-licensing-framework
+                        label: 'Europeana Licencing Framework'
+                    -
+                        path: page/rightsstatements-org
+                        label: Rightsstatements.org
+                    -
+                        label: 'Public Domain calculator'
+                        path: page/257
+                    -
+                        path: page/220
+                        label: 'Glossary of Terms'
+            -
+                path: pages/statistics
+                label: Statistics
+                submenu:
+                    -
+                        path: pages/europeana-usage-statistics
+                        label: 'Usage statistics'
+                    -
                         path: pages/enumerate
+                        label: Enumerate
 secondary:
     -
-        label: 'Join us'
-        class: secondary
         path: pages/sign-up
+        class: secondary
+        label: 'Join us'
     -
-        label: Blog
+        class: secondary
         path: pages/blog
-        class: secondary
+        label: Blog
     -
-        label: 'Europeana Collections'
-        class: secondary
         link: 'https://www.europeana.eu'
-    -
-        label: 'Get the API'
         class: secondary
+        label: 'Europeana Collections'
+    -
         path: pages/get-api
-    -
-        label: Jobs
         class: secondary
+        label: 'Get the API'
+    -
         path: pages/jobs
-    -
-        path: page/press
         class: secondary
+        label: Jobs
+    -
         label: Press
+        class: secondary
+        path: page/press
 footer:
     -
-        path: pages/home
         label: Home
+        path: pages/home
     -
-        link: 'http://europeana.eu/portal/rights/terms-and-policies.html'
         label: 'Terms & policies'
+        link: 'http://europeana.eu/portal/rights/terms-and-policies.html'
     -
-        path: pages/contact-us
         label: 'Contact us'
+        path: pages/contact-us
     -
-        path: sitemap
         label: Sitemap
+        path: sitemap

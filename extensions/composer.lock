@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0f464a83518b085f75fe9f5fba44b61",
+    "content-hash": "2f97c9ce5286a879f0188abe6ecd356f",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -225,6 +225,53 @@
                 "sitemap"
             ],
             "time": "2019-10-20T16:50:44+00:00"
+        },
+        {
+            "name": "sahassar/boltredirector",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:bolt-looking-for-maintainers/boltredirector.git",
+                "reference": "cc4e1eade10fdfccb800bc7a08c63b4c92d74d96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt-looking-for-maintainers/boltredirector/zipball/cc4e1eade10fdfccb800bc7a08c63b4c92d74d96",
+                "reference": "cc4e1eade10fdfccb800bc7a08c63b4c92d74d96",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-class": "Bolt\\Extension\\Sahassar\\Boltredirector\\BoltredirectorExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Sahassar\\Boltredirector\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Anthony",
+                    "email": "code@foundrybusiness.co.za"
+                },
+                {
+                    "name": "Svante Richter",
+                    "email": "svante.richter@gmail.com"
+                }
+            ],
+            "description": "Easily manage 301 redirects; useful for migrating from another platform.",
+            "keywords": [
+                "301",
+                "migration",
+                "redirect"
+            ],
+            "time": "2019-10-31T15:07:12+00:00"
         },
         {
             "name": "soapbox/relatedcontent",
