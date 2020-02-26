@@ -303,7 +303,12 @@ ul {
 .introduction {
     font-family:$base-font-family;
     font-weight: 400;
-    color: $light-gray;
+    color: $medium-gray;
+    font-size: 1rem;
+
+        @include respond-to (medium-screens){
+            font-size: 1.125rem;
+        }
 
     p a,
     ul a,
@@ -317,13 +322,11 @@ ul {
         @include respond-to (medium-screens){
             font-size: 1.125rem;
         }
-    }
 
-    font-size: 1rem;
-
-        @include respond-to (medium-screens){
-            font-size: 1.125rem;
+        @include respond-to (large-screens){
+            font-size: 1.5rem;
         }
+    }
 
 }
 
