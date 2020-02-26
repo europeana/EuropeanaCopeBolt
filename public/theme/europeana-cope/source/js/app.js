@@ -85,6 +85,8 @@ $( document ).ready(function() {
     /**
     * breadcrumbs / history path
     */
+
+    // NOTE: breadcrumbs build, but client decided not to implement (yet). Here for reference.
     breadcrumbStateSaver(document.location.href, document.title);
     showBreadCrumb();
 
@@ -496,6 +498,7 @@ function eraseCookie(name) {
 }
 
 
+// NOTE: breadcrumbs build, but client decided not to implement (yet). Here for reference.
 //breadcrumbs -> https://stackoverflow.com/questions/18998797/create-breadcrumbs-dynamically-on-client-side-using-javascript
 function bindEventToNavigation(){
     $.each($("#primary-menu li a"), function(index, element){
@@ -520,5 +523,5 @@ function breadcrumbStateSaver(link, text) {
 
 function showBreadCrumb(){
      var breadcrumbs = JSON.parse(sessionStorage.breadcrumb);
-     $("#breadcrumbs").html(breadcrumbs.slice(-4,-1).join(' &raquo; '));   
+     $("#breadcrumbs").html(breadcrumbs.slice(-4,-1).join(' &raquo; '));
 }
