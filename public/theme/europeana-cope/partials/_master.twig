@@ -31,7 +31,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {% block headincludes %}
     {% endblock headincludes %}
 </head>
-<body class="{% block bodyclass %}{% endblock bodyclass %}">
+
+{%- set sidemenu = app.config.get('menu/main') %}
+{% set currentpageinmenu = false %}
+
+{% for item in sidemenu %}
+    {# hoofditems #}
+    {% setcontent thisitem = item.path %}
+    {% if thisitem.slug == record.slug %}
+        {% set currentpageinmenu = true %}
+    {% endif %}
+
+    {% for subitem in item.submenu %}
+        {# subitems #}
+        {% setcontent thissubitem = subitem.path %}
+        {% if thissubitem.slug|default("") == record.slug %}
+            {% set currentpageinmenu = true %}
+        {% endif %}
+    {% endfor %}
+{% endfor -%}
+
+{# {{ dump(currentpageinmenu) }} #}
+
+{# TODO: Set bodyclass if currentpageinmenu == false #}
+
+<body class="{% block bodyclass %}{% endblock bodyclass %} {% if currentpageinmenu == false %} body-no-menu{% endif %}">
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPHB4DK"

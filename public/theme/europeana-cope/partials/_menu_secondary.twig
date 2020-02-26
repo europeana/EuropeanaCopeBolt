@@ -44,6 +44,9 @@
     {% from _self import display_menu_item %}
 
     {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
+
+    {% if menu is not empty %}
+    <hr>
     <ul class="secondary-menu" id="secondary-menu">
         {% for item in menu %}
             {% if item.label is defined %}
@@ -51,6 +54,7 @@
             {% endif %}
         {% endfor %}
     </ul>
+    {% endif %}
 
 {% endspaceless %}
 

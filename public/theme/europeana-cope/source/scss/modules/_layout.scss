@@ -70,7 +70,8 @@ body > div {
         margin-left: 235px;
     }
 
-    body.homepage & {
+    body.homepage &,
+    body.body-no-menu & {
         // no menu on homepage
         @include respond-to(menu-full){
             margin-left: 0;
