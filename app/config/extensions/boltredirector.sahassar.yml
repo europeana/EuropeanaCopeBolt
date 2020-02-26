@@ -5,10 +5,10 @@
 redirects:
     # Redirects om de topnav goed te laten werken. Linkt door naar eerste child via deze redirect. EP-125
     # parent : first child
-    '/page/placeholder-share-your-data': 'page/666'
-    '/page/placeholder-about-us': 'page/105'
-    '/page/placeholder-join-the-network': 'page/153'
-    
+    '/page/cultural-heritage-institutions': 'page/666'
+    '/page/network-association': 'page/105'
+    '/page/aggregators': 'page/153'
+
 
 #    page:
 #        from: '{slug:segment}.html'
@@ -17,7 +17,7 @@ redirects:
 # Variables
 #
 # A simple array to make variable replacements in destination paths using the
-# {@<variable>} syntax. 
+# {@<variable>} syntax.
 
 variables:
 
