@@ -5,13 +5,12 @@
 redirects:
     # Redirects om de topnav goed te laten werken. Linkt door naar eerste child via deze redirect. EP-125
     # parent : first child
-    
-    # '/page/cultural-heritage-institutions': 'page/666'
-    # '/page/network-association': 'page/105'
-    # '/page/aggregators': 'page/153'
-    # '/cultural-heritage-institutions': 'page/666'
-    # '/network-association': 'page/105'
-    # '/aggregators': 'page/153'
+    '/page/share-your-data': '/share-your-data/process'
+    '/share-your-data': '/share-your-data/process'
+    '/page/about-us': '/about-us/mission'
+    '/about-us': '/about-us/mission'
+    '/page/network-association': ' /network-association/sign-up'
+    '/network-association': '/network-association/sign-up'
 
 
 
