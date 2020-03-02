@@ -38,14 +38,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {% for item in sidemenu %}
     {# hoofditems #}
     {% setcontent thisitem = item.path %}
-    {% if thisitem.slug == record.slug %}
+    {% if thisitem.slug == record.slug|default('') %}
         {% set currentpageinmenu = true %}
     {% endif %}
 
     {% for subitem in item.submenu %}
         {# subitems #}
         {% setcontent thissubitem = subitem.path %}
-        {% if thissubitem.slug|default("") == record.slug %}
+        {% if thissubitem.slug|default("") == record.slug|default('') %}
             {% set currentpageinmenu = true %}
         {% endif %}
     {% endfor %}
