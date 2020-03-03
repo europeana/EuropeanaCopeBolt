@@ -2480,7 +2480,7 @@ svg.icon-cutoff.top.right {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    @include respond-to(large-screens) { 
+    @include respond-to(large-screens) {
         padding: 0;
     }
 
@@ -2702,7 +2702,8 @@ table.listingtable {
             margin: 1rem 0 2rem 0;
 
             p {
-                letter-spacing: 1.5px;
+                letter-spacing: 1px;
+                font-weight: 600;
             }
         }
 
@@ -2727,7 +2728,7 @@ table.listingtable {
 
     h3 {
         color: $baseFirstThemeColour;
-        font-weight: 400;
+        font-weight: 600;
         letter-spacing: 1px;
         text-align: center;
         font-size: 1.125rem;
