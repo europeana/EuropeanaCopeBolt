@@ -212,6 +212,19 @@ section {
 
     }
 
+    > .inner-wrap > h3 {
+        text-align: center;
+        font-size: 1rem;
+
+        @include respond-to (medium-screens) {
+            font-size: 1.25rem;
+        }
+    }
+
+    > .inner-wrap > h2 + h3 {
+        margin-top: 1rem;
+    }
+
     &.info-list-section > h2 {
         font-weight: 700;
         text-transform: none;
