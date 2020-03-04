@@ -19,8 +19,8 @@ Available variables
         <h2>{{ title }}</h2>
     {% endif %}
 
-    {% if subtitle|default('') is not empty %}
-        <p>{{ subtitle }}</p>
+    {% if subtitle is defined and subtitle is not empty %}
+        <h3>{{ subtitle }}</h3>
     {% endif %}
 
     {% if body is not empty %}

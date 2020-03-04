@@ -30,7 +30,7 @@ This query has as exception an extra sontent set: all_records. since records is 
     {% endif %}
 
     {% if subtitle|default('') is not empty %}
-        <p>{{ subtitle }}</p>
+        <h3>{{ subtitle }}</h3>
     {% endif %}
 
     {% if body is not empty %}
@@ -158,7 +158,7 @@ This query has as exception an extra sontent set: all_records. since records is 
 
             {% endif %}
 
-            {% if hasresults == false %} 
+            {% if hasresults == false %}
                 <tr><td colspan='4'>No results for this filter. Please try a broader search.</td></tr>
             {% endif %}
 
