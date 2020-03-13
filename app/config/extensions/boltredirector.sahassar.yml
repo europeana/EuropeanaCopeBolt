@@ -169,7 +169,13 @@ redirects:
     '/page/how-to-contribute-data': '/share-your-data/process'
     '/page/become-a-data-provider': '/share-your-data/process'
     '/page/network-association-newsletters': '/network-association/sign-up'
-
+    
+    # Extra loops
+    '/page/allezculture': '/page/campaigns'
+    '/what-we-do/advocacy': '/page/advocacy-framework'
+    '/resources/resources-standardisation/the-licensing-framework': '/page/europeana-licensing-framework'
+    '/what-we-do/standardisation': '/share-your-data/copyright'
+    '/resources/resources-standardisation/edm-documentation': '/share-your-data/metadata'
 
 #    page:
 #        from: '{slug:segment}.html'
