@@ -384,8 +384,6 @@ $( document ).ready(function() {
         // };
 
         if ( windowWidthEms < breakLarge ) { // less then 767
-            // $("#topbar").trigger("sticky_kit:detach");
-            $("#mainmenu").trigger("sticky_kit:detach");
             $(".sticky-header").trigger("sticky_kit:detach");
             // console.log(windowWidthEms, breakLarge, 'A')
         } else {
@@ -396,15 +394,16 @@ $( document ).ready(function() {
 
         }
 
-        if (windowWidthEms < breakMenuFull ) {
-            $('#topbar').stick_in_parent({
-                offset_top: 64
-            });
-        }
 
         if ( windowWidthEms < breakMenuFull ) { // less then 960
             // $('#headersearch').hide();
             $('#headersearch').appendTo('header'); // put it back, if coming from large
+            $('#topbar').stick_in_parent({
+                offset_top: 64
+            });
+            // $('#mainmenu').stick_in_parent({
+            //     offset_top: 64
+            // });
 
         } else {
              //remove all leftover inline styles from mobile view;
@@ -414,10 +413,12 @@ $( document ).ready(function() {
              $('#headersearch').appendTo('.headercontainer');
 
 
-             // set sticky topbar and menu
-             $('#mainmenu').stick_in_parent({
-                 offset_top: 75
-             });
+
+            //  $('#mainmenu').stick_in_parent({
+            //      offset_top: 75
+            //  });
+
+            // set sticky topbar
              $('#topbar').stick_in_parent({
                 offset_top: 75
             });

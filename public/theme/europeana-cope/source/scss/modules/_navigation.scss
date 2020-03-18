@@ -105,9 +105,9 @@ a.back-link {
 }
 
 nav.main-menu {
-    position: absolute;
+    position: fixed;
     width: 235px;
-    top: 124px; //magic number: height from topbar
+    top: 64px; //magic number: height from topbar
     left:-235px;
     //display: none; always on, because on mobile it's waiting to slide in.
     z-index: 15; //check if correct. Needed on mobile for hover over sticky bar.
