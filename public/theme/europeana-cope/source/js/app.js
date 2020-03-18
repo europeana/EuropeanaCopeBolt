@@ -384,7 +384,7 @@ $( document ).ready(function() {
         // };
 
         if ( windowWidthEms < breakLarge ) { // less then 767
-            $("#topbar").trigger("sticky_kit:detach");
+            // $("#topbar").trigger("sticky_kit:detach");
             $("#mainmenu").trigger("sticky_kit:detach");
             $(".sticky-header").trigger("sticky_kit:detach");
             // console.log(windowWidthEms, breakLarge, 'A')
@@ -396,7 +396,7 @@ $( document ).ready(function() {
 
         }
 
-        if (( windowWidthEms >= breakLarge ) && ( windowWidthEms < breakMenuFull )) {
+        if (windowWidthEms < breakMenuFull ) {
             $('#topbar').stick_in_parent({
                 offset_top: 64
             });

@@ -746,6 +746,16 @@ code, pre {
 }
 
 // make the scrolling snap to the right place -> https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
+//not working yet on ios thingies
+
 a.in-page-anchor {
-    scroll-margin-top: 4em;
+    // scroll-margin-top: 7em; //not working yet on ios thingies
+    padding-top: 7em;
+    margin-top: -7em;
+
+    @include respond-to(large-screens){
+        // scroll-margin-top: 5em; //not working yet on ios thingies
+        padding-top: 5em;
+        margin-top: -5em;
+    }
 }
