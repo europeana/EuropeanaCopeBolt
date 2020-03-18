@@ -215,7 +215,7 @@ footer {
     max-width: $site-max-width;
     position:relative;
     //prevent margin-collapse
-    overflow:auto;
+    // overflow: auto; // why?
 
     @include respond-to(medium-screens){
         padding: 0 1.5rem; // 15px ipv 10 0 0.625rem;
