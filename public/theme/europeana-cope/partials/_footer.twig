@@ -9,6 +9,10 @@
 </a>
 
 <footer>
+    <svg class="icon icon-cutoff top right">
+        <use xlink:href="#icon-cutoff"></use>
+    </svg>
+
     <div class="inner-wrap">
 
         <div class="group">
@@ -24,6 +28,8 @@
 
             {% setcontent footermission = 'resources/footer-mission' %}
             <div class="footer-block footer-block-mission">
+                {{ menu('footer', 'partials/_menu_footer.twig') }}
+
                 {% if footermission is not empty %}
                     <h4>{{ footermission.title }}</h4>
                     {{ footermission.body }}
@@ -69,8 +75,6 @@
         </div>
 
         <div class="sub-footer">
-
-            {# {{ menu('footer', 'partials/_menu_footer.twig') }} #}
 
             {% setcontent footereu = 'resources/footer-eu' %}
             {% if footereu is not empty and footereu.values.image.file is not empty %}

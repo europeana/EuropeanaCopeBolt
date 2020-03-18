@@ -1,23 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4be6a1f90626e2fc2758975f64ede94d",
+    "content-hash": "2f97c9ce5286a879f0188abe6ecd356f",
     "packages": [
         {
             "name": "bacboslab/menueditor",
-            "version": "3.2.4",
+            "version": "3.2.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bacbos/bolt-menu-editor.git",
-                "reference": "f3937950ed1938299beaf2d097f8bcff855af884"
+                "url": "git@github.com:bacbos/bolt-menu-editor.git",
+                "reference": "c81b84b768f83f4ea5b3cc081017dedbbebe72e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bacbos/bolt-menu-editor/zipball/f3937950ed1938299beaf2d097f8bcff855af884",
-                "reference": "f3937950ed1938299beaf2d097f8bcff855af884",
+                "url": "https://api.github.com/repos/bacbos/bolt-menu-editor/zipball/c81b84b768f83f4ea5b3cc081017dedbbebe72e6",
+                "reference": "c81b84b768f83f4ea5b3cc081017dedbbebe72e6",
                 "shasum": ""
             },
             "require": {
@@ -73,24 +73,20 @@
                 "tool",
                 "visual"
             ],
-            "support": {
-                "source": "https://github.com/bacbos/bolt-menu-editor/tree/3.2.4",
-                "issues": "https://github.com/bacbos/bolt-menu-editor/issues"
-            },
-            "time": "2018-02-16T13:27:41+00:00"
+            "time": "2019-09-06T15:56:55+00:00"
         },
         {
             "name": "bobdenotter/seo",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bobdenotter/seo.git",
-                "reference": "07f8b5b2ab1da80559d68028c2030ec0b7d5392b"
+                "url": "git@github.com:bobdenotter/seo.git",
+                "reference": "2a9823a3484c99a90f8ea903129c90c93092df2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/07f8b5b2ab1da80559d68028c2030ec0b7d5392b",
-                "reference": "07f8b5b2ab1da80559d68028c2030ec0b7d5392b",
+                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/2a9823a3484c99a90f8ea903129c90c93092df2a",
+                "reference": "2a9823a3484c99a90f8ea903129c90c93092df2a",
                 "shasum": ""
             },
             "require": {
@@ -116,24 +112,20 @@
                 }
             ],
             "description": "An extension to easily manage SEO title, meta description and OG tags.",
-            "support": {
-                "source": "https://github.com/bobdenotter/seo/tree/master",
-                "issues": "https://github.com/bobdenotter/seo/issues"
-            },
-            "time": "2018-03-05T16:38:28+00:00"
+            "time": "2019-09-20T11:16:52+00:00"
         },
         {
             "name": "bolt/jsonapi",
-            "version": "v3.3.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/xiaohutai/jsonapi.git",
-                "reference": "ffba4a26e05f5a10e2337c8ddbe51f1f46c37644"
+                "url": "git@github.com:xiaohutai/jsonapi.git",
+                "reference": "7e29f15fcc0fc332df15c5c019f7e3d1623565f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/ffba4a26e05f5a10e2337c8ddbe51f1f46c37644",
-                "reference": "ffba4a26e05f5a10e2337c8ddbe51f1f46c37644",
+                "url": "https://api.github.com/repos/xiaohutai/jsonapi/zipball/7e29f15fcc0fc332df15c5c019f7e3d1623565f7",
+                "reference": "7e29f15fcc0fc332df15c5c019f7e3d1623565f7",
                 "shasum": ""
             },
             "require": {
@@ -178,24 +170,20 @@
                 "json",
                 "jsonapi"
             ],
-            "support": {
-                "source": "https://github.com/xiaohutai/jsonapi/tree/master",
-                "issues": "https://github.com/xiaohutai/jsonapi/issues"
-            },
-            "time": "2018-08-02T10:09:55+00:00"
+            "time": "2018-10-26T12:33:29+00:00"
         },
         {
             "name": "bolt/sitemap",
-            "version": "2.5.0",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bolt/Sitemap.git",
-                "reference": "f7e67187c7fddd0335e90d5ae000c471593ed6bc"
+                "url": "git@github.com:bolt/Sitemap.git",
+                "reference": "cb58a95df47e355a2e9f1fa318d0972364d1b724"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/Sitemap/zipball/f7e67187c7fddd0335e90d5ae000c471593ed6bc",
-                "reference": "f7e67187c7fddd0335e90d5ae000c471593ed6bc",
+                "url": "https://api.github.com/repos/bolt/Sitemap/zipball/cb58a95df47e355a2e9f1fa318d0972364d1b724",
+                "reference": "cb58a95df47e355a2e9f1fa318d0972364d1b724",
                 "shasum": ""
             },
             "require": {
@@ -236,18 +224,61 @@
                 "SEO",
                 "sitemap"
             ],
-            "support": {
-                "source": "https://github.com/bolt/Sitemap/tree/2.x",
-                "issues": "https://github.com/bolt/Sitemap/issues"
+            "time": "2019-10-20T16:50:44+00:00"
+        },
+        {
+            "name": "sahassar/boltredirector",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:bolt-looking-for-maintainers/boltredirector.git",
+                "reference": "cc4e1eade10fdfccb800bc7a08c63b4c92d74d96"
             },
-            "time": "2018-06-03T09:18:36+00:00"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt-looking-for-maintainers/boltredirector/zipball/cc4e1eade10fdfccb800bc7a08c63b4c92d74d96",
+                "reference": "cc4e1eade10fdfccb800bc7a08c63b4c92d74d96",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-class": "Bolt\\Extension\\Sahassar\\Boltredirector\\BoltredirectorExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Sahassar\\Boltredirector\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Anthony",
+                    "email": "code@foundrybusiness.co.za"
+                },
+                {
+                    "name": "Svante Richter",
+                    "email": "svante.richter@gmail.com"
+                }
+            ],
+            "description": "Easily manage 301 redirects; useful for migrating from another platform.",
+            "keywords": [
+                "301",
+                "migration",
+                "redirect"
+            ],
+            "time": "2019-10-31T15:07:12+00:00"
         },
         {
             "name": "soapbox/relatedcontent",
             "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/graham73may/bolt-related-content.git",
+                "url": "git@github.com:graham73may/bolt-related-content.git",
                 "reference": "9a64abe11117b86e6e9fad42e60135304073872a"
             },
             "dist": {
@@ -302,16 +333,16 @@
         },
         {
             "name": "twokings/bolt-extension-who-is-editing",
-            "version": "v1.9.2",
+            "version": "v1.9.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nestordedios/bolt-extension-who-is-editing.git",
-                "reference": "193ec23349875995b367e548486d46ef1169ca0c"
+                "url": "git@github.com:nestordedios/bolt-extension-who-is-editing.git",
+                "reference": "7d94d2a23bdf19a42653a2aff8b82585188e5436"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nestordedios/bolt-extension-who-is-editing/zipball/193ec23349875995b367e548486d46ef1169ca0c",
-                "reference": "193ec23349875995b367e548486d46ef1169ca0c",
+                "url": "https://api.github.com/repos/nestordedios/bolt-extension-who-is-editing/zipball/7d94d2a23bdf19a42653a2aff8b82585188e5436",
+                "reference": "7d94d2a23bdf19a42653a2aff8b82585188e5436",
                 "shasum": ""
             },
             "require": {
@@ -348,24 +379,20 @@
                 "record",
                 "simultaneously"
             ],
-            "support": {
-                "source": "https://github.com/nestordedios/bolt-extension-who-is-editing/tree/master",
-                "issues": "https://github.com/nestordedios/bolt-extension-who-is-editing/issues"
-            },
-            "time": "2018-08-08T13:33:47+00:00"
+            "time": "2018-11-16T08:57:51+00:00"
         },
         {
             "name": "twokings/hierarchical-routes",
-            "version": "v0.2.4",
+            "version": "v0.2.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/xiaohutai/bolt-hierarchicalroutes.git",
-                "reference": "96f1b683eb53c7ff9471c276725c37146155d147"
+                "url": "git@github.com:xiaohutai/bolt-hierarchicalroutes.git",
+                "reference": "5463765c917b5ac899e8c56fda3768df7702370c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xiaohutai/bolt-hierarchicalroutes/zipball/96f1b683eb53c7ff9471c276725c37146155d147",
-                "reference": "96f1b683eb53c7ff9471c276725c37146155d147",
+                "url": "https://api.github.com/repos/xiaohutai/bolt-hierarchicalroutes/zipball/5463765c917b5ac899e8c56fda3768df7702370c",
+                "reference": "5463765c917b5ac899e8c56fda3768df7702370c",
                 "shasum": ""
             },
             "require": {
@@ -420,18 +447,14 @@
                 "structure",
                 "sub-page"
             ],
-            "support": {
-                "source": "https://github.com/xiaohutai/bolt-hierarchicalroutes/tree/master",
-                "issues": "https://github.com/xiaohutai/bolt-hierarchicalroutes/issues"
-            },
-            "time": "2018-08-21T11:39:51+00:00"
+            "time": "2019-01-04T14:30:29+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
             "version": "v1.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wikimedia/composer-merge-plugin.git",
+                "url": "git@github.com:wikimedia/composer-merge-plugin.git",
                 "reference": "81c6ac72a24a67383419c7eb9aa2b3437f2ab100"
             },
             "dist": {

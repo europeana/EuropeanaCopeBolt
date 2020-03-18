@@ -15,8 +15,9 @@ input[type="search"], //for specifics reason with normalize
 [type="url"],
 [type="color"],
 textarea {
-    border: 1px solid $line-gray;
-    border-radius: 5px;
+    background: $off-white;
+    border: 0;
+    border-radius: 6px;
     -webkit-appearance: none; // for iOS
     padding: .8rem 0.5rem;
     font-size: 1rem;
@@ -37,48 +38,43 @@ textarea {
 }
 
 input::placeholder {
-    color: $line-gray;
+    color: $medium-gray;
 }
 
 form.searchform {
     display: flex;
 
+    .js header & {
+        display: none;
+        @include respond-to (menu-full) {
+        display: flex;
+        }
+    }
+
     header & {
-        margin: 1rem 0;
+        // margin: 0;
         text-align: right;
-        // width: 100%;
+        height: 2.65rem;
+        flex: 1 1 auto;
+        margin: 1rem;
 
         @include respond-to (menu-full) {
-            //display: block;
-            position: absolute;
-            top: 0.5rem; //1rem;
-            right: 0.875rem;
-            min-width: 380px;
-            width: 50%;
+            margin-top: 1rem;
+            padding: 0;
         }
-
     }
 
     article p + & {
         margin-top: 2rem;
     }
 
-
     input[type="search"] {
-        margin: 0 .8rem 0 0;
+        margin: 0;
         box-sizing: border-box;
-        flex-grow: 1;
+        border-radius: 6px 0 0 6px;
+        flex: 1 1 auto;
         min-width: 0;
-        //width: 82%;
-
-        @include respond-to (medium-screens) {
-            margin: 0 .8rem 0 0;
-            // width: 90%;
-        }
-
-        @include respond-to (menu-full) {
-            // width: 300px; //580px;
-        }
+        width: 100%;
 
         article & {
 
@@ -89,11 +85,7 @@ form.searchform {
     }
 
     button {
-        //width: 15%;
-        width: 52px;
-        //display: inline-block;
-        margin: 0;
-
+        border-radius: 0 6px 6px 0;
 
         @include respond-to (medium-screens) {
             //width: 8%;
@@ -103,6 +95,10 @@ form.searchform {
             //width: 52px;
         }
 
+        svg {
+            width: 1.5em;
+            height: 1.5em;
+        }
     }
 
 }
@@ -110,8 +106,8 @@ form.searchform {
 form {
 
     button, .button {
-        background-color: $dark-blue;
-        border-radius: 5px;
+        background-color: $innovationblue;
+        border-radius: 6px;
         color: $white;
         border: 0;
         padding: 0.7em 0.8em;

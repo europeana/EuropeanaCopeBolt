@@ -13,17 +13,26 @@ $base-font-family: "Open Sans", Arial, Sans-serif;
 /* Europeana colours */
 $black:             #1a1a1a;
 $medium-gray:       #4d4d4d;
-$light-gray:        #777777;
+$light-gray:        #828282;
 $line-gray:         #cccccc;
 $footer-gray:       #e7e7e7;
 $white:             #fff;
 $yellow:            #ffae00;
 $off-white:         #f1f1ee;
 $collections-blue:  #1a8ac7;
-$link-blue:         #095f90;
-$dark-blue:         #293745; 
+
+$dark-blue:         #293745;
 $paper:             #D9D4CA;
-$denim:             #095F90;
+$denim:             #3E5E6B; //#095F90;
+
+//restyling colours
+$innovationblue:           #0A72CC;
+$innovationblue-light:     #79B2E3;
+$innovationblue-dark:      #085395;
+$menu-grey:                #F8F8F8;
+
+$link-blue:             $innovationblue;
+// $denim:             $innovationblue-dark;
 
 $opacity-black: rgba(0,0,0,0.7);
 $opacity-white: rgba(255,255,255,0.75);
@@ -161,64 +170,3 @@ $site-max-width:76rem; // 1216px
 
 
 
-/**
-*   Helper
-*/
-
-/***********************************************
-HULPJE
-***********************************************/
-
-
-
-// footer {
-
-//     &:after {
-//             content: "content";
-//             display: block;
-//             height: 16px;
-//             position: fixed;
-//             bottom: 0;
-//             left: 0;
-//             z-index: 1000;
-//             width: 100%;
-//             text-align: center;
-//             font-size: 12px;
-
-//         }
-
-//     @include respond-to(small-screens){
-//         &:after {
-//             content: "small-screens";
-//             background-color: #0f9;
-//         }
-//     }
-
-//     @include respond-to(medium-screens) {
-//             &:after {
-//                 content: "medium-screens";
-//                 background-color: #f06;
-//         }
-//     }
-
-//     @include respond-to(large-screens) {
-//         &:after {
-//             content: "large-screens";
-//             background-color: #90f;
-//         }
-//     }
-
-//     @include respond-to(xlarge-screens) {
-//         &:after {
-//             content: "xlarge-screens";
-//             background-color: #903;
-//         }
-//     }
-
-//     @include respond-to(wide-screens) {
-//         &:after {
-//             content: "wide-screens";
-//             background-color: #906;
-//         }
-//     }
-// }

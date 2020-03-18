@@ -8,6 +8,16 @@ Available variables
     'records':   array of (selected) records that belong to the module
     'allow_pager': boolean to check is the pager is available
 #}
+
+{# NOTE! - AW feb 2020
+This template has a filtering for country + domain. Very specific.
+This query has as exception an extra sontent set: all_records. since records is limited, but all_records is just... you know.. ALL records.
+
+- if no filtering: table of 'records', paginated
+- if filtering on domain, country or both: table of 'all_records' NOT paginated
+#}
+
+
 {% set override_css_id = module.override_css_id %}
 {% set override_css_class = module.override_css_class %}
 {% set template = module.templates %}
@@ -20,15 +30,63 @@ Available variables
     {% endif %}
 
     {% if subtitle|default('') is not empty %}
-        <p>{{ subtitle }}</p>
+        <h3>{{ subtitle }}</h3>
     {% endif %}
 
     {% if body is not empty %}
         {{ body|raw }}
     {% endif %}
 
+{# Get domain + land from url #}
 
-    {% if records is iterable and records is not empty %}
+{% set requestedcountry = app.request.get('country')|default('') %}
+{% set requesteddomain = app.request.get('domain')|default('') %}
+{% set showpagination = true %}
+{% set hasresults = false %}
+
+{% if requestedcountry is not empty or requesteddomain is not empty %}
+    {% set showpagination = false %}
+{% endif %}
+
+
+{% if records is iterable and records is not empty %}
+
+    {# Collecting all countries for selectbox from the unpaginated records #}
+    {% set allCountries = [] %}
+    {% for record in allrecords|order('country') %}
+        {% if record.values.country not in allCountries and record.values.country is not empty %}
+           {% set allCountries = allCountries|merge([record.values.country]) %}
+        {% endif %}
+    {% endfor %}
+
+    {# Collecting all domains for selectbox from the unpaginated records #}
+    {% set allDomains = [] %}
+    {% for record in allrecords|order('domain') %}
+        {% if record.values.domain not in allDomains and record.values.domain is not empty %}
+            {% set allDomains = allDomains|merge([record.values.domain]) %}
+        {% endif %}
+    {% endfor %}
+
+        <div class="table-actions">
+            <form>
+                <span>Filter by</span>
+                <select id="country-select" name="country" class="button outline button-filter">
+                    <option value="">Country</option>
+                    {% for country in allCountries %}
+                        <option value="{{ country }}" {% if requestedcountry == country %} selected {% endif %}>{{ country }}</option>
+                    {% endfor %}
+                    <option value="">All countries</option>
+                </select>
+                <select id="domain-select" name="domain" class="button outline button-filter">
+                    <option value="">Domain</option>
+                    {% for domain in allDomains %}
+                        <option value="{{ domain }}" {% if requesteddomain == domain %} selected {% endif %}>{{ domain }}</option>
+                    {% endfor %}
+                    <option value="">All domains</option>
+                </select>
+                <button type='submit'>go</button>
+            </form>
+        </div>
 
         <table class="listingtable">
 
@@ -45,19 +103,69 @@ Available variables
 
             <tbody>
 
+            {% if requestedcountry is not empty and requesteddomain is empty %}
+                {% for record in all_records %}
+                    {% if record.id is defined and record.country == requestedcountry %}
+                        {% set hasresults = true %}
+                        {% set templatefile =  'views/_' ~ template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
+                        {% set defaulttemplatefile =  'views/_' ~ template ~ '.twig' %}
+                        <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
+                        {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
+                    {% else %}
+                        <!-- selected record is unpublished or otherwise unavailable -->
+                    {% endif %}
+                {% endfor %}
+
+            {% elseif requestedcountry is empty and requesteddomain is not empty %}
+                {% for record in all_records %}
+                    {% if record.id is defined and record.domain == requesteddomain %}
+                        {% set hasresults = true %}
+                        {% set templatefile =  'views/_' ~ template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
+                        {% set defaulttemplatefile =  'views/_' ~ template ~ '.twig' %}
+                        <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
+                        {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
+                    {% else %}
+                        <!-- selected record is unpublished or otherwise unavailable -->
+                    {% endif %}
+                {% endfor %}
+
+            {% elseif requestedcountry is not empty and requesteddomain is not empty %}
+                {% for record in all_records %}
+                    {% if record.id is defined and record.domain == requesteddomain and record.country == requestedcountry %}
+                        {% set hasresults = true %}
+                        {% set templatefile =  'views/_' ~ template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
+                        {% set defaulttemplatefile =  'views/_' ~ template ~ '.twig' %}
+                        <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
+                        {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
+                    {% else %}
+                        <!-- selected record is unpublished or otherwise unavailable -->
+                    {% endif %}
+                {% endfor %}
+
+            {% else %}
+
             {% for record in records %}
-                {% if record.id is defined %}
-                    {% set templatefile =  'views/_' ~ template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
-                    {% set defaulttemplatefile =  'views/_' ~ template ~ '.twig' %}
-                    <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
-                    {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
-                {% else %}
-                    <!-- selected record is unpublished or otherwise unavailable -->
-                {% endif %}
-            {% endfor %}
+                    {% if record.id is defined %}
+                        {% set hasresults = true %}
+                        {% set templatefile =  'views/_' ~ template ~ '_' ~ record.contenttype.slug ~ '.twig' %}
+                        {% set defaulttemplatefile =  'views/_' ~ template ~ '.twig' %}
+                        <!-- loading templatefile for record: '{{ templatefile }}' or '{{ defaulttemplatefile }}' or 'views/_fallback.twig' -->
+                        {% include [templatefile, defaulttemplatefile, 'views/_fallback.twig'] with { item: record, template: template } %}
+                    {% else %}
+                        <!-- selected record is unpublished or otherwise unavailable -->
+                    {% endif %}
+                {% endfor %}
+
+            {% endif %}
+
+            {% if hasresults == false %}
+                <tr><td colspan='4'>No results for this filter. Please try a broader search.</td></tr>
+            {% endif %}
+
             </tbody>
         </table>
 
+    {% if showpagination == true %}
         {% set pagername = records|first.contenttype.slug|default('') %}
         {% if pagername is not empty and allow_pager == true %}
             {{ pager( pagername, 2 ) }}
@@ -68,6 +176,7 @@ Available variables
         {% else %}
             <!-- no records were found for this module -->
         {% endif %}
+    {% endif %}
     {% endif %}
 
     </div>

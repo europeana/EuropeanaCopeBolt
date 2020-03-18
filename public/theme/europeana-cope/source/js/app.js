@@ -52,7 +52,7 @@ $( document ).ready(function() {
 
         if ( nav.hasClass('is-overlay') ){
             // Doe dicht
-            iconclose.fadeOut('fast');
+            iconclose.hide();
             iconmenu.fadeIn('fast');
 
             //inschuiven menu
@@ -69,8 +69,9 @@ $( document ).ready(function() {
                 'min-height': windowHeight,
                 'height': fullHeight
             });
+            iconmenu.hide();
             iconclose.fadeIn('fast');
-            iconmenu.fadeOut('fast');
+
 
             //inschuiven menu
             nav.animate({
@@ -80,6 +81,16 @@ $( document ).ready(function() {
             });
         }
     });
+
+    /**
+    * breadcrumbs / history path
+    */
+
+    // NOTE: breadcrumbs build, but client decided not to implement (yet). Here for reference.
+    breadcrumbStateSaver(document.location.href, document.title);
+    showBreadCrumb();
+
+
 
     /**
     * submit sortform on click of icon
@@ -96,12 +107,12 @@ $( document ).ready(function() {
     $('.search-toggle').on( "click", function(e) {
         e.preventDefault();
 
-        var search = $('header .searchform');
+        var search = $('#headersearch');
         var nav = $("nav.main-menu");
 
         if (search.hasClass('is-open')) {
             //doe dicht
-            search.slideUp().removeClass('is-open');
+            search.slideUp('fast').removeClass('is-open');
 
             if (nav.hasClass('is-overlay')){
                 nav.animate({
@@ -110,7 +121,14 @@ $( document ).ready(function() {
             }
         } else {
             //doe open
-            search.slideDown().addClass('is-open');
+            // search.slideDown('fast').addClass('is-open');
+
+            search.slideDown('fast', function () {
+                  $(this).css({
+                    display: "flex"
+                  })
+                }
+              ).addClass('is-open');
 
             if (nav.hasClass('is-overlay')) {
                 console.log('is-overlay');
@@ -194,6 +212,7 @@ $( document ).ready(function() {
     // Add inline anchors to quicklinks
     if( $('a.in-page-anchor').is('*') ) {
         // if there are in page anchors, add a link to each of them in the quicklinks navigation
+        $('.quicklinks').show();
 
         $('a.in-page-anchor').each(function() {
             $('.quicklinks ul').append(
@@ -207,8 +226,7 @@ $( document ).ready(function() {
                 )
             );
         });
-        // remove the blank placeholder link if quicklinks were added
-        $('.in-page-blank-link').detach();
+
     }
 
     /**
@@ -365,39 +383,97 @@ $( document ).ready(function() {
         // } else {
         // };
 
-        if ( windowWidthEms < breakMenuFull ) {
-            $('header .searchform').hide();
-        }
-
-        if ( windowWidthEms >= breakMenuFull ) {
-            //remove all leftover inline styles from mobile view;
-            $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
-            $('header .searchform').removeAttr('style');
-        }
-
-        if ( windowWidthEms >= breakMenuFull ) {
-            // set sticky topbar and menu
-            $('#mainmenu').stick_in_parent();
-            $('#topbar').stick_in_parent();
-            $('.sticky-header').stick_in_parent();
-
+        if ( windowWidthEms < breakLarge ) { // less then 767
+            $(".sticky-header").trigger("sticky_kit:detach");
+            // console.log(windowWidthEms, breakLarge, 'A')
         } else {
-           // remove stickyness when window is resized
-           $("#topbar").trigger("sticky_kit:detach");
-           $("#mainmenu").trigger("sticky_kit:detach");
-           $(".sticky-header").trigger("sticky_kit:detach");
-
-        }
-
-        if ( windowWidthEms >= breakLarge ) {
             // set filters outside list for desktop.
             // NOTE: Anke is lazy and has not coded for the edgecase where a Large window is resized to < Large.
             // hardly ever occurs. If happens, slap Anke and fix it yourself.
             $('.filters-chapter').appendTo('.filter-container');
+
         }
+
+
+        if ( windowWidthEms < breakMenuFull ) { // less then 960
+            // $('#headersearch').hide();
+            $('#headersearch').appendTo('header'); // put it back, if coming from large
+            $('#topbar').stick_in_parent({
+                offset_top: 64
+            });
+            // $('#mainmenu').stick_in_parent({
+            //     offset_top: 64
+            // });
+
+        } else {
+             //remove all leftover inline styles from mobile view;
+             $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
+             $('#headersearch').removeAttr('style');
+             // stick it _in_ the header
+             $('#headersearch').appendTo('.headercontainer');
+
+
+
+            //  $('#mainmenu').stick_in_parent({
+            //      offset_top: 75
+            //  });
+
+            // set sticky topbar
+             $('#topbar').stick_in_parent({
+                offset_top: 75
+            });
+            $('.sticky-header').stick_in_parent();
+        }
+
+
+
+
+        // if ( windowWidthEms >= breakLarge ) {
+        //     // set filters outside list for desktop.
+        //     // NOTE: Anke is lazy and has not coded for the edgecase where a Large window is resized to < Large.
+        //     // hardly ever occurs. If happens, slap Anke and fix it yourself.
+        //     $('.filters-chapter').appendTo('.filter-container');
+
+        //     $('#topbar').stick_in_parent({
+        //         offset_top: 64
+        //     });
+        // } else {
+
+        // }
+
+        // if ( windowWidthEms < breakMenuFull ) {
+        //     $('#headersearch').hide();
+        //     $('#headersearch').appendTo('header'); // put it back, if coming from large
+        // }
+
+        // if ( windowWidthEms >= breakMenuFull ) {
+        //     //remove all leftover inline styles from mobile view;
+        //     $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
+        //     $('#headersearch').removeAttr('style');
+        //     // stick it _in_ the header
+        //     $('#headersearch').appendTo('.headercontainer');
+
+        //     // set sticky topbar and menu
+        //     $('#mainmenu').stick_in_parent({
+        //         offset_top: 75
+        //     });
+
+        //     $('.sticky-header').stick_in_parent();
+
+        // } else {
+        //    // remove stickyness when window is resized
+        //    $("#topbar").trigger("sticky_kit:detach");
+        //    $("#mainmenu").trigger("sticky_kit:detach");
+        //    $(".sticky-header").trigger("sticky_kit:detach");
+
+        // }
+
+
     }
 
 });
+
+
 
 function setCookie(name,value,days) {
     var expires = "";
@@ -420,4 +496,33 @@ function getCookie(name) {
 }
 function eraseCookie(name) {
     document.cookie = name+'=; Max-Age=-99999999;';
+}
+
+
+// NOTE: breadcrumbs build, but client decided not to implement (yet). Here for reference.
+//breadcrumbs -> https://stackoverflow.com/questions/18998797/create-breadcrumbs-dynamically-on-client-side-using-javascript
+function bindEventToNavigation(){
+    $.each($("#primary-menu li a"), function(index, element){
+        $(element).click(function(event){
+            breadcrumbStateSaver($(this).attr('href'), $(this).text());
+            showBreadCrumb();
+        });
+    });
+}
+
+function breadcrumbStateSaver(link, text) {
+    if (typeof (Storage) != "undefined") {
+        text = text.split('|')[0];
+        var items = [];
+        if (sessionStorage.breadcrumb) {
+            items = JSON.parse(sessionStorage.breadcrumb);
+        }
+        items.push("<a href='" + link + "'>" + text + "</a>");
+        sessionStorage.breadcrumb = JSON.stringify(items);
+    }
+}
+
+function showBreadCrumb(){
+     var breadcrumbs = JSON.parse(sessionStorage.breadcrumb);
+     $("#breadcrumbs").html(breadcrumbs.slice(-4,-1).join(' &raquo; '));
 }

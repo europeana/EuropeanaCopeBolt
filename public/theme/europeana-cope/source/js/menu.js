@@ -135,6 +135,7 @@
 }(jQuery, window, document));
 
 $(document).ready(function() {
+
   // attach the plugin to an element
   $('#playmenu').findActivePath().europeanaMenu({
     'extraclass': 'has-europeana-menu'
@@ -186,113 +187,8 @@ $(document).ready(function() {
   var breakMenuFull = 60; //960
   var windowWidthEms = ((viewportSize.getWidth()) / 16);
 
-  if ( windowWidthEms >= breakMenuFull ) {
-    // clone current page to show in first level submenu
-    var thispage = $('li.level-2.active');
-    thispage.parents('li.level-1').children('a').append('<span class="cloned-current">' + thispage.text() + '</span>');
-  }
-
 });
 
 
-$(document).ready(function() {
 
-  // initialize links and bools
-  var referrerlink = document.createElement('a');
-  var backlink = $('<a>').text('Back').attr({'id': 'backlink', 'href': '/', 'class': 'back-link'});
-  var topbar = $('nav.quicklinks ul:first');
-  var filterbar = $('div.filter-listing:first .current-filters');
-  //console.log('lets look in the history', window.history, document.referrer, document.location);
-
-  if(document.referrer) {
-    referrerlink.href = document.referrer;
-    //console.log('referrerlink:', referrerlink.hostname);
-  }
-
-  if(document.referrer && referrerlink.hostname === document.location.hostname && document.location.pathname !== '/') {
-
-    // we're in a local referrer and not on the homepage
-    backlink.attr('href', document.referrer);
-    backlink.on('click', function(e) {
-      e.preventDefault();
-      window.history.back();
-    });
-
-    //console.log(' come on' , $(topbar).is('*'), $(filterbar).is('*'));
-    if (topbar.is('*') > 0 && backlink.attr('href') !== '') {
-      topbar.prepend(
-          $('<li>').css({
-            'border-right': '1px solid #fff'
-          }).addClass('has-border-right').append(backlink)
-      );
-    }
-    else if (filterbar.is('*') > 0 && backlink.attr('href') !== '') {
-      filterbar.prepend(backlink);
-    }
-    else {
-      $('#topbar').append(
-          $('<nav>').addClass('quicklinks').append(
-              $('<ul>').append(
-                  $('<li>').append(backlink)
-              )
-          )
-      );
-    }
-
-  } else if(!document.referrer && document.location.pathname === '/') {
-
-    // we're on the homepage so don't add a back link
-    // console.log("we're on the homepage, and we've forgot where we're from");
-    // console.log('referrer', document.referrer);
-    // console.log('location', document.location);
-
-  } else if (
-    (!document.referrer || (referrerlink.hostname !== document.location.hostname)) &&
-    !$('body').hasClass('splashpage')
-    ) {
-
-    // no history - fallback to parent overviews
-    console.log('were without (a local) history');
-    // check te pagetype
-    if($('body').hasClass('detail-posts')) {
-      // if post - go to toplevel listing
-      console.log('TODO: were on a post page');
-      backlink.attr('href', "/#listing");
-    }
-    // check the landingtype
-    else if($('body').hasClass('landingpage')) {
-      // if sublanding - go to parent landing
-      console.log('TODO: were on a sublandingpage');
-      backlink.attr('href', "/#parentlanding");
-    }
-    //console.log(' come on' , $(topbar).is('*'), $(filterbar).is('*'));
-    if(topbar.is('*') > 0 && backlink.attr('href')!=='') {
-      topbar.prepend(
-          $('<li>').css({
-            'border-right': '1px solid #fff'
-          }).addClass('has-border-right').append(backlink)
-      );
-    } else if (filterbar.is('*') > 0 && backlink.attr('href')!=='') {
-      filterbar.prepend(backlink);
-    } else {
-      $('#topbar').append(
-          $('<nav>').addClass('quicklinks').append(
-              $('<ul>').append(
-                  $('<li>').append(backlink)
-              )
-          )
-      );
-    }
-  } else {
-    // we're on the homepage so don't add a back link
-    console.log("we're probably on the homepage, or everything else failed");
-    console.log('referrer', document.referrer);
-    console.log('location', document.location);
-  }
-  //console.log('how high', $('#topbar nav.quicklinks').height());
-  if($('#topbar nav.quicklinks').height() >= '25') {
-    //console.log('too high');
-    $('#topbar').css({'height': 'auto'});
-  }
-});
 

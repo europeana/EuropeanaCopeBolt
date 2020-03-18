@@ -1,5 +1,5 @@
 body {
-    background-color: $off-white;
+    background-color: $menu-grey;
 }
 
 
@@ -10,25 +10,34 @@ body {
 header {
     position: relative;
     background: $white;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
+
 
     h1, .home-link { //logo
-        margin: 1rem 0 0 0;
         display: block;
+        margin-bottom: 0;
 
-        img {
-           height: 50px;
+        @include respond-to(menu-full){
+            margin: 1.125rem 0 0 0;
+        }
+    }
 
-           @include respond-to(medium-screens) {
-            height: 65px;
-           }
+    .headercontainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        @include respond-to(menu-full) {
+            align-items: stretch; // default
         }
     }
 
     button.toggle {
         background: none;
         border: none;
-        position: absolute;
-        top: 1rem;
+        // position: absolute;
+        // top: 1rem;
         padding: 1rem;
         font-size: 1.25rem;
 
@@ -36,12 +45,6 @@ header {
             left: 0rem;
             width: 3.5rem;
             height: 4rem;
-
-            svg {
-                position: absolute;
-                left: 1rem;
-                top: 1.3rem; //optical
-            }
 
             svg.icon-delete {
                 display: none;
@@ -80,31 +83,15 @@ header {
 
 .mainlogo {
     position: relative;
-    padding-left: 1.5rem;
-    margin: 0 auto;
     width: 200px;
 
     @include respond-to (medium-screens) {
-        width: 265px;
+        width: 232px;
     }
     @include respond-to (menu-full) {
         margin: 0 0 0 -1rem;
-        width: 265px;
-    }
-}
-
-.version-flag {
-    position: absolute; //0 - 0
-    top: 0;
-    left: 0;
-    color: $white;
-    background-color: $version-flag;
-    text-transform: uppercase;
-    padding: 0em .5em;
-    font-size: 0.6875rem;
-
-    @include respond-to (medium-screens) {
-        font-size: 0.75rem;
+        padding-left: 1.875rem;
+        flex-shrink: 0;
     }
 }
 
@@ -247,6 +234,12 @@ footer {
     address {
         display: inline-block;
     }
+
+    svg.icon-cutoff.right {
+
+    }
+
+
 }
 
 .sub-footer {
@@ -329,7 +322,6 @@ img.round,
         height: 108px;
         margin: 0 auto;
     }
-
 }
 
 .img-container {
@@ -339,8 +331,32 @@ img.round,
 .colored-image {
     display: block;
     height: 100%;
-    background-color: $baseFirstThemeColour;
+    background-color: $denim;
     background-blend-mode: multiply;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // gradient specified by Carlos
+        background-image: linear-gradient(-180deg, rgba(127,125,125,0.47) 0%, rgba(0,0,0,0.72) 89%);
+        mix-blend-mode: color;
+    }
+
+    // exception for section banner
+    .section-banner & {
+        background-color: transparent;
+
+        &:before {
+            background-image:  linear-gradient(to bottom, rgba(255,255,255,0.65) 0%, rgba(19,19,19,1) 100%);
+            mix-blend-mode: multiply;
+        }
+    }
 }
 
 
@@ -410,13 +426,12 @@ img.round,
 .banner,
 a.banner {
     display: block;
-    height: 16rem;
+    height: 22rem;
     position: relative;
     margin:  0;
 
     @include respond-to(large-screens){
-        height: 20rem;
-        // margin: 1rem 0;
+        height: 32em;
         margin: 0;
     }
 
@@ -425,7 +440,6 @@ a.banner {
         width: 100%;
         left:0;
         top:0;
-
     }
 
     h3 {
@@ -434,7 +448,7 @@ a.banner {
 
     .header-group {
         position: absolute;
-        bottom: 0;
+        bottom: 2rem;
         color: $white;
         padding: 1rem;
         left: 0;
@@ -442,15 +456,16 @@ a.banner {
         text-shadow: 0px 0px 2px rgba($black, 0.5);
 
         @include respond-to(large-screens){
-            left: 60.666%; //66.666 edited because of banner info image button thingie
-            width: 33%;
+            left: 60%; //66.666 edited because of banner info image button thingie
+            width: 35%;
+            padding-right: 40px; //make room for cutoff
         }
 
         p {
-            font-size: 0.75rem;
+            font-size: 0.88rem;
 
             @include respond-to(large-screens){
-                font-size: 0.875rem;
+                // font-size: 1.125rem;
             }
 
         }
@@ -462,6 +477,14 @@ a.banner {
 
         p {
             font-size: 0.75rem;
+        }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        svg.icon-cutoff {
+            fill: $white;
         }
     }
 
@@ -485,7 +508,6 @@ a.banner {
 
     use {
         border: 1px solid #fff;
-        // background-color: #f09;
     }
 
     &.white {
@@ -557,74 +579,61 @@ a.banner {
 
 
 .teaser-twocol {
+    overflow: visible; // to make sure the shadows are not cut off.
+
+    .rounded-card {
+        height: 100%; // fill out flex box
+    }
+
+    &:not(.teaser-events) .rounded-card {
+        display: flex;
+    }
 
     .img-container {
         width: 27.5%;
-        float: left;
+        // float: left;
         position: relative;
-        margin-right: .875rem;
+        margin-right: 1.5rem;
 
         @include respond-to(large-screens){
-            width: 50%;
-        }
-    }
-
-    &.teaser-events .img-container {
-        float: none;
-        width: 100%;
-        margin-bottom: 1rem;
-
-        @include respond-to(medium-screens){
-            float: left;
-            width: 50%;
-            //max-width: 300px;
+            width: 48%;
         }
 
-        @include respond-to(large-screens){
-            float: none;
+        img {
             width: 100%;
-            max-width: none;
+            height: 100%;
+            object-fit: cover;
         }
-
-        @include respond-to(xlarge-screens){
-            float: left;
-            width: 50%;
-        }
-
     }
 
-    .img-insert {
-        position: absolute;
-        padding: .75rem 0.875rem;
-        margin: 0;
-        top: 0;
-        right: 0;
-        background: $white;
-        display: none;
-
-        @include respond-to(large-screens){
-        display: block;
-        }
+    .txt-container {
+        padding-left: 0;
+        width: 50%;
     }
 
     .label {
         margin: 0 0 0.75rem 0;
     }
 
-    p {
+    p:not(.meta) {
         margin: 0 0 .5rem;
         font-size: 0.875rem;
+        display: none;
 
-        @include respond-to(medium-screens){
-            font-size: 1rem;
+        @include respond-to(large-screens){
+            display: block;
         }
     }
 
     p.meta {
-        display: block;
+        margin: .5rem 0;
+    }
+
+    .tags {
+        display: none;
 
         @include respond-to(large-screens){
-            display: none;
+            display: block;
         }
     }
 
@@ -649,7 +658,37 @@ a.banner {
         }
     }
 
+    &.teaser-events {
 
+        .img-container {
+            float: none;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            @include respond-to(medium-screens){
+                float: left;
+                width: 50%;
+                //max-width: 300px;
+            }
+
+            @include respond-to(large-screens){
+                float: none;
+                width: 100%;
+                max-width: none;
+            }
+
+            @include respond-to(xlarge-screens){
+                float: left;
+                width: 50%;
+            }
+        }
+
+        .txt-container {
+            width: 100%;
+            padding-left: 1.5rem;
+        }
+
+    }
 
 
 }
@@ -926,6 +965,10 @@ div.calltoaction-readmore {
 
 .teaser-threecol {
 
+    .rounded-card {
+        height: 100%; // fill out flex box
+    }
+
     p {
         margin: 0 0 .5rem;
         font-size: 0.875rem;
@@ -1094,10 +1137,20 @@ section.catstream {
 * WIDGET CALL TO ACTION FULL / HALF
 **/
 
-div.calltoaction {  //little bit more specific to avoid issues with defaul header group
-    height: 200px;
+.items-grid.breakerdouble {
+    grid-template-columns: 1fr;
+    @include respond-to(large-screens) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    > div.calltoaction {
+        width: 100%;
+    }
+}
+
+div.calltoaction {  //little bit more specific to avoid issues with default header group
+    min-height: 200px;
     position: relative;
-    // margin: 1rem 0;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -1107,14 +1160,24 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
         color: $white;
         text-align: center;
         width: 70%;
-        padding: 0;
+        padding: 3rem 0;
         margin-top: 0;
         z-index: 5;
 
 
         p {
-            font-size: 0.875rem;
+            font-size: 1rem;
             margin: 0 0 0.5em 0;
+        }
+
+        hr {
+            // content: "";
+            width: 6.75rem;
+            height: 1px;
+            border: 0;
+            border-bottom: 1px solid $white;
+            display: block;
+            margin: 2rem auto 4rem;
         }
 
     }
@@ -1131,7 +1194,7 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
     position: relative;
     background-color: $line-gray; //$baseFirstThemeColour;
     overflow: hidden;
-    margin: 1rem 0;
+    margin: 0;
 
 
     @include respond-to(large-screens) {
@@ -1146,8 +1209,6 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
         display: block;
         width: 100%;
         height: 55px;
-        background-color: $baseFirstThemeColour;
-        background-blend-mode: multiply;
 
         @include respond-to(large-screens) {
             width: 55%;
@@ -1160,7 +1221,7 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
         margin: 0 1rem 0 0;
         color: $white;
         text-transform: none;
-        top: 1.1rem;
+        top: 0.7rem;
         text-align: center;
         width: 100%;
         left: 0;
@@ -1170,6 +1231,16 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
             left: auto;
             width: auto;
         }
+    }
+
+    hr {
+        // content: "";
+        width: 6.75rem;
+        height: 1px;
+        border: 0;
+        border-bottom: 1px solid $white;
+        display: block;
+        margin: 2rem auto 4rem;
     }
 
     .button {
@@ -1215,8 +1286,6 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
         }
 
     }
-
-
 }
 
 
@@ -1229,9 +1298,8 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
     text-align: center;
     margin: 1rem 0;
 
-
     a.button {
-        padding: .5rem 4rem
+        padding: .75rem 1.5rem
     }
 
     p {
@@ -1241,92 +1309,42 @@ div.calltoaction {  //little bit more specific to avoid issues with defaul heade
 
 
 /*
-* Collapse margins when a call to action follows a banner
-**/
-
-//regular one-banner
-.section-banner + .section-calltoactionform,
-.section-banner + .section-calltoactioninline,
-.section-banner + .section-calltoactionlink,
-.section-banner + .section-calltoaction,
-//or when an in-page anchor is in between
-.section-banner + .in-page-anchor + .section-calltoactionform,
-.section-banner + .in-page-anchor + .section-calltoactioninline,
-.section-banner + .in-page-anchor + .section-calltoactionlink,
-.section-banner + .in-page-anchor + .section-calltoaction,
-// three banners next to another
-.section-bannertriple + .section-calltoactionform,
-.section-bannertriple + .section-calltoactioninline,
-.section-bannertriple + .section-calltoactionlink,
-.section-bannertriple + .section-calltoaction,
-//or when an in-page anchor is in between these
-.section-bannertriple + .in-page-anchor + .section-calltoactionform,
-.section-bannertriple + .in-page-anchor + .section-calltoactioninline,
-.section-bannertriple + .in-page-anchor + .section-calltoactionlink,
-.section-bannertriple + .in-page-anchor + .section-calltoaction,
-// call to action banner
-.section-calltoaction + .section-calltoactionform,
-.section-calltoaction + .section-calltoactioninline,
-.section-calltoaction + .section-calltoactionlink,
-.section-calltoaction + .section-calltoaction,
-//or when an in-page anchor is in between these
-.section-calltoaction + .in-page-anchor + .section-calltoactionform,
-.section-calltoaction + .in-page-anchor + .section-calltoactioninline,
-.section-calltoaction + .in-page-anchor + .section-calltoactionlink,
-.section-calltoaction + .in-page-anchor + .section-calltoaction
- {
-    overflow: visible;
-
-    .calltoactionform,
-    .calltoactionlink,
-    .calltoactioninline,
-    .calltoaction {
-
-
-        // margin-top: 0 rem; // needs check, gaat dit altijd goed? - AW
-
-        @include respond-to(large-screens){
-            // margin-top: -1rem;
-        }
-
-    }
-
-}
-
-/*
 * Collapse margins when a banner or call to action is the first item on a landingpage
 **/
 
-main .section-banner:first-child {
-    a.banner {
-        margin-top: 0px;
-    }
-}
+// main .section-banner:first-child {
+//     a.banner {
+//         margin-top: 0px;
+//     }
+// }
 
-main .section-calltoactionform:first-child {
-    .calltoactionform {
-        margin-top: 0px;
-    }
-}
+// main .section-calltoactionform:first-child {
+//     .calltoactionform {
+//         margin-top: 0px;
+//     }
+// }
 
 
-main .section-calltoactioninline:first-child {
-    .calltoactioninline {
-        margin-top: 0px;
-    }
-}
+// main .section-calltoactioninline:first-child {
+//     .calltoactioninline {
+//         margin-top: 0px;
+//     }
+// }
 
-main .section-calltoactionlink:first-child {
-    .calltoactionlink {
-        margin-top: 0px;
-    }
-}
+// main .section-calltoactionlink:first-child {
+//     .calltoactionlink {
+//         margin-top: 0px;
+//     }
+// }
 
-main .section-calltoactionlink:first-child {
-    .calltoactionlink {
-        margin-top: 0px;
-    }
-}
+// main .section-calltoactionlink:first-child {
+//     .calltoactionlink {
+//         margin-top: 0px;
+//     }
+// }
+
+// Hoe wordt de spacing tussen secties gedaan?
+// -> https://codepen.io/ankedsgn/pen/zYGKOdm via de div erbinnenin
 
 /*
 ***********************************************************************
@@ -1339,7 +1357,6 @@ main .section-calltoactionlink:first-child {
     padding: 0;
 
     @include respond-to(medium-screens) {
-        margin-left: 210px;
         text-align: right;
         padding: 0 0.875rem;
     }
@@ -1347,6 +1364,7 @@ main .section-calltoactionlink:first-child {
 
     @include respond-to(large-screens) {
         // margin-bottom: 2rem;
+        margin-left: 210px;
         position: absolute;
         z-index: index($layers, higher-content);
         top: -7.5rem;
@@ -1715,7 +1733,7 @@ main .section-calltoactionlink:first-child {
         max-width: 150px;
 
         @include respond-to(large-screens){
-            font-size: 1rem;
+            font-size: 0.875rem;
             max-width: 200px;
         }
 
@@ -1861,6 +1879,36 @@ figure {
     .img-container {
         position: relative;
     }
+
+    img {
+        border-radius: 4px;
+    }
+
+}
+
+svg.icon-cutoff,
+svg.icon-cutoff.left {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 145px;
+    width: 60px;
+    fill: $white;
+    margin: 0;
+}
+
+svg.icon-cutoff.right {
+    transform: scaleX(-1); // flip svg
+    left: auto;
+    right: 0px;
+}
+
+svg.icon-cutoff.top.right {
+    transform: scaleX(-1) scaleY(-1); // flip svg
+    left: auto;
+    right: 0px;
+    bottom: auto;
+    top: 0;
 }
 
 
@@ -2437,6 +2485,47 @@ figure {
 ***********************************************************************
 **/
 
+.table-actions {
+    margin: 1rem 0;
+    padding: 0 .875rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include respond-to(large-screens) {
+        padding: 0;
+    }
+
+    span {
+        width: 100%;
+        display: block;
+        margin-bottom: 1rem;
+        @include respond-to(large-screens) {
+            width: auto;
+            display: inline-block;
+        }
+        @include respond-to(menu-full) {
+            width: 100%;
+            display: block;
+        }
+        @include respond-to(wide-screens) {
+            width: auto;
+            display: inline-block;
+        }
+    }
+
+    select.button {
+        margin: 0 .5rem 1rem;
+        width: 290px; // optical: 'Bosnia Herzegovina' fits now.
+        &:hover, &:active {
+            background-color: $white;
+            color: $black;
+        }
+    }
+    button {
+        margin: 0 .5rem;
+    }
+}
+
 table.listingtable {
     border-bottom: 1px solid $line-gray;
     margin-top: 1rem;
@@ -2624,7 +2713,8 @@ table.listingtable {
             margin: 1rem 0 2rem 0;
 
             p {
-                letter-spacing: 1.5px;
+                letter-spacing: 1px;
+                font-weight: 600;
             }
         }
 
@@ -2649,7 +2739,7 @@ table.listingtable {
 
     h3 {
         color: $baseFirstThemeColour;
-        font-weight: 400;
+        font-weight: 600;
         letter-spacing: 1px;
         text-align: center;
         font-size: 1.125rem;
@@ -2827,14 +2917,8 @@ div.body {
     button.image-info {
         position: absolute;
         bottom: 1rem;
-        left: 1rem;
+        right: 1rem;
         z-index: 50;
-
-        svg {
-            width: 26px;
-            height: 26px;
-            fill: $white;
-        }
 
         figure.non-wide & {  // Specific exception for blog with multiple authors
 
@@ -2849,7 +2933,7 @@ div.body {
         position: absolute;
         bottom: 0 ;
         left: 0 ;
-        width: 100%;
+        width: auto;
         background: rgba($black, 0.95);
         color: $white;
         padding: .55rem;
@@ -2865,7 +2949,7 @@ div.body {
 
             @include respond-to(xlarge-screens) {
                 left: 4rem;
-                width: calc( 100% - 8rem);
+                // width: calc( 100% - 8rem);
             }
 
         }
@@ -2877,6 +2961,10 @@ div.body {
             padding: 0;
             max-width: 500px;
 
+            @include respond-to(large-screens) {
+                margin: 0 1em 0 0;
+                display: inline-block;
+            }
         }
 
         span.image-license {
@@ -2931,9 +3019,9 @@ div.body {
     .section-banner & {
 
         button.image-info {
-            bottom: 1rem;
-            left: auto;
-            right: 1rem;
+            bottom: .5rem;
+            right: auto;
+            left: 1rem;
 
             @include respond-to(large-screens) {
                 left: 1rem;
@@ -2942,23 +3030,32 @@ div.body {
         }
 
         article {
-            bottom: 1rem ;
-            left: 0 ;
-            border-radius: 5px;
-            width: 90%;
+            bottom: 0;
+            left: 1rem;
+            border-radius: 4px 4px 0 0;
+            // width: 90%;
+            padding: .3em .8em .5em;
+            line-height: 1.2;
+
+            background: $white;
 
             @include respond-to(medium-screens) {
-                width: 50%;
-                left: auto;
-                right: 1rem;
+                // width: 50%;
             }
 
             @include respond-to(large-screens) {
-                width: 33%;
-                left: 0;
-                border-radius: 0 5px 5px 0;
+                // width: 33%;
 
             }
+        }
+
+        p, a {
+            color: $black;
+            font-size: 0.625rem;
+        }
+
+        svg {
+            fill: $black;
         }
 
     }
@@ -2975,12 +3072,12 @@ div.body {
         article {
 
             left:0;
-            width: 100%;
+            // width: 100%;
             bottom: 0;
             border-radius: 0;
 
             @include respond-to(large-screens) {
-                width: 100%;
+                // width: 100%;
                 left: 0;
             }
         }
@@ -3012,6 +3109,11 @@ div.body {
 ***********************************************************************
 **/
 
+
+
+
+
+/* not used after redesign 2019 - AW feb 2019 */
 
 /* blue to raspberry gradient*/
 .grad_network .colored-image {
