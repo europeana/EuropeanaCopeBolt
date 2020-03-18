@@ -744,3 +744,8 @@ code, pre {
         background-color: $white;
     }
 }
+
+// make the scrolling snap to the right place -> https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
+a.in-page-anchor {
+    scroll-margin-top: 4em;
+}
