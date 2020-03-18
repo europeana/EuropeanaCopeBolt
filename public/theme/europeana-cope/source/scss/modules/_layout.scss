@@ -510,6 +510,12 @@ ul.teaser-list {
 
 }
 
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    // in module css: define template columns
+}
+
 
 
 

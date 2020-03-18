@@ -1137,6 +1137,17 @@ section.catstream {
 * WIDGET CALL TO ACTION FULL / HALF
 **/
 
+.items-grid.breakerdouble {
+    grid-template-columns: 1fr;
+    @include respond-to(large-screens) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    > div.calltoaction {
+        width: 100%;
+    }
+}
+
 div.calltoaction {  //little bit more specific to avoid issues with default header group
     min-height: 200px;
     position: relative;
