@@ -38,7 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {% for item in sidemenu %}
     {# hoofditems #}
     {% setcontent thisitem = item.path %}
-    {% if thisitem.slug == record.slug|default('') %}
+    {% if thisitem.slug|default('') == record.slug|default('') %}
         {% set currentpageinmenu = true %}
     {% endif %}
 
