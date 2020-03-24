@@ -47,7 +47,7 @@ $( document ).ready(function() {
         e.preventDefault();
         var nav = $("nav.main-menu");
         var headerHeight = $('header').height();
-        var cookieHeight = $('#cookiebar').height();
+        var cookieHeight = $('#cookiebar').outerHeight();
         var windowHeight = (viewportSize.getHeight())
         var fullHeight = ($('body').height())-headerHeight;
         var iconmenu = $('svg.icon-menu', this);
