@@ -24,6 +24,8 @@ $( document ).ready(function() {
     var windowWidthEms = ((viewportSize.getWidth()) / 16);
     //console.log(windowWidthEms);
 
+    var hasCookie = getCookie('epro_cookieconsent');
+
     /**
      * initial checks for page setup. Checks the viewport width and does some
      * actions for the UI based on screen size
@@ -45,10 +47,17 @@ $( document ).ready(function() {
         e.preventDefault();
         var nav = $("nav.main-menu");
         var headerHeight = $('header').height();
+        var cookieHeight = $('#cookiebar').height();
         var windowHeight = (viewportSize.getHeight())
         var fullHeight = ($('body').height())-headerHeight;
         var iconmenu = $('svg.icon-menu', this);
         var iconclose = $('svg.icon-delete', this);
+
+        if ($('#cookiebar').is(':visible') == true ){
+            offsetHeight = headerHeight + cookieHeight;
+        } else {
+            offsetHeight = headerHeight;
+        }
 
         if ( nav.hasClass('is-overlay') ){
             // Doe dicht
@@ -65,7 +74,7 @@ $( document ).ready(function() {
         } else {
             // Doe open
             nav.addClass('is-overlay').css({
-                'top': headerHeight,
+                'top': offsetHeight,
                 'min-height': windowHeight,
                 'height': fullHeight
             });
@@ -131,7 +140,7 @@ $( document ).ready(function() {
               ).addClass('is-open');
 
             if (nav.hasClass('is-overlay')) {
-                console.log('is-overlay');
+
                 nav.animate({
                     top: '+=71'
                 });
@@ -144,17 +153,21 @@ $( document ).ready(function() {
      */
 
     var cookiebar = $('#cookiebar');
-    var hasCookie = getCookie('epro_cookieconsent');
+    // var hasCookie = getCookie('epro_cookieconsent');
 
     if (!hasCookie){
+        $('body').addClass('show-cookiebar');
         cookiebar.show();
+        var cookieheight = cookiebar.height();
         cookiebar.find('button').on('click', function(){
             cookiebar.slideUp('fast');
             cookiebar.fadeOut();
+            $('body').removeClass('show-cookiebar');
             //set cookie
             setCookie('epro_cookieconsent','1',30);
         });
     }
+
 
     /**
     * Show 'back to top' button on scroll up
@@ -361,13 +374,15 @@ $( document ).ready(function() {
     /* Add button to splashpage header _if_ a registerbutton is there. */
 
     var registerlink = $('.eventregister .button').attr('href');
-    console.log(registerlink);
+    // console.log(registerlink);
 
     if (registerlink && $('body').hasClass('splashpage')) {
         var ticketbutton = $('<a>').text('Buy tickets').attr({'href': registerlink, 'class': 'button outline header-action'});
 
         $('header').append(ticketbutton);
     }
+
+
 
     /**
      * preloadchecks function
@@ -401,9 +416,20 @@ $( document ).ready(function() {
             $('#topbar').stick_in_parent({
                 offset_top: 64
             });
+
             // $('#mainmenu').stick_in_parent({
             //     offset_top: 64
             // });
+
+            setTimeout(function() {
+                var cookieheight =  $('#cookiebar').outerHeight();
+                cookieoffset = cookieheight + 64;
+
+                $('#topbar').stick_in_parent({
+                    offset_top: cookieoffset
+                });
+
+            }, 500);
 
         } else {
              //remove all leftover inline styles from mobile view;
@@ -424,50 +450,6 @@ $( document ).ready(function() {
             });
             $('.sticky-header').stick_in_parent();
         }
-
-
-
-
-        // if ( windowWidthEms >= breakLarge ) {
-        //     // set filters outside list for desktop.
-        //     // NOTE: Anke is lazy and has not coded for the edgecase where a Large window is resized to < Large.
-        //     // hardly ever occurs. If happens, slap Anke and fix it yourself.
-        //     $('.filters-chapter').appendTo('.filter-container');
-
-        //     $('#topbar').stick_in_parent({
-        //         offset_top: 64
-        //     });
-        // } else {
-
-        // }
-
-        // if ( windowWidthEms < breakMenuFull ) {
-        //     $('#headersearch').hide();
-        //     $('#headersearch').appendTo('header'); // put it back, if coming from large
-        // }
-
-        // if ( windowWidthEms >= breakMenuFull ) {
-        //     //remove all leftover inline styles from mobile view;
-        //     $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
-        //     $('#headersearch').removeAttr('style');
-        //     // stick it _in_ the header
-        //     $('#headersearch').appendTo('.headercontainer');
-
-        //     // set sticky topbar and menu
-        //     $('#mainmenu').stick_in_parent({
-        //         offset_top: 75
-        //     });
-
-        //     $('.sticky-header').stick_in_parent();
-
-        // } else {
-        //    // remove stickyness when window is resized
-        //    $("#topbar").trigger("sticky_kit:detach");
-        //    $("#mainmenu").trigger("sticky_kit:detach");
-        //    $(".sticky-header").trigger("sticky_kit:detach");
-
-        // }
-
 
     }
 
@@ -526,3 +508,13 @@ function showBreadCrumb(){
      var breadcrumbs = JSON.parse(sessionStorage.breadcrumb);
      $("#breadcrumbs").html(breadcrumbs.slice(-4,-1).join(' &raquo; '));
 }
+
+var waitForEl = function(selector, callback) {
+    if (jQuery(selector).length) {
+      callback();
+    } else {
+      setTimeout(function() {
+        waitForEl(selector, callback);
+      }, 100);
+    }
+  };

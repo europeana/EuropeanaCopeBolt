@@ -123,6 +123,10 @@ nav.main-menu {
         // height: 100vh; // No height: fucks with stcky-kit js
     }
 
+    body.show-cookiebar & {
+        top: 289px; // magic numer - room for cookiebar on mobile
+    }
+
     body.homepage &,
     body.body-no-menu &{
         // no menu on homepage
