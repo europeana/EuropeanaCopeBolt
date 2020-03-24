@@ -749,13 +749,24 @@ code, pre {
 //not working yet on ios thingies
 
 a.in-page-anchor {
-    // scroll-margin-top: 7em; //not working yet on ios thingies
-    padding-top: 7em;
-    margin-top: -7em;
+    scroll-margin-top: 7em; //not working yet on ios thingies
+
+    @supports (-webkit-overflow-scrolling: touch) { // bc ios safari is not playing along
+        /* CSS specific to iOS devices only */
+        padding-top: 7em;
+        margin-top: -7em;
+      }
 
     @include respond-to(large-screens){
-        // scroll-margin-top: 5em; //not working yet on ios thingies
-        padding-top: 5em;
-        margin-top: -5em;
+        scroll-margin-top: 5em; //not working yet on ios thingies
+
+        @supports (-webkit-overflow-scrolling: touch) { // bc ios safari is not playing along
+            /* CSS specific to iOS devices only */
+            padding-top: 5em;
+            margin-top: -5em;
+          }
     }
 }
+
+// TODO: this ios css also affects chrome on ipad, which doesnt work, for now. :(
+
