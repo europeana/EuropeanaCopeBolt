@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5 {
     margin-top:0;
     font-weight: 700;
     font-style: normal;
-    line-height: 1.125;
+    line-height: 1.2;
 }
 
 h1, .alpha {
@@ -71,13 +71,17 @@ h3, .gamma {
     }
 
     a {
-        color: $link-blue;
+        // color: $link-blue;
+        color: $medium-gray; //assumption for whole site, seeing the module restyling
         text-decoration: none;
     }
 
     .teaser-twocol & {
-        color: $dark-blue;
-        margin-bottom: .75rem;
+        color: $medium-gray;
+        margin-bottom: .5rem;
+
+        font-weight: 500;
+        font-size: 1.375rem;
     }
 
     .teaser-threecol &,
@@ -85,8 +89,11 @@ h3, .gamma {
         font-size: 1rem;
         margin: .75rem 0 0.5rem; //optically even
 
+        font-weight: 500;
+
         @include respond-to (medium-screens) {
             font-size: 1.375rem;
+            min-height: 65px;
         }
     }
 
@@ -159,6 +166,17 @@ h2.widget, h3.widget { //HEADERS IN BANNERS / CALL TO ACTIONS
     font-weight: 400;
     letter-spacing: 1.5px;
     color: $white;
+
+    @include respond-to (medium-screens) {
+        font-size: 1.625rem;
+    }
+
+    .section-banner & {
+
+        @include respond-to (medium-screens) {
+            font-size: 1.375rem;
+        }
+    }
 }
 
 h2.widget-emph,
@@ -192,6 +210,19 @@ section {
             margin: 4rem 0 .4rem 0;
         }
 
+    }
+
+    > .inner-wrap > h3 {
+        text-align: center;
+        font-size: 1rem;
+
+        @include respond-to (medium-screens) {
+            font-size: 1.25rem;
+        }
+    }
+
+    > .inner-wrap > h2 + h3 {
+        margin-top: 1rem;
     }
 
     &.info-list-section > h2 {
@@ -234,15 +265,20 @@ section {
         text-align: center;
         // margin: 0 0 3rem 0;
         letter-spacing: -.3px;
-        font-size: 0.875rem; // Carlos wants 0.75rem, 2K Think that's too small.
+        font-size: 1rem;
 
         @include respond-to (medium-screens) {
-            font-size: 1rem;
+            font-size: 1.125rem; // redesign: all text should be 18px
         }
     }
 
-    .inner-wrap p + .items-container,
-    .inner-wrap h2 + .items-container {
+    // .inner-wrap p + .items-container,
+    // .inner-wrap h2 + .items-container,
+    // &.tiles-module h2 + .items-container {
+    //     margin-top: 3rem;
+    // }
+
+    .items-container { // opdat er ook marge is _zonder_ titel. check of dit goed blijft gaan.
         margin-top: 3rem;
     }
 }
@@ -278,6 +314,15 @@ ul {
 }
 
 .introduction {
+    font-family:$base-font-family;
+    font-weight: 400;
+    color: $medium-gray;
+    font-size: 1rem;
+
+        @include respond-to (medium-screens){
+            font-size: 1.125rem;
+        }
+
     p a,
     ul a,
     ol a {
@@ -285,22 +330,25 @@ ul {
     }
 
     p {
-        font-size: 1.125rem;
+        font-size: 1rem;
+
+        @include respond-to (medium-screens){
+            font-size: 1.125rem;
+        }
 
         @include respond-to (large-screens){
             font-size: 1.5rem;
         }
     }
 
-    font-size: 1.125rem;
-
-        @include respond-to (large-screens){
-            font-size: 1.5rem;
-        }
 }
 
 .body,
 .collapsed-body {
+    font-family:$base-font-family;
+    font-weight: 400;
+    color: $light-gray;
+
     p a,
     ul a,
     ol a {
@@ -321,12 +369,14 @@ ul {
     }
 
     p, ul, ol {
-    font-size: 0.875rem;
+    font-size: 1rem;
 
         @include respond-to (medium-screens){
-            font-size: 1rem;
+            font-size: 1.125rem;
         }
     }
+
+
 }
 
 p {
@@ -340,7 +390,7 @@ p {
     .teaser-twocol &,
     .teaser-threecol &,
     .catstream-threecol & {
-        color: $medium-gray;
+        color: $light-gray;
     }
 
     &.function {
@@ -386,6 +436,7 @@ a {
 
     &:hover, &:active, &.focus {
         text-decoration: underline;
+        color: $innovationblue-dark;
     }
 
     footer & {
@@ -393,16 +444,7 @@ a {
     }
 }
 
-.introduction p, .introduction ul, .introduction ol, .introduction {
-    font-family:$base-font-family;
-    font-weight: 400;
-    color: $medium-gray;
-}
 
-.body p, .body ul, .body ol, .body  {
-    font-family:$base-font-family;
-    font-weight: 400;
-}
 
 address {
     font-family: $base-font-family;
@@ -517,8 +559,7 @@ a {
 
     &.tag,
     &.team {
-        border-bottom: 1px dotted $link-blue;
-        font-size: 0.75rem;
+        font-size: 0.6875rem;
         margin-right: .5rem;
 
         &:last-child {
@@ -527,7 +568,8 @@ a {
 
         &:hover, &:focus, &:active {
             text-decoration: none;
-            border-bottom: 1px solid $link-blue;
+            border-bottom: 1px dotted $innovationblue-dark;
+            color: $innovationblue-dark;
         }
 
         // @include respond-to(medium-screens) {
@@ -573,18 +615,23 @@ a {
 
 }
 
+.tags {
+    line-height: 1.2;
+}
 
 p.meta {
     font-size: 0.75rem;
 
     @include respond-to(large-screens) {
-        font-size: 0.875rem;
+        //font-size: 0.875rem;
+        font-size: 0.75rem
     }
 
     span {
         white-space: nowrap;
         display: inline-block;
         margin-right: 0.5rem;
+        color: $black;
 
         &:last-child {
             margin-right: 0;
@@ -697,3 +744,29 @@ code, pre {
         background-color: $white;
     }
 }
+
+// make the scrolling snap to the right place -> https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
+//not working yet on ios thingies
+
+a.in-page-anchor {
+    scroll-margin-top: 7em; //not working yet on ios thingies
+
+    @supports (-webkit-overflow-scrolling: touch) { // bc ios safari is not playing along
+        /* CSS specific to iOS devices only */
+        padding-top: 7em;
+        margin-top: -7em;
+      }
+
+    @include respond-to(large-screens){
+        scroll-margin-top: 5em; //not working yet on ios thingies
+
+        @supports (-webkit-overflow-scrolling: touch) { // bc ios safari is not playing along
+            /* CSS specific to iOS devices only */
+            padding-top: 5em;
+            margin-top: -5em;
+          }
+    }
+}
+
+// TODO: this ios css also affects chrome on ipad, which doesnt work, for now. :(
+

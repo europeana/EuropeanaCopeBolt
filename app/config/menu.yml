@@ -1,11 +1,7 @@
 main:
     -
-        class: home
-        path: pages/home
-        label: Homepage
-    -
         class: mission
-        path: pages/our-mission
+        path: page/our-mission
         label: 'Our mission '
         submenu:
             -
@@ -111,6 +107,10 @@ main:
             -
                 path: page/23
                 label: 'Data publication'
+                submenu:
+                    -
+                        path: page/547
+                        label: 'Europeana Aggregators'
             -
                 label: Discovery
                 path: pages/discovery
@@ -246,31 +246,7 @@ main:
                     -
                         label: Enumerate
                         path: pages/enumerate
-secondary:
-    -
-        label: 'Join us'
-        class: secondary
-        path: pages/sign-up
-    -
-        label: Blog
-        path: pages/blog
-        class: secondary
-    -
-        label: 'Europeana Collections'
-        class: secondary
-        link: 'https://www.europeana.eu'
-    -
-        label: 'Get the API'
-        class: secondary
-        path: pages/get-api
-    -
-        label: Jobs
-        class: secondary
-        path: pages/jobs
-    -
-        path: page/press
-        class: secondary
-        label: Press
+secondary: {  }
 footer:
     -
         path: pages/home

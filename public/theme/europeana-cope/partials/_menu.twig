@@ -12,33 +12,36 @@
 
     {# The 'recursive' macro, for inserting one menu item. If it has a submenu, it
        invokes itself to insert the items of the submenus. #}
-    {% macro display_menu_item(item, loop, withsubmenus, level) %}
+    {% macro display_menu_item(item, loop, withsubmenus, level, parentLinks) %}
         {% from _self import display_menu_item %}
         {% from _self import is_current_url %}
+        {% set active = item|current or item.link in parentLinks %}
+
         {% spaceless %}
             <li class="index-{{ loop.index -}}
                 {{ item.path|default('') == 'homepage' ? '' -}}
                 {{ ' ' ~ item.class|default('') -}}
                 {{ loop.first ? ' first' -}}
                 {{ loop.last ? ' last' -}}
-                {{ (level > 0) ? ' level-' ~ level -}}
+                {{ ' level-' ~ level -}}
                 {{ (item.submenu|default(false) and withsubmenus) ? ' is-parent' -}}
-                {{ item|current ? ' active' -}}
+                {{ active ? ' active' -}}
                 {{ is_current_url(item) -}}">
 
                 <a href="{{ item.link }}" title='{{ item.title|default('')|escape }}'>
                     {{- item.label|default('-') -}}
                 </a>
 
-                {% if item.submenu is defined and withsubmenus %}
+                {% if item.submenu is defined and withsubmenus and active and level == 0 %}
                     <ul class="sub-menu" data-submenu>
                         {% set sublevel = level+1 %}
                         {% for submenu in item.submenu %}
-                            {{ display_menu_item(submenu, loop, withsubmenus, sublevel) }}
+                            {{ display_menu_item(submenu, loop, withsubmenus, sublevel, parentLinks) }}
                         {% endfor %}
                     </ul>
                 {% endif %}
             </li>
+
         {% endspaceless %}
     {% endmacro %}
 
@@ -57,12 +60,25 @@
     {% from _self import is_current_url %}
     {% from _self import display_menu_item %}
 
+    {% set parentLinks = [] %}
+
+    {% if record is defined %}
+        {% set parents = getParents(record) %}
+
+        {% for parent in parents %}
+            {% set parentLinks = parentLinks|merge([ parent.link ]) %}
+        {% endfor %}
+
+        {% set parentLinks = parentLinks|merge([ record.link ]) %}
+    {% endif %}
+
+
     {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
     {# we need all these classes for the jquery interactivity #}
-    <ul class="play-menu" id="playmenu">
+    <ul class="primary-menu" id="primary-menu">
         {% for item in menu %}
             {% if item.label is defined %}
-                {{ display_menu_item(item, loop, withsubmenus, 0) }}
+                {{ display_menu_item(item, loop, withsubmenus, 0, parentLinks) }}
             {% endif %}
         {% endfor %}
     </ul>

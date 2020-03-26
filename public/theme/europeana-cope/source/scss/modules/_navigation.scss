@@ -9,19 +9,23 @@
 * CONTENTHEADER
 **/
 
-.topbar {
-    background-color: $denim;
-    min-height: 53px;
-    z-index: 10; //for sticky
-    height: 53px; // to prevent filtering from pushing bar down. remove if it causes other problems!
 
-    @include respond-to (medium-screens) {
-        height: 53px;
-    }
+.topbar {
+    // min-height: 53px;
+    z-index: 10; //for sticky
+    // height: 53px; // to prevent filtering from pushing bar down. remove if it causes other problems!
+    height: auto;
+
+    // @include respond-to (medium-screens) {
+        height: auto;
+    // }
 
 }
 
 nav.quicklinks { // regular page quicklinks
+    margin: 0 1.5rem;
+    border-bottom: 1px solid $line-gray;
+    display: none; // js sets it to show() when links are present
 
     ul {
         // background-color: $quicklinks-bar;
@@ -39,14 +43,14 @@ nav.quicklinks { // regular page quicklinks
 
     a {
         display: block;
-        color: $white;
+        color: $light-gray;
         padding: 6px 0.5rem;
-        font-size: 0.75rem;
+        font-size: 0.875rem;
         line-height: 21px; // magic number: to align bar with menu on left
 
         @include respond-to (medium-screens) {
-            font-size: 0.875rem;
             padding: 6px 1rem;
+            font-size: 1rem;
         }
     }
 
@@ -71,8 +75,6 @@ nav.quicklinks { // regular page quicklinks
 }
 
 
-
-
 a.back-link {
     color: $white;
     line-height: 21px;
@@ -89,30 +91,51 @@ a.back-link {
 }
 
 
-
-
-
 /*
 * MAIN MENU
 **/
 
-
+.menu-container{
+    hr {
+        background: $line-gray;
+        margin: 1.5rem 30px;
+        border: 0;
+        height: 1px;
+    }
+}
 
 nav.main-menu {
-    position: absolute;
+    position: fixed;
     width: 235px;
-    top: 124px; //magic number: height from topbar
+    top: 64px; //magic number: height from topbar
     left:-235px;
     //display: none; always on, because on mobile it's waiting to slide in.
     z-index: 15; //check if correct. Needed on mobile for hover over sticky bar.
-    background-color: $off-white;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    background-color: $menu-grey;
+    box-shadow: none;
+
 
     @include respond-to(menu-full) {
         display: block; //check, medium or large?
-        top: 95px; //magic number: height from topbar
+        top: 75px; //magic number: height from topbar
         left: 0;
-        box-shadow: none;
+        // box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        // height: 100vh; // No height: fucks with stcky-kit js
+    }
+
+    body.show-cookiebar & {
+        top: 289px; // magic number - room for cookiebar on mobile
+        @include respond-to(menu-full) {
+            top: 175px;
+        }
+    }
+
+    body.homepage &,
+    body.body-no-menu &{
+        // no menu on homepage
+        @include respond-to(menu-full) {
+            display: none;
+        }
     }
 
     ul {
@@ -121,288 +144,179 @@ nav.main-menu {
 
     a {
         text-decoration: none;
-        color: $black;
     }
 
 
     // CLASS OVERLAY NA TOGGLE
     &.is-overlay {
-       //does not do anything here, but give the JS a detection that it's in overlay
-    }
-
-
-    li.is-parent {
-        position: relative;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        //does not do anything here, but give the JS a detection that it's in overlay
     }
 
 }
 
+// new menu (2019) styles
 
-// playmenu container styles
+nav.toplayer {
+    display: none;
+    @include respond-to(menu-full){
+        display: block;
+    }
+}
 
-#playmenu {
-    top: 0;
-    position: relative;
-    width: 100%;
-    z-index: 1;
+.toplayer-menu { // in topbar
+    height: 100%;
+    display: flex;
+    flex-direction: row; // setting default for completeness
+    align-items: stretch;
+    padding: 0 1rem;
 
+    li {
+        vertical-align: middle;
+    }
 
-    .home {
-        padding-left: 0;
-        background: $dark-blue;
-
+    li.active {
         a {
-            color: $white;
-            text-align: center;
-            font-weight: 400;
-            display: block;
-            min-height: 27px; // quick fix for pixelproblem in chrome
+            font-weight: 700;
+            &:after {
+                background: $innovationblue;
+            }
         }
     }
-
-}
-
-// styling items in playmenu
-
-ul.play-menu {
-    border-right: 1px solid $off-white;
-    background-color: $white;
 
     a {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        height: 100%;
+
+        color: $medium-gray;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        text-shadow: 7px 2px 0 0 $white;
+        padding: 0 .8em 0 .8em;
+        line-height: 1.2;
+        // text-align: center;
+
+        span {
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            margin-top: auto;
+            height: 3px;
+            width: 100%;
+            background: transparent;
+            flex-grow: 0;
+        }
+
+        &:first-child {
+            // margin-left: 1rem;
+        }
 
         &:hover {
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-    }
-
-    .active > a {
-        font-weight: 700;
-        letter-spacing: -0.5px;
-        color: $dark-blue;
-    }
-
-    // listitems toplevel and level 1
-    > li,
-    > li > .sub-menu > li {
-        padding: 0.8125rem 0;
-        border-bottom: 1px solid $line-gray;
-
-        &:last-child {
-            border-bottom: 0;
+            background: rgba($innovationblue, 0.1);
+            text-decoration: none;
         }
 
-        &.active.toplevel {
-            padding-left: 0;
-            background: $dark-blue;
+    }
+}
 
-            > a {
-                min-height: 35px;
-                color: $white;
-                text-align: center;
-                font-weight: 400;
-                display: block;
+.primary-menu {
+    li + li  {
+        margin-top: 6px;
+    }
+    li.level-0 {
+        // margin: 1.5rem 0;
+        // padding: 1.5rem 0;
+
+        & > a { //top levels
+            color: $medium-gray;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+            text-shadow: 7px 2px 0 0 $white;
+            line-height: 1.2;
+            padding: 1.2rem 0 1.2rem 1.875rem;
+
+            @include respond-to(menu-full){
+                display: none;
             }
         }
 
-        &.active.toplevel:not(.home) {
-            min-height: 26em;
-            margin-left: 0;
-        }
-    }
-
-    >li:not(.home){
-        margin-left: 0px;
-        padding-left: 35px;
-    }
-
-    .sub-menu {
-        li {
-            border-left: none;
-        }
-    }
-
-    //targets level-1 (light brown level1)
-    .toplevel >.sub-menu {
-        margin: 5px 0 -12px 0;
-        padding: 0 0 0 2rem; //padding: 0 1rem 0 2rem;
-        //border-left: none;
-        background-color: lighten($paper, 15%);
-        min-height: 23em;
-
-        // quick fix to make sure the borders end before the side, but the focus stays on the li.
-        >li {
-            padding-right: 1rem;
-            padding-bottom: 0;
-            border-bottom: 0;
-        }
-        >li > a {
-            border-bottom: 1px solid $line-gray;
-            padding-bottom: 1rem;
-        }
-        >li:last-child > a {
-            border-bottom: 0;
-        }
-    }
-
-    // targets level-2 (floating side menus)
-    .level-1 >.sub-menu {
-        display: none;
-        margin-left: 0;
-        background-color: $white;
-
-        @include respond-to(menu-full) {
-            position: absolute;
-            left: 202px; //width of li parent
-            top: 0; //magic number: to align with top of li
-            width: 200px;
-            padding: 1rem;
-            box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-        }
-
-        li {
-            padding: 2px 0;
-            border-bottom: none;
-        }
-
-        a {
-            font-size: 90%;
-        }
-    }
-
-    .sub-menu li.active .sub-menu {
-    // don't show submenu when active
-        display: none;
-    }
-
-    .sub-menu li:hover .sub-menu {
-    // do show submenu when hovered
-         display: block;
-    }
-
-    .cloned-current {
-        font-size: 90%;
-        font-weight: 700;
-        letter-spacing: -0.5px;
-        color: $dark-blue;
-        display: block;
-        cursor: default;
-        margin: 10px 0 0 0;
-    }
-}
-
-
-/* the mouseover menu styles */
-ul.backlinks.play-menu {
-    background: $white;
-    top: 53px; //magic number: bottom of sandcolored current item.
-    position: absolute;
-    width: 25px;
-    overflow: hidden;
-    z-index: 10;
-    height: 22.75em; //make dynamic
-    transition: width 0.2s ease-in-out;
-
-
-    &:before {
-        content: "❰";
-        font-weight: bold;
-        color: $light-gray;
-        top: 50%;
-        margin-top:-10px;
-        padding: 5px;
-        position: absolute;
-    }
-
-    &:hover {
-        background: $white;
-        width: 100%;
-
-        &:before {
-            content: "";
-        }
-    }
-
-
-    li {
-        margin-left: 25px;
-        padding-left: 10px;
-
         &.active {
-            display: none;
+            // margin: 1.5rem 0;
+        }
+
+        &.active > a {
+            font-weight: 700;
+            border-bottom: 3px solid $innovationblue;
+            padding-bottom: .5em;
+        }
+
+        ul {
+            margin-top: .7rem;
+        }
+
+    }
+
+    li.level-1.active {
+        // active level 1 items
+        a {
+            background: $innovationblue;
+            color: $white;
+            font-weight: 400;
         }
     }
+
+    a {
+        color: $light-gray;
+        font-size: 1.125rem;
+        padding: 0.1em 0 0.1em 1.875rem;
+        margin-right: 1.125rem;
+        display: block;
+        transition: background-color .25s ease-in .1s;
+
+        @include respond-to(menu-full){
+            border-radius: 0 18px 18px 0;
+        }
+
+        &:hover, &:focus, &:active {
+            background: rgba($innovationblue, 0.1);
+        }
+
+    }
+
+    .sub-menu a {
+        border-radius: 0 18px 18px 0;
+    }
 }
+
 
 
 // styling secondary menu
 
 nav ul.secondary-menu {
+    font-size: 0.8125rem;
 
-    padding: 2rem 0;
-
-    li {
-        font-size: 90%;
-        padding-left: 25px;
-    }
-
-    .secondary {
-        //background-color: $white;
-        color: $black;
-        padding-bottom: 5px;
-        padding-top: 5px;
+    li + li{
+        margin-top: 4px;
     }
 
     a {
         display: block;
+        color: $black;
+        padding: .1em 0 .1em 1.875rem;
+
+        &:hover, &:active, &:focus {
+            color: $link-blue;
+        }
     }
-
-    .active > a {
-        font-weight: 700;
-        letter-spacing: -0.5px;
-        color: $dark-blue;
-    }
-
-    li:hover a:hover {
-        font-weight: 700;
-        letter-spacing: -0.5px;
-    }
-
-    // no current class, so not sure what this should do...
-
-    // li.is-parent.current {
-    //     padding-bottom: 0;
-    //     padding-left: 0;
-    // }
-
-    // no current class, so not sure what this should do...
-    // li.is-parent.current a {
-    //     margin-left: 10px;
-    // }
-
-
-    // does not look like its doing anything either
-    // li.active ul.sub-menu {
-        // background-color: #fff;
-        // padding-left: 0;
-        // padding-right: 0;
-        // margin-bottom: 0;
-        // padding-bottom: 10px;
-        // margin-top: 10px;
-    // }
-
-    // no current class, so not sure what this should do...
-    // li.current ul li {
-    //     padding-left: 0;
-    //     padding-bottom: 0;
-    //     padding-right: 0;
-    //     border: none;
-    // }
-
 }
-
-
 
 
 /*
@@ -413,12 +327,15 @@ nav ul.secondary-menu {
 
 
 nav.footer-menu {
+    margin-bottom: 2rem;
+
     ul {
 
     }
 
     li {
-        display: inline-block;
+        // display: inline-block;
+        margin-top: 4px;
     }
 
     a {
@@ -426,6 +343,7 @@ nav.footer-menu {
         text-decoration: none;
         border-bottom: 1px dotted $line-gray;
         margin-right: .8em;
+        font-size: .8125rem;
 
         &:hover, &:focus, &:active {
             color: $white;

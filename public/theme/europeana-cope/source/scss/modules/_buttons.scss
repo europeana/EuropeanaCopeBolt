@@ -5,15 +5,20 @@
 a.button, .button, button {
     text-decoration: none;
     display: inline-block; // to adjust width to text
-    border-radius: 5px;
-    background-color: $baseFirstThemeColour;
+    border-radius: 4px;
+    background-color: $innovationblue;
     color: $white;
     border: 0;
-    padding: .3rem 4rem;
+    padding: .75rem 1.5rem;
     text-align: center;
 
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 0.875rem;
+
     &:hover, &:active, &:focus {
-        background-color: darken($baseFirstThemeColour,25%);
+        background-color: $innovationblue-dark;
     }
 }
 
@@ -73,8 +78,6 @@ button.simple,
     .calltoaction-readmore & {
     }
 
-
-
 }
 
 button.floating,
@@ -102,41 +105,25 @@ button.floating,
 }
 
 button.image-info {
-    background-color: rgba($black, 0.8);
-    width: 40px;
-    height: 40px;
-    padding: 9px;
+    background-color: $white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid $black;
+    padding: 0;
 
-    // > span {
-    //     border-radius: 50%;
-    //     display: block;
-    //     width: 24px;
-    //     height: 24px;
-    //     border: 2px solid $white;
-    //     color: $white;
-    //     text-align: center;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-
-    // }
-
-    // span > span {
-    //     display: inline;
-    //     text-align: center;
-    //     font-size: 1.1rem;
-    //     font-family: 'helvetica', 'Helvetica Neue', 'Arial';
-    //     margin: 0;
-    //     padding: 0;
-    //     width: auto;
-    //     margin-top: -2px;
-    // }
+    svg {
+        width: 4px;
+        height: 15px;
+        fill: $black;
+        vertical-align: -1px;
+    }
 
 }
 
 button.outline,
 .button.outline {
-    background: none;
+    background-color: $white;
     border: 1px solid $black;
     color: $black;
     font-weight: 700;
@@ -151,7 +138,7 @@ button.outline,
     }
 
     &:hover {
-        background: $baseFirstThemeColour;
+        background-color: $baseFirstThemeColour;
         color: $white;
         border-color: $baseFirstThemeColour;
 
@@ -159,6 +146,17 @@ button.outline,
             fill: $white;
         }
     }
+}
+
+select.button {  // yes! that happens on the members _listingtable.twig :)
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('../images/icons/caret_down.svg');
+    background-size: 1em 1em;
+    background-position: top 52% right 1em;
+    background-repeat: no-repeat;
+    padding-right: 2.5em;
 }
 
 a.roundsocial {
