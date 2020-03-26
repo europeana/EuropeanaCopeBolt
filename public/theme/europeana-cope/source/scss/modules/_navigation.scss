@@ -124,7 +124,10 @@ nav.main-menu {
     }
 
     body.show-cookiebar & {
-        top: 289px; // magic numer - room for cookiebar on mobile
+        top: 289px; // magic number - room for cookiebar on mobile
+        @include respond-to(menu-full) {
+            top: 175px;
+        }
     }
 
     body.homepage &,
