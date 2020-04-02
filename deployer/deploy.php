@@ -344,11 +344,7 @@ task('complete:message', function() {
     write("\n");
     write('   Current host: {{ hostname }} ');
     write("\n\n");
-    write('   If the server is on php 7.2 you can restart the service by running: ');
-    write("\n");
-    write('   sudo service php7.2-fpm restart ');
-    write("\n\n");
-    write('   Alternatively if the server is on php 7.3: ');
+    write('   You can restart the service by running: ');
     write("\n");
     write('   sudo service php7.3-fpm restart ');
     write("\n");
