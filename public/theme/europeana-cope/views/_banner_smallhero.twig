@@ -1,0 +1,44 @@
+<div class="banner-container banner-smallhero-container {{ layoutclass }}">
+    <a class="banner" href="{{ record.htmllink|default(record.link)|default('#') }}">
+        <div class="colored-image"
+            {% if record.image is defined and record.image is not empty %}
+                {% if layoutclass == 'third' %}
+                    style="background-image: url({{ image(record.image, 800, 1000)|default('notfound') }})"
+                {% elseif layoutclass == 'half' %}
+                    style="background-image: url({{ image(record.image, 1500, 1000, 'r')|default('notfound') }})"
+                {% else %}
+                    style="background-image: url({{ image(record.image, 1500, 1000, 'r')|default('notfound') }})"
+                {% endif %}
+            {% else %}
+                 style="background-image: url({{ image('/web_assets/default.png', 600, 400) }})"
+            {% endif %}
+        ></div>
+
+        <svg class="icon icon-cutoff right">
+            <use xlink:href="#icon-cutoff"></use>
+        </svg>
+
+        <div class="ripple {{ record.ripplelocation | default('no-ripple') }} {{ record.ripplecolor | default('white') }} {{ record.rippleweight | default('full') }}">
+            <svg class="icon icon-ripple_thin_pro">
+                <use xlink:href="#icon-ripple_thin_pro"></use>
+            </svg>
+        </div>
+
+        <div class="header-group">
+            <h3 class="widget">{{ record.title }}</h3>
+            {% if record.teaser %}
+                {{ record.teaser }}
+            {% elseif record.intro %}
+                {{ record.intro }}
+            {% elseif record.body %}
+                {{ record.body }}
+            {% else %}
+                {# for banners we do not want an excerpt unless really necessary #}
+                <p>{{ record.excerpt(300, false, search|default('')) }}</p>
+            {% endif %}
+        </div>
+    </a>
+
+    {% include 'partials/_image_attribution.twig' with { parentitem: 'banner', expanded: 'true' } %}
+
+</div>

@@ -577,6 +577,58 @@ a.banner {
 
 }
 
+// BANNER SMALLHERO  - identiek aan banner, maar:
+// - text left
+// - niet volle breedte
+
+.banner-smallhero-container {
+
+    .banner, a.banner {
+        height: 16rem;
+        @include respond-to(large-screens) {
+            height: 32em;
+        }
+    }
+
+
+    .banner .header-group,
+    a.banner .header-group  {
+        left: 0;
+        width: 80%;
+
+        @include respond-to(large-screens) {
+            left: 1rem;
+            width: 50%;
+        }
+
+    }
+
+    .banner h3,
+    a.banner h3 {
+        font-weight: bold;
+        letter-spacing: 0;
+        font-size: 1rem;
+
+        @include respond-to(large-screens) {
+            font-size: 2rem;
+        }
+    }
+
+    .banner .header-group p,
+    a.banner .header-group p {
+        text-transform: uppercase;
+        letter-spacing: .2px;
+        font-size: .75rem;
+
+        @include respond-to(large-screens) {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+
+
+
 
 .teaser-twocol {
     overflow: visible; // to make sure the shadows are not cut off.
