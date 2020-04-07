@@ -472,6 +472,7 @@ pages:
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
             tiles:     "1-10 tiles on a grid (_tiles.twig)"
+            contenttwocol: "Text + an image or quote (_contenttwocol.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -848,6 +849,7 @@ posts:
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
             tiles:     "1-10 tiles on a grid (_tiles.twig)"
+            contenttwocol: "Text + an image or quote (_contenttwocol.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -1234,6 +1236,7 @@ data:
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
             tiles:     "1-10 tiles on a grid (_tiles.twig)"
+            contenttwocol: "Text + an image or quote (_contenttwocol.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -1676,6 +1679,7 @@ projects:
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
             tiles:     "1-10 tiles on a grid (_tiles.twig)"
+            contenttwocol: "Text + an image or quote (_contenttwocol.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -2031,6 +2035,7 @@ events:
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
             tiles:     "1-10 tiles on a grid (_tiles.twig)"
+            contenttwocol: "Text + an image or quote (_contenttwocol.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -2993,6 +2998,22 @@ resources:
     cssid:
       type: text
       label: "CSS ID (optional)"
+    quotetext:
+      type: textarea
+      height: 150px
+      label: "Block quote"
+      height: 300px
+      postfix: "<small>WITHOUT QUOTES!</small>"
+      group: quote
+    quotesourcename:
+      type: text
+      label: "Quote source (name)"
+      height: 300px
+      placeholder: "eg: 'Thomas Edison'"
+    quotesourcefunction:
+      type: text
+      label: "Quote source (function)"
+      placeholder: "eg: 'Inventor of the lightbulb'"
     ripplelocation:
       label: "Where to place the Europeana ripple? (optional)"
       type: select

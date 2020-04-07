@@ -1,0 +1,30 @@
+## For information on how to use thie file, see the documentation at the repo home:
+## github.com/sahassar/boltredirector
+
+# Redirects - The Main Redirects for this Installation
+redirects:
+    page:
+        from: '{slug:segment}.html'
+        to: '/page/{slug}'
+
+# Variables
+#
+# A simple array to make variable replacements in destination paths using the
+# {@<variable>} syntax. 
+
+variables:
+
+# JIT (Just In Time) Replacements
+#
+# These replacements are made just before the actual redirect, so they
+# must match any parts in `to` patterns from the above array.
+#
+# For conciseness, try to match an entire destination, as other URIs
+# could be inadvertantly affected. If other URIs won't contain the
+# string, then you can keep it as short as needed.
+#
+# Also, regular expressions are allowed here. Capture with \\n.
+jits:
+    test:
+        replace: 'page/test2'
+        with: 'page/test'

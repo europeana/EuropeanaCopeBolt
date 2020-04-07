@@ -218,7 +218,7 @@ header {
 * FOOTER
 **/
 
-footer {
+.canvas > footer {
     .logo-small {
         width: 80px;
         display: inline-block;
@@ -2748,6 +2748,85 @@ table.listingtable {
 
 
 
+/*
+***********************************************************************
+* Content Two Col (_contentwocol.twig)
+***********************************************************************
+**/
+
+.section-contenttwocol {
+
+}
+
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    > .column {
+
+    }
+
+    > .column-half {
+        @include respond-to(large-screens) {
+            width: 50%;
+        }
+    }
+
+    .column p:first-child {
+        margin-top: 0;
+    }
+
+    .column-quote {
+        border-right: 3px solid $innovationblue;
+    }
+}
+
+blockquote.special {
+    text-align: right;
+    margin: 0;
+    border-left: 0;
+    font-style: normal;
+
+    p {
+        font-size: 1.5rem;
+        color: $black;
+
+        &:before {
+            content:"\2018";
+            display: inline-block;
+            color: $innovationblue;
+            font-size: 2rem;
+            margin-right: .1em;
+        }
+
+        &:after {
+            content:"\2019";
+            display: inline-block;
+            margin-left: .1em;
+        }
+    }
+
+    > footer {
+        background: none;
+        color: $black;
+
+        .sourcename {
+            display: inline-block;
+            font-size: 1.375rem;
+            // border-bottom: 1px solid $innovationblue;
+            text-decoration: underline;
+            text-decoration-color: $innovationblue;
+            text-decoration-thickness: 2px;
+        }
+
+        .sourcefunction {
+            display: block;
+            font-size: 1.125rem;
+            border-bottom: none;
+        }
+    }
+}
 
 
 
