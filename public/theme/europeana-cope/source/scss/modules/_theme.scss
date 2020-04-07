@@ -3199,6 +3199,15 @@ div.body {
     background-color: transparent;
 }
 
+section.bg-paper {  //used for body-module
+    background-color: $paper;
+    padding: .1rem 0 2rem;
+}
+
+section.bg-grey { //used for body-module
+    background-color: $footer-gray; //$line-gray;
+    padding: .1rem 0 2rem;
+}
 
 
 /*  Special styles for 2019 event splash ( old style, but partly restyling) */
