@@ -2807,6 +2807,11 @@ table.listingtable {
 **/
 
 .section-contenttwocol {
+    .img-container {
+        display: flex;
+        justify-content: flex-end;
+
+    }
 
 }
 

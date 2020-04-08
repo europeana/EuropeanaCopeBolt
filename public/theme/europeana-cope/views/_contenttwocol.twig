@@ -36,7 +36,7 @@
     {% if item.image is defined and item.image is not empty %}
     <div class="column column-half column-image">
         <div class="img-container">
-             <img src="{{ item.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+             <img src="{{ item.image|thumbnail(600,400,'r')}}" alt="{{ item.title }}"/>
 
              {% include 'partials/_image_attribution.twig' with { parentitem: 'banner' } %}
 
