@@ -3019,6 +3019,10 @@ resources:
       type: text
       label: "Quote source (function)"
       placeholder: "eg: 'Inventor of the lightbulb'"
+    quotelink:
+      type: text
+      label: "Quote link (optional)"
+      postfix: "<small>The link to the profile of the person making the quote. Include 'https'</small>"
     ripplelocation:
       label: "Where to place the Europeana ripple? (optional)"
       type: select

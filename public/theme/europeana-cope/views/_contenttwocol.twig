@@ -17,8 +17,15 @@
         <blockquote class="special">
             <p>{{ item.quotetext }}</p>
             <footer>
-                <span class="sourcename">{{ item.quotesourcename }}</span>
-                <span class="sourcefunction">{{ item.quotesourcefunction }}</span>
+                {% if item.quotelink is defined and item.quotelink is not empty %}
+                <a href="{{ item.quotelink }}">
+                    <span class="sourcename">{{ item.quotesourcename }}</span>
+                    <span class="sourcefunction">{{ item.quotesourcefunction }}</span>
+                </a>
+                {% else %}
+                    <span class="sourcename">{{ item.quotesourcename }}</span>
+                    <span class="sourcefunction">{{ item.quotesourcefunction }}</span>
+                {% endif %}
             </footer>
         </blockquote>
 
