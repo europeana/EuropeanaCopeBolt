@@ -3333,11 +3333,17 @@ div.body {
 section.bg-paper {  //used for body-module
     background-color: $paper;
     padding: .1rem 0 2rem;
+    p {
+        color: $black;
+    }
 }
 
 section.bg-grey { //used for body-module
     background-color: $footer-gray; //$line-gray;
     padding: .1rem 0 2rem;
+    p {
+        color: $black;
+    }
 }
 
 
