@@ -3088,14 +3088,15 @@ div.body {
 
     article {
         position: absolute;
-        bottom: 0 ;
-        left: 0 ;
+        bottom: .5rem;
+        right: .5rem;
         width: auto;
         background: rgba($white, 0.95);
         color: $black;
         padding: .55rem;
         z-index: 50;
-        line-height: 1.2;
+        line-height: 1.8;
+        border-radius: 4px;
         display: none;
 
         &.expanded {
@@ -3113,15 +3114,19 @@ div.body {
 
         p {
             margin: 0;
-            font-size: 0.625rem;
+            font-size: 0.75rem;
             color: $black;
             padding: 0;
             max-width: 500px;
 
             @include respond-to(large-screens) {
-                margin: 0 1em 0 0;
-                display: inline-block;
+                // margin: 0 1em 0 0;
+                // display: inline-block;
             }
+        }
+
+        span.def {
+            color: $light-gray;
         }
 
         span.image-license {
@@ -3135,7 +3140,7 @@ div.body {
 
         a {
             color: $black;
-            font-size: 0.625rem;
+            font-size: 0.75rem;
 
             &:hover {
                text-decoration: none;
@@ -3205,6 +3210,17 @@ div.body {
                 // width: 33%;
 
             }
+        }
+
+        p {
+            @include respond-to(large-screens) {
+                margin: 0 1em 0 0;
+                display: inline-block;
+            }
+        }
+
+        span.def {
+            // display: none;
         }
 
         p, a {
