@@ -3091,10 +3091,11 @@ div.body {
         bottom: 0 ;
         left: 0 ;
         width: auto;
-        background: rgba($black, 0.95);
-        color: $white;
+        background: rgba($white, 0.95);
+        color: $black;
         padding: .55rem;
         z-index: 50;
+        line-height: 1.2;
         display: none;
 
         &.expanded {
@@ -3108,13 +3109,12 @@ div.body {
                 left: 4rem;
                 // width: calc( 100% - 8rem);
             }
-
         }
 
         p {
             margin: 0;
-            font-size: 0.6875rem;
-            color: $white;
+            font-size: 0.625rem;
+            color: $black;
             padding: 0;
             max-width: 500px;
 
@@ -3129,12 +3129,13 @@ div.body {
         }
 
         svg {
-            fill: $white;
+            fill: $black;
             margin-right: .5rem;
         }
 
         a {
-            color: $white;
+            color: $black;
+            font-size: 0.625rem;
 
             &:hover {
                text-decoration: none;
@@ -3145,7 +3146,7 @@ div.body {
             border-bottom: none;
 
             &:hover {
-               border-bottom: 1px dotted $white;
+               border-bottom: 1px dotted $black;
             }
         }
 
