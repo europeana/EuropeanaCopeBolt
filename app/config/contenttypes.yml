@@ -441,6 +441,7 @@ pages:
           postfix: 'Use the template to select how the module will look <a class="cheatsheet btn btn-info btn-xs pull-right"><i class="fa fa-comment-o" aria-hidden="true"></i> view the template cheatsheet</a>'
           values:
             banner:            "One wide banner view (_banner.twig)"
+            banner_smallhero:  "One less-wide banner view (_banner_smallhero.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
             eventbanner:       "One wide eventbanner view (_eventbanner.twig)"
@@ -472,6 +473,7 @@ pages:
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
             tiles:     "1-10 tiles on a grid (_tiles.twig)"
+            contenttwocol: "Text + an image or quote (_contenttwocol.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -833,6 +835,7 @@ posts:
             image:             "One wide image view (_image.twig)"
             image_full:        "One full image view (_image_full.twig)"
             banner:            "One wide banner view (_banner.twig)"
+            banner_smallhero:  "One less-wide banner view (_banner_smallhero.twig)"
             eventbanner:       "One wide eventbanner view (_eventbanner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
@@ -848,6 +851,7 @@ posts:
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
             tiles:     "1-10 tiles on a grid (_tiles.twig)"
+            contenttwocol: "Text + an image or quote (_contenttwocol.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -1219,6 +1223,7 @@ data:
             image:             "One wide image view (_image.twig)"
             image_full:        "One full image view (_image_full.twig)"
             banner:            "One wide banner view (_banner.twig)"
+            banner_smallhero:  "One less-wide banner view (_banner_smallhero.twig)"
             eventbanner:       "One wide eventbanner view (_eventbanner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
@@ -1234,6 +1239,7 @@ data:
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
             tiles:     "1-10 tiles on a grid (_tiles.twig)"
+            contenttwocol: "Text + an image or quote (_contenttwocol.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -1661,6 +1667,7 @@ projects:
             image:             "One wide image view (_image.twig)"
             image_full:        "One full image view (_image_full.twig)"
             banner:            "One wide banner view (_banner.twig)"
+            banner_smallhero:  "One less-wide banner view (_banner_smallhero.twig)"
             eventbanner:       "One wide eventbanner view (_eventbanner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
@@ -1676,6 +1683,7 @@ projects:
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
             tiles:     "1-10 tiles on a grid (_tiles.twig)"
+            contenttwocol: "Text + an image or quote (_contenttwocol.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -2016,6 +2024,7 @@ events:
             image:             "One wide image view (_image.twig)"
             image_full:        "One full image view (_image_full.twig)"
             banner:            "One wide banner view (_banner.twig)"
+            banner_smallhero:  "One less-wide banner view (_banner_smallhero.twig)"
             eventbanner:       "One wide eventbanner view (_eventbanner.twig)"
             #bannerdouble:      "Two banners view (_bannerdouble.twig)"
             bannertriple:      "Three banners view (_bannertriple.twig)"
@@ -2031,6 +2040,7 @@ events:
             logolisting:       "Logo listing (_logolisting.twig)"
             eventregister:     "Event info + register (_eventregister.twig)"
             tiles:     "1-10 tiles on a grid (_tiles.twig)"
+            contenttwocol: "Text + an image or quote (_contenttwocol.twig)"
         body:
           type: html
           label: "Module body (optional)"
@@ -2993,6 +3003,26 @@ resources:
     cssid:
       type: text
       label: "CSS ID (optional)"
+    quotetext:
+      type: textarea
+      height: 150px
+      label: "Block quote"
+      height: 300px
+      postfix: "<small>WITHOUT QUOTES!</small>"
+      group: quote
+    quotesourcename:
+      type: text
+      label: "Quote source (name)"
+      height: 300px
+      placeholder: "eg: 'Thomas Edison'"
+    quotesourcefunction:
+      type: text
+      label: "Quote source (function)"
+      placeholder: "eg: 'Inventor of the lightbulb'"
+    quotelink:
+      type: text
+      label: "Quote link (optional)"
+      postfix: "<small>The link to the profile of the person making the quote. Include 'https'</small>"
     ripplelocation:
       label: "Where to place the Europeana ripple? (optional)"
       type: select

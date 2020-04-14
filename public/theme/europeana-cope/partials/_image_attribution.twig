@@ -103,18 +103,28 @@
                     <a class='sourcelink' href="{{ attribution_link }}">
             {% endif %}
 
-            {{ attribution_title }}
-            {% if (attribution_title is not empty) and (attribution_creator is not empty) %} - {% endif %}
-            {{ attribution_creator }}
+            <span class="def">Title:</span> {{ attribution_title }}
 
             {% if attribution_link  is not empty %}
                 </a>
             {% endif %}
-
             </p>
-            <p>{{ attribution_date }}</p>
-            <p>{{ attribution_holder }}</p>
-            <p>{{ attribution_country }}</p>
+
+            {% if attribution_creator is not empty %}
+                <p><span class="def">Creator:</span> {{ attribution_creator }}</p>
+            {% endif %}
+
+            {% if attribution_date is not empty %}
+                <p><span class="def">Date:</span> {{ attribution_date }}</p>
+            {% endif %}
+
+            {% if attribution_holder is not empty %}
+                <p><span class="def">Institution:</span> {{ attribution_holder }}</p>
+            {% endif %}
+
+            {% if attribution_country is not empty %}
+                <p><span class="def">Country:</span> {{ attribution_country }}</p>
+            {% endif %}
 
             {% if (attribution_license is defined and attribution_license is not empty) %}
 

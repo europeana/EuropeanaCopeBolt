@@ -218,7 +218,7 @@ header {
 * FOOTER
 **/
 
-footer {
+.canvas > footer {
     .logo-small {
         width: 80px;
         display: inline-block;
@@ -576,6 +576,58 @@ a.banner {
 
 
 }
+
+// BANNER SMALLHERO  - identiek aan banner, maar:
+// - text left
+// - niet volle breedte
+
+.banner-smallhero-container {
+
+    .banner, a.banner {
+        height: 16rem;
+        @include respond-to(large-screens) {
+            height: 32em;
+        }
+    }
+
+
+    .banner .header-group,
+    a.banner .header-group  {
+        left: 0;
+        width: 80%;
+
+        @include respond-to(large-screens) {
+            left: 1rem;
+            width: 50%;
+        }
+
+    }
+
+    .banner h3,
+    a.banner h3 {
+        font-weight: bold;
+        letter-spacing: 0;
+        font-size: 1rem;
+
+        @include respond-to(large-screens) {
+            font-size: 2rem;
+        }
+    }
+
+    .banner .header-group p,
+    a.banner .header-group p {
+        text-transform: uppercase;
+        letter-spacing: .2px;
+        font-size: .75rem;
+
+        @include respond-to(large-screens) {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+
+
 
 
 .teaser-twocol {
@@ -2748,6 +2800,111 @@ table.listingtable {
 
 
 
+/*
+***********************************************************************
+* Content Two Col (_contentwocol.twig)
+***********************************************************************
+**/
+
+.section-contenttwocol {
+    .img-container {
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+}
+
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    > .column {
+
+    }
+
+    > .column-half {
+        @include respond-to(large-screens) {
+            width: 50%;
+        }
+    }
+
+    .column p:first-child {
+        margin-top: 0;
+    }
+
+    .column-quote {
+        border-right: 3px solid $innovationblue;
+    }
+}
+
+blockquote.special {
+    text-align: right;
+    margin: 0;
+    border-left: 0;
+    font-style: normal;
+
+    p {
+        font-size: 1.5rem;
+        color: $black;
+
+        &:before {
+            content:"\2018";
+            display: inline-block;
+            color: $innovationblue;
+            font-size: 2rem;
+            margin-right: .1em;
+        }
+
+        &:after {
+            content:"\2019";
+            display: inline-block;
+            margin-left: .1em;
+        }
+    }
+
+    > footer {
+        background: none;
+        color: $black;
+
+        .sourcename {
+            display: inline-block;
+            font-size: 1.375rem;
+            // border-bottom: 1px solid $innovationblue;
+
+        }
+
+        .sourcefunction {
+            display: block;
+            font-size: 1.125rem;
+            border-bottom: none;
+        }
+
+        a {
+            color: $black;
+            text-decoration: none;
+
+            .sourcename {
+                text-decoration: underline;
+                text-decoration-color: $innovationblue;
+                text-decoration-thickness: 2px;
+            }
+
+            &:hover, &:focus, &:active {
+                text-decoration-color: $black;
+
+                .sourcename {
+                    text-decoration-color: $black;
+                }
+                .sourcefunction{
+                    text-decoration: none;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -2931,13 +3088,15 @@ div.body {
 
     article {
         position: absolute;
-        bottom: 0 ;
-        left: 0 ;
+        bottom: .5rem;
+        right: .5rem;
         width: auto;
-        background: rgba($black, 0.95);
-        color: $white;
+        background: rgba($white, 0.95);
+        color: $black;
         padding: .55rem;
         z-index: 50;
+        line-height: 1.8;
+        border-radius: 4px;
         display: none;
 
         &.expanded {
@@ -2951,20 +3110,23 @@ div.body {
                 left: 4rem;
                 // width: calc( 100% - 8rem);
             }
-
         }
 
         p {
             margin: 0;
-            font-size: 0.6875rem;
-            color: $white;
+            font-size: 0.75rem;
+            color: $black;
             padding: 0;
             max-width: 500px;
 
             @include respond-to(large-screens) {
-                margin: 0 1em 0 0;
-                display: inline-block;
+                // margin: 0 1em 0 0;
+                // display: inline-block;
             }
+        }
+
+        span.def {
+            color: $light-gray;
         }
 
         span.image-license {
@@ -2972,12 +3134,13 @@ div.body {
         }
 
         svg {
-            fill: $white;
+            fill: $black;
             margin-right: .5rem;
         }
 
         a {
-            color: $white;
+            color: $black;
+            font-size: 0.75rem;
 
             &:hover {
                text-decoration: none;
@@ -2988,7 +3151,7 @@ div.body {
             border-bottom: none;
 
             &:hover {
-               border-bottom: 1px dotted $white;
+               border-bottom: 1px dotted $black;
             }
         }
 
@@ -3047,6 +3210,17 @@ div.body {
                 // width: 33%;
 
             }
+        }
+
+        p {
+            @include respond-to(large-screens) {
+                margin: 0 1em 0 0;
+                display: inline-block;
+            }
+        }
+
+        span.def {
+            // display: none;
         }
 
         p, a {
@@ -3199,6 +3373,21 @@ div.body {
     background-color: transparent;
 }
 
+section.bg-paper {  //used for body-module
+    background-color: $paper;
+    padding: .1rem 0 2rem;
+    p {
+        color: $black;
+    }
+}
+
+section.bg-grey { //used for body-module
+    background-color: $footer-gray; //$line-gray;
+    padding: .1rem 0 2rem;
+    p {
+        color: $black;
+    }
+}
 
 
 /*  Special styles for 2019 event splash ( old style, but partly restyling) */

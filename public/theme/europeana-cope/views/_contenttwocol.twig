@@ -1,0 +1,48 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+<!-- {{ dump(item) }} -->
+
+<div class="column-container">
+
+    {% if item.body is not empty %}
+    <div class="column column-half column-content">
+        {{ item.body|raw }}
+    </div>
+    {% endif %}
+
+    {% if item.quotetext is defined and item.quotetext is not empty %}
+    <div class="column column-half column-quote">
+        <blockquote class="special">
+            <p>{{ item.quotetext }}</p>
+            <footer>
+                {% if item.quotelink is defined and item.quotelink is not empty %}
+                <a href="{{ item.quotelink }}">
+                    <span class="sourcename">{{ item.quotesourcename }}</span>
+                    <span class="sourcefunction">{{ item.quotesourcefunction }}</span>
+                </a>
+                {% else %}
+                    <span class="sourcename">{{ item.quotesourcename }}</span>
+                    <span class="sourcefunction">{{ item.quotesourcefunction }}</span>
+                {% endif %}
+            </footer>
+        </blockquote>
+
+    </div>
+    {% endif %}
+
+
+    {% if item.image is defined and item.image is not empty %}
+    <div class="column column-half column-image">
+        <div class="img-container">
+             <img src="{{ item.image|thumbnail(600,400,'r')}}" alt="{{ item.title }}"/>
+
+             {% include 'partials/_image_attribution.twig' with { parentitem: 'banner' } %}
+
+        </div>
+    </div>
+    {% endif %}
+
+
+</div>
