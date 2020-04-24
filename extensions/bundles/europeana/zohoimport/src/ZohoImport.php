@@ -539,7 +539,7 @@ class ZohoImport
                     }
                 }
             }
-            sleep(3);
+            sleep(1);
             // if a record has the hide on pro flag set - depublish it by default
             if (array_key_exists('hide_on_pro', $items) && $items['hide_on_pro'] == true) {
                 $items['status'] = 'held';
