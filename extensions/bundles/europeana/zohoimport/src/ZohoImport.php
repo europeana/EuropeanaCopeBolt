@@ -400,7 +400,6 @@ class ZohoImport
         $this->currentrecord = false;
 
         foreach ($this->resourcedata as $inputrecord) {
-            if($inputrecord->id == "5572"){
             $uid = $config['target']['mapping']['fields']['uid'];
 
             unset($this->currentrecord);
@@ -638,17 +637,12 @@ class ZohoImport
             }
             $relations = [];
             $tmprel = [];
-            if ($items['hide_on_pro'] == true) {
-                dump($inputrecord);
-                die();
-            }
 
             // make the things smaller for the memory footprint
             $inputrecord = null;
             $items = null;
             $this->currentrecord = null;
         }
-    }
     }
 
     /**
