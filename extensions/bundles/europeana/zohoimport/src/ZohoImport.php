@@ -230,6 +230,10 @@ class ZohoImport
                     $pageNumber = 0;
                     $numrecords = 0;
 
+                    if ($this->ffwd != null && $this->ffwd >= 1) {
+                        $pageNumber = $this->ffwd;
+                    }
+
                     // We don't know how many pages there are but attempt to fetch data of page 1 at least.
                     // If there are more pages save fetch and save that data too.
                     do {
