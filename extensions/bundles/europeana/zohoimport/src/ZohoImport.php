@@ -239,6 +239,8 @@ class ZohoImport
                     do {
                         $pageNumber++;
 
+                        $this->setLastImportDate('Importing from page ' . $pageNumber . ' - ' . $batchdate);
+
                         $config['source']['getparams']['page'] = $pageNumber;
                         $this->fileFetcher($config);
                         $this->fileNormalizer($config);
