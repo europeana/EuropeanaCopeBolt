@@ -43,7 +43,7 @@ class FileFetcher
                 }
                 $source .= "?" . join('&', $gkeys);
             }
-            $this->app['zohoimport']->logger('debug', 'fetching remote file: ' . $source, 'zohoimport');
+            $this->app['zohoimport']->logger('info', 'fetching remote file: ' . $source, 'zohoimport');
             $this->fetchRemoteResource($source);
         }
         return true;
