@@ -432,6 +432,10 @@ class ZohoImport
                 $existing_id = $this->currentrecord->getId();
 
                 $logmessage = $name
+                    . ' - updating record from remote source page: ' . $config['source']['getparams']['page'];
+                $this->logger('debug', $logmessage, 'zohoimport');
+
+                $logmessage = $name
                     . ' - updating existing record: ' . $inputrecord->{$uid};
                 $this->logger('debug', $logmessage, 'zohoimport');
 
