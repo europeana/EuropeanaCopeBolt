@@ -230,10 +230,16 @@ class ZohoImport
                     $pageNumber = 0;
                     $numrecords = 0;
 
+                    if ($this->ffwd != null && $this->ffwd >= 1) {
+                        $pageNumber = $this->ffwd;
+                    }
+
                     // We don't know how many pages there are but attempt to fetch data of page 1 at least.
                     // If there are more pages save fetch and save that data too.
                     do {
                         $pageNumber++;
+
+                        $this->setLastImportDate('Importing from page ' . $pageNumber . ' - ' . $batchdate);
 
                         $config['source']['getparams']['page'] = $pageNumber;
                         $this->fileFetcher($config);
@@ -411,30 +417,34 @@ class ZohoImport
             );
 
             if (!$this->currentrecord) {
-                  $existing_id = false;
+                $existing_id = false;
 
-                  $logmessage = $name
+                $logmessage = $name
                     . ' - preparing a new record: ' . $inputrecord->{$uid};
-                  $this->logger('debug', $logmessage, 'zohoimport');
+                $this->logger('debug', $logmessage, 'zohoimport');
 
-                  $this->currentrecord = clone $this->emptyrecord;
+                $this->currentrecord = clone $this->emptyrecord;
 
-                  $items['status'] = $config['target']['defaults']['new'];
-                  // update datecreated, may be redundant, but lets do it anyway
-                  $items['datecreated'] = $date;
-                  // update datechanged, may be redundant, but lets do it anyway
-                  $items['datechanged'] = $date;
+                $items['status'] = $config['target']['defaults']['new'];
+                // update datecreated, may be redundant, but lets do it anyway
+                $items['datecreated'] = $date;
+                // update datechanged, may be redundant, but lets do it anyway
+                $items['datechanged'] = $date;
             } else {
-                  $existing_id = $this->currentrecord->getId();
+                $existing_id = $this->currentrecord->getId();
 
-                  $logmessage = $name
+                $logmessage = $name
+                    . ' - updating record from remote source page: ' . $config['source']['getparams']['page'];
+                $this->logger('debug', $logmessage, 'zohoimport');
+
+                $logmessage = $name
                     . ' - updating existing record: ' . $inputrecord->{$uid};
-                  $this->logger('debug', $logmessage, 'zohoimport');
+                $this->logger('debug', $logmessage, 'zohoimport');
 
-                  $items['status'] = $config['target']['defaults']['updated'];
+                $items['status'] = $config['target']['defaults']['updated'];
 
-                  // update datechanged, may be redundant, but lets do it anyway
-                  $items['datechanged'] = $date;
+                // update datechanged, may be redundant, but lets do it anyway
+                $items['datechanged'] = $date;
             }
 
             // update the new values
@@ -447,7 +457,7 @@ class ZohoImport
 //                    $this->currentrecord->$value = '';
 //                    $var = '';
 //                }
-                if (is_array($var)){
+                if (is_array($var)) {
                     $var = implode(';', $var);
                 }
                 // if zoho returns a text with double linebreaks
@@ -485,7 +495,7 @@ class ZohoImport
                             // set the new value only if there is a result for the callback
                             $logmessage = $name . ' - hookafterload new value ' . $key;
                             if (is_string($tempvalue)) {
-                                $logmessage .= ' - ' .$tempvalue;
+                                $logmessage .= ' - ' . $tempvalue;
                             }
                             $this->logger('debug', $logmessage, 'zohoimport');
                             $items[$key] = $tempvalue;
@@ -498,7 +508,7 @@ class ZohoImport
                         if ($tempvalue != $items[$key]) {
                             $logmessage = $name . ' - hookafterload existing value ' . $key;
                             if (is_string($tempvalue)) {
-                                $logmessage .= ' - ' .$tempvalue;
+                                $logmessage .= ' - ' . $tempvalue;
                             }
                             $this->logger('debug', $logmessage, 'zohoimport');
                             $items[$key] = $tempvalue;
@@ -508,14 +518,14 @@ class ZohoImport
                     $this->logger('debug', $logmessage, 'zohoimport');
                     // check existing
                     $this->currentrecord = $this->workingrepository->findOneBy(
-                       ['uid' => $inputrecord->{$uid}]
+                        ['uid' => $inputrecord->{$uid}]
                     );
 
                     if (!$this->currentrecord) {
                         $existing_id = false;
 
                         $logmessage = $name
-                          . ' - preparing a new record in hookafterload: ' . $inputrecord->{$uid};
+                            . ' - preparing a new record in hookafterload: ' . $inputrecord->{$uid};
                         $this->logger('debug', $logmessage, 'zohoimport');
 
                         $this->currentrecord = clone $this->emptyrecord;
@@ -529,7 +539,7 @@ class ZohoImport
                         $existing_id = $this->currentrecord->getId();
 
                         $logmessage = $name
-                          . ' - updating existing record in hookafterload: ' . $inputrecord->{$uid};
+                            . ' - updating existing record in hookafterload: ' . $inputrecord->{$uid};
                         $this->logger('debug', $logmessage, 'zohoimport');
 
                         $items['status'] = $config['target']['defaults']['updated'];
@@ -539,12 +549,12 @@ class ZohoImport
                     }
                 }
             }
-
+//            sleep(1);
             // if a record has the hide on pro flag set - depublish it by default
-            if (array_key_exists('hide_on_pro', $items) && $items['hide_on_pro'] === true) {
+            if (array_key_exists('hide_on_pro', $items) && $items['hide_on_pro'] == true) {
                 $items['status'] = 'held';
                 $logmessage = $name
-                  . ' - hiding record on pro: ' . $existing_id . ' - ' . $inputrecord->{$uid};
+                    . ' - hiding record on pro: ' . $existing_id . ' - ' . $inputrecord->{$uid};
                 $this->logger('debug', $logmessage, 'zohoimport');
             }
 
@@ -560,7 +570,7 @@ class ZohoImport
                 } elseif (!empty($items['name'])) {
                     $items['slug'] = $this->app['slugify']->slugify($items['name']);
                 } elseif (!empty($items['title']) || !empty($items['locationtitle'])) {
-                    $items['slug'] = $this->app['slugify']->slugify($items['title'] ."-". $items['locationtitle']);
+                    $items['slug'] = $this->app['slugify']->slugify($items['title'] . "-" . $items['locationtitle']);
                 } else {
                     $items['slug'] = $this->app['slugify']->slugify($items['uid']);
                 }
@@ -592,22 +602,22 @@ class ZohoImport
             if ($existing_id) {
                 $items['id'] = $existing_id;
             }
-            if($this->currentrecord && is_array($items)) {
-              $this->currentrecord->setValues($items);
+            if ($this->currentrecord && is_array($items)) {
+                $this->currentrecord->setValues($items);
             } else {
-              $logmessage = $name
-                . ' - Sorry, the import can not save an empty record: ' . $existing_id . ' - ' . $inputrecord->{$uid} . ' exiting import.';
-              $this->logger('warning', $logmessage, 'zohoimport');
-              print_r($items);
-              var_dump($this->currentrecord);
-              die();
+                $logmessage = $name
+                    . ' - Sorry, the import can not save an empty record: ' . $existing_id . ' - ' . $inputrecord->{$uid} . ' exiting import.';
+                $this->logger('warning', $logmessage, 'zohoimport');
+                print_r($items);
+                var_dump($this->currentrecord);
+                die();
             }
 
 
             $this->currentrecord->setDateChanged($date);
 
             $logmessage = $name
-              . ' - storing record: ' . $existing_id . ' - ' . $inputrecord->{$uid} . ' on: ' . $date;
+                . ' - storing record: ' . $existing_id . ' - ' . $inputrecord->{$uid} . ' on: ' . $date;
             $this->logger('debug', $logmessage, 'zohoimport');
 
             // save relations for after the save because the save action will try to invert it partially
