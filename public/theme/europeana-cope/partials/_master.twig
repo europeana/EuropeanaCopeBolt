@@ -107,30 +107,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a21862925f66e56"></script>
 
     {% block trackingcodes %}
-{# Google Analytics #}
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', '{{ app.config.get('general/google_ua_key')|default('UA-27537877-1') }}', 'auto');
-  ga('send', 'pageview');
-</script>
-
-{# Hotjar Tracking Code for pro.europeana.eu #}
-<script>
-  (function(h,o,t,j,a,r){
-    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-    h._hjSettings={hjid:45702,hjsv:6};
-    a=o.getElementsByTagName('head')[0];
-    r=o.createElement('script');r.async=1;
-    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-    a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+        {{ include('partials/_analytics.twig') }}
     {% endblock trackingcodes %}
-
     </div>
+
+    {{ include('partials/_aggregators_webchat.twig') }}
 </body>
 </html>
