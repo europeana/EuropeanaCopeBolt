@@ -20,7 +20,7 @@ redirects:
     '/services/discovery/collections': '/page/collections'
     '/services/discovery/thematic-collections': '/page/collections'
     #'/page/creating-editorial': '/page/creating-editorial'
-    '/what-we-do/academic-research': '/page/academic-research'
+    #'/what-we-do/academic-research': '/page/academic-research'
     '/what-we-do/creative-industries': '/about-us/services-and-tools'
     '/what-we-do/cultural-heritage-institutions': '/'
     '/what-we-do/education': '/page/education'
@@ -96,7 +96,7 @@ redirects:
     '/resources/apis/annotations': '/page/annotations'
     '/resources/apis/oai-pmh-service': '/page/oai-pmh-service'
     '/resources/apis/iiif': '/page/iiif'
-    '/services/facilitating-innovation/take-the-challenge': '/about-us/activities'
+    # '/services/facilitating-innovation/take-the-challenge': '/about-us/activities'
     '/services/data-publication-services': '/share-your-data/process'
     '/page/reasons-to-share-your-data-on-europeana-collections': '/share-your-data/process'
     '/page/what-kind-of-content-is-europeana-looking-for': '/share-your-data/process'
@@ -169,7 +169,15 @@ redirects:
     '/page/how-to-contribute-data': '/share-your-data/process'
     '/page/become-a-data-provider': '/share-your-data/process'
     '/page/network-association-newsletters': '/network-association/sign-up'
-    
+
+    # Additional redirects, added by Bob on 2020-05-22
+    '/services/facilitating-innovation/take-the-challenge': '/about-us/services-and-tools'
+    '/network-association/network-members': '/network-association/members'
+    '/pro-blog/-/blogs/how-the-rijksmuseum-opened-up-its-collection-a-case-study': '/post/how-the-rijksmuseum-opened-up-its-collection-a-case-study'
+    '/documents/858566/858665/Democratising+the+Rijksmuseum': '/files/Europeana_Professional/Publications/Democratising%20the%20Rijksmuseum.pdf'
+    '/what-we-do/academic-research': '/page/research'
+    '/page/academic-research': '/page/research'
+
     # Extra loops
     '/page/allezculture': '/page/campaigns'
     '/what-we-do/advocacy': '/page/advocacy-framework'
