@@ -9,12 +9,27 @@
 </a>
 
 <footer>
+    <svg class="icon icon-cutoff top right">
+        <use xlink:href="#icon-cutoff"></use>
+    </svg>
+
     <div class="inner-wrap">
 
         <div class="group">
+            <div class="footer-block footer-block-address h-card">
+                <img class="logo-small u-logo" src="{{ paths.theme }}images/europeana_logo_footer_white.png" alt="Europeana"/>
+                <address>
+                    <span class="p-name">Europeana Foundation</span>
+                    <br /><span class="p-street-address">Prins Willem-Alexanderhof 5</span>
+                    <br /><span class="p-postal-code">2595 BE</span> <span class="p-locality">Den Haag</span>
+                    <br /><span class="p-country-name">Netherlands</span>
+                </address>
+            </div>
 
             {% setcontent footermission = 'resources/footer-mission' %}
             <div class="footer-block footer-block-mission">
+                {{ menu('footer', 'partials/_menu_footer.twig') }}
+
                 {% if footermission is not empty %}
                     <h4>{{ footermission.title }}</h4>
                     {{ footermission.body }}
@@ -26,11 +41,11 @@
                 {% endif %}
             </div>
 
-            <div class="footer-block footer-block-moreinfo">
+            {# <div class="footer-block footer-block-moreinfo">
                 <h4>More info</h4>
                 <p><a href="https://pro.europeana.eu">Europeana Pro</a></p>
                 <p><a href="https://europeana.eu">Europeana Collections</a></p>
-            </div>
+            </div> #}
 
 
             <div class="footer-block footer-block-socials">
@@ -51,7 +66,12 @@
                             <use xlink:href="#icon-linkedin"> </use>
                         </svg> <span class="sr-only">Linked In</span>
                     </a>
-                     <a href="https://www.instagram.com/europeana_eu/ " class="li">
+                    <a href="https://github.com/europeana" class="gh">
+                         <svg class="icon icon-github">
+                            <use xlink:href="#icon-github"> </use>
+                        </svg> <span class="sr-only">Github</span>
+                    </a>
+                    <a href="https://www.instagram.com/europeana_eu/ " class="li">
                          <svg class="icon icon-instagram">
                             <use xlink:href="#icon-instagram"> </use>
                         </svg> <span class="sr-only">Instagram</span>
@@ -61,7 +81,7 @@
 
         </div>
 
-        <div class="sub-footer group">
+        <div class="sub-footer">
 
             {% setcontent footereu = 'resources/footer-eu' %}
             {% if footereu is not empty and footereu.values.image.file is not empty %}
