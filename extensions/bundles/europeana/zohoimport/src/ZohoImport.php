@@ -608,8 +608,8 @@ class ZohoImport
                 $logmessage = $name
                     . ' - Sorry, the import can not save an empty record: ' . $existing_id . ' - ' . $inputrecord->{$uid} . ' exiting import.';
                 $this->logger('warning', $logmessage, 'zohoimport');
-                print_r($items);
-                var_dump($this->currentrecord);
+                //  print_r($items);
+                //  var_dump($this->currentrecord);
                 die();
             }
 

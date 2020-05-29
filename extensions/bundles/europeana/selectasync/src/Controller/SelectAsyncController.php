@@ -178,7 +178,7 @@ class SelectAsyncController implements ControllerProviderInterface
         $filesystem = $this->app['filesystem'];
         $this->selectAsyncRecursiveDirTree($filesystem, 'files', $search);
 
-        //dump('results', $this->directory_tree);
+        // dump('results', $this->directory_tree);
         $jsonResponse = new JsonResponse();
 
         $jsonResponse->setData([
@@ -551,7 +551,7 @@ class SelectAsyncController implements ControllerProviderInterface
     private function checkAccess($type = 'all')
     {
         $users = $this->app['users'];
-        //dump('check access', $users);
+        // dump('check access', $users);
 
         if ($type=='all') {
             $contentquery = 'contentaction';
@@ -568,7 +568,7 @@ class SelectAsyncController implements ControllerProviderInterface
 
         $hasaccess = $users->isAllowed($contentquery);
 
-        //dump('check access', $contentquery, $hasaccess);
+        // dump('check access', $contentquery, $hasaccess);
         return $hasaccess;
     }
 

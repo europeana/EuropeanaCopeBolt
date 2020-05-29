@@ -44,7 +44,7 @@ class Normalizer
         } else {
             $logmessage = 'Error occurred during normalize: ' . $this->config['source']['type'];
             //$this->logger('info', $logmessage, 'zohoimport');
-            dump($logmessage);
+            // dump($logmessage);
             die();
         }
 
@@ -123,9 +123,9 @@ class Normalizer
         if (array_key_exists('error', $items['data'])) {
             // we might get an error code https://www.zoho.com/crm/help/api/error-messages.html
             if ($this->debug_mode) {
-                dump('error in $items');
-                dump($doc);
-                dump($items);
+                // dump('error in $items');
+                // dump($doc);
+                // dump($items);
             }
             // exit the importer gracefully
             $this->data = 'nodata';
@@ -140,9 +140,9 @@ class Normalizer
 
         if (empty($items)) {
             if ($this->debug_mode) {
-                dump('empty $items');
-                dump($doc);
-                dump($items);
+                // dump('empty $items');
+                // dump($doc);
+                // dump($items);
             }
             // exit the importer gracefully
             $this->data = 'nodata';
