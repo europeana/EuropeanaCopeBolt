@@ -412,7 +412,13 @@ $( document ).ready(function() {
 
         if ( windowWidthEms < breakMenuFull ) { // less then 960
             // $('#headersearch').hide();
-            $('#headersearch').appendTo('header'); // put it back, if coming from large
+
+            if ( $('#headersearch input').is(":focus") ) {
+                // resize is probably bc of upsliding keyboard; so no touching this element (breaks in android)
+            } else {
+                $('#headersearch').appendTo('header'); // put it back, if coming from large
+            }
+
             $('#topbar').stick_in_parent({
                 offset_top: 64
             });
