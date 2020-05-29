@@ -802,7 +802,7 @@ persons:
       label: "Public phone number"
       variant: inline
       class: narrow
-      postfix: <small>Format: +31 (0)12 345 6789</small>
+      postfix: "<small>Format: +31 (0)12 345 6789</small>"
     twitter:
       type: text
       label: "Twitter URL"
