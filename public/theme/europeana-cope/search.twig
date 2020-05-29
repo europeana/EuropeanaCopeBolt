@@ -18,8 +18,10 @@
 
             <ul class="teaser-list">
 
+            {% if search is not empty %}
             {# custom search so we can change the order over multiple paginated pages #}
             {% setcontent records = '(pages,posts,data,projects,events,jobs,persons)/search' where { filter: search } allowpaging order '-datepublish' %}
+            {% endif %}
 
             {# apply sorting #}
             {% if app.request.get('sort') == 'datedesc' %}
