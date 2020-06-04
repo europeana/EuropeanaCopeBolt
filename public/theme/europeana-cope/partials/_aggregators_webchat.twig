@@ -1,7 +1,7 @@
 {# --
 This is the webchat module, for use on the aggregators page.
 -- #}
-{% if record.slug == 'aggregators' %}
+{% if record.slug is defined and record.slug == 'aggregators' %}
 <div id="webchat"></div>
 <script src="https://europeana-pro-bot.jhn.ngo/demo/europeana_pro/webchat.js"></script>
 <script src="https://europeana-pro-bot.jhn.ngo/demo/europeana_pro/webchat_europeana_pro.js"></script>
