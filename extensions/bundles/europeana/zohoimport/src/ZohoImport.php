@@ -54,13 +54,13 @@ class ZohoImport
      */
     public function setFfwdSource($ffwdsource)
     {
-      if ($ffwdsource !== null) {
-        $this->ffwdsource = $ffwdsource;
-      } else {
-        $this->getEnabledSources();
-        $firstconfig = reset($this->enabledsources);
-        $this->ffwdsource = $firstconfig['target']['contenttype'];
-      }
+        if ($ffwdsource !== null) {
+            $this->ffwdsource = $ffwdsource;
+        } else {
+            $this->getEnabledSources();
+            $firstconfig = reset($this->enabledsources);
+            $this->ffwdsource = $firstconfig['target']['contenttype'];
+        }
     }
 
     /**
@@ -97,14 +97,14 @@ class ZohoImport
 
             // if ffwdsource is set and not the one in this loop iteration
             // continue with the next loop iteration
-            if(isset($this->ffwdsource) && $this->ffwdsource === $this->workingtype) {
-              $logmessage = $name . ' - ffwd content type to import is: '. $this->workingtype;
-              $this->logger('info', $logmessage, 'zohoimport');
+            if (isset($this->ffwdsource) && $this->ffwdsource === $this->workingtype) {
+                $logmessage = $name . ' - ffwd content type to import is: ' . $this->workingtype;
+                $this->logger('info', $logmessage, 'zohoimport');
             } else if (isset($this->ffwdsource) && $this->ffwdsource !== $this->workingtype) {
-              $logmessage = $name . ' - ffwd skipping content type: '. $this->workingtype;
-              $this->logger('info', $logmessage, 'zohoimport');
+                $logmessage = $name . ' - ffwd skipping content type: ' . $this->workingtype;
+                $this->logger('info', $logmessage, 'zohoimport');
 
-              continue;
+                continue;
             }
 
             // test if image downloads should be activated
@@ -118,8 +118,8 @@ class ZohoImport
             // initialize empty record for cloning
             $this->emptyrecord = $this->workingrepository->create();
 
-            $logmessage = $name . ' - started import - batch: '. $batchdate . ' - '
-            . $config['source']['type'];
+            $logmessage = $name . ' - started import - batch: ' . $batchdate . ' - '
+                . $config['source']['type'];
             $this->logger('info', $logmessage, 'zohoimport');
 
             if (isset($config['source']['loopparams'])) {
@@ -136,13 +136,13 @@ class ZohoImport
                 $localconfig['source']['getparams'][$stepper] = $size;
                 if ($this->ffwd != null && $this->ffwd >= 1) {
                     // TODO: fast forward to step $this->ffwd
-                    $looper = $this->ffwd +1;
+                    $looper = $this->ffwd + 1;
                     $previousbatchdate = $this->getLastImportDate($localconfig);
                     $starttime = strtotime($previousbatchdate);
                     $batchdate = $previousbatchdate;
                     $batchdate = $previousbatchdate;
                     $logmessage = $name . ' - fast forward to '
-                        . $looper . '. - batch: '. $batchdate . ' - '
+                        . $looper . '. - batch: ' . $batchdate . ' - '
                         . $config['source']['type'];
                     $this->logger('info', $logmessage, 'zohoimport');
                     $start = ($this->ffwd * $size) + 1;
@@ -156,8 +156,8 @@ class ZohoImport
 
                 while ($this->endcondition === false) {
                     $logmessage = $name . ' - step ' . $looper
-                    . ': ' . $localconfig['source']['getparams'][$counter]
-                    . ' - ' . $localconfig['source']['getparams'][$stepper] . ' starting.';
+                        . ': ' . $localconfig['source']['getparams'][$counter]
+                        . ' - ' . $localconfig['source']['getparams'][$stepper] . ' starting.';
                     $this->logger('info', $logmessage, 'zohoimport');
 
                     $this->fileFetcher($localconfig);
@@ -182,7 +182,7 @@ class ZohoImport
                         $deltatime = $time_usage - $this->lastbatchtime;
                         $memory_usage = round((memory_get_peak_usage() / 1024) / 1024);
                         $deltamem = $memory_usage - $this->lastbatchmem;
-                        $logmessage = $name . ' - step '. $looper. ": " . $localconfig['source']['getparams'][$counter]. ' - '. $localconfig['source']['getparams'][$stepper].' completed. [total '. $memory_usage .' MB] [delta '.$deltamem.' MB] [time '. $deltatime . ' sec]';
+                        $logmessage = $name . ' - step ' . $looper . ": " . $localconfig['source']['getparams'][$counter] . ' - ' . $localconfig['source']['getparams'][$stepper] . ' completed. [total ' . $memory_usage . ' MB] [delta ' . $deltamem . ' MB] [time ' . $deltatime . ' sec]';
                         $this->logger('info', $logmessage, 'zohoimport');
 
                         $this->lastbatchtime = time();
@@ -199,7 +199,7 @@ class ZohoImport
                     $looper++;
                 }
 
-                $logmessage = $name . ' - imported ~ '. $numrecords .' records from paged resource..';
+                $logmessage = $name . ' - imported ~ ' . $numrecords . ' records from paged resource..';
                 $this->logger('info', $logmessage, 'zohoimport');
             } elseif (isset($config['source']['files'])) {
                 // the import has file paging so lets import every file at once
@@ -217,16 +217,16 @@ class ZohoImport
                     $this->fileNormalizer($localconfig);
 
                     $numrecords += count($this->resourcedata);
-                    if ($this->resourcedata!='nodata') {
+                    if ($this->resourcedata != 'nodata') {
                         $this->saveRecords($name, $localconfig);
                     }
                 }
 
 
-                $logmessage = $name . ' - imported '. $numrecords .' records from files resource..';
+                $logmessage = $name . ' - imported ' . $numrecords . ' records from files resource..';
                 $this->logger('info', $logmessage, 'zohoimport');
             } else {
-                if($config['source']['pagination'] === true){
+                if ($config['source']['pagination'] === true) {
                     $pageNumber = 0;
                     $numrecords = 0;
 
@@ -247,14 +247,14 @@ class ZohoImport
 
                         $canPaginate = json_decode($this->app['zohoimport.filefetcher']->latestFile())->info->more_records;
 
-                        if ($this->resourcedata!='nodata') {
+                        if ($this->resourcedata != 'nodata') {
                             $this->saveRecords($name, $config);
                         }
 
                         $numrecords = $numrecords + count($this->resourcedata);
-                    }while($canPaginate);
+                    } while ($canPaginate);
 
-                    $logmessage = $name . ' - imported '. $numrecords .' records from paginated resource..';
+                    $logmessage = $name . ' - imported ' . $numrecords . ' records from paginated resource..';
                     $this->logger('info', $logmessage, 'zohoimport');
                 } else {
                     $this->app['zohoimport.filefetcher']->fetchAnyResource($config);
@@ -262,16 +262,20 @@ class ZohoImport
                     $this->fileNormalizer($config);
 
                     $numrecords = count($this->resourcedata);
-                    if ($this->resourcedata!='nodata') {
+                    if ($this->resourcedata != 'nodata') {
                         $this->saveRecords($name, $config);
                     }
 
-                    $logmessage = $name . ' - imported '. $numrecords .' records from short resource..';
+                    $logmessage = $name . ' - imported ' . $numrecords . ' records from short resource..';
                     $this->logger('info', $logmessage, 'zohoimport');
                 }
             }
 
-            $this->depublishRemovedRecords($name, $config, $batchdate);
+            if($name != 'zoho_json_remote_orgs'){
+                $this->depublishRemovedRecords($name, $config, $batchdate);
+            } else {
+                $this->depublishRemovedOrganisationsRecords($name, $config, $batchdate);
+            }
 
             $logmessage = $name . ' - completed import';
 
@@ -332,14 +336,14 @@ class ZohoImport
                 $num_unpublished_records = $this->getUnpublishedRecords($localconfig);
 
                 $table = [
-                  'head' => [ 'Import', 'amount' ],
-                  'data' => [
-                    [ 'last run', $lastimportdate ],
-                    //[ 'items', $num_imported_items ],
-                    //[ 'remote requests', $num_remote_request ],
-                    [ 'published records', $num_published_records ],
-                    [ 'unpublished records', $num_unpublished_records ]
-                  ]
+                    'head' => [ 'Import', 'amount' ],
+                    'data' => [
+                        [ 'last run', $lastimportdate ],
+                        //[ 'items', $num_imported_items ],
+                        //[ 'remote requests', $num_remote_request ],
+                        [ 'published records', $num_published_records ],
+                        [ 'unpublished records', $num_unpublished_records ]
+                    ]
                 ];
                 $rowoutput = $tableoutput = '';
                 foreach ($table['head'] as $cell) {
@@ -686,11 +690,43 @@ class ZohoImport
     }
 
     /**
+     * Depublish all records in Organisations contenttype if they are not present in the current feed
+     * and keep the Sponsor type Organisation published.
+     * Organisation of type Sponsor has org_role empty.
+     *
+     * @param $name
+     * @param $config
+     * @param $date
+     *
+     * @return bool
+     */
+    private function depublishRemovedOrganisationsRecords($name, $config, $date)
+    {
+        $logmessage = $name . ' - depublishing all removed Organisations records on date: ' . $date;
+        $this->logger('info', $logmessage, 'zohoimport');
+
+        $contenttype = $config['target']['contenttype'];
+        $unpublished_status = $config['target']['defaults']['removed'];
+
+        $prefix = $this->app['config']->get('general/database/prefix');
+        $tablename = $prefix . $contenttype;
+
+        // dont depublish records that are already depublished
+        $query = "UPDATE $tablename SET status = :status WHERE datechanged < :datechanged AND status != :status AND org_role != ''";
+        $stmt = $this->connection->prepare($query);
+        $stmt->bindValue('status', $unpublished_status);
+        $stmt->bindValue('datechanged', $date);
+        $res = $stmt->execute();
+
+        return true;
+    }
+
+    /**
      * setLastImportDate saves the last successfull import to the current start of the batch
      */
     private function setLastImportDate($timestamp)
     {
-      // save the timestamp to the 'app/config/extensions/zohoimport_lock_local.yml' file
+        // save the timestamp to the 'app/config/extensions/zohoimport_lock_local.yml' file
         $filesystem = $this->app['filesystem']->getFilesystem('extensions_config');
         $path = 'zohoimport_lock_local.yml';
         $file = $filesystem->getFile($path);
@@ -710,7 +746,7 @@ class ZohoImport
      */
     private function getLastImportDate($config = false)
     {
-      // save the timestamp to the 'app/config/extensions/zohoimport_lock_local.yml' file
+        // save the timestamp to the 'app/config/extensions/zohoimport_lock_local.yml' file
         $timestamp = null;
         $filesystem = $this->app['filesystem']->getFilesystem('extensions_config');
         $path = 'zohoimport_lock_local.yml';
@@ -777,26 +813,26 @@ class ZohoImport
 
         //prepare url
         if (array_key_exists($params['source_field'], $source_record) && !empty($source_record[$params['source_field']])) {
-          $params['name'] = $source_record[$params['source_field']];
-          $params['source_url'] = str_replace($params['source_field'], $params['name'], $params['source_url']);
-          if ($params['name'] == $params['source_url']) {
-              $params['name'] = md5($params['name']);
-          }
+            $params['name'] = $source_record[$params['source_field']];
+            $params['source_url'] = str_replace($params['source_field'], $params['name'], $params['source_url']);
+            if ($params['name'] == $params['source_url']) {
+                $params['name'] = md5($params['name']);
+            }
         } elseif (array_key_exists($params['source_field'], $source_record) && empty($source_record[$params['source_field']])) {
-          // empty source value - ignore this field
-          $logmessage = "loadZohoRelatedRecords has empty value";
-          $this->logger('info', $logmessage, 'zohoimport');
-          return false;
+            // empty source value - ignore this field
+            $logmessage = "loadZohoRelatedRecords has empty value";
+            $this->logger('info', $logmessage, 'zohoimport');
+            return false;
         } else {
-          $logmessage = "loadZohoRelatedRecords has bad config";
-          $this->logger('error', $logmessage, 'zohoimport');
-          $logmessage = "source record: " . json_encode($source_record);
-          $this->logger('error', $logmessage, 'zohoimport');
-          $logmessage = "target record: " . json_encode($target_record);
-          $this->logger('error', $logmessage, 'zohoimport');
-          $logmessage = "params: " . json_encode($params);
-          $this->logger('error', $logmessage, 'zohoimport');
-          return false;
+            $logmessage = "loadZohoRelatedRecords has bad config";
+            $this->logger('error', $logmessage, 'zohoimport');
+            $logmessage = "source record: " . json_encode($source_record);
+            $this->logger('error', $logmessage, 'zohoimport');
+            $logmessage = "target record: " . json_encode($target_record);
+            $this->logger('error', $logmessage, 'zohoimport');
+            $logmessage = "params: " . json_encode($params);
+            $this->logger('error', $logmessage, 'zohoimport');
+            return false;
         }
 
         // really fetch the file
@@ -816,7 +852,7 @@ class ZohoImport
 
         // no valid image
         if (stristr($relationsdata, 'No records attached to this record id')
-          || stristr($relationsdata, 'Unable to process your request')) {
+            || stristr($relationsdata, 'Unable to process your request')) {
             $logmessage = $accountid . ' - no remote relations data found for:' . $params['name'] . ' at url: ' . $params['source_url'];
             $this->logger('error', $logmessage, 'zohoimport');
             return false;
@@ -834,10 +870,10 @@ class ZohoImport
 
         // double check if there are any records
         if ($relationsdatanormalized == 'nodata') {
-          $logmessage = $accountid . ' - loadZohoRelatedRecords result: ' . json_encode($relationsdatanormalized);
-          $this->logger('debug', $logmessage, 'zohoimport');
-          // no records means return something and get out
-          return [];
+            $logmessage = $accountid . ' - loadZohoRelatedRecords result: ' . json_encode($relationsdatanormalized);
+            $this->logger('debug', $logmessage, 'zohoimport');
+            // no records means return something and get out
+            return [];
         }
 
         // load a repository
@@ -848,7 +884,7 @@ class ZohoImport
         if (!$this->currentrecord->id) {
             // check existing
             $this->currentrecord = $this->workingrepository->findOneBy(
-              ['uid' => $accountid]
+                ['uid' => $accountid]
             );
         }
 
@@ -868,7 +904,7 @@ class ZohoImport
 
             // get contact from database by CONTACTID
             $target_record = $relatedrepository->findOneBy(
-              ['uid' => $target_person_uid]
+                ['uid' => $target_person_uid]
             );
 
             if ($target_record) {
@@ -883,53 +919,53 @@ class ZohoImport
     }
 
     public function deleteImportedRelations($parent_organisation, $parent_type, $target_type) {
-      // clear contacts for ACCOUNTID
+        // clear contacts for ACCOUNTID
 
-      $deletesql = "DELETE FROM bolt_relations WHERE from_id = :parent_organisation AND from_contenttype = :parent_type AND to_contenttype = :target_type";
+        $deletesql = "DELETE FROM bolt_relations WHERE from_id = :parent_organisation AND from_contenttype = :parent_type AND to_contenttype = :target_type";
 
-      $deletevalues = [
-        "parent_organisation" => $parent_organisation,
-        "parent_type" => $parent_type,
-        "target_type" => $target_type
-      ];
+        $deletevalues = [
+            "parent_organisation" => $parent_organisation,
+            "parent_type" => $parent_type,
+            "target_type" => $target_type
+        ];
 
-      $stmt = $this->connection->prepare($deletesql);
+        $stmt = $this->connection->prepare($deletesql);
 
-      foreach($deletevalues as $label => $value) {
-        $stmt->bindValue($label, $value);
-      }
+        foreach($deletevalues as $label => $value) {
+            $stmt->bindValue($label, $value);
+        }
 
-      $deleted = $stmt->execute();
+        $deleted = $stmt->execute();
 
-      $logmessage = $parent_organisation . ' - refreshing relations for current organisation id: ' . $parent_organisation . ' [' . $deleted . ']';
-      $this->logger('debug', $logmessage, 'zohoimport');
+        $logmessage = $parent_organisation . ' - refreshing relations for current organisation id: ' . $parent_organisation . ' [' . $deleted . ']';
+        $this->logger('debug', $logmessage, 'zohoimport');
 
-      return $deleted;
+        return $deleted;
     }
 
     public function insertImportedRelation($parent_organisation, $parent_type, $target_type, $target_record_id) {
 
-      $insertsql = "INSERT INTO bolt_relations (from_id, from_contenttype, to_id, to_contenttype) VALUES (:parent_organisation, :parent_type, :target_record_id, :target_type)";
+        $insertsql = "INSERT INTO bolt_relations (from_id, from_contenttype, to_id, to_contenttype) VALUES (:parent_organisation, :parent_type, :target_record_id, :target_type)";
 
-      $insertvalues = [
-        "parent_organisation" => $parent_organisation,
-        "parent_type" => $parent_type,
-        "target_type" => $target_type,
-        "target_record_id" => $target_record_id
-      ];
+        $insertvalues = [
+            "parent_organisation" => $parent_organisation,
+            "parent_type" => $parent_type,
+            "target_type" => $target_type,
+            "target_record_id" => $target_record_id
+        ];
 
-      $stmt = $this->connection->prepare($insertsql);
+        $stmt = $this->connection->prepare($insertsql);
 
-      foreach($insertvalues as $label => $value) {
-        $stmt->bindValue($label, $value);
-      }
+        foreach($insertvalues as $label => $value) {
+            $stmt->bindValue($label, $value);
+        }
 
-      $inserted = $stmt->execute();
+        $inserted = $stmt->execute();
 
-      $logmessage = $parent_organisation . ' - adding related person: ' . $target_record_id . ' == ' . $inserted;
-      $this->logger('debug', $logmessage, 'zohoimport');
+        $logmessage = $parent_organisation . ' - adding related person: ' . $target_record_id . ' == ' . $inserted;
+        $this->logger('debug', $logmessage, 'zohoimport');
 
-      return $inserted;
+        return $inserted;
     }
 
     /**
@@ -951,15 +987,15 @@ class ZohoImport
 
         //prepare url
         if (property_exists($source_record, $params['source_field']) && !empty($source_record->{$params['source_field']})) {
-          $params['name'] = $source_record->{$params['source_field']};
-          $params['source_url'] = str_replace(
-            $params['source_field'],
-            $params['name'],
-            $params['source_url']
-          );
-          if ($params['name'] == $params['source_url']) {
-            $params['name'] = md5($params['name']);
-          }
+            $params['name'] = $source_record->{$params['source_field']};
+            $params['source_url'] = str_replace(
+                $params['source_field'],
+                $params['name'],
+                $params['source_url']
+            );
+            if ($params['name'] == $params['source_url']) {
+                $params['name'] = md5($params['name']);
+            }
         } elseif (property_exists($source_record, $params['source_field']) && empty($source_record->{$params['source_field']})) {
             // empty source value - ignore this field
             $logmessage = "downloadZohoPhotoFromURL has empty value";
@@ -980,18 +1016,18 @@ class ZohoImport
         // only fetch photos from contacts that need it
         // if we're looking at the contacts
         if (property_exists($source_record, "Show_photo_on_europeana_site")) {
-          if ($source_record->Show_photo_on_europeana_site == 'true') {
-            $logmessage = 'show public photo from: ' . $params['source_url'];
-            $this->logger('debug', $logmessage, 'zohoimport');
-          } elseif ($source_record->Show_photo_on_europeana_site == FALSE || $source_record->Show_photo_on_europeana_site == 'false') {
-            //$logmessage = 'no remote photo needed for: ' . $params['source_url'];
-            //$this->logger('debug', $logmessage, 'zohoimport');
-            return FALSE;
-          } else {
-            //$logmessage = 'no public photo at: ' . $params['source_url'];
-            //$this->logger('debug', $logmessage, 'zohoimport');
-            return FALSE;
-          }
+            if ($source_record->Show_photo_on_europeana_site == 'true') {
+                $logmessage = 'show public photo from: ' . $params['source_url'];
+                $this->logger('debug', $logmessage, 'zohoimport');
+            } elseif ($source_record->Show_photo_on_europeana_site == FALSE || $source_record->Show_photo_on_europeana_site == 'false') {
+                //$logmessage = 'no remote photo needed for: ' . $params['source_url'];
+                //$this->logger('debug', $logmessage, 'zohoimport');
+                return FALSE;
+            } else {
+                //$logmessage = 'no public photo at: ' . $params['source_url'];
+                //$this->logger('debug', $logmessage, 'zohoimport');
+                return FALSE;
+            }
         }
 
         // prevent hammering the limits of zoho by only fetching images after minimum of 36 hours
@@ -1088,16 +1124,16 @@ class ZohoImport
         $image['mime'] = image_type_to_mime_type($image['type']);
 
         if (strrchr($params['source_url'], '.') == '.svg'
-          || pathinfo(parse_url($params['source_url'])['path'], PATHINFO_EXTENSION) == 'svg'
+            || pathinfo(parse_url($params['source_url'])['path'], PATHINFO_EXTENSION) == 'svg'
         ) {
-          $image['type'] = 0;
-          $image['gisz'] = array(
-            'width' => '1',
-            'height' => '1',
-            'type' => 0,
-            'attr' => 'width="1" height="1"'
-          );
-          $image['mime'] = 'image/svg+xml';
+            $image['type'] = 0;
+            $image['gisz'] = array(
+                'width' => '1',
+                'height' => '1',
+                'type' => 0,
+                'attr' => 'width="1" height="1"'
+            );
+            $image['mime'] = 'image/svg+xml';
         }
 
         switch ($image['mime']) {
@@ -1209,7 +1245,7 @@ class ZohoImport
         }
 
         if (!($this->consoleoutput->isVerbose() || $this->consoleoutput->isVeryVerbose())
-        && $type == 'debug') {
+            && $type == 'debug') {
             // skip all debug messages if not -v or -vv
             return;
         }
@@ -1234,27 +1270,27 @@ class ZohoImport
         switch ($type) {
             case 'error':
                 $this->app['logger.system']->error($message, [
-                'event' => $event,
-                'context' => $context
+                    'event' => $event,
+                    'context' => $context
                 ]);
                 break;
             case 'warning':
                 $this->app['logger.system']->warning($message, [
-                'event' => $event,
-                'context' => $context
+                    'event' => $event,
+                    'context' => $context
                 ]);
                 break;
             case 'debug':
                 $this->app['logger.system']->debug($message, [
-                'event' => $event,
-                'context' => $context
+                    'event' => $event,
+                    'context' => $context
                 ]);
                 break;
             case 'info':
             default:
                 $this->app['logger.system']->info($message, [
-                'event' => $event,
-                'context' => $context
+                    'event' => $event,
+                    'context' => $context
                 ]);
                 break;
         }
