@@ -3404,3 +3404,10 @@ section.bg-grey { //used for body-module
     z-index: 10;
 }
 
+.splashpage-slug-europeana-2019 { //specific page override - Jira EP-185
+    main .section-banner:first-of-type {
+        .colored-image::before {
+            display:none;
+        }
+    }
+}
