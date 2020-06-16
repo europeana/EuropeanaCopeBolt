@@ -28,6 +28,11 @@
         </a>
     </div>
 
-    {% include 'partials/_image_attribution.twig' with { parentitem: 'banner' } %}
-
+    {% if record.contenttype.slug in ['resources'] %}
+        {% include 'partials/_image_attribution.twig' with { parentitem: 'banner' } %}
+    {% elseif record.contenttype.slug in ['pages','posts', 'events', 'projects', 'jobs','data','blogevents' ] %}
+        {% include 'partials/_image_attribution.twig' with { parentitem: 'teaser' } %}
+    {% else %}
+        {% include 'partials/_image_attribution.twig' %}
+    {% endif %}
 </div>

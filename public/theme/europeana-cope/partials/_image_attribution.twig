@@ -2,6 +2,10 @@
     {% set item = record %}
 {% endif %}
 
+{% if parentitem is not defined %}
+    {% set parentitem = '' %}
+{% endif %}
+
 {# expanded = true in include: Attribution always open #}
 
 {% if expanded is not defined %}
