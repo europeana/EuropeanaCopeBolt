@@ -1,8 +1,6 @@
 <div class="banner-container {{ layoutclass }}">
     {% if record.htmllink|default(record.link)|default(false) %}
-    <!-- {{ record.htmllink|default() }} --
-    {{  record.link|default)() }} -->
-        <a class="banner" href="{{ record.htmllink|default(record.link)|default('sometihng') }}">
+        <a class="banner" href="{{ record.htmllink|default(record.link) }}">
     {% else %}
         <div class="banner">
     {% endif %}
