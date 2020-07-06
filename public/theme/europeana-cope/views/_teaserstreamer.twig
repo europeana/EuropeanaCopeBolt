@@ -38,13 +38,14 @@
             {% endfor %}
         {% endif %}
 
-
+        {% if item.shoulddatepublish|default() %}
         <span class="caldate">
             <svg class="icon icon-calendar">
                 <use xlink:href="#icon-calendar"></use>
             </svg>
             {{ item.datepublish|localedatetime("%e %B  %Y") }}
         </span>
+        {% endif %}
 
     </p>
 </article>

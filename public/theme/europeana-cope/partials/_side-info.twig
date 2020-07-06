@@ -9,7 +9,6 @@
 
 {% endif %} #}
 
-
 <div class="side-info {{ centerclass }}">
     {% if record.pagetype is defined
         and not (record.pagetype == 'listing' or record.pagetype == 'landingpage' or record.pagetype == 'landingpage-nohighlight')
@@ -20,7 +19,9 @@
             {% include 'partials/_readtime.twig' %}
             {% endif %}
 
+            {% if record.shoulddatepublish|default() %}
             <span class="date">Posted on {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+            {% endif %}
         </p>
     {% endif %}
 

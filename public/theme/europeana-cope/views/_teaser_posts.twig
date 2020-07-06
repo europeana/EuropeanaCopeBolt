@@ -19,7 +19,9 @@
             <span class="info-type">
                 {{ item.posttype|default('News') }}
             </span>
+            {% if item.shoulddatepublish|default() %}
             <span class="info-date">Created: {{ item.datepublish|localedatetime("%e %B  %Y") }}</span>
+            {% endif %}
 
             {% if item.author is not empty %}
                 {% set contacts = item.author %}

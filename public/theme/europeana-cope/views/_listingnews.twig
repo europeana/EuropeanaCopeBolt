@@ -19,7 +19,9 @@
     </div>
     <div class="txt-container">
         <h3><a href="{{ item.link }}">{{ item.title }}</a></h3>
+        {% if item.shoulddatepublish|default() %}
         <p class="meta">Created: <span class="date">{{ item.datepublish|localedatetime("%e %B  %Y") }}</span></p>
+        {% endif %}
 
     
         {% if item.teaser is defined and item.teaser is not empty %}

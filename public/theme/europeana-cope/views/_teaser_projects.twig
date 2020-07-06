@@ -34,7 +34,7 @@
                 {% else %}
                     <span class="info-date">{{ item.start_event|localedatetime("%e %B  %Y") }}</span>
                 {% endif %}
-            {% else %}
+            {% elseif item.shoulddatepublish|default() %}
                 <span class="info-date">{{ item.datepublish|localedatetime("%e %B  %Y") }}</span>
             {% endif %}
 

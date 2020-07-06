@@ -136,6 +136,11 @@ __nodes:
       variant: inline
       class: 'image-attribution-group'
   structure_defaults: &structure_defaults
+    shoulddatepublish:
+      type: checkbox
+      label: "Display publication date on frontend"
+      default: 1
+      group: meta
     slug:
       type: slug
       uses: title

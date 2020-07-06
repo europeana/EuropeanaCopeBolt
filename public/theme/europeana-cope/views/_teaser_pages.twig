@@ -17,7 +17,9 @@
 
         <div class="info-block">
             <span class="info-type">Page</span>
+            {% if item.shoulddatepublish|default() %}
             <span class="info-date">Created: {{ item.datepublish|localedatetime("%e %B  %Y") }}</span>
+            {% endif %}
 
             {% if item.contact_record is not empty %}
                 {% set contacts = item.contact_record %}
