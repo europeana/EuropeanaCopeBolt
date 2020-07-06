@@ -1,5 +1,9 @@
 <div class="banner-container {{ layoutclass }}">
-    <a class="banner" href="{{ record.htmllink|default(record.link)|default('#') }}">
+    {% if record.htmllink|default(record.link)|default(false) %}
+        <a class="banner" href="{{ record.htmllink|default(record.link)|default('#') }}">
+    {% else %}
+        <div class="banner">
+    {% endif %}
         <div class="colored-image"
             {% if record.image is defined and record.image is not empty %}
                 {% if layoutclass == 'third' %}
@@ -37,7 +41,11 @@
                 <p>{{ record.excerpt(300, false, search|default('')) }}</p>
             {% endif %}
         </div>
-    </a>
+    {% if record.htmllink|default(false) %}
+        </a>
+    {% else %}
+        </div>
+    {% endif %}
 
     {% include 'partials/_image_attribution.twig' with { parentitem: 'banner', expanded: 'true' } %}
 
