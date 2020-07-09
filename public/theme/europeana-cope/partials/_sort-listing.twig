@@ -47,5 +47,18 @@
 
 {% endif %}
 
+<fieldset>
+    <legend>test to filter on: </legend>
+
+    <input type='radio' id="filterbyposts" name='filterby' value='posts'>
+    <label for='filterbyposts'>Posts</label><br>
+
+    <input type='radio' id="filterbypages" name='filterby' value='pages'>
+    <label for='filterbypages'>Pages</label><br>
+
+    <input type='radio' id="filterbypersons" name='filterby' value='persons'>
+    <label for='filterbypersons'>Persons</label>
+</fieldset>
+
     <button type="submit">Filter</button>
 </form>

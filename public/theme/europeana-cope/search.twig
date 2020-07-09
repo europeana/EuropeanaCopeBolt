@@ -4,36 +4,52 @@
 
 {% block main %}
 
+{% if search is not empty %}
+    {# custom search so we can change the order over multiple paginated pages #}
+    {% setcontent records = '(pages,posts,data,projects,events,jobs,persons)/search' where { filter: search } allowpaging order '-datepublish' %}
+{% endif %}
+
+{# apply filtering #}
+{% if app.request.get('filterby') is not empty %}
+    {% setcontent records = app.request.get('filterby') where { filter: search } allowpaging %}
+{% endif %}
+
+{# apply sorting #}
+{% if app.request.get('sort') == 'datedesc' %}
+    {% set records = records|order('-datepublish') %}
+{% elseif app.request.get('sort') == 'dateasc' %}
+    {% set records = records|order('datepublish') %}
+{% endif %}
+
+{# store the total amount of found records #}
+{% if records is not empty %}
+    {% set totalrecords = records|length %}
+{% endif %}
+
+{# apply pagination #}
+{% set offset = (app.request.get('page_search')|default(1) - 1) * 10 %}
+{% set records = records|slice(offset, 10) %}
+
 <section>
     <div class="inner-wrap">
 
         <div class="column">
             <h1>
-                {% if search is not empty %}
-                    {{ searchresult.no_of_results }} search results for "{{ search }}"
+                {% if records is not empty and app.request.get('filterby') is empty %}
+                    {# regular search #}
+                    {{ totalrecords }} search results for "{{ search }}"
+                {% elseif records is not empty and app.request.get('filterby') is not empty %}
+                    {# search, filtered by contenttype #}
+                    {{ totalrecords }} search results for "{{ search }}" in {{ app.request.get('filterby') }}
+                {% elseif records is empty %}
+                    {# no results #}
+                    No results
                 {% else %}
                     {{ __('general.phrase.search') }}
                 {% endif %}
             </h1>
 
             <ul class="teaser-list">
-
-            {% if search is not empty %}
-            {# custom search so we can change the order over multiple paginated pages #}
-            {% setcontent records = '(pages,posts,data,projects,events,jobs,persons)/search' where { filter: search } allowpaging order '-datepublish' %}
-            {% endif %}
-
-            {# apply sorting #}
-            {% if app.request.get('sort') == 'datedesc' %}
-                {% set records = records|order('-datepublish') %}
-            {% elseif app.request.get('sort') == 'dateasc' %}
-                {% set records = records|order('datepublish') %}
-            {% endif %}
-
-            {# apply pagination #}
-            {% set offset = (app.request.get('page_search')|default(1) - 1) * 10 %}
-            {% set records = records|slice(offset, 10) %}
-
 
             {# display the results #}
             {% for record in records %}
@@ -66,7 +82,15 @@
             {% endif %}
 
             {# If there are more records than will fit on one page, the pager is shown. #}
-            {{ pager(template = 'partials/_pager.twig') }}
+
+            {% if app.request.get('filterby') is not empty %}
+               {% set thiscontenttype = app.request.get('filterby') %}
+                {# {{ pager(thiscontenttype, template = 'partials/_pager.twig') }} #}
+                {{ pager('search', template = 'partials/_pager.twig' ) }}
+            {% else %}
+                {{ pager(template = 'partials/_pager.twig') }}
+            {% endif %}
+
 
         </div> {# /column #}
 
