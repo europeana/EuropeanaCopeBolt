@@ -17,7 +17,7 @@
 
 {% set sort = app.request.get('sort') ? '&sort=' ~ app.request.get('sort') : '' %}
 
-{# {{ dump(pager) }} #}
+{{ dump(pager) }}
 
 {% if pager.totalpages > 1 %}
 <ol class="pagination">
