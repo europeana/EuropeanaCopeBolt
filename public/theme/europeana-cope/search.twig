@@ -11,7 +11,7 @@
 
 {# apply filtering #}
 {% if app.request.get('filterby') is not empty %}
-    {% setcontent records = app.request.get('filterby') where { filter: search } allowpaging %}
+    {% setcontent records = app.request.get('filterby') ~ '/search' where { filter: search } allowpaging %}
 {% endif %}
 
 {# apply sorting #}
