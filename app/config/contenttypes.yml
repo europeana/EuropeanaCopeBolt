@@ -141,6 +141,10 @@ __nodes:
       label: "Display publication date on frontend"
       default: 1
       group: meta
+    shoulddatemodified:
+      type: checkbox
+      label: "Display the modification date on the frontend"
+      default: 1
     slug:
       type: slug
       uses: title

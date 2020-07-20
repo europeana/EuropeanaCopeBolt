@@ -19,9 +19,11 @@
             {% include 'partials/_readtime.twig' %}
             {% endif %}
 
-            {% if record.shoulddatepublish|default() %}
+            {% if record.shoulddatepublish|default(true) %}
             <span class="date">Posted on {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
             {% endif %}
+
+            {% include 'partials/_date_modified.twig' %}
         </p>
     {% endif %}
 
