@@ -23,7 +23,7 @@
 
     {# organisation #}
     {# Europeana specifically requested the company to _not_ be displayed on the /about-us/office-employees page only. #}
-    {% if item.company and not app.request.attributes.get('slug')|default is same as('office-employees') %}
+    {% if item.company and not app.request.attributes.get('slug')|default is same as('about-us/office-employees') %}
     <p class="company">
         {{ item.company }}
     </p>
