@@ -1,0 +1,6 @@
+{% if record.shoulddatemodified|default(true) %}
+     <p class="meta outline">
+          <object data="{{ paths.theme }}/images/icons/pen-solid.svg" type="image/svg+xml"></object>
+          Updated on {{ record.datechanged|localedatetime("%A %B %e, %Y") }}
+     </p>
+{% endif %}

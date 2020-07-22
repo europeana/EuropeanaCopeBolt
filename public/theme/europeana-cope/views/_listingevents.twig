@@ -1,7 +1,7 @@
 <article class="column teaser record-{{ record.contenttype.slug  }}">
     <div class="img-container">
         {% include('partials/_image_snippet.twig') with { record: record, width: 600, height: 600 } %}
-        {% if record.datepublish is not empty %}
+        {% if record.datepublish is not empty and record.shouldatepublish|default() %}
             <p class="img-insert">
                 Created: <span class="date">{{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
             </p>

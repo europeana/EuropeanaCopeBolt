@@ -1442,6 +1442,19 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
         color: $light-gray;
     }
 
+    .outline {
+        border-style: solid;
+        border-color: $line-gray;
+        border-width: 0.1rem;
+        border-radius: 4px;
+        margin-left: 330px;
+        padding: 0.2rem 0.4rem;
+
+        object {
+            width: 0.7rem;
+        }
+    }
+
     .label {
         margin-top: 0;
     }

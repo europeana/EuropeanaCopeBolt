@@ -9,7 +9,11 @@
 <tr>
     <td><a href="{{ item.link() }}">{{ item.title }}</a></td>
 
+    {% if item.shoulddatepublish|default() %}
     <td> Created: {{ item.datepublish|localedatetime("%e %B  %Y") }} </td>
+    {% else %}
+    <td> - </td>
+    {% endif %}
 
     <td> {{ item.contenttype.slug|capitalize }} </td>
 

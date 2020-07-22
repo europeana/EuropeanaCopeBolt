@@ -16,7 +16,9 @@
         {% include 'partials/_image_attribution.twig' with { parentitem: 'teaser' } %}
 
         <div class="info-block">
-           <span class="info-date">Created: {{ record.datepublish|localedatetime("%e %B  %Y") }}</span>
+            {% if record.showdatepublish|default()%}
+                <span class="info-date">Created: {{ record.datepublish|localedatetime("%e %B  %Y") }}</span>
+            {% endif %}
 
             {% if item.contact_record %}
             <span class="info-author">

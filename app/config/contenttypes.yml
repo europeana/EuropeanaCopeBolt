@@ -136,6 +136,15 @@ __nodes:
       variant: inline
       class: 'image-attribution-group'
   structure_defaults: &structure_defaults
+    shoulddatepublish:
+      type: checkbox
+      label: "Display the publication date on frontend"
+      default: 1
+      group: meta
+    shoulddatemodified:
+      type: checkbox
+      label: "Display the modification date on the frontend"
+      default: 1
     slug:
       type: slug
       uses: title
