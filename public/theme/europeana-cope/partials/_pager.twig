@@ -12,12 +12,19 @@
 
 </ol> #}
 
-
 {% set link = pager.makelink() %}
+{% set records_per_page = 10 %}
 
 {% set sort = app.request.get('sort') ? '&sort=' ~ app.request.get('sort') : '' %}
+{% set filterby = app.request.get('filterby') ? '&filterby=' ~ app.request.get('filterby') : '' %}
 
-{# {{ dump(pager) }} #}
+{% if filterby is not empty %}
+    {# Filter by contenttype like this does not work in Bolt 3. The pager returns the wrong results. #}
+    {# The next few lines update the pager variable with the correct information. #}
+    {% set pager = pager.manager.pagers['page_events'] %}
+    {% do pager.setTotalpages( (pager.count / records_per_page)|round(0, 'ceil') ) %}
+    {% do pager.setCurrent( app.request.get('page_search', 1) ) %}
+{% endif %}
 
 {% if pager.totalpages > 1 %}
 <ol class="pagination">
@@ -26,7 +33,7 @@
     <li><a href="{{link}}{{pager.current-1}}{{sort}}" rel="noindex, follow">&#8592; </a></li>
 {% endif %}
 {% if pager.current > surr+1 %}
-    <li><a href="{{link}}{{1}}{{sort}}">&laquo; 1</a></li>
+    <li><a href="{{link}}{{1}}{{sort}}{{filterby}}">&laquo; 1</a></li>
 {% endif %}
 
 {# start with '..' if there are more than surr+1 before currentpage.. #}
@@ -35,7 +42,7 @@
 {% endif %}
 
 {% for i in max(1, pager.current-surr)..min(pager.current+surr, pager.totalpages) -%}
-    <li {% if i==pager.current %}class='current'{%endif%}><a href="{{link}}{{i}}{{sort}}" {% if i != 1 %}rel="noindex, follow"{% endif %}>{{i}}</a></li>
+    <li {% if i==pager.current %}class='current'{%endif%}><a href="{{link}}{{i}}{{sort}}{{filterby}}" {% if i != 1 %}rel="noindex, follow"{% endif %}>{{i}}</a></li>
 {%- endfor %}
 
 {# end with '..' if there are more than surr+1 after currentpage.. #}
@@ -45,10 +52,10 @@
 
 {# 'next' and 'last' #}
 {% if pager.current < pager.totalpages-surr %}
-    <li><a href="{{link}}{{pager.totalpages}}{{sort}}" rel="noindex, follow">{{pager.totalpages}} &raquo; </a></li>
+    <li><a href="{{link}}{{pager.totalpages}}{{sort}}{{filterby}}" rel="noindex, follow">{{pager.totalpages}} &raquo; </a></li>
 {% endif %}
 {% if pager.current < pager.totalpages and class!="narrow" %}
-    <li><a href="{{link}}{{pager.current+1}}{{sort}}" rel="noindex, follow">&#8594;</a></li>
+    <li><a href="{{link}}{{pager.current+1}}{{sort}}{{filterby}}" rel="noindex, follow">&#8594;</a></li>
 {% endif %}
 </ul>
 
