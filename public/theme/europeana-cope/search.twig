@@ -55,7 +55,6 @@
             {% for record in records %}
 
                 <li>
-                    {% dump(record.contenttype.slug) %}
                 {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
                 <!-- loading search listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
                 {% include [template, 'views/_teasers.twig', 'views/_fallback.twig'] with {item:record} %}
@@ -83,7 +82,7 @@
             {% endif %}
 
             {# If there are more records than will fit on one page, the pager is shown. #}
-            { pager(template = 'partials/_pager.twig') }}
+            {{ pager(template = 'partials/_pager.twig') }}
 
         </div> {# /column #}
 
