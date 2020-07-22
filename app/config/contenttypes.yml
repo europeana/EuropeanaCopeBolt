@@ -138,7 +138,7 @@ __nodes:
   structure_defaults: &structure_defaults
     shoulddatepublish:
       type: checkbox
-      label: "Display publication date on frontend"
+      label: "Display the publication date on frontend"
       default: 1
       group: meta
     shoulddatemodified:
