@@ -20,7 +20,7 @@
 {% if subtype is not empty %}
     {# Filter by contenttype like this does not work in Bolt 3. The pager returns the wrong results. #}
     {# The next few lines update the pager variable with the correct information. #}
-    {% do pager.setTotalpages( (recordsLength / records_per_page)|round(0, 'ceil') ) %}
+    {% do pager.setTotalpages( (totalrecords / records_per_page)|round(0, 'ceil') ) %}
     {% do pager.setCurrent( app.request.get('page_search', 1) ) %}
 {% endif %}
 

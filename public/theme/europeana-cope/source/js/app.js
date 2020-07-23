@@ -350,7 +350,7 @@ $( document ).ready(function() {
      * for posting the form.
      */
     $("[data-bind]").on('change', function() {
-        updateDataBind(null, this);
+        const b = updateDataBind(null, this);
         // trigger the change event manually
         // because changes from code do not trigger
         // the 'change' event by default.
@@ -363,7 +363,9 @@ $( document ).ready(function() {
     function updateDataBind(index, elem) {
         const b = $($(elem).attr('data-bind'));
         b.attr('name', $(elem).attr('name'));
-        b.val(this.value);
+        b.val($(elem).val());
+
+        return b;
     }
 
     /**

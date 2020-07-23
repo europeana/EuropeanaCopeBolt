@@ -1123,7 +1123,6 @@ posts:
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   recordsperpage: 100
-  listing_records: 10
   description: "Posts are used as general messages, blogposts or pressreleases in the site."
   sort: -datepublish
   icon_many: "fa:quote-left"

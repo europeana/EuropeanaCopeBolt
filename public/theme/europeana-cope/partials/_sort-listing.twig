@@ -44,30 +44,8 @@
         </svg>
         <span>Sort by date, most recent first</span>
     </label>
-
 {% endif %}
 
-<fieldset>
-    <legend>test to filter on: </legend>
-
-    <input type='radio' id="filterbyposts" name='filterby' value='posts'>
-    <label for='filterbyposts'>Posts</label><br>
-
-    <input type='radio' id="filterbyevents" name='filterby' value='events'>
-    <label for='filterbyevents'>Events</label><br>
-
-    <input type='radio' id="filterbypages" name='filterby' value='pages'>
-    <label for='filterbypages'>Pages</label><br>
-
-    <input type='radio' id="filterbyprojects" name='filterby' value='projects'>
-    <label for='filterbyprojects'>Projects</label><br>
-
-    <input type='radio' id="filterbyjobs" name='filterby' value='jobs'>
-    <label for='filterbyjobs'>Jobs</label><br>
-
-    <input type='radio' id="filterbypersons" name='filterby' value='persons'>
-    <label for='filterbypersons'>Persons</label>
-</fieldset>
-
-    <button type="submit">Filter</button>
+    {# Bind the values of these fields to filter options. See _filter-listing.twig and app.js   #}
+    <input type="hidden" id="bind-subtype" />
 </form>

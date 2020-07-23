@@ -46,7 +46,7 @@
 {% endif %}
 
 {# set some variables for pagination. see _pager.twig #}
-{% set recordsLength = records|length %}
+{% set totalrecords = records|length %}
 {% set records_per_page = 10 %}
 {% set surr = "5" %}
 
@@ -56,11 +56,6 @@
     {% set records = records|order('-datepublish') %}
 {% elseif app.request.get('sort') == 'dateasc' %}
     {% set records = records|order('datepublish') %}
-{% endif %}
-
-{# store the total amount of found records #}
-{% if records is not empty %}
-    {% set totalrecords = records|length %}
 {% endif %}
 
 {# apply pagination #}
