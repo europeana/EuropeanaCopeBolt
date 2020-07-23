@@ -14,17 +14,17 @@
         and not (record.pagetype == 'listing' or record.pagetype == 'landingpage' or record.pagetype == 'landingpage-nohighlight')
     %}
         <p class="meta">
-
             {% if record.contenttype.slug in ['posts'] %}
-            {% include 'partials/_readtime.twig' %}
+                {% include 'partials/_readtime.twig' %}
             {% endif %}
 
             {% if record.shoulddatepublish|default(true) %}
-            <span class="date">Posted on {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
+                <span class="date">Posted on {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</span>
             {% endif %}
-
-            {% include 'partials/_date_modified.twig' %}
         </p>
+
+        {% include 'partials/_date_modified.twig' %}
+
     {% endif %}
 
     {% include 'partials/_tags.twig' %}
