@@ -1,7 +1,12 @@
+{# filter by subtype #}
 <label for="filter-content-select">Filter by</label>
-<select id="filter-content-select" name="filterby" class="button outline button-filter">
-    {% for ct in filterContentTypes %}
-        <option value="{{ ct }}" {% if filterby == ct %}selected="selected"{% endif %}>{{ ct|capitalize }}</option>
+<select id="filter-subtype-select" name="subtype" class="button outline button-filter" data-bind="#bind-subtype">
+    <option value=""
+    {% for name, option in filterSubTypes %}
+        <option value="{{ option.subtype }}"
+            {% if subtype == option.subtype %}selected="selected"{% endif %}
+        >
+            {{ name|capitalize }}
+        </option>
     {% endfor %}
 </select>
-<button type="submit">Filter</button>

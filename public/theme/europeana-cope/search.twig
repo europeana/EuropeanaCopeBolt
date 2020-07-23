@@ -4,15 +4,52 @@
 
 {% block main %}
 
+{% set filterContentTypes = ['pages', 'posts', 'data', 'projects', 'events', 'jobs', 'persons'] %}
+
+{#
+    Used to filter by sutypes.
+    Key: option name
+    contenttype: the CT for that option (e.g. Publications -> posts)
+    subtype: the option value (Publications -> Publication (how it is stored in DB)
+    field: the CT field for that subtype. Empty for CTs without subtypes (e.g. jobs)
+ #}
+{% set filterSubTypes = {
+    'News': { contenttype: 'posts', subtype: 'News', field: 'posttype' },
+    'Press releases': { contenttype: 'posts', subtype: 'Pressrelease', field: 'posttype' },
+    'Publications': { contenttype: 'posts', subtype: 'Publication', field: 'posttype' },
+    'Events': { contenttype: 'events', subtype: 'events', field: '' },
+    'Pages': { contenttype: 'pages', subtype: 'pages', field: '' },
+    'Task Forces': { contenttype: 'pages', subtype: 'TaskForce', field: 'pagetype' },
+    'Working Groups': { contenttype: 'pages', subtype: 'WorkingGroup', field: 'pagetype' },
+    'Projects': { contenttype: 'pages', subtype: 'Project', field: 'pagetype' },
+    'Jobs': { contenttype: 'jobs', subtype: 'jobs', field: '' },
+    'Persons': { contenttype: 'persons', subtype: 'persons', field: '' }
+} %}
+
 {% if search is not empty %}
     {# custom search so we can change the order over multiple paginated pages #}
-    {% setcontent records = '(pages,posts,data,projects,events,jobs,persons)/search' where { filter: search } allowpaging order '-datepublish' %}
+    {% setcontent records = '(' ~ filterContentTypes|join(',') ~  ')/search' where { filter: search } allowpaging order '-datepublish' %}
 {% endif %}
 
+{% set subtype = app.request.get('subtype', '') %}
+{% set option = filterSubTypes|filter(option => option.subtype == subtype)|first|default('') %}
+{% set filterby = option.contenttype|default(filterContentTypes) %}
+
 {# apply filtering #}
-{% if app.request.get('filterby') is not empty %}
-    {% setcontent records = app.request.get('filterby') ~ '/search' where { filter: search } allowpaging %}
+{% if filterby is not empty %}
+    {% setcontent records = filterby ~ '/search' where { filter: search } allowpaging %}
 {% endif %}
+
+{# apply filtering on subtype #}
+{% if option.field|default('') is not empty %}
+    {% set records = records|filter(record => record[option.field] == option.subtype) %}
+{% endif %}
+
+{# set some variables for pagination. see _pager.twig #}
+{% set recordsLength = records|length %}
+{% set records_per_page = 10 %}
+{% set surr = "5" %}
+
 
 {# apply sorting #}
 {% if app.request.get('sort') == 'datedesc' %}
@@ -27,20 +64,20 @@
 {% endif %}
 
 {# apply pagination #}
-{% set offset = (app.request.get('page_search')|default(1) - 1) * 10 %}
-{% set records = records|slice(offset, 10) %}
+{% set offset = (app.request.get('page_search')|default(1) - 1) * records_per_page %}
+{% set records = records|slice(offset, records_per_page) %}
 
 <section>
     <div class="inner-wrap">
 
         <div class="column">
             <h1>
-                {% if records is not empty and app.request.get('filterby') is empty %}
+                {% if records is not empty and subtype is empty %}
                     {# regular search #}
                     {{ totalrecords }} search results for "{{ search }}"
-                {% elseif records is not empty and app.request.get('filterby') is not empty %}
+                {% elseif records is not empty and subtype is not empty %}
                     {# search, filtered by contenttype #}
-                    {{ totalrecords }} search results for "{{ search }}" in {{ app.request.get('filterby') }}
+                    {{ totalrecords }} search results for "{{ search }}" in {{ subtype ~ (subtype|last == 's' ? '' : 's') }}
                 {% elseif records is empty %}
                     {# no results #}
                     No results
@@ -49,15 +86,17 @@
                 {% endif %}
             </h1>
 
+            {% include 'partials/_filter-listing.twig' with { filterSubTypes: filterSubTypes, subtype: subtype } %}
+
             <ul class="teaser-list">
 
             {# display the results #}
             {% for record in records %}
 
                 <li>
-                {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
-                <!-- loading search listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
-                {% include [template, 'views/_teasers.twig', 'views/_fallback.twig'] with {item:record} %}
+                    {% set template =  'views/_teaser_' ~ record.contenttype.slug ~ '.twig' %}
+                    <!-- loading search listing templatefile for view: '{{ template }}' or 'views/_teasers.twig' or 'views/_fallback.twig' -->
+                    {% include [template, 'views/_teasers.twig', 'views/_fallback.twig'] with {item:record} %}
                 </li>
 
             {% endfor %}
@@ -82,7 +121,8 @@
             {% endif %}
 
             {# If there are more records than will fit on one page, the pager is shown. #}
-            {{ pager(template = 'partials/_pager.twig') }}
+            {# Include the pager manually, because Bolt's pager is buggy when filtering by contenttypes  #}
+            {% include 'partials/_pager.twig' %}
 
         </div> {# /column #}
 
