@@ -17,7 +17,7 @@
 {% set sort = app.request.get('sort') ? '&sort=' ~ app.request.get('sort') : '' %}
 {% set subtype = app.request.get('subtype') ? '&subtype=' ~ app.request.get('subtype') : '' %}
 
-{% if subtype is not empty %}
+{% if customsearch %}
     {# Filter by contenttype like this does not work in Bolt 3. The pager returns the wrong results. #}
     {# The next few lines update the pager variable with the correct information. #}
     {% do pager.setTotalpages( (totalrecords / records_per_page)|round(0, 'ceil') ) %}

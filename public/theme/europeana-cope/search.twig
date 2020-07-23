@@ -33,11 +33,11 @@
 
 {% set subtype = app.request.get('subtype', '') %}
 {% set option = filterSubTypes|filter(option => option.subtype == subtype)|first|default('') %}
-{% set filterby = option.contenttype|default(filterContentTypes) %}
+{% set filterby = option.contenttype|default(filterContentTypes|join(',')) %}
 
 {# apply filtering #}
 {% if filterby is not empty %}
-    {% setcontent records = filterby ~ '/search' where { filter: search } allowpaging %}
+    {% setcontent records = '('~filterby~')' ~ '/search' where { filter: search } allowpaging %}
 {% endif %}
 
 {# apply filtering on subtype #}
@@ -117,7 +117,7 @@
 
             {# If there are more records than will fit on one page, the pager is shown. #}
             {# Include the pager manually, because Bolt's pager is buggy when filtering by contenttypes  #}
-            {% include 'partials/_pager.twig' %}
+            {% include 'partials/_pager.twig' with { customsearch: true } %}
 
         </div> {# /column #}
 
