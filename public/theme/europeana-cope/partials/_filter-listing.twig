@@ -3,10 +3,14 @@
 <select id="filter-subtype-select" name="subtype" class="button outline button-filter" data-bind="#bind-subtype">
     <option value=""></option>
     {% for name, option in filterSubTypes %}
-        <option value="{{ option.subtype }}"
-            {% if subtype == option.subtype %}selected="selected"{% endif %}
-        >
-            {{ name|capitalize }}
-        </option>
+        {# only include if results for that subtype exist. make sure this is the same as in search.twig #}
+        {% set filteredRecords = allrecords|filter(record => record[option.field] == option.subtype or record.contenttype.slug == option.contenttype) %}
+        {% if filteredRecords|length > 0 %}
+            <option value="{{ option.subtype }}"
+                {% if subtype == option.subtype %}selected="selected"{% endif %}
+            >
+                {{ name|capitalize }}
+            </option>
+        {% endif %}
     {% endfor %}
 </select>

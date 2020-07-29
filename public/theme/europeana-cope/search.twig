@@ -19,9 +19,9 @@
     'Publications': { contenttype: 'posts', subtype: 'Publication', field: 'posttype' },
     'Events': { contenttype: 'events', subtype: 'events', field: '' },
     'Pages': { contenttype: 'pages', subtype: 'pages', field: '' },
-    'Task Forces': { contenttype: 'pages', subtype: 'TaskForce', field: 'pagetype' },
-    'Working Groups': { contenttype: 'pages', subtype: 'WorkingGroup', field: 'pagetype' },
-    'Projects': { contenttype: 'pages', subtype: 'Project', field: 'pagetype' },
+    'Task Forces': { contenttype: 'projects', subtype: 'TaskForce', field: 'projecttype' },
+    'Working Groups': { contenttype: 'projects', subtype: 'WorkingGroup', field: 'projecttype' },
+    'Projects': { contenttype: 'projects', subtype: 'Project', field: 'projecttype' },
     'Jobs': { contenttype: 'jobs', subtype: 'jobs', field: '' },
     'Persons': { contenttype: 'persons', subtype: 'persons', field: '' }
 } %}
@@ -40,7 +40,10 @@
     {% setcontent records = '('~filterby~')' ~ '/search' where { filter: search } allowpaging %}
 {% endif %}
 
-{# apply filtering on subtype #}
+{# All search results (without filter by suttype). Used in partials/_filter-listing.twig #}
+{% set allrecords = records %}
+
+{# apply filtering on subtype. Make sure this is the same as partials/_filter-listing.twig #}
 {% if option.field|default('') is not empty %}
     {% set records = records|filter(record => record[option.field] == option.subtype) %}
 {% endif %}
