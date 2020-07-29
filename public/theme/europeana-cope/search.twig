@@ -31,6 +31,9 @@
     {% setcontent records = '(' ~ filterContentTypes|join(',') ~  ')/search' where { filter: search } allowpaging order '-datepublish' %}
 {% endif %}
 
+{# All search results (without filter by suttype). Used in partials/_filter-listing.twig #}
+{% set allrecords = records %}
+
 {% set subtype = app.request.get('subtype', '') %}
 {% set option = filterSubTypes|filter(option => option.subtype == subtype)|first|default('') %}
 {% set filterby = option.contenttype|default(filterContentTypes|join(',')) %}
@@ -39,9 +42,6 @@
 {% if filterby is not empty %}
     {% setcontent records = '('~filterby~')' ~ '/search' where { filter: search } allowpaging %}
 {% endif %}
-
-{# All search results (without filter by suttype). Used in partials/_filter-listing.twig #}
-{% set allrecords = records %}
 
 {# apply filtering on subtype. Make sure this is the same as partials/_filter-listing.twig #}
 {% if option.field|default('') is not empty %}
