@@ -24,7 +24,9 @@ communities:
         fashion: Fashion
         art: Art
         photo: Photography
-        labs: Labs
+        impact: Impact
+        communicators: Communicators
+#        labs: Labs
     postfix: "Select one of the communities to activate the branding for that community in the website."
 
 markets:
@@ -58,12 +60,13 @@ categories:
         data-standards: Data standards
         funding: Funding
         impact-framework: Impact framework
-        legal-standards: Legal standards
+        copyright: Copyright #renamed form legal-standards: Legal standards
         network: Network
         projects: Projects
-        statistics: Statistics
         strategy: Strategy
-        content-promotion: Content promotion
+        partnerships: Partnerships
+#        statistics: Statistics
+#        content-promotion: Content promotion
 #        legal_interoperability: Legal interoperability of data
 #        crossdomain_exchange: Cross-domain data exchange of interoperability
 #        thematic_collections: Thematic Collections
