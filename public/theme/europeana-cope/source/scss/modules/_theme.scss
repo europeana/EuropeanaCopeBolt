@@ -1445,12 +1445,14 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
     }
 
     .outline {
-        align-self: flex-end;
+        align-self: flex-start;
+        @include respond-to(medium-screens) {
+            align-self: flex-end;
+        }
         border-style: solid;
         border-color: $line-gray;
         border-width: 0.1rem;
         border-radius: 4px;
-        margin-left: 330px;
         padding: 0.2rem 0.4rem;
 
         object {
