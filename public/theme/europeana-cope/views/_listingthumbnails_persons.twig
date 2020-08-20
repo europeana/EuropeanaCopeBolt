@@ -39,7 +39,7 @@
 
     {# network association member role - europeana foundation team #}
     {# Europeana specifically requested the na_role to _not_ be displayed on the /about-us/governance page only. #}
-    {% if item.na_role is not empty and not app.request.attributes.get('slug')|default is same as('about-us/governance') %}
+    {% if item.na_role is not empty and not app.request.attributes.get('slug')|default is same as('about-us/foundation') %}
     <p class="roles network" title="Network Association role / Europeana Foundation team: {{ item.na_role }}">
         <svg class="icon icon-users">
             <use xlink:href="#icon-users"></use></svg>
