@@ -15,16 +15,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class UploadController extends Base
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected function registerBackendRoutes(ControllerCollection $collection)
-    {
-        // POST requests on the /bolt/oembed-upload route
-        $collection->post('/upload', [$this, 'uploadThumbnail']);
-        $collection->get('/upload', [$this, 'uploadThumbnail']);
-    }
-
     protected function addRoutes(\Silex\ControllerCollection $c)
     {
         $c->match('/upload', [$this, 'uploadThumbnail']);
