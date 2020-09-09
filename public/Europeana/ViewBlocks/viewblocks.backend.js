@@ -557,6 +557,7 @@ jQuery(document).ready(function($) {
                 data: {
                     'url': form.find('.oembed-thumbnail').attr('src'),
                     'name': form.find('.oembed-thumbnail-name').val(),
+                    '_token': document.getElementById('content_edit__token').value,
                 },
                 success: function(response) {
                     field.find('.image-attribution-group').val(response.url);

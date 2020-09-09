@@ -28,6 +28,8 @@ class UploadController extends Base
      */
     public function uploadThumbnail(Application $app, Request $request)
     {
+        $this->validateCsrfToken($request->get('_token'), 'content_edit');
+
         $url = $request->get('url');
         $name = $request->get('name');
 
