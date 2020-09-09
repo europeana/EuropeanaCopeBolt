@@ -460,10 +460,115 @@ jQuery(document).ready(function($) {
         $(this).children('.fileinput-button').each(function() {
             $(this).hide();
         });
-        $(this).append($('<a>').attr({
-            'href': 'https://www.dropbox.com',
-            'target': '_blank'
-        }).addClass('btn btn-primary btn-sm').html('<i class="fa fa-dropbox"></i> Upload files'));
+
+        // OLD DROPBOX BUTTON
+        // $(this).append($('<a>').attr({
+        //     'href': 'https://www.dropbox.com',
+        //     'target': '_blank'
+        // }).addClass('btn btn-primary btn-sm').html('<i class="fa fa-dropbox"></i> Upload files'));
+
+        const oembed = $('<button>').attr({
+            'class': 'btn btn-tertiary btn-sm'
+        }).html('<i class="fa fa-window-restore"></i> oEmbed');
+
+        $(this).append(oembed);
+
+        oembed.click(function(e){
+            e.preventDefault();
+            const form = $("<form>");
+
+            form.attr({
+                'data-action-preview': 'https://oembedjs-test.eanadev.org/',
+                'data-method-preview': 'GET',
+                'data-action-ok': '/admin/oembed/upload',
+                'data-method-ok': 'POST',
+            });
+
+            const url = $("<div>").attr({
+               'class': 'form-group'
+            })
+                .append($('<label>').text('Link'))
+                .append($('<input>').attr({'name': 'url', 'type': 'url', 'class': 'form-control'}));
+            form.append(url);
+
+            const dimensions = $("<div>").attr({'class': 'row'});
+            const width = $("<div>").attr({
+                'class': 'form-group col-xs-6',
+            })
+                .append($('<label>').text('Width'))
+                .append($('<input>').attr({'name': 'maxwidth', 'type': 'number', 'class': 'form-control'}))
+                .append($('<small>').attr({'class': 'form-text text-muted'}).text('Optional'));
+            dimensions.append(width);
+
+            const height = $("<div>").attr({
+                'class': 'form-group col-xs-6',
+            })
+                .append($('<label>').text('Height'))
+                .append($('<input>').attr({'name': 'maxheight', 'type': 'number', 'class': 'form-control'}))
+                .append($('<small>').attr({'class': 'form-text text-muted'}).text('Optional'));
+            dimensions.append(height);
+
+            form.append(dimensions);
+
+            const preview = $("<div>").attr({'class': 'oembed-preview'})
+                .append($('<label>').text('Preview'))
+                .append($("<img>").attr({'class': 'oembed-thumbnail img-thumbnail'}))
+                .append($("<input>").attr({'type': 'hidden', 'class': 'oembed-thumbnail-name'}))
+                .hide();
+            form.append(preview);
+
+            const dialog = bootbox.confirm(form, function(result) {
+                if (result) {
+                    const field = $(e.target).closest('.elm-dropzone');
+                    handleOembedOK(form, field);
+                }
+            });
+
+            form.find(':input').change({ dialog }, fetchOembedThumbnail);
+
+            dialog.find('[data-bb-handler="confirm"]').prop('disabled', true);
+        });
+
+        function fetchOembedThumbnail(e) {
+            const form = $(e.target).closest('form');
+
+            $.ajax({
+                type: form.attr('data-method-preview'),
+                url: form.attr('data-action-preview'),
+                data: form.serialize(),
+                success: function(response) {
+                    form.find('.oembed-preview')
+                        .show()
+                        .find('.oembed-thumbnail')
+                        .attr({'src': response.thumbnail_url});
+                    form.find('.oembed-thumbnail-name').val(response.title + response.author_name + response.thumbnail_width);
+                    e.data.dialog.find('[data-bb-handler="confirm"]').prop('disabled', false);
+                },
+                failure: function(response) {
+                    console.log(response);
+                }
+            });
+        }
+
+        function handleOembedOK(form, field) {
+            $.ajax({
+                type: form.attr('data-method-ok'),
+                url: form.attr('data-action-ok'),
+                data: {
+                    'url': form.find('.oembed-thumbnail').attr('src'),
+                    'name': form.find('.oembed-thumbnail-name').val(),
+                },
+                success: function(response) {
+                    field.find('.image-attribution-group').val(response.url);
+                    field.find('.image-attribution-group').attr('changeWithoutSelection', false);
+                    field.find('img').attr('src', response.preview);
+                },
+                failure: function(response) {
+                    console.log(response);
+                }
+            });
+        }
+
     });
 
     console.log('uploadbuttons js loaded');

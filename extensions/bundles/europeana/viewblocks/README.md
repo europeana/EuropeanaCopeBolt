@@ -1,7 +1,8 @@
 Europeana ViewBlocks extension
 ==============================
 
-This extension adds javascript in the europeana site back-end that handles the modules for the landing pages.
+This extension adds javascript in the europeana site back-end that handles the modules for the landing pages,
+and other buttons and options.
 
 If correctly installed the following files exist in the folder
 `public/extensions/local/europeana/viewblocks`

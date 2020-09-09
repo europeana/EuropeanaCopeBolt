@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f97c9ce5286a879f0188abe6ecd356f",
+    "content-hash": "c770834f3e990b69599102db1f7f7e95",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -77,16 +77,16 @@
         },
         {
             "name": "bobdenotter/seo",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:bobdenotter/seo.git",
-                "reference": "2a9823a3484c99a90f8ea903129c90c93092df2a"
+                "reference": "7124892cfb709b7a6c7fe4a7f186488082f005bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/2a9823a3484c99a90f8ea903129c90c93092df2a",
-                "reference": "2a9823a3484c99a90f8ea903129c90c93092df2a",
+                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/7124892cfb709b7a6c7fe4a7f186488082f005bf",
+                "reference": "7124892cfb709b7a6c7fe4a7f186488082f005bf",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
                 }
             ],
             "description": "An extension to easily manage SEO title, meta description and OG tags.",
-            "time": "2019-09-20T11:16:52+00:00"
+            "time": "2020-06-05T12:22:27+00:00"
         },
         {
             "name": "bolt/jsonapi",
