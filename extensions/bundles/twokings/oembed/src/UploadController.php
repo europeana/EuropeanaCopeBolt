@@ -53,7 +53,7 @@ class UploadController extends Base
         $thumbsUrl = '/thumbs/200x150b/';
 
         return JsonResponse::create([
-            'url' => $name . '.' . $extension,
+            'url' => $dateFolder . '/' . $name . '.' . $extension,
             'preview' => $thumbsUrl . $dateFolder . '/' . $name . '.' . $extension
         ]);
     }
