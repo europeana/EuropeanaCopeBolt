@@ -460,10 +460,99 @@ jQuery(document).ready(function($) {
         $(this).children('.fileinput-button').each(function() {
             $(this).hide();
         });
-        $(this).append($('<a>').attr({
-            'href': 'https://www.dropbox.com',
-            'target': '_blank'
-        }).addClass('btn btn-primary btn-sm').html('<i class="fa fa-dropbox"></i> Upload files'));
+
+        // OLD DROPBOX BUTTON
+        // $(this).append($('<a>').attr({
+        //     'href': 'https://www.dropbox.com',
+        //     'target': '_blank'
+        // }).addClass('btn btn-primary btn-sm').html('<i class="fa fa-dropbox"></i> Upload files'));
+
+        const oembed = $('<button>').attr({
+            'class': 'btn btn-tertiary btn-sm'
+        }).html('<i class="fa fa-window-restore"></i> oEmbed');
+
+        $(this).append(oembed);
+
+        oembed.click(function(e){
+            e.preventDefault();
+            const form = $("<form>");
+
+            form.attr({
+                'action': 'https://oembedjs-test.eanadev.org/',
+                'method': 'GET',
+            });
+
+            const url = $("<div>").attr({
+               'class': 'form-group'
+            })
+                .append($('<label>').text('Link'))
+                .append($('<input>').attr({'name': 'url', 'type': 'url', 'class': 'form-control'}));
+            form.append(url);
+
+            const dimensions = $("<div>").attr({'class': 'row'});
+            const width = $("<div>").attr({
+                'class': 'form-group col-xs-6',
+            })
+                .append($('<label>').text('Width'))
+                .append($('<input>').attr({'name': 'maxwidth', 'type': 'number', 'class': 'form-control'}))
+                .append($('<small>').attr({'class': 'form-text text-muted'}).text('Optional'));
+            dimensions.append(width);
+
+            const height = $("<div>").attr({
+                'class': 'form-group col-xs-6',
+            })
+                .append($('<label>').text('Height'))
+                .append($('<input>').attr({'name': 'maxheight', 'type': 'number', 'class': 'form-control'}))
+                .append($('<small>').attr({'class': 'form-text text-muted'}).text('Optional'));
+            dimensions.append(height);
+
+            form.append(dimensions);
+
+            const preview = $("<div>").attr({'class': 'oembed-preview'})
+                .append($('<label>').text('Preview'))
+                .append($("<img>").attr({'class': 'oembed-thumbnail img-thumbnail'}))
+                .hide();
+            form.append(preview);
+
+            const dialog = bootbox.confirm(form, function(result) {
+                if (result) {
+                    const field = $(e.target).closest('.elm-dropzone');
+                    handleOembedOK(form, field);
+                }
+            });
+
+            form.find(':input').change({ dialog }, fetchOembedThumbnail);
+
+            dialog.find('[data-bb-handler="confirm"]').prop('disabled', true);
+        });
+
+        function fetchOembedThumbnail(e) {
+            const form = $(e.target).closest('form');
+
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function(response) {
+                    form.find('.oembed-preview')
+                        .show()
+                        .find('.oembed-thumbnail')
+                        .attr({'src': response.thumbnail_url});
+                    e.data.dialog.find('[data-bb-handler="confirm"]').prop('disabled', false);
+                    form.data('oembed-response', response);
+                },
+                failure: function(response) {
+                    console.log(response);
+                }
+            });
+        }
+
+        function handleOembedOK(form, field) {
+            const oembedField = field.find('*[name*=oembed]');
+            const response = form.data('oembed-response');
+            oembedField.val(response.html);
+        }
+
     });
 
     console.log('uploadbuttons js loaded');

@@ -39,8 +39,9 @@ __nodes:
     teaser_image:
       type: image
       label: "Teaser image"
-      postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers"
+      postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers. <br> Use the path to image <strong>or</strong> the oEmbed."
       class: 'image-attribution-group attribution-parent'
+      attrib: oEmbed
     teaser_attribution_title:
       type: text
       label: "Image attribution title text"
@@ -87,7 +88,7 @@ __nodes:
     image:
       type: image
       label: "Main image"
-      attrib: [title, alt]
+      attrib: [title, alt, Oembed]
       postfix: "The main image is displayed on individual pages."
       required: true
       extensions: [ gif, jpg, png ]
