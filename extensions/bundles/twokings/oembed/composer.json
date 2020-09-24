@@ -1,0 +1,28 @@
+{
+    "name": "twokings/oembed",
+    "description": "This extension provides a custom oembed button for Europeana's custom oembed service.",
+    "type": "bolt-extension",
+    "keywords": [
+        "content"
+    ],
+    "require": {
+        "bolt/bolt": "^3.3",
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivo Valchev",
+            "email": "ivo@twokings.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Bolt\\Extension\\TwoKings\\Oembed\\": "src"
+        }
+    },
+    "extra": {
+        "bolt-class": "Bolt\\Extension\\TwoKings\\Oembed\\OembedExtension"
+    }
+}
