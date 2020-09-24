@@ -478,10 +478,8 @@ jQuery(document).ready(function($) {
             const form = $("<form>");
 
             form.attr({
-                'data-action-preview': 'https://oembedjs-test.eanadev.org/',
-                'data-method-preview': 'GET',
-                'data-action-ok': '/admin/oembed/upload',
-                'data-method-ok': 'POST',
+                'action': 'https://oembedjs-test.eanadev.org/',
+                'method': 'GET',
             });
 
             const url = $("<div>").attr({
@@ -513,7 +511,6 @@ jQuery(document).ready(function($) {
             const preview = $("<div>").attr({'class': 'oembed-preview'})
                 .append($('<label>').text('Preview'))
                 .append($("<img>").attr({'class': 'oembed-thumbnail img-thumbnail'}))
-                .append($("<input>").attr({'type': 'hidden', 'class': 'oembed-thumbnail-name'}))
                 .hide();
             form.append(preview);
 
@@ -533,16 +530,16 @@ jQuery(document).ready(function($) {
             const form = $(e.target).closest('form');
 
             $.ajax({
-                type: form.attr('data-method-preview'),
-                url: form.attr('data-action-preview'),
+                type: form.attr('method'),
+                url: form.attr('action'),
                 data: form.serialize(),
                 success: function(response) {
                     form.find('.oembed-preview')
                         .show()
                         .find('.oembed-thumbnail')
                         .attr({'src': response.thumbnail_url});
-                    form.find('.oembed-thumbnail-name').val(response.title + response.author_name + response.thumbnail_width);
                     e.data.dialog.find('[data-bb-handler="confirm"]').prop('disabled', false);
+                    form.data('oembed-response', response);
                 },
                 failure: function(response) {
                     console.log(response);
@@ -551,23 +548,9 @@ jQuery(document).ready(function($) {
         }
 
         function handleOembedOK(form, field) {
-            $.ajax({
-                type: form.attr('data-method-ok'),
-                url: form.attr('data-action-ok'),
-                data: {
-                    'url': form.find('.oembed-thumbnail').attr('src'),
-                    'name': form.find('.oembed-thumbnail-name').val(),
-                    '_token': document.getElementById('content_edit__token').value,
-                },
-                success: function(response) {
-                    field.find('.image-attribution-group').val(response.url);
-                    field.find('.image-attribution-group').attr('changeWithoutSelection', false);
-                    field.find('img').attr('src', response.preview);
-                },
-                failure: function(response) {
-                    console.log(response);
-                }
-            });
+            const oembedField = field.find('*[name*=oembed]');
+            const response = form.data('oembed-response');
+            oembedField.val(response.html);
         }
 
     });
