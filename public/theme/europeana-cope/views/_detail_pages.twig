@@ -16,9 +16,7 @@
                 {% include 'partials/_side-info.twig' %}
 
                 <div class="header-group">
-                    <p>HEY STUFF</p>
                     {% if record.contact_name is not empty %}
-                        <p>im here</p>
                         {% include 'modules/_mini_persons.twig' with { record: record } %}
                     {% endif %}
 
@@ -55,7 +53,6 @@
                             {% endif %}
                         </figure>
                     {% elseif record.values.image.oembed|default is not empty %}
-                        <p>stuff</p>
                         <div class="is-overflow-hidden">
                             {% include 'partials/_oembed_resize.twig' with { oembed: record.values.image.oembed, width: 1240, height: 600} %}
                         </div>
