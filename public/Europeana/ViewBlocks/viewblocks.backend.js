@@ -467,7 +467,7 @@ jQuery(document).ready(function($) {
         //     'target': '_blank'
         // }).addClass('btn btn-primary btn-sm').html('<i class="fa fa-dropbox"></i> Upload files'));
 
-        const oembed = $('<button>').attr({
+        var oembed = $('<button>').attr({
             'class': 'btn btn-tertiary btn-sm'
         }).html('<i class="fa fa-window-restore"></i> oEmbed');
 
@@ -475,22 +475,22 @@ jQuery(document).ready(function($) {
 
         oembed.click(function(e){
             e.preventDefault();
-            const form = $("<form>");
+            var form = $("<form>");
 
             form.attr({
                 'action': 'https://oembedjs-test.eanadev.org/',
                 'method': 'GET',
             });
 
-            const url = $("<div>").attr({
+            var url = $("<div>").attr({
                'class': 'form-group'
             })
                 .append($('<label>').text('Link'))
                 .append($('<input>').attr({'name': 'url', 'type': 'url', 'class': 'form-control'}));
             form.append(url);
 
-            const dimensions = $("<div>").attr({'class': 'row'});
-            const width = $("<div>").attr({
+            var dimensions = $("<div>").attr({'class': 'row'});
+            var width = $("<div>").attr({
                 'class': 'form-group col-xs-6',
             })
                 .append($('<label>').text('Width'))
@@ -498,7 +498,7 @@ jQuery(document).ready(function($) {
                 .append($('<small>').attr({'class': 'form-text text-muted'}).text('Optional'));
             dimensions.append(width);
 
-            const height = $("<div>").attr({
+            var height = $("<div>").attr({
                 'class': 'form-group col-xs-6',
             })
                 .append($('<label>').text('Height'))
@@ -508,15 +508,15 @@ jQuery(document).ready(function($) {
 
             form.append(dimensions);
 
-            const preview = $("<div>").attr({'class': 'oembed-preview'})
+            var preview = $("<div>").attr({'class': 'oembed-preview'})
                 .append($('<label>').text('Preview'))
                 .append($("<img>").attr({'class': 'oembed-thumbnail img-thumbnail'}))
                 .hide();
             form.append(preview);
 
-            const dialog = bootbox.confirm(form, function(result) {
+            var dialog = bootbox.confirm(form, function(result) {
                 if (result) {
-                    const field = $(e.target).closest('.elm-dropzone');
+                    var field = $(e.target).closest('.elm-dropzone');
                     handleOembedOK(form, field);
                 }
             });
@@ -527,7 +527,7 @@ jQuery(document).ready(function($) {
         });
 
         function fetchOembedThumbnail(e) {
-            const form = $(e.target).closest('form');
+            var form = $(e.target).closest('form');
 
             $.ajax({
                 type: form.attr('method'),
@@ -548,8 +548,8 @@ jQuery(document).ready(function($) {
         }
 
         function handleOembedOK(form, field) {
-            const oembedField = field.find('*[name*=oembed]');
-            const response = form.data('oembed-response');
+            var oembedField = field.find('*[name*=oembed]');
+            var response = form.data('oembed-response');
             oembedField.val(response.html);
         }
 
