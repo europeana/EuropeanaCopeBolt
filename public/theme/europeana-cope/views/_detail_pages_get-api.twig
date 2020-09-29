@@ -37,7 +37,7 @@ or record.pagetype == 'landingpage-nohighlight'
                     {% endif %}
                 </div>
 
-                {% if record.values.image is defined and record.values.image is not empty %}
+                {% if record.values.image is defined and record.values.image.file|default is not empty %}
                     {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
                     <figure>
                         <div class="main-img-container">
@@ -52,6 +52,10 @@ or record.pagetype == 'landingpage-nohighlight'
                             </figcaption>
                         {% endif %}
                     </figure>
+                {% elseif record.values.image.oembed|default is not empty %}
+                    <div class="main-img-container img-container is-overflow-hidden">
+                        {% include 'partials/_oembed_resize.twig' with { oembed: record.values.image.oembed, width: 1240, height: 600 } %}
+                    </div>
                 {% endif %}
 
                 <div class="body"> {# can be multiple bodies #}

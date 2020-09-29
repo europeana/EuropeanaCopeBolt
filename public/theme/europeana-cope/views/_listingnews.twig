@@ -8,8 +8,12 @@
         <a href="{{ item.link }}">
         {% if item.teaser_image is defined and item.teaser_image is not empty %}
             <img src="{{ item.teaser_image|thumbnail(600,600,'c')}}" alt="{{ item.title }}"/>
-        {% elseif item.values.image is defined and item.values.image is not empty %}
+        {% elseif item.values.image is defined and item.values.image.file|default is not empty %}
             <img src="{{ item.values.image|thumbnail(600,600,'c')}}" alt="{{ item.title }}"/>
+        {% elseif item.values.image.oembed|default is not empty %}
+            <div class="img-container is-overflow-hidden">
+                {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 600, height: 600 } %}
+            </div>
         {% else %}
             <img src="{{ 'web_assets/default.png'|thumbnail(600,600,'c')}}" alt="{{ item.title }}"/>
         {% endif %}

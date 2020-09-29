@@ -38,6 +38,18 @@ input {
   white-space: nowrap !important;
 }
 
+.is-overflow-hidden {
+  overflow: hidden;
+}
+
+.is-fixed-center {
+  position: relative;
+}
+
+.is-fixed-center > *{
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
 
 .is-visible {
   display:block;
@@ -131,6 +143,10 @@ img {
   max-width:100%;
   height: auto;
   display: block; // to prevent extra pixels on bottom;
+}
+
+iframe {
+  border: none;
 }
 
 

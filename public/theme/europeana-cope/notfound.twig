@@ -38,7 +38,7 @@
          <article class="half column">
 
             {% if statusmessage.values.image is defined and statusmessage.values.image is not empty %}
-
+                {% if statusmessage.values.image.file|default is not empty %}
                     <figure>
                         <div class="main-img-container">
                             <img class="main-img" src="{{ statusmessage.image|thumbnail(800, 1200, 'r') }}" alt="" />
@@ -52,8 +52,9 @@
                             </figcaption>
                         {% endif %}
                     </figure>
+                {% elseif statusmessage.values.image.oembed|default is not empty %}
+                    {{ record.values.image.oembed|raw }}
                 {% endif %}
-
          </article>
 
         </div>

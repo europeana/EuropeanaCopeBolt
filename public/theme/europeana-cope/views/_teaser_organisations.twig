@@ -6,9 +6,13 @@
     <div class="img-container offwhite-logo">
 
         {% if item.values.image is defined and item.values.image is not empty %}
-           
-            <img src="{{ item.values.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
-
+            {% if item.values.image.file|default is not empty %}
+                <img src="{{ item.values.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+            {% elseif item.values.image.oembed|default is not empty %}
+                <div class="is-overflow-hidden">
+                    {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 600, height: 400} %}
+                </div>
+            {% endif %}
             {# <div class=="offwhite-image">
             </div> #}
         {% else %}

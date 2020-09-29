@@ -1,7 +1,11 @@
 <div class="author-small group">
-    {% if record.values.image is defined and record.values.image is not empty %}
+    {% if record.values.image is defined and record.values.image.file|default is not empty %}
         {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
         <img class="round" src="{{ record.values.image|thumbnail(72, 72, 'c') }}" alt=""/>
+    {% elseif record.values.image.oembed|default is not empty %}
+        <div class="img-container round is-overflow-hidden is-fixed-center">
+            {% include 'partials/_oembed_resize.twig' with { oembed: record.values.image.oembed, width: 72, height: 72 } %}
+        </div>
     {% else %}
         <img class="round" src="{{ 'web_assets/default.png'|thumbnail(72, 72, 'c') }}" alt=""/>
     {% endif %}
