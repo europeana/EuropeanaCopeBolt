@@ -485,7 +485,7 @@ class SelectAsyncController implements ControllerProviderInterface
                 break;
         }
 
-        $qb->setMaxResults(10);
+        $qb->setMaxResults(50);
 
         $entries = $qb->execute()->fetchAll();
 
