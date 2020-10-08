@@ -475,7 +475,7 @@ jQuery(document).ready(function($) {
             return;
         }
 
-        const oembed = $('<button>').attr({
+        const oembed = $('<a>').attr({
             'class': 'btn btn-tertiary btn-sm'
         }).html('<i class="fa fa-window-restore"></i> oEmbed');
 
