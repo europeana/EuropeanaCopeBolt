@@ -471,7 +471,7 @@ jQuery(document).ready(function($) {
             return;
         }
 
-        if ($(this).find('.allow-oembed').length <= 0) {
+        if ($(this).closest('fieldset').find('.allow-oembed').length <= 0) {
             return;
         }
 
