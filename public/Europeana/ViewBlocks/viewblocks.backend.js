@@ -467,7 +467,15 @@ jQuery(document).ready(function($) {
         //     'target': '_blank'
         // }).addClass('btn btn-primary btn-sm').html('<i class="fa fa-dropbox"></i> Upload files'));
 
-        var oembed = $('<button>').attr({
+        if ($(this).closest('.bolt-field-imagelist').length > 0) {
+            return;
+        }
+
+        if ($(this).closest('fieldset').find('.allow-oembed').length <= 0) {
+            return;
+        }
+
+        const oembed = $('<a>').attr({
             'class': 'btn btn-tertiary btn-sm'
         }).html('<i class="fa fa-window-restore"></i> oEmbed');
 

@@ -1,0 +1,6 @@
+{{ oembed
+    |preg_replace('/width="\\d+"/', 'width="'~ width~'"')
+    |preg_replace('/height="\\d+"/', 'height="'~height~'"')
+    |preg_replace('/(src="[^"]+)/', '$1?width='~width~"&height="~height)
+    |raw
+}}

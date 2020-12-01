@@ -14,6 +14,10 @@
 
         {% if item.values.image is defined and item.values.image is not empty and item.values.image.file|default() != "" %}
             <img src="{{ item.values.image|default('notfound')|thumbnail(172,172,'c')}}" alt="Portrait of {{ item.first_name }} {{ item.last_name }}"/>
+        {% elseif item.values.image.oembed|default is not empty %}
+            <div class="img-container is-overflow-hidden">
+                {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 172, height: 172 } %}
+            </div>
         {% else %}
             <img class="round" src="{{ 'web_assets/default.png'|thumbnail(172,172,'c')}}" alt="{{ item.first_name }} {{ item.last_name }}"/>
         {% endif %}

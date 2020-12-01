@@ -40,7 +40,7 @@ __nodes:
       type: image
       label: "Teaser image"
       postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers. <br> Use the path to image <strong>or</strong> the oEmbed."
-      class: 'image-attribution-group attribution-parent'
+      class: 'image-attribution-group attribution-parent allow-oembed'
       attrib: oEmbed
     teaser_attribution_title:
       type: text
@@ -88,12 +88,12 @@ __nodes:
     image:
       type: image
       label: "Main image"
-      attrib: [title, alt, Oembed]
-      postfix: "The main image is displayed on individual pages."
+      attrib: [title, alt, oEmbed]
+      postfix: "The fileselectbuttongroup is displayed on individual pages. Use the 'Path to image file' <strong>or</strong> the oEmbed. If both are filled, the 'Path to image' takes priority."
       required: true
       extensions: [ gif, jpg, png ]
       group: "Main"
-      class: 'image-attribution-group attribution-parent'
+      class: 'image-attribution-group attribution-parent allow-oembed'
     image_attribution_title:
       type: text
       label: "Image attribution title text"
@@ -3277,6 +3277,8 @@ blogevents:
       required: false
       label: "Teaser image"
       group: "Teaser"
+      class: 'allow-oembed'
+      attrib: oEmbed
     attachments:
       type: filelist
       required: false
