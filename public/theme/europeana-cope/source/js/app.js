@@ -102,10 +102,10 @@ $( document ).ready(function() {
 
 
     /**
-    * submit sortform on click of icon
+    * submit sortform on click of fields
     */
     $('#sortbar button').hide();
-    $('#sortbar input[type=radio]').on('change', function() {
+    $('#sortbar input').on('change', function() {
         // console.log('KLIKKERDIEKLIK');
         $('#sortbar').submit();
     });
@@ -338,6 +338,35 @@ $( document ).ready(function() {
     $('.tile:nth-last-child(2), .tile:nth-last-child(1)').wrapAll('<div class="wrapped" />');
 
 
+    /**
+     * FILTER
+     *
+     * data-bind
+     *
+     * Binds one input's value (a) to another (b).
+     * When a changes, b is updated accordingly.
+     * Currently used for filter, because (a) needs to be in a different
+     * place in the HTML than (b). (a) is used for display, and (b) is used
+     * for posting the form.
+     */
+    $("[data-bind]").on('change', function() {
+        var b = updateDataBind(null, this);
+        // trigger the change event manually
+        // because changes from code do not trigger
+        // the 'change' event by default.
+        b.trigger('change');
+    });
+
+    // Set initial values
+    $.each($("[data-bind]"), updateDataBind);
+
+    function updateDataBind(index, elem) {
+        var b = $($(elem).attr('data-bind'));
+        b.attr('name', $(elem).attr('name'));
+        b.val($(elem).val());
+
+        return b;
+    }
 
     /**
      * Merge streamer colums into the first

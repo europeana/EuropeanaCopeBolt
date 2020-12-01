@@ -44,8 +44,8 @@
         </svg>
         <span>Sort by date, most recent first</span>
     </label>
-
 {% endif %}
 
-    <button type="submit">Filter</button>
+    {# Bind the values of these fields to filter options. See _filter-listing.twig and app.js   #}
+    <input type="hidden" id="bind-subtype" />
 </form>

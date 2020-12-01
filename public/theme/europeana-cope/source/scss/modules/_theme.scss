@@ -3080,6 +3080,15 @@ div.body {
     }
 }
 
+/*
+ * Filtering
+ */
+#filter-subtype-select {
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+}
 
 /*
 ***********************************************************************
