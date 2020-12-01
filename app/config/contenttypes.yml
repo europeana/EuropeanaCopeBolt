@@ -1978,7 +1978,6 @@ events:
       label: "Location Name"
     geolocation:
       type: geolocation
-      required: true
       label: "Location Place"
     featured:
       type: checkbox
