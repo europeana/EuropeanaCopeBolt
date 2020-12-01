@@ -1,0 +1,21 @@
+{% if record is defined and record.image is defined %}
+    <div class="img-container">
+        <img class="event-img" src="{{ record.image|default('notfound')|thumbnail(700, 510, 'c') }}" alt="{{ record.title }}" />
+
+        {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
+
+        <div class="info-block">
+            {% include 'partials/_event-datetime.twig' %}
+
+            {% if record.location_name is not empty %}
+                <span class="event-location">
+                    <svg class="icon icon-location">
+                        <use xlink:href="#icon-location"></use>
+                    </svg>
+                    {{ record.location_name }}
+                </span>
+            {% endif %}
+
+        </div>
+    </div>
+{% endif %}

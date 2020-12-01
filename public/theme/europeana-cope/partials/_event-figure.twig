@@ -6,38 +6,22 @@
         {% include 'partials/_add-to-calendar.twig'%}
     </div>
 
-    <div class="map">
+    {% if record.geolocation is not empty %}
+        <div class="map">
+            {# HERE BE MAP #}
 
-        {# HERE BE MAP #}
-        {% if record.geolocation is not empty %}
-        <img width="640" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?key={{ app.config.get('general/google_api_key') -}}&center={{ record.geolocation.latitude }},{{ record.geolocation.longitude - 0.15}}&zoom=11&scale=2&size=640x400&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{{ record.geolocation.address }}" alt="Google Map of {{ record.geolocation.address }}">
+            {% if record.geolocation is not empty %}
+                <img width="640" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?key={{ app.config.get('general/google_api_key') -}}&center={{ record.geolocation.latitude }},{{ record.geolocation.longitude - 0.15}}&zoom=11&scale=2&size=640x400&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{{ record.geolocation.address }}" alt="Google Map of {{ record.geolocation.address }}">
+            {% else %}
+            {# Right now, this is not reachable. See {% if record.geolocation is not empty %} a few lines above. #}
+            {# <img width="640" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?key={{ app.config.get('general/google_api_key') -}}&center=München&zoom=4&scale=2&size=640x400&maptype=roadmap&format=png&visual_refresh=true" alt="Google Map of Europa">#}
+            {% endif %}
 
-        {% else %}
-            <img width="640" class="static-map" src="https://maps.googleapis.com/maps/api/staticmap?key={{ app.config.get('general/google_api_key') -}}&center=München&zoom=4&scale=2&size=640x400&maptype=roadmap&format=png&visual_refresh=true" alt="Google Map of Europa">
-        {% endif %}
-
-
-        <div class="img-container">
-            <img class="event-img" src="{{ record.image|default('notfound')|thumbnail(700, 510, 'c') }}" alt="{{ record.title }}" />
-
-            {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
-
-            <div class="info-block">
-                {% include 'partials/_event-datetime.twig' %}
-
-                {% if record.location_name is not empty %}
-                <span class="event-location">
-                    <svg class="icon icon-location">
-                        <use xlink:href="#icon-location"></use>
-                    </svg>
-                    {{ record.location_name }}
-                </span>
-                {% endif %}
-
-            </div>
+            {% include 'partials/_event_mainimage.twig' %}
         </div>
-
-    </div>
+    {% else %}
+        {% include 'partials/_event_mainimage.twig' %}
+    {% endif %}
 
     {% if record.values.image.title is defined %}
     <figcaption>
