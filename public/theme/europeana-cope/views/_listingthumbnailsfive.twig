@@ -3,10 +3,18 @@
 {% endif %}
 
 <div class="column fifth thumblink-fourcol thumblink-{{ item.contenttype.slug }}">
-    {% if item.teaser_image is defined and item.teaser_image is not empty %}
+    {% if item.teaser_image is defined and item.teaser_image.file|default is not empty %}
         <img class="round" src="{{ item.teaser_image|thumbnail(250,250,'c')}}" alt="{{ item.title }}"/>
-    {% elseif item.values.image is defined and item.values.image is not empty %}
+    {% elseif item.teaser_image is defined and item.teaser_image.oembed is not empty %}
+        <div class="img-container round is-overflow-hidden is-fixed-center">
+            {% include 'partials/_oembed_resize.twig' with { oembed: item.teaser_image.oembed, width: 250, height: 250} %}
+        </div>
+    {% elseif item.values.image is defined and item.values.image.file|default is not empty %}
         <img class="round" src="{{ item.values.image|thumbnail(250,250,'c')}}" alt="{{ item.title }}"/>
+    {% elseif item.values.image.oembed|default is not empty %}
+        <div class="img-container round is-overflow-hidden is-fixed-center">
+            {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 250, height: 250} %}
+        </div>
     {% else %}
         <img class="round" src="{{ 'web_assets/default.png'|thumbnail(250,250,'c')}}" alt="{{ item.title }}"/>
     {% endif %}

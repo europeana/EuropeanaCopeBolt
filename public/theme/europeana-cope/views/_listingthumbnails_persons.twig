@@ -6,6 +6,10 @@
     <a href="{{ item.link() }}">
     {% if item.values.image is defined and item.values.image is not empty and item.values.image.file|default() != "" %}
         <img class="round" src="{{ item.values.image|thumbnail(250,250,'c')}}" alt="{{ item.first_name }} {{ item.last_name }}"/>
+    {% elseif item.values.image.oembed|default is not empty %}
+        <div class="is-overflow-hidden">
+            {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 250, height: 250} %}
+        </div>
     {% else %}
         <img class="round" src="{{ 'web_assets/default.png'|thumbnail(250,250,'c')}}" alt="{{ item.first_name }} {{ item.last_name }}"/>
     {% endif %}
