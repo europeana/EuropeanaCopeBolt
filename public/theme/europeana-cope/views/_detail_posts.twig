@@ -84,3 +84,13 @@
 
         </div>
     </aside>
+
+{# This script below allows analytics based on the posttype. #}
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        ga('send', 'pageview',
+            'posttype',
+            '{{ record.posttype }}'
+        );
+    });
+</script>
