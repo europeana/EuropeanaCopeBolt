@@ -2330,10 +2330,10 @@ svg.icon-cutoff.top.right {
         position: relative;
         margin-bottom: 2rem;
 
-        img, iframe {
-            max-width: 600px;
-            max-height: 400px;
-        }
+        //img, iframe {
+        //    max-width: 600px;
+        //    max-height: 400px;
+        //}
 
         @include respond-to(large-screens){
             float:left;
