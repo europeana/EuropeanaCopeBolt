@@ -7,7 +7,7 @@
 
         {% if item.teaser_image is defined and item.teaser_image.file|default is not empty %}
             <img src="{{ item.teaser_image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
-        {% else if item.teaser_image is defined and aitem.teaser_image.oembed|default is not empty %}
+        {% elseif item.teaser_image is defined and aitem.teaser_image.oembed|default is not empty %}
             <div class="img-container is-overflow-hidden">
                 {% include 'partials/_oembed_resize.twig' with { oembed: item.teaser_image.oembed, width: 600, height: 400} %}
             </div>
