@@ -1,0 +1,46 @@
+{% apply spaceless %}
+
+{% if first_name is not defined %}
+    {% if record is defined and record.first_name is defined %}
+        {% set first_name = record.first_name %}
+    {% elseif item is defined and item.first_name is defined %}
+        {% set first_name = item.first_name %}
+    {% else %}
+        {% set first_name = '?' %}
+    {% endif %}
+{% endif %}
+
+{% if last_name is not defined %}
+    {% if record is defined and record.last_name is defined %}
+        {% set last_name = record.last_name %}
+    {% elseif item is defined and item.last_name is defined %}
+        {% set last_name = item.last_name %}
+    {% else %}
+        {% set last_name = '?' %}
+    {% endif %}
+{% endif %}
+
+{% if size is not defined %}
+    {% set size = 128 %}
+{% endif %}
+
+{% set lightcolors = ['#219D31', '#FFAE00', '#D9D4CA', '#79B2E3', '#71C07B', '#E95A81', '#FFCB5C'] %}
+{% set darkcolors = ['#0A72CC', '#E11D53', '#8A3375', '#085395', '#197324', '#A4163D', '#652656', '#BA7F00'] %}
+{% if background is not defined %}
+    {% set background = random(lightcolors|merge(darkcolors)) %}
+{% endif %}
+
+{% if color is not defined %}
+    {% if background in lightcolors %}
+        {% set color = '#000000' %}
+    {% elseif background in darkcolors %}
+        {% set color = '#FFFFF' %}
+    {% else %}
+        {% set color = '#FFFFF' %}
+    {% endif%}
+{% endif %}
+
+{% set url = 'https://eu.ui-avatars.com/api/' %}
+{% set params = { 'name': first_name ~ ' ' ~ last_name, 'size': size, 'background': background, 'color': color }|url_encode %}
+{{ url~'?'~params }}
+{% endapply %}

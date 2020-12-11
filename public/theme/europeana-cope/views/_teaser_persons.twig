@@ -15,7 +15,7 @@
         {% if item.values.image is defined and item.values.image is not empty and item.values.image.file|default() != "" %}
             <img src="{{ item.values.image|default('notfound')|thumbnail(172,172,'c')}}" alt="Portrait of {{ item.first_name }} {{ item.last_name }}"/>
         {% else %}
-            <img class="round" src="{{ 'web_assets/default.png'|thumbnail(172,172,'c')}}" alt="{{ item.first_name }} {{ item.last_name }}"/>
+            <img class="round" src="{% include 'partials/_person_initials.twig' with { 'size': 172 } %}" alt="{{ item.first_name }} {{ item.last_name }}"/>
         {% endif %}
 
         <h3><a href="{{ item.link() }}">{{ item.first_name }} {{ item.last_name }}</a></h3>
