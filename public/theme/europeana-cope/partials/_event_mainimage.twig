@@ -1,6 +1,13 @@
+{% if width is not defined %}
+    {% set width = 700 %}
+{% endif %}
+{% if height is not defined %}
+    {% set height = 510 %}
+{% endif %}
+
 {% if record is defined and record.image is defined %}
     <div class="img-container">
-        <img class="event-img" src="{{ record.image|default('notfound')|thumbnail(1200, 600, 'c') }}" alt="{{ record.title }}" />
+        <img class="event-img" src="{{ record.image|default('notfound')|thumbnail(width, height, 'c') }}" alt="{{ record.title }}" />
 
         {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
 
