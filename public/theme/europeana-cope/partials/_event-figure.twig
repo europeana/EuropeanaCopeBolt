@@ -20,7 +20,7 @@
             {% include 'partials/_event_mainimage.twig' %}
         </div>
     {% else %}
-        {% include 'partials/_event_mainimage.twig' %}
+        {% include 'partials/_event_mainimage.twig' with { 'width': 1200, 'height': 600 } %}
     {% endif %}
 
     {% if record.values.image.title is defined %}
