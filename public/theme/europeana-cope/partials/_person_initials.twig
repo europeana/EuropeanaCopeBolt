@@ -3,7 +3,7 @@
 {% if first_name is not defined %}
     {% if record is defined and record.first_name is defined %}
         {% set first_name = record.first_name %}
-    {% else if item is defined anad item.first_name is defined %}
+    {% elseif item is defined anad item.first_name is defined %}
         {% set first_name = item.first_name %}
     {% else %}
         {% set first_name = '?' %}
