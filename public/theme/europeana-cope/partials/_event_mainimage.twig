@@ -1,6 +1,6 @@
 {% if record is defined and record.image is defined %}
     <div class="img-container">
-        <img class="event-img" src="{{ record.image|default('notfound')|thumbnail(700, 510, 'c') }}" alt="{{ record.title }}" />
+        <img class="event-img" src="{{ record.image|default('notfound')|thumbnail(1200, 600, 'c') }}" alt="{{ record.title }}" />
 
         {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
 
