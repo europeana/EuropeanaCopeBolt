@@ -497,25 +497,6 @@ jQuery(document).ready(function($) {
                 .append($('<input>').attr({'name': 'url', 'type': 'url', 'class': 'form-control'}));
             form.append(url);
 
-            var dimensions = $("<div>").attr({'class': 'row'});
-            var width = $("<div>").attr({
-                'class': 'form-group col-xs-6',
-            })
-                .append($('<label>').text('Width'))
-                .append($('<input>').attr({'name': 'maxwidth', 'type': 'number', 'class': 'form-control'}))
-                .append($('<small>').attr({'class': 'form-text text-muted'}).text('Optional'));
-            dimensions.append(width);
-
-            var height = $("<div>").attr({
-                'class': 'form-group col-xs-6',
-            })
-                .append($('<label>').text('Height'))
-                .append($('<input>').attr({'name': 'maxheight', 'type': 'number', 'class': 'form-control'}))
-                .append($('<small>').attr({'class': 'form-text text-muted'}).text('Optional'));
-            dimensions.append(height);
-
-            form.append(dimensions);
-
             var preview = $("<div>").attr({'class': 'oembed-preview'})
                 .append($('<label>').text('Preview'))
                 .append($("<img>").attr({'class': 'oembed-thumbnail img-thumbnail'}))
