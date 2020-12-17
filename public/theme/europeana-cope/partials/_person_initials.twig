@@ -1,9 +1,9 @@
 {% apply spaceless %}
 
 {% if first_name is not defined %}
-    {% if record is defined and record.first_name is defined %}
+    {% if record is defined and record.first_name|default %}
         {% set first_name = record.first_name %}
-    {% elseif item is defined and item.first_name is defined %}
+    {% elseif item is defined and item.first_name|default %}
         {% set first_name = item.first_name %}
     {% else %}
         {% set first_name = '?' %}
@@ -11,9 +11,9 @@
 {% endif %}
 
 {% if last_name is not defined %}
-    {% if record is defined and record.last_name is defined %}
+    {% if record is defined and record.last_name|default %}
         {% set last_name = record.last_name %}
-    {% elseif item is defined and item.last_name is defined %}
+    {% elseif item is defined and item.last_name|default %}
         {% set last_name = item.last_name %}
     {% else %}
         {% set last_name = '?' %}
