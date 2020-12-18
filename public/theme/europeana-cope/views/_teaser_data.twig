@@ -5,10 +5,18 @@
 <article class="teaser teaser-data group">
         <div class="img-container">
 
-        {% if item.teaser_image is defined and item.teaser_image is not empty %}
+        {% if item.teaser_image is defined and item.teaser_image.file|default is not empty %}
             <img src="{{ item.teaser_image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+        {% elseif item.teaser_image is defined and item.teaser_image.oembed|default is not empty %}
+            <div class="is-overflow-hidden">
+                {% include 'partials/_oembed_resize.twig' with { oembed: item.teaser_image.oembed, width: 600, height: 400} %}
+            </div>
         {% elseif item.image is defined and item.image is not empty %}
             <img src="{{ item.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
+        {% elseif item.image is defined and item.image.oembed|default is not empty %}
+            <div class="is-overflow-hidden">
+                {% include 'partials/_oembed_resize.twig' with { oembed: item.image.oembed, width: 600, height: 400} %}
+            </div>
         {% else %}
             <img src="{{ 'web_assets/default.png'|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
         {% endif %}

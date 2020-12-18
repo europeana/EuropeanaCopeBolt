@@ -9,6 +9,10 @@
                     <div class="img-container">
                         {% if record.values.image is defined and record.values.image is not empty and record.values.image.file|default() != "" %}
                             <img class="card-img personal-img u-photo" src="{{ record.values.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}" />
+                        {% elseif item.values.image.oembed|default is not empty %}
+                            <div class="is-overflow-hidden">
+                                {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 450, height: 450} %}
+                            </div>
                         {% else %}
                             <img class="card-img personal-img u-photo" src="{% include 'partials/_person_initials.twig' with { 'size': 450 } %}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}"/>
                         {% endif %}

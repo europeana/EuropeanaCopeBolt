@@ -328,6 +328,10 @@ img.round,
     position: relative;
 }
 
+.img-container iframe {
+    scrollbar-width: none;
+}
+
 .colored-image {
     display: block;
     height: 100%;
@@ -2327,6 +2331,7 @@ svg.icon-cutoff.top.right {
     .img-container {
         position: relative;
         margin-bottom: 2rem;
+        
 
         @include respond-to(large-screens){
             float:left;

@@ -467,7 +467,15 @@ jQuery(document).ready(function($) {
         //     'target': '_blank'
         // }).addClass('btn btn-primary btn-sm').html('<i class="fa fa-dropbox"></i> Upload files'));
 
-        var oembed = $('<button>').attr({
+        if ($(this).closest('.bolt-field-imagelist').length > 0) {
+            return;
+        }
+
+        if ($(this).closest('fieldset').find('.allow-oembed').length <= 0) {
+            return;
+        }
+
+        const oembed = $('<a>').attr({
             'class': 'btn btn-tertiary btn-sm'
         }).html('<i class="fa fa-window-restore"></i> oEmbed');
 
@@ -488,25 +496,6 @@ jQuery(document).ready(function($) {
                 .append($('<label>').text('Link'))
                 .append($('<input>').attr({'name': 'url', 'type': 'url', 'class': 'form-control'}));
             form.append(url);
-
-            var dimensions = $("<div>").attr({'class': 'row'});
-            var width = $("<div>").attr({
-                'class': 'form-group col-xs-6',
-            })
-                .append($('<label>').text('Width'))
-                .append($('<input>').attr({'name': 'maxwidth', 'type': 'number', 'class': 'form-control'}))
-                .append($('<small>').attr({'class': 'form-text text-muted'}).text('Optional'));
-            dimensions.append(width);
-
-            var height = $("<div>").attr({
-                'class': 'form-group col-xs-6',
-            })
-                .append($('<label>').text('Height'))
-                .append($('<input>').attr({'name': 'maxheight', 'type': 'number', 'class': 'form-control'}))
-                .append($('<small>').attr({'class': 'form-text text-muted'}).text('Optional'));
-            dimensions.append(height);
-
-            form.append(dimensions);
 
             var preview = $("<div>").attr({'class': 'oembed-preview'})
                 .append($('<label>').text('Preview'))
