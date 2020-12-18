@@ -11,7 +11,7 @@
             {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 250, height: 250} %}
         </div>
     {% else %}
-        <img class="round" src="{{ 'web_assets/default.png'|thumbnail(250,250,'c')}}" alt="{{ item.first_name }} {{ item.last_name }}"/>
+        <img class="round" src="{% include 'partials/_person_initials.twig' with { 'size': 250 } %}" alt="{{ item.first_name }} {{ item.last_name }}"/>
     {% endif %}
     </a>
 

@@ -14,7 +14,7 @@
                                 {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 450, height: 450} %}
                             </div>
                         {% else %}
-                            <img class="card-img personal-img u-photo" src="{{ 'web_assets/default.png'|thumbnail(450, 450, 'c')}}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}"/>
+                            <img class="card-img personal-img u-photo" src="{% include 'partials/_person_initials.twig' with { 'size': 450 } %}" alt="Portrait of {{ record.first_name }} {{ record.last_name }}"/>
                         {% endif %}
                     </div>
 

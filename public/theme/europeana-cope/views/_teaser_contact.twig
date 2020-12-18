@@ -15,7 +15,7 @@
             </div>
         {% else %}
             <a href="{{ item.link() }}">
-                <img class="round" src="{{ 'web_assets/default.png'|thumbnail(144,144,'c')}}" alt="{{ item.first_name }} {{ item.last_name }}"/>
+                <img class="round" src="{% include 'partials/_person_initials.twig' with { 'size': 144 } %}" alt="{{ item.first_name }} {{ item.last_name }}"/>
             </a>
         {% endif %}
     </div>

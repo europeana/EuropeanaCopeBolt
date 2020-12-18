@@ -1907,7 +1907,7 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
         width: 100%;
     }
 
-    .img-container {
+    .map .img-container {
         position: relative;
 
         @include respond-to(large-screens){
@@ -1921,16 +1921,18 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
             overflow: hidden;
         }
 
+        .event-img {
+            @include respond-to(large-screens){
+                padding-top: 2rem;
+            }
+        }
+
     }
 
     .event-img {
         width: 100%;
         height: auto;
         padding-top: 0rem;
-
-        @include respond-to(large-screens){
-            padding-top: 2rem;
-        }
     }
 
     .info-block {
