@@ -6,13 +6,13 @@
     <div class="rounded-card">
         <div class="img-container">
             <a href="{{ item.link }}">
-            {% if item.teaser_image is defined and item.teaser_image.file|default is not empty %}
+            {% if item.teaser_image is defined and item.teaser_image is not empty and item.teaser_image is not iterable %}
                 <img src="{{ item.teaser_image|thumbnail(600,600,'c')}}" alt="{{ item.title }}"/>
             {% elseif item.teaser_image is defined and item.teaser_image.oembed|default is not empty %}
                 <div class="is-overflow-hidden">
                     {% include 'partials/_oembed_resize.twig' with { oembed: item.teaser_image.oembed, width: 600, height: 600 } %}
                 </div>
-            {% elseif item.values.image is defined and item.values.image.file|default is not empty %}
+            {% elseif item.image is defined and item.image|default is not empty and item.image is not iterable %}
                 <img src="{{ item.values.image|thumbnail(600,600,'c')}}" alt="{{ item.title }}"/>
             {% elseif item.values.image.oembed|default is not empty %}
                 <div class="is-overflow-hidden">
