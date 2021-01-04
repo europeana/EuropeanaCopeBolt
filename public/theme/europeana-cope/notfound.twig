@@ -1,11 +1,10 @@
 {% extends 'partials/_master.twig' %}
 
-{% block bodyclass 'contentpage' %}
+{% block bodyclass 'contentpage body-no-menu' %}
 
 {% block title %}
     {{ record.title|default('404 not found') }}
 {% endblock title %}
-
 
 {% block main %}
 
@@ -55,6 +54,7 @@
                 {% elseif statusmessage.values.image.oembed|default is not empty %}
                     {{ record.values.image.oembed|raw }}
                 {% endif %}
+             {% endif %}
          </article>
 
         </div>
