@@ -5,24 +5,52 @@
     {% set height = 510 %}
 {% endif %}
 
-{% if record is defined and record.image is defined %}
-    <div class="img-container">
-        <img class="event-img" src="{{ record.image|default('notfound')|thumbnail(width, height, 'c') }}" alt="{{ record.title }}" />
+{% if record is defined and record.values.image is defined and record.values.image is not empty%}
+    {% if record.values.image.file|default is not empty %}
+        <figure>
+            <div class="main-img-container">
+                <img class="main-img" src="{{ record.image|thumbnail(width, height, 'c') }}" alt="{{ record.values.image.alt|default('main image') }}" />
 
-        {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
+                {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
 
-        <div class="info-block">
-            {% include 'partials/_event-datetime.twig' %}
+                <div class="info-block">
+                    {% include 'partials/_event-datetime.twig' %}
 
-            {% if record.location_name is not empty %}
-                <span class="event-location">
+                    {% if record.location_name is not empty %}
+                        <span class="event-location">
                     <svg class="icon icon-location">
                         <use xlink:href="#icon-location"></use>
                     </svg>
                     {{ record.location_name }}
                 </span>
-            {% endif %}
+                    {% endif %}
 
+                </div>
+            </div>
+
+            {% if record.values.image.title is defined %}
+                <figcaption>
+                    {{ record.values.image.title }}
+                </figcaption>
+            {% endif %}
+        </figure>
+    {% elseif record.values.image.oembed|default is not empty %}
+        <div class="is-overflow-hidden">
+            {% include 'partials/_oembed_resize.twig' with { oembed: record.values.image.oembed, width: width, height: height, setheight: true} %}
+
+            <div class="info-block">
+                {% include 'partials/_event-datetime.twig' %}
+
+                {% if record.location_name is not empty %}
+                    <span class="event-location">
+                    <svg class="icon icon-location">
+                        <use xlink:href="#icon-location"></use>
+                    </svg>
+                    {{ record.location_name }}
+                </span>
+                {% endif %}
+
+            </div>
         </div>
-    </div>
+    {% endif %}
 {% endif %}
