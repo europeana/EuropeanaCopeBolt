@@ -1,5 +1,6 @@
 {# EVENT MAP #}
 
+{% if record.values.image is defined and record.values.image is not empty %}
 <figure class="event-figure{% if record.author|length > 1 %} non-wide{% endif %}">
 
     <div class="add-calendar-wrapper">
@@ -30,3 +31,4 @@
     {% endif %}
 
 </figure>
+{% endif %}
