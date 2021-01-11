@@ -1,5 +1,6 @@
 <form method="get" action="{{ path('search') }}" id="{{ id|default('') }}" class="searchform" enctype="text/plain">
-    <input type="search" value="{% if q is defined %}{{ q|escape }}{% endif %}" placeholder="Search for ..." name="q"><button type="submit" class="button">
+    <label for="search--input" class="sr-only">Search Europeana</label>
+    <input id="search--input" type="search" value="{% if q is defined %}{{ q|escape }}{% endif %}" placeholder="Search for ..." name="q"><button type="submit" class="button">
         <svg class="icon icon-calendar">
             <use xlink:href="#icon-search"></use>
         </svg>
