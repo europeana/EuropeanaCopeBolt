@@ -89,8 +89,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function(){
         ga('send', 'pageview',
-            'posttype',
-            '{{ record.posttype }}'
+            'post/{{ record.posttype|slugify }}/{{ record.slug }}'
         );
     });
 </script>
