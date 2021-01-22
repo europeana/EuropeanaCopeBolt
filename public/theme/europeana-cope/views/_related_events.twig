@@ -1,6 +1,6 @@
 <article class="column third teaser-threecol related-item related-events">
     <div class="img-container">
-        <a href="{{ item.link() }}">
+        <a href="{{ item.link() }}" aria-label="{{ item.title|default }}">
             <img src="{{ item.teaser_image|default('notfound')|thumbnail(768, 550, 'c') }}" alt=""/>
         </a>
 
