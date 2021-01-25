@@ -135,7 +135,7 @@ class ZohoImport
                 $size = $config['source']['loopparams']['size'];
                 $localconfig['source']['getparams'][$counter] = $start;
                 $localconfig['source']['getparams'][$stepper] = $size;
-                if ($this->ffwd != null && $this->ffwd >= 1) {
+                if ($this->ffwd !== null && $this->ffwd >= 1) {
                     // TODO: fast forward to step $this->ffwd
                     $looper = $this->ffwd + 1;
                     $previousbatchdate = $this->getLastImportDate($localconfig);
@@ -231,7 +231,7 @@ class ZohoImport
                     $pageNumber = 0;
                     $numrecords = 0;
 
-                    if ($this->ffwd != null && $this->ffwd >= 1) {
+                    if ($this->ffwd !== null && $this->ffwd >= 1) {
                         $pageNumber = $this->ffwd;
                     }
 
@@ -375,7 +375,7 @@ class ZohoImport
      * @param string $property
      * @return mixed
      */
-    private function getPropertyOfRecord($record, $property)
+    private function getPropertyOfRecord(\stdClass $record, $property)
     {
 
         if (strpos($property, '->') === false) {
@@ -556,7 +556,7 @@ class ZohoImport
             }
 //            sleep(1);
             // if a record has the hide on pro flag set - depublish it by default
-            if (array_key_exists('hide_on_pro', $items) && $items['hide_on_pro'] == true) {
+            if (array_key_exists('hide_on_pro', $items) && $items['hide_on_pro'] === true) {
                 $items['status'] = 'held';
                 $logmessage = $name
                     . ' - hiding record on pro: ' . $existing_id . ' - ' . $inputrecord->{$uid};
@@ -982,7 +982,7 @@ class ZohoImport
     public function downloadZohoPhotoFromURL($source_record, $target_record, $params)
     {
 
-        if ($this->config['image_downloads'] != true) {
+        if ($this->config['image_downloads'] !== true) {
             return false;
         }
 

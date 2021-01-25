@@ -26,7 +26,7 @@ class ApiLoginExtension extends SimpleExtension
     {
         $this->app = $this->getContainer();
         $this->config = $this->getConfig();
-        if ($this->config['debug']['verbose'] == true) {
+        if ($this->config['debug']['verbose'] === true) {
             $this->verbose = true;
         }
         return [
@@ -75,7 +75,7 @@ class ApiLoginExtension extends SimpleExtension
             if ($this->verbose) {
                 // dump('remote request', $results);
             }
-            if ($results->success == true) {
+            if ($results->success === true) {
                 if ($this->verbose) {
                     // dump('dispatchRemoteRequest did something right', $results);
                 }
@@ -128,13 +128,13 @@ class ApiLoginExtension extends SimpleExtension
     {
         $has_errors = false;
 
-        if ($this->config['recaptcha']['enabled'] == true) {
+        if ($this->config['recaptcha']['enabled'] === true) {
             // request remote recaptcha
             $recaptcharesult = $this->dispatchRecaptchaRequest($postvars);
             if ($this->verbose) {
                 // ('recaptcha result', $recaptcharesult);
             }
-            if ($recaptcharesult->success != true || $recaptcharesult->success != 'true') {
+            if ($recaptcharesult->success !== true || $recaptcharesult->success != 'true') {
                 if ($this->verbose) {
                     // dump('recaptcha failed');
                 }
@@ -146,7 +146,7 @@ class ApiLoginExtension extends SimpleExtension
 
         foreach ($this->config['form']['fields'] as $key => $field) {
             // test required fields
-            if ($field['required'] == true && empty($postvars[$key])) {
+            if ($field['required'] === true && empty($postvars[$key])) {
                 $this->valid_input = false;
                 $this->form_errors[$key] = str_replace('%label%', $field['label'], $field['placeholder']);
                 $has_errors = true;
