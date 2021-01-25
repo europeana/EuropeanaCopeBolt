@@ -65,7 +65,6 @@ class FileFetcher
      */
     public function fetchRemoteResource($url)
     {
-        // $curlOptions = array('CURLOPT_CONNECTTIMEOUT' => 5);
         // Set cURL proxy options if there's a proxy
         if ($this->app['config']->get('general/httpProxy')) {
             $curlOptions['CURLOPT_PROXY'] = $this->app['config']->get('general/httpProxy/host');
