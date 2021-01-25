@@ -2,9 +2,7 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport\Parser;
 
-use zcrmsdk\crm\crud\ZCRMModule;
-use zcrmsdk\crm\setup\restclient\ZCRMRestClient;
-use zcrmsdk\oauth\ZohoOAuth;
+use GuzzleHttp\Exception\RequestException;
 
 class FileFetcher
 {
@@ -12,7 +10,6 @@ class FileFetcher
     private $latestfile;
     private $remote_request_counter;
     private $errormessage;
-    private $responseData;
 
     public function __construct($app)
     {

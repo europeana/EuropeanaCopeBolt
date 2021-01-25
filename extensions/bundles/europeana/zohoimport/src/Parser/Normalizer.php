@@ -2,6 +2,7 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport\Parser;
 
+use Exception;
 use SimpleXMLElement;
 use mjohnson\utility\TypeConverter as TypeConverter;
 
@@ -26,6 +27,7 @@ class Normalizer
      * @param $filedata
      *
      * @return mixed
+     * @throws \Exception
      */
     public function normalizeInput($localconfig, $filedata)
     {
@@ -45,7 +47,7 @@ class Normalizer
             $logmessage = 'Error occurred during normalize: ' . $this->config['source']['type'];
             //$this->logger('info', $logmessage, 'zohoimport');
             // dump($logmessage);
-            die();
+            throw new \Exception($logmessage);
         }
 
         return $this->data;
@@ -102,7 +104,7 @@ class Normalizer
         if (empty($doc)) {
             if ($this->debug_mode) {
             }
-            die();
+            throw new Exception("Empty filedata when normalizing from Zoho json");
         }
 
         $items = TypeConverter::toArray($doc);

@@ -2,6 +2,7 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport;
 
+use Exception;
 use Symfony\Component\HttpFoundation\File\File;
 
 class ZohoImport
@@ -614,7 +615,7 @@ class ZohoImport
                 $this->logger('warning', $logmessage, 'zohoimport');
                 //  print_r($items);
                 //  var_dump($this->currentrecord);
-                die();
+                throw new Exception($logmessage);
             }
 
 
