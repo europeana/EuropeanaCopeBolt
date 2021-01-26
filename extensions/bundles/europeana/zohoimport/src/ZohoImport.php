@@ -477,6 +477,11 @@ class ZohoImport
                 $items[$key] = $var;
             }
 
+            // Populate community field for member accounts
+            if (array_key_exists('contenttype', $config['target']) && $config['target']['contenttype'] == "persons"){
+                $items['community'] = $this->getCommunities($inputrecord);
+            }
+
             // add default field values from config
             if (!empty($config['target']['defaults']['fields'])) {
                 foreach ($config['target']['defaults']['fields'] as $defaultfield => $defaultvalue) {
@@ -585,11 +590,6 @@ class ZohoImport
 
                 if (!empty($items['org_role'])) {
                     $items['org_role'] = explode(";", $items['org_role']);
-                }
-
-
-                if (!empty($items['community'])) {
-                    $items['community'] = explode(";", $items['community']);
                 }
 
                 if (!empty($items['twitter'])) {
@@ -1294,5 +1294,28 @@ class ZohoImport
                 ]);
                 break;
         }
+    }
+
+    public function getCommunities($memberRecord)
+    {
+        $zohoCommunities = [
+            'Member_of_Research' => 'Member of Research',
+            'Member_of_Copyright' => 'Member of Copyright',
+            'Member_of_Communicators' => 'Member of Communicators',
+            'Member_of_EuropeanaTech' => 'Member of EuropeanaTech',
+            'Member_of_Impact' => 'Member of Impact',
+            'Member_of_Education' => 'Member of Education'
+        ];
+
+        $communities = array();
+
+        foreach ($zohoCommunities as $key => $value)
+        {
+            if($memberRecord->{$key}) {
+                array_push($communities, $value);
+            }
+        }
+
+        return $communities;
     }
 }
