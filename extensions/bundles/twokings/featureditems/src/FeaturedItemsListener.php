@@ -38,15 +38,12 @@ class FeaturedItemsListener
       $itemid = $itemcontent->get('id');
       $itemfeaturedstatus = $itemcontent->get('featured');
 
-      //dump($itemtype, $itemid, $itemfeaturedstatus, $currenttypeconfig);
-
       if($itemfeaturedstatus == 1) {
         $this->deFeatureOtherItems($currenttypeconfig, $itemtype, $itemid);
       } else {
         $this->deFeatureCurrentItem($currenttypeconfig, $itemtype, $itemid);
       }
     }
-    // die();
   }
 
   /**
@@ -79,14 +76,12 @@ class FeaturedItemsListener
         ->from($tablename)
         ->where('id = ?')
         ->setParameter(0, $itemid);
-      //$q0 = $qb->__toString();
       $r0 = $qb->execute();
       $post0 = $r0->fetch();
 
-      // TODO: this needs to be tweaked to handle the unpublishing when multiple items are sticky
       if(array_key_exists('featured', $post0) && $post0[$featuredfield] == 1) {
         // item was featured
-        //$query = 'UPDATE %contentype SET %featured = 0 WHERE id = %itemid';
+        // 'UPDATE %contentype SET %featured = 0 WHERE id = %itemid';
         $qb1 = $db->createQueryBuilder();
         $qb1->update($tablename)
           ->set($featuredfield, 0)
@@ -94,11 +89,10 @@ class FeaturedItemsListener
             $qb1->expr()->eq('id', $itemid)
           )
         ;
-        //$q1 = $qb1->__toString();
         $r1 = $qb1->execute();
 
         // decrease featured flag for all featured items.
-        //$query = 'UPDATE %contentype SET %featured =  %featured + 1 WHERE %featured > 0 AND id != %itemid';
+        // 'UPDATE %contentype SET %featured =  %featured + 1 WHERE %featured > 0 AND id != %itemid';
         $qb2 = $db->createQueryBuilder();
         $qb2->update($tablename)
           ->set($featuredfield, $featuredfield . '-1')
@@ -106,12 +100,9 @@ class FeaturedItemsListener
             $qb2->expr()->gt($featuredfield, 1)
           )
         ;
-        //$q2 = $qb2->__toString();
         $r2 = $qb2->execute();
 
       }
-      //dump($q0, $r0, $post0, $q1, $r1, $q2, $r2);
-      //dump($post0);
     }
     return 1;
   }
@@ -147,7 +138,6 @@ class FeaturedItemsListener
         ->from($tablename)
         ->where('id = ?')
         ->setParameter(0, $itemid);
-      //$q0 = $qb->__toString();
       $r0 = $qb0->execute();
       $post0 = $r0->fetch();
 
@@ -168,20 +158,8 @@ class FeaturedItemsListener
       }
       else {
 
-        // increment all the current one
-        // not needed if not die-ing
-        //$query = 'UPDATE %contentype SET %featured = 1 WHERE id = %itemid';
-        //$qb = $db->createQueryBuilder();
-        //$qb->update($tablename)
-        //  ->set($featuredfield, 1)
-        //  ->where(
-        //    $qb->expr()->eq('id', $itemid)
-        //  );
-        ////$q0 = $qb->__toString();
-        //$r0 = $qb->execute();
-
         // increment all featured posts except the current one
-        //$query = 'UPDATE %contentype SET %featured =  %featured + 1 WHERE %featured > 0 AND id != %itemid';
+        //'UPDATE %contentype SET %featured =  %featured + 1 WHERE %featured > 0 AND id != %itemid';
         $qb1 = $db->createQueryBuilder();
         $qb1->update($tablename)
           ->set($featuredfield, $featuredfield . '+1')
@@ -192,11 +170,10 @@ class FeaturedItemsListener
             )
           )
         ;
-        //$q1 = $qb1->__toString();
         $r1 = $qb1->execute();
 
         // kill all featured posts that were featuree flags are too old
-        //$query = 'UPDATE %contentype SET %featured = 0 WHERE %featured > %maxfeatured';
+        // 'UPDATE %contentype SET %featured = 0 WHERE %featured > %maxfeatured';
         $qb2 = $db->createQueryBuilder();
         $qb2->update($tablename)
           ->set($featuredfield, 0)
@@ -207,10 +184,8 @@ class FeaturedItemsListener
             )
           )
         ;
-        //$q2 = $qb2->__toString();
         $r2 = $qb2->execute();
 
-        //dump($q0, $r0, $q1, $r1, $q2, $r2);
         return 1;
       }
     }

@@ -457,11 +457,6 @@ class ZohoImport
 
                 $var = $this->getPropertyOfRecord($inputrecord, $value);
 
-                // make sure empty values are written
-//                if (!array_key_exists($value, $inputrecord) && $key != 'id') {
-//                    $this->currentrecord->$value = '';
-//                    $var = '';
-//                }
                 if (is_array($var)) {
                     $var = implode(';', $var);
                 }
@@ -554,7 +549,7 @@ class ZohoImport
                     }
                 }
             }
-//            sleep(1);
+
             // if a record has the hide on pro flag set - depublish it by default
             if (array_key_exists('hide_on_pro', $items) && $items['hide_on_pro'] === true) {
                 $items['status'] = 'held';
@@ -613,8 +608,6 @@ class ZohoImport
                 $logmessage = $name
                     . ' - Sorry, the import can not save an empty record: ' . $existing_id . ' - ' . $inputrecord->{$uid} . ' exiting import.';
                 $this->logger('warning', $logmessage, 'zohoimport');
-                //  print_r($items);
-                //  var_dump($this->currentrecord);
                 throw new Exception($logmessage);
             }
 
@@ -1021,12 +1014,8 @@ class ZohoImport
                 $logmessage = 'show public photo from: ' . $params['source_url'];
                 $this->logger('debug', $logmessage, 'zohoimport');
             } elseif ($source_record->Show_photo_on_europeana_site == FALSE || $source_record->Show_photo_on_europeana_site == 'false') {
-                //$logmessage = 'no remote photo needed for: ' . $params['source_url'];
-                //$this->logger('debug', $logmessage, 'zohoimport');
                 return FALSE;
             } else {
-                //$logmessage = 'no public photo at: ' . $params['source_url'];
-                //$this->logger('debug', $logmessage, 'zohoimport');
                 return FALSE;
             }
         }

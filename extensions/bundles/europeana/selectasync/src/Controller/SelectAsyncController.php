@@ -178,7 +178,6 @@ class SelectAsyncController implements ControllerProviderInterface
         $filesystem = $this->app['filesystem'];
         $this->selectAsyncRecursiveDirTree($filesystem, 'files', $search);
 
-        // dump('results', $this->directory_tree);
         $jsonResponse = new JsonResponse();
 
         $jsonResponse->setData([
@@ -194,7 +193,6 @@ class SelectAsyncController implements ControllerProviderInterface
 
     /**
      * Return a list of directories and subdirectories
-     * TODO: Test if this scales up to a a few thousand files
      *
      * @param \Bolt\Filesystem\Manager $filesystem
      * @param                          $root
@@ -237,7 +235,6 @@ class SelectAsyncController implements ControllerProviderInterface
                             ]
                         );
                     }
-                    //array_push($this->directory_tree, $fileobject);
                 }
             }
         }
@@ -508,7 +505,6 @@ class SelectAsyncController implements ControllerProviderInterface
         }
 
         if (!empty($ids) && !is_array($ids)) {
-            //$ids = explode(',', $ids);
             $ids = json_decode($ids);
         }
 
@@ -551,7 +547,6 @@ class SelectAsyncController implements ControllerProviderInterface
     private function checkAccess($type = 'all')
     {
         $users = $this->app['users'];
-        // dump('check access', $users);
 
         if ($type=='all') {
             $contentquery = 'contentaction';
@@ -568,7 +563,6 @@ class SelectAsyncController implements ControllerProviderInterface
 
         $hasaccess = $users->isAllowed($contentquery);
 
-        // dump('check access', $contentquery, $hasaccess);
         return $hasaccess;
     }
 
