@@ -538,7 +538,6 @@ class SelectAsyncController implements ControllerProviderInterface
     }
     /**
      * Check if a client is logged in and has access to the content type
-     * TODO: double check if type is a valid contenttype
      *
      * @param string $type
      *

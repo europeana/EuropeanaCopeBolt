@@ -136,7 +136,6 @@ class ZohoImport
                 $localconfig['source']['getparams'][$counter] = $start;
                 $localconfig['source']['getparams'][$stepper] = $size;
                 if ($this->ffwd !== null && $this->ffwd >= 1) {
-                    // TODO: fast forward to step $this->ffwd
                     $looper = $this->ffwd + 1;
                     $previousbatchdate = $this->getLastImportDate($localconfig);
                     $starttime = strtotime($previousbatchdate);
@@ -317,10 +316,8 @@ class ZohoImport
     {
         $config = $this->config;
 
-        // TODO: show number of imported items in last batch
         $num_imported_items = 'n/a';
 
-        // TODO: show number of requests in last batch
         $num_remote_request = 'n/a';
 
         $messages = [];

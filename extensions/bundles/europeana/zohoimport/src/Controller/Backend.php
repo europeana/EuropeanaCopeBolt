@@ -82,7 +82,6 @@ class Backend implements ControllerProviderInterface
             </div><div class="panel-footer"></div></div>';
                 break;
         }
-        // $app['zohoimport']->logger('info', $text, 'zoho-backend-'.$type, $request);
 
         $html = $app['twig']->render('overview.twig', [
           'title' => 'ZOHO Import overview',

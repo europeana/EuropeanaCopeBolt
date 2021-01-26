@@ -45,8 +45,6 @@ class Normalizer
             $this->normalizeFromSimpleXML($filedata);
         } else {
             $logmessage = 'Error occurred during normalize: ' . $this->config['source']['type'];
-            //$this->logger('info', $logmessage, 'zohoimport');
-            // dump($logmessage);
             throw new \Exception($logmessage);
         }
 
@@ -124,11 +122,6 @@ class Normalizer
 
         if (array_key_exists('error', $items['data'])) {
             // we might get an error code https://www.zoho.com/crm/help/api/error-messages.html
-            if ($this->debug_mode) {
-                // dump('error in $items');
-                // dump($doc);
-                // dump($items);
-            }
             // exit the importer gracefully
             $this->data = 'nodata';
             return $doc;
@@ -141,45 +134,13 @@ class Normalizer
         }
 
         if (empty($items)) {
-            if ($this->debug_mode) {
-                // dump('empty $items');
-                // dump($doc);
-                // dump($items);
-            }
             // exit the importer gracefully
             $this->data = 'nodata';
             return $doc;
         }
 
-        // Modify deep nested json objects
-        // $test = reset($items);
-        // //print_r($test);
-        // //print_r($items);
-        // if (!is_array($test) && !array_key_exists('no', $items)) {
-        //     foreach ($items as $rawzohoitem) {
-        //         if (isset($rawzohoitem->FL) && is_array($rawzohoitem->FL)) {
-        //             $currentrow = $rawzohoitem->FL;
-        //             foreach ($currentrow as $rowitem) {
-        //                 $outrow[$rowitem->val] = $rowitem->content;
-        //             }
-        //         }
-
-        //         $outrows[] = $outrow;
-        //         unset($outrow);
-        //     }
-        // } else {
-        //   // echo "only one item";
-        //   $currentrow = $items['FL'];
-        //   // print_r($currentrow);
-        //   foreach ($currentrow as $rowitem) {
-        //     $outrow[$rowitem->val] = $rowitem->content;
-        //   }
-        //   $outrows[] = $outrow;
-        // }
-
         $this->data = $items;
         return $this->data;
-
     }
 
 
