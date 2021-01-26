@@ -480,8 +480,6 @@ class ZohoImport
             // Populate community field for member accounts
             if (array_key_exists('contenttype', $config['target']) && $config['target']['contenttype'] == "persons"){
                 $items['community'] = $this->getCommunities($inputrecord);
-//                var_dump($items);
-//                die();
             }
 
             // add default field values from config
@@ -592,11 +590,6 @@ class ZohoImport
 
                 if (!empty($items['org_role'])) {
                     $items['org_role'] = explode(";", $items['org_role']);
-                }
-
-
-                if (!empty($items['community'])) {
-//                    $items['community'] = explode(";", $items['community']);
                 }
 
                 if (!empty($items['twitter'])) {
