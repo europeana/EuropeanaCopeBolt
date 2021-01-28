@@ -70,14 +70,14 @@ This query has as exception an extra sontent set: all_records. since records is 
         <div class="table-actions">
             <form>
                 <span>Filter by</span>
-                <select id="country-select" name="country" class="button outline button-filter">
+                <select id="country-select" aria-label="Select country" name="country" class="button outline button-filter">
                     <option value="">Country</option>
                     {% for country in allCountries %}
                         <option value="{{ country }}" {% if requestedcountry == country %} selected {% endif %}>{{ country }}</option>
                     {% endfor %}
                     <option value="">All countries</option>
                 </select>
-                <select id="domain-select" name="domain" class="button outline button-filter">
+                <select id="domain-select" aria-label="Select domain" name="domain" class="button outline button-filter">
                     <option value="">Domain</option>
                     {% for domain in allDomains %}
                         <option value="{{ domain }}" {% if requesteddomain == domain %} selected {% endif %}>{{ domain }}</option>

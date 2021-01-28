@@ -129,7 +129,7 @@ h3, .gamma {
 
     .location-list & {
         font-size: 1.125rem;
-        color: $light-gray;
+        color: $medium-gray;
         margin-top: 0;
     }
 
@@ -138,7 +138,7 @@ h3, .gamma {
 
 h4, .delta {
     font-size: 0.875rem;
-    color: $light-gray;
+    color: $medium-gray;
     margin-bottom: 0.8rem;
 
     footer & {
@@ -390,13 +390,13 @@ p {
     .teaser-twocol &,
     .teaser-threecol &,
     .catstream-threecol & {
-        color: $light-gray;
+        color: $medium-gray;
     }
 
     &.function {
         font-size: 1.125rem;
         font-weight: 700;
-        color: $light-gray;
+        color: $medium-gray;
         line-height: 1.4;
     }
 
@@ -405,14 +405,14 @@ p {
     &.theme {
         font-size: 1.125rem;
         font-weight: 400;
-        color: $light-gray;
+        color: $medium-gray;
         line-height: 1.4;
     }
 
     &.networklevel {
         font-size: 0.875rem;
         font-weight: 700;
-        color: $light-gray;
+        color: $medium-gray;
         line-height: 1.4;
     }
 
@@ -649,7 +649,7 @@ p.meta {
     }
 
     svg {
-        fill: $light-gray;
+        fill: $medium-gray;
         margin-right: .2rem;
     }
 }
@@ -699,7 +699,7 @@ blockquote {
     font-style: italic;
     color: $medium-gray;
     padding: .75rem 1.5rem; //optisch hetzelfde
-    border-left: 1px solid $light-gray;
+    border-left: 1px solid $medium-gray;
 }
 
 p blockquote {

@@ -43,7 +43,7 @@ nav.quicklinks { // regular page quicklinks
 
     a {
         display: block;
-        color: $light-gray;
+        color: $medium-gray;
         padding: 6px 0.5rem;
         font-size: 0.875rem;
         line-height: 21px; // magic number: to align bar with menu on left
@@ -274,7 +274,7 @@ nav.toplayer {
     }
 
     a {
-        color: $light-gray;
+        color: $medium-gray;
         font-size: 1.125rem;
         padding: 0.1em 0 0.1em 1.875rem;
         margin-right: 1.125rem;
