@@ -2,9 +2,7 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport\Parser;
 
-use zcrmsdk\crm\crud\ZCRMModule;
-use zcrmsdk\crm\setup\restclient\ZCRMRestClient;
-use zcrmsdk\oauth\ZohoOAuth;
+use GuzzleHttp\Exception\RequestException;
 
 class FileFetcher
 {
@@ -12,7 +10,6 @@ class FileFetcher
     private $latestfile;
     private $remote_request_counter;
     private $errormessage;
-    private $responseData;
 
     public function __construct($app)
     {
@@ -68,7 +65,6 @@ class FileFetcher
      */
     public function fetchRemoteResource($url)
     {
-        // $curlOptions = array('CURLOPT_CONNECTTIMEOUT' => 5);
         // Set cURL proxy options if there's a proxy
         if ($this->app['config']->get('general/httpProxy')) {
             $curlOptions['CURLOPT_PROXY'] = $this->app['config']->get('general/httpProxy/host');

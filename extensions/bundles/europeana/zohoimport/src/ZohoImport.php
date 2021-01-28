@@ -2,6 +2,7 @@
 
 namespace Bolt\Extension\Europeana\ZohoImport;
 
+use Exception;
 use Symfony\Component\HttpFoundation\File\File;
 
 class ZohoImport
@@ -134,8 +135,7 @@ class ZohoImport
                 $size = $config['source']['loopparams']['size'];
                 $localconfig['source']['getparams'][$counter] = $start;
                 $localconfig['source']['getparams'][$stepper] = $size;
-                if ($this->ffwd != null && $this->ffwd >= 1) {
-                    // TODO: fast forward to step $this->ffwd
+                if ($this->ffwd !== null && $this->ffwd >= 1) {
                     $looper = $this->ffwd + 1;
                     $previousbatchdate = $this->getLastImportDate($localconfig);
                     $starttime = strtotime($previousbatchdate);
@@ -230,7 +230,7 @@ class ZohoImport
                     $pageNumber = 0;
                     $numrecords = 0;
 
-                    if ($this->ffwd != null && $this->ffwd >= 1) {
+                    if ($this->ffwd !== null && $this->ffwd >= 1) {
                         $pageNumber = $this->ffwd;
                     }
 
@@ -316,10 +316,8 @@ class ZohoImport
     {
         $config = $this->config;
 
-        // TODO: show number of imported items in last batch
         $num_imported_items = 'n/a';
 
-        // TODO: show number of requests in last batch
         $num_remote_request = 'n/a';
 
         $messages = [];
@@ -374,7 +372,7 @@ class ZohoImport
      * @param string $property
      * @return mixed
      */
-    private function getPropertyOfRecord($record, $property)
+    private function getPropertyOfRecord(\stdClass $record, $property)
     {
 
         if (strpos($property, '->') === false) {
@@ -456,11 +454,6 @@ class ZohoImport
 
                 $var = $this->getPropertyOfRecord($inputrecord, $value);
 
-                // make sure empty values are written
-//                if (!array_key_exists($value, $inputrecord) && $key != 'id') {
-//                    $this->currentrecord->$value = '';
-//                    $var = '';
-//                }
                 if (is_array($var)) {
                     $var = implode(';', $var);
                 }
@@ -553,9 +546,9 @@ class ZohoImport
                     }
                 }
             }
-//            sleep(1);
+
             // if a record has the hide on pro flag set - depublish it by default
-            if (array_key_exists('hide_on_pro', $items) && $items['hide_on_pro'] == true) {
+            if (array_key_exists('hide_on_pro', $items) && $items['hide_on_pro'] === true) {
                 $items['status'] = 'held';
                 $logmessage = $name
                     . ' - hiding record on pro: ' . $existing_id . ' - ' . $inputrecord->{$uid};
@@ -612,9 +605,7 @@ class ZohoImport
                 $logmessage = $name
                     . ' - Sorry, the import can not save an empty record: ' . $existing_id . ' - ' . $inputrecord->{$uid} . ' exiting import.';
                 $this->logger('warning', $logmessage, 'zohoimport');
-                //  print_r($items);
-                //  var_dump($this->currentrecord);
-                die();
+                throw new Exception($logmessage);
             }
 
 
@@ -981,7 +972,7 @@ class ZohoImport
     public function downloadZohoPhotoFromURL($source_record, $target_record, $params)
     {
 
-        if ($this->config['image_downloads'] != true) {
+        if ($this->config['image_downloads'] !== true) {
             return false;
         }
 
@@ -1020,12 +1011,8 @@ class ZohoImport
                 $logmessage = 'show public photo from: ' . $params['source_url'];
                 $this->logger('debug', $logmessage, 'zohoimport');
             } elseif ($source_record->Show_photo_on_europeana_site == FALSE || $source_record->Show_photo_on_europeana_site == 'false') {
-                //$logmessage = 'no remote photo needed for: ' . $params['source_url'];
-                //$this->logger('debug', $logmessage, 'zohoimport');
                 return FALSE;
             } else {
-                //$logmessage = 'no public photo at: ' . $params['source_url'];
-                //$this->logger('debug', $logmessage, 'zohoimport');
                 return FALSE;
             }
         }

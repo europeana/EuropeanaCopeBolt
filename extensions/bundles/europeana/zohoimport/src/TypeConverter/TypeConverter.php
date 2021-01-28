@@ -7,6 +7,8 @@
 
 namespace mjohnson\utility;
 
+use SimpleXMLElement;
+
 /**
  * A class that handles the detection and conversion of certain resource formats / content types into other formats.
  * The current formats are supported: XML, JSON, Array, Object, Serialized
@@ -85,7 +87,8 @@ class TypeConverter {
 	 * @static
 	 */
 	public static function isJson($data) {
-		return (@json_decode($data) !== null);
+	    json_decode($data);
+		return json_last_error() === JSON_ERROR_NONE;
 	}
 
 	/**
@@ -299,7 +302,7 @@ class TypeConverter {
 	 * @param array $array
 	 * @return object
 	 */
-	public static function buildXml(&$xml, $array) {
+	public static function buildXml(object &$xml, $array) {
 		if (is_array($array)) {
 			foreach ($array as $key => $value) {
 				// XML_NONE

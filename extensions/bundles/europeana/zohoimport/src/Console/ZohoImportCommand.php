@@ -82,8 +82,6 @@ class ZohoImportCommand extends BaseCommand
         }
 
         if ($type == 'full') {
-            //$on_console = true;
-            //$text .= $this->app['extensions.ZohoImport']->importJob($on_console);
             $this->app['zohoimport']->importJob(true, $output);
         } elseif ($type == 'imageonly') {
             // do stuff

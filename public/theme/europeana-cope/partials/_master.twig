@@ -47,8 +47,6 @@
 
 {# {{ dump(currentpageinmenu) }} #}
 
-{# TODO: Set bodyclass if currentpageinmenu == false #}
-
 <body class="{% block bodyclass %}{% endblock bodyclass %} {% if currentpageinmenu == false %} body-no-menu{% endif %}">
 
     {{ include('partials/_analytics_gtm_noscript.twig') }}

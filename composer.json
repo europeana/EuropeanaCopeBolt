@@ -4,10 +4,12 @@
     "type": "project",
     "license": "MIT",
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
         "bolt/bolt": "^3.6",
         "bolt/configuration-notices": "^1.0",
-        "zohocrm/php-sdk": "^2.0"
+        "zohocrm/php-sdk": "^2.0",
+        "ext-simplexml": "*",
+        "ext-json": "*"
     },
     "minimum-stability": "beta",
     "prefer-stable": true,
