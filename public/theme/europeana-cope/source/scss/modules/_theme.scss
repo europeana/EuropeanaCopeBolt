@@ -1445,7 +1445,7 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
 
     p {
         margin-bottom: 0.5rem;
-        color: $light-gray;
+        color: $medium-gray;
     }
 
     .outline {
@@ -1873,7 +1873,7 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
     }
 
     svg {
-        fill: $light-gray;
+        fill: $medium-gray;
     }
 
 }
@@ -2037,7 +2037,7 @@ svg.icon-cutoff.top.right {
             left: 1rem;
             margin: 0;
             display: inline-block;
-            color: $light-gray;
+            color: $medium-gray;
 
             span {
                 display: none;
@@ -2234,7 +2234,7 @@ svg.icon-cutoff.top.right {
     margin-bottom: 1rem;
 
     .mc-term {
-        color: $light-gray;
+        color: $medium-gray;
         font-weight: normal;
     }
 }
@@ -3167,7 +3167,7 @@ div.body {
         }
 
         span.def {
-            color: $light-gray;
+            color: $medium-gray;
         }
 
         span.image-license {
