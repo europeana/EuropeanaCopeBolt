@@ -41,7 +41,7 @@ __nodes:
       label: "Teaser image"
       postfix: "The teaser image is shown on listing pages instead of the main image. Also used for related content teasers. <br> Use the path to image <strong>or</strong> the oEmbed."
       class: 'image-attribution-group attribution-parent allow-oembed'
-      attrib: oEmbed
+      attrib: [ title, oEmbed ]
     teaser_attribution_title:
       type: text
       label: "Image attribution title text"
@@ -3278,7 +3278,7 @@ blogevents:
       label: "Teaser image"
       group: "Teaser"
       class: 'allow-oembed'
-      attrib: oEmbed
+      attrib: [ title, oEmbed ]
     attachments:
       type: filelist
       required: false
