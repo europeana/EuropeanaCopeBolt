@@ -1299,12 +1299,12 @@ class ZohoImport
     public function getCommunities($memberRecord)
     {
         $zohoCommunities = [
-            'Member_of_Research' => 'Member of Research',
-            'Member_of_Copyright' => 'Member of Copyright',
-            'Member_of_Communicators' => 'Member of Communicators',
-            'Member_of_EuropeanaTech' => 'Member of EuropeanaTech',
-            'Member_of_Impact' => 'Member of Impact',
-            'Member_of_Education' => 'Member of Education'
+            'I_am_interested_in_Academic_Research' => 'Member of Research',
+            'I_am_interested_in_EuropeanaIPR' => 'Member of Copyright',
+            'I_am_interested_in_Communications_and_campaigns' => 'Member of Communicators',
+            'I_am_interested_in_EuropeanaTech' => 'Member of EuropeanaTech',
+            'I_am_interested_in_Impact' => 'Member of Impact',
+            'I_am_interested_in_Education' => 'Member of Education'
         ];
 
         $communities = array();
