@@ -7,6 +7,13 @@
 
     ga('create', '{{ app.config.get('general/google_ua_key')|default('UA-27537877-1') }}', 'auto');
     ga('send', 'pageview');
+
+    {# This script below allows analytics based on the posttype. #}
+    {% if record is defined and record.contenttype.slug|default == 'posts' and record.posttype is defined %}
+    ga('send', 'pageview',
+        'post/{{ record.posttype|slugify }}/{{ record.slug }}'
+    );
+    {% endif %}
 </script>
 
 {# Hotjar Tracking Code for pro.europeana.eu #}
