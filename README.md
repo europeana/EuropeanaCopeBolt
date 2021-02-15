@@ -83,7 +83,6 @@ extensions:
   - Bolt\Extension\Europeana\ViewBlocks\ViewBlocksExtension
   - Bolt\Extension\Europeana\ZohoImport\ZohoImportExtension
   - Bolt\Extension\Europeana\SelectAsync\SelectAsyncExtension
-  - Bolt\Extension\Europeana\ApiLogin\ApiLoginExtension
 ```
 
 The `config_local.yml` file should look similar to:
