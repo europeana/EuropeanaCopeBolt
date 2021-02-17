@@ -2871,6 +2871,15 @@ table.listingtable {
     }
 }
 
+.listingthumbnail.column {
+    display: flex;
+    flex-direction: column;
+
+    a.button-link {
+        margin-top: auto;
+    }
+}
+
 blockquote.special {
     text-align: right;
     margin: 0;
