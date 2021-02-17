@@ -580,11 +580,7 @@ ul.teaser-list {
 
 .sub-footer {
     padding: 2rem 0 0 0;
-    margin: 3.5rem 0 0 0;
-
-    @include respond-to(large-screens) {
-        margin: 9.5rem 0 0 0;
-    }
+    margin: .5rem 0 0 0;
 }
 
 %rounded-card,
