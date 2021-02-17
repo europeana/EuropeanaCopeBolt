@@ -5,22 +5,34 @@
 {% set singlefile = module.singlefile %}
 
 <section class="download-module">
-    <ul>
-        {% if singlefile is not empty %}
-            <li>
-                {% set fileinfo = imageinfo(singlefile) %}
-                <a href="/files/{{ singlefile }}" download="{{ title|default(fileinfo.filename) }}">
-                    <svg class="icon icon-download">
-                        <use xlink:href="#icon-download"></use>
-                    </svg>
-                    {{ title|default(fileinfo.filename) }}
-                    <div class="meta">
-                        <span class="filesize">{{ fileinfo.getSizeFormatted() }}</span>
-                        <span class="date-added">Added {{ fileinfo.carbon|localedatetime("%d/%m/%Y") }}</span>
+    <div class="inner-wrap">
+        <ul>
+            {% if singlefile is not empty %}
+                <li>
+                    {% set fileinfo = imageinfo(singlefile) %}
+                    <div class="download-container" >
+                        <div class="icon-container">
+                            <svg class="icon icon-file">
+                                <use xlink:href="#icon-file"></use>
+                            </svg>
+                        </div>
+                        <div class="download-info">
+                            {{ title|default(fileinfo.filename) }}
+                            <div class="meta">
+                                <span class="date-added">Added {{ fileinfo.carbon|localedatetime("%d/%m/%Y") }} | </span>
+                                <span class="fileextension">{{ fileinfo.extension|upper }} | </span>
+                                <span class="filesize">{{ fileinfo.getSizeFormatted() }}</span>
+
+                            </div>
+                        </div>
+
+                        <a class="download" href="/files/{{ singlefile }}" download="{{ title|default(fileinfo.filename) }}">
+                            DOWNLOAD
+                        </a>
                     </div>
-                </a>
-            </li>
-        {% endif %}
-    </ul>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
 </section>
 {% endspaceless %}
