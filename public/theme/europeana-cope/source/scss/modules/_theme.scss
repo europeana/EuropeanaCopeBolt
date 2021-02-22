@@ -2091,7 +2091,7 @@ svg.icon-cutoff.top.right {
         }
     }
 
-    .date-added {
+    &:not(.download-module) .date-added {
         float: right;
         text-align: right;
 
@@ -2154,25 +2154,80 @@ svg.icon-cutoff.top.right {
 
 .download-module { // DOWNLOAD ONLY STYLES
     margin: 2rem 0;
+    padding: 0;
 
     @include respond-to(medium-screens){
         margin: 4rem 0;
     }
 
-    li {
-        position: relative;
-        border-bottom: 1px solid $line-gray;
-        padding: 1rem;
-        font-size: 0.875rem;
+    ul {
 
-        &:first-of-type {
-            border-top: 1px solid $line-gray;
-        }
+        li {
+            background-color: $off-white;
+            border-radius: 4px;
+            margin-left: .5rem;
+            margin-right: .5rem;
 
-        @include respond-to(medium-screens){
+            position: relative;
+            padding: .8rem;
+            font-size: 0.875rem;
+
+            @include respond-to(medium-screens){
                 font-size: 1rem;
             }
+
+            .download-container {
+                display: flex;
+                align-items: center;
+            }
+
+            .icon-container {
+                width: 2.63rem;
+                min-width: 2.63rem;
+                height: 2.63rem;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $white;
+                border-radius: 50%;
+
+                svg {
+                    margin: 0;
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin-top: .2em;
+                }
+
+            }
+
+            .download-info {
+                margin: .2em .7em;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                max-width: 60%;
+
+                .meta {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    display: block;
+                    margin-left: unset;
+                    color: $medium-gray;
+                }
+
+            }
+
+            a.download {
+                margin-left: auto;
+                color: $innovationblue-dark;
+                text-decoration: none;
+                margin-right: .5em;
+            }
+
+        }
     }
+
 }
 
 
