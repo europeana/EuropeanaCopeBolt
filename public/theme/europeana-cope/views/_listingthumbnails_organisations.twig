@@ -2,7 +2,7 @@
     {% set item = record %}
 {% endif %}
 
-<div class="column fourth thumblink-fourcol thumblink-organisations">
+<div class="listingthumbnail column fourth thumblink-fourcol thumblink-organisations">
     <a href="{{ item.link() }}">
         <div class="img-container offwhite-logo round">
             {% if item.values.image is defined and item.values.image.file|default is not empty %}
