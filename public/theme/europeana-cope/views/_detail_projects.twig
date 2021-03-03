@@ -23,7 +23,7 @@
                     </div>
                 </div>
 
-                {% if record.values.image is defined and record.values.image.file|default is not empty %}
+                {% if record.values.image is defined and record.values.image.file|default is not empty or record.values.image|is_string %}
                     <figure>
                         <div class="main-img-container">
                             <img class="main-img" src="{{ record.values.image|thumbnail(1240, 600, 'c') }}" alt="{{ record.values.image.alt|default('main image') }}" />

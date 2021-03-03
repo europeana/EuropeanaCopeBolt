@@ -5,7 +5,7 @@
 {% if (item is not empty) and (item.last_name is not empty) %}
 <section class="author-big column group">
     <div class="img-container">
-        {% if item.values.image is defined and item.values.image is not empty and item.values.image.file|default() != "" %}
+        {% if item.values.image is defined and item.values.image is not empty and item.values.image.file|default() != "" or item.values.image|is_string %}
             <a href="{{ item.link() }}">
                 <img class="round" src="{{ item.values.image|default('notfound')|thumbnail(144, 144, 'c') }}" alt="Portrait of {{item.first_name}} {{item.last_name}}"/>
             </a>

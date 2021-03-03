@@ -5,7 +5,7 @@
 <article class="fifth">
     <div class="img-container">
 
-        {% if item.values.image is defined and item.values.image.file|default is not empty %}
+        {% if item.values.image is defined and item.values.image.file|default is not empty pr record.values.image|is_string %}
             {# LOGO #}
             <img class="logo-img" src="{{ item.values.image|thumbnail(600,400,'r')}}" alt="{{ item.title }}"/>
         {% elseif item.values.image.oembed|default is not empty %}
