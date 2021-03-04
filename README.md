@@ -122,3 +122,29 @@ mailoptions:
 ## setting up the database migration
 
 Use the <a href="https://github.com/europeana/EuropeanaCopeBolt/blob/master/tools/migration/step-by-step.md">step by step</a> instructions to setup the databases during development.
+
+## Automated accessibility reports
+
+Automated accessibility reports are set up since March 2021,
+implemented with Pull Request #97.
+
+The automated analysis use `lighthouse-batch`, an NPM package that allows
+multi-page analysis using the official Lighthouse CLI by Google.
+
+To run the analysis, use `npm run accessibility:lighthouse` from
+`./public/theme/europeana-cope/source/`.
+
+### Important files
+
+- `./public/theme/europeana-cope/source/accessibility.sh` -> 
+Runs the prepare, analyse and send tasks.
+- `/home/deploy/.mailrc` on the production server -> contains configuration
+for `s-nail`. The `s-nail` linux command is used to send emails to the 
+Europeana core team.
+`./public/files/accessibility-lighthouse.txt` -> contains the list of URLs
+that lighthouse analyses.
+- `/home/dropbox/Dropbox (Europeana Pro)/accessibility-reports` on
+the production server -> contains the detailed reports and summary from
+each run, organised by month and year.
+- Run `crontab -l` to show the crontab configuration for running the analyses
+automatically. 
