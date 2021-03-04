@@ -8,7 +8,7 @@
     "accessibility:lighthouse": "./accessibility.sh",
     "accessibility:lighthouse:prepare": "mkdir -p ${DEST_DIR}",
     "accessibility:lighthouse:analyse": "lighthouse-batch -f ../../../files/accessibility-lighthouse.txt --out ${DEST_DIR} --html --params \"--only-categories=accessibility --quiet\"",
-    "accessibility:lighthouse:send": "echo \"Dear Europeana Team, \n\n New accessibility reports are available in the shared folder on Pro. \n You'll find a summary attached in this email. For readibility, it is advised to open the summary in Firefox.\" | s-nail -a ${SUMMARY_PATH} -s \"Europeana Pro: Accessibility summary for $(date \"+%B %Y\")\" ivo@twokings.nl"
+    "accessibility:lighthouse:send": "echo \"Dear Europeana Team, \n\n New accessibility reports are available in the shared folder on Pro. \n You'll find a summary attached in this email. For readibility, it is advised to open the summary in Firefox.\" | s-nail -a ${SUMMARY_PATH} -s \"Europeana Pro: Accessibility summary for $(date \"+%B %Y\")\" ivo@twokings.nl nicholas.jarrett@europeana.eu georgia.evans@europeana.eu"
   },
   "repository": {
     "type": "git",
