@@ -4,7 +4,11 @@
   "description": "Europeana COPE Bolt template theme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "accessibility:lighthouse": "./accessibility.sh",
+    "accessibility:lighthouse:prepare": "mkdir -p ${DEST_DIR}",
+    "accessibility:lighthouse:analyse": "lighthouse-batch -f ../../../files/accessibility-lighthouse.txt --out ${DEST_DIR} --html --params \"--only-categories=accessibility --quiet\"",
+    "accessibility:lighthouse:send": "mail -s \"Europeana Pro: Accessibility summary for $(date \"+%B %Y\")\" ivo@twokings.nl <<< 'Dear Europeana Team, \n New accessibility reports are available in the shared folder on Pro. \n\n You'll find a summary attached in this email. For readibility, it is advised to open the summary in Firefox.'"
   },
   "repository": {
     "type": "git",
@@ -17,12 +21,8 @@
   "homepage": "",
   "devDependencies": {
     "boom": "^7.2.0",
-    "sntp": "^3.0.1",
-    "hawk": "^7.0.7",
     "cryptiles": "^4.1.1",
-    "request": "^2.86.0",
     "gulp": "^4.0.0",
-    "node-sass": "^4.9.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
@@ -30,7 +30,11 @@
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
+    "hawk": "^7.0.7",
+    "node-sass": "^4.9.0",
+    "request": "^2.86.0",
     "run-sequence": "^2.2.1",
+    "sntp": "^3.0.1",
     "yargs": "^11.0.0"
   },
   "dependencies": {
@@ -38,6 +42,7 @@
     "gulp-cli": "^2.0.1",
     "gulp-install": "^1.1.0",
     "gulp-load-plugins": "^1.5.0",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "lighthouse-batch": "^7.1.0"
   }
 }
