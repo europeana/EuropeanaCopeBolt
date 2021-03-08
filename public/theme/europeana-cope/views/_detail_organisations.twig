@@ -7,7 +7,7 @@
                 <div class="group card organisation h-card">
                     <div class="img-container offwhite-logo">
 
-                        {% if record.values.image is defined and record.values.image is not empty and record.values.image.file|default() != "" %}
+                        {% if record.values.image is defined and record.values.image is not empty and record.values.image.file|default() != ""  or record.values.image|is_string %}
                             <img class="card-img organisation-img u-photo" src="{{ record.image|default('notfound')|thumbnail(450, 450, 'c') }}" alt="Logo of {{ record.name }}" />
                         {% elseif record.values.image.oembed|default is not empty %}
                             <div class="img-container is-overflow-hidden">

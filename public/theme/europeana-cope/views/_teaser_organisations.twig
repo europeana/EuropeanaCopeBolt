@@ -5,7 +5,7 @@
 <article class="teaser teaser-organisations group">
     <div class="img-container offwhite-logo">
 
-        {% if item.values.image is defined and item.values.image is not empty %}
+        {% if item.values.image is defined and item.values.image is not empty or item.values.image|is_string %}
             {% if item.values.image.file|default is not empty %}
                 <img src="{{ item.values.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
             {% elseif item.values.image.oembed|default is not empty %}

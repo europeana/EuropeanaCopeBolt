@@ -37,7 +37,7 @@
          <article class="half column">
 
             {% if statusmessage.values.image is defined and statusmessage.values.image is not empty %}
-                {% if statusmessage.values.image.file|default is not empty %}
+                {% if statusmessage.values.image.file|default is not empty or statusmessage.values.image|is_string %}
                     <figure>
                         <div class="main-img-container">
                             <img class="main-img" src="{{ statusmessage.image|thumbnail(800, 1200, 'r') }}" alt="" />
