@@ -1,0 +1,28 @@
+{
+  "name": "twokings/twig",
+  "description": "This extension provides useful twig functions.",
+  "type": "bolt-extension",
+  "keywords": [
+    "content"
+  ],
+  "require": {
+    "bolt/bolt": "^3.3"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ivo Valchev",
+      "email": "ivo@twokings.nl"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Bolt\\Extension\\TwoKings\\Twig\\": "src"
+    }
+  },
+  "extra": {
+    "bolt-class": "Bolt\\Extension\\TwoKings\\Twig\\TwigExtension"
+  }
+}

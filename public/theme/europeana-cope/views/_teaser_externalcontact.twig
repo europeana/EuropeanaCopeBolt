@@ -4,7 +4,7 @@
 
 <section class="author-big column group">
     <div class="img-container">
-        {% if item.values.image.file|default is not empty %}
+        {% if item.values.image.file|default is not empty or imte.values.image|is_string %}
             <img class="round" src="{{ item.values.image|thumbnail(144, 144, 'c') }}" alt=""/>
         {% elseif item.values.image.oembed|default is not empty %}
             <div class="img-container round is-overflow-hidden is-fixed-center">

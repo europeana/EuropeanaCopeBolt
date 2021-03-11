@@ -11,7 +11,7 @@
                 {% if record.values.image is defined and record.values.image is not empty %}
                     {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
 
-                    {% if record.values.image.file|default is not empty %}
+                    {% if record.values.image.file|default is not empty or record.values.image|is_string %}
                         {% set contacts = 0 %}
                         {# Checking for more than 1 contact #}
                         {% if record.author is defined and record.author is not empty %}
