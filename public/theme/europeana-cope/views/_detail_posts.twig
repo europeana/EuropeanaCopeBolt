@@ -36,7 +36,9 @@
                             {% endif %}
                         </figure>
                     {% elseif record.values.image.oembed|default is not empty %}
-                        {% include 'partials/_oembed_resize.twig' with { oembed: record.values.image.oembed, width: 1240, height: 600 } %}
+                        <figure>
+                            {% include 'partials/_oembed_resize.twig' with { oembed: record.values.image.oembed, width: 1240, height: 600 } %}
+                        </figure>
                     {% endif %}
                 {% endif %}
 
