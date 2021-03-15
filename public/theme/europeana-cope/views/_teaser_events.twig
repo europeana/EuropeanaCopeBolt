@@ -9,13 +9,13 @@
             <img src="{{ item.teaser_image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
         {% elseif item.teaser_image is defined and item.teaser_image.oembed|default is not empty %}
             <div class="is-overflow-hidden">
-                {% include 'partials/_oembed_resize.twig' with { oembed: item.teaser_image.oembed, width: 600, height: 400} %}
+                {% include 'partials/_oembed_resize.twig' with { oembed: item.teaser_image.oembed, width: 600, height: 400, setheight: true } %}
             </div>
         {% elseif item.image is defined and item.image|default is not empty and item.image is not iterable %}
             <img src="{{ item.values.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
         {% elseif item.values.image.oembed|default is not empty %}
             <div class="is-overflow-hidden">
-                {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 600, height: 400} %}
+                {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 600, height: 400, setheight: true } %}
             </div>
         {% else %}
             <img src="{{ 'web_assets/default.png'|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>

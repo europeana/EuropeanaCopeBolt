@@ -8,7 +8,7 @@
             <img class="round" src="{{ item.values.image|thumbnail(144, 144, 'c') }}" alt=""/>
         {% elseif item.values.image.oembed|default is not empty %}
             <div class="img-container round is-overflow-hidden is-fixed-center">
-                {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 144, height: 144} %}
+                {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 144, height: 144, setheight: true } %}
             </div>
         {% else %}
             <img class="round" src="{{ 'web_assets/default.png'|thumbnail(144, 144, 'c') }}" alt=""/>
