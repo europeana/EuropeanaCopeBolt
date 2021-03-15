@@ -10,7 +10,7 @@
                 <img src="{{ item.values.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
             {% elseif item.values.image.oembed|default is not empty %}
                 <div class="is-overflow-hidden">
-                    {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 600, height: 400} %}
+                    {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 600, height: 400, setheight: true } %}
                 </div>
             {% endif %}
             {# <div class=="offwhite-image">

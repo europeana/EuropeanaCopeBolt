@@ -15,7 +15,7 @@
             <img src="{{ item.image|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
         {% elseif item.image is defined and item.image.oembed|default is not empty %}
             <div class="is-overflow-hidden">
-                {% include 'partials/_oembed_resize.twig' with { oembed: item.image.oembed, width: 600, height: 400} %}
+                {% include 'partials/_oembed_resize.twig' with { oembed: item.image.oembed, width: 600, height: 400, setheight: true } %}
             </div>
         {% else %}
             <img src="{{ 'web_assets/default.png'|thumbnail(600,400,'c')}}" alt="{{ item.title }}"/>
