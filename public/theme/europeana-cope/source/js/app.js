@@ -287,11 +287,11 @@ $( document ).ready(function() {
     /**
     * Open en close image attribution
     */
-    $('button.image-info').on('mouseenter', function(e){
+    $('button.image-info').on('mouseenter focus', function(e){
         $(this).siblings('article').addClass('expanded');
     });
 
-    $('.license-attribution article').not('.always-expanded').on('mouseleave', function(e){
+    $('.license-attribution article').not('.always-expanded').on('mouseleave focusout', function(e){
         $(this).removeClass('expanded');
     });
 
