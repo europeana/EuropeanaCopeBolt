@@ -2006,35 +2006,43 @@ svg.icon-cutoff.top.right {
     }
 
     .collapse-header {
-        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         box-shadow: 1px 1px 5px rgba($black, 0.5);
         padding: 1rem;
         margin-bottom: 4px; // Magic number - to prevent from overlapping boxshadow of header
         text-align: center;
 
         h3 {
+            margin-left: 1em;
             display: inline-block;
             font-weight: 400;
             font-size: 0.875rem;
             margin-bottom: 0;
             color: $black;
 
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
             @include respond-to(medium-screens){
                 font-size: 1rem;
+            }
+
+            &:hover {
+                cursor: pointer;
             }
 
         }
 
         svg.icon-facet_up,
         svg.icon-facet_down {
-            position: absolute;
-            top: 20px;
-            right: 12px;
+            margin-left: 1em;
         }
 
         .content-kind {
-            position: absolute;
-            left: 1rem;
             margin: 0;
             display: inline-block;
             color: $medium-gray;
