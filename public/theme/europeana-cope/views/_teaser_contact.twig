@@ -11,7 +11,7 @@
             </a>
         {% elseif item.values.image.oembed|default is not empty %}
             <div class="is-overflow-hidden">
-                {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 144, height: 144} %}
+                {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 144, height: 144, setheight: true } %}
             </div>
         {% else %}
             <a href="{{ item.link() }}">
