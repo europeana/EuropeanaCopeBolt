@@ -115,3 +115,59 @@ form {
 
 }
 
+
+form.registration-form {
+    input, select, textarea {
+        background: $white;
+        gap: 10px;
+        padding: 13px 12px;
+        border-radius: 8px;
+        border: solid 1px $medium-gray;
+        width: 100%;
+    }
+
+    input[type=checkbox] {
+        width: fit-content;
+        transform: scale(1.4);
+    }
+
+    input[type=checkbox]:checked:before {
+        background: red !important;
+    }
+
+    label {
+        color: $medium-gray;
+        font-family: $base-font-family;
+        font-size: 14px;
+
+        span {
+            margin-left: .3em;
+        }
+    }
+
+    input:active, input:focus-visible, label:focus-visible, select:active, select:focus-visible {
+        border-color: $innovationblue;
+        outline: 0;
+    }
+
+    & > div {
+        margin: 2em 0;
+    }
+
+    & > div:last-of-type > div {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 15px;
+    }
+
+    input[type=submit] {
+        background: $innovationblue;
+        color: $white;
+        border: none;
+    }
+
+    input[type=reset], input[type=submit] {
+        width: fit-content;
+        padding: .4em .8em;
+    }
+}
