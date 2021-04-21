@@ -385,8 +385,10 @@ class ZohoImport
         $property = explode('->', $property);
 
         $tempval = $record->{$property[0]};
-
-        return $this->getPropertyOfRecord($tempval, $property[1]);
+        if ($tempval != null)
+        {
+            return $this->getPropertyOfRecord($tempval, $property[1]);
+        }
     }
 
     /**
@@ -465,6 +467,11 @@ class ZohoImport
                 // if single linebreaks are left, convert them to <br>
                 if (strpos($var, "\n") !== false) {
                     $var = str_replace("\n", "<br>", $var);
+                }
+
+                if($key == 'image' && empty($var))
+                {
+                    $items[$key] = "[]";
                 }
 
                 $items[$key] = $var;
