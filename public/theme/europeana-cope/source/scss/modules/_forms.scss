@@ -21,7 +21,6 @@ textarea {
     -webkit-appearance: none; // for iOS
     padding: .8rem 0.5rem;
     font-size: 1rem;
-    margin: 0 0 1rem;
     display: block;
 
 
@@ -34,6 +33,22 @@ textarea {
         height: 2.20rem;
         border: none;
 
+    }
+
+
+}
+
+input,
+textarea,
+select {
+    & + span {
+        font-size: 12px;
+        color: $black;
+    }
+
+    &[type="checkbox"] {
+        display: block;
+        margin-top: .3em;
     }
 }
 
@@ -129,6 +144,7 @@ form.registration-form {
     input[type=checkbox] {
         width: fit-content;
         transform: scale(1.4);
+        margin-left: 3px;
     }
 
     input[type=checkbox]:checked:before {
@@ -164,10 +180,20 @@ form.registration-form {
         background: $innovationblue;
         color: $white;
         border: none;
+        border-radius: 4px;
+        text-transform: uppercase;
     }
 
     input[type=reset], input[type=submit] {
         width: fit-content;
-        padding: .4em .8em;
+        padding: .5em 1em;
     }
+}
+
+
+// For the network form title
+p.zcwf_title {
+    font-weight: bold;
+    color: $black;
+    font-size: 16px;
 }
