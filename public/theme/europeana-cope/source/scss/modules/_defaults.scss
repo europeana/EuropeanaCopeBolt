@@ -175,3 +175,9 @@ a.external
 * {
   overflow-anchor: none;
 }
+
+// Proper focus for the banner element
+a.banner:focus > div.header-group {
+  outline: inherit;
+  outline-offset: -10px;
+}
