@@ -1,0 +1,7 @@
+{% if item is not defined %}
+    {% set item = record %}
+{% endif %}
+
+{% set itemlink = item.htmllink %}
+
+{% include 'views/_listingthumbnailsfive.twig' %}
