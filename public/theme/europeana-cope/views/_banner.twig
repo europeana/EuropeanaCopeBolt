@@ -1,7 +1,7 @@
 <div class="banner-container {{ layoutclass }}">
     {% if record.htmllink|default(record.link)|default(false) %}
         {% set title = record.htmllink|default ? record.buttontext|default('') : record.title|default('') %}
-        <a class="banner" href="{{ record.htmllink|default(record.link) }}" aria-label="{{ title }}">
+        <a class="banner" href="{{ record.htmllink|default(record.link) }}" aria-label="{{ title }}" tabindex="0">
     {% else %}
         <div class="banner">
     {% endif %}
