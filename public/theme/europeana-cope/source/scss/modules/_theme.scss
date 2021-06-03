@@ -2787,14 +2787,12 @@ table.listingtable {
         justify-content: center;
         align-items: stretch;
         flex-wrap: wrap;
+        max-width: 1400px; // up to 4 tiles per row.
+        margin-left: auto;
+        margin-right: auto;
     }
     .subtitle {
         text-align: center;
-    }
-
-    .wrapped {
-        display: flex;
-        flex-wrap: no-wrap;
     }
 }
 
