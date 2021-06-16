@@ -33,7 +33,9 @@
         {% elseif item.intro is defined and item.intro is not empty %}
             {{ item.intro }}
         {% else %}
-            {% set omitted = ['htmllink', 'buttontext'] %}
+            {% set omitted = ['htmllink', 'buttontext', 'image_attribution_title', 'image_attribution_creator',
+                'image_attribution_date', 'image_attribution_holder', 'image_attribution_country', 'imagelicense',
+                'image_attribution_link'] %}
             <p>{{ item.excerpt(130, false, null, omitted) }}</p>
         {% endif %}
 
