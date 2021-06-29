@@ -8,7 +8,9 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <form class="registration-form" accept-charset="UTF-8" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" name="WebToLeads1482250000001117001" onsubmit="javascript:document.charset=&quot;UTF-8&quot;; return checkMandatory1482250000001117001()">
         <input name="xnQsjsdp" style="display:none;" type="text" value="c50096c169ca85883080b0c68d580d35df70e65a4004d20551df0b0a25ea005e"><input id="zc_gad" name="zc_gad" type="hidden" value=""><input name="xmIwtLD" style="display:none;" type="text" value="47d808d3e8614a6fe8bf7efd0b5d0ae3b2d4911830669c10e64938c4cd3dce0c"><input name="actionType" style="display:none;" type="text" value="TGVhZHM="><input name="returnURL" style="display:none;" type="text" value="https://pro.europeana.eu/page/thank-you-for-your-registration"><!-- Do not remove this code. -->
-        <p class="zcwf_title">Register for the Network</p>
+        <p class="zcwf_title" style="font-size: 1.2em;">Register for the Network</p>
+
+        <p class="zcwf_title">About you</p>
         <div>
             <div><label for="First_Name">First Name</label></div>
             <div><input maxlength="40" name="First Name" id="First_Name" type="text" required /> <span>Required</span></div>
@@ -22,20 +24,26 @@
             <div><input maxlength="100" name="Email" type="text"  id="Email" required /> <span>Required</span></div>
         </div>
         <div>
-            <div><label for="Company">Organisation (in English)</label></div>
-            <div><input maxlength="100" name="Company" type="text" id="Company" required /><span>Required</span></div>
-        </div>
-        <div>
-            <div><label for="Designation">Job title</label></div>
-            <div><input maxlength="100" name="Designation" type="text" id="Designation"/></div>
-        </div>
-        <div>
             <div><label for="Country">Country</label></div>
             <div><input maxlength="100" name="Country" type="text" required id="Country" /> <span>Required</span></div>
         </div>
         <div>
             <div><label for="City">City</label></div>
             <div><input maxlength="100" name="City" type="text" required id="City" /> <span>Required</span></div>
+        </div>
+        <div>
+            <div><label for="LEADCF14">Why do you want to become a Network member?</label></div>
+            <div><textarea name="LEADCF14" required id="LEADCF14" ></textarea><span>Required</span></div>
+        </div>
+
+        <p class="zcwf_title">Your work</p>
+        <div>
+            <div><label for="Company">Organisation (in English)</label></div>
+            <div><input maxlength="100" name="Company" type="text" id="Company" required /><span>Required</span></div>
+        </div>
+        <div>
+            <div><label for="Designation">Job title</label></div>
+            <div><input maxlength="100" name="Designation" type="text" id="Designation"/></div>
         </div>
         <div>
             <div><label for="Sector">Sector</label></div>
@@ -94,10 +102,9 @@
                 <span>Required</span>
             </div>
         </div>
-        <div>
-            <div><label for="LEADCF14">Why do you want to become a Network member?</label></div>
-            <div><textarea name="LEADCF14" required id="LEADCF14" ></textarea><span>Required</span></div>
-        </div>
+
+
+        <p class="zcwf_title">How can we find you online?</p>
         <div>
             <div><label for="LEADCF20">Personal or Organisational URL</label></div>
             <div><input maxlength="35" name="LEADCF20" type="text" id="LEADCF20" required /> <span>Required</span></div>
@@ -110,42 +117,56 @@
             <div><label for="LEADCF19">LinkedIn profile (shown public)</label></div>
             <div><input maxlength="100" name="LEADCF19" id="LEADCF19" type="text" /></div>
         </div>
+
+        <p class="zcwf_title">Which community do you wish to join? You can choose more than one.</p>
         <div>
-            <div><label for="LEADCF108">I wish to join the Europeana Research community</label></div>
+            <div><label for="LEADCF108">Europeana Research community</label></div>
             <div><input maxlength="3" name="LEADCF108" id="LEADCF108" type="checkbox" /></div>
         </div>
         <div>
-            <div><label for="LEADCF140">I wish to join the Europeana Education community</label></div>
+            <div><label for="LEADCF140">Europeana Education community</label></div>
             <div><input maxlength="3" name="LEADCF140" id="LEADCF140" type="checkbox" /></div>
         </div>
         <div>
-            <div><label for="LEADCF138">I wish to join the Europeana Impact community</label></div>
+            <div><label for="LEADCF138">Europeana Impact community</label></div>
             <div><input maxlength="3" name="LEADCF138" id="LEADCF138" type="checkbox" /></div>
         </div>
         <div>
-            <div><label for="LEADCF110">I wish to join the Europeana Copyright community</label></div>
+            <div><label for="LEADCF110">Europeana Copyright community</label></div>
             <div><input maxlength="3" name="LEADCF110" id="LEADCF110" type="checkbox" /></div>
         </div>
         <div>
-            <div><label for="LEADCF106">I wish to join the EuropeanaTech community</label></div>
+            <div><label for="LEADCF106">EuropeanaTech community</label></div>
             <div><input maxlength="3" name="LEADCF106" id="LEADCF106" type="checkbox" /></div>
         </div>
         <div>
-            <div><label for="LEADCF139">Join the Europeana Communicators community</label></div>
+            <div><label for="LEADCF139">Europeana Communicators community</label></div>
             <div><input maxlength="3" name="LEADCF139" id="LEADCF139" type="checkbox" /></div>
         </div>
+
+        <hr>
+
         <div>
-            <div><label for="LEADCF102">I have read and agreed to the Statutes and Bylaws</label></div>
+            <div><label for="LEADCF102">I have read and agreed to the
+                <a target="_blank" href="https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-statutes.pdf" rel="noopener noreferrer">
+                    Statutes
+                </a> and
+                <a target="_blank" href="https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-bylaws.pdf" rel="noopener noreferrer">
+                    Bylaws
+                </a>
+            </label></div>
             <div><input maxlength="3" name="LEADCF102" id="LEADCF102" type="checkbox" required /> <span>Required</span></div>
         </div>
         <div>
-            <div><label for="LEADCF136">Agreed to privacy policy terms and conditions</label></div>
+            <div><label for="LEADCF136">I agree to
+                <a target="_blank" href="https://www.europeana.eu/en/rights/privacy-policy" rel="noopener noreferrer">privacy policy</a>
+                terms and conditions</label></div>
             <div><input maxlength="3" name="LEADCF136" id="LEADCF136" type="checkbox" required /> <span>Required</span></div>
         </div>
-<!--        <div>-->
-<!--            <div><label for="LEADCF137">Network Association newsletter</label></div>-->
-<!--            <div><input checked="checked" maxlength="3" id="LEADCF137" name="LEADCF137" type="checkbox" /></div>-->
-<!--        </div>-->
+        <div style="visibility: hidden; position: absolute;">
+            <div><label for="LEADCF137">Network Association newsletter</label></div>
+            <div><input checked="checked" maxlength="3" id="LEADCF137" name="LEADCF137" type="checkbox" /></div>
+        </div>
         <div>
             <div><input title="Submit" type="submit" value="Submit" /></div>
         </div>
