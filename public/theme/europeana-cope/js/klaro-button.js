@@ -5,10 +5,14 @@ jQuery(document).ready(function () {
     })
 })
 
-function getCookie(){
-
+function getCookie() {
+    if (document.cookie.includes('klaro')) {
+        $('#cookie-button').show('slow', function () {
+        })
+    }
 }
 
+getCookie()
 
 $(document).on('click', '.cm-btn-accept-all', function () {
     $('#cookie-button').show('slow', function () {
