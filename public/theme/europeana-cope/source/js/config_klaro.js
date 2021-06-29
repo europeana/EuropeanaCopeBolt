@@ -1,7 +1,7 @@
 // By default, Klaro will load the config from  a global "klaroConfig" variable.
 // You can change this by specifying the "data-config" attribute on your
 // script take, e.g. like this:
-// <script src="klaro.js" data-config="myConfigVariableName" />
+// <script src="klaro.min.js" data-config="myConfigVariableName" />
 var klaroConfig = {
     // With the 0.7.0 release we introduce a 'version' paramter that will make
     // if easier for us to keep configuration files backwards-compatible in the future.
@@ -218,11 +218,11 @@ var klaroConfig = {
             // An optional callback function that will be called each time
             // the consent state for the service changes (true=consented). Passes
             // the `service` config as the second parameter as well.
-            callback: function (consent, service) {
-                // This is an example callback function.
-                console.log(
-                    'User consent for service ' + service.name + ': consent=' + consent
-                );
+            // callback: function (consent, service) {
+            //     // This is an example callback function.
+            //     console.log(
+            //         'User consent for service ' + service.name + ': consent=' + consent
+            //     );
                 // To be used in conjunction with Matomo 'requireCookieConsent' Feature, Matomo 3.14.0 or newer
                 // For further Information see https://matomo.org/faq/new-to-piwik/how-can-i-still-track-a-visitor-without-cookies-even-if-they-decline-the-cookie-consent/
                 /*
@@ -232,7 +232,7 @@ var klaroConfig = {
                     _paq.push(['forgetCookieConsentGiven']);
                 }
                 */
-            },
+            // },
 
             // If "required" is set to true, Klaro will not allow this service to
             // be disabled by the user.
