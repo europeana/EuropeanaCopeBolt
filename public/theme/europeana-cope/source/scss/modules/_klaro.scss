@@ -1,10 +1,23 @@
 .cookie-notice {
-  background-color: #3ad900 !important;
-  bottom: 0;
+  bottom: 0 !important;
+  top: auto !important;
 }
 
-.button.is-success {
+.cm-btn-success {
+  background-color: $dark-blue !important;
+}
+
+.cn-decline {
+  background-color: $line-gray !important;
+}
+
+.cn-learn-more {
+  color: $dark-blue !important;
+}
+
+#cookie-button {
   webkit-transform: translateY(2em);
+  transform: translateY(2em);
   bottom: 0;
   left: 3em;
   border-top-left-radius: .5em;
@@ -13,13 +26,11 @@
   -webkit-transition: -webkit-transform 1s ease;
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
-  transition: transform 1s ease,-webkit-transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
   position: fixed;
   overflow: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: Helvetica,Calibri,Arial,sans-serif;
-  font-size: 16px;
   line-height: 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,4 +38,11 @@
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   z-index: 9999;
+  background-color: $collections-blue !important;
+  cursor: pointer;
+}
+
+#cookie-button:hover {
+  webkit-transform: translateY(0em);
+  transform: translateY(0em);
 }
