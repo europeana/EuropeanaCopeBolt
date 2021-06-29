@@ -103,61 +103,6 @@ var klaroConfig = {
 
     // Example config that shows how to overwrite translations:
     // https://github.com/KIProtect/klaro/blob/master/src/configs/i18n.js
-    translations: {
-        // translationsed defined under the 'zz' language code act as default
-        // translations.
-        zz: {
-            privacyPolicyUrl: '/#privacy',
-        },
-        // If you erase the "consentModal" translations, Klaro will use the
-        // bundled translations.
-        de: {
-            privacyPolicyUrl: '/#datenschutz',
-            consentModal: {
-                description:
-                    'Hier können Sie einsehen und anpassen, welche Information wir über Sie sammeln. Einträge die als "Beispiel" gekennzeichnet sind dienen lediglich zu Demonstrationszwecken und werden nicht wirklich verwendet.',
-            },
-            matomo: {
-                description: 'Sammeln von Besucherstatistiken',
-            },
-            cloudflare: {
-                description: 'Schutz gegen DDoS-Angriffe',
-            },
-            purposes: {
-                analytics: 'Besucher-Statistiken',
-                security: 'Sicherheit',
-                livechat: 'Live Chat',
-                advertising: 'Anzeigen von Werbung',
-                styling: 'Styling',
-            },
-        },
-        en: {
-            consentModal: {
-                title: '<u>Consent</u>',
-                description:
-                    'Here you can see and customize the information that we collect about you. Entries marked as "Example" are just for demonstration purposes and are not really used on this website.',
-            },
-            matomo: {
-                description: 'Collecting of visitor statistics',
-            },
-            hotjar: {
-                description: 'Collecting of visitor statistics',
-            },
-            addthis: {
-                description: 'Collecting of visitor statistics',
-            },
-            cloudflare: {
-                description: 'Protection against DDoS attacks',
-            },
-            purposes: {
-                analytics: 'Analytics',
-                security: 'Security',
-                livechat: 'Livechat',
-                advertising: 'Advertising',
-                styling: 'Styling',
-            },
-        },
-    },
 
     // This is a list of third-party services that Klaro will manage for you.
     services: [
