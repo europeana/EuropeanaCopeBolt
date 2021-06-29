@@ -1,0 +1,31 @@
+.cookie-notice {
+  background-color: #3ad900 !important;
+  bottom: 0;
+}
+
+.button.is-success {
+  webkit-transform: translateY(2em);
+  /* transform: translateY(2em); */
+  bottom: 0;
+  left: 3em;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  -webkit-transition: transform 1s ease;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease,-webkit-transform 1s ease;
+  position: fixed;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Helvetica,Calibri,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  z-index: 9999;
+}
