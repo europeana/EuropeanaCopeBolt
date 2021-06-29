@@ -117,12 +117,6 @@ var klaroConfig = {
                 description:
                     'Hier können Sie einsehen und anpassen, welche Information wir über Sie sammeln. Einträge die als "Beispiel" gekennzeichnet sind dienen lediglich zu Demonstrationszwecken und werden nicht wirklich verwendet.',
             },
-            inlineTracker: {
-                description: 'Beispiel für ein Inline-Tracking Skript',
-            },
-            externalTracker: {
-                description: 'Beispiel für ein externes Tracking Skript',
-            },
             matomo: {
                 description: 'Sammeln von Besucherstatistiken',
             },
@@ -142,12 +136,6 @@ var klaroConfig = {
                 title: '<u>Consent</u>',
                 description:
                     'Here you can see and customize the information that we collect about you. Entries marked as "Example" are just for demonstration purposes and are not really used on this website.',
-            },
-            inlineTracker: {
-                description: 'Example of an inline tracking script',
-            },
-            externalTracker: {
-                description: 'Example of an external tracking script',
             },
             matomo: {
                 description: 'Collecting of visitor statistics',
@@ -261,19 +249,6 @@ var klaroConfig = {
         },
 
         // The services will appear in the modal in the same order as defined here.
-        {
-            name: 'inlineTracker',
-            title: 'Inline Tracker',
-            purposes: ['analytics'],
-            cookies: ['inline-tracker'],
-            optOut: false,
-        },
-        {
-            name: 'externalTracker',
-            title: 'External Tracker',
-            purposes: ['analytics', 'security'],
-            cookies: ['external-tracker'],
-        },
         {
             name: 'cloudflare',
             title: 'Cloudflare',
