@@ -24,9 +24,10 @@
                 <use xlink:href="#icon-search"></use>
             </svg>
         </button>
+
+
+        {% include 'partials/_searchform.twig' with {id : 'headersearch'} %}
+        {% include 'partials/_language-switcher-widget.twig' %}
     </div>
-
-    {% include 'partials/_searchform.twig' with {id : 'headersearch'} %}
-
 </header>
 

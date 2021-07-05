@@ -28,8 +28,18 @@ header {
         justify-content: space-between;
         height: 100%;
 
+        .translation-widget {
+            display: none;
+        }
+
         @include respond-to(menu-full) {
             align-items: stretch; // default
+
+            .translation-widget {
+                display: block;
+                align-self: center;
+                order: 1;
+            }
         }
     }
 

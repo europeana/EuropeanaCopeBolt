@@ -153,6 +153,23 @@ nav.main-menu {
         //does not do anything here, but give the JS a detection that it's in overlay
     }
 
+    .translation-widget {
+        color: $medium-gray;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        text-shadow: 7px 2px 0 0 $white;
+        line-height: 1.2;
+        padding: 1.2rem 1.2rem 1.2rem 1.875rem;
+
+        select {
+            background: inherit;
+        }
+
+        @include respond-to(menu-full) {
+            display: none;
+        }
+    }
+
 }
 
 // new menu (2019) styles
