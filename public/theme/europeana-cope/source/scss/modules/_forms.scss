@@ -131,7 +131,7 @@ form {
 }
 
 
-form.registration-form {
+form.registration-form, .translation-widget {
     input, select, textarea {
         background: $white;
         gap: 10px;
