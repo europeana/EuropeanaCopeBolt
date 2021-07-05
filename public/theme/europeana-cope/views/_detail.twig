@@ -52,9 +52,9 @@
                         {% endif %}
                     </figure>
                 {% elseif record.values.image.oembed|default is not empty %}
-                    <div class="main-img-container img-container is-overflow-hidden">
-                        {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 1240, height: 600} %}
-                    </div>
+                    <figure class="main-img-container img-container is-overflow-hidden">
+                        {% include 'partials/_oembed_resize.twig' with { oembed: item.values.image.oembed, width: 1240, height: 600 } %}
+                    </figure>
                 {% endif %}
 
                 {% if record.body is not empty %}
