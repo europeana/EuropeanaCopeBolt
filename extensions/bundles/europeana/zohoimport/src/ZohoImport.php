@@ -601,6 +601,11 @@ class ZohoImport
                 }
             }
 
+            // Set an empty array for records with no image
+            if(!key_exists('image', $items)) {
+                $items['image'] = [];
+            }
+
             // Store the data array into the record
             // reset the existing id if it was there before
             if ($existing_id) {
