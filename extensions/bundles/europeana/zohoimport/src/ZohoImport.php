@@ -601,10 +601,6 @@ class ZohoImport
                 }
             }
 
-            // Set an empty array for records with no image
-            if(!key_exists('image', $items)) {
-                $items['image'] = [];
-            }
 
             // Store the data array into the record
             // reset the existing id if it was there before
@@ -641,6 +637,10 @@ class ZohoImport
                     ];
                     $relations[$relation_id_before] = $tmprel;
                 }
+            }
+
+            if($this->currentrecord->get('image') == ""){
+                $this->currentrecord->set('image', []);
             }
 
             // use storage engine entity manager
