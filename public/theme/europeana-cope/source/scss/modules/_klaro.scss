@@ -12,7 +12,9 @@
 }
 
 .cn-learn-more {
-  color: $dark-blue !important;
+  color: $collections-blue !important;
+  font-size: x-large;
+  font-weight: bold ;
 }
 
 #cookie-button {
@@ -46,3 +48,4 @@
   webkit-transform: translateY(0em);
   transform: translateY(0em);
 }
+

@@ -105,24 +105,52 @@ var klaroConfig = {
     // https://github.com/KIProtect/klaro/blob/master/src/configs/i18n.js
 
     // This is a list of third-party services that Klaro will manage for you.
+
+    translations: {
+        en: {
+            privacyPolicyUrl: '/privacy',
+            consentModal: {
+                title: 'Cookies we would like to use',
+                description:
+                    'Here you can see and customise the information that we collect about you. We take your data privacy seriously.',
+            },
+            consentNotice: {
+                description:
+                'Hi! Could we please enable some additional cookies for Analytics & Security? You can always change or withdraw your consent later.'
+            },
+        },
+    },
+
     services: [
         {
             name: 'google-analytics',
             title: 'Google Analytics',
             purposes: ['analytics'],
-            default: false,
+            translations: {
+                en: {
+                    description: 'Used to track website performance and collect visitor insights',
+                }
+            }
         },
         {
             name: 'hotjar',
             title: 'Hotjar tracking',
             purposes: ['analytics'],
-            default: false,
+            translations: {
+                en: {
+                    description: 'Measure and observe user behavior',
+                }
+            }
         },
         {
             name: 'addthis',
             title: 'Addthis tracking',
             purposes: ['analytics'],
-            default: false,
+            translations: {
+                en: {
+                    description: 'Click tracking feature to measure the amount of traffic',
+                }
+            }
         },
         {
             // Each service should have a unique (and short) name.
@@ -159,7 +187,11 @@ var klaroConfig = {
                 [/^_pk_.*$/, '/', 'localhost'], //for the local version
                 'piwik_ignore',
             ],
-
+            translations: {
+                en: {
+                    description: 'Tracks online visits to one or more websites and displays reports on these visits for analysis',
+                }
+            },
             // An optional callback function that will be called each time
             // the consent state for the service changes (true=consented). Passes
             // the `service` config as the second parameter as well.
@@ -199,6 +231,11 @@ var klaroConfig = {
             title: 'Cloudflare',
             purposes: ['security'],
             required: true,
+            translations: {
+                en: {
+                    description: 'To provide the identification of trusted web traffic.',
+                }
+            },
         },
     ],
 };
