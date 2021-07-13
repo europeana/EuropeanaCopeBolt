@@ -4,6 +4,7 @@
   "description": "Europeana COPE Bolt template theme",
   "main": "index.js",
   "scripts": {
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1",
     "accessibility:lighthouse": "./accessibility.sh",
     "accessibility:lighthouse:prepare": "mkdir -p ${DEST_DIR}",

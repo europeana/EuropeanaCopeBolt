@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ seo.title() }}</title>
 
-{{ seo.metatags() }}
+    {{ seo.metatags() }}
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&subset=latin,greek,cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&subset=latin,greek,cyrillic"
+          rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/screen.css', 'theme') }}">
 
-    <link rel="Shortcut Icon" href="{{ asset('images/favicons/favicon.ico', 'theme') }}" />
+    <link rel="Shortcut Icon" href="{{ asset('images/favicons/favicon.ico', 'theme') }}"/>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicons/apple-touch-icon.png', 'theme') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicons/favicon-32x32.png', 'theme') }}">
@@ -19,6 +20,12 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="{{ asset('images/favicons/safari-pinned-tab.svg', 'theme') }}" color="#095f90">
     <meta name="theme-color" content="#ffffff">
+    <script defer data-config="klaroConfig" type="application/javascript"
+            src="https://cdn.kiprotect.com/klaro/v0.7/klaro.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.slim.js"
+            integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+            crossorigin="anonymous"></script>
 
     {{ include('partials/_analytics_gtm_script.twig') }}
 
@@ -49,15 +56,15 @@
 
 <body class="{% block bodyclass %}{% endblock bodyclass %} {% if currentpageinmenu == false %} body-no-menu{% endif %}">
 
-    {{ include('partials/_analytics_gtm_noscript.twig') }}
+{{ include('partials/_analytics_gtm_noscript.twig') }}
 
 
-    {{ include('partials/_svg_library.twig') }}
+{{ include('partials/_svg_library.twig') }}
 
-    {{ include('partials/_cookiebar.twig') }}
+{{ include('partials/_cookiebar.twig') }}
 
 {% block splashpage %}
-    <div> {# Needed for the sticking of main-menu #}
+<div> {# Needed for the sticking of main-menu #}
 
     {% block header %}
         {{ include('partials/_header.twig') }}
@@ -90,17 +97,17 @@
 
     {% block bottomincludes %}
     {% endblock bottomincludes %}
+
     <script src="{{ asset('js/scripts.min.js', 'theme') }}"></script>
 
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     {# addthis utility script #}
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a21862925f66e56"></script>
-
+    <script type="text/plain" data-type="application/javascript" data-name="addthis" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a21862925f66e56"></script>
     {% block trackingcodes %}
         {{ include('partials/_analytics.twig') }}
     {% endblock trackingcodes %}
-    </div>
+</div>
 
-    {{ include('partials/_aggregators_webchat.twig') }}
+{{ include('partials/_aggregators_webchat.twig') }}
 </body>
 </html>
