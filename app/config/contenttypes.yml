@@ -210,6 +210,14 @@ __nodes:
       required: false
       variant: inline
       class: narrow
+  search_defaults: &search_defaults
+    search_keywords:
+      type: textarea
+      label: 'Search keywords'
+      required: false
+      searchweight: 500
+      group: Search weight
+      prefix: '<div><h3>Weighted search</h3><p>Include search keywords and phrases, separated by comma, that will improve the search ranking of this page</p></div>'
   network_default_values: &network_default_values
     values:
       "(not set)": "(not set)"
@@ -747,6 +755,7 @@ pages:
     <<: *structure_defaults
     <<: *support_defaults
     <<: *contact_defaults
+    <<: *search_defaults
   taxonomy: [ communities, markets, categories, tags ]
   <<: *all_relations
   recordsperpage: 50
