@@ -110,14 +110,14 @@ var klaroConfig = {
         en: {
             privacyPolicyUrl: '/privacy',
             consentModal: {
-                title: 'Cookies we would like to use',
+                title: 'Services we would like to use',
                 description:
                     'Here you can see and customise the information that we collect about you. We take your data privacy seriously.',
             },
-            consentNotice: {
-                description:
-                'Hi! Could we please enable some additional cookies for Analytics & Security? You can always change or withdraw your consent later.'
-            },
+            // consentNotice: {
+            //     description:
+            //     'Hi! Could we please enable some additional cookies for Analytics & Security? You can always change or withdraw your consent later.'
+            // },
         },
     },
 

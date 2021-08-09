@@ -3,8 +3,13 @@
   top: auto !important;
 }
 
+.cn-ok {
+  align-items: center !important;
+
+}
+
 .cm-btn-success {
-  background-color: $dark-blue !important;
+  background-color: #219D31 !important;
 }
 
 .cn-decline {
@@ -13,8 +18,14 @@
 
 .cn-learn-more {
   color: $collections-blue !important;
-  font-size: x-large;
-  font-weight: bold ;
+  font-size: large;
+  font-weight: bold;
+  flex-grow: unset !important;
+}
+
+button.cm-btn.cm-btn-success.cm-btn-info.cm-btn-accept {
+  background-color: $innovationblue-light !important;
+  color: #085395;
 }
 
 #cookie-button {
@@ -48,4 +59,3 @@
   webkit-transform: translateY(0em);
   transform: translateY(0em);
 }
-
