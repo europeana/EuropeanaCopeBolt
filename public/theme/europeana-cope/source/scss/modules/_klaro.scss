@@ -16,11 +16,18 @@
   background-color: $line-gray !important;
 }
 
-.cn-learn-more {
+a.cm-link.cn-learn-more
+{
   color: $collections-blue !important;
-  font-size: large;
   font-weight: bold;
   flex-grow: unset !important;
+  border: solid 1px var(--dark2, #5c5c5c) ;
+  border-radius: var(--border-radius, 4px);
+  margin-right: .5em;
+  padding: 0.4em;
+  font-size: 1em;
+  cursor: pointer;
+
 }
 
 button.cm-btn.cm-btn-success.cm-btn-info.cm-btn-accept {
@@ -58,4 +65,8 @@ button.cm-btn.cm-btn-success.cm-btn-info.cm-btn-accept {
 #cookie-button:hover {
   webkit-transform: translateY(0em);
   transform: translateY(0em);
+}
+
+div.cn-buttons {
+  margin-top: 0 !important;
 }
