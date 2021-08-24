@@ -217,7 +217,7 @@ __nodes:
       required: false
       searchweight: 500
       group: Search weight
-      prefix: '<div><h3>Weighted search</h3><p>Include search keywords and phrases, separated by comma, that will improve the search ranking of this page</p></div>'
+      prefix: '<div><h3>Weighted search</h3><p>Include search keywords and phrases, separated by comma, that will improve the search ranking of this page</p><p><strong>Note: you should only use this after confirming with Nick or Georgia.</div>'
   network_default_values: &network_default_values
     values:
       "(not set)": "(not set)"
