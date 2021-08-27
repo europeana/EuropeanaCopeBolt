@@ -101,8 +101,8 @@
             </svg>
         </button>
 
-        <article>
-            <p>
+        <dl>
+            <dd>
             {% if attribution_link  is not empty %}
                     <a class='sourcelink' href="{{ attribution_link }}">
             {% endif %}
@@ -112,22 +112,22 @@
             {% if attribution_link  is not empty %}
                 </a>
             {% endif %}
-            </p>
+            </dd>
 
             {% if attribution_creator is not empty %}
-                <p><span class="def">Creator:</span> {{ attribution_creator }}</p>
+                <dd><span class="def">Creator:</span> {{ attribution_creator }}</dd>
             {% endif %}
 
             {% if attribution_date is not empty %}
-                <p><span class="def">Date:</span> {{ attribution_date }}</p>
+                <dd><span class="def">Date:</span> {{ attribution_date }}</dd>
             {% endif %}
 
             {% if attribution_holder is not empty %}
-                <p><span class="def">Institution:</span> {{ attribution_holder }}</p>
+                <dd><span class="def">Institution:</span> {{ attribution_holder }}</dd>
             {% endif %}
 
             {% if attribution_country is not empty %}
-                <p><span class="def">Country:</span> {{ attribution_country }}</p>
+                <dd><span class="def">Country:</span> {{ attribution_country }}</dd>
             {% endif %}
 
             {% if (attribution_license is defined and attribution_license is not empty) %}
@@ -187,6 +187,6 @@
 
             {% endif %}
 
-        </article>
+        </dl>
     </div>
     {% endif %}

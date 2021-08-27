@@ -113,6 +113,7 @@ nav.main-menu {
     z-index: 15; //check if correct. Needed on mobile for hover over sticky bar.
     background-color: $menu-grey;
     box-shadow: none;
+    display: none; // for screen readers
 
 
     @include respond-to(menu-full) {

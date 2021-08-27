@@ -3197,7 +3197,7 @@ div.body {
         }
     }
 
-    article {
+    dl {
         position: absolute;
         bottom: .5rem;
         right: .5rem;
@@ -3223,7 +3223,7 @@ div.body {
             }
         }
 
-        p {
+        dd {
             margin: 0;
             font-size: 0.75rem;
             color: $black;
