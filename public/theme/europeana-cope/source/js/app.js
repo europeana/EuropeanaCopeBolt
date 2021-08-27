@@ -63,6 +63,7 @@ $( document ).ready(function() {
             // Doe dicht
             iconclose.hide();
             iconmenu.fadeIn('fast');
+            $(this).attr('aria-expanded', false);
 
             //inschuiven menu
             nav.animate({
@@ -71,8 +72,11 @@ $( document ).ready(function() {
                 // Animation complete.
             });
             nav.removeClass('is-overlay');
+            nav.delay(100).hide(0);
+
         } else {
             // Doe open
+            nav.show();
             nav.addClass('is-overlay').css({
                 'top': offsetHeight,
                 'min-height': windowHeight,
@@ -80,7 +84,7 @@ $( document ).ready(function() {
             });
             iconmenu.hide();
             iconclose.fadeIn('fast');
-
+            $(this).attr('aria-expanded', true)
 
             //inschuiven menu
             nav.animate({
@@ -122,6 +126,8 @@ $( document ).ready(function() {
         if (search.hasClass('is-open')) {
             //doe dicht
             search.slideUp('fast').removeClass('is-open');
+            $(this).attr('aria-expanded', false);
+
 
             if (nav.hasClass('is-overlay')){
                 nav.animate({
@@ -138,6 +144,8 @@ $( document ).ready(function() {
                   })
                 }
               ).addClass('is-open');
+
+            $(this).attr('aria-expanded', true);
 
             if (nav.hasClass('is-overlay')) {
 
@@ -288,10 +296,17 @@ $( document ).ready(function() {
     * Open en close image attribution
     */
     $('button.image-info').on('mouseenter focus', function(e){
-        $(this).siblings('article').addClass('expanded');
+        $(this).siblings('dl').addClass('expanded');
     });
 
-    $('.license-attribution article').not('.always-expanded').on('mouseleave focusout', function(e){
+    $(document).on('keyup', function(e) {
+        const licenseAttributions =  $('.license-attribution dl').not('.always-expanded');
+        if (e.key === 'Escape' && licenseAttributions.length > 0) {
+            licenseAttributions.removeClass('expanded');
+        }
+    });
+
+    $('.license-attribution dl').not('.always-expanded').on('mouseleave focusout', function(e){
         $(this).removeClass('expanded');
     });
 
