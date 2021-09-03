@@ -138,7 +138,7 @@ var klaroConfig = {
             purposes: ['analytics'],
             translations: {
                 en: {
-                    description: 'Click tracking feature to measure the amount of traffic',
+                    description: ' Allows users to share pages directly to social media',
                 }
             }
         },
@@ -183,7 +183,7 @@ var klaroConfig = {
             ],
             translations: {
                 en: {
-                    description: 'Tracks website performance and collect visitor insights',
+                    description: 'Tracks website performance and collects visitor insights',
                 }
             },
             // An optional callback function that will be called each time
