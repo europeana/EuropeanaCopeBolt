@@ -461,9 +461,9 @@ $( document ).ready(function() {
                 $('#headersearch').appendTo('header'); // put it back, if coming from large
             }
 
-            $('#topbar').stick_in_parent({
-                offset_top: 64
-            });
+            // $('#topbar').stick_in_parent({
+            //     offset_top: 64
+            // });
 
             // $('#mainmenu').stick_in_parent({
             //     offset_top: 64
@@ -473,9 +473,9 @@ $( document ).ready(function() {
                 var cookieheight =  $('#cookiebar').outerHeight();
                 cookieoffset = cookieheight + 64;
 
-                $('#topbar').stick_in_parent({
-                    offset_top: cookieoffset
-                });
+                // $('#topbar').stick_in_parent({
+                //     offset_top: cookieoffset
+                // });
 
             }, 500);
 
@@ -493,9 +493,9 @@ $( document ).ready(function() {
             //  });
 
             // set sticky topbar
-             $('#topbar').stick_in_parent({
-                offset_top: 75
-            });
+            //  $('#topbar').stick_in_parent({
+            //     offset_top: 75
+            // });
             $('.sticky-header').stick_in_parent();
         }
 

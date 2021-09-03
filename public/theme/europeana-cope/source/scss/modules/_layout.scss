@@ -41,13 +41,13 @@ body > div {
         position: relative;
     }
     > header {
-        position: sticky;
         top: 0px;
         z-index: 20;
 
         padding: 0 0.875rem;
             @include respond-to(menu-full){
                 height: 75px;
+                position: sticky;
             }
     }
     > main,[role="main"] {
@@ -61,6 +61,11 @@ body > div {
     // background: #f09;
     position: relative;
     background-color: $white;
+
+    @include respond-to(menu-full) {
+        position: sticky;
+        top: 75px; // after the main #header
+    }
 }
 
 .canvas {
