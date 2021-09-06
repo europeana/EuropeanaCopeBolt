@@ -38,13 +38,24 @@ $( document ).ready(function() {
     $(window).resize(function() {
         clearTimeout(resizeId);
         resizeId = setTimeout(preLoadChecks, 20);
+        handleMobileMenu();
     });
 
     /**
-    * off-canvas menu on mobile
-    */
-    $('.menu-toggle').on( "click", function(e) {
-        e.preventDefault();
+     * MOBILE MENU HANDLING
+     */
+    let mobileMenuState = 'collapsed';
+
+    const flipMobileMenuState = () => {
+       if (mobileMenuState === 'collapsed') {
+           mobileMenuState = 'expanded';
+       }   else if (mobileMenuState === 'expanded') {
+           mobileMenuState = 'collapsed';
+       }
+    };
+
+    const handleMobileMenu = () => {
+
         var nav = $("nav.main-menu");
         var headerHeight = $('header').height();
         var cookieHeight = $('#cookiebar').outerHeight();
@@ -52,6 +63,8 @@ $( document ).ready(function() {
         var fullHeight = ($('body').height())-headerHeight;
         var iconmenu = $('svg.icon-menu', this);
         var iconclose = $('svg.icon-delete', this);
+        var toggleButton = $('button.menu-toggle');
+
 
         if ($('#cookiebar').is(':visible') == true ){
             offsetHeight = headerHeight + cookieHeight;
@@ -59,11 +72,11 @@ $( document ).ready(function() {
             offsetHeight = headerHeight;
         }
 
-        if ( nav.hasClass('is-overlay') ){
+        if ( mobileMenuState === 'collapsed'){
             // Doe dicht
             iconclose.hide();
             iconmenu.fadeIn('fast');
-            $(this).attr('aria-expanded', false);
+            toggleButton.attr('aria-expanded', false);
 
             //inschuiven menu
             nav.animate({
@@ -74,7 +87,7 @@ $( document ).ready(function() {
             nav.removeClass('is-overlay');
             nav.delay(100).hide(0);
 
-        } else {
+        } else if (mobileMenuState === 'expanded') {
             // Doe open
             nav.show();
             nav.addClass('is-overlay').css({
@@ -84,16 +97,29 @@ $( document ).ready(function() {
             });
             iconmenu.hide();
             iconclose.fadeIn('fast');
-            $(this).attr('aria-expanded', true)
+            toggleButton.attr('aria-expanded', true)
 
             //inschuiven menu
             nav.animate({
-                left: '+=235'
+                left: '0'
             }, 100, function() {
                 // Animation complete.
             });
         }
+    };
+
+    /**
+    * off-canvas menu on mobile
+    */
+    $('.menu-toggle').on( "click", function(e) {
+        e.preventDefault();
+        flipMobileMenuState();
+        handleMobileMenu();
     });
+
+    /**
+     * end of mobile menu handling
+     */
 
     /**
     * breadcrumbs / history path
