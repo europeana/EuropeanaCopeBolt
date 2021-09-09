@@ -2,9 +2,9 @@
 
 <a class="button floating backtotop" id="backtotop" href="#header">
     {% spaceless %}
-    <svg class="icon icon-facet_up">
-        <use xlink:href="#icon-facet_up"></use>
-    </svg><span class="sr-only">top</span>
+        <svg class="icon icon-facet_up">
+            <use xlink:href="#icon-facet_up"></use>
+        </svg><span class="sr-only">top</span>
     {% endspaceless %}
 </a>
 
@@ -17,12 +17,13 @@
 
         <div class="group">
             <div class="footer-block footer-block-address h-card">
-                <img class="logo-small u-logo" src="{{ paths.theme }}images/europeana_logo_footer_white.png" alt="Europeana"/>
+                <img class="logo-small u-logo" src="{{ paths.theme }}images/europeana_logo_footer_white.png"
+                     alt="Europeana"/>
                 <address>
                     <span class="p-name">Europeana Foundation</span>
-                    <br /><span class="p-street-address">Prins Willem-Alexanderhof 5</span>
-                    <br /><span class="p-postal-code">2595 BE</span> <span class="p-locality">Den Haag</span>
-                    <br /><span class="p-country-name">Netherlands</span>
+                    <br/><span class="p-street-address">Prins Willem-Alexanderhof 5</span>
+                    <br/><span class="p-postal-code">2595 BE</span> <span class="p-locality">Den Haag</span>
+                    <br/><span class="p-country-name">Netherlands</span>
                 </address>
             </div>
 
@@ -36,7 +37,8 @@
                 {% else %}
                     <h4>Our mission</h4>
                     <p>
-                        We transform the world with culture! We want to build on Europe’s rich heritage and make it easier for people to use, whether for work, for learning or just for fun.
+                        We transform the world with culture! We want to build on Europe’s rich heritage and make it
+                        easier for people to use, whether for work, for learning or just for fun.
                     </p>
                 {% endif %}
             </div>
@@ -46,28 +48,33 @@
                 <div class="socials">
                     <a href="https://twitter.com/EuropeanaEU" class="tw">
                         <svg class="icon icon-twitter">
-                            <use xlink:href="#icon-twitter"> </use>
-                        </svg> <span class="sr-only">twitter</span>
+                            <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                        <span class="sr-only">twitter</span>
                     </a>
                     <a href="https://www.facebook.com/Europeana" class="fb">
-                         <svg class="icon icon-facebook">
-                            <use xlink:href="#icon-facebook"> </use>
-                        </svg> <span class="sr-only">facebook</span>
+                        <svg class="icon icon-facebook">
+                            <use xlink:href="#icon-facebook"></use>
+                        </svg>
+                        <span class="sr-only">facebook</span>
                     </a>
                     <a href="https://www.linkedin.com/company/europeana" class="li">
-                         <svg class="icon icon-linkedin">
-                            <use xlink:href="#icon-linkedin"> </use>
-                        </svg> <span class="sr-only">Linked In</span>
+                        <svg class="icon icon-linkedin">
+                            <use xlink:href="#icon-linkedin"></use>
+                        </svg>
+                        <span class="sr-only">Linked In</span>
                     </a>
                     <a href="https://github.com/europeana" class="gh">
-                         <svg class="icon icon-github">
-                            <use xlink:href="#icon-github"> </use>
-                        </svg> <span class="sr-only">Github</span>
+                        <svg class="icon icon-github">
+                            <use xlink:href="#icon-github"></use>
+                        </svg>
+                        <span class="sr-only">Github</span>
                     </a>
                     <a href="https://www.instagram.com/europeana_eu/ " class="li">
-                         <svg class="icon icon-instagram">
-                            <use xlink:href="#icon-instagram"> </use>
-                        </svg> <span class="sr-only">Instagram</span>
+                        <svg class="icon icon-instagram">
+                            <use xlink:href="#icon-instagram"></use>
+                        </svg>
+                        <span class="sr-only">Instagram</span>
                     </a>
                 </div>
             </div>
@@ -79,43 +86,50 @@
             {% setcontent footereu = 'resources/footer-eu' %}
             {% if footereu is not empty and footereu.values.image.file is not empty %}
                 <p class="copyright {{ footereu.cssclass|default() }}">
-                    <img src="/files/{{ footereu.values.image.file }}" width='250' alt="{{ footereu.values.image.title|default(footereu.buttontext|default('Funded by the European Union. Connecting Europe Facility.')) }}"/>
+                    <img src="/files/{{ footereu.values.image.file }}" width='250'
+                         alt="{{ footereu.values.image.title|default(footereu.buttontext|default('Funded by the European Union. Connecting Europe Facility.')) }}"/>
                 </p>
             {% else %}
                 <p class="copyright fallback">
-                    <img src="{{paths.theme}}images/eu_flag_co-financed_white.svg" width='250' alt="Funded by the European Union. Connecting Europe Facility."/>
+                    <img src="{{ paths.theme }}images/eu_flag_co-financed_white.svg" width='250'
+                         alt="Funded by the European Union. Connecting Europe Facility."/>
                 </p>
             {% endif %}
 
             {% setcontent footerdisclaimer = 'resources/footer-disclaimer' %}
             {% if footerdisclaimer is not empty %}
                 <p class="eu-disclaimer {{ footerdisclaimer.cssclass|default() }}">
-                   {{ footerdisclaimer.body|default('This website is developed and maintained on behalf of the European Commission by the consortium led by Europeana Foundation. The European Commission goal is to keep information provided at this website accurate. However, the Commission does not guarantee the accuracy of the information and accepts no responsibility or liability whatsoever with regard to the information on this site. Neither the Commission nor any person acting on the Commission’s behalf may be held responsible for the use which may be made of the information contained therein.')|striptags('<a> <b> <strong> <i> <em>')|raw|nl2br }}
+                    {{ footerdisclaimer.body|default('This website is developed and maintained on behalf of the European Commission by the consortium led by Europeana Foundation. The European Commission goal is to keep information provided at this website accurate. However, the Commission does not guarantee the accuracy of the information and accepts no responsibility or liability whatsoever with regard to the information on this site. Neither the Commission nor any person acting on the Commission’s behalf may be held responsible for the use which may be made of the information contained therein.')|striptags('<a> <b> <strong> <i> <em>')|raw|nl2br }}
                 </p>
             {% else %}
                 <p class="eu-disclaimer fallback">
-                    This website is developed and maintained on behalf of the European Commission by the consortium led by Europeana Foundation. The European Commission goal is to keep information provided at this website accurate. However, the Commission does not guarantee the accuracy of the information and accepts no responsibility or liability whatsoever with regard to the information on this site. Neither the Commission nor any person acting on the Commission’s behalf may be held responsible for the use which may be made of the information contained therein.
+                    This website is developed and maintained on behalf of the European Commission by the consortium led
+                    by Europeana Foundation. The European Commission goal is to keep information provided at this
+                    website accurate. However, the Commission does not guarantee the accuracy of the information and
+                    accepts no responsibility or liability whatsoever with regard to the information on this site.
+                    Neither the Commission nor any person acting on the Commission’s behalf may be held responsible for
+                    the use which may be made of the information contained therein.
                 </p>
             {% endif %}
 
             {% setcontent footerextralogo = 'resources/footer-extralogo' %}
             {% if footerextralogo is not empty and footerextralogo.values.image.file is not empty %}
                 <div class="extra-logo {{ footerextralogo.cssclass|default() }}">
-                    <img src="/files/{{ footereu.values.image.file }}"  width='250' alt="{{ footerextralogo.values.image.title|default(footerextralogo.buttontext|default('2018 European year of cultural heritage. #EuropeForCulture')) }}"/>
+                    <img src="/files/{{ footereu.values.image.file }}" width='250'
+                         alt="{{ footerextralogo.values.image.title|default(footerextralogo.buttontext|default('2018 European year of cultural heritage. #EuropeForCulture')) }}"/>
                 </div>
             {% else %}
                 <div class="extra-logo">
 
                 </div>
             {% endif %}
-
             {% setcontent footerinfo = 'resources/footer-info' %}
             {% if footerinfo is not empty %}
                 {{ footerinfo.body }}
             {% endif %}
         </div>
-
     </div>
+    <a class="button is-success" id="cookie-button" onclick="return klaro.show();" style="display: none">Change cookie settings</a>
 </footer>
 {% block editlink %}
     {{ include('partials/_editlink.twig') }}
