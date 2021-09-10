@@ -115,8 +115,7 @@ var klaroConfig = {
                     "Here you can see and customise the services that we'd like to use on this website. We take your data privacy seriously.",
             },
             consentNotice: {
-                description:
-                'Hi! Could we please enable some additional services for Analytics & Security? You can always change or withdraw your consent later.'
+                description: 'Hi! Could we please enable some additional services for Analytics & Security? You can always change or withdraw your consent later.'
             },
         },
     },
@@ -130,7 +129,11 @@ var klaroConfig = {
                 en: {
                     description: 'Measures and observes user behavior including surveys and functionality enabling the user to give feedback',
                 }
-            }
+            },
+            cookies: [
+                [/^_hj.*$/, '/', 'klaro.kiprotect.com'], //for the production version
+                [/^_hj.*$/, '/', 'localhost'], //for the local version
+            ]
         },
         {
             name: 'addthis',
@@ -140,7 +143,11 @@ var klaroConfig = {
                 en: {
                     description: ' Allows users to share pages directly to social media',
                 }
-            }
+            },
+            cookies: [
+                [/^__atuv.*$/, '/', 'klaro.kiprotect.com'], //for the production version
+                [/^__atuv.*$/, '/', 'localhost'], //for the local version
+            ]
         },
         {
             // Each service should have a unique (and short) name.
@@ -194,15 +201,15 @@ var klaroConfig = {
             //     console.log(
             //         'User consent for service ' + service.name + ': consent=' + consent
             //     );
-                // To be used in conjunction with Matomo 'requireCookieConsent' Feature, Matomo 3.14.0 or newer
-                // For further Information see https://matomo.org/faq/new-to-piwik/how-can-i-still-track-a-visitor-without-cookies-even-if-they-decline-the-cookie-consent/
-                /*
-                if(consent==true){
-                    _paq.push(['rememberCookieConsentGiven']);
-                } else {
-                    _paq.push(['forgetCookieConsentGiven']);
-                }
-                */
+            // To be used in conjunction with Matomo 'requireCookieConsent' Feature, Matomo 3.14.0 or newer
+            // For further Information see https://matomo.org/faq/new-to-piwik/how-can-i-still-track-a-visitor-without-cookies-even-if-they-decline-the-cookie-consent/
+            
+            if(consent==true){
+                _paq.push(['rememberCookieConsentGiven']);
+            } else {
+                _paq.push(['forgetCookieConsentGiven']);
+            }
+            
             // },
 
             // If "required" is set to true, Klaro will not allow this service to
