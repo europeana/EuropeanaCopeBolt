@@ -203,13 +203,15 @@ var klaroConfig = {
             //     );
             // To be used in conjunction with Matomo 'requireCookieConsent' Feature, Matomo 3.14.0 or newer
             // For further Information see https://matomo.org/faq/new-to-piwik/how-can-i-still-track-a-visitor-without-cookies-even-if-they-decline-the-cookie-consent/
-            
+
+            /*
             if(consent==true){
                 _paq.push(['rememberCookieConsentGiven']);
             } else {
                 _paq.push(['forgetCookieConsentGiven']);
             }
-            
+            */
+
             // },
 
             // If "required" is set to true, Klaro will not allow this service to
