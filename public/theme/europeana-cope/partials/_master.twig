@@ -61,7 +61,7 @@
 
 {{ include('partials/_svg_library.twig') }}
 
-{{ include('partials/_cookiebar.twig') }}
+{#{{ include('partials/_cookiebar.twig') }}#}
 
 {% block splashpage %}
 <div> {# Needed for the sticking of main-menu #}
@@ -69,10 +69,6 @@
     {% block header %}
         {{ include('partials/_header.twig') }}
     {% endblock header %}
-
-    {% block navigation %}
-        {{ include('partials/_navigation.twig') }}
-    {% endblock navigation %}
 
     <div class="canvas"> {# contains all items next to navigation #}
 

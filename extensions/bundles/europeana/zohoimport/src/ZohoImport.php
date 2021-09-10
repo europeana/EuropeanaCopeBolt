@@ -601,6 +601,7 @@ class ZohoImport
                 }
             }
 
+
             // Store the data array into the record
             // reset the existing id if it was there before
             if ($existing_id) {
@@ -636,6 +637,10 @@ class ZohoImport
                     ];
                     $relations[$relation_id_before] = $tmprel;
                 }
+            }
+
+            if($this->currentrecord->get('image') == ""){
+                $this->currentrecord->set('image', []);
             }
 
             // use storage engine entity manager

@@ -115,8 +115,7 @@ var klaroConfig = {
                     "Here you can see and customise the services that we'd like to use on this website. We take your data privacy seriously.",
             },
             consentNotice: {
-                description:
-                    'Hi! Could we please enable some additional services for Analytics & Security? You can always change or withdraw your consent later.'
+                description: 'Hi! Could we please enable some additional services for Analytics & Security? You can always change or withdraw your consent later.'
             },
         },
     },
@@ -184,6 +183,10 @@ var klaroConfig = {
                 [/^_pk_.*$/, '/', 'klaro.kiprotect.com'], //for the production version
                 [/^_pk_.*$/, '/', 'localhost'], //for the local version
                 'piwik_ignore',
+                [/^_hj.*$/, '/', 'klaro.kiprotect.com'], //for the production version
+                [/^_hj.*$/, '/', 'localhost'], //for the local version
+                [/^__atuv.*$/, '/', 'klaro.kiprotect.com'], //for the production version
+                [/^__atuv.*$/, '/', 'localhost'], //for the local version
             ],
             translations: {
                 en: {
