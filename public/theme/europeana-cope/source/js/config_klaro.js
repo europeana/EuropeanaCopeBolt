@@ -108,7 +108,7 @@ var klaroConfig = {
 
     translations: {
         en: {
-            privacyPolicyUrl: 'https://www.europeana.eu/en/rights/privacy-policy',
+            privacyPolicyUrl: 'https://www.europeana.eu/en/rights/cookies-policy',
             consentModal: {
                 title: 'Services we would like to use',
                 description:
