@@ -183,10 +183,6 @@ var klaroConfig = {
                 [/^_pk_.*$/, '/', 'klaro.kiprotect.com'], //for the production version
                 [/^_pk_.*$/, '/', 'localhost'], //for the local version
                 'piwik_ignore',
-                [/^_hj.*$/, '/', 'klaro.kiprotect.com'], //for the production version
-                [/^_hj.*$/, '/', 'localhost'], //for the local version
-                [/^__atuv.*$/, '/', 'klaro.kiprotect.com'], //for the production version
-                [/^__atuv.*$/, '/', 'localhost'], //for the local version
             ],
             translations: {
                 en: {
