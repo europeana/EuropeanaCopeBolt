@@ -2987,6 +2987,10 @@ resources:
       type: image
       label: "Block image"
       attrib: title
+    enable_filter:
+      type: checkbox
+      label: "Enable filter"
+      postfix: "Tick this checbox if you want to add the filter at the bottom of the image for better readability of the overlayed text"
     icon:
       type: image
       label: "Icon"
