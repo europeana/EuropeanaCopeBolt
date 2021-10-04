@@ -332,6 +332,18 @@ img.round,
     scrollbar-width: none;
 }
 
+
+
+// exception for section banner
+.section-banner .colored-image.image-filter {
+    background-color: transparent;
+
+    &:before {
+        background-image:  linear-gradient(to bottom, rgba(255,255,255,0.65) 0%, rgba(19,19,19,1) 100%);
+        mix-blend-mode: multiply;
+    }
+}
+
 .colored-image {
     display: block;
     height: 100%;
@@ -340,7 +352,7 @@ img.round,
     background-size: cover;
     background-position: 50% 50%;
 
-    &:before {
+    &.image-filter:before {
         content: '';
         position: absolute;
         top: 0;
@@ -350,16 +362,6 @@ img.round,
         // gradient specified by Carlos
         background-image: linear-gradient(-180deg, rgba(127,125,125,0.47) 0%, rgba(0,0,0,0.72) 89%);
         mix-blend-mode: color;
-    }
-
-    // exception for section banner
-    .section-banner & {
-        background-color: transparent;
-
-        &:before {
-            background-image:  linear-gradient(to bottom, rgba(255,255,255,0.65) 0%, rgba(19,19,19,1) 100%);
-            mix-blend-mode: multiply;
-        }
     }
 
     .section-banner.no-overlay & {
