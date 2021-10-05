@@ -3388,7 +3388,17 @@ div.body {
     }
 
 }
-
+.section-banner .license-attribution.always-expanded  {
+    @include respond-to(large-screens) {
+        button.image-info {
+            display: block;
+        }
+        .expanded {
+            bottom: 0;
+            left: 0.5rem;
+        }
+    }
+}
 /*
 ***********************************************************************
 * Gradients for images.
