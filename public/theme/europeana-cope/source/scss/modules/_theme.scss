@@ -3206,7 +3206,7 @@ div.body {
         position: absolute;
         bottom: .5rem;
         right: .5rem;
-        width: auto;
+        width: max-content;
         background: rgba($white, 0.95);
         color: $black;
         padding: .55rem;
