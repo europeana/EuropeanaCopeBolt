@@ -1,6 +1,6 @@
 <div class="banner-container {{ layoutclass }}">
     <a class="banner event-banner" href="{{ record.htmllink|default(record.link)|default('#') }}" aria-label="{{ record.values.image.title|default }}">
-        <div class="colored-image"
+        <div class="colored-image {% if record.enable_filter %}image-filter{% endif %}"
             {% if record.image is defined and record.image is not empty %}
                 {% if layoutclass == 'third' %}
                     style="background-image: url({{ image(record.image, 800, 1000)|default('notfound') }})"

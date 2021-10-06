@@ -335,7 +335,7 @@ img.round,
 
 
 // exception for section banner
-.section-banner .colored-image.image-filter {
+.section-banner .banner:not(event-banner) .colored-image.image-filter {
     background-color: transparent;
 
     &:before {
@@ -344,11 +344,14 @@ img.round,
     }
 }
 
+.section-banner .event-banner .colored-image.image-filter {
+    background-blend-mode: multiply;
+}
+
 .colored-image {
     display: block;
     height: 100%;
     background-color: $denim;
-    background-blend-mode: multiply;
     background-size: cover;
     background-position: 50% 50%;
 
