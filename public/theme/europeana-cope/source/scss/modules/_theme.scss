@@ -335,7 +335,7 @@ img.round,
 
 
 // exception for section banner
-.section-banner .colored-image.image-filter {
+.section-banner .banner:not(event-banner) .colored-image.image-filter {
     background-color: transparent;
 
     &:before {
@@ -344,11 +344,14 @@ img.round,
     }
 }
 
+.section-banner .event-banner .colored-image.image-filter {
+    background-blend-mode: multiply;
+}
+
 .colored-image {
     display: block;
     height: 100%;
     background-color: $denim;
-    background-blend-mode: multiply;
     background-size: cover;
     background-position: 50% 50%;
 
@@ -3203,7 +3206,7 @@ div.body {
         position: absolute;
         bottom: .5rem;
         right: .5rem;
-        width: auto;
+        width: max-content;
         background: rgba($white, 0.95);
         color: $black;
         padding: .55rem;
@@ -3388,7 +3391,17 @@ div.body {
     }
 
 }
-
+.section-banner .license-attribution.always-expanded  {
+    @include respond-to(large-screens) {
+        button.image-info {
+            display: block;
+        }
+        .expanded {
+            bottom: 0;
+            left: 0.5rem;
+        }
+    }
+}
 /*
 ***********************************************************************
 * Gradients for images.
