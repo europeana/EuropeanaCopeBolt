@@ -2990,7 +2990,7 @@ resources:
     enable_filter:
       type: checkbox
       label: "Enable filter"
-      postfix: "Tick this checbox if you want to add the filter at the bottom of the image for better readability of the overlayed text"
+      postfix: "Tick this checbox if you want to add the filter to the image for better readability of the overlayed text. Note: Only applicable to hero banners"
     icon:
       type: image
       label: "Icon"
