@@ -355,6 +355,10 @@ img.round,
     background-size: cover;
     background-position: 50% 50%;
 
+    .section-calltoaction & {
+        background-blend-mode: multiply;
+    }
+
     &.image-filter:before {
         content: '';
         position: absolute;
