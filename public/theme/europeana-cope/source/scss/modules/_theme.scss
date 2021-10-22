@@ -3219,6 +3219,18 @@ div.body {
         border-radius: 4px;
         display: none;
 
+        @include respond-to(large-screens) {
+            display: flex;
+            gap: .25rem;
+            position: relative;
+            bottom: 0;
+            margin-bottom: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            margin-left: 4rem;
+            font-size: $font-size-smallest;
+        }
+
         &.expanded {
             display: block;
         }
@@ -3234,7 +3246,6 @@ div.body {
 
         dd {
             margin: 0;
-            font-size: 0.75rem;
             color: $black;
             padding: 0;
             max-width: 500px;
@@ -3249,10 +3260,6 @@ div.body {
             color: $medium-gray;
         }
 
-        span.image-license {
-           font-size: 0.6875rem;
-        }
-
         svg {
             fill: $black;
             margin-right: .5rem;
@@ -3260,7 +3267,6 @@ div.body {
 
         a {
             color: $black;
-            font-size: 0.75rem;
 
             &:hover {
                text-decoration: none;
@@ -3398,7 +3404,7 @@ div.body {
 .section-banner .license-attribution.always-expanded  {
     @include respond-to(large-screens) {
         button.image-info {
-            display: block;
+            display: none;
         }
         .expanded {
             bottom: 0;
