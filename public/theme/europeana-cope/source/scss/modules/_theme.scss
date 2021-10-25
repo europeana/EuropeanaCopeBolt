@@ -3219,16 +3219,18 @@ div.body {
         border-radius: 4px;
         display: none;
 
-        @include respond-to(large-screens) {
-            display: flex;
-            gap: .25rem;
-            position: relative;
-            bottom: 0;
-            margin-bottom: 0;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            margin-left: 4rem;
-            font-size: $font-size-smallest;
+        .banner-container & {
+            @include respond-to(large-screens) {
+                display: flex;
+                gap: .25rem;
+                position: relative;
+                bottom: 0;
+                margin-bottom: 0;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                margin-left: 4rem;
+                font-size: $font-size-smallest;
+            }
         }
 
         &.expanded {
