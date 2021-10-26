@@ -28,7 +28,7 @@
                 {{ active ? ' active' -}}
                 {{ is_current_url(item) -}}">
 
-                <a href="{{ item.link }}" title='{{ item.title|default('')|escape }}'>
+                <a href="{{ item.link }}" title='{{ item.title|default('')|escape }}' {{ active ? ' aria-current="page"' }}>
                     {{- item.label|default('-') -}}
                 </a>
 
