@@ -10,11 +10,6 @@
             </svg>
         </button>
 
-
-        {% block navigation %}
-            {{ include('partials/_navigation.twig') }}
-        {% endblock navigation %}
-
         <div class="mainlogo">
             <a class="home-link" href="/">
                 <img src="{{ paths.theme }}images/europeana_pro_logo.svg" alt="Europeana pro" />
@@ -28,6 +23,11 @@
                 <use xlink:href="#icon-search"></use>
             </svg>
         </button>
+
+        {% block navigation %}
+            {{ include('partials/_navigation.twig') }}
+        {% endblock navigation %}
+
     </div>
 
     {% include 'partials/_searchform.twig' with {id : 'headersearch'} %}

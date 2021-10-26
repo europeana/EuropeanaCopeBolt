@@ -18,7 +18,8 @@
                 {{ active ? ' active' }}">
 
                 <a href="{{ item.link }}"
-                   title='{{ item.title|default('')|escape }}'>
+                        {{ active ? ' aria-current="true"' }}
+                    title='{{ item.title|default('')|escape }}'>
                     <span>{{- item.label|default('-') -}}</span>
                 </a>
 
