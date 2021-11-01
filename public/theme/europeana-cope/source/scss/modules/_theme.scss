@@ -359,6 +359,10 @@ img.round,
         background-blend-mode: multiply;
     }
 
+    &.image-filter {
+        background-blend-mode: multiply;
+    }
+
     &.image-filter:before {
         content: '';
         position: absolute;
