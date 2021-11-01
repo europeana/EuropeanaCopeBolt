@@ -359,6 +359,10 @@ img.round,
         background-blend-mode: multiply;
     }
 
+    &.image-filter {
+        background-blend-mode: multiply;
+    }
+
     &.image-filter:before {
         content: '';
         position: absolute;
@@ -3175,6 +3179,11 @@ div.body {
 
 .banner-container {
     position: relative;
+    &.third {
+        .colored-image {
+            background-blend-mode: multiply;
+        }
+    }
 }
 
 .license-attribution {
