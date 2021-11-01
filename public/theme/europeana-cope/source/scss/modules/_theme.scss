@@ -3179,6 +3179,11 @@ div.body {
 
 .banner-container {
     position: relative;
+    &.third {
+        .colored-image {
+            background-blend-mode: multiply;
+        }
+    }
 }
 
 .license-attribution {
