@@ -1,12 +1,12 @@
-$( document ).ready(function() {
+$(document).ready(function () {
     $('html').removeClass('no-js').addClass('js');
 
     //console.log("This JS file is engaged, captain. permission to fly?");
 
     /**
-    * vars
-    */
-    // Breakpoints, make same as base.css!!! In ems
+     * vars
+     */
+        // Breakpoints, make same as base.css!!! In ems
     var breakSmall = 6.25; // 100
     var breakMedium = 24; // 384
     var breakLarge = 47.9375; // 767
@@ -22,6 +22,8 @@ $( document ).ready(function() {
     var windowWidth = viewportSize.getWidth(); //replaces buggy and unreliable $(window).width();
     // assume base font size is 16px
     var windowWidthEms = ((viewportSize.getWidth()) / 16);
+
+    const getWindowEmWidth = () => { return  viewportSize.getWidth() / 16 };
     //console.log(windowWidthEms);
 
     var hasCookie = getCookie('epro_cookieconsent');
@@ -35,10 +37,12 @@ $( document ).ready(function() {
     /**
      * do some checks when window is resized
      */
-    $(window).resize(function() {
+    $(window).resize(function () {
         clearTimeout(resizeId);
         resizeId = setTimeout(preLoadChecks, 20);
-        handleMobileMenu();
+        if (getWindowEmWidth() < breakLarge) {
+            handleMobileMenu();
+        }
     });
 
     /**
@@ -47,32 +51,27 @@ $( document ).ready(function() {
     let mobileMenuState = 'collapsed';
 
     const flipMobileMenuState = () => {
-       if (mobileMenuState === 'collapsed') {
-           mobileMenuState = 'expanded';
-       }   else if (mobileMenuState === 'expanded') {
-           mobileMenuState = 'collapsed';
-       }
+        if (mobileMenuState === 'collapsed') {
+            mobileMenuState = 'expanded';
+        } else if (mobileMenuState === 'expanded') {
+            mobileMenuState = 'collapsed';
+        }
     };
 
     const handleMobileMenu = () => {
-
         var nav = $("nav.main-menu");
         var headerHeight = $('header').height();
-        var cookieHeight = $('#cookiebar').outerHeight();
         var windowHeight = (viewportSize.getHeight())
-        var fullHeight = ($('body').height())-headerHeight;
+        var fullHeight = ($('body').height()) - headerHeight;
         var iconmenu = $('svg.icon-menu', this);
         var iconclose = $('svg.icon-delete', this);
         var toggleButton = $('button.menu-toggle');
 
 
-        if ($('#cookiebar').is(':visible') == true ){
-            offsetHeight = headerHeight + cookieHeight;
-        } else {
-            offsetHeight = headerHeight;
-        }
+        offsetHeight = headerHeight;
 
-        if ( mobileMenuState === 'collapsed'){
+
+        if (mobileMenuState === 'collapsed') {
             // Doe dicht
             iconclose.hide();
             iconmenu.fadeIn('fast');
@@ -81,7 +80,7 @@ $( document ).ready(function() {
             //inschuiven menu
             nav.animate({
                 left: "-235"
-            }, 100, function() {
+            }, 100, function () {
                 // Animation complete.
             });
             nav.removeClass('is-overlay');
@@ -102,16 +101,16 @@ $( document ).ready(function() {
             //inschuiven menu
             nav.animate({
                 left: '0'
-            }, 100, function() {
+            }, 100, function () {
                 // Animation complete.
             });
         }
     };
 
     /**
-    * off-canvas menu on mobile
-    */
-    $('.menu-toggle').on( "click", function(e) {
+     * off-canvas menu on mobile
+     */
+    $('.menu-toggle').on("click", function (e) {
         e.preventDefault();
         flipMobileMenuState();
         handleMobileMenu();
@@ -122,28 +121,27 @@ $( document ).ready(function() {
      */
 
     /**
-    * breadcrumbs / history path
-    */
+     * breadcrumbs / history path
+     */
 
     // NOTE: breadcrumbs build, but client decided not to implement (yet). Here for reference.
     breadcrumbStateSaver(document.location.href, document.title);
     showBreadCrumb();
 
 
-
     /**
-    * submit sortform on click of fields
-    */
+     * submit sortform on click of fields
+     */
     $('#sortbar button').hide();
-    $('#sortbar input').on('change', function() {
+    $('#sortbar input').on('change', function () {
         // console.log('KLIKKERDIEKLIK');
         $('#sortbar').submit();
     });
 
     /**
-    * show searchform on mobile
-    */
-    $('.search-toggle').on( "click", function(e) {
+     * show searchform on mobile
+     */
+    $('.search-toggle').on("click", function (e) {
         e.preventDefault();
 
         var search = $('#headersearch');
@@ -155,7 +153,7 @@ $( document ).ready(function() {
             $(this).attr('aria-expanded', false);
 
 
-            if (nav.hasClass('is-overlay')){
+            if (nav.hasClass('is-overlay')) {
                 nav.animate({
                     top: '-=71'
                 });
@@ -165,11 +163,11 @@ $( document ).ready(function() {
             // search.slideDown('fast').addClass('is-open');
 
             search.slideDown('fast', function () {
-                  $(this).css({
-                    display: "flex"
-                  })
+                    $(this).css({
+                        display: "flex"
+                    })
                 }
-              ).addClass('is-open');
+            ).addClass('is-open');
 
             $(this).attr('aria-expanded', true);
 
@@ -183,36 +181,15 @@ $( document ).ready(function() {
     });
 
     /**
-     * Cookiebar
+     * Show 'back to top' button on scroll up
      */
-
-    var cookiebar = $('#cookiebar');
-    // var hasCookie = getCookie('epro_cookieconsent');
-
-    if (!hasCookie){
-        $('body').addClass('show-cookiebar');
-        cookiebar.show();
-        var cookieheight = cookiebar.height();
-        cookiebar.find('button').on('click', function(){
-            cookiebar.slideUp('fast');
-            cookiebar.fadeOut();
-            $('body').removeClass('show-cookiebar');
-            //set cookie
-            setCookie('epro_cookieconsent','1',30);
-        });
-    }
-
-
-    /**
-    * Show 'back to top' button on scroll up
-    */
     var previousScroll = 0;
     headerHeight = $('#header').height();
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var currentScroll = $(this).scrollTop();
         // console.log(currentScroll + " and " + previousScroll + " and " + headerHeight);
 
-        if(currentScroll > headerHeight) {
+        if (currentScroll > headerHeight) {
             if (currentScroll > previousScroll) {
                 // console.log('GOING DOWN!')
                 $('#backtotop').removeClass('fixed').fadeOut('slow');
@@ -221,12 +198,12 @@ $( document ).ready(function() {
                 $('#backtotop').addClass('fixed').fadeIn('slow');
             }
         } else {
-             $('#backtotop').removeClass('fixed');
+            $('#backtotop').removeClass('fixed');
         }
         previousScroll = currentScroll;
     });
 
-    $('#backtotop').on( "click", function(e) {
+    $('#backtotop').on("click", function (e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: '0px'}, 300);
         $(this).blur();
@@ -237,11 +214,11 @@ $( document ).ready(function() {
     //  https://github.com/heyimjuani/minRead
 
     //  check for read-time item
-    if ( $(".read-time").length ) {
+    if ($(".read-time").length) {
 
         var options = {
             where: ".read-time",                // where the "x min read" will be inserted. Defaults to ".min-read"
-            wordsPerMinute  : 180,              // this is the avg adults can read on a screen, acording to wikipedia
+            wordsPerMinute: 180,              // this is the avg adults can read on a screen, acording to wikipedia
             archive: true,                      // set to true if trying to fetch read time from another page. "false" by default
             archiveText: ".main-column",        // if archive: true, time will be calteaserlated using text on div specified here. Defaults to ".text"
             anchor: "h2 a",             // external article anchor class. Defaults to ".article-link"
@@ -257,19 +234,19 @@ $( document ).ready(function() {
     }
 
     // Add inline anchors to quicklinks
-    if( $('a.in-page-anchor').is('*') ) {
+    if ($('a.in-page-anchor').is('*')) {
         // if there are in page anchors, add a link to each of them in the quicklinks navigation
         $('.quicklinks').show();
 
-        $('a.in-page-anchor').each(function() {
+        $('a.in-page-anchor').each(function () {
             $('.quicklinks ul').append(
                 $('<li>').append(
                     $('<a>').text(
                         $(this).data('anchor-title')).attr(
-                            {
-                                'href': '#' + $(this).attr('name')
-                            }
-                        )
+                        {
+                            'href': '#' + $(this).attr('name')
+                        }
+                    )
                 )
             );
         });
@@ -287,7 +264,7 @@ $( document ).ready(function() {
      * - html/theme/europeana-cope/modules/_collapsedcontent.twig
      */
     $('.can-expand').hide();
-    $('.expand-toggle').on('click', function(e) {
+    $('.expand-toggle').on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
 
@@ -311,41 +288,40 @@ $( document ).ready(function() {
             $this.removeClass('expand-toggle-open');
             $sublist.removeClass('expanded').slideUp('fast');
 
-        }
-        else {
+        } else {
             $sublist.addClass('expanded').slideDown();
             $this.addClass('expand-toggle-open');
         }
     });
 
     /**
-    * Open en close image attribution
-    */
-    $('button.image-info').on('mouseenter focus', function(e){
+     * Open en close image attribution
+     */
+    $('button.image-info').on('mouseenter focus', function (e) {
         $(this).siblings('dl').addClass('expanded');
     });
 
-    $(document).on('keyup', function(e) {
-        const licenseAttributions =  $('.license-attribution dl').not('.always-expanded');
+    $(document).on('keyup', function (e) {
+        const licenseAttributions = $('.license-attribution dl').not('.always-expanded');
         if (e.key === 'Escape' && licenseAttributions.length > 0) {
             licenseAttributions.removeClass('expanded');
         }
     });
 
-    $('.license-attribution dl').not('.always-expanded').on('mouseleave focusout', function(e){
+    $('.license-attribution dl').not('.always-expanded').on('mouseleave focusout', function (e) {
         $(this).removeClass('expanded');
     });
 
     /**
-    * Open en close filters
-    */
-    $('.toggle-filter').on('click',function(e){
+     * Open en close filters
+     */
+    $('.toggle-filter').on('click', function (e) {
         e.preventDefault();
 
         $('.filter-container').toggleClass('expanded');
     });
 
-    $('.chapter-toggle').on('click', function(e){
+    $('.chapter-toggle').on('click', function (e) {
         e.preventDefault();
 
         var chapter = $(this).attr('data-slug');
@@ -353,10 +329,10 @@ $( document ).ready(function() {
 
         // toggle filterlists
         $(this).parent('li').toggleClass('current');
-        $('.chapter-toggle').not('.chapter-toggle-'+chapter).parent('li').removeClass('current');
+        $('.chapter-toggle').not('.chapter-toggle-' + chapter).parent('li').removeClass('current');
 
-        $('#filters-'+chapter).toggleClass('current');
-        $('.filters-chapter').not('#filters-'+chapter).removeClass('current');
+        $('#filters-' + chapter).toggleClass('current');
+        $('.filters-chapter').not('#filters-' + chapter).removeClass('current');
     });
 
 
@@ -364,13 +340,13 @@ $( document ).ready(function() {
      * TILES
      */
 
-    $(".tile").on('mouseover', function(e){
+    $(".tile").on('mouseover', function (e) {
         $(this).find(".tile-front").hide();
         $(this).find(".tile-back").fadeIn();
         // console.log('OVER');
     });
 
-    $(".tile").on('mouseleave', function(e){
+    $(".tile").on('mouseleave', function (e) {
         $(".tile-back").stop().hide();
         $(this).find(".tile-front").fadeIn();
         // console.log('... en uit');
@@ -388,7 +364,7 @@ $( document ).ready(function() {
      * place in the HTML than (b). (a) is used for display, and (b) is used
      * for posting the form.
      */
-    $("[data-bind]").on('change', function() {
+    $("[data-bind]").on('change', function () {
         var b = updateDataBind(null, this);
         // trigger the change event manually
         // because changes from code do not trigger
@@ -412,7 +388,7 @@ $( document ).ready(function() {
      * Only works with 3 or 2 streamer columns per page.
      */
     var streamers = $('section.catstreamcontainer');
-    if( $(streamers).is('*') ) {
+    if ($(streamers).is('*')) {
         var amount = $(streamers).length;
         var first = $(streamers[0]).find('section.catstream');
         var mainwrap = $(streamers[0]).find('.inner-wrap');
@@ -445,11 +421,13 @@ $( document ).ready(function() {
     // console.log(registerlink);
 
     if (registerlink && $('body').hasClass('splashpage')) {
-        var ticketbutton = $('<a>').text('Buy tickets').attr({'href': registerlink, 'class': 'button outline header-action'});
+        var ticketbutton = $('<a>').text('Buy tickets').attr({
+            'href': registerlink,
+            'class': 'button outline header-action'
+        });
 
         $('header').append(ticketbutton);
     }
-
 
 
     /**
@@ -466,7 +444,7 @@ $( document ).ready(function() {
         // } else {
         // };
 
-        if ( windowWidthEms < breakLarge ) { // less then 767
+        if (windowWidthEms < breakLarge) { // less then 767
             $(".sticky-header").trigger("sticky_kit:detach");
             // console.log(windowWidthEms, breakLarge, 'A')
         } else {
@@ -478,10 +456,10 @@ $( document ).ready(function() {
         }
 
 
-        if ( windowWidthEms < breakMenuFull ) { // less then 960
+        if (windowWidthEms < breakMenuFull) { // less then 960
             // $('#headersearch').hide();
 
-            if ( $('#headersearch input').is(":focus") ) {
+            if ($('#headersearch input').is(":focus")) {
                 // resize is probably bc of upsliding keyboard; so no touching this element (breaks in android)
             } else {
                 $('#headersearch').appendTo('header'); // put it back, if coming from large
@@ -495,23 +473,13 @@ $( document ).ready(function() {
             //     offset_top: 64
             // });
 
-            setTimeout(function() {
-                var cookieheight =  $('#cookiebar').outerHeight();
-                cookieoffset = cookieheight + 64;
-
-                // $('#topbar').stick_in_parent({
-                //     offset_top: cookieoffset
-                // });
-
-            }, 500);
 
         } else {
-             //remove all leftover inline styles from mobile view;
-             $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
-             $('#headersearch').removeAttr('style');
-             // stick it _in_ the header
-             $('#headersearch').appendTo('.headercontainer');
-
+            //remove all leftover inline styles from mobile view;
+            $('nav.main-menu').removeAttr('style').removeClass('is-overlay');
+            $('#headersearch').removeAttr('style');
+            // stick it _in_ the header
+            $('#headersearch').appendTo('.headercontainer');
 
 
             //  $('#mainmenu').stick_in_parent({
@@ -530,36 +498,37 @@ $( document ).ready(function() {
 });
 
 
-
-function setCookie(name,value,days) {
+function setCookie(name, value, days) {
     var expires = "";
     if (days) {
         var date = new Date();
-        date.setTime(date.getTime() + (days*24*60*60*1000));
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         expires = "; expires=" + date.toUTCString();
     }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
+
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
+    for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
     }
     return null;
 }
+
 function eraseCookie(name) {
-    document.cookie = name+'=; Max-Age=-99999999;';
+    document.cookie = name + '=; Max-Age=-99999999;';
 }
 
 
 // NOTE: breadcrumbs build, but client decided not to implement (yet). Here for reference.
 //breadcrumbs -> https://stackoverflow.com/questions/18998797/create-breadcrumbs-dynamically-on-client-side-using-javascript
-function bindEventToNavigation(){
-    $.each($("#primary-menu li a"), function(index, element){
-        $(element).click(function(event){
+function bindEventToNavigation() {
+    $.each($("#primary-menu li a"), function (index, element) {
+        $(element).click(function (event) {
             breadcrumbStateSaver($(this).attr('href'), $(this).text());
             showBreadCrumb();
         });
@@ -578,17 +547,17 @@ function breadcrumbStateSaver(link, text) {
     }
 }
 
-function showBreadCrumb(){
-     var breadcrumbs = JSON.parse(sessionStorage.breadcrumb);
-     $("#breadcrumbs").html(breadcrumbs.slice(-4,-1).join(' &raquo; '));
+function showBreadCrumb() {
+    var breadcrumbs = JSON.parse(sessionStorage.breadcrumb);
+    $("#breadcrumbs").html(breadcrumbs.slice(-4, -1).join(' &raquo; '));
 }
 
-var waitForEl = function(selector, callback) {
+var waitForEl = function (selector, callback) {
     if (jQuery(selector).length) {
-      callback();
+        callback();
     } else {
-      setTimeout(function() {
-        waitForEl(selector, callback);
-      }, 100);
+        setTimeout(function () {
+            waitForEl(selector, callback);
+        }, 100);
     }
-  };
+};
