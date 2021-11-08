@@ -614,6 +614,9 @@ a.banner {
         }
     }
 
+    &.colored-image {
+        background-blend-mode: multiply;
+    }
 
     .banner .header-group,
     a.banner .header-group  {
@@ -1004,6 +1007,10 @@ div.calltoaction-readmore {
     justify-content: center;
     align-items: center;
 
+    &.colored-image {
+        background-blend-mode: multiply;
+    }
+
     @include respond-to(large-screens){
         height: 55px;
     }
@@ -1231,6 +1238,10 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &.colored-image {
+        background-blend-mode: multiply;
+    }
 
     .header-group {
         color: $white;
