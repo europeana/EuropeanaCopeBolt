@@ -75,7 +75,7 @@
 
     {# The main menu loop: Iterates over the items, calling `display_menu_item` #}
     {# we need all these classes for the jquery interactivity #}
-    <ul class="primary-menu" id="primary-menu">
+    <ul class="primary-menu" id="primary-menu" aria-label="sub-menu-navigation">
         {% for item in menu %}
             {% if item.label is defined %}
                 {{ display_menu_item(item, loop, withsubmenus, 0, parentLinks) }}
