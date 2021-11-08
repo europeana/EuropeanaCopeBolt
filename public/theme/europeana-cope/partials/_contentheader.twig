@@ -1,11 +1,11 @@
 <!-- Header bar -->
 {# the values in the 'app.config' object are taken directly from the file app/config/config.yml #}
-<div class="topbar" id="topbar" aria-label="in-page-navigation">
+<div class="topbar" id="topbar">
     {% if search is defined and search is not empty %}
         {% include 'partials/_sort-listing.twig' %}
     {% endif %}
 
-    <nav class="quicklinks">
+    <nav class="quicklinks" aria-label="in-page-navigation">
         <ul>
         </ul>
     </nav>
