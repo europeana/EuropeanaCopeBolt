@@ -257,10 +257,6 @@ aside {
         padding: 0 0.875rem;
         position: relative;
 
-        @include respond-to(medium-screens) {
-            padding: 0 2rem;
-        }
-
         @include respond-to(large-screens) {
             margin-top: 8.125rem;
         }

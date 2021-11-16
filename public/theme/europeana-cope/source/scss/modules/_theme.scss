@@ -1432,19 +1432,16 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
     flex-direction: column;
 
     @include respond-to(medium-screens) {
-        text-align: right;
+        text-align: center;
         padding: 0 0.875rem;
     }
 
 
     @include respond-to(large-screens) {
         // margin-bottom: 2rem;
-        margin-left: 210px;
-        position: absolute;
         z-index: index($layers, higher-content);
         top: -7.5rem;
         right: 0;
-        margin-left: 330px;
     }
 
     &.centered-info {
@@ -1461,7 +1458,7 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
     .outline {
         align-self: flex-start;
         @include respond-to(medium-screens) {
-            align-self: flex-end;
+            align-self: center;
         }
         border-style: solid;
         border-color: $line-gray;
@@ -1547,7 +1544,6 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
     margin-bottom: 1rem;
 
     @include respond-to(medium-screens){
-        position: absolute;
         margin-bottom: 0;
         top: 7px; //magic number - optical nice space
     }
@@ -1575,9 +1571,21 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
 
 
 .contentpage {
-    .header-group,
+
+    .project_header-group {
+    display: flex;
+
+        @media (max-width: $bp-medium) {
+            flex-direction: column;
+        }
+    }
+
     .card {
         position: relative;
+    }
+
+    .header-group,
+    .card {
         margin-top: 2rem;
 
         @include respond-to(large-screens) {
@@ -1585,8 +1593,8 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
         }
     }
 
-    &.detail-jobs,
-    &.detail-projects {
+
+    &.detail-jobs {
         .header-group h1 {
 
             @include respond-to(large-screens) {
@@ -2404,7 +2412,7 @@ svg.icon-cutoff.top.right {
     .img-container {
         position: relative;
         margin-bottom: 2rem;
-        
+
 
         @include respond-to(large-screens){
             float:left;
