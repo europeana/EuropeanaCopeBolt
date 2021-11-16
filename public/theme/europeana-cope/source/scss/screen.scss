@@ -4,6 +4,7 @@
  * Author:      Sebastiaan Bonardt - @_sebbon
  */
 
+@import "_variables.scss";
 @import "base/_base.scss";
 @import "base/_normalize.scss";
 @import "modules/_defaults.scss";
@@ -16,6 +17,7 @@
 @import "modules/_theme.scss";
 @import "modules/_skins.scss";
 @import "modules/_klaro.scss";
+
 // splashpages
 @import "splashpages/_tenyears.scss";
 @import "splashpages/_annual-report-2018.scss";
