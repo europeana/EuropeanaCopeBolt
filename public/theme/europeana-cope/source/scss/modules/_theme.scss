@@ -3239,7 +3239,6 @@ div.body {
         border-radius: 4px;
         display: none;
         font-size: $font-size-smallest;
-        max-width: 600px;
 
         .banner-container & {
             @include respond-to(large-screens) {
@@ -3250,7 +3249,7 @@ div.body {
                 margin-bottom: 0;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
-                margin-left: 4rem;
+                padding-left: 2rem;
             }
         }
 
