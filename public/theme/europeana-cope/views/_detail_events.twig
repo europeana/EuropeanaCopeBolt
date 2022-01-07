@@ -7,9 +7,11 @@
 
 
                 {% include 'partials/_community-info.twig' %}
-                {% include 'partials/_side-info.twig' %}
 
-                {% include 'partials/_event-header-group.twig' %}
+                <div class="flex-header">
+                    {% include 'partials/_event-header-group.twig' %}
+                    {% include 'partials/_side-info.twig' %}
+                </div>
 
                 {% include 'partials/_event-figure.twig' %}
 
