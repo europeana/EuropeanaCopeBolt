@@ -271,6 +271,17 @@ aside {
         }
     }
 
+    .flex-header {
+        @include respond-to(medium-screens) {
+            flex-direction: column;
+        }
+
+        @include respond-to(large-screens) {
+            flex-direction: unset;
+            display: flex;
+        }
+    }
+
     figure,
     .card {
         margin: 1rem 0rem; //1rem 2rem;
