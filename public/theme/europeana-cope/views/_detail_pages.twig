@@ -12,28 +12,28 @@
                     {% include 'partials/_community-info.twig' %}
                 {% endif %}
 
-                <div class="flex-header">
-                    <div class="header-group">
-                        {% if record.contact_name is not empty %}
-                            {% include 'modules/_mini_persons.twig' with { record: record } %}
-                        {% endif %}
+                {% include 'partials/_side-info.twig' %}
 
-                        {% if record.pagetype is defined
-                            and not (
-                            record.pagetype == 'landingpage'
-                            or record.pagetype == 'landingpage-nohighlight'
-                            ) %}
-                            <h1>{{ record.title }}</h1>
-                        {% endif %}
+                <div class="header-group">
+                    {% if record.contact_name is not empty %}
+                        {% include 'modules/_mini_persons.twig' with { record: record } %}
+                    {% endif %}
 
-                        {% if record.intro is not empty %}
-                            <div class="introduction">
-                                {{ record.intro }}
-                            </div>
-                        {% endif %}
-                    </div>
-                    {% include 'partials/_side-info.twig' %}
+                    {% if record.pagetype is defined
+                        and not (
+                        record.pagetype == 'landingpage'
+                        or record.pagetype == 'landingpage-nohighlight'
+                        ) %}
+                        <h1>{{ record.title }}</h1>
+                    {% endif %}
+
+                    {% if record.intro is not empty %}
+                        <div class="introduction">
+                            {{ record.intro }}
+                        </div>
+                    {% endif %}
                 </div>
+
 
                 {% if record.values.image is defined and record.values.image is not empty %}
                     {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}

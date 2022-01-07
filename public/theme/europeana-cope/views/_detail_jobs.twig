@@ -4,7 +4,8 @@
 
             {% include 'partials/_community-info.twig' %}
 
-            <div class="flex-header">
+            {% include 'partials/_side-info.twig' %}
+
                 <div class="header-group">
 
                     {% if record.contact_name is not empty %}
@@ -41,8 +42,6 @@
                         </p>
                     </div>
                 </div>
-                {% include 'partials/_side-info.twig' %}
-            </div>
 
             {% if record.values.image is defined and (record.values.image.file|default is not empty or record.values.image|is_string) %}
                 {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
