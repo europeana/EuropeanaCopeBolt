@@ -2,7 +2,7 @@
     {% set item = record %}
 {% endif %}
 
-<article class="tile"
+<article class="tile {% if item.htmllink is not empty %}tile-pointer{% endif %}"
     {% if item.values.image is defined and item.values.image is not empty %}
         style="background-image: url({{ image(item.image, 600, 400) }})"
     {% else %}
@@ -21,7 +21,7 @@
         <a href="{{ item.htmllink }}"><h3>{{ item.title }}</h3></a>
     </div>
 
-    <div class="tile-back">
+    <div class="tile-back" {% if item.htmllink is not empty %}data-url="{{ item.htmllink }}"{% endif %}>
 
         <div class="intro">
 
