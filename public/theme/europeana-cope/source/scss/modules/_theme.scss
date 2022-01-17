@@ -3235,8 +3235,7 @@ div.body {
     dl {
         position: absolute;
         bottom: .5rem;
-        right: .5rem;
-        width: max-content;
+        width: auto;
         background: rgba($white, 0.95);
         color: $black;
         padding: .55rem;
@@ -3255,7 +3254,6 @@ div.body {
                 margin-bottom: 0;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
-                margin-left: 4rem;
             }
         }
 
