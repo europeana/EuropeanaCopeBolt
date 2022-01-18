@@ -352,6 +352,14 @@ $(document).ready(function () {
         // console.log('... en uit');
     });
 
+    $(".tile-back").on("click", function() {
+        var dataAttr = $(this).attr('data-url');
+
+        if (typeof dataAttr !== 'undefined' && dataAttr !== false) {
+            window.location.href = dataAttr;
+        }
+    });
+
 
     /**
      * FILTER
