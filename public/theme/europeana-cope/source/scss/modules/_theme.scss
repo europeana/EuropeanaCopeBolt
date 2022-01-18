@@ -2921,6 +2921,12 @@ table.listingtable {
     }
 }
 
+.tile-pointer {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 
 
 /*
