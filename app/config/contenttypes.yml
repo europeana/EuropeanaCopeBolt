@@ -636,7 +636,8 @@ pages:
           class: preload-marketslug
           info: The selected market category will be used to filter the records that are shown
         selected_pages:
-          type: text
+          type: select
+          values: pages/id,title
           label: "Select Pages"
           class: 'ajaxselector ct-pages fields-id--title--status key-id results-auto'
         filter_persons:
@@ -648,8 +649,10 @@ pages:
           postfix: You can optionally choose one of the network participation levels to filter
           <<: *network_default_values
         selected_persons:
-          type: text
+          type: select
+          values: persons/id,title
           label: "Select Persons"
+          class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
           class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
         filter_posts:
           type: select
@@ -663,7 +666,8 @@ pages:
             "Publication": "Publication"
             "News": "News"
         selected_posts:
-          type: text
+          type: select
+          values: posts/id,title
           label: "Select Posts"
           class: 'ajaxselector ct-posts fields-id--title--status key-id results-auto'
         filter_data:
@@ -680,7 +684,8 @@ pages:
             "Documentation": "Documentation"
             "API": "API"
         selected_data:
-          type: text
+          type: select
+          values: data/id,title
           label: "Select data"
           class: 'ajaxselector ct-data fields-id--title--status key-id results-auto'
         filter_projects:
@@ -694,23 +699,28 @@ pages:
             "WorkingGroup": "WorkingGroup"
             "Project": "Project"
         selected_projects:
-          type: text
+          type: select
+          values: projects/id,title
           label: "Select Projects"
           class: 'ajaxselector ct-projects fields-id--title--status key-id results-auto'
         selected_jobs:
-          type: text
+          type: select
+          values: jobs/id,title
           label: "Select Jobs"
           class: 'ajaxselector ct-jobs fields-id--position--status key-id results-auto'
         selected_events:
-          type: text
+          type: select
+          values: events/id,title
           label: "Select Events"
           class: 'ajaxselector ct-events fields-id--title--status key-id results-auto'
         selected_resources:
-          type: text
+          type: select
+          values: resources/id,title
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
         selected_organisations:
-          type: text
+          type: select
+          values: organisations/id,title
           label: "Select Organisations"
           class: 'ajaxselector ct-organisations fields-id--name--status key-id results-auto'
         modulemorelink:
@@ -1008,7 +1018,8 @@ posts:
           class: preload-marketslug
           info: The selected market category will be used to filter the records that are shown
         selected_pages:
-          type: text
+          type: select
+          values: pages/id,title
           label: "Select Pages"
           class: 'ajaxselector ct-pages fields-id--title--status key-id results-auto'
         filter_persons:
@@ -1020,7 +1031,8 @@ posts:
           postfix: You can optionally choose one of the network participation levels to filter
           <<: *network_default_values
         selected_persons:
-          type: text
+          type: select
+          values: persons/id,title
           label: "Select Persons"
           class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
         filter_posts:
@@ -1035,7 +1047,8 @@ posts:
             "Publication": "Publication"
             "News": "News"
         selected_posts:
-          type: text
+          type: select
+          values: posts/id,title
           label: "Select Posts"
           class: 'ajaxselector ct-posts fields-id--title--status key-id results-auto'
         filter_data:
@@ -1052,7 +1065,8 @@ posts:
             "Documentation": "Documentation"
             "API": "API"
         selected_data:
-          type: text
+          type: select
+          values: data/id,title
           label: "Select data"
           class: 'ajaxselector ct-data fields-id--title--status key-id results-auto'
         filter_projects:
@@ -1066,23 +1080,28 @@ posts:
             "WorkingGroup": "WorkingGroup"
             "Project": "Project"
         selected_projects:
-          type: text
+          type: select
+          values: projects/id,title
           label: "Select Projects"
           class: 'ajaxselector ct-projects fields-id--title--status key-id results-auto'
         selected_jobs:
-          type: text
+          type: select
+          values: jobs/id,title
           label: "Select Jobs"
           class: 'ajaxselector ct-jobs fields-id--position--status key-id results-auto'
         selected_events:
-          type: text
+          type: select
+          values: events/id,title
           label: "Select Events"
           class: 'ajaxselector ct-events fields-id--title--status key-id results-auto'
         selected_resources:
-          type: text
+          type: select
+          values: resources/id,title
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
         selected_organisations:
-          type: text
+          type: select
+          values: organisations/id,title
           label: "Select Organisations"
           class: 'ajaxselector ct-organisations fields-id--name--status key-id results-auto'
         modulemorelink:
@@ -1396,7 +1415,8 @@ data:
           class: preload-marketslug
           info: The selected market category will be used to filter the records that are shown
         selected_pages:
-          type: text
+          type: select
+          values: pages/id,title
           label: "Select Pages"
           class: 'ajaxselector ct-pages fields-id--title--status key-id results-auto'
         filter_persons:
@@ -1408,7 +1428,8 @@ data:
           postfix: You can optionally choose one of the network participation levels to filter
           <<: *network_default_values
         selected_persons:
-          type: text
+          type: select
+          values: persons/id,title
           label: "Select Persons"
           class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
         filter_posts:
@@ -1423,7 +1444,8 @@ data:
             "Publication": "Publication"
             "News": "News"
         selected_posts:
-          type: text
+          type: select
+          values: posts/id,title
           label: "Select Posts"
           class: 'ajaxselector ct-posts fields-id--title--status key-id results-auto'
         filter_data:
@@ -1440,7 +1462,8 @@ data:
             "Documentation": "Documentation"
             "API": "API"
         selected_data:
-          type: text
+          type: select
+          values: data/id,title
           label: "Select data"
           class: 'ajaxselector ct-data fields-id--title--status key-id results-auto'
         filter_projects:
@@ -1454,23 +1477,28 @@ data:
             "WorkingGroup": "WorkingGroup"
             "Project": "Project"
         selected_projects:
-          type: text
+          type: select
+          values: projects/id,title
           label: "Select Projects"
           class: 'ajaxselector ct-projects fields-id--title--status key-id results-auto'
         selected_jobs:
-          type: text
+          type: select
+          values: jobs/id,title
           label: "Select Jobs"
           class: 'ajaxselector ct-jobs fields-id--position--status key-id results-auto'
         selected_events:
-          type: text
+          type: select
+          values: events/id,title
           label: "Select Events"
           class: 'ajaxselector ct-events fields-id--title--status key-id results-auto'
         selected_resources:
-          type: text
+          type: select
+          values: resources/id,title
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
         selected_organisations:
-          type: text
+          type: select
+          values: organisations/id,title
           label: "Select Organisations"
           class: 'ajaxselector ct-organisations fields-id--name--status key-id results-auto'
         modulemorelink:
@@ -1840,7 +1868,8 @@ projects:
           class: preload-marketslug
           info: The selected market category will be used to filter the records that are shown
         selected_pages:
-          type: text
+          type: select
+          values: pages/id,title
           label: "Select Pages"
           class: 'ajaxselector ct-pages fields-id--title--status key-id results-auto'
         filter_persons:
@@ -1852,7 +1881,8 @@ projects:
           postfix: You can optionally choose one of the network participation levels to filter
           <<: *network_default_values
         selected_persons:
-          type: text
+          type: select
+          values: persons/id,title
           label: "Select Persons"
           class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
         filter_posts:
@@ -1867,7 +1897,8 @@ projects:
             "Publication": "Publication"
             "News": "News"
         selected_posts:
-          type: text
+          type: select
+          values: posts/id,title
           label: "Select Posts"
           class: 'ajaxselector ct-posts fields-id--title--status key-id results-auto'
         filter_data:
@@ -1884,7 +1915,8 @@ projects:
             "Documentation": "Documentation"
             "API": "API"
         selected_data:
-          type: text
+          type: select
+          values: data/id,title
           label: "Select data"
           class: 'ajaxselector ct-data fields-id--title--status key-id results-auto'
         filter_projects:
@@ -1898,23 +1930,28 @@ projects:
             "WorkingGroup": "WorkingGroup"
             "Project": "Project"
         selected_projects:
-          type: text
+          type: select
+          values: projects/id,title
           label: "Select Projects"
           class: 'ajaxselector ct-projects fields-id--title--status key-id results-auto'
         selected_jobs:
-          type: text
+          type: select
+          values: jobs/id,title
           label: "Select Jobs"
           class: 'ajaxselector ct-jobs fields-id--position--status key-id results-auto'
         selected_events:
-          type: text
+          type: select
+          values: events/id,title
           label: "Select Events"
           class: 'ajaxselector ct-events fields-id--title--status key-id results-auto'
         selected_resources:
-          type: text
+          type: select
+          values: resources/id,title
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
         selected_organisations:
-          type: text
+          type: select
+          values: organisations/id,title
           label: "Select Organisations"
           class: 'ajaxselector ct-organisations fields-id--name--status key-id results-auto'
         modulemorelink:
@@ -2190,7 +2227,8 @@ events:
           class: preload-marketslug
           info: The selected market category will be used to filter the records that are shown
         selected_pages:
-          type: text
+          type: select
+          values: pages/id,title
           label: "Select Pages"
           class: 'ajaxselector ct-pages fields-id--title--status key-id results-auto'
         filter_persons:
@@ -2202,7 +2240,8 @@ events:
           postfix: You can optionally choose one of the network participation levels to filter
           <<: *network_default_values
         selected_persons:
-          type: text
+          type: select
+          values: persons/id,title
           label: "Select Persons"
           class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
         filter_posts:
@@ -2217,7 +2256,8 @@ events:
             "Publication": "Publication"
             "News": "News"
         selected_posts:
-          type: text
+          type: select
+          values: posts/id,title
           label: "Select Posts"
           class: 'ajaxselector ct-posts fields-id--title--status key-id results-auto'
         filter_data:
@@ -2234,7 +2274,8 @@ events:
             "Documentation": "Documentation"
             "API": "API"
         selected_data:
-          type: text
+          type: select
+          values: data/id,title
           label: "Select data"
           class: 'ajaxselector ct-data fields-id--title--status key-id results-auto'
         filter_projects:
@@ -2248,23 +2289,28 @@ events:
             "WorkingGroup": "WorkingGroup"
             "Project": "Project"
         selected_projects:
-          type: text
+          type: select
+          values: projects/id,title
           label: "Select Projects"
           class: 'ajaxselector ct-projects fields-id--title--status key-id results-auto'
         selected_jobs:
-          type: text
+          type: select
+          values: jobs/id,title
           label: "Select Jobs"
           class: 'ajaxselector ct-jobs fields-id--position--status key-id results-auto'
         selected_events:
-          type: text
+          type: select
+          values: events/id,title
           label: "Select Events"
           class: 'ajaxselector ct-events fields-id--title--status key-id results-auto'
         selected_resources:
-          type: text
+          type: select
+          values: resources/id,title
           label: "Select Banners, Calls to action or Blocks"
           class: 'ajaxselector ct-resources fields-id--title--status key-id results-auto'
         selected_organisations:
-          type: text
+          type: select
+          values: organisations/id,title
           label: "Select Organisations"
           class: 'ajaxselector ct-organisations fields-id--name--status key-id results-auto'
         modulemorelink:
