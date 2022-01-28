@@ -1148,7 +1148,8 @@ posts:
           removePlugins: 'image'
     author:
       label: "Author(s)"
-      type: text
+      type: select
+      values: persons/id
       class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
     isbn:
       label: "ISBN"
