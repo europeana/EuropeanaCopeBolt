@@ -112,7 +112,7 @@ class TypeConverter {
 	 * @static
 	 */
 	public static function isSerialized($data) {
-		$ser = @unserialize($data);
+		$ser = unserialize($data);
 
 		return ($ser !== false) ? $ser : false;
 	}
@@ -126,7 +126,7 @@ class TypeConverter {
 	 * @static
 	 */
 	public static function isXml($data) {
-		$xml = @simplexml_load_string($data);
+		$xml = simplexml_load_string($data);
 
 		return ($xml instanceof SimpleXmlElement) ? $xml : false;
 	}
@@ -381,7 +381,7 @@ class TypeConverter {
 	 */
 	public static function xmlToArray($xml, $format = self::XML_GROUP) {
 		if (is_string($xml)) {
-			$xml = @simplexml_load_string($xml);
+			$xml = simplexml_load_string($xml);
 		}
 
 		if (count($xml->children()) <= 0) {
