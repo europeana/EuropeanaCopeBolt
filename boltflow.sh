@@ -54,7 +54,7 @@ fi
 if [[ $1 = "config_local_dev" ]] ; then
     curl -o $WD/app/config/config_local.yml https://raw.githubusercontent.com/bobdenotter/boltflow/master/files/config_local_dev.yml
     echo "Fetched 'app/config/config_local.yml' for DEV. Open it in an editor, and edit your credentials."
-    # TODO: only do this on MacOS
+    # Only do this on MacOS
     # ${FCEDIT:-${VISUAL:-${EDITOR:-vi}}} $WD/app/config/config_local.yml &
     exit 1
 fi
@@ -62,7 +62,7 @@ fi
 if [[ $1 = "config_local_prod" ]] ; then
     curl -o $WD/app/config/config_local.yml https://raw.githubusercontent.com/bobdenotter/boltflow/master/files/config_local_prod.yml
     echo "Fetched 'app/config/config_local.yml' for PROD. Open it in an editor, and edit your credentials."
-    # TODO: only do this on MacOS
+    # Only do this on MacOS
     # ${FCEDIT:-${VISUAL:-${EDITOR:-vi}}} $WD/app/config/config_local.yml &
     exit 1
 fi
