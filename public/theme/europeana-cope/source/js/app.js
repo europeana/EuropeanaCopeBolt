@@ -253,6 +253,11 @@ $(document).ready(function () {
 
     }
 
+    $('.quicklinks a').on('click', function() {
+        $('.quicklinks a').removeAttr('aria-current');
+        $(this).attr('aria-current', true);
+    })
+
     /**
      * Open and close filelistings.
      *
