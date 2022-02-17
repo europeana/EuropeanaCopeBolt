@@ -26,7 +26,7 @@ class FileFetcher
 
         if (isset($enabled['source']['file'])) {
             $source = __DIR__."/".$enabled['source']['file'];
-            $this->app['zohoimport']->logger('debug', 'fetching local file: ' . $source, 'zohoimport');
+            $this->app['zohoimport.logger']->logger('debug', 'fetching local file: ' . $source, 'zohoimport');
             if (file_exists($source)) {
                 $this->fetchLocalResource($source);
             }
@@ -40,7 +40,7 @@ class FileFetcher
                 }
                 $source .= "?" . join('&', $gkeys);
             }
-            $this->app['zohoimport']->logger('info', 'fetching remote file: ' . $source, 'zohoimport');
+            $this->app['zohoimport.logger']->logger('info', 'fetching remote file: ' . $source, 'zohoimport');
             $this->fetchRemoteResource($source);
         }
         return true;

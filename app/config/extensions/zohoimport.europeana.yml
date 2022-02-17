@@ -26,6 +26,7 @@ oauth:
 remotes:
   zoho_json_remote:
     enabled: true
+    on_console: true
     source:
       # https://www.zohoapis.com/crm/v2/Contacts
       url: https://www.zohoapis.com/crm/v2/Contacts
@@ -82,6 +83,7 @@ remotes:
 
   zoho_json_remote_orgs:
     enabled: true
+    on_console: true
     source:
       # https://www.zohoapis.com/crm/v2/Accounts/search
       url: https://www.zohoapis.com/crm/v2/Accounts/search
