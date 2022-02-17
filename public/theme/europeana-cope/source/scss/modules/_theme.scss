@@ -3283,11 +3283,17 @@ div.body {
             color: $black;
             padding: 0;
             max-width: 500px;
+            display: inline-block;
 
             @include respond-to(large-screens) {
                 // margin: 0 1em 0 0;
                 // display: inline-block;
             }
+        }
+
+        dt {
+            display: inline-block;
+            margin-right: 0.2rem;
         }
 
         span.def {
