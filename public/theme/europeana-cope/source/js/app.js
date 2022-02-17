@@ -274,6 +274,8 @@ $(document).ready(function () {
         // nested `.expand-toggle` elements.
         var $sublist = $this.find('> .can-expand');
 
+        var $buttonText = $this.find('span');
+
         // Otherwise get `$this`'s _uncle_, because of wrappers around `$this`.
         if ($sublist.length === 0) {
             $sublist = $this.parent().next('.can-expand');
@@ -286,11 +288,14 @@ $(document).ready(function () {
 
         if ($sublist.hasClass('expanded')) {
             $this.removeClass('expand-toggle-open');
+            $this.attr('aria-expanded', false);
+            $buttonText.text('Expand all folders');
             $sublist.removeClass('expanded').slideUp('fast');
-
         } else {
             $sublist.addClass('expanded').slideDown();
             $this.addClass('expand-toggle-open');
+            $this.attr('aria-expanded', true);
+            $buttonText.text('Collapse all folders');
         }
     });
 
