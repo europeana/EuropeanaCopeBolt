@@ -17,9 +17,9 @@
     <li{% if active %} class="active" aria-current="true"{% endif %}>
         <a
                 {%- if not active %} href="{{ link }}"{% endif -%}
-                {% if first %} aria-label="Previous page"{% endif %}
+                {% if label == "‹" %} aria-label="Previous page"{% endif %}
                 {%- if not first %} rel="noindex, follow"{% endif -%}
-                {% if last %} aria-label="Next page"{% endif %}
+                {% if label == "›" %} aria-label="Next page"{% endif %}
         >
             {{- label|raw -}}
         </a>
