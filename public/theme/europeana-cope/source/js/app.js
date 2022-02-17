@@ -309,17 +309,22 @@ $(document).ready(function () {
      */
     $('button.image-info').on('mouseenter focus', function (e) {
         $(this).siblings('dl').addClass('expanded');
+        $(this).attr('aria-expanded', true);
     });
 
     $(document).on('keyup', function (e) {
         const licenseAttributions = $('.license-attribution dl').not('.always-expanded');
         if (e.key === 'Escape' && licenseAttributions.length > 0) {
             licenseAttributions.removeClass('expanded');
+            licenseAttributions.each(function() {
+                $(this).parent().find('.image-info').attr('aria-expanded', false);
+            });
         }
     });
 
     $('.license-attribution dl').not('.always-expanded').on('mouseleave focusout', function (e) {
         $(this).removeClass('expanded');
+        $(this).parent().find('.image-info').attr('aria-expanded', false);
     });
 
     /**
