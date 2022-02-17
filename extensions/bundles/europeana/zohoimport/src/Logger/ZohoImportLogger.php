@@ -73,13 +73,13 @@ class ZohoImportLogger
             $message = sprintf('<fg=cyan;bg=default>%s</>', $message);
         }
 
-        if ($consoleoutput != null && (!($consoleoutput->isVerbose() || $consoleoutput->isVeryVerbose()))
+        if ($consoleoutput !== null && (!($consoleoutput->isVerbose() || $consoleoutput->isVeryVerbose()))
             && $type == 'debug') {
             // skip all debug messages if not -v or -vv
             return;
         }
 
-        if($consoleoutput != null) {
+        if($consoleoutput !== null) {
             $consoleoutput->writeln($message);
         }
     }
