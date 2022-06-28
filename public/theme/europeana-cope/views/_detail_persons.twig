@@ -41,6 +41,34 @@
                             {% endfor %}
                             #}
                         </div>
+                        <div class="card-community">
+                            {% set communities = [] %}
+
+                            {% if record.europeana_tech %}
+                                {% set communities = communities|merge('Member of EuropeanaTech Community') %}
+                            {% endif %}
+                            {% if record.member_of_research %}
+                                {% set communities = communities|merge('Member of Research Community') %}
+                            {% endif %}
+                            {% if record.member_of_education %}
+                                {% set communities = communities|merge('Member of Education Community') %}
+                            {% endif %}
+                            {% if record.member_of_communicators %}
+                                {% set communities = communities|merge('Member of Communicators Community') %}
+                            {% endif %}
+                            {% if record.member_of_impact %}
+                                {% set communities = communities|merge('Member of Impact Community') %}
+                            {% endif %}
+                            {% if record.member_of_copyright %}
+                                {% set communities = communities|merge('Member of Copyright Community') %}
+                            {% endif %}
+
+                            {% if communities is not empty %}
+                                <span>
+                                    {{ communities|join(' | ') }}
+                                </span>
+                            {% endif %}
+                        </div>
                         {% if record.membership_council_term is not empty %}
                             <div class="card-network personal-network network-mc-council">
                                 <span class="mc-term">
