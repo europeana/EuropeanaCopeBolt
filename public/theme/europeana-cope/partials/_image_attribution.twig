@@ -95,44 +95,59 @@
 
         <div class="license-attribution{% if expanded == true %} always-expanded{% endif %}">
 
-        <button class="image-info" aria-label="{{ attribution_title }} attribution">
+        <button class="image-info" aria-label="{{ attribution_title }} attribution" aria-expanded="false">
             <svg class="icon icon-info">
                 <use xlink:href="#icon-info"></use>
             </svg>
         </button>
 
         <dl>
-            <dd>
-            {% if attribution_link  is not empty %}
+            <div>
+                <dt>
+                    {% if attribution_link  is not empty %}
                     <a class='sourcelink' href="{{ attribution_link }}">
-            {% endif %}
+                        {% endif %}
 
-            <span class="def">Title:</span> {{ attribution_title }}
+                        Title:
 
-            {% if attribution_link  is not empty %}
-                </a>
-            {% endif %}
-            </dd>
+                        {% if attribution_link  is not empty %}
+                    </a>
+                    {% endif %}
+                </dt>
+                <dd>{{ attribution_title }}</dd>
+            </div>
 
             {% if attribution_creator is not empty %}
-                <dd><span class="def">Creator:</span> {{ attribution_creator }}</dd>
+            <div>
+                <dt>Creator:</dt>
+                <dd>{{ attribution_creator }}</dd>
+            </div>
             {% endif %}
 
             {% if attribution_date is not empty %}
-                <dd><span class="def">Date:</span> {{ attribution_date }}</dd>
+            <div>
+                <dt>Date:</dt>
+                <dd>{{ attribution_date }}</dd>
+            </div>
             {% endif %}
 
             {% if attribution_holder is not empty %}
-                <dd><span class="def">Institution:</span> {{ attribution_holder }}</dd>
+            <div>
+                <dt>Institution:</dt>
+                <dd>{{ attribution_holder }}</dd>
+            </div>
             {% endif %}
 
             {% if attribution_country is not empty %}
-                <dd><span class="def">Country:</span> {{ attribution_country }}</dd>
+            <div>
+                <dt>Country:</dt>
+                <dd>{{ attribution_country }}</dd>
+            </div>
             {% endif %}
 
             {% if (attribution_license is defined and attribution_license is not empty) %}
 
-                {# Showing the correct icons + link #}
+{#                 Showing the correct icons + link #}
                 {% set iconlinks = {
                     'Public-Domain' : 'https://creativecommons.org/publicdomain/mark/1.0/',
                     'CC0' : 'https://creativecommons.org/publicdomain/zero/1.0/',
@@ -143,47 +158,56 @@
                     }
                 %}
 
+                <div>
+                    <dt class="sr-only">Copyright:</dt>
+                    <dd><a class="attributionlink" href="{{ iconlinks[attribution_license] }}" target="_blank">
 
-                <a class="attributionlink" href="{{ iconlinks[attribution_license] }}" target="_blank">
+                            {% if attribution_license == 'Public-Domain' %}
+                                <svg class="icon icon-cc_publicdomain">
+                                    <title>Public Domain Mark</title>
+                                    <use xlink:href="#icon-cc_publicdomain"></use>
+                                </svg>
+                            {% elseif attribution_license == 'CC0' %}
+                                <svg class="icon icon-cc">
+                                    <title>Creative Commons Public Domain Dedication</title>
+                                    <use xlink:href="#icon-cc_zero"></use>
+                                </svg>
+                            {% else %}
+                                <svg class="icon icon-cc">
+                                    <title>Creative Commons</title>
+                                    <use xlink:href="#icon-cc"></use>
+                                </svg>
 
-                {% if attribution_license == 'Public-Domain' %}
-                    <svg class="icon icon-cc_publicdomain">
-                        <use xlink:href="#icon-cc_publicdomain"></use>
-                    </svg>
-                {% elseif attribution_license == 'CC0' %}
-                    <svg class="icon icon-cc">
-                        <use xlink:href="#icon-cc_zero"></use>
-                    </svg>
-                {% else %}
-                    <svg class="icon icon-cc">
-                        <use xlink:href="#icon-cc"></use>
-                    </svg>
+                                {% if 'BY' in attribution_license %}
+                                    <svg class="icon icon-cc_by">
+                                        <title>Creative Commons BY option</title>
+                                        <use xlink:href="#icon-cc_by"></use>
+                                    </svg>
+                                {% endif %}
 
-                    {% if 'BY' in attribution_license %}
-                        <svg class="icon icon-cc_by">
-                            <use xlink:href="#icon-cc_by"></use>
-                        </svg>
-                    {% endif %}
+                                {% if 'NC' in attribution_license %}
+                                    <svg class="icon icon-cc_nc">
+                                        <title>Creative Commons NC option</title>
+                                        <use xlink:href="#icon-cc_nc"></use>
+                                    </svg>
+                                {% endif %}
 
-                    {% if 'NC' in attribution_license %}
-                        <svg class="icon icon-cc_nc">
-                            <use xlink:href="#icon-cc_nc"></use>
-                        </svg>
-                    {% endif %}
+                                {% if 'SA' in attribution_license %}
+                                    <svg class="icon icon-cc_sa">
+                                        <title>Creative Commons SA option</title>
+                                        <use xlink:href="#icon-cc_sa"></use>
+                                    </svg>
+                                {% endif %}
 
-                    {% if 'SA' in attribution_license %}
-                        <svg class="icon icon-cc_sa">
-                            <use xlink:href="#icon-cc_sa"></use>
-                        </svg>
-                    {% endif %}
+                            {% endif %}
 
-                {% endif %}
+                            {% set labels = config.get('contenttypes/pages/fields/image_attribution_license/values') %}
 
-                {% set labels = config.get('contenttypes/pages/fields/image_attribution_license/values') %}
+                            <span class="image-license">{{ labels[attribution_license] }}</span>
 
-                <span class="image-license">{{ labels[attribution_license] }}</span>
-
-                </a>
+                        </a>
+                    </dd>
+                </div>
 
             {% endif %}
 

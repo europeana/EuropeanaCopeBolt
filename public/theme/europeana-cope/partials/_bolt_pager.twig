@@ -1,0 +1,31 @@
+{% extends 'pager/_base.twig' %}
+
+{% block list %}
+    <div class="pagination pagination-centered {{ class|default }}" role="navigation" aria-label="Pagination">
+        <ul class="pagination">
+            {{ block('items') }}
+        </ul>
+    </div>
+{% endblock %}
+
+{% block prev_label '‹' %}
+{% block next_label '›' %}
+{% block first_label '« ' ~ page %}
+{% block last_label page ~ ' »' %}
+
+{%- block item -%}
+    <li{% if active %} class="active" aria-current="true"{% endif %}>
+        <a
+                {%- if not active %} href="{{ link }}"{% endif -%}
+                {% if label == "‹" %} aria-label="Previous page"{% endif %}
+                {%- if not first %} rel="noindex, follow"{% endif -%}
+                {% if label == "›" %} aria-label="Next page"{% endif %}
+        >
+            {{- label|raw -}}
+        </a>
+    </li>
+{%- endblock -%}
+
+{% block collapsed_item %}
+    <li class="disabled"><a>…</a></li>
+{% endblock %}

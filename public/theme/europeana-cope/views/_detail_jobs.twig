@@ -1,10 +1,10 @@
+<section>
+    <div class="inner-wrap">
+        <article class="column main-column">
 
-    <section>
-        <div class="inner-wrap">
-            <article class="column main-column">
+            {% include 'partials/_community-info.twig' %}
 
-               {% include 'partials/_community-info.twig' %}
-               {% include 'partials/_side-info.twig' %}
+            {% include 'partials/_side-info.twig' %}
 
                 <div class="header-group">
 
@@ -16,85 +16,86 @@
 
                     <div class="introduction">
                         <p>
-                        {% if record.salary_eur is not empty %}
-                           {{ record.salary_eur }}<br />
-                        {% endif %}
+                            {% if record.salary_eur is not empty %}
+                                {{ record.salary_eur }}<br/>
+                            {% endif %}
 
-                        {% if record.scale_eur is not empty %}
-                            Scale: {{ record.scale_eur }}<br />
-                        {% endif %}
+                            {% if record.scale_eur is not empty %}
+                                Scale: {{ record.scale_eur }}<br/>
+                            {% endif %}
 
-                        {% if record.position_type is not empty %}
-                            Position type: {{ record.position_type }}<br />
-                        {% endif %}
+                            {% if record.position_type is not empty %}
+                                Position type: {{ record.position_type }}<br/>
+                            {% endif %}
 
-                         {% if record.teampage is not empty %}
-                            Team:
-                            {% set teamids = record.teampage|json_decode() %}
+                            {% if record.teampage is not empty %}
+                                Team:
+                                {% set teamids = record.teampage|json_decode() %}
 
                                 {% for teamid in teamids %}
                                     {% setcontent teampage = "pages" where { 'id': teamid } %}
-                                        <a href="{{ teampage.link() }}">{{ teampage.title }} </a>
+                                    <a href="{{ teampage.link() }}">{{ teampage.title }} </a>
                                 {% endfor %}
 
 
-                        {% endif %}
+                            {% endif %}
                         </p>
                     </div>
                 </div>
 
-                {% if record.values.image is defined and (record.values.image.file|default is not empty or record.values.image|is_string) %}
-                    {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
-                    <figure>
-                        <div class="main-img-container">
-                            <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="{{ record.values.image.alt|default('main image') }}" />
+            {% if record.values.image is defined and (record.values.image.file|default is not empty or record.values.image|is_string) %}
+                {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
+                <figure>
+                    <div class="main-img-container">
+                        <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}"
+                             alt="{{ record.values.image.alt|default('main image') }}"/>
 
-                            {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
-                        </div>
-
-                        {% if record.values.image.title is defined %}
-                            <figcaption>
-                                {{ record.values.image.title }}
-                            </figcaption>
-                        {% endif %}
-                    </figure>
-                {% elseif record.values.image.oembed|default is not empty %}
-                    <div class="main-img-container img-container is-overflow-hidden">
-                        {% include 'partials/_oembed_resize.twig' with { oembed: record.values.image.oembed, width: 1240, height: 600} %}
+                        {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
                     </div>
-                {% endif %}
+
+                    {% if record.values.image.title is defined %}
+                        <figcaption>
+                            {{ record.values.image.title }}
+                        </figcaption>
+                    {% endif %}
+                </figure>
+            {% elseif record.values.image.oembed|default is not empty %}
+                <div class="main-img-container img-container is-overflow-hidden">
+                    {% include 'partials/_oembed_resize.twig' with { oembed: record.values.image.oembed, width: 1240, height: 600} %}
+                </div>
+            {% endif %}
 
 
-                {% if record.body is not empty %}
-                    <div class="body"> {# can be multiple bodies #}
-                        {{ record.body }}
-                    </div>
-                {% endif %}
+            {% if record.body is not empty %}
+                <div class="body"> {# can be multiple bodies #}
+                    {{ record.body }}
+                </div>
+            {% endif %}
 
-                {% if record.imagegallery is not empty %}
-                    {% include 'views/_imagegallery.twig' %}
-                {% endif %}
+            {% if record.imagegallery is not empty %}
+                {% include 'views/_imagegallery.twig' %}
+            {% endif %}
 
-            </article>
+        </article>
 
-        </div>
-    </section>
+    </div>
+</section>
 
-    {% for module in record.modules if (global.request.get('_route') != "preview") %}
-        {{ include('partials/_default_module.twig', { 'module': module }) }}
-    {% endfor %}
+{% for module in record.modules if (global.request.get('_route') != "preview") %}
+    {{ include('partials/_default_module.twig', { 'module': module }) }}
+{% endfor %}
 
     {% if record.button_link is defined and record.button_link is not empty %}
         {% include 'partials/_record_cta.twig' %}
     {% endif %}
 
-    <aside>
-        <div class="inner-wrap">
+<aside>
+    <div class="inner-wrap">
 
-            {% include 'partials/_addthis-widget.twig' %}
+        {% include 'partials/_addthis-widget.twig' %}
 
-            {# CONTACT BIG #}
-            {% include 'modules/_teaser_contact.twig' with { record : record } %}
+        {# CONTACT BIG #}
+        {% include 'modules/_teaser_contact.twig' with { record : record } %}
 
-        </div>
-    </aside>
+    </div>
+</aside>

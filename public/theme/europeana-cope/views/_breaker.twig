@@ -1,4 +1,4 @@
-<div class="calltoaction colored-image {{ layoutclass }}"
+<div class="calltoaction colored-image {{ layoutclass }} {% if record.enable_filter %} image-filter{% endif %}"
     {% if record.image is defined and record.image is not empty %}
         {% if layoutclass == "half" %}
             style="background-image: url({{ image(record.image, 800, 400)|default('notfound') }})"

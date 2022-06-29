@@ -1,9 +1,8 @@
-    {% if record.pagetype is defined
-        and not (
-            record.pagetype == 'landingpage'
-            or record.pagetype == 'landingpage-nohighlight'
-        )
-    %}
+{% if record.pagetype is defined
+    and not (
+    record.pagetype == 'landingpage'
+    or record.pagetype == 'landingpage-nohighlight'
+    ) %}
     {# HIDE this complete section on landingpages #}
     <section>
         <div class="inner-wrap">
@@ -22,10 +21,9 @@
 
                     {% if record.pagetype is defined
                         and not (
-                            record.pagetype == 'landingpage'
-                            or record.pagetype == 'landingpage-nohighlight'
-                        )
-                    %}
+                        record.pagetype == 'landingpage'
+                        or record.pagetype == 'landingpage-nohighlight'
+                        ) %}
                         <h1>{{ record.title }}</h1>
                     {% endif %}
 
@@ -36,12 +34,14 @@
                     {% endif %}
                 </div>
 
+
                 {% if record.values.image is defined and record.values.image is not empty %}
                     {# getting values.image to prevent fallback -> https://github.com/bolt/bolt/issues/6798 #}
                     {% if record.values.image.file|default is not empty or record.values.image|is_string %}
                         <figure>
                             <div class="main-img-container">
-                                <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}" alt="{{ record.values.image.alt|default('main image') }}" />
+                                <img class="main-img" src="{{ record.image|thumbnail(1240, 600, 'c') }}"
+                                     alt="{{ record.values.image.alt|default('main image') }}"/>
 
                                 {% include 'partials/_image_attribution.twig' with { parentitem: 'mainimage' } %}
                             </div>
@@ -73,7 +73,7 @@
 
         </div>
     </section>
-    {% endif %}
+{% endif %}
 
 
     {% for module in record.modules if (global.request.get('_route') != "preview") %}
@@ -89,36 +89,35 @@
     {% endif %}
 
     {% if record.pagefooter is defined and record.pagefooter is not empty %}
-    <section>
-        <div class="inner-wrap">
-            <article class="column main-column">
-                <div class="body pagefooter">
-                    {{ record.pagefooter }}
-                </div>
-            </article>
-        </div>
-    </section>
+        <section>
+            <div class="inner-wrap">
+                <article class="column main-column">
+                    <div class="body pagefooter">
+                        {{ record.pagefooter }}
+                    </div>
+                </article>
+            </div>
+        </section>
     {% endif %}
 
 
     {% if record.pagetype is defined
         and not (
-            record.pagetype == 'landingpage'
-            or record.pagetype == 'landingpage-nohighlight'
-        )
-    %}
-    {# HIDE this complete aside on landingpages #}
-    <aside>
-        <div class="inner-wrap">
+        record.pagetype == 'landingpage'
+        or record.pagetype == 'landingpage-nohighlight'
+        ) %}
+        {# HIDE this complete aside on landingpages #}
+        <aside>
+            <div class="inner-wrap">
 
-            {% include 'partials/_addthis-widget.twig' %}
+                {% include 'partials/_addthis-widget.twig' %}
 
-            {# AUTHOR BIG #}
-            {% include 'modules/_teaser_author.twig' with { record : record } %}
+                {# AUTHOR BIG #}
+                {% include 'modules/_teaser_author.twig' with { record : record } %}
 
-            {# RELATED CONTENT #}
-            {% include 'modules/_related_posts.twig' with { record : record, title : 'Related' } %}
+                {# RELATED CONTENT #}
+                {% include 'modules/_related_posts.twig' with { record : record, title : 'Related' } %}
 
-        </div>
-    </aside>
-{% endif %}
+            </div>
+        </aside>
+    {% endif %}

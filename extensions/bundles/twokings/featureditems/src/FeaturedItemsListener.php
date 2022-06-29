@@ -53,7 +53,7 @@ class FeaturedItemsListener
    * @param $itemtype
    * @param $itemid
    */
-  function deFeatureCurrentItem($currenttypeconfig, $itemtype, $itemid) {
+  public function deFeatureCurrentItem($currenttypeconfig, $itemtype, $itemid) {
     if ($currenttypeconfig['maxfeatured'] > 1) {
       // don't use the native bolt item save, because that will trigger the storage save event again
       // get content type table from bolt
@@ -114,7 +114,7 @@ class FeaturedItemsListener
    * @param $itemtype
    * @param $itemid
    */
-  function deFeatureOtherItems($currenttypeconfig, $itemtype, $itemid) {
+  public function deFeatureOtherItems($currenttypeconfig, $itemtype, $itemid) {
     if($currenttypeconfig['maxfeatured'] == 0) {
       return 1;
     } else {
@@ -198,7 +198,7 @@ class FeaturedItemsListener
    *
    * @return bool
    */
-  function isContentTypeFeatured($type) {
+  public function isContentTypeFeatured($type) {
     foreach($this->config['contenttypes'] as $key => $values) {
       if($type == $key && $values['hasfeatured'] === true) {
         return true;

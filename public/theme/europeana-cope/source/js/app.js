@@ -253,6 +253,11 @@ $(document).ready(function () {
 
     }
 
+    $('.quicklinks a').on('click', function() {
+        $('.quicklinks a').removeAttr('aria-current');
+        $(this).attr('aria-current', true);
+    })
+
     /**
      * Open and close filelistings.
      *
@@ -274,6 +279,8 @@ $(document).ready(function () {
         // nested `.expand-toggle` elements.
         var $sublist = $this.find('> .can-expand');
 
+        var $buttonText = $this.find('span');
+
         // Otherwise get `$this`'s _uncle_, because of wrappers around `$this`.
         if ($sublist.length === 0) {
             $sublist = $this.parent().next('.can-expand');
@@ -286,11 +293,14 @@ $(document).ready(function () {
 
         if ($sublist.hasClass('expanded')) {
             $this.removeClass('expand-toggle-open');
+            $this.attr('aria-expanded', false);
+            $buttonText.text('Expand all folders');
             $sublist.removeClass('expanded').slideUp('fast');
-
         } else {
             $sublist.addClass('expanded').slideDown();
             $this.addClass('expand-toggle-open');
+            $this.attr('aria-expanded', true);
+            $buttonText.text('Collapse all folders');
         }
     });
 
@@ -299,17 +309,22 @@ $(document).ready(function () {
      */
     $('button.image-info').on('mouseenter focus', function (e) {
         $(this).siblings('dl').addClass('expanded');
+        $(this).attr('aria-expanded', true);
     });
 
     $(document).on('keyup', function (e) {
         const licenseAttributions = $('.license-attribution dl').not('.always-expanded');
         if (e.key === 'Escape' && licenseAttributions.length > 0) {
             licenseAttributions.removeClass('expanded');
+            licenseAttributions.each(function() {
+                $(this).parent().find('.image-info').attr('aria-expanded', false);
+            });
         }
     });
 
     $('.license-attribution dl').not('.always-expanded').on('mouseleave focusout', function (e) {
         $(this).removeClass('expanded');
+        $(this).parent().find('.image-info').attr('aria-expanded', false);
     });
 
     /**
@@ -350,6 +365,14 @@ $(document).ready(function () {
         $(".tile-back").stop().hide();
         $(this).find(".tile-front").fadeIn();
         // console.log('... en uit');
+    });
+
+    $(".tile-back").on("click", function() {
+        var dataAttr = $(this).attr('data-url');
+
+        if (typeof dataAttr !== 'undefined' && dataAttr !== false) {
+            window.location.href = dataAttr;
+        }
     });
 
 

@@ -49,7 +49,7 @@ Available variables
 
         {% set pagername = records|first.contenttype.slug|default('') %}
         {% if pagername is not empty and allow_pager == true %}
-            {{ pager( (pagername) ) }}
+            {{ pager( (pagername), template = 'partials/_bolt_pager.twig' ) }}
         {% endif %}
     {% else %}
         {% if record is not empty and record.editlink() %}

@@ -188,7 +188,7 @@ header {
         font-size: 0.75rem;
 
         @include respond-to (large-screens) {
-           font-size: 0.875rem;
+            font-size: 0.875rem;
         }
 
     }
@@ -205,8 +205,8 @@ header {
         right: 0.875rem;
 
         @include respond-to (large-screens) {
-           top: auto;
-           bottom: 1rem;
+            top: auto;
+            bottom: 1rem;
         }
     }
 
@@ -614,9 +614,6 @@ a.banner {
         }
     }
 
-    &.colored-image {
-        background-blend-mode: multiply;
-    }
 
     .banner .header-group,
     a.banner .header-group  {
@@ -846,9 +843,9 @@ a.event-banner {
     }
 
     .dates {
-       display: flex;
-       align-items: center;
-       color: $white;
+        display: flex;
+        align-items: center;
+        color: $white;
     }
 
     .divider {
@@ -949,8 +946,8 @@ a.event-banner {
             }
         }
         p {
-           font-size:  0.625rem;
-           margin: 0;
+            font-size:  0.625rem;
+            margin: 0;
         }
         p.location-name {
             font-weight: 700;
@@ -1006,10 +1003,6 @@ div.calltoaction-readmore {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &.colored-image {
-        background-blend-mode: multiply;
-    }
 
     @include respond-to(large-screens){
         height: 55px;
@@ -1084,7 +1077,7 @@ div.calltoaction-readmore {
 
 
 .related-item
- {
+{
     position: relative;
 
     .img-container {
@@ -1239,10 +1232,6 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
     justify-content: center;
     align-items: center;
 
-    &.colored-image {
-        background-blend-mode: multiply;
-    }
-
     .header-group {
         color: $white;
         text-align: center;
@@ -1342,11 +1331,11 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
             max-width: 250px;
             z-index: 10;
 
-        @include respond-to(large-screens) {
-            display: inline-block;
-            margin: 0 0 0 5rem;
-            width: auto;
-            max-width: none;
+            @include respond-to(large-screens) {
+                display: inline-block;
+                margin: 0 0 0 5rem;
+                width: auto;
+                max-width: none;
             }
         }
 
@@ -1504,6 +1493,11 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
     }
 }
 
+.project_header-group .side-info {
+    margin: 0;
+    position: unset;
+}
+
 
 
 .deadline-block {
@@ -1589,6 +1583,19 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
 
 
 .contentpage {
+
+    .project_header-group {
+        display: flex;
+
+        @media (max-width: $bp-medium) {
+            flex-direction: column;
+        }
+    }
+
+    .card {
+        position: relative;
+    }
+
     .header-group,
     .card {
         position: relative;
@@ -1599,8 +1606,7 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
         }
     }
 
-    &.detail-jobs,
-    &.detail-projects {
+    &.detail-jobs {
         .header-group h1 {
 
             @include respond-to(large-screens) {
@@ -1612,10 +1618,10 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
         }
 
         .introduction {
-           @include respond-to(large-screens) {
+            @include respond-to(large-screens) {
                 padding-right: 180px; // magic number, to avoid problems with abs pos time block
             }
-             @include respond-to(xlarge-screens) {
+            @include respond-to(xlarge-screens) {
                 padding-right: 120px;
             }
         }
@@ -1647,9 +1653,9 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
         float: left;
         margin: 0 1rem 1rem 0;
 
-         @include respond-to(large-screens) {
+        @include respond-to(large-screens) {
             float: none;
-         }
+        }
     }
 
     .letter-overlay {
@@ -1762,9 +1768,9 @@ div.calltoaction {  //little bit more specific to avoid issues with default head
     color: $medium-gray;
 
     @include respond-to(large-screens){
-            width: 172px;
-            padding: 0.8rem;
-        }
+        width: 172px;
+        padding: 0.8rem;
+    }
 
     .event-figure & {
         width: 120px;
@@ -2090,12 +2096,12 @@ svg.icon-cutoff.top.right {
         font-size: 0.875rem;
 
         @include respond-to(medium-screens){
-                font-size: 1rem;
-            }
+            font-size: 1rem;
+        }
 
         > a {
-           display: inline-block;
-           padding-bottom: 1rem;
+            display: inline-block;
+            padding-bottom: 1rem;
         }
 
         &.has-sublist {
@@ -2376,7 +2382,7 @@ svg.icon-cutoff.top.right {
 
 
 .info-list {
-// in an info list, the teasers are separated by lines
+    // in an info list, the teasers are separated by lines
 
     li {
         padding: 2rem;
@@ -2418,7 +2424,7 @@ svg.icon-cutoff.top.right {
     .img-container {
         position: relative;
         margin-bottom: 2rem;
-        
+
 
         @include respond-to(large-screens){
             float:left;
@@ -2719,7 +2725,7 @@ table.listingtable {
         // Targetting safari 9  - does not support box shadow
         @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
             & {
-                    border: 1px solid $line-gray;
+                border: 1px solid $line-gray;
             }
         }
 
@@ -2835,8 +2841,8 @@ table.listingtable {
 
     background-blend-mode: overlay;
     background-color: $menu-grey;
-        // background-blend-mode: soft-light;
-        // background-color: $link-blue;
+    // background-blend-mode: soft-light;
+    // background-color: $link-blue;
 
     &:hover {
         background-blend-mode: soft-light;
@@ -2912,6 +2918,12 @@ table.listingtable {
         letter-spacing: 1px;
         text-align: center;
         font-size: 1.125rem;
+    }
+}
+
+.tile-pointer {
+    &:hover {
+        cursor: pointer;
     }
 }
 
@@ -3229,8 +3241,8 @@ div.body {
     dl {
         position: absolute;
         bottom: .5rem;
-        right: .5rem;
-        width: max-content;
+        right: .1rem;
+        width: fit-content;
         background: rgba($white, 0.95);
         color: $black;
         padding: .55rem;
@@ -3249,7 +3261,7 @@ div.body {
                 margin-bottom: 0;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
-                margin-left: 4rem;
+                margin-left: 2.1rem;
             }
         }
 
@@ -3271,11 +3283,17 @@ div.body {
             color: $black;
             padding: 0;
             max-width: 500px;
+            display: inline-block;
 
             @include respond-to(large-screens) {
                 // margin: 0 1em 0 0;
                 // display: inline-block;
             }
+        }
+
+        dt {
+            display: inline-block;
+            margin-right: 0.2rem;
         }
 
         span.def {
@@ -3291,7 +3309,7 @@ div.body {
             color: $black;
 
             &:hover {
-               text-decoration: none;
+                text-decoration: none;
             }
         }
 
@@ -3299,7 +3317,7 @@ div.body {
             border-bottom: none;
 
             &:hover {
-               border-bottom: 1px dotted $black;
+                border-bottom: 1px dotted $black;
             }
         }
 
@@ -3551,7 +3569,7 @@ section.bg-grey { //used for body-module
 /*  Special styles for 2019 event splash ( old style, but partly restyling) */
 
 .logo2019 {
-   margin: 7px 1rem  0 0;
+    margin: 7px 1rem  0 0;
 }
 .splashpage header {
     // height: 90px;
