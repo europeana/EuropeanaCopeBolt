@@ -41,6 +41,27 @@
                             {% endfor %}
                             #}
                         </div>
+
+                        {% if record.membership_council_term is not empty %}
+                            <div class="card-network personal-network network-mc-council">
+                                <span class="mc-term">
+                                    <svg class="icon icon-calendar-mc">
+                                        <use xlink:href="#icon-calendar-mc"></use></svg>
+                                    <strong>MC Term</strong>: {{ record.membership_council_term }}
+                                </span>
+                            </div>
+                        {% endif %}
+
+                        <div class="card-function personal-function">
+                            <span class="p-job-title">{{ record.job_title }}</span>
+                            <span class="p-org">{{ record.company }}</span>
+                            <span class="p-country-name">{{ record.country }}</span>
+                            {# <span>{{ record.sector }}</span> #}
+                            {% if record.domain is not empty %}
+                            <span>{{ record.domain }}</span>
+                            {% endif %}
+                        </div>
+
                         <div class="card-community">
                             {% set communities = [] %}
                             {% set communityLinks = {} %}
@@ -77,25 +98,6 @@
                                         |
                                     {% endif %}
                                 {% endfor %}
-                            {% endif %}
-                        </div>
-                        {% if record.membership_council_term is not empty %}
-                            <div class="card-network personal-network network-mc-council">
-                                <span class="mc-term">
-                                    <svg class="icon icon-calendar-mc">
-                                        <use xlink:href="#icon-calendar-mc"></use></svg>
-                                    <strong>MC Term</strong>: {{ record.membership_council_term }}
-                                </span>
-                            </div>
-                        {% endif %}
-
-                        <div class="card-function personal-function">
-                            <span class="p-job-title">{{ record.job_title }}</span>
-                            <span class="p-org">{{ record.company }}</span>
-                            <span class="p-country-name">{{ record.country }}</span>
-                            {# <span>{{ record.sector }}</span> #}
-                            {% if record.domain is not empty %}
-                            <span>{{ record.domain }}</span>
                             {% endif %}
                         </div>
 
