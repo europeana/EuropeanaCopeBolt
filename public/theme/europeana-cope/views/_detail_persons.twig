@@ -43,30 +43,40 @@
                         </div>
                         <div class="card-community">
                             {% set communities = [] %}
+                            {% set communityLinks = {} %}
 
                             {% if record.europeana_tech %}
                                 {% set communities = communities|merge(['Member of EuropeanaTech Community']) %}
+                                {% set communityLinks = communityLinks|merge({'Member of EuropeanaTech Community': '/page/europeanatech'}) %}
                             {% endif %}
                             {% if record.member_of_research %}
                                 {% set communities = communities|merge(['Member of Research Community']) %}
+                                {% set communityLinks = communityLinks|merge({'Member of Research Community': '/page/europeana-research'}) %}
                             {% endif %}
                             {% if record.member_of_education %}
                                 {% set communities = communities|merge(['Member of Education Community']) %}
+                                {% set communityLinks = communityLinks|merge({'Member of Education Community': '/page/europeana-education'}) %}
                             {% endif %}
                             {% if record.member_of_communicators %}
                                 {% set communities = communities|merge(['Member of Communicators Community']) %}
+                                {% set communityLinks = communityLinks|merge({'Member of Communicators Community': '/page/europeana-communicators-group'}) %}
                             {% endif %}
                             {% if record.member_of_impact %}
                                 {% set communities = communities|merge(['Member of Impact Community']) %}
+                                {% set communityLinks = communityLinks|merge({'Member of Impact Community': '/page/europeana-impact-community'}) %}
                             {% endif %}
                             {% if record.member_of_copyright %}
                                 {% set communities = communities|merge(['Member of Copyright Community']) %}
+                                {% set communityLinks = communityLinks|merge({'Member of Copyright Community': '/page/europeana-copyright'}) %}
                             {% endif %}
 
                             {% if communities is not empty %}
-                                <span>
-                                    {{ communities|join(' | ') }}
-                                </span>
+                                {% for community in communities %}
+                                    <a href="{{ communityLinks[community] }}">{{ community }}</a>
+                                    {% if not loop.last %}
+                                        |
+                                    {% endif %}
+                                {% endfor %}
                             {% endif %}
                         </div>
                         {% if record.membership_council_term is not empty %}
