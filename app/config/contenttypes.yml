@@ -2649,6 +2649,60 @@ persons:
         "(not set)": "(not set)"
         "false": "false"
         "true": "true"
+    member_of_research:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of Research"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
+    member_of_education:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of Education"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
+    member_of_communicators:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of communicators"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
+    member_of_impact:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of Impact"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
+    member_of_copyright:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of Copyright"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
+    member_of_climate:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of Climate"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
     gb_role:
       type: text
       label: "Governing board role"
