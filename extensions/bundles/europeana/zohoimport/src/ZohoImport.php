@@ -371,6 +371,12 @@ class ZohoImport
             if($record === null){
                 return null;
             }
+
+            if (! property_exists($record, $property)) {
+                echo "\nProperty '$property' was not found in retrieved record from Zoho.\n";
+                return '';
+            }
+
             return $record->{$property};
         }
 
