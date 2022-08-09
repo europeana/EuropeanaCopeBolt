@@ -121,20 +121,20 @@ var klaroConfig = {
     },
 
     services: [
-        {
-            name: 'hotjar',
-            title: 'Hotjar tracking',
-            purposes: ['analytics'],
-            translations: {
-                en: {
-                    description: 'Measures and observes user behavior including surveys and functionality enabling the user to give feedback',
-                }
-            },
-            cookies: [
-                [/^_hj.*$/, '/', 'klaro.kiprotect.com'], //for the production version
-                [/^_hj.*$/, '/', 'localhost'], //for the local version
-            ]
-        },
+        // {
+        //     name: 'hotjar',
+        //     title: 'Hotjar tracking',
+        //     purposes: ['analytics'],
+        //     translations: {
+        //         en: {
+        //             description: 'Measures and observes user behavior including surveys and functionality enabling the user to give feedback',
+        //         }
+        //     },
+        //     cookies: [
+        //         [/^_hj.*$/, '/', 'klaro.kiprotect.com'], //for the production version
+        //         [/^_hj.*$/, '/', 'localhost'], //for the local version
+        //     ]
+        // },
         {
             name: 'addthis',
             title: 'Addthis tracking',
