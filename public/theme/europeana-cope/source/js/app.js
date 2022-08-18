@@ -584,3 +584,47 @@ var waitForEl = function (selector, callback) {
         }, 100);
     }
 };
+
+// Scroll listing events or news with pagination into view
+
+$(document).ready(function() {
+    var paginationTarget = getCookie("pagination_target");
+    
+    checkCookie()
+
+    function setCookie(cname, cvalue) {
+        document.cookie = cname + "=" + cvalue + ";";
+    }
+
+
+    $('.listingnews-paginator.pagination a').on('click', function(e){
+        let sectionClass = $(this).parents('section').attr('id');
+        setCookie("pagination_target", sectionClass);
+    });
+
+
+    function checkCookie() {
+        if (paginationTarget != "") {
+            $("#" + paginationTarget)[0].scrollIntoView({
+                behavior: "smooth", // or "auto" or "instant"
+                block: "end" // or "end"
+            });
+        }
+    }
+
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+});
