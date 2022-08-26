@@ -14,8 +14,9 @@ Available variables
 {% set modulemorelink = module.modulemorelink|default('') %}
 {% set modulemorelabel = module.modulemorelabel|default('') %}
 {% set modulemoretext = module.modulemoretext|default('') %}
+
 {% endspaceless %}
-<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module group {%- if override_css_class %} {{ override_css_class }}{% endif -%}">
+<section {% if override_css_id %}id="{{ override_css_id }}"{% endif %} class="module group{%- if override_css_class %} {{ override_css_class }}{% endif -%}">
     <div class="inner-wrap">
 
     {% if title is not empty %}
@@ -48,7 +49,7 @@ Available variables
 
         {% set pagername = records|first.contenttype.slug|default('') %}
         {% if pagername is not empty and allow_pager == true %}
-            {{ pager( (pagername), template = 'partials/_bolt_pager.twig' ) }}
+            {{ pager( (pagername), template = 'partials/_bolt_pager.twig', class = 'listingnews-paginator' ) }}
         {% endif %}
     {% else %}
         {% if record is not empty and record.editlink() %}
