@@ -90,7 +90,7 @@ $(document).ready(function () {
             // Doe open
             nav.show();
             nav.addClass('is-overlay').css({
-                'top': offsetHeight,
+                'top': 0,
                 'min-height': windowHeight,
                 'height': fullHeight
             });

@@ -42,7 +42,8 @@ header {
         font-size: 1.25rem;
 
         &.menu-toggle{
-            left: 0rem;
+            position: fixed;
+            right: 0rem;
             width: 3.5rem;
             height: 4rem;
 
@@ -84,6 +85,7 @@ header {
 .mainlogo {
     position: relative;
     width: 200px;
+    padding: 16px 0;
 
     @include respond-to (medium-screens) {
         width: 232px;

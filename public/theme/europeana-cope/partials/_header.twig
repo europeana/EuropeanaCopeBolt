@@ -1,6 +1,13 @@
 <header id="header">
 
     <div class="headercontainer">
+
+        <div class="mainlogo">
+            <a class="home-link" href="/">
+                <img src="{{ paths.theme }}images/europeana_pro_logo.svg" alt="Europeana pro" />
+            </a>
+        </div>
+
         <button class="toggle menu-toggle" aria-label="Toggle menu">
             <svg class="icon icon-menu">
                 <use xlink:href="#icon-menu"></use>
@@ -10,27 +17,15 @@
             </svg>
         </button>
 
-        <div class="mainlogo">
-            <a class="home-link" href="/">
-                <img src="{{ paths.theme }}images/europeana_pro_logo.svg" alt="Europeana pro" />
-            </a>
-        </div>
-
         {{ menu('main', 'partials/_menu_toplayer.twig') }}
-
-        <button class="toggle search-toggle" aria-label="Toggle search">
-            <svg class="icon icon-search">
-                <use xlink:href="#icon-search"></use>
-            </svg>
-        </button>
 
         {% block navigation %}
             {{ include('partials/_navigation.twig') }}
         {% endblock navigation %}
 
-    </div>
+        {% include 'partials/_searchform.twig' with {id : 'headersearch'} %}
 
-    {% include 'partials/_searchform.twig' with {id : 'headersearch'} %}
+    </div>
 
 </header>
 

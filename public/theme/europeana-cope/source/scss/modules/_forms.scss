@@ -56,6 +56,15 @@ input::placeholder {
     color: $medium-gray;
 }
 
+#mobile_headersearch {
+    .js header & {
+        display: flex;
+        @include respond-to (menu-full) {
+            display: none;
+        }
+    }
+}
+
 form.searchform {
     display: flex;
 
