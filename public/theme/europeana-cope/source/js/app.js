@@ -314,11 +314,30 @@ $(document).ready(function () {
 
     $(document).on('keyup', function (e) {
         const licenseAttributions = $('.license-attribution dl').not('.always-expanded');
+        attributionPopup = $(e.target).siblings().first();
         if (e.key === 'Escape' && licenseAttributions.length > 0) {
             licenseAttributions.removeClass('expanded');
             licenseAttributions.each(function() {
                 $(this).parent().find('.image-info').attr('aria-expanded', false);
+                attributionPopup.attr('aria-expanded', false);
+                attributionPopup.removeClass('expanded')
             });
+        }
+
+        if (e.key === 'Enter') {
+            if(attributionPopup.attr('class') != 'expanded') {
+                licenseAttributions.each(function() {
+                    $(this).parent().find('.image-info').attr('aria-expanded', true);
+                    attributionPopup.addClass('expanded')
+                });
+                attributionPopup.addClass('expanded')
+            } else {
+                licenseAttributions.removeClass('expanded');
+                licenseAttributions.each(function() {
+                    $(this).parent().find('.image-info').attr('aria-expanded', false);
+                    attributionPopup.removeClass('expanded')
+                });
+            }
         }
     });
 
