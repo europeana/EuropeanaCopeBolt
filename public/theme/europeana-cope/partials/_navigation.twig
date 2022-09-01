@@ -7,6 +7,8 @@
         {{ menu('main', 'partials/_menu.twig') }}
 
         {{ menu('secondary', 'partials/_menu_secondary.twig') }}
+
+        {% include 'partials/_searchform.twig' with {id : 'mobile_headersearch'} %}
     </div>
 </nav>
 
