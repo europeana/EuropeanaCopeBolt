@@ -1,14 +1,17 @@
+<!-- Temporarily no "_related_posts.twig" -->
+
+{#
 {% spaceless %}
 {% set template = 'related' %}
 {% endspaceless %}
 
 {% if record.related() is not empty %}
-    {# get the manually set related records #}
+    {# get the manually set related records # }
     {% set relatedrecords = record.related()|shuffle %}
 {% elseif
     (record.taxonomy.categories is defined and record.taxonomy.categories is not empty)
     or (record.taxonomy.tags is defined and record.taxonomy.tags is not empty) %}
-    {# get the automatically related records by category  - extension #}
+    {# get the automatically related records by category  - extension # }
     {% set relatedrecords = relatedcontent(record)|shuffle %}
 {% else %}
     <!-- No tags, no categories, so no related items -->
@@ -38,4 +41,4 @@
 
 {% endif %}
 
-
+#}

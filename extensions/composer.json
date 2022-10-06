@@ -46,8 +46,7 @@
         "sahassar/boltredirector": "^2.1",
         "soapbox/relatedcontent": "^1",
         "twokings/bolt-extension-who-is-editing": "^1.9",
-        "twokings/hierarchical-routes": "^0.2",
-        "wikimedia/composer-merge-plugin": "^1.3"
+        "twokings/hierarchical-routes": "^0.2"
     },
     "scripts": {
         "post-autoload-dump": "Bolt\\Composer\\EventListener\\PackageEventListener::dump",
