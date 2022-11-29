@@ -174,7 +174,8 @@ __nodes:
       group: meta
   support_defaults: &support_defaults
     contact_record:
-      type: text
+      type: select
+      values: persons/id,title
       label: "Contact record"
       class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-1'
       prefix: '<div><h3>Support Contact</h3><p>The support contact is usually a europeana staff member who is designated as the primary contact about the current record.</p></div>'
@@ -1149,7 +1150,7 @@ posts:
     author:
       label: "Author(s)"
       type: select
-      values: persons/id
+      values: persons/id,title
       class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
     isbn:
       label: "ISBN"
@@ -2445,7 +2446,8 @@ jobs:
       label: "Deadline"
       group: "Main"
     teampage:
-      type: text
+      type: select
+      values: pages/id,title
       label: "Select Team page (optional)"
       info: Select the page that displays the team (optional)
       class: 'ajaxselector ct-pages fields-id--title--status key-id results-auto'

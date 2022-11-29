@@ -1,0 +1,3957 @@
+__bolt_export_meta:
+    date: '2022-11-02T11:05:45+01:00'
+    version: 3.7.4
+    platform: mysql
+organisations:
+    -
+        slug: the-european-film-gateway
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-02-27 20:57:45'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'The European Film Gateway'
+        name_alt1: null
+        name_alt2: null
+        acronym: EFG
+        org_country: Germany
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'http://www.europeanfilmgateway.eu'
+        email: efg@dff.film
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>EFG - The European Film Gateway is the aggregator for the film archive domain. In addition to aggregating data for Europeana, EFG also makes the consolidated metadata from its providing archives accessible through its own portal at <a href=\"http://www.europeanfilmgateway.eu/\" target=\"_blank\">www.europeanfilmgateway.eu</a>. EFG features collections from its currently 58 contributing archives and works actively to improve data and to make available new collections on a regular basis. EFG represents partners from more than 25 countries, giving access to over 700,000 film historical documents as preserved in European film archives and cinémathèques: photos, posters, programs, periodicals, censorship documents, rare feature and documentary films, newsreels and other materials.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication, the EFG offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Advice on reparation and delivery of metadata to EFG/Europeana and other national and trans-national initiatives,</li>\r\n    <li>Advice on the use of Europeana rights statements, Creative Commons Licences and IPR in the film sector in general,</li>\r\n    <li>Advice on the Europeana Publishing Framework.</li>\r\n    <li>Data mapping: Unless content providers can deliver data in EFG format or EDM, native xml will be mapped to the EFG schema and EDM.</li>\r\n    <li>Data consolidation: EFG will match vocabularies applied in local databases to controlled EFG vocabularies to allow for a harmonized display on the EFG and Europeana portals.</li>\r\n    <li>Data enrichment: In some cases, EFG will automatically enrich metadata provided by partners.</li>\r\n    <li>Data provided in connection with WWI-related materials will automatically be made part of the curated WWI section on EFG and at europeana1914-1918.eu</li>\r\n</ul>\r\n\r\n<p><strong>Technical conditions for working with the EFG:</strong></p>\r\n\r\n<ul>\r\n    <li>Metadata must be available in XML for upload or for harvesting through OAI-PMH,</li>\r\n    <li>EFG strongly encourages data providers to deliver their data in EFG or EDM format, but will also accept native XML and map it to the EFG schema and from there to EDM.</li>\r\n    <li>Digital media (images, text, video) must be published online and made available via a direct link.</li>\r\n    <li>The rights to the content must be cleared and all content clearly rights labeled.</li>\r\n</ul>\r\n\r\n<p>For more detailed information, please refer to the <a href=\"https://docs.google.com/document/d/1UqIPtoi_WRYyIGQbRXSe8rv78e-kuygDg1G35qTBITQ/edit\">EFG Data Provider Handbook</a>.</p>\r\n\r\n<p>Limitations: Providers must be not-for-profit film archives and cinematheques or cultural heritage institutions with film collections.</p>\r\n\r\n<p>Financial conditions: None</p>\r\n\r\n<p>EFG encourages its data providers to become members of the Europeana Network and potentially of the Association of European Film Archives &amp; Cinematheques (ACE).</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Film heritage'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 2021-08/index.jpg
+        city: 'Frankfurt am Main'
+        street: 'Schaumainkai 41'
+        zipcode: '60596'
+        po_box: null
+        country: Germany
+        uid: '1482250000004671158'
+        europeana_id: null
+        org_uid: '1482250000004671158'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: EN(English)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/julia-welter
+        tags: {  }
+        _id: organisations/the-european-film-gateway
+    -
+        slug: openup
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2018-04-05 15:44:27'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: OpenUp!
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Austria
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+            - 'Data Provider'
+        website: 'http://open-up.eu/'
+        email: p.boettinger@bgbm.org
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>OpenUp! is a growing network of European institutions from the natural history domain, providing multimedia objects to Europeana since 2012. This includes digitized specimens, natural history artwork, animal sounds, and videos. 12 European countries take part in the OpenUp! Network so far and contribute more than 10 million records (spring 2022). In addition to providing data to Europeana, OpenUp! also operates an information portal at <a href=\"https://open-up.myspecies.info/en\">open-up.eu</a>.</p>\r\n\r\n<p><strong>Besides data publication OpenUp! offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Scientific, technical and data presentation related advice,</li>\r\n    <li>Advice on data quality and rights statements, on data presentation and linkage, as well as cultural heritage relevance,</li>\r\n    <li>Advice on metadata storage, data transformation, data enrichment, data testing,</li>\r\n    <li>Automated update services,</li>\r\n    <li>Data enrichment at the source with geolocation link information, addition of vernacular names and biodiversity literature linkage, others in prep.</li>\r\n    <li>Publication through the OpenUp! portal with direct links to Europeana's OpenUp! content,</li>\r\n    <li>Training materials downloadable via the OpenUp! homepage,</li>\r\n    <li>Training workshops.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with OpenUp!:</strong></p>\r\n\r\n<ul>\r\n    <li>Biodiversity data formats (DwC-A, ABCD(EFG)) and museum data formats (LIDO); other data formats like MARC21, MODS, Dublin Core and EDM; more data formats are possible upon request</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: Providers have to sign the OpenUp! Service Level Agreement.</p>\r\n\r\n<p>Financial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Natural History'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 2021-08/logolowresolutiontrasnparent.png
+        city: Graz
+        street: 'Klosterwiesgasse 32/1'
+        zipcode: '8010 Graz'
+        po_box: null
+        country: Austria
+        uid: '1482250000004671150'
+        europeana_id: null
+        org_uid: '1482250000004671150'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/petra-boettinger
+        tags: {  }
+        _id: organisations/openup
+    -
+        slug: digital-libraries-federation
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2018-04-06 10:39:40'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Digital Libraries Federation'
+        name_alt1: 'Federacja Bibliotek Cyfrowych'
+        name_alt2: null
+        acronym: FBC
+        org_country: Poland
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'https://fbc.pionier.net.pl'
+        email: fbc@man.poznan.pl
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Federacja Bibliotek Cyfrowych (FBC) is the only national cross-domain aggregator in Poland. It currently works with over 130 Polish data providers that give FBC automated access to their data via mechanisms like OAI-PMH. Data of 49 FBC data providers are also delivered to Europeana. Providers are digital libraries, digital museums, institutional repositories. The majority of providers are regional digital libraries, which are hosting data for several institutions from their region. FBC is one of the largest aggregators for Europeana, currently providing more than 2.1 million records to Europeana from hundreds of individual institutions.</p>\r\n\r\n<p><strong>In addition to data publication, Federacja Bibliotek Cyfrowych also offers its providers:</strong></p>\r\n\r\n<ul>\r\n    <li>Answers to questions related to the participation in Europeana, both on technical and non-technical level, related to data itself, but also on organisational and legal aspects,</li>\r\n    <li>Information materials on the aggregator website.</li>\r\n    <li>Data conversion (from CSV to XML), mapping to EDM, basic enrichments and preview generation.</li>\r\n    <li>Data made searchable via <a href=\"https://fbc.pionier.net.pl/index/select\" target=\"_blank\">Solr API</a></li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with Federacja Bibliotek Cyfrowych:</strong></p>\r\n\r\n<ul>\r\n    <li>Strongly recommended: properly implemented OAI-PMH interface.\_</li>\r\n    <li>Minimum requirement: CSV file\_</li>\r\n    <li>Metadata mapping to EDM is done on the aggregator level in cooperation with content provider.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: Content providers must be a legal entity (public, NGO, commercial company).</p>\r\n\r\n<p>Financial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'All subjects and periods'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Poland_FBC.png'
+            title: 'FBC Federacja Bibliotek Cyfrowych'
+        city: Poznan
+        street: 'ul Z. Noskowskiego 12/14'
+        zipcode: 61-704
+        po_box: null
+        country: Poland
+        uid: '1482250000004671122'
+        europeana_id: null
+        org_uid: '1482250000004671122'
+        name_lang: EN(English)
+        name_alt1_lang: PL(Polish)
+        name_alt2_lang: null
+        acronym_lang: PL(Polish)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/aleksandra-nowak
+        tags: {  }
+        _id: organisations/digital-libraries-federation
+    -
+        slug: euscreen
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2018-04-05 15:53:02'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: EUscreen
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: 'The Netherlands'
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'http://euscreen.eu'
+        email: info@euscreen.eu
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>EUscreen is a consortium of European broadcasters and audiovisual archives, supporting durable and contextualised access to Europe’s audiovisual heritage. It serves as Europeana's aggregator for television and audiovisual archives, contributing over 1,000,000 records from 34 archives based in 28 countries (March 2019). In addition to consolidating data from different sources for Europeana, EUscreen also runs its own portal at <a href=\"http://www.euscreen.eu\" target=\"_blank\">euscreen.eu</a>. The consortium was established in 2006 and draws on the expertise of a wide network of audiovisual archives, academic and technical partners. In order to ensure the long-term sustainability of the network, the EUscreen Foundation was founded in 2013.</p>\r\n\r\n<p><strong>In addition to data publication EUscreen offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Curation of audiovisual content through video collections, virtual and onsite exhibitions,</li>\r\n    <li>Promotion of collections and partners through a monthly newsletter, the <a href=\"http://blog.euscreen.eu/\" target=\"_blank\">EUscreen blog</a> and social media (<a href=\"https://twitter.com/EUscreen\" target=\"_blank\">Twitter</a> and <a href=\"https://www.facebook.com/EUscreen/\" target=\"_blank\">Facebook</a>), video collections, virtual exhibitions,</li>\r\n    <li>Promotion of using audiovisual collections for education and research, also through the open access academic <a href=\"http://viewjournal.eu/\" target=\"_blank\">VIEW Journal of European Television History and Culture</a>,</li>\r\n    <li>Information and training on workflows and requirements needed to contribute data to EUscreen and Europeana,</li>\r\n    <li>Training on working with the MINT mapping tool to map and enrich data following the requirements for publication on the EUscreen portal, as well as on Europeana Collections,</li>\r\n    <li>Online aggregation training, courses and workshops at EUscreen network events,</li>\r\n    <li>Data analysis and a feedback loop before sending data to Europeana,</li>\r\n    <li>Uploading, storing and streaming of content for the EUscreen portal.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with EUScreen:</strong></p>\r\n\r\n<ul>\r\n    <li>Data must be available in XML, CSV, or JSON files, or via OAI-PMH harvesting</li>\r\n</ul>\r\n\r\n<p>Limitations: None</p>\r\n\r\n<p>Financial conditions: Participation in the network is free. Supporting Participants contribute an annual fee and receive additional benefits: free access to all EUscreen events; priority involvement in future project proposals; extra visibility via EUscreen social media and portal; the right to participate in the elections of the EUscreen Foundation Board members.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Audiovisual heritage'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/EUscreen.jpg'
+            title: 'EU Screen Discover Europe''s Audiovisual Heritage'
+        city: Hilversum
+        street: 'Media Parkboulevard 1'
+        zipcode: '1217 WE'
+        po_box: null
+        country: 'The Netherlands'
+        uid: '1482250000004671121'
+        europeana_id: null
+        org_uid: '1482250000004671121'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/chiara-latronico
+        tags: {  }
+        _id: organisations/euscreen
+    -
+        slug: europeana-sounds
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2018-10-12 14:01:09'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Europeana Sounds'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: 'United Kingdom'
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'http://www.eusounds.eu/'
+        email: tom.miles@bl.uk
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The Europeana Sounds project, led by the British Library, ran from February 2014 to January 2017 and became the domain aggregator for audio and audio-related material. Europeana Sounds is hosted by the British Library, supported by the Europeana Sounds Task Force. Europeana Music, which was developed as part of the Europeana Sounds project, is also curated by the British Library. Europeana Sounds therefore also aggregates collections with music-related content, such as music manuscripts, printed music, photographs of musicians, etc. Europeana Sounds has over 530,000 records on Europeana, corresponding to around 618,000 audio recordings and 312,000 audio-related objects. Currently 20 archives contribute to Europeana through Europeana Sounds.</p>\r\n\r\n<p><strong>In addition to data publication Europeana Sounds offers:</strong></p>\r\n\r\n<ul><li>Advice on type of material that can be aggregated</li>\r\n    <li>Access to and maintenance of the mapping software, MINT, offered free to Europeana Sounds data providers</li>\r\n    <li>One to one training (which can be provided remotely) in the operation of MINT software, setting up an account, uploading and mapping of data,</li>\r\n    <li>Best practice for data quality,</li>\r\n    <li>Technical advice on audio-visual material,</li>\r\n    <li>Advice on copyright and licensing</li>\r\n    <li>Yearly one day training workshop held at the British Library,</li>\r\n    <li>Metadata conversion and enrichment with MINT,</li>\r\n    <li>For small, standalone collections, Europeana Sounds can map metadata to EDM format and publish on Europeana.</li>\r\n</ul><p></p>\r\n\r\n<p><strong>Technical conditions for working with Europeana Sounds:</strong></p>\r\n\r\n<ul><li>Metadata must be available in XML or CSV for upload or for harvesting through OAI-PMH,</li>\r\n    <li>Europeana Sounds encourages data providers to transform their data to EDM format using MINT; however, it will also accept native metadata and map it to the EDM Sounds schema and from there to EDM.</li>\r\n    <li>Digital media (audio, images, text, video) must be published online and made available via a direct link.</li>\r\n    <li>Audio can be either downloadable or embeddable.</li>\r\n    <li>The rights to the content must be cleared to be freely accessible worldwide and all content clearly rights labelled.</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: None</p>\r\n\r\n<p>Financial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Audio heritage'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Europeana Sounds.jpg'
+            title: 'Europeana Sounds logo'
+        city: London
+        street: '96 Euston Road'
+        zipcode: 'NW1 2DB'
+        po_box: null
+        country: 'United Kingdom'
+        uid: '1482250000004671113'
+        europeana_id: null
+        org_uid: '1482250000004671113'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/tom-miles
+        tags: {  }
+        _id: organisations/europeana-sounds
+    -
+        slug: german-digital-library
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2018-10-11 14:23:11'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'German Digital Library'
+        name_alt1: 'Deutsche Digitale Bibliothek'
+        name_alt2: null
+        acronym: DDB
+        org_country: Germany
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'https://www.deutsche-digitale-bibliothek.de'
+        email: service@deutsche-digitale-bibliothek.de
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The goal of Deutsche Digitale Bibliothek\_is to offer everyone unrestricted access to Germany’s cultural and scientific heritage, that is, access to millions of books, archived items, images, sculptures, pieces of music and other sound documents, as well as films and scores, from all over Germany.</p>\r\n\r\n<p>Deutsche Digitale Bibliothek\_is an accredited aggregator for Europeana, active since 2012.</p>\r\n\r\n<p><strong>In addition to data publication,\_Deutsche Digitale Bibliothek</strong><strong> also advises its providers on:</strong></p>\r\n\r\n<ul>\r\n    <li>Metadata format,</li>\r\n    <li>Mapping and data quality,</li>\r\n    <li>Licenses and legal matters,</li>\r\n    <li>Delivery of data,</li>\r\n    <li>Delivery to Europeana and its advantages.</li>\r\n</ul>\r\n\r\n<p>Data partners can make use of our free tool DDBstudio to curate their digital collection. We also promote our data partners via our newsletter, social media channels, and post articles about them on our website.</p>\r\n\r\n<p><strong>Technical conditions for working with Deutsche Digitale Bibliothek:</strong></p>\r\n\r\n<ul>\r\n    <li>Accepted data formats: METS/MODS, EAD, MARC, Dublin Core, ESE, LIDO, DenXweb, EDM,</li>\r\n    <li>The digital objects have to be accessible online and be provided with a stable URL,</li>\r\n    <li>In the case of images, the resolution has to be at least 800 x 600 px (jpeg or png),</li>\r\n    <li>Each object must be provided with a stable ID.</li>\r\n</ul>\r\n\r\n<p>Limitations: Mostly public Cultural Heritage Institutions\_<br>\r\nFinancial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Objects from German heritage institutions'
+        working_languages: ''
+        content_languages: ''
+        logo_url: 'http://commons.wikimedia.org/wiki/Special:FilePath/Logo_Deutsche_Digitale_Bibliothek.svg'
+        image:
+            file: zoho_images/5d2d19858173c99a6367784a5d42d426.svg
+            title: 5d2d19858173c99a6367784a5d42d426
+        city: 'Frankfurt am Main'
+        street: 'Adickesallee 1'
+        zipcode: '60322'
+        po_box: null
+        country: Germany
+        uid: '1482250000004671090'
+        europeana_id: null
+        org_uid: '1482250000004671090'
+        name_lang: EN(English)
+        name_alt1_lang: DE(German)
+        name_alt2_lang: null
+        acronym_lang: DE(German)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/cosmina-berta
+        tags: {  }
+        _id: organisations/german-digital-library
+    -
+        slug: carare
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2018-04-05 14:57:01'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: CARARE
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Ireland
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'http://www.carare.eu/'
+        email: info@carare.eu
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>CARARE (Connecting Archaeology and Architecture in Europe) aims to advance professional practice and foster appreciation of the digital archaeological and architectural heritage through the promotion for the public benefit of digitisation, connection, enhancement, and use of digital content nationally and internationally.</p>\r\n\r\n<p>CARARE is an accredited aggregator for Europeana, active since 2010. It serves ca. 200 institutions contributing content. In 2018 it has published 1.9 million+ records in Europeana.</p>\r\n\r\n<h4>In addition to data publication CARARE also advises its providers on:</h4>\r\n\r\n<ul>\r\n<li>Metadata standards, schemas, and data quality including data analysis, metadata mapping, conversion to CARARE and EDM formats, metadata enrichment, geographic data (place name gazetteers, coordinates, conversion of national coordinates to WGS 84 for Europeana, historical placenames), subject indexing (use of controlled vocabularies), temporal data (archaeological periods, date formats), Linked Data and Linked Open Data, Copyright and associated rights, Access rights and permissions, language identification, metadata validation, metadata enrichment.</li>\r\n    <li>the Europeana Publishing Framework.</li>\r\n    <li>Systems including digital libraries, configuring metadata exports, OAI-PMH, Omeka-XML.</li>\r\n    <li>Content including digitisation, 3D capture, 3D processing, publication and the criteria for content so it can be used in the education, tourism, research, and the creative industry sector.</li>\r\n    <li>Open access + FAIR principles</li>\r\n    <li>Public participation in the creation, use and understanding of digital archaeological and architectural heritage content</li>\r\n</ul>\r\n<h4>Technical conditions for working with CARARE:</h4>\r\n\r\n<ul>\r\n<li>Metadata must be available in XML for upload or for remote harvesting via OAI-PMH</li>\r\n    <li>Metadata exported in native format must be mapped to one of the supported standard data formats: CARARE (all schema versions), LIDO, EDM.</li>\r\n    <li>Direct metadata harvesting of data formatted in CARARE (all schema versions), LIDO, EDM, ESE, Omeka-XML, and DC.</li>\r\n    <li>Digital media (images, text, video, sound, and 3D) must be published online and made available either via a direct link (text, images) or in an oEmbed player (sound, video), in the Sketchfab player (3D) or as 3D PDF</li>\r\n    <li>The rights to the content must be cleared and all content clearly labeled.</li>\r\n    <li>Geographic coordinates must be converted to the WGS84 coordinate system (support is available for conversion)</li>\r\n</ul>\r\n<p>Limitations: By subject domain<br>\r\nFinancial conditions: Annual fee for membership of the CARARE association</p>\r\n"
+        geographical_reach: null
+        content_themes: Archaeology
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Carare.jpg'
+            title: Carare
+        city: Dublin
+        street: null
+        zipcode: null
+        po_box: null
+        country: Ireland
+        uid: '1482250000004671084'
+        europeana_id: null
+        org_uid: '1482250000004671084'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/kate-fernie
+        tags: {  }
+        _id: organisations/carare
+    -
+        slug: archives-portal-europe-foundation
+        datecreated: '2016-10-10 10:31:00'
+        datechanged: '2022-06-07 21:44:38'
+        datepublish: '2018-04-06 11:06:47'
+        datedepublish: ''
+        ownerid: 1
+        status: held
+        templatefields: {  }
+        name: 'Archives Portal Europe'
+        name_alt1: null
+        name_alt2: null
+        acronym: APE
+        org_country: Netherlands
+        org_role:
+            - Aggregator
+        website: 'https://www.archivesportaleurope.net'
+        email: info@archivesportaleurope.net
+        domain: Archive
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The Archives Portal Europe is the domain aggregator for archives from and about Europe. Established in the context of two EU-funded projects between 2009 and 2015, the Archives Portal Europe since is maintained and developed further by the Archives Portal Europe Foundation. It provides an overview of the collections kept in European archival institutions by publishing so called finding aids (inventories of archives) along with other contextual information and links those to the digitised archival material itself as much as possible. The portal holds information on more than 7,000 archival institutions from over 30 countries, of which over 1,000 actively contribute content.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication, Archives Portal Europe also supports its providers with or offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Storage of metadata files in archival standard formats,</li>\r\n    <li>Mapping from custom data formats to archival standard formats,</li>\r\n    <li>Data conversion,</li>\r\n    <li>Data validation,</li>\r\n    <li>Dissemination for institutions about usage of backend on demand (usually executed by Country Managers responsible for the institutions of the partner countries).</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with Archives Portal Europe:</strong></p>\r\n\r\n<ul>\r\n    <li>Metadata should ideally be provided in one of the international archival standards (EAD – either EAD 2002 or EAD3, EAC-CPF, EAG) or other XML formats,</li>\r\n    <li>Providing data to the Archives Portal Europe can either be done directly by the content provider or via existing national, regional or thematic portals in the various partner countries.</li>\r\n</ul>\r\n\r\n<p>An introduction to providing data to Archives Portal Europe is given in this <a href=\"https://www.youtube.com/watch?v=R6SsLFgj8Is\" target=\"_blank\">short video</a> and there is more detailed information available on <a href=\"http://wiki.archivesportaleurope.net/index.php/Main_Page\" target=\"_blank\">Archives Portal Europe Wiki</a>. Providers to the Archives Portal Europe also can make their data available through the portal’s API. To access, register a user account at <a href=\"http://www.archivesportaleurope.net\" target=\"_blank\">archivesportaleurope.net</a>, then retrieve API key. Please note that only data from archival institutions can be retrieved, which have explicitly given permission. An <a href=\"http://wiki.archivesportaleurope.net/index.php/APE_API_documentation\" target=\"_blank\">online manual</a> for usage is available.</p>\r\n\r\n<p><br>\r\nLimitations: None</p>\r\n\r\n<p>Financial conditions: Associates of the Archives Portal Europe Foundation (APEF) pay a yearly membership fee in accordance with their budget. Providing content to the Archives Portal Europe incl. the support mentioned above is free of charge.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Archival finding aids and inventories'
+        working_languages: EN(English)
+        content_languages: 'MUL(Multilingual Content)'
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/APE_Logo.png'
+        city: 'Den Haag'
+        street: 'Prins Willem Alexanderhof 20'
+        zipcode: '2595 BE'
+        po_box: null
+        country: Netherlands
+        uid: '1482250000001730037'
+        europeana_id: null
+        org_uid: '1482250000001730037'
+        name_lang: EN(English)
+        name_alt1_lang: EN(English)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/archives-portal-europe-foundation
+    -
+        slug: europeana-foundation
+        datecreated: '2016-09-13 11:14:40'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2018-06-25 17:52:23'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Europeana Foundation'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Netherlands
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: 'The Hague'
+        street: 'Prins Willem-Alexanderhof 5'
+        zipcode: '2595 BE'
+        po_box: null
+        country: Netherlands
+        uid: '1482250000001617026'
+        europeana_id: ''
+        org_uid: '1482250000001617026'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeana-foundation
+    -
+        slug: european-fashion-heritage-association
+        datecreated: '2015-08-17 17:04:32'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2018-04-06 11:09:35'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'European Fashion Heritage Association'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Italy
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'https://fashionheritage.eu'
+        email: info@fashionheritage.eu
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The European Fashion Heritage Association has been established in 2014, following a successful project co-funded by the European Commission, in which for the first time both public and private archives and museums across Europe gathered together to share online their rich heritage of historical clothing and accessories, contemporary designs, catwalk photographs, drawings, sketches, magazines, catalogues and videos.\_</p>\r\n\r\n<p>The Association has now become an international hub, in which fashion GLAMs (Galleries, Libraries, Archives and Museums), brands, researchers and creatives can\_share experiences and best practices in the field of digitisation, open access, co-creation, reuse and valorisation of fashion heritage resources, contributing to the digital transformation in the sector and supporting the preservation and valorisation of tangible and intangible heritage connected to textile and fashion.</p>\r\n\r\n<p>The European Fashion Heritage Association is also an accredited aggregator for Europeana. It serves more than 45 cultural heritage institutions contributing content from 15 European countries. In 2022 it has published more than 930.000 records in Europeana.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication, the European Fashion Heritage Association also supports its providers with:</strong></p>\r\n\r\n<ul>\r\n    <li>Advice on metadata production, mapping, and uploading,</li>\r\n    <li>Advice on the use and mapping of linked open data terminologies,</li>\r\n    <li>Advice on IPR issues and rights labeling,</li>\r\n    <li>Free cloud storage of digital content,</li>\r\n    <li>Digital curation of\_fashion heritage content on Europeana (including galleries, blog posts and virtual exhibitions),</li>\r\n    <li>Regular publication of blog posts on the EFHA Journal and a bi-weekly newsletter that highlights the aggregated content and the partners providing it,</li>\r\n    <li>Daily publication of fashion heritage content highlights on social media (Facebook, Twitter, Instagram, Pinterest),</li>\r\n    <li>Engagement in research and innovation projects in various EC programmes.</li>\r\n</ul>\r\n\r\n<p><strong>And facilitates workshops on:</strong></p>\r\n\r\n<ul>\r\n    <li>Metadata enrichment and data quality,</li>\r\n    <li>Co-creation and exploitation of digital content,</li>\r\n    <li>Digital curation.</li>\r\n</ul>\r\n\r\n<p><strong>Technical conditions for working with the European Fashion Heritage Association:</strong></p>\r\n\r\n<ul>\r\n    <li>OAI PMH or HTTP upload of metadata in XML or CSV format,</li>\r\n    <li>If needed we provide an XLS template to ingest metadata.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: Collection to be evaluated prior to ingestion by the aggregator Scientific Committee.<br>\r\nFinancial conditions: Participation and publication of content are free. Paying members receive extra support and promotion on EFHA channels and free access to training and networking events, plus priority engagement in international projects in different EC programmes.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Fashion heritage'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Europeana Fashion Association.png'
+            title: 'European Fashion Heritage Association'
+        city: Florence
+        street: 'Via di Brozzi 274'
+        zipcode: '50145'
+        po_box: null
+        country: Italy
+        uid: '1482250000000369861'
+        europeana_id: null
+        org_uid: '1482250000000369861'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/marco-rendina
+        tags: {  }
+        _id: organisations/european-fashion-heritage-association
+    -
+        slug: museu
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2018-04-06 11:10:40'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: MUSEU
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Belgium
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'http://www.museuhub.eu'
+        email: contact@michael-culture.eu
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>MUSEU is an accredited aggregator of Europeana and the reference point for European museums and other cultural institutions hosting museum collections in the field of digital cultural heritage and aggregation for Europeana. Over the years, it has provided Europeana with access to over 5.5 million records from around 350 museums from across Europe. MUSEU is run by experts working for the MICHAEL Culture Association, and it benefits from a big network of experts in digital cultural heritage. It has established a network of National Contact Points that were appointed in past projects to function as mediators between MUSEU and contributing local institutions.</p>\r\n\r\n<p>Museums interested in joining MUSEU are invited to contact the MUSEU team in English, Italian or French.</p>\r\n\r\n<p><strong>In addition to data publication, MUSEU offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Advice on the overall workflow of aggregation towards Europeana, including the Europeana Publishing Framework, data modeling, mapping, terminologies, and questions on\_multilingualism,</li>\r\n    <li>Advice on digitisation standards,</li>\r\n    <li>Advice on IPR and reuse,</li>\r\n    <li>Content analysis,</li>\r\n    <li>Data mapping and enrichment,</li>\r\n    <li>Regular collective training as well as individual training on demand,</li>\r\n    <li>Virtual exhibitions and story-telling tools.</li>\r\n</ul>\r\n\r\n<p><strong>Technical conditions for working with MUSEU:</strong></p>\r\n\r\n<ul>\r\n    <li>MUSEU may implement\_the LIDO schema for data modeling in order to maintain the richness of museum records.</li>\r\n    <li>The MINT mapping tool assures the crosswalk to EDM and transforms the records for the Europeana harvesting.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: None</p>\r\n\r\n<p>Financial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Museum collections'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Museu_Green.png'
+            title: 'Museu by Michael Culture Association'
+        city: Brussel
+        street: 'c/o BUROTEL, Rue de la Presse 4'
+        zipcode: '1000'
+        po_box: null
+        country: Belgium
+        uid: '1482250000004671142'
+        europeana_id: null
+        org_uid: '1482250000004671142'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/maria-teresa-natale
+        tags: {  }
+        _id: organisations/museu
+    -
+        slug: photoconsortium
+        datecreated: '2016-10-07 10:47:29'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2018-10-12 14:06:51'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: PHOTOCONSORTIUM
+        name_alt1: 'Photoconsortium, International Consortium for Photographic Heritage'
+        name_alt2: null
+        acronym: null
+        org_country: Italy
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'http://www.photoconsortium.net'
+        email: info@photoconsortium.net
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>PHOTOCONSORTIUM is Europeana's domain aggregator specialized in photographic content, and since 2014 has made accessible in Europeana over 500,000 photographs from around 50 partners, showcasing famous heritage collections from prestigious public institutions and private agencies, and also unveiling hitherto unknown photographic content from crowdsourcing campaigns, private collectors and smaller local archives.</p>\r\n\r\n<p>The high quality data that are made available to Europeana are also promoted and showcased in a dedicated thematic collection: \"<a href=\"https://www.europeana.eu/portal/en/collections/photography#\" target=\"_blank\">Europeana Photography</a>\", curated by PHOTOCONSORTIUM and enriched with galleries, virtual exhibitions, blogs.</p>\r\n\r\n<p>PHOTOCONSORTIUM – International Consortium for Photographic Heritage is a non for profit association whose purpose is the promotion and enhancement of the culture of photography and photographic heritage. It promotes and organizes conferences, exhibitions, events and training courses. The association participates - and promotes the participation of its members - in new projects and initiatives, including but not limited to participation in the Programmes of the European Commission.</p>\r\n\r\n<p><strong>In addition to data publication PHOTOCONSORTIUM offers:</strong></p>\r\n\r\n<ul><li>Advice on digitisation practices and equipment,</li>\r\n    <li>Advice on data format and management,</li>\r\n    <li>Training on MINT mapping tool,</li>\r\n    <li>Advice on archiving tools and practices,</li>\r\n    <li>Advice on IPR issues and rights labelling, particularly promoting open/wider access policies</li>\r\n    <li>Advice and support on the Europeana Publishing Framework as well as the Europeana Exchange Agreement,</li>\r\n    <li>Data curation, particularly for educational reuse purposes,</li>\r\n    <li>Promotion of collections and objects through virtual and physical exhibitions, blogs, social media and via <a href=\"http://www.photoconsortium.net\" target=\"_blank\">photoconsortium.net</a> portal</li>\r\n</ul><p></p>\r\n\r\n<p><strong>Technical conditions for working with PHOTOCONSORTIUM:</strong></p>\r\n\r\n<ul><li>Data format needs to be checked case by case, with personalized support in all the phases of the ingestion process, according to the provider’s requirements and skills</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: None</p>\r\n\r\n<p>Financial conditions: Small annual fee to be paid</p>\r\n"
+        geographical_reach: null
+        content_themes: Photography
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Photoconsortium.jpg'
+            title: Photoconsortium
+        city: Peccioli
+        street: 'Via della Bonifica 69'
+        zipcode: '56037'
+        po_box: null
+        country: Italy
+        uid: '1482250000001721054'
+        europeana_id: null
+        org_uid: '1482250000001721054'
+        name_lang: EN(English)
+        name_alt1_lang: EN(English)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/frederik-truyen
+            - persons/valentina-bachi
+            - persons/antonella-fresa
+        tags: {  }
+        _id: organisations/photoconsortium
+    -
+        slug: europeana-local-austria
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2018-10-12 14:00:18'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Europeana Local Austria'
+        name_alt1: 'Europeana Local Österreich'
+        name_alt2: null
+        acronym: null
+        org_country: Austria
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+            - 'Data Provider'
+        website: 'http://www.europeana-local.at'
+        email: kochg@europeana-local.at
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Europeana Local Austria aggregates data from regional and local cultural heritage institutions in Austria. It currently gives access to more than 20,000 digital objects (constantly updated) from 7 content providers. The participating institutions benefit from the infrastructure provided, the use of common tools for data integration and the assistance in adapting the data to international standards. Local metadata from museums, libraries and archives receive added value as they become internationally visible and searchable by means of data synchronization and their data can be exchanged with any other OAI portals via the OAI-PMH protocol used.</p>\r\n\r\n<p>Europeana Local Austria was founded in 2008 at AIT Angewandte Informationstechnik Forschungsgesellschaft mbH as part of the successful international Europeana Local project, which established service facilities for local and regional cultural institutions to support their participation in the Europeana Network.</p>\r\n\r\n<p><strong>In addition to data publication Europeana Local Austria offers:</strong></p>\r\n\r\n<ul><li>Advice on technical prerequisites for contributing data to Europeana</li>\r\n    <li>Data enrichment</li>\r\n    <li>Data transformation and publication</li>\r\n    <li>Data storage and automated data update procedures</li>\r\n    <li>Publication in a national online repository (including/connected to data from Europeana and the DPLA API)</li>\r\n</ul><p>Since 2010 Europeana Local Austria has on a regular basis been organising a 2-days national conference called \"Digital Library\" (<a href=\"http://conference.ait.co.at/digbib\" target=\"_blank\">conference.ait.co.at/digbib</a>). The conference offers workshops and a one-day lecture programme on current topics for digital libraries. Additionally, individual training workshops are organized upon request.</p>\r\n\r\n<p><strong>Technical conditions for working with Europeana Local Austria:</strong></p>\r\n\r\n<ul><li>Electronic database (including links to digital objects, if data should go to Europeana)</li>\r\n</ul><p>Limitations: None</p>\r\n\r\n<p>Financial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Cultural heritage objects and research data from all periods of time'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Europeana Local.jpg'
+            title: 'Europeana Local Osterreich'
+        city: Graz
+        street: 'Klosterwiesgasse 32'
+        zipcode: '8010'
+        po_box: null
+        country: Austria
+        uid: '1482250000004671116'
+        europeana_id: null
+        org_uid: '1482250000004671116'
+        name_lang: EN(English)
+        name_alt1_lang: DE(German)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/gerda-koch
+        tags: {  }
+        _id: organisations/europeana-local-austria
+    -
+        slug: kulturpool
+        datecreated: '2017-12-04 14:17:55'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-13 06:44:24'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: Kulturpool
+        name_alt1: Kulturpool
+        name_alt2: null
+        acronym: null
+        org_country: Austria
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+            - 'Data Provider'
+        website: 'http://www.kulturpool.at'
+        email: redaktion@kulturpool.at
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p><a href=\"http://www.kulturpool.at\" target=\"_blank\">Kulturpool.at</a>\_is the national cross domain aggregator for Europeana and as such makes an important contribution to promote the digital Austrian cultural heritage on the European level. Kulturpool.at was established in 2008 and is funded by the Arts and Culture Division of the Federal Chancellery of Austria and the Austrian Federal Ministry of Education, Science and Research.</p>\r\n\r\n<p>Kulturpool.at has the aim to</p>\r\n\r\n<ul><li>Provide a broad and free access to culture and knowledge to all citizens through an overarching search functionality of all participating institutions</li>\r\n    <li>Offer an inter- and transdisciplinary access to cultural heritage in Austria for scientific research</li>\r\n    <li>Encourage a closer relation of culture and education</li>\r\n</ul><p>For Europeana, Kulturpool.at currently gives access to more than 230.000 digital objects from 12 institutions and constantly updates and increases its provided content. The participating data providers benefit from the use of a future-oriented infrastructure for data transmission with a sustainable partner as part of an international aggregation landscape.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to that Kulturpool.at offers:</strong></p>\r\n\r\n<ul><li>Advice on technical prerequisites and on content embedding</li>\r\n    <li><a href=\"http://www.kulturpool.at/pages/viewpage.action?pageId=12025873\" target=\"_blank\">Kulturpool.at metadata specification</a></li>\r\n    <li>Mapping, data transformation and publication</li>\r\n    <li>Advice on data quality and enrichment according to the Europeana Publishing Framework</li>\r\n    <li>A temporary repository for provider's data (if required)</li>\r\n    <li>National Workshops in cooperation with Europeana</li>\r\n    <li>Representation of the participating institutions through the collaboration with Europeana in forums, projects and meetings</li>\r\n    <li>Advice on opportunities and challenges in opening up collections in an online format</li>\r\n    <li>User Engagement through the creation and publication of Smartworks (for use in the educational sector) SmartWorks.</li>\r\n    <li>Promotion of new institutions, collections and objects through editorial contributions on the portal</li>\r\n    <li>Lectures at national/regional conferences and</li>\r\n    <li>Lectures at the national elearning-conference hosted by the Austrian Federal Ministry of Education, Science and Research</li>\r\n</ul><p></p>\r\n\r\n<p><strong>Technical conditions for working with Kulturpool.at:</strong></p>\r\n\r\n<ul><li>Depending on the instistitutions' capabilities: supported formats for the data export are: XML, OAI-PMH, csv, Excel etc. Access is possible via: HTTP, FTP, Mail.\_ \_</li>\r\n    <li>Kulturpool.at also offers the possibility of providing a repository.</li>\r\n</ul><p><br>\r\nLimitations: None<br>\r\nFinancial conditions: None</p>\r\n\r\n<p>Kulturpool.at is developed and operated by uma information technology GmbH for the Arts and Culture Division of the Federal Chancellery of Austria and the Austrian Federal Ministry of Education, Science and Research.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Austrian digitised cultural heritage from museums, libraries, archives, university and non-university institutions, public and private institutions; all periods'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Kulturpool_Logo_web.png'
+            title: Kulturpool
+        city: Vienna
+        street: 'Breite Gasse 3/2'
+        zipcode: '1070'
+        po_box: null
+        country: Austria
+        uid: '1482250000004507745'
+        europeana_id: null
+        org_uid: '1482250000004507745'
+        name_lang: EN(English)
+        name_alt1_lang: DE(German)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/leonore-felmayer
+        tags: {  }
+        _id: organisations/kulturpool
+    -
+        slug: aggregator-for-europeana
+        datecreated: '2019-03-12 01:23:53'
+        datechanged: '2022-05-27 14:16:50'
+        datepublish: '2019-03-13 23:34:58'
+        datedepublish: ''
+        ownerid: 1
+        status: held
+        templatefields: {  }
+        name: 'National Library of Serbia'
+        name_alt1: 'Народна библиотека Србије'
+        name_alt2: null
+        acronym: null
+        org_country: Serbia
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'http://agregator.nb.rs'
+        email: evropeana.agregator@nb.rs
+        domain: Library
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The\_National Library of Serbia provides digital collections from Serbian cultural heritage institutions to Europeana.</p>\r\n\r\n<p><br>\r\n<strong>In addition to data publication, the\_National Library of Serbia offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Advice on copyright and licensing,</li>\r\n    <li>Advice on data format and quality,</li>\r\n    <li>Metadata mapping and conversion.</li>\r\n</ul>\r\n\r\n<p><br>\r\n<strong>Technical conditions for working with the National Library of Serbia:</strong></p>\r\n\r\n<ul>\r\n    <li>Metadata should ideally be made available as EDM xml file.</li>\r\n</ul>\r\n\r\n<p><br>\r\nLimitations: Public cultural heritage institutions only.<br>\r\nFinancial conditions: None</p>\r\n\r\n<p></p>\r\n"
+        geographical_reach: null
+        content_themes: 'All subjects and periods'
+        working_languages: SR(Serbian)
+        content_languages: SR(Serbian)
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Serbia.png'
+        city: Belgrade
+        street: 'Skerlićeva 1'
+        zipcode: '11000'
+        po_box: null
+        country: Serbia
+        uid: '1482250000012962245'
+        europeana_id: null
+        org_uid: '1482250000012962245'
+        name_lang: EN(English)
+        name_alt1_lang: SR(Serbian)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/tamara-butigan
+        tags: {  }
+        _id: organisations/aggregator-for-europeana
+    -
+        slug: greek-aggregator-searchculture-gr
+        datecreated: '2019-03-12 00:50:32'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-14 00:37:53'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Greek Aggregator SearchCulture.gr'
+        name_alt1: 'National Documentation Center (EKT)'
+        name_alt2: null
+        acronym: EKT
+        org_country: Greece
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'https://www.searchculture.gr'
+        email: searchculture@ekt.gr
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The <a href=\"http://www.ekt.gr/en\" target=\"_blank\">National Documentation Center (EKT)</a> is the national aggregator for Greek cultural heritage via its portal <a href=\"http://www.searchculture.gr\" target=\"_blank\">SearchCulture.gr</a>. The digital resources accessible via SearchCulture.gr include digital representations of archaeological and ethnological material, historical documents and manuscripts, works of art, maps, books and intangible heritage resources. The digital files are mainly photographs and other images, pdfs, 3D digital representations and audiovisual material.</p>\r\n\r\n<p>So far, SearchCulture.gr hosts more than 500,000 items from 73 collections contributed by 59 institutions that include museums, archives, ephorates of antiquities, municipalities and cultural foundations. SearchCulture.gr has contributed 35 collections (more than 150,000 items) to Europeana.</p>\r\n\r\n<p><strong>In addition to data publication SearchCulture.gr also offers:</strong></p>\r\n\r\n<ul><li>Guidelines and validation tools for data quality and interoperability standards (metadata formats, harvesting protocols, persistent identifiers)</li>\r\n    <li>Advice on use of open licences</li>\r\n    <li>Semantic enrichment currently for types, historical periods and subjects, using EKT vocabularies that are linked to Getty AAT, DBpedia and UNESCO thesaurus</li>\r\n    <li>Publication as Linked Data and via API</li>\r\n    <li>Secure back-up storage for metadata and digital files for selected providers</li>\r\n    <li>Dissemination, promotion and outreach</li>\r\n    <li>Training and remote support</li>\r\n</ul><p><strong>Technical conditions for working with SearchCulture.gr:</strong></p>\r\n\r\n<ul><li>Metadata can be harvested through OAI-PMH in seven alternative formats: EDM, ESE, OAI-DC, DC-DS-XML, Qualified DC (QDC), HEAL and MODS</li>\r\n</ul><p>Limitations: None<br>\r\nFinancial conditions: None</p>\r\n\r\n<p></p>\r\n"
+        geographical_reach: null
+        content_themes: 'Various periods, subjects and types, ie archeology, art, ethnology, history, literature, etc'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_SearchCulture.jpg'
+            title: 'Search Culture.gr Greek cultural heritage in the digital public space'
+        city: Athens
+        street: '48, Vas. Constantinou Av'
+        zipcode: '11635'
+        po_box: null
+        country: Greece
+        uid: '1482250000012962180'
+        europeana_id: null
+        org_uid: '1482250000012962180'
+        name_lang: EN(English)
+        name_alt1_lang: EN(English)
+        name_alt2_lang: null
+        acronym_lang: EL(Greek)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/haris-georgiadis
+        tags: {  }
+        _id: organisations/greek-aggregator-searchculture-gr
+    -
+        slug: jewish-heritage-network
+        datecreated: '2019-03-12 00:34:58'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-13 06:12:46'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Jewish Heritage Network'
+        name_alt1: 'Judaica Europeana'
+        name_alt2: null
+        acronym: JHN
+        org_country: Netherlands
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'http://www.jhn.ngo'
+        email: info@jhn.ngo
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Jewish Heritage Network (JHN) is the network of Jewish cultural heritage institutions, counting more than thirty Jewish museums, libraries, and research centers, mainly in Europe, but also in Israel and US. JHN is the operator of the Judaica Europeana aggregator and content partner consortium, funded by the European Commission (via Judaica Europeana and Judaica Europeana 2.0 projects)</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication the Jewish Heritage Network offers:</strong><br>\r\n\_</p>\r\n\r\n<ul><li>Advice on description format and mapping</li>\r\n    <li>Advice on publishing methods and standards</li>\r\n    <li>Advice on content preparation</li>\r\n    <li>Metadata enrichment (Europeana and Judaica specific)</li>\r\n    <li>Data storage</li>\r\n    <li>Training workshops on above mentioned subjects</li>\r\n    <li>Digital services for heritage institutions</li>\r\n    <li>Storytelling content development</li>\r\n    <li>Advice on European funding</li>\r\n</ul><p>\_\r\n</p>\r\n<p>Limitations: None<br>\r\nFinancial conditions: None</p>\r\n\r\n"
+        geographical_reach: null
+        content_themes: 'Jewish heritage'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Jewish Heritage Network.png'
+            title: 'Jewish Heritage Network'
+        city: Amsterdam
+        street: 'Jewish Cultural Quarter'
+        zipcode: '1011 RE'
+        po_box: '16737'
+        country: Netherlands
+        uid: '1482250000012962149'
+        europeana_id: null
+        org_uid: '1482250000012962149'
+        name_lang: EN(English)
+        name_alt1_lang: EN(English)
+        name_alt2_lang: null
+        acronym_lang: EN(English)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/pavel-kats
+            - persons/dov-winer
+        tags: {  }
+        _id: organisations/jewish-heritage-network
+    -
+        slug: gallica
+        datecreated: '2019-03-12 00:22:30'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-13 06:10:39'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: Gallica
+        name_alt1: Gallica
+        name_alt2: null
+        acronym: null
+        org_country: France
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'https://gallica.bnf.fr'
+        email: gallica@bnf.fr
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Gallica is the digital library of the Bibliothèque nationale de France (BnF) and the national aggregator for collections held in French cultural heritage institutions. The available collections consist of printed materials (books, journals, newspapers, printed music, and other documents), graphic materials (engravings, maps, photographs, and others), and sound recordings. Gallica makes it possible to find sources that are rare, unusual, out-of-print, or difficult, if not impossible, to access.</p>\r\n\r\n<p><br><strong>In addition to data publication Gallica offers:</strong></p>\r\n\r\n<ul><li>Guidance on data formatting and conversion,</li>\r\n    <li>Instructions on Europeana requirements,</li>\r\n    <li>Good practices of data publication and digitisation,</li>\r\n    <li>Gallica Vanilla, an infrastructure that allows data providers to create their own digital libraries,</li>\r\n    <li>Digital preservation,</li>\r\n    <li>Regular training sessions, also on demand,</li>\r\n    <li>Promotion of contents through <a href=\"https://www.facebook.com/GallicaBnF\" target=\"_blank\">Gallica Facebook</a>, <a href=\"https://twitter.com/GallicaBnF\" target=\"_blank\">Gallica Twitter</a>, <a href=\"https://www.pinterest.com/gallicabnf/\" target=\"_blank\">Gallica Pinterest</a>, <a href=\"https://www.instagram.com/gallicabnf/?hl=fr\" target=\"_blank\">Gallica Instagram</a>, <a href=\"https://gallica.bnf.fr/blog/\" target=\"_blank\">Gallica Blog</a>, BnF Hackathons.</li>\r\n</ul><p></p>\r\n\r\n<p><strong>Technical conditions for working with Gallica:</strong></p>\r\n\r\n<ul><li>Comply with BnF Interoperability OAI-PMH Guide (enhanced with mandatory data elements for Europeana) \_</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: None<br>\r\nFinancial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: encyclopaedic
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_BnF Gallica.png'
+            title: 'BnF Gallica Bibliotheque Numerique'
+        city: Paris
+        street: 'Quai François Mauriac'
+        zipcode: '75013'
+        po_box: null
+        country: France
+        uid: '1482250000012962123'
+        europeana_id: null
+        org_uid: '1482250000012962123'
+        name_lang: EN(English)
+        name_alt1_lang: FR(French)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/elisabeth-freyre
+        tags: {  }
+        _id: organisations/gallica
+    -
+        slug: swedish-open-cultural-heritage
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-14 01:04:52'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Swedish Open Cultural Heritage'
+        name_alt1: K-samsök
+        name_alt2: null
+        acronym: SOCH
+        org_country: Sweden
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'https://www.raa.se/ksamsok'
+        email: ksamsok@raa.se
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Swedish Open Cultural Heritage (SOCH) is the national aggregator for Sweden, currently contributing over 2,400,000 records from around 45 institutions to Europeana. <a href=\"https://www.raa.se/ksamsok\" target=\"_blank\">SOCH</a> (\"K-samsök\" in Swedish) is a web service which harvests metadata from the databases of cultural heritage institutions in Sweden, indexes and links the data, and then publishes it, allowing third parties to build on and use the data via a web-API. The Swedish National Heritage Board received the SOCH assignment from the government in 2008 and has been working on it ever since.</p>\r\n\r\n<p>One of the main purposes of SOCH is also working with linked open data: linking together data sources (for example Wikipedia and the database of the National Library of Sweden), creating a smart, semantic infrastructure for cultural heritage information. This makes searching the material easier and enriches the user experience. Open data refers to the work making sure that metadata and content (for instance digital images) are as free as possible to use, reuse and publish. In SOCH this is clarified with the use of the open license model Creative Commons.</p>\r\n\r\n<p><strong>In addition to data publication, SOCH offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Advice on best practices for data management,</li>\r\n    <li>Advice on licensing and copyright,</li>\r\n    <li>Advice on metadata description, publication, data enrichment and more,</li>\r\n    <li>Assistance with data mapping,</li>\r\n    <li>Validation of data,</li>\r\n    <li>Monitoring of harvest status, statistics, etc.</li>\r\n</ul>\r\n\r\n<p><strong>Technical conditions for working with SOCH:</strong></p>\r\n\r\n<ul>\r\n    <li>Metadata must be harvestable as XML via OAI-PMH, and mapped to the SOCH data model.</li>\r\n    <li>Metadata must include license for the object itself (preferably CC).</li>\r\n    <li>Digital object must have a source URL with the data provider.</li>\r\n    <li>Data provider must be stable with ongoing data management.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: Data providers must attribute their metadata with an CC0 license.</p>\r\n\r\n<p>Financial conditions: None</p>\r\n\r\n<p></p>\r\n"
+        geographical_reach: null
+        content_themes: 'Objects from Swedish heritage institutions'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_SOCH.png'
+            title: 'Swedish National Heritage Board'
+        city: Visby
+        street: null
+        zipcode: '621 22'
+        po_box: 'Box 1114'
+        country: Sweden
+        uid: '1482250000004671157'
+        europeana_id: null
+        org_uid: '1482250000004671157'
+        name_lang: EN(English)
+        name_alt1_lang: SV(Swedish)
+        name_alt2_lang: null
+        acronym_lang: EN(English)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/marcus-smith
+        tags: {  }
+        _id: organisations/swedish-open-cultural-heritage
+    -
+        slug: slovenian-national-e-content-aggregator
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-14 00:45:16'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Slovenian National E-content Aggregator'
+        name_alt1: 'Slovenski nacionalni agregator e-vsebin'
+        name_alt2: null
+        acronym: null
+        org_country: Slovenia
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'http://www.agregator.si'
+        email: matjaz.kragelj@nuk.uni-lj.si
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The general objective of the national aggregator of e-content is to connect public institutions and non-governmental organizations in the field of culture in order to realize the public interest in the field of digital culture and encouraging the extent and use of ICT. The purpose of the aggregator is to maintain a single point of access to Slovene e-content from the field of culture and to establish conditions that are needed for preservation of such content.</p>\r\n\r\n<p>The national aggregator provides faster progress in the effort of stimulating digitization of different types of cultural content, better documentation of digitization projects, the development of Slovene terminology, preservation of digital content and the possibility of exporting data to Europeana and other scientific repositories of knowledge.</p>\r\n\r\n<p>The aggregator provides a unified, public, simple and lasting access to e-content in the field of culture and science via the web. It encourages the creation of e-content in public institutions in the field of culture, especially those that up until now did not have the technical, human and other resources in order to enter the digital environment. It also established the connection and synergy of collaboration between existing and future portals that provide access to e-content from the field of culture and science. The national aggregator of e-content is our connection to Europeana.</p>\r\n\r\n<p><strong>In addition to data publication Slovenian National E-content aggregator also offers:</strong></p>\r\n\r\n<ul><li>Advice on creating, managing and harvesting of metadata,</li>\r\n    <li>Advice on digitization proccesess</li>\r\n    <li>Individual training</li>\r\n    <li>Data storage,</li>\r\n    <li>Data conversion, mapping and enrichment</li>\r\n</ul><p><br><strong>Technical conditions for working with Slovenian National E-content aggregator:</strong></p>\r\n\r\n<ul><li>Metadata needs to be available for harvesting through OAI-PMH, or prepared in XML files, Excel tables, etc.</li>\r\n    <li>Accepted data formats: EDM, ESE, MARC21, COMARC,\_DC and others</li>\r\n</ul><p><br>\r\nLimitations: None<br>\r\nFinancial conditions: None</p>\r\n\r\n<p></p>\r\n"
+        geographical_reach: null
+        content_themes: 'All subjects and periods'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_NUK_National aggregator Slovenia.png'
+            title: 'National and University Library'
+        city: Ljubljana
+        street: 'Turjaška 1'
+        zipcode: '1000'
+        po_box: null
+        country: Slovenia
+        uid: '1482250000004671156'
+        europeana_id: null
+        org_uid: '1482250000004671156'
+        name_lang: EN(English)
+        name_alt1_lang: SL(Slovenian)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/matjaz-kragelj
+        tags: {  }
+        _id: organisations/slovenian-national-e-content-aggregator
+    -
+        slug: national-register-for-digital-objects
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-14 00:28:07'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'National Register for Digital Objects'
+        name_alt1: 'Registo Nacional de Objetos Digitais'
+        name_alt2: null
+        acronym: RNOD
+        org_country: Portugal
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'http://rnod.bnportugal.gov.pt/rnod'
+        email: rnod@bnportugal.gov.pt
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The National Registry of Digital Objects - RNOD is an aggregator for Europeana, active since 2013. The main mission of RNOD is to collect bibliographic metadata from Portuguese providers, and to expose the datasets for Europeana ingestion, assuring the best quality of content and metadata, in order to comply with Europeana quality requirements. Another goal of RNOD is to provide centralized access to Portuguese digital cultural heritage collections. It currently serves 22 institutions contributing content. By 2018 it had published 114.000 records in Europeana.</p>\r\n\r\n<p><strong>In addition to data publication RNOD also offers:</strong></p>\r\n\r\n<ul><li>Data mapping and conversion;</li>\r\n    <li>Data validation;</li>\r\n    <li>Delivery of data;</li>\r\n    <li>Technical workshops for CHI and general public.</li>\r\n</ul><p></p>\r\n\r\n<p><strong>Technical conditions for working with RNOD:</strong></p>\r\n\r\n<ul><li>Harvesting of data through OAI-PMH or import of ISO data files.</li>\r\n    <li>Manual insertion of data is also possible. \_</li>\r\n    <li>Data formats - UNIMARC or similar formats ingested in RNOD.</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: Does not aggregate academic repositories data.<br>\r\nFinancial conditions: None</p>\r\n\r\n<p></p>\r\n"
+        geographical_reach: null
+        content_themes: 'Bibliographic heritage from Portuguese Cultural Institutions'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Rnod.png'
+            title: RNOD
+        city: Lisbon
+        street: 'Campo Grande, 83'
+        zipcode: 1749-081
+        po_box: null
+        country: Portugal
+        uid: '1482250000004671153'
+        europeana_id: null
+        org_uid: '1482250000004671153'
+        name_lang: EN(English)
+        name_alt1_lang: PT(Portugese)
+        name_alt2_lang: null
+        acronym_lang: PT(Portugese)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/helena-patricio
+        tags: {  }
+        _id: organisations/national-register-for-digital-objects
+    -
+        slug: museumap
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-13 23:15:28'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: MuseuMap
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Hungary
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'http://www.museumap.hu'
+        email: ommik@mnm.hu
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The aim of the MuseuMap aggregation service is to collect and provide online access to digital objects of Hungarian museums through a common <a href=\"http://www.museumap.hu\" target=\"_blank\">search interface</a>.<br>\r\nMuseuMap currently has published more than 300,000 records from 30 museums and has been a domain aggregator for Europeana since 2015.</p>\r\n\r\n<p><br><strong>In addition to data publication MuseuMap offers:</strong></p>\r\n\r\n<ul><li>Information on required descriptive and administrative data, including recommendation on sizes of digital images,</li>\r\n    <li>Workshops and training sessions on topics such as digitization, creating virtual exhibitions, usage of digital contents in education,</li>\r\n    <li>Data storage, conversion, mapping, enrichment,</li>\r\n    <li>Methodology support,</li>\r\n    <li>Sharing programs of partner institutes,</li>\r\n    <li>Promotion of collections,</li>\r\n    <li>All MuseuMap records have a persistent URL,</li>\r\n    <li>All records are available in PDF, XML or LIDO format.</li>\r\n</ul><p><br><strong>Technical conditions for working with MuseuMap:</strong></p>\r\n\r\n<ul><li>MuseuMap uses the LIDO harvesting schema and recommends partners to provide data via OAI-PMH.</li>\r\n    <li>The digital objects have to be accessible online and be provided with a stable URL.</li>\r\n    <li>The resolution of the images has to be at least 800 px (jpeg or tif), with a file size min. 70 kB.</li>\r\n</ul><p><br>\r\nLimitations: None</p>\r\n\r\n<p>Financial conditions: Paid service</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Hungarian museum contents'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/MuseuMap_logo_web.png'
+            title: MuseuMap
+        city: Budapest
+        street: 'Múzeum krt. 14-16.'
+        zipcode: '1088'
+        po_box: null
+        country: Hungary
+        uid: '1482250000004671143'
+        europeana_id: null
+        org_uid: '1482250000004671143'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/eva-komar
+        tags: {  }
+        _id: organisations/museumap
+    -
+        slug: lt-aggregator-service-national-library-of-lithuania
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-13 22:54:15'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'LT-Aggregator Service National Library of Lithuania'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Lithuania
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'https://www.epaveldas.lt'
+        email: biblio@lnb.lt
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>LT-Aggregator Service National Library of Lithuania is the national aggregator for Europeana from Lithuania. It gives access to over 99,500 digital objects from more than 50 cultural heritage institutions of the country not only through Europeana, but also through its own portal\_<a href=\"http://www.epaveldas.lt\" target=\"_blank\">epaveldas.lt</a>. Collections made available to Europeana include manuscripts reflecting a wide historical, political, social and economical panorama of Lithuania in the 16th-19th century, as well as musical works digitised from old shellac records and museum heritage objects ranging from folk art and applied art to objects held by the Lithuanian Theatre, Music and Cinema Museum.</p>\r\n\r\n<p><br><strong>In addition to data publication LT-Aggregator Service National Library of Lithuania offers:</strong></p>\r\n\r\n<ul><li>Advice on digitisation of analogue collections,</li>\r\n    <li>Advice on the usage of the digital object labelling tool \"cc.lnb.lt\"\_ based on creative commons licenses,</li>\r\n    <li>Recommendations on the quality of digital objects for online publication,</li>\r\n    <li>Training and workshops on digitisation and data contribution,</li>\r\n    <li>Validation of data before publication on Europeana and <a href=\"http://www.epaveldas.lt\" target=\"_blank\">epaveldas.lt</a>.</li>\r\n</ul><p><br><strong>Technical conditions for working with LT-Aggregator Service National Library of Lithuania:</strong></p>\r\n\r\n<ul><li>Accepted data formats: METS/MODS, EAD, MARC, Dublin Core, ESE, EDM.</li>\r\n    <li>The digital objects have to be accessible online and be provided with a stable URL.</li>\r\n    <li>In the case of images, the resolution has to be at least 800 x 600 px (jpeg or png).</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: The selection of the objects is regulated by copyright and personal data protection laws of the European Union and the Republic of Lithuania. Mostly public Cultural Heritage Institutions</p>\r\n\r\n<p>Financial conditions: None</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
+        geographical_reach: null
+        content_themes: 'Books: Old Lithuanian books (1547-1863); Books from the press ban period (1864-1904); Books of the Grand Duchy of Lithuania in the 16th-17th c. in Latin and Polish; Books from Lithuania Minor; Books in Lithuanian and other languages published in Lithuania'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_National Library of Lithuania.jpg'
+        city: Vilnius
+        street: 'Gedimino ave. 51'
+        zipcode: '01504'
+        po_box: null
+        country: Lithuania
+        uid: '1482250000004671138'
+        europeana_id: null
+        org_uid: '1482250000004671138'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/lt-aggregator-service-national-library-of-lithuania
+    -
+        slug: hispana
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-13 06:11:44'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: Hispana
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Spain
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'http://hispana.mcu.es'
+        email: info.hispana@cultura.gob.es
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Hispana is the national aggregator for Spain and brings together the digital collections of Spanish archives, libraries, museums and other cultural heritage institutions. Through its\_<a href=\"https://hispana.mcu.es/es/inicio/inicio.do\">portal</a>, it offers access to growing collections of all types of materials (manuscripts, printed books, photographs, maps...) both digitised and born-digital.</p>\r\n\r\n<p><br>\r\n<strong>In addition to data publication, Hispana offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Europeana technical documentation translated into Spanish,</li>\r\n    <li>Metadata analysis and conformity with Europeana specifications,</li>\r\n    <li>Basic automatic data enrichment operations per default,</li>\r\n    <li>EDM conversion and enrichment on demand (depending on the availability of staff at Hispana),</li>\r\n    <li>A professional site (<a href=\"https://hispanapro.mecd.es/\">Hispana Pro</a>) with resources for the digital transformation of the GLAM sector,</li>\r\n    <li>Courses and webinars on aggregation and related digital cultural heritage issues.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with Hispana:</strong></p>\r\n\r\n<ul>\r\n    <li>Having an OAI-PMH repository.</li>\r\n</ul>\r\n\r\n<p><br>\r\nLimitations: None<br>\r\nFinancial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'All subjects and periods'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/HISPANA_HD_web.png'
+            title: Hispana
+        city: Madrid
+        street: 'Plaza del Rey, 1'
+        zipcode: '28071'
+        po_box: null
+        country: Spain
+        uid: '1482250000004671126'
+        europeana_id: null
+        org_uid: '1482250000004671126'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/hispana
+    -
+        slug: dutch-collections-for-europe
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-13 06:07:21'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Dutch Collections for Europe'
+        name_alt1: null
+        name_alt2: null
+        acronym: DC4EU
+        org_country: 'The Netherlands'
+        org_role:
+            - Aggregator
+        website: 'http://digitalecollectie.nl'
+        email: datsidis@beeldengeluid.nl
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Dutch Collections for Europe\_is the national aggregator for cultural heritage from the Netherlands. It provides access to around 2.5 million digital objects from over 100 Dutch cultural heritage institutions.\_DC4EU brings the digital heritage collections of Dutch museums, archives and other heritage institutions together and from here, all heritage data is provided to Europeana. It was set up in 2011 as an aggregator: heritage institutions can link their collection to it, so that they can also connect to other national and international services and facilities. The management of the collections remains the responsibility of the institution itself. By bringing all this data together, new applications can be developed by, among others, science and the creative industry.</p>\r\n\r\n<p>Since 2015\_DC4EU is part of the Network Digital Heritage (NDE) which carries out the activities of the Dutch National Strategy for Digital Heritage.<br>\r\nThe Network Digital Heritage was set up with the mission to develop a system of national facilities and services with all heritage institutions in the Netherlands to improve the visibility, usability and sustainability of digital heritage. In this way more social added value of our digital heritage is jointly created. The DC4EU is carried out by the Netherlands Institute for Sound and Vision.</p>\r\n\r\n<p><br>\r\n<strong>In addition to data publication the\_DC4EU offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Advice on best route to Europeana for Dutch participants,</li>\r\n    <li>Advice on the Europeana workflow, documentation and requirements,</li>\r\n    <li>Data analysis and feedback loop before sending data to Europeana,</li>\r\n    <li>Data validation service,</li>\r\n    <li>On-demand training.</li>\r\n</ul>\r\n\r\n<p><br>\r\n<strong>Technical conditions for working with DC4EU:</strong></p>\r\n\r\n<ul>\r\n    <li>Metadata should preferrably be available through OAI-PMH in the EDM format following the Europeana guidelines for publication.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: None</p>\r\n\r\n<p>Financial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'All subjects and periods'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Digitale Collectie.jpg'
+            title: 'Digitale Collectie'
+        city: Hilversum
+        street: 'Media Parkboulevard 1'
+        zipcode: '1200 BB'
+        po_box: 'Postbus 1060'
+        country: 'The Netherlands'
+        uid: '1482250000004671093'
+        europeana_id: null
+        org_uid: '1482250000004671093'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: EN(English)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/dimitra-atsidis
+        tags: {  }
+        _id: organisations/dutch-collections-for-europe
+    -
+        slug: forum-hungaricum-non-profit-ltd
+        datecreated: '2017-10-24 11:07:53'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-13 06:09:14'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Forum Hungaricum Non-profit Ltd.'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Hungary
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'http://forumhungaricum.hu'
+        email: info@forumhungaricum.hu
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Forum Hungaricum Non-profit Ltd. is Hungary’s largest accredited aggregator to Europeana. The goal of the <a href=\"https://en.mandadb.hu\" target=\"_blank\">Hungarian National Digital Archive</a> aggregation database that is developed by the Company continuously, is the digitisation of the intellectual and cultural heritage related to Hungary and to make them accessible to the great public on a central public online surface within the frames of effective copyright law. By publishing digital contents, the Company contributes to making cultural goods guarded in public collections accessible to the Hungarian society, Hungarian communities living outside Hungary, and to international interested people. The high-priority task of the Company is the content provision to the digital library of the European Union Europeana. As of 2013, more than 180 – former and actual – cultural heritage institutes publish their digitised documents through the Hungarian National Digital Archive.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication Forum Hungaricum Non-profit Ltd. also advises its providers to:</strong></p>\r\n\r\n<ul><li>Digitise unique materials,</li>\r\n    <li>Support PDM license,</li>\r\n    <li>Respect the Europeana Publishing Framework.</li>\r\n</ul><p><br><strong>Forum Hungaricum Non-profit Ltd. offers:</strong></p>\r\n\r\n<ul><li>Methodology support,</li>\r\n    <li>Personal training and e-learning training</li>\r\n    <li>Data storage, conversion, mapping, enrichment,</li>\r\n    <li>Presentation of objects in virtual exhibitions, blogs and in Facebook posts</li>\r\n</ul><p><br><strong>Technical conditions for working with Forum Hungaricum Non-profit Ltd.:</strong></p>\r\n\r\n<ul><li>Harvesting of data through OAI-PMH in Dublin Core and EDM XML</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: None<br>\r\nFinancial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Hungarian cultural heritage, unique collections, virtual exhibitions'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Forum_Hungaricum_new.jpeg'
+            title: 'Forum Hungaricum'
+        city: Budapest
+        street: 'Márvány 18.'
+        zipcode: '1012'
+        po_box: null
+        country: Hungary
+        uid: '1482250000003772998'
+        europeana_id: null
+        org_uid: '1482250000003772998'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/lajos-lovas
+            - persons/etele-szuets
+        tags: {  }
+        _id: organisations/forum-hungaricum-non-profit-ltd
+    -
+        slug: national-heritage-institute-bucharest
+        datecreated: '2016-02-25 12:05:53'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-13 06:16:22'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'National Heritage Institute, Bucharest'
+        name_alt1: 'Institutul Național Al Patrimoniului'
+        name_alt2: null
+        acronym: INP
+        org_country: Romania
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'http://www.cimec.ro'
+        email: dan@cimec.ro
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The National Heritage Institute [INP] is the national aggregator for Romania, since 2008. Since then it has been aggregating datasets from more than 250 Romanian providers. INP is a public institution under the Romanian Ministry of Culture. Its mission is to research, protect and restore the cultural heritage of Romania (including the immovable, movable, digital and intangible heritage). It has a professional team specialized in cultural documentation (architects, archaeologists, bibliologists, historians, art historians, ethnographers, etc.), beside information specialists. The National Heritage Institute activities include:</p>\r\n\r\n<ul><li>Collecting, processing and disseminating information on the movable, immovable, intangible and digital cultural heritage;</li>\r\n    <li>Supervising the restoration works for the monuments across the country;</li>\r\n    <li>Management of the national heritage databases.</li>\r\n</ul><p><br><strong>In addition to data publication the\_National Heritage Institute offers:</strong></p>\r\n\r\n<ul><li>Advice on metadata quality requirements,</li>\r\n    <li>Advice on quality requirements for digital objects,</li>\r\n    <li>Metadata conversion,</li>\r\n    <li>Data storage.</li>\r\n</ul><p><br><strong>Technical conditions for working with the\_National Heritage Institute:</strong></p>\r\n\r\n<ul><li>Digital objects must be published online and made available either via a direct link to the digital file or to the website where the digital file is hosted,</li>\r\n    <li>Metadata in a processable file (database, sheet, i.e. not plain text).</li>\r\n</ul><p><br>\r\nLimitations: None<br>\r\nFinancial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'All subjects and periods'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Romania.jpg'
+        city: București
+        street: 'str. Ienăchiță Văcărescu nr. 16, sect. 4'
+        zipcode: '40157'
+        po_box: null
+        country: Romania
+        uid: '1482250000000992135'
+        europeana_id: null
+        org_uid: '1482250000000992135'
+        name_lang: EN(English)
+        name_alt1_lang: RO(Romanian)
+        name_alt2_lang: null
+        acronym_lang: RO(Romanian)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/dan-matei
+        tags: {  }
+        _id: organisations/national-heritage-institute-bucharest
+    -
+        slug: culturaitalia
+        datecreated: '2015-08-05 17:46:23'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-13 06:04:42'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: CulturaItalia
+        name_alt1: CulturaItalia
+        name_alt2: null
+        acronym: null
+        org_country: Italy
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'http://www.culturaitalia.it'
+        email: culturaitalia.info@beniculturali.it
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>CulturaItalia is the national aggregator for Italian cultural heritage, managed by the Central Institute for the Union Catalogue of Italian Libraries and Bibliographic Information (ICCU) of the Italian Ministry for Cultural Heritage and Activities, giving access to over 3.4 million digital objects from more than 600 Italian cultural heritage institutions that make up the country's vast cultural spectrum.</p>\r\n\r\n<p>CulturaItalia is an accredited aggregator for Europeana, active since 2008. The <a href=\"http://www.culturaitalia.it\" target=\"_blank\">portal</a> is interoperabile with thematic, domain and regional portals.</p>\r\n\r\n<p><strong>In addition to data publication CulturaItalia offers:</strong></p>\r\n\r\n<ul><li>Advice on the use of Europeana rights statements, Creative Commons Licences and IPR</li>\r\n    <li>Advice on the Europeana Publishing Framework</li>\r\n    <li>Data analysis and mapping</li>\r\n    <li>Data storage for museums</li>\r\n    <li>Data enrichment and data conversion to EDM</li>\r\n    <li>OAI-PMH software customised to CulturaItalia format</li>\r\n    <li>Online documentation and training corse</li>\r\n    <li>Section devoted to Linked Open Data (<a href=\"http://dati.culturaitalia.it/?locale=it\" target=\"_blank\">dati.culturaitalia.it</a>)</li>\r\n</ul><p></p>\r\n\r\n<p><strong>Technical conditions for working with CulturaItalia:</strong></p>\r\n\r\n<ul><li>Metadata harvesting via OAI-PMH protocol and data upload in CSV format</li>\r\n    <li>ICCU strongly encourages data providers to deliver their data in CulturaItalia format</li>\r\n    <li>Digital media (images, text, video) must be published online and made available via a direct link</li>\r\n    <li>The rights to the content must be cleared and all content clearly rights labeled</li>\r\n    <li>For more detailed information, please refer to the CulturaItalia's section '<a href=\"http://www.culturaitalia.it/opencms/aderisci_al_portale_it.jsp?language=it&amp;tematica=static\" target=\"_blank\">Aderisci al portale</a>'.</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: None</p>\r\n\r\n<p>Financial conditions: None</p>\r\n\r\n<p>ICCU encourages its data providers to become members of the Europeana Network.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'All periods and subjects'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Cultura Italia.jpg'
+            title: 'Cultural italia un patrimonio da esplorare'
+        city: Roma
+        street: 'viale Castro Pretorio, 105'
+        zipcode: '185'
+        po_box: null
+        country: Italy
+        uid: '1482250000000338951'
+        europeana_id: null
+        org_uid: '1482250000000338951'
+        name_lang: EN(English)
+        name_alt1_lang: IT(Italian)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/sara-di-giorgio
+        tags: {  }
+        _id: organisations/culturaitalia
+    -
+        slug: mimo-musical-instrument-museums-online
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-15 03:58:12'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'MIMO - Musical Instrument Museums Online'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: 'United Kingdom'
+        org_role:
+            - Aggregator
+        website: 'http://www.mimo-international.com/MIMO/'
+        email: null
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>MIMO is Europeana's domain aggregator for musical instruments museums and the world's largest freely accessible database for information on musical instruments held in public collections. The aim of the MIMO consortium is to become the single access point for information on public collections of musical instruments for the entire world. With that in mind MIMO is\_actively seeking new museums to contribute digital content as this represents a unique opportunity for museums to pull their resources and contribute to a truly worldwide initiative which will have long term benefits to anyone with an interest in collections of musical instruments.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication MIMO also offers:</strong></p>\r\n\r\n<ul><li>Data mapping and conversion,</li>\r\n    <li>Data enrichment,</li>\r\n    <li>Data storage,</li>\r\n    <li>Organisation of workshops,</li>\r\n    <li>Advice on all technical matters related to metadata contribution and digitisation.</li>\r\n</ul><p><br><strong>Technical conditions for working with MIMO:</strong></p>\r\n\r\n<ul><li>Supporting harvesting and\_one-shot import in LIDO format.</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: Only public cultural heritage institutions can participate, their participation is subject to approval by a committee.</p>\r\n\r\n<p>Financial conditions:\_Partner institutions pay a fee for a five-year period. There are different levels of membership.</p>\r\n\r\n<p><em>Level 1 Membership (€2000 / 5 years)</em> is for\_organisations\_that wish to participate in the ongoing development and decision making process of MIMO. Each Level 1 contributor gets a logo on the front page of the MIMO website, along with the phrase\_\"MIMO is supported by ...\".\_\_</p>\r\n\r\n<p><em>Level 2 Membership (€500 / 5 years)</em> is a lower-level contribution that facilitates the ongoing delivery and updates of online content only, without involvement in the development and decision making process of MIMO.\_\_</p>\r\n\r\n<p><em>Level 3 Membership (free of charge)</em> is for organisations that do not financially contribute.<em> </em>Museums can still\_add their collections but data will\_remain static.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Musical heritage'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_MIMO_resized.png'
+            title: 'MIMO musical instrument museums online'
+        city: Edinburgh
+        street: '50 Niddry St'
+        zipcode: 'EH1 1LG'
+        po_box: null
+        country: 'United Kingdom'
+        uid: '1482250000004671140'
+        europeana_id: null
+        org_uid: '1482250000004671140'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/rodolphe-bailly
+            - persons/norman-rodger
+        tags: {  }
+        _id: organisations/mimo-musical-instrument-museums-online
+    -
+        slug: erfgoedplus-be
+        datecreated: '2019-03-15 23:56:27'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-21 01:43:08'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: Erfgoedplus.be
+        name_alt1: Erfgoedplus.be
+        name_alt2: null
+        acronym: null
+        org_country: Belgium
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'http://www.erfgoedplus.be'
+        email: info@erfgoedplus.be
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Erfgoedplus.be started as an initiative of two Belgian provinces in the Flemish region. The goal was to collect digital data about cultural heritage on their territories in a central database and to make it accessible to all for reuse, research, education or simply interest. Since 2018 it is managed at the Flemish ministry for culture, broadening the scope potentially to the Flemish region. Though erfgoedplus.be is open for any kind of heritage collection, the main focus is on supporting local, often non-professional heritage holders to register and share their knowledge according to professional standards, including semantic web technology. In 2017 Erfgoedplus.be received the EU Prize for Cultural Heritage / Europa Nostra Awards in the category Education, Training and Awareness-Raising.</p>\r\n\r\n<p>Erfgoedplus.be is operational since 2008 and an aggregator for Europeana since 2010. It holds and publishes data from about 550 collections. In 2018 it published about 150000 records in Europeana.</p>\r\n\r\n<p><br>\r\n<strong>In addition to data publication,\_Erfgoedplus.be offers:</strong></p>\r\n\r\n<ul>\r\n    <li>On-the-job training and guidance in regular sessions or on demand,</li>\r\n    <li>Data analysis,</li>\r\n    <li>Data mapping,</li>\r\n    <li>Data quality improvement and enrichment,</li>\r\n    <li>Assistance with registration,</li>\r\n    <li>Web based application for registration of small collections on the Erfgoedplus server.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with Erfgoedplus.be:</strong></p>\r\n\r\n<ul>\r\n    <li>Metadata in XML format,\_</li>\r\n    <li>Minimum standard data model,\_</li>\r\n    <li>Consistent application of dataformat and thesauri,</li>\r\n    <li>Preferably with images (or pdf, or mp3, video via link only).</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: None<br>\r\nFinancial conditions: None\_\_\_</p>\r\n"
+        geographical_reach: null
+        content_themes: 'All periods and subjects'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Erfgoedplus.jpg'
+            title: 'erfgoedplus.be vind meer dan je zoekt'
+        city: Brussels
+        street: 'Arenbergstraat 9'
+        zipcode: '1000'
+        po_box: null
+        country: Belgium
+        uid: '1482250000013076075'
+        europeana_id: null
+        org_uid: '1482250000013076075'
+        name_lang: EN(English)
+        name_alt1_lang: NL(Dutch)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/jef-malliet
+        tags: {  }
+        _id: organisations/erfgoedplus-be
+    -
+        slug: public-library-pencho-slaveykov-varna
+        datecreated: '2015-08-17 17:03:25'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-20 23:31:24'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Public Library Pencho Slaveykov, Varna'
+        name_alt1: 'Регионална библиотека ПЕНЧО СЛАВЕЙКОВ, Варна'
+        name_alt2: 'Public Library - Varna'
+        acronym: null
+        org_country: Bulgaria
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+            - 'Data Provider'
+        website: 'http://www.libvar.bg'
+        email: office@libvar.bg
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p></p>\r\n\r\n<p><strong>In addition to data publication Public Library - Varna offers:</strong></p>\r\n\r\n<ul><li>Advice on scanning process (technical requirements),</li>\r\n    <li>Advice on metadata formats,</li>\r\n    <li>Advice on mapping scheme and assistance with mapping</li>\r\n    <li>Training on demand</li>\r\n</ul><p><br><strong>Technical conditions for working with Public Library - Varna:</strong></p>\r\n\r\n<ul><li>All data must be submitted according to Europeana requirements</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: None</p>\r\n\r\n<p>Financial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'All periods and subjects'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Libvar.jpg'
+        city: Varna
+        street: '34 Slivnitsa Blvd.'
+        zipcode: null
+        po_box: null
+        country: Bulgaria
+        uid: '1482250000000366217'
+        europeana_id: null
+        org_uid: '1482250000000366217'
+        name_lang: EN(English)
+        name_alt1_lang: BG(Bulgarian)
+        name_alt2_lang: EN(English)
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/radka-kalcheva
+        tags: {  }
+        _id: organisations/public-library-pencho-slaveykov-varna
+    -
+        slug: manuscriptorium
+        datecreated: '2015-08-17 16:51:51'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-19 07:22:12'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: Manuscriptorium
+        name_alt1: 'Digital Library of Written Cultural Heritage'
+        name_alt2: 'National Library of the Czech Republic'
+        acronym: null
+        org_country: 'Czech Republic'
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'http://www.manuscriptorium.com'
+        email: null
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Manuscriptorium is a Europeana aggregator for the sphere of historical resources. It is also a freely accessible digital library which enables ready access to concentrated information on these resources via sophisticated search tools. The objective of Manuscriptorium is to provide access to existing digital content via integrated tools in order to make it as readily accessible as possible. The digital library aggregates documents from many renowned institutions, extending beyond the countries of the European Union. The user interface is designed for easy searching and viewing of documents and it enables the creation of personal collections and virtual documents. This means users and contributors of content can create their own virtual libraries from the aggregated content and share the results of their work with students, colleagues and other users.</p>\r\n\r\n<p><strong>In addition to data publication Manuscriptorium also offers:</strong></p>\r\n\r\n<ul><li>Advice concerning intersystem communication in order to achieve seamless aggregation via OAI-PMH (profiles incl. structural maps) and IIIF</li>\r\n    <li>Advice concerning delivery to Europeana and its advantages</li>\r\n    <li>Advice concerning metadata formats and standards</li>\r\n    <li>Training concerning enrichment of data in Manuscriptorium such as creation of virtual exhibitions, historical texts processing, etc</li>\r\n    <li>Data storage for national contributors and for several foreign ones (not running their own digital libraries)</li>\r\n    <li>Conversion incl. structure maps from contributors' formats</li>\r\n    <li>Seamless access and personalizing tools under the uniform Manuscriptorium interface</li>\r\n    <li>Access to contributors' data through other portals</li>\r\n</ul><p></p>\r\n\r\n<p><strong>Technical conditions for working with Manuscriptorium:</strong></p>\r\n\r\n<ul><li>Metadata must be available in XML for upload or for harvesting through OAI-PMH</li>\r\n    <li>The digital objects have to be accessible online and be provided with a stable URL.</li>\r\n    <li>Each object must be provided with a stable ID.</li>\r\n</ul><p><br>\r\nLimitations: Content must be accessible freely; Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</p>\r\n\r\n<p>Financial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: Manuscripts
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Manuscriptorium.png'
+        city: 'Prague 1'
+        street: 'Klementinum 190'
+        zipcode: '110 00'
+        po_box: null
+        country: 'Czech Republic'
+        uid: '1482250000000362375'
+        europeana_id: null
+        org_uid: '1482250000000362375'
+        name_lang: EN(English)
+        name_alt1_lang: EN(English)
+        name_alt2_lang: EN(English)
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/tomas-klimek
+        tags: {  }
+        _id: organisations/manuscriptorium
+    -
+        slug: memobase
+        datecreated: '2019-03-19 07:31:41'
+        datechanged: '2019-03-28 06:51:56'
+        datepublish: '2019-03-20 23:21:34'
+        datedepublish: ''
+        ownerid: 1
+        status: held
+        templatefields: {  }
+        name: memobase
+        name_alt1: ''
+        name_alt2: ''
+        acronym: ''
+        org_country: 'Switzerland, CH'
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: www.memoriav.ch
+        email: memobase@memoriav.ch
+        domain: GLAM
+        scope: ''
+        sector: ''
+        description: null
+        geographical_reach: ''
+        content_themes: 'Swiss audiovisual heritage'
+        working_languages: 'MUL(Multilingual Content)'
+        content_languages: 'MUL(Multilingual Content)'
+        logo_url: ''
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Memobase.jpg'
+            title: 'memobase Logo'
+        city: Berne
+        street: 'Bümplizstrasse 192'
+        zipcode: '3018'
+        po_box: ''
+        country: Switzerland
+        uid: '1482250000013132035'
+        europeana_id: ''
+        org_uid: '1482250000013132035'
+        name_lang: EN(English)
+        name_alt1_lang: ''
+        name_alt2_lang: ''
+        acronym_lang: ''
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/daniel-hess
+        tags: {  }
+        _id: organisations/memobase
+    -
+        slug: moteur-collections
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-03-20 23:25:18'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Moteur Collections'
+        name_alt1: 'Moteur Collections'
+        name_alt2: null
+        acronym: null
+        org_country: France
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+        website: 'http://collections.culture.fr'
+        email: moteur-collections@culture.gouv.fr
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Moteur Collections is a national and cross-domain aggregator providing access to more than 7 millions of documents with more than 5 millions of images. All databases and resources at the Ministry of Culture but also those of local authorities, associations or other volunteering establishments are indexed in this single access point. All artistic and cultural fields are covered: archeology, architecture, archives, African art, Native American art, oceanian art, performing arts, maps, postcards, dance, design, drawing, illuminations, ethnology, engraving, medicine, historical monuments, music, movable objects, overseas heritage, railway heritage, industrial heritage, maritime and fluvial heritage, digital heritage, painting, photography, sculpture, theater, travel ...</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication Moteur Collections offers:</strong></p>\r\n\r\n<ul><li>Data analysis before conversion</li>\r\n    <li>Assistance with mapping of native xml,</li>\r\n    <li>Technical development for feeding the OAI repositories,</li>\r\n    <li>Regular training for participants of Moteur Collections regarding the process of data integration,</li>\r\n    <li>Focus on a special theme each month,</li>\r\n    <li>Monthly newsletter with updates and focus on data providers,</li>\r\n    <li>API: \"Collections sur mesure\" widget can be integrated on any website for specific access to the content of Moteur Collections.</li>\r\n</ul><p><br><strong>Technical conditions for working with Moteur Collections:</strong></p>\r\n\r\n<ul><li>Import of data and harvest via OAI-PMH in CSV or XML, from 2018 on criteria are aligned with the Europeana publishing framework \_</li>\r\n</ul><p><br>\r\nLimitations: Only public institutions, national databases and local aggregators expressing their will to be visible on Europeana. Signature of an agreement and approval from the Moteur Collections advisory committee.</p>\r\n\r\n<p>Financial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'All subjects and periods'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_MoteurCollections.jpg'
+            title: 'Moteur collections'
+        city: Paris
+        street: '182 rue Saint-Honoré'
+        zipcode: '75001'
+        po_box: null
+        country: France
+        uid: '1482250000004671141'
+        europeana_id: null
+        org_uid: '1482250000004671141'
+        name_lang: EN(English)
+        name_alt1_lang: FR(French)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/marie-veronique-leroi
+        tags: {  }
+        _id: organisations/moteur-collections
+    -
+        slug: digiphil
+        datecreated: '2017-12-04 14:17:55'
+        datechanged: '2019-03-28 06:51:56'
+        datepublish: '2019-03-20 23:29:05'
+        datedepublish: ''
+        ownerid: 1
+        status: held
+        templatefields: {  }
+        name: Digiphil
+        name_alt1: ''
+        name_alt2: ''
+        acronym: ''
+        org_country: 'Hungary, HU'
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+            - 'Data Provider'
+        website: digiphil.hu
+        email: ''
+        domain: GLAM
+        scope: ''
+        sector: ''
+        description: null
+        geographical_reach: ''
+        content_themes: Literature
+        working_languages: HU(Hungarian)
+        content_languages: HU(Hungarian)
+        logo_url: ''
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Digiphil.jpg'
+            title: 'Digiphil Logo'
+        city: Budapest
+        street: 'Károlyi 16.'
+        zipcode: '1053'
+        po_box: ''
+        country: Hungary
+        uid: '1482250000004502134'
+        europeana_id: ''
+        org_uid: '1482250000004502134'
+        name_lang: EN(English)
+        name_alt1_lang: ''
+        name_alt2_lang: ''
+        acronym_lang: ''
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/zsolt-banki
+        tags: {  }
+        _id: organisations/digiphil
+    -
+        slug: pcce-provincial-centre-for-cultural-heritage
+        datecreated: '2015-08-05 15:53:31'
+        datechanged: '2019-03-28 06:51:56'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: held
+        templatefields: {  }
+        name: 'PCCE (Provincial Centre for Cultural Heritage)'
+        name_alt1: Erfgoedplus.be
+        name_alt2: ''
+        acronym: ''
+        org_country: 'Belgium, BE'
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'http://www.erfgoedplus.be/'
+        email: jef.malliet@cjsm.vlaanderen.be
+        domain: GLAM
+        scope: ''
+        sector: ''
+        description: ''
+        geographical_reach: ''
+        content_themes: 'All subjects and periods'
+        working_languages: NL(Dutch)
+        content_languages: NL(Dutch)
+        logo_url: ''
+        image: ''
+        city: Brussels
+        street: 'Arenbergstraat 9'
+        zipcode: '1000'
+        po_box: ''
+        country: Belgium
+        uid: '1482250000000338555'
+        europeana_id: ''
+        org_uid: '1482250000000338555'
+        name_lang: EN(English)
+        name_alt1_lang: NL(Dutch)
+        name_alt2_lang: ''
+        acronym_lang: ''
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/pcce-provincial-centre-for-cultural-heritage
+    -
+        slug: national-library-of-portugal
+        datecreated: '2019-05-14 15:59:27'
+        datechanged: '2020-06-04 17:31:01'
+        datepublish: '2019-05-14 15:54:29'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        name: 'National Library of Portugal'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role: null
+        website: null
+        email: null
+        domain: null
+        scope: null
+        sector: null
+        description: null
+        geographical_reach: null
+        content_themes: null
+        working_languages: null
+        content_languages: null
+        logo_url: null
+        image:
+            file: Images/Event_images/BNP_400px.png
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: null
+        europeana_id: null
+        org_uid: null
+        name_lang: null
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/national-library-of-portugal
+    -
+        slug: turismo-de-lisboa
+        datecreated: '2019-06-07 14:12:50'
+        datechanged: '2020-04-21 09:38:46'
+        datepublish: '2019-06-07 14:03:19'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        name: 'Turismo de Lisboa'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role: null
+        website: null
+        email: null
+        domain: null
+        scope: null
+        sector: null
+        description: null
+        geographical_reach: null
+        content_themes: null
+        working_languages: null
+        content_languages: null
+        logo_url: null
+        image:
+            file: 'Images/Event_images/Turismo de Lisboa_logo.png'
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: null
+        europeana_id: null
+        org_uid: null
+        name_lang: null
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/turismo-de-lisboa
+    -
+        slug: digital-repository-of-ireland
+        datecreated: '2015-08-17 17:03:01'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-08-15 12:57:45'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Digital Repository of Ireland'
+        name_alt1: 'Taisclann Dhigiteach na hÉireann'
+        name_alt2: null
+        acronym: DRI
+        org_country: Ireland
+        org_role:
+            - Aggregator
+        website: 'http://www.dri.ie/'
+        email: dri@ria.ie
+        domain: ''
+        scope: null
+        sector: 'Academic Research'
+        description: "<p>The Digital Repository of Ireland is a\_national infrastructure for Ireland’s social and cultural heritage, which aims to curate, preserve and provide sustained access to Ireland's humanities and social science data.\_DRI was originally built by a research consortium of six academic partners working together to deliver the repository, policies, guidelines and training. Core academic institutions continue to manage the repository and implement its policies, guidelines and training. These are the Royal Irish Academy (RIA), Trinity College Dublin (TCD) and Maynooth University (MU). DRI is also supported by a network of academic, cultural, social and industry partners.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication DRI\_also offers:\_\_</strong></p>\r\n\r\n<ul><li>Data storage and preservation services,\_</li>\r\n    <li>Data\_conversion into web-renderable\_surrogate versions,</li>\r\n    <li>Metadata mapping to\_EDM,\_\_</li>\r\n    <li>Metadata enrichment,\_\_</li>\r\n    <li>Advice on metadata enrichment for data providers,</li>\r\n    <li>Tools for transforming spreadsheet (tabular) metadata for ingest,\_</li>\r\n    <li>Support for all data formats (although open, lossless and archival formats are recommended),\_</li>\r\n    <li>Published guides on how to prepare metadata and data (available at\_<a href=\"https://www.dri.ie/publications\" target=\"_blank\">https://www.dri.ie/publications</a>),</li>\r\n    <li>Regular training for members and potential members on\_metadata preparation, ingestion to the DRI, metadata enrichment and digital preservation,\_</li>\r\n    <li>Curatorial and editorial activities, e.g. featured collections, occasional blog posts, twitter series featuring themed objects.\_</li>\r\n</ul><p></p>\r\n\r\n<p><strong>Technical conditions for working with DRI:</strong>\_\_</p>\r\n\r\n<ul><li>Metadata can be provided in MODS, MARC, EAD or Dublin Core,</li>\r\n    <li>Metadata can be submitted in English or Irish.</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: Aggregation service available to Irish social and cultural institutions that have deposited material with the DRI.</p>\r\n\r\n<p>Financial conditions: Annual fee for membership of the DRI.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Irish contemporary and historical cultural heritage'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Digital Repository of Ireland_resized.jpg'
+            title: 'DRI Digital Repository of Ireland'
+        city: Dublin
+        street: '19 Dawson Street'
+        zipcode: 'D02 HH58'
+        po_box: null
+        country: Ireland
+        uid: '1482250000000364879'
+        europeana_id: null
+        org_uid: '1482250000000364879'
+        name_lang: EN(English)
+        name_alt1_lang: 'GA(Irish),'
+        name_alt2_lang: null
+        acronym_lang: EN(English)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/natalie-harrower
+            - persons/lisa-griffith
+        tags: {  }
+        _id: organisations/digital-repository-of-ireland
+    -
+        slug: national-library-of-finland
+        datecreated: '2015-08-17 17:02:59'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-08-15 10:08:49'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'National Library of Finland'
+        name_alt1: Kansalliskirjasto
+        name_alt2: null
+        acronym: null
+        org_country: Finland
+        org_role:
+            - Aggregator
+        website: 'https://www.kansalliskirjasto.fi/en/services/europeana-formula'
+        email: finna-posti@helsinki.fi
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The National Library of Finland acts as the national aggregator, providing Europeana with digital objects from Finnish institutions. The National Library of Finland maintains the Formula Aggregation Service for this purpose. The working languages of the aggregator are Finnish and Swedish.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication, the National Library of Finland</strong>\_<strong>also offers:\_</strong></p>\r\n\r\n<ul>\r\n    <li>Data mapping and conversion to EDM,\_</li>\r\n    <li>Data storage for converted metadata (MongoDB),</li>\r\n    <li>Advice on metadata,\_</li>\r\n    <li>Technical support,\_</li>\r\n    <li>Rights issues support,\_</li>\r\n    <li>Providing information to participants regarding the guidelines, standards and\_recommendations of Europeana,</li>\r\n    <li>Regular training on the basics of Formula aggregation service and Europeana.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with the National Library of Finland:\_</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Using OAI-PMH protocol for harvesting metadata,</p>\r\n    </li>\r\n    <li>Metadata can be provided in LIDO, EAD, MARC or Dublin Core.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: Only cultural heritage institutions under the auspices of the Ministry of Education and Culture can participate free of charge.</p>\r\n\r\n<p>Financial conditions: None.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Cultural heritage'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Formula_National Library of Finland_resized.png'
+        city: Helsinki
+        street: 'Unioninkatu 36'
+        zipcode: '00014 University of Helsinki'
+        po_box: '15'
+        country: Finland
+        uid: '1482250000000364563'
+        europeana_id: null
+        org_uid: '1482250000000364563'
+        name_lang: EN(English)
+        name_alt1_lang: FI(Finnish)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/minna-roenkae
+        tags: {  }
+        _id: organisations/national-library-of-finland
+    -
+        slug: czech-digital-library
+        datecreated: '2017-11-02 08:26:54'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-08-16 09:45:11'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Czech Digital Library'
+        name_alt1: 'Česká digitální knihovna'
+        name_alt2: null
+        acronym: null
+        org_country: 'Czech Republic'
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'https://www.czechdigitallibrary.cz/cs/'
+        email: lhotak@knav.cz
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>Czech Digital Library (CDL) contains metadata and thumbnails continuously harvested from digital libraries operated in the Czech Republic. Documents in full view are stored in the source/original digital libraries from which they are at the user’s request dynamically loaded to the web interface of the CDL. The user is working in one interface of the CDL. The content is currently harvested from nine\_digital libraries\_that are\_the biggest libraries in the Czech Republic. The goal of the CDL is to provide access to content from all digital libraries run in the Czech Republic. Availability of documents is determined and controlled by source/original digital libraries. All metadata and around 20% of full view images are freely accessible.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication CDL\_also offers:\_</strong>\_</p>\r\n\r\n<ul><li>Data analysis before conversion,\_</li>\r\n    <li>Data conversion and mapping,\_</li>\r\n    <li>Curation of metadata,\_</li>\r\n    <li>Support on EDM,\_</li>\r\n    <li>Information about possible copyright options,\_</li>\r\n    <li>Training can be provided on demand.\_</li>\r\n</ul><p></p>\r\n\r\n<p><strong>Technical conditions for working with DRI:\_</strong>\_</p>\r\n\r\n<ul><li>Using OAI-PMH protocol for harvesting metadata.\_</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: None.\_</p>\r\n\r\n<p>Financial conditions: None.\_</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Mainly modern Czech literature (from 19th century until now)'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Czech Library_resized.png'
+        city: Praha
+        street: 'Národní 3'
+        zipcode: '110 00'
+        po_box: null
+        country: 'Czech Republic'
+        uid: '1482250000003906525'
+        europeana_id: null
+        org_uid: '1482250000003906525'
+        name_lang: EN(English)
+        name_alt1_lang: CS(Czech)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/martin-lhotak
+        tags: {  }
+        _id: organisations/czech-digital-library
+    -
+        slug: latvian-national-e-content-aggregator
+        datecreated: '2019-09-19 11:27:56'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-09-20 10:21:25'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Latvian National E-content Aggregator'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Latvia
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'https://www.lnb.lv/en'
+        email: lnb@lnb.lv
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The aim of Latvian National E-content Aggregator is digitising cultural-heritage content with historical value and making it available online.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication Latvian National E-content Aggregator also offers:</strong></p>\r\n\r\n<ul><li>Assistance with data storage,</li>\r\n    <li>Data conversion,</li>\r\n    <li>Data enrichment,</li>\r\n    <li>Data curation,</li>\r\n    <li>Mapping to controlled vocabularies,</li>\r\n    <li>Helpdesk by email and phone.</li>\r\n</ul><p></p>\r\n\r\n<p><strong>Technical conditions for working with Latvian National E-content Aggregator:</strong></p>\r\n\r\n<ul><li>Harvesting of data through OAI-PMH,</li>\r\n    <li>Accepting metadata in any structured format, including XML, Excel, etc.</li>\r\n</ul><p></p>\r\n\r\n<p>Limitations: Only public cultural heritage institutions can participate, their participation is subject of approval by content evaluation working group. Digitised material should preferably be without copyright restrictions. If copyright restrictions apply, data providers are asked to evaluate them on their own, without the assistance of the aggregator.</p>\r\n\r\n<p>Financial conditions: None.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Cultural-heritage content with historical value'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Latvia.png'
+            title: 'LNB National Library of Latvia'
+        city: Riga
+        street: 'Mūkusalas iela 3'
+        zipcode: LV-1423
+        po_box: null
+        country: Latvia
+        uid: '1482250000018112033'
+        europeana_id: null
+        org_uid: '1482250000018112033'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/emils-boltris
+            - persons/arturs-zogla
+        tags: {  }
+        _id: organisations/latvian-national-e-content-aggregator
+    -
+        slug: '1'
+        datecreated: '2019-09-25 11:01:43'
+        datechanged: '2020-06-04 17:29:38'
+        datepublish: '2019-09-25 10:59:59'
+        datedepublish: ''
+        ownerid: 54
+        status: published
+        templatefields: {  }
+        name: 'Republic of Portugal'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role: null
+        website: null
+        email: null
+        domain: null
+        scope: null
+        sector: null
+        description: null
+        geographical_reach: null
+        content_themes: null
+        working_languages: null
+        content_languages: null
+        logo_url: null
+        image:
+            file: Images/Event_images/RepPTcultura_400px.png
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: null
+        europeana_id: null
+        org_uid: null
+        name_lang: null
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/1
+    -
+        slug: ministry-of-culture-and-media-of-the-republic-of-croatia-ekultura-hr
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2019-11-01 10:07:59'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Ministry of Culture and Media of the Republic of Croatia, eKultura.hr'
+        name_alt1: 'Ministarstvo kulture i medija Republike Hrvatske, eKultura aggregator'
+        name_alt2: null
+        acronym: null
+        org_country: Croatia
+        org_role:
+            - Aggregator
+            - 'Data Partner'
+            - 'Data Provider'
+        website: 'http://agregator.arhivx.net/mk/'
+        email: Jelena.rubic@min-kulture.hr
+        domain: ''
+        scope: null
+        sector: Government
+        description: "<p>eKultura Aggregator\_is a national aggregator for audio-visual, archival, library and museum material. The main aim of the aggregator is to provide technical support to institutions and individuals from Croatia that have valuable digital cultural heritage and wish to share their material in Europeana Collections.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication, the\_eKultura Aggregator</strong><strong>\_also offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Data conversion and mapping to EDM</li>\r\n    <li>Enrichment of existing data with semantic links</li>\r\n    <li>Technical support</li>\r\n    <li>Providing advice about metadata</li>\r\n    <li>Trainings provided on demand.</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with the eKultura Aggregator:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Using OAI-PMH protocol for harvesting metadata.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: None.</p>\r\n\r\n<p>Financial conditions: None.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'All periods, all subjects'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Croatia_new.svg'
+        city: Zagreb
+        street: 'Runjaninova ul. 2'
+        zipcode: '10000'
+        po_box: null
+        country: Croatia
+        uid: '1482250000004671134'
+        europeana_id: null
+        org_uid: '1482250000004671134'
+        name_lang: EN(English)
+        name_alt1_lang: 'HR(Croatian (hrvatski jezik))'
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/jelena-rubic
+        tags: {  }
+        _id: organisations/ministry-of-culture-and-media-of-the-republic-of-croatia-ekultura-hr
+    -
+        slug: '1'
+        datecreated: '2019-11-22 17:10:31'
+        datechanged: '2020-04-21 09:39:49'
+        datepublish: '2019-11-22 17:09:38'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        name: Epal
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role: null
+        website: null
+        email: null
+        domain: null
+        scope: null
+        sector: null
+        description: null
+        geographical_reach: null
+        content_themes: null
+        working_languages: null
+        content_languages: null
+        logo_url: null
+        image:
+            file: Images/Blog_images/2019-11/Epal_logo.png
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: null
+        europeana_id: null
+        org_uid: null
+        name_lang: null
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/1
+    -
+        slug: '1'
+        datecreated: '2019-11-26 15:23:42'
+        datechanged: '2020-06-30 14:07:39'
+        datepublish: '2019-11-26 15:22:50'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        name: 'European Open Science Cloud'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role: null
+        website: null
+        email: null
+        domain: null
+        scope: null
+        sector: null
+        description: null
+        geographical_reach: null
+        content_themes: null
+        working_languages: null
+        content_languages: null
+        logo_url: null
+        image:
+            file: Images/Event_images/Conference/EOSC.png
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: null
+        europeana_id: null
+        org_uid: null
+        name_lang: null
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/1
+    -
+        slug: leibniz-information-centre-for-science-and-technology
+        datecreated: '2020-01-16 08:34:50'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2020-05-07 15:54:06'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Leibniz Information Centre for Science and Technology'
+        name_alt1: 'Leibniz-Informationszentrum Technik und Naturwissenschaften'
+        name_alt2: null
+        acronym: TIB
+        org_country: Germany
+        org_role:
+            - Aggregator
+        website: 'https://www.tib.eu/en/'
+        email: null
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p><strong>TIB -\_Leibniz Information Centre for Science and Technology</strong></p>\r\n\r\n<p>TIB is one of the biggest subject specific libraries in the fields of Architecture, Chemistry, Computer Science, Mathematics, Engineering and Physics worldwide.\_</p>\r\n\r\n<p>They are aggregating scientific videos with a special focus on the domains in Europe and beyond. In addition, they have a historic film collection which covers 100 years of science videos, including subjects like Ethnology, History, Social Sciences, Arts and Media. TIB is operating a pan-European, domain-specific portal for audiovisual media - <a href=\"http://av.tib.eu/\" title=\"http://av.tib.eu\"><u>The TIB AV-Portal</u></a>. They provide professional hosting and semantic indexing of scientific videos, ranging from computer visualisations, instructional videos, simulations, experiments, interviews, video abstracts, video supplements to recordings of conferences and lectures.</p>\r\n\r\n<p><br>\r\n<strong>In addition to data publication, TIB -\_Leibniz Information Centre for Science and Technology also offers:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Data storage in the video repository (videos, supplement materials and metadata),</p>\r\n    </li>\r\n    <li>\r\n    <p>Uploading and streaming of content in the TIB AV-Portal,</p>\r\n    </li>\r\n    <li>\r\n    <p>Comprehensive advice from experts on topics such as data/metadata management and IT for audiovisual media,</p>\r\n    </li>\r\n    <li>\r\n    <p>Advice on IPR issues and rights labelling, particularly promoting open access licenses. The rights to the content must be cleared and a license agreement with TIB must be concluded,</p>\r\n    </li>\r\n    <li>\r\n    <p>Regular training through webinars, workshops and lectures,</p>\r\n    </li>\r\n    <li>\r\n    <p>Helpdesk by email and phone,</p>\r\n    </li>\r\n    <li>\r\n    <p>Metadata mapping (e.g. from XML to EDM),</p>\r\n    </li>\r\n    <li>\r\n    <p>Cross-lingual mapping (English/German),</p>\r\n    </li>\r\n    <li>\r\n    <p>Automatic enrichment (video shot boundary detection; speech, text and image recognition; semantic analysis) for videos from TIB core subjects,</p>\r\n    </li>\r\n    <li>\r\n    <p>All videos are assigned a Digital Object Identifier (DOI). Additionally Media Fragment Identifier, ORCID, ROA and EIDR are used,</p>\r\n    </li>\r\n    <li>\r\n    <p>Linking to accompanying materials via DOI,</p>\r\n    </li>\r\n    <li>\r\n    <p>Provision of embed code,</p>\r\n    </li>\r\n    <li>\r\n    <p><a href=\"https://www.tib.eu/en/tib/open-data/\">Free access to publicly funded data in standard RDF</a>,</p>\r\n    </li>\r\n    <li>\r\n    <p>Promotion of collections and objects via TIB’s social media channels.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with TIB -\_Leibniz Information Centre for Science and Technology:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Accepted data formats: XML if possible,</p>\r\n    </li>\r\n    <li>\r\n    <p>If needed, TIB provides an XML Generator Tool to fill in the data.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p><br>\r\n<strong>Limitations: </strong>The videos must fit into TIB collection profile. This is checked by the TIB scientific service.</p>\r\n\r\n<p><br>\r\n<strong>Financial conditions:</strong> None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Scientific videos'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_TIB_.png'
+            title: 'TIB Leibniz information centre for science and technology university library'
+        city: Hannover
+        street: 'TIB-Standort Technik/Naturwissenschaften, Welfengarten 1B'
+        zipcode: '30167'
+        po_box: null
+        country: Germany
+        uid: '1482250000020371446'
+        europeana_id: null
+        org_uid: '1482250000020371446'
+        name_lang: EN(English)
+        name_alt1_lang: DE(German)
+        name_alt2_lang: null
+        acronym_lang: DE(German)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/margret-plank
+        tags: {  }
+        _id: organisations/leibniz-information-centre-for-science-and-technology
+    -
+        slug: estonian-e-repository-and-conservation-of-collections
+        datecreated: '2020-11-12 16:59:41'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2020-11-13 09:18:08'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Estonian e-Repository and Conservation of Collections'
+        name_alt1: e-Varamu
+        name_alt2: null
+        acronym: e-Varamu
+        org_country: Estonia
+        org_role:
+            - Aggregator
+        website: 'https://www.e-varamu.ee/'
+        email: peeter@tlulib.ee
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The Estonian e-repository is an integrated e-environment created for digitised resources of the Estonian memory institutions: libraries, archives and museums.</p>\r\n\r\n<p><br>\r\n<strong>In addition to data publication e-Varamu offers:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Data storage,</p>\r\n    </li>\r\n    <li>\r\n    <p>Data conversion,</p>\r\n    </li>\r\n    <li>\r\n    <p>Data mapping,</p>\r\n    </li>\r\n    <li>\r\n    <p>Data enrichment,</p>\r\n    </li>\r\n    <li>\r\n    <p>Helpdesk by email.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with e-Varamu:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>The Aggregator supports different methods of harvesting: through the OAI-PMH REPOX server, API, or FTP server.</p>\r\n    </li>\r\n    <li>\r\n    <p>Accepted data formats: Dublin Core, LIDO, EDM.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: None.</p>\r\n\r\n<p>Financial conditions: None.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Cultural heritage, scientific materials'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Estonia_eVaramu.png'
+            title: e-varamu
+        city: Tallinn
+        street: 'Tõnismägi 2'
+        zipcode: null
+        po_box: null
+        country: Estonia
+        uid: '1482250000026719048'
+        europeana_id: null
+        org_uid: '1482250000026719048'
+        name_lang: EN(English)
+        name_alt1_lang: ET(Estonian)
+        name_alt2_lang: null
+        acronym_lang: ET(Estonian)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/estonian-e-repository-and-conservation-of-collections
+    -
+        slug: cyprus-ministry-of-education-culture-sport-and-youth
+        datecreated: '2015-10-07 16:54:58'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2021-05-20 15:58:35'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Cyprus Ministry of Education, Culture, Sport and Youth'
+        name_alt1: 'Υπουργείου Παιδείας, Πολιτισμού, Αθλητισμού και Νεολαίας της Κύπρου'
+        name_alt2: null
+        acronym: CMOEC
+        org_country: Cyprus
+        org_role:
+            - Aggregator
+        website: 'http://www.moec.gov.cy/'
+        email: null
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The national aggregator for Cyprus is based in\_Cyprus Ministry of Education, Culture, Sport and Youth with the initials CMOEC. It is supported by open-source software. It\_is a national initiative and is currently harvesting collections from a variety of cultural heritage institutions, as well as academic institutions in Cyprus.</p>\r\n\r\n<p><br>\r\n<strong>In addition to data publication, CMOEC offers:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Annual training performed by the aggregator's team: during the training, all participants are presented with new tools and hands-on sessions,</p>\r\n    </li>\r\n    <li>\r\n    <p>Metadata submission via OAI-PMH, or FTP server,</p>\r\n    </li>\r\n    <li>\r\n    <p>Data mapping in EDM,</p>\r\n    </li>\r\n    <li>\r\n    <p>Data enrichment,</p>\r\n    </li>\r\n    <li>\r\n    <p>Feedback report to participants,</p>\r\n    </li>\r\n    <li>\r\n    <p>Helpdesk by email and phone.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with CMOEC:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>A participant CHI must have the ability to provide an OAI-PMH endpoint or exportation of their records in XML files so that the aggregator can proceed in harvesting and mapping the data collected,\_</p>\r\n    </li>\r\n    <li>\r\n    <p>The data format is preferably in Dublin Core schemas.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Aggregator strongly advises all CHIs to provide good quality and well-documented content and generally keep enriching their collections so as to keep the accessibility at high levels,</p>\r\n    </li>\r\n    <li>\r\n    <p>Aggregator encourages participants to maintain open access and free reuse policy on their content so as to keep the datasets as open as possible to everyone,</p>\r\n    </li>\r\n    <li>\r\n    <p>Aggregator advises participants to keep up with Europeana's strategies, policies and technological upgrades so as to keep an effective workflow on their data in terms of publishing in Europeana.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: None. The aggregator is working with public and private CHIs.</p>\r\n\r\n<p>Financial conditions: None.</p>\r\n"
+        geographical_reach: null
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Cyprus_transparent.png'
+        city: 'Strovolos Nicosia'
+        street: '27 Ifigenias Street'
+        zipcode: null
+        po_box: null
+        country: Cyprus
+        uid: '1482250000000602023'
+        europeana_id: null
+        org_uid: '1482250000000602023'
+        name_lang: EN(English)
+        name_alt1_lang: EN(English)
+        name_alt2_lang: null
+        acronym_lang: EN(English)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/zachos-polyviou
+        tags: {  }
+        _id: organisations/cyprus-ministry-of-education-culture-sport-and-youth
+    -
+        slug: europeana
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: Europeana
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Netherlands
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: Netherlands
+        uid: '1482250000004671104'
+        europeana_id: ''
+        org_uid: '1482250000004671104'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeana
+    -
+        slug: europeana-280
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Europeana 280'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671105'
+        europeana_id: ''
+        org_uid: '1482250000004671105'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeana-280
+    -
+        slug: europeana-development
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Europeana development'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671106'
+        europeana_id: ''
+        org_uid: '1482250000004671106'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeana-development
+    -
+        slug: europeana-fashion
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-02-09 06:13:01'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: held
+        templatefields: {  }
+        name: 'Europeana Fashion'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: Archive
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: null
+        content_languages: null
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671107'
+        europeana_id: ''
+        org_uid: '1482250000004671107'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeana-fashion
+    -
+        slug: musit
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: MUSIT
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671145'
+        europeana_id: ''
+        org_uid: '1482250000004671145'
+        name_lang: NO(Norwegian)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/musit
+    -
+        slug: partage-plus
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Partage Plus'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671152'
+        europeana_id: ''
+        org_uid: '1482250000004671152'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/partage-plus
+    -
+        slug: the-natural-europe-project
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'The Natural Europe Project'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671161'
+        europeana_id: ''
+        org_uid: '1482250000004671161'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/the-natural-europe-project
+    -
+        slug: euinsideda
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: EUInsideDA
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671103'
+        europeana_id: ''
+        org_uid: '1482250000004671103'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/euinsideda
+    -
+        slug: eclap-e-library-for-performing-arts
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'ECLAP, e-library for Performing Arts'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671101'
+        europeana_id: ''
+        org_uid: '1482250000004671101'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/eclap-e-library-for-performing-arts
+    -
+        slug: eagle
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: EAGLE
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671100'
+        europeana_id: ''
+        org_uid: '1482250000004671100'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/eagle
+    -
+        slug: dm2e
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: DM2E
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671099'
+        europeana_id: ''
+        org_uid: '1482250000004671099'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/dm2e
+    -
+        slug: dk-national-aggregation-service
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'DK-National Aggregation Service'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671098'
+        europeana_id: ''
+        org_uid: '1482250000004671098'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/dk-national-aggregation-service
+    -
+        slug: dismarc
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: DISMARC
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671096'
+        europeana_id: ''
+        org_uid: '1482250000004671096'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/dismarc
+    -
+        slug: digitising-contemporary-art
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Digitising Contemporary Art'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671094'
+        europeana_id: ''
+        org_uid: '1482250000004671094'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/digitising-contemporary-art
+    -
+        slug: culturegrid
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: CultureGrid
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671087'
+        europeana_id: ''
+        org_uid: '1482250000004671087'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/culturegrid
+    -
+        slug: athenaplus
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: AthenaPlus
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: 'https://www.athenaplus.eu/'
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671081'
+        europeana_id: ''
+        org_uid: '1482250000004671081'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/athenaplus
+    -
+        slug: athena
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: Athena
+        name_alt1: Athena
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671080'
+        europeana_id: ''
+        org_uid: '1482250000004671080'
+        name_lang: EN(English)
+        name_alt1_lang: EL(Greek)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/athena
+    -
+        slug: arts-council-norway
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Arts Council Norway'
+        name_alt1: Kulturrådet
+        name_alt2: null
+        acronym: null
+        org_country: Norway
+        org_role:
+            - Aggregator
+        website: 'http://www.kulturradet.no/'
+        email: null
+        domain: ''
+        scope: ''
+        sector: Other
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: Oslo
+        street: 'Mølleparken 2'
+        zipcode: '459'
+        po_box: null
+        country: Norway
+        uid: '1482250000004671078'
+        europeana_id: ''
+        org_uid: '1482250000004671078'
+        name_lang: EN(English)
+        name_alt1_lang: NO(Norwegian)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/arts-council-norway
+    -
+        slug: archives-portal-europe
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2022-07-11 10:42:40'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'Archives Portal Europe'
+        name_alt1: null
+        name_alt2: null
+        acronym: APE
+        org_country: Netherlands
+        org_role:
+            - Aggregator
+        website: 'https://www.archivesportaleurope.net'
+        email: info@archivesportaleurope.net
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The Archives Portal Europe is the domain aggregator for archives from and about Europe. Established in the context of two EU-funded projects between 2009 and 2015, the Archives Portal Europe since is maintained and developed further by the Archives Portal Europe Foundation. It provides an overview of the collections kept in European archival institutions by publishing so called finding aids (inventories of archives) along with other contextual information and links those to the digitised archival material itself as much as possible. The portal holds information on more than 7,000 archival institutions from over 30 countries, of which over 1,000 actively contribute content.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition to data publication, Archives Portal Europe also supports its providers with or offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Storage of metadata files in archival standard formats,</li>\r\n    <li>Mapping from custom data formats to archival standard formats,</li>\r\n    <li>Data conversion,</li>\r\n    <li>Data validation,</li>\r\n    <li>Dissemination for institutions about usage of backend on demand (usually executed by Country Managers responsible for the institutions of the partner countries).</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with Archives Portal Europe:</strong></p>\r\n\r\n<ul>\r\n    <li>Metadata should ideally be provided in one of the international archival standards (EAD – either EAD 2002 or EAD3, EAC-CPF, EAG) or other XML formats,</li>\r\n    <li>Providing data to the Archives Portal Europe can either be done directly by the content provider or via existing national, regional or thematic portals in the various partner countries.</li>\r\n</ul>\r\n\r\n<p>An introduction to providing data to Archives Portal Europe is given in this <a href=\"https://www.youtube.com/watch?v=R6SsLFgj8Is\" target=\"_blank\">short video</a> and there is more detailed information available on <a href=\"http://wiki.archivesportaleurope.net/index.php/Main_Page\" target=\"_blank\">Archives Portal Europe Wiki</a>. Providers to the Archives Portal Europe also can make their data available through the portal’s API. To access, register a user account at <a href=\"http://www.archivesportaleurope.net\" target=\"_blank\">archivesportaleurope.net</a>, then retrieve API key. Please note that only data from archival institutions can be retrieved, which have explicitly given permission. An <a href=\"http://wiki.archivesportaleurope.net/index.php/APE_API_documentation\" target=\"_blank\">online manual</a> for usage is available.</p>\r\n\r\n<p><br>\r\nLimitations: None</p>\r\n\r\n<p>Financial conditions: Associates of the Archives Portal Europe Foundation (APEF) pay a yearly membership fee in accordance with their budget. Providing content to the Archives Portal Europe incl. the support mentioned above is free of charge.</p>\r\n"
+        geographical_reach: null
+        content_themes: 'Archival finding aids and inventories'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/APE_Logo.png'
+        city: 'Den Haag'
+        street: 'Prins Willem Alexanderhof 20'
+        zipcode: '2595 BE'
+        po_box: null
+        country: Netherlands
+        uid: '1482250000004671077'
+        europeana_id: null
+        org_uid: '1482250000004671077'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: EN(English)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/kerstin-arnold
+        tags: {  }
+        _id: organisations/archives-portal-europe
+    -
+        slug: apenet
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: APEnet
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671076'
+        europeana_id: ''
+        org_uid: '1482250000004671076'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/apenet
+    -
+        slug: 3d-coform-consortium
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: '3D-COFORM consortium'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: 'United Kingdom'
+        org_role:
+            - Aggregator
+        website: 'http://www.3d-coform.eu/'
+        email: null
+        domain: ''
+        scope: ''
+        sector: Other
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: 'United Kingdom'
+        uid: '1482250000004671075'
+        europeana_id: ''
+        org_uid: '1482250000004671075'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/3d-coform-consortium
+    -
+        slug: 3d-icons
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: '3D ICONS'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: null
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671074'
+        europeana_id: ''
+        org_uid: '1482250000004671074'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/3d-icons
+    -
+        slug: university-of-ioannina
+        datecreated: '2016-05-30 13:43:49'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'University of Ioannina'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Greece
+        org_role:
+            - Aggregator
+        website: 'http://www.uoi.gr/en/'
+        email: null
+        domain: ''
+        scope: ''
+        sector: Education
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: Greece
+        uid: '1482250000001267525'
+        europeana_id: ''
+        org_uid: '1482250000001267525'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/university-of-ioannina
+    -
+        slug: irish-manuscripts-commission
+        datecreated: '2015-09-29 13:37:54'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Irish Manuscripts Commission'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Ireland
+        org_role:
+            - Aggregator
+        website: 'http://www.irishmanuscripts.ie'
+        email: null
+        domain: ''
+        scope: ''
+        sector: Other
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: Ireland
+        uid: '1482250000000574027'
+        europeana_id: ''
+        org_uid: '1482250000000574027'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/irish-manuscripts-commission
+    -
+        slug: thinkmotion
+        datecreated: '2015-08-17 17:03:02'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: thinkMOTION
+        name_alt1: 'DMG-Lib goes Europeana'
+        name_alt2: null
+        acronym: null
+        org_country: Germany
+        org_role:
+            - Aggregator
+        website: 'http://www.thinkmotion.eu'
+        email: null
+        domain: ''
+        scope: ''
+        sector: Education
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: Germany
+        uid: '1482250000000365001'
+        europeana_id: ''
+        org_uid: '1482250000000365001'
+        name_lang: EN(English)
+        name_alt1_lang: EN(English)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/thinkmotion
+    -
+        slug: europeana-food-and-drink
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Europeana Food and Drink'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671108'
+        europeana_id: ''
+        org_uid: '1482250000004671108'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeana-food-and-drink
+    -
+        slug: europeana-inside-sweden
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Europeana Inside Sweden'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Sweden
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: Sweden
+        uid: '1482250000004671109'
+        europeana_id: ''
+        org_uid: '1482250000004671109'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeana-inside-sweden
+    -
+        slug: europeana-local
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Europeana Local'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671110'
+        europeana_id: ''
+        org_uid: '1482250000004671110'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeana-local
+    -
+        slug: europeanalocal-portugal
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'EuropeanaLocal Portugal'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Portugal
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: Other
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: Portugal
+        uid: '1482250000004671111'
+        europeana_id: ''
+        org_uid: '1482250000004671111'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeanalocal-portugal
+    -
+        slug: europeana-office
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Europeana Office'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671112'
+        europeana_id: ''
+        org_uid: '1482250000004671112'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeana-office

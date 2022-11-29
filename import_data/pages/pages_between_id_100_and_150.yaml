@@ -1,0 +1,869 @@
+__bolt_export_meta:
+    date: '2022-10-27T16:25:27+02:00'
+    version: 3.7.4
+    platform: mysql
+pages:
+    -
+        slug: about-us
+        datecreated: '2015-07-30 10:07:18'
+        datechanged: '2020-03-01 16:44:58'
+        datepublish: '2015-07-30 10:06:52'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        title: 'About us'
+        intro: null
+        body: null
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: null
+        teaser_image: null
+        teaser_attribution_title: null
+        teaser_attribution_creator: null
+        teaser_attribution_date: null
+        teaser_attribution_holder: null
+        teaser_attribution_country: null
+        teaser_attribution_license: null
+        teaser_attribution_link: null
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record: {  }
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        modules:
+            -
+                enabled: disabled
+                title: 'Who Europeana?'
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>It's you. Cultural institutions. Researchers. Teachers. Learners. Creative start-ups. Data nerds. Art lovers. Book addicts. Culture vultures. We work with each other. For each other.</p>\r\n"
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                basemarket: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                selected_organisations: ''
+        _id: pages/about-us
+    -
+        slug: about-europeana-eu
+        datecreated: '2015-03-04 16:39:06'
+        datechanged: '2022-09-21 13:26:08'
+        datepublish: '2015-03-04 16:37:57'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        title: 'About Europeana.eu'
+        intro: "<p>A multilingual resource for discovering and using\_digital cultural heritage material and collections.</p>\r\n"
+        body: "<p>The <a href=\"http://www.europeana.eu\">Europeana website (Europeana.eu) </a>is Europe’s digital library, museum, gallery and archive. From books, photos and paintings to television broadcasts and 3D objects, the website provides online access to a vast store of cultural heritage material and collections from across Europe.</p>\r\n\r\n<p>Through this\_multilingual platform,\_individuals and professionals can\_discover, research, share\_and enjoy Europe’s wealth of digital cultural resources.</p>\r\n\r\n<p>We want the cultural heritage collections held in Europeana to be viewed, shared, used and reused wherever and whenever possible. To support both audiences and data partners, we're always working on making\_Europeana collections better, showcasing\_its contents in the best and most useful way possible.\_</p>\r\n"
+        pagefooter: null
+        pagetype: landingpage-nohighlight
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>A multilingual resource providing online access to a vast store of cultural heritage material from across Europe.\_</p>\r\n"
+        teaser_image:
+            file: 'Images/New_pro_images_March2020/Image updates/Europeana website.png'
+            title: 'A group of people skating on a frozen river'
+        teaser_attribution_title: 'Enjoying the Ice'
+        teaser_attribution_creator: null
+        teaser_attribution_date: 'c.1615 - c.1620'
+        teaser_attribution_holder: Rijksmuseum
+        teaser_attribution_country: Netherlands
+        teaser_attribution_license: Public-Domain
+        teaser_attribution_link: 'https://www.europeana.eu/en/item/90402/SK_A_3247'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record: {  }
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: 'europeana website, collections'
+        pages:
+            - pages/online-exhibitions
+            - pages/thematic-collections
+            - pages/creating-editorial
+            - pages/europeana-reuse-be-inspired
+        posts:
+            - posts/europeana-collections-brings-you-closer-to-culture
+            - posts/new-europeana-collections-site-brings-people-closer-to-culture
+            - posts/editorial-guidelines-for-contributors
+            - posts/discovering-europe-looking-back-at-our-summer-season
+            - posts/exploring-biodiversity-with-the-linbi-project
+            - posts/bringing-the-past-back-to-life-with-the-estense-digital-library
+            - posts/ready-set-go-europeana-s-sport-season-kicks-off
+            - posts/europeana-in-conversation-with-kim-mckay-from-the-australian-museum
+            - posts/viziel-learning-more-than-you-see-with-europeana-content
+            - posts/discover-cultural-heritage-by-institution-with-our-new-organisation-pages
+            - posts/exploring-the-highlights-of-gif-it-up-2021
+            - posts/sharing-black-history-at-the-horniman-museum-and-gardens
+            - posts/making-the-europeana-collections-website-accessible-to-all
+            - posts/what-s-new-on-the-europeana-website-january-march-2022
+            - posts/join-us-in-celebrating-women-s-history-month-2022
+            - posts/in-conversation-with-heritage-in-motion-2021-winners-life-code-escape-room-quest
+            - posts/europeana-and-the-khalili-collections-introducing-our-new-partnership
+            - posts/what-s-new-on-the-europeana-website-september-december-2021
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories:
+            -
+                slug: collections
+                name: Collections
+        tags: {  }
+        modules:
+            -
+                enabled: enabled
+                title: 'The Europeana Website'
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><meta charset=\"utf-8\" />The <a href=\"http://www.europeana.eu\">Europeana website (Europeana.eu)</a> is Europe’s digital library, museum, gallery and archive, providing online access to a vast store of cultural heritage material and collections from across Europe. We want this material to be viewed, shared, used and reused wherever and whenever possible. To support both audiences and data partners, we're always working to showcase the content&nbsp;of Europeana through innovative editorial, engaging awareness campaigns and remix competitions. Use these pages to learn more about our activities and how you can contribute.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '115'
+                        _id: pages/about-europeana-eu
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1047'
+                        _id: resources/the-europeana-website
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '806'
+                        _id: pages/europeana-reuse-be-inspired
+                    -
+                        value: '654'
+                        _id: pages/creating-editorial
+                    -
+                        value: '477'
+                        _id: pages/campaigns
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Quarterly updates'
+                subtitle: 'Explore new features released for the Europeana website'
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2414'
+                        _id: posts/what-s-new-on-the-europeana-website-september-december-2021
+                    -
+                        value: '2464'
+                        _id: posts/what-s-new-on-the-europeana-website-january-march-2022
+                    -
+                        value: '2504'
+                        _id: posts/what-s-new-on-the-europeana-website-march-june-2022
+                    -
+                        value: '2536'
+                        _id: posts/what-s-new-on-the-europeana-website-june-september-2022
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Developing the Europeana website'
+                subtitle: 'Explore our news theme from 2020'
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2239'
+                        _id: posts/website-development-for-cultural-heritage-content-at-europeana
+                    -
+                        value: '2231'
+                        _id: posts/making-the-europeana-collections-website-accessible-to-all
+                    -
+                        value: '2234'
+                        _id: posts/exploring-europeana-s-approach-to-design
+                    -
+                        value: '2263'
+                        _id: posts/introducing-strategic-priorities-for-the-europeana-website
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><meta charset=\"utf-8\" />If you would like to have your content viewed through Europeana, promoted in campaigns and reuse collaborations and featured in our editorial, explore how you can <a href=\"/share-your-data/process\">share your data</a>.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: pages/about-europeana-eu
+    -
+        slug: co-creation
+        datecreated: '2015-06-30 14:56:33'
+        datechanged: '2020-03-10 16:07:26'
+        datepublish: '2015-06-30 12:02:00'
+        datedepublish: ''
+        ownerid: 1
+        status: held
+        templatefields: {  }
+        title: Co-creation
+        intro: null
+        body: null
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>Test various product scenarios and develop a viable prototype</p>\r\n"
+        teaser_image:
+            file: labs.europeana.eu/labs/datasets/9200495-yoolib-inha-9306.jpeg
+        teaser_attribution_title: 'Le Divan Japonais'
+        teaser_attribution_creator: 'Henri de Toulouse-Lautrec'
+        teaser_attribution_date: '1893'
+        teaser_attribution_holder: 'Bibliothèque De L''INHA'
+        teaser_attribution_country: France
+        teaser_attribution_license: Public-Domain
+        teaser_attribution_link: 'https://www.europeana.eu/portal/en/record/9200495/yoolib_inha_9306.html?q=Le+Divan+Japonais'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: labs
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            -
+                value: '2379'
+                _id: persons/milena-popova
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: labs
+                name: Labs
+        markets:
+            -
+                slug: creative-industries
+                name: 'Creative industries'
+        categories:
+            -
+                slug: content-promotion
+                name: 'Content promotion'
+            -
+                slug: api
+                name: API
+            -
+                slug: funding
+                name: Funding
+        tags: {  }
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<h3>Work together to incubate viable application designs</h3>\r\n\r\n<p>Our partners&nbsp;<a href=\"http://platoniq.net/\" target=\"_blank\">Platoniq</a>&nbsp;have developed a methodology called Wotify (pronounced what-if-I) that helps creative teams to collectively build products and services using Europeana's digital cultural content.</p>\r\n\r\n<h3>How does it work?</h3>\r\n\r\n<p>Wotify describes its methodology as 'Co-creation Made Agile'. Users gain an unique repository of tools that can be used independently or sequentially - and it’s available for organisations and creatives to download, print and share. From prototyping to implementation, these tools will help you to co-design a viable creative project. You can also choose between co-creation workshops of different length where you learn about various techniques and principles from creative thinking, rapid prototyping and agile development in the time frame that best suits your needs.</p>\r\n\r\n<h4><strong>For example...</strong></h4>\r\n\r\n<p>You can choose co-creation workshops where you learn about various techniques and principles from creative thinking, rapid prototyping and agile development. In particular, the tools are designed to create winning applications, platforms and products for education, tourism, design and social innovation.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: breaker
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '253'
+                        _id: resources/explore-free-co-creation-tools
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+        _id: pages/co-creation
+    -
+        slug: logs
+        datecreated: '2015-09-22 13:06:03'
+        datechanged: '2015-09-22 13:11:54'
+        datepublish: '2015-09-22 13:05:00'
+        datedepublish: ''
+        ownerid: 69
+        status: held
+        templatefields: {  }
+        title: 'Europeana Logs'
+        intro: 'Information on retrieving and interpreting logs from the Europeana portal.'
+        body: "<p>We record user interactions with the Europeana portal. The log files provides access to search queries done by users and the various clicks executed on the portal. The equivalent of two months of logs files are stored and can be made accessible on demand.</p>\r\n\r\n<p>Our logs have been analysed and used in the past by various research projects:</p>\r\n\r\n<ul>\n<li>The <a href=\"http://www.clef-initiative.eu/\">CLEF</a> initiative</li>\r\n    <li>The PATHS project: see more <a href=\"http://paths-project.eu/eng/News/Participation-by-PATHS-partners-in-Cultural-Heritage-in-CLEF-CHiC\">documentation</a> project</li>\r\n    <li>ASSETS- Advanced Service Search and Enhancing Technological Solutions: see the related <a href=\"http://pro.europeana.eu/web/assets/outcomes/-/document_library_display/rbR2/view/1977472\">report</a>\n</li>\r\n    <li>Europeana Connect for analysing users' attitudes and needs and opens new ways of discovering cultural heritage in Europeana: see the <a href=\"http://www.europeanaconnect.eu/results-and-resources.php?page=3\">results</a>\n</li>\r\n    <li>\n<a href=\"http://www.galateas.eu/partners/ibi-universitaet-zu-berlin.html\">Galateas</a> project</li>\r\n</ul>\n<p>If you would like to get access to the log files, please contact Antoine Isaac [<a href=\"mailto:antoine.isaac@europeana.eu\">antoine.isaac@europeana.eu</a>] or Valentine Charles [<a href=\"mailto:valentine.charles@europeana.eu\">valentine.charles@europeana.eu</a>].</p>\r\n\r\n<p>Be aware that any use of the lofs should comply with Europeana's <a href=\"http://europeana.eu/portal/rights/privacy.html\">privacy policy</a>.</p>\r\n\r\n<p>We describe below the details of the Europeana Logs actions and the Europeana session clickstream. We thank Maria Gäde researcher at Humboldt-Universität zu Berlin for providing us with this documentation.</p>\r\n\r\n<h2>Europeana Logs actions</h2>\r\n\r\n<table>\n<thead><tr>\n<th>Action</th>\r\n            <th>Explanation</th>\r\n        </tr></thead>\n<tbody>\n<tr>\n<td>BRIEF_RESULT</td>\r\n            <td>User launches a query and is directed to the brief result page.</td>\r\n        </tr>\n<tr>\n<td>FULL_RESULT_HTML</td>\r\n            <td>User clicks on an object from the result list and is directed to the detailed full result presentation</td>\r\n        </tr>\n<tr>\n<td>INDEXPAGE</td>\r\n            <td>User views the homepage.</td>\r\n        </tr>\n<tr>\n<td>REDIRECT_OUTLINK</td>\r\n            <td>User clicks on a link directing to the content provider.</td>\r\n        </tr>\n<tr>\n<td>RETURN_TO_RESULTS</td>\r\n            <td>Users from a full view to the result list.</td>\r\n        </tr>\n<tr>\n<td>STATICPAGE</td>\r\n            <td>Pages views with no dynamic parameter such as “contact us”, “terms of use and policies”.</td>\r\n        </tr>\n<tr>\n<td>BRIEF_RESULT</td>\r\n            <td>Result list from a search query.</td>\r\n        </tr>\n<tr>\n<td>LANGUAGE_CHANGE</td>\r\n            <td>A user switches the interface language via drop down menu.</td>\r\n        </tr>\n<tr>\n<td>LOGIN</td>\r\n            <td>User logs in the user profile MyEuropeana.</td>\r\n        </tr>\n<tr>\n<td>LOGOUT</td>\r\n            <td>User logs out from MyEuropeana.</td>\r\n        </tr>\n<tr>\n<td>LOGOUT_COOKIE_THEFT</td>\r\n            <td>Matching of cookies fails.</td>\r\n        </tr>\n<tr>\n<td>REGISTER</td>\r\n            <td>User registers for MyEuropeana.</td>\r\n        </tr>\n<tr>\n<td>REGISTER_FAILURE</td>\r\n            <td>Registration process failed.</td>\r\n        </tr>\n<tr>\n<td>REGISTER_SUCCESS</td>\r\n            <td>The registration was successfully confirmed.</td>\r\n        </tr>\n<tr>\n<td>EXCEPTION_CAUGHT</td>\r\n            <td>Requested object was not found.</td>\r\n        </tr>\n<tr>\n<td>CONTACT_PAGE</td>\r\n            <td>User clicks on the contact / feedback page.</td>\r\n        </tr>\n<tr>\n<td>FEEDBACK_SEND</td>\r\n            <td>User has send a message at the feedback page.</td>\r\n        </tr>\n<tr>\n<td>FULL_RESULT_FROM_TIME_LINE_VIEW</td>\r\n            <td>Object view presented at the timeline.</td>\r\n        </tr>\n<tr>\n<td>MY_EUROPEANA</td>\r\n            <td>MyEuropeana link for registration or log in.</td>\r\n        </tr>\n<tr>\n<td>FEEDBACK_SEND_FAILURE</td>\r\n            <td>User message from the feedback page.</td>\r\n        </tr>\n<tr>\n<td>CHANGE_PASSWORD_SUCCES</td>\r\n            <td>User changed the log in password.</td>\r\n        </tr>\n<tr>\n<td>SITE_MAP_XML</td>\r\n            <td>XML rendition of the sitemap so crawlers can navigate the website.</td>\r\n        </tr>\n<tr>\n<td>SAVE_ITEM</td>\r\n            <td>Users saves an object in MyEuropeana.</td>\r\n        </tr>\n<tr>\n<td>SAVE_SOCIAL_TAG</td>\r\n            <td>Users assigns a tag to an object saved in MyEuropeana.</td>\r\n        </tr>\n<tr>\n<td>CHANGE_PASSWORD_FAILURE</td>\r\n            <td>Change of user profile password failed.</td>\r\n        </tr>\n<tr>\n<td>FULL_RESULT_FROM_SAVED_ITEM</td>\r\n            <td>A user clicks on a saved object and views the full result representation.</td>\r\n        </tr>\n<tr>\n<td>SAVE_SEARCH</td>\r\n            <td>User saves previous search terms in MyEuropeana.</td>\r\n        </tr>\n<tr>\n<td>BRIEF_RESULT_FROM_SAVED_SEARCH</td>\r\n            <td>User clicks on a previous saved search and receives a result list.</td>\r\n        </tr>\n<tr>\n<td>REMOVE_SAVED_ITEM</td>\r\n            <td>Users removes a saved object from MyEuropeana.</td>\r\n        </tr>\n<tr>\n<td>REMOVE_SOCIAL_TAG</td>\r\n            <td>User removes a tag from MyEuropeana.</td>\r\n        </tr>\n<tr>\n<td>FULL_RESULT_FROM_CAROUSEL</td>\r\n            <td>Users clicks on an object from the carousel. and is directed to the full result presentation.</td>\r\n        </tr>\n<tr>\n<td>ERROR_TOKEN_EXPIRED</td>\r\n            <td>User session is terminated due to inactivity.</td>\r\n        </tr>\n<tr>\n<td>REMOVE_SAVED_SEARCH</td>\r\n            <td>User removes saved search terms from MyEuropeana.</td>\r\n        </tr>\n<tr>\n<td>AJAX_ERROR</td>\r\n            <td>Error with Java Script request from front-end to back-end service.</td>\r\n        </tr>\n<tr>\n<td>REDIRECT_TO_SECURE</td>\r\n            <td>User is directed to a secure communication page (HTTPS).</td>\r\n        </tr>\n<tr>\n<td>FULL_RESULT_HMTL</td>\r\n            <td>The HTML rendering of the full result page.</td>\r\n        </tr>\n<tr>\n<td>FULL_RESULT_SRW</td>\r\n            <td>The XML SRU/SRW rendering of the full-result page.</td>\r\n        </tr>\n<tr>\n<td>FULL_RESULT_JSON</td>\r\n            <td>JSON output of the full-result.</td>\r\n        </tr>\n</tbody>\n</table>\n<h2>Europeana session clickstream</h2>\r\n\r\n<table style=\"width: 797px;\">\n<thead><tr>\n<th style=\"width: 288px;\">Field</th>\r\n            <th style=\"width: 262px;\">Example</th>\r\n            <th style=\"width: 241px;\">Explanation</th>\r\n        </tr></thead>\n<tbody>\n<tr>\n<td style=\"width: 288px;\"><strong>Session statistics</strong></td>\r\n            <td style=\"width: 262px;\"></td>\r\n            <td style=\"width: 241px;\"></td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">IP</td>\r\n            <td style=\"width: 262px;\">B7A5C7280ACDE2F373D32BC53B7[…]</td>\r\n            <td style=\"width: 241px;\">Unique identifier replacing IP address.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">Countries55</td>\r\n            <td style=\"width: 262px;\">BR</td>\r\n            <td style=\"width: 241px;\">Country code derived from IP address.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">Dates</td>\r\n            <td style=\"width: 262px;\">2010-09-23</td>\r\n            <td style=\"width: 241px;\">Date of access.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">durationInMin, start_session, end_session</td>\r\n            <td style=\"width: 262px;\">4; \"10:35:37\", \"10:40:30\"</td>\r\n            <td style=\"width: 241px;\">Session duration in minutes with timestamp of first and last log entry.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">userHasLoggedIn</td>\r\n            <td style=\"width: 262px;\">false</td>\r\n            <td style=\"width: 241px;\">Session with login to user profile.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">inactivityBreak</td>\r\n            <td style=\"width: 262px;\">true</td>\r\n            <td style=\"width: 241px;\">Session was cut off due to inactivity after 60 minutes.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">pageClicks</td>\r\n            <td style=\"width: 262px;\">24</td>\r\n            <td style=\"width: 241px;\">No. of performed actions / page views.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">bounceSession</td>\r\n            <td style=\"width: 262px;\">false</td>\r\n            <td style=\"width: 241px;\">Session with only one page view / action.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">Actions</td>\r\n            <td style=\"width: 262px;\">\"REDIRECT_OUTLINK\" : 4,<br>\r\n            \"FULL_RESULT\" : 6 […]</td>\r\n            <td style=\"width: 241px;\">List of actions with frequency; here: 4 times an outlink to content providers was used, 6 times a full object views was recorded, etc.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">actionOrder</td>\r\n            <td style=\"width: 262px;\">\"INDEXPAGE\" \"BRIEF_RESULT\",<br>\r\n            \"RETURN_TO_RESULTS\", [….]</td>\r\n            <td style=\"width: 241px;\">Order of actions performed during a session</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">reqRefererPairs</td>\r\n            <td style=\"width: 262px;\">\n<a href=\"http://www.google.com/search?hl=en&amp;q=biblioteca+on+line\">http://www.google.com/search?<br>\r\n            hl=en&amp;q=<br>\r\n            biblioteca+on+line</a> &gt;<a href=\"http://www.europeana.eu/portal/\">http://www.europeana.eu:80/portal/</a> ...</td>\r\n            <td style=\"width: 241px;\">Request and referrer links for each log entry.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">hasExternalReferrer</td>\r\n            <td style=\"width: 262px;\">true</td>\r\n            <td style=\"width: 241px;\">Session was started from an external referrer link.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">googleLanguage, googleCountry</td>\r\n            <td style=\"width: 262px;\">“en”; “com”</td>\r\n            <td style=\"width: 241px;\">Language and country parameters from external Google links.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">Queries</td>\r\n            <td style=\"width: 262px;\">\r\n            <p>\"europeana_uri:\"<a href=\"http://www.europeana%2Ceu/resolve/record/90101/079674BD6F20C0FB6CCAF1C6785BE655490406E8\">http://www.europeana,eu/<br>\r\n            resolve/record/90101/<br>\r\n            079674BD6F20C0FB6CCAF1<br>\r\n            C6785BE655490406E8</a>\"\" : 1,<br>\r\n            \"Karl Marx\" : 13, \"Benjamin Franklin\" : 2</p>\r\n            </td>\r\n            <td style=\"width: 241px;\">Browsing, paging and related item queries with frequency; includes queries that are typed by the user (Karl Marx; Benjmin Franklin) as well as queries set by the system as consequence of a link request.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">uniqueQueriesNr</td>\r\n            <td style=\"width: 262px;\">3</td>\r\n            <td style=\"width: 241px;\">No. of unique queries in session.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">searchType</td>\r\n            <td style=\"width: 262px;\">“Paging”: 5</td>\r\n            <td style=\"width: 241px;\">Search types with query frequency: „initial“: first result page viewed,„paging“:at least 2 result pages viewed, “facet select”: first result page viewed with result refinement.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">facetSelected</td>\r\n            <td style=\"width: 262px;\">1</td>\r\n            <td style=\"width: 241px;\">No. of search result pages with facet selection.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\"><strong>Statistics for Brief Result Pages</strong></td>\r\n            <td style=\"width: 262px;\"></td>\r\n            <td style=\"width: 241px;\"></td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">pageViews</td>\r\n            <td style=\"width: 262px;\">6</td>\r\n            <td style=\"width: 241px;\">No. of result list pages.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">hasPagingSessions</td>\r\n            <td style=\"width: 262px;\">True</td>\r\n            <td style=\"width: 241px;\">Session includes brief result paging.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">uniquePagingSessionNr</td>\r\n            <td style=\"width: 262px;\">2</td>\r\n            <td style=\"width: 241px;\">No. of unique brief result.paging sessions per query (Karl Marx; Benjamin Franklin).</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">pagingSessions</td>\r\n            <td style=\"width: 262px;\">\"Karl Marx\" : 4,\"Benjamin Franklin\" : 2</td>\r\n            <td style=\"width: 241px;\">Queries with result page interaction; for Karl Marx 4 result pages were viewed and for the query Benjamin Franklin only 2.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">usesFacetsConstraints</td>\r\n            <td style=\"width: 262px;\">true</td>\r\n            <td style=\"width: 241px;\">Usage of facets.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">hasLangFacetSelected</td>\r\n            <td style=\"width: 262px;\">true</td>\r\n            <td style=\"width: 241px;\">Usage of language facet.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">selectedLangFacets</td>\r\n            <td style=\"width: 262px;\">“pt”</td>\r\n            <td style=\"width: 241px;\">Selected language facet.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">hasCountryFacetSelected</td>\r\n            <td style=\"width: 262px;\">false</td>\r\n            <td style=\"width: 241px;\">Usage of country facet.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">selectedCountryFacets</td>\r\n            <td style=\"width: 262px;\">x</td>\r\n            <td style=\"width: 241px;\">Selected country facet.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">hasProviderFacetSelected</td>\r\n            <td style=\"width: 262px;\">false</td>\r\n            <td style=\"width: 241px;\">Usage of provider facet.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">selectedProviderFacets</td>\r\n            <td style=\"width: 262px;\">x</td>\r\n            <td style=\"width: 241px;\">Selected provider facet.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">queryConstraints</td>\r\n            <td style=\"width: 262px;\">\"\\\"TYPE:\\\"TEXT\\\"\\\"\", \"\\\"LANGUAGE:\\\"pt\\\"\\\"</td>\r\n            <td style=\"width: 241px;\">Content of selected facets.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">countryFacet</td>\r\n            <td style=\"width: 262px;\">\"france\", \"germany\", \"portugal\"</td>\r\n            <td style=\"width: 241px;\">Top three country facets returned.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">languageFacet</td>\r\n            <td style=\"width: 262px;\">\"fr\", \"de\"</td>\r\n            <td style=\"width: 241px;\">Top three language facets returned.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\"><strong>Statistics for Full Result Pages</strong></td>\r\n            <td style=\"width: 262px;\"></td>\r\n            <td style=\"width: 241px;\"></td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">directFullViews</td>\r\n            <td style=\"width: 262px;\">0</td>\r\n            <td style=\"width: 241px;\">User landed on full view without performing a search.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">uniqueFullViews 4</td>\r\n            <td style=\"width: 262px;\">No. of unique full object views.</td>\r\n            <td style=\"width: 241px;\"></td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">nrUniqueCollections</td>\r\n            <td style=\"width: 262px;\">3</td>\r\n            <td style=\"width: 241px;\">No. of unique collections viewed.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">uniqueCollections</td>\r\n            <td style=\"width: 262px;\">\"00301\", \"92201\", \"90101\"</td>\r\n            <td style=\"width: 241px;\">Collection IDs.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">collCountry</td>\r\n            <td style=\"width: 262px;\">norway</td>\r\n            <td style=\"width: 241px;\">Country of collection viewed.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">collLanguage</td>\r\n            <td style=\"width: 262px;\">no</td>\r\n            <td style=\"width: 241px;\">Language of collection viewed.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">Queries</td>\r\n            <td style=\"width: 262px;\">\"europeana_uri:<br>\r\n            \"<a href=\"http://www.europeana.eu/resolve/record/90101/079674BD6F20C...\">http://www.europeana.eu/<br>\r\n            resolve/record/90101/<br>\r\n            079674BD6F20C...</a>\"\" : 1,<br>\r\n            \"Karl Marx\" : 5</td>\r\n            <td style=\"width: 241px;\">Queries from which the user navigated to a full view.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\"><strong>Statistics for Interface Language</strong></td>\r\n            <td style=\"width: 262px;\"></td>\r\n            <td style=\"width: 241px;\"></td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">Languages</td>\r\n            <td style=\"width: 262px;\">\"EN\" : 1, \"PT\" : 23</td>\r\n            <td style=\"width: 241px;\">For each page view, the interface language is determined; this session contains one page view with an EN and 23 page views with PT</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">uniqueLanguagesNr</td>\r\n            <td style=\"width: 262px;\">2</td>\r\n            <td style=\"width: 241px;\">Nr. of unique languages: EN, PT.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">hasLanguageChange</td>\r\n            <td style=\"width: 262px;\">true</td>\r\n            <td style=\"width: 241px;\">Session includes an interface language change.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">hasLanguageChangeFirst</td>\r\n            <td style=\"width: 262px;\">false</td>\r\n            <td style=\"width: 241px;\">Interface language change appeared as first action.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">languageChangePairs</td>\r\n            <td style=\"width: 262px;\">\"EN-&gt;PT\" : 1</td>\r\n            <td style=\"width: 241px;\">Interface language change pairs.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">userTriggeredlanguageChange</td>\r\n            <td style=\"width: 262px;\">false</td>\r\n            <td style=\"width: 241px;\">Session includes a user-triggered interface language change via drop-down menu.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">languageChangeType</td>\r\n            <td style=\"width: 262px;\">\"cookie-change\"</td>\r\n            <td style=\"width: 241px;\">Interface language change type.</td>\r\n        </tr>\n<tr>\n<td style=\"width: 288px;\">Locale</td>\r\n            <td style=\"width: 262px;\">x</td>\r\n        </tr>\n</tbody>\n</table>"
+        pagefooter: null
+        pagetype: null
+        highlighttitle: ''
+        highlightsources: null
+        highlightsubtype: null
+        highlightcategory: ''
+        highlightlink: ''
+        teaser: '<p>Information on retrieving and interpreting logs from the Europeana portal.</p>'
+        teaser_image: {  }
+        teaser_attribution_title: ''
+        teaser_attribution_creator: ''
+        teaser_attribution_date: null
+        teaser_attribution_holder: ''
+        teaser_attribution_country: ''
+        teaser_attribution_license: null
+        teaser_attribution_link: ''
+        image: null
+        image_attribution_title: ''
+        image_attribution_creator: ''
+        image_attribution_date: null
+        image_attribution_holder: ''
+        image_attribution_country: ''
+        image_attribution_license: null
+        image_attribution_link: ''
+        imagegallery: null
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: labs
+        template: ''
+        seo: null
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: ''
+        contact_email: ''
+        contact_website: ''
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities: {  }
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        modules: {  }
+        _id: pages/logs
+    -
+        slug: challenges-frequently-asked-questions
+        datecreated: '2016-08-02 12:11:21'
+        datechanged: '2020-03-11 11:55:51'
+        datepublish: '2016-08-02 12:00:35'
+        datedepublish: ''
+        ownerid: 77
+        status: held
+        templatefields: {  }
+        title: 'Frequently asked questions'
+        intro: 'We answer your most frequently asked questions about the Europeana Challenges.'
+        body: "<p></p>\r\n\r\n<blockquote>\r\n<h3>Application tips</h3>\r\n\r\n<ul>\r\n<li>This is a short application form – answer the question and make your responses count.</li>\r\n    <li>Think carefully about the supporting material you can upload and how long it might take you to develop the material you need to show us. Make it concise, high quality and visually engaging - show off your production value!</li>\r\n    <li>Make sure your project is SMART and deliverable within a realistic timeframe.</li>\r\n    <li>Really think about the product's audience.</li>\r\n    <li>We want you to present a great idea, but we also need to see how you will make this idea happen, develop it, grow it, and make it a success!</li>\r\n</ul>\r\n</blockquote>\r\n\r\n<p></p>\r\n\r\n<p><strong>Why do you run <a href=\"https://pro.europeana.eu/services/facilitating-innovation/take-the-challenge\" target=\"_blank\">challenges</a>?</strong><br>\r\nWe believe that the mostly unexploited and often unseen content in <a href=\"http://www.europeana.eu/portal/en\" target=\"_blank\">Europeana Collections</a> can help to fuel economic growth and broader cultural, social and educational impact. Through the <a href=\"https://pro.europeana.eu/services/facilitating-innovation/take-the-challenge\" target=\"_blank\">Europeana Challenges</a> we invite creative professionals to play with digital cultural data, make use of our free technology to develop viable products, services and businesses and provide the best ideas with funding to grow.</p>\r\n\r\n<p><strong>Why do you have themed challenges?</strong><br>\r\nWe set a challenge theme(s) in order to inspire and attract proposals that will exploit and creatively (re-)use the best of Europeana’s Collections. Our thematic collections are created because there is interesting content available and significant market demand.</p>\r\n\r\n<p><strong>Who can apply?</strong><br>\r\nAnyone across the world can apply if they have a great idea of how to creatively (re-)use Europeana openly licensed content in ways that will generate economic or social impact and that will reach a local, international or global audience. You can apply by yourself or in partnership but you must be registered as a legal entity – we cannot work with those who do not have legal business or charitable status.</p>\r\n\r\n<p><strong>Why must I be a legal entity to apply?</strong><br>\r\nIf you do not have legal business or charitable status, the funding we give you might be taxed at a different rate. In order to achieve the most impact from our funding, we therefore ask that you are legally registered (eg self-employed, foundation or charity, or a business) and have informed yourself about the tax implications of receiving our grant. When you apply, you must account for any applicable tax or VAT in your budget planning. Europeana Foundation is VAT exempt and you are responsible for any VAT or tax declarations.</p>\r\n\r\n<p><strong>What type of project is eligible?</strong><br>\r\nYour product or service should be digital - we can only assess a digital proposal. Suitable entries\_must meet our challenge theme(s) and criteria.</p>\r\n\r\n<p><strong>What content can I use?</strong><br>\r\nYou must use openly licensed content (eg Public domain, CC0, CC-BY, CC-BY-SA). We will not fund proposals that do not respect the relevant rights statements.</p>\r\n\r\n<p>We recommend using the <a href=\"https://pro.europeana.eu/resources/apis\" target=\"_blank\">Europeana APIs</a> and <a href=\"http://www.europeana.eu/portal/en\" target=\"_blank\">Europeana platform</a> due to the filter and search functions which will let you directly find and use openly licensed content (a strict requirement in this competition).</p>\r\n\r\n<p><strong>What do you mean by 'openly licensed' content?</strong><br>\r\nNot all of the content available on European.eu is free to reuse. Freely reusable content with attribution includes CC0, CC BY, CC BY-SA.</p>\r\n\r\n<p><strong>How do I access the content? Do I need to use an API?</strong><br>\r\nYou can choose to use the <a href=\"https://pro.europeana.eu/resources/apis\" target=\"_blank\">free Europeana APIs</a> or a manual download. Registration to get an API key is simple - all we need is an email address.</p>\r\n\r\n<p><strong>How do I apply?</strong><br>\r\nWe accept only applications submitted via the online form on the <a href=\"https://pro.europeana.eu/services/facilitating-innovation/take-the-challenge\" target=\"_blank\">Challenge webpage</a>. Once you submit your application there will be no further chance to edit your proposal, so ensure that you work on it carefully before submitting.</p>\r\n\r\n<p><strong>What language can I write my proposal in?</strong><br>\r\nYour online proposal and supporting documents must be in English, but visual supporting documents (eg screenshots of an app) can be in other languages.</p>\r\n\r\n<p><strong>What attachments should I submit and how many can I add to support my application?</strong><br>\r\nYou can add a maximum of five supporting attachments or links. Stick to the main ideas that you want to present to us - for example, visual representations (‘proof’) of your product/service or illustrations of its functionality. Shorter, visually engaging and high-quality documents relevant to the application are most effective. We can’t accept attachments to your application by email.</p>\r\n\r\n<p><strong>Can I submit my business plan as an attachment?</strong><br>\r\nYes - but we still need to see the key points from the business model canvas in the application. If you attach your business plan, it should be no longer than two pages and should follow the business model canvas structure.</p>\r\n\r\n<p><strong>What do you mean by sustainability?</strong><br>\r\nWe mean the longevity of the business model over time. As a minimum we expect you to consider your plans for the development of the app/product for one year, and the strongest proposals are likely to show outline planning for the next 2-3 years, considering the time frame for development and future growth, including when and how you hope to access income revenues to support growth and meet the project costs and your long term goals.</p>\r\n\r\n<p><strong>Do I have to deliver within the timeframe set by Europeana? What happens if there are problems?</strong><br>\r\nIn your project planning, you should take into account the timeframe for delivery set by Europeana and, of course, thoroughly scope any potential problems and plan additional contingency time. You can deliver early but not late.</p>\r\n\r\n<p><strong>Can I make money from the product I develop for the challenge and from Europeana content?</strong><br>\r\nYes – we encourage the commercial (re-)use of Europeana’s openly licensed content.</p>\r\n\r\n<p><strong>Can Europeana give me advice on my proposal?</strong><br>\r\nWe are a small team and, out of fairness to all applicants, we can’t review or comment on your application or project idea. If you’re having problems with the Europeana API, you can access help via the API forum. You can get help and contact us <a href=\"mailto:reuse@europeana.eu\" target=\"_blank\">here</a>.</p>\r\n\r\n<p><strong>Who assesses the applications?</strong><br>\r\nFirst, the reuse team will check that your proposal against the challenge criteria. Then a panel of external experts\_and one member of the re-use team will assess eligible proposals using this <a href=\"https://docs.google.com/document/d/1zZd_Y-XtMU_LRqrfFAyZbs-jXZ5rLHFrTSWmJo601Bc/edit?usp=sharing\" target=\"_blank\">assessment framework</a>. The panel will also conduct Skype interviews with the shortlisted proposals and select the winning proposal(s). You will be immediately disqualified from the challenge if you approach any panel members for support.</p>\r\n\r\n<p><strong>Who owns the intellectual property in the product/service?</strong><br>\r\nYou own the intellectual property in whatever you develop. On your finished product and on any related website or materials you must use the ‘Made with Europeana’ logo.</p>\r\n\r\n<p><strong>Will I get all the funding I requested in my application?</strong><br>\r\nNot necessarily. It is possible that the panel recommends that the project should get funded but at a reduced amount.</p>\r\n\r\n<p><strong>What happens if my application is unsuccessful?</strong><br>\r\nIt is not possible to appeal the final decision of the panel or Europeana. We will endeavour to give feedback to all applicants.</p>\r\n\r\n<p><strong>What happens if I am selected?</strong><br>\r\nTo receive the funding, the winner will be required to sign a subcontract with us. A staged payment schedule and delivery points will be agreed between Europeana and the winning applicant(s).\_</p>\r\n\r\n<p><strong>Will you have more challenges?</strong><br>\r\nYes, we host one or two challenges each year. We also work in partnership with others to provide opportunities for the creative re-use of cultural heritage and Europeana content. Sign up to our newsletter, <a href=\"https://twitter.com/europeanalabs\" target=\"_blank\">follow us</a> on twitter and keep an eye on our <a href=\"https://pro.europeana.eu/what-we-do/creative-industries\" target=\"_blank\">website</a> to find out more.</p>\r\n"
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: '<p>Find answers to your questions about the Europeana Challenges</p>'
+        teaser_image:
+            file: Images/Blog_images/2018-02/2021633_AtlantisPubliek_detail_aspx_xmldescid_99662822.jpeg
+        teaser_attribution_title: 'Reünie van ex-TBC patiënten Mariaoord maakt veel los.'
+        teaser_attribution_creator: 'Janssens, Felix'
+        teaser_attribution_date: 4/4/1993
+        teaser_attribution_holder: 'Stadsarchief ''s-Hertogenbosch'
+        teaser_attribution_country: Netherlands
+        teaser_attribution_license: CC-BY-SA
+        teaser_attribution_link: 'https://www.europeana.eu/portal/en/record/2021633/AtlantisPubliek_detail_aspx_xmldescid_99662822.html?q=europeana_collectionName%3A2021633%2A'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: labs
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            -
+                value: '2379'
+                _id: persons/milena-popova
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: labs
+                name: Labs
+        markets:
+            -
+                slug: creative-industries
+                name: 'Creative industries'
+        categories:
+            -
+                slug: funding
+                name: Funding
+        tags:
+            -
+                slug: challenge
+                name: challenge
+        modules:
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: ''
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                selected_organisations: ''
+        _id: pages/challenges-frequently-asked-questions

@@ -1,0 +1,2986 @@
+__bolt_export_meta:
+    date: '2022-10-27T16:24:13+02:00'
+    version: 3.7.4
+    platform: mysql
+pages:
+    -
+        slug: edm-case-studies
+        datecreated: '2014-11-18 10:50:50'
+        datechanged: '2020-03-11 12:07:24'
+        datepublish: '2014-11-18 10:49:47'
+        datedepublish: ''
+        ownerid: 2
+        status: held
+        templatefields: {  }
+        title: 'EDM Case studies'
+        intro: "<p>How the Europeana Data Model has been implemented, specialised and re-used by organisations and projects across Europe.</p>\r\n"
+        body: null
+        pagefooter: null
+        pagetype: listing
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>How the Europeana Data Model has been implemented, specialised and re-used by organisations and projects across Europe.</p>\r\n"
+        teaser_image:
+            file: 'Images/Blog_images/EDM TF.png'
+        teaser_attribution_title: null
+        teaser_attribution_creator: null
+        teaser_attribution_date: null
+        teaser_attribution_holder: null
+        teaser_attribution_country: null
+        teaser_attribution_license: null
+        teaser_attribution_link: null
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages:
+            - pages/edm-case-studies
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories:
+            -
+                slug: data-publication
+                name: 'Data publication'
+        tags: {  }
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listing
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: tag
+                sources: pages
+                override_amount: 6
+                basetag: edm-case-study
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+        _id: pages/edm-case-studies
+    -
+        slug: enumerate
+        datecreated: '2015-03-18 16:40:13'
+        datechanged: '2022-06-13 15:30:53'
+        datepublish: '2015-03-18 16:17:42'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        title: 'ENUMERATE Observatory'
+        intro: "<p>The ENUMERATE Observatory provides a reliable baseline of statistical data about digitisation, digital preservation and online access to cultural heritage in Europe.\_</p>\r\n"
+        body: null
+        pagefooter: null
+        pagetype: landingpage-nohighlight
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>The ENUMERATE Observatory provides a reliable baseline of statistical data about digitisation, digital preservation and online access to cultural heritage in Europe.\_</p>\r\n"
+        teaser_image:
+            file: 'Images/Teaser_images/Enumerate Observatory.png'
+            title: 'An abacus'
+        teaser_attribution_title: 'abacus from "Map Modeling in Geography, including the use of sand, clay, putty, paper pulp, plaster of Paris ... Also Chalk Modeling in its adaptation to purposes of illustration. Fully illustrated"'
+        teaser_attribution_creator: null
+        teaser_attribution_date: '1895'
+        teaser_attribution_holder: 'The British Library'
+        teaser_attribution_country: 'United Kingdom'
+        teaser_attribution_license: Public-Domain
+        teaser_attribution_link: 'https://www.europeana.eu/en/item/9200387/BibliographicResource_3000117276557'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages:
+            - pages/enumerate
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories:
+            -
+                slug: data-publication
+                name: 'Data publication'
+        tags:
+            -
+                slug: digitisation
+                name: digitisation
+            -
+                slug: enumerate
+                name: enumerate
+            -
+                slug: statistics
+                name: statistics
+        modules:
+            -
+                enabled: enabled
+                title: 'ENUMERATE Observatory'
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>The ENUMERATE Observatory provides a reliable baseline of statistical data about digitisation, digital preservation and online access to cultural heritage in Europe. We collect statistics through surveys, reuse data from existing research, analyse and publish the results, develop indicators and collect your needs on intelligence.&nbsp;<a href=\"http://pro.europeana.eu/files/Europeana_Professional/Projects/Project_list/ENUMERATE/deliverables/DSI-2_Deliverable%20D4.4_Europeana_Report%20on%20ENUMERATE%20Core%20Survey%204.pdf\" target=\"_blank\">Click here for the&nbsp;report of the ENUMERATE Core Survey 4</a>.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: breaker
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1025'
+                        _id: resources/the-enumerate-self-assessment-tool
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: Dashboards
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '703'
+                        _id: pages/setting-the-context
+                    -
+                        value: '746'
+                        _id: pages/economic-impact
+                    -
+                        value: '747'
+                        _id: pages/digital-collections
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ENUMERATE
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '77'
+                        _id: pages/about-enumerate
+                    -
+                        value: '278'
+                        _id: pages/results
+                    -
+                        value: '80'
+                        _id: pages/enumerate-documentation
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnailsfive
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '77'
+                        _id: pages/about-enumerate
+                    -
+                        value: '78'
+                        _id: pages/surveys
+                    -
+                        value: '79'
+                        _id: pages/presenting-data
+                    -
+                        value: '80'
+                        _id: pages/enumerate-documentation
+                    -
+                        value: '616'
+                        _id: pages/impact-knowledge-bank
+                    -
+                        value: '748'
+                        _id: pages/enumerate-dashboards
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: pages/enumerate
+    -
+        slug: about-enumerate
+        datecreated: '2015-03-24 12:20:27'
+        datechanged: '2021-08-04 10:04:15'
+        datepublish: '2015-03-24 12:19:55'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        title: 'About ENUMERATE'
+        intro: "<p>In ENUMERATE, we create a reliable baseline of statistical data about digitisation, digital preservation and online access to cultural heritage in Europe.</p>\r\n"
+        body: "<h3><strong>Current activities and future plans\_</strong></h3>\r\n\r\n<p>ENUMERATE started in 2011 as a European Commission funded project, led by the Collections Trust in the UK. As of 2014, the project became part of Europeana v3 led by Collections Trust and the DEN Foundation in the Netherlands.</p>\r\n\r\n<p>The primary objective of ENUMERATE was and still is, to create a reliable baseline of statistical data about digitisation, digital preservation and online access to cultural heritage in Europe.</p>\r\n\r\n<p>Bringing the expertise built into the ENUMERATE project into the operational environment of Europeana has two advantages: the results of ENUMERATE will be continued through the work on Europeana, and Europeana gets a head start to run and coordinate quantitative surveys to digital cultural heritage services in Europe.</p>\r\n\r\n<p>ENUMERATE engages itself in the following activities:</p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Managing the ENUMERATE framework, documentation and dataplatform and ensure its sustainability.</p>\r\n    </li>\r\n    <li>\r\n    <p>Maintaining contacts with the National Coordinators.</p>\r\n    </li>\r\n    <li>\r\n    <p>Research and consultation on new topics for future surveys.</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3><strong>Partners</strong></h3>\r\n\r\n<ul>\r\n    <li>\r\n    <p><a href=\"http://www.den.nl/\" target=\"_blank\">DEN Foundation</a>, Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p><a href=\"http://www.collectionstrust.org.uk/\" target=\"_blank\">Collections Trust</a>, UK</p>\r\n    </li>\r\n    <li>\r\n    <p><a href=\"/page/national-coordinators\">National Coordinators</a></p>\r\n    </li>\r\n</ul>\r\n\r\n<h3><strong>Past activities</strong></h3>\r\n\r\n<p>ENUMERATE (v1.0) was funded by the ICT Policy Support Programme of the European Commission and was running for three years, from 2011-2014. It now continues as part of Europeana.</p>\r\n\r\n<p class=\"align-justify\">Statistical data on Europe’s digital heritage is tentative and scattered at best. For the European Commission and many of the agencies and actors in the field of culture there is no consistent evidence base for making strategic decisions on investments in digitisation.The first ENUMERATE project brought about major improvements in the quality and availability of intelligence about digital heritage. A consortium of 10 partners was at the heart of the ENUMERATE 'Thematic Network'. Together they initiated a Europe-wide community of practice to share statistical data and knowledge on the progress of digitisation.</p>\r\n\r\n<p>ENUMERATE<b> </b>built on the results of the NUMERIC project (2007-2009) and is now (since 2014) part of Europeana. NUMERIC was a ground breaking initiative to create a framework for the gathering of statistical data on digital cultural heritage. ENUMERATE improved and refined the methodology from NUMERIC and published the data online for re-use. ENUMERATE also took into account the results of a recent study of Collections Trust into the costs of digitising Europe’s cultural heritage. As part of Europeana, ENUMERATE will continue to improve the methodology, carry out surveys and improve the data platform.</p>\r\n\r\n<h3><b>ENUMERATE past project consortium</b>:</h3>\r\n\r\n<ul>\r\n    <li>\r\n    <p><a class=\"external-link-new-window\" href=\"http://www.collectionstrust.org.uk/\" title=\"Opens external link in new window\">Collections Trust</a>, UK: Nick Poole (Project Coordinator) &amp; Gordon McKenna (Project Manager);</p>\r\n    </li>\r\n    <li>\r\n    <p><a class=\"external-link-new-window\" href=\"http://www.den.nl/\" title=\"Opens external link in new window\">Digitaal Erfgoed Nederland (DEN)</a>, Netherlands: Marco de Niet, Gerhard Jan Nauta &amp; Sjoerd Bakker;</p>\r\n    </li>\r\n    <li>\r\n    <p><a class=\"external-link-new-window\" href=\"http://hv.spk-berlin.de/deutsch/index.php\" title=\"Opens external link in new window\">Stiftung Preussischer Kulturbesitz</a>, Germany: Monika Hagedorn-Saupe, Stefan Rohde-Enslin &amp; Axel Ermert;</p>\r\n    </li>\r\n    <li>\r\n    <p><a class=\"external-link-new-window\" href=\"http://www.digibis.com/\" title=\"Opens external link in new window\">Digibís</a>, Spain: Xavier Agenjo Bullón, Jesús L. Domínguez Muriel &amp; Francisca Hernández Carrascal;</p>\r\n    </li>\r\n    <li>\r\n    <p><a class=\"external-link-new-window\" href=\"http://www.faronet.be/\" title=\"Opens external link in new window\">FARO Vlaams Steunpunt voor Cultureel Erfgoed</a>, Belgium: Jeroen Walterus &amp; Alexander Van der Stichele;</p>\r\n    </li>\r\n    <li>\r\n    <p><a class=\"external-link-new-window\" href=\"http://www.culture.gouv.fr/\" title=\"Opens external link in new window\">Ministère de la Culture et de la Communication</a>, France: Sonia Zillhardt;</p>\r\n    </li>\r\n    <li>\r\n    <p><a class=\"external-link-new-window\" href=\"http://www.onb.ac.at/\" title=\"Opens external link in new window\">Österreichische Nationalbibliothek</a>, Austria: Max Kaiser, Bettina Kann &amp; Hans Petschar;</p>\r\n    </li>\r\n    <li>\r\n    <p><a class=\"external-link-new-window\" href=\"http://www.nuk.uni-lj.si/\" title=\"Opens external link in new window\">Narodna in univerzitetna knjižnica</a> (National and University Library), Slovenia: Gorazd Vodeb;</p>\r\n    </li>\r\n    <li>\r\n    <p><a class=\"external-link-new-window\" href=\"http://www.oszk.hu/\" title=\"Opens external link in new window\">Országos Széchényi Könyvtár</a><a class=\"external-link-new-window\" href=\"http://www.oszk.hu/\" title=\"Opens external link in new window\"> </a>(OSZK; National Széchényi Library), Hungary: Lajos Vonderviszt &amp; Gábor Veres;</p>\r\n    </li>\r\n    <li>\r\n    <p><a class=\"external-link-new-window\" href=\"http://search.theeuropeanlibrary.org/portal/en/index.html\" title=\"Opens external link in new window\">The European Library</a> (hosted by the Koninklijke Bibliotheek, Netherlands): Louise Edwards &amp; Julia Brungs.</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3><strong>Find out more</strong></h3>\r\n\r\n<ul>\r\n    <li>\r\n    <p><a href=\"https://pro.europeana.eu/page/national-coordinators\">National Co-ordinators</a></p>\r\n    </li>\r\n    <li>\r\n    <p><a href=\"https://pro.europeana.eu/page/methodology-guidance\">Methodology and Guidance</a></p>\r\n    </li>\r\n</ul>\r\n"
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: '<p>In ENUMERATE, we create a reliable baseline of statistical data about digitization, digital preservation and online access to cultural heritage in Europe.</p>'
+        teaser_image:
+            file: Images/Blog_images/2018-02/92062_BibliographicResource_1000126163074.jpeg
+            title: 'Portrait of Peeter van Avont, flanked by cherubs'
+        teaser_attribution_title: 'Avont, Peeter van'
+        teaser_attribution_creator: null
+        teaser_attribution_date: null
+        teaser_attribution_holder: 'Austrian National Library'
+        teaser_attribution_country: Austria
+        teaser_attribution_license: Public-Domain
+        teaser_attribution_link: 'https://www.europeana.eu/portal/en/record/92062/BibliographicResource_1000126163074.html?q=TYPE%3AIMAGE'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record: {  }
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories:
+            -
+                slug: statistics
+                name: Statistics
+            -
+                slug: projects
+                name: Projects
+        tags:
+            -
+                slug: digital-preservation
+                name: digital-preservation
+            -
+                slug: digitisation
+                name: digitisation
+        modules:
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: ''
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                selected_organisations: ''
+        _id: pages/about-enumerate
+    -
+        slug: surveys
+        datecreated: '2015-03-24 12:24:14'
+        datechanged: '2019-02-04 15:57:07'
+        datepublish: '2015-03-24 12:20:54'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        title: 'Collecting data'
+        intro: 'ENUMERATE conducts various surveys in Europe. Find out more about the methodology, guidelines and national coordinators.'
+        body: null
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: '<p>ENUMERATE conducts various surveys in Europe. Find out more about the methodology, guidelines and national coordinators.</p>'
+        teaser_image:
+            file: Images/Blog_images/2018-02/0969_repro.jpg
+        teaser_attribution_title: 'Shipwreck off the Coast'
+        teaser_attribution_creator: 'Jan Porcellis'
+        teaser_attribution_date: '1631'
+        teaser_attribution_holder: Mauritshuis
+        teaser_attribution_country: Netherlands
+        teaser_attribution_license: Public-Domain
+        teaser_attribution_link: 'https://www.europeana.eu/portal/en/record/2021672/resource_document_mauritshuis_969.html?q='
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            -
+                value: '1899'
+                _id: persons/stephanie-teunisse
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories:
+            -
+                slug: statistics
+                name: Statistics
+            -
+                slug: projects
+                name: Projects
+        tags:
+            -
+                slug: digitization
+                name: digitization
+            -
+                slug: digital-preservation
+                name: digital-preservation
+            -
+                slug: enumerate
+                name: enumerate
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '274'
+                        _id: pages/methodology-guidance
+                    -
+                        value: '275'
+                        _id: pages/national-coordinators
+                    -
+                        value: '273'
+                        _id: pages/past-surveys
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                selected_organisations: ''
+        _id: pages/surveys
+    -
+        slug: presenting-data
+        datecreated: '2015-03-24 12:25:26'
+        datechanged: '2020-03-11 12:39:30'
+        datepublish: '2015-03-24 12:25:13'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        title: 'Presenting data ENUMERATE'
+        intro: "<p>Find all the raw data, reports and results and our benchmarking tool in this section and reuse the data for your own research.</p>\r\n"
+        body: null
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>Find all the raw data, reports and results and our benchmarking tool in this section and reuse the data for your own research.</p>\r\n"
+        teaser_image:
+            file: Images/Blog_images/2018-02/0957_repro.jpg
+        teaser_attribution_title: 'Study of Two Brazilian Tortoises'
+        teaser_attribution_creator: 'Albert Eckhout'
+        teaser_attribution_date: '1640'
+        teaser_attribution_holder: Mauritshuis
+        teaser_attribution_country: Netherlands
+        teaser_attribution_license: Public-Domain
+        teaser_attribution_link: 'https://www.europeana.eu/portal/en/record/2021672/resource_document_mauritshuis_957.html?q='
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            -
+                value: '1899'
+                _id: persons/stephanie-teunisse
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories:
+            -
+                slug: statistics
+                name: Statistics
+            -
+                slug: projects
+                name: Projects
+        tags:
+            -
+                slug: digital-preservation
+                name: digital-preservation
+            -
+                slug: enumerate
+                name: enumerate
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '278'
+                        _id: pages/results
+                    -
+                        value: '532'
+                        _id: pages/raw-data
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                selected_organisations: ''
+        _id: pages/presenting-data
+    -
+        slug: enumerate-documentation
+        datecreated: '2015-03-24 12:26:10'
+        datechanged: '2021-08-04 10:13:55'
+        datepublish: '2015-03-24 12:25:42'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        title: 'ENUMERATE project archive'
+        intro: "<p>The first ENUMERATE survey was carried out in 2012. This bi-annual survey collects data from cultural heritage institutions across Europe, with the aim creating\_a reliable baseline of statistical data about digitisation, digital preservation and online access to cultural heritage in Europe. In this ENUMERATE Project Archive you can find all previous project documentation which is no longer part of the ongoing project.</p>\r\n"
+        body: null
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>In this ENUMERATE Project Archive you can find previous project documentation which is no longer part of the ongoing project.</p>\r\n"
+        teaser_image:
+            file: Images/Blog_images/2018-02/947_repro.jpg
+            title: 'Still life with a lit candle, glass and book on a table'
+        teaser_attribution_title: 'Still Life with Lighted Candle'
+        teaser_attribution_creator: 'Pieter Claesz'
+        teaser_attribution_date: '1627'
+        teaser_attribution_holder: Mauritshuis
+        teaser_attribution_country: Netherlands
+        teaser_attribution_license: Public-Domain
+        teaser_attribution_link: 'https://www.europeana.eu/portal/en/record/2021672/resource_document_mauritshuis_947.html?q='
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record: {  }
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories:
+            -
+                slug: statistics
+                name: Statistics
+            -
+                slug: projects
+                name: Projects
+        tags:
+            -
+                slug: digital-preservation
+                name: digital-preservation
+            -
+                slug: enumerate
+                name: enumerate
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '280'
+                        _id: pages/enumerate-presentations
+                    -
+                        value: '279'
+                        _id: pages/enumerate-project-documentation
+                    -
+                        value: '281'
+                        _id: pages/related-information
+                    -
+                        value: '91'
+                        _id: pages/digital-heritage-indicators
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                selected_organisations: ''
+        _id: pages/enumerate-documentation
+    -
+        slug: foundation
+        datecreated: '2015-09-01 13:55:43'
+        datechanged: '2022-08-22 06:27:41'
+        datepublish: '2015-09-01 13:54:14'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        title: 'Europeana Foundation'
+        intro: null
+        body: null
+        pagefooter: null
+        pagetype: landingpage-nohighlight
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>An independent, non-profit organisation that operates the Europeana platform and works with other digital initiatives that put cultural heritage to good use in the world.</p>\r\n"
+        teaser_image:
+            file: 'Images/New_pro_images_March2020/Image updates/Europeana Foundation.png'
+            title: 'A group of people standing on a railway station platform'
+        teaser_attribution_title: 'A group of civilians standing on a railway station platform'
+        teaser_attribution_creator: 'Desmond Fitzgerald'
+        teaser_attribution_date: null
+        teaser_attribution_holder: 'UCD School of History and Archives'
+        teaser_attribution_country: Ireland
+        teaser_attribution_license: CC-BY-NC-SA
+        teaser_attribution_link: 'https://www.europeana.eu/portal/nl/record/2064501/https___data_ucd_ie_data_ucdlib_30799.html'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            -
+                value: '2366'
+                _id: persons/shadi-ardalan
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: 'Europeana Foundation'
+        pages: {  }
+        posts:
+            - posts/europeana-opens-up-full-dataset-for-re-use
+            - posts/happy-new-year-from-the-europeana-foundation
+            - posts/martina-bagnoli-elected-to-be-chair-of-the-europeana-foundation
+            - posts/europeana-foundation-business-plan-2022
+            - posts/elisabeth-niggemann-and-joke-van-der-leeuw-roord-reflect-on-their-time-on-the-europeana-foundation-board
+            - posts/statement-of-solidarity-with-ukraine
+            - posts/multi-million-euro-partnership-to-strengthen-europe-s-cultural-and-creative-sectors-and-industries
+            - posts/join-our-working-group-to-support-the-digital-cultural-heritage-of-ukraine
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories:
+            -
+                slug: strategy
+                name: Strategy
+        tags:
+            -
+                slug: governing-board
+                name: governing_board
+        modules:
+            -
+                enabled: enabled
+                title: 'Europeana Foundation'
+                subtitle: ''
+                anchortitle: 'Europeana Foundation'
+                templates: body
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">The Europeana Foundation is an independent, non-profit organisation that operates <a href=\"https://pro.europeana.eu/about-us/mission\">the Europeana platform</a> and contributes to other digital initiatives that put cultural heritage to good use in the world. Our work helps to develop an open, knowledgeable and creative society.&nbsp;</p>\r\n\r\n<p>Access to cultural heritage is vital to humankind - to our knowledge and understanding of who we are, where we’ve come from and what we can become. At the Europeana Foundation we work to democratise access to culture - digitally - so that everyone in our society is empowered to embrace diversity and flourish.</p>\r\n\r\n<p>We do this collaboratively. We cross borders - and where necessary, break them down. Our range of projects and partnerships create positive change in and around the cultural heritage sector through new shared services, models and frameworks that contribute to the digital transformation and sustainability of our diverse sector.&nbsp;</p>\r\n\r\n<p>We promote the use of digital technology that makes cultural heritage online accessible, traceable and trustworthy, which in turn means people can explore it, use it and learn from it with confidence.&nbsp;</p>\r\n\r\n<p>We ensure our work is relevant to the world we live in - and the world we want to build - by aligning it with the UN’s Sustainable Development Goals.&nbsp;</p>\r\n\r\n<p>The Europeana Foundation and a consortium of 21&nbsp;partners are tasked by the European Commission to run the Europeana platform, in close collaboration with the Europeana Aggregators’ Forum and the Europeana Network Association.&nbsp;</p>\r\n\r\n<p>The Europeana Foundation employs approximately 60 staff members representing around 20 different nationalities based in our main office in The Hague. The organisation is led by <a href=\"https://pro.europeana.eu/person/harry-verwayen\">Harry Verwayen</a>, General Director, and steered by a Supervisory&nbsp;Board from cultural and scientific heritage organisations across Europe chaired by <a data-saferedirecturl=\"https://www.google.com/url?q=https://pro.europeana.eu/person/martina-bagnoli&amp;source=gmail&amp;ust=1644591830645000&amp;usg=AOvVaw1zskXoWf66bq3K78hb4Z2O\" href=\"https://pro.europeana.eu/person/martina-bagnoli\" target=\"_blank\">Martina Bagnoli</a>.&nbsp;The Board of Directors and the Supervisory Board are supported by an Advisory Board.</p>\r\n"
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: disabled
+                title: 'Europeana Foundation Governance'
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><meta charset=\"utf-8\" />The Europeana Foundation aims to put Europe’s rich cultural heritage to good use in the world because it believes that cultural heritage empowers us to embrace our diversity and flourish.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The Europeana Foundation is an independently governed, non-profit organisation. It leads the consortium of partners that delivers the Core Service provided by the Europeana platform. It drives capacity building for the digital transformation of the cultural heritage sector.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The Europeana Foundation is based in The Hague, Netherlands, and has over 50 dedicated staff members representing 20 different nationalities. The organisation is steered by a Governing Board of 20 experts from cultural and scientific heritage organisations across Europe and led by <a href=\"/person/harry-verwayen\">Harry Verwayen</a>, Executive Director.&nbsp;</p>\r\n"
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: 'Annual report and business plan'
+                templates: breakerdouble
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2438'
+                        _id: posts/europeana-a-look-back-at-2021
+                    -
+                        value: '2417'
+                        _id: posts/europeana-foundation-business-plan-2022
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Board of Directors'
+                subtitle: ''
+                anchortitle: 'Board of Directors'
+                templates: body
+                body: "<p>The Board of Directors manages the Foundation and sets its financial and strategic directions in consultation with the Supervisory Board and the Advisory Board.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnails
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: persons
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons:
+                    -
+                        value: '2394'
+                        _id: persons/harry-verwayen
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Supervisory Board'
+                subtitle: ''
+                anchortitle: 'Supervisory Board'
+                templates: body
+                body: "<p dir=\"ltr\">Europeana Foundation Supervisory Board members supervise the management of the Foundation and help set strategy and policy. Members are legally and financially responsible for the activities of the Foundation. The Supervisory Board is responsible for appointing the Board of Directors. They meet at least five times a year and their participation on the board is voluntary and unpaid.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnails
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: persons
+                override_amount: 2
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: 'Founding Member'
+                selected_persons:
+                    -
+                        value: '2448'
+                        _id: persons/elisabeth-niggemann
+                    -
+                        value: '843'
+                        _id: persons/monika-hagedorn-saupe
+                    -
+                        value: '863'
+                        _id: persons/joke-van-der-leeuw-roord
+                    -
+                        value: '2218'
+                        _id: persons/agnes-magnien
+                    -
+                        value: '2446'
+                        _id: persons/brid-dooley
+                    -
+                        value: '2321'
+                        _id: persons/elsbeth-kwant
+                    -
+                        value: '560'
+                        _id: persons/frederik-truyen
+                    -
+                        value: '704'
+                        _id: persons/georgia-angelaki
+                    -
+                        value: '2219'
+                        _id: persons/jelena-rubic
+                    -
+                        value: '5217'
+                        _id: persons/julien-roche
+                    -
+                        value: '1744'
+                        _id: persons/karin-van-honacker
+                    -
+                        value: '233'
+                        _id: persons/marco-de-niet
+                    -
+                        value: '4482'
+                        _id: persons/minna-karvonen
+                    -
+                        value: '4652'
+                        _id: persons/sara-di-giorgio
+                    -
+                        value: '4485'
+                        _id: persons/sophie-engelhardt
+                    -
+                        value: '504'
+                        _id: persons/stephan-bartholmei
+                    -
+                        value: '837'
+                        _id: persons/susan-hazan
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnails
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: persons
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons:
+                    -
+                        value: '7819'
+                        _id: persons/martina-bagnoli
+                    -
+                        value: '233'
+                        _id: persons/marco-de-niet
+                    -
+                        value: '860'
+                        _id: persons/kerstin-herlt
+                    -
+                        value: '2446'
+                        _id: persons/brid-dooley
+                    -
+                        value: '8022'
+                        _id: persons/wim-nieuwenhuijse
+                    -
+                        value: '927'
+                        _id: persons/taja-vovk-van-gaal
+                    -
+                        value: '6692'
+                        _id: persons/anne-torreggiani
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Advisory Board'
+                subtitle: ''
+                anchortitle: 'Advisory Board'
+                templates: body
+                body: "<p>Europeana Foundation Advisory Board members provide expert insight, knowledge and recommendations relating to the strategic direction of the Foundation. The Advisory Board represents the voice of the sector at large, with members reflecting a wide range of countries, domains and perspectives. Together with the Board of Directors and the Supervisory Board, they are committed to considering, understanding and representing diversity in all its forms and are determined to further increase diversity within the board itself over time. Members have no legal or financial responsibility for the activities of the Foundation. They meet at least twice per year and their participation on the board is voluntary and unpaid.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnails
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: persons
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons:
+                    -
+                        value: '704'
+                        _id: persons/georgia-angelaki
+                    -
+                        value: '6788'
+                        _id: persons/gaelle-bequet
+                    -
+                        value: '5489'
+                        _id: persons/michael-peter-edson
+                    -
+                        value: '6751'
+                        _id: persons/medhavi-gandhi
+                    -
+                        value: '5191'
+                        _id: persons/david-haskiya
+                    -
+                        value: '837'
+                        _id: persons/susan-hazan
+                    -
+                        value: '855'
+                        _id: persons/paul-keller
+                    -
+                        value: '8446'
+                        _id: persons/ilja-kocian
+                    -
+                        value: '2321'
+                        _id: persons/elsbeth-kwant
+                    -
+                        value: '5619'
+                        _id: persons/vlatka-lemic
+                    -
+                        value: '1406'
+                        _id: persons/marie-veronique-leroi
+                    -
+                        value: '475'
+                        _id: persons/franco-niccolucci
+                    -
+                        value: '864'
+                        _id: persons/johan-oomen
+                    -
+                        value: '6791'
+                        _id: persons/julia-pagel
+                    -
+                        value: '6774'
+                        _id: persons/jeftha-pattikawa
+                    -
+                        value: '5964'
+                        _id: persons/sneska-quaedvlieg-mihailovic
+                    -
+                        value: '323'
+                        _id: persons/marco-rendina
+                    -
+                        value: '857'
+                        _id: persons/merete-sanderhoff
+                    -
+                        value: '6787'
+                        _id: persons/loic-tallon
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Documents related to the governance of the Europeana Foundation'
+                subtitle: ''
+                anchortitle: Documents
+                templates: fileslisting
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: Europeana_Professional/Governing_Board
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: pages/foundation
+    -
+        slug: members-council
+        datecreated: '2015-09-01 14:01:26'
+        datechanged: '2022-01-18 07:20:38'
+        datepublish: '2015-09-01 13:59:35'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        title: 'Members Council'
+        intro: "<p>The Members Council decides on the Europeana Network Association’s priorities, steers its activities and ensures general progress against the Europeana Strategy.</p>\r\n"
+        body: "<p>The Network Association Members Council is elected by members of the network, like yourself.</p>\r\n\r\n<p><strong>What is their role?</strong></p>\r\n\r\n<p>They will be your active representative in all of Europeana’s activities, including how best to prioritize issues, and setting the agenda for our Annual General Meeting.\_You can find an overview of all their responsibilities in our\_<a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/General/Councillor-Terms-of-Reference.pdf\" target=\"_blank\">Councillor Terms of Reference</a>.\_</p>\r\n\r\n<p><strong>Would you like to join them?</strong></p>\r\n\r\n<p>If you’re a Network Association Member who would like to be on the Members Council, then why not run for election? Contact us directly for more details or find out more through the\_<a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-statutes.pdf\" target=\"_blank\">Europeana Network Association Statutes</a>, <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-bylaws.pdf\" target=\"_blank\">Bylaws</a> and <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Elections%20documents/Europeana%20Network%20Association%20Procedures.pdf?984152f69e\" target=\"_blank\">Procedures</a>.</p>\r\n"
+        pagefooter: null
+        pagetype: landingpage-nohighlight
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>The Members Council decides on the Europeana Network Association’s priorities, steers its activities and ensures general progress against the Europeana Strategy.</p>\r\n"
+        teaser_image:
+            file: Images/New_pro_images_March2020/49163569618_60c51af8cf_c.jpg
+            title: 'A seated crowd of people watch a presentation'
+        teaser_attribution_title: 'Europeana 2019'
+        teaser_attribution_creator: 'Sebastiaan ter Burg'
+        teaser_attribution_date: '2019'
+        teaser_attribution_holder: null
+        teaser_attribution_country: Netherlands
+        teaser_attribution_license: CC-BY
+        teaser_attribution_link: null
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            -
+                value: '2359'
+                _id: persons/zuzana-malicherova
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: 'members council, ena members council, europeana network association members council, members, members'' council'
+        pages: {  }
+        posts:
+            - posts/professionals-in-focus-marco-streefkerk
+            - posts/looking-back-at-the-ena-members-council-in-2020
+            - posts/professionals-in-focus-milena-dobreva
+            - posts/professionals-in-focus-nienke-van-schaverbeke
+            - posts/come-forward-in-the-europeana-network-association-members-council-elections
+            - posts/professionals-in-focus-antonio-davide-madonna
+        data: {  }
+        projects:
+            - projects/ena-membership-working-group
+            - projects/governance-working-group
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories:
+            -
+                slug: network
+                name: Network
+        tags:
+            -
+                slug: members-council
+                name: members_council
+        modules:
+            -
+                enabled: enabled
+                title: 'Members Council'
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>Each year Europeana Network Association members elect a governing body of 36 representatives to form the Members Council. The Members Council decides on the Association’s priorities, steers its activities and ensures general progress against the Europeana Strategy. Meet the current Council below!</p>\r\n\r\n<p>All Europeana Network Association Members can run for election as a Members Councillor - find out more through the Europeana Network Association <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-statutes.pdf\" target=\"_blank\">Statutes</a>, <a href=\"http://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-bylaws.pdf\" target=\"_blank\">Bylaws</a>, <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Elections%20documents/Europeana%20Network%20Association%20Procedures.pdf?984152f69e\" target=\"_blank\">Procedures</a> and <a href=\"http://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/General/Councillor-Terms-of-Reference.pdf\" target=\"_blank\">Councillor Terms of Reference</a>.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: breaker
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '89'
+                        _id: pages/members-council-election-candidates
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2395'
+                        _id: posts/europeana-network-association-welcomes-its-27-new-members-councillors
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnails
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: alphabetical
+                sources: persons
+                override_amount: 50
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: 'Members Council Member'
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: pages/members-council
+    -
+        slug: members-council-election-candidates
+        datecreated: '2015-09-29 16:02:24'
+        datechanged: '2021-10-15 11:33:51'
+        datepublish: '2015-09-29 16:02:10'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        title: 'Members Council candidates'
+        intro: "<p>Find out more about candidates for upcoming Members Council elections.</p>\r\n"
+        body: "<p>Below you can find the\_candidates who have come forward for the 2021 Members Council Elections!\_The candidates have an opportunity to campaign and will be seeking your support from now until the elections kick-off during the ENA <a href=\"https://pro.europeana.eu/event/ena-general-assembly-2021\">General Assembly meeting 2021</a> on 3 November.<b>\_</b>Members will then have one week until 10 November to select up to 27 of their preferred candidates in the online voting.\_</p>\r\n\r\n<p>You can find the list of the current Members Council members\_<a href=\"https://pro.europeana.eu/network-association/members-council\" target=\"_blank\">here</a>, and explore previous elections through the news below.\_</p>\r\n\r\n<p>If you have any questions, do not hesitate to get in touch with the Elections and Voting Committee at\_<a href=\"mailto:network@europeana.eu\" target=\"_blank\">network@europeana.eu</a>.</p>\r\n"
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>Find out more about candidates for upcoming Members Council elections.</p>\r\n"
+        teaser_image:
+            file: 'Images/Blog_images/2020-09/ENA MC election launch teaser image.png'
+            title: 'A group of dancers pose while performing'
+        teaser_attribution_title: '0.2 IBM 50 år i Norge'
+        teaser_attribution_creator: null
+        teaser_attribution_date: null
+        teaser_attribution_holder: Telemuseet
+        teaser_attribution_country: Norway
+        teaser_attribution_license: CC-BY-SA
+        teaser_attribution_link: 'https://www.europeana.eu/en/item/2022608/TELE_TELE_IBM_2012_06047'
+        image:
+            alt: 'A group of dancers pose while performing'
+            file: 'Images/Blog_images/2020-09/ENA MC Election launch main image.png'
+        image_attribution_title: '0.2 IBM 50 år i Norge'
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: Telemuseet
+        image_attribution_country: Norway
+        image_attribution_license: CC-BY-SA
+        image_attribution_link: 'https://www.europeana.eu/en/item/2022608/TELE_TELE_IBM_2012_06047'
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: pro
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            -
+                value: '2359'
+                _id: persons/zuzana-malicherova
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts:
+            - posts/2020-members-council-elections-presenting-the-candidates
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories:
+            -
+                slug: network
+                name: Network
+        tags:
+            -
+                slug: elections
+                name: elections
+            -
+                slug: members-council
+                name: members-council
+        modules:
+            -
+                enabled: disabled
+                title: 'The candidates'
+                subtitle: ''
+                anchortitle: ''
+                templates: listingtwocol
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: alphabetical
+                sources: persons
+                override_amount: 90
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: 'MC Election Candidate'
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: 'The candidates'
+                subtitle: ''
+                anchortitle: ''
+                templates: listingtwocol
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: persons
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons:
+                    -
+                        value: '200'
+                        _id: persons/henk-alkemade
+                    -
+                        value: '7032'
+                        _id: persons/stephanie-bertrand
+                    -
+                        value: '6268'
+                        _id: persons/bart-boskaljon
+                    -
+                        value: '7083'
+                        _id: persons/alexandra-bountali
+                    -
+                        value: '4617'
+                        _id: persons/flavia-bruni
+                    -
+                        value: '6104'
+                        _id: persons/jochen-buechel
+                    -
+                        value: '7393'
+                        _id: persons/jorge-cardoso
+                    -
+                        value: '1874'
+                        _id: persons/steven-claeyssens
+                    -
+                        value: '6876'
+                        _id: persons/francesca-condorelli
+                    -
+                        value: '7762'
+                        _id: persons/arnaldo-costeira
+                    -
+                        value: '1629'
+                        _id: persons/marinela-covaci
+                    -
+                        value: '4587'
+                        _id: persons/robert-davies
+                    -
+                        value: '335'
+                        _id: persons/chris-de-loof
+                    -
+                        value: '6044'
+                        _id: persons/giada-di-trinca
+                    -
+                        value: '7016'
+                        _id: persons/maria-ana-silva-dias
+                    -
+                        value: '7172'
+                        _id: persons/morgan-ditchburn
+                    -
+                        value: '2459'
+                        _id: persons/killian-downing
+                    -
+                        value: '827'
+                        _id: persons/maria-drabczyk
+                    -
+                        value: '7790'
+                        _id: persons/emma-duester
+                    -
+                        value: '7148'
+                        _id: persons/moataz-elmekawy
+                    -
+                        value: '5100'
+                        _id: persons/vincenza-ferrara
+                    -
+                        value: '4582'
+                        _id: persons/lynda-frenois
+                    -
+                        value: '1610'
+                        _id: persons/tomasz-gruszkowski
+                    -
+                        value: '6067'
+                        _id: persons/matthijs-holwerda
+                    -
+                        value: '1532'
+                        _id: persons/melanie-imming
+                    -
+                        value: '5908'
+                        _id: persons/nina-janz
+                    -
+                        value: '6600'
+                        _id: persons/rebecca-kahn
+                    -
+                        value: '451'
+                        _id: persons/radka-kalcheva
+                    -
+                        value: '6360'
+                        _id: persons/tim-keefe
+                    -
+                        value: '6289'
+                        _id: persons/ping-kong
+                    -
+                        value: '5251'
+                        _id: persons/loa-steinunn-kristjansdottir
+                    -
+                        value: '7855'
+                        _id: persons/denise-melanie-lagrosa
+                    -
+                        value: '7841'
+                        _id: persons/maurizio-lana
+                    -
+                        value: '6436'
+                        _id: persons/blessing-lawal
+                    -
+                        value: '7492'
+                        _id: persons/pedro-pereira-leite
+                    -
+                        value: '7098'
+                        _id: persons/antonio-davide-madonna
+                    -
+                        value: '276'
+                        _id: persons/marianna-marcucci
+                    -
+                        value: '5778'
+                        _id: persons/dorina-marin
+                    -
+                        value: '412'
+                        _id: persons/juozas-markauskas
+                    -
+                        value: '6943'
+                        _id: persons/radoslav-markov
+                    -
+                        value: '4734'
+                        _id: persons/anna-maria-marras
+                    -
+                        value: '7126'
+                        _id: persons/neda-madarac
+                    -
+                        value: '7419'
+                        _id: persons/alexandra-milanova
+                    -
+                        value: '5315'
+                        _id: persons/dhurata-myrtollari
+                    -
+                        value: '1201'
+                        _id: persons/clemens-neudecker
+                    -
+                        value: '7825'
+                        _id: persons/moritz-neumueller
+                    -
+                        value: '6610'
+                        _id: persons/serge-noiret
+                    -
+                        value: '5437'
+                        _id: persons/uxio-novoneyra-rei
+                    -
+                        value: '5676'
+                        _id: persons/tatyana-oleinik
+                    -
+                        value: '5551'
+                        _id: persons/eleni-panagou
+                    -
+                        value: '7824'
+                        _id: persons/pawel-pokutycki
+                    -
+                        value: '5873'
+                        _id: persons/alina-mirela-popa
+                    -
+                        value: '38'
+                        _id: persons/cristina-roiu
+                    -
+                        value: '814'
+                        _id: persons/vassiliki-sakka
+                    -
+                        value: '1569'
+                        _id: persons/dejan-sandic
+                    -
+                        value: '6551'
+                        _id: persons/sadik-shahadu
+                    -
+                        value: '7293'
+                        _id: persons/supriya-sharma
+                    -
+                        value: '6636'
+                        _id: persons/gulsu-simsek-franci
+                    -
+                        value: '7802'
+                        _id: persons/panagiota-skouroliakou
+                    -
+                        value: '1771'
+                        _id: persons/eugene-smyth
+                    -
+                        value: '259'
+                        _id: persons/alexandru-stan
+                    -
+                        value: '7215'
+                        _id: persons/ana-stjelja
+                    -
+                        value: '5549'
+                        _id: persons/beatriz-tadeo-fuica
+                    -
+                        value: '5300'
+                        _id: persons/sofie-taes
+                    -
+                        value: '1630'
+                        _id: persons/olga-terenetska
+                    -
+                        value: '7543'
+                        _id: persons/sasa-tkalec
+                    -
+                        value: '2466'
+                        _id: persons/dafydd-tudur
+                    -
+                        value: '4868'
+                        _id: persons/altheo-valentini
+                    -
+                        value: '1188'
+                        _id: persons/hans-van-der-linden
+                    -
+                        value: '7844'
+                        _id: persons/ines-vodopivec
+                    -
+                        value: '7750'
+                        _id: persons/sophie-wehtje
+                    -
+                        value: '5416'
+                        _id: persons/vassiliki-yiannou
+                    -
+                        value: '4775'
+                        _id: persons/gian-piero-zarri
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: 'Elections Updates'
+                subtitle: ''
+                anchortitle: ''
+                templates: listingnews
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: tag
+                sources: posts
+                override_amount: 2
+                basetag: elections
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2195'
+                        _id: posts/stand-for-election-to-the-europeana-network-association-members-council
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: pages/members-council-election-candidates
+    -
+        slug: digital-heritage-indicators
+        datecreated: '2016-06-07 09:18:33'
+        datechanged: '2021-08-04 10:21:13'
+        datepublish: '2016-06-07 09:16:16'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        title: 'Digital heritage indicators'
+        intro: "<p>The digital heritage indicators provide statistics about various aspects of digitising, maintaining and publishing digital cultural heritage. The indicators are divided in four main themes: supply, demand , economics and sustainability. This work is part of the <a href=\"https://pro.europeana.eu/page/enumerate\">ENUMERATE project</a>.</p>\r\n"
+        body: null
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>The digital heritage indicators provide statistics about various aspects of digitising, maintaining and publishing digital cultural heritage. This work is part of the ENUMERATE project.</p>\r\n"
+        teaser_image:
+            file: Images/Blog_images/2018-03/2063604_DEN_280_014.jpg
+            title: 'A woman sitting at a table reading a book'
+        teaser_attribution_title: 'The Artist''s Mother Ane Hedvig Brøndum in the Blue Room'
+        teaser_attribution_creator: 'Anna Ancher'
+        teaser_attribution_date: null
+        teaser_attribution_holder: 'Statens Museum for Kunst'
+        teaser_attribution_country: Denmark
+        teaser_attribution_license: CC0
+        teaser_attribution_link: 'https://www.europeana.eu/portal/nl/record/2063604/DEN_280_014.html?q=TYPE%3AIMAGE'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record: {  }
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories:
+            -
+                slug: statistics
+                name: Statistics
+        tags:
+            -
+                slug: digitisation
+                name: digitisation
+            -
+                slug: enumerate
+                name: enumerate
+        modules:
+            -
+                enabled: enabled
+                title: Supply
+                subtitle: ''
+                anchortitle: Supply
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '337'
+                        _id: pages/institutions-with-digital-heritage-collections
+                    -
+                        value: '336'
+                        _id: pages/digitisation-policies
+                    -
+                        value: '335'
+                        _id: pages/digital-reproduction-of-analogue-collections
+                    -
+                        value: '348'
+                        _id: pages/digitisation
+                    -
+                        value: '325'
+                        _id: pages/metadata-cataloguing
+                    -
+                        value: '334'
+                        _id: pages/born-digital-heritage-collections
+                    -
+                        value: '339'
+                        _id: pages/online-access-to-digital-heritage
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: Demand
+                subtitle: ''
+                anchortitle: Demand
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    - {  }
+                    -
+                        value: '338'
+                        _id: pages/monitoring-access-and-use-of-digital-collections
+                    -
+                        value: '330'
+                        _id: pages/importance-of-types-of-use-of-digital-collections
+                    - {  }
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: Economics
+                subtitle: ''
+                anchortitle: Economics
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '341'
+                        _id: pages/staff-creating-and-preserving-digital-collections
+                    -
+                        value: '328'
+                        _id: pages/incidental-versus-structural-costs
+                    -
+                        value: '326'
+                        _id: pages/in-house-versus-outsourced-costs
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: Sustainability
+                subtitle: ''
+                anchortitle: Sustainability
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    - {  }
+                    -
+                        value: '332'
+                        _id: pages/use-of-international-preservation-standards
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+        _id: pages/digital-heritage-indicators
+    -
+        slug: facilitating-innovation
+        datecreated: '2015-07-29 13:29:52'
+        datechanged: '2020-03-10 15:32:33'
+        datepublish: '2015-07-29 13:29:01'
+        datedepublish: ''
+        ownerid: 2
+        status: held
+        templatefields: {  }
+        title: Funding
+        intro: "<p>Take advantage of various\_funding strategies to bring your idea to market.</p>\r\n"
+        body: "<p>We have designed a simple incubation process specifically for cultural heritage products, with services meeting your needs at every stage of the growth from an idea to a market-ready project.</p>\r\n\r\n<ol>\r\n<li>Co-creation</li>\r\n    <li>Crowd and match funding</li>\r\n    <li>Grants</li>\r\n    <li>Challenges</li>\r\n</ol>"
+        pagefooter: null
+        pagetype: landingpage-nohighlight
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>Take advantage of various\_funding strategies to bring your idea to market.</p>\r\n"
+        teaser_image:
+            file: 'Images/Europeana_Creative_images/Europeana_WP7 PPTtemp_Backgrounds_slide22.jpg'
+        teaser_attribution_title: 'Fauna. Mamífers: primats: cercopitecs, còlobs i mangabeis (changed)'
+        teaser_attribution_creator: 'Jordi Sabater Pi'
+        teaser_attribution_date: null
+        teaser_attribution_holder: 'Universität de Barcelona'
+        teaser_attribution_country: Spain
+        teaser_attribution_license: CC-BY
+        teaser_attribution_link: 'https://www.europeana.eu/portal/en/record/91920/u__sabaterpi_685.html?q=who%3A+Jordi+Sabater+Pi'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: academic-research
+                name: 'Academic Research'
+            -
+                slug: creative-industries
+                name: 'Creative industries'
+            -
+                slug: education
+                name: Education
+        categories:
+            -
+                slug: funding
+                name: Funding
+        tags: {  }
+        modules:
+            -
+                enabled: enabled
+                title: Funding
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>Even the best ideas sometimes need help to get from beermat concept to market-ready product. You've got the ideas, we've got the support. Our&nbsp;simple incubation process is specifically for cultural heritage products, with services meeting your needs every step of the way.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnails
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages:
+                    -
+                        value: '121'
+                        _id: pages/co-creation
+                    -
+                        value: '487'
+                        _id: pages/grants-programme
+                    -
+                        value: '488'
+                        _id: pages/take-the-challenge
+                    -
+                        value: '486'
+                        _id: pages/crowd-and-matchfunding
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+        _id: pages/facilitating-innovation
+    -
+        slug: apps
+        datecreated: '2015-07-30 09:51:49'
+        datechanged: '2020-03-10 15:33:46'
+        datepublish: '2015-07-30 09:50:40'
+        datedepublish: ''
+        ownerid: 2
+        status: published
+        templatefields: {  }
+        title: Apps
+        intro: "<p>The possibilities for using open cultural heritage in new apps, products and services are almost limitless.\_Explore our showcase\_of apps using the Europeana content and API.</p>\r\n"
+        body: null
+        pagefooter: null
+        pagetype: listing
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>\_Explore our showcase\_of apps using the Europeana API.</p>\r\n"
+        teaser_image:
+            file: Images/Blog_images/2018-02/916118_S_TEK_photo_TEKA0158040.jpeg
+        teaser_attribution_title: 'Skioptikonbild från institutionen för fotografi vid Kungliga Tekniska Högskolan. Motiv föreställande utsikt över landskap. Bilden är troligen tagen av John Hertzberg under en resa i Europa.'
+        teaser_attribution_creator: 'Hertzberg, John'
+        teaser_attribution_date: '1900-01-01 - 1930-01-01'
+        teaser_attribution_holder: 'Tekniska museet'
+        teaser_attribution_country: Sweden
+        teaser_attribution_license: Public-Domain
+        teaser_attribution_link: 'https://www.europeana.eu/portal/nl/record/916118/S_TEK_photo_TEKA0158040.html?q=who%3A%28Hertzberg%2C+John%29'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+            -
+                slug: creative-industries
+                name: 'Creative industries'
+            -
+                slug: education
+                name: Education
+        categories:
+            -
+                slug: content-promotion
+                name: 'Content promotion'
+        tags: {  }
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listing
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: data
+                override_amount: 12
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: Showcase
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+        _id: pages/apps

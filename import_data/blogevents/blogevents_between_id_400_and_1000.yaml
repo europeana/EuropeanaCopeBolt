@@ -1,0 +1,824 @@
+__bolt_export_meta:
+    date: '2022-11-02T11:11:06+01:00'
+    version: 3.7.4
+    platform: mysql
+blogevents:
+    -
+        slug: exhibition-madame-gre
+        datecreated: '2012-07-20 08:03:55'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-07-20 08:03:55'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Madame Grès - Sculptural Fashion"'
+        start_event: '2012-09-12 00:00:00'
+        unconfirmed_start: false
+        end_event: '2013-02-10 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Fashion Museum Province of Antwerp - MoMu'
+        geolocation:
+            address: 'Nationalestraat 28 , Antwerp , 2000, BE'
+            latitude: '51.2167738'
+            longitude: '4.399518100000023'
+            formatted_address: 'Nationalestraat 28 , Antwerp , 2000, BE'
+        introduction: ''
+        teaser: '<p style="text-align: justify">From September 12th, 2012 till February 10th, 2013 MoMu presents MADAME GRÈS. Sculptural Fashion, an overview of the work of the Parisian couturier, Madame Grès (1903– 1993).</p>'
+        body: "<p style=\"text-align: justify\">Conceptually, the design of the exhibition at the Fashion Museum will be consistent with the sculptural fashion of Madame Grès. To achieve this, MoMu will work with the Belgian artist Renato Nicolodi, who has designed new elements and installations for the exhibition spaces and will also exhibit own work. His archetypal, minimalist and classically inspired works take on a stimulating dialogue with the work of Madame Grès. MoMu welcomes and recomposes the retrospective of Madame Grès from musée Gallièra, musée de la Mode de la Ville de Paris, which was pre- sented in 2011 at the musée Bourdelle in Paris. This exhibition reunites Madame Grès silhouettes originating mostly from the Gallièra collections as well as some private collections.</p>\n<p style=\"text-align: justify\">For more information, visit <a href=\"http://www.momu.be/en/\">MoMu</a>.</p>"
+        teaser_image:
+            file: fashion/2012-07/madame-gres.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-madame-gre
+    -
+        slug: exhibition-van-cleef-and-arpel
+        datecreated: '2012-07-20 08:29:24'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-07-20 08:29:24'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Van Cleef & Arpels - L’art de la haute joaillerie"'
+        start_event: '2012-09-20 00:00:00'
+        unconfirmed_start: false
+        end_event: '2013-02-10 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Les Arts Décoratifs'
+        geolocation:
+            address: '107 rue de Rivoli, Paris, 75001, FR'
+            latitude: '48.863091'
+            longitude: '2.3333069999999907'
+            formatted_address: '107 rue de Rivoli, Paris, 75001, FR'
+        introduction: ''
+        teaser: '<p style="text-align: justify">All the daring of the creations of this legendary jewellery house will be highlighted in the Nave at Les Arts Décoratifs, with 400 pieces that have made the fame of Van Cleef &amp; Arpels since 1906.</p>'
+        body: "<p style=\"text-align: justify\">These prestigious pieces will be shown with archive documents and drawings, in an exhibition design by Jouin-Manku. The history of Van Cleef &amp; Arpels is studded with technical inventions handed down from generation to generation. This savoir-faire, always kept secret, combined with imagination and very free sources of inspiration, fuelled its formidable production of forms and models. Subtly mixing values and styles, Van Cleef &amp; Arpels is continuing to stamp its signature on the jewellery world. A signature whose hallmark is legendary mastery and savoir-faire, a passionate love of precious stones and a taste for innovation and metamorphosis.</p>\n<p style=\"text-align: justify\">For more information, visit <a href=\"http://www.lesartsdecoratifs.fr/francais/\" target=\"_blank\">Les Arts Décoratifs</a>.\nImage credits: Clip Columbiad, col­lec­tion Les Voyages extra­or­di­nai­res, Paris, 2010. Or blanc, saphirs, spi­nel­les noirs, dia­mants. Van Cleef &amp; Arpels © Van Cleef &amp; Arpels</p>"
+        teaser_image:
+            file: fashion/2012-07/van-cleef-arpels.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-van-cleef-and-arpel
+    -
+        slug: exhibition-iris-van-herpen
+        datecreated: '2012-07-20 09:01:15'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-07-20 09:01:15'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Iris van Herpen"'
+        start_event: '2012-03-24 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-09-23 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Groninger Museum'
+        geolocation:
+            address: 'Museumeiland 1, Groningen, 9711 ME, NL'
+            latitude: '53.2124091'
+            longitude: '6.566059300000006'
+            formatted_address: 'Museumeiland 1, Groningen, 9711 ME, NL'
+        introduction: ''
+        teaser: '<p style="text-align: justify">Until 23 September 2012, the Groninger Museum presents the first large-scale solo exhibition of the work of Iris van Herpen (Wamel, 1984), one of the most striking designers of this moment.</p>'
+        body: "<p style=\"text-align: justify\">Van Herpen graduated from the ArtEZ Hogeschool voor Kunsten (ArtEZ Institute of the Arts) in Arnhem in 2006, did an internship with Alexander McQueen, among others, and started a label under her own name in 2007. She has won great acclaim ever since. Iris van Herpen is renowned for her remarkable outfits in which she combines traditional craftsmanship and zealous handwork with innovative techniques. Van Herpen’s work harmonizes with an important field of interest in the Groninger Museum, namely, the interface of art, design and fashion. The Iris van Herpen exhibition has been compiled by Sue-an van der Zijpp, curator of present-day art, and Mark Wilson, chief curator.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://www.groningermuseum.nl/\" target=\"_blank\">Groninger Museum</a>.</p>"
+        teaser_image:
+            file: fashion/2012-07/iris-van-herpen.png
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-iris-van-herpen
+    -
+        slug: exhibition-christobal-balenciag
+        datecreated: '2012-07-20 11:19:41'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-07-20 11:19:41'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "CRISTÓBAL BALENCIAGA - The approach of the genius, the master’s technique"'
+        start_event: '2012-05-26 00:00:00'
+        unconfirmed_start: false
+        end_event: '2013-12-31 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Cristóbal Balenciaga Museoa'
+        geolocation:
+            address: 'Aldamar Parkea 6, Gipuzkoa, 20808, ES'
+            latitude: '43.3028273'
+            longitude: '-2.2042738999999756'
+            formatted_address: 'Aldamar Parkea 6, Gipuzkoa, 20808, ES'
+        introduction: ''
+        teaser: '<p style="text-align: justify">The exhibition explores the couturier''s life and work, from his early years to his final creations, experienced through the rigorous selection of 90 pieces.</p>'
+        body: "<p style=\"text-align: justify\">The works on view are displayed in six exhibition spaces organised thematically: Early Years, Day, Cocktail, Evening, Brides and Essential Balenciaga. In order to properly care for the collection, the conservation staff must make sure that the pieces featured in the permanent exhibition are rotated on an ongoing basis. Therefore, every 6 to 12 months the objects on display will be rotated. This will keep the exhibition alive, shying away from static nature of conventional exhibitions. The permanent exhibition also aims to include work by Balenciaga from other institutions and collections, and in this way make the exhibition even more interesting and dynamic.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://www.cristobalbalenciagamuseoa.com/Home.html\" target=\"_blank\">Cristóbal Balenciaga Museoa</a>.</p>"
+        teaser_image:
+            file: fashion/2012-07/cristobal-balenciaga.png
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-christobal-balenciag
+    -
+        slug: conference-costume-colloquium-iii-past-dress-future-fashion
+        datecreated: '2012-07-23 15:23:24'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-07-23 15:23:24'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Conference: "Costume Colloquium III: Past Dress – Future Fashion"'
+        start_event: '2012-11-08 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-11-11 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Auditorium al Duomo'
+        geolocation:
+            address: 'Via de Cerretani 54/r, Firenze, 50123, IT'
+            latitude: '43.7734541'
+            longitude: '11.253844299999969'
+            formatted_address: 'Via de Cerretani 54/r, Firenze, 50123, IT'
+        introduction: ''
+        teaser: "<p style=\"text-align: justify\">Costume Colloquium III: Past Dress – Future Fashion\_is the third in a series of bi-annual conferences dedicated to the discussion of fashion, fabric, styles, techniques, conservation and the many topics associated with dress history and contemporary costume creation, use and design.\_The 2012 edition will focus on the broader analysis of historical styles and their influences on current and future fashion trends.</p>"
+        body: "<p style=\"text-align: justify\">Stylists and designers look to the past to seek inspiration for their latest creations. We reference the past to spark our imagination for new ideas, but more often we look back to identify those timeless themes that remain valuable for the present and into the future.\_Therefore vintage styles, designer creations and historic fashion collections will be just some of the many topics presented at\_Costume Colloquium III: Past Dress – Future Fashion\_to be held November 8-11, 2012\_in\_Florence, Italy. The international, interdisciplinary and intercultural structure of Costume Colloquium promotes a lively exchange of knowledge on a full range of ideas and interests. The conference topics and themes of Past Dress – Future Fashion are appealing to professionals and academics as well as amateurs and students.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://www.costume-textiles.com/past-dress-future-fashion-2/\" target=\"_blank\">Costume-Textiles</a>.</p>"
+        teaser_image:
+            file: fashion/2012-07/schermafbeelding-2012-07-23-om.19.22.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: conference
+                name: conference
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/conference-costume-colloquium-iii-past-dress-future-fashion
+    -
+        slug: workshop-2nd-nordic-research-workshop-in-fashion-studies-invitation-and-call-for-papers
+        datecreated: '2012-07-26 14:10:28'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-07-26 14:10:28'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Workshop: "2nd Nordic Research Workshop in Fashion Studies - invitation and call for papers"'
+        start_event: '2012-12-14 09:00:00'
+        unconfirmed_start: false
+        end_event: '2012-12-14 17:00:00'
+        unconfirmed_end: false
+        location_name: 'Stockholm University - Frescati Campus'
+        geolocation:
+            address: 'Universiteitsvagen 10, Stockholm, 114 18, SE'
+            latitude: '59.36308919999999'
+            longitude: '18.060547000000042'
+            formatted_address: 'Universiteitsvagen 10, Stockholm, 114 18, SE'
+        introduction: ''
+        teaser: '<p style="text-align: justify">The 2nd Nordic Research Workshop in Fashion Studies, hosted by the Centre for Fashion Studies will be held at Stockholm University on Friday, December 14, 2012.</p>'
+        body: "<div style=\"text-align: justify\">\n\nFollowing the successful workshop in 2008 we once again invite Nordic scholars and graduate students from all academic disciplines and design fields who conduct research in Fashion and/or Fashion Studies to participate and present their research in a one day long workshop. Besides being a venue for presenting and workshopping current research, this is an important network opportunity for scholars, students and teachers alike. We hope that this event will strengthen the already existing relations and make more collaborations possible between various academic scholars, design teachers, and graduate students in our Nordic countries.\n\n</div>\n<p style=\"text-align: justify\">Each presentation, which should be in English, should be no longer than 15 minutes, and we do not ask for formal papers.The workshop, which takes place at Stockholm University at Frescati, will run from 09.00 to 17.00 with breaks for lunch and coffee. Following the workshop, there will be a reception. The event is free for all participants who present.</p>\n<p style=\"text-align: justify\">Deadline for abstracts : Monday, October 1, 2012. Please send a short abstract (max 400 words) no later than Monday, October 1, 2012 to coordinator Petrine Knight at <a href=\"'+String.fromCharCode(112,101,116,114,105,110,101,64,102,97,115,104,105,111,110,46,115,117,46,115,101)+'?subject=2nd%20Nordic%20Workshop%20in%20Fashion%20Studies%20-%20invitation%20and%20call%20for%20papers')\">petrine@fashion.su.se</a></p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://www.ims.su.se/om-oss/nyheter/nyheter-fran-centrum-for-modevetenskap/2nd-nordic-research-workshop-in-fashion-studies-invitation-and-call-for-papers-1.92731\" target=\"_blank\">The University of Stockholm</a>.\nCredits image: Jens Mohr © Hallwylska museet</p>"
+        teaser_image:
+            file: fashion/2012-07/logo_english_stripe_landscape.png
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: featured
+                name: featured
+            -
+                slug: workshop
+                name: workshop
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/workshop-2nd-nordic-research-workshop-in-fashion-studies-invitation-and-call-for-papers
+    -
+        slug: exhibition-les-robes-du-temps
+        datecreated: '2012-07-27 14:47:07'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-07-27 14:47:07'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Les Robes du Temps"'
+        start_event: '2012-05-10 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-09-30 00:00:00'
+        unconfirmed_end: false
+        location_name: 'la Cité internationale de la dentelle et de la mode de Calais'
+        geolocation:
+            address: '135, Quai du Commerce, Calais, 62100 , FR'
+            latitude: '50.9507006'
+            longitude: '1.859912099999974'
+            formatted_address: '135, Quai du Commerce, Calais, 62100 , FR'
+        introduction: ''
+        teaser: '<p style="text-align: justify">The International City of Lace and Fashion in Calais is inviting the Quebec-based textile artist Carole Simard-Laflamme to decorate the temporary exhibition room with personal works of art calling on the five senses.</p>'
+        body: "<p style=\"text-align: justify\">The nature of things and the ties binding them together are the main food for thought behind Carole Simard-Laflamme’s designs. Nature and structure are central to her decompartmentalised, multidisciplinary handiwork where textile fibre stands out as the media par excellence.</p>\n<div>\n<p style=\"text-align: justify\">Manipulated in all its forms and often in surprising ways, fibre is assembled into creations exploring the human condition and our cultural roots. Perception, intuition, identity, emotion, memory and poetry are the artist’s driving creative forces.</p>\n<p style=\"text-align: justify\">Her desire to separate out disciplines leads Carole to associate, for example, nature and textile, clothing and architecture, fibre and sound. Transcending the ephemeral, delicate nature of the medium, she stages architectural installations that often incorporate sound elements to create environments bursting with intense emotional and aesthetic experiences.</p>\n<p style=\"text-align: justify\">For more info, please visit \_<a href=\"http://www.cite-dentelle.fr/spip.php?article463\" target=\"_blank\">la Cité internationale de la dentelle et de la mode de Calais</a>.\nCredits image:\_Fred Collier @ pixopale.com</p>\n\n</div>"
+        teaser_image:
+            file: fashion/2012-07/logo_english_stripe_landscape.png
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-les-robes-du-temps
+    -
+        slug: exhibition-fashion-a-z-highlights-from-the-collection-of-the-museum-at-fit-part-two
+        datecreated: '2012-07-28 20:20:03'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-07-28 20:20:03'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Fashion, A-Z: Highlights from the Collection of the Museum at FIT, Part Two"'
+        start_event: '2012-05-23 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-11-10 00:00:00'
+        unconfirmed_end: false
+        location_name: 'The Museum at FIT'
+        geolocation:
+            address: 'Seventh Avenue at 27 Street, New York City, 10001, US'
+            latitude: '40.7466119'
+            longitude: '-73.99384069999996'
+            formatted_address: 'Seventh Avenue at 27 Street, New York City, 10001, US'
+        introduction: ''
+        teaser: "<p style=\"text-align: justify\">The Museum at FIT has organized two consecutive exhibitions in The Fashion and Textile History Gallery that celebrate the best of the permanent collection:\_Fashion, A-Z: Highlights from the Collection of the Museum at FIT, Part One\_(which ran through May 8, 2012) and\_Fashion, A-Z: Highlights from the Collection of the Museum at FIT, Part Two\_(May 23 through November 10, 2012).</p>"
+        body: "<p style=\"text-align: justify\">The Museum at FIT has long been recognized for its innovative and award-winning exhibitions, but less well-known is the fact that its permanent collection encompasses more than 50,000 garments and accessories and 30,000 textiles dating from the eighteenth century to the present.\_Thematic exhibitions in the Fashion and Textile History Gallery are drawn exclusively from the museum's permanent collection and have typically been organized chronologically, covering 200 to 250 years of fashion history. Since The Museum at FIT collection is especially strong in designer fashion from the 20th and 21st centuries, it decided to organize an exhibition that focuses on modern and contemporary fashion and accessories from the collection.\_A companion book, to be published by TASCHEN in fall 2012, will feature more than 500 photographs of fashions from the museum's collection, as well as photographs of many of our exhibitions.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://www.fitnyc.edu/12469.asp\" target=\"_blank\">The Museum at FIT</a>.\nCredits image: Charles James, evening dress in silk taffeta and net, 1955, USA, gift of Robert Wells In Memory of Lisa Kirk.</p>"
+        teaser_image:
+            file: fashion/2012-07/logo_english_stripe_landscape.png
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-fashion-a-z-highlights-from-the-collection-of-the-museum-at-fit-part-two
+    -
+        slug: exhibition-yohji-yamamot
+        datecreated: '2012-07-29 07:57:06'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-07-29 07:57:06'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: " Yohji Yamamoto"'
+        start_event: '2012-07-05 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-10-20 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Design Museum Holon'
+        geolocation:
+            address: 'Pinhas Eilon St. 8 , Holon, 58459, IL'
+            latitude: '32.005605'
+            longitude: '34.79532930000005'
+            formatted_address: 'Pinhas Eilon St. 8 , Holon, 58459, IL'
+        introduction: ''
+        teaser: '<p style="text-align: justify">In an Israeli first, Design Museum Holon is proud to announce an exhibition by visionary designer Yohji Yamamoto.</p>'
+        body: "<p style=\"text-align: justify\">The exhibition will curate over 80 Yohji Yamamoto's signature women and menswear silhouettes, exploring discussions between people, places, clothing and design. The expressive installation, designed by\_Masao Nihei, will cleverly bring together all the various indoor and outdoor spaces of the museum, including the two major galleries, lab space, garden and public areas. The flow of objects through the private and public arenas will create a continuous stream of inspiration, inviting visitors to experience a journey of emotions, memories and design.\_The lower gallery will recreate the vibrancy and heightened feeling of the world's major metropolitan areas while the upper gallery will invite visitors to interact with an abstract installation.</p>\n<p style=\"text-align: justify\">Curated by Galit Gaon, Design Museum Holon's Chief Curator, the exposition will challenge and re-conceptualise the way in which conventional fashion exhibitions are presented. A series of site specific installations will be designed which embrace and respond to Ron Arad's iconic building.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://www.dmh.org.il/Exhibition/Exhibition.aspx?pid=20&amp;catId=-1\" target=\"_blank\">Design Museum Holon</a>.\nCredits image: photo by Max Vadukul.</p>"
+        teaser_image:
+            file: fashion/2012-07/yamamoto.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-yohji-yamamot
+    -
+        slug: conference-fashioning-the-city-exploring-fashion-cultures-structures-and-systems
+        datecreated: '2012-07-30 13:03:14'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-07-30 13:03:14'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Conference: "Fashioning the City: Exploring Fashion Cultures, Structures, and Systems"'
+        start_event: '2012-09-19 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-09-21 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Royal College of Art'
+        geolocation:
+            address: 'Kensington Gore , London, SW7 2EU, GB'
+            latitude: '51.500786'
+            longitude: '-0.17815169999994396'
+            formatted_address: 'Kensington Gore , London, SW7 2EU, GB'
+        introduction: ''
+        teaser: '<p style="text-align: justify">Fashioning the City: Exploring Fashion Cultures, Structures, and Systems is an international inter-disciplinary conference, hosted at the Royal College of Art (RCA), London, from 19th-21st September 2012.</p>'
+        body: "<p style=\"text-align: justify\">The conference and accompanying exhibition \"Fashioning the City: Exploring Fashion Cultures, Structures,\_and Systems\"\_to be held in London in\_September 2012 seeks to consider, or perhaps reconsider, the changing and developing dynamics of the fashion industry in the 21<sup>st</sup>\_Century. The staging of this event comes at a highly significant time in the development of the fashion industry as the structures and systems of the industry as we know and recognise them today, based around a network of five ‘’Fashion Capitals’’, namely Paris, London, Milan, New York, and Tokyo, is being increasingly challenged by innovations in technology, processes of manufacturing, and a reconfiguration of what we have come to think of as ‘’Fashion Cities.’’</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://fashioningthecity.wordpress.com/\" target=\"_blank\">Fashioning the City</a>.</p>"
+        teaser_image:
+            file: fashion/2012-07/fashioning-the-city.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: conference
+                name: conference
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/conference-fashioning-the-city-exploring-fashion-cultures-structures-and-systems
+    -
+        slug: exhibition-christian-lacroix-la-source-et-le-ballet-de-lopera-de-paris
+        datecreated: '2012-08-02 09:41:23'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-08-02 09:41:23'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Christian Lacroix, La Source et le Ballet de l''Opéra de Paris"'
+        start_event: '2012-06-16 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-12-31 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Le Centre National du Costume de Scène'
+        geolocation:
+            address: 'Quartier Villars, Route de Montilly, Moulins, 03000, FR'
+            latitude: '46.5679044'
+            longitude: '3.312979100000007'
+            formatted_address: 'Quartier Villars, Route de Montilly, Moulins, 03000, FR'
+        introduction: ''
+        teaser: '<p style="text-align: justify">The Centre national du costume de scène et de la scénographie continues its collaboration with Christian Lacroix, following him into the heart of the Opéra national de Paris where he created the costumes for the ballet La Source, in a choreography by Jean-Guillaume Bart, Danseur Etoile.</p>'
+        body: "<p style=\"text-align: justify\">These costumes, of refined neo-classical style for the fantasy roles, tinted with orientalism and shimmering colors for the folk characters, bear witness to the dream world of Christian Lacroix. The sumptous costumes embroidered with Swarovski crystals were worn on stage by the Paris Opera Ballet at the Palais Garnier in the autumn of 2011 and are presented here in an exhibition organized by Christian Lacroix. The exhibition and the accompanying catalogue are an invitation to discover these costumes and accessories from their conception by the costume designer to their creation by the costume workshops at the Palais Garnier and finally to the staging of the ballet.</p>\n<p style=\"text-align: justify\">For more information, please visit the <a href=\"http://www.cncs.fr/expositions/a-l-affiche/christian%20lacroix,%20la%20source%20et%20le%20ballet%20de%20l'op%C3%A9ra%20de%20paris/37/en\" target=\"_blank\">Centre National du Costume de Scène</a>.</p>"
+        teaser_image:
+            file: fashion/2012-08/christian-lacroix.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-christian-lacroix-la-source-et-le-ballet-de-lopera-de-paris
+    -
+        slug: exhibition-blue-jeans
+        datecreated: '2012-08-02 10:08:03'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-08-02 10:08:03'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Blue Jeans"'
+        start_event: '2012-11-24 00:00:00'
+        unconfirmed_start: false
+        end_event: '2013-03-10 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Centraal Museum'
+        geolocation:
+            address: 'Nicolaaskerkhof 10, Utrecht, 3512 XC , NL'
+            latitude: '52.08338329999999'
+            longitude: '5.125795100000005'
+            formatted_address: 'Nicolaaskerkhof 10, Utrecht, 3512 XC , NL'
+        introduction: ''
+        teaser: '<p style="text-align: justify">The Centraal Museum presents the first large-scale exhibition in the Netherlands on blue jeans. Across various themes, the exhibition shows new work by renowned artists, combined with national and international loan pieces - showcasing both craftsmanship and innovative technology.</p>'
+        body: "<p style=\"text-align: justify\">The exhibition is divided into a number of themes showing the experimental and creative side of jeans: from their origin as work wear in the 17<sup>th</sup> century, to high fashion in the 20<sup>th</sup> century, to modern-day jeans - including internationally renowned Dutch labels such as G-Star. Special attention is reserved for national and international subcultures, in which the jean is a product for the masses that expresses uniformity, but at the same time a most personal garment that reflects individuality. The exhibition also looks at the DNA of jeans: the materials, buttons, labels and their typical indigo blue colour. The highly polluting production process and current innovative sustainable alternatives, such as ‘zero water waste’ and ‘ozone’ treatments, are also part of the exhibition.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://centraalmuseum.nl/en/visit/exhibitions/Jeans/\" target=\"_blank\">Centraal Museum</a>.\nCredits image: Gluejeans Revolution Jeans © Bill Tanaka.</p>"
+        teaser_image:
+            file: fashion/2012-08/jeans.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-blue-jeans
+    -
+        slug: exhibition-stars-in-dior-from-the-screen-to-the-streets
+        datecreated: '2012-08-03 07:36:20'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-08-03 07:36:20'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Stars in Dior - From the Screen to the Streets"'
+        start_event: '2012-05-12 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-09-23 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Christian Dior Museum and Garden - Villa “Les Rhumbs”'
+        geolocation:
+            address: 'Route d''Estouteville, Granville, 50400 , FR'
+            latitude: '48.84193639999999'
+            longitude: '-1.5919867000000067'
+            formatted_address: 'Route d''Estouteville, Granville, 50400 , FR'
+        introduction: ''
+        teaser: '<p style="text-align: justify">The Christian Dior Museum will pay homage to the silver screen in 2012. For one summer only, the salons of Ville "Les Rhumbs" will exhibit the Dior fashions worn by movie stars on the screen and the streets.</p>'
+        body: "<p>Even before 1947 and the creation of the couture house bearing his name, Christian Dior put his talent to work as costume designer for the cinema, collaborating with renowned filmmakers such as Claude Autant-Lara and René Clair. Christian Dior’s 1947 success brought other filmmakers to call on his talent, and he often gave in to their demands in spite of his bustling activity within the House of Dior. We owe it to Marlene Dietrich that the name of Christian Dior came to be associated with one of the greatest filmmakers of the twentieth century, Alfred Hitchcock. For the exhibition, the Berlin Film Archive has exceptionally loaned an exhibit dedicated to the actress, who wore Dior on the screen and in the streets. Admiring his talent as a designer, other actresses have made and still make Christan Dior\_their chosen couture.\_ You’ll see some of the sumptuous gowns designed for the actresses whose faces have become synonymous with the brand, bringing you up close to the magical, dreamlike universe which is the cinematic trademark of the House of Dior.</p>\n<p>For more information, please visit the <a href=\"http://www.musee-dior-granville.com/c/287/p/c51e42661f7441dff4f2bfd9a1bab0c8/Stars-in-Dior.html\" target=\"_blank\">Musée Christian Dior</a>.\nCredits image: Marilyn Monroe\_in Dior\_photographed by\_Bert Stern during the shooting\_ of The Last Sitting, in the Bel-Air hotel in Los Angeles, june 1962. © BERT STERN</p>"
+        teaser_image:
+            file: fashion/2012-08/stars-in-dior.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-stars-in-dior-from-the-screen-to-the-streets
+    -
+        slug: fashion-week-copenhagen
+        datecreated: '2012-08-03 08:10:26'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-08-03 08:10:26'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Fashion Week: Copenhagen'
+        start_event: '2012-08-08 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-08-12 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Official Show Venue of Copenhagen Fashion Week - event has multiple locations'
+        geolocation:
+            address: 'Pasteursvej 30, Copenhagen, DK'
+            latitude: '55.6650842'
+            longitude: '12.535290700000018'
+            formatted_address: 'Pasteursvej 30, Copenhagen, DK'
+        introduction: ''
+        teaser: '<p style="text-align: justify">Every February and August, Copenhagen is host to Northern Europe''s largest fashion event, Copenhagen Fashion Week. On the catwalks are a growing number of new and known Danish talents with a preview of their upcoming collections.</p>'
+        body: "<p style=\"text-align: justify\">Every February and August, Copenhagen is host to Northern Europe's largest fashion event, Copenhagen Fashion Week. On the catwalks are a growing number of new and known Danish talents with a preview of their upcoming collections. And at the five trade fairs, CPH Vision, Terminal-2, Gallery, Copenhagen International Fashion Fair (CIFF) and CIFFKIDS, you will find an additional 1,100 exhibitors representing a total of more than 2,300 international brand name collections.</p>\n<p style=\"text-align: justify\">Danish fashion is known for its unique angle on design, innovation and aesthetics. With a more modern approach to femininity and functionality, expressed in fresh silhouettes, a focus on details and incomparable quality. These are only some of the reasons why more than 60,000 buyers, designers and global press attend Copenhagen Fashion Week twice a year.</p>\n<p style=\"text-align: justify\">Of course, the other main attraction is Copenhagen itself. It's a cosy, metropolitan city located by the waterfront, and features an interesting array of design venues, architecture, cultural events, cafés, bars and nightlife.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://www.copenhagenfashionweek.com/\" target=\"_blank\">Copenhagen Fashion Week</a>.</p>"
+        teaser_image:
+            file: fashion/2012-08/logo_english_stripe_landscape.png
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: fashion-week
+                name: fashion-week
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/fashion-week-copenhagen
+    -
+        slug: fashion-week-stockholm
+        datecreated: '2012-08-03 08:24:06'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-08-03 08:24:06'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Fashion Week: Stockholm'
+        start_event: '2012-08-27 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-08-29 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Berns Stora Salongen, Berzelii Park - event has multiple locations'
+        geolocation:
+            address: 'Berzelii park, Stockholm, 111 47, CH'
+            latitude: '59.33290640000001'
+            longitude: '18.073365400000057'
+            formatted_address: 'Berzelii park, Stockholm, 111 47, CH'
+        introduction: ''
+        teaser: '<p style="text-align: justify">Its main focus is to attract the international fashion community such as the press and fashion buyers to get a closer look at the Swedish fashion scene. The Mercedes-Benz Fashion Week Stockholm supports around thirty local designers twice a year.</p>'
+        body: "<p style=\"text-align: justify\">Its main focus is to attract the international fashion community such as the press and fashion buyers to get a closer look at the Swedish fashion scene. The Mercedes-Benz Fashion Week Stockholm supports around thirty local designers twice a year.</p>\n<p style=\"text-align: justify\">The main venues for Mercedes-Benz Fashion Week is at the well-renowned Berns in central Stockholm and at Mercedes-Benz Fashion Pavilion.</p>\n<p style=\"text-align: justify\">Since the first event in 2005 the Mercedes-Benz Fashion Week Stockholm has grown to become one of the most important fashion weeks in Northern Europe.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://www.mercedesbenzfashionweek.se/\" target=\"_blank\">Mercedes-Benz Fashion Week Stockholm</a>.</p>"
+        teaser_image:
+            file: fashion/2012-08/fashion-week-stockholm1.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: fashion-week
+                name: fashion-week
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/fashion-week-stockholm
+    -
+        slug: fashion-week-new-york
+        datecreated: '2012-08-03 08:33:57'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-08-03 08:33:57'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Fashion Week: New York'
+        start_event: '2012-09-06 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-09-13 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Lincoln Center'
+        geolocation:
+            address: '10 Lincoln Center Plaza, New York, 10023, US'
+            latitude: '40.7722992'
+            longitude: '-73.98295410000003'
+            formatted_address: '10 Lincoln Center Plaza, New York, 10023, US'
+        introduction: ''
+        teaser: '<p style="text-align: justify">Mercedes-Benz Fashion Week is New York City''s single largest media event, taking place twice a year (February &amp; September) at Lincoln Center.</p>'
+        body: "<p style=\"text-align: justify\">Mercedes-Benz Fashion Week is New York City's single largest media event, taking place twice a year (February &amp; September) at Lincoln Center, one of the most well known arts and cultural institutions in the world.\_ The event provides top designers an international platform to showcase their collections to more than 100,000 industry insiders from around the world, including buyers, editors, retailers, celebrities, VIPs, and more.\_ With more than 80 designers shows over 8 days, it is known as the premier event worldwide where style, beauty, supermodels, and celebrities come together to celebrate the best in fashion.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://newyork.mbfashionweek.com/\" target=\"_blank\">Mercedes-Benz Fashion Week New York</a>.</p>"
+        teaser_image:
+            file: fashion/2012-08/fashion-week-new-york.png
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: fashion-week
+                name: fashion-week
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/fashion-week-new-york
+    -
+        slug: fashion-week-london
+        datecreated: '2012-08-03 08:46:21'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-08-03 08:46:21'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Fashion Week: London'
+        start_event: '2012-09-14 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-09-18 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Somerset House - event has multiple locations'
+        geolocation:
+            address: 'Strand, London, WC2R 1LA, GB'
+            latitude: '51.51160280000001'
+            longitude: '-0.11831849999998667'
+            formatted_address: 'Strand, London, WC2R 1LA, GB'
+        introduction: ''
+        teaser: '<p style="text-align: justify">London Fashion Week is now established as one of London''s premier events attracting a target audience of key fashion leaders, retailers and press who attend this bi-annual showcase of British designer fashion.</p>'
+        body: "<p style=\"text-align: justify\">The British Fashion Council was formed in 1983 out of the Fashion Industry Action Group, an ad hoc group created in 1981. The British Fashion Council aims to showcase British designers and develop London’s position as a major player in the international fashion arena. As a result, London Fashion Week ranks alongside New York, Milan and Paris as one of the 'Big Four’. The BFC showcase the best of British designer collections to international press and buyers at a globally recognised event, London Fashion Week. The current venue for most of the \"on-schedule\" events is Somerset House in central London, where a large marquee in the central courtyard hosts a series of catwalk shows by top designers and fashion houses, while an exhibition, housed within Somerset House itself, shows over 150 designers. However, many \"off-schedule\" events, such as Vauxhall Fashion Scout and On|Off, are organised by other private-funded groups and take place at other venues in central London.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://www.londonfashionweek.co.uk/\" target=\"_blank\">London Fashion Week</a>.</p>\n<p style=\"text-align: justify\"></p>"
+        teaser_image:
+            file: fashion/2012-08/fashion-week-london.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: fashion-week
+                name: fashion-week
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/fashion-week-london
+    -
+        slug: exhibition-futurotextiles-3-2012-2014
+        datecreated: '2012-08-09 09:59:43'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-08-09 09:59:43'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Futurotextiles 3 2012-2014"'
+        start_event: '2012-10-13 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-12-31 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Centre Européen des Textiles Innovants'
+        geolocation:
+            address: '1 rue des Métissages, Tourcoing, FR'
+            latitude: '50.7077465'
+            longitude: '3.166017199999942'
+            formatted_address: '1 rue des Métissages, Tourcoing, FR'
+        introduction: ''
+        teaser: "<p style=\"text-align: justify\">Created in 2006 by lille3000, Futurotextiles is an exhibition which associates science, technology and art to textile. \_ <span style=\"color: #290000;font-family: DIN-Regular;font-size: x-small\"><span style=\"color: #290000;font-family: DIN-Regular;font-size: x-small\"><span style=\"color: #290000;font-family: DIN-Regular;font-size: x-small\">.</span></span></span></p>"
+        body: "<p style=\"text-align: justify\">The pioneering project started in 2006, the exhibition Futurotextiles, combines the creative and the\_scientific, showcasing innovations from the world of textiles. After the success of the first two editions and its world tour, the brand new exhibition Futurotextiles will be presented in Tourcoing on the occasion of the CETI (European Centre for Innovative Textiles) inauguration. On\_over more than 1500 square meters, discover how the latest textiles are dreamt up and made, bringing the worlds of art, design and science ever closer. Over the course of the exhibition, all in an original scenography and with\_a ludic and poetic approach, Futurotextiles invites the visitor to become aware of the opportunities given by these attractive materials in many fields.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"http://www.ceti.com/en/news--futurotextiles-3\" target=\"_blank\">Centre Européen des Textiles Innovants</a>.</p>"
+        teaser_image:
+            file: fashion/2012-08/futuro-textiles-3.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-futurotextiles-3-2012-2014
+    -
+        slug: exhibition-chloe-attitudes
+        datecreated: '2012-08-29 15:22:03'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-08-29 15:22:03'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Chloé. Attitudes"'
+        start_event: '2012-09-29 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-11-18 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Palais de Tokyo'
+        geolocation:
+            address: '13, avenue du Président Wilson, Paris, 75116, FR'
+            latitude: '48.86481850000001'
+            longitude: '2.296583499999997'
+            formatted_address: '13, avenue du Président Wilson, Paris, 75116, FR'
+        introduction: ''
+        teaser: '<p style="text-align: justify">Chloé. Attitudes is the very first exhibition dedicated to Chloé, a celebration of the Maison’s 60-year contribution to fashion culture. This spectacular and groundbreaking exhibition offers a playful interpretation of the Chloé spirit that spans seven decades.</p>'
+        body: "<p style=\"text-align: justify\">The exhibition takes a thematic path through the very best of Chloé’s creativity, pausing at key moments within its history. This approach paints a picture of Chloé that is both familiar and yet unexpected. Iconic looks are presented alongside lesser-known yet equally influential designs. Many of these were rediscovered during the creation of the new archive developed since Waight Keller’s arrival. Most importantly, these are on display to the public for the very first time.\_The exhibition is curated and designed by renowned exhibition-maker Judith Clark and staged in the newly refurbished galleries of Le Palais de Tokyo.\_Focusing equally on Chloé’s key designers and the Maison’s enduring themes, garment groupings serve to underscore Gaby Aghion’s original vision for the brand.</p>\n<p style=\"text-align: justify\">For more information, please visit <a href=\"https://palaisdetokyo.com/en/exhibition/chloe-attitudes\" target=\"_blank\">Palais de Tokyo</a>.</p>"
+        teaser_image:
+            file: fashion/2012-08/chloe.png
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-chloe-attitudes
+    -
+        slug: exhibition-fashion-timeline
+        datecreated: '2012-08-30 07:16:47'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-08-30 07:16:47'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Fashion Timeline"'
+        start_event: '2012-06-29 00:00:00'
+        unconfirmed_start: false
+        end_event: '2015-06-28 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Kent State University Museum'
+        geolocation:
+            address: '515 Hilltop Drive, Kent, US'
+            latitude: '41.1525644'
+            longitude: '-81.35126989999998'
+            formatted_address: '515 Hilltop Drive, Kent, US'
+        introduction: ''
+        teaser: '<p style="text-align: justify">The “Fashion Timeline” showcases the Kent State University Museum’s world-class collection of historic fashions. Encompassing two centuries of fashion history, this exhibition is designed to show the evolution of styles and silhouettes while contextualizing the pieces with relevant political, technological and cultural developments.</p>'
+        body: "<p style=\"text-align: justify\">The first gallery spans the late-eighteenth and early-nineteenth centuries. This was a period of revolutionary change that can clearly be seen reflected in the fashions. The American and French Revolutions radically changed the political landscapes while the industrial revolution transformed how goods, particularly clothing and textiles, were made. The luxury and rococo excesses of the eighteenth century gave way to the romanticism and neoclassicism of the early nineteenth century. The next room includes the second half of the nineteenth century to the dawn of World War I. Synthetic dyes opened up a world of color and the sewing machine facilitated the application of yards of ruffles, pleats, and fringe. The upholstered, heavy styles of the Victorian era eventually gave way to Edwardian froth and lace. The final room finishes the timeline with fashions of the early twentieth century. While it may have been a period of world wars and depression, fashions also reflected the heydays of jazz and swing, the boldness of Art Deco, and the endless possibilities of technology from plastics to rockets.</p>\n<p style=\"text-align: justify\">For more information, please visit the <a href=\"http://www.kent.edu/museum/exhibits/exhibitdetail.cfm?customel_datapageid_2203427=3134506\" target=\"_blank\">Kent State University Museum</a>.</p>\n<p style=\"text-align: justify\"></p>"
+        teaser_image:
+            file: fashion/2012-08/fashion-timeline-kent-state-university.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-fashion-timeline
+    -
+        slug: exhibition-alternative-fashion-before-glossies-1985-1995
+        datecreated: '2012-08-30 07:59:53'
+        datechanged: '2017-03-31 17:44:55'
+        datepublish: '2012-08-30 07:59:53'
+        datedepublish: ''
+        ownerid: 73
+        status: published
+        templatefields: {  }
+        title: 'Exhibition: "Alternative Fashion before Glossies, 1985-1995"'
+        start_event: '2012-08-05 00:00:00'
+        unconfirmed_start: false
+        end_event: '2012-09-02 00:00:00'
+        unconfirmed_end: false
+        location_name: 'Garage Center for Contemporary Culture'
+        geolocation:
+            address: 'Ulitsa Krymskiy Val, Moscow, 199049, RU'
+            latitude: '55.729295'
+            longitude: '37.607606499999974'
+            formatted_address: 'Ulitsa Krymskiy Val, Moscow, 199049, RU'
+        introduction: ''
+        teaser: 'The Alternative Fashion before Glossies, 1985-1995 show displays the history of alternative fashion, a trend that emerged at the junction of rock and squat club culture, during the period that started with early perestroika and ended those the arrival of glossy fashion periodicals in mid 1990s.'
+        body: "<p style=\"text-align: justify\">During 1985-1995 alternative fashion was the symbol of changing time and a brand of the perestroika .USSR abroad, drawing the attention of western media with its experimental features. Artists played the hard roles of trendsetters – the Avant-Garde and socialites expressed their attitude to contemporaneity through images and wear.\_The phenomenon of alternative fashion was noticed and appreciated by such western couturiers as Vivienne Westwood who had thought earlier that there could be no fashion in the country of sickles and hammers, and Yohji Yamamoto for whom special shows were organized in the epicenter of the liberal Moscow fashion crowd in the Petrovsky Avenue.\_The exhibition will\_present about a hundred photographs with images of fashion created by Katya Filippova, Gosha Ostretsov, Alexander Petlyura, Andrey Bartenev, Katya Mikulskaya-Mosina, Katya Ryzhikova, Iren Burmistrova, the La Re duet, and Bruno Birmanis.</p>\n<p style=\"text-align: justify\">For more information, please visit the <a href=\"http://garageccc.com/en/event/47\" target=\"_blank\">Garage Culture for Contemporary Fashion</a>.\nCredits image: Iren Burmistrova, Model from the A Getup for the Day after Tomorrow. Photo: I. Piganov, 1989.</p>"
+        teaser_image:
+            file: fashion/2012-08/alternative-fashion-before-glossies-gccc.jpg
+        attachments: {  }
+        original_url: ''
+        persons: {  }
+        tags:
+            -
+                slug: exhibition
+                name: exhibition
+            -
+                slug: culturelover
+                name: culturelover
+            -
+                slug: culturelover-fashion
+                name: culturelover-fashion
+        _id: blogevents/exhibition-alternative-fashion-before-glossies-1985-1995

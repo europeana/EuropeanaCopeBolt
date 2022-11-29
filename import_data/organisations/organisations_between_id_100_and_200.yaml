@@ -1,0 +1,680 @@
+__bolt_export_meta:
+    date: '2022-11-02T11:06:00+01:00'
+    version: 3.7.4
+    platform: mysql
+organisations:
+    -
+        slug: europeana-space
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Europeana Space'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671114'
+        europeana_id: ''
+        org_uid: '1482250000004671114'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeana-space
+    -
+        slug: europeanaconnect-eod
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'EuropeanaConnect - EOD'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671115'
+        europeana_id: ''
+        org_uid: '1482250000004671115'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeanaconnect-eod
+    -
+        slug: europeanalocal-deutschland
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'EuropeanaLocal Deutschland'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Germany
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: Germany
+        uid: '1482250000004671117'
+        europeana_id: ''
+        org_uid: '1482250000004671117'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeanalocal-deutschland
+    -
+        slug: europeana-local-sweden
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Europeana Local Sweden'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Sweden
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: Sweden
+        uid: '1482250000004671118'
+        europeana_id: ''
+        org_uid: '1482250000004671118'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeana-local-sweden
+    -
+        slug: europeanatravel
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: EuropeanaTravel
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671119'
+        europeana_id: ''
+        org_uid: '1482250000004671119'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europeanatravel
+    -
+        slug: europhoto
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: EuroPhoto
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671120'
+        europeana_id: ''
+        org_uid: '1482250000004671120'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/europhoto
+    -
+        slug: heritage-of-the-people-s-europe
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Heritage of the People''s Europe'
+        name_alt1: null
+        name_alt2: null
+        acronym: HOPE
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671125'
+        europeana_id: ''
+        org_uid: '1482250000004671125'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: EN(English)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/heritage-of-the-people-s-europe
+    -
+        slug: culture-institute-of-barcelona
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Culture Institute of Barcelona'
+        name_alt1: 'Institut de Cultura de Barcelona'
+        name_alt2: null
+        acronym: ICUB
+        org_country: Spain
+        org_role:
+            - Aggregator
+        website: 'http://lameva.barcelona.cat/barcelonacultura/es/icub'
+        email: null
+        domain: ''
+        scope: ''
+        sector: Other
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: Spain
+        uid: '1482250000004671130'
+        europeana_id: ''
+        org_uid: '1482250000004671130'
+        name_lang: EN(English)
+        name_alt1_lang: ES(Spanish)
+        name_alt2_lang: null
+        acronym_lang: ES(Spanish)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/culture-institute-of-barcelona
+    -
+        slug: judaica-europeana
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-02-11 06:14:12'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: held
+        templatefields: {  }
+        name: 'Judaica Europeana'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: null
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: null
+        content_languages: null
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671133'
+        europeana_id: ''
+        org_uid: '1482250000004671133'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/judaica-europeana
+    -
+        slug: linked-heritage
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Linked Heritage'
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671136'
+        europeana_id: ''
+        org_uid: '1482250000004671136'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/linked-heritage
+    -
+        slug: locloud
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: LoCloud
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671137'
+        europeana_id: ''
+        org_uid: '1482250000004671137'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/locloud
+    -
+        slug: museums-eu
+        datecreated: '2017-12-14 14:57:22'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: Museums.EU
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: null
+        org_role:
+            - Aggregator
+        website: null
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: null
+        uid: '1482250000004671144'
+        europeana_id: ''
+        org_uid: '1482250000004671144'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/museums-eu
+    -
+        slug: national-library-of-serbia
+        datecreated: '2015-08-17 16:52:16'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: '2022-07-11 11:24:24'
+        datedepublish: ''
+        ownerid: 1
+        status: published
+        templatefields: {  }
+        name: 'National Library of Serbia'
+        name_alt1: 'Народна библиотека Србије'
+        name_alt2: null
+        acronym: null
+        org_country: Serbia
+        org_role:
+            - Aggregator
+            - 'Data Provider'
+        website: 'https://nb.rs/'
+        email: evropeana.agregator@nb.rs
+        domain: ''
+        scope: null
+        sector: 'Cultural Heritage'
+        description: "<p>The\_National Library of Serbia provides digital collections from Serbian cultural heritage institutions to Europeana.</p>\r\n\r\n<p><br>\r\n<strong>In addition to data publication, the\_National Library of Serbia offers:</strong></p>\r\n\r\n<ul>\r\n    <li>Advice on copyright and licensing,</li>\r\n    <li>Advice on data format and quality,</li>\r\n    <li>Metadata mapping and conversion.</li>\r\n</ul>\r\n\r\n<p><br>\r\n<strong>Technical conditions for working with the National Library of Serbia:</strong></p>\r\n\r\n<ul>\r\n    <li>Metadata should ideally be made available as EDM xml file.</li>\r\n</ul>\r\n\r\n<p><br>\r\nLimitations: Public cultural heritage institutions only.<br>\r\nFinancial conditions: None</p>\r\n"
+        geographical_reach: null
+        content_themes: 'All subjects and periods'
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image:
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Serbia.png'
+        city: Belgrade
+        street: 'Skerlićeva 1'
+        zipcode: '11000'
+        po_box: null
+        country: Serbia
+        uid: '1482250000000362501'
+        europeana_id: null
+        org_uid: '1482250000000362501'
+        name_lang: EN(English)
+        name_alt1_lang: SR(Serbian)
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons:
+            - persons/tamara-butigan
+        tags: {  }
+        _id: organisations/national-library-of-serbia
+    -
+        slug: poznan-supercomputing-and-networking-center
+        datecreated: '2016-09-13 12:33:51'
+        datechanged: '2022-10-27 06:07:49'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: 'Poznan Supercomputing and Networking Center'
+        name_alt1: null
+        name_alt2: null
+        acronym: PSNC
+        org_country: Poland
+        org_role:
+            - Aggregator
+        website: 'http://psnc.pl'
+        email: null
+        domain: ''
+        scope: ''
+        sector: Other
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: Poznań
+        street: null
+        zipcode: null
+        po_box: null
+        country: Poland
+        uid: '1482250000001617040'
+        europeana_id: ''
+        org_uid: '1482250000001617040'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: EN(English)
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/poznan-supercomputing-and-networking-center

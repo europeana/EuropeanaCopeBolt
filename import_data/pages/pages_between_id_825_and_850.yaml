@@ -1,0 +1,2087 @@
+__bolt_export_meta:
+    date: '2022-10-27T17:02:34+02:00'
+    version: 3.7.4
+    platform: mysql
+pages:
+    -
+        slug: europeana-low-code-fest-2022
+        datecreated: '2022-09-14 15:49:35'
+        datechanged: '2022-10-12 17:11:09'
+        datepublish: '2022-09-21 15:49:00'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Europeana Low-Code Fest 2022'
+        intro: "<p>We're inviting educators and cultural heritage professionals to Europeana’s first social and educational low-code hackathon - Low Code-Fest 2022! This programme is organised by the Europeana Network Association Education Community.</p>\r\n"
+        body: null
+        pagefooter: null
+        pagetype: landingpage-nohighlight
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>We're inviting educators and cultural heritage professionals to Europeana’s first social and educational low-code hackathon - Low Code-Fest 2022! This programme is organised by the Europeana Network Association Education Community.</p>\r\n"
+        teaser_image:
+            file: Images/Education/low_code_fest_teaser.png
+            title: 'An illustration of an Apple personal computer'
+        teaser_attribution_title: 'Detail from Apple II Referentieboek'
+        teaser_attribution_creator: null
+        teaser_attribution_date: '1980'
+        teaser_attribution_holder: Museon
+        teaser_attribution_country: Netherlands
+        teaser_attribution_license: CC-BY
+        teaser_attribution_link: 'https://www.europeana.eu/item/2021657/resource_document_museon_209379'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages:
+            - pages/apis
+            - pages/europeana-education
+            - pages/europeana-low-code-fest-2022
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: education
+                name: Education
+        categories: {  }
+        tags:
+            -
+                slug: api
+                name: api
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: banner_smallhero
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1050'
+                        _id: resources/europeana-low-code-fest-2022
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: About
+                subtitle: ''
+                anchortitle: About
+                templates: body
+                body: "<p>Inspired by examples like <a href=\"https://digieduhack.com/en/\">DigiEduhack </a>and the Erasmus+ project <a href=\"https://socialhackademy.eu/\">#hackAD - Social, </a>the <a href=\"https://pro.europeana.eu/page/europeana-education\">Europeana Education Community</a> invites you to the first Europeana social and educational low-code hackathon - <strong>Low-Code Fest 2022</strong>! This programme and series of events aims to engage teachers, educators and their students to co-develop solutions to social challenges and/or enhance educational processes and practices.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">The Low-Code Fest will focus on using the&nbsp; <a href=\"https://pro.europeana.eu/page/apis\">Europeana APIs</a> and supporting European educators and cultural heritage professionals to identify innovative approaches for educational initiatives. This programme is open to applications from all types of&nbsp; educators (whether you teach arts and humanities or STEM disciplines) because <strong>previous coding experience is not required - it is ‘Low-Code’</strong>.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Why join?'
+                subtitle: ''
+                anchortitle: 'Why join?'
+                templates: body
+                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">If you are an educator that wants to engage your students or peers with online data and digital cultural heritage, the Low-Code Fest will teach you how to use online tools to go beyond simply searching through a website. You'll learn the basics of what APIs are, how they can be used in educational projects, and discover innovative ways of delving into online databases to find wonderful cultural heritage objects to work with.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">If you want to have students work hands-on with online data, improve their digital literacy and understanding of how websites and databases work, this programme will hand you the tools you need to do so. After this programme you'll be able to engage students and teach them:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">how websites are built on top of databases</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">what cultural heritage data and metadata is and how to use it</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">how to query a database using a website as well as an API endpoint</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">critical thinking on the use of keywords, queries and advanced searching</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">how to develop and assess use cases for their digital projects</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">how to start using APIs in their own projects using digital cultural heritage</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\" role=\"presentation\"><meta charset=\"utf-8\" /><b id=\"docs-internal-guid-8cca149d-7fff-a811-f42a-f3f7dd44620d\">The three best projects will have special prizes, so keep reading until the end! </b></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Phase 1: Open call for applications'
+                subtitle: ''
+                anchortitle: 'Phase 1: Open call for applications'
+                templates: body
+                body: "<p><strong>Applications for Low-Code Fest are now closed (the deadline was 10 October 2022).&nbsp;</strong></p>\r\n\r\n<p>The call was open to:&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Teachers in formal education (from primary to secondary and Vocational and Education training, VET) from European countries who have an interest in digital technologies for education and want to learn how to use low-coding apps and tools. Your project application needs to consider how to benefit a cultural heritage institution with a digital collection in your area.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">European cultural professionals working in museums, archives, libraries and any other cultural heritage institution who currently works with schools and students, and wants to design a digital educational service or product.</p>\r\n    </li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1051'
+                        _id: resources/submit-your-application-for-low-code-fest-2022
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Phase 2: Selection of teams'
+                subtitle: ''
+                anchortitle: 'Phase 2: Selection of teams'
+                templates: body
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">During the first week of October a committee of Europeana staff and Council Members will select a maximum of 12 applicants to form teams to work on their projects and to be involved in the capacity development activities and final hackfest event.&nbsp;Teams will be selected according to the following criteria:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Eligibility check: the applicant is from one of the two eligible categories and has correctly provided all the requested information in the <a href=\"https://pretix.eu/Europeana-Foundation/ljnqw/\">online application form</a>.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Local partnership: there is an evident connection between the school and the cultural venue mentioned in the form.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Feasibility: the co-development project proposed by the team can effectively benefit from the integration of existing Europeana APIs.</p>\r\n    </li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Phase 3: Capacity-building sessions'
+                subtitle: ''
+                anchortitle: 'Phase 3: Capacity-building sessions'
+                templates: body
+                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Europeana will organise two, two hour long webinars on <strong>20 and 21 October</strong> to build capacity in participants to use Europeana’s APIs for educational purposes.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The first webinar will focus on presenting digital cultural heritage data and metadata, what an API is, and what Europeana's APIs are, to equip participants with a basic understanding of technical and digital aspects to be considered in the co-designing phase.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The second webinar will present examples of Europeana’s APIs’ integration in different projects, with the aim to provide inspirational input to the teams. It will allow for participants to discuss their ideas for the Low-Code Fest.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Following these sessions, remote support will be provided through a common online channel where participants can post questions and receive feedback from experts. In the period between the capacity building and the hackfest, the teams will receive a final list of experts who will mentor them, and will be able to book a 30 minutes mentoring session with up to three mentors during the first day of the hackathon.</p>\r\n\r\n<p dir=\"ltr\"></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Phase 4: Low-Code Fest'
+                subtitle: ''
+                anchortitle: 'Phase 4: Low-Code Fest'
+                templates: body
+                body: "<p><meta charset=\"utf-8\" />The Europeana Low-Code Fest event will be organised over two consecutive days (the afternoon of <strong>10 November</strong> and complete day on <strong>11 November)</strong>. It will take place two or three weeks after the end of the capacity building sessions, to give teams enough time to meet and cooperate in designing the project to further develop and present during the hackfest.</p>\r\n\r\n<p>Each day will have a programme that combines plenary and parallel sessions. Expert organisations <a href=\"https://www.egina.eu/en/network/\">EGInA</a> and the <a href=\"https://www.egina.eu/en/network/\">CRHACK LAB FOLIGNO 4D</a> will provide a team of experts who will meet the teams according to their needs.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Find out more about the programme'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><strong>Day 1 (TBC)</strong></p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">12.45 – Opening - Europeana to open access to the online environment selected for Hackfest</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">13.00 – Welcome (plenary session) from Isabel Crespo, Business Development Coordinator, Education at Europeana Foundation, and Altheo Valentini, Chair of the Europeana Education Community.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">13.15 – First mentoring session; teams will be divided into parallel sessions within the chosen communication environment and meet one of the eight available mentors for a 30-minute session</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">14.15 – Teams work remotely on the project, without the mentor</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">15.30 – Return to plenary and direct calls with the various teams for flash presentations of the work being done by the testimonials</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">16.00 – Second mentoring session</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">17.05 – Closing remarks after the first day of EduHack</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\"><strong>Day 2 (TBC)</strong></p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">8.45 – Opening - Europeana to open access to the online environment selected for Hackfest</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">9.00 – Welcome (plenary session) from Isabel Crespo, Business Development Coordinator, Education at Europeana Foundation, and Altheo Valentini, Chair of the Europeana Education Community.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">9.15 – Third mentoring session 10.15 – Teams work remotely on the project, without the mentor</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">12.45 – Back to the plenary session for the random drawing of pairs of teams that will compete online by presenting their solution and trying to get as many votes as possible from the members of the other teams and all those who will be connected to the streaming of the event.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">13.00 – Lunch break</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">13.45 – Access to the online environment is available for participants and the public (promotion of this part of the event that will be open to everyone interested)</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">14.00 – six semifinals according to the six pairs of teams drawn before lunch. Each team will have five minutes to present their project. In the end public voting online via Mentimeter and selection of six finalists.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">15.30 – The jury meets in a separate room to agree on the final selection of the best projects</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">16.30 – Announcement of the top three ranked teams</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">17.00 – Closing remarks</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">Each team enrolled in the Europeana Low-Code Fest will independently manage the logistical organisation for the involvement and active participation of team members in the activities proposed for the hackfest. In particular, the coordinator of each team will have to ensure:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">If necessary and possible, the provision of physical space that enables synchronous collaboration between all team members; Europeana will provide the teams with a virtual space for collaboration (tbd) and help as much as possible solving doubts and facilitating advice and tools;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Moderation between the team members;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Participation in the capacity building phase and make sure (if schedule allows) their team members synchronously attend or, alternatively, make sure they have access to the recordings;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Notification of all communications and information received before, during and after the Low-Code Fest;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Participation in the plenary sessions and meetings planned with mentors in the programme of the Low-Code Fest.</p>\r\n    </li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Jury and selection criteria'
+                subtitle: ''
+                anchortitle: Jury
+                templates: body
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">The Low-Code Fest takes the format of a competition, with the projects evaluated by the public and an expert jury. The best projects will be awarded with special prizes.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">During the second day of the Fest, a first round to select six final projects&nbsp; will be done by the public.</p>\r\n\r\n<p dir=\"ltr\">After the presentation of the final projects, the jury will meet for the final evaluation and selection of the most deserving project from among those that have passed the first selection phase. They will evaluate the entries in three areas:&nbsp;</p>\r\n\r\n<ol>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Relevance: how much the project improves the collaboration between schools and cultural institutions. (Max. 5 points)</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Feasibility: how easy is it to integrate the selected API(s) in the proposed project? (Max. 5 points)</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Transferability: is it possible to integrate/adapt the solution to other projects and in other sectors? (Max. 5 points)</p>\r\n    </li>\r\n</ol>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Prizes
+                subtitle: ''
+                anchortitle: Prizes
+                templates: body
+                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">The winners will have cost travel covered up to 2,500 euros to be able to attend <a href=\"https://www.socialhackathonumbria.info/en/\">Social Hackathon Umbria</a>, an event where they will be able to bring their projects to the next level and meet with experts and other like-minded professionals.</p>\r\n\r\n<p dir=\"ltr\">The projects awarded second and third place will receive a collective subscription to <a href=\"https://brilliant.org/premium/\">Brilliant</a> or <a href=\"https://curiositystream.com/gift/purchase\">Curiosity</a> (up to 250 euros each team) that can be used individually by its members, to continue upskilling and reskilling their new acquired competencies.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">All of the winners will have the chance to have an interview published on Europeana Pro.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1051'
+                        _id: resources/submit-your-application-for-low-code-fest-2022
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: pages/europeana-low-code-fest-2022
+    -
+        slug: out-of-commerce-works-faqs-the-directive-and-its-transposition
+        datecreated: '2022-09-22 17:21:31'
+        datechanged: '2022-10-11 08:43:12'
+        datepublish: '2022-09-27 17:21:00'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Out of Commerce Works FAQs: the Directive and its transposition'
+        intro: "<p>Explore these FAQs to gain a better understanding of the out of commerce works system, specifically questions related to the transposition of the Copyright in the Digital Single Market Directive.</p>\r\n"
+        body: null
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>Explore these FAQs to gain a better understanding of the out of commerce works system, specifically questions related to the transposition of the Copyright in the Digital Single Market (CDSM) Directive.</p>\r\n"
+        teaser_image:
+            file: Images/Teaser_images/oocw_faqs.png
+            title: 'Helsinki railway station, perspective drawing of imperial waiting room'
+        teaser_attribution_title: 'Helsingin rautatieasema, perspektiivipiirustus keisarillinen odotushuone, ajoittamaton'
+        teaser_attribution_creator: 'Saarinen, Eliel'
+        teaser_attribution_date: null
+        teaser_attribution_holder: 'Museum of Finnish Architecture'
+        teaser_attribution_country: Finland
+        teaser_attribution_license: CC-BY
+        teaser_attribution_link: 'https://www.europeana.eu/item/636/_e48e8ace_6226_427d_8d80_61f9f1c14096'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories:
+            -
+                slug: legal-standards
+                name: 'Legal standards'
+        tags:
+            -
+                slug: copyright
+                name: copyright
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>Out of Commerce Works are materials in the collections of cultural heritage institutions, most likely protected by copyright, and no longer in commercial circulation. In mass digitisation projects, clearing rights to make these materials available online is often complex to an extent where it can become prohibitive.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">In order to avoid a situation in which they are locked away from online access, the Copyright in the Digital Single Market (CDSM) Directive created a legal solution so that cultural heritage institutions (CHIs) from across the European Union could share these materials online legally without having to ask for permission on an item by item basis.&nbsp;The out of commerce works provisions in the CDSM Directive are an key opportunity for many cultural heritage institutions to overcome one of their most important copyright problems.</p>\r\n\r\n<p dir=\"ltr\">Members of the&nbsp;<a href=\"https://pro.europeana.eu/project/out-of-commerce-works-working-group\">Europeana Working Group on Out of Commerce Works</a>&nbsp;have developed&nbsp;FAQs to help readers gain a better understanding of the various characteristics of the out of commerce works system, so that you can successfully share more out of commerce works available online.&nbsp;<strong>The&nbsp;FAQs below cover&nbsp;questions related to the transposition of the Copyright in the Digital Single Market (CDSM) Directive. You can also explore questions related to&nbsp;<a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-key-concepts-in-the-directive\">key concepts in the Directive</a>; <a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-stakeholder-dialogues\">stakeholder dialogues</a>; and&nbsp;<a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-the-system-in-practice\">the system in practice</a>.</strong></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'What should cultural heritage institutions advocate for throughout the transposition of the Directive?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\" role=\"presentation\">Cultural heritage institutions are encouraged to follow the discussions at their member state throughout the transposition process, that is, as their national lawmaker makes changes to the national law to bring in the out of commerce works provisions in line with what is established in the <a href=\"https://eur-lex.europa.eu/eli/dir/2019/790/oj\">Copyright in the Digital Single Market (CDSM) Directive</a>.</p>\r\n\r\n<p dir=\"ltr\">More specifically, we encourage cultural heritage institutions to:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Advocate for a definition of out of commerce works that includes <strong>never in commerce</strong> works and is at least as clear and broad as what is established in the Directive’s article 8 and recital 37.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Oppose the adoption of requirements</strong> not recognised in the Directive for conducting a ‘reasonable effort’ to determine that a work is out of commerce, in line with article 8 and recital 38. Additional requirements could lead to burdensome or prohibitive conditions that make the system difficult to comply with by cultural heritage institutions. Instead, best practices can be agreed through the stakeholder dialogues.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Make use of the option to adopt <strong>cut-off dates</strong> to simplify the determination of what is out of commerce&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">In line with the Directive’s article 8 and recitals 31 to 36 and 39 to 44, ensure that the exception to copyright applies when no <strong>sufficiently representative</strong> collective management organisations exist for the specific type of work and right. The sufficient representativity of a collective management organisation should be based on a set of objective criteria. Have clarity on when to consider a collective management organisation ‘sufficiently representative’.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Encourage early <strong>stakeholder dialogues</strong> through which cultural heritage institutions, collective management organisations and rights holders, by area of work, can have a constructive dialogue to ensure that the system works in practice.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">For more information on what to advocate for throughout the transposition of the Directive, we recommend consulting the <a href=\"https://www.notion.so/Articles-8-11-Use-of-out-of-commerce-works-b0091ea89dac4cca96fe537293ed22e6#021099ecba134bd1aa7e93f335e8412c\">Communia guidelines</a> and the <a href=\"https://zenodo.org/record/3552203#.YuEDSnZBxMw\">Guide for Libraries and Library Associations</a> by EBLIDA, IFLA, LIBER and SPARC Europe.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'How do the out of commerce works provisions relate to the Orphan Works Directive?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p dir=\"ltr\" role=\"presentation\">The out of commerce works provisions in the 2019 CDSM Directive and the exception defined by the 2012 <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32012L0028\">Orphan Works Directive</a> are two distinct systems that can be used by a cultural heritage institution when clearing of rights of in-copyright materials. Cultural heritage institutions should evaluate which option is more suitable to clear rights in the specific collection, but it should be noted that the orphan works exception is more limited in scope and is likely to be much more burdensome to use. Below we outline some of the main differences of each of the systems:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><meta charset=\"utf-8\" /><b id=\"docs-internal-guid-32e843a7-7fff-0d67-a3e6-8a3ea4d22d70\">Scope: </b>the Orphan Works exception only applies to text-based, cinematographic and embedded copyright-protected material whose authors are not known or cannot be located. It thus leaves out relevant cultural heritage materials such as photographs and other materials that are not embedded. Instead, the out of commerce works provisions include any type of material as long as it was never or it no longer is subject to commercial exploitation. Most orphan works are likely to also be out of commerce.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Obligations</strong>: The orphan works system requires a (cumbersome) diligent search to be conducted, with a list of mandatory sources and the obligation to record the search results. There is no such thing in the out of commerce works provisions, only a ‘reasonable effort’ to determine that the materials are out of commerce.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Exception, licence, remuneration/compensation</strong>: the orphan works system relies on an exception to copyright, in principle not remunerated, with no licence to be obtained. However, the opt-out by the rightsholder can lead to a compensation for the use made, to be paid by the cultural heritage institution. For out of commerce works, a licence should be obtained if a sufficiently representative collective management organisation exists. An exception applies if that is not the case. The exception is in principle not remunerated, and no compensation is foreseen for the use made in case of opt-out.</p>\r\n    </li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'How should cultural heritage institutions approach a situation in which the national transposition of the out of commerce works provisions is more restrictive or contrary to the Directive?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p>If a Member State does not adopt some of the mandatory or minimum standards set by the Directive, it fails to meet its transposition obligations. If the European Commission recognises that the transposition is not compliant, it <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:12016E260&amp;from=EN\">may challenge this to the European Court of Justice</a>.</p>\r\n\r\n<p dir=\"ltr\">For cultural heritage institutions, the safer option is to advocate throughout the transposition process for everything to be adopted according to the Directive. If this is not successful, cultural heritage institutions could consider:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Initiating a good faith dialogue with the government to highlight the challenges that the incorrect transposition creates for the cultural heritage sector and request that these are corrected;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Addressing a letter to the European Commission to bring the incorrect transposition to their attention;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Or as a last resource, challenging the incorrect transposition through national courts.</p>\r\n    </li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><em>These FAQs have been developed by members of the<a href=\"https://pro.europeana.eu/project/out-of-commerce-works-working-group\"> Europeana Working Group on Out of Commerce Works</a>. They were first published in September 2022. The aim of the working group is to continuously review these questions and recommendations in the answers. For any comments or suggestions, please reach out to <a href=\"mailto:copyright@europeana.eu\">copyright@europeana.eu</a>.&nbsp;</em><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /><em>The information in the FAQs should not be used as professional or legal advice (if you need specific advice, we recommend consulting a suitably qualified professional).</em></p>\r\n\r\n<p><em>Disclaimer: The International Federation of Reproduction Rights Organisations IFRRO is an active member of the Europeana Out of Commerce Works working group, has made an important contribution to the discussions, including for the development of these FAQs, and closely cooperates with Europeana on raising awareness within their respective memberships about out of commerce works. There are however divergences of opinion on some of the content, including certain advocacy and policy recommendations described in the FAQs.</em></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: pages/out-of-commerce-works-faqs-the-directive-and-its-transposition
+    -
+        slug: out-of-commerce-works-faqs-key-concepts-in-the-directive
+        datecreated: '2022-09-23 14:27:49'
+        datechanged: '2022-10-11 08:46:47'
+        datepublish: '2022-09-27 14:25:00'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Out of Commerce Works FAQs: key concepts in the Directive'
+        intro: "<p>Explore these FAQs to gain a better understanding of the out of commerce works system, specifically questions related to key concepts in the Copyright in the Digital Single Market Directive.</p>\r\n"
+        body: null
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>Explore these FAQs to gain a better understanding of the out of commerce works system, specifically questions related to key concepts in the Copyright in the Digital Single Market Directive.</p>\r\n"
+        teaser_image:
+            file: Images/IPR/oocw_faqs_key_concepts.png
+            title: 'Perspective drawing of a large, vaulted hall, with a chair in front of a fireplace, chairs and a table with flowers on it, and a piano'
+        teaser_attribution_title: 'Suur-Merijoen kartano, Viipurin maalaiskunta, hallin perspektiivipiirustus, 1902'
+        teaser_attribution_creator: null
+        teaser_attribution_date: 'Gesellius, Lindgren & Saarinen'
+        teaser_attribution_holder: 'Museum of Finnish Architecture'
+        teaser_attribution_country: Finland
+        teaser_attribution_license: CC-BY
+        teaser_attribution_link: 'https://www.europeana.eu/item/636/_17fb8975_3ef0_4053_ba23_ce0ce7f92001'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories:
+            -
+                slug: legal-standards
+                name: 'Legal standards'
+        tags:
+            -
+                slug: copyright
+                name: copyright
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>Out of Commerce Works are materials in the collections of cultural heritage institutions, most likely protected by copyright, and no longer in commercial circulation. In mass digitisation projects, clearing rights to make these materials available online is often complex to an extent where it can become prohibitive.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">In order to avoid a situation in which they are locked away from online access, the Copyright in the Digital Single Market (CDSM) Directive created a legal solution so that cultural heritage institutions (CHIs) from across the European Union could share these materials online legally without having to ask for permission on an item by item basis.&nbsp;The out of commerce works provisions in the CDSM Directive are an key opportunity for many cultural heritage institutions to overcome one of their most important copyright problems.</p>\r\n\r\n<p dir=\"ltr\">Members of the&nbsp;<a href=\"https://pro.europeana.eu/project/out-of-commerce-works-working-group\">Europeana Working Group on Out of Commerce Works</a>&nbsp;have developed&nbsp;FAQs to help readers gain a better understanding of the various characteristics of the out of commerce works system, so that you can successfully share more out of commerce works available online.&nbsp;<strong>The&nbsp;FAQs below cover&nbsp;questions related to key concepts in&nbsp;the Copyright in the Digital Single Market (CDSM) Directive. You can also explore questions related to the <a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-the-directive-and-its-transposition\">CDSM Directive and its transposition</a>; <a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-stakeholder-dialogues\">stakeholder dialogues</a>; and the <a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-the-system-in-practice\">OOCWs&nbsp;system in practice</a>.</strong></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'How are ‘out of commerce’ works defined?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p><meta charset=\"utf-8\" />The Directive describes out of commerce works as any type of materials that are in the permanent collections of a cultural heritage institution and are out of commerce. The Directive clarifies that these could be owned or permanently held, ‘for example as a result of a transfer of ownership or a licence agreement, legal deposit obligations or permanent custody arrangements’.</p>\r\n\r\n<p dir=\"ltr\">By ‘out of commerce’, the Directive includes materials that were never in commercial circulation, such as unpublished manuscripts, sound recordings, photographs, amateur films, personal correspondence, etc., and materials that were in commerce, but no longer are. This determination can be done on the item as a whole, rather than by checking every possibly protected work or material contained in the item. Importantly, the Directive makes a few precisions in this regard, including:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">materials that are in commerce only to a very limited extent (e.g. in second-hand shops, or the theoretical possibility to obtain a licence) can be considered to be out of commerce</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">an item can be considered to be out of commerce even if there are adaptations of it (e.g. translations, derivative works) available in commerce</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">And an item should not be considered to be out of commerce if a version of it (e.g. subsequent edition) is still available in commerce</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">The Directive excludes sets of items consisting predominantly of materials from outside of the European Union.</p>\r\n\r\n<p dir=\"ltr\">A more detailed overview of these conditions is available in <a href=\"https://www.youtube.com/watch?v=uBT28EHlos0\">this presentation</a> at the <a href=\"https://euipo.europa.eu/ohimportal/en/web/observatory/datathon-2022?inheritRedirect=true\">EUIPO datathon</a> (<a href=\"https://euipo.europa.eu/tunnel-web/secure/webdav/guest/document_library/observatory/documents/OOCWP/Datathon-2022/What_is_an_out_of_commerce_work-EUIPO_Datathon_en.pdf\">slides here</a>) as well as in the <a href=\"https://www.notion.so/Articles-8-11-Use-of-out-of-commerce-works-b0091ea89dac4cca96fe537293ed22e6#021099ecba134bd1aa7e93f335e8412c\">Communia guidelines</a>, the <a href=\"https://zenodo.org/record/3552203#.YuEDSnZBxMw\">Guide for Libraries and Library Associations</a> by EBLIDA, IFLA, LIBER and SPARC Europe and the <a href=\"https://ifrro.org/page/resources-public/\">IFRRO guide</a>.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'What are cut-off dates?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p dir=\"ltr\"><meta charset=\"utf-8\" />Article 8 of the CDSM Directive opens the possibility for member states to establish a cut-off date. The Directive does not go into any detail of what these could look like, but these should be generally understood as dates before which certain types of materials are presumed to be out of commerce. Cut-off dates simplify the ‘out of commerce determination’ that the cultural heritage institution needs to do by minimising the need to make a ‘reasonable effort’ to determine that materials are out of commerce.&nbsp;&nbsp;</p>\r\n\r\n<p dir=\"ltr\"></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">The Directive clarifies that such requirements should not ‘extend beyond what is necessary and reasonable, and shall not preclude being able to determine that a set of works or other subject matter as a whole is out of commerce, when it is reasonable to presume that all works or other subject matter are out of commerce’. This could be, for example, the case of books in print where it is reasonable to believe that some are in commerce if the effort to conduct a search is reasonable, for example via automated processes when checking certain databases.</p>\r\n\r\n<p dir=\"ltr\">While some countries have recognised cut-off dates directly through the transposition text, some consider adopting them through further regulatory measures, and others, such as the Netherlands, are discussing possible options via the stakeholder dialogues to implement them through memoranda of understanding.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'What are some examples of cut-off dates that cultural heritage institutions could suggest introducing in their countries?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p>Not all countries that have transposed the Directive have adopted a cut-off date, but there are a few examples so far, and they generally consist of one of the following types:</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><meta charset=\"utf-8\" /><b id=\"docs-internal-guid-c58b9009-7fff-7c7b-f33d-70061fb830fe\">‘Static date’: </b>a specific date before which certain types of works are considered to be out of commerce. The date always remains the same. For example, in Hungary, literary works last published in Hungary on or before 31 August 1999 are out of commerce, unless the contrary is proven.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\"><b id=\"docs-internal-guid-c58b9009-7fff-7c7b-f33d-70061fb830fe\">‘A moving wall’: </b>a number of years before which certain types of materials are presumed to be out of commerce. The date will therefore move as years pass, opening the door to more materials being presumed to be out of commerce. For example, in France, all types of materials are considered to be out of commerce if their first publication or communication to the public dates back thirty years or more.\r\n    <p dir=\"ltr\" role=\"presentation\"></p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">Differently from the two types of cut-off dates described above, in which the presumption is for the out of commerce status, some countries have established a ‘static’ date after which certain types of materials are presumed to be ‘in’ commerce (‘Limited window’). For example, all books that have been published less than 10 years before a specific date are considered to be in commerce unless the contrary is proven.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Beyond the ‘types’ identified above, member states have brought in various specifications. For example, the Hungarian example contains a reference to ‘last’ published that requires an additional check for that date of publication. On the other hand, Italy refers to a cut-off date which in practice does not act like any of the cut-off dates described above, as it presumes that materials that are not available in commercial channels for at least 10 years are out of commerce, which in practice still requires making an out of commerce determination.</p>\r\n\r\n<p dir=\"ltr\">Generally, a ‘moving wall’ is recommended over a ‘static date’, given that, as described above, as time moves forward more and more materials will likely become out-of-commerce. Using a specific date only produces a one time benefit for the cultural heritage institution, whereas a moving wall is a recurring benefit.</p>\r\n\r\n<p dir=\"ltr\">It is reasonable to expect that the duration of a cut-off date is adapted to the type of work, whose nature will determine the probability that it is out of commerce at a sooner or later stage. For example, Estonia’s cut-off dates are moving walls of 50 years for works in general, 20 years for serial publications, and five years for ‘pamphlets’.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'What is a ‘sufficiently representative’ collective management organisation? What criteria should be used to make such a determination?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p dir=\"ltr\"><meta charset=\"utf-8\" />Determining what is and is not a sufficiently representative collective management organisation is a crucial aspect. When no ‘sufficiently representative’ collective management organisation exists, cultural heritage institutions can make out of commerce works available online on the basis of an exception to copyright. Instead, when a ‘sufficiently representative’ collective management organisation exists, cultural heritage institutions can only publish out-of-commerce works by concluding a licence with such organisation.</p>\r\n\r\n<p dir=\"ltr\">While it is for each member state to define what ‘sufficiently representative’ exactly means, we can confer from the text of the Directive that the collective management organisation must represent a significant number of rights holders in the relevant types of work, that this has to be determined on the basis of its mandates, and for one, some or all of the rights mentioned in the Directive.</p>\r\n\r\n<p dir=\"ltr\">In order to be able to make such a determination in a way that is fair, transparent and non-debatable, it is important that clear objective criteria on the basis of accessible information are defined. This way, there can either be a joint agreement on which collective management organisations are considered representative on that basis, or cultural heritage institutions have sufficient information to make that determination by themselves and have a clear understanding on the situations in which they should seek to conclude a licence and the situations in which they shouldn’t, without facing any legal insecurity.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The issue of representativeness is also an important discussion point in the context of government-organised stakeholder dialogues. In the Netherlands, for example, cultural heritage institutions argue that if there is no collective management organisation that a cultural heritage institution would generally reach out to obtain a licence for works that are in commercial circulation, the collective management organisation in question should not be seen as being sufficiently representative for that same type of work when it’s not in commerce. The <a href=\"https://libereurope.eu/working-group/liber-copyright-legal-matters-working-group/\">LIBER Copyright &amp; Legal Matters Working Group</a> published a <a href=\"https://libereurope.eu/article/liber-statement-regarding-out-of-commerce-works/\">statement on out of commerce works</a> arguing that ‘LIBER is convinced that collective management organisations are not, and should not be, representative of the makers of works that have never been in commerce and/or were never intended to be in commerce’.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'How should cultural heritage institutions deal with situations in which more than one collective management organisation might be sufficiently representative?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p>Under the Directive, Member States are “free to establish specific rules applicable to cases in which more than one collective management organisation is representative for the relevant works or other subject matter, requiring for example, joint licences or an agreement between relevant organisations”. There is concern that if a cultural heritage institution is required to reach out to more than one collective management organisation for the same collection of works, this would make the process unnecessarily burdensome.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">An approach that has worked effectively is where one collective management organisation is the contact point and will re-distribute royalties with the other relevant collective management organisations, so that cultural heritage institutions only have one contact point. In Germany, for example, the collective management organisations for text (<a href=\"https://www.vgwort.de/startseite.html\">VG WORT</a>) and visual arts (<a href=\"https://www.bildkunst.de/en/homepage\">VG BILD-KUNST</a>) have worked together to facilitate the licensing of books and printed works to ensure that the entire content of a book with text and illustrations can be combined in ‘one licence’. In this process, VG WORT assumes the ‘leading part’ by taking over the billing, technical tasks and internal affairs between the collecting societies.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Should ‘customary channels of commerce’ be defined and if so, how and by who?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p dir=\"ltr\" role=\"presentation\"><meta charset=\"utf-8\" />The lack of commercial availability of an item needs to be determined on the basis of checking ‘customary channels’ of commerce. According to article 8 of the Directive, ‘a work (...) shall be deemed to be out of commerce when it can be presumed in good faith that [it] is not available to the public through customary channels of commerce, after a reasonable effort has been made to determine whether it is available to the public’.<meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"></p>\r\n\r\n<p dir=\"ltr\">No definition or list of channels is provided by the Directive, but it does establish that ‘customary channels’ should take into account ‘the characteristics of a particular work’. While we recommend that if any channels of commerce are identified as relevant, these are not established as mandatory, but as good practice, in order to avoid reaching a situation similar to that of the orphan works exception. As described in the question ‘How are ‘out of commerce’ works defined?’, second-hand shops should not be considered as a customary channel of commerce.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">For books, a books-in-print database, in particular using ISBN numbers, could be considered a reasonable source to check, although it leaves out early works that were not catalogued.</p>\r\n\r\n<p dir=\"ltr\">For sound recordings, Spotify, Deezer, and YouTube could be an option, and for audiovisual or film works, Netflix and similar platforms, as well as local streaming platforms. However, in order for this search to create the least burden possible, a source should ideally be open, free to use, and machine readable for it to be considered a suitable option, which is unfortunately not the case for streaming platforms.</p>\r\n\r\n<p dir=\"ltr\">As regards other types of works: ISSN numbers could be checked for periodicals, ISMN for sheet music, and ISTC for textual works, as well as ISNI. In the field of visual arts, image libraries, image collective management organisations and auction house catalogues could also be consulted. Collective management organisation’s catalogues can also assist when they contain information about when works have been used in customary channels.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><em>These FAQs have been developed by members of the<a href=\"https://pro.europeana.eu/project/out-of-commerce-works-working-group\">&nbsp;Europeana Working Group on Out of Commerce Works</a>. They were first published in September 2022. The aim of the working group is to continuously review these questions and recommendations in the answers. For any comments or suggestions, please reach out to&nbsp;<a href=\"mailto:copyright@europeana.eu\">copyright@europeana.eu</a>.&nbsp;</em></p>\r\n\r\n<p><em>The information in the FAQs should not be used as professional or legal advice (if you need specific advice, we recommend consulting a suitably qualified professional).</em></p>\r\n\r\n<p><em>Disclaimer: The International Federation of Reproduction Rights Organisations IFRRO is an active member of the Europeana Out of Commerce Works working group, has made an important contribution to the discussions, including for the development of these FAQs, and closely cooperates with Europeana on raising awareness within their respective memberships about out of commerce works. There are however divergences of opinion on some of the content, including certain advocacy and policy recommendations described in the FAQs.</em></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: pages/out-of-commerce-works-faqs-key-concepts-in-the-directive
+    -
+        slug: out-of-commerce-works-faqs-stakeholder-dialogues
+        datecreated: '2022-09-26 13:04:47'
+        datechanged: '2022-10-11 08:47:39'
+        datepublish: '2022-09-27 13:04:00'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Out of Commerce Works FAQs: stakeholder dialogues'
+        intro: "<p>Explore these FAQs to gain a better understanding of the out of commerce works system, specifically questions related to stakeholder dialogues for the\_Copyright in the Digital Single Market Directive.</p>\r\n"
+        body: null
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>Explore these FAQs to gain a better understanding of the out of commerce works system, specifically questions related to stakeholder dialogues for the\_Copyright in the Digital Single Market Directive.</p>\r\n"
+        teaser_image:
+            file: Images/IPR/oocw_faqs_stakeholder.png
+            title: 'Perspective drawing of a large vaulted hall'
+        teaser_attribution_title: 'Helsingin rautatieasema, perspektiivipiirustus odotussalista, 1910'
+        teaser_attribution_creator: 'Saarinen, Eliel'
+        teaser_attribution_date: null
+        teaser_attribution_holder: 'Museum of Finnish Architecture'
+        teaser_attribution_country: Finland
+        teaser_attribution_license: CC-BY
+        teaser_attribution_link: 'https://www.europeana.eu/item/636/_d567fbff_ce0a_4bf2_925b_deee01c3c330'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories:
+            -
+                slug: legal-standards
+                name: 'Legal standards'
+        tags:
+            -
+                slug: copyright
+                name: copyright
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>Out of Commerce Works are materials in the collections of cultural heritage institutions, most likely protected by copyright, and no longer in commercial circulation. In mass digitisation projects, clearing rights to make these materials available online is often complex to an extent where it can become prohibitive.</p>\r\n\r\n<p dir=\"ltr\">In order to avoid a situation in which they are locked away from online access, the Copyright in the Digital Single Market (CDSM) Directive created a legal solution so that cultural heritage institutions (CHIs) from across the European Union could share these materials online legally without having to ask for permission on an item by item basis.&nbsp;The out of commerce works provisions in the CDSM Directive are an key opportunity for many cultural heritage institutions to overcome one of their most important copyright problems.</p>\r\n\r\n<p dir=\"ltr\">Members of the&nbsp;<a href=\"https://pro.europeana.eu/project/out-of-commerce-works-working-group\">Europeana Working Group on Out of Commerce Works</a>&nbsp;have developed&nbsp;FAQs to help readers gain a better understanding of the various characteristics of the out of commerce works system, so that you can successfully share more out of commerce works available online.&nbsp;<strong>The&nbsp;FAQs below cover&nbsp;questions related to stakeholder dialogues in the&nbsp;Copyright in the Digital Single Market (CDSM) Directive. You can also explore questions related to the <a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-the-directive-and-its-transposition\">CDSM Directive and its transposition</a>; <a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-key-concepts-in-the-directive\">its key concepts</a>; and the <a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-the-system-in-practice\">OOCWs&nbsp;system in practice</a>.</strong></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'What are the stakeholder dialogues?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p>Article 11 and recital 42 of the CDSM Directive state that governments must, ‘consult rightholders, collective management organisations and cultural heritage institutions in each sector before establishing specific requirements (...)’ in the area of out of commerce works.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">These stakeholder dialogues should be prompted by each national government, most likely after the completion of the transposition of the Directive. They should be sector-specific (various dialogues should run in parallel) and should have representation from the cultural heritage sector, collective management organisations, and rights holders.</p>\r\n\r\n<p dir=\"ltr\">According to the Directive, these dialogues should be used to agree on possible best practices to determine what materials are out of commerce; ensure the relevance, adequacy of terms and publicity of licences; and provide legal certainty with regard to the representativeness of collective management organisations and the categorisation of works.</p>\r\n\r\n<p dir=\"ltr\">You can read more about the stakeholder dialogues in the questions that follow, in <a href=\"https://pro.europeana.eu/post/be-part-of-the-discussions-on-out-of-commerce-works\">this post</a>, as well as in the <a href=\"https://ifrro.org/page/resources-public/\">IFRRO guide</a>, the <a href=\"https://www.notion.so/Articles-8-11-Use-of-out-of-commerce-works-b0091ea89dac4cca96fe537293ed22e6#021099ecba134bd1aa7e93f335e8412c\">Communia guidelines</a> and the <a href=\"https://zenodo.org/record/3552203#.YuEDSnZBxMw\">Guide for Libraries and Library Associations</a> by EBLIDA, IFLA, LIBER and SPARC Europe.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'What is a good setup for the stakeholder dialogues, and who should participate?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p dir=\"ltr\" role=\"presentation\">The Directive establishes that stakeholder dialogues need to be sector-specific. Breaking up stakeholder dialogues into groups also makes them more manageable. For example, there can be dialogues on written works, audio (phonograms), audiovisual works, photographs, visual artworks, databases and software. There is no indication on the regularity or the duration in time of these dialogues, or the specific outcome that should be foreseen.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">As pointed out in the question above, each dialogue should at least have representatives from cultural heritage institutions, collective management organisations (if existing) and rights holders. The cultural heritage sector could be represented by sectoral institutions or can consider appointing a person from a specific institution. The person involved should have a strong copyright knowledge and/or knowledge on the practical implications of the decisions that might be made at the stakeholder dialogues.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The Directive does not preclude the possibility of inviting other types of organisation who can provide additional insight and enrich the discussion, for example into how the commercial exploitation of a type of work works.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'If a government has not set up stakeholder dialogues even though the Directive has been transposed, how could cultural heritage institutions prompt these dialogues?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p dir=\"ltr\" role=\"presentation\">Setting up stakeholder dialogues is an obligation for all member states, as set forth in the CDSM Directive’s article 11. If governments do not initiate this process, cultural heritage organisations should approach their representatives to encourage the organisation of stakeholder dialogues.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">If this does not succeed, cultural heritage institutions could still seek to make progress by approaching collective management organisations and rightsholder representatives directly in situations in which it is clear that they are likely to be sufficiently representative. Through an informal dialogue with these organisations, important information can already be exchanged – including in relation to the licensing of future digitisation projects - and consensus can be sought. Such an approach, that would not preclude an agreement being made under formal, government-organised stakeholder dialogues, would help to advance work on digitisation projects and provide some legal security to cultural heritage organisations.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><em>These FAQs have been developed by members of the<a href=\"https://pro.europeana.eu/project/out-of-commerce-works-working-group\">&nbsp;Europeana Working Group on Out of Commerce Works</a>. They were first published in September 2022. The aim of the working group is to continuously review these questions and recommendations in the answers. For any comments or suggestions, please reach out to&nbsp;<a href=\"mailto:copyright@europeana.eu\">copyright@europeana.eu</a>.&nbsp;</em></p>\r\n\r\n<p><em>The information in the FAQs should not be used as professional or legal advice (if you need specific advice, we recommend consulting a suitably qualified professional).</em></p>\r\n\r\n<p><em>Disclaimer: The International Federation of Reproduction Rights Organisations IFRRO is an active member of the Europeana Out of Commerce Works working group, has made an important contribution to the discussions, including for the development of these FAQs, and closely cooperates with Europeana on raising awareness within their respective memberships about out of commerce works. There are however divergences of opinion on some of the content, including certain advocacy and policy recommendations described in the FAQs.</em></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: pages/out-of-commerce-works-faqs-stakeholder-dialogues
+    -
+        slug: out-of-commerce-works-faqs-the-system-in-practice
+        datecreated: '2022-09-26 13:38:39'
+        datechanged: '2022-10-11 08:48:36'
+        datepublish: '2022-09-27 13:38:00'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Out of Commerce Works FAQs: the system in practice'
+        intro: "<p>Explore these FAQs to gain a better understanding of the Out of Commerce Works system, specifically questions related to the system in practice.\_</p>\r\n"
+        body: null
+        pagefooter: null
+        pagetype: page
+        highlighttitle: null
+        highlightsources: posts
+        highlightsubtype: null
+        highlightcategory: null
+        highlightlink: null
+        teaser: "<p>Explore these FAQs to gain a better understanding of the Out of Commerce Works system, specifically questions related to the system in practice.\_</p>\r\n"
+        teaser_image:
+            file: Images/IPR/oocw_faqs_the_system.png
+            title: 'An illustration of a room with seats, a desk and a vaulted ceiling'
+        teaser_attribution_title: 'Decoration fantasy, interior perspective drawing, 1901'
+        teaser_attribution_creator: null
+        teaser_attribution_date: 'Saarinen, Eliel'
+        teaser_attribution_holder: 'Museum of Finnish Architecture'
+        teaser_attribution_country: Finland
+        teaser_attribution_license: CC-BY
+        teaser_attribution_link: 'https://www.europeana.eu/item/636/_18aa5194_3312_4636_b8bd_44b4abf25ba1'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        imagegallery: {  }
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        search_keywords: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories:
+            -
+                slug: legal-standards
+                name: 'Legal standards'
+        tags:
+            -
+                slug: copyright
+                name: copyright
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>Out of Commerce Works are materials in the collections of cultural heritage institutions, most likely protected by copyright, and no longer in commercial circulation. In mass digitisation projects, clearing rights to make these materials available online is often complex to an extent where it can become prohibitive.</p>\r\n\r\n<p dir=\"ltr\">In order to avoid a situation in which they are locked away from online access, the Copyright in the Digital Single Market (CDSM) Directive created a legal solution so that cultural heritage institutions (CHIs) from across the European Union could share these materials online legally without having to ask for permission on an item by item basis.&nbsp;The out of commerce works provisions in the CDSM Directive are an key opportunity for many cultural heritage institutions to overcome one of their most important copyright problems.</p>\r\n\r\n<p dir=\"ltr\">Members of the&nbsp;<a href=\"https://pro.europeana.eu/project/out-of-commerce-works-working-group\">Europeana Working Group on Out of Commerce Works</a>&nbsp;have developed&nbsp;FAQs to help cultural heritage professionals gain a better understanding of the various characteristics of the out of commerce works system, so that you can successfully share more out of commerce works available online.&nbsp;<strong>The&nbsp;FAQs below cover&nbsp;questions related the system in practice. You can also explore questions related to the <a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-the-directive-and-its-transposition\">CDSM Directive and its transposition</a>; <a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-key-concepts-in-the-directive\">key concepts in the Directive</a>; and <a href=\"https://pro.europeana.eu/page/out-of-commerce-works-faqs-stakeholder-dialogues\">stakeholder dialogues</a>.&nbsp;</strong></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'How should a cultural heritage institution approach licence negotiations with collective management organisations?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p>Whenever a sufficiently representative collective management organisation for the type of materials and rights in question exists, cultural heritage institutions should seek to obtain a licence from the collective management organisation in order to make the out of commerce works available online. It is therefore very likely that many cultural heritage institutions will have to enter into negotiations with collective management organisations for the dissemination of certain collections. In addition, the Directive clarifies that ‘a lack of agreement on the conditions of the licence should not be interpreted as a lack of availability of licensing solutions’, that is, the fact that the licence negotiations are not successful does not remove the obligation from having to obtain a licence. It is therefore essential for cultural heritage institutions that the licence negotiations lead to a positive outcome.</p>\r\n\r\n<p dir=\"ltr\">In order to do that, it is important to:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Enter the negotiations with a constructive mindset, leaving aside the belief that the conclusion of the licence might be unfair.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Presume that the collective management organisation understands and is willing to support the cultural heritage institution’s mission and will not enter negotiations in bad faith.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Determine, ahead of the meeting, the concrete outcome expected, including the best-case and worst-case scenarios. Have clarity on whether you seek a licence for a very specific collection, or to initiate a negotiation for many collections and therefore understand the possible fees.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">If the focus of the licence is on a specific collection, be familiar with its size, the type of materials that it is made of, the commercial ‘stakes’ that rights holders might have, how the materials are generally distributed and how long the commercial lifespan of the items generally is.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Familiarise the collective management organisation with the nature of the collection.&nbsp;</p>\r\n    </li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'What should the text of a licence for out of commerce works between a cultural heritage institution and a collective management organisation contain?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p dir=\"ltr\" role=\"presentation\">The Directive specifies that when concluding licences for out of commerce works, CHIs and collective management organisations “should remain free to agree on the territorial scope of licences, including the option of covering all Member States, the licence fee and the uses allowed”. For cultural heritage institutions, it is also important to make sure that the text of the licence provides clarity on the following aspects:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">The materials covered, that is, the identification of the collections, and for example an acknowledgement that public domain materials are outside of its scope.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><meta charset=\"utf-8\" />The type of exploitation authorised, which should at least foresee what is allowed by the Directive and the national law. In principle this includes reproduction, distribution, communication to the public or making available to the public via non-commercial websites. You could envisage having a clear identification of the websites through which the materials can be shared, e.g. the institutional website, a national aggregator and Europeana.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">The duration of the licence.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">A clarification that the licence is non-exclusive.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">The territorial scope of the licence.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">The fees to which the exploitation of the materials are subject. Different approaches to agreeing fees are possible, including for example a fee per usage of the work, a lump sum for as long as the materials are out of commerce and in copyright, or a yearly indexed fee, for example. If regular payments are a burden on a cultural heritage institution, it is possible to instead aim at a one-time payment. The fee should be adapted to the nature of the works (e.g. whether they are more “recently” published or not).</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">You can read more about the conclusion of licences for out of commerce works in the <a href=\"https://ifrro.org/page/resources-public/\">IFRRO guide</a>.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Who do I approach for licences for works from outside of my Member State?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p dir=\"ltr\" role=\"presentation\">According to the Directive, the licences ‘are to be sought from a collective management organisation that is representative for the Member State where the cultural heritage institution is established’. This is also the case in situations where the cultural heritage institution plans to make available online works from other countries. In this case, they can approach the national collective management organisation who can in turn liaise with a collective management organisation in the other Member State. Some collective management organisations are currently considering how to make this process easy and simple.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Who can opt-out, how, and when?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p dir=\"ltr\" role=\"presentation\">The Directive establishes that all rights holders should be able to exclude their works from being used in the context of the out of commerce works system, and that this should be possible ‘at any time, easily and effectively’. Rights holders should be able to opt out ‘in general or in specific cases’ and that includes ‘after the conclusion of a licence or after the beginning of the use concerned’.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'When should an institution share data via the EUIPO portal?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p dir=\"ltr\" role=\"presentation\">It is mandatory to share information about the dataset that the cultural heritage institution wants to make available to the public at least six months before that happens via the EUIPO <a href=\"https://euipo.europa.eu/out-of-commerce\">out of commerce works portal</a>. The cultural heritage institution can share information about the data via the EUIPO portal anytime, including before a licence has been concluded with a collective management organisation.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Sharing this information via the portal serves as a publicity measure so that rights holders have the opportunity to become aware of the intention of the cultural heritage institution and opt-out of the intended use if they wish to.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Information about the functioning of the portal, including user guides, are available in <a href=\"https://euipo.europa.eu/ohimportal/en/web/observatory/outofcommerceworks\">this page</a>.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'What Rights Statement should I use?'
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p dir=\"ltr\" role=\"presentation\">When sharing out of commerce works online after having obtained a licence or under the terms of the exception, the cultural heritage institution might want to share rights information alongside the item for users to understand if and to what extent they can use the materials. This becomes even more important when sharing the collections through aggregators like Europeana, where the use of a <a href=\"https://pro.europeana.eu/page/available-rights-statements\">standardised rights statement</a> is mandatory.</p>\r\n\r\n<p dir=\"ltr\">Given that out of commerce works are protected by copyright, a suitable amongst the existing rights statements by the <a href=\"https://rightsstatements.org/en/\">Rights Statements Consortium</a> is the <a href=\"https://rightsstatements.org/page/InC/1.0/?language=en\">In Copyright</a> rights statement. If the rightsholder is unknown, the In <a href=\"https://rightsstatements.org/page/InC-RUU/1.0/?language=en\">Copyright - Rights-Holder(s) Unlocatable or Unidentifiable</a> statement could also be suitable, although it should be noted that it is currently not supported when aggregating data with Europeana. Even though the Rights Statements Consortium developed a specific <a href=\"https://rightsstatements.org/page/InC-OW-EU/1.0/?language=en\">statement for orphan works</a>, there are no public plans by the Rights Statements Consortium to develop an equivalent statement for out of commerce works at the moment.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">While according to the Directive the cultural heritage institution can share the item online but cannot authorise any further reuse, it should be noted that users of digital cultural heritage might be able to benefit from <a href=\"https://copyrightexceptions.eu/\">exceptions to copyright</a> through which they can use this material, for example for citation purposes, research or teaching.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><em>These FAQs have been developed by members of the<a href=\"https://pro.europeana.eu/project/out-of-commerce-works-working-group\">&nbsp;Europeana Working Group on Out of Commerce Works</a>. They were first published in September 2022. The aim of the working group is to continuously review these questions and recommendations in the answers. For any comments or suggestions, please reach out to&nbsp;<a href=\"mailto:copyright@europeana.eu\">copyright@europeana.eu</a>.&nbsp;</em></p>\r\n\r\n<p><em>The information in the FAQs should not be used as professional or legal advice (if you need specific advice, we recommend consulting a suitably qualified professional).</em></p>\r\n\r\n<p><em>Disclaimer: The International Federation of Reproduction Rights Organisations IFRRO is an active member of the Europeana Out of Commerce Works working group, has made an important contribution to the discussions, including for the development of these FAQs, and closely cooperates with Europeana on raising awareness within their respective memberships about out of commerce works. There are however divergences of opinion on some of the content, including certain advocacy and policy recommendations described in the FAQs.</em></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
