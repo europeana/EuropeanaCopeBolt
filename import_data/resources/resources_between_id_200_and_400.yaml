@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T11:06:32+01:00'
+    date: '2022-11-28T19:32:41+01:00'
     version: 3.7.4
     platform: mysql
 resources:
@@ -15,7 +15,7 @@ resources:
         title: 'Everyday life in a Dutch provincial city - Apeldoorn in black-and-white pictures'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A2021636*&view=grid'
         buttontext: 'Explore on Collections'
@@ -62,7 +62,7 @@ resources:
         title: 'Everyday life in a Dutch city - Den Bosch in historical pictures and postcards'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A2021633*&view=grid'
         buttontext: 'Explore on Collections'
@@ -109,7 +109,7 @@ resources:
         title: 'Historical views and landscapes of Europe from the Austrian National Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BREUSABILITY%5D%5B%5D=open&locale=en&per_page=96&q=edm_datasetName%3A92070%2A&view=grid&source=reuse'
         buttontext: 'Explore on Collections'
@@ -156,7 +156,7 @@ resources:
         title: 'Medieval manuscripts and parchment fragments from Finland'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A2021003*&view=grid'
         buttontext: 'Explore on Collections'
@@ -203,7 +203,7 @@ resources:
         title: 'Music and songs in Yiddish'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A09301*&view=grid'
         buttontext: 'Explore on Collections'
@@ -250,7 +250,7 @@ resources:
         title: 'Photographs of places and buildings in Estonia'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A2020735*&view=grid'
         buttontext: 'Explore on Collections'
@@ -297,7 +297,7 @@ resources:
         title: 'Portrait Collection of the Austrian National Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BREUSABILITY%5D%5B%5D=open&locale=en&q=europeana_collectionName%3A92062%2A&view=grid&source=reuse'
         buttontext: 'Explore on Collections'
@@ -344,7 +344,7 @@ resources:
         title: 'The rich history and collections of the University of Edinburgh'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A9200271*&view=grid'
         buttontext: 'Explore on Collections'
@@ -391,7 +391,7 @@ resources:
         title: 'User contributed content - pictures of Swedish Monuments'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A2058702*&view=grid'
         buttontext: 'Explore on Collections'
@@ -438,7 +438,7 @@ resources:
         title: 'WWI photographs from Austria-Hungary'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BREUSABILITY%5D%5B%5D=open&locale=en&per_page=96&q=edm_datasetName%3A9200291%2A&view=grid&source=reuse'
         buttontext: 'Explore on Collections'
@@ -485,7 +485,7 @@ resources:
         title: 'WWI text posters from Austria-Hungary'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BREUSABILITY%5D%5B%5D=open&locale=en&per_page=96&q=edm_datasetName%3A9200290%2A&view=grid&source=reuse'
         buttontext: 'Explore on Collections'
@@ -532,7 +532,7 @@ resources:
         title: 'Swedish churches and archaeological sites'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A91622*&view=grid'
         buttontext: 'Explore on Collections'
@@ -579,7 +579,7 @@ resources:
         title: '19th and 20th-century Lithuania in photographs'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A2024906*&view=grid'
         buttontext: 'Explore on Collections'
@@ -626,7 +626,7 @@ resources:
         title: 'British Library book illustrations'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A9200387*&view=grid'
         buttontext: 'Explore on Collections'
@@ -673,7 +673,7 @@ resources:
         title: 'Daily life in the South of Sweden'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BDATA_PROVIDER%5D%5B%5D=Malm%C3%B6+museer&f%5BREUSABILITY%5D%5B%5D=open&q=&view=grid'
         buttontext: 'Explore on Collections'
@@ -720,7 +720,7 @@ resources:
         title: 'Manuscript illuminations from the Austrian National Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A9200388*&view=grid'
         buttontext: 'Explore on Collections'
@@ -767,7 +767,7 @@ resources:
         title: 'Wiki loves Swedish monuments'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A205870*&view=grid'
         buttontext: 'Explore on Collections'
@@ -814,7 +814,7 @@ resources:
         title: 'Dutch heritage in a nutshell'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A2021657*&view=grid'
         buttontext: 'Explore on Collections'
@@ -861,7 +861,7 @@ resources:
         title: 'Famous manuscripts and notebooks from the British Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A9200397*&view=grid'
         buttontext: 'Explore on Collections'
@@ -908,7 +908,7 @@ resources:
         title: 'Life in a 20th-century Dutch county'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A2021612*&view=grid'
         buttontext: 'Explore on Collections'
@@ -955,7 +955,7 @@ resources:
         title: 'The history of the circus from 1880 to now'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A2021603*&view=grid'
         buttontext: 'Explore on Collections'
@@ -1002,7 +1002,7 @@ resources:
         title: 'Historical collections and toys from Deventer Museums'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BMEDIA%5D%5B%5D=true&f%5BREUSABILITY%5D%5B%5D=open&q=europeana_collectionName%3A2021659%2A&source=reuse&view=grid'
         buttontext: 'Explore on Collections'
@@ -1049,7 +1049,7 @@ resources:
         title: 'Military maps and drawings from the Spanish Ministry of Defence'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BDATA_PROVIDER%5D%5B%5D=Biblioteca+Virtual+del+Ministerio+de+Defensa&f%5BREUSABILITY%5D%5B%5D=open&view=grid'
         buttontext: 'Explore on Collections'
@@ -1096,7 +1096,7 @@ resources:
         title: 'Bookplates from the Romanian National Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?per_page=96&q=europeana_collectionName%3A9200423%2A+&view=grid&source=reuse'
         buttontext: 'Explore on Collections'
@@ -1143,7 +1143,7 @@ resources:
         title: 'Vintage photographs of Vienna'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?source=reuse&q=europeana_collectionName%3A9200434*&view=grid'
         buttontext: 'Explore on Collections'
@@ -1191,7 +1191,7 @@ resources:
         image:
             file: labs.europeana.eu/labs/hero/hero-today.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>\r\n  <br><br></p>"
         htmllink: 'https://twitter.com/europeanalabs'
         buttontext: 'Join us'
@@ -1238,7 +1238,7 @@ resources:
         title: 'Academic Research'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: /what-we-do/academic-research
         buttontext: ''
@@ -1285,7 +1285,7 @@ resources:
         title: 'Travel through treasures of the National Library of Slovenia'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.dlib.si/results/?&query=%27rele%253dknjige%27&pageSize=25'
         buttontext: 'Explore on Collections'
@@ -1332,7 +1332,7 @@ resources:
         title: 'Digitized newspapers and journals from Iceland, the Faroe Islands and Greenland (1773-2001)'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://timarit.is/search_init.jsp?navsel=0&lang=en'
         buttontext: 'Explore on Collections'
@@ -1379,7 +1379,7 @@ resources:
         title: 'The Sounds of the Past'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://mz.nsk.hr/zbirka78/en/'
         buttontext: 'Explore on Collections'
@@ -1426,7 +1426,7 @@ resources:
         title: 'Prints by Giovanni Battista Piranesi (1720-1778)'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200138_Ag_EU_TEL_a1004_Belgium%22'
         buttontext: 'Explore on Collections'
@@ -1473,7 +1473,7 @@ resources:
         title: 'World War I collection curated by Ghent University Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200142_Ag_EU_TEL_a1057_E.Libraries_Ghent%22'
         buttontext: 'Explore on Collections'
@@ -1520,7 +1520,7 @@ resources:
         title: 'Manuscripts and Old Printed Books - Cultural Heritage of Flanders'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200141_Ag_EU_TEL_a1058_E.Libraries_Ghent%22'
         buttontext: 'Explore on Collections'
@@ -1567,7 +1567,7 @@ resources:
         title: 'Ghent World Fair 1913'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200139_Ag_EU_TEL_a1035_Belgium%22'
         buttontext: 'Explore on Collections'
@@ -1614,7 +1614,7 @@ resources:
         title: 'Ghent - Google Books Collection - Dutch and French literature'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%2204202_L_BE_UniLibGent_googlebooks%22'
         buttontext: 'Explore on Collections'
@@ -1661,7 +1661,7 @@ resources:
         title: 'Enrique Lafuente Ferrari Photographic collection'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://pendientedemigracion.ucm.es/info/lafuente/sitio/sitio.html/index.html'
         buttontext: 'Explore on Collections'
@@ -1708,7 +1708,7 @@ resources:
         title: 'Cartographic material, maps and city views'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200152_Ag_EU_TEL_a1049_E.Librarier_Madrid%22'
         buttontext: 'Explore on Collections'
@@ -1755,7 +1755,7 @@ resources:
         title: 'Personal Archive of Ruben Dario, Nicaraguan poet (1867–1916)'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search?q=europeana_collectionName%3A%229200189_Ag_EU_TEL_a1015_EUlibraries_Madrid%22'
         buttontext: 'Explore on Collections'
@@ -1802,7 +1802,7 @@ resources:
         title: 'Fine Art Old Drawings from the Fine Arts Faculty (1752-1914) from the Fine Arts Faculty, Complutense University Of Madrid'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200130_Ag_EU_TEL_a1013_Madrid%22'
         buttontext: 'Explore on Collections'
@@ -1849,7 +1849,7 @@ resources:
         title: 'Engravings of Dioscorides collection'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200190_Ag_EU_TEL_a1011_EUlibraries_Madrid%22'
         buttontext: 'Explore on Collections'
@@ -1896,7 +1896,7 @@ resources:
         title: 'Piranesi engravings of the Complutense University Library of Madrid'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search?q=europeana_collectionName%3A%229200232_Ag_EU_TEL_a1115_University_library_Madrid%22'
         buttontext: 'Explore on Collections'
@@ -1943,7 +1943,7 @@ resources:
         title: 'The worlds largest collection of photochrom prints of the Central Library of Zurich'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200166_Ag_EU_TEL_a1062_Eu_Libraries_Zurich%22'
         buttontext: 'Explore on Collections'
@@ -1990,7 +1990,7 @@ resources:
         title: 'Wickiana Collection of 16th century news reports'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200150_Ag_EU_TEL_a1061_Wickiana_Collection%22'
         buttontext: 'Explore on Collections'
@@ -2037,7 +2037,7 @@ resources:
         title: '29 Maps from the War Collection of Biblioteca universitaria Alessandrina'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200314_Ag_EU_TEL_a1192b_Collections_1914-1918%22'
         buttontext: 'Explore on Collections'
@@ -2084,7 +2084,7 @@ resources:
         title: 'Miscellaneous album from the WW1 period.'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200219_Ag_EU_TEL_a1192a_Collections_1914-1918%22'
         buttontext: 'Explore on Collections'
@@ -2131,7 +2131,7 @@ resources:
         title: 'Monographs within the series of records of the India Office Military Department (1914-1918)'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200282_Ag_EU_TEL_Collections_1914-1918_BL_a0575%22'
         buttontext: 'Explore on Collections'
@@ -2178,7 +2178,7 @@ resources:
         title: 'Calendars from the First World War period'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200200_Ag_EU_TEL_a1130f_EUCollections1418_Italy%22'
         buttontext: 'Explore on Collections'
@@ -2225,7 +2225,7 @@ resources:
         title: 'Italian posters from the First World War period'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search?q=europeana_collectionName%3A%229200199_Ag_EU_TEL_a1130e_EUCollections1418_Italy%22'
         buttontext: 'Explore on Collections'
@@ -2272,7 +2272,7 @@ resources:
         title: 'Italian satirical and advertising drawings from the WW1 period'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search?q=europeana_collectionName%3A%229200198_Ag_EU_TEL_a1130d_EUCollections1418_Italy%22'
         buttontext: 'Explore on Collections'
@@ -2319,7 +2319,7 @@ resources:
         title: 'Italian postcards - First World War'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search?q=europeana_collectionName%3A%229200197_Ag_EU_TEL_a1130c_EUCollections1418_Italy%22'
         buttontext: 'Explore on Collections'
@@ -2366,7 +2366,7 @@ resources:
         title: 'Photographs of the Italian trench warfare and Italian cities during WW1'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200196_Ag_EU_TEL_a1130b_EUCollections1418_Italy%22'
         buttontext: 'Explore on Collections'
@@ -2413,7 +2413,7 @@ resources:
         title: 'Manuscript documents of the Italian War Ministry - First World War'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search?q=europeana_collectionName%3A%229200218_Ag_EU_TEL_a1134b_Collections_1914-1918%22'
         buttontext: 'Explore on Collections'
@@ -2461,7 +2461,7 @@ resources:
         image:
             file: labs.europeana.eu/m57d2f09117b22.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://wotify.eu/tools/'
         buttontext: 'Learn more'
@@ -2508,7 +2508,7 @@ resources:
         title: 'Italian diaries and letters World War One'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200217_Ag_EU_TEL_a1134a_Collections_1914-1918%22'
         buttontext: 'Explore on Collections'
@@ -2555,7 +2555,7 @@ resources:
         title: 'Italian trench journals from the WW1 period'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200205_Ag_EU_TEL_a1133b_EUCollections1418_Italy%22'
         buttontext: 'Explore on Collections'
@@ -2602,7 +2602,7 @@ resources:
         title: 'Italian and foreign pamphlets from the First World War period'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200202_Ag_EU_TEL_a1132a_EUCollections1418_Italy%22'
         buttontext: 'Explore on Collections'
@@ -2649,7 +2649,7 @@ resources:
         title: 'Italian leafs from the First World War period'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?q=europeana_collectionName%3A%229200203_Ag_EU_TEL_a1132b_EUCollections1418_Italy%22'
         buttontext: 'Explore on Collections'
@@ -2696,7 +2696,7 @@ resources:
         title: 'Italian songbooks and music sheets from the First World War'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/record/9200201/BibliographicResource_3000005843675_source.html'
         buttontext: 'Explore on Collections'
@@ -2743,7 +2743,7 @@ resources:
         title: 'British Wildlife Recordings'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A(9200253_Ag_EU_TEL_a1200c_British_Library)&view=grid'
         buttontext: 'Explore on Collections'
@@ -2790,7 +2790,7 @@ resources:
         title: 'British Library Sound Recordings'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search?q=europeana_collectionName%3A%229200253_Ag_EU_TEL_a1200c_British_Library%22'
         buttontext: 'Explore on Collections'
@@ -2837,7 +2837,7 @@ resources:
         title: 'Posters from the First World War held by the British Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A%229200321_Ag_EU_TEL_a0627_Collections_1914-1918%22'
         buttontext: 'Explore on Collections'
@@ -2884,7 +2884,7 @@ resources:
         title: 'Photographs of Canada during the First World War'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A%229200176_Ag_EU_TEL_a0559_EUcollection14-18%22&view=grid'
         buttontext: 'Explore on Collections'
@@ -2931,7 +2931,7 @@ resources:
         title: 'Historical books of the Austrian National Library from the 16th to the second half of the 19th century'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A9200332*'
         buttontext: 'Explore on Collections'
@@ -2978,7 +2978,7 @@ resources:
         title: 'The Picture Archives and Graphics Collection of the Austrian National Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A92060*&view=grid'
         buttontext: 'Explore on Collections'
@@ -3025,7 +3025,7 @@ resources:
         title: 'Posters, sketches and drawings by Toulouse-Lautrec'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BDATA_PROVIDER%5D%5B%5D=Biblioth%C3%A8que+de+l%27INHA&f%5BREUSABILITY%5D%5B%5D=open&q=who%3A%28Henri+de+Toulouse-Lautrec%29&view=grid'
         buttontext: 'Explore on Collections'
@@ -3072,7 +3072,7 @@ resources:
         title: 'Art Nouveau posters and decorative objects'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?per_page=96&q=edm_datasetName%3A2048429%2A&qf%5B%5D=has_media%3Atrue&qf%5B%5D=jugendstil&view=grid'
         buttontext: 'Explore on Collections'
@@ -3119,7 +3119,7 @@ resources:
         title: 'Early photographs of Japan'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BDATA_PROVIDER%5D%5B%5D=Museum+f%C3%BCr+Kunst+und+Gewerbe+Hamburg&per_page=96&q=japan&view=grid'
         buttontext: 'Explore on Collections'
@@ -3166,7 +3166,7 @@ resources:
         title: 'Daguerreotypes from the MKG Hamburg'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BTYPE%5D%5B%5D=IMAGE&per_page=96&q=edm_datasetName%3A2048429%2A&qf%5B%5D=daguerre%2A&view=grid'
         buttontext: 'Explore on Collections'
@@ -3213,7 +3213,7 @@ resources:
         title: 'Early 20th century gymnastics'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?view=grid&q=edm_datasetName%3A2048429*&qf%5B%5D=sportfotografie&per_page=96'
         buttontext: 'Explore on Collections'
@@ -3260,7 +3260,7 @@ resources:
         title: 'Art Nouveau: Architectural and interior design drawings'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?per_page=96&q=europeana_collectionName%3A%282064110_HungarianUniversity_FineArts%29&qf%5B%5D=architecture&view=grid'
         buttontext: 'Explore on Collections'
@@ -3307,7 +3307,7 @@ resources:
         title: 'Art Nouveau: Drawings of plants and ornaments'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?f%5BREUSABILITY%5D%5B%5D=open&q=europeana_collectionName%3A2064110%2A&qf%5B%5D=%22La+Plante%22&view=grid'
         buttontext: 'Explore on Collections'
@@ -3354,7 +3354,7 @@ resources:
         title: 'Street photography by Dutch artist Breitner'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?view=grid&q=who%3A%22Breitner%2C+George+Hendrik%22&qf%5B%5D=proxy_dc_type%3A%22foto%22&f%5BDATA_PROVIDER%5D%5B%5D=Rijksmuseum&f%5BREUSABILITY%5D%5B%5D=open&per_page=96'
         buttontext: 'Explore on Collections'
@@ -3401,7 +3401,7 @@ resources:
         title: 'Sounds of nature from the British Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/en/collections/natural-history?f%5BREUSABILITY%5D%5B%5D=open&per_page=96&q=provider_aggregation_edm_isShownBy%3A*&qf%5B%5D=europeana_collectionName%3A2059209*&view=grid'
         buttontext: 'Explore on Collections'
@@ -3448,7 +3448,7 @@ resources:
         title: 'Art Nouveau: Ornamental Motifs in Hungarian Style'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BMEDIA%5D%5B%5D=true&f%5BTYPE%5D%5B%5D=IMAGE&per_page=96&q=europeana_collectionName%3A%282064110_HungarianUniversity_FineArts%29&qf%5B%5D=Groh%2C+Istv%C3%A1n&view=grid'
         buttontext: 'Explore on Collections'
@@ -3495,7 +3495,7 @@ resources:
         title: 'High resolution drawings from the Dutch Labour Movement'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BIMAGE_SIZE%5D%5B%5D=large&f%5BTYPE%5D%5B%5D=IMAGE&locale=en&per_page=48&q=europeana_collectionName%3A%282022093_Ag_EU_IALHI_1001_IIISH_DutchLabourMovement%29&view=grid'
         buttontext: 'Explore on Collections'
@@ -3542,7 +3542,7 @@ resources:
         title: 'Vintage photographs from the Bohusläns Museum, Sweden'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?f%5BIMAGE_SIZE%5D%5B%5D=large&f%5BIMAGE_SIZE%5D%5B%5D=medium&f%5BIMAGE_SIZE%5D%5B%5D=extra_large&f%5BMEDIA%5D%5B%5D=true&f%5BREUSABILITY%5D%5B%5D=open&q=edm_datasetName%3A916105%2A&view=grid'
         buttontext: 'Explore on Collections'
@@ -3589,7 +3589,7 @@ resources:
         title: 'Black-and-white pictures by Swedish photographer John Hertzberg'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/nl/search?f%5BDATA_PROVIDER%5D%5B%5D=Tekniska+museet&f%5BREUSABILITY%5D%5B%5D=open&per_page=96&q=who%3A%28Hertzberg%2C+John%29&view=grid'
         buttontext: 'Explore on Collections'
@@ -3636,7 +3636,7 @@ resources:
         title: 'Vintage stereoscope cards'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?per_page=96&q=edm_datasetName%3A916118%2A&qf%5B%5D=what%3A%22Stereobild+med+motiv%22+OR+who%3A%22Centennial+Photographic+Co+Philada%22&view=grid'
         buttontext: 'Explore on Collections'
@@ -3683,7 +3683,7 @@ resources:
         title: 'Travel Collection of the Picture Archives of the Austrian National Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A92027*'
         buttontext: 'Explore on Collections'
@@ -3730,7 +3730,7 @@ resources:
         title: 'The India Office Records (1914-1918)'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search?q=europeana_collectionName%3A%289200154_Ag_EU_TEL_a0581_Europeana14-18_UK%29'
         buttontext: 'Explore on Collections'
@@ -3777,7 +3777,7 @@ resources:
         title: 'Historical pictures of Vienna'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A92063*'
         buttontext: 'Explore on Collections'
@@ -3824,7 +3824,7 @@ resources:
         title: 'Historical Images of Europe from the Austrian National Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A92070*'
         buttontext: 'Explore on Collections'
@@ -3871,7 +3871,7 @@ resources:
         title: 'Historical Photographs of Austria'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A92061*'
         buttontext: 'Explore on Collections'
@@ -3918,7 +3918,7 @@ resources:
         title: 'Historical photographs from the Austrian National Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A92064*'
         buttontext: 'Explore on Collections'
@@ -3965,7 +3965,7 @@ resources:
         title: 'Masterpieces of the non-Western book'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A92092*&page=7'
         buttontext: 'Explore on Collections'
@@ -4012,7 +4012,7 @@ resources:
         title: 'Home Data Conservative Party Poster Collection Conservative Party Poster Collection'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A9200175*'
         buttontext: 'Explore on Collections'
@@ -4059,7 +4059,7 @@ resources:
         title: 'Early Printing in Europe: examples in Bodleian collections'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A92090*&rows=24'
         buttontext: 'Explore on Collections'
@@ -4106,7 +4106,7 @@ resources:
         title: 'Celtic Manuscripts from the Bodleian Libraries'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A92088*&rows=24'
         buttontext: 'Explore on Collections'
@@ -4153,7 +4153,7 @@ resources:
         title: 'World War One photo collection from the propaganda department of the Austro-Hungarian army'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A9200291*&rows=24'
         buttontext: 'Explore on Collections'
@@ -4200,7 +4200,7 @@ resources:
         title: 'Oxford Digital Library Collections'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A9200175*'
         buttontext: 'Explore on Collections'
@@ -4247,7 +4247,7 @@ resources:
         title: 'Digitised Books from the Bodleian Libraries'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A9200143*'
         buttontext: 'Explore on Collections'
@@ -4294,7 +4294,7 @@ resources:
         title: 'Luna collections - Western Manuscripts'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search?q=europeana_collectionName%3A%2892094_Ag_UK_TEL_a1009h_EuropeanaLibraries%29'
         buttontext: 'Explore on Collections'
@@ -4341,7 +4341,7 @@ resources:
         title: 'World War One Posters, Small Form Graphics and Children’s Drawings'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A9200290*'
         buttontext: 'Explore on Collections'
@@ -4388,7 +4388,7 @@ resources:
         title: 'Portraits Collection of the Austrian National Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A92062*'
         buttontext: 'Explore on Collections'
@@ -4435,7 +4435,7 @@ resources:
         title: 'First World War Songbooks and Music Shee'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A9200289*'
         buttontext: 'Explore on Collections'
@@ -4482,7 +4482,7 @@ resources:
         title: 'World War One in Books'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A9200292*'
         buttontext: 'Explore on Collections'
@@ -4529,7 +4529,7 @@ resources:
         title: 'Austrian Newspapers and Special Editions of the First World War'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A9200115*'
         buttontext: 'Explore on Collections'
@@ -4576,7 +4576,7 @@ resources:
         title: 'Full Text of Newspapers from National Library of Poland'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.theeuropeanlibrary.org/tel4/newspapers/gallery?count=9&provider-id=P01214'
         buttontext: 'Explore on Collections'
@@ -4623,7 +4623,7 @@ resources:
         title: 'The Library of Charles V preserved in the National Library of France'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A92099*&rows=12'
         buttontext: 'Explore on Collections'
@@ -4670,7 +4670,7 @@ resources:
         title: 'The Finnish Travel Collection'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A92080*'
         buttontext: 'Explore on Collections'
@@ -4717,7 +4717,7 @@ resources:
         title: 'Danish collection of 18th Century Flute Music'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A92028*'
         buttontext: 'Explore on Collections'
@@ -4764,7 +4764,7 @@ resources:
         title: 'The map collection of The National Library of Denmark'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A9200335*'
         buttontext: 'Explore on Collections'
@@ -4811,7 +4811,7 @@ resources:
         title: 'The Virtual Manuscript Library of Switzerland'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A9200211*'
         buttontext: 'Explore on Collections'
@@ -4858,7 +4858,7 @@ resources:
         title: 'Manuscript Maps of Switzerland and Abroad'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A9200120*'
         buttontext: 'Explore on Collections'
@@ -4905,7 +4905,7 @@ resources:
         title: 'First World War maps preserved by the British Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A9200318*'
         buttontext: 'Explore on Collections'
@@ -4952,7 +4952,7 @@ resources:
         title: 'Greek holdings from the Bodleian Libraries'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A92091*'
         buttontext: 'Explore on Collections'
@@ -4999,7 +4999,7 @@ resources:
         title: 'High-resolution paintings from the Mauritshuis'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search?f%5BDATA_PROVIDER%5D%5B%5D=Mauritshuis&per_page=36&q=&view=grid'
         buttontext: 'Explore on Collections'
@@ -5048,7 +5048,7 @@ resources:
             file: Images/Europeana_Research/grantshighresbannerbolt.png
             title: 'Chromo-lithograph of Scott Monument by T. Nelson and Sons, [Monuments], and Princes Street: Looking West - Edinburgh'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>The Grants Programme 2017 is now closed for applications</p>\r\n"
         htmllink: /post/europeana-research-grants-programme-2017-call-for-submissions-and-guidelines-for-applicants
         buttontext: ''
@@ -5096,7 +5096,7 @@ resources:
         image:
             file: Images/Blog_images/2017-09/2021641_publiek_detail_aspx_xmldescid_55275795.jpeg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pro.europeana.eu/post/europeana-network-association-invites-the-2017-members-council-candidates-to-come-forward'
         buttontext: ''
@@ -5145,7 +5145,7 @@ resources:
             file: Europeana_Professional_images/RGP_2018_TeaserImage.png
             title: 'Deadline: 31 October 2019'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/page/research-grants-programme-submissions-2019'
         buttontext: Apply!
@@ -5192,7 +5192,7 @@ resources:
         title: 'Help us and fill out the Cultural Heritage Data Reuse Charter Survey'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://sondages.inria.fr/index.php/593568/lang-en'
         buttontext: 'Take the survey'
@@ -5239,7 +5239,7 @@ resources:
         title: '400 travel texts from University College London'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/en/search?f%5BTYPE%5D%5B%5D=TEXT&q=europeana_collectionName%3A%2808809_Ag_EU_ETravel_UCL%29&view=grid'
         buttontext: 'Explore on Collections'
@@ -5286,7 +5286,7 @@ resources:
         title: 'Cultural Heritage Infrastructure in Digital Humanities'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.routledge.com/Cultural-Heritage-Infrastructures-in-Digital-Humanities/Benardou-Champion-Dallas-Hughes/p/book/9781472447128'
         buttontext: 'More Information'
@@ -5333,7 +5333,7 @@ resources:
         title: 'Over 6.700 photographs from Catalan photographer Josep Maria Sagarra'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/en/search?f%5BREUSABILITY%5D%5B%5D=restricted&f%5BTYPE%5D%5B%5D=IMAGE&per_page=96&q=who%3A%28Sagarra%2C+Josep+Maria%29&qf%5B%5D=Catalonia&view=grid'
         buttontext: 'Explore on Collections'
@@ -5381,7 +5381,7 @@ resources:
         image:
             file: Europeana_Professional/Impact/31600659656_c757a46634_k.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pro.europeana.eu/page/impact-resources'
         buttontext: 'Download the playbook, tools & resources'
@@ -5429,7 +5429,7 @@ resources:
         image:
             file: Europeana_Professional/Impact/31600660236_85489ec193_k.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: post/europeana-impact-assessment-playbook
         buttontext: 'Download the Impact Playbook'
@@ -5476,7 +5476,7 @@ resources:
         title: 'Pitch your project'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://app.smartsheet.com/b/form/aa60147874324f82bd344c87519007b4'
         buttontext: 'Pitch your project'
@@ -5523,7 +5523,7 @@ resources:
         title: 'Playbills of the Croatian National Theatre in Zagreb'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://www.europeana.eu/portal/search?q=europeana_collectionName%3A9200440*'
         buttontext: 'Explore on Collections'
@@ -5571,7 +5571,7 @@ resources:
         image:
             file: Europeana_Professional/Impact/31600659656_c757a46634_k.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: ''
         buttontext: 'Download the impact playbook'
@@ -5620,7 +5620,7 @@ resources:
             file: 'Europeana_Professional/Impact/blurred impact post its.jpg'
             title: 'Sticky notes on a piece of paper with the text ''social cohesion'''
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p></p>\r\n\r\n<p>The Europeana Impact Playbook is a step by step approach to help cultural heritage professionals design, measure and narrate their impact. Download the four phases of the Playbook, and explore accompanying resources from each phase to support your impact practice.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/page/europeana-impact-playbook'
         buttontext: 'Download it today'
@@ -5669,7 +5669,7 @@ resources:
             file: 'Europeana_Professional/Impact/Change pathway EF.JPG'
             title: 'Table for change pathway'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>A method for connecting the activities and outputs of an organisation\_with outcomes experienced by the stakeholder.</p>\r\n\r\n<p></p>\r\n"
         htmllink: 'https://www.dropbox.com/s/sd63u693p17gno0/Change%20Pathway.pdf?dl=1'
         buttontext: 'Download pdf'
@@ -5727,7 +5727,7 @@ resources:
             file: 'Europeana_Professional/Impact/Empathy map EF.JPG'
             title: 'Graph of the empathy map'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>A collaborative tool that you can use to gain a deeper insight into your stakeholders.</p>\r\n"
         htmllink: 'https://www.dropbox.com/s/ofnlslufcummbvr/Empathy%20Map.pdf?dl=1'
         buttontext: 'Download pdf'
@@ -5785,7 +5785,7 @@ resources:
             file: 'Europeana_Professional/Impact/Strategic perspective EF.JPG'
             title: 'Graph for strategic perspectives resource'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>A tool which provides a strategic context for decision-making on what impact is to be measured and why that measurement is needed.</p>\r\n"
         htmllink: 'https://www.dropbox.com/s/gxfchfqwlee724f/Strategic%20Perspectives.pdf?dl=1'
         buttontext: 'Download pdf'
@@ -5842,7 +5842,7 @@ resources:
         image:
             file: 'Europeana_Professional/Impact/ImpactPlaybook front cover.JPG'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.dropbox.com/s/36xzwx4tnn0va8y/Europeana%20Impact%20Playbook.pdf?dl=1'
         buttontext: Download
@@ -5891,7 +5891,7 @@ resources:
             file: 'Europeana_Professional/Impact/Value Lens EF.JPG'
             title: 'Value lens graph'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>A tool that enables us to zoom in on a specific type of value attributable to activities.</p>\r\n"
         htmllink: 'https://www.dropbox.com/s/d9idc3nxcgitnjl/Value%20Lens.pdf?dl=1'
         buttontext: 'Download pdf'
@@ -5949,7 +5949,7 @@ resources:
             file: 'Europeana_Professional/Impact/Pathway builder.JPG'
             title: 'Pathway builder table screenshot'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>A way to document\_the Change Pathway and\_identify\_associated measurements.</p>\r\n"
         htmllink: 'https://docs.google.com/spreadsheets/d/1NL58a8Houz_Meuz_pZ4WS_twW46ZMbB7scPLhlRrVhk/edit?usp=sharing'
         buttontext: 'Open in Google Sheets'
@@ -6007,7 +6007,7 @@ resources:
             file: 'Images/Communities/Impact/Impact playbook slide deck.jpg'
             title: 'Projector leaning against a computer'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>An online slide deck that you can copy and download with all the tools you need in one place.</p>\r\n\r\n<p></p>\r\n"
         htmllink: 'https://drive.google.com/open?id=1UuKJcmYDcfpOyuCUcC3rMvD8i0Y7pEY_RT83vD7XQ2Y'
         buttontext: 'Open in Google Slides'
@@ -6065,7 +6065,7 @@ resources:
             file: Images/High_resolution/The-Librarian-Giuseppe-Arcimboldo.png
             title: 'The Librarian Giuseppe Arcimboldo'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n"
         htmllink: /pages/get-api
         buttontext: 'Click here'
@@ -6114,7 +6114,7 @@ resources:
             file: Images/Home_page/2017-11-20_Thunderclap_with_us.jpg
             title: 'Lightning during a thunderstorm in Milwaukee'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Join us and support the European Year of Cultural Heritage 2018.</p>\r\n"
         htmllink: 'https://www.thunderclap.it/projects/64703-launch-of-eych-2018'
         buttontext: ''
@@ -6161,7 +6161,7 @@ resources:
         title: 'Europeana Publication Policy'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pro.europeana.eu/post/publication-policy'
         buttontext: 'Go to the Europeana Publication Policy'
@@ -6208,7 +6208,7 @@ resources:
         title: 'Historical portraits of London Pubs'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A(2059528_EU_FD_NBHT)&view=grid&source=reuse'
         buttontext: 'Explore on Collections'
@@ -6255,7 +6255,7 @@ resources:
         title: 'Swedish military aviation in historical images'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A916113*&view=grid&source=reuse'
         buttontext: 'Explore on Collections'
@@ -6303,7 +6303,7 @@ resources:
         image:
             file: Images/Europeana_Communicators/9200397_BibliographicResource.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<!-- Begin MailChimp Signup Form -->\r\n#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }\r\n    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.\r\n       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\r\n<div id=\"mc_embed_signup\">\r\n\r\n<div id=\"mc_embed_signup_scroll\">\r\n<h2>Subscribe to our mailing list</h2>\r\n\r\n<div class=\"indicates-required\">\r\n<span class=\"asterisk\">*</span> indicates required</div>\r\n\r\n<div class=\"mc-field-group\">Email Address <span class=\"asterisk\">*</span>  </div>\r\n\r\n<div class=\"clear\" id=\"mce-responses\">\r\n<div class=\"response\" id=\"mce-error-response\" style=\"display:none\"></div>\r\n\r\n<div class=\"response\" id=\"mce-success-response\" style=\"display:none\"></div>\r\n</div>\r\n<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n\r\n<div style=\"position: absolute; left: -5000px;\"></div>\r\n\r\n<div class=\"clear\"></div>\r\n</div>\r\n\r\n</div>\r\n(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);<!--End mc_embed_signup-->"
         htmllink: null
         buttontext: null
@@ -6351,7 +6351,7 @@ resources:
         image:
             file: 'Images/High_resolution/Cyclist on the Prinsengracht in Amsterdam  Breitner, George Hendrik.jpeg'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p>Share your experience and interest in Europeana</p>\r\n"
         htmllink: 'https://ec.europa.eu/eusurvey/runner/europeana'
         buttontext: 'Take the survey'
@@ -6399,7 +6399,7 @@ resources:
         image:
             file: Images/Europeana_Research/grantshighresbannerbolt.png
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://twitter.com/eurresearch?lang=en'
         buttontext: ''
@@ -6447,7 +6447,7 @@ resources:
         image:
             file: 'Images/Home_page/Consultation PRO hero image.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -6494,7 +6494,7 @@ resources:
         title: 'Java Client Library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/europeana/europeana-client'
         buttontext: 'Europeana-client Java Library on Github'
@@ -6541,7 +6541,7 @@ resources:
         title: 'Europeana API PHP client'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/dan-nl/europeana-api'
         buttontext: 'Europeana API PHP client on Github'
@@ -6588,7 +6588,7 @@ resources:
         title: 'Colada PHP client'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/netsensei/europeana'
         buttontext: 'Europeana Colada PHP client on Github'
@@ -6635,7 +6635,7 @@ resources:
         title: 'bulk download code snippets'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/jamesinealing/europeana-snippets/'
         buttontext: 'Europeana bulk download code snippets on Github'
@@ -6682,7 +6682,7 @@ resources:
         title: 'django client library'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pypi.python.org/pypi/django-europeana'
         buttontext: 'go to the Django client library for the Europeana API'
@@ -6729,7 +6729,7 @@ resources:
         title: 'Blacklight github code'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/europeana/europeana-blacklight'
         buttontext: 'find the Blacklight for Europeana code on Github'
@@ -6776,7 +6776,7 @@ resources:
         title: 'Blacklight quickstart guide'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/europeana/europeana-blacklight/blob/develop/QUICKSTART.md'
         buttontext: 'Quick start guide on Blacklight for Europeana'
@@ -6823,7 +6823,7 @@ resources:
         title: 'ruby client library github'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/europeana/europeana-api-client-ruby'
         buttontext: 'Europeana-API Ruby Client Library on github'
@@ -6870,7 +6870,7 @@ resources:
         title: 'ruby client library rubygems'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://rubygems.org/gems/europeana-api'
         buttontext: 'Europeana-api Ruby Gem on rubygems'
@@ -6917,7 +6917,7 @@ resources:
         title: 'search python'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pypi.python.org/pypi/europeana-search'
         buttontext: 'find the Search Python wrapper'
@@ -6964,7 +6964,7 @@ resources:
         title: 'rest easy'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/reklaklislaw/rest_easy'
         buttontext: 'Rest Easy code on Github'
@@ -7011,7 +7011,7 @@ resources:
         title: 'Node.js npm'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.npmjs.com/package/europeana'
         buttontext: 'Europeana API Node.JS module on NPM'
@@ -7058,7 +7058,7 @@ resources:
         title: 'Node.js github'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/fvdm/nodejs-europeana'
         buttontext: 'Europeana API Node.JS module on GitHub'
@@ -7105,7 +7105,7 @@ resources:
         title: 'Eexcess moodle plugin'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://eexcess.eu/plug-in-for-moodle/'
         buttontext: 'Learn about the moodle plug-in on the Eexcess website'
@@ -7152,7 +7152,7 @@ resources:
         title: 'Eexcess moodle download'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://purl.org/eexcess/install/moodle-server-plugin'
         buttontext: 'Install the Moodle server plugin'
@@ -7199,7 +7199,7 @@ resources:
         title: 'Eexcess chrome extension'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://eexcess.eu/results/chrome-extension/'
         buttontext: 'Learn more about the chrome browser extension on the Eexcess website'
@@ -7246,7 +7246,7 @@ resources:
         title: 'Eexcess chrome extension install'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://chrome.google.com/webstore/detail/eexcess/mnicfonfoiffhekefgjlaihcpnbchdbc'
         buttontext: 'Install the Eexcess Google Chrome extension'
@@ -7293,7 +7293,7 @@ resources:
         title: 'Eexcess chrome extension code'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/EEXCESS/chrome-extension'
         buttontext: 'the Eexcess Chrome extension code on Github'
@@ -7340,7 +7340,7 @@ resources:
         title: 'Eexcess wordpress plugin'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://eexcess.eu/results/wordpress-plug-in/'
         buttontext: 'Read up on the wordpress plugin on the Eexcess website'
@@ -7387,7 +7387,7 @@ resources:
         title: 'Eexcess wordpress plugin code'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/EEXCESS/wordpress-plugin'
         buttontext: 'Eexcess wordpress plugin code on Github'
@@ -7434,7 +7434,7 @@ resources:
         title: 'OAI PMH harvester'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/pkiraly/europeana-oai-pmh-client'
         buttontext: 'OAI-PMH harvester code on Github'
@@ -7481,7 +7481,7 @@ resources:
         title: 'Repox github'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/europeana/REPOX'
         buttontext: 'Repox code on Github'
@@ -7528,7 +7528,7 @@ resources:
         title: 'Repox wiki'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://github.com/europeana/REPOX/wiki'
         buttontext: 'Repox wiki'
@@ -7575,7 +7575,7 @@ resources:
         title: 'libraries and plugins page'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pro.europeana.eu/page/api-libraries-and-plugins'
         buttontext: 'Click here to see all the available API Libraries and Plugins'
@@ -7623,7 +7623,7 @@ resources:
         image:
             file: Images/Blog_images/2017-09/2021641_publiek_detail_aspx_xmldescid_55275795.jpeg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pro.europeana.eu/page/members-council-election-candidates'
         buttontext: ''
@@ -7670,7 +7670,7 @@ resources:
         title: 'DI4R Clarin and Europeana presentation'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://indico.egi.eu/indico/event/3455/session/1/contribution/14'
         buttontext: 'Find out more about CLARIN and Europeana at DI4R2017'
@@ -7717,7 +7717,7 @@ resources:
         title: 'Swedish silent cinema playbills, 1904-1921'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/en/search?q=europeana_collectionName%3A2051913*&view=grid'
         buttontext: 'Explore on Collections'
@@ -7765,7 +7765,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Developing the impact toolkit 2017 thumbnail.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Developing the impact toolkit 2017</p>\r\n"
         htmllink: post/developing-the-impact-toolkit
         buttontext: 'Read the report'
@@ -7812,7 +7812,7 @@ resources:
         title: 'Fashion objects from the Victoria and Albert Museum'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/en/search?f%5BDATA_PROVIDER%5D%5B%5D=Victoria+and+Albert+Museum&f%5BREUSABILITY%5D%5B%5D=open&page=2&per_page=96&q=&view=grid'
         buttontext: 'Explore on Collections'
@@ -7860,7 +7860,7 @@ resources:
         image:
             file: Images/Blog_images/GLAMwiki.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pro.europeana.eu/tags/wikimedia'
         buttontext: ''
@@ -7908,7 +7908,7 @@ resources:
         image:
             file: labs.europeana.eu/labs/datasets/022wzvoxmvun.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.surveymonkey.com/r/QVJ8H8M'
         buttontext: 'Help us improve our newsletter!'
@@ -7956,7 +7956,7 @@ resources:
         image:
             file: Europeana_Professional/Impact/31600660236_85489ec193_k.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: impact@europeana.eu
         buttontext: 'Register your interest'
@@ -8003,7 +8003,7 @@ resources:
         title: 'Building new knowledge from distributed scientific corpus'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://dcicblog.umd.edu/cas/wp-content/uploads/sites/13/2017/06/Dugenie.pdf'
         buttontext: 'Read the Research paper (PDF)'
@@ -8051,7 +8051,7 @@ resources:
         image:
             file: 'Europeana_Professional/Europeana_Network/Elections documents/Image Elections.jpg'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pro.europeana.eu/post/europeana-network-association-welcomes-its-8-new-members-council-representatives'
         buttontext: ''
@@ -8098,7 +8098,7 @@ resources:
         title: 'Antun Matos Literary Bequest'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/search?q=europeana_collectionName%3A9200439*&view=grid'
         buttontext: 'Explore on Collections'
@@ -8145,7 +8145,7 @@ resources:
         title: 'EuropeanaTech 2018 conference eventbrite'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.eventbrite.co.uk/e/europeanatech-conference-2018-ticket-tickets-43923398066'
         buttontext: 'EuropeanaTech 2018 ticket'
@@ -8192,7 +8192,7 @@ resources:
         title: 'Apply for the Europeana #EdTech Challenge!'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://app.smartsheet.com/b/form/9fd1451e7e5b48fbbd9e030dfcbc083a'
         buttontext: 'Apply for the Europeana #EdTech Challenge!'
@@ -8239,7 +8239,7 @@ resources:
         title: 'Europeana #edTech Challenge 2018 - Terms and Conditions'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pro.europeana.eu/page/europeana-edtech-challenge-2018-terms-and-conditions'
         buttontext: 'Europeana #edTech Challenge 2018 - Terms and Conditions'
@@ -8287,7 +8287,7 @@ resources:
         image:
             file: 'labs.europeana.eu/labs/hero/Labs 3 version.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pro.europeana.eu/page/europeana-edtech-challenge-2018-terms-and-conditions'
         buttontext: ''
@@ -8335,7 +8335,7 @@ resources:
         image:
             file: labs.europeana.eu/labs/hero/SK-A-3471.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://pro.europeana.eu/page/europeana-edtech-challenge-2018-terms-and-conditions'
         buttontext: 'Apply now!'
@@ -8382,7 +8382,7 @@ resources:
         title: 'SAVE THE DATE - EuropeanaTech 15-16 May 2018'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.eventbrite.co.uk/e/europeanatech-conference-2018-ticket-tickets-43923398066'
         buttontext: 'Purchase your ticket now!'
@@ -8429,7 +8429,7 @@ resources:
         title: 'Vintage photographs of 1960’s and 1970’s Norway'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/en/search?f%5BDATA_PROVIDER%5D%5B%5D=Oslo+Museum&f%5BIMAGE_SIZE%5D%5B%5D=medium&f%5BREUSABILITY%5D%5B%5D=open&f%5BTYPE%5D%5B%5D=IMAGE&page=5&per_page=96&q=who%3A%28Delphin%2C+Rigmor+Dahl%29&view=grid'
         buttontext: 'Explore on Collections'
@@ -8477,7 +8477,7 @@ resources:
         image:
             file: Images/Home_page/EUtech_hero_2500x744_a.png
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>On May 15-16 nearly 300 innovators and thought leaders from across the world meton the SS Rotterdam for two action-packed days of EuropeanaTech 2018. Those in attendance watched and contributed to 37 presentations, seven panel sessions and a very entertaining and thought-provoking debate.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/europeanatech-2018-gorgeous-data-glorious-technology-in-review'
         buttontext: null
@@ -8525,7 +8525,7 @@ resources:
         image:
             file: Images/Event_images/Migration/emigrantsheureuxdequitterellisisland.jpeg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: ''
         buttontext: ''
@@ -8572,7 +8572,7 @@ resources:
         title: 'Exploring Migration Cultural Heritage'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/en/collections/migration'
         buttontext: 'visit Europeana Migration Collection'
@@ -8620,7 +8620,7 @@ resources:
         image:
             file: 'Europeana_Professional/IPR/IPR images/91625_nomu_photo_NMA0065605-3.jpg'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Working with and for the copyright community, we\_cultivate, curate\_and share\_knowledge around the topic of copyright in\_the cultural heritage sector</p>\r\n"
         htmllink: null
         buttontext: null
@@ -8668,7 +8668,7 @@ resources:
         image:
             file: 'Europeana_Professional/IPR/IPR images/2021646_HttpHandler_icoon_ico_file_6206801.jpeg'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>\r\n  \r\n</p>"
         htmllink: 'https://pro.europeana.eu/resources/standardization-tools/rightsstatements-org'
         buttontext: 'Read more about RightsStatements.org consortium'
@@ -8717,7 +8717,7 @@ resources:
             file: 'Europeana_Professional/IPR/IPR images/916121_S_OLM_photo_OLM_2013_1_1047-2.jpeg'
             title: 'Gymnastikkurs i Hasselfors. 7 augusti 1955'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>\r\n  \r\n</p>"
         htmllink: 'https://pro.europeana.eu/post/the-europeana-public-domain-charter'
         buttontext: 'Read the Charter'
@@ -8765,7 +8765,7 @@ resources:
         image:
             file: 'Europeana_Professional/IPR/IPR images/916121_S_OLM_photo_OLM_Nr3625_1-2.jpeg'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>\r\n  \r\n</p>"
         htmllink: 'https://pro.europeana.eu/project/copyright-policy-working-group'
         buttontext: 'Find out more'
@@ -8812,7 +8812,7 @@ resources:
         title: 'Migration Collection days'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'http://eepurl.com/dkMfhv'
         buttontext: 'Register your interest'
@@ -8859,7 +8859,7 @@ resources:
         title: 'High-resolution artworks from the Finnish National Gallery'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: ''
         htmllink: 'https://www.europeana.eu/portal/en/search?f%5BDATA_PROVIDER%5D%5B%5D=Finnish+National+Gallery&locale=en&per_page=36&view=grid'
         buttontext: 'Explore on Collections'
@@ -8907,7 +8907,7 @@ resources:
         image:
             file: Images/Blog_images/2016-06/christeningsm.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Whether you're new to Europeana or an established data partner, we'll help you make your data work harder and do more for your organization and audiences.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/services/data-publication-services'
         buttontext: ''
@@ -8955,7 +8955,7 @@ resources:
         image:
             file: Images/Blog_images/2017-11/Vluchtelinge.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Europeana is building up a new thematic collection dedicated to migration to, from, and within Europe. Learn more and get involved!</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/contribute-your-collections-on-europe-s-migration-heritage'
         buttontext: ''

@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T11:09:08+01:00'
+    date: '2022-11-28T19:20:11+01:00'
     version: 3.7.4
     platform: mysql
 resources:
@@ -16,7 +16,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Were part of the climate problem and the solution option 3.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3 style=\"color:#085395;\"><strong>We’re part of the climate problem - and the solution</strong></h3>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p>There is a global climate emergency. Digital has a carbon footprint too. From what we do in the office, to the broader Europeana Initiative and the sector at large - we need to support action related to the digital transformation.</p>\r\n\r\n<p>Our climate action should support and contribute to the European Green Deal, creating a greener, more sustainable society.\_</p>\r\n\r\n<p>We will set up a ‘Green team’ that will establish our carbon footprint, monitor our progress and develop actions and activities with the Europeana Network Association to build capacity in the sector on this important subject. We want to find easy-to-manage, easy-to-measure ways to assess our progress and our impact.</p>\r\n\r\n<p>We can’t do it alone - our longstanding habits of collaboration and participation will enable a meaningful contribution to reducing the impact the digital cultural heritage sector has on climate change.\_</p>\r\n"
         htmllink: null
         buttontext: null
@@ -63,7 +63,7 @@ resources:
         title: 'Data data data'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3 style=\"color:#085395;\"><strong>Data Data Data</strong></h3>\r\n\r\n<p></p>\r\n\r\n<p>The availability of high-quality, usable and accessible material is essential for digital cultural participation and reuse opportunities\_ and sits at the heart of the European Commission’s new concept of ‘data spaces’ - making better use of publicly held data for the common good, for example in other sectors such as tourism, education and research. To help meet this vision, we’re improving our aggregation infrastructure (to get material in) and data publishing process (to share it with the world), as well as increasing data quality.\_</p>\r\n"
         htmllink: null
         buttontext: null
@@ -110,7 +110,7 @@ resources:
         title: 'Access for all'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3 style=\"color:#0A72CC;\"><strong>Access for all</strong></h3>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p>The <a href=\"https://www.europeana.eu/en\">Europeana website</a> is at the heart of our audience engagement work and the culmination of our collaborative work with partners to showcase and connect their collections in a digital public space. It’s where people come to participate - to search, browse, explore, learn and even to contribute their own stories.\_</p>\r\n"
         htmllink: null
         buttontext: null
@@ -157,7 +157,7 @@ resources:
         title: 'A sector fit for digital'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3 style=\"color:#085395;\"><strong>A sector fit for digital</strong></h3>\r\n\r\n<p>The needs of cultural heritage institutions are many and varied. The Europeana Foundation is dedicated to supporting the cultural heritage sector in building capacity for digital transformation, showcasing the value of and advocating for sustainable digitisation in Europe, adoption of standards and best practice. We will partner with organisations who can help us put culture and digital transformation at the heart of the recovery of Europe.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -204,7 +204,7 @@ resources:
         title: 'Diverse and inclusive'
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Inclusive and diverse.png'
         body: "<p>Cultural heritage empowers society to embrace its diversity and flourish. We want to embed this belief in our work and in our products and services so that everyone feels welcome, represented, equal and safe.</p>\r\n"
         htmllink: null
@@ -252,7 +252,7 @@ resources:
         title: Collaborative
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Collaborative.png'
         body: "<p>We want to work collaboratively with our networks, partners and communities towards a European cultural sector focused on collectively putting digital cultural heritage at the heart of society.\_</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
         htmllink: null
@@ -300,7 +300,7 @@ resources:
         title: Participatory
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Participatory.png'
         body: "<p>Participation in culture creates value in the cultural sector and society at large.\_We want to set high standards for participatory practices on our platform, in our campaigns and in the global cultural sector.</p>\r\n"
         htmllink: null
@@ -348,7 +348,7 @@ resources:
         title: 'We collaborate'
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: Images/Home_page/we_collaborate.png
         body: "<p>We bring together cultural heritage professionals from all over Europe.\_</p>\r\n"
         htmllink: /network-association/sign-up
@@ -396,7 +396,7 @@ resources:
         title: 'We advocate'
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: Images/Home_page/we_advocate.png
         body: "<p>We provide the cultural heritage sector with a voice advocating for better digital practices.</p>\r\n"
         htmllink: /page/advocacy
@@ -444,7 +444,7 @@ resources:
         title: 'We reach audiences'
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: Images/Home_page/we-reach-audiences.png
         body: "<p>We work to share and promote cultural heritage so that it can be used and enjoyed by people all over the world.\_</p>\r\n"
         htmllink: /page/europeana-reuse-be-inspired
@@ -492,7 +492,7 @@ resources:
         title: 'We build capacity'
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: Images/Home_page/we_build_capacity.png
         body: "<p>We provide opportunities for institutions and individuals in the cultural heritage sector to develop their digital skills and practice.</p>\r\n"
         htmllink: /page/building-digital-capacity
@@ -540,7 +540,7 @@ resources:
         title: 'We build technology'
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: Images/Home_page/we-build-technology.png
         body: "<p>We develop and maintain technical solutions for showcasing, sharing and using digital cultural heritage.</p>\r\n"
         htmllink: /page/apis
@@ -588,7 +588,7 @@ resources:
         title: 'Europeana Sport workshops April 2021'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://docs.google.com/forms/d/e/1FAIpQLScHA0BQfHXiCF8WiYurKm8chuWc8DZQDUgx26beSWlH-5YECA/viewform'
         buttontext: 'Register now'
@@ -635,7 +635,7 @@ resources:
         title: 'Spring events programme'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://app.smartsheet.com/b/form/db93509ef27042e099f114b40b9078ba'
         buttontext: 'Submit your proposal'
@@ -682,7 +682,7 @@ resources:
         title: 'Explore Europeana Foundation Business Plan 2021'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/post/europeana-foundation-business-plan-2021'
         buttontext: 'Explore Europeana Foundation Business Plan 2021'
@@ -730,7 +730,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Access for all 3.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Providing a rich experience</strong></p>\r\n\r\n<p></p>\r\n\r\n<p>We want audiences to return more frequently and to stay for longer. So we’ll keep improving our searching, browsing and viewing experiences, for example, upgrading our newspapers search to search within the full-text of a document. And with <a href=\"https://pro.europeana.eu/project/europeana-xx\">Europeana XX</a>, we’ll launch a feature so anyone can curate and publish their own personal galleries on Europeana.</p>\r\n\r\n<p>For a better online browsing experience, we already link records with a similar creator, place or topic together. We will extend our work on these collection pages and improve how we enrich records with these linking terms.\_</p>\r\n\r\n<p>The language you speak shouldn’t be a barrier to participation, so we’re working on translations for item pages, and progressing multilingual search. Ultimately, <a href=\"https://pro.europeana.eu/project/europeana-translate\">Europeana Translate</a> will connect Europeana and the EU’s <a href=\"https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eTranslation\">eTranslation</a> tool, automatically translating millions of records from a local language to English.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -778,7 +778,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Access for all.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Connecting with audiences</strong></p>\r\n\r\n<p></p>\r\n\r\n<p>Highlighting captivating materials and stories, our high-quality editorial features help audiences explore and discover digital cultural heritage. Promoted via social media and outreach channels, the editorial drives people back to the <a href=\"https://www.europeana.eu/en\">Europeana website</a> to discover more. We look forward to further building our understanding of our audience and their needs and expanding our editorial range, exploring engaging formats such as vlogs, podcasts and online tours developed in associated projects.\_</p>\r\n\r\n<p>The support we give to developers using the <a href=\"https://pro.europeana.eu/page/apis\">Europeana APIs</a> will broaden the use of digital cultural content on third party platforms (including tourism providers). And activities with <a href=\"https://pro.europeana.eu/page/europeana-education\">education communities</a> foster the use of digital cultural heritage for teaching and learning, with an emphasis now on audiovisual content and resources in multiple languages.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -826,7 +826,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Rezied A sector fit for digital.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Developing capacity-building</strong></p>\r\n\r\n<p>Collaborating with the\_ <a href=\"https://pro.europeana.eu/network-association/sign-up\" style=\"color:#085395;\">Europeana Network Association</a>, <a href=\"https://pro.europeana.eu/page/aggregators\" style=\"color:#085395;\">Europeana Aggregators’ Forum</a> and others, we will develop a framework for the structural adoption of our capacity-building initiative, developing skills and knowledge across the sector. Clear measures of change will be designed and tested using the <a href=\"https://pro.europeana.eu/page/impact\" style=\"color:#085395;\">Europeana Impact Framework</a> and the Europeana Pro website will be developed further as a knowledge hub for related resources and tools.</p>\r\n\r\n<p>A rich professional development programme of online, watch-again and in-person events run by the <a href=\"https://pro.europeana.eu/about-us/foundation\" style=\"color:#085395;\">Europeana Foundation</a> and partners will cover topics from data quality, impact and copyright, to artificial intelligence, communications, research and education.</p>\r\n\r\n<p>With <a href=\"https://www.den.nl/\" style=\"color:#085395;\">Stichting Digitaal Erfgoed Nederland</a> (DEN), a pilot management academy for the cultural sector will support cultural heritage professionals to develop skills for digital transformation and enable them to train their peers.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -874,7 +874,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Rezied A sector fit for digital 2.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Nurturing our networks</strong></p>\r\n\r\n<p>We want to increase the diversity of our networks - the <a href=\"https://pro.europeana.eu/network-association/sign-up\" style=\"color:#085395;\">Europeana Network Association</a> and <a href=\"https://pro.europeana.eu/page/aggregators\" style=\"color:#085395;\">Europeana Aggregators’ Forum</a> - and encourage active participation. We want to align our activities, including efforts in areas such as diversity and climate action, so we can all better contribute to capacity-building and outreach work.\_</p>\r\n\r\n<p>Individual institutions need good arguments to invest resources in contributing their collections to Europeana so we will demonstrate the value of the Europeana Initiative to national infrastructures, with a focus on the adoption of the <a href=\"https://pro.europeana.eu/page/europeana-licensing-framework\" style=\"color:#085395;\">Europeana Licensing Framework</a>. We will develop <a href=\"https://rightsstatements.org/en/about.html\" style=\"color:#085395;\">global efforts</a> to label digital cultural heritage with accurate international interoperable rights information. And we will raise awareness of the value delivered by the Europeana Initiative in EU member states, via relevant policy areas, conferences under the Presidency of the Council of the European Union in Portugal and Slovenia,\_ and through partnerships such as Europa Nostra.</p>\r\n\r\n<ul>\r\n</ul>\r\n"
         htmllink: null
         buttontext: null
@@ -922,7 +922,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Resized data data data.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Innovating our infrastructure</strong></p>\r\n\r\n<p>We’ll speed up and improve the publishing process via <a href=\"https://metis.europeana.eu/\" style=\"color:#085395;\">Metis</a> - our bespoke aggregation infrastructure. The Metis Sandbox will allow aggregators to test and improve their datasets before submission to Europeana.\_</p>\r\n\r\n<p>We’ll increase the potential for participation by upgrading the <a href=\"https://pro.europeana.eu/page/apis\" style=\"color:#085395;\">Europeana APIs</a> to improve effective two-way connection between external platforms and Europeana.\_</p>\r\n\r\n<p>Projects focusing on aggregating 3D and intangible heritage content will provide valuable insights to help us improve the data models for these content types.\_</p>\r\n\r\n<p>Collaborating with <a href=\"https://pro.europeana.eu/page/europeanatech\" style=\"color:#085395;\">EuropeanaTech</a> and global initiatives like <a href=\"https://pro.europeana.eu/project/iiif-europeana-working-group\" style=\"color:#085395;\">IIIF</a>, we’ll work on innovations for cultural heritage content interoperability.</p>\r\n\r\n<p>We’ll keep a mindful eye on minimising our carbon footprint and make sure our infrastructures run on renewable energy.\_</p>\r\n"
         htmllink: null
         buttontext: null
@@ -970,7 +970,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Rezied data data data 2.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Improving data quality</strong></p>\r\n\r\n<p>The <a href=\"https://pro.europeana.eu/post/publishing-framework\" style=\"color:#085395;\">Europeana Publishing Framework</a> will highlight the impact that better quality content and metadata have on how we promote and showcase material.\_</p>\r\n\r\n<p>We’ll build first-hand knowledge of how Artificial Intelligence (AI) and crowdsourcing can enrich data, with an image classification pilot, AI tools for automatic translation and semantic enrichments to improve the discoverability and multilinguality of Europeana. In addition to our <a href=\"https://pro.europeana.eu/page/transcribathon\" style=\"color:#085395;\">transcribathons</a>, we’ll explore subtitle-a-thons and edit-a-thons.\_</p>\r\n\r\n<p>Collaboration with aggregators and data providers is vital for improving our cultural collections and enhancing their diversity and inclusivity. We want to develop shared learning opportunities with the Europeana Aggregators’ Forum to address bias in our data and the way we apply AI. We’ll improve existing content, resolving broken links and re-engaging with inactive data partners. And we look forward to new content from crafts, broadcasting and Roma traditions to Chinese and Jewish heritage.</p>"
         htmllink: null
         buttontext: null
@@ -1018,7 +1018,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Transparent Data data data Goals 2.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h4 style=\"color:#085395;\">GOALS</h4>\r\n\r\n<ul style=\"padding: 15px; background-color: #0A72CC;\">\r\n    <li style=\"color:#fff;\"><strong>&gt; 65% of data in content Tier 2+</strong> (High quality content)</li>\r\n    <li style=\"color:#fff;\"><strong>&gt; 45% of data in content Tier 3+</strong> (High quality and reusable content)</li>\r\n    <li style=\"color:#fff;\"><strong>&gt; 65% of data in metadata Tier A+</strong> (High quality metadata)</li>\r\n    <li style=\"color:#fff;\"><strong>More than 2.5 million enrichments</strong>\_from Generic Services projects</li>\r\n    <li style=\"color:#fff;\"><strong>More than 460,000 new and updated records</strong> from Generic Services projects</li>\r\n</ul>\r\n\r\n<h4 style=\"color: #085395; margin-top: 10px;\">ⓘ\_<a href=\"https://pro.europeana.eu/post/publishing-framework\" style=\"color:#085395;\">Find out more about the Europeana Publishing Framework tiers</a></h4>\r\n"
         htmllink: null
         buttontext: null
@@ -1066,7 +1066,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Transparent Access for all Goals 2.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h4 style=\"color:#085395;\">GOALS</h4>\r\n\r\n<ul style=\"padding: 15px; background-color: #0A72CC;\">\r\n    <li style=\"color:#fff;\"><strong>500,000 visits </strong>to Europeana website (monthly)</li>\r\n    <li style=\"color:#fff;\"><strong>75% satisfaction rate </strong>for the Europeana website</li>\r\n    <li style=\"color:#fff;\"><strong>250 million impressions on social media </strong>(Facebook, Pinterest, GIPHY, Instagram, Twitter)</li>\r\n    <li style=\"color:#fff;\"><strong>75% satisfaction rate </strong>from educational communities</li>\r\n</ul>\r\n"
         htmllink: null
         buttontext: null
@@ -1114,7 +1114,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Transparent A sector fit for digital 2.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h4 style=\"color:#085395;\">GOALS</h4>\r\n\r\n<ul style=\"padding: 15px; background-color: #0A72CC;\">\r\n    <li style=\"color:#fff;\"><strong>75% accredited aggregators satisfaction rate</strong></li>\r\n    <li style=\"color:#fff;\"><strong>&gt; 2,500 Europeana Network Association members\_</strong></li>\r\n    <li style=\"color:#fff;\"><strong>75% Europeana Network Association member satisfaction rate</strong></li>\r\n</ul>\r\n"
         htmllink: null
         buttontext: null
@@ -1162,7 +1162,7 @@ resources:
         image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Business Plan Lead Image.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -1209,7 +1209,7 @@ resources:
         title: 'Research Event Grants Submission Form 2021'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://app.smartsheet.com/b/form/c6f9891f105b4f0ab3d9dde3e0f29e6e'
         buttontext: 'Submit your application'
@@ -1256,7 +1256,7 @@ resources:
         title: 'Research grants 2021 Pro announcement to submission page'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://bit.ly/3u1WeIV'
         buttontext: 'Find out more and apply'
@@ -1303,7 +1303,7 @@ resources:
         title: 'Indices project second consultation workshop'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://participate.indices-culture.eu/conferences/secondconsultationworkshop'
         buttontext: 'View the full programme and register'
@@ -1352,7 +1352,7 @@ resources:
             file: 'Images/Home_page/Europeana 2021 Research Grants PRO Homepage Banner image (1).png'
             title: 'Europeana Research Grants Programme 2021. Theme: Crowdsourcing and Research. Funds available: €25,000. Apply now'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Theme: Crowdsourcing and Research</p>\r\n\r\n<p>Funds available: €25,000</p>\r\n\r\n<p>Apply now\_ \_ \_ \_ \_ \_ \_ \_ \_\_</p>\r\n"
         htmllink: 'https://pro.europeana.eu/page/grants-programme'
         buttontext: null
@@ -1399,7 +1399,7 @@ resources:
         title: 'Eventbrite registration link 7'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pretix.eu/Europeana-Foundation/xargu/'
         buttontext: 'Register now!'
@@ -1446,7 +1446,7 @@ resources:
         title: 'Research Impact symposium'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.eventbrite.co.uk/e/research-and-digital-cultural-heritage-new-impact-horizons-tickets-150686406097'
         buttontext: 'Explore the programme and register for the symposium!'
@@ -1493,7 +1493,7 @@ resources:
         title: 'Europeana Question Bank'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://docs.google.com/document/d/11TpWjtjU5it0SlClPqdT5ZTF23dZc0VKV42lknrQ_D0/edit?usp=sharing'
         buttontext: 'Use the question bank'
@@ -1541,7 +1541,7 @@ resources:
         image:
             file: 'Images/Communities/Impact/Block image for impact research symposium 2.png'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p>In May 2021, Europeana brought together cultural heritage professionals, policy makers, academics and researchers at a dedicated symposium to discuss impact horizons of research nurtured by digital cultural heritage.\_</p>\r\n"
         htmllink: 'https://pro.europeana.eu/event/research-and-digital-cultural-heritage-new-impact-horizons'
         buttontext: 'Watch the sessions'
@@ -1588,7 +1588,7 @@ resources:
         title: 'Europeana Question Bank page'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/page/europeana-standardised-question-bank'
         buttontext: 'Access the Europeana standardised question bank'
@@ -1636,7 +1636,7 @@ resources:
         image:
             file: 'Images/New European Bauhaus/NEB Block 2.jpeg'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>You can respond now to European Commission's call for inspiring examples of how our cultural institutions and heritage contribute to sustainable and inclusive practices, services, and spaces in our communities.\_We’ve seen lots of examples shared by other sectors but not from the cultural heritage sector - so speak up up for it now and let’s make sure that the policies and funding that will shape the future reflect our sector’s contribution!</p>\r\n"
         htmllink: 'https://europa.eu/new-european-bauhaus/co-design/new-european-bauhaus-share-your-voice'
         buttontext: 'Share your examples by 30 June'
@@ -1684,7 +1684,7 @@ resources:
         image:
             file: 'Images/New European Bauhaus/NEB Block 1.jpeg'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p>You can keep up to date with news and initiatives related to New European Bauhaus by following\_#NewEuropeanBauhaus on Twitter.</p>\r\n"
         htmllink: 'https://twitter.com/hashtag/NewEuropeanBauhaus?src=hashtag_click'
         buttontext: 'Follow now'
@@ -1732,7 +1732,7 @@ resources:
         image:
             file: 'Images/New European Bauhaus/NEB page lead image.png'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -1780,7 +1780,7 @@ resources:
         image:
             file: 'Images/New European Bauhaus/NEB Block 3.jpeg'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p>You can explore and register for upcoming events related to New European Bauhaus on the European Commission’s website.</p>\r\n"
         htmllink: 'https://europa.eu/new-european-bauhaus/events_en'
         buttontext: 'View the events'
@@ -1827,7 +1827,7 @@ resources:
         title: 'Eventbrite registration link 8'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pretix.eu/Europeana-Foundation/aa97q/'
         buttontext: 'Register now!'
@@ -1874,7 +1874,7 @@ resources:
         title: 'Eventbrite registration link 9'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pretix.eu/Europeana-Foundation/ebvnx/'
         buttontext: 'Register now!'
@@ -1922,7 +1922,7 @@ resources:
         image:
             file: 'Images/New European Bauhaus/NEB Block 4.jpeg'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>We are connecting contemporary conversations about green issues and sustainable living with cultural heritage using blogs, galleries and learning resources on the Europeana website. Explore topics from sustainable tourism to pollution, Bauhaus to beavers, and discover varied learning resources around ecology and climate change.\_\_</p>\r\n"
         htmllink: 'https://www.europeana.eu/new-european-bauhaus'
         buttontext: 'Explore now'
@@ -1969,7 +1969,7 @@ resources:
         title: 'Explore New European Bauhaus on Europeana Pro'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/page/new-european-bauhaus'
         buttontext: 'Explore New European Bauhaus on Europeana Pro'
@@ -2016,7 +2016,7 @@ resources:
         title: 'Register for Storytelling with digital culture webinar'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.eventbrite.co.uk/e/storytelling-with-digital-culture-tickets-153268579447'
         buttontext: 'Register for Storytelling with digital culture webinar'
@@ -2063,7 +2063,7 @@ resources:
         title: 'New European Bauhaus on the Europeana website'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.europeana.eu/new-european-bauhaus'
         buttontext: 'Explore now'
@@ -2112,7 +2112,7 @@ resources:
             file: 'Images/Communities/Impact/Impact playbook banner 1.jpg'
             title: 'A hand selecting post-it notes'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Phase One has everything you need to take your organisation through the process of impact assessment design. Its tools can also help you design an impactful project from scratch.<b>\_</b>Download the English version using the button\_below or the <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Impact/impact_playbook/Impact_Playbook_Phase1_PL.pdf\">Polish version</a>.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/files/Europeana_Professional/Impact/impact_playbook/Impact_Playbook_Phase1_ENG.pdf'
         buttontext: 'Download Phase one'
@@ -2161,7 +2161,7 @@ resources:
             file: 'Images/Communities/Impact/Impact playbook banner 2.jpg'
             title: 'Coloured cardboard cubes with the Europeana logo on a table'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Phase two of the Impact Playbook helps you to design your data collection all the way through to the interpretation of the data you collect.<b> </b> Download a colour version using the button below, or a <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Impact/impact_playbook/Impact_Playbook_Phase2_B&amp;W.pdf\">printer-friendly black and white version</a>.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/files/Europeana_Professional/Impact/impact_playbook/Impact_Playbook_Phase2_COL.pdf'
         buttontext: 'Download Phase two'
@@ -2208,7 +2208,7 @@ resources:
         title: 'Financial report 2020'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: null
         buttontext: 'Download Europeana Foundation Financial Report 2020'
@@ -2257,7 +2257,7 @@ resources:
             file: 'Images/Publication_thumbnails/Annual report 2021 lead image test.png'
             title: 'Väinämöinen creates light, a sketch for a Kaleva-themed cartoon series'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p>ANNUAL REPORT 2020</p>\r\n"
         htmllink: null
         buttontext: null
@@ -2304,7 +2304,7 @@ resources:
         title: 'Storytelling Longlist - Google Sheet'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://docs.google.com/spreadsheets/d/1RtLsy4tQyziYY8DYkmScNlZrC8mdhtuyWuMD2e7XIz4/edit?usp=sharing'
         buttontext: 'Explore longlist via Google Sheet'
@@ -2351,7 +2351,7 @@ resources:
         title: 'Storytelling Longlist - Padlet'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'Explore longlist via Padlet'
         buttontext: 'https://padlet.com/lisa_peter/EuropeanaTF'
@@ -2398,7 +2398,7 @@ resources:
         title: 'Download storytelling Task Force report'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: null
         buttontext: 'Download report from the Europeana as a ''powerful platform for storytelling'' Task Force'
@@ -2445,7 +2445,7 @@ resources:
         title: 'Register for portugal presidency event'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.eventbrite.co.uk/e/towards-recovery-digital-capacity-building-in-the-cultural-heritage-sector-tickets-154564130475'
         buttontext: 'Register now'
@@ -2493,7 +2493,7 @@ resources:
         image:
             file: 'Images/Home_page/Europeana 2021 header Teaser 1500x527 (1).png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>16 and 17 June 2021</p>\r\n\r\n<p>Bring content to new audiences, meet our aggregators and receive expert guidance.\_</p>\r\n\r\n<p>Click to find out more and register.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/event/europeana-aggregators-fair'
         buttontext: null
@@ -2540,7 +2540,7 @@ resources:
         title: 'Access these rights statements at RightsStatements.org'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://rightsstatements.org/page/1.0/'
         buttontext: 'Access these rights statements at RightsStatements.org'
@@ -2588,7 +2588,7 @@ resources:
         image:
             file: 'Images/Teaser_images/Impact question bank.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>A bank of standardised questions relating to Europeana’s work in digital cultural heritage that you can also use in your own work.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/page/europeana-standardised-question-bank'
         buttontext: null
@@ -2636,7 +2636,7 @@ resources:
         image:
             file: 'Images/Teaser_images/Data collection worksheet.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>An extension to the Change Pathway to support data collection in Phase 2 - available as a Google document.\_</p>\r\n\r\n<p></p>\r\n"
         htmllink: 'https://docs.google.com/document/d/12jdeqGdW-gLQPzGS1orvH1gRHZTVArk2GkemsUcCgyQ/edit'
         buttontext: null
@@ -2684,7 +2684,7 @@ resources:
         image:
             file: 'Images/Event_images/Get the data right.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>This impact webinar takes you through Phase two of the Impact Playbook, focusing on data collection and analysis.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/event/get-the-data-impact-playbook-phase-2'
         buttontext: null
@@ -2732,7 +2732,7 @@ resources:
         image:
             file: Images/COVID-19/29863247137_3245a06e03_c.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>This 3-D virtual tour allows audiences to\_wander virtually through the historic building from the comfort of their homes, taking in centuries of art across three floors of gallery spaces with this state-of-the art, easily navigable touring technology.</p>\r\n"
         htmllink: 'https://crawfordartgallery.ie/crawford-art-gallery-3d-map/'
         buttontext: null
@@ -2779,7 +2779,7 @@ resources:
         title: 'Interested in sharing your collections with Europeana? Find out how to share your data.'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/share-your-data/process'
         buttontext: 'Interested in sharing your collections with Europeana? Find out how to share your data.'
@@ -2828,7 +2828,7 @@ resources:
             file: 'Images/Collections/Olympic game banner.jpeg'
             title: 'A stand of sports spectators'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>The Olympic Flame Quest is a new online game which helps children aged 8 - 12 learn about Olympic values using digital heritage items from Europeana. Play the game and fill in a short survey to help us test it!</p>\r\n"
         htmllink: 'https://www.europeana.eu/blog/help-test-a-new-game-the-olympic-flame-quest'
         buttontext: 'Find out more'
@@ -2877,7 +2877,7 @@ resources:
             file: 'Images/Event_images/Events toolkit/Online events checklist PDF.png'
             title: 'Two people in an office look at some documents'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p>Download and use the checklist as a PDF decision tree.\_</p>\r\n"
         htmllink: 'https://drive.google.com/file/d/1fUgFGVgnqipJCpf7dWqjot3TRxfJVus_/view?usp=sharing'
         buttontext: 'Open the PDF'
@@ -2926,7 +2926,7 @@ resources:
             file: 'Images/Event_images/Events toolkit/Online events checklist graphml.png'
             title: 'Factory workers standing by industrial machinery'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p>This format allows you to edit our checklist through\_yED (free software).</p>\r\n"
         htmllink: 'https://drive.google.com/file/d/1wYSICA6_AZLHN359KrYWIbX2-4AE13Ri/view?usp=sharing'
         buttontext: 'Open the file'
@@ -2975,7 +2975,7 @@ resources:
             file: 'Images/Event_images/Events toolkit/Survey template.png'
             title: 'A person working on a typewriter'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>A template for you to use when sending out your surveys.\_</p>\r\n"
         htmllink: null
         buttontext: null
@@ -3023,7 +3023,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://hangouts.google.com/'
         buttontext: null
@@ -3071,7 +3071,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://zoom.us/'
         buttontext: null
@@ -3119,7 +3119,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.mentimeter.com/'
         buttontext: null
@@ -3167,7 +3167,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://kahoot.com/'
         buttontext: null
@@ -3215,7 +3215,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://trello.com/'
         buttontext: null
@@ -3263,7 +3263,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://miro.com/index/'
         buttontext: null
@@ -3311,7 +3311,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://jamboard.google.com/'
         buttontext: null
@@ -3359,7 +3359,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pretix.eu/about/en/'
         buttontext: null
@@ -3407,7 +3407,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.surveymonkey.com/'
         buttontext: null
@@ -3455,7 +3455,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.smartsheet.com/'
         buttontext: null
@@ -3503,7 +3503,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.google.co.uk/forms/about/'
         buttontext: null
@@ -3551,7 +3551,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://obsproject.com/'
         buttontext: null
@@ -3600,7 +3600,7 @@ resources:
             file: 'Images/Event_images/Events toolkit/Planning template.png'
             title: 'A typewriter'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>We use a chart noting all actions from the very start to the very end of the process, the due date and who is responsible. Make a copy of our planning template\_(available as a Google document) and tailor it to your needs!</p>\r\n"
         htmllink: 'https://docs.google.com/spreadsheets/d/10lxdgYauP2X5y8_9X482zxdLgznC4z6UUxS93ZbFAT0/edit#gid=0'
         buttontext: null
@@ -3649,7 +3649,7 @@ resources:
             file: 'Images/Event_images/Events toolkit/Calendar.png'
             title: 'A typewriter'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>If you’re organising multiple events, you will need a planning calendar to keep track of everything that is going on. Make a copy of our empty calendar spreadsheet (available as a Google document) and adapt it.\_</p>\r\n"
         htmllink: 'https://docs.google.com/spreadsheets/d/1K6pGmYv8Ecwx5fCZ_3j83DDSiJlhq8Btsw3I1IPQRug/edit?usp=sharing'
         buttontext: null
@@ -3697,7 +3697,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Running order.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<h4>You will need to plan how you use the time you have in your event and who is responsible for each section. Here’s an example of a running order we have used several times as a Google document - make a copy and adapt it to your own needs.</h4>\r\n"
         htmllink: 'https://docs.google.com/document/d/1BVtcuLZILALoAnLMPCw4pDmKH2FBfSKm_1-B-Xp19pI/edit'
         buttontext: null
@@ -3746,7 +3746,7 @@ resources:
             file: 'Images/Education/Built with bits 2.png'
             title: 'Computer visualisation of an indoor pool, fitness and wellness center'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p>Designing virtual spaces for the future.</p>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -3793,7 +3793,7 @@ resources:
         title: 'Built with bits sign-up form'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://forms.gle/ULfMMoLDUF7GgFhY7'
         buttontext: 'Sign up now!'
@@ -3841,7 +3841,7 @@ resources:
         image:
             file: 'Images/Event_images/Events toolkit/Online tools.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pretalx.com/p/about/'
         buttontext: null
@@ -3890,7 +3890,7 @@ resources:
             file: 'Images/New_pro_images_March2020/Image updates/Righstatements.org.png'
             title: 'Decoration on a vase'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>The Rights Statements Consortium facilitates engagement with cultural heritage online through rights statements.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/page/rightsstatements-org#the-rights-statements-consortium'
         buttontext: null
@@ -3939,7 +3939,7 @@ resources:
             file: 'Images/Communities/Impact/Impact playbook banner 1.jpg'
             title: 'Hands hovering over sticky notes'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Keep up to date with the latest news, share your projects and initiatives and add your voice to discussions!</p>\r\n"
         htmllink: 'https://www.linkedin.com/groups/13528017/'
         buttontext: 'Connect now'
@@ -3986,7 +3986,7 @@ resources:
         title: 'Europeana 2021 Call for Proposals'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/page/conference-call-for-proposals'
         buttontext: 'Submit your proposal'
@@ -4035,7 +4035,7 @@ resources:
             file: 'Images/Home_page/Consultation August 2021.png'
             title: 'JR 01 scientific computer'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: null
         buttontext: null
@@ -4083,7 +4083,7 @@ resources:
         image:
             file: 'Images/Home_page/Europeana 2021 PRO homepage banner.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>\_ \_\_</p>\r\n"
         htmllink: null
         buttontext: null
@@ -4131,7 +4131,7 @@ resources:
         image:
             file: 'Europeana_Professional/Impact/Impact playbook/Impact Playbook Phase 3.jpg'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>In Phase three we guide you through the narration of your impact, from building your narrative to visualising your data and publishing your findings in different ways for different audiences. Download it below.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/files/Europeana_Professional/Impact/Impact%20playbook/Phase%20three%20-%20Europeana%20Impact%20Playbook%20version%201.0.pdf'
         buttontext: 'Download Phase three'
@@ -4180,7 +4180,7 @@ resources:
             file: 'Europeana_Professional/Impact/impact images/Narrative builder canvas.jpg'
             title: 'Hands writing onto a small wooden block'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>This resource shapes your findings into a narrative arc, helping you to draw out the most important messages for your audiences.\_</p>\r\n"
         htmllink: 'https://pro.europeana.eu/files/Europeana_Professional/Impact/Impact%20playbook/Europeana%20Impact%20Playbook%20narrative%20builder%20canvas.pdf'
         buttontext: 'Download now'
@@ -4229,7 +4229,7 @@ resources:
             file: 'Europeana_Professional/Impact/impact images/Mapping your stakeholders.jpg'
             title: 'Two figures looking at cardboard blocks on a coloured worksheet'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Use this document to\_map your stakeholders and think about what they need from your impact findings.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/files/Europeana_Professional/Impact/Impact%20playbook/Mapping%20your%20stakeholders%20-%20worksheet.pdf'
         buttontext: 'Download now'
@@ -4278,7 +4278,7 @@ resources:
             file: 'Europeana_Professional/Impact/impact images/Dissemination plan worksheet.jpg'
             title: 'Wooden blocks on a worksheet'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Use this resource to set out how you share your findings, what you do with your stakeholders\_and what success looks like.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/files/Europeana_Professional/Impact/Impact%20playbook/Blank%20dissemination%20plan%20worksheet.pdf'
         buttontext: null
@@ -4327,7 +4327,7 @@ resources:
             file: Images/Event_images/CultureFromHomeWebinar.jpg
             title: 'A young girl on the telephone'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Explore webinars organised by the Europeana Communicators Community and those relevant to engaging audiences!</p>\r\n"
         htmllink: 'https://pro.europeana.eu/page/webinars#engaging-audiences'
         buttontext: null
@@ -4376,7 +4376,7 @@ resources:
             file: 'Images/Blog_images/2021-01/Public Domain Day teaser image.png'
             title: 'A sketch of a dog resting in a forest'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>The Europeana Network Association Communicators and Copyright communities share some of their favourite public domain works!</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/publicdomainday-a-few-of-europeana-s-public-domain-favourites-highlighted-for-you'
         buttontext: null
@@ -4425,7 +4425,7 @@ resources:
             file: Images/Network/copyright_work_plan_2022_teaser.png
             title: 'People seated around a table'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Explore our Community Work plan for 2022!</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/copyright-community-work-plan-2022'
         buttontext: null
@@ -4473,7 +4473,7 @@ resources:
         image:
             file: 'Images/New_pro_images_March2020/Molen bij een rivier.jpeg'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>A Task Force assessing the feasibility\_for a schema for cultural heritage institutions to identify copyright in their collections.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/project/how-to-guide-for-labelling-cultural-heritage'
         buttontext: null
@@ -4520,7 +4520,7 @@ resources:
         title: 'ENA MC Elections 2021'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://app.smartsheet.com/b/form/e19fa86ff86641a6ad8830d3f937f30f'
         buttontext: 'Submit your candidacy'
@@ -4569,7 +4569,7 @@ resources:
             file: 'Images/Communities/ENA AGM 2021 banner.jpeg'
             title: 'A group of people waving flags on a race track'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>On 3 November 2021, the Europeana Network Association will come together in its General Assembly meeting. It's an exclusive opportunity for our members to meet, get to know each other, interact and learn about Europeana.\_</p>\r\n"
         htmllink: 'https://pro.europeana.eu/event/ena-general-assembly-2021'
         buttontext: 'Register for the Assembly!'
@@ -4617,7 +4617,7 @@ resources:
         image:
             file: 'Images/DSI-4 Annual report 2019 - 2020/Strengthen the infrastructure (resized 2).png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3><strong>Highlights this year</strong></h3>\r\n\r\n<p><strong>Behind the scenes:</strong>\_Improvements to the aggregation infrastructure added new data enrichment sources to improve quality and multilingual coverage, while other developments give our aggregators greater power to contribute and improve collections faster.\_</p>\r\n\r\n<p><strong>On the Europeana website</strong>:\_A new create-your-own gallery feature allows people to favourite, curate and share the treasures they find. New ‘Stories’ and ‘Features’ pages, along with exhibitions in multiple languages, translations of more than 300 on-screen texts, and improvements to the search facility, attract and retain new audiences by making the material more accessible to more people. And editorial work brings our audience closer to the collections by focussing on diverse themes around, for example, Women’s History Month, Black History Month and LGBTQ+.</p>\r\n\r\n<p><strong>And beyond</strong>:\_Improved API services make it easier for developers to create new apps, games and services with Europeana content, while partnerships such as GIF IT UP and the Digital Storytelling Festival reach cultural enthusiasts across the world. Our educational challenge #ReinventingBeethoven invited teachers to encourage students to be creative\_with cultural heritage resources. An interactive handbook for education, ‘Digital Learning in the Pandemic’, presents 24 learning resources to help\_educators overcome future challenges of online and blended learning.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -4665,7 +4665,7 @@ resources:
         image:
             file: 'Images/DSI-4 Annual report 2019 - 2020/Improve data quality (resized).png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3><strong>Highlights this year:</strong></h3>\r\n\r\n<p><strong>Setting solid foundations</strong>:\_Building closer relationships with both active and inactive aggregators has resulted in more direct links to digital objects and far fewer broken links, with more data moving up the tiers of the Europeana Publishing Framework - our quality scale. And the launch of the Aggregator User Group and additional training opportunities bring us closer together, improving our feedback processes and knowledge-sharing.</p>\r\n\r\n<p><strong>To new frontiers:\_</strong>A focus on innovation saw a challenge give financial support for the development of three large datasets to which artificial intelligence and machine-learning enrichments can be applied. This creates greater value for both institutions and audiences. A Task Force, a Europeana Pro News series and a webinar series all explored the opportunities and challenges of working with AI in the cultural heritage and arts sector, while more and more Europeana partners used crowdsourcing and machine-learning to enrich their metadata.\_</p>\r\n\r\n<p><strong>Seeing the results:</strong>\_A revamped Statistics Dashboard gives an at-a-glance visualisation of the status of collections, for example, by country, rights statements or where they sit on our quality scale, showing where there is room for improvement.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -4714,7 +4714,7 @@ resources:
             file: 'Images/DSI-4 Annual report 2019 - 2020/Build capacity (resized).png'
             title: 'An athlete standing on a beam'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3><strong>Highlights this year</strong></h3>\r\n\r\n<p><strong>Setting up a framework:</strong>\_The release of a definition of digital transformation for the cultural heritage sector and the first stage of a capacity-building framework mark significant steps in our capacity-building initiative, which will be measured in line with best practices derived from the Europeana Impact Framework.\_ Digital transformation was\_discussed at two European Presidency conferences, with the German event focussing on copyright, and Portugal event on capacity-building.\_</p>\r\n\r\n<p><strong>Getting together</strong>:\_Our programme of online events, including Europeana 2020 - our first-ever online-only annual conference, the first Europeana Aggregators’ Fair and a Digital Spring Programme, brought thousands of professionals from across the globe together, attracting a wider audience and achieving better green credentials than the equivalent in-person events. These events strengthened a sense of community, provided inspiration for professional change and innovation, and shared knowledge or skills that can be applied in attendees’ own practice.</p>\r\n\r\n<p><strong>Practical resources</strong>:\_The Europeana Foundation, Europeana Network Association and Europeana Aggregators’ Forum\_strengthened their alignment by collaborating on common themes, often culminating in the publication on Europeana Pro of practical resources and examples of good practice. Examples include a a standardised question bank - a resource from the Europeana Impact Toolkit, good practice for digital storytelling from Europeana Communicators, funding opportunities from Europeana Research and a webinar series from Europeana Copyright.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -4762,7 +4762,7 @@ resources:
         image:
             file: 'Images/DSI-4 Annual report 2019 - 2020/DSI Report 2020 - 2021 lead image - Copy.jpeg'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -4810,7 +4810,7 @@ resources:
         image:
             file: 'Images/Education/Logos/European Schoolnet.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/page/european-schoolnet'
         buttontext: null
@@ -4858,7 +4858,7 @@ resources:
         image:
             file: Images/Education/Logos/EuroClio.png
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/page/euroclio'
         buttontext: null
@@ -4906,7 +4906,7 @@ resources:
         image:
             file: 'Images/Education/Logos/All Digital.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://alldigitalweek.eu/partners/'
         buttontext: null
@@ -4954,7 +4954,7 @@ resources:
         image:
             file: Images/Education/Logos/Nemo.png
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.ne-mo.org/about-us/partners.html'
         buttontext: null
@@ -5002,7 +5002,7 @@ resources:
         image:
             file: Images/Education/Logos/eTwinning.png
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.etwinning.net/en/pub/community/friends.htm'
         buttontext: null
@@ -5051,7 +5051,7 @@ resources:
             file: 'Images/Education/Logos/School Education Gateway.png'
             title: 'School Education Gateway logo'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.schooleducationgateway.eu/en/pub/about/friends.htm'
         buttontext: null
@@ -5099,7 +5099,7 @@ resources:
         image:
             file: 'Images/Education/Logos/Open Education Global.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.oeglobal.org/'
         buttontext: null
@@ -5147,7 +5147,7 @@ resources:
         image:
             file: Images/Education/Logos/Unsplash.png
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://unsplash.com/@europeana'
         buttontext: null
@@ -5195,7 +5195,7 @@ resources:
         image:
             file: 'Images/Education/Logos/its learning.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://itslearning.com/global/'
         buttontext: null
@@ -5243,7 +5243,7 @@ resources:
         image:
             file: Images/Education/Logos/Canva.png
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.canva.com/p/europeanaimages/'
         buttontext: null
@@ -5291,7 +5291,7 @@ resources:
         image:
             file: 'Images/Education/Logos/Art Stories.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'http://www.artstories.it/en/faces/'
         buttontext: null
@@ -5339,7 +5339,7 @@ resources:
         image:
             file: 'Images/Education/Logos/French Ministry of Education.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.edutheque.fr/utiliser/partenaire/europeana.html'
         buttontext: null
@@ -5388,7 +5388,7 @@ resources:
             file: Images/Education/Logos/spain.png
             title: 'INTEF logo'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://intef.es/'
         buttontext: null
@@ -5437,7 +5437,7 @@ resources:
             file: Images/Education/Logos/portugal.png
             title: 'Direcão-geral da educação logo'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://erte.dge.mec.pt/europeana'
         buttontext: null
@@ -5485,7 +5485,7 @@ resources:
         image:
             file: 'Images/Education/Logos/Polish Ministry of Education.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://epodreczniki.pl/a/materialy-partnerow/D1DDYDP5e'
         buttontext: null
@@ -5533,7 +5533,7 @@ resources:
         image:
             file: 'Images/Education/Logos/IND IRE.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.indire.it/patrimoniostorico/conversare-tra-le-carte-in-un-mondo-digitale/'
         buttontext: null
@@ -5582,7 +5582,7 @@ resources:
             file: Images/Education/Logos/greek.png
             title: Logo
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'http://iep.edu.gr/el/deltia-typou-genika/europeana'
         buttontext: null
@@ -5629,7 +5629,7 @@ resources:
         title: 'Explore Chinese heritage on Europeana'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.europeana.eu/en/chinese-heritage'
         buttontext: 'Explore Chinese heritage on Europeana'
@@ -5676,7 +5676,7 @@ resources:
         title: 'Register for the LabDay'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.eventbrite.co.uk/e/europeana-labday-tickets-167726046119'
         buttontext: 'Register for the LabDay'
@@ -5723,7 +5723,7 @@ resources:
         title: 'Heritage in Motion award winners'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://heritageinmotion.eu/pressrelease/winners-of-the-heritage-in-motion-awards-2021-announced'
         buttontext: 'Explore the winning projects of the Heritage in Motion Awards 2021'
@@ -5771,7 +5771,7 @@ resources:
         image:
             file: 'Images/Home_page/Europeana 2021 PRO Hero Banner (2).png'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p>Watch the recordings from Europeana 2021\_and register your interest for Europeana 2022.\_</p>\r\n"
         htmllink: 'https://pro.europeana.eu/page/conference'
         buttontext: null
@@ -5818,7 +5818,7 @@ resources:
         title: 'Copyright hours session one'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/event/copyright-office-hours-open-licensing'
         buttontext: 'Register now!'
@@ -5865,7 +5865,7 @@ resources:
         title: 'Explore Europeana’s Black Lives in Europe exhibition'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.europeana.eu/en/exhibitions/black-lives-in-europe'
         buttontext: 'Explore Europeana’s Black Lives in Europe exhibition'
@@ -5912,7 +5912,7 @@ resources:
         title: 'Join the research community'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/page/europeana-research'
         buttontext: 'Join the research community'
@@ -5959,7 +5959,7 @@ resources:
         title: 'Re-use page quotation 1 (Pookie)'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p><img src=\"https://pro.europeana.eu/thumbs/600x400r/Images/Blog_images/2021-11/PookieDrawing.png\"></p>\r\n\r\n<p></p>\r\n\r\n<h6>Portrait by Pookie_art, in copyright, based on Vilhelmine Biering (1852-1899), The National Library of Denmark CC BY-NC-ND</h6>\r\n"
         htmllink: null
         buttontext: null
@@ -6006,7 +6006,7 @@ resources:
         title: 'Re-use page quotation 2 (Nick Cave)'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p><iframe allowfullscreen=\"\" class=\"giphy-embed\" frameborder=\"0\" height=\"350\" src=\"https://giphy.com/embed/6gYBW3mT68HZHTUALZ\" width=\"545\"></iframe></p>\r\n\r\n<h6>GIF by Nick Cave, Birmingham, UK. Based on\_1. A periscope being used above an operation which is projected onto a lantern,\_gouache painting by W.R. Seton.\_Wellcome Collection.\_\_2. Praying skeleton, W. Cheselden.\_3. Infirmary, Museon via Europeana</h6>\r\n"
         htmllink: null
         buttontext: null
@@ -6053,7 +6053,7 @@ resources:
         title: 'Re-use page quotation 3 - Emma Abbate'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"360\" src=\"https://player.vimeo.com/video/442043198?h=101ec5f1d6\" title=\"vimeo-player\" width=\"545\"></iframe></p>\r\n\r\n<h6>Europeana, Minecraft &amp; Mozilla Hubs by Emma Abbate / Connecting Formal and Informal Education with Digital Cutlural Heritage, August 2020, CC BY-SA</h6>\r\n"
         htmllink: null
         buttontext: null
@@ -6102,7 +6102,7 @@ resources:
             file: Images/Blog_images/2021-11/Saverio_vita.png
             title: 'Portrait of Saverio Vita, by Marco Serra'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: null
         buttontext: null
@@ -6149,7 +6149,7 @@ resources:
         title: 'Re-use page quotation 5'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: null
         buttontext: null
@@ -6196,7 +6196,7 @@ resources:
         title: 'Re-use page quotation 6 - Elizaveta Berquin'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p><img src=\"https://pro.europeana.eu/thumbs/600x400r/Images/Blog_images/2021-11/Elizaveta_posters.png\"></p>\r\n\r\n<h6>Russian and Soviet posters visualisation,\_Elizaveta Berquin,\_2020,\_In copyright.</h6>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -6244,7 +6244,7 @@ resources:
         image:
             file: Images/Blog_images/2019-12/tueuropeana2019_teaser.jpg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>TuEuropeana</strong></p>\r\n\r\n<p>Maria Drabczyk, Chief International Projects Expert at FINA, ran a poster competition for the TuEuropeana project that encouraged the use of material accessed through Europeana and Polish digital repositories. The project aimed to show the potential of digital collections - with Europeana at its centre - and now runs an annual programme of activities.</p>\r\n\r\n<p>She says, ‘We believe that archives can inspire and contribute to discussions on serious, contemporary socially relevant issues, like ecology and the environment. Our poster competition was targeted at young artists, who often simply don’t know that digital archives offer ready to (re)use material and can be a great source of inspiration. Most entries used material from Europeana. I am proud that some of our artists were bold enough to “play” with masterpieces of Polish art and used them to convey a very strong message about the environment.’ <a href=\"https://pro.europeana.eu/post/mixing-sustainability-and-cultural-heritage-with-tueuropeana\">Find out more.</a></p>\r\n"
         htmllink: null
         buttontext: null
@@ -6292,7 +6292,7 @@ resources:
         image:
             file: 'Images/Europeana_Creative_images/Blog Posts/11-11 Memories Retold.jpg'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Personal stories transform WW1 video game</strong></p>\r\n\r\n<p>Captivated by his own family history during WW1, Yoan Fanise, creative director and co-founder of DigixArt created ‘11-11: Memories Retold’ with animation studio Aardman - a video game with a touching story about the relationship between two men on different sides of the war.\_</p>\r\n\r\n<p>He says, ‘The game is about the two sides of World War One, shown from the perspective of the Canadian allies and the German army, in which you play both characters. We had a lot of sources from the allied side, but not from the German side. For the character of Harry - the German soldier - we needed more materials and Europeana was a great source for that. Europeana 1914-1918 has so many documents, some of which are very personal, especially those collected from families. Those are the stories that I was looking for in order to humanise Harry.</p>\r\n\r\n<p>‘Europeana has a nice licence filter, we know what we can and can’t use and since we wanted to put the documents into the game we needed to make sure the copyright is cleared. This was one of the reasons we used Europeana.' <a href=\"https://pro.europeana.eu/post/the-different-individual-sides-to-history-human-aspects-of-ww1\">Find out more.</a></p>\r\n"
         htmllink: null
         buttontext: null
@@ -6341,7 +6341,7 @@ resources:
             file: Images/Blog_images/2021-11/Branch_steam.png
             title: 'Teddy Tablante''s animation workspace. Teddy Tablante, 2021. CC BY-SA'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>From steam engine to STEM learning\_</strong></p>\r\n\r\n<p>‘While looking through Europeana’s collections, I found amazing images of locomotives and steam engines which inspired me to make a set of videos. The most mind-blowing image for me was a picture of the steam carriage patent from 1828. The idea that this image from almost 200 years ago evolved into the modern-day car really cemented my realisation that engineering and history are intertwined and I wanted to share this idea with other people.’</p>\r\n\r\n<p>Teddy Tablante is an American Mechanical and Electrical Engineer with over a decade of experience in the semiconductor industry. He developed his Branch Education YouTube channel to teach engineering, science and technology topics to 14-18 year olds. Teddy’s videos on steam engines won the 2019 Europeana STEM Challenge.\_</p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/post/bringing-cultural-heritage-to-life-an-interview-with-the-winner-of-the-europeana-stem-challenge\">Find out more</a>.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -6389,7 +6389,7 @@ resources:
         image:
             file: 'Images/Blog_images/2021-04/Viziel teaser image.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>APIs</strong></p>\r\n\r\n<p>Avigail Soloveychik created Viziel - a visual information platform to encourage people to discover digitised cultural heritage objects - to do for visual arts what many platforms already do for books, music and film.\_</p>\r\n\r\n<p>Avigail chose Europeana as a source of data for Viziel because, ‘dealing with a single source that aggregates data from numerous institutions was an optimal choice. Europeana employs cross-disciplinary teams of professionals who were very supportive from the beginning to the launch of the project. And Europeana's APIs are very well structured and documented.’ <a href=\"https://pro.europeana.eu/post/viziel-learning-more-than-you-see-with-europeana-content\">Find out more.</a></p>\r\n"
         htmllink: null
         buttontext: null
@@ -6436,7 +6436,7 @@ resources:
         title: 'Find out more about the Black Archives Amsterdam'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.theblackarchives.nl/home.html'
         buttontext: 'Find out more about the Black Archives Amsterdam'
@@ -6483,7 +6483,7 @@ resources:
         title: 'Europeana 2021 programme'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/files/Europeana_Professional/Event_documentation/Events/Europeana/2021/Europeana-2021-Digital-programme.pdf'
         buttontext: 'Explore the programme'
@@ -6530,7 +6530,7 @@ resources:
         title: 'What you can do'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Join the Europeana Climate Action community through the Europeana Network Association to share your experiences, and help us to promote these principles and put them into action.\_<a href=\"https://pro.europeana.eu/page/climate-action-community\">Join now</a>.</p>\r\n\r\n<p>Every change counts. Whether you act as an individual, or you have influence for wider systemic change within an organisation or network, we urge you to consider what you can do, to set your own goals and to make your own commitments.</p>\r\n\r\n<p>Finally - help us to reach more people by sharing this manifesto on Twitter with the tweet to the right.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -6578,7 +6578,7 @@ resources:
         image:
             file: 'Images/Communities/Climate Action Community.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Climate impact should inform all stages and elements of our work. We will:</p>\r\n\r\n<ul>\r\n    <li>\r\n    <p><strong>Embed eco-thinking</strong>. We will ‘think climate’ from high-level strategy setting, to yearly roadmaps and individual planning cycles.</p>\r\n    </li>\r\n    <li>\r\n    <p><strong>Set standards for managing resources</strong>. We will ensure our supply chains are as ecologically responsible as possible.</p>\r\n    </li>\r\n    <li><strong>Benchmark and measure our progress</strong>. We will carry out sustainability audits and impact assessments so that we can reduce our carbon footprint in targeted areas.</li>\r\n</ul>\r\n"
         htmllink: null
         buttontext: null
@@ -6626,7 +6626,7 @@ resources:
         image:
             file: 'Images/Communities/Climate Action Community.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p>Collective action is essential. We will:</p>\r\n\r\n<ul>\r\n    <li>\r\n    <p><strong>Learn together</strong>. We will progress further and faster if we work together,\_ collaborating with experts, organisations and networks who are similarly committed and who may be further along this journey than we are.\_</p>\r\n    </li>\r\n    <li>\r\n    <p><strong>Harness our networks</strong>. The expertise and experience of the professionals and organisations in our networks are integral to our ability to address the complexities of climate change in our sector. Together, we will work towards common solutions, standards and frameworks for climate-responsible practice for digital culture.</p>\r\n    </li>\r\n    <li>\r\n    <p><strong>Share what we learn</strong>. Sharing good practices and the challenges we encounter can empower further change at professional and organisational level. We want our learnings to be helpful for others to use or adapt for their own settings. So, Europeana’s climate actions will be transparent and made available through, for example, easy-to-access guides or working documents.</p>\r\n    </li>\r\n</ul>\r\n"
         htmllink: null
         buttontext: null
@@ -6674,7 +6674,7 @@ resources:
         image:
             file: 'Images/Communities/Climate Action Community.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p>Small changes contribute to a big impact. We will:</p>\r\n\r\n<ul>\r\n    <li>\r\n    <p><strong>Make systematic changes.</strong> The development of a climate action strategy will be an important tool to help us to exercise material and digital minimalism in all our operations.</p>\r\n    </li>\r\n    <li>\r\n    <p><strong>Meet sustainably.</strong> When we convene either physically or digitally, we will minimise the damage we do, from considering the impacts of travel and catering, to the green credentials of the conferencing software we use.\_</p>\r\n    </li>\r\n    <li>\r\n    <p><strong>Clean up our digital practices.</strong> Every individual can make a difference so we will educate ourselves to clean up our personal digital practices.</p>\r\n    </li>\r\n</ul>\r\n"
         htmllink: null
         buttontext: null
@@ -6722,7 +6722,7 @@ resources:
         image:
             file: 'Images/Communities/Climate Action Community.png'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p>Change doesn’t end with us. We will:</p>\r\n\r\n<ul>\r\n    <li>\r\n    <p><strong>Lead by example</strong>. We will raise awareness of climate issues related to digital cultural heritage and highlight environmentally-friendly practices on both individual and organisation levels.\_</p>\r\n    </li>\r\n    <li>\r\n    <p><strong>Provide support. </strong>We will help our members and peers, partner and contributing organisations, to develop their own capacity for making sustainable change, through sharing tools and case studies and providing opportunities for learning and discussion.</p>\r\n    </li>\r\n</ul>\r\n"
         htmllink: null
         buttontext: null
@@ -6770,7 +6770,7 @@ resources:
         image:
             file: Images/Communities/Climate-Action-Manifesto-lead.png
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -6817,7 +6817,7 @@ resources:
         title: 'Join the Europeana Climate Action Community'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/page/climate-action-community'
         buttontext: 'Join the Europeana Climate Action Community'
@@ -6864,7 +6864,7 @@ resources:
         title: 'Reshare the Europeana climate action manifesto on Twitter'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://twitter.com/Europeanaeu/status/1458753336082059267'
         buttontext: 'Share the Europeana climate action manifesto on Twitter'
@@ -6912,7 +6912,7 @@ resources:
         image:
             file: Images/Home_page/Europeana-Climate-Action-manifesto-homepage.png
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Plan. Collaborate. Operate. Advocate.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/the-europeana-climate-action-manifesto'
         buttontext: null
@@ -6961,7 +6961,7 @@ resources:
             file: Images/Blog_images/2021-11/War_diary.png
             title: 'Upgrading History. Diaries from the War Front'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Using autobiographical writings from prisoners of war</strong></p>\r\n\r\n<p>Early-career scholar Dr Saverio Vita looked to Europeana to help him combine his strong interest in ethical issues about war and his experience in working with digital documents.\_</p>\r\n\r\n<p>'I used Europeana material to build a platform on which anyone can access real war diaries, with comments and introductions. I think that everyone who works in a research context should know and use the available digital collections - they're a great resource for both the general public and academic audiences.' Saverio Vita,\_research fellow, Italy</p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/post/exploring-autobiographical-writings-from-prisoners-of-war-saverio-vita-europeana-research-grants-winner\">Find out more</a></p>\r\n"
         htmllink: null
         buttontext: null
@@ -7008,7 +7008,7 @@ resources:
         title: 'Re-use page quotation 11 (Marie Bellando Mitjans)'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p><img src=\"https://pro.europeana.eu/thumbs/600x400r/Images/Blog_images/2021-11/Marie_new_year.png\"></p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<h6>New Year card,\_Marie Bellando Mitjans (aka Gabian Spirit),\_2021, CC BY-SA</h6>\r\n"
         htmllink: null
         buttontext: null
@@ -7055,7 +7055,7 @@ resources:
         title: 'Watch the videos'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/page/conference#watch-the-sessions'
         buttontext: 'Watch the videos'
@@ -7104,7 +7104,7 @@ resources:
             file: Images/Reuse/europeana-reuse-3.png
             title: 'A bunch of peonies'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p>Be inspired</p>\r\n"
         htmllink: null
         buttontext: null
@@ -7151,7 +7151,7 @@ resources:
         title: 'Europeana DSI-4 2020-2021 publication'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/files/Europeana_Professional/Publications/DSI4 Y3_AnnualReport_V0.9_Per-version for Pro.pdf'
         buttontext: 'Download Europeana DSI-4 Annual Report 2020-2021'
@@ -7198,7 +7198,7 @@ resources:
         title: 'Explore the organisation pages'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.europeana.eu/en/collections/organisations'
         buttontext: 'Explore the organisation pages'
@@ -7245,7 +7245,7 @@ resources:
         title: 'Find our more about the Europeana Foundation Supervisory Board'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/about-us/foundation#supervisory-board'
         buttontext: 'Find our more about the Europeana Foundation Supervisory Board'
@@ -7292,7 +7292,7 @@ resources:
         title: 'Find out more about Museum Geelvinck'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://geelvinck.nl/en/'
         buttontext: 'Find out more about Museum Geelvinck'
@@ -7340,7 +7340,7 @@ resources:
         image:
             file: Images/Education/europeana-mooc.jpeg
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>\_Learn new skills and develop your knowledge through online teaching.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/sign-up-now-for-the-europeana-mooc-digital-education-with-cultural-heritage'
         buttontext: 'Sign up now'
@@ -7389,7 +7389,7 @@ resources:
             file: Images/Home_page/seasons-greetings.png
             title: 'Children throw snowballs in front of a row of houses'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Wishing you a lovely festive period and a happy new year!</p>\r\n"
         htmllink: 'https://pro.europeana.eu/page/season-s-greetings-from-europeana'
         buttontext: null
@@ -7436,7 +7436,7 @@ resources:
         title: 'Digital education MOOC'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.europeanschoolnetacademy.eu/courses/course-v1:Europeana+Culture_EN+2022/about'
         buttontext: 'Register now'
@@ -7483,7 +7483,7 @@ resources:
         title: 'Heritage in Motion winners'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://heritageinmotion.eu/pressrelease/winners-of-the-heritage-in-motion-awards-2021-announced'
         buttontext: 'Explore more Heritage in Motion winners'
@@ -7532,7 +7532,7 @@ resources:
             file: 'Images/Blog_images/2021-10/Public space teaser.png'
             title: 'A cloud icon'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3><b id=\"docs-internal-guid-31ae4f6b-7fff-857b-e9e0-2bc6f208db8c\">Common data space for cultural heritage</b></h3>\r\n\r\n<p>Europeana is the basis of the <a href=\"https://digital-strategy.ec.europa.eu/en/news/commission-proposes-common-european-data-space-cultural-heritage\">European Commission’s plans for building the common data space for cultural heritage</a>. This space will allow museums, galleries, libraries, archives across Europe to share and reuse digitised cultural heritage images such as 3D models of historical sites and high quality scans of paintings.</p>\r\n\r\n<p>We want that space to be part of a vibrant digital public sphere, an open online space in which everyone can access and interact with trustworthy, reliable information and where discussion and interactions are respectful and free of harassment and exploitation. This idea is very closely linked to the foundations on which Europeana is built and the values we hold.\_ Whilst the Commission has named Europeana in its plans, it is the sector’s responsibility to bring this vision to life and to really make it work - for the sector and for the European public.</p>\r\n\r\n<p><strong>Read: <a href=\"https://pro.europeana.eu/post/the-role-of-digital-in-shaping-europe-s-future-spaces-on-and-offline\">Talking data spaces at the Europeana Foundation: shaping Europe’s future spaces on and offline</a></strong></p>\r\n"
         htmllink: null
         buttontext: null
@@ -7581,7 +7581,7 @@ resources:
             file: Images/Blog_images/2021-11/Climate_teaser.png
             title: 'An icon showing a globe'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3><b id=\"docs-internal-guid-d74b83e3-7fff-ce29-d638-188ffa89a59f\">Climate action - now</b></h3>\r\n\r\n<p>There is a global climate emergency. Digital has a carbon footprint too. From how we manage hybrid working practices, to the broader Europeana Initiative and the sector at large - we support climate action related to digital transformation.</p>\r\n\r\n<p>The <a href=\"https://pro.europeana.eu/post/the-europeana-climate-action-manifesto\">Europeana Climate Action Manifesto</a> sets out four guiding principles that will inform the concrete actions the Europeana Initiative will undertake to mitigate climate change through how we plan, collaborate, operate and advocate. And our climate action supports and contributes to the European Green Deal, creating a greener, more sustainable society.\_</p>\r\n\r\n<p>We can’t do it alone - our longstanding habits of collaboration and participation will enable a meaningful contribution to reducing the impact the digital cultural heritage sector has on climate change.\_</p>\r\n\r\n<p><strong>Read: <a href=\"https://pro.europeana.eu/post/talking-climate-change-at-the-europeana-foundation-a-green-team-and-community-action\">Talking climate change at the Europeana Foundation: a ‘green’ team and community action</a></strong></p>\r\n"
         htmllink: null
         buttontext: null
@@ -7628,7 +7628,7 @@ resources:
         title: 'The best data possible'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3><strong>The best data possible</strong></h3>\r\n\r\n<p>The availability of high-quality, usable and accessible material is essential for digital cultural participation and reuse opportunities and sits at the heart of the European Commission’s common data space for cultural heritage. To deliver this, we’re continually improving our aggregation infrastructure (to get material in) and data publishing process (to share it with the world).\_</p>\r\n"
         htmllink: null
         buttontext: null
@@ -7677,7 +7677,7 @@ resources:
             file: Images/Publication_thumbnails/Business_plan_2022/the_best_data_possible_1.png
             title: 'Figures in a line transforming from a man into a butterfly'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Innovating our infrastructure</strong></p>\r\n\r\n<p>Guided by our <a href=\"https://pro.europeana.eu/post/europeana-dsi-4-aggregation-strategy\">Aggregation Strategy</a>, we‘ll further develop our new family of products with <a href=\"https://metis.europeana.eu/\">Metis</a> - our bespoke aggregation infrastructure - at its core. This will support data providers to test and publish their data more directly and to report on that data via the <a href=\"https://metis-statistics.europeana.eu/\">Data Statistics Dashboard</a>.\_</p>\r\n\r\n<p></p>\r\n\r\n<p>We’ll integrate sustainable technologies, tools and content produced by <a href=\"https://pro.europeana.eu/page/generic-services-projects\">Generic Services projects</a> into the Europeana core platform.</p>\r\n\r\n<p>Throughout all of this, we’ll keep a mindful eye on minimising our carbon footprint.\_</p>\r\n"
         htmllink: null
         buttontext: null
@@ -7726,7 +7726,7 @@ resources:
             file: Images/Publication_thumbnails/Business_plan_2022/the_best_data_possible_2.png
             title: 'A line of figures transforming from scissors to a dancing girl'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Improving data quality</strong></p>\r\n\r\n<p>Our holistic approach to product and service delivery will provide cultural heritage institutions with an easy and rewarding process for contributing high quality data, and more automated approaches to the enrichment and publication of data, which will support both our partners and users.</p>\r\n\r\n<p>Based on feedback from our networks and the <a href=\"https://pro.europeana.eu/project/3d-content-in-europeana\">3D Content Task Force</a>, we’ll refine and strengthen our definition of data quality as part of the\_ <a href=\"https://pro.europeana.eu/post/publishing-framework\">Europeana Publishing Framework</a>, concentrating on content and 3D.\_</p>\r\n\r\n<p>To make 3D content more visible in Europeana, we’ll develop guidance to better label 3D materials and obtain a more accurate representation of this content in Europeana.\_</p>\r\n\r\n<p>We’ll focus on reviewing and nurturing inactive data partners or aggregators, and set up a new Libraries Working Group to support national libraries. And we’ll continue to <a href=\"https://pro.europeana.eu/post/addressing-broken-links-to-digital-objects-our-approach\">resolve broken links</a>.</p>\r\n\r\n<p>Collaborating with <a href=\"https://pro.europeana.eu/page/europeanatech\">EuropeanaTech</a> and global initiatives like <a href=\"https://pro.europeana.eu/project/iiif-europeana-working-group\">IIIF</a>, we’ll work on innovations for cultural heritage content interoperability. We’ll use crowdsourcing, artificial intelligence and our ‘entity’ concept to enrich Europeana items and support multilinguality, search and data quality.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -7773,7 +7773,7 @@ resources:
         title: 'Data data data goals 2022'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h4 style=\"color:#085395;\">GOALS</h4>\r\n\r\n<ul style=\"padding: 15px; background-color: #0A72CC;\">\r\n    <li style=\"color:#fff;\"><strong>&gt; 70% of data in content Tier 2+</strong> (High quality content)</li>\r\n    <li style=\"color:#fff;\"><strong>&gt; 50% of data in content Tier 3+</strong> (High quality and reusable content)</li>\r\n    <li style=\"color:#fff;\"><strong>&gt; 70% of data in metadata Tier A+</strong> (High quality metadata)</li>\r\n    <li style=\"color:#fff;\"><strong>More than 2.6\_million enrichments</strong>\_from Generic Services projects</li>\r\n    <li style=\"color:#fff;\"><strong>More than 525,000 new and updated records</strong> from Generic Services projects</li>\r\n</ul>\r\n\r\n<h4 style=\"color: #085395; margin-top: 10px;\">ⓘ\_<a href=\"https://pro.europeana.eu/post/publishing-framework\" style=\"color:#085395;\">Find out more about the Europeana Publishing Framework tiers</a></h4>\r\n"
         htmllink: null
         buttontext: null
@@ -7820,7 +7820,7 @@ resources:
         title: 'Access for all 2022'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3><strong>Access for all</strong></h3>\r\n\r\n<p>The <a href=\"https://www.europeana.eu/en\">Europeana website</a> is at the heart of our audience engagement work and the culmination of our collaborative work with partners to showcase and connect their collections in a digital public space. It’s where people come to participate - to search, learn, explore and even to contribute their own stories<b>.\_</b></p>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -7869,7 +7869,7 @@ resources:
             file: Images/Publication_thumbnails/Business_plan_2022/access_for_all_1.png
             title: 'Woodcut showing houses in a fores'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Providing a rich experience</strong></p>\r\n\r\n<p></p>\r\n\r\n<p>We want audiences to return more frequently and to stay for longer. So we’ll keep improving our searching, browsing and viewing experiences.\_</p>\r\n\r\n<p>Guided by our <a href=\"https://pro.europeana.eu/post/europeana-dsi-4-multilingual-strategy\">Multilingual Strategy</a> and our <a href=\"https://pro.europeana.eu/post/europeana-search-strategy\">Search Strategy</a>, and working with partners, we’ll make finding and learning about Europeana content easier in any of the 24 official EU languages.</p>\r\n\r\n<p>A redesign of the homepage will make it easier to discover new content, and we’ll develop the user account functionality to make it more robust, accessible and easier to use.\_</p>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -7918,7 +7918,7 @@ resources:
             file: Images/Publication_thumbnails/Business_plan_2022/access_for_all_2.png
             title: 'A woodcut showing two people looking at many white birds in a lake'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Connecting with audiences</strong></p>\r\n\r\n<p>Highlighting captivating materials and stories, our high-quality editorial features help educators, researchers, culture lovers and creatives discover and explore digital cultural heritage. Promoted via social media and outreach channels, the editorial drives people back to the Europeana website to discover more. Our editorial themes provide links between Europeana collections and our audiences’ priorities - which we will explore in 2022 by reaching out to our users and collaborators - and will support wider campaigns such as <a href=\"https://www.europeana.eu/en/womens-history\">Women’s History Month</a>, the <a href=\"https://pro.europeana.eu/page/new-european-bauhaus\">New European Bauhaus</a> and the <a href=\"https://ec.europa.eu/commission/presscorner/detail/en/IP_21_5226\">European Year of Youth</a>. All embedded within the Europeana Foundation’s developing <a href=\"https://pro.europeana.eu/post/diversity-and-inclusion-working-towards-an-equitable-future\">Diversity &amp; Inclusion agenda</a>.</p>\r\n\r\n<p>Opportunities for such public participation and grass-roots activities in institutions will include the second edition of the <a href=\"https://pro.europeana.eu/event/digital-storytelling-festival\">Digital Storytelling Festival</a> and the global GIF-making contest, <a href=\"https://pro.europeana.eu/page/gif-it-up\">GIF IT UP</a>. While partnerships with the education sector will raise educators’ digital skills and capacity and see digital culture, accessible via Europeana, integrated into classrooms across Europe.\_</p>\r\n\r\n<p>To encourage greater reuse of that same material, we’ll work on supporting <a href=\"https://pro.europeana.eu/page/apis\">API users</a> with transparent documentation and personalised support.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -7965,7 +7965,7 @@ resources:
         title: 'Access for all goals 2022'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h4 style=\"color:#085395;\">GOALS</h4>\r\n\r\n<ul style=\"padding: 15px; background-color: #0A72CC;\">\r\n    <li style=\"color:#fff;\"><strong>500,000 visits </strong>to Europeana website (monthly)</li>\r\n    <li style=\"color:#fff;\"><strong>75% satisfaction rate </strong>for the Europeana website</li>\r\n    <li style=\"color:#fff;\"><strong>450 million impressions on social media </strong>(Facebook, Pinterest, GIPHY, Instagram, Twitter)</li>\r\n    <li style=\"color:#fff;\"><strong>75% satisfaction rate </strong>from educational communities</li>\r\n</ul>\r\n"
         htmllink: null
         buttontext: null
@@ -8012,7 +8012,7 @@ resources:
         title: 'Building digital skills and capacity 2022'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h3><b id=\"docs-internal-guid-b9fe8ad5-7fff-7c14-9723-8334c5b318f1\">Building digital skills and capacity</b></h3>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p>The needs of cultural heritage institutions are many and varied. The Europeana Foundation is dedicated to supporting the cultural heritage sector in building capacity for digital transformation, showcasing the value of and advocating for sustainable digitisation in Europe, adoption of standards and best practice. We will partner with organisations who share our motivation to embrace the opportunities opened up by new technology, putting culture and digital transformation at the heart of Europe’s pandemic recovery.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -8061,7 +8061,7 @@ resources:
             file: Images/Publication_thumbnails/Business_plan_2022/building_skills_2.png
             title: 'A fencing match between two athletes in wheelchairs'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><strong>Training and support</strong></p>\r\n\r\n<p>We’ll develop our successful events programme and training practices designed to build capacity for aggregators and cultural heritage professionals, with a focus on enhancing accessibility, diversity and multilingual participation.\_</p>\r\n\r\n<p></p>\r\n\r\n<p>We’ll deliver professional development resources, including the Europeana Knowledge Base for Aggregators and training tools for Europeana products and services. While <a href=\"https://www.den.nl/\">Stichting Digitaal Erfgoed Nederland</a> (DEN) will run the DEN Leadership programme, our aggregator partners will provide help desk activities and support, and <a href=\"https://www.factsandfiles.com/\">Facts &amp; Files</a> will run Transcribathon training.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -8110,7 +8110,7 @@ resources:
             file: Images/Publication_thumbnails/Business_plan_2022/building_skills_1.png
             title: 'People posing in a line with their arms out as part of a gymnastics display'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><b id=\"docs-internal-guid-2e20bd17-7fff-3a06-a482-0bd90fa53cce\">Nurturing our networks</b></p>\r\n\r\n<p>We want to increase the diversity of our networks - the <a href=\"https://pro.europeana.eu/network-association/sign-up\">Europeana Network Association</a> and <a href=\"https://pro.europeana.eu/page/aggregators\">Europeana Aggregators’ Forum</a> - and encourage active participation. We’ll increase efforts to understand professional audiences and further develop our ‘Inclusive Engagement Guidelines’ and common terms of reference for us to work together. We’ll instigate Task Forces working across the Europeana Initiative, and nurture communities and partnerships, both existing and new, with a particular focus on integrating new professionals.</p>\r\n\r\n<p>We’ll maintain and update our existing frameworks and standards, and develop a framework design to use across our frameworks, ensuring they are all more accessible and comprehensible for our audiences.\_</p>\r\n\r\n<p>And we will raise awareness of the value delivered by the Europeana Initiative in EU member states, via relevant policy areas, conferences under the Presidency of the Council of the European Union in France and the Czech Republic,\_ and through partnerships such as Europa Nostra and Time Machine.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -8157,7 +8157,7 @@ resources:
         title: 'Building digital skills and capacity goals 2022'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<h4 style=\"color:#085395;\">GOALS</h4>\r\n\r\n<ul style=\"padding: 15px; background-color: #0A72CC;\">\r\n    <li style=\"color:#fff;\"><strong>75% accredited aggregators satisfaction rate</strong></li>\r\n    <li style=\"color:#fff;\"><strong>&gt; 3,000 Europeana Network Association members\_</strong></li>\r\n    <li style=\"color:#fff;\"><strong>75% Europeana Network Association member satisfaction rate</strong></li>\r\n</ul>\r\n"
         htmllink: null
         buttontext: null
@@ -8206,7 +8206,7 @@ resources:
             file: Images/Publication_thumbnails/business_plan_2022_lead.png
             title: 'People standing underneath lights in a public garden'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p></p>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -8255,7 +8255,7 @@ resources:
             file: 'Images/Publication_thumbnails/Digital learning in the pandemic - cultural heritage resources by and for educators teaser.png'
             title: 'Artist''s impression of neuronal connections in a region of the mature cortex of the brain, based on a high resolution electron micrograph. Axons are shown in yellow, dendrites are shown in blue, synaptic vesicles are shown in gold or silver.'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>This handbook from Europeana Education and European Schoolnet showcases best practices and examples of digital learning during the pandemic. It provides a resource to help educators throughout Europe find innovative, ready-to-use educational material.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/digital-learning-in-the-pandemic-cultural-heritage-resources-by-and-for-educators'
         buttontext: null
@@ -8302,7 +8302,7 @@ resources:
         title: 'MB election results Jan 2022'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Elections%20documents/elections-results-mb-2022.pdf'
         buttontext: 'Explore election results in full'
@@ -8349,7 +8349,7 @@ resources:
         title: 'Diverse and inclusive'
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: Images/Blog_images/2021-11/Diversity_teaser.png
         body: "<p>We want our data, stories, events and communities to be diverse and inclusive. We’ll showcase underrepresented communities, consider how we approach contentious content and develop Inclusive Engagement Guidelines.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-diversity-and-inclusivity-at-the-european-foundation-being-bold-and-learning-from-others'
@@ -8397,7 +8397,7 @@ resources:
         title: Participatory
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: Images/Blog_images/2021-11/Participation_teaser.png
         body: "<p>We will set high standards for participatory practices on our platform, in our campaigns and in the cultural sector so that everyone can access, share, play with, contribute to and be enriched by digital culture.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-participation-at-the-europeana-foundation-working-with-audiences'
@@ -8445,7 +8445,7 @@ resources:
         title: 'Climate action'
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/climate_change.png'
         body: "<p>We support climate action related to digital transformation. Guided by the Europeana Climate Action Manifesto, we will investigate reducing, off-setting and benchmarking our carbon footprint.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-climate-change-at-the-europeana-foundation-a-green-team-and-community-action'
@@ -8493,7 +8493,7 @@ resources:
         title: Collaborative
         image: null
         enable_filter: false
-        icon:
+        icon_image:
             file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Collaborative.png'
         body: "<p>Collaborating with the sector, we’ll support its digital transformation, putting digital culture at the heart of society. Hybrid collaborative working will maximise our outputs and safeguard our staff and partners.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-collaboration-at-the-europeana-foundation-driving-change-together'
@@ -8543,7 +8543,7 @@ resources:
             file: Images/Publication_thumbnails/EF_AR_2021_lead.jpeg
             title: 'Lawn tennis'
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p>\r\n  </p><p>\r\n    \r\n</p>\r\n"
         htmllink: null
         buttontext: null
@@ -8590,7 +8590,7 @@ resources:
         title: 'European Heritage Ambassadors'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.esach.org/ehya.html'
         buttontext: 'Get involved'
@@ -8637,7 +8637,7 @@ resources:
         title: 'House of European History'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://historia-europa-ep.zetcom.net/en/'
         buttontext: 'Explore the House of European History''s online collection'
@@ -8684,7 +8684,7 @@ resources:
         title: 'The Future is Heritage'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'http://www.thefutureisheritage.com'
         buttontext: 'Find out more and get involved'
@@ -8731,7 +8731,7 @@ resources:
         title: 'ICA new professionals programme'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.ica.org/en/new-professionals'
         buttontext: 'Find out more and get involved'
@@ -8778,7 +8778,7 @@ resources:
         title: 'Copyright quiz 1.1'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://docs.google.com/forms/d/1NrTzsQCTmRIu512BvlLnOWawF7mz8GAD04VTSBuymEw/viewform?edit_requested=true'
         buttontext: 'Test your knowledge and take a quiz'
@@ -8825,7 +8825,7 @@ resources:
         title: 'Copyright quiz 1.2'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://docs.google.com/forms/d/1Mt2RvQ-Op3WtebBtBDyUlphmcPSkXCb14gthhnQsldc/viewform?edit_requested=true'
         buttontext: 'Test your knowledge and take a quiz'
@@ -8872,7 +8872,7 @@ resources:
         title: 'Copyright quiz 1.3'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://docs.google.com/forms/d/1723JSzr06-Mv7B6acfVyBzC4TMovYuTa9fT1KFRYva4/viewform?edit_requested=true'
         buttontext: 'Test your knowledge and take a quiz'
@@ -8919,7 +8919,7 @@ resources:
         title: 'Copyright quiz 2.1'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://docs.google.com/forms/d/1sacomr5BdmwLVaNQpTRPaFrzeTg17aDtYmxak8hWsMY/viewform?edit_requested=true'
         buttontext: 'Test your knowledge and take a quiz'
@@ -8966,7 +8966,7 @@ resources:
         title: 'Copyright quiz 2.2'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://docs.google.com/forms/d/198pkPtUg6UlAZyQFB9UKRBJLHafgKPQ0aWvgPo1hw-Y/viewform?edit_requested=true'
         buttontext: 'Test your knowledge and take a quiz'
@@ -9013,7 +9013,7 @@ resources:
         title: 'Copyright quiz 3.1'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://docs.google.com/forms/d/1bq-VWXaUhVl41NlwME3HudfKkvOu8ItJ52pUSFzp1Hc/viewform?edit_requested=true'
         buttontext: 'Test your knowledge and take a quiz'
@@ -9060,7 +9060,7 @@ resources:
         title: 'Copyright quiz 3.2'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://docs.google.com/forms/d/1YHjP4qihs6E__XHbIlK0T_oEr8Eiahgwncs1eHnpGUM/viewform?edit_requested=true'
         buttontext: 'Test your knowledge and take a quiz'
@@ -9107,7 +9107,7 @@ resources:
         title: 'Download the impact playbook Pro news'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://pro.europeana.eu/page/europeana-impact-playbook'
         buttontext: 'Get support in measuring impact - Download the Europeana Impact Playbook today'
@@ -9155,7 +9155,7 @@ resources:
         image:
             file: Images/Home_page/ukraine_banner.png
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>The Europeana Initiative stands in solidarity with the people of Ukraine.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/statement-of-solidarity-with-ukraine'
         buttontext: null
@@ -9203,7 +9203,7 @@ resources:
         image:
             file: Images/Home_page/ukraine_homepage_image.png
         enable_filter: true
-        icon: null
+        icon_image: null
         body: "<p>The Europeana Initiative stands in solidarity with the people of Ukraine.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/statement-of-solidarity-with-ukraine'
         buttontext: null
@@ -9250,7 +9250,7 @@ resources:
         title: 'Visit the Pill exhibition'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.europeana.eu/exhibitions/the-pill'
         buttontext: 'Visit the Pill exhibition'
@@ -9297,7 +9297,7 @@ resources:
         title: 'Inclusive Engagement Guidelines'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://docs.google.com/forms/d/e/1FAIpQLSc10lPSqBImMIosckzJN1C9uMGkk4qkGWoWqNhOV13JCcqveA/viewform'
         buttontext: 'Sign up to test our Guidelines'
@@ -9344,7 +9344,7 @@ resources:
         title: 'EU Datathon'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://op.europa.eu/en/web/eudatathon'
         buttontext: 'Find out more about the EU Datathon and enter now!'
@@ -9391,7 +9391,7 @@ resources:
         title: 'Visit Mná100'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: null
         htmllink: 'https://www.mna100.ie/'
         buttontext: 'Visit Mná100'
@@ -9438,7 +9438,7 @@ resources:
         title: 'Re-use page quotation - Marcin Novak'
         image: null
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p><img src=\"https://pro.europeana.eu/thumbs/600x400c/Images/Blog_images/2022-03/Jigsaw.jpg\"></p>\r\n\r\n<h6>World of Art jigsaw puzzle, Marcin Novak</h6>\r\n"
         htmllink: null
         buttontext: null
@@ -9487,7 +9487,7 @@ resources:
             file: Images/Blog_images/2022-03/Knight_reuse.png
             title: 'Don Quichotte, by Cyprián Majerník, Slovak national gallery, public domain'
         enable_filter: false
-        icon: null
+        icon_image: null
         body: "<p>Gabriel Rosenstock is a bilingual poet and was inspired by artwork he\_found in Europeana from the Slovak National Gallery to write a series of tanka (Japanese for 'a little song') poems in Irish and English.\_'Ekphrastic tanka\_responds to artwork and is one of my favourite literary pursuits -\_works of art triggering spontaneous utterances, guided by syllabic rules.'</p>\r\n\r\n<p>is this what I am<br>\r\na knight-errant on the road<br>\r\nsome kind of throwback<br>\r\n\_ \_ \_i am my own laughing stock<br>\r\n\_ \_ \_and the butt of my own jokes</p>\r\n\r\n<p>an é sin mise<br>\r\nridire fáin ar an ród<br>\r\nneach ait ón seanam<br>\r\n\_ \_ im' cheap magaidh agam féin<br>\r\n\_ \_ cúis gháire ó Dhia chugainn</p>\r\n\r\n<p>\_ \_ \_ \_ \_ \_ \_ \_Gabriel Rosenstock, poet, Ireland</p>\r\n"
         htmllink: null
         buttontext: null
