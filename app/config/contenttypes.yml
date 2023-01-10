@@ -563,7 +563,7 @@ pages:
           info: Enter a path within the files directory to use for the fileslisting.
           variant: inline
           class: 'showfortemplate-fileslisting directoryselect'
-        icon:
+        icon_image:
           type: image
           label: Streamer Icon (optional)
           info: Add image.
@@ -3040,7 +3040,7 @@ resources:
       type: checkbox
       label: "Enable filter"
       postfix: "Tick this checbox if you want to add the filter to the image for better readability of the overlayed text. Note: Only applicable to hero banners"
-    icon:
+    icon_image:
       type: image
       label: "Icon"
       placeholder: "Preferably SVG - used in tiles"
