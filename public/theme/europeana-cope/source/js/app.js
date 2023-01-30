@@ -604,7 +604,8 @@ $(document).ready(function() {
 
 
     function checkCookie() {
-        if (paginationTarget != "") {
+        const urlParams = new URLSearchParams(location.search);
+        if (paginationTarget != "" && (urlParams.has('page_events') || urlParams.has('page_posts'))) {
             $("#" + paginationTarget)[0].scrollIntoView({
                 behavior: "smooth", // or "auto" or "instant"
                 block: "end" // or "end"
