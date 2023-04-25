@@ -654,7 +654,6 @@ pages:
           values: persons/id,title
           label: "Select Persons"
           class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
-          class: 'ajaxselector ct-persons fields-id--first_name--last_name--status--email key-id results-auto'
         filter_posts:
           type: select
           required: false
@@ -773,6 +772,9 @@ pages:
   description: "Pages are the main content for the site. You can make different kinds of pages by selecting a type on the Modules tab."
   icon_many: "fa:files-o"
   icon_one: "fa:file"
+  show_in_menu: false
+  show_on_dashboard: false
+
 
 #################################
 #
@@ -1167,6 +1169,8 @@ posts:
   sort: -datepublish
   icon_many: "fa:quote-left"
   icon_one: "fa:quote-right"
+  show_in_menu: false
+  show_on_dashboard: false
 
 #################################
 #
@@ -1607,6 +1611,8 @@ data:
   recordsperpage: 100
   icon_many: "fa:object-group"
   icon_one: "fa:object-group"
+  show_in_menu: true
+  show_on_dashboard: true
 
 #################################
 #
@@ -2009,6 +2015,8 @@ projects:
   sort: -datepublish
   icon_many: "fa:clipboard"
   icon_one: "fa:clipboard"
+  show_in_menu: false
+  show_on_dashboard: false
 
 #################################
 #
@@ -2374,6 +2382,8 @@ events:
   <<: *all_relations
   icon_many: "fa:calendar"
   icon_one: "fa:calendar"
+  show_in_menu: false
+  show_on_dashboard: false
 
 #################################
 #
@@ -2470,6 +2480,8 @@ jobs:
   sort: -datepublish
   icon_many: "fa:money"
   icon_one: "fa:money"
+  show_in_menu: false
+  show_on_dashboard: false
 
 #################################
 #
@@ -2698,6 +2710,60 @@ persons:
         "(not set)": "(not set)"
         "false": "false"
         "true": "true"
+    member_of_research:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of Research"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
+    member_of_education:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of Education"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
+    member_of_communicators:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of communicators"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
+    member_of_impact:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of Impact"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
+    member_of_copyright:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of Copyright"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
+    member_of_climate:
+      type: select
+      required: false
+      multiple: false
+      label: "Member of Climate"
+      values:
+        "(not set)": "(not set)"
+        "false": "false"
+        "true": "true"
     gb_role:
       type: text
       label: "Governing board role"
@@ -2782,6 +2848,8 @@ persons:
   sort: "last_name"
   icon_many: "fa:users"
   icon_one: "fa:user"
+  show_in_menu: false
+  show_on_dashboard: false
 
 organisations:
   name: Organisations
@@ -3011,6 +3079,8 @@ organisations:
   sort: "name"
   icon_many: "fa:tasks"
   icon_one: "fa:tasks"
+  show_in_menu: false
+  show_on_dashboard: false
 
 
 #################################
@@ -3173,6 +3243,8 @@ resources:
   icon_many: "fa:tasks"
   icon_one: "fa:tasks"
   # show_in_menu: System
+  show_in_menu: false
+  show_on_dashboard: false
 
 #################################
 #################################
@@ -3244,6 +3316,8 @@ blogposts:
   icon_one: "fa:quote-right"
   viewless: true
   sort: -datepublish
+  show_in_menu: false
+  show_on_dashboard: false
 
 #################################
 #
@@ -3363,6 +3437,8 @@ blogevents:
   icon_one: "fa:calendar"
   viewless: true
   sort: start_event
+  show_in_menu: false
+  show_on_dashboard: false
 
 #################################
 #
@@ -3402,3 +3478,5 @@ statusmessages:
   viewless: true
   icon_many: "fa:commenting-o"
   icon_one: "fa:commenting-o"
+  show_in_menu: false
+  show_on_dashboard: false
