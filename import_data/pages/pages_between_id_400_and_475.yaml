@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:31:45+02:00'
+    date: '2023-05-30T14:48:34+02:00'
     version: 3.7.4
     platform: mysql
 pages:
@@ -101,7 +101,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 selected_pages: ''
                 selected_persons: ''
@@ -142,7 +142,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -286,7 +286,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 selected_pages: ''
                 selected_persons: ''
@@ -327,7 +327,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: alphabetical
                 sources: persons
@@ -459,7 +459,7 @@ pages:
                 anchortitle: Ecosystem
                 templates: body
                 body: "<p>Europeana couldn’t exist without the fantastic people who contribute their expertise and knowledge to our shared cause. They include thousands of cultural heritage and technology professionals from across Europe. They are all part of what we call&nbsp;the Europeana ecosystem and, within it, form&nbsp;various groups and communities, each essential to our combined service. Together, they work hard to provide the organisational structure, expertise and content needed to create and maintain a platform for Europe’s cultural heritage.</p>\r\n\r\n<p></p>\r\n"
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -516,7 +516,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -561,7 +561,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -606,7 +606,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -651,7 +651,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -771,7 +771,7 @@ pages:
                 anchortitle: ''
                 templates: body
                 body: "<p>In 2015, Europeana’s collection-related websites e.g. its search engine, exhibitions and blog, started to come together in one place, now called <a href=\"http://www.europeana.eu\">Europeana Collections</a>. As of summer 2017, Europeana Collections gives access to 53 million digital objects, with five thematic collections, 30 exhibitions and dozens of curated galleries.</p>\r\n"
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -813,7 +813,7 @@ pages:
     -
         slug: office-employees
         datecreated: '2017-07-25 14:13:05'
-        datechanged: '2022-10-18 08:46:36'
+        datechanged: '2023-05-26 14:02:11'
         datepublish: '2017-07-25 14:08:16'
         datedepublish: ''
         ownerid: 2
@@ -891,7 +891,7 @@ pages:
                 anchortitle: ''
                 templates: body
                 body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Europeana Foundation staff represent around 20 different nationalities and work mainly in The Hague. Use these pages to get in touch with individual staff members and explore the diverse expertise of the Europeana Foundation.</p>\r\n"
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -941,7 +941,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1002,7 +1002,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -1035,77 +1035,59 @@ pages:
                         value: '4656'
                         _id: persons/sarah-spence
                     -
-                        value: '7745'
-                        _id: persons/diana-spaans
+                        value: '4859'
+                        _id: persons/jochen-vermeulen
                     -
-                        value: '2364'
-                        _id: persons/sophie-klein
+                        value: '6570'
+                        _id: persons/joana-correia-magalhaes-sousa
                     -
-                        value: '5955'
-                        _id: persons/faryel-duijm
+                        value: '2406'
+                        _id: persons/andrew-maclean
                     -
-                        value: '2414'
-                        _id: persons/beth-daley
+                        value: '8792'
+                        _id: persons/deepti-pandit
                     -
-                        value: '2397'
-                        _id: persons/douglas-mccarthy
+                        value: '8027'
+                        _id: persons/jorge-ortiz
                     -
-                        value: '2409'
-                        _id: persons/adrian-murphy
-                    -
-                        value: '2407'
-                        _id: persons/aleksandra-strzelichowska
-                    -
-                        value: '2384'
-                        _id: persons/malgorzata-szynkielewska
-                    -
-                        value: '2383'
-                        _id: persons/marijke-everts
-                    -
-                        value: '4682'
-                        _id: persons/jolan-wuyts
+                        value: '2365'
+                        _id: persons/simon-tzanakis
                     -
                         value: '4659'
                         _id: persons/isabel-crespo
                     -
-                        value: '2379'
-                        _id: persons/milena-popova
+                        value: '2414'
+                        _id: persons/beth-daley
                     -
-                        value: '2390'
-                        _id: persons/julia-schellenberg
-                    -
-                        value: '5648'
-                        _id: persons/michelle-lewis
-                    -
-                        value: '5451'
-                        _id: persons/fiona-mowat
-                    -
-                        value: '2389'
-                        _id: persons/julia-fallon
-                    -
-                        value: '5898'
-                        _id: persons/georgia-evans
-                    -
-                        value: '4658'
-                        _id: persons/nicholas-jarrett
-                    -
-                        value: '2359'
-                        _id: persons/zuzana-malicherova
-                    -
-                        value: '6010'
-                        _id: persons/sebastiaan-ter-burg
-                    -
-                        value: '2411'
-                        _id: persons/ad-polle
-                    -
-                        value: '2395'
-                        _id: persons/gina-van-der-linden
+                        value: '2383'
+                        _id: persons/marijke-everts
                     -
                         value: '5019'
                         _id: persons/alba-irollo
                     -
+                        value: '2409'
+                        _id: persons/adrian-murphy
+                    -
+                        value: '2384'
+                        _id: persons/malgorzata-szynkielewska
+                    -
+                        value: '4682'
+                        _id: persons/jolan-wuyts
+                    -
+                        value: '2389'
+                        _id: persons/julia-fallon
+                    -
+                        value: '6010'
+                        _id: persons/sebastiaan-ter-burg
+                    -
                         value: '2363'
                         _id: persons/tamara-van-hulst
+                    -
+                        value: '2395'
+                        _id: persons/gina-van-der-linden
+                    -
+                        value: '2359'
+                        _id: persons/zuzana-malicherova
                     -
                         value: '5894'
                         _id: persons/ariadna-matas
@@ -1113,8 +1095,8 @@ pages:
                         value: '2376'
                         _id: persons/nicole-mcneilly
                     -
-                        value: '6790'
-                        _id: persons/rania-mouzakiti
+                        value: '2411'
+                        _id: persons/ad-polle
                     -
                         value: '2393'
                         _id: persons/henning-scholz
@@ -1125,50 +1107,41 @@ pages:
                         value: '7809'
                         _id: persons/lianne-heslinga
                     -
-                        value: '7810'
-                        _id: persons/ilektra-osmani
-                    -
                         value: '5864'
                         _id: persons/masa-skrinjar
-                    -
-                        value: '2404'
-                        _id: persons/antoine-isaac
-                    -
-                        value: '5313'
-                        _id: persons/monica-marrero
-                    -
-                        value: '6333'
-                        _id: persons/jose-eduardo-cejudo-grano-de-oro
                     -
                         value: '4858'
                         _id: persons/eleftheria-tsoupra
                     -
-                        value: '7813'
-                        _id: persons/paolo-scalia
+                        value: '8872'
+                        _id: persons/gajapathi-krishni
                     -
-                        value: '2398'
-                        _id: persons/dasha-moskalenko
+                        value: '8790'
+                        _id: persons/theo-lew
                     -
-                        value: '5248'
-                        _id: persons/prabhakar-gautam
+                        value: '4658'
+                        _id: persons/nicholas-jarrett
                     -
-                        value: '2386'
-                        _id: persons/lutz-biedinger
+                        value: '5898'
+                        _id: persons/georgia-evans
                     -
-                        value: '2367'
-                        _id: persons/richard-doe
+                        value: '6790'
+                        _id: persons/rania-mouzakiti
                     -
-                        value: '6700'
-                        _id: persons/leonie-peters
+                        value: '5451'
+                        _id: persons/fiona-mowat
                     -
-                        value: '7377'
-                        _id: persons/paco-lim
+                        value: '2407'
+                        _id: persons/aleksandra-strzelichowska
                     -
-                        value: '8491'
-                        _id: persons/julie-van-oyen
+                        value: '7745'
+                        _id: persons/diana-spaans
                     -
-                        value: '8588'
-                        _id: persons/ana-moreno
+                        value: '2364'
+                        _id: persons/sophie-klein
+                    -
+                        value: '5955'
+                        _id: persons/faryel-duijm
                     -
                         value: '2392'
                         _id: persons/hugo-manguinhas
@@ -1182,23 +1155,47 @@ pages:
                         value: '5859'
                         _id: persons/srishti-singh
                     -
-                        value: '6571'
-                        _id: persons/immanuel-kattey
+                        value: '2379'
+                        _id: persons/milena-popova
                     -
-                        value: '4859'
-                        _id: persons/jochen-vermeulen
+                        value: '5648'
+                        _id: persons/michelle-lewis
                     -
-                        value: '2365'
-                        _id: persons/simon-tzanakis
+                        value: '2390'
+                        _id: persons/julia-schellenberg
                     -
-                        value: '2406'
-                        _id: persons/andrew-maclean
+                        value: '2404'
+                        _id: persons/antoine-isaac
                     -
-                        value: '6570'
-                        _id: persons/joana-correia-magalhaes-sousa
+                        value: '6333'
+                        _id: persons/jose-eduardo-cejudo-grano-de-oro
                     -
-                        value: '8027'
-                        _id: persons/jorge-ortiz
+                        value: '5313'
+                        _id: persons/monica-marrero
+                    -
+                        value: '2398'
+                        _id: persons/dasha-moskalenko
+                    -
+                        value: '2386'
+                        _id: persons/lutz-biedinger
+                    -
+                        value: '2367'
+                        _id: persons/richard-doe
+                    -
+                        value: '7377'
+                        _id: persons/paco-lim
+                    -
+                        value: '8588'
+                        _id: persons/ana-moreno
+                    -
+                        value: '8491'
+                        _id: persons/julie-van-oyen
+                    -
+                        value: '6700'
+                        _id: persons/leonie-peters
+                    -
+                        value: '7813'
+                        _id: persons/paolo-scalia
                 filter_posts: ''
                 selected_posts: ''
                 filter_data: ''
@@ -1213,7 +1210,7 @@ pages:
                 modulemorelabel: ''
                 modulemoretext: ''
                 override_css_id: ''
-                override_css_class: 'lorena aldana'
+                override_css_class: ''
         _id: pages/office-employees
     -
         slug: design-your-device
@@ -1294,7 +1291,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1415,7 +1412,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1502,8 +1499,8 @@ pages:
         pages:
             - pages/our-brand-values
             - pages/brand-materials-and-templates
-        posts:
-            - posts/exploring-europeana-s-approach-to-design
+            - pages/brand-guidelines
+        posts: {  }
         data: {  }
         projects: {  }
         events: {  }
@@ -1546,7 +1543,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1594,7 +1591,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1639,7 +1636,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1687,7 +1684,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1741,7 +1738,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1796,7 +1793,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1913,7 +1910,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1958,7 +1955,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2003,7 +2000,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2048,7 +2045,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2093,7 +2090,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2145,7 +2142,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2254,7 +2251,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: projects
@@ -2371,7 +2368,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: Europeana_Professional/Europeana_Network/Europeana_Network_Task_Forces/Final_reports
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2408,7 +2405,7 @@ pages:
     -
         slug: documentation
         datecreated: '2017-08-01 11:46:54'
-        datechanged: '2022-02-01 11:18:13'
+        datechanged: '2022-11-25 13:59:39'
         datepublish: '2017-08-01 11:43:49'
         datedepublish: ''
         ownerid: 2
@@ -2492,7 +2489,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2544,7 +2541,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: Europeana_Professional/Europeana_Network/Association_Updates
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2571,7 +2568,7 @@ pages:
                 override_css_class: ''
                 selected_organisations: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: 'Network Association Newsletters'
                 subtitle: ''
                 anchortitle: Newsletters
@@ -2589,7 +2586,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2634,7 +2631,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2679,7 +2676,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2733,7 +2730,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -2778,7 +2775,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -2865,7 +2862,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -2919,7 +2916,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -2973,7 +2970,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -3030,7 +3027,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -3148,7 +3145,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3266,7 +3263,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3314,7 +3311,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: projects
@@ -3434,7 +3431,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3556,7 +3553,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: Europeana_Professional/Europeana_Network/Europeana_Network_Task_Forces/Task_Force_documents
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3689,7 +3686,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3741,7 +3738,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3789,7 +3786,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3834,7 +3831,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3885,7 +3882,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3936,7 +3933,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -3947,7 +3944,7 @@ pages:
                 selected_pages:
                     -
                         value: ''
-                        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
+                        _id: pages/tools
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -3984,7 +3981,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4029,7 +4026,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -4040,7 +4037,7 @@ pages:
                 selected_pages:
                     -
                         value: ''
-                        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
+                        _id: pages/tools
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -4080,7 +4077,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -4206,7 +4203,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4322,7 +4319,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: calendar_archive
                 sources: projects

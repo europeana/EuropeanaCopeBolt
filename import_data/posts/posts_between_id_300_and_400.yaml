@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T17:11:26+02:00'
+    date: '2023-05-30T15:31:17+02:00'
     version: 3.7.4
     platform: mysql
 posts:
@@ -3149,61 +3149,107 @@ posts:
     -
         slug: first-public-beta-version-of-the-deutsche-digitale-bibliothek-is
         datecreated: '2014-08-28 14:49:44'
-        datechanged: '2015-02-16 15:32:40'
+        datechanged: '2023-05-15 10:29:55'
         datepublish: '2012-11-30 08:52:52'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
         title: 'First public beta version of the Deutsche Digitale Bibliothek is launched'
-        posttype: blog
+        posttype: News
         featured: false
-        intro: null
-        body: "<p><em>The Deutsche Digitale Bibliothek (DDB) went online for the general public this week at <a href=\"http://www.deutsche-digitale-bibliothek.de\">www.deutsche-digitale-bibliothek.de</a>. This post is taken from the Deutsche Digitale Bibliothek <a href=\"http://www.deutsche-digitale-bibliothek.de/content/news/2012-11-28-000\">news pages</a>. </em></p>\r\n\r\n<p>On 28 November, in Berlin’s Altes Museum on the city’s Museum Island, Hermann Parzinger, President of the Prussian Cultural Heritage Foundation and Spokesperson for the Board of the DDB Competence Network,&nbsp; Elke Harjes-Ecker, Head of the Culture Department at Thuringia’s Ministry of Education, Science and Culture and Chairperson of the Board of Trustees of the DDB Competence Network,&nbsp; Matthias Harbort, Head of New Media for the Federal Government Representative for Culture and Media and Vice-Chairman of the Board of Trustees, as well as Jill Cousins, Executive Director of the Europeana Foundation, introduced the new portal together.</p>\r\n\r\n<p style=\"text-align: center;\"><img alt=\"\" src=\"/files/blogimages/launch-gross.jpg\" style=\"width: 498px; height: 319px;\" /></p>\r\n\r\n<p style=\"text-align: center;\"><em>Jill Cousins, Hermann Parzinger, Elke Harjes-Ecker, Matthias Harbort (from left to right). Photo: Julia Hoppen</em></p>\r\n\r\n<p>This will pave the way for networking all of Germany’s cultural and scientific institutions together with their digitised inventories in the medium to long term and integrating them into the European digital library, Europeana. \"The goal of the Deutsche Digitale Bibliothek (DDB) is to offer everyone unrestricted access to Germany’s cultural and scientific heritage, that is, access to millions of books, archived items, images, sculptures, pieces of music and other sound documents, as well as films and scores, from all over Germany,\" explained Hermann Parzinger.</p>\r\n\r\n<p>\"The DDB should secure Germany’s connectivity and competitiveness in the areas of science, research and education, but also make it possible for anyone to access Germany’s unique cultural heritage and knowledge conveniently via one central point of entry,\" emphasised Elke Harjes-Ecker. \"This will bring about a fundamental improvement to our opportunities in the areas of research, education and the economy.\"<br />\r\n<br />\r\nSince the summer of 2007, a competence network made up of representatives of the Federal Government, the Länder and municipalities has been working on this ambitious project. Starting in 2010, the first phase of the technical infrastructure was created at the Fraunhofer Institute for Intelligent Analysis and Information Systems (IAIA). As technical operator, FIZ Karlsruhe – Leibniz Institute for Information Infrastructure is responsible for the entire technical and administrative operations of the DDB central infrastructure.<br />\r\n<br />\r\nThe first public beta version provides users with a great many contents and new functions. Users can explore the entire inventory of items using search terms. In addition, the system provides an advanced search as well as different filters to narrow down results. The information to be found there has been processed with a great deal of editorial care and bears the quality seal of Germany’s cultural and scientific institutions. Search results are not influenced by commercial interests. Thanks to the comprehensive preparation of the metadata, it is possible to carry out a uniform search in the collections from different contexts. \"The user will soon be able to navigate between the objects found using semantic references, which will open up unexpected content and contexts. This will highlight connections and cross-references that are not clearly visible on the websites of individual institutions or on domain-specific sites, such as purely library-based portals for example. This is a feature unique to the DDB,\" explained Matthias Harbort.<br />\r\n<br />\r\nOne important function fulfilled by the DDB is that of national data aggregator for the European cultural portal, Europeana. It enables German cultural and scientific institutions to make a significant contribution towards this European project. \"The Europeana emerged from the conviction that free, democratic access to cultural heritage must be guaranteed for everyone so that the opportunities provided by digitalisation can be used for the further development of our society,\" said Jill Cousins. \"We are happy to have the DDB on board as a central national partner whose support will help us work towards fulfilling our objective.\"<br />\r\n<br />\r\nLike many internet services, the DDB lives from participation. On the one hand from those who provide content and, on the other, from those who use the portal and recommend it further. \"All of Germany's scientific, research and cultural institutions are invited to support the continued expansion of the DDB to make it more attractive,\" says Elke Harjes-Ecker. The institutions that have provided their content for the DDB already enjoy many advantages. The central access provided by the DDB takes users reliably to digitised cultural items from Germany. As the digital items are always linked to the location where the actual works and objects can be found, this increases the visibility and public awareness of the institutions in question, so they can expect an increase in visitor numbers both online and offline.<br />\r\n<br />\r\nSoon the institutions will be able to exchange information and ideas and support one another via the emerging DDB network. What is more, the DDB offers tools and services that should help the institutions in future to prepare, edit and present their own digitised objects.<br />\r\n<br />\r\nIn the course of the coming year, the DDB will already be adding successively to the functions it provides and will optimise the search for and networking of objects. The virtual exhibitions put together by experts will clearly present the entire range of cultural heritage to be made accessible via the DDB. The portal will act as a continuously growing network for the participating cultural and scientific institutions. Moreover, an application programming interface (API) will enable the development of services around the DDB, for example, specific applications for smartphones and tablets.<br />\r\n<br />\r\n\"Today’s launch of the Deutsche Digitale Bibliothek beta version goes a long way to realising our vision of making the cultural and scientific heritage of Germany available in digital form via the portal,\" explained Hermann Parzinger. \"However, we have not yet reached our destination. This is a process that will take years to complete.\"</p>"
+        intro: "<p>The Deutsche Digitale Bibliothek (DDB) went online for the general public this week at <a href=\"http://www.deutsche-digitale-bibliothek.de\">www.deutsche-digitale-bibliothek.de</a>. This post is taken from the Deutsche Digitale Bibliothek <a href=\"http://www.deutsche-digitale-bibliothek.de/content/news/2012-11-28-000\">news pages</a>.</p>\r\n"
+        body: "<p>On 28 November, in Berlin’s Altes Museum on the city’s Museum Island, Hermann Parzinger, President of the Prussian Cultural Heritage Foundation and Spokesperson for the Board of the DDB Competence Network,\_ Elke Harjes-Ecker, Head of the Culture Department at Thuringia’s Ministry of Education, Science and Culture and Chairperson of the Board of Trustees of the DDB Competence Network,\_ Matthias Harbort, Head of New Media for the Federal Government Representative for Culture and Media and Vice-Chairman of the Board of Trustees, as well as Jill Cousins, Executive Director of the Europeana Foundation, introduced the new portal together.</p>\r\n\r\n<p>This will pave the way for networking all of Germany’s cultural and scientific institutions together with their digitised inventories in the medium to long term and integrating them into the European digital library, Europeana. \"The goal of the Deutsche Digitale Bibliothek (DDB) is to offer everyone unrestricted access to Germany’s cultural and scientific heritage, that is, access to millions of books, archived items, images, sculptures, pieces of music and other sound documents, as well as films and scores, from all over Germany,\" explained Hermann Parzinger.</p>\r\n\r\n<p>\"The DDB should secure Germany’s connectivity and competitiveness in the areas of science, research and education, but also make it possible for anyone to access Germany’s unique cultural heritage and knowledge conveniently via one central point of entry,\" emphasised Elke Harjes-Ecker. \"This will bring about a fundamental improvement to our opportunities in the areas of research, education and the economy.\"<br>\r\n<br>\r\nSince the summer of 2007, a competence network made up of representatives of the Federal Government, the Länder and municipalities has been working on this ambitious project. Starting in 2010, the first phase of the technical infrastructure was created at the Fraunhofer Institute for Intelligent Analysis and Information Systems (IAIA). As technical operator, FIZ Karlsruhe – Leibniz Institute for Information Infrastructure is responsible for the entire technical and administrative operations of the DDB central infrastructure.<br>\r\n<br>\r\nThe first public beta version provides users with a great many contents and new functions. Users can explore the entire inventory of items using search terms. In addition, the system provides an advanced search as well as different filters to narrow down results. The information to be found there has been processed with a great deal of editorial care and bears the quality seal of Germany’s cultural and scientific institutions. Search results are not influenced by commercial interests. Thanks to the comprehensive preparation of the metadata, it is possible to carry out a uniform search in the collections from different contexts. \"The user will soon be able to navigate between the objects found using semantic references, which will open up unexpected content and contexts. This will highlight connections and cross-references that are not clearly visible on the websites of individual institutions or on domain-specific sites, such as purely library-based portals for example. This is a feature unique to the DDB,\" explained Matthias Harbort.<br>\r\n<br>\r\nOne important function fulfilled by the DDB is that of national data aggregator for the European cultural portal, Europeana. It enables German cultural and scientific institutions to make a significant contribution towards this European project. \"The Europeana emerged from the conviction that free, democratic access to cultural heritage must be guaranteed for everyone so that the opportunities provided by digitalisation can be used for the further development of our society,\" said Jill Cousins. \"We are happy to have the DDB on board as a central national partner whose support will help us work towards fulfilling our objective.\"<br>\r\n<br>\r\nLike many internet services, the DDB lives from participation. On the one hand from those who provide content and, on the other, from those who use the portal and recommend it further. \"All of Germany's scientific, research and cultural institutions are invited to support the continued expansion of the DDB to make it more attractive,\" says Elke Harjes-Ecker. The institutions that have provided their content for the DDB already enjoy many advantages. The central access provided by the DDB takes users reliably to digitised cultural items from Germany. As the digital items are always linked to the location where the actual works and objects can be found, this increases the visibility and public awareness of the institutions in question, so they can expect an increase in visitor numbers both online and offline.<br>\r\n<br>\r\nSoon the institutions will be able to exchange information and ideas and support one another via the emerging DDB network. What is more, the DDB offers tools and services that should help the institutions in future to prepare, edit and present their own digitised objects.<br>\r\n<br>\r\nIn the course of the coming year, the DDB will already be adding successively to the functions it provides and will optimise the search for and networking of objects. The virtual exhibitions put together by experts will clearly present the entire range of cultural heritage to be made accessible via the DDB. The portal will act as a continuously growing network for the participating cultural and scientific institutions. Moreover, an application programming interface (API) will enable the development of services around the DDB, for example, specific applications for smartphones and tablets.<br>\r\n<br>\r\n\"Today’s launch of the Deutsche Digitale Bibliothek beta version goes a long way to realising our vision of making the cultural and scientific heritage of Germany available in digital form via the portal,\" explained Hermann Parzinger. \"However, we have not yet reached our destination. This is a process that will take years to complete.\"</p>\r\n"
         author:
             value: null
-        isbn: ''
-        teaser: ''
+        isbn: null
+        teaser: "<p>The Deutsche Digitale Bibliothek (DDB) went online for the general public this week at <a href=\"http://www.deutsche-digitale-bibliothek.de\">www.deutsche-digitale-bibliothek.de</a>. This post is taken from the Deutsche Digitale Bibliothek <a href=\"http://www.deutsche-digitale-bibliothek.de/content/news/2012-11-28-000\">news pages</a>.</p>\r\n"
         teaser_image: null
-        teaser_attribution_title: ''
-        teaser_attribution_creator: ''
+        teaser_attribution_title: null
+        teaser_attribution_creator: null
         teaser_attribution_date: null
-        teaser_attribution_holder: ''
-        teaser_attribution_country: ''
+        teaser_attribution_holder: null
+        teaser_attribution_country: null
         teaser_attribution_license: null
-        teaser_attribution_link: ''
+        teaser_attribution_link: null
         contact_record:
             value: null
         contact_blurb: null
-        contact_name: ''
-        contact_email: ''
-        contact_website: ''
+        contact_name: null
+        contact_email: null
+        contact_website: null
         image:
+            alt: 'Four people signing an agreement'
             file: blogimages/launch-gross.jpg
-            title: ''
-        image_attribution_title: ''
-        image_attribution_creator: ''
+        image_attribution_title: 'Jill Cousins, Hermann Parzinger, Elke Harjes-Ecker, Matthias Harbort (from left to right). Photo: Julia Hoppen'
+        image_attribution_creator: null
         image_attribution_date: null
-        image_attribution_holder: ''
-        image_attribution_country: ''
+        image_attribution_holder: null
+        image_attribution_country: null
         image_attribution_license: null
-        image_attribution_link: ''
+        image_attribution_link: null
         shoulddatepublish: true
         shoulddatemodified: true
         subsite: pro
-        template: ''
-        seo: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts: {  }
         data: {  }
         projects: {  }
         events: {  }
         persons: {  }
-        communities: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
         markets: {  }
         categories: {  }
         tags: {  }
-        modules: {  }
+        modules:
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: ''
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
         _id: posts/first-public-beta-version-of-the-deutsche-digitale-bibliothek-is
     -
         slug: natural-europe-natural-heritage-and-educational-pathways
@@ -6876,7 +6922,6 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/europeana-opens-up-full-dataset-for-re-use
             - posts/europeana-opens-up-full-dataset-for-re-use
             - posts/europeana-opens-up-full-dataset-for-re-use
         data: {  }

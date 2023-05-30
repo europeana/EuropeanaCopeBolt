@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:25:27+02:00'
+    date: '2023-05-30T14:46:59+02:00'
     version: 3.7.4
     platform: mysql
 pages:
@@ -72,7 +72,7 @@ pages:
                 anchortitle: ''
                 templates: body
                 body: "<p>It's you. Cultural institutions. Researchers. Teachers. Learners. Creative start-ups. Data nerds. Art lovers. Book addicts. Culture vultures. We work with each other. For each other.</p>\r\n"
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -114,15 +114,15 @@ pages:
     -
         slug: about-europeana-eu
         datecreated: '2015-03-04 16:39:06'
-        datechanged: '2022-09-21 13:26:08'
+        datechanged: '2023-05-22 13:53:03'
         datepublish: '2015-03-04 16:37:57'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
         title: 'About Europeana.eu'
-        intro: "<p>A multilingual resource for discovering and using\_digital cultural heritage material and collections.</p>\r\n"
-        body: "<p>The <a href=\"http://www.europeana.eu\">Europeana website (Europeana.eu) </a>is Europe’s digital library, museum, gallery and archive. From books, photos and paintings to television broadcasts and 3D objects, the website provides online access to a vast store of cultural heritage material and collections from across Europe.</p>\r\n\r\n<p>Through this\_multilingual platform,\_individuals and professionals can\_discover, research, share\_and enjoy Europe’s wealth of digital cultural resources.</p>\r\n\r\n<p>We want the cultural heritage collections held in Europeana to be viewed, shared, used and reused wherever and whenever possible. To support both audiences and data partners, we're always working on making\_Europeana collections better, showcasing\_its contents in the best and most useful way possible.\_</p>\r\n"
+        intro: "<p>Cultural heritage data shared with Europeana through our\_network of aggregators\_is made publicly available on the\_Europeana website (Europeana.eu), giving educators, researchers, culture lovers and people everywhere the opportunity to explore Europe’s cultural heritage.\_</p>\r\n"
+        body: null
         pagefooter: null
         pagetype: landingpage-nohighlight
         highlighttitle: null
@@ -161,30 +161,8 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: 'europeana website, collections'
-        pages:
-            - pages/online-exhibitions
-            - pages/thematic-collections
-            - pages/creating-editorial
-            - pages/europeana-reuse-be-inspired
-        posts:
-            - posts/europeana-collections-brings-you-closer-to-culture
-            - posts/new-europeana-collections-site-brings-people-closer-to-culture
-            - posts/editorial-guidelines-for-contributors
-            - posts/discovering-europe-looking-back-at-our-summer-season
-            - posts/exploring-biodiversity-with-the-linbi-project
-            - posts/bringing-the-past-back-to-life-with-the-estense-digital-library
-            - posts/ready-set-go-europeana-s-sport-season-kicks-off
-            - posts/europeana-in-conversation-with-kim-mckay-from-the-australian-museum
-            - posts/viziel-learning-more-than-you-see-with-europeana-content
-            - posts/discover-cultural-heritage-by-institution-with-our-new-organisation-pages
-            - posts/exploring-the-highlights-of-gif-it-up-2021
-            - posts/sharing-black-history-at-the-horniman-museum-and-gardens
-            - posts/making-the-europeana-collections-website-accessible-to-all
-            - posts/what-s-new-on-the-europeana-website-january-march-2022
-            - posts/join-us-in-celebrating-women-s-history-month-2022
-            - posts/in-conversation-with-heritage-in-motion-2021-winners-life-code-escape-room-quest
-            - posts/europeana-and-the-khalili-collections-introducing-our-new-partnership
-            - posts/what-s-new-on-the-europeana-website-september-december-2021
+        pages: {  }
+        posts: {  }
         data: {  }
         projects: {  }
         events: {  }
@@ -205,17 +183,17 @@ pages:
         modules:
             -
                 enabled: enabled
-                title: 'The Europeana Website'
+                title: 'Discover the data on Europeana.eu'
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p><meta charset=\"utf-8\" />The <a href=\"http://www.europeana.eu\">Europeana website (Europeana.eu)</a> is Europe’s digital library, museum, gallery and archive, providing online access to a vast store of cultural heritage material and collections from across Europe. We want this material to be viewed, shared, used and reused wherever and whenever possible. To support both audiences and data partners, we're always working to showcase the content&nbsp;of Europeana through innovative editorial, engaging awareness campaigns and remix competitions. Use these pages to learn more about our activities and how you can contribute.</p>\r\n"
+                body: "<p>Cultural heritage data shared with Europeana through our <a href=\"https://pro.europeana.eu/page/aggregators\">network of aggregators</a> is made publicly available through&nbsp;<a href=\"https://www.europeana.eu/\">Europeana.eu</a>, giving educators, researchers, culture lovers and people everywhere the opportunity to explore Europe’s cultural heritage.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">We want this data to be viewed, shared, used and reused wherever and whenever possible to bring cultural heritage content from institutions across Europe to new audiences. We do this by developing engaging stories, innovative awareness campaigns and remix competitions, and by creating website features which allow people to engage with the data in new ways, such as creating bespoke galleries. Explore some of the ways that we encourage the discovery of cultural heritage data – and how people have reused data from the Europeana website – below.&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -267,7 +245,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -318,7 +296,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -355,8 +333,8 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: 'Quarterly updates'
-                subtitle: 'Explore new features released for the Europeana website'
+                title: 'What''s new on the Europeana website?'
+                subtitle: 'Explore our quarterly updates series which ran from 2021 - 2022'
                 anchortitle: ''
                 templates: listingsemistatic
                 body: ''
@@ -372,7 +350,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -397,6 +375,9 @@ pages:
                     -
                         value: '2536'
                         _id: posts/what-s-new-on-the-europeana-website-june-september-2022
+                    -
+                        value: '2566'
+                        _id: posts/what-s-new-on-the-europeana-website-september-december-2022
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -429,7 +410,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -486,7 +467,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -603,7 +584,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -648,7 +629,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -833,7 +814,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts

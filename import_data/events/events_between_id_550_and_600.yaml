@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T10:51:43+01:00'
+    date: '2023-05-30T17:17:03+02:00'
     version: 3.7.4
     platform: mysql
 events:
@@ -588,12 +588,12 @@ events:
         contact_name: null
         contact_email: null
         contact_website: null
-        pages:
-            - pages/research
+        pages: {  }
         posts: {  }
         data: {  }
         projects: {  }
-        events: {  }
+        events:
+            - events/the-potential-contribution-of-the-european-association-of-professors-emeriti-to-education
         persons: {  }
         communities:
             -
@@ -4409,7 +4409,7 @@ events:
     -
         slug: built-with-bits-kick-off-workshop
         datecreated: '2021-08-24 15:00:03'
-        datechanged: '2021-10-06 17:37:37'
+        datechanged: '2023-04-13 11:05:12'
         datepublish: '2021-08-26 14:36:00'
         datedepublish: ''
         ownerid: 54
@@ -4475,26 +4475,14 @@ events:
         categories: {  }
         tags:
             -
-                slug: capacity-building
-                name: capacity-building
-            -
                 slug: new-european-bauhaus
                 name: new-european-bauhaus
-            -
-                slug: teachers
-                name: teachers
-            -
-                slug: webinar
-                name: webinar
             -
                 slug: webinars
                 name: webinars
             -
-                slug: educators
-                name: educators
-            -
-                slug: immersive-technologies
-                name: immersive-technologies
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -6347,12 +6335,12 @@ events:
         contact_name: null
         contact_email: null
         contact_website: null
-        pages:
-            - pages/member-states
+        pages: {  }
         posts: {  }
         data: {  }
         projects: {  }
-        events: {  }
+        events:
+            - events/digital-transformation-driving-engagement-and-public-participation
         persons: {  }
         communities:
             -

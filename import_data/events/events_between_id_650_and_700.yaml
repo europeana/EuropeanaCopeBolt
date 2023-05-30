@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T10:54:00+01:00'
+    date: '2023-05-30T17:18:07+02:00'
     version: 3.7.4
     platform: mysql
 events:
@@ -171,7 +171,7 @@ events:
     -
         slug: built-with-bits-final-ceremony-and-winners-announcement
         datecreated: '2021-12-10 13:37:55'
-        datechanged: '2022-02-03 15:30:26'
+        datechanged: '2023-04-13 11:04:47'
         datepublish: '2021-12-10 13:34:34'
         datedepublish: ''
         ownerid: 54
@@ -240,6 +240,9 @@ events:
             -
                 slug: webinars
                 name: webinars
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -2741,7 +2744,7 @@ events:
     -
         slug: policy-office-hours-a-post-article-14-world
         datecreated: '2022-02-10 07:28:00'
-        datechanged: '2022-10-12 16:30:24'
+        datechanged: '2022-11-29 08:30:31'
         datepublish: '2022-02-09 13:26:54'
         datedepublish: ''
         ownerid: 54
@@ -2853,51 +2856,6 @@ events:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: calltoactioninline
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                fileslistpath: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '709'
-                        _id: resources/running-webinars-what-we-ve-learnt-so-far
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -5820,7 +5778,7 @@ events:
     -
         slug: built-with-bits-tutorial-introduction-to-mozilla-hubs
         datecreated: '2022-04-05 10:42:10'
-        datechanged: '2022-04-26 16:33:11'
+        datechanged: '2023-04-13 11:04:36'
         datepublish: '2022-04-06 10:39:00'
         datedepublish: ''
         ownerid: 124
@@ -5882,7 +5840,10 @@ events:
                 slug: education
                 name: Education
         categories: {  }
-        tags: {  }
+        tags:
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -6014,7 +5975,7 @@ events:
     -
         slug: built-with-bits-tutorial-building-custom-spaces
         datecreated: '2022-04-05 10:44:29'
-        datechanged: '2022-04-26 16:32:55'
+        datechanged: '2023-04-13 11:04:25'
         datepublish: '2022-04-06 10:44:00'
         datedepublish: ''
         ownerid: 124
@@ -6076,7 +6037,10 @@ events:
                 slug: education
                 name: Education
         categories: {  }
-        tags: {  }
+        tags:
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -6334,7 +6298,7 @@ events:
     -
         slug: built-with-bits-tutorial-using-external-resources
         datecreated: '2022-04-05 10:45:49'
-        datechanged: '2022-04-26 16:32:38'
+        datechanged: '2023-04-13 11:04:04'
         datepublish: '2022-04-06 10:45:00'
         datedepublish: ''
         ownerid: 124
@@ -6396,7 +6360,10 @@ events:
                 slug: education
                 name: Education
         categories: {  }
-        tags: {  }
+        tags:
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -6612,7 +6579,7 @@ events:
     -
         slug: built-with-bits-tutorial-designing-spaces
         datecreated: '2022-04-05 10:47:26'
-        datechanged: '2022-04-26 16:32:20'
+        datechanged: '2023-04-13 11:03:53'
         datepublish: '2022-04-06 10:47:00'
         datedepublish: ''
         ownerid: 124
@@ -6674,7 +6641,10 @@ events:
                 slug: education
                 name: Education
         categories: {  }
-        tags: {  }
+        tags:
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled

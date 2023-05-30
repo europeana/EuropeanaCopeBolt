@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T17:19:45+02:00'
+    date: '2023-05-30T15:44:26+02:00'
     version: 3.7.4
     platform: mysql
 posts:
@@ -8249,7 +8249,7 @@ posts:
     -
         slug: the-europeana-public-domain-charter
         datecreated: '2015-01-28 12:43:53'
-        datechanged: '2022-06-14 14:50:50'
+        datechanged: '2023-02-09 11:56:18'
         datepublish: '2010-04-28 12:39:00'
         datedepublish: ''
         ownerid: 2
@@ -8259,7 +8259,7 @@ posts:
         posttype: Publication
         featured: false
         intro: "<p>This policy document highlights the importance of the public domain by establishing Europeana’s views for a healthy public domain and recommendations for preserving its function.</p>\r\n"
-        body: "<p>Below you can download our Public Domain Charter in 15\_languages, and read the full Charter in English. Most translations available have been kindly provided by volunteers, and the only version whose accuracy we can guarantee is the English one. If you wish to give feedback to this translation, please\_<a href=\"mailto:info@europeana.eu\" target=\"_blank\">contact us</a>.</p>\r\n"
+        body: "<p>Below you can download our Public Domain Charter in 18\_languages, and read the full Charter in English. Most translations available have been kindly provided by volunteers, and the only version whose accuracy we can guarantee is the English one. If you wish to give feedback to this translation, please\_<a href=\"mailto:info@europeana.eu\" target=\"_blank\">contact us</a>.</p>\r\n"
         author:
             -
                 value: '2389'
@@ -8300,8 +8300,8 @@ posts:
         pages:
             - pages/process
             - pages/rightsstatements-org
-        posts:
-            - posts/the-europeana-public-domain-charter
+            - pages/copyright
+        posts: {  }
         data: {  }
         projects: {  }
         events: {  }

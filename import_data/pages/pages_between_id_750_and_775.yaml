@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:55:02+02:00'
+    date: '2023-05-30T15:19:22+02:00'
     version: 3.7.4
     platform: mysql
 pages:
@@ -98,7 +98,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -220,7 +220,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -339,7 +339,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -459,7 +459,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -507,7 +507,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -552,7 +552,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -597,7 +597,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -645,7 +645,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -693,7 +693,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -738,7 +738,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -789,7 +789,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -834,7 +834,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -897,7 +897,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -960,7 +960,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: data
@@ -1014,7 +1014,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1029,7 +1029,7 @@ pages:
                 selected_posts:
                     -
                         value: ''
-                        _id: posts/team-using-europeana-data-win-prize-at-the-eu-datathon-2022
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -1062,7 +1062,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1110,7 +1110,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -1149,14 +1149,14 @@ pages:
     -
         slug: building-digital-capacity
         datecreated: '2020-06-17 13:16:58'
-        datechanged: '2022-06-29 14:30:28'
+        datechanged: '2023-02-01 16:05:46'
         datepublish: '2020-06-17 13:16:43'
         datedepublish: ''
         ownerid: 124
         status: published
         templatefields: {  }
         title: 'Building Digital Capacity'
-        intro: "<p>A phased project to identify and shape a capacity-building framework for digital transformation in the cultural heritage sector.\_</p>\r\n"
+        intro: "<p>The Europeana Initiative offers capacity building activities which support the development of, and participation in, the common European data space for cultural heritage.</p>\r\n"
         body: null
         pagefooter: null
         pagetype: landingpage-nohighlight
@@ -1165,7 +1165,7 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>A phased project to identify and shape a capacity-building framework for digital transformation in the cultural heritage sector.\_</p>\r\n"
+        teaser: "<p>The Europeana Initiative offers capacity building activities which support the development of, and participation in, the common European data space for cultural heritage.</p>\r\n"
         teaser_image:
             file: 'Images/Blog_images/2020-10/Build Digital Capacity - teaser image 3.png'
             title: 'Hands on a game board'
@@ -1198,14 +1198,14 @@ pages:
         contact_website: null
         search_keywords: 'capacity building, digital transformation'
         pages:
-            - pages/building-digital-capacity
-            - pages/building-digital-capacity
+            - pages/guidelines-for-delivering-training-and-development
         posts:
             - posts/public-domain-tool-automating-the-calculation-of-works-in-the-public-domain
             - posts/digital-transformation-requires-strong-leadership-introducing-the-den-academy-leadership-programme-pilot
             - posts/defining-digital-transformation-for-the-cultural-heritage-sector
             - posts/curious-smart-and-resourceful-the-bnf-s-new-digital-roadmap
             - posts/building-digital-capacity-sense-making-findings-and-outcomes
+            - posts/europeana-initiative-task-force-offers-new-learnings-for-digital-transformation
         data: {  }
         projects: {  }
         events: {  }
@@ -1239,7 +1239,7 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p><meta charset=\"utf-8\" />As COVID-19 changes and challenges the cultural heritage sector, the importance of building capacity for digital transformation is clearer than ever. We have developed a phased project to help us identify and shape a capacity building framework based on the needs of our sector.&nbsp;</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">The common European data space for cultural heritage is a new flagship initiative of the European Union to support the digital transformation of our sector. The Europeana Initiative - at the heart of the data space - offers capacity building activities which support the development of, and participation in, the common European data space for cultural heritage. Explore how we are doing this on this page.&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -1252,7 +1252,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1280,59 +1280,11 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: ''
+                title: 'Understanding the sector'
                 subtitle: ''
-                anchortitle: ''
-                templates: calltoactioninline
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '707'
-                        _id: resources/sense-making-sign-up
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: 'Sensemaking Digital Transformation in the time of COVID-19'
-                subtitle: ''
-                anchortitle: 'Sensemaking digital transformation'
+                anchortitle: 'Understanding the sector'
                 templates: body
-                body: "<p><meta charset=\"utf-8\" />In June 2020 we launched a series of workshops that called upon our community to bring their perspective, experience and expertise together to identify new paths through - and beyond - the COVID-19 crisis for digital cultural heritage. Concurrently, we worked closely with independent charity Culture24 to produce a report to help develop a shared understanding of what building digital capacity in our sector really means. Explore a summary of the findings and the full reports below.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" />A key part of building capacity across the data space is understanding the needs, diverse perspectives and varied goals of its beneficiaries and contributors. This builds upon previous research with our communities, a report with independent charity Culture24 and a dedicated Task Force.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -1345,7 +1297,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1376,7 +1328,7 @@ pages:
                 title: ''
                 subtitle: ''
                 anchortitle: ''
-                templates: listingsemistatic
+                templates: teaser
                 body: ''
                 image:
                     file: ''
@@ -1390,7 +1342,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1403,9 +1355,6 @@ pages:
                 selected_persons: ''
                 filter_posts: ''
                 selected_posts:
-                    -
-                        value: '2219'
-                        _id: posts/building-digital-capacity-sense-making-findings-and-outcomes
                     -
                         value: '2211'
                         _id: posts/digital-transformation-in-the-time-of-covid-19-sense-making-workshops-findings-and-outcomes
@@ -1427,7 +1376,55 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: 'A definition of digital transformation'
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: teaser
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: projects
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects:
+                    -
+                        value: '162'
+                        _id: projects/digital-transformation-task-force
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Defining digital transformation'
                 subtitle: ''
                 anchortitle: 'Defining digital transformation'
                 templates: body
@@ -1444,7 +1441,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1489,7 +1486,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1534,7 +1531,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1579,7 +1576,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1624,7 +1621,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1669,7 +1666,52 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: disabled
+                title: 'Digital Transformation Task Force'
+                subtitle: ''
+                anchortitle: 'Digital Transformation Task Force'
+                templates: body
+                body: "<p>From autumn 2021 - spring 2022, a Europeana&nbsp;Initiative-wide <a href=\"https://pro.europeana.eu/project/digital-transformation-task-force\">Digital Transformation Task Force </a>aimed to build capacity for digital transformation across Europeana. This Task Force included representatives from the Europeana Network Association, Europeana Aggregators’ Forum, Europeana Foundation and independent consultants. During the course of its work, the Task Force organised three consultation sessions where 44 participants provided input on digital activities (572 comments in total) and digital skills (228 comments in total) from an individual, organisational and network perspective. This has resulted in two publications that can be downloaded below.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><strong>The ‘Guide to Digital Transformation in Cultural Heritage’ </strong>aims to support the digital transformation of the cultural heritage sector across Europe. It is written for the people who work in, around and for the many different museums, galleries, archives, libraries, heritage sites, arts organisations&nbsp;that hold and protect cultural collections and seek to engage audiences with them. It offers recommendations that frame an approach to digital transformation for the whole cultural heritage sector.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The <strong>Digital Transformation Report</strong> on the Task Force details the work that&nbsp;independent charity Culture24 was commissioned to guide and support. It covers the Task Force’s activities between October 2021 and the publication of this report in June 2022 and introduces the ‘Guide to Digital Transformation in Cultural Heritage’ that has been produced collaboratively by the Task Force as a separate stand alone document.</p>\r\n\r\n<p dir=\"ltr\">Based on the above, initiative-wide discussions will continue to determine the role and responsibility of Europeana as a whole and of its three separate bodies.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1700,96 +1742,6 @@ pages:
                 title: ''
                 subtitle: ''
                 anchortitle: ''
-                templates: body
-                body: "<p>Shared your training course and want to share another? Please scroll up to submit more examples through the form.</p>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: 'Digital Transformation Task Force'
-                subtitle: ''
-                anchortitle: 'Digital Transformation Task Force'
-                templates: body
-                body: "<p>From autumn 2021 - spring 2022, a Europeana&nbsp;Initiative-wide <a href=\"https://pro.europeana.eu/project/digital-transformation-task-force\">Digital Transformation Task Force </a>aimed to build capacity for digital transformation across Europeana. This Task Force included representatives from the Europeana Network Association, Europeana Aggregators’ Forum, Europeana Foundation and independent consultants. During the course of its work, the Task Force organised three consultation sessions where 44 participants provided input on digital activities (572 comments in total) and digital skills (228 comments in total) from an individual, organisational and network perspective. This has resulted in two publications that can be downloaded below.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><strong>The ‘Guide to Digital Transformation in Cultural Heritage’ </strong>aims to support the digital transformation of the cultural heritage sector across Europe. It is written for the people who work in, around and for the many different museums, galleries, archives, libraries, heritage sites, arts organisations&nbsp;that hold and protect cultural collections and seek to engage audiences with them. It offers recommendations that frame an approach to digital transformation for the whole cultural heritage sector.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The <strong>Digital Transformation Report</strong> on the Task Force details the work that&nbsp;independent charity Culture24 was commissioned to guide and support. It covers the Task Force’s activities between October 2021 and the publication of this report in June 2022 and introduces the ‘Guide to Digital Transformation in Cultural Heritage’ that has been produced collaboratively by the Task Force as a separate stand alone document.</p>\r\n\r\n<p dir=\"ltr\">Based on the above, initiative-wide discussions will continue to determine the role and responsibility of Europeana as a whole and of its three separate bodies.&nbsp;</p>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
                 templates: filecontent
                 body: ''
                 image:
@@ -1804,7 +1756,7 @@ pages:
                 attribution_link: ''
                 singlefile: Europeana_Professional/Europeana_Network/Europeana_Network_Task_Forces/Final_reports/Guide_to_digital_transformation_in_cultural_heritage.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1831,7 +1783,7 @@ pages:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: ''
                 subtitle: ''
                 anchortitle: ''
@@ -1849,7 +1801,7 @@ pages:
                 attribution_link: ''
                 singlefile: Europeana_Professional/Europeana_Network/Europeana_Network_Task_Forces/Final_reports/Digital_transformation_report.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1877,9 +1829,9 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: 'Developing a capacity building framework'
+                title: 'Developing a framework'
                 subtitle: ''
-                anchortitle: 'Developing a capacity building framework'
+                anchortitle: 'Developing a framework'
                 templates: body
                 body: "<p><meta charset=\"utf-8\" />We are working to create a strategy and implement a framework that empowers, motivates and guides the development of capacity building through the cultural heritage sector. Find out more through the document below, which&nbsp;describes the strategy for building and implementing the Europeana Capacity Building Framework. It reflects work in progress and future plans, and describes the guiding principles that have been developed for the Framework.</p>\r\n"
                 image:
@@ -1894,7 +1846,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1939,7 +1891,7 @@ pages:
                 attribution_link: ''
                 singlefile: 'Europeana_Professional/Publications/Strategy for building and implementing a capacity building framework.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1984,7 +1936,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2029,7 +1981,7 @@ pages:
                 attribution_link: ''
                 singlefile: 'Europeana_Professional/Publications/Thematic Agenda for the Europeana Initiative.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2059,7 +2011,7 @@ pages:
     -
         slug: identifying-copyright-in-collection-items
         datecreated: '2020-06-25 11:53:25'
-        datechanged: '2022-10-21 16:46:22'
+        datechanged: '2022-11-16 15:26:12'
         datepublish: '2020-06-25 11:52:40'
         datedepublish: ''
         ownerid: 124
@@ -2152,7 +2104,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2197,7 +2149,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2242,7 +2194,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2287,7 +2239,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2332,7 +2284,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2377,7 +2329,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2425,7 +2377,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2470,7 +2422,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2502,7 +2454,7 @@ pages:
                 subtitle: 'Is it possible to obtain permission to use the item?'
                 anchortitle: ''
                 templates: body
-                body: "<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">If a cultural heritage institution does not own the copyright to the materials at stake, and there is no exception or limitation to copyright for the intended use, the institution will need to identify the rights owner and obtain the permission to use copyright-protected material.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">In order to do that, it is worth noting that:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">The rightsholder may have already transferred certain rights to the cultural heritage institution when the item was acquired.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">It is possible that the author transferred the copyright to someone else, especially if the material was exploited commercially. This is the case, for instance, of the author of a book who transfers rights to a publisher, or the author of the song to a record company. This is the person/institution that can give permission to use the materials.</p>\r\n    </li>\r\n</ul>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">It is important to know in advance which permissions are needed. This&nbsp; intended use should be stated in the agreement with the rightsholder. For example, sharing a digital object with an aggregator, or allowing additional uses like education or commercial use.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Collecting societies (organisations that collect copyright royalties on behalf of authors) might be in a position where they can give licences to cultural heritage institutions to make collections available online, even if the author is not known or not in the collecting society’s repertoire.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">If you cannot identify or locate the rightsholder to obtain permission, or the amount of items is too large to even consider undertaking such a process, consider relying on the out of commerce works provisions, which provide a solution based on a licence and an exception to copyright. You can find more information about this system <a href=\"https://pro.europeana.eu/project/out-of-commerce-works-working-group#faqs\">on this page</a>.</p>\r\n\r\n<p dir=\"ltr\">Alternatively, consider relying on the <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012L0028\">orphan works exception</a>. This exception to copyright requires conducting a diligent search before you can rely on it to make the work available online. It is worth noting, however, that the experience of many cultural heritage institutions when relying on this exception has been rather unfruitful.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>A solution based on managing risk</strong></p>\r\n\r\n<p dir=\"ltr\">The last remaining option, that some cultural heritage institutions make use of, is taking a risk-managed approach, after carefully examining the risks and considering aspects such as whether the work was ever commercially available, its age, type or the intended use. You can read more about risk-management in <a href=\"https://pro.europeana.eu/post/orphan-works-and-uk-glams-the-case-for-a-risk-managed-approach\">this post</a> and in <a href=\"https://pro.europeana.eu/event/clearing-rights-in-collections-part-1\">this webinar</a> by<a href=\"https://pro.europeana.eu/person/naomi-korn\"> Naomi Korn</a>, and in the <a href=\"https://pro.europeana.eu/event/tools-and-good-practice-to-manage-copyright\">second presentation of this webinar</a> by <a href=\"https://pro.europeana.eu/person/fred-saunderson\">Fred Saunderson.</a></p>\r\n"
+                body: "<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">If a cultural heritage institution does not own the copyright to the materials at stake, and there is no exception or limitation to copyright for the intended use, the institution will need to identify the rights owner and obtain the permission to use copyright-protected material.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">In order to do that, it is worth noting that:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">The rightsholder may have already transferred certain rights to the cultural heritage institution when the item was acquired.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">It is possible that the author transferred the copyright to someone else, especially if the material was exploited commercially. This is the case, for instance, of the author of a book who transfers rights to a publisher, or the author of the song to a record company. This is the person/institution that can give permission to use the materials.</p>\r\n    </li>\r\n</ul>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">It is important to know in advance which permissions are needed. This&nbsp; intended use should be stated in the agreement with the rightsholder. For example, sharing a digital object with an aggregator, or allowing additional uses like education or commercial use.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Collecting societies (organisations that collect copyright royalties on behalf of authors) might be in a position where they can give licences to cultural heritage institutions to make collections available online, even if the author is not known or not in the collecting society’s repertoire.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">If you cannot identify or locate the rightsholder to obtain permission, or the amount of items is too large to even consider undertaking such a process, consider relying on the out of commerce works provisions, which provide a solution based on a licence and an exception to copyright. You can find more information about this system <a href=\"https://pro.europeana.eu/project/out-of-commerce-works-working-group#faqs\">on this page</a>.</p>\r\n\r\n<p dir=\"ltr\">Alternatively, consider relying on the <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012L0028\">orphan works exception</a>. This exception to copyright requires conducting a diligent search before you can rely on it to make the work available online. It is worth noting, however, that the experience of many cultural heritage institutions when relying on this exception has been rather unfruitful.&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -2515,7 +2467,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2542,12 +2494,12 @@ pages:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: disabled
+                enabled: enabled
                 title: ''
-                subtitle: 'What if you cannot identify or locate the rightsholder?'
+                subtitle: 'A solution based on managing risk'
                 anchortitle: ''
                 templates: body
-                body: "<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">If you cannot identify or locate the rightsholder to obtain permission, or the amount of items is too large to even consider undertaking such a process, consider relying on the <strong>out of commerce works provisions</strong>, which provide a solution based on a licence and an exception to copyright.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Alternatively, consider relying on the <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012L0028\">orphan works exception</a>. This exception to copyright requires conducting a diligent search before you can rely on it to make the work available online. It is worth noting, however, that the experience of many cultural heritage institutions when relying on this exception has been rather unfruitful.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The last remaining option, that some cultural heritage institutions make use of, is taking a risk-managed approach, after carefully examining the risks and considering aspects such as whether the work was ever commercially available, its age, type or the intended use. You can read more about risk-management in <a href=\"https://pro.europeana.eu/post/orphan-works-and-uk-glams-the-case-for-a-risk-managed-approach\">this post</a> and in <a href=\"https://pro.europeana.eu/event/clearing-rights-in-collections-part-1\">this webinar</a> by<a href=\"https://pro.europeana.eu/person/naomi-korn\"> Naomi Korn</a>, and in the <a href=\"https://pro.europeana.eu/event/tools-and-good-practice-to-manage-copyright\">second presentation of this webinar</a> by <a href=\"https://pro.europeana.eu/person/fred-saunderson\">Fred Saunderson.</a></p>\r\n"
+                body: "<p>The last remaining option, that some cultural heritage institutions make use of, is taking a risk-managed approach, after carefully examining the risks and considering aspects such as whether the work was ever commercially available, its age, type or the intended use. You can read more about risk-management in <a href=\"https://pro.europeana.eu/post/orphan-works-and-uk-glams-the-case-for-a-risk-managed-approach\">this post</a> and in <a href=\"https://pro.europeana.eu/event/clearing-rights-in-collections-part-1\">this webinar</a> by<a href=\"https://pro.europeana.eu/person/naomi-korn\"> Naomi Korn</a>, and in the <a href=\"https://pro.europeana.eu/event/tools-and-good-practice-to-manage-copyright\">second presentation of this webinar</a> by <a href=\"https://pro.europeana.eu/person/fred-saunderson\">Fred Saunderson.</a></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -2560,7 +2512,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2605,7 +2557,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2653,7 +2605,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2682,10 +2634,10 @@ pages:
             -
                 enabled: enabled
                 title: ''
-                subtitle: ''
+                subtitle: 'Other legal considerations'
                 anchortitle: ''
                 templates: body
-                body: "<p><strong>Other legal considerations</strong></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">From a legal perspective, there might be data protection or privacy concerns that challenge the sharing of the digital object online.</p>\r\n\r\n<p dir=\"ltr\"><strong>Contractual limitations or conditions</strong></p>\r\n\r\n<p dir=\"ltr\">There can also be contractual limitations. For example, it is quite common that funding for digitisation comes with a number of conditions. A cultural heritage institution may have agreed that the publication or reuse of the digital reproduction is limited to certain circumstances.&nbsp; The person or institution that conducts the digitisation efforts, such as a photographer, may also have rights that need to be cleared, ideally via an agreement through which all rights are transferred to the cultural heritage institution. These various additional aspects need to be addressed in order to make the digital object available online.</p>\r\n\r\n<p dir=\"ltr\"><strong>Ethical considerations</strong></p>\r\n\r\n<p dir=\"ltr\">Last but not least, there might be ethical considerations. Copyright protection may have expired, but a cultural heritage institution should still consider whether sharing certain digital objects online and encouraging their reuse can lead to negative consequences for certain individuals or communities. You can read more about the balance between opening up and ethics in this <a href=\"https://medium.com/creative-commons-we-like-to-share/beyond-copyright-the-ethics-of-open-sharing-a495bb95569d\">set of recommendations by Creative Commons</a> and in the Europeana <a href=\"https://www.europeana.eu/en/rights/public-domain-usage-guidelines\">Public Domain Usage Guidelines</a>.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>No rights on digital reproductions of public domain materials</strong></p>\r\n\r\n<p dir=\"ltr\">Cultural heritage institutions should also consider being explicit about the fact that no rights arise, or no rights are recognised, on the digitised copy of an item.&nbsp; If the item is protected by copyright, restrictions would exist anyways. Removing rights on the digital copy is therefore particularly important when the item is in the public domain: in those cases, the cultural heritage institution is depriving users of an opportunity to use the material without copyright limitations or conditions.</p>\r\n\r\n<p dir=\"ltr\">Europeana, through its <a href=\"https://pro.europeana.eu/post/the-europeana-public-domain-charter\">Public Domain Charter</a>, encourages cultural heritage institutions to never claim rights on digital reproductions of public domain materials, and considers that it goes against the public interest mission of a cultural heritage organisation to do so.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The very few situations in which such rights might arise are described below for clarity, and not to support making use of them.</p>\r\n"
+                body: "<p>From a legal perspective, there might be data protection or privacy concerns that challenge the sharing of the digital object online.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -2698,7 +2650,142 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: 'Contractual limitations or conditions'
+                anchortitle: ''
+                templates: body
+                body: "<p dir=\"ltr\">There can also be contractual limitations. For example, it is quite common that funding for digitisation comes with a number of conditions. A cultural heritage institution may have agreed that the publication or reuse of the digital reproduction is limited to certain circumstances.&nbsp; The person or institution that conducts the digitisation efforts, such as a photographer, may also have rights that need to be cleared, ideally via an agreement through which all rights are transferred to the cultural heritage institution. These various additional aspects need to be addressed in order to make the digital object available online</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: 'Ethical considerations'
+                anchortitle: ''
+                templates: body
+                body: "<p dir=\"ltr\">Last but not least, there might be ethical considerations. Copyright protection may have expired, but a cultural heritage institution should still consider whether sharing certain digital objects online and encouraging their reuse can lead to negative consequences for certain individuals or communities. You can read more about the balance between opening up and ethics in this <a href=\"https://medium.com/creative-commons-we-like-to-share/beyond-copyright-the-ethics-of-open-sharing-a495bb95569d\">set of recommendations by Creative Commons</a> and in the Europeana <a href=\"https://www.europeana.eu/en/rights/public-domain-usage-guidelines\">Public Domain Usage Guidelines</a>.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: 'No rights on digital reproductions of public domain materials'
+                anchortitle: ''
+                templates: body
+                body: "<p dir=\"ltr\">Cultural heritage institutions should also consider being explicit about the fact that no rights arise, or no rights are recognised, on the digitised copy of an item.&nbsp; If the item is protected by copyright, restrictions would exist anyways. Removing rights on the digital copy is therefore particularly important when the item is in the public domain: in those cases, the cultural heritage institution is depriving users of an opportunity to use the material without copyright limitations or conditions.</p>\r\n\r\n<p dir=\"ltr\">Europeana, through its <a href=\"https://pro.europeana.eu/post/the-europeana-public-domain-charter\">Public Domain Charter</a>, encourages cultural heritage institutions to never claim rights on digital reproductions of public domain materials, and considers that it goes against the public interest mission of a cultural heritage organisation to do so.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The very few situations in which such rights might arise are described below for clarity, and not to support making use of them.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2743,7 +2830,7 @@ pages:
                 attribution_link: 'https://www.europeana.eu/item/2048047/Athena_Plus_ProvidedCHO_Institutul_Na_ional_al_Patrimoniului_21DD9A13837845DBBBE07434AC072EB4'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2788,7 +2875,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2833,7 +2920,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2881,7 +2968,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3004,7 +3091,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3130,7 +3217,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3258,7 +3345,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3303,7 +3390,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3333,7 +3420,7 @@ pages:
     -
         slug: webinars
         datecreated: '2020-07-27 18:38:04'
-        datechanged: '2022-07-18 10:52:40'
+        datechanged: '2023-05-12 13:20:40'
         datepublish: '2020-08-17 14:37:00'
         datedepublish: ''
         ownerid: 124
@@ -3425,7 +3512,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3470,7 +3557,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3498,6 +3585,12 @@ pages:
                     -
                         value: '501'
                         _id: events/cultural-heritage-and-climate-change
+                    -
+                        value: '761'
+                        _id: events/how-to-create-more-climate-friendly-communications
+                    -
+                        value: '796'
+                        _id: events/europeana-ki-culture-sustainability-workshop-series
                 selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
@@ -3524,7 +3617,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3614,7 +3707,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3683,7 +3776,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3741,6 +3834,12 @@ pages:
                     -
                         value: '672'
                         _id: events/boost-your-educational-activities-with-an-erasmus-ka2-partnership
+                    -
+                        value: '764'
+                        _id: events/strengthen-your-erasmus-days-matchmaking-event
+                    -
+                        value: '760'
+                        _id: events/strengthen-your-erasmus-days-info-day
                 selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
@@ -3767,7 +3866,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3876,6 +3975,24 @@ pages:
                     -
                         value: '688'
                         _id: events/digital-storytelling-festival-opening-gala
+                    -
+                        value: '768'
+                        _id: events/social-media-tips-tricks-and-tales-from-europeana-s-experts
+                    -
+                        value: '727'
+                        _id: events/presenting-europeana
+                    -
+                        value: '761'
+                        _id: events/how-to-create-more-climate-friendly-communications
+                    -
+                        value: '740'
+                        _id: events/how-to-build-your-storytelling-skills-and-start-writing-for-europeana
+                    -
+                        value: '743'
+                        _id: events/memex-memories-and-experiences-for-inclusive-digital-storytelling
+                    -
+                        value: '790'
+                        _id: events/digital-storytelling-festival-2023
                 selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
@@ -3902,7 +4019,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3971,7 +4088,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -4049,7 +4166,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -4092,6 +4209,9 @@ pages:
                     -
                         value: '520'
                         _id: events/research-and-digital-cultural-heritage-new-impact-horizons
+                    -
+                        value: '799'
+                        _id: events/ai-tools-in-perspective-the-potential-for-cultural-heritage-institutions-the-responses-of-dh-researchers
                 selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
@@ -4118,7 +4238,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -4193,7 +4313,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -4245,6 +4365,9 @@ pages:
                     -
                         value: '657'
                         _id: events/3d-reconstructions-for-story-telling-and-understanding
+                    -
+                        value: '763'
+                        _id: events/europeanatech-and-iiif-webinar-v2-0
                 selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
@@ -4354,7 +4477,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4485,7 +4608,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4515,15 +4638,15 @@ pages:
     -
         slug: motionnotes
         datecreated: '2020-08-05 15:02:07'
-        datechanged: '2021-05-20 13:10:18'
+        datechanged: '2023-03-20 09:17:09'
         datepublish: '2020-08-11 15:01:00'
         datedepublish: ''
         ownerid: 124
         status: published
         templatefields: {  }
         title: MotionNotes
-        intro: "<p>MotionNotes is a multimodal video annotator that facilitates the use of digital technologies in art and dance performances. This standalone tool was developed under the Europeana Generic Service project <a href=\"https://pro.europeana.eu/project/culturemoves\">CultureMoves</a>.</p>\r\n"
-        body: "<h3><strong>About the tool\_</strong></h3>\r\n\r\n<p>MotionNotes is a real-time, multimodal video annotator based on keyboard, touch and voice inputs. It was designed to assist the creative and exploratory processes of both professional and amateur users who work with dance choreography and art performances.\_\_</p>\r\n\r\n<p>The tool allows users to record videos and take notes over the video at the same time and make annotations including drawings, text, voice, marks and web URL links to edit and enrich video performances. Users can work with this web-based tool on any web browser and device.</p>\r\n\r\n<h3><strong>Benefits of the tool</strong></h3>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Allows users to annotate dance performances in real time, supporting the practice of dance professionals and enthusiasts</p>\r\n    </li>\r\n    <li>\r\n    <p>Encourages and enhances the use of dance related content for the promotion of local and regional territories, potentially strengthening community ties and attracting tourism.\_</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3><strong>Technical information\_</strong></h3>\r\n\r\n<p>The tool follows responsive design principles and can be used across all major operating systems, browsers and devices (including smartphones and tablets). The videos are WebM files (open, royalty-free, media file format). Annotations and metadata are stored in an open video-specific JSON format.</p>\r\n\r\n<h3><strong>Use MotionNotes</strong></h3>\r\n\r\n<p>To use the\_MotionNotes tool, <a href=\"https://motion-notes.di.fct.unl.pt/\">register and log in</a> on the website. You can also find out more through the\_<a href=\"https://youtu.be/4IoNv-_Jfx4\">online tutorial</a>, or by <a href=\"https://culturemoves.eu/#contact\">contacting</a> the project partners.</p>\r\n"
+        intro: "<p></p>\r\n\r\n<p></p>\r\n\r\n<p>MotionNotes is a web-based, real-time multimodal video annotator designed to assist the creative and exploratory processes of dance professionals. This standalone tool was developed by NOVA University of Lisbon under the <a href=\"https://pro.europeana.eu/project/culturemoves\">CultureMoves</a> Europeana Generic Service project and further enhanced under the <a href=\"https://pro.europeana.eu/project/weave-widen-european-access-to-cultural-communities-via-europeana\">WEAVE</a> Europeana Generic Service project.</p>\r\n"
+        body: "<h3><strong>About the tool\_</strong></h3>\r\n\r\n<p></p>\r\n\r\n<p>MotionNotes is a real-time, multimodal video annotator based on keyboard, touch and voice inputs. It was designed to assist the creative and exploratory processes of both professional and amateur users who work with dance choreography and art performances.\_\_</p>\r\n\r\n<p>The tool allows users to record videos and take notes over the video at the same time, as well as make annotations including drawings, text, voice, marks and web URL links to edit and enrich video performances.\_</p>\r\n\r\n<p>The tool also supports 3D annotations. Users can upload their 3D models to MotionNotes and have them available while creating new annotations. Each user has their collection of 3D models available in his account. Users can look at the model, rotate it, and zoom it in/out. Users can annotate any part of the video with 3D models. The tool will then save the timestamp and position in which the 3D model was added. Musical instruments can be added as 3D annotations and provide important information. The 3D object annotations can be used as historical and cultural references. Geographical mapping is possible through the use of 3D object annotations.\_\_</p>\r\n\r\n<p>Moreover, the tool uses AI to automatically enable specific human movement detection in a video (e.g., arms open) and to estimate human pose in the video. This enables users to add dynamic annotations in MotionNotes, i.e. annotations can follow a human body part.\_</p>\r\n\r\n<h3><strong>Benefits of the tool</strong></h3>\r\n\r\n<p></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Allows users to annotate dance performances in real time, supporting the practice of dance professionals and enthusiasts</p>\r\n    </li>\r\n    <li>\r\n    <p>Encourages and enhances the use of dance related content for the promotion of local and regional territories, potentially strengthening community ties and attracting tourism.</p>\r\n    </li>\r\n    <li>\r\n    <p>Thanks its AI-powered annotations of human motion, MotionNotes is also relevant to performing arts, sports, education, journalism and tourism.</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3><strong>Technical information\_</strong></h3>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p>The tool follows responsive design principles and can be used across all major operating systems, browsers and devices (including smartphones and tablets).\_</p>\r\n\r\n<p>The videos are WebM files (open, royalty-free, media file format). Annotations and metadata are stored in an open video-specific JSON format.\_</p>\r\n\r\n<p>For human pose estimation, the tool makes use of the <a href=\"https://github.com/CMU-Perceptual-Computing-Lab/openpose\">OpenPose algorithm</a>.\_</p>\r\n\r\n<p>MotionNotes videos and annotations can be shared over the web using an oEmbed.\_</p>\r\n\r\n<h3><strong>Use MotionNotes</strong></h3>\r\n\r\n<p>To use the MotionNotes tool, <a href=\"https://motion-notes.di.fct.unl.pt/\">register and log in</a> on the website. You can also find out more through the <a href=\"https://www.youtube.com/watch?v=poN5mvzbchM\">online tutorial</a>, or by <a href=\"https://weave-culture.eu/about/\">contacting </a>the project partners.</p>\r\n"
         pagefooter: null
         pagetype: page
         highlighttitle: null
@@ -4616,7 +4739,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4744,7 +4867,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4872,7 +4995,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5003,7 +5126,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5048,7 +5171,7 @@ pages:
                 attribution_link: 'http://www.europeana.eu/en/item/2064116/Museu_ProvidedCHO_Nationalmuseum__Sweden_24209'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5093,7 +5216,7 @@ pages:
                 attribution_link: 'https://www.europeana.eu/nl/item/2020108/_urn_www_culture_si_images_pageid_12579'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5123,14 +5246,14 @@ pages:
     -
         slug: conference-call-for-proposals
         datecreated: '2020-08-28 12:57:03'
-        datechanged: '2022-08-11 16:09:57'
+        datechanged: '2023-05-11 10:14:59'
         datepublish: '2020-08-28 12:55:37'
         datedepublish: ''
         ownerid: 112
         status: published
         templatefields: {  }
-        title: 'Europeana 2022 call for proposals'
-        intro: "<p>At Europeana 2022 we aim to explore how we can collaboratively build a common data Space for Cultural Heritage and raise voices from across the sector to empower digital transformation and explore the role digital cultural heritage plays in today’s and tomorrow’s world.</p>\r\n\r\n<p>On this page you can find all the information you need to submit a proposal for an interactive and engaging talk, webinar, workshop, session or intervention to be held during Europeana 2022 on 28, 29 &amp; 30 September 2022. Proposals should be for 30 minute sessions.</p>\r\n\r\n<p><strong>The call for proposals has closed.</strong></p>\r\n"
+        title: 'EuropeanaTech 2023 call for proposals'
+        intro: "<p>EuropeanaTech 2023 will be taking place in The Hague, the Netherlands, from 10 - 12 October 2023. The conference is for all tech-minded professionals, developers, researchers and students working in and around digital cultural heritage across the globe and is organised in collaboration with the EuropeanaTech Community.\_</p>\r\n\r\n<p>On this page you can find all the information you need to submit a proposal for an interactive and engaging talk, webinar, workshop, session or intervention to be held during EuropeanaTech 2023 on 10, 11 and 12 October.</p>\r\n"
         body: null
         pagefooter: null
         pagetype: landingpage-nohighlight
@@ -5139,13 +5262,13 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>Find all the information you need to submit a proposal for an interactive and engaging talk, webinar, workshop, session or intervention to be held during Europeana 2022.</p>\r\n"
+        teaser: "<p>Find all the information you need to submit a proposal for EuropeanaTech 2023.</p>\r\n"
         teaser_image:
-            file: Images/Blog_images/2022-04/europeana_2022_pro_teaser.png
-            title: 'Europeana 2022, 28-30 September 2022'
-        teaser_attribution_title: 'Europeana 2022 - Save the date'
-        teaser_attribution_creator: null
-        teaser_attribution_date: '2022'
+            file: Images/Blog_images/2023-04/europeanatech2023_call_for_proposals_teaser.png
+            title: 'EuropeanaTech 2023 Call for Proposals'
+        teaser_attribution_title: 'EuropeanaTech 2023 call for proposals'
+        teaser_attribution_creator: 'Ana Moreno'
+        teaser_attribution_date: '2023'
         teaser_attribution_holder: 'Europeana Foundation'
         teaser_attribution_country: Netherlands
         teaser_attribution_license: CC-BY-SA
@@ -5159,11 +5282,11 @@ pages:
         image_attribution_license: null
         image_attribution_link: null
         imagegallery: {  }
-        shoulddatepublish: true
+        shoulddatepublish: false
         shoulddatemodified: true
         subsite: null
         template: null
-        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        seo: '{"title":"Europeana Call for Proposals","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         contact_record:
             value: null
         contact_blurb: null
@@ -5172,8 +5295,7 @@ pages:
         contact_website: null
         search_keywords: null
         pages: {  }
-        posts:
-            - posts/submit-your-proposal-for-europeana-2021
+        posts: {  }
         data: {  }
         projects: {  }
         events: {  }
@@ -5182,26 +5304,26 @@ pages:
             -
                 slug: ''
                 name: ''
-        markets:
-            -
-                slug: chis
-                name: 'Cultural Heritage Institutions'
+        markets: {  }
         categories:
             -
                 slug: network
                 name: Network
         tags:
             -
-                slug: europeana-2021
-                name: europeana-2021
+                slug: europeanatech
+                name: europeanatech
+            -
+                slug: europeanatech2023
+                name: europeanatech2023
         modules:
             -
                 enabled: enabled
-                title: 'Europeana 2022 call for proposals'
+                title: 'EuropeanaTech 2023 call for proposals'
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p>At Europeana 2022 we aim to explore how we can collaboratively build a common data Space for Cultural Heritage and raise voices from across the sector to empower digital transformation and explore the role digital cultural heritage plays in today’s and tomorrow’s world.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">On this page you can find all the information you need to submit a proposal for an interactive and engaging talk, webinar, workshop, session or intervention to be held during Europeana 2022 on 28, 29 &amp; 30 September 2022. Proposals should be for 30 minute sessions.</p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /><strong>The call for proposals has closed but you can now <a href=\"https://pro.europeana.eu/post/secure-your-ticket-for-europeana-2022-making-digital-culture-count\">secure your ticket for Europeana 2022 - making digital culture count</a>.&nbsp;</strong></p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><a href=\"https://pro.europeana.eu/page/conference\">EuropeanaTech 2023</a> will be taking place in The Hague, the Netherlands, from 10 - 12 October 2023. The conference is for all tech-minded professionals, developers, researchers and students working in and around digital cultural heritage across the globe and is organised in collaboration with the EuropeanaTech Community.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">On this page you can find all the information you need to submit a proposal for an interactive and engaging talk, webinar, workshop, session or intervention to be held during EuropeanaTech 2023 on 10, 11 and 12 October.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5214,7 +5336,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5246,7 +5368,7 @@ pages:
                 subtitle: ''
                 anchortitle: Themes
                 templates: body
-                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" />We are looking for your proposals for an interactive and engaging session or intervention to be held during Europeana 2022. We want to invite the best ideas to take the stage, and open up our platforms to new voices and subjects around the following themes.</p>\r\n\r\n<p dir=\"ltr\"><strong>Common Data Spaces:</strong> The Europeana Initiative is positioned at the heart of a data space for cultural heritage in the new plans of the European Commission. We want that space to be part of a vibrant digital public sphere where everyone can interact with trustworthy, reliable information and enjoy discussions and interactions which are respectful and free of harassment and exploitation. This idea is very closely linked to the foundations on which Europeana is built and the values we hold. And it’s also closely linked to the European Commission’s New European Bauhaus movement which aims to shape future ways of living that answer the wider challenges we face today. Digital cultural heritage can play an important role in this initiative, and in shaping the heritage of tomorrow. We’re looking for proposals in this area to share and showcase how the digital transformation of our sector contributes to such a thriving public digital space, to sustainability, accessibility, and inclusivity, and to help ensure that culture is always represented in discussions on the development of policies and programmes linked to digital public spaces.</p>\r\n\r\n<p dir=\"ltr\"><strong>Diversity and Inclusion:</strong> Cultural heritage empowers society to embrace its diversity and flourish. We are looking for proposals related to any aspect of diversity and inclusion. This could be around access, reinterpreting or reimagining practices and discourses, or looking at the ways people work and operate individually, within our organisations and as a sector. We are interested in how we can collectively ensure our communities are equitable and everyone feels safe, welcome, represented and equal.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Participation and Collaboration:</strong> Participation in and engagement with culture creates value in our sector and society at large. We want everyone to have the opportunity to participate in digital cultural heritage - to access it, to share it, to enjoy it, contribute to it and be enriched by it. We are looking for proposals that help engender participation and are looking for proposals that cover participatory practices, standards, platforms, tools and more. Collaboration is vital in addressing the cultural heritage sector’s vulnerabilities and challenges. Greater collaborative practices can progress our sector’s digital transformation, which in turn can enable further collaborative opportunities. We’re looking for proposals that support collaborations for a European cultural sector which places digital cultural heritage at the heart of society. We’d love to hear from you if you have imaginative, engaging or new ways to connect people or organisations, build partnerships, engage audiences and network from within or even outside the sector.</p>\r\n\r\n<p dir=\"ltr\"><strong>Climate Action:</strong> There is a global climate emergency and digital has a carbon footprint too. We’re looking for proposals that support and contribute to the European Green Deal and New European Bauhaus, creating a greener, more sustainable society. We want to hear about innovative and new ways we can work together to tackle and raise awareness of the climate emergency. The proposals could cover individual actions we can all take to ‘green-up’ our practices, or activities that organisations can carry out to proactively make a positive difference. If it covers how we can individually and collectively reduce the impact the digital cultural heritage sector has on climate change, we want to hear from you!</p>\r\n\r\n<p dir=\"ltr\"><strong>Storytelling:</strong> Europeana aims to be a powerful platform for storytelling and to enable cultural heritage institutions to transcend cultural and national borders and place their collections in the European context - to be part of the story of Europe. Initiatives such as our <a href=\"https://medium.com/digital-storytelling-festival\">Digital Storytelling Festival</a> and the Europeana Network Association <a href=\"https://pro.europeana.eu/project/europeana-as-a-powerful-platform-for-storytelling\">Task Force on digital storytelling</a> have demonstrated that this is a hot topic in the cultural heritage sector and that professionals are keen to share and develop their own storytelling expertise. We want to hear about your storytelling work - how do you find and tell stories with digital cultural heritage that capture imaginations, and create memorable and meaningful experiences for audiences?&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>3D, multilinguality and AI:</strong> Europeana 2022 will have a strong EuropeanaTech element. Tech does not sit alone, and the areas of 3D, multilinguality and AI are not only prominent threads in the common data space but also affect so many of the other aspects we collectively work on. For example, how can AI and 3D help us tell stories and encourage collaboration? What can multilinguality do to help foster an inclusive sector and online experience? Perhaps you have work in this area which can help contribute to the common data space, or you have created something you want the sector to hear about. If it’s related to 3D, multilinguality and AI and digital cultural heritage, send us your proposal!</p>\r\n\r\n<p dir=\"ltr\"><strong>European Year of Youth:</strong> 2022 is the European Year of Youth. At Europeana 2022, we want to celebrate this, and build on the work the&nbsp; Europeana initiative has been doing to support to <a href=\"https://pro.europeana.eu/project/new-professionals\">new professionals</a> and collaborate with <a href=\"https://pro.europeana.eu/post/supporting-new-professionals-the-european-students-association-for-cultural-heritage\">ESACH, The European Students' Association for Cultural Heritage</a>. We want to receive proposals that relate to digital cultural heritage and students, young people and those new to working in the sector. If you have ideas on how we can support these groups or facilitate intergenerational exchange within the sector, examples of innovative ways to reach and communicate with young people around cultural heritage, something to showcase from the European Year of Youth, or are a new professional who wants to make a difference to our sector and the societies we live in - we’d love to hear from you.&nbsp;</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">We are looking for your proposals for an interactive and engaging session or intervention to be held during EuropeanaTech 2023. We want to invite the best ideas to take the stage, and open up our platforms to new voices and subjects around the following themes.</p>\r\n\r\n<h3 dir=\"ltr\"><strong>Explore&nbsp;&nbsp;</strong></h3>\r\n\r\n<p dir=\"ltr\">In order to help people explore cultural heritage online and discover Europe’s rich heritage, cultural heritage institutions work tirelessly to structure, enrich and link their data to make digital cultural heritage more findable, accessible and interoperable. The use of automated approaches like AI assisted&nbsp; enrichments of data offers opportunities&nbsp;for new ways of interaction. The emergence of new types of data, such as 3D also pushes us to rethink and upgrade our current process and workflows.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Under this conference theme, we are interested in interventions around:&nbsp;</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Processes and workflows which facilitate the digitisation, creation,&nbsp;enrichment and management of data (including 3D)&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Standards and protocols which support the creation, sharing and reuse of Linked Data</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">New automated approaches towards the enrichment of content and metadata including machine learning, computer vision&nbsp; and natural language processing</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3><strong>Engage&nbsp;</strong></h3>\r\n\r\n<p dir=\"ltr\">Cultural heritage enriches lives. Access to cultural heritage in all its richness helps us learn about who we are, where we’ve come from and what we can become. The ways cultural heritage institutions provide access to cultural heritage data, and are set up to preserve, curate and deliver that data, is increasingly determining the relevance of the cultural heritage sector. Is developing decentralised models a way to make the cultural heritage sector stronger and more prominent in society? How can technology facilitate the participation of diverse audiences and communities? What advancements can be used to create a&nbsp; space for others to share their own pieces of cultural heritage with the world?</p>\r\n\r\n<p dir=\"ltr\">Under this conference theme we are interested in receiving proposals related to:&nbsp;</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Models of developments and&nbsp; collaboration between cultural heritage professionals which support better sharing of, and access to,cultural heritage data as well as increasing its impact</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Developments around user interactions and applications which support new ways to search, browse and interact with cultural heritage data (for example, through immersive experiences)</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Projects and tools which facilitate the participation of audiences in the curation, enrichment, reuse of digital cultural heritage&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Activities related to open access, public domain, and Creative Commons, making collections more accessible</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3 dir=\"ltr\"><strong>Experience</strong></h3>\r\n\r\n<p dir=\"ltr\">Digital cultural heritage is no longer limited to 2D content, a link to a webpage and a couple of metadata fields. The diversity of data (from transcriptions and annotations, to 3D models) and the increased number of available technologies coupled with high-quality digitisation and AI have transformed the experience we can offer to audiences. We have gone beyond the paradigm of search and browse, and can now look to build rich, interactive and immersive experiences which let people explore, engage and experience the past as never before seen possible.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Under this theme we are looking forward to hear about inspiring presentations about:&nbsp;</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Usage of cultural heritage data (image, text, video, audio and 3D) to build user interaction and experience&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Collaboration between cultural heritage institutions and creative industries&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">New types of interactions supporting users in their interaction with cultural heritage (e.g AI chatbot, assist tools)</p>\r\n    </li>\r\n</ul>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5259,7 +5381,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5291,7 +5413,7 @@ pages:
                 subtitle: ''
                 anchortitle: 'Selection criteria'
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Our selection criteria is designed to enable a broad and diverse selection. In order to open up the conference to new voices, we want to facilitate a more inclusive and equitable call, and on the submission form applicants have the opportunity to tell us how we can support your proposal if it is selected. The submissions will go through the initial selection process without this information being seen, and the final decision will be made by the programme committee.</p>\r\n\r\n<p dir=\"ltr\">The selection process will begin when the call for proposals opens. We will review proposals in order of submission.</p>\r\n\r\n<p dir=\"ltr\">The selection committee might contact you, before or after the first notice, with a request to merge or combine your proposal with another proposal. This will only be done if there is overlap between the proposals.</p>\r\n\r\n<p dir=\"ltr\">The proposals will be reviewed on the following:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">To what extent does the proposal make it clear what outcomes the participants should be able to get out of the session?</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">To what extent does the proposal speak to, involve, or collaborate with one or more of the conference target audiences?</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">To what extent does the proposal offer something interesting, useful, innovative, or important to the event?</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">To what extent do the topics proposed represent diversity in the themes?</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">Once the proposal is submitted you will receive a confirmation email - make sure you check your spam folder if you don't have this message in your primary inbox.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" />Our selection criteria are designed to enable a broad and diverse selection and to facilitate a more inclusive and equitable call in order to open up the conference to new voices.</p>\r\n\r\n<p dir=\"ltr\">The proposals will be reviewed on the following:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">&nbsp;Does the proposal make it clear what outcomes the attendees will be able to get out of the session? (0 - not at all, 1 - partially, 2 - fully)&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Does the proposal speak to, involve, or collaborate with one or more of the conference target audiences? (0 - not at all, 1 - partially, 2 - fully)&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Does the proposal offer something interesting, useful, innovative, or important to the event? (0 - not at all, 1 - partially, 2 - fully)&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Do the topics proposed represent diversity in the themes? (0 - not at all, 1 - partially, 2 - fully)&nbsp;</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">Once the proposal is submitted you will receive a confirmation email - make sure you check your spam folder if you don't have this message in your primary inbox.</p>\r\n\r\n<p dir=\"ltr\">The selection committee might contact you, before or after the first notice, with a request to merge or combine your proposal with another proposal. This will only be done if there is overlap between the proposals.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5304,7 +5426,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5349,7 +5471,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5381,7 +5503,7 @@ pages:
                 subtitle: ''
                 anchortitle: 'Selection and Programme Committee'
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Our selection and programme committees are&nbsp;representative of the Europeana Initiative. The committees consist&nbsp;of members of Europeana Foundation, Europeana Members Council, Europeana Aggregators’ Forum, members of our <a href=\"https://pro.europeana.eu/network-association/communities\">seven communities</a> and from our <a href=\"https://pro.europeana.eu/project/new-professionals\">New Professionals Task Force</a> and <a href=\"https://pro.europeana.eu/project/diversity-and-inclusion-task-force\">Diversity and Inclusion Task Force</a>.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Our selection and programme committees are representatives of the Europeana Initiative. The committees consist of members from Europeana Foundation, the Europeana Network Association Members Council, Europeana Aggregators’ Forum, EuropeanaTech Steering Group and members of our other communities.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5394,7 +5516,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5439,7 +5561,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -5451,44 +5573,77 @@ pages:
                 filter_persons: ''
                 selected_persons:
                     -
+                        value: '4741'
+                        _id: persons/andrija-sagic
+                    -
+                        value: '864'
+                        _id: persons/johan-oomen
+                    -
+                        value: '5191'
+                        _id: persons/david-haskiya
+                    -
+                        value: '5013'
+                        _id: persons/jill-cousins
+                    -
+                        value: '1201'
+                        _id: persons/clemens-neudecker
+                    -
+                        value: '8090'
+                        _id: persons/eirini-kaldeli
+                    -
+                        value: '7465'
+                        _id: persons/sebastian-majstorovic
+                    -
+                        value: '830'
+                        _id: persons/gregory-markus
+                    -
                         value: '200'
                         _id: persons/henk-alkemade
                     -
-                        value: '1874'
-                        _id: persons/steven-claeyssens
+                        value: '704'
+                        _id: persons/georgia-angelaki
                     -
-                        value: '2410'
-                        _id: persons/adina-ciocoiu
+                        value: '5837'
+                        _id: persons/tiziana-lombardo
                     -
-                        value: '8279'
-                        _id: persons/miruna-gaman
-                    -
-                        value: '4598'
-                        _id: persons/lindita-lohja
-                    -
-                        value: '7333'
-                        _id: persons/laura-ioana-luca
-                    -
-                        value: '5639'
-                        _id: persons/valerie-madoka-naito
-                    -
-                        value: '7098'
-                        _id: persons/antonio-davide-madonna
-                    -
-                        value: '7510'
-                        _id: persons/sorina-neacsu
+                        value: '799'
+                        _id: persons/glen-robson
                     -
                         value: '5994'
                         _id: persons/fred-saunderson
                     -
-                        value: '5251'
-                        _id: persons/loa-steinunn-kristjansdottir
+                        value: '7941'
+                        _id: persons/matias-katajavaara-seidler
                     -
-                        value: '306'
-                        _id: persons/marco-streefkerk
+                        value: '7844'
+                        _id: persons/ines-vodopivec
                     -
-                        value: '1619'
-                        _id: persons/corinne-szteinsznaider
+                        value: '6695'
+                        _id: persons/evelien-hauwaerts
+                    -
+                        value: '4659'
+                        _id: persons/isabel-crespo
+                    -
+                        value: '2410'
+                        _id: persons/adina-ciocoiu
+                    -
+                        value: '2394'
+                        _id: persons/harry-verwayen
+                    -
+                        value: '2362'
+                        _id: persons/valentine-charles
+                    -
+                        value: '2404'
+                        _id: persons/antoine-isaac
+                    -
+                        value: '2389'
+                        _id: persons/julia-fallon
+                    -
+                        value: '4658'
+                        _id: persons/nicholas-jarrett
+                    -
+                        value: '2395'
+                        _id: persons/gina-van-der-linden
                 filter_posts: ''
                 selected_posts: ''
                 filter_data: ''
@@ -5510,7 +5665,7 @@ pages:
                 subtitle: ''
                 anchortitle: 'Timetable and process'
                 templates: body
-                body: "<p><strong>Deadline</strong></p>\r\n\r\n<p dir=\"ltr\"><strong>The Call for proposals for the Europeana 2022 conference has closed</strong>.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">We will review proposals in order of submission.</p>\r\n\r\n<p dir=\"ltr\"><strong>First notice&nbsp;</strong></p>\r\n\r\n<p dir=\"ltr\">You will receive a first notice end of June 2022 if your proposal meets the conditions to be taken into account for final selection.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Final notice</strong></p>\r\n\r\n<p dir=\"ltr\">You will get a final notice if your proposal has been selected by mid - late July 2022. We will provide brief feedback on proposals which are not selected.</p>\r\n\r\n<p dir=\"ltr\"><strong>Training and checks</strong></p>\r\n\r\n<p dir=\"ltr\">Organisers of selected proposals will receive a short voluntary training session and will be asked to participate in a mandatory technical check in September 2022.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">If you have questions, doubts or you want to withdraw your proposal, for whatever reason, please contact our <a href=\"mailto:events@europeana.eu\">events team</a> (<a href=\"mailto:events@europeana.eu\">events@europeana.eu</a>).</p>\r\n"
+                body: "<h3><meta charset=\"utf-8\" /><strong>Deadline</strong></h3>\r\n\r\n<p dir=\"ltr\">The deadline for the call for proposals is 30 May 2023, 23:59 CEST.</p>\r\n\r\n<h3 dir=\"ltr\"><strong>First notice&nbsp;</strong></h3>\r\n\r\n<p dir=\"ltr\">You will receive a first notice by the end of June 2023 if your proposal meets the conditions to be taken into account for final selection.&nbsp;</p>\r\n\r\n<h3 dir=\"ltr\"><strong>Final notice</strong></h3>\r\n\r\n<p dir=\"ltr\">You will get a final notice if your proposal has been selected by mid - late July 2023. We will provide brief feedback on proposals which are not selected.</p>\r\n\r\n<h3 dir=\"ltr\"><strong>Training and checks for online presentations</strong></h3>\r\n\r\n<p dir=\"ltr\">Authors of selected proposals will receive a short, voluntary training session and will be asked to participate in a mandatory technical check in September 2023.&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5523,7 +5678,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5568,7 +5723,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest_unpaged
                 sources: posts
@@ -5600,7 +5755,7 @@ pages:
                 subtitle: ''
                 anchortitle: Formats
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" />There are numerous ways to facilitate interaction in a hybrid event. The examples below are not a list of options that you have to choose from, but are intended to help you think of ways to maximise the impact of your contribution to Europeana 2022. The main criterion for choosing a format is the impact you want to make with your contribution.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Please note: The parallel sessions will be hybrid, which means people in the room and people online will attend your session.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Do you want participants to learn something from you? Do you want to learn from them? Do you want to raise the profile of a certain topic by encouraging discussions? Do you want participants to experience a thought process?</p>\r\n\r\n<p dir=\"ltr\">Explore some suggestions below.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">The format examples below are intended to help you think of ways to maximise the impact of your contribution to EuropeanaTech. The main criterion for choosing a format is the impact you want to make with your contribution.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Do you want participants to learn something from you? Do you want to learn from them? Do you want to raise the profile of a certain topic by encouraging discussions? Do you want participants to experience a thought process?</p>\r\n\r\n<p dir=\"ltr\">We welcome four different types of submissions:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">‘Paper’ format (15min + 5min discussion) - Talk/Presentation or demo etc.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">‘Lightning’ format (5min) - Lightning Talk or demo etc.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">‘Moderated’ discussions (45 min) - Presentations followed by a panel, Q&amp;A sessions</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">‘Workshop’ format (2h-4h) (Only Tuesday, 10 October) - Workshop or tutorial etc. Please note that this format can only be run on site, not in a hybrid or online form.</p>\r\n    </li>\r\n</ul>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5613,7 +5768,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5640,7 +5795,7 @@ pages:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: Formats
                 subtitle: ''
                 anchortitle: ''
@@ -5658,7 +5813,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5686,11 +5841,11 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: Contact
+                title: 'Submit your proposal'
                 subtitle: ''
-                anchortitle: Contact
-                templates: body
-                body: "<p><meta charset=\"utf-8\" />For all other questions,&nbsp;<b> </b>please contact the <a href=\"mailto:events@europeana.eu\">events team</a>.</p>\r\n"
+                anchortitle: 'Submit your proposal'
+                templates: calltoactioninline
+                body: ''
                 image:
                     file: ''
                     title: ''
@@ -5703,7 +5858,55 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1149'
+                        _id: resources/europeanatech-2023-call-for-proposals-pretalx-link
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Contact
+                subtitle: ''
+                anchortitle: Contact
+                templates: body
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">If you have questions, doubts or you want to withdraw your proposal, for whatever reason, please contact our events team (<a href=\"mailto:events@europeana.eu\">events@europeana.eu</a>).</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5733,7 +5936,7 @@ pages:
     -
         slug: europeana-initiative-position-consultation-on-opportunities-offered-by-digital-technologies
         datecreated: '2020-09-09 17:14:18'
-        datechanged: '2021-04-19 11:57:11'
+        datechanged: '2023-05-25 15:44:45'
         datepublish: '2020-09-09 17:09:25'
         datedepublish: ''
         ownerid: 112
@@ -5832,7 +6035,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5880,7 +6083,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5925,7 +6128,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5970,7 +6173,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6015,7 +6218,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6060,7 +6263,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6105,7 +6308,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6137,7 +6340,7 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">While some countries have established a national strategy for digital cultural heritage, the majority of EU Member States have not, resulting in differing approaches to digital cultural heritage. For example, standardisation of data on a central level is supported by frameworks such as the Europeana Licensing Framework, however adoption of those standards is inconsistent across Member States. Equally, while the majority of EU Member States have established some form of national aggregation, a significant proportion have not, and not all aggregators are resourced appropriately.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The European sector would be strengthened if all Member States were required to design and publish strategies, which:</p>\r\n\r\n<ol>\r\n    <li>are national, multi-annual and forward-looking on digitisation and digital preservation;</li>\r\n    <li>embrace the big challenges of our times: social and economic inequalities, rising nationalism, climate change, the impact of tourism overloads in cities and fragile areas, algorithmic and Artificial Intelligence (AI) biases and resultant injustices, deep fakes, and fake news;</li>\r\n    <li>promote the adoption of standards developed in cooperation with Europeana as integral to the strategy. This should include encouraging wider uptake of the Europeana Publishing Framework, the Europeana Licensing Framework, and standards such as the Resource Description Framework (RDF) and SPARQL endpoints which are necessary to interconnect to other systems using Linked Data and APIs;</li>\r\n    <li>support and develop the role of national aggregators as capacity-building hubs, digital services’ providers, requirements and standards-setting bodies in each Member State;</li>\r\n    <li>involve the educational, creative and research communities in setting the priorities for the digitisation agenda;</li>\r\n    <li>include and address born-digital content and adopt binding measures for digital preservation;</li>\r\n    <li>adopt a human-centric and ethical approach to AI, further developed at EU level for cultural heritage and based on the European Commission’s <a href=\"https://ec.europa.eu/info/sites/info/files/commission-white-paper-artificial-intelligence-feb2020_en.pdf\"><em>White paper on Artificial Intelligence - A European approach to excellence and trust</em></a><em>;</em>&nbsp;</li>\r\n    <li>envisage DCHE biennial country reporting.</li>\r\n</ol>\r\n"
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">While some countries have established a national strategy for digital cultural heritage, the majority of EU Member States have not, resulting in differing approaches to digital cultural heritage. For example, standardisation of data on a central level is supported by frameworks such as the Europeana Licensing Framework, however adoption of those standards is inconsistent across Member States. Equally, while the majority of EU Member States have established some form of national aggregation, a significant proportion have not, and not all aggregators are resourced appropriately.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The European sector would be strengthened if all Member States were required to design and publish strategies, which:</p>\r\n\r\n<ol>\r\n    <li>are national, multi-annual and forward-looking on digitisation and digital preservation;</li>\r\n    <li>embrace the big challenges of our times: social and economic inequalities, rising nationalism, climate change, the impact of tourism overloads in cities and fragile areas, algorithmic and Artificial Intelligence (AI) biases and resultant injustices, deep fakes, and fake news;</li>\r\n    <li>promote the adoption of standards developed in cooperation with Europeana as integral to the strategy. This should include encouraging wider uptake of the Europeana Publishing Framework, the Europeana Licensing Framework, and standards such as the Resource Description Framework (RDF) and SPARQL endpoints which are necessary to interconnect to other systems using Linked Data and APIs;</li>\r\n    <li>support and develop the role of national aggregators as capacity-building hubs, digital services’ providers, requirements and standards-setting bodies in each Member State;</li>\r\n    <li>involve the educational, creative and research communities in setting the priorities for the digitisation agenda;</li>\r\n    <li>include and address born-digital content and adopt binding measures for digital preservation;</li>\r\n    <li>adopt a human-centric and ethical approach to AI, further developed at EU level for cultural heritage and based on the European Commission’s <a href=\"https://commission.europa.eu/publications/white-paper-artificial-intelligence-european-approach-excellence-and-trust_en\"><em>White paper on Artificial Intelligence - A European approach to excellence and trust</em></a><em>;</em>&nbsp;</li>\r\n    <li>envisage DCHE biennial country reporting.</li>\r\n</ol>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -6150,7 +6353,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6195,7 +6398,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6240,7 +6443,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6285,7 +6488,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6330,7 +6533,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6375,7 +6578,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6420,7 +6623,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6465,7 +6668,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6591,7 +6794,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6636,7 +6839,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6770,7 +6973,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6815,7 +7018,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6860,7 +7063,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6905,7 +7108,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6950,7 +7153,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6995,7 +7198,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7040,7 +7243,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7085,7 +7288,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7130,7 +7333,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7175,7 +7378,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7305,7 +7508,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7447,7 +7650,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7492,7 +7695,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7537,7 +7740,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7582,7 +7785,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7627,7 +7830,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7672,7 +7875,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7717,7 +7920,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7854,7 +8057,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7899,7 +8102,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7944,7 +8147,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7989,7 +8192,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -8034,7 +8237,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -8164,7 +8367,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -8212,7 +8415,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -8257,7 +8460,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -8302,7 +8505,7 @@ pages:
                 attribution_link: 'https://www.europeana.eu/en/item/2048043/ProvidedCHO_Universit_t_Osnabr_ck___Historische_Bildpostkarten_4091'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -8347,7 +8550,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -8392,7 +8595,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -8437,7 +8640,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -8485,7 +8688,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -8530,7 +8733,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -8581,7 +8784,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -8626,7 +8829,7 @@ pages:
                 attribution_link: ''
                 singlefile: Europeana_Professional/Education/reinventing_Beethoven_Digital_Brochure_(2).pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts

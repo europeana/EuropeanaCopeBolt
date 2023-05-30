@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T10:54:54+01:00'
+    date: '2023-05-30T17:30:42+02:00'
     version: 3.7.4
     platform: mysql
 events:
@@ -1409,7 +1409,7 @@ events:
     -
         slug: built-with-bits-brussels
         datecreated: '2022-05-25 16:07:09'
-        datechanged: '2022-06-01 11:01:17'
+        datechanged: '2023-04-13 11:01:33'
         datepublish: '2022-06-01 16:06:00'
         datedepublish: ''
         ownerid: 54
@@ -1481,6 +1481,9 @@ events:
             -
                 slug: event
                 name: event
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: disabled
@@ -1750,7 +1753,7 @@ events:
                 selected_resources:
                     -
                         value: ''
-                        _id: resources/eu-datathon-1
+                        _id: resources/media-literacy-competence-framework-en
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -2469,7 +2472,7 @@ events:
     -
         slug: digital-storytelling-festival-2022-closing-event
         datecreated: '2022-07-20 09:00:09'
-        datechanged: '2022-08-29 15:24:45'
+        datechanged: '2023-05-15 12:34:48'
         datepublish: '2022-07-20 08:39:09'
         datedepublish: ''
         ownerid: 54
@@ -2493,9 +2496,9 @@ events:
         teaser_attribution_country: null
         teaser_attribution_license: Public-Domain
         teaser_attribution_link: null
-        start_event: '2022-08-04 11:30:00'
+        start_event: ''
         unconfirmed_start: false
-        end_event: '2022-08-04 12:30:00'
+        end_event: ''
         unconfirmed_end: false
         image: null
         image_attribution_title: null
@@ -2584,7 +2587,7 @@ events:
                 selected_resources:
                     -
                         value: ''
-                        _id: resources/eu-datathon-1
+                        _id: resources/media-literacy-competence-framework-en
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -4391,20 +4394,20 @@ events:
     -
         slug: ena-general-assembly-2022
         datecreated: '2022-10-03 09:59:59'
-        datechanged: '2022-10-07 10:43:35'
+        datechanged: '2022-11-15 17:01:16'
         datepublish: '2022-10-03 09:59:09'
         datedepublish: ''
         ownerid: 124
         status: published
         templatefields: {  }
         title: 'ENA General Assembly 2022'
-        intro: "<p>On 3 November 2022, the Europeana Network Association (ENA) will hold its 2022 General Assembly meeting.</p>\r\n"
-        body: "<p>As we find ourselves at the brink of a new era, with Europeana at the heart of the new data space for cultural heritage, the meeting will provide an\_opportunity for ENA members to discuss ENA’s role in the data space, and how individual members and Communities can contribute.</p>\r\n\r\n<p>We will catch up on all the vital work that has taken place over this past year in the ENA and its Communities, and set the groundwork for the year to come. We are also going to launch the 2022 voting period.</p>\r\n\r\n<p>The half-day event will take place online and will be moderated by the ENA Management Board, Members Council and Community Steering Groups members. The programme includes:</p>\r\n\r\n<ul>\r\n    <li>Presentation of this year’s ENA achievements and priorities for next year in light of the European data space for cultural heritage</li>\r\n    <li>Presentation of the activity highlights and achievements of the seven ENA Communities, and their plans towards implementation of the data space</li>\r\n    <li>Approval of the formal ENA documents (annual and financial reports)</li>\r\n</ul>\r\n\r\n<p>Please note that you need to be an ENA member in order to attend this event. If you’re not a registered member yet, you still have time to <a href=\"https://pro.europeana.eu/europeana-network-association/sign-up\">sign up</a> - please make sure you do so before 3 October 2022.\_</p>\r\n"
+        intro: "<p>On 3 November 2022, the Europeana Network Association (ENA) held\_its 2022 General Assembly meeting.</p>\r\n"
+        body: null
         location_name: Online
         geolocation: null
         featured: false
         registerlink: null
-        teaser: "<p>On 3 November 2022, the Europeana Network Association (ENA) will hold its 2022 General Assembly meeting.</p>\r\n"
+        teaser: "<p>On 3 November 2022, the Europeana Network Association (ENA) held\_its 2022 General Assembly meeting.</p>\r\n"
         teaser_image:
             file: Images/Event_images/ena_agm_2022.png
             title: 'A group of people seated in a car'
@@ -4415,20 +4418,18 @@ events:
         teaser_attribution_country: Spain
         teaser_attribution_license: Public-Domain
         teaser_attribution_link: 'https://www.europeana.eu/item/2024914/photography_ProvidedCHO_Ajuntament_de_Girona_342607'
-        start_event: '2022-11-03 10:00:00'
+        start_event: ''
         unconfirmed_start: false
-        end_event: '2022-11-03 12:00:00'
+        end_event: ''
         unconfirmed_end: false
-        image:
-            alt: 'A group of people seated in a car'
-            file: Images/Event_images/ena_agm_2022_lead.png
-        image_attribution_title: '[Portrait by car]'
-        image_attribution_creator: Desconegut
-        image_attribution_date: 1920-1930
-        image_attribution_holder: 'Girona City Council'
-        image_attribution_country: Spain
-        image_attribution_license: Public-Domain
-        image_attribution_link: 'https://www.europeana.eu/item/2024914/photography_ProvidedCHO_Ajuntament_de_Girona_342607'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
         shoulddatepublish: true
         shoulddatemodified: true
         subsite: null
@@ -4440,9 +4441,7 @@ events:
         contact_name: null
         contact_email: null
         contact_website: null
-        pages:
-            - pages/news
-            - pages/europeana-network-association
+        pages: {  }
         posts: {  }
         data: {  }
         projects: {  }
@@ -4462,6 +4461,93 @@ events:
                 slug: webinar
                 name: webinar
         modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"480\" src=\"https://www.youtube.com/embed/ojUTqyH9pbA\" width=\"100%\"></iframe></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1054'
+                        _id: resources/ena-agm-2022-registration-link
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>This&nbsp;meeting&nbsp;provided an&nbsp;opportunity for ENA&nbsp;members to discuss ENA’s role in the common European&nbsp;data space for cultural heritage, and how individual members and Communities can contribute.</p>\r\n\r\n<p>Participants caught&nbsp;up on all the vital work that has taken place over this past year in the ENA and its Communities, and set the groundwork for the year to come. The event also saw the&nbsp;launch the 2022 voting period.</p>\r\n\r\n<p>The half-day event took place online and was&nbsp;moderated by the ENA Management Board, Members Council and Community Steering Groups members. The programme included:</p>\r\n\r\n<ul>\r\n    <li>Presentation of this year’s ENA achievements and priorities for next year in light of the European data space for cultural heritage</li>\r\n    <li>Presentation of the activity highlights and achievements of the seven ENA Communities, and their plans towards implementation of the data space</li>\r\n    <li>Approval of the formal ENA documents (annual and financial reports)</li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
             -
                 enabled: enabled
                 title: ''
@@ -4499,8 +4585,8 @@ events:
                 selected_events: ''
                 selected_resources:
                     -
-                        value: '1054'
-                        _id: resources/ena-agm-2022-registration-link
+                        value: '565'
+                        _id: resources/join-the-europeana-network-association-2
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -4893,7 +4979,7 @@ events:
     -
         slug: europeanatech-and-iiif-webinar
         datecreated: '2022-10-13 10:06:34'
-        datechanged: '2022-10-20 13:56:00'
+        datechanged: '2023-05-10 22:59:59'
         datepublish: '2022-10-20 09:34:00'
         datedepublish: ''
         ownerid: 54
@@ -4917,9 +5003,9 @@ events:
         teaser_attribution_country: 'United Kingdom'
         teaser_attribution_license: CC-BY
         teaser_attribution_link: 'https://www.europeana.eu/item/9200579/jdty6237'
-        start_event: '2022-11-21 13:30:00'
+        start_event: ''
         unconfirmed_start: false
-        end_event: '2022-11-21 15:00:00'
+        end_event: ''
         unconfirmed_end: false
         image:
             alt: 'Scissors evolving into a woman'
@@ -4961,51 +5047,12 @@ events:
             -
                 slug: europeanatech
                 name: europeanatech
+            -
+                slug: iiif
+                name: iiif
         modules:
             -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: body
-                body: "<p>The webinar is intended for a wide range of participants, including digital image repository managers, content curators, software developers, scholars, and administrators at libraries, museums, archives or galleries, software firms and other organisations working with digital images or audio/visual materials.</p>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                fileslistpath: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
+                enabled: disabled
                 title: ''
                 subtitle: ''
                 anchortitle: ''
@@ -5041,8 +5088,50 @@ events:
                 selected_events: ''
                 selected_resources:
                     -
-                        value: '839'
-                        _id: resources/eventbrite-registration-link-8
+                        value: ''
+                        _id: resources/media-literacy-competence-framework-en
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>The webinar is intended for a wide range of participants, including digital image repository managers, content curators, software developers, scholars, and administrators at libraries, museums, archives or galleries, software firms and other organisations working with digital images or audio/visual materials.</p>\r\n\r\n<p>Speakers:</p>\r\n\r\n<ul>\r\n    <li>Tom Miles - Using MINT to publish IIIF content on Europeana</li>\r\n    <li>Hembo Pagi - Newbie navigating around in IIIF world</li>\r\n    <li>Prof. Michalis Sfakakis - Music Score Archives of Ionian Islands (Greece) Philharmonic Bands</li>\r\n    <li>Hendrik Hameeuw - Integrating multimodal research datasets on heritage objects into a curated consultation environment on a Mirador 3 platform</li>\r\n    <li>Michael Lužný - Manuscriptorium Annotation Module</li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -5053,20 +5142,20 @@ events:
     -
         slug: europeanatech-presents-acoustics-in-cultural-heritage
         datecreated: '2022-10-13 13:23:41'
-        datechanged: '2022-10-20 13:37:33'
-        datepublish: '2022-10-14 13:20:00'
+        datechanged: '2022-12-22 10:50:45'
+        datepublish: '2022-10-15 13:20:00'
         datedepublish: ''
         ownerid: 54
         status: published
         templatefields: {  }
         title: 'EuropeanaTech presents: Acoustics in cultural heritage'
-        intro: "<p>This webinar, organised by EuropeanaTech, will bring attention to a topic previously uncovered by EuropeanaTech but one that’s highly relevant to the cultural heritage sector: acoustics and the preservation and presentation of historic acoustic spaces.</p>\r\n"
+        intro: "<p>This webinar, organised by EuropeanaTech, highlights a topic highly relevant to the cultural heritage sector: acoustics and the preservation and presentation of historic acoustic spaces.</p>\r\n"
         body: null
         location_name: Online
         geolocation: null
         featured: false
         registerlink: null
-        teaser: "<p>This webinar, organised by EuropeanaTech, will bring attention to a topic previously uncovered by EuropeanaTech but one that’s highly relevant to the cultural heritage sector: acoustics and the preservation and presentation of historic acoustic spaces.</p>\r\n"
+        teaser: "<p>This webinar, organised by EuropeanaTech, highlights a topic highly relevant to the cultural heritage sector: acoustics and the preservation and presentation of historic acoustic spaces.</p>\r\n"
         teaser_image:
             file: Images/Event_images/EuropeanaTech-presents600x400.jpg
             title: 'The interior of Notre-Dame, a large vaulted church'
@@ -5077,20 +5166,18 @@ events:
         teaser_attribution_country: Belgium
         teaser_attribution_license: Public-Domain
         teaser_attribution_link: 'https://www.europeana.eu/item/2058401/_providedCHO_390dc628_740a_f88a_1ef7_2f3b397c27f9'
-        start_event: '2022-11-15 10:30:00'
+        start_event: ''
         unconfirmed_start: false
-        end_event: '2022-11-15 12:00:00'
+        end_event: ''
         unconfirmed_end: false
-        image:
-            alt: 'The interior of Notre-Dame, a large vaulted church'
-            file: Images/Event_images/EuropeanaTech-presents1240x600.jpg
-        image_attribution_title: 'Intérieur de Notre-Dame de Paris'
-        image_attribution_creator: 'Philippon, Charles'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
         image_attribution_date: null
-        image_attribution_holder: 'Collectie Herman Maes'
-        image_attribution_country: Belgium
-        image_attribution_license: Public-Domain
-        image_attribution_link: 'https://www.europeana.eu/item/2058401/_providedCHO_390dc628_740a_f88a_1ef7_2f3b397c27f9'
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
         shoulddatepublish: true
         shoulddatemodified: true
         subsite: null
@@ -5121,6 +5208,9 @@ events:
             -
                 slug: europeanatech
                 name: europeanatech
+            -
+                slug: acoustics
+                name: acoustics
         modules:
             -
                 enabled: enabled
@@ -5128,49 +5218,7 @@ events:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p>Acoustic analysis not a new technique - it's been around for millenia.&nbsp;Just think of a Greek amphitheater or any cathedral; these spaces are purposefully designed to amplify and control sound. And today, measuring, recording, analysing and modifying spaces to ensure perfect acoustics is widely practiced -&nbsp;consider any modern concert hall, for instance.</p>\r\n\r\n<p>These techniques and technologies offer endless opportunities for cultural heritage as well, firstly from a preservation point of view. Researchers across the world are recording and documenting the acoustic profile of historic spaces to ensure that their characteristics can live on should these spaces be demolished, altered or sadly, destroyed whether by conflict or climate change. Secondly, once these spaces are documented, modern technologies can allow the sound of these spaces to be reused by musicians and sound designers without them having to visit these specific sites; or they can be presented in different virtual exhibitions, offering visitors the opportunity to exist in these historic spaces from their own home with just a pair of a headphones. Lastly, as more research is compiled, much like the 3D imaging technology and AI offer, we will be able to recreate the sound of specific historic sites that no longer exist.</p>\r\n\r\n<p>Sound very exciting? <a href=\"https://pro.europeana.eu/page/europeanatech\">EuropeanaTech</a> think so too, and is organising this webinar&nbsp;to bring this topic and different work being done in the field to the attention of the EuropeanaTech community. Hopefully,&nbsp;by spotlighting this topic, the highly multidisciplinary EuropeanaTech community can start to bring in different field of expertise to this growing field, especially data modeling, semantics, Linked Open Data and the wide-variety of work happening within 3D.</p>\r\n\r\n<p>This event is free to attend online and open to the EuropeanaTech community and&nbsp;anyone interested to join! More questions or feedback please contact <a href=\"https://pro.europeana.eu/person/gregory-markus\">Gregory Markus</a> and <a href=\"https://pro.europeana.eu/person/andrija-sagic\">Andrija Sagic</a>.</p>\r\n\r\n<p><strong>Speakers</strong></p>\r\n\r\n<ul>\r\n    <li>Pamela Jordan (University of Amsterdam)</li>\r\n    <li>Ronald Haynes (Cambridge University / IIIF 3D)&nbsp;</li>\r\n    <li>Aglaia Foteinou (University of York)</li>\r\n    <li>Julien Ferrando (Aix - Marseille University)</li>\r\n</ul>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                fileslistpath: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: calltoactioninline
-                body: ''
+                body: "<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"480\" src=\"https://www.youtube.com/embed/ucozMP3X2AU\" width=\"100%\"></iframe></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5201,8 +5249,50 @@ events:
                 selected_events: ''
                 selected_resources:
                     -
-                        value: '840'
-                        _id: resources/eventbrite-registration-link-9
+                        value: ''
+                        _id: resources/media-literacy-competence-framework-en
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<h3><strong>About</strong></h3>\r\n\r\n<p>Acoustic analysis not a new technique - it's been around for millenia.&nbsp;Just think of a Greek amphitheater or any cathedral; these spaces are purposefully designed to amplify and control sound. And today, measuring, recording, analysing and modifying spaces to ensure perfect acoustics is widely practiced -&nbsp;consider any modern concert hall, for instance.</p>\r\n\r\n<p>These techniques and technologies offer endless opportunities for cultural heritage as well, firstly from a preservation point of view. Researchers across the world are recording and documenting the acoustic profile of historic spaces to ensure that their characteristics can live on should these spaces be demolished, altered or sadly, destroyed whether by conflict or climate change. Secondly, once these spaces are documented, modern technologies can allow the sound of these spaces to be reused by musicians and sound designers without them having to visit these specific sites; or they can be presented in different virtual exhibitions, offering visitors the opportunity to exist in these historic spaces from their own home with just a pair of a headphones. Lastly, as more research is compiled, much like the 3D imaging technology and AI offer, we will be able to recreate the sound of specific historic sites that no longer exist.</p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/page/europeanatech\">EuropeanaTech</a>&nbsp;organised&nbsp;this webinar&nbsp;to bring this topic and different work being done in the field to the attention of the EuropeanaTech community. Hopefully,&nbsp;by spotlighting this topic, the highly multidisciplinary EuropeanaTech community can start to bring in different field of expertise to this growing field, especially data modeling, semantics, Linked Open Data and the wide-variety of work happening within 3D. The webinar took place on 15 November 2022.&nbsp;</p>\r\n\r\n<p>For more questions or feedback please contact <a href=\"https://pro.europeana.eu/person/gregory-markus\">Gregory Markus</a> and <a href=\"https://pro.europeana.eu/person/andrija-sagic\">Andrija Sagic</a>.</p>\r\n\r\n<h3><strong>Speakers</strong></h3>\r\n\r\n<ul>\r\n    <li>Pamela Jordan (University of Amsterdam)</li>\r\n    <li>Ronald Haynes (Cambridge University / IIIF 3D)&nbsp;</li>\r\n    <li>Aglaia Foteinou (University of York)</li>\r\n    <li>Julien Ferrando (Aix - Marseille University)</li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -5328,20 +5418,20 @@ events:
     -
         slug: how-to-build-your-storytelling-skills-and-start-writing-for-europeana
         datecreated: '2022-10-14 09:54:51'
-        datechanged: '2022-10-14 12:04:00'
+        datechanged: '2022-12-09 14:22:19'
         datepublish: '2022-10-14 09:40:00'
         datedepublish: ''
         ownerid: 54
         status: published
         templatefields: {  }
         title: 'How to build your storytelling skills and start writing for Europeana'
-        intro: "<p>Would you like to write for Europeana, sharing stories of collections and culture? Great! Let us help you! In this hands-on and interactive workshop, we’ll look at how to tell your story, as well as introduce you to the formats and processes you need to know to contribute to editorial on Europeana.eu.</p>\r\n"
+        intro: "<p>Would you like to write for Europeana, sharing stories of collections and culture? Explore the resources from\_an\_interactive workshop which explored\_how to tell your story and introduces the formats and processes you need to know to contribute to editorial on Europeana.eu.</p>\r\n"
         body: null
         location_name: Online
         geolocation: null
         featured: false
         registerlink: null
-        teaser: "<p>Would you like to write for Europeana, sharing stories of collections and culture? Great! Let us help you! In this hands-on and interactive workshop, we’ll look at how to tell your story, as well as introduce you to the formats and processes you need to know to contribute to editorial on Europeana.eu.<br>\r\n\_</p>\r\n"
+        teaser: "<p>Would you like to write for Europeana, sharing stories of collections and culture? Explore the resources from\_an\_interactive workshop which explored\_how to tell your story and introduces the formats and processes you need to know to contribute to editorial on Europeana.eu.</p>\r\n"
         teaser_image:
             file: Images/Event_images/CommsStorytellingSkills600x400.jpg
             title: 'Graffiti artwork wo Utrecht Gnomes'
@@ -5352,20 +5442,18 @@ events:
         teaser_attribution_country: Netherlands
         teaser_attribution_license: CC-BY
         teaser_attribution_link: 'https://www.europeana.eu/item/257/https___hetutrechtsarchief_nl_beeld_C2C101010F915E3290B88D7EDE71C069?lang=en'
-        start_event: '2022-11-29 10:30:00'
+        start_event: ''
         unconfirmed_start: false
-        end_event: '2022-11-29 12:00:00'
+        end_event: ''
         unconfirmed_end: false
-        image:
-            alt: 'Graffiti artwork with Utrecht Gnomes'
-            file: Images/Event_images/CommsStorytellingSkills1240x600.jpg
-        image_attribution_title: 'Image of the graffiti artwork ''Utrecht'' from 2015 with two Utrecht Gnomes (KBTRs)'
-        image_attribution_creator: 'Goosen, D.C.'
-        image_attribution_date: '2015'
-        image_attribution_holder: 'The Utrecht Archives'
-        image_attribution_country: Netherlands
-        image_attribution_license: CC-BY
-        image_attribution_link: 'https://www.europeana.eu/item/257/https___hetutrechtsarchief_nl_beeld_C2C101010F915E3290B88D7EDE71C069?lang=en'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
         shoulddatepublish: true
         shoulddatemodified: true
         subsite: null
@@ -5393,6 +5481,9 @@ events:
             -
                 slug: webinar
                 name: webinar
+            -
+                slug: communicators
+                name: communicators
         modules:
             -
                 enabled: enabled
@@ -5400,7 +5491,52 @@ events:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p>Join the team behind Europeana’s blogs, galleries, exhibitions and social media to find out how you can start contributing your own stories. Through presentations and activities we’ll do together, we’ll explore what storytelling is all about, and how you can translate your ideas into engaging and relevant stories for Europeana’s audiences.</p>\r\n"
+                body: '<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="506" src="https://www.youtube.com/embed/7h3a0hB6PzU" title="YouTube video player" width="100%"></iframe></p>'
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '730'
+                        _id: resources/eventbrite-registration-link-4
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>In this workshop, international storyteller Clare Murphy, Director of Story at Mission Critical Team Institute USA and a consultant and trainer with many organisations worldwide, and some of the team behind Europeana’s blogs, galleries, exhibitions and social media, explained how&nbsp;you can start contributing your own stories. Explore the slides and recordings to discover&nbsp;what storytelling is all about, and how you can translate your ideas into engaging and relevant stories for Europeana’s audiences.</p>\r\n\r\n<p><iframe allowfullscreen=\"true\" frameborder=\"0\" height=\"569\" mozallowfullscreen=\"true\" src=\"https://docs.google.com/presentation/d/e/2PACX-1vSu-4MAv_grqvxyN26kYslg9xsCKOzKU_D9RqAOi53lZNQou97s4Q_XY3DlYH19I5UQcG0GN3Y5XCk3/embed?start=false&amp;loop=false&amp;delayms=3000\" webkitallowfullscreen=\"true\" width=\"960\"></iframe></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5464,6 +5600,9 @@ events:
                 filter_persons: ''
                 selected_persons:
                     -
+                        value: '8713'
+                        _id: persons/clare-murphy
+                    -
                         value: '2414'
                         _id: persons/beth-daley
                     -
@@ -5490,69 +5629,24 @@ events:
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: calltoactioninline
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                fileslistpath: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '730'
-                        _id: resources/eventbrite-registration-link-4
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
         _id: events/how-to-build-your-storytelling-skills-and-start-writing-for-europeana
     -
         slug: digital-transformation-in-the-data-space-measurement-and-assessment
         datecreated: '2022-10-21 13:27:51'
-        datechanged: '2022-10-26 17:55:51'
+        datechanged: '2022-11-16 12:45:41'
         datepublish: '2022-10-21 13:26:31'
         datedepublish: ''
         ownerid: 124
         status: published
         templatefields: {  }
         title: 'Digital transformation in the data space: measurement and assessment'
-        intro: "<p>Join this\_Europeana online symposium during the Czech Presidency of the Council of the European Union to gain an understanding of how data collection can evidence and further support the digital transformation in the heritage sector.</p>\r\n"
+        intro: "<p>This\_Europeana online symposium under the auspices of the Czech Presidency of the Council of the European Union explored how data collection can evidence and further support the digital transformation in the heritage sector.</p>\r\n"
         body: null
         location_name: Online
         geolocation: null
         featured: false
         registerlink: null
-        teaser: "<p>Join this\_Europeana online symposium during the Czech Presidency of the Council of the European Union.</p>\r\n"
+        teaser: "<p>This\_Europeana online symposium under the auspices of the Czech Presidency of the Council of the European Union explored how data collection can evidence and further support the digital transformation in the heritage sector.</p>\r\n"
         teaser_image:
             file: Images/Event_images/cz_presidency_teaser.jpg
             title: 'Depiction of a stage with build structures with rounded doorways'
@@ -5563,19 +5657,17 @@ events:
         teaser_attribution_country: 'Česká republika'
         teaser_attribution_license: CC-BY
         teaser_attribution_link: null
-        start_event: '2022-11-11 09:00:00'
+        start_event: ''
         unconfirmed_start: false
-        end_event: '2022-11-11 12:00:00'
+        end_event: ''
         unconfirmed_end: false
-        image:
-            alt: 'An image of flowers with a blue overlay and the text: DIGITAL TRANSFORMATION IN THE DATA SPACE:   MEASUREMENT AND ASSESSMENT  A Europeana Symposium during the Czech Presidency of the Council of the EU. 11 NOVEMBER 2022 | ONLINE'
-            file: Images/Event_images/cz_presidency_lead.jpg
-        image_attribution_title: 'Bavlněný tištěný šátek'
-        image_attribution_creator: 'Mgr. Tauberová Monika'
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
         image_attribution_date: null
-        image_attribution_holder: 'Historické muzeum'
-        image_attribution_country: 'Česká republika'
-        image_attribution_license: CC-BY
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
         image_attribution_link: null
         shoulddatepublish: true
         shoulddatemodified: true
@@ -5611,49 +5703,7 @@ events:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p>This Europeana online symposium during the Czech Presidency of the Council of the EU will explore challenges and opportunities around data collection, and how this could help to evidence, and better support, the digital transformation of cultural heritage institutions. You will be introduced to and hear perspectives on indicators and measurements of digital transformation, and the reuse of collections, from important datasets including ENUMERATE.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Join members of the European Commission’s Expert Group on a common European data space for cultural heritage, relevant representatives from ministries of culture and cultural heritage institutions and other professionals<meta charset=\"utf-8\" /><b id=\"docs-internal-guid-bdec72b2-7fff-8f1f-0e2d-4e887e441eb2\">&nbsp;</b>to hear about:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">What more holistic indicators to help measure digital transformation might look like, and what we can do to address the data gaps.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">How we can work in partnership at different levels (from the EU to the institutional level) to create a richer picture of digital transformation.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">How we can emphasise care and value for the institutions that share their data, and how we can be most ethical and environmentally friendly.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">How we can move towards seeing data collection not just as a one-off, but a continued and mutually beneficial activity.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">How we can create greater social and economic impact for the sector and for society through better policy-making, more targeted support, and greater opportunities for the re-use of digital heritage data.</p>\r\n    </li>\r\n</ul>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                fileslistpath: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: calltoactioninline
-                body: ''
+                body: "<p><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"480\" src=\"https://www.youtube.com/embed/c_RHZtTU87E\" width=\"100%\"></iframe></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5692,26 +5742,192 @@ events:
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>This Europeana online symposium under the auspices of the Czech Presidency of the Council of the EU explored challenges and opportunities around data collection, and how this could help to evidence, and better support, the digital transformation of cultural heritage institutions. Attendees were introduced to&nbsp;perspectives on indicators and measurements of digital transformation, and the reuse of collections, from important datasets including ENUMERATE.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Members of the European Commission’s Expert Group on a common European data space for cultural heritage, relevant representatives from ministries of culture and cultural heritage institutions and other professionals<meta charset=\"utf-8\" /><b id=\"docs-internal-guid-bdec72b2-7fff-8f1f-0e2d-4e887e441eb2\">&nbsp;</b>attended to discuss:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">What more holistic indicators to help measure digital transformation might look like, and what we can do to address the data gaps.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">How we can work in partnership at different levels (from the EU to the institutional level) to create a richer picture of digital transformation.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">How we can emphasise care and value for the institutions that share their data, and how we can be most ethical and environmentally friendly.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">How we can move towards seeing data collection not just as a one-off, but a continued and mutually beneficial activity.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">How we can create greater social and economic impact for the sector and for society through better policy-making, more targeted support, and greater opportunities for the re-use of digital heritage data.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\" role=\"presentation\">You can view the programme <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Event_documentation/Events/Presidency/CzechRepublic-Presidency-2022-Digital-Programme-public.pdf\" target=\"_blank\">here</a>.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Speakers
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnails
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: specified
+                sources: persons
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons:
+                    -
+                        value: '7248'
+                        _id: persons/hannah-baker-hitzhusen
+                    -
+                        value: '1402'
+                        _id: persons/agata-krawczyk
+                    -
+                        value: '8675'
+                        _id: persons/nada-machkova-prajzova
+                    -
+                        value: '2376'
+                        _id: persons/nicole-mcneilly
+                    -
+                        value: '5451'
+                        _id: persons/fiona-mowat
+                    -
+                        value: '8714'
+                        _id: persons/katerina-moutogianni
+                    -
+                        value: '7887'
+                        _id: persons/kristine-paberza-ramirez
+                    -
+                        value: '8676'
+                        _id: persons/pille-pruulmann-vengerfeldt
+                    -
+                        value: '5959'
+                        _id: persons/rehana-schwinninger-ladak
+                    -
+                        value: '4471'
+                        _id: persons/eva-stengard
+                    -
+                        value: '560'
+                        _id: persons/frederik-truyen
+                    -
+                        value: '8003'
+                        _id: persons/olga-tykhonova
+                    -
+                        value: '2394'
+                        _id: persons/harry-verwayen
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Profant Ondřej - Deputy Minister for Digitisation, Ministry of Regional Development, Czech Republic</p>\r\n    </li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
         _id: events/digital-transformation-in-the-data-space-measurement-and-assessment
     -
         slug: how-to-prepare-an-application-for-the-european-heritage-awards-europa-nostra-awards-2023
         datecreated: '2022-10-26 10:25:08'
-        datechanged: '2022-10-26 10:25:28'
-        datepublish: '2022-10-26 09:21:03'
+        datechanged: '2022-10-27 13:00:08'
+        datepublish: '2022-10-27 09:21:00'
         datedepublish: ''
         ownerid: 54
-        status: draft
+        status: published
         templatefields: {  }
         title: 'How to prepare an application for the European Heritage Awards / Europa Nostra Awards 2023'
-        intro: "<p>This webinar is organised by Europa Nostra</p>\r\n\r\n<p>Are you interested in applying for the European Heritage Awards / Europa Nostra Awards 2023?</p>\r\n\r\n<p></p>\r\n"
-        body: "<p>The Awards department of Europa Nostra will host a webinar to explain the selection procedure in more detail and provide tips on how to best present a project and avoid common errors in preparing the application.</p>\r\n\r\n<p>Participants will have some time to ask questions at the end of the event.</p>\r\n\r\n<p>Please <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSf6iTG74hlC8aLQu9fyqjDdrS2aVivHBJcPPjO0KINyR5I53w/viewform\" target=\"_blank\">register</a> by Sunday, 6 November 2022. Places are limited.</p>\r\n"
+        intro: "<p>Are you interested in applying for the European Heritage Awards / Europa Nostra Awards 2023? This webinar, organised by Europa Nostra, will explain the process.\_</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
+        body: "<p>The Awards department of Europa Nostra will host a webinar to explain the selection procedure\_for the European Heritage Awards / Europa Nostra Awards 2023 in more detail and provide tips on how to best present a project and avoid common errors in preparing the application.</p>\r\n\r\n<p>Participants will have some time to ask questions at the end of the event.</p>\r\n\r\n<p>Please <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSf6iTG74hlC8aLQu9fyqjDdrS2aVivHBJcPPjO0KINyR5I53w/viewform\" target=\"_blank\">register</a> by Sunday, 6 November 2022. Places are limited.</p>\r\n"
         location_name: Online
         geolocation: null
         featured: false
         registerlink: null
-        teaser: "<p>This webinar is organised by Europa Nostra</p>\r\n\r\n<p>Are you interested in applying for the European Heritage Awards / Europa Nostra Awards 2023?</p>\r\n"
+        teaser: "<p>Are you interested in applying for the European Heritage Awards / Europa Nostra Awards 2023? This webinar, organised by Europa Nostra, will explain the process.\_</p>\r\n"
         teaser_image:
             file: Images/Event_images/EuropaNostraAwards2022-600x400.jpg
+            title: 'Awards banner'
         teaser_attribution_title: 'Europa Nostra'
         teaser_attribution_creator: null
         teaser_attribution_date: null
@@ -5724,6 +5940,7 @@ events:
         end_event: '2022-11-07 19:00:00'
         unconfirmed_end: false
         image:
+            alt: 'Awards banner'
             file: Images/Event_images/EuropaNostraAwards2022-1240x600.jpg
         image_attribution_title: 'Europa Nostra'
         image_attribution_creator: null
@@ -5732,8 +5949,8 @@ events:
         image_attribution_country: null
         image_attribution_license: CC-BY-SA
         image_attribution_link: null
-        shoulddatepublish: false
-        shoulddatemodified: false
+        shoulddatepublish: true
+        shoulddatemodified: true
         subsite: null
         template: null
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
@@ -5759,9 +5976,6 @@ events:
             -
                 slug: webinar
                 name: webinar
-            -
-                slug: webinars
-                name: webinars
         modules:
             -
                 enabled: disabled
@@ -5809,22 +6023,23 @@ events:
     -
         slug: memex-memories-and-experiences-for-inclusive-digital-storytelling
         datecreated: '2022-10-26 10:37:24'
-        datechanged: '2022-10-26 10:40:45'
-        datepublish: '2022-10-26 10:26:17'
+        datechanged: '2022-11-03 16:21:09'
+        datepublish: '2022-10-28 10:26:00'
         datedepublish: ''
         ownerid: 54
-        status: draft
+        status: published
         templatefields: {  }
         title: 'MEMEX- MEMories and EXperiences for inclusive digital storytelling'
-        intro: "<p>This event is organised by\_MEMEX Project H2020</p>\r\n\r\n<p>The MEMEX project was launched in 2019 to develop artificial intelligence and augmented reality technologies able to help the social inclusion of people who risk being marginalised, by promoting their personal stories linked to cultural heritage via digital tools.</p>\r\n"
-        body: "<p>The project's main achievement is represented by a new mobile app prototype that has been co-created and tested in Paris’ most vulnerable residents of the 19th district, in Barcelona by migrant women, and in Lisbon by first and second-generation migrants. Coordinated by the Italian Institute of Technology (Genoa, Italy), the project relied on the joint expertise of socio-cultural actors, universities, research institutes, NGOs and tech companies in Italy, Spain, Portugal, Ireland, France and Belgium!</p>\r\n\r\n<p>In Lisbon, Barcelona and Paris participants were engaged by the MEMEX project’s partners in a digital storytelling journey to reinforce inclusion and cultural participation. Participants visited local heritage through guided tours, reflected on these places, then identified the topics and wrote their stories, by also co-creating audio-visual stories. Their participation was key to re-interpreting existing heritage and co-creating plural meanings of it.</p>\r\n\r\n<p>The Final Event of the MEMEX project will serve to showcase the results achieved and, based on the above, it is structured in two initial sessions that tackle the two main strands of the project: on the one hand, digital storytelling to reinterpret cultural heritage and, on the other, technology to foster access to cultural heritage. To provide a problematized approach, each session will be centred on the questions around which the project has evolved.<br>\r\nThe event will close with the European Policy round table: \"Community inclusion through cultural resources and technology \" which will feature a conversation with experts from the global network of local governments for culture and from the communications and technology sectors who will give us their feedback on the research results of the MEMEX project and on their policy implications. A MEMEX exhibition is presented in the context of the \_LOOP Festival until 23 December.</p>\r\n\r\n<p>For more information, please visit the <a href=\"https://memexproject.eu/en/events/memex-events/final-event\" target=\"_blank\">website</a>. Or register directly <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSegtdt0mfJLbilz6ZctdOLtkW8YNCT_r2-yBIO1PouPcFLcbA/viewform\" target=\"_blank\">here</a>.</p>\r\n"
+        intro: "<p>This final\_event of the MEMEX project will showcase the project results. It is organised by\_MEMEX Project H2020.</p>\r\n\r\n<p></p>\r\n"
+        body: "<p>The MEMEX project was launched in 2019 to develop artificial intelligence and augmented reality technologies able to help the social inclusion of people who risk being marginalised, by promoting their personal stories linked to cultural heritage via digital tools.</p>\r\n\r\n<p>The project's main achievement is represented by a new mobile app prototype that has been co-created and tested in Paris’ most vulnerable residents of the 19th district, in Barcelona by migrant women, and in Lisbon by first and second-generation migrants. Coordinated by the Italian Institute of Technology (Genoa, Italy), the project relied on the joint expertise of socio-cultural actors, universities, research institutes, NGOs and tech companies in Italy, Spain, Portugal, Ireland, France and Belgium!</p>\r\n\r\n<p>In Lisbon, Barcelona and Paris participants were engaged by the MEMEX project’s partners in a digital storytelling journey to reinforce inclusion and cultural participation. Participants visited local heritage through guided tours, reflected on these places, then identified the topics and wrote their stories, by also co-creating audio-visual stories. Their participation was key to re-interpreting existing heritage and co-creating plural meanings of it.</p>\r\n\r\n<p>The Final Event of the MEMEX project will serve to showcase the results achieved and, based on the above, it is structured in two initial sessions that tackle the two main strands of the project: on the one hand, digital storytelling to reinterpret cultural heritage and, on the other, technology to foster access to cultural heritage. Each session will be centred on the questions around which the project has evolved.</p>\r\n\r\n<p>The event will close with the European Policy round table 'Community inclusion through cultural resources and technology'\_which will feature a conversation with experts from the global network of local governments for culture and from the communications and technology sectors who will give us their feedback on the research results of the MEMEX project and on their policy implications. A MEMEX exhibition is presented in the context of the \_LOOP Festival until 23 December.</p>\r\n\r\n<p>For more information, please visit the <a href=\"https://memexproject.eu/en/events/memex-events/final-event\" target=\"_blank\">website</a>. Or register directly <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSegtdt0mfJLbilz6ZctdOLtkW8YNCT_r2-yBIO1PouPcFLcbA/viewform\" target=\"_blank\">here</a>.</p>\r\n"
         location_name: 'Interarts, Carrer Mallorca 272, Barcelona and Online'
         geolocation: null
         featured: false
         registerlink: null
-        teaser: "<p>This event is organised by\_MEMEX Project H2020</p>\r\n\r\n<p>The MEMEX project was launched in 2019 to develop artificial intelligence and augmented reality technologies able to help the social inclusion of people who risk being marginalised, by promoting their personal stories linked to cultural heritage via digital tools.</p>\r\n"
+        teaser: "<p>This final\_event of the MEMEX project will showcase the project results. It is organised by\_MEMEX Project H2020.</p>\r\n"
         teaser_image:
             file: Images/Event_images/MEMEXProjectH2020-600x400.jpg
+            title: 'MEMEX FINAL EVENT'
         teaser_attribution_title: 'MEMEX Project'
         teaser_attribution_creator: null
         teaser_attribution_date: null
@@ -5837,6 +6052,7 @@ events:
         end_event: '2022-11-15 19:00:00'
         unconfirmed_end: false
         image:
+            alt: 'MEMEX FINAL EVENT'
             file: Images/Event_images/MEMEXProjectH2020-1240x600.jpg
         image_attribution_title: 'MEMEX Project'
         image_attribution_creator: null
@@ -5844,6 +6060,771 @@ events:
         image_attribution_holder: null
         image_attribution_country: null
         image_attribution_license: CC-BY-NC
+        image_attribution_link: null
+        shoulddatepublish: false
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags:
+            -
+                slug: webinar
+                name: webinar
+        modules:
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: ''
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: events/memex-memories-and-experiences-for-inclusive-digital-storytelling
+    -
+        slug: europeana-subtitled-training-for-europeanatach
+        datecreated: '2022-11-04 09:54:35'
+        datechanged: '2023-05-22 14:53:02'
+        datepublish: '2022-11-04 09:34:58'
+        datedepublish: ''
+        ownerid: 54
+        status: published
+        templatefields: {  }
+        title: 'Europeana Subtitled training for EuropeanaTech'
+        intro: "<p>Join this special Europeana Subtitled and EuropeanaTech interactive training\_to learn about how subtitling and translating videos can increase the\_accessibility and inclusiveness of collections.</p>\r\n\r\n<p></p>\r\n"
+        body: null
+        location_name: Online
+        geolocation: null
+        featured: false
+        registerlink: null
+        teaser: "<p>Join this interactive training run by Europeana Subtitled and EuropeanaTech, and learn from experts on\_ASR and Machine Translation.</p>\r\n"
+        teaser_image:
+            file: 'Images/Event_images/Subtitled Tech teaser.jpg'
+        teaser_attribution_title: 'AVA_net Winter School 2017'
+        teaser_attribution_creator: 'Sebastiaan ter Burg'
+        teaser_attribution_date: null
+        teaser_attribution_holder: null
+        teaser_attribution_country: null
+        teaser_attribution_license: CC-BY
+        teaser_attribution_link: null
+        start_event: '2022-11-28 11:00:00'
+        unconfirmed_start: false
+        end_event: '2022-11-28 12:30:00'
+        unconfirmed_end: false
+        image:
+            file: 'Images/Event_images/Subtitled Tech.jpg'
+        image_attribution_title: 'AVA_net Winter School 2017'
+        image_attribution_creator: 'Sebastiaan ter Burg'
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: CC-BY
+        image_attribution_link: null
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags:
+            -
+                slug: webinar
+                name: webinar
+            -
+                slug: webinars
+                name: webinars
+            -
+                slug: europeanatech
+                name: europeanatech
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>The Europeana website currently hosts over 330,000 videos, 770,000 sounds and 5,000 3D objects on its website. Europeana is actively working with partners on tools and services that increase the possible uses of audiovisual content.</p>\r\n\r\n<p>One of these projects is <a href=\"https://pro.europeana.eu/project/europeana-subtitled\">Europeana Subtitled</a>; a project that aims to add subtitles and translations to videos based on automatic generated subtitles that are improved by volunteers and validated by professionals, increasing accessibility and inclusiveness of collections.</p>\r\n\r\n<p>In this interactive training you will have an opportunity to:</p>\r\n\r\n<ul dir=\"ltr\">\r\n    <li role=\"presentation\">learn how machines can be trained for Automatic Speech Recognition and Machine Translation,</li>\r\n    <li role=\"presentation\">ask questions to experts in these areas</li>\r\n    <li role=\"presentation\">learn how to select suitable content and offer it for ingestion and&nbsp;</li>\r\n    <li role=\"presentation\">learn how communities and experts can contribute to improving the subtitles and translations generated by the machines.</li>\r\n</ul>\r\n\r\n<p>This training session is tailored for the <a href=\"https://pro.europeana.eu/page/europeanatech\">EuropeanaTech Community</a>, but is open for anyone else interested in this topic too.</p>\r\n\r\n<p dir=\"ltr\">Programme (times subject to change)</p>\r\n\r\n<ul dir=\"ltr\">\r\n    <li>11:00&nbsp;- 11:10&nbsp;Intro to workshop: Increasing inclusiveness of AV content with Automatic Speech Recognition (ASR) and Machine Translation (MT) by <a href=\"https://pro.europeana.eu/project/europeana-subtitled\">Europeana Subtitled</a></li>\r\n    <li>11:10 - 11:40 The Black Box of ASR and MT unravelled</li>\r\n    <li>11:40&nbsp;- 12:00 Determining the needed amount and eligibility of audiovisual content for ASR and MT</li>\r\n    <li>12:00 - 12:30 How to involve communities and experts in improving ASR and MT generated subtitles.</li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: events/europeana-subtitled-training-for-europeanatach
+    -
+        slug: europeana-subtitled-training-for-aggregators
+        datecreated: '2022-11-04 09:54:44'
+        datechanged: '2022-11-08 19:44:12'
+        datepublish: '2022-11-04 09:42:37'
+        datedepublish: ''
+        ownerid: 54
+        status: published
+        templatefields: {  }
+        title: 'Europeana Subtitled training for aggregators'
+        intro: "<p>Join this interactive training for aggregators and learn how subtitling and translating videos can increase the accessibility and inclusiveness of collections.</p>\r\n"
+        body: null
+        location_name: Online
+        geolocation: null
+        featured: false
+        registerlink: null
+        teaser: "<p>Join this interactive training for aggregators and learn how subtitling and translating videos can increase the accessibility and inclusiveness of collections.</p>\r\n"
+        teaser_image:
+            file: 'Images/Event_images/Subtitled Agg teaser.jpg'
+        teaser_attribution_title: 'AVA_net Winter School 2017'
+        teaser_attribution_creator: 'Sebastiaan ter Burg'
+        teaser_attribution_date: null
+        teaser_attribution_holder: null
+        teaser_attribution_country: null
+        teaser_attribution_license: CC-BY
+        teaser_attribution_link: null
+        start_event: '2022-11-22 13:00:00'
+        unconfirmed_start: false
+        end_event: '2022-11-22 14:30:00'
+        unconfirmed_end: false
+        image:
+            file: 'Images/Event_images/Subtitled Agg.jpg'
+        image_attribution_title: 'AVA_net Winter School 2017'
+        image_attribution_creator: 'Sebastiaan ter Burg'
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: CC-BY
+        image_attribution_link: null
+        shoulddatepublish: false
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags:
+            -
+                slug: webinar
+                name: webinar
+            -
+                slug: webinars
+                name: webinars
+            -
+                slug: aggregators
+                name: aggregators
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">The Europeana website currently hosts over 330,000 videos, 770,000 sounds and 5,000 3D objects on its website. Europeana is actively working with partners on tools and services that increase the possible uses of audiovisual content.</p>\r\n\r\n<p dir=\"ltr\">One of these projects is<a href=\"https://pro.europeana.eu/project/europeana-subtitled\"> Europeana Subtitled</a>; a project that aims to add subtitles and translations to videos based on automatic generated subtitles that are improved by volunteers and validated by professionals, increasing accessibility and inclusiveness of collections.</p>\r\n\r\n<p dir=\"ltr\">In this interactive training you will have an opportunity to:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">learn how machines can be trained for Automatic Speech Recognition and Machine Translation</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">ask questions to experts in these areas</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">learn how to select suitable content and offer it for ingestion and&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">learn how communities and experts can contribute to improving the subtitles and translations generated by the machines.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">This training session is tailored for aggregators, but is open for others interested too. A<a href=\"https://pro.europeana.eu/event/europeana-subtitled-training-for-europeanatach\"> similar session will run one week later</a>, tailored for the EuropeanaTech community.</p>\r\n\r\n<p dir=\"ltr\">Programme (times subject to change)</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">14:00 - 14:10 Intro to workshop: Increasing inclusiveness of AV content with Automatic Speech Recognition (ASR) and Machine Translation (MT) by<a href=\"https://pro.europeana.eu/project/europeana-subtitled\"> Europeana Subtitled</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">14:10 - 14:40 The Black Box of ASR and MT unravelled</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">14:40 - 15:00 Determining the needed amount and eligibility of audiovisual content for ASR and MT</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">15:00 - 15:30 How to involve communities and experts in improving ASR and MT generated subtitles.</p>\r\n    </li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '731'
+                        _id: resources/eventbrite-registration-link-5
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: events/europeana-subtitled-training-for-aggregators
+    -
+        slug: europeana-research-community-cafe-odeuropa-new-approaches-to-olfactory-heritage
+        datecreated: '2022-11-14 13:20:08'
+        datechanged: '2022-11-14 17:08:53'
+        datepublish: '2022-11-14 13:17:13'
+        datedepublish: ''
+        ownerid: 54
+        status: published
+        templatefields: {  }
+        title: 'Europeana Research Community Café - Odeuropa. New approaches to olfactory heritage'
+        intro: "<p>In this Europeana Research Community café, guest speaker Inger Leemans (Full Professor of Cultural History at Vrije Universiteit Amsterdam and Director of NL-Lab at KNAW) will discuss the potential\_of\_hackathons within a research project like Odeuropa.</p>\r\n"
+        body: null
+        location_name: Online
+        geolocation: null
+        featured: false
+        registerlink: null
+        teaser: "<p>In this Europeana Research Community café, guest speaker Inger Leemans will discuss the potential\_of a hackathon within a research project like Odeuropa.\_</p>\r\n"
+        teaser_image:
+            file: Images/Event_images/Research-Community-Cafe600x400.png
+            title: Cafe
+        teaser_attribution_title: 'Imperator Leipzig: Café-Cabaret-Diele : Windmühlen-Str. 31'
+        teaser_attribution_creator: null
+        teaser_attribution_date: null
+        teaser_attribution_holder: 'Leibniz-Institut für Länderkunde e. V.'
+        teaser_attribution_country: Germany
+        teaser_attribution_license: CC-BY-NC-SA
+        teaser_attribution_link: 'https://www.europeana.eu/en/item/202/item_DEE7CHFWT4R5KIOGVOY2RYHIIRIJJTEQ'
+        start_event: '2022-11-23 13:00:00'
+        unconfirmed_start: false
+        end_event: '2022-11-23 13:45:00'
+        unconfirmed_end: false
+        image:
+            alt: Cafe
+            file: Images/Event_images/ResearchCommunityCafe1240x600.png
+        image_attribution_title: 'Imperator Leipzig: Café-Cabaret-Diele : Windmühlen-Str. 31'
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: 'Leibniz-Institut für Länderkunde.'
+        image_attribution_country: Germany
+        image_attribution_license: CC-BY-NC-SA
+        image_attribution_link: 'https://www.europeana.eu/en/item/202/item_DEE7CHFWT4R5KIOGVOY2RYHIIRIJJTEQ'
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: academic-research
+                name: 'Academic Research'
+        categories: {  }
+        tags:
+            -
+                slug: webinar
+                name: webinar
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<h3><strong>About&nbsp;</strong></h3>\r\n\r\n<p>The&nbsp;<a href=\"https://pro.europeana.eu/page/europeana-research\">Europeana Research Community</a> has 2,600 members who work in the cultural heritage sector, higher education and research. There is a lot of potential in community members sharing experiences, new ideas, project results and tips from across Europe and beyond.</p>\r\n\r\n<p>To foster interaction between members and encourage more people to join the Community, the Research Community Steering Group is delighted to organise the Europeana Research Community Cafés. At these informal events, a guest speaker will introduce some themes for each Café, with a common thread around the opportunities that digitised and born digital cultural heritage bring to research and higher education. Join and bring your voice to a wide community of professionals - register for our third Café below!</p>\r\n\r\n<p>The Europeana Research Community Cafés are open to everyone and will not be recorded.</p>\r\n\r\n<h3><strong>Speaker</strong></h3>\r\n\r\n<p>At this Café, speaker Inger Leemans will present new scientific approaches and upgrades to&nbsp;existing artificial intelligence methods for&nbsp;analysing historical texts and art collections. The <a href=\"https://pro.europeana.eu/page/research-community-video-series-odeuropa\">Odeuropa project</a> develops and tests a 'computer nose', for the recognition of the most probable smells of scenes depicted in artistic paintings and described in historical texts.</p>\r\n\r\n<p>Most recently, the Odeuropa project organised a hackathon, which addressed the sense of smell and the historical significance of smells with the aim of promoting and connecting European cultural heritage.</p>\r\n\r\n<h3><strong>Host</strong></h3>\r\n\r\n<p>Dr Ines Vodopivec, Deputy Director at the National and University Library of Slovenia.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '741'
+                        _id: resources/eventbrite-registration-link-6
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: events/europeana-research-community-cafe-odeuropa-new-approaches-to-olfactory-heritage
+    -
+        slug: eaf-outreach-event-december2022
+        datecreated: '2022-11-15 13:38:35'
+        datechanged: '2022-12-16 09:06:25'
+        datepublish: '2022-11-15 13:34:25'
+        datedepublish: ''
+        ownerid: 54
+        status: published
+        templatefields: {  }
+        title: 'Europeana Aggregators’ Forum outreach event'
+        intro: "<p>The Europeana Aggregators’ Forum outreach event showcased\_the role of aggregators and cultural heritage institutions in collecting, maintaining, and increasing discoverability of content\_in the context of the common European data space for cultural heritage.</p>\r\n"
+        body: null
+        location_name: Online
+        geolocation: null
+        featured: false
+        registerlink: null
+        teaser: "<p>Discover\_the role of aggregators and cultural heritage institutions in collecting, maintaining\_and increasing discoverability of content\_in the context of the common European data space for cultural heritage.</p>\r\n"
+        teaser_image:
+            file: Images/Event_images/EAFoutreach2022-600x400.png
+            title: 'Stacks of paper in straw.'
+        teaser_attribution_title: 'Servizio fotografico Villa Lagarina'
+        teaser_attribution_creator: 'Monti, Paolo'
+        teaser_attribution_date: '1978'
+        teaser_attribution_holder: 'Fondazione Biblioteca Europea di Informazione e Cultura (BEIC)'
+        teaser_attribution_country: Italy
+        teaser_attribution_license: CC-BY-SA
+        teaser_attribution_link: 'https://www.europeana.eu/en/item/9200369/webclient_DeliveryManager_pid_6331119_custom_att_2_simple_viewer'
+        start_event: ''
+        unconfirmed_start: false
+        end_event: ''
+        unconfirmed_end: false
+        image: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
+        image_attribution_link: null
+        shoulddatepublish: false
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags:
+            -
+                slug: webinar
+                name: webinar
+            -
+                slug: webinars
+                name: webinars
+            -
+                slug: aggregators-forum
+                name: aggregators-forum
+        modules:
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"480\" src=\"https://www.youtube.com/embed/v7dln4-jxdk\" width=\"100%\"></iframe></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: ''
+                        _id: resources/media-literacy-competence-framework-en
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>The common European data space for cultural heritage will support Europe’s cultural sector in its digital transformation and promote the creation, use, and reuse of content in areas such as the cultural and creative sectors and tourism, as well as education and scientific research.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Aggregators will play a key role in the data space, and their active involvement is crucial for a smooth transition from digital service infrastructure to data space. In this context, the Europeana Aggregators’ Forum organised an online outreach event on the 15th of December&nbsp;from 9:45 to 12:30 CET, in English. This event focused&nbsp;on the role of the aggregators and cultural heritage institutions in collecting new content and maintaining up to date data in the context of the common European data space for cultural heritage.</p>\r\n\r\n<p dir=\"ltr\">If you work with digital cultural heritage collections, watch the recording to find out more about what the data space might mean for your organisation and your content, and to understand how your organisation can contribute to develop and benefit from the data space. Learn from aggregators about the process of aggregation, and discover ome of the practicalities, challenges and opportunities when collecting and providing content to Europeana.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><b>Event programme</b></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p>9:45-10:00: Welcome and introduction by the Europeana Aggregators’ Forum, Marie-Véronique Leroi and Kerstin Herlt (EAF)</p>\r\n\r\n<p>10:00-10:15: Keynote, Rehana Schwinninger-Ladak (DG-CONNECT)</p>\r\n\r\n<p>10:15-10:30: Introduction by the Europeana Initiative, Harry Verwayen (EF), Rob Davies (ENA), Marie Véronique Leroi (EAF)</p>\r\n\r\n<p>10:30-10:45: Use case from one aggregator describing the process from onboarding to data processing and maintaining this process, Cosmina Berta (DDB)</p>\r\n\r\n<p>10:45-11:00: Break</p>\r\n\r\n<p>11:00- 11:30: Panel I: Collecting and maintaining data and networks from past to present. Panel members: Marzia Piccininno (MUSEU), Jelena Bilic (eKultura), Henk Alkemade (CARARE), Cosmina Berta (DDB)</p>\r\n\r\n<p>11:30-11:40: Q&amp;A</p>\r\n\r\n<p>11:40-12:10: Panel II: Expanding networks and collections for the data space. Panel members: Valentina Bachi (Photoconsortium), Julia Welter (EFG), Kerstin Arnold (APEF), Marie-Véronique Leroi (Moteur Collections)</p>\r\n\r\n<p>12:10-12:20: Q&amp;A</p>\r\n\r\n<p>12:20-12:30: Conclusions</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: disabled
+                title: Speakers
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnails
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: specified
+                sources: persons
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons:
+                    -
+                        value: '5959'
+                        _id: persons/rehana-schwinninger-ladak
+                    -
+                        value: '1406'
+                        _id: persons/marie-veronique-leroi
+                    -
+                        value: '860'
+                        _id: persons/kerstin-herlt
+                    -
+                        value: '4587'
+                        _id: persons/robert-davies
+                    -
+                        value: '2394'
+                        _id: persons/harry-verwayen
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: events/eaf-outreach-event-december2022
+    -
+        slug: wordings-the-language-of-fashion-heritage
+        datecreated: '2022-11-17 10:13:12'
+        datechanged: '2022-11-17 10:16:24'
+        datepublish: '2022-11-17 10:07:35'
+        datedepublish: ''
+        ownerid: 54
+        status: published
+        templatefields: {  }
+        title: '"Wordings" - The Language of Fashion heritage'
+        intro: "<p>This event is organised by EFHA</p>\r\n\r\n<p>In cultural heritage, words matter. We use them to identify artefacts and the techniques and people they represent; to describe artefacts and their meaning; to reactivate stories, re-evaluate power structures, signal moments of disruption and change.</p>\r\n"
+        body: "<p>The conference 'Wordings' wants to look at words – their social value, the complexities connected to their changing meaning and their historical and cultural context, and their ‘life’ as curatorial tools – in museological practices.</p>\r\n\r\n<p>For more information please visit the <a href=\"https://fashionheritage.eu/wordings-efha-conference-2022/\" target=\"_blank\">website</a>. Or register directly <a href=\"https://pretix.eu/EFHA/Wordings/\" target=\"_blank\">here</a>.\_</p>\r\n"
+        location_name: Online
+        geolocation: null
+        featured: false
+        registerlink: null
+        teaser: "<p>This event is organised by EFHA</p>\r\n\r\n<p>In cultural heritage, words matter. We use them to identify artefacts and the techniques and people they represent; to describe artefacts and their meaning; to reactivate stories, re-evaluate power structures, signal moments of disruption and change.</p>\r\n"
+        teaser_image:
+            file: Images/Event_images/Wordings2022-EFHA600x400.jpg
+        teaser_attribution_title: 'Box of hairpins, 1930. Courtesy of Modemuseum Hasselt'
+        teaser_attribution_creator: null
+        teaser_attribution_date: null
+        teaser_attribution_holder: null
+        teaser_attribution_country: null
+        teaser_attribution_license: null
+        teaser_attribution_link: null
+        start_event: '2022-12-12 14:00:00'
+        unconfirmed_start: false
+        end_event: '2022-12-13 17:30:00'
+        unconfirmed_end: false
+        image:
+            file: Images/Event_images/Wordings2022-EFHA1240x600.jpg
+        image_attribution_title: 'Box of hairpins, 1930. Courtesy of Modemuseum Hasselt'
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
         image_attribution_link: null
         shoulddatepublish: false
         shoulddatemodified: false
@@ -5918,4 +6899,234 @@ events:
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
-        _id: events/memex-memories-and-experiences-for-inclusive-digital-storytelling
+        _id: events/wordings-the-language-of-fashion-heritage
+    -
+        slug: liber-winter-event-building-on-collaboration-for-the-future
+        datecreated: '2022-11-17 10:19:26'
+        datechanged: '2022-11-21 12:14:02'
+        datepublish: '2022-11-21 10:16:00'
+        datedepublish: ''
+        ownerid: 54
+        status: published
+        templatefields: {  }
+        title: 'LIBER Winter Event - Building on collaboration for the future'
+        intro: "<p>LIBER’s first ever Winter Event will be held in person on the 1st – 2nd of December 2022 at the Vrije Universiteit Amsterdam. The event is organised by LIBER.</p>\r\n"
+        body: "<p>The event will be a space for participants to reconnect and gain new inspiration for a range of topics within the\_ field. It will serve as a\_forum for the presentation and discussion of work undertaken by LIBER Working Groups and Steering Committees. Work that is carried out through the International Projects in which LIBER is involved as a partner will also be showcased.</p>\r\n\r\n<p>Europeana is represented in LIBER by the Research Coordinator who is a member of the <a href=\"https://libereurope.eu/working-group/digital-scholarship-and-digital-cultural-heritage-collections-working-group/\">LIBER Digital Scholarship and Digital Cultural Heritage Collections Working Group.</a>\_The WG will run the workshop 'Prototyping a collaborative and sustainable training hub for supporting LIBER Member skills development in digital scholarship, digital cultural heritage and data science.'</p>\r\n\r\n<p>For more information, please visit the <a href=\"https://libereurope.eu/eventscalendar/liber-winter-event/\" target=\"_blank\">website</a>.</p>\r\n"
+        location_name: 'Vrije Universiteit Amsterdam'
+        geolocation: null
+        featured: false
+        registerlink: null
+        teaser: "<p>LIBER’s first-ever Winter Event will be held in person on the 1st – 2nd of December 2022 at the Vrije Universiteit Amsterdam.\_</p>\r\n"
+        teaser_image:
+            file: Images/Event_images/LIBERwinter2022-600x400.jpg
+            title: 'Event image Liber Winter Event'
+        teaser_attribution_title: 'Official banner of the event'
+        teaser_attribution_creator: null
+        teaser_attribution_date: null
+        teaser_attribution_holder: null
+        teaser_attribution_country: null
+        teaser_attribution_license: CC-BY
+        teaser_attribution_link: null
+        start_event: '2022-12-01 09:00:00'
+        unconfirmed_start: false
+        end_event: '2022-12-02 18:00:00'
+        unconfirmed_end: false
+        image:
+            alt: 'Event image Liber Winter Event'
+            file: Images/Event_images/LIBERwinter2022-1240x600.jpg
+        image_attribution_title: 'Official banner of the event'
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: CC-BY
+        image_attribution_link: null
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: academic-research
+                name: 'Academic Research'
+        categories: {  }
+        tags:
+            -
+                slug: event
+                name: event
+        modules:
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: ''
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: events/liber-winter-event-building-on-collaboration-for-the-future
+    -
+        slug: dariah-annual-event-cultural-heritage-data-as-humanities-research-data
+        datecreated: '2022-11-17 10:38:01'
+        datechanged: '2023-01-30 21:50:28'
+        datepublish: '2022-11-21 10:35:00'
+        datedepublish: ''
+        ownerid: 54
+        status: published
+        templatefields: {  }
+        title: 'DARIAH Annual Event - Cultural Heritage Data as Humanities Research Data?'
+        intro: "<p>The DARIAH Annual Event is the annual gathering point of the DARIAH community to meet, discuss and present research on the year’s set topic. It is organised by DARIAH.</p>\r\n"
+        body: "<p>DARIAH takes part in the consortium that deploys the common European data space for cultural heritage. The topic of the 2023 event is 'Cultural Heritage Data as Humanities Research Data?'</p>\r\n\r\n<p>The call for papers\_is articulated around three themes:</p>\r\n\r\n<ol>\r\n    <li>Sustainable workflows for data management and curation</li>\r\n    <li>Imagining experimental data spaces for cultural heritage</li>\r\n    <li>Advancing digital methods for the analysis of cultural heritage</li>\r\n</ol>\r\n\r\n<p>Deadline for submitting abstracts:\_1st of February 2023. Extended until 8 February 2023.</p>\r\n\r\n<p>For more information, please visit the <a href=\"https://annualevent.dariah.eu/\" target=\"_blank\">website</a>.\_</p>\r\n\r\n<p></p>\r\n"
+        location_name: 'Eötvös Loránd University'
+        geolocation: null
+        featured: false
+        registerlink: null
+        teaser: "<p>The DARIAH Annual Event is the annual gathering point of the DARIAH community to meet, discuss and present research on the year’s set topic.\_It is organised by DARIAH.</p>\r\n"
+        teaser_image:
+            file: Images/Event_images/DARIAHAnnualEvent2022-600x400.jpg
+            title: 'Save the date! June 6 - 9 2023, DARIAH Annual Event'
+        teaser_attribution_title: 'Official banner of the DARIAH Annual Event 2023'
+        teaser_attribution_creator: null
+        teaser_attribution_date: null
+        teaser_attribution_holder: null
+        teaser_attribution_country: null
+        teaser_attribution_license: CC-BY
+        teaser_attribution_link: null
+        start_event: '2023-06-06 00:00:00'
+        unconfirmed_start: false
+        end_event: '2023-06-09 00:00:00'
+        unconfirmed_end: false
+        image:
+            alt: 'Save the date! June 6 - 9 2023, DARIAH Annual Event'
+            file: Images/Event_images/DARIAHAnnualEvent2022-1240x600.jpg
+        image_attribution_title: 'Official banner of the DARIAH Annual Event 2023'
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: CC0
+        image_attribution_link: null
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            value: null
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: academic-research
+                name: 'Academic Research'
+        categories: {  }
+        tags:
+            -
+                slug: event
+                name: event
+        modules:
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: ''
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+        _id: events/dariah-annual-event-cultural-heritage-data-as-humanities-research-data

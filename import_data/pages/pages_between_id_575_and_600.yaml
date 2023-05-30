@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:39:42+02:00'
+    date: '2023-05-30T15:10:26+02:00'
     version: 3.7.4
     platform: mysql
 pages:
@@ -107,7 +107,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -122,7 +122,7 @@ pages:
                 selected_posts:
                     -
                         value: ''
-                        _id: posts/team-using-europeana-data-win-prize-at-the-eu-datathon-2022
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -158,7 +158,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -173,7 +173,7 @@ pages:
                 selected_posts:
                     -
                         value: ''
-                        _id: posts/team-using-europeana-data-win-prize-at-the-eu-datathon-2022
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -209,7 +209,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -254,7 +254,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: 'Images/Event_images/Collection Days'
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -299,7 +299,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: 'Images/Event_images/Migration/Migration communications toolkit/'
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -344,7 +344,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -365,7 +365,7 @@ pages:
                 selected_events:
                     -
                         value: ''
-                        _id: events/memex-memories-and-experiences-for-inclusive-digital-storytelling
+                        _id: events/archiefdag-2023-de-bias-workshop
                 selected_resources: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -392,7 +392,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -422,7 +422,7 @@ pages:
     -
         slug: europeana-copyright
         datecreated: '2018-01-25 11:34:27'
-        datechanged: '2022-08-26 15:23:53'
+        datechanged: '2023-05-24 15:33:59'
         datepublish: '2018-01-25 10:55:56'
         datedepublish: ''
         ownerid: 1
@@ -534,7 +534,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -579,7 +579,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -627,7 +627,172 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '725'
+                        _id: pages/copyright
+                    -
+                        value: '785'
+                        _id: pages/copyright-and-digital-cultural-heritage
+                    -
+                        value: '776'
+                        _id: pages/copyright-tools-and-resources
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: ''
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: ''
+                        _id: resources/media-literacy-competence-framework-en
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2489'
+                        _id: posts/copyright-management-guidelines-for-cultural-heritage-institutions
+                    -
+                        value: '2575'
+                        _id: posts/europeana-copyright-community-work-plan-2023
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: 'Task Forces and Working Groups'
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: projects
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects:
+                    -
+                        value: '180'
+                        _id: projects/article-14-task-force
+                    -
+                        value: '166'
+                        _id: projects/out-of-commerce-works-working-group
+                    -
+                        value: '144'
+                        _id: projects/how-to-guide-for-labelling-cultural-heritage
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: breaker
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -657,122 +822,8 @@ pages:
                 selected_events: ''
                 selected_resources:
                     -
-                        value: '893'
-                        _id: resources/copyright-community-work-plan-2021
-                    -
                         value: '778'
                         _id: resources/copyright-webinars
-                    -
-                        value: '894'
-                        _id: resources/how-to-guide-for-labelling-cultural-heritage
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: listingsemistatic
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: pages
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages:
-                    -
-                        value: '725'
-                        _id: pages/copyright
-                    -
-                        value: '785'
-                        _id: pages/copyright-and-digital-cultural-heritage
-                    -
-                        value: '776'
-                        _id: pages/copyright-tools-and-resources
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts:
-                    -
-                        value: ''
-                        _id: posts/team-using-europeana-data-win-prize-at-the-eu-datathon-2022
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: ''
-                        _id: resources/eu-datathon-1
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: listingsemistatic
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts:
-                    -
-                        value: '2489'
-                        _id: posts/copyright-management-guidelines-for-cultural-heritage-institutions
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
@@ -798,7 +849,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -812,9 +863,6 @@ pages:
                     -
                         value: '5994'
                         _id: persons/fred-saunderson
-                    -
-                        value: '1605'
-                        _id: persons/karin-glasemann
                     -
                         value: '4837'
                         _id: persons/marina-markellou
@@ -831,11 +879,14 @@ pages:
                         value: '6063'
                         _id: persons/annabelle-shaw
                     -
-                        value: '7407'
-                        _id: persons/timo-enroth
-                    -
                         value: '7431'
                         _id: persons/ana-lazarova
+                    -
+                        value: '8384'
+                        _id: persons/deborah-de-angelis
+                    -
+                        value: '6820'
+                        _id: persons/ellen-van-keer
                     -
                         value: '5894'
                         _id: persons/ariadna-matas
@@ -873,7 +924,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -921,7 +972,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: category
                 sources: posts
@@ -941,12 +992,12 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
+                selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
                 override_css_id: news
                 override_css_class: ''
-                selected_organisations: ''
             -
                 enabled: enabled
                 title: 'Upcoming events'
@@ -966,7 +1017,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: calendar_upcoming
                 sources: events
@@ -1011,7 +1062,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1068,7 +1119,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1122,7 +1173,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1173,7 +1224,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -1218,7 +1269,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1272,7 +1323,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1326,7 +1377,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1365,7 +1416,7 @@ pages:
     -
         slug: impact-case-studies
         datecreated: '2018-02-09 17:36:11'
-        datechanged: '2021-12-16 13:47:44'
+        datechanged: '2023-02-27 13:40:21'
         datepublish: '2018-02-09 17:32:01'
         datedepublish: ''
         ownerid: 112
@@ -1464,7 +1515,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1477,6 +1528,9 @@ pages:
                 selected_persons: ''
                 filter_posts: ''
                 selected_posts:
+                    -
+                        value: '2603'
+                        _id: posts/impact-assessment-report-europeana-2021
                     -
                         value: '2413'
                         _id: posts/impact-assessment-report-europeana-network-association-2021
@@ -1542,7 +1596,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1617,7 +1671,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -1762,7 +1816,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -1880,7 +1934,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1895,7 +1949,7 @@ pages:
                 selected_posts:
                     -
                         value: ''
-                        _id: posts/team-using-europeana-data-win-prize-at-the-eu-datathon-2022
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -1931,7 +1985,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1976,7 +2030,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2027,7 +2081,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2042,7 +2096,7 @@ pages:
                 selected_posts:
                     -
                         value: ''
-                        _id: posts/team-using-europeana-data-win-prize-at-the-eu-datathon-2022
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -2078,7 +2132,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2123,7 +2177,7 @@ pages:
                 attribution_link: 'http://embed.europeana1914-1918.eu/en/contributions/7709'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2168,7 +2222,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: 'Images/Event_images/Migration/Migration collection days files/'
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2213,7 +2267,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2258,7 +2312,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2303,7 +2357,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2427,7 +2481,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2457,7 +2511,7 @@ pages:
     -
         slug: aggregators
         datecreated: '2018-02-23 09:52:04'
-        datechanged: '2022-08-26 14:07:58'
+        datechanged: '2023-04-19 13:33:33'
         datepublish: '2020-09-23 09:49:00'
         datedepublish: ''
         ownerid: 95
@@ -2507,10 +2561,7 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: 'aggregators, aggregator, aggregators forum, aggregation, europeana aggregators forum'
-        pages:
-            - pages/aggregators
-            - pages/aggregators
-            - pages/aggregators
+        pages: {  }
         posts:
             - posts/europeana-aggregators-forum-looking-forward-to-2021
             - posts/sharing-heritage-and-building-capacity-with-the-europeana-aggregators-forum
@@ -2521,6 +2572,9 @@ pages:
             - posts/europeana-aggregators-forum-activity-report-2021
             - posts/digitise-and-upload-promoting-ingestion-in-archives-portal-europe-and-europeana
             - posts/join-our-working-group-to-support-the-digital-cultural-heritage-of-ukraine
+            - posts/golf-is-art-brings-sporting-content-from-europeana-to-new-audiences
+            - posts/join-the-europeana-aggregators-forum-outreach-event
+            - posts/case-studies-highlight-the-benefits-of-sharing-high-quality-cultural-heritage-data-with-europeana
         data: {  }
         projects:
             - projects/data-quality-committee
@@ -2558,7 +2612,7 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p><meta charset=\"utf-8\" />Aggregators work with cultural heritage institutions to gather authentic, trustworthy and robust data and make it accessible through Europeana. Through the Europeana Aggregators' Forum, they work to exchange the knowledge and best practice that supports their work. Explore these pages to find an aggregator.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Aggregators work with cultural heritage institutions to gather authentic, trustworthy and robust data and make it accessible through Europeana. All Europeana aggregators are members of the <strong>Europeana Aggregators' Forum (EAF)</strong>, a network of national, regional, domain and thematic aggregators who - among others - work to exchange the knowledge and best practice that supports aggregation and data sharing with Europeana.&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -2571,7 +2625,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2603,7 +2657,7 @@ pages:
                 subtitle: ''
                 anchortitle: 'Domain & thematic aggregators'
                 templates: body
-                body: "<p><meta charset=\"utf-8\" />Domain &amp; thematic aggregators define their scope by cultural sector (such as museum, archive or library) or by topic and theme (such as fashion). They work with contributors based in different European countries.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" />Domain and&nbsp;thematic aggregators define their scope by cultural sector (such as museum, archive or library) or by topic and theme (such as fashion). They work with contributors based in different European countries.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -2616,7 +2670,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2661,7 +2715,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: organisations
@@ -2735,7 +2789,7 @@ pages:
                 subtitle: ''
                 anchortitle: 'National & regional aggregators'
                 templates: body
-                body: "<p><meta charset=\"utf-8\" />National &amp; regional aggregators define their scope by specific country or region. They work with contributors situated within that country or region.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" />National and regional aggregators define their scope by specific country or region. They work with contributors situated within that country or region.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -2748,7 +2802,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2793,7 +2847,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: organisations
@@ -2831,7 +2885,7 @@ pages:
                         _id: organisations/ministry-of-culture-and-media-of-the-republic-of-croatia-ekultura-hr
                     -
                         value: '70'
-                        _id: organisations/cyprus-ministry-of-education-culture-sport-and-youth
+                        _id: organisations/deputy-ministry-of-culture-republic-of-cyprus
                     -
                         value: '61'
                         _id: organisations/czech-digital-library
@@ -2905,6 +2959,369 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
+                title: 'Steering Group'
+                subtitle: ''
+                anchortitle: 'Steering Group'
+                templates: body
+                body: "<p>The Steering Group of the Europeana Aggregators’ Forum&nbsp;is made up of elected representatives from accredited aggregators and one representative of the Europeana Foundation.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnails
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: persons
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons:
+                    -
+                        value: '1406'
+                        _id: persons/marie-veronique-leroi
+                    -
+                        value: '861'
+                        _id: persons/kerstin-arnold
+                    -
+                        value: '803'
+                        _id: persons/tom-miles
+                    -
+                        value: '2393'
+                        _id: persons/henning-scholz
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Outreach
+                subtitle: ''
+                anchortitle: Outreach
+                templates: body
+                body: "<p>The Europeana Aggregators’ Forum organises regular events to show cultural heritage institutions how they can engage with and share their data with Europeana.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingnews
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: events
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events:
+                    -
+                        value: '714'
+                        _id: events/eaf-outreach-event
+                    -
+                        value: '747'
+                        _id: events/eaf-outreach-event-december2022
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Task Forces and Working Groups'
+                subtitle: ''
+                anchortitle: 'Task Forces and Working Groups'
+                templates: body
+                body: "<p>Through Task Forces and Working Groups, the Europeana Aggregators’ Forum collaborates with other pillars of the Europeana Initiative to address key issues in the digital cultural heritage sector. Explore some below.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: projects
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects:
+                    -
+                        value: '162'
+                        _id: projects/digital-transformation-task-force
+                    -
+                        value: '165'
+                        _id: projects/diversity-and-inclusion-task-force
+                    -
+                        value: '167'
+                        _id: projects/supporting-the-digital-cultural-heritage-of-ukraine-working-group
+                    -
+                        value: '146'
+                        _id: projects/iiif-europeana-working-group
+                    -
+                        value: '98'
+                        _id: projects/data-quality-committee
+                    -
+                        value: '176'
+                        _id: projects/solid-based-decentralised-aggregation-task-force
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Year plans and reports'
+                subtitle: ''
+                anchortitle: 'Year plans and reports'
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2609'
+                        _id: posts/europeana-aggregators-forum-activity-report-2022
+                    -
+                        value: '2450'
+                        _id: posts/europeana-aggregators-forum-activity-plan-2022
+                    -
+                        value: '2449'
+                        _id: posts/europeana-aggregators-forum-activity-report-2021
+                    -
+                        value: '2290'
+                        _id: posts/europeana-aggregators-forum-looking-forward-to-2021
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
                 title: 'News from the Europeana Aggregators'' Forum'
                 subtitle: ''
                 anchortitle: News
@@ -2922,7 +3339,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -3037,7 +3454,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3085,7 +3502,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3224,7 +3641,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3269,7 +3686,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3314,7 +3731,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3359,7 +3776,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3404,7 +3821,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3449,7 +3866,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3573,7 +3990,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3617,7 +4034,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3742,7 +4159,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3787,7 +4204,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3943,7 +4360,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4071,7 +4488,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4191,7 +4608,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4313,7 +4730,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4435,7 +4852,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4557,7 +4974,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4679,7 +5096,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4801,7 +5218,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4923,7 +5340,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5044,7 +5461,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -5101,7 +5518,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5219,7 +5636,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -5276,7 +5693,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts

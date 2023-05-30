@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T17:20:12+02:00'
+    date: '2023-05-30T15:53:52+02:00'
     version: 3.7.4
     platform: mysql
 posts:
@@ -7341,8 +7341,7 @@ posts:
         template: ''
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","keywords":""}'
         pages: {  }
-        posts:
-            - posts/new-europeana-collections-site-brings-people-closer-to-culture
+        posts: {  }
         data: {  }
         projects: {  }
         events: {  }
@@ -8070,7 +8069,7 @@ posts:
     -
         slug: europeana-strategy
         datecreated: '2017-08-20 04:02:41'
-        datechanged: '2020-03-23 08:49:14'
+        datechanged: '2022-11-03 09:27:32'
         datepublish: '2017-08-20 04:01:31'
         datedepublish: ''
         ownerid: 2
@@ -8080,7 +8079,7 @@ posts:
         posttype: Publication
         featured: false
         intro: "<p>Europeana started in 2008\_as a\_big political idea to unite Europe through culture by making our heritage available to all for work, learning or pleasure.</p>\r\n"
-        body: "<p>A deeply felt belief that our shared cultural heritage fundamentally belongs to all of us, and is therefore too important to leave to market forces alone to digitise and make available. We still believe in this big idea. We are Europeana, the\_<a href=\"http://pro.europeana.eu/network\" target=\"_blank\">network</a>\_for the cultural heritage sector in Europe, and we think we are in a unique position to make these ideals come true. We are expanding our network with thousands of cultural institutions, politicians, tech entrepreneurs, open data activists, developers and researchers all with one thing in common:\_<a href=\"http://dreams.europeana.eu/\" target=\"_blank\">A shared dream</a>\_of a world where every citizen will have access to all cultural heritage. We transform the world with culture</p>\r\n"
+        body: "<p>A deeply felt belief that our shared cultural heritage fundamentally belongs to all of us, and is therefore too important to leave to market forces alone to digitise and make available. We still believe in this big idea. We are Europeana, the\_<a href=\"http://pro.europeana.eu/network\" target=\"_blank\">network</a>\_for the cultural heritage sector in Europe, and we think we are in a unique position to make these ideals come true. We are expanding our network with thousands of cultural institutions, politicians, tech entrepreneurs, open data activists, developers and researchers all with one thing in common:\_A shared dream\_of a world where every citizen will have access to all cultural heritage. We transform the world with culture.</p>\r\n\r\n<p>Download the strategy and accompanying documents\_below, or to find the most up-to-date Europeana strategy, visit our '<a href=\"https://pro.europeana.eu/about-us/mission\">About us</a>' page.</p>\r\n"
         author: {  }
         isbn: null
         teaser: "<p>Europeana's strategy from now until 2020 focuses on three powerful priorities. Read the original strategy and its 'supercharged' update.</p>\r\n"
@@ -8107,7 +8106,7 @@ posts:
         image_attribution_license: null
         image_attribution_link: null
         shoulddatepublish: true
-        shoulddatemodified: true
+        shoulddatemodified: false
         subsite: null
         template: null
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
@@ -8135,7 +8134,7 @@ posts:
                 name: '2020'
         modules:
             -
-                enabled: enabled
+                enabled: disabled
                 title: ''
                 subtitle: ''
                 anchortitle: ''
@@ -8181,7 +8180,7 @@ posts:
                 modulemoretext: ''
                 selected_organisations: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: ''
                 subtitle: ''
                 anchortitle: ''

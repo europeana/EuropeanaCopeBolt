@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T10:03:44+01:00'
+    date: '2023-05-30T16:45:50+02:00'
     version: 3.7.4
     platform: mysql
 posts:
@@ -61,7 +61,6 @@ posts:
             - pages/news
         posts:
             - posts/introducing-the-weave-project-widening-access-to-the-heritage-of-cultural-communities
-            - posts/weave-events-explore-3d-for-intangible-heritage-and-regeneration
             - posts/weave-events-explore-3d-for-intangible-heritage-and-regeneration
         data: {  }
         projects: {  }
@@ -890,8 +889,8 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
             - pages/news
-            - pages/building-digital-capacity
-        posts: {  }
+        posts:
+            - posts/europeana-initiative-task-force-offers-new-learnings-for-digital-transformation
         data: {  }
         projects:
             - projects/digital-transformation-task-force
@@ -1059,7 +1058,7 @@ posts:
             - pages/news
         posts:
             - posts/little-by-little-one-travels-far-europeana-developments-in-ireland
-            - posts/marking-irish-women-s-history-with-website-mna100
+            - posts/digitally-recovering-ireland-s-history-virtual-record-treasury-of-ireland-connects-millions-of-lost-records
         data: {  }
         projects: {  }
         events: {  }
@@ -1950,7 +1949,6 @@ posts:
         pages:
             - pages/news
         posts:
-            - posts/multi-million-euro-partnership-to-strengthen-europe-s-cultural-and-creative-sectors-and-industries
             - posts/multi-million-euro-partnership-to-strengthen-europe-s-cultural-and-creative-sectors-and-industries
         data: {  }
         projects: {  }
@@ -2859,7 +2857,7 @@ posts:
                 selected_pages:
                     -
                         value: ''
-                        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
+                        _id: pages/tools
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -2937,9 +2935,9 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
             - pages/news
-            - pages/events
         posts:
             - posts/digital-cultural-heritage-in-education-a-bridge-to-connect-formal-and-non-formal-education
+            - posts/secure-your-ticket-for-europeana-2022-making-digital-culture-count
             - posts/secure-your-ticket-for-europeana-2022-making-digital-culture-count
             - posts/secure-your-ticket-for-europeana-2022-making-digital-culture-count
         data: {  }
@@ -3150,8 +3148,8 @@ posts:
         pages:
             - pages/news
         posts:
-            - posts/copyright-directive-series-a-closer-look-at-italy
             - posts/copyright-directive-series-progress-in-the-directive-transposition
+            - posts/copyright-directive-series-a-closer-look-at-the-netherlands
         data: {  }
         projects: {  }
         events: {  }
@@ -3263,7 +3261,7 @@ posts:
     -
         slug: new-project-at-the-museum-fuer-naturkunde-berlin-explores-crowdsourcing-for-the-anthropocene
         datecreated: '2022-08-01 12:06:45'
-        datechanged: '2022-08-18 17:30:37'
+        datechanged: '2023-02-01 13:02:07'
         datepublish: '2022-08-05 12:06:00'
         datedepublish: ''
         ownerid: 124
@@ -3282,7 +3280,7 @@ posts:
                 value: '5898'
                 _id: persons/georgia-evans
         isbn: null
-        teaser: "<p>In 2021, Europeana\_Research Grants Programme awarded funding for innovative projects exploring crowdsourcing and research. What did the winners achieve? We hear from Ulrike Sturm, Scientific Officer Innovation for Nature and Society at the Museum für Naturkunde Berlin, who spoke on behalf of the project team.</p>\r\n\r\n<p></p>\r\n"
+        teaser: "<p>In 2021, Europeana\_Research Grants Programme awarded funding for innovative projects exploring crowdsourcing and research. Hear from a winning project at the Museum für Naturkunde Berlin.</p>\r\n\r\n<p></p>\r\n"
         teaser_image:
             file: Images/Blog_images/2022-08/mfn_interview.png
             title: 'Painting of hens and chicks'
@@ -3316,9 +3314,9 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
             - pages/news
-            - pages/grants-programme
         posts:
-            - posts/new-project-at-the-university-of-warsaw-explores-cultural-heritage-geodata-and-crowdsourcing
+            - posts/new-project-at-the-museum-fuer-naturkunde-berlin-explores-crowdsourcing-for-the-anthropocene
+            - posts/new-project-at-the-museum-fuer-naturkunde-berlin-explores-crowdsourcing-for-the-anthropocene
             - posts/new-project-at-the-museum-fuer-naturkunde-berlin-explores-crowdsourcing-for-the-anthropocene
             - posts/new-project-at-the-museum-fuer-naturkunde-berlin-explores-crowdsourcing-for-the-anthropocene
         data: {  }
@@ -3553,7 +3551,7 @@ posts:
     -
         slug: new-project-at-the-university-of-warsaw-explores-cultural-heritage-geodata-and-crowdsourcing
         datecreated: '2022-08-01 13:30:21'
-        datechanged: '2022-08-18 17:29:01'
+        datechanged: '2023-02-01 13:04:29'
         datepublish: '2022-08-11 13:29:00'
         datedepublish: ''
         ownerid: 124
@@ -3572,7 +3570,7 @@ posts:
                 value: '5898'
                 _id: persons/georgia-evans
         isbn: null
-        teaser: "<p>In 2021, Europeana\_Research Grants Programme awarded funding for innovative projects exploring crowdsourcing and research. Over the summer, we interview the winners to find out what they have achieved. Today, we hear from Francis Harvey, visiting professor at the University of Warsaw.</p>\r\n\r\n<p></p>\r\n"
+        teaser: "<p>In 2021, Europeana\_Research Grants Programme awarded funding for innovative projects exploring crowdsourcing and research. Hear from a winning project at the University of Warsaw.</p>\r\n\r\n<p></p>\r\n"
         teaser_image:
             file: Images/Blog_images/2022-08/warsaw_faculty_of_history_interview.png
             title: 'A map of the globe shown as two circles'
@@ -3607,8 +3605,8 @@ posts:
         pages:
             - pages/news
         posts:
-            - posts/new-project-at-the-university-of-warsaw-explores-cultural-heritage-geodata-and-crowdsourcing
-            - posts/new-project-at-the-university-of-warsaw-explores-cultural-heritage-geodata-and-crowdsourcing
+            - posts/new-project-explores-crowdsourcing-in-estonian-cultural-heritage-institutions
+            - posts/new-project-at-the-museum-fuer-naturkunde-berlin-explores-crowdsourcing-for-the-anthropocene
             - posts/new-project-at-the-university-of-warsaw-explores-cultural-heritage-geodata-and-crowdsourcing
             - posts/new-project-at-the-university-of-warsaw-explores-cultural-heritage-geodata-and-crowdsourcing
         data: {  }
@@ -3777,10 +3775,10 @@ posts:
         template: null
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
-            - pages/europeana-reuse-be-inspired
             - pages/news
-            - pages/aggregators
-        posts: {  }
+        posts:
+            - posts/golf-is-art-brings-sporting-content-from-europeana-to-new-audiences
+            - posts/golf-is-art-brings-sporting-content-from-europeana-to-new-audiences
         data: {  }
         projects: {  }
         events: {  }
@@ -4173,7 +4171,7 @@ posts:
     -
         slug: new-project-explores-crowdsourcing-in-estonian-cultural-heritage-institutions
         datecreated: '2022-08-12 12:22:00'
-        datechanged: '2022-08-24 14:28:38'
+        datechanged: '2023-02-01 13:04:02'
         datepublish: '2022-08-18 12:21:00'
         datedepublish: ''
         ownerid: 124
@@ -4189,7 +4187,7 @@ posts:
                 value: '5898'
                 _id: persons/georgia-evans
         isbn: null
-        teaser: "<p>In 2021, the Europeana\_Research Grants Programme awarded funding for innovative projects exploring crowdsourcing and research. What did the winners achieve?\_ We hear from Dr Mari-Leen Tammela, from the Estonian War Museum – General Laidoner Museum, about how they were able to support cultural heritage institutions to produce crowdsourcing plans.<b> </b></p>\r\n"
+        teaser: "<p>In 2021, the Europeana\_Research Grants Programme awarded funding for innovative projects exploring crowdsourcing and research. Hear from a winning project at\_the Estonian War Museum – General Laidoner Museum.<b> </b></p>\r\n"
         teaser_image:
             file: Images/Blog_images/2022-08/research_interview_estonia.png
             title: 'A room painted in multicolours'
@@ -4224,8 +4222,8 @@ posts:
         pages:
             - pages/news
         posts:
-            - posts/new-project-at-the-university-of-warsaw-explores-cultural-heritage-geodata-and-crowdsourcing
             - posts/new-project-at-the-museum-fuer-naturkunde-berlin-explores-crowdsourcing-for-the-anthropocene
+            - posts/new-project-explores-crowdsourcing-in-estonian-cultural-heritage-institutions
             - posts/new-project-explores-crowdsourcing-in-estonian-cultural-heritage-institutions
         data: {  }
         projects: {  }
@@ -4394,8 +4392,8 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
             - pages/news
-            - pages/events
         posts:
+            - posts/going-hybrid-bringing-events-in-the-cultural-heritage-sector-online-and-on-site
             - posts/going-hybrid-bringing-events-in-the-cultural-heritage-sector-online-and-on-site
         data: {  }
         projects: {  }
@@ -4873,7 +4871,7 @@ posts:
     -
         slug: new-project-at-the-the-national-museums-of-world-culture-sweden-explores-crowdsourcing-to-decolonialise-data
         datecreated: '2022-08-17 15:53:10'
-        datechanged: '2022-08-29 14:01:39'
+        datechanged: '2023-05-17 15:30:32'
         datepublish: '2022-08-25 15:49:00'
         datedepublish: ''
         ownerid: 124
@@ -4892,7 +4890,7 @@ posts:
                 value: '5898'
                 _id: persons/georgia-evans
         isbn: null
-        teaser: "<p>In 2021, the Europeana\_Research Grants Programme awarded funding for innovative projects exploring crowdsourcing and research. Today, we hear from Dr Adriana Muñoz, from the National Museums of World Culture, Sweden, about a pilot project which explored decolonialsing a Swedish database for museum collections.</p>\r\n"
+        teaser: "<p>In 2021, the Europeana\_Research Grants Programme awarded funding for innovative projects exploring crowdsourcing and research. Hear about a pilot project which explored decolonialsing a Swedish database for museum collections.</p>\r\n"
         teaser_image:
             file: Images/Blog_images/2022-08/eliane_waiwai.png
             title: 'A person seated next to Wai Wait objects'
@@ -4927,8 +4925,8 @@ posts:
         pages:
             - pages/news
         posts:
-            - posts/new-project-at-the-university-of-warsaw-explores-cultural-heritage-geodata-and-crowdsourcing
             - posts/new-project-explores-crowdsourcing-in-estonian-cultural-heritage-institutions
+            - posts/new-project-at-the-university-of-warsaw-explores-cultural-heritage-geodata-and-crowdsourcing
         data: {  }
         projects: {  }
         events: {  }
@@ -4949,6 +4947,9 @@ posts:
             -
                 slug: research-grants-interviews
                 name: research-grants-interviews
+            -
+                slug: imd2023
+                name: '#IMD2023'
         modules:
             -
                 enabled: enabled
@@ -5255,7 +5256,7 @@ posts:
     -
         slug: sign-up-for-a-new-mooc-on-digital-transition-strategies-for-cultural-heritage-institutions
         datecreated: '2022-08-22 12:30:18'
-        datechanged: '2022-09-26 15:20:29'
+        datechanged: '2023-02-07 18:04:48'
         datepublish: '2022-09-01 12:12:00'
         datedepublish: ''
         ownerid: 124
@@ -5264,14 +5265,14 @@ posts:
         title: 'Sign up for a new MOOC on digital transition strategies for cultural heritage institutions'
         posttype: News
         featured: false
-        intro: "<p>The inDICEs project is delighted to announce a new Massive Open Online Course (MOOC) which aims to support cultural heritage professionals at all stages of their careers to develop digital strategies. The MOOC is free to join and open to all - sign up today!</p>\r\n"
+        intro: "<p>The inDICEs project is delighted to announce a reopening of the enrolments for a Massive Open Online Course (MOOC) which aims to support cultural heritage professionals at all stages of their careers to develop digital strategies. The MOOC is free to join and open to all - sign up today!</p>\r\n"
         body: null
         author:
             -
                 value: '6998'
                 _id: persons/roberta-pireddu
         isbn: null
-        teaser: "<p>The inDICEs project is delighted to announce a new Massive Open Online Course (MOOC) which aims to support cultural heritage professionals at all stages of their careers to develop digital strategies. The MOOC is free to join and open to all - sign up today!</p>\r\n"
+        teaser: "<p>The inDICEs project is delighted to announce a reopening of the enrolments for a Massive Open Online Course (MOOC) which aims to support cultural heritage professionals at all stages of their careers to develop digital strategies. The MOOC is free to join and open to all - sign up today!</p>\r\n"
         teaser_image:
             file: Images/Blog_images/2022-09/indices_mooc_teaser.png
             title: 'A graffiti artwork of a chameleon'
@@ -5335,7 +5336,7 @@ posts:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<h3><meta charset=\"utf-8\" /><strong>New questions for the cultural heritage sector</strong></h3>\r\n\r\n<p dir=\"ltr\">The fast advance of new digital technologies and, more recently, the COVID-19 pandemic, have encouraged many cultural heritage institutions to make their collections digitally accessible and reusable. In the last two decades, millions of objects - artworks, documents, and media - have found their way into the digital realm.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">However, the same advance of new technologies has prompted changes in digitisation processes and raises questions about how to manage digital heritage, its reuse, copyright and the way audiences interact with it. How can cultural heritage institutions keep up with the latest digital technologies and trends? How can they organise and develop an impactful digital workflow? How can digital collections enhance audience engagement and participation? How can cultural heritage institutions manage, apply and make the users aware of intellectual property rights? How can cultural heritage institutions manage, apply and make the users aware of intellectual property rights?</p>\r\n\r\n<h3 dir=\"ltr\"><strong>About the MOOC</strong></h3>\r\n\r\n<p dir=\"ltr\">These and a plethora of other questions are addressed in a new, free Massive Open Online Course (MOOC), ‘Developing digital transition strategies for cultural heritage institutions’. The MOOC is organised by the <a href=\"https://indices-culture.eu/resources/\">inDICEs</a> project, which has received funding from the European Union for 2020-2022 under the Horizon 2020 programme. A MOOC allows large numbers of participants to learn new skills and develop their knowledge through online teaching.</p>\r\n\r\n<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"500\" src=\"https://www.youtube.com/embed/YzpKqECWBfU\" title=\"YouTube video player\" width=\"100%\"></iframe></p>\r\n\r\n<p dir=\"ltr\">‘Developing digital transition strategies for cultural heritage institutions’ is in English and will be hosted by KU Leuven via the edX platform. It is aimed at cultural heritage professionals, students, policy makers, and anybody with an interest in discovering how to tackle the challenges of digital transformation. Guided by experts from varied fields (from cultural economics to sociology, from communication to intellectual property rights), participants will learn how to design, assess, and improve digital transformation strategies. The course will provide insights and tools and framework for assessing the impact that cultural heritage institutions’ mission and activities can have thanks to new technologies.&nbsp;</p>\r\n\r\n<h3 dir=\"ltr\"><strong>How the MOOC will run</strong></h3>\r\n\r\n<p dir=\"ltr\">The course will run from 26 September 2022 onwards and will cover six modules.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Digital Transformation &amp; Self-Assessment </strong>is an introductory module partly focused on the concept and importance of digital transformation in the GLAM sector, and partly on self-assessment and monitoring strategies.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Digital trends and Culture 3.0</strong> examines the main transitions of the web, from its use as an information source (web 1.0) to the adoption of social and interactive elements (web 2.0). It also explores the concept of Culture 3.0 in which active participation is essential, analysing it in correlation with societal challenges. Different domains and types of impact of digital cultural participation, as well as trend watching practices are focal points.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Empowering IPR for the commons</strong> explores how cultural heritage institutions can make reuse of digital content clear from a legal perspective. How can institutions navigate EU legislation with regards to digital cultural collections and what are the fundamentals to understand when it comes to intellectual property rights?&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Strategic skills, collaboration &amp; organisation growth</strong> discusses how&nbsp; participation in networks can increase organisational capacity and help to optimise the impact of cultural heritage institutions.</p>\r\n\r\n<p dir=\"ltr\"><strong>Impact assessment</strong> introduces good practices, tools and methodologies to assess whether a strategy is working or needs to be refined or redirected. In this module, special attention is given to the <a href=\"https://pro.europeana.eu/page/europeana-impact-playbook\">Europeana Impact Playbook</a> and its application.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Approaching technological innovation</strong> investigates the notion of ‘innovation’. It then focuses on what that means for designing a comprehensive digital strategy, including ways of reaching out to audiences via online communication channels.</p>\r\n\r\n<p dir=\"ltr\">Each module is enriched with lectures, interviews with experts, and readings. Learners will be encouraged to apply their newly acquired knowledge and set their critical thinking skills in motion through multiple choice quizzes, and reflection assignments. They will also have the opportunity to interact, discuss and share experiences and thoughts with the other students.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The MOOC is instructor-paced and will run for 8 weeks. Participants will be able to discover a module per week during the first six weeks, and dedicate the remaining time to attempt the final exam if they wish so, or to revisit once again the previous learning activities. Learners are expected to dedicate three - four hours to each module.</p>\r\n\r\n<p dir=\"ltr\">All the material offered by this edX course is freely accessible. However, participants will always have the opportunity to receive an official certificate for a fee, upon passing a final exam.&nbsp;&nbsp;</p>\r\n\r\n<h3 dir=\"ltr\"><strong>Register now!</strong></h3>\r\n\r\n<p dir=\"ltr\">Are you interested in this course? <strong>Developing Digital Transition Strategies for Cultural Heritage Institutions will start on the 26 September, and you can enrol up until 20 November</strong> (although please note that you will need to complete the MOOC by this date). Enrol now on <a href=\"https://www.edx.org/course/developing-digital-transition-strategies-for-cultural-heritage-institutions\">KULeuvenX.</a></p>\r\n"
+                body: "<h3><meta charset=\"utf-8\" /><strong>New questions for the cultural heritage sector</strong></h3>\r\n\r\n<p dir=\"ltr\">The fast advance of new digital technologies and, more recently, the COVID-19 pandemic, have encouraged many cultural heritage institutions to make their collections digitally accessible and reusable. In the last two decades, millions of objects - artworks, documents, and media - have found their way into the digital realm.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">However, the same advance of new technologies has prompted changes in digitisation processes and raises questions about how to manage digital heritage, its reuse, copyright and the way audiences interact with it. How can cultural heritage institutions keep up with the latest digital technologies and trends? How can they organise and develop an impactful digital workflow? How can digital collections enhance audience engagement and participation? How can cultural heritage institutions manage, apply and make the users aware of intellectual property rights? How can cultural heritage institutions manage, apply and make the users aware of intellectual property rights?</p>\r\n\r\n<h3 dir=\"ltr\"><strong>About the MOOC</strong></h3>\r\n\r\n<p dir=\"ltr\">These and a plethora of other questions are addressed in a new, free Massive Open Online Course (MOOC), ‘Developing digital transition strategies for cultural heritage institutions’. The MOOC is organised by the <a href=\"https://indices-culture.eu/resources/\">inDICEs</a> project, which has received funding from the European Union for 2020-2022 under the Horizon 2020 programme. A MOOC allows large numbers of participants to learn new skills and develop their knowledge through online teaching.</p>\r\n\r\n<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"500\" src=\"https://www.youtube.com/embed/YzpKqECWBfU\" title=\"YouTube video player\" width=\"100%\"></iframe></p>\r\n\r\n<p dir=\"ltr\">‘Developing digital transition strategies for cultural heritage institutions’ is in English and will be hosted by KU Leuven via the edX platform. It is aimed at cultural heritage professionals, students, policy makers, and anybody with an interest in discovering how to tackle the challenges of digital transformation. Guided by experts from varied fields (from cultural economics to sociology, from communication to intellectual property rights), participants will learn how to design, assess, and improve digital transformation strategies. The course will provide insights and tools and framework for assessing the impact that cultural heritage institutions’ mission and activities can have thanks to new technologies.&nbsp;</p>\r\n\r\n<h3 dir=\"ltr\"><strong>How the MOOC will run</strong></h3>\r\n\r\n<p dir=\"ltr\">The course will run from 13 February - 10 April 2023&nbsp;onwards and will cover six modules.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Digital Transformation &amp; Self-Assessment </strong>is an introductory module partly focused on the concept and importance of digital transformation in the GLAM sector, and partly on self-assessment and monitoring strategies.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Digital trends and Culture 3.0</strong> examines the main transitions of the web, from its use as an information source (web 1.0) to the adoption of social and interactive elements (web 2.0). It also explores the concept of Culture 3.0 in which active participation is essential, analysing it in correlation with societal challenges. Different domains and types of impact of digital cultural participation, as well as trend watching practices are focal points.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Empowering IPR for the commons</strong> explores how cultural heritage institutions can make reuse of digital content clear from a legal perspective. How can institutions navigate EU legislation with regards to digital cultural collections and what are the fundamentals to understand when it comes to intellectual property rights?&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Strategic skills, collaboration &amp; organisation growth</strong> discusses how&nbsp; participation in networks can increase organisational capacity and help to optimise the impact of cultural heritage institutions.</p>\r\n\r\n<p dir=\"ltr\"><strong>Impact assessment</strong> introduces good practices, tools and methodologies to assess whether a strategy is working or needs to be refined or redirected. In this module, special attention is given to the <a href=\"https://pro.europeana.eu/page/europeana-impact-playbook\">Europeana Impact Playbook</a> and its application.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Approaching technological innovation</strong> investigates the notion of ‘innovation’. It then focuses on what that means for designing a comprehensive digital strategy, including ways of reaching out to audiences via online communication channels.</p>\r\n\r\n<p dir=\"ltr\">Each module is enriched with lectures, interviews with experts, and readings. Learners will be encouraged to apply their newly acquired knowledge and set their critical thinking skills in motion through multiple choice quizzes, and reflection assignments. They will also have the opportunity to interact, discuss and share experiences and thoughts with the other students.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The MOOC is instructor-paced and will run for 8 weeks. Participants will be able to discover a module per week during the first six weeks, and dedicate the remaining time to attempt the final exam if they wish so, or to revisit once again the previous learning activities. Learners are expected to dedicate three - four hours to each module.</p>\r\n\r\n<p dir=\"ltr\">All the material offered by this edX course is freely accessible. However, participants will always have the opportunity to receive an official certificate for a fee, upon passing a final exam.&nbsp;&nbsp;</p>\r\n\r\n<h3 dir=\"ltr\"><strong>Register now!</strong></h3>\r\n\r\n<p dir=\"ltr\">Are you interested in this course? <strong>Developing Digital Transition Strategies for Cultural Heritage Institutions will start on the 13 February 2023</strong>. Enrol now on <a href=\"https://www.edx.org/course/developing-digital-transition-strategies-for-cultural-heritage-institutions\">KULeuvenX.</a></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5378,7 +5379,7 @@ posts:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p><em>This page was edited on 26/09/22 to note that you can enrol in this MOOC until 20 November.</em></p>\r\n"
+                body: "<p><em>This page was edited on 26/09/22 to note that you can enrol in this MOOC until 20 November; and on 03/02/23 to reflect the rerun of the MOOC.</em></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5419,16 +5420,16 @@ posts:
     -
         slug: europeana-wins-tender-to-deploy-the-common-european-data-space-for-cultural-heritage
         datecreated: '2022-08-22 16:12:12'
-        datechanged: '2022-09-13 12:23:59'
+        datechanged: '2022-12-14 15:52:48'
         datepublish: '2022-09-13 16:11:00'
         datedepublish: ''
         ownerid: 124
         status: published
         templatefields: {  }
-        title: 'Europeana wins tender to deploy the common European data space for cultural heritage'
+        title: 'Europeana Initiative wins tender to deploy the common European data space for cultural heritage'
         posttype: News
         featured: false
-        intro: "<p></p>\r\n\r\n<p></p>\r\n\r\n<p>We are delighted that in the coming years, Europeana will be at the heart of the European Commission’s data space for cultural heritage, continuing our work together with 18 partners and a great network, to empower the cultural heritage sector in its digital transformation.\_</p>\r\n"
+        intro: "<p>We are delighted that in the coming years, the Europeana Initiative will be at the heart of the European Commission’s data space for cultural heritage, continuing our work together with 18 partners and a great network, to empower the cultural heritage sector in its digital transformation.\_</p>\r\n"
         body: null
         author:
             -
@@ -5496,7 +5497,7 @@ posts:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<h3 dir=\"ltr\"><strong>Data spaces for Europe</strong></h3>\r\n\r\n<p dir=\"ltr\">Since 2015, Europeana has been working to empower the digital transformation of the cultural heritage sector as a <a href=\"https://pro.europeana.eu/page/europeana-dsi\">Digital Service Infrastructure</a> of the European Commission. We are excited that we will be continuing our work at the heart of a data space for cultural heritage under the <a href=\"https://digital-strategy.ec.europa.eu/en/activities/digital-programme\">Digital Europe Programme</a>, which focuses on bringing digital technology to businesses, citizens and public administrations.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">In the coming years, the programme will oversee the development of 14 data spaces in strategic sectors and key areas of public interest (health, energy, culture, and more). Data spaces seek to harness the value of data for the benefit of European society and economy by deploying data sharing tools and services, developing data governance structures and improving the availability, quality and interoperability of data.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The European Commission’s 14 interconnected data spaces will grow at their own rates, going from zero to fully interoperable within a decade. But the data space for cultural heritage has a head start.</p>\r\n\r\n<p dir=\"ltr\">With Europeana - with over a decade of experience - at its heart, we lead the way in terms of infrastructure, governance, collaboration and experience supporting a sector in its digital transformation - and will continue to do so in the coming period at the heart of the common European data space for cultural heritage.&nbsp;</p>\r\n\r\n<h3 dir=\"ltr\"><strong>A consortium of committed partners&nbsp;</strong></h3>\r\n\r\n<p dir=\"ltr\">The Europeana Foundation will steward the data space for cultural heritage, but collaboration, community and teamwork will be key to its success. We will continue to work closely with the Europeana Network Association and Europeana Aggregators’ Forum to bring - and build - the benefits of the data space to cultural heritage institutions and professionals throughout Europe. We will also work across sectors and borders with a consortium of partners who will manage the data space with enthusiasm, creativity and drive.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">These partners include:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">AIT Angewandte Informationstechnik Forschungsgesellschaft mbH&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">AIT Austrian Institute Of Technology GmbH</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Archives Portal Europe Foundation</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Capgemini Nederland BV</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Connecting Archaeology and Architecture in Europe</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">DARIAH-ERIC</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Datoptron P.C.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Deutsches Filminstitut &amp; Filmmuseum</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">European Fashion Heritage Association</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">EUN Partnership AISBLl</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">EuroClio</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Facts &amp; Files Digital Services GmbH</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Inception s.r.l</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Michael Culture</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Nederlands Instituut voor Beeld en Geluid</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">International Consortium for Photographic Heritage</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Instytut Chemii Bioorganicznej Polskiej Akademii Nauk</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Time Machine Organisation</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3 dir=\"ltr\"><strong>An exciting outlook</strong></h3>\r\n\r\n<p dir=\"ltr\">Our role in the data space is a fantastic opportunity to drive our sector’s digital transformation. We’re excited to deliver higher-quality digital data that can be used and reused in everything from school projects to world-changing research. We’re looking forward to advances in 3D - for preservation and restoration and to boost opportunities in tourism and creative industries. We’re excited about what advanced technologies like augmented and virtual reality and artificial intelligence can do to get culture to more people more usefully; and we can’t wait to build digital capacity among the professionals in our sector.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Would you like to learn more?</strong> The data space will be in focus at our upcoming conference, Europeana 2022, with the first day (Wednesday 28 September) exploring perspectives on the data space for digital cultural heritage. Join us to explore the data space in practice, what it means for Europeana as we know it - and share why it’s something that institutions across the cultural heritage sector should be excited about.</p>\r\n"
+                body: "<h3><strong>Data spaces for Europe</strong></h3>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Since 2015, the Europeana Initiative has been working to empower the digital transformation of the cultural heritage sector as a <a href=\"https://pro.europeana.eu/page/europeana-dsi\">Digital Service Infrastructure</a> of the European Commission. We are excited that we will be continuing our work at the heart of a data space for cultural heritage under the <a href=\"https://digital-strategy.ec.europa.eu/en/activities/digital-programme\">Digital Europe Programme</a>, which focuses on bringing digital technology to businesses, citizens and public administrations.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">In the coming years, the programme will oversee the development of 14 data spaces in strategic sectors and key areas of public interest (health, energy, culture, and more). Data spaces seek to harness the value of data for the benefit of European society and economy by deploying data sharing tools and services, developing data governance structures and improving the availability, quality and interoperability of data.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The European Commission’s 14 interconnected data spaces will grow at their own rates, going from zero to fully interoperable within a decade. But the data space for cultural heritage has a head start.</p>\r\n\r\n<p dir=\"ltr\">With the Europeana Initiative - with over a decade of experience - at its heart, we lead the way in terms of infrastructure, governance, collaboration and experience supporting a sector in its digital transformation - and will continue to do so in the coming period at the heart of the common European data space for cultural heritage.&nbsp;</p>\r\n\r\n<h3 dir=\"ltr\"><strong>A consortium of committed partners&nbsp;</strong></h3>\r\n\r\n<p dir=\"ltr\">The Europeana Foundation will steward the data space for cultural heritage, but collaboration, community and teamwork will be key to its success. We will continue to work closely with the Europeana Network Association and Europeana Aggregators’ Forum to bring - and build - the benefits of the data space to cultural heritage institutions and professionals throughout Europe. We will also work across sectors and borders with a consortium of partners who will manage the data space with enthusiasm, creativity and drive.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">These partners include:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">AIT Angewandte Informationstechnik Forschungsgesellschaft mbH&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">AIT Austrian Institute Of Technology GmbH</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Archives Portal Europe Foundation</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Capgemini Nederland BV</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Connecting Archaeology and Architecture in Europe</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">DARIAH-ERIC</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Datoptron P.C.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Deutsches Filminstitut &amp; Filmmuseum</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">European Fashion Heritage Association</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">EUN Partnership AISBLl</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">EuroClio</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Facts &amp; Files Digital Services GmbH</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Inception s.r.l</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Michael Culture</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Nederlands Instituut voor Beeld en Geluid</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">International Consortium for Photographic Heritage</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Instytut Chemii Bioorganicznej Polskiej Akademii Nauk</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Time Machine Organisation</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3 dir=\"ltr\"><strong>An exciting outlook</strong></h3>\r\n\r\n<p dir=\"ltr\">Our role in the data space is a fantastic opportunity to drive our sector’s digital transformation. We’re excited to deliver higher-quality digital data that can be used and reused in everything from school projects to world-changing research. We’re looking forward to advances in 3D - for preservation and restoration and to boost opportunities in tourism and creative industries. We’re excited about what advanced technologies like augmented and virtual reality and artificial intelligence can do to get culture to more people more usefully; and we can’t wait to build digital capacity among the professionals in our sector.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><strong>Would you like to learn more?</strong> The data space was in focus at our&nbsp;conference, Europeana 2022, with the first day (Wednesday 28 September) exploring perspectives on the data space for digital cultural heritage. <a href=\"http://youtube.com/watch?v=Ezm6BF93rqI&amp;list=PLqmcH-mOlMLxPjNDlvkI_GOmsv8IFrs8D&amp;index=2&amp;t=2s\">Watch a recording of the opening of the day from Harry Verwayen</a>.&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5534,7 +5535,7 @@ posts:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: ''
                 subtitle: ''
                 anchortitle: ''
@@ -6381,7 +6382,7 @@ posts:
     -
         slug: get-involved-in-gif-it-up-and-promote-your-collections-in-new-ways
         datecreated: '2022-09-09 10:05:30'
-        datechanged: '2022-09-13 13:16:37'
+        datechanged: '2023-03-21 15:52:31'
         datepublish: '2022-09-13 10:02:00'
         datedepublish: ''
         ownerid: 34
@@ -6397,7 +6398,7 @@ posts:
                 value: '2407'
                 _id: persons/aleksandra-strzelichowska
         isbn: null
-        teaser: "<p>GIF IT UP is Europeana’s annual GIF making competition which challenges people throughout Europe to get creative with cultural heritage. It’s a great opportunity for institutions to share and promote their collections\_- read on to find out how!</p>\r\n"
+        teaser: "<p>GIF IT UP 2022 is Europeana’s annual GIF making competition which challenges people throughout Europe to get creative with cultural heritage. It’s a great opportunity for institutions to share and promote their collections\_- read on to find out how!</p>\r\n"
         teaser_image:
             file: Images/Blog_images/2022-08/GIFITUP_TEASER.png
             title: 'A fairy shepherd blows a horn. Stars twinkle in the background.'
@@ -6583,23 +6584,23 @@ posts:
     -
         slug: case-studies-highlight-the-benefits-of-sharing-high-quality-cultural-heritage-data-with-europeana
         datecreated: '2022-09-12 16:24:30'
-        datechanged: '2022-09-15 08:36:43'
+        datechanged: '2023-04-17 16:23:30'
         datepublish: '2022-09-15 16:23:00'
         datedepublish: ''
         ownerid: 124
         status: published
         templatefields: {  }
-        title: 'Case studies highlight the benefits of sharing high quality cultural heritage data with Europeana'
+        title: 'Case studies highlight the benefits of sharing high quality data with Europeana'
         posttype: News
         featured: false
-        intro: "<p>Europeana’s accredited aggregator for photography, Photoconsortium, has published two case studies which highlight the benefits that publishing data on Europeana has brought for two cultural heritage institutions.</p>\r\n\r\n<p></p>\r\n"
+        intro: "<p>Europeana’s accredited aggregator for photography, Photoconsortium, has published two case studies which highlight the benefits that publishing cultural heritage\_data on Europeana has brought for two cultural heritage institutions.</p>\r\n\r\n<p></p>\r\n"
         body: null
         author:
             -
                 value: '1743'
                 _id: persons/valentina-bachi
         isbn: null
-        teaser: "<p>Europeana’s accredited aggregator for photography, Photoconsortium, has published two case studies which highlight the benefits that publishing data on Europeana has brought for two cultural heritage institutions.</p>\r\n"
+        teaser: "<p>Europeana’s accredited aggregator for photography, Photoconsortium, has published two case studies which highlight the benefits that publishing cultural heritage data on Europeana has brought for two cultural heritage institutions.</p>\r\n"
         teaser_image:
             file: Images/Blog_images/2022-09/photoconsortium_case_studies.png
             title: 'Several shots of a jockey riding a horse'
@@ -6633,9 +6634,9 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
             - pages/news
-            - pages/aggregators
             - pages/process
-        posts: {  }
+        posts:
+            - posts/case-studies-highlight-the-benefits-of-sharing-high-quality-cultural-heritage-data-with-europeana
         data: {  }
         projects: {  }
         events: {  }
@@ -6920,8 +6921,8 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
             - pages/news
-            - pages/europeana-communicators-group
-        posts: {  }
+        posts:
+            - posts/build-your-communications-confidence-sign-up-for-our-workshops
         data: {  }
         projects: {  }
         events: {  }
@@ -7085,9 +7086,9 @@ posts:
             - pages/news
         posts:
             - posts/opening-up-new-collaborations-between-cultural-heritage-and-tourism
+            - posts/opening-up-new-collaborations-between-cultural-heritage-and-tourism
         data: {  }
-        projects:
-            - projects/jewish-history-tours
+        projects: {  }
         events: {  }
         persons: {  }
         communities:
@@ -7919,8 +7920,7 @@ posts:
         posts:
             - posts/weave-events-explore-3d-for-intangible-heritage-and-regeneration
         data: {  }
-        projects:
-            - projects/weave-widen-european-access-to-cultural-communities-via-europeana
+        projects: {  }
         events: {  }
         persons: {  }
         communities:
@@ -8031,9 +8031,9 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
             - pages/news
-            - pages/creating-editorial
         posts:
             - posts/an-interview-with-the-black-archives-amsterdam
+            - posts/get-involved-in-black-history-month-2022
         data: {  }
         projects: {  }
         events: {  }
@@ -8965,9 +8965,9 @@ posts:
             - pages/news
         posts:
             - posts/ready-set-go-enriching-and-promoting-crafts-with-the-crafted-project
+            - posts/sharing-stories-of-european-crafts-and-artisanship
         data: {  }
-        projects:
-            - projects/crafted
+        projects: {  }
         events: {  }
         persons: {  }
         communities:
@@ -9424,9 +9424,9 @@ posts:
             - pages/news
         posts:
             - posts/bringing-digitised-medieval-objects-into-compulsory-education
+            - posts/arma-discovering-medieval-reading-culture
         data: {  }
-        projects:
-            - projects/the-art-of-reading-in-the-middle-ages-arma
+        projects: {  }
         events: {  }
         persons: {  }
         communities:
@@ -10902,7 +10902,7 @@ posts:
     -
         slug: case-study-explores-digitisation-education-and-engagement-at-the-hunt-museum
         datecreated: '2022-10-14 16:40:30'
-        datechanged: '2022-10-19 09:49:27'
+        datechanged: '2023-05-17 15:30:25'
         datepublish: '2022-10-19 16:40:00'
         datedepublish: ''
         ownerid: 124
@@ -10975,6 +10975,9 @@ posts:
             -
                 slug: 3d
                 name: 3d
+            -
+                slug: imd2023
+                name: '#IMD2023'
         modules:
             -
                 enabled: enabled
@@ -11023,7 +11026,7 @@ posts:
     -
         slug: the-weave-project-linking-the-tangible-and-intangible-heritage-of-cultural-communities
         datecreated: '2022-10-18 09:29:51'
-        datechanged: '2022-10-18 11:45:46'
+        datechanged: '2022-11-25 15:38:53'
         datepublish: '2022-10-18 09:29:40'
         datedepublish: ''
         ownerid: 124
@@ -11094,7 +11097,7 @@ posts:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><a href=\"https://weave-culture.eu/\">WEAVE (Widen European access to cultural communities via Europeana)</a> was a Europeana Generic Services project co-funded by the European Commission through the CEF Telecom programme. Starting in April 2020 and running until September 2022, the project developed a framework to link the tangible and intangible heritage of cultural communities.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">WEAVE focused on three main areas, including building capacity in cultural heritage professionals to work with minoritised communities, and support them in preserving and presenting their intangible heritage; aggregating new high-quality content into Europeana, including 3D content and content representing intangible heritage; and providing an innovative set of tools that allow professionals to better manage 3D content, annotate videos, automatically enrich content and create digital stories.</p>\r\n\r\n<h3 dir=\"ltr\"><strong>Representing communities with new content and editorials</strong></h3>\r\n\r\n<p dir=\"ltr\">The WEAVE project saw new tangible and intangible cultural heritage content digitised and <a href=\"https://www.europeana.eu/en/search?page=1&amp;query=proxy_dcterms_isPartOf%3A%20%28WEAVE%20OR%20Weave%29&amp;reusability=restricted&amp;view=grid\">aggregated to Europeana</a>, including built heritage, artworks, posters, historical photographs and representation of traditional practices from different communities. Content includes images,videos, audio files and a selection of 3D content that comprises existing models of Slovenian castles, which were digitised by partner ARCTUR. The project also aggregated reproductions of fragile daguerreotypes, specifically digitised in the context of WEAVE by partner CRDI, at top quality and published with open access. Explore all the collections <a href=\"https://weave-culture.eu/collections/\">here</a>.</p>\r\n\r\n<p dir=\"ltr\">This new content shared with Europeana has been showcased in inspiring new editorials on the Europeana website, such as the exhibition <a href=\"https://www.europeana.eu/en/exhibitions/the-renaissance-of-romani-re-presentation\">The Renaissance of Romani Re-presentation</a>, which explores the histories of Roma communities and highlights their contemporary artistic expressions. This unique exhibition was authored by Dr Adrian R Marsh, a professor of Romani Studies, himself of Welsh Gypsy origins, and increases the self-representation in Europeana editorial from underrepresented voices and communities. A corresponding <a href=\"https://pro.europeana.eu/post/roma-representation-in-the-cultural-heritage-sector-an-interview-with-eriac\">Pro news piece</a> was published alongside the exhibition, which further reflected on the vulnerability of the Roma community in the cultural heritage sector as well as the value for them of working with Europeana to amplify their voices.</p>\r\n"
+                body: "<p><a href=\"https://weave-culture.eu/\">WEAVE (Widen European access to cultural communities via Europeana)</a> was a Europeana Generic Services project co-funded by the European Commission through the CEF Telecom programme. Starting in April 2020 and running until September 2022, the project developed a framework to link the tangible and intangible heritage of cultural communities.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">WEAVE focused on three main areas, including building capacity in cultural heritage professionals to work with minoritised communities, and support them in preserving and presenting their intangible heritage; aggregating new high-quality content into Europeana, including 3D content and content representing intangible heritage; and providing an innovative set of tools that allow professionals to better manage 3D content, annotate videos, automatically enrich content and create digital stories.</p>\r\n\r\n<h3 dir=\"ltr\"><strong>Representing communities with new content and editorials</strong></h3>\r\n\r\n<p dir=\"ltr\">The WEAVE project saw new tangible and intangible cultural heritage content digitised and <a href=\"https://www.europeana.eu/en/search?page=1&amp;query=proxy_dcterms_isPartOf%3A%20%28WEAVE%20OR%20Weave%29&amp;reusability=restricted&amp;view=grid\">aggregated to Europeana</a>, including built heritage, artworks, posters, historical photographs and representation of traditional practices from different communities. Content includes images,videos, audio files and a selection of 3D content that comprises existing models of Slovenian castles, which were digitised by partner ARCTUR. The project also aggregated reproductions of fragile daguerreotypes, specifically digitised in the context of WEAVE by partner CRDI, at top quality and published with open access.</p>\r\n\r\n<p dir=\"ltr\">The digitisation was performed with&nbsp;photogrammetry to obtain 3D reproductions of the daguerreotypes. This process posed a number of challenges&nbsp;to achieve the best visual results for the digitised objects. From this experience, a&nbsp;<a data-saferedirecturl=\"https://www.google.com/url?q=https://www.photoconsortium.net/wp-content/uploads/2022/11/WEAVE-case-study-daguerreotypes-in-3D.pdf&amp;source=gmail&amp;ust=1669470788943000&amp;usg=AOvVaw33CBOo5kXei1iL5pn88gDq\" href=\"https://www.photoconsortium.net/wp-content/uploads/2022/11/WEAVE-case-study-daguerreotypes-in-3D.pdf\" target=\"_blank\">case study</a>&nbsp;was written to share the knowledge and solutions developed in WEAVE with&nbsp;other institutions, to support capacity building around 3D digitisation of cultural heritage. Explore all the collections <a href=\"https://weave-culture.eu/collections/\">here</a>.</p>\r\n\r\n<p dir=\"ltr\">This new content shared with Europeana has been showcased in inspiring new editorials on the Europeana website, such as the exhibition <a href=\"https://www.europeana.eu/en/exhibitions/the-renaissance-of-romani-re-presentation\">The Renaissance of Romani Re-presentation</a>, which explores the histories of Roma communities and highlights their contemporary artistic expressions. This unique exhibition was authored by Dr Adrian R Marsh, a professor of Romani Studies, himself of Welsh Gypsy origins, and increases the self-representation in Europeana editorial from underrepresented voices and communities. A corresponding <a href=\"https://pro.europeana.eu/post/roma-representation-in-the-cultural-heritage-sector-an-interview-with-eriac\">Pro news piece</a> was published alongside the exhibition, which further reflected on the vulnerability of the Roma community in the cultural heritage sector as well as the value for them of working with Europeana to amplify their voices.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -11217,11 +11220,54 @@ posts:
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><em>This page was edited on 25/11/22 to add a short paragraph about the WEAVE 3D case study.</em></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
         _id: posts/the-weave-project-linking-the-tangible-and-intangible-heritage-of-cultural-communities
     -
         slug: copyright-directive-series-a-closer-look-at-lithuania
         datecreated: '2022-10-19 13:25:26'
-        datechanged: '2022-10-25 17:36:12'
+        datechanged: '2023-01-10 13:39:19'
         datepublish: '2022-10-20 13:24:00'
         datedepublish: ''
         ownerid: 124
@@ -11288,6 +11334,9 @@ posts:
             -
                 slug: copyright
                 name: copyright
+            -
+                slug: cdsm-series
+                name: cdsm-series
         modules:
             -
                 enabled: enabled

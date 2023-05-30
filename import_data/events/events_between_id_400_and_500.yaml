@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T10:45:39+01:00'
+    date: '2023-05-30T17:13:01+02:00'
     version: 3.7.4
     platform: mysql
 events:
@@ -10196,11 +10196,11 @@ events:
     -
         slug: how-to-make-your-online-presence-more-green
         datecreated: '2020-11-25 13:51:16'
-        datechanged: '2022-10-06 12:53:58'
+        datechanged: '2022-11-25 09:06:14'
         datepublish: '2020-11-25 13:50:49'
         datedepublish: ''
         ownerid: 124
-        status: held
+        status: published
         templatefields: {  }
         title: 'How to make your online presence more green'
         intro: "<p>This session\_from Europeana 2020 aims to help people reduce their carbon footprint from being online.</p>\r\n"
@@ -10447,11 +10447,11 @@ events:
     -
         slug: glam-for-future-best-practices-from-the-glam-field-on-their-climate-policies
         datecreated: '2020-11-25 13:55:00'
-        datechanged: '2022-10-06 12:52:31'
+        datechanged: '2022-11-25 09:06:50'
         datepublish: '2020-11-25 13:54:38'
         datedepublish: ''
         ownerid: 124
-        status: held
+        status: published
         templatefields: {  }
         title: 'GLAM for Future - Best practices from the GLAM field on their climate policies'
         intro: "<p>In this session\_from Europeana 2020, participants will find inspiration from best practices in GLAM, and an opportunity to discuss a GLAM4F action plan.</p>\r\n"
@@ -10915,11 +10915,11 @@ events:
     -
         slug: tools-and-good-practice-to-manage-copyright
         datecreated: '2020-11-25 14:02:39'
-        datechanged: '2022-10-06 12:55:17'
+        datechanged: '2023-02-01 15:35:24'
         datepublish: '2020-11-25 14:02:25'
         datedepublish: ''
         ownerid: 124
-        status: held
+        status: published
         templatefields: {  }
         title: 'Tools and good practice to manage copyright'
         intro: "<p>This session\_from Europeana 2020\_highlights four initiatives\_from across Europe designed to support cultural heritage professionals dealing with copyright.</p>\r\n"
@@ -12676,12 +12676,12 @@ events:
         contact_email: null
         contact_website: null
         pages: {  }
-        posts:
-            - posts/catch-up-with-europeana-2020
+        posts: {  }
         data: {  }
-        projects:
-            - projects/europeana-as-a-powerful-platform-for-storytelling
-        events: {  }
+        projects: {  }
+        events:
+            - events/love-stories-digital-storytelling-experiences-we-can-t-stop-thinking-about
+            - events/love-stories-digital-storytelling-experiences-we-can-t-stop-thinking-about
         persons: {  }
         communities:
             -
@@ -15702,11 +15702,11 @@ events:
         contact_email: null
         contact_website: null
         pages: {  }
-        posts:
-            - posts/catch-up-with-europeana-2020
+        posts: {  }
         data: {  }
         projects: {  }
-        events: {  }
+        events:
+            - events/keynote-and-panel-session-crisis-change-and-culture-shaping-new-realities
         persons: {  }
         communities:
             -
@@ -16899,11 +16899,11 @@ events:
         contact_email: null
         contact_website: null
         pages: {  }
-        posts:
-            - posts/catch-up-with-europeana-2020
+        posts: {  }
         data: {  }
         projects: {  }
-        events: {  }
+        events:
+            - events/keynote-a-traveller-s-guide-to-digital-transformation
         persons: {  }
         communities:
             -
@@ -17737,7 +17737,6 @@ events:
         data: {  }
         projects: {  }
         events:
-            - events/new-frontiers-for-jewish-digital-heritage
             - events/new-frontiers-for-jewish-digital-heritage
         persons: {  }
         communities:
@@ -19005,7 +19004,7 @@ events:
                 selected_resources:
                     -
                         value: ''
-                        _id: resources/eu-datathon-1
+                        _id: resources/media-literacy-competence-framework-en
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''

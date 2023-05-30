@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:48:20+02:00'
+    date: '2023-05-30T15:12:56+02:00'
     version: 3.7.4
     platform: mysql
 pages:
@@ -107,7 +107,7 @@ pages:
                 attribution_link: 'https://www.europeana.eu/portal/en/record/9200579/zncts6ch.html'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -152,7 +152,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -262,7 +262,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -292,23 +292,23 @@ pages:
     -
         slug: creating-editorial
         datecreated: '2018-12-14 12:00:42'
-        datechanged: '2021-10-20 11:33:44'
+        datechanged: '2023-05-05 11:52:33'
         datepublish: '2018-12-14 11:57:01'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
         title: 'Editorial on the Europeana website'
-        intro: "<p>The\_<a href=\"https://www.europeana.eu/\">Europeana website (Europeana.eu)</a>\_uses a variety of editorial formats to tell the stories of the amazing collections found on our website. Blogs, exhibitions and galleries highlight collections from different institutions and encourage audiences to engage with this content in new ways.\_</p>\r\n"
-        body: "<p>If you’d like to contribute, we’d love to hear from you.\_</p>\r\n\r\n<p>Whether you’re a curator, heritage professional, data partner, researcher, student or enthusiast, you can suggest ideas for editorial on Europeana’s objects.</p>\r\n\r\n<h3><strong>Guidelines for contributors</strong></h3>\r\n\r\n<p>We invite proposals for the following formats:</p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Blogs – short editorial pieces that illuminate a topic; usually 400-1,200 words</p>\r\n    </li>\r\n    <li>\r\n    <p>Exhibitions – long-form narratives that engage readers with text and imagery\_\_</p>\r\n    </li>\r\n    <li>\r\n    <p>Galleries – sets of minimum 20 items on a subject or theme</p>\r\n    </li>\r\n</ul>\r\n\r\n<p>If you’d like to propose a story idea, please send your pitch (no more than 300 words) to <a href=\"mailto:editorial@europeana.eu\">editorial@europeana.eu</a>. Include an outline of what the story will cover, why it’s suitable for Europeana collections, and the format it will take. You can also <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdDENRPXjG1RA881YOv2hRR0SykSqWwuQh6DVHuu_TOdGTGKw/formResponse\">submit this information through our Google Form</a>.\_</p>\r\n\r\n<p>While we will give all pitches due consideration, we cannot guarantee that your idea will be published. The lead times on our content varies, but a typical timeline from pitch to publication is around 2-3 months. Only pitch if you can produce the proposed content within this time frame.\_</p>\r\n\r\n<p>Please note that all editorial content on Europeana is published under a Creative Commons CC BY-SA licence. For full details on formats and tone of voice, please see our editorial guidelines,\_available as both Google Slides and text, below.</p>\r\n\r\n<p><iframe allowfullscreen=\"true\" frameborder=\"0\" height=\"541\" src=\"https://docs.google.com/presentation/d/e/2PACX-1vTQ1vMQKIkZD7ZGwROc4fCEa9VkL8RfYQ7rhQUfsy_1K24ZEnyEsAlOgnNmDs8VZWpVNtYR8kyw12zk/embed?start=false&amp;loop=false&amp;delayms=10000\" width=\"683\"></iframe></p>\r\n"
+        intro: "<p>The\_<a href=\"https://www.europeana.eu/\">Europeana website (Europeana.eu)</a>\_uses a variety of editorial formats to tell the stories of the amazing collections found on our website. Blogs, exhibitions and galleries highlight collections from different institutions and encourage audiences to engage with this content in new ways.\_If you’d like to contribute, we’d love to hear from you.\_</p>\r\n"
+        body: null
         pagefooter: null
-        pagetype: page
+        pagetype: landingpage-nohighlight
         highlighttitle: null
         highlightsources: posts
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>Our galleries, blogs and exhibitions tell the stories of the content shared by cultural heritage institutions. Find out how you can contribute.\_</p>\r\n\r\n<p></p>\r\n"
+        teaser: "<p>Our exhibitions, blogs and galleries tell engaging stories with digital collections shared by cultural heritage institutions. Find out how you can contribute.</p>\r\n\r\n<p></p>\r\n"
         teaser_image:
             file: 'Images/New_pro_images_March2020/Editorial on Europeana Collections.png'
             title: 'Woman writing at a desk'
@@ -344,14 +344,13 @@ pages:
         search_keywords: null
         pages:
             - pages/online-exhibitions
-            - pages/creating-editorial
-            - pages/creating-editorial
-            - pages/creating-editorial
-            - pages/creating-editorial
         posts:
             - posts/from-an-exhibition-to-a-competition-wrapping-up-picture-this-vintage-postcards-of-southeastern-europe
             - posts/effective-digital-storytelling-reflecting-on-our-faces-of-europe-exhibition
             - posts/pictures-at-an-exhibition-how-we-made-faces-of-europe
+            - posts/get-involved-in-black-history-month-2022
+            - posts/what-s-new-on-the-europeana-website-january-march-2022
+            - posts/what-s-new-on-the-europeana-website-september-december-2021
         data: {  }
         projects: {  }
         events: {  }
@@ -375,11 +374,11 @@ pages:
         modules:
             -
                 enabled: enabled
-                title: ''
+                title: 'Editorial on the Europeana website'
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<h3><meta charset=\"utf-8\" /><b id=\"docs-internal-guid-5b8307d2-7fff-4cd7-4462-b68c79098f8c\">Editorial guidelines for contributors</b></h3>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Europeana presents engaging cultural heritage online – on diverse topics and from diverse sources – for learning, for work or just for fun.These guidelines describe how you can propose and develop editorial ideas as well as ensure their accessibility to all.</p>\r\n\r\n<h3 dir=\"ltr\"><strong>Publishing with purpose</strong></h3>\r\n\r\n<p dir=\"ltr\">Europeana’s editorial objectives are to:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Encourage audiences to discover &amp; engage with collections about European cultural heritage</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Tell compelling stories about collections, people &amp; objects</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Showcase Europeana as a diverse and rich source</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Maximise our reach via extensive social media marketing</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3 dir=\"ltr\"><strong>Editorial principles</strong></h3>\r\n\r\n<p dir=\"ltr\">We are guided by these principles:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Be inspiring, welcoming and intelligent</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Reflect the diversity of European culture</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Fairly represent our cultural heritage providers</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Always attribute, credit and link content</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Focus on topics in the thematic collections framework</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Avoid content duplication or repetition</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3 dir=\"ltr\"><strong>Editorial formats</strong></h3>\r\n\r\n<p dir=\"ltr\"><strong>Blogs</strong></p>\r\n\r\n<p dir=\"ltr\">Blogs can:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Tell the story of individual artists, artworks or institutions</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Answer a question for the audience</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Relate to a topical contemporary issue</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Be a short, themed compilation of images/objects</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Announce new features or functionalities</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Relate to Europeana campaigns or seasons</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Highlight the history of a certain topic or theme</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">Blogs should:</p>\r\n\r\n<ul>\r\n    <li data-stringify-border=\"0\" data-stringify-indent=\"0\">Usually be 400-1,200 words long</li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Feature a number of images, sound clips or videos, with a minimum of 3 objects from Europeana</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Be on topics that encourage sharing</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Use appropriate keyword-friendly language in titles</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Have titles that clearly signpost the topic to users</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Link to objects in Europeana</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Europeana’s blog is primarily in English, but we can also publish blogs in any of the EU’s 24 supported languages.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\"><strong>Exhibitions</strong></p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Exhibitions are longer-form editorial format, usually arranged over several chapters</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Text should be light, engaging and informative</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Optimal exhibition size is 2000-3000 words, with 20-30 images, the majority of which should be available in Europeana</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Exhibitions should reflect cultural breadth and include material from multiple institutions across Europe</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">You can include any content that can be embedded in an iframe.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Multilingual: exhibitions can be published in English and any of the EU’s 24 supported languages</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Exhibition’s main cover image should be openly licensed (Public Domain, CC0, CC BY, CC BY-SA)</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\"><strong>Galleries</strong></p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Showcase curated visual material to culture lovers</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Focus on a single defined topic, like an artist, a type of object, or a time/place</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Typically feature 25-50 items</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Reflect cultural breadth and include material from multiple institutions across Europe - not only from a single source</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Titles should reflect SEO principles</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Descriptions should use keywords, can include hyperlinks and must be no longer than 280 characters</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Every Monday we publish and promote #GalleryOfTheWeek</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\"><strong>Curate your gallery</strong></p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">The Europeana account functionality (released in late 2020) allows registered users to <a href=\"https://www.europeana.eu/account/login\">create their own galleries</a>, which can be kept private or made public. Selected public galleries may be featured on the Europeana website and promoted by Europeana’s Collections Engagement team.</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3 dir=\"ltr\"><strong>Licensing</strong></h3>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Blogs, exhibitions and galleries can feature digital objects with any licence or rights statement from the <a href=\"https://pro.europeana.eu/page/europeana-licensing-framework\">Europeana Licensing Framework</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">We encourage authors to use openly licensed content where possible.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">All contributed texts are published under a CC BY-SA licence by default. All authors are credited in blogs and exhibitions. Gallery creators are noted where space allows.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">To allow promotion of the editorial on social media, we require at least one openly licensed image or permission from the rights holder.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">In-copyright material from outside the Europeana website can only be used if specific permission has been obtained by the author from the copyright holder.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Specific attention should be paid to objects with a ‘non-derivative’ licence, as these cannot be cropped or changed, e.g. in feature or hero images.</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3 dir=\"ltr\"><strong>Guidance for writing for exhibitions / blogs</strong></h3>\r\n\r\n<p dir=\"ltr\"><strong>Style and tone of voice</strong></p>\r\n\r\n<p dir=\"ltr\">Europeana’s editorial is aimed at culture lovers across the world. The personality we convey is intelligent, welcoming and inspiring. Our editorial should not read like an academic journal or a legal document. We want to see the humanity in it.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">We want our editorial to be easily understood by a range of readers all around the world. So we prefer simple writing and simple punctuation. Think one idea per paragraph. Avoid complicated structures that require complex punctuation. Read it out loud and make sure there are places to breathe.</p>\r\n\r\n<p dir=\"ltr\"><strong>Think about your story</strong></p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Before you begin, think about the story you want to tell.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">What is the reader going to learn from this exhibition or blog?</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Then break it down into smaller sections.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">What does each exhibition chapter or section of a blog reveal? How does it relate to the others?</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">And think about how the sections relate to each other. Remember that people don’t always explore an exhibition in the order it’s written. And people might share their favourite bit of your blog on social media - each section needs to work by itself, while being part of the whole story.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\"><strong>Be an expert</strong></p>\r\n\r\n<p dir=\"ltr\">You’re contributing to Europeana because you have specialist knowledge. We’d love you to&nbsp; give us something that Wikipedia or a quick Google search doesn’t provide. Give us a new perspective - something we don’t know - and link your text closely to the digital collections, using a range of sources from different organisations / countries.</p>\r\n\r\n<p dir=\"ltr\">Please explain - or better still avoid - any jargon so that your text is accessible to a wide range of readers. Don’t forget many are reading in a second language.&nbsp;</p>\r\n\r\n<h3 dir=\"ltr\"><strong>Useful tips</strong></h3>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Use conversational tone and accessible language (no jargon)</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Focus on one story (do not include off-topic information)</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Keep paragraphs to 1-3 sentences</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">You can add images or embed video or audio (where embedding is allowed)</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Use subheadings, white space and images, other media or pull quotes to break up longer sections of text</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Make sure the title / subtitle / introduction is&nbsp; SEO-friendly&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">We use British English spellings, the Oxford English Dictionary and the European Commission’s English Style Guide</p>\r\n    </li>\r\n</ul>\r\n\r\n<h3 dir=\"ltr\"><strong>Support from Europeana</strong></h3>\r\n\r\n<p dir=\"ltr\">Your contributions to Europeana editorial are hugely valuable and we are very happy to support you in developing them from the ideas stage through to publication. We will work with you to ensure your texts fit our editorial style and our platform.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Please remember that what has worked on another platform or in another format may not transfer automatically to Europeana’s style and requirements. So please assess and edit your exhibition or blog in light of these guidelines. If you have questions or difficulties, please get in touch at&nbsp;<meta charset=\"utf-8\" /><a href=\"mailto:editorial@europeana.eu.\">editorial@europeana.eu.</a></p>\r\n"
+                body: "<p>The&nbsp;<a href=\"https://www.europeana.eu/\">Europeana website (Europeana.eu)</a>&nbsp;uses a variety of editorial formats to tell the stories of the amazing collections found on our website. Blogs, exhibitions and galleries highlight collections from different institutions and encourage audiences to engage with this content in new ways.&nbsp;If you’d like to contribute, we’d love to hear from you.&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -392,7 +391,373 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Share your story on the Europeana website'
+                subtitle: ''
+                anchortitle: 'Share your story'
+                templates: body
+                body: "<p dir=\"ltr\">Stories connect people. We think cultural heritage does too. At Europeana, digital storytelling matters to us and our partners. Our blogs and exhibitions tell stories about history and culture with the amazing collections on <a href=\"https://www.europeana.eu/\">the Europeana website</a>. Want to tell your story? Here’s how to get involved.</p>\r\n\r\n<p>Our stories combine engaging text with the rich variety of images and audiovisual content to be found on the Europeana website. We have two key formats:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><a href=\"https://www.europeana.eu/blog\">Blogs</a> – short pieces that illuminate a topic, usually 400-800 words</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><a href=\"https://www.europeana.eu/exhibitions\">Exhibitions</a> – longer, multi-chapter narratives, usually more than 1200 words</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">We welcome and publish stories written in any of the <a href=\"https://european-union.europa.eu/principles-countries-history/languages_en\">24 official languages</a> of the European Union, but please send us your pitch in English.&nbsp;</p>\r\n\r\n<p>While we will give all pitches due consideration, we cannot guarantee that your idea will be published. The lead times on our content varies, but a typical timeline from pitch to publication is around 1-2 months. Only pitch something if you can produce the proposed content within this time frame.</p>\r\n\r\n<p>Please note that all editorial content on Europeana is published under a Creative Commons <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA</a> licence. For full details on formats and tone of voice, please see our editorial guidelines, available as&nbsp;Google Slides below.</p>\r\n\r\n<p>Last but not least, did you know you can create your own Europeana galleries? Just sign up for a <a href=\"https://www.europeana.eu/create-and-use-a-europeana-account\">Europeana account</a> and get started right away.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: bg-grey
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1103'
+                        _id: resources/share-your-europeana-blog-idea
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: bg-grey
+            -
+                enabled: enabled
+                title: 'Editorial grants programme'
+                subtitle: ''
+                anchortitle: 'Editorial grants programme'
+                templates: body
+                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Our <a href=\"https://pro.europeana.eu/post/how-we-are-supporting-underrepresented-voices-on-the-europeana-website\">editorial grants programme</a> provides €200 funding for writers to contribute blogs for europeana.eu that put a spotlight on underrepresented communities, voices and lived experiences.&nbsp; Are you from an underrepresented community, or are you writing about topics that surface unheard voices from minoritised or oppressed groups and/or cultures? You might be eligible for an editorial grant through our grants programme.</p>\r\n\r\n<p dir=\"ltr\">In the first half of 2023, part of our editorial grants programme is dedicated to the World Festival of Cultural Diversity, supporting underrepresented stories and experiences on religious diversity.</p>\r\n\r\n<p>If you would like to apply for an editorial grant, please use the form linked below.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1090'
+                        _id: resources/apply-for-an-editorial-grant
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Editorial guidelines'
+                subtitle: ''
+                anchortitle: 'Editorial guidelines'
+                templates: body
+                body: "<p>Europeana presents engaging cultural heritage online – on diverse topics and from diverse sources – for learning, for work or just for fun. These guidelines describe how you can propose and develop editorial ideas as well as ensure their accessibility to all.</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<center><iframe allowfullscreen=\"true\" frameborder=\"0\" height=\"541\" src=\"https://docs.google.com/presentation/d/e/2PACX-1vTQ1vMQKIkZD7ZGwROc4fCEa9VkL8RfYQ7rhQUfsy_1K24ZEnyEsAlOgnNmDs8VZWpVNtYR8kyw12zk/embed?start=false&amp;loop=false&amp;delayms=10000\" width=\"683\"></iframe></center>\r\n\r\n<p></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: bg-grey
+            -
+                enabled: enabled
+                title: 'Style, tone of voice and storytelling'
+                subtitle: ''
+                anchortitle: 'Style, tone of voice and storytelling'
+                templates: body
+                body: "<p>We try to engage audiences with digital cultural heritage in a way that's user-friendly, interactive and multilingual. We promote diverse and inclusive storytelling so that more people can discover, use and reuse cultural heritage content online.</p>\r\n\r\n<p>We want our editorial to be easily understood by a range of readers all around the world. The personality we convey is intelligent, welcoming and inspiring - we want to see the humanity in your stories. Our editorial should not read like an academic journal or a legal document. We want to see the humanity in it.&nbsp;&nbsp;</p>\r\n\r\n<p>We use British English spellings, and we consult the Oxford English Dictionary and the <a href=\"https://commission.europa.eu/document/download/c45f5b70-2d0e-4da7-b181-b5fe3a16c4bb_en?filename=styleguide_english_dgt_en.pdf\">European Commission’s English Style Guide</a> to ensure consistency. We also respect <a href=\"https://www.materialculture.nl/sites/default/files/2018-08/words_matter.pdf.pdf\">Words Matter: An Unfinished Guide to Word Choices in the Cultural Sector</a> to help our writing to be inclusive.</p>\r\n\r\n<p>If you are writing in a language other than English, please consider how Europeana’s style and tone of voice might be applied to the language you’re using, and the implications of word choices to ensure your writing remains inclusive.&nbsp;</p>\r\n\r\n<p>Audiences want to feel informed by digital stories, but also curious, immersed, inspired and connected by them. It is this that sets storytelling apart from other content types and gives storytelling a role in engagement and community-building across the cultural heritage sector.&nbsp; These <a href=\"https://pro.europeana.eu/post/seven-tips-for-digital-storytelling-with-cultural-heritage\">seven tips</a> are designed to help you plan, write and deliver engaging stories about cultural heritage.</p>\r\n\r\n<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"500\" src=\"https://www.youtube.com/embed/8EjM9vHOLpw\" title=\"YouTube video player\" width=\"100%\"></iframe></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Using images and audio or visual content'
+                subtitle: ''
+                anchortitle: 'Using images and audio or visual content'
+                templates: body
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">All images should be accompanied by ‘alt text’. This is a way of describing a visual element and is a principle of web accessibility. It provides a meaning and description to images that can be read by search engines. Visually impaired users using screen readers will use the alt description to better understand the images. Alternative text will be displayed in place of the image if the image file has trouble loading. If you need tips or guidelines on how to write effective alt-text, please <a href=\"https://docs.google.com/document/d/117cRj0J3QNqFWpIM-ePNHMHr0KJ1ygKbW5irbtTB7DM/edit?usp=sharing\">refer to this document</a>.</p>\r\n\r\n<p>Any embedded audio or video should ideally have captions and audio descriptions.</p>\r\n\r\n<p>To fairly represent our cultural heritage providers, all images, audio and visual material used in our editorial must be credited appropriately.&nbsp;</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Blogs and&nbsp;exhibitions can feature digital objects with any licence or rights statement from the <a href=\"https://pro.europeana.eu/page/europeana-licensing-framework\">Europeana Licensing Framework</a> but we encourage authors to use openly licensed content where possible.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">To allow promotion of the editorial on social media, we require at least one openly licensed image or permission from the rights holder.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">In-copyright material from outside the Europeana website can only be used if specific permission has been obtained by the author from the copyright holder.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Specific attention should be paid to objects with a ‘non-derivative’ licence, as these cannot be cropped or changed, e.g. in feature or hero images.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">All contributed texts are published under a CC BY-SA licence by default. All authors are credited in blogs and exhibitions.&nbsp;</p>\r\n    </li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: bg-grey
+            -
+                enabled: enabled
+                title: 'We are happy to help you'
+                subtitle: ''
+                anchortitle: Help
+                templates: body
+                body: "<p>Your contributions to Europeana editorial are hugely valuable and we are very happy to support you in developing them from the ideas stage through to publication. We will work with you to ensure your texts fit our editorial style and our platform.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p>Please remember that what has worked on another platform or in another format may not transfer automatically to Europeana’s style and requirements. So please assess and edit your exhibition or blog in light of these guidelines. If you have questions or difficulties, please get in touch.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -511,7 +876,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -556,7 +921,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -604,7 +969,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -649,7 +1014,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -770,7 +1135,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -890,7 +1255,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -935,7 +1300,7 @@ pages:
                 attribution_link: 'https://www.flickr.com/photos/51443772@N06/10991695814/in/dateposted/'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -983,7 +1348,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1037,7 +1402,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1085,7 +1450,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1130,7 +1495,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -1267,7 +1632,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1297,7 +1662,7 @@ pages:
     -
         slug: iiif
         datecreated: '2019-02-12 15:14:46'
-        datechanged: '2021-06-16 15:26:47'
+        datechanged: '2023-02-21 18:09:28'
         datepublish: '2019-02-12 15:14:20'
         datedepublish: ''
         ownerid: 75
@@ -1345,9 +1710,9 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: null
-        pages:
-            - pages/iiif
-        posts: {  }
+        pages: {  }
+        posts:
+            - posts/professionals-in-focus-evelien-hauwaerts
         data: {  }
         projects: {  }
         events: {  }
@@ -1381,7 +1746,7 @@ pages:
                 subtitle: ''
                 anchortitle: Intro
                 templates: body
-                body: "<section>\r\n<p>The <a href=\"https://iiif.io/\">International Image Interoperability Framework (IIIF)</a> combines a set of APIs that offer an alternative and complementary means to group, search and access information about the digital objects (aside from the <a href=\"/search\">Search</a> and <a href=\"record\">Record</a> APIs) specifically tailored for the display of Newspaper materials. These APIs follow the specifications defined by the IIIF consortium and therefore can also be suitable for other materials that can have full text content besides Newspapers.</p>\r\n\r\n<p>Before start using these APIs, we recommend reading the <a href=\"#apikey\">Registering for an API key</a> and reading the <a href=\"http://www.europeana.eu/portal/rights/api-terms-of-use.html\">Terms of Use</a>. If you want to get started with these APIs, go directly to the <a href=\"#get-started\">Getting Started</a> section. If you want to get regular updates about the Europeana API, provide feedback and discuss it with other developers, we suggest to join the <a href=\"https://groups.google.com/forum/?pli=1#!forum/europeanaapi\">Europeana API discussion group at Google Groups</a>.</p>\r\n</section>\r\n"
+                body: "<section>\r\n<p>The <a href=\"https://iiif.io/\">International Image Interoperability Framework (IIIF)</a> combines a set of APIs that offer an alternative and complementary means to group, search and access information about the digital objects (aside from the <a href=\"/search\">Search</a> and <a href=\"record\">Record</a> APIs) specifically tailored for the display of Newspaper materials. These APIs follow the specifications defined by the IIIF consortium and therefore can also be suitable for other materials that can have full text content besides Newspapers.</p>\r\n\r\n<p>Before start using these APIs, we recommend&nbsp;<a href=\"https://pro.europeana.eu/page/annotations#get-started\">Registering for an API key</a> and reading the <a href=\"http://www.europeana.eu/portal/rights/api-terms-of-use.html\">Terms of Use</a>. <strong>You currently don't need an API key to use our IIIF API.&nbsp;</strong>If you want to get started with these APIs, go directly to the <a href=\"#get-started\">Getting Started</a> section. If you want to get regular updates about the Europeana API, provide feedback and discuss it with other developers, we suggest to join the <a href=\"https://groups.google.com/forum/?pli=1#!forum/europeanaapi\">Europeana API discussion group at Google Groups</a>.</p>\r\n</section>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -1394,7 +1759,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1425,6 +1790,54 @@ pages:
                 title: ''
                 subtitle: ''
                 anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '335'
+                        _id: resources/get-the-api-key
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
                 templates: listingsemistatic
                 body: ''
                 image:
@@ -1439,7 +1852,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1480,7 +1893,7 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<section>\r\n\r\n<h3>Changelog</h3>\r\n\r\n<p>As mentioned in the introduction, the IIIF APIs are made up of several distinct APIs, each one with its own project in GitHub and changelog as listed below.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <thead>\r\n        <tr>\r\n            <th style=\"width: 150px\">API</th>\r\n            <th>Last version</th>\r\n            <th>Description</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr>\r\n            <td>IIIF Manifest API</td>\r\n            <td><a href=\"https://github.com/europeana/iiif-manifest-api/releases\">0.3-alpha (2018-11-27)</a></td>\r\n            <td>Supports only the retrieval of manifests.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>IIIF Full-text API</td>\r\n            <td><a href=\"https://github.com/europeana/fulltext/releases\">0.5 (2018-11-12)</a></td>\r\n            <td>Supports the retrieval of full-text, both the Annotation Pages and Full-text resources.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n</section>"
+                body: "<section>\r\n<h3>Changelog</h3>\r\n\r\n<p>As mentioned in the introduction, the IIIF APIs are made up of several distinct APIs, each one with its own project in GitHub and changelog as listed below.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <thead>\r\n        <tr>\r\n            <th style=\"width: 150px\">API</th>\r\n            <th>Last version</th>\r\n            <th>Description</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr>\r\n            <td>IIIF Manifest API</td>\r\n            <td><a href=\"https://github.com/europeana/iiif-manifest-api/releases/tag/manifest-api-0.8.2\">0.8.2-alpha (2022-11-23)</a></td>\r\n            <td>Add source field for translated items<br />\r\n            Add validation of requested IIIF version<br />\r\n            Fix links to Fulltext for translated items<br />\r\n            Fix duplicate items<br />\r\n            Refactoring</td>\r\n        </tr>\r\n        <tr>\r\n            <td>IIIF Full-text API</td>\r\n            <td><a href=\"https://github.com/europeana/fulltext/releases\">0.9.1-alpha (2022-11-23)</a></td>\r\n            <td>Add source field for translated items<br />\r\n            Add validation of requested IIIF version to summary and search endpoints<br />\r\n            Add validation of more configuration properties<br />\r\n            Add support to sync annotations with Solr (not activated yet)<br />\r\n            Refactoring</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n</section>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -1493,7 +1906,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1538,7 +1951,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1583,7 +1996,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1628,7 +2041,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1673,7 +2086,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1718,7 +2131,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1763,7 +2176,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1927,7 +2340,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2067,7 +2480,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2112,7 +2525,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2157,7 +2570,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2202,7 +2615,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2330,7 +2743,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2341,7 +2754,7 @@ pages:
                 selected_pages:
                     -
                         value: ''
-                        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
+                        _id: pages/tools
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -2465,7 +2878,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2610,7 +3023,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2655,7 +3068,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2700,7 +3113,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2745,7 +3158,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2790,7 +3203,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2835,7 +3248,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2880,7 +3293,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2925,7 +3338,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3057,7 +3470,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3068,7 +3481,7 @@ pages:
                 selected_pages:
                     -
                         value: ''
-                        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
+                        _id: pages/tools
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -3169,7 +3582,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3214,7 +3627,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -3259,7 +3672,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3387,7 +3800,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3514,7 +3927,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3646,7 +4059,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3777,7 +4190,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3888,7 +4301,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3933,7 +4346,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3978,7 +4391,7 @@ pages:
                 attribution_link: 'https://pro.europeana.eu/post/more-than-a-buzzword-why-transcribathon-exemplifies-the-need-for-digital-transformation-and-just-what-that-means'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4023,7 +4436,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4068,7 +4481,7 @@ pages:
                 attribution_link: 'https://www.europeana.eu/portal/en/record/2022608/TELE_TELE_IBM_2012_53008.html?q=%22IBM+Modell%22#dcId=1551874922225&p=5'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4113,7 +4526,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4158,7 +4571,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4203,7 +4616,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4248,7 +4661,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4293,7 +4706,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4338,7 +4751,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4383,7 +4796,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4428,7 +4841,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4473,7 +4886,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4518,7 +4931,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4563,7 +4976,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4608,7 +5021,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4653,7 +5066,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4698,7 +5111,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4743,7 +5156,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4788,7 +5201,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4833,7 +5246,7 @@ pages:
                 attribution_link: ''
                 singlefile: 'Europeana_Professional/Publications/Europeana Annual Report and Accounts 2018.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4967,7 +5380,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -5085,7 +5498,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5195,7 +5608,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5311,7 +5724,7 @@ pages:
                 attribution_link: 'https://www.europeana.eu/portal/en/record/2021012/app_si_A_IV_3650.html'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5356,7 +5769,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5401,7 +5814,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5446,7 +5859,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5491,7 +5904,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5536,7 +5949,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5581,7 +5994,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5626,7 +6039,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5671,7 +6084,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5716,7 +6129,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5761,7 +6174,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5806,7 +6219,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts

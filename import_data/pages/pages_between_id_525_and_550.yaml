@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:37:06+02:00'
+    date: '2023-05-30T15:09:24+02:00'
     version: 3.7.4
     platform: mysql
 pages:
@@ -90,7 +90,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -286,7 +286,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -331,7 +331,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -376,7 +376,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -421,7 +421,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -466,7 +466,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -511,7 +511,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -548,7 +548,7 @@ pages:
     -
         slug: home
         datecreated: '2017-09-04 14:08:43'
-        datechanged: '2022-10-03 13:38:33'
+        datechanged: '2023-04-25 16:09:43'
         datepublish: '2017-09-04 14:07:49'
         datedepublish: ''
         ownerid: 2
@@ -610,54 +610,6 @@ pages:
         tags: {  }
         modules:
             -
-                enabled: disabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: banner
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '921'
-                        _id: resources/europeana-2021-tickets
-                override_css_id: ''
-                override_css_class: grad_none
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
                 enabled: enabled
                 title: ''
                 subtitle: ''
@@ -669,7 +621,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -690,56 +642,8 @@ pages:
                 selected_events: ''
                 selected_resources:
                     -
-                        value: '1055'
-                        _id: resources/join-the-europeana-network-association-general-assembly-2022
-                override_css_id: ''
-                override_css_class: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
-                enabled: disabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: banner
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '886'
-                        _id: resources/call-for-proposals
+                        value: '1150'
+                        _id: resources/europeanatech-2023-call-for-proposals
                 override_css_id: ''
                 override_css_class: ''
                 modulemorelink: ''
@@ -759,20 +663,13 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p>We empower the cultural heritage sector in its digital transformation.&nbsp;We develop expertise, tools and policies to embrace digital change and encourage partnerships that foster innovation.&nbsp;We make it easier for people to use cultural heritage for education, research, creation and recreation. Our work contributes to an open, knowledgeable and creative society.</p>\r\n"
+                body: "<p>We empower the cultural heritage sector in its digital transformation.&nbsp;We develop expertise, tools and policies to embrace digital change and encourage partnerships that foster innovation.&nbsp;We make it easier for people to use cultural heritage for education, research, creation and recreation. Our work contributes to an open, knowledgeable and creative society.</p>\r\n\r\n<p>We are at the heart of the common European data space for cultural heritage.</p>\r\n"
                 image:
                     file: ''
                     title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -792,12 +689,19 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
-                selected_organisations: ''
+                override_css_id: ''
+                override_css_class: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
             -
                 enabled: enabled
                 title: ''
@@ -808,16 +712,9 @@ pages:
                 image:
                     file: ''
                     title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -852,12 +749,19 @@ pages:
                     -
                         value: '812'
                         _id: resources/we-build-technology
-                selected_organisations: ''
+                override_css_id: ''
+                override_css_class: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
             -
                 enabled: enabled
                 title: ''
@@ -877,7 +781,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -925,7 +829,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest_unpaged
                 sources: posts
@@ -970,7 +874,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1021,7 +925,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1066,7 +970,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1114,7 +1018,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1139,8 +1043,8 @@ pages:
                         value: '744'
                         _id: pages/research
                     -
-                        value: '737'
-                        _id: pages/working-with-you-and-for-you-in-the-time-of-covid-19
+                        value: '533'
+                        _id: pages/impact
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -1177,7 +1081,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1225,7 +1129,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1341,7 +1245,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1378,7 +1282,7 @@ pages:
     -
         slug: research-advisory-board
         datecreated: '2017-09-05 11:08:40'
-        datechanged: '2021-08-19 08:13:03'
+        datechanged: '2022-11-22 23:24:22'
         datepublish: '2017-09-05 11:05:07'
         datedepublish: ''
         ownerid: 100
@@ -1467,7 +1371,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -1478,9 +1382,6 @@ pages:
                 selected_pages: ''
                 filter_persons: ''
                 selected_persons:
-                    -
-                        value: '1318'
-                        _id: persons/lorna-hughes
                     -
                         value: '6734'
                         _id: persons/robin-boast
@@ -1493,6 +1394,9 @@ pages:
                     -
                         value: '6124'
                         _id: persons/marianne-huang
+                    -
+                        value: '1318'
+                        _id: persons/lorna-hughes
                     -
                         value: '2337'
                         _id: persons/seamus-ross
@@ -1537,7 +1441,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -1688,7 +1592,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: 'Europeana_Professional/Projects/Project_list/ENUMERATE/raw data'
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1725,7 +1629,7 @@ pages:
     -
         slug: impact
         datecreated: '2017-09-06 12:31:22'
-        datechanged: '2022-08-26 14:23:21'
+        datechanged: '2023-02-27 13:39:26'
         datepublish: '2017-09-06 12:30:15'
         datedepublish: ''
         ownerid: 2
@@ -1829,15 +1733,15 @@ pages:
                 enabled: enabled
                 title: Impact
                 subtitle: ''
-                anchortitle: ''
+                anchortitle: About
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Working in the cultural heritage sector is all about making a difference to the people who visit and use our products and services. We believe that we are all better off if we understand how the things we do contribute to bringing about change. To support cultural heritage professionals to grow this understanding, we have developed the Europeana Impact Framework, at the core of which you can find the Europeana Impact Playbook, webinars, impact assessments and the Europeana Impact community. Explore and use them below!</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Working in the cultural heritage sector is all about making a difference to the people who visit and use our products and services. We believe that we are all better off if we understand how the things we do contribute to bringing about change.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">To support cultural heritage professionals to grow this understanding of the impact of their work and activities, we have developed the Europeana Impact Framework, which includes the Europeana Impact Playbook, resources, information and documentation to build capacity and knowledge. Explore and use them below!</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1882,7 +1786,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1917,7 +1821,7 @@ pages:
                 selected_organisations: ''
             -
                 enabled: enabled
-                title: ''
+                title: 'The Impact Playbook'
                 subtitle: ''
                 anchortitle: 'Impact Playbook'
                 templates: breaker
@@ -1927,7 +1831,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1964,20 +1868,20 @@ pages:
                 attribution_link: ''
                 selected_organisations: ''
             -
-                enabled: disabled
-                title: 'Resources for Phase One'
-                subtitle: ''
-                anchortitle: Resources
-                templates: body
-                body: "<p>Phase one of the Impact Playbook has six stages. They have everything you need to take your organisation through the process of impact assessment design. Below, we introduce the main tools that are used at different stages of the process, which you can download individually as PDFs.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
+                enabled: enabled
+                title: 'Tools and knowledge'
+                subtitle: 'Access information and research on the impact of the Europeana Initiative through our documentation and case studies.'
+                anchortitle: 'Tools and knowledge'
+                templates: listingsemistatic
+                body: ''
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
-                ordering: latest
+                ordering: specified
                 sources: posts
                 override_amount: 3
                 basetag: ''
@@ -1987,7 +1891,25 @@ pages:
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
-                selected_posts: ''
+                selected_posts:
+                    -
+                        value: '2204'
+                        _id: posts/impact-assessment-case-study-europeana-in-your-classroom-mooc
+                    -
+                        value: '2603'
+                        _id: posts/impact-assessment-report-europeana-2021
+                    -
+                        value: '2413'
+                        _id: posts/impact-assessment-report-europeana-network-association-2021
+                    -
+                        value: '2517'
+                        _id: posts/how-to-use-outcome-harvesting-to-investigate-your-impact
+                    -
+                        value: '2510'
+                        _id: posts/our-impact-word-of-the-year-embedding
+                    -
+                        value: '2452'
+                        _id: posts/how-impact-assessment-helps-us-to-understand-the-value-of-built-cultural-heritage
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -2009,18 +1931,18 @@ pages:
                 attribution_link: ''
                 selected_organisations: ''
             -
-                enabled: disabled
-                title: Resources
+                enabled: enabled
+                title: ''
                 subtitle: ''
                 anchortitle: ''
-                templates: breakerdouble
+                templates: calltoactioninline
                 body: ''
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2041,23 +1963,8 @@ pages:
                 selected_events: ''
                 selected_resources:
                     -
-                        value: '334'
-                        _id: resources/slide-deck
-                    -
-                        value: '329'
-                        _id: resources/empathy-map
-                    -
-                        value: '328'
-                        _id: resources/change-pathway
-                    -
-                        value: '333'
-                        _id: resources/pathway-builder-google-sheet
-                    -
-                        value: '330'
-                        _id: resources/strategic-perspectives
-                    -
-                        value: '332'
-                        _id: resources/value-lens
+                        value: '799'
+                        _id: resources/impact-assessment-reports
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
@@ -2070,6 +1977,99 @@ pages:
                 attribution_country: ''
                 attribution_license: ''
                 attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: 'Network and communities'
+                subtitle: 'Join our vibrant Impact Community to engage, collaborate and transfer knowledge with peers and experts working on impact in the cultural heritage sector.'
+                anchortitle: 'Network and communities'
+                templates: teaser
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '683'
+                        _id: pages/europeana-impact-community
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: Events
+                subtitle: 'Register for upcoming events which support cultural heritage professionals to gain new skills and knowledge.'
+                anchortitle: Events
+                templates: listingnews
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: calendar_upcoming
+                sources: events
+                override_amount: 2
+                basetag: impact
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
                 selected_organisations: ''
             -
                 enabled: enabled
@@ -2090,7 +2090,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -2125,12 +2125,12 @@ pages:
                         value: '427'
                         _id: events/looking-back-at-the-impact-assessment-process-phase-4
                 selected_resources: ''
+                selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
-                selected_organisations: ''
             -
                 enabled: enabled
                 title: ''
@@ -2150,7 +2150,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2173,156 +2173,6 @@ pages:
                     -
                         value: '779'
                         _id: resources/impact-webinars
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
-                title: 'Case studies'
-                subtitle: 'As a cultural heritage professional you know the work you and your institution delivers has impact - but how do you prove it? Explore examples of our own impact assessments on activities in the Europeana Initiative.'
-                anchortitle: 'Case studies'
-                templates: listingsemistatic
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts:
-                    -
-                        value: '2204'
-                        _id: posts/impact-assessment-case-study-europeana-in-your-classroom-mooc
-                    -
-                        value: '2343'
-                        _id: posts/impact-assessment-report-europeana-2020
-                    -
-                        value: '2413'
-                        _id: posts/impact-assessment-report-europeana-network-association-2021
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: calltoactioninline
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '799'
-                        _id: resources/impact-assessment-reports
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: Community
-                subtitle: ''
-                anchortitle: Community
-                templates: breaker
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: pages
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages:
-                    -
-                        value: '683'
-                        _id: pages/europeana-impact-community
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -2332,7 +2182,7 @@ pages:
             -
                 enabled: enabled
                 title: News
-                subtitle: ''
+                subtitle: 'Keep up to date with the latest news, policies and good practice around impact and cultural heritage.'
                 anchortitle: News
                 templates: listingnews
                 body: ''
@@ -2348,7 +2198,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -2402,7 +2252,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2517,7 +2367,7 @@ pages:
                     title: ''
                 singlefile: Europeana_Professional/IPR/copyright-and-digitisation-of-cultural-heritage-presentation.ppt
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2562,7 +2412,7 @@ pages:
                     title: ''
                 singlefile: Europeana_Professional/IPR/the-europeana-licensing-framework-presentation.ppt
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2607,7 +2457,7 @@ pages:
                     title: ''
                 singlefile: Europeana_Professional/IPR/creative-commons-for-cultural-heritage-presentation.ppt
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2652,7 +2502,7 @@ pages:
                     title: ''
                 singlefile: Europeana_Professional/IPR/guidelines-for-ipr-training-presentations.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2770,7 +2620,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2892,7 +2742,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: data
@@ -3022,7 +2872,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3138,7 +2988,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3260,7 +3110,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3297,7 +3147,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3411,7 +3261,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3455,7 +3305,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3499,7 +3349,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts

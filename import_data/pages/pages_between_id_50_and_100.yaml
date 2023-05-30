@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:24:13+02:00'
+    date: '2023-05-30T14:46:24+02:00'
     version: 3.7.4
     platform: mysql
 pages:
@@ -86,7 +86,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: pages
@@ -123,7 +123,7 @@ pages:
     -
         slug: enumerate
         datecreated: '2015-03-18 16:40:13'
-        datechanged: '2022-06-13 15:30:53'
+        datechanged: '2022-10-27 14:58:10'
         datepublish: '2015-03-18 16:17:42'
         datedepublish: ''
         ownerid: 2
@@ -171,9 +171,9 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: null
-        pages:
-            - pages/enumerate
-        posts: {  }
+        pages: {  }
+        posts:
+            - posts/the-enumerate-self-assessment-tool-gain-insight-into-your-institution-s-digital-transformation
         data: {  }
         projects: {  }
         events: {  }
@@ -213,7 +213,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -247,7 +247,7 @@ pages:
                 attribution_link: ''
                 selected_organisations: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: ''
                 subtitle: ''
                 anchortitle: ''
@@ -258,7 +258,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -313,7 +313,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -367,7 +367,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -421,7 +421,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -557,7 +557,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -687,7 +687,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -823,7 +823,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -954,7 +954,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1003,7 +1003,7 @@ pages:
     -
         slug: foundation
         datecreated: '2015-09-01 13:55:43'
-        datechanged: '2022-08-22 06:27:41'
+        datechanged: '2023-05-02 12:10:58'
         datepublish: '2015-09-01 13:54:14'
         datedepublish: ''
         ownerid: 2
@@ -1019,7 +1019,7 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>An independent, non-profit organisation that operates the Europeana platform and works with other digital initiatives that put cultural heritage to good use in the world.</p>\r\n"
+        teaser: "<p>An independent, non-profit organisation that\_stewards the common European\_data space for cultural heritage and contributes to other digital initiatives that put cultural heritage to good use in the world.</p>\r\n"
         teaser_image:
             file: 'Images/New_pro_images_March2020/Image updates/Europeana Foundation.png'
             title: 'A group of people standing on a railway station platform'
@@ -1090,8 +1090,8 @@ pages:
                 subtitle: ''
                 anchortitle: 'Europeana Foundation'
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">The Europeana Foundation is an independent, non-profit organisation that operates <a href=\"https://pro.europeana.eu/about-us/mission\">the Europeana platform</a> and contributes to other digital initiatives that put cultural heritage to good use in the world. Our work helps to develop an open, knowledgeable and creative society.&nbsp;</p>\r\n\r\n<p>Access to cultural heritage is vital to humankind - to our knowledge and understanding of who we are, where we’ve come from and what we can become. At the Europeana Foundation we work to democratise access to culture - digitally - so that everyone in our society is empowered to embrace diversity and flourish.</p>\r\n\r\n<p>We do this collaboratively. We cross borders - and where necessary, break them down. Our range of projects and partnerships create positive change in and around the cultural heritage sector through new shared services, models and frameworks that contribute to the digital transformation and sustainability of our diverse sector.&nbsp;</p>\r\n\r\n<p>We promote the use of digital technology that makes cultural heritage online accessible, traceable and trustworthy, which in turn means people can explore it, use it and learn from it with confidence.&nbsp;</p>\r\n\r\n<p>We ensure our work is relevant to the world we live in - and the world we want to build - by aligning it with the UN’s Sustainable Development Goals.&nbsp;</p>\r\n\r\n<p>The Europeana Foundation and a consortium of 21&nbsp;partners are tasked by the European Commission to run the Europeana platform, in close collaboration with the Europeana Aggregators’ Forum and the Europeana Network Association.&nbsp;</p>\r\n\r\n<p>The Europeana Foundation employs approximately 60 staff members representing around 20 different nationalities based in our main office in The Hague. The organisation is led by <a href=\"https://pro.europeana.eu/person/harry-verwayen\">Harry Verwayen</a>, General Director, and steered by a Supervisory&nbsp;Board from cultural and scientific heritage organisations across Europe chaired by <a data-saferedirecturl=\"https://www.google.com/url?q=https://pro.europeana.eu/person/martina-bagnoli&amp;source=gmail&amp;ust=1644591830645000&amp;usg=AOvVaw1zskXoWf66bq3K78hb4Z2O\" href=\"https://pro.europeana.eu/person/martina-bagnoli\" target=\"_blank\">Martina Bagnoli</a>.&nbsp;The Board of Directors and the Supervisory Board are supported by an Advisory Board.</p>\r\n"
-                icon:
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">The Europeana Foundation is an independent, non-profit organisation that, as part of the Europeana Initiative, stewards the common European&nbsp;data space for cultural heritage in collaboration with a consortium of 18 partners from nine EU countries and contributes to other digital initiatives that put cultural heritage to good use in the world.</p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p>Access to cultural heritage is vital to humankind - to our knowledge and understanding of who we are, where we’ve come from and what we can become. At the Europeana Foundation we work to democratise access to culture - digitally - so that everyone in our society is empowered to embrace diversity and flourish.</p>\r\n\r\n<p>We do this collaboratively. We cross borders - and where necessary, break them down. Our range of projects and partnerships create positive change in and around the cultural heritage sector through new shared services, models and frameworks that contribute to the digital transformation and sustainability of our diverse sector.&nbsp;</p>\r\n\r\n<p>We promote the use of digital technology that makes cultural heritage online accessible, traceable and trustworthy, which in turn means people can explore it, use it and learn from it with confidence.&nbsp;</p>\r\n\r\n<p>We ensure our work is relevant to the world we live in - and the world we want to build - by aligning it with the UN’s Sustainable Development Goals.&nbsp;</p>\r\n\r\n<p>The Europeana Foundation, as part of a consortium of 19 partners, is tasked by the European Commission to steward the common European data space for cultural heritage, in close collaboration with the Europeana Aggregators’ Forum and the Europeana Network Association.</p>\r\n\r\n<p>The Europeana Foundation employs approximately 60 staff members representing around 20 different nationalities based in our main office in The Hague. The organisation is led by <a href=\"https://pro.europeana.eu/person/harry-verwayen\">Harry Verwayen</a>, General Director, and steered by a Supervisory&nbsp;Board from cultural and scientific heritage organisations across Europe chaired by <a data-saferedirecturl=\"https://www.google.com/url?q=https://pro.europeana.eu/person/martina-bagnoli&amp;source=gmail&amp;ust=1644591830645000&amp;usg=AOvVaw1zskXoWf66bq3K78hb4Z2O\" href=\"https://pro.europeana.eu/person/martina-bagnoli\" target=\"_blank\">Martina Bagnoli</a>.&nbsp;The Board of Directors and the Supervisory Board are supported by an Advisory Board.</p>\r\n"
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1136,7 +1136,7 @@ pages:
                 anchortitle: ''
                 templates: body
                 body: "<p><meta charset=\"utf-8\" />The Europeana Foundation aims to put Europe’s rich cultural heritage to good use in the world because it believes that cultural heritage empowers us to embrace our diversity and flourish.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The Europeana Foundation is an independently governed, non-profit organisation. It leads the consortium of partners that delivers the Core Service provided by the Europeana platform. It drives capacity building for the digital transformation of the cultural heritage sector.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The Europeana Foundation is based in The Hague, Netherlands, and has over 50 dedicated staff members representing 20 different nationalities. The organisation is steered by a Governing Board of 20 experts from cultural and scientific heritage organisations across Europe and led by <a href=\"/person/harry-verwayen\">Harry Verwayen</a>, Executive Director.&nbsp;</p>\r\n"
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1193,7 +1193,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1244,7 +1244,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1289,7 +1289,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -1337,7 +1337,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1382,7 +1382,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -1478,7 +1478,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -1544,7 +1544,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1589,7 +1589,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -1613,6 +1613,9 @@ pages:
                         value: '6751'
                         _id: persons/medhavi-gandhi
                     -
+                        value: '6099'
+                        _id: persons/laura-guindal
+                    -
                         value: '5191'
                         _id: persons/david-haskiya
                     -
@@ -1622,17 +1625,11 @@ pages:
                         value: '855'
                         _id: persons/paul-keller
                     -
-                        value: '8446'
-                        _id: persons/ilja-kocian
-                    -
                         value: '2321'
                         _id: persons/elsbeth-kwant
                     -
                         value: '5619'
                         _id: persons/vlatka-lemic
-                    -
-                        value: '1406'
-                        _id: persons/marie-veronique-leroi
                     -
                         value: '475'
                         _id: persons/franco-niccolucci
@@ -1654,6 +1651,9 @@ pages:
                     -
                         value: '857'
                         _id: persons/merete-sanderhoff
+                    -
+                        value: '4471'
+                        _id: persons/eva-stengard
                     -
                         value: '6787'
                         _id: persons/loic-tallon
@@ -1691,7 +1691,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: Europeana_Professional/Governing_Board
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1814,7 +1814,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1866,7 +1866,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1917,7 +1917,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: alphabetical
                 sources: persons
@@ -2038,7 +2038,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: alphabetical
                 sources: persons
@@ -2090,7 +2090,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -2354,7 +2354,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -2472,7 +2472,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2538,7 +2538,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2591,7 +2591,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2645,7 +2645,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2771,7 +2771,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2816,7 +2816,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2950,7 +2950,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: data

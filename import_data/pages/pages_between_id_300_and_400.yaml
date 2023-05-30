@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:28:33+02:00'
+    date: '2023-05-30T14:48:10+02:00'
     version: 3.7.4
     platform: mysql
 pages:
@@ -103,7 +103,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -224,7 +224,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -345,7 +345,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -474,7 +474,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -526,7 +526,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -571,7 +571,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -652,7 +652,7 @@ pages:
         search_keywords: null
         pages:
             - pages/edm-case-studies
-            - pages/edm-documentation
+            - pages/edm-profiles
         posts: {  }
         data: {  }
         projects:
@@ -688,7 +688,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -733,7 +733,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -778,7 +778,7 @@ pages:
                     title: ''
                 singlefile: Europeana_Professional/Share_your_data/Technical_requirements/EDM_profiles/EDM_Organization_Profile_042016.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -823,7 +823,7 @@ pages:
                     title: ''
                 singlefile: Europeana_Professional/Share_your_data/Technical_requirements/EDM_profiles/EDM_Dataset_Profile_042016.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -868,7 +868,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -913,7 +913,7 @@ pages:
                     title: ''
                 singlefile: 'Europeana_Professional/Share_your_data/Technical_requirements/EDM_profiles/EDM Collection Profile.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -958,7 +958,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1003,7 +1003,7 @@ pages:
                     title: ''
                 singlefile: Europeana_Professional/EuropeanaTech/EuropeanaTech_taskforces/EDMSound/TF_Report_EDM_Profile_Sound_301214.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1048,7 +1048,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1093,7 +1093,7 @@ pages:
                     title: ''
                 singlefile: Europeana_Professional/Share_your_data/Technical_requirements/EDM_profiles/IIIFtoEDM_profile_042016.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1138,7 +1138,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1183,7 +1183,7 @@ pages:
                     title: ''
                 singlefile: 'Europeana_Professional/Share_your_data/Technical_requirements/EDM_profiles/Technical Metadata properties_20150217.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1235,7 +1235,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1280,7 +1280,7 @@ pages:
                 attribution_link: ''
                 singlefile: Europeana_Professional/Share_your_data/Technical_requirements/EDM_profiles/EDM_Annotation_Profile_v1.2.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1325,7 +1325,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1370,7 +1370,7 @@ pages:
                 attribution_link: ''
                 singlefile: Europeana_Professional/Share_your_data/Technical_requirements/EDM_profiles/EDM_provenance_profile_external_202111.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1415,7 +1415,7 @@ pages:
                 attribution_link: ''
                 singlefile: Europeana_Professional/Share_your_data/Technical_requirements/EDM_profiles/EDM_provenance_profile_internal_202203.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1460,7 +1460,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1505,7 +1505,7 @@ pages:
                 attribution_link: ''
                 singlefile: 'Europeana_Professional/EuropeanaTech/Readings/D7.6 Model refinements for EDM.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1622,7 +1622,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1740,7 +1740,7 @@ pages:
                 anchortitle: ''
                 templates: collapsedcontent
                 body: "<p><a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-statutes.pdf\" target=\"_blank\">Europeana Network Association Statutes</a>, <a href=\"http://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-bylaws.pdf\" target=\"_blank\">Bylaws</a> and <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-procedures.pdf\" target=\"_blank\">Procedures</a></p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/General/FA_EU_Network_Leaflet_A5.pdf\" target=\"_blank\">Network Association Leaflet</a></p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/General/Councillor-Terms-of-Reference.pdf\" target=\"_blank\">Councillor Terms of Reference</a></p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/General/Europeana-Network-Association-Code-of-Conduct.pdf\" target=\"_blank\">ENA Code of conduct</a></p>\r\n\r\n<p><a href=\"http://pro.europeana.eu/resources/document-archive/newsletters-and-updates\" target=\"_blank\">Europeana Network Association Newsletter</a></p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/files/Europeana_Professional/Publications/Europeana_Business_Plan_2018.pdf\" target=\"_blank\">Europeana Business Plan 2018</a></p>\r\n\r\n<p><a href=\"http://strategy2020.europeana.eu/update/\" target=\"_blank\">Europeana Strategy 2015-2020: ‘We transform the world with culture’</a></p>\r\n\r\n<p><a href=\"http://strategy2020.europeana.eu/update/\" target=\"_blank\">Europeana 2020 Strategic Update : ‘A call to culture’</a></p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/resources/europeana-brand/brand-materials-and-templates\" target=\"_blank\">Europeana print and web templates</a></p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/General_Assembly_Meeting_2019/Annual_report_2019.pdf\" target=\"_blank\">Europeana Network Association Annual report 2019</a></p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/General_Assembly_Meeting_2019/ENA_Activity_Plan_2020.pdf\" target=\"_blank\">Europeana Network Association Activity plan 2020</a></p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/General_Assembly_Meeting_2019/ENA_Budget_2020.pdf\" target=\"_blank\">Europeana Network Association Budget 2020</a></p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/General_Assembly_Meeting_2017/Europeana-Joint-Aspiration-and-Association-Approach-2017.pdf\" target=\"_blank\">Europeana Joint Aspiration and Association Approach</a></p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/General/Management-Board-Terms-of-Reference.pdf\" target=\"_blank\">Management Board Terms of Reference</a></p>\r\n\r\n<p><a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/General/ENA-Communities-terms-of-reference.pdf\" target=\"_blank\">Europeana Network Association Communities Terms of Reference</a></p>\r\n"
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1863,7 +1863,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: Europeana_Professional/Governing_Board/Public_Papers_of_Governing_Board_Meetings
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1986,7 +1986,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2038,7 +2038,7 @@ pages:
                 attribution_link: 'http://europeana.eu/portal/record/2063603/LIT_280_002.html'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2083,7 +2083,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2128,7 +2128,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2173,7 +2173,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2218,7 +2218,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2248,15 +2248,15 @@ pages:
     -
         slug: thank-you-for-your-registration
         datecreated: '2016-04-13 10:19:47'
-        datechanged: '2022-05-31 14:13:06'
+        datechanged: '2022-11-18 15:55:39'
         datepublish: '2016-04-13 10:19:36'
         datedepublish: ''
         ownerid: 2
         status: published
         templatefields: {  }
         title: 'Thank you for your registration'
-        intro: "<p>Your Europeana Network Association registration has been recorded and will now be reviewed by the Network’s Management Board. You will receive an email confirming your membership within one month.</p>\r\n"
-        body: "<p>Being a member of the Europeana Network Association allows you to:</p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Exchange knowledge, expertise and best practice in our seven special interest communities: <a href=\"https://pro.europeana.eu/page/europeanatech\">EuropeanaTech</a>, <a href=\"https://pro.europeana.eu/page/europeana-communicators-group\">Communicators</a>, <a href=\"https://pro.europeana.eu/page/europeana-copyright\">Copyright</a>, <a href=\"https://pro.europeana.eu/page/europeana-education\">Education</a>, <a href=\"https://pro.europeana.eu/page/europeana-impact-community\">Impact</a>,\_<a href=\"https://pro.europeana.eu/page/europeana-research\">Research</a>\_and <a href=\"https://pro.europeana.eu/page/climate-action-community\">Climate Action</a>.\_</p>\r\n    </li>\r\n    <li>\r\n    <p><a href=\"https://pro.europeana.eu/network-association/members\">Meet colleagues</a> from the cultural heritage sector to develop new projects and foster cross-border and cross-domain collaboration.</p>\r\n    </li>\r\n    <li>\r\n    <p>Stand for election as a <a href=\"https://pro.europeana.eu/network-association/members-council\">Members Councillor</a> to lead on new initiatives for digital cultural heritage and influence the future of the Europeana Initiative.</p>\r\n    </li>\r\n    <li>\r\n    <p>Work with the Europeana Foundation to involve policymakers, make recommendations and set the agenda for digital cultural heritage in funded\_<a href=\"https://pro.europeana.eu/network-association/task-forces\">Task Forces and Working Groups</a>.</p>\r\n    </li>\r\n    <li>\r\n    <p>Get the <a href=\"https://pro.europeana.eu/page/news\">latest news</a> from Europeana and the Europeana cultural heritage landscape through our monthly Network Association newsletter and community updates.</p>\r\n    </li>\r\n    <li>\r\n    <p>Get reimbursed to attend our <a href=\"https://pro.europeana.eu/page/conference\">annual conference</a> and benefit from the engaging workshops, discussions, panels, interaction and networking.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p>While you wait to receive confirmation of your membership, why not <a href=\"https://pro.europeana.eu/page/news\">browse our recent news</a>, <a href=\"https://www.linkedin.com/groups/134927/\">join the Europeana LinkedIn Group</a> or <a href=\"https://twitter.com/Europeanaeu\">follow us on Twitter</a>.</p>\r\n"
+        intro: "<p>We really appreciate you taking the time to sign up to become a Europeana Network Association member and hope to welcome you officially soon. First, your registration will\_be reviewed by the Network’s Management Board and\_you will receive an email confirming your membership and outlining some of the ways you can get involved\_within one month.</p>\r\n"
+        body: "<p>Being a member of the Europeana Network Association allows you to:</p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Exchange knowledge, expertise and best practice in our seven special interest communities: <a href=\"https://pro.europeana.eu/page/europeanatech\">EuropeanaTech</a>, <a href=\"https://pro.europeana.eu/page/europeana-communicators-group\">Communicators</a>, <a href=\"https://pro.europeana.eu/page/europeana-copyright\">Copyright</a>, <a href=\"https://pro.europeana.eu/page/europeana-education\">Education</a>, <a href=\"https://pro.europeana.eu/page/europeana-impact-community\">Impact</a>,\_<a href=\"https://pro.europeana.eu/page/europeana-research\">Research</a>\_and <a href=\"https://pro.europeana.eu/page/climate-action-community\">Climate Action</a>.\_</p>\r\n    </li>\r\n    <li>\r\n    <p><a href=\"https://pro.europeana.eu/network-association/members\">Meet colleagues</a> from the cultural heritage sector to develop new projects and foster cross-border and cross-domain collaboration.</p>\r\n    </li>\r\n    <li>\r\n    <p>Stand for election as a <a href=\"https://pro.europeana.eu/network-association/members-council\">Members Councillor</a> to lead on new initiatives for digital cultural heritage and influence the future of the Europeana Initiative.</p>\r\n    </li>\r\n    <li>\r\n    <p>Work with the Europeana Foundation to involve policymakers, make recommendations and set the agenda for digital cultural heritage in funded\_<a href=\"https://pro.europeana.eu/network-association/task-forces\">Task Forces and Working Groups</a>.</p>\r\n    </li>\r\n    <li>\r\n    <p>Get the <a href=\"https://pro.europeana.eu/page/news\">latest news</a> from Europeana and the Europeana cultural heritage landscape through our monthly Network Association newsletter and community updates.</p>\r\n    </li>\r\n    <li>\r\n    <p>Attend our <a href=\"https://pro.europeana.eu/page/conference\">annual conference</a> and benefit from the engaging workshops, discussions, panels, interaction and networking.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p>While you wait to receive confirmation of your membership, why not <a href=\"https://pro.europeana.eu/page/news\">browse our recent news</a>, <a href=\"https://www.linkedin.com/groups/134927/\">join the Europeana LinkedIn Group</a> or <a href=\"https://twitter.com/Europeanaeu\">follow us on Twitter</a>.</p>\r\n"
         pagefooter: null
         pagetype: page
         highlighttitle: null
@@ -2323,7 +2323,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2442,7 +2442,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2564,7 +2564,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2686,7 +2686,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2805,7 +2805,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2927,7 +2927,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag_unpaged
                 sources: pages
@@ -2979,7 +2979,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3088,7 +3088,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3204,7 +3204,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3320,7 +3320,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3439,7 +3439,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3552,7 +3552,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3674,7 +3674,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3793,7 +3793,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3911,7 +3911,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4029,7 +4029,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -4077,7 +4077,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -4221,7 +4221,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4348,7 +4348,7 @@ pages:
                 attribution_link: ''
                 singlefile: Europeana_Professional/IPR/160331rights_clearance_case_studies_public.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4471,7 +4471,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4516,7 +4516,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4561,7 +4561,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4606,7 +4606,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4651,7 +4651,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4696,7 +4696,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4733,7 +4733,7 @@ pages:
     -
         slug: europeana-foundation-rules-for-the-reimbursement
         datecreated: '2016-07-15 08:53:37'
-        datechanged: '2022-07-29 15:36:37'
+        datechanged: '2023-04-24 12:16:49'
         datepublish: '2016-07-15 08:46:12'
         datedepublish: ''
         ownerid: 1
@@ -4741,7 +4741,7 @@ pages:
         templatefields: {  }
         title: 'Rules for Reimbursement'
         intro: 'These are the Europeana Foundation Rules for Reimbursement of Travel and Subsistence Expenses'
-        body: "<h2>GENERAL PROVISIONS</h2>\r\n\r\n<p>1. Travel and subsistence expenses incurred for Europeana Foundation events are eligible for reimbursement. <strong>Please note</strong>; this policy does not apply to the forthcoming Europeana 2022 Conference, 28-30 September 2022. Limited reimbursement opportunities are available and will be communicated during the ticket purchase process.\_</p>\r\n\r\n<p>2. Travel and subsistence expenses incurred for governance related meetings (of the Europeana Foundation Board, Europeana Advisory Board, Europeana Members Council, Management Board) or strategic business unit specific meetings (e.g. presidency events, strategy workshops, Business Plan meetings) are eligible for reimbursement for all participants irrespective of their affiliation or Europeana Network Association membership.</p>\r\n\r\n<p>3. For Europeana Network Association related meetings (Annual General Meeting, Europeana Plenary, Aggregator Forum), Europeana Foundation will only reimburse one representative per organisation or University that is a member of the Europeana Association Network and not a representative of a European Commission funded project. (this includes all Europeana DSI Generic Services projects)</p>\r\n\r\n<p>4. Members of one of the Europeana Network Association Task Forces have to follow the reimbursement rules set forth in the <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Europeana_Network_Task_Forces/Task_Force_documents/task-force-terms-of-reference-v1.pdf\" target=\"_blank\">Task Force Terms and Conditions</a>.</p>\r\n\r\n<h2>TRAVEL COSTS</h2>\r\n\r\n<p>5. Meeting participants are allowed to claim their travel costs up to a maximum amount of <strong>€500 for second class transport per trip</strong> (e.g. airfare, train ticket). Higher costs <strong>must</strong> be approved in advance.\_</p>\r\n\r\n<p>6. Travel undertaken for Europeana should be made using public transport where possible. The cost of second class rail fare, economy class airfare and transportation by public transport from and to an airport can be reimbursed. Where there is no public-transport option, mileage for travel by car\_is eligible but must be approved in advance.</p>\r\n\r\n<p>7. Travel documentation is required for reimbursement (receipts, boarding pass, train ticket, etc.). Clear and readable digital copies (preferably in pdf format) or photocopies are eligible. The submitted travel documentation should include the name of the claimant, places of origin and destination, dates of travel, the total amount paid, proof of payment, and the name of the event for which the expenses are being claimed.</p>\r\n\r\n<p><strong>Please note</strong>; this policy does not apply to the forthcoming Europeana 2022 Conference, 28-30 September 2022. Limited reimbursement opportunities are available and will be communicated during the ticket purchase process.\_</p>\r\n\r\n<h2>ACCOMMODATION AND RELATED SUBSISTENCE COSTS</h2>\r\n\r\n<p>8. A flat rate of €120 for a necessary overnight stay to attend a meeting will be reimbursable (unless otherwise mentioned in the adjusted rates below). If no overnight stay is required then only travel costs will be reimbursed.</p>\r\n\r\n<p>9. Should this flat rate not cover reasonable accommodation and subsistence expenses incurred then clear, readable copies of the receipts for additional expenditure may be submitted for possible reimbursement. Only in exceptional circumstances can Europeana consider covering these additional expenses and only when applied for in advance of the event.</p>\r\n\r\n<p><strong>Please note</strong>; this policy does not apply to the forthcoming Europeana 2022 Conference, 28-30 September 2022. Limited reimbursement opportunities are available and will be communicated during the ticket purchase process.\_</p>\r\n\r\n<h2>REIMBURSEMENT OF COSTS</h2>\r\n\r\n<p>11. Reimbursement may be transferred into a personal or an institutional bank account on the provision of the relevant bank account number, IBAN, BIC or SWIFT codes and full address details.</p>\r\n\r\n<p>12. Expense claims <strong>should be submitted</strong> <strong>within four weeks following an event </strong>organised by the Network Association or attended by an Association member on behalf of the Network. Expense claims submitted later than four weeks after an event, will not be eligible for reimbursement unless an agreement with <a href=\"mailto:invoices@europeana.eu\">the financial department</a> was made beforehand. Expense claims submitted after the end of a project will not be eligible for reimbursement too.</p>\r\n\r\n<p>13. Reimbursement of travel and subsistence expenses will be made within six weeks following the receipt of the expense claim form. Please note that in case a claim form was sent in later than six weeks after an event it will not be automatically processed.</p>\r\n\r\n<p>14. Claims in non-Euro (€) currency will be converted by the coordinator on the day of processing of the travel claim using the <a href=\"http://ec.europa.eu/budget/contracts_grants/info_contracts/inforeuro/index_en.cfm\" target=\"_blank\">European Union’s currency converter, InforEuro</a>.</p>\r\n\r\n<p>15. The completed electronic version of the <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Event_documentation/europeana-Travel-and-subsistence-reimbursement-claim-form.xls\">Europeana Travel and Subsistence Claim Form</a> should be emailed, with supporting documentation, to <a href=\"mailto:events@europeana.eu\">events@europeana.eu</a></p>\r\n\r\n<p>If this is not possible then the original claim form and documents should be sent by mail FAO</p>\r\n\r\n<p><em>Ms Tamara van Hulst<br>\r\nEuropeana Foundation<br>\r\nPO Box 90407<br>\r\n2509 LK The Hague<br>\r\nThe Netherlands</em></p>\r\n"
+        body: "<h2>GENERAL PROVISIONS</h2>\r\n\r\n<p>1. Travel and subsistence expenses incurred for Europeana Foundation events are eligible for reimbursement.</p>\r\n\r\n<p>2. Travel and subsistence expenses incurred for governance related meetings (of the Europeana Foundation Board, Europeana Advisory Board, Europeana Members Council, Management Board) or strategic business unit-specific meetings (e.g. Presidency events, strategy workshops, Business Plan meetings) are eligible for reimbursement for all participants irrespective of their affiliation or Europeana Network Association membership.</p>\r\n\r\n<p>3. For Europeana Network Association related meetings (Annual General Meeting,\_Aggregators' Forum), Europeana Foundation will only reimburse one representative per organisation or University that is a member of the Europeana Association Network and not a representative of a European Commission-funded project. (this includes all Europeana DS\_Generic Services projects)</p>\r\n\r\n<p>4. Members of one of the Europeana Network Association Task Forces have to follow the reimbursement rules set forth in the <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Europeana_Network_Task_Forces/Task_Force_documents/task-force-terms-of-reference-v1.pdf\" target=\"_blank\">Task Force Terms and Conditions</a>.</p>\r\n\r\n<h2>TRAVEL COSTS</h2>\r\n\r\n<p>5. Meeting participants are allowed to claim their travel costs up to a maximum amount of <strong>€500 for second-class transport per trip</strong> (e.g. airfare, train ticket). Higher costs <strong>must</strong> be approved in advance.\_</p>\r\n\r\n<p>6. Travel undertaken for Europeana should be made using public transport where possible. The cost of second-class rail fare, economy-class airfare and transportation by public transport from and to an airport can be reimbursed. Where there is no public transport option, mileage for travel by car\_is eligible but must be approved in advance.</p>\r\n\r\n<p>7. Travel documentation is required for reimbursement (receipts, boarding pass, train ticket, etc.). Clear and readable digital copies (preferably in pdf format) or photocopies are eligible. The submitted travel documentation should include the name of the claimant, places of origin and destination, dates of travel, the total amount paid, proof of payment, and the name of the event for which the expenses are being claimed.\_</p>\r\n\r\n<h2>ACCOMMODATION AND RELATED SUBSISTENCE COSTS</h2>\r\n\r\n<p>8. A flat rate of €120 for a necessary overnight stay to attend a meeting will be reimbursable (unless otherwise mentioned in the adjusted rates below). If no overnight stay is required then only travel costs will be reimbursed.</p>\r\n\r\n<p>9. Should this flat rate not cover reasonable accommodation and subsistence expenses incurred then clear, readable copies of the receipts for additional expenditure may be submitted for possible reimbursement. Only in exceptional circumstances can Europeana consider covering these extra expenses and only when applied for in advance of the event.</p>\r\n\r\n<h2>REIMBURSEMENT OF COSTS</h2>\r\n\r\n<p>11. Reimbursement may be transferred into a personal or an institutional bank account on the provision of the relevant bank account number, IBAN, BIC, or SWIFT codes and full address details.</p>\r\n\r\n<p>12. Expense claims <strong>should be submitted</strong> <strong>within four weeks following an event </strong>organised by the Network Association or attended by an Association member on behalf of the Network. Expense claims submitted later than four weeks after an event, will not be eligible for reimbursement unless an agreement with <a href=\"mailto:invoices@europeana.eu\">the financial department</a> was made beforehand. Expense claims submitted after the end of a project will not be eligible for reimbursement too.</p>\r\n\r\n<p>13. Reimbursement of travel and subsistence expenses will be made within six weeks following the receipt of the expense claim form. Please note that in case a claim form was sent in later than six weeks after an event it will not be automatically processed.</p>\r\n\r\n<p>14. Claims in non-Euro (€) currency will be converted by the coordinator on the day of processing of the travel claim using the <a href=\"http://ec.europa.eu/budget/contracts_grants/info_contracts/inforeuro/index_en.cfm\" target=\"_blank\">European Union’s currency converter, InforEuro</a>.</p>\r\n\r\n<p>15. The completed electronic version of the <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Event_documentation/europeana-Travel-and-subsistence-reimbursement-claim-form.xls\">Europeana Travel and Subsistence Claim Form</a> should be emailed, with supporting documentation, to <a href=\"mailto:events@europeana.eu\">events@europeana.eu</a></p>\r\n\r\n<p>If this is not possible then the original claim form and documents should be sent by mail FAO</p>\r\n\r\n<p><em>Ms Tamara van Hulst<br>\r\nEuropeana Foundation<br>\r\nPO Box 90407<br>\r\n2509 LK The Hague<br>\r\nThe Netherlands</em></p>\r\n"
         pagefooter: null
         pagetype: page
         highlighttitle: null
@@ -4821,7 +4821,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4949,7 +4949,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5069,7 +5069,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5196,7 +5196,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts

@@ -1,12 +1,12 @@
 __bolt_export_meta:
-    date: '2022-11-02T10:00:55+01:00'
+    date: '2023-05-30T16:43:57+02:00'
     version: 3.7.4
     platform: mysql
 posts:
     -
         slug: marking-women-s-history-month-with-the-women-s-museum-of-norway
         datecreated: '2022-02-28 14:18:59'
-        datechanged: '2022-03-02 16:54:32'
+        datechanged: '2023-04-11 13:54:24'
         datepublish: '2022-03-02 14:18:00'
         datedepublish: ''
         ownerid: 124
@@ -61,7 +61,7 @@ posts:
             - pages/news
         posts:
             - posts/join-us-in-celebrating-women-s-history-month-2022
-            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-cynthia-liem
+            - posts/marking-women-s-history-month-with-the-women-s-museum-of-norway
             - posts/marking-women-s-history-month-with-the-women-s-museum-of-norway
             - posts/marking-women-s-history-month-with-the-women-s-museum-of-norway
             - posts/marking-women-s-history-month-with-the-women-s-museum-of-norway
@@ -79,6 +79,9 @@ posts:
             -
                 slug: womens-history-month-2022
                 name: womens-history-month-2022
+            -
+                slug: womens-history-month
+                name: womens-history-month
         modules:
             -
                 enabled: enabled
@@ -584,7 +587,7 @@ posts:
     -
         slug: heritage-history-and-contraception-behind-the-scenes-of-the-pill-exhibition
         datecreated: '2022-03-08 11:30:37'
-        datechanged: '2022-03-10 15:09:29'
+        datechanged: '2023-04-11 13:54:38'
         datepublish: '2022-03-08 11:30:25'
         datedepublish: ''
         ownerid: 124
@@ -658,6 +661,9 @@ posts:
             -
                 slug: womens-history-month-2022
                 name: womens-history-month-2022
+            -
+                slug: womens-history-month
+                name: womens-history-month
         modules:
             -
                 enabled: enabled
@@ -916,7 +922,7 @@ posts:
     -
         slug: copyright-directive-series-a-closer-look-at-italy
         datecreated: '2022-03-09 11:47:41'
-        datechanged: '2022-03-29 14:48:29'
+        datechanged: '2023-01-11 16:31:06'
         datepublish: '2022-03-10 11:45:00'
         datedepublish: ''
         ownerid: 124
@@ -967,8 +973,8 @@ posts:
         pages:
             - pages/news
         posts:
-            - posts/copyright-directive-series-a-closer-look-at-italy
-            - posts/copyright-directive-series-a-closer-look-at-italy
+            - posts/copyright-directive-series-a-closer-look-at-the-netherlands
+            - posts/copyright-directive-series-progress-in-the-directive-transposition
             - posts/copyright-directive-series-a-closer-look-at-italy
         data: {  }
         projects: {  }
@@ -1040,7 +1046,7 @@ posts:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><em>You can read more about the transposition of the CDSM Directive and copyright law in Italy in the Communia pages (<a href=\"https://eurovision.communia-association.org/detail/italy/\">here</a> and <a href=\"https://www.notion.so/Italy-ef314e69e7ef42d1893efe5ef0ee39f8\">here</a>), the <a href=\"https://www.dsmexceptions.info/index.php/Italy\">Bournemouth page</a> and the <a href=\"https://www.dsmexceptions.info/index.php/Italy\">CIPPM page</a>. The <a href=\"https://www.notion.so/DSM-Directive-Implementation-Guidelines-45233be9c0e143338860ae5a03118bf3\">Communia guidelines</a> for the transposition of the Directive are also available in Italian <a href=\"http://here\">here</a>. General information about the text of the Directive is available <a href=\"https://pro.europeana.eu/post/explainer-what-will-the-new-eu-copyright-rules-change-for-europe-s-cultural-heritage-institutions\">in this explainer</a>, in this <a href=\"https://pro.europeana.eu/event/the-copyright-directive-new-approaches-to-the-public-domain-and-to-out-of-commerce-works\">webinar by Europeana</a> and in this <a href=\"https://repository.dri.ie/catalog/xw432021n\">webinar by the DRI</a>. The Italian Copyright Law (that brings in the changes of the Directive) is available <a href=\"https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633\">here</a>.</em></p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><em>You can read more about the transposition of the CDSM Directive and copyright law in Italy in the Communia pages (<a href=\"https://eurovision.communia-association.org/detail/italy/\">here</a> and <a href=\"https://www.notion.so/Italy-ef314e69e7ef42d1893efe5ef0ee39f8\">here</a>), the <a href=\"https://www.dsmexceptions.info/index.php/Italy\">Bournemouth page</a> and the <a href=\"https://www.dsmexceptions.info/index.php/Italy\">CIPPM page</a>. The <a href=\"https://www.notion.so/DSM-Directive-Implementation-Guidelines-45233be9c0e143338860ae5a03118bf3\">Communia guidelines</a> for the transposition of the Directive are also available in Italian <a href=\"https://meta.wikimedia.org/wiki/EU_policy/Implementation/Guidelines/All/it\">here</a>. General information about the text of the Directive is available <a href=\"https://pro.europeana.eu/post/explainer-what-will-the-new-eu-copyright-rules-change-for-europe-s-cultural-heritage-institutions\">in this explainer</a>, in this <a href=\"https://pro.europeana.eu/event/the-copyright-directive-new-approaches-to-the-public-domain-and-to-out-of-commerce-works\">webinar by Europeana</a> and in this <a href=\"https://repository.dri.ie/catalog/xw432021n\">webinar by the DRI</a>. The Italian Copyright Law (that brings in the changes of the Directive) is available <a href=\"https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633\">here</a>.</em></p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -1621,7 +1627,7 @@ posts:
     -
         slug: marking-irish-women-s-history-with-website-mna100
         datecreated: '2022-03-14 16:08:30'
-        datechanged: '2022-03-17 08:38:45'
+        datechanged: '2023-04-11 13:54:51'
         datepublish: '2022-03-17 16:08:00'
         datedepublish: ''
         ownerid: 124
@@ -1672,9 +1678,9 @@ posts:
         pages:
             - pages/news
         posts:
+            - posts/digitally-recovering-ireland-s-history-virtual-record-treasury-of-ireland-connects-millions-of-lost-records
             - posts/heritage-history-and-contraception-behind-the-scenes-of-the-pill-exhibition
             - posts/marking-women-s-history-month-with-the-women-s-museum-of-norway
-            - posts/marking-irish-women-s-history-with-website-mna100
         data: {  }
         projects: {  }
         events: {  }
@@ -1689,6 +1695,9 @@ posts:
             -
                 slug: womens-history-month-2022
                 name: womens-history-month-2022
+            -
+                slug: womens-history-month
+                name: womens-history-month
         modules:
             -
                 enabled: enabled
@@ -2288,8 +2297,7 @@ posts:
         subsite: null
         template: null
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
-        pages:
-            - pages/creating-editorial
+        pages: {  }
         posts:
             - posts/what-s-new-on-the-europeana-website-january-march-2022
             - posts/what-s-new-on-the-europeana-website-january-march-2022
@@ -2631,7 +2639,6 @@ posts:
         posts:
             - posts/generic-services-projects-2021-event-highlights-an-impressive-portfolio-for-innovation
             - posts/apply-now-for-eu-grants-for-data-space-for-cultural-heritage-projects
-            - posts/apply-now-for-eu-grants-for-data-space-for-cultural-heritage-projects
         data: {  }
         projects: {  }
         events: {  }
@@ -2948,7 +2955,7 @@ posts:
     -
         slug: looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
         datecreated: '2022-04-04 12:55:23'
-        datechanged: '2022-04-05 12:43:53'
+        datechanged: '2023-04-13 11:01:57'
         datepublish: '2022-04-05 12:53:00'
         datedepublish: ''
         ownerid: 124
@@ -3004,8 +3011,8 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
             - pages/news
+            - pages/new-european-bauhaus
         posts:
-            - posts/looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
             - posts/looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
             - posts/looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
             - posts/looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
@@ -3030,6 +3037,9 @@ posts:
             -
                 slug: built-with-bits-interviews
                 name: built-with-bits-interviews
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -3325,7 +3335,7 @@ posts:
     -
         slug: built-with-bits-an-educational-challenge-the-spain-winner
         datecreated: '2022-04-05 12:13:45'
-        datechanged: '2022-04-07 09:12:09'
+        datechanged: '2023-04-13 11:03:32'
         datepublish: '2022-04-07 12:10:00'
         datedepublish: ''
         ownerid: 124
@@ -3379,11 +3389,11 @@ posts:
         pages:
             - pages/news
         posts:
+            - posts/built-with-bits-an-educational-challenge-best-new-european-bauhaus-project
+            - posts/built-with-bits-an-educational-challenge-the-greece-winner
+            - posts/built-with-bits-an-educational-challenge-the-portugal-winner
+            - posts/built-with-bits-an-educational-challenge-the-italy-winner
             - posts/looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
-            - posts/built-with-bits-an-educational-challenge-the-spain-winner
-            - posts/built-with-bits-an-educational-challenge-the-spain-winner
-            - posts/built-with-bits-an-educational-challenge-the-spain-winner
-            - posts/built-with-bits-an-educational-challenge-the-spain-winner
             - posts/built-with-bits-an-educational-challenge-the-spain-winner
         data: {  }
         projects: {  }
@@ -3405,6 +3415,9 @@ posts:
             -
                 slug: new-european-bauhaus
                 name: new-european-bauhaus
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -3671,7 +3684,7 @@ posts:
     -
         slug: built-with-bits-an-educational-challenge-the-italy-winner
         datecreated: '2022-04-07 10:03:38'
-        datechanged: '2022-04-12 10:50:24'
+        datechanged: '2023-04-13 11:03:21'
         datepublish: '2022-04-12 10:03:00'
         datedepublish: ''
         ownerid: 124
@@ -3725,10 +3738,10 @@ posts:
         pages:
             - pages/news
         posts:
-            - posts/built-with-bits-an-educational-challenge-the-spain-winner
+            - posts/built-with-bits-an-educational-challenge-best-europeana-project
+            - posts/built-with-bits-an-educational-challenge-the-greece-winner
+            - posts/built-with-bits-an-educational-challenge-the-portugal-winner
             - posts/looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
-            - posts/built-with-bits-an-educational-challenge-the-italy-winner
-            - posts/built-with-bits-an-educational-challenge-the-italy-winner
             - posts/built-with-bits-an-educational-challenge-the-italy-winner
         data: {  }
         projects: {  }
@@ -3750,6 +3763,9 @@ posts:
             -
                 slug: new-european-bauhaus
                 name: new-european-bauhaus
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -4016,7 +4032,7 @@ posts:
     -
         slug: built-with-bits-an-educational-challenge-the-portugal-winner
         datecreated: '2022-04-19 12:44:39'
-        datechanged: '2022-07-01 16:15:21'
+        datechanged: '2023-04-13 11:03:08'
         datepublish: '2022-04-19 12:41:00'
         datedepublish: ''
         ownerid: 124
@@ -4069,12 +4085,12 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/built-with-bits-an-educational-challenge-the-italy-winner
-            - posts/built-with-bits-an-educational-challenge-the-spain-winner
-            - posts/looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
             - posts/built-with-bits-an-educational-challenge-best-new-european-bauhaus-project
             - posts/built-with-bits-an-educational-challenge-best-europeana-project
             - posts/built-with-bits-an-educational-challenge-the-greece-winner
+            - posts/looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
+            - posts/built-with-bits-an-educational-challenge-the-portugal-winner
+            - posts/built-with-bits-an-educational-challenge-the-portugal-winner
         data: {  }
         projects: {  }
         events: {  }
@@ -4095,6 +4111,9 @@ posts:
             -
                 slug: new-european-bauhaus
                 name: new-european-bauhaus
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -4618,7 +4637,7 @@ posts:
     -
         slug: built-with-bits-an-educational-challenge-the-greece-winner
         datecreated: '2022-04-20 09:51:22'
-        datechanged: '2022-04-21 09:14:26'
+        datechanged: '2023-04-13 11:02:56'
         datepublish: '2022-04-21 09:50:00'
         datedepublish: ''
         ownerid: 124
@@ -4671,8 +4690,8 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/built-with-bits-an-educational-challenge-the-italy-winner
-            - posts/built-with-bits-an-educational-challenge-the-spain-winner
+            - posts/built-with-bits-an-educational-challenge-best-europeana-project
+            - posts/built-with-bits-an-educational-challenge-the-greece-winner
             - posts/built-with-bits-an-educational-challenge-the-greece-winner
             - posts/built-with-bits-an-educational-challenge-the-greece-winner
         data: {  }
@@ -4695,6 +4714,9 @@ posts:
             -
                 slug: new-european-bauhaus
                 name: new-european-bauhaus
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -5052,10 +5074,10 @@ posts:
         subsite: null
         template: null
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
-        pages:
-            - pages/member-states
+        pages: {  }
         posts:
             - posts/discuss-participation-with-digital-heritage-at-an-accompanying-event-of-the-slovenian-presidency
+            - posts/summary-of-the-slovenian-presidency-europeana-conference
         data: {  }
         projects: {  }
         events:
@@ -5165,7 +5187,7 @@ posts:
     -
         slug: built-with-bits-an-educational-challenge-best-europeana-project
         datecreated: '2022-04-25 09:20:12'
-        datechanged: '2022-04-25 09:48:05'
+        datechanged: '2023-04-13 11:02:45'
         datepublish: '2022-04-25 09:19:06'
         datedepublish: ''
         ownerid: 124
@@ -5218,8 +5240,8 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/built-with-bits-an-educational-challenge-the-greece-winner
-            - posts/built-with-bits-an-educational-challenge-the-italy-winner
+            - posts/built-with-bits-an-educational-challenge-best-new-european-bauhaus-project
+            - posts/built-with-bits-an-educational-challenge-best-europeana-project
             - posts/built-with-bits-an-educational-challenge-best-europeana-project
             - posts/built-with-bits-an-educational-challenge-best-europeana-project
         data: {  }
@@ -5242,6 +5264,9 @@ posts:
             -
                 slug: new-european-bauhaus
                 name: new-european-bauhaus
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -5508,7 +5533,7 @@ posts:
     -
         slug: built-with-bits-an-educational-challenge-best-new-european-bauhaus-project
         datecreated: '2022-04-25 11:53:25'
-        datechanged: '2022-04-26 10:20:59'
+        datechanged: '2023-04-13 11:02:33'
         datepublish: '2022-04-26 11:52:00'
         datedepublish: ''
         ownerid: 124
@@ -5561,8 +5586,8 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/built-with-bits-an-educational-challenge-best-europeana-project
-            - posts/built-with-bits-an-educational-challenge-the-spain-winner
+            - posts/built-with-bits-an-educational-challenge-best-new-european-bauhaus-project
+            - posts/built-with-bits-an-educational-challenge-best-new-european-bauhaus-project
             - posts/built-with-bits-an-educational-challenge-best-new-european-bauhaus-project
         data: {  }
         projects: {  }
@@ -5584,6 +5609,9 @@ posts:
             -
                 slug: new-european-bauhaus
                 name: new-european-bauhaus
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -6542,7 +6570,7 @@ posts:
     -
         slug: exploring-serbian-women-s-voices-from-the-pandemic-through-cultural-heritage
         datecreated: '2022-04-25 16:07:57'
-        datechanged: '2022-05-02 08:37:58'
+        datechanged: '2023-04-11 13:55:08'
         datepublish: '2022-05-02 16:07:00'
         datedepublish: ''
         ownerid: 124
@@ -6616,6 +6644,9 @@ posts:
             -
                 slug: covid-19
                 name: covid-19
+            -
+                slug: womens-history-month
+                name: womens-history-month
         modules:
             -
                 enabled: enabled
@@ -7056,12 +7087,12 @@ posts:
         subsite: null
         template: null
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
-        pages:
-            - pages/seven-tips-for-digital-storytelling
+        pages: {  }
         posts:
             - posts/what-is-digital-storytelling-and-what-has-it-got-to-do-with-cultural-heritage
             - posts/get-inspired-by-examples-of-digital-storytelling-in-action
-            - posts/sharing-women-s-history-through-digital-storytelling
+            - posts/digital-storytelling-festival-2022-here-s-everything-you-need-to-know-to-join-in
+            - posts/digital-storytelling-festival-2022-here-s-everything-you-need-to-know-to-join-in
         data: {  }
         projects: {  }
         events:
@@ -7807,7 +7838,7 @@ posts:
     -
         slug: sharing-women-s-history-through-digital-storytelling
         datecreated: '2022-05-06 14:13:00'
-        datechanged: '2022-05-30 12:38:20'
+        datechanged: '2023-04-11 13:55:23'
         datepublish: '2022-05-11 14:12:00'
         datedepublish: ''
         ownerid: 124
@@ -7858,9 +7889,9 @@ posts:
         pages:
             - pages/news
         posts:
-            - posts/join-us-in-celebrating-women-s-history-month-2022
-            - posts/uncovering-invisiblewomen
             - posts/get-inspired-by-examples-of-digital-storytelling-in-action
+            - posts/digital-storytelling-festival-2022-here-s-everything-you-need-to-know-to-join-in
+            - posts/join-us-in-celebrating-women-s-history-month-2022
             - posts/sharing-women-s-history-through-digital-storytelling
         data: {  }
         projects: {  }
@@ -7882,6 +7913,9 @@ posts:
             -
                 slug: digital-storytelling-2022
                 name: digital-storytelling-2022
+            -
+                slug: womens-history-month
+                name: womens-history-month
         modules:
             -
                 enabled: enabled
@@ -8220,7 +8254,7 @@ posts:
     -
         slug: uncovering-invisiblewomen
         datecreated: '2022-05-17 09:25:13'
-        datechanged: '2022-05-18 14:43:23'
+        datechanged: '2023-04-11 13:55:34'
         datepublish: '2022-05-18 09:24:00'
         datedepublish: ''
         ownerid: 124
@@ -8274,8 +8308,8 @@ posts:
         pages:
             - pages/news
         posts:
+            - posts/sharing-women-s-history-through-digital-storytelling
             - posts/exploring-serbian-women-s-voices-from-the-pandemic-through-cultural-heritage
-            - posts/uncovering-invisiblewomen
         data: {  }
         projects: {  }
         events: {  }
@@ -8290,6 +8324,9 @@ posts:
             -
                 slug: womens-history-month-2022
                 name: womens-history-month-2022
+            -
+                slug: womens-history-month
+                name: womens-history-month
         modules:
             -
                 enabled: enabled
@@ -9151,8 +9188,8 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
             - pages/news
-            - pages/enumerate
         posts:
+            - posts/the-enumerate-self-assessment-tool-gain-insight-into-your-institution-s-digital-transformation
             - posts/the-enumerate-self-assessment-tool-gain-insight-into-your-institution-s-digital-transformation
         data: {  }
         projects: {  }
@@ -9563,7 +9600,7 @@ posts:
     -
         slug: built-with-bits-brussels-kicks-off-at-festival-of-the-new-european-bauhaus
         datecreated: '2022-05-24 11:32:38'
-        datechanged: '2022-06-01 13:33:59'
+        datechanged: '2023-04-13 11:01:46'
         datepublish: '2022-06-01 11:29:00'
         datedepublish: ''
         ownerid: 34
@@ -9616,8 +9653,8 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
             - pages/news
+            - pages/new-european-bauhaus
         posts:
-            - posts/built-with-bits-brussels-kicks-off-at-festival-of-the-new-european-bauhaus
             - posts/built-with-bits-brussels-kicks-off-at-festival-of-the-new-european-bauhaus
         data: {  }
         projects: {  }
@@ -9639,6 +9676,9 @@ posts:
             -
                 slug: new-european-bauhaus
                 name: new-european-bauhaus
+            -
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -10196,7 +10236,7 @@ posts:
             - pages/news
         posts:
             - posts/what-s-new-on-the-europeana-website-january-march-2022
-            - posts/making-the-europeana-collections-website-accessible-to-all
+            - posts/is-the-europeana-website-working-for-a-visually-diverse-audience-an-investigation
         data: {  }
         projects: {  }
         events: {  }
@@ -10885,9 +10925,9 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages:
             - pages/news
-            - pages/events
-            - pages/aggregators
-        posts: {  }
+        posts:
+            - posts/join-the-europeana-aggregators-forum-outreach-event
+            - posts/join-the-europeana-aggregators-forum-outreach-event
         data: {  }
         projects: {  }
         events: {  }

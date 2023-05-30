@@ -1,12 +1,12 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:57:21+02:00'
+    date: '2023-05-30T15:20:35+02:00'
     version: 3.7.4
     platform: mysql
 pages:
     -
         slug: copyright-tools-and-resources
         datecreated: '2020-11-06 13:54:06'
-        datechanged: '2022-06-10 15:03:30'
+        datechanged: '2022-12-22 11:21:46'
         datepublish: '2020-12-03 13:53:00'
         datedepublish: ''
         ownerid: 124
@@ -101,7 +101,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -146,7 +146,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -197,7 +197,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -242,7 +242,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -287,7 +287,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -325,7 +325,7 @@ pages:
                 subtitle: ''
                 anchortitle: 'Exceptions and limitations'
                 templates: collapsedcontent
-                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\" role=\"presentation\"><a href=\"http://www.wipo.int/meetings/en/doc_details.jsp?doc_id=389654\">Study on Copyright Limitations and Exceptions for Libraries and Archives</a>&nbsp;-&nbsp;A World Intellectual Property Organisation list of existing exceptions and limitations to copyright for libraries, archives and museums in each United Nations country.</p>\r\n\r\n<p dir=\"ltr\" role=\"presentation\"><a href=\"http://uklaca.org/325/\">Copyright Declaration Forms</a>&nbsp;- A template for librarians and archivists in the UK supplying a reasonable proportion of a published copyright work, or the whole or part of an unpublished work.&nbsp;</p>\r\n\r\n<p><a href=\"https://www.copyrightuser.org/understand/exceptions/\">Copyrightuser.org</a> -&nbsp;Guidance on UK copyright exceptions (circumstances when a work can be used without the need to get permission from the copyright owner).</p>\r\n\r\n<p><a href=\"https://copyrightexceptions.eu/#Art.%205.1\">Copyrightexceptions.eu</a> - A site that documented&nbsp;the implementation status of 22 exceptions and limitations to copyright in 28 European countries.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\" role=\"presentation\"><a href=\"http://www.wipo.int/meetings/en/doc_details.jsp?doc_id=389654\">Study on Copyright Limitations and Exceptions for Libraries and Archives</a>&nbsp;-&nbsp;A World Intellectual Property Organisation list of existing exceptions and limitations to copyright for libraries, archives and museums in each United Nations country.</p>\r\n\r\n<p dir=\"ltr\" role=\"presentation\"><a href=\"http://uklaca.org/325/\">Copyright Declaration Forms</a>&nbsp;- A template for librarians and archivists in the UK supplying a reasonable proportion of a published copyright work, or the whole or part of an unpublished work.&nbsp;</p>\r\n\r\n<p><a href=\"https://www.copyrightuser.org/understand/exceptions/\">Copyrightuser.org</a> -&nbsp;Guidance on UK copyright exceptions (circumstances when a work can be used without the need to get permission from the copyright owner).</p>\r\n\r\n<p><a href=\"https://copyrightexceptions.eu/#Art.%205.1\">Copyrightexceptions.eu</a> - A site that documented&nbsp;the implementation status of 22 exceptions and limitations to copyright in 28 European countries.</p>\r\n\r\n<p>Codes of Best Practices in Creative Reuse for&nbsp;<a data-saferedirecturl=\"https://www.google.com/url?q=https://zenodo.org/record/7180853%23.Y6LfwuzP3UK&amp;source=gmail&amp;ust=1671790450012000&amp;usg=AOvVaw1hUEhCLlWZb5A9O0hJwcEN\" href=\"https://zenodo.org/record/7180853#.Y6LfwuzP3UK\" id=\"m_-1066218749287664844m_-3124631079033887704LPlnk313465\" target=\"_blank\" title=\"https://zenodo.org/record/7180853#.Y6LfwuzP3UK\">Documentary Filmmakers</a>&nbsp;and for&nbsp;<a data-saferedirecturl=\"https://www.google.com/url?q=https://zenodo.org/record/7180861%23.Y6HbwOzP3UK&amp;source=gmail&amp;ust=1671790450012000&amp;usg=AOvVaw28PwnXzX9Gqk1kKa8SXC37\" href=\"https://zenodo.org/record/7180861#.Y6HbwOzP3UK\" id=\"m_-1066218749287664844m_-3124631079033887704LPlnk346189\" target=\"_blank\" title=\"https://zenodo.org/record/7180861#.Y6HbwOzP3UK\">Immersive Experiences</a>&nbsp;-&nbsp;The codes of best practices - developed by CREATe (University of Glasgow) and IViR (University of Amsterdam) for&nbsp;<a data-saferedirecturl=\"https://www.google.com/url?q=https://www.recreating.eu/&amp;source=gmail&amp;ust=1671790450012000&amp;usg=AOvVaw0L3ohv2Sk8KoS_YUOozZWg\" href=\"https://www.recreating.eu/\" id=\"m_-1066218749287664844m_-3124631079033887704LPNoLPOWALinkPreview\" target=\"_blank\" title=\"https://www.recreating.eu/\">ReCreating Europe</a>&nbsp;- intend to help documentary filmmakers and digital heritage curators and creators make informed decisions around the lawful reuse of existing works.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -338,7 +338,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -395,7 +395,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -417,7 +417,7 @@ pages:
                 selected_resources:
                     -
                         value: ''
-                        _id: resources/eu-datathon-1
+                        _id: resources/media-literacy-competence-framework-en
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -443,7 +443,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -494,7 +494,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -622,7 +622,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -750,7 +750,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -875,7 +875,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1001,7 +1001,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1046,7 +1046,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1091,7 +1091,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1136,7 +1136,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1301,7 +1301,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1346,7 +1346,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1468,7 +1468,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1513,7 +1513,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1561,7 +1561,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1591,7 +1591,7 @@ pages:
     -
         slug: copyright-and-digital-cultural-heritage
         datecreated: '2021-04-16 12:22:57'
-        datechanged: '2022-08-26 14:20:32'
+        datechanged: '2023-03-29 15:40:31'
         datepublish: '2021-06-17 12:22:00'
         datedepublish: ''
         ownerid: 124
@@ -1644,9 +1644,9 @@ pages:
             - posts/the-eu-copyright-reform-s-great-disservice-to-free-use-for-educational-purposes
             - posts/copyright-management-guidelines-for-cultural-heritage-institutions
             - posts/europeana-copyright-community-launches-guidelines-on-copyright-management-for-cultural-heritage-institutions
-            - posts/copyright-directive-series-a-closer-look-at-italy
             - posts/copyright-directive-series-progress-in-the-directive-transposition
             - posts/exploring-reuse-of-audiovisual-content-for-education
+            - posts/copyright-directive-series-a-closer-look-at-italy
         data: {  }
         projects: {  }
         events:
@@ -1679,9 +1679,9 @@ pages:
                 enabled: enabled
                 title: 'Copyright and digital cultural heritage'
                 subtitle: ''
-                anchortitle: ''
+                anchortitle: About
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /><meta charset=\"utf-8\" />Copyright presents a big question for digital cultural heritage; how do you legally share collections online and support their reuse? We offer free, up-to-date and expert guidance, resources, standards, webinars and an active community for all professionals who work with copyright in the sector.&nbsp;</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Copyright raises relevant questions for those who work with or otherwise use digital cultural heritage: how do you legally share collections online and support their reuse? How can you deal with legal risk? How are legal and policy changes shaping this area?&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The Europeana Initiative offers free, up-to-date and expert guidance, resources, standards, webinars and an active community for all professionals who work with copyright in the cultural heritage sector. Explore these below.&nbsp;&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -1694,7 +1694,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1722,9 +1722,9 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: 'Resources and support'
-                subtitle: 'Explore guidance for data providers, access tools from across the sector and join our active Copyright community.'
-                anchortitle: 'Resources and support'
+                title: Training
+                subtitle: 'Learn and test your knowledge on copyright and the use of rights statements.'
+                anchortitle: Training
                 templates: listingsemistatic
                 body: ''
                 image:
@@ -1739,7 +1739,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1749,11 +1749,62 @@ pages:
                 basemarket: ''
                 selected_pages:
                     -
+                        value: '756'
+                        _id: pages/identifying-copyright-in-collection-items
+                    -
+                        value: '227'
+                        _id: pages/available-rights-statements
+                    -
+                        value: '228'
+                        _id: pages/selecting-a-rights-statement
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Tools and knowledge'
+                subtitle: 'Access resources and documentation on topics which support cultural heritage professionals to build understanding of copyright in relation to digital cultural heritage.'
+                anchortitle: 'Tools and knowledge'
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
                         value: '725'
                         _id: pages/copyright
-                    -
-                        value: '579'
-                        _id: pages/europeana-copyright
                     -
                         value: '776'
                         _id: pages/copyright-tools-and-resources
@@ -1767,7 +1818,16 @@ pages:
                 selected_projects: ''
                 selected_jobs: ''
                 selected_events: ''
-                selected_resources: ''
+                selected_resources:
+                    -
+                        value: '1096'
+                        _id: resources/copyright-when-sharing-data-with-europeana
+                    -
+                        value: '1097'
+                        _id: resources/copyright-tools-and-resources
+                    -
+                        value: '1098'
+                        _id: resources/faqs-on-out-of-commerce-works
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -1793,7 +1853,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1809,6 +1869,18 @@ pages:
                     -
                         value: '2489'
                         _id: posts/copyright-management-guidelines-for-cultural-heritage-institutions
+                    -
+                        value: '2178'
+                        _id: posts/the-state-of-play-of-copyright-knowledge-in-cultural-heritage-institutions
+                    -
+                        value: '2201'
+                        _id: posts/europeana-copyright-2020-2025
+                    -
+                        value: '2288'
+                        _id: posts/recommendations-on-copyright-and-its-role-in-the-digital-transformation-of-the-cultural-heritage-sector
+                    -
+                        value: '2227'
+                        _id: posts/copyright-in-the-cultural-heritage-sector-outcomes-of-the-german-presidency-event
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -1824,9 +1896,9 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: 'Rights statements and standards'
-                subtitle: 'Through RightsStatements.org we offer tools to standardise the way you communicate rights information about your online collections.'
-                anchortitle: 'Rights statements and standards'
+                title: 'Standards for rights information'
+                subtitle: 'We support the use of Creative Commons Licences and Tools, and through the Rights Statements Consortium, we offer additional tools to standardise the way you communicate rights information about online collections.'
+                anchortitle: Activities
                 templates: listing
                 body: ''
                 image:
@@ -1841,7 +1913,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1873,9 +1945,9 @@ pages:
             -
                 enabled: enabled
                 title: 'Open access'
-                subtitle: 'We advocate for open access through our policies and frameworks, and encourage you to open your collections up for reuse.'
-                anchortitle: 'Open access'
-                templates: listing
+                subtitle: 'We advocate for open access through our policies and frameworks, and encourage you to open your collections up for reuse. Learn about the benefits of removing barriers to reuse and explore the experiences of other institutions.'
+                anchortitle: ''
+                templates: listingsemistatic
                 body: ''
                 image:
                     file: ''
@@ -1889,7 +1961,139 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '781'
+                        _id: pages/open-and-reusable-digital-cultural-heritage
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1100'
+                        _id: resources/open-and-reusable-digital-cultural-heritage
+                    -
+                        value: '392'
+                        _id: resources/public-domain-charter
+                    -
+                        value: '1099'
+                        _id: resources/opening-up-approaches-from-cultural-heritage-institutions-across-europe
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Copyright Directive'
+                subtitle: 'Gain an understanding of recent and upcoming legal and policy changes in the European Union and your country.'
+                anchortitle: ''
+                templates: listingthumbnailsthree
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '1970'
+                        _id: posts/explainer-what-will-the-new-eu-copyright-rules-change-for-europe-s-cultural-heritage-institutions
+                    -
+                        value: '2089'
+                        _id: posts/keeping-digitised-works-in-the-public-domain-how-the-copyright-directive-makes-it-a-reality
+                    -
+                        value: '2331'
+                        _id: posts/a-missed-deadline-the-state-of-play-of-the-copyright-directive
+                    -
+                        value: '2074'
+                        _id: posts/be-part-of-the-discussions-on-out-of-commerce-works
+                    -
+                        value: '2236'
+                        _id: posts/evaluating-the-orphan-works-directive
+                    -
+                        value: '2429'
+                        _id: posts/copyright-directive-series-progress-in-the-directive-transposition
+                    -
+                        value: '2456'
+                        _id: posts/copyright-directive-series-a-closer-look-at-italy
+                    -
+                        value: '2515'
+                        _id: posts/copyright-directive-series-a-closer-look-at-the-netherlands
+                    -
+                        value: '2548'
+                        _id: posts/copyright-directive-series-a-closer-look-at-lithuania
+                    -
+                        value: '2570'
+                        _id: posts/copyright-directive-series-a-closer-look-at-sweden
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Network and communities'
+                subtitle: 'Join our vibrant Copyright Communityto engage, collaborate and transfer knowledge with peers and experts working on copyright and digital cultural heritage.'
+                anchortitle: 'Network and communities'
+                templates: teaser
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1899,8 +2103,8 @@ pages:
                 basemarket: ''
                 selected_pages:
                     -
-                        value: '781'
-                        _id: pages/open-and-reusable-digital-cultural-heritage
+                        value: '579'
+                        _id: pages/europeana-copyright
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -1920,9 +2124,102 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: 'Reports, studies and publications'
-                subtitle: 'Explore relevant documents and approaches to copyright from the Europeana Initiative.'
-                anchortitle: 'Reports, studies and publications'
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: teaser
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: projects
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects:
+                    -
+                        value: '166'
+                        _id: projects/out-of-commerce-works-working-group
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Events
+                subtitle: 'Register for upcoming events which support cultural heritage professionals to gain new skills and knowledge.'
+                anchortitle: Events
+                templates: listingnews
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: calendar_upcoming
+                sources: events
+                override_amount: 2
+                basetag: ''
+                basecategory: 'Legal Standards'
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: events
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Webinars
+                subtitle: 'Learn from various useful and successful approaches to clearing rights and to managing copyright in a cultural heritage institution.'
+                anchortitle: Webinars
                 templates: listingsemistatic
                 body: ''
                 image:
@@ -1937,61 +2234,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts:
-                    -
-                        value: '2178'
-                        _id: posts/the-state-of-play-of-copyright-knowledge-in-cultural-heritage-institutions
-                    -
-                        value: '2201'
-                        _id: posts/europeana-copyright-2020-2025
-                    -
-                        value: '2288'
-                        _id: posts/recommendations-on-copyright-and-its-role-in-the-digital-transformation-of-the-cultural-heritage-sector
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: Webinars
-                subtitle: 'Develop your knowledge and understanding of copyright and digital cultural heritage through webinars from the Europeana Initiative.'
-                anchortitle: Webinars
-                templates: listingthumbnailsthree
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -2011,63 +2254,15 @@ pages:
                 selected_jobs: ''
                 selected_events:
                     -
-                        value: '366'
-                        _id: events/copyright-open-access-for-glams-in-the-age-of-covid19
+                        value: '414'
+                        _id: events/clearing-rights-in-collections-part-1
                     -
-                        value: '375'
-                        _id: events/glam-collections-on-social-media-navigating-copyright-questions
+                        value: '397'
+                        _id: events/copyright-clearance-and-labelling-works-a-primer
                     -
-                        value: '545'
-                        _id: events/launch-of-the-euipo-out-of-commerce-works-portal
+                        value: '459'
+                        _id: events/tools-and-good-practice-to-manage-copyright
                 selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: calltoactioninline
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '778'
-                        _id: resources/copyright-webinars
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -2093,7 +2288,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: category
                 sources: posts
@@ -2118,51 +2313,6 @@ pages:
                 modulemorelabel: ''
                 modulemoretext: ''
                 override_css_id: news
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: Events
-                subtitle: ''
-                anchortitle: Events
-                templates: listingnews
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: calendar_upcoming
-                sources: events
-                override_amount: 2
-                basetag: ''
-                basecategory: 'Legal Standards'
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: events
                 override_css_class: ''
         _id: pages/copyright-and-digital-cultural-heritage
     -
@@ -2216,7 +2366,9 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: 'new european bauhaus, neb'
-        pages: {  }
+        pages:
+            - pages/new-european-bauhaus
+            - pages/new-european-bauhaus
         posts:
             - posts/the-european-heritage-label-discover-the-network-of-sites-that-have-shaped-the-history-of-europe
             - posts/new-european-bauhaus-an-interview-with-hector-aliaga
@@ -2225,8 +2377,6 @@ pages:
             - posts/new-european-bauhaus-an-interview-with-marie-veronique-leroi
             - posts/new-european-bauhaus-an-interview-with-harry-verwayen
             - posts/beautiful-sustainable-together-the-new-european-bauhaus
-            - posts/built-with-bits-brussels-kicks-off-at-festival-of-the-new-european-bauhaus
-            - posts/looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
         data: {  }
         projects: {  }
         events:
@@ -2277,7 +2427,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2325,7 +2475,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2370,7 +2520,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2418,7 +2568,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -2481,7 +2631,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2529,7 +2679,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -2592,7 +2742,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2637,7 +2787,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2685,7 +2835,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -2739,7 +2889,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -2787,7 +2937,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: events
@@ -2832,7 +2982,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2964,7 +3114,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3009,7 +3159,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -3063,7 +3213,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3108,7 +3258,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3241,7 +3391,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3286,7 +3436,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3334,7 +3484,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3397,7 +3547,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3445,7 +3595,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3493,7 +3643,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3550,7 +3700,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3595,7 +3745,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3643,7 +3793,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3697,7 +3847,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3745,7 +3895,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3793,7 +3943,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3841,7 +3991,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3895,7 +4045,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -4039,7 +4189,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4084,7 +4234,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -4171,7 +4321,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4297,7 +4447,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4342,7 +4492,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4387,7 +4537,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4432,7 +4582,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4483,7 +4633,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4528,7 +4678,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4582,7 +4732,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4627,7 +4777,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4672,7 +4822,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4753,7 +4903,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4798,7 +4948,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4843,7 +4993,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4888,7 +5038,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4933,7 +5083,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4978,7 +5128,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5032,7 +5182,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5077,7 +5227,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5122,7 +5272,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5167,7 +5317,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -5206,7 +5356,7 @@ pages:
     -
         slug: seven-tips-for-digital-storytelling
         datecreated: '2021-06-29 15:48:37'
-        datechanged: '2022-06-27 15:14:02'
+        datechanged: '2023-03-14 10:55:35'
         datepublish: '2021-07-13 15:48:00'
         datedepublish: ''
         ownerid: 124
@@ -5256,9 +5406,9 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: null
-        pages:
-            - pages/seven-tips-for-digital-storytelling
-        posts: {  }
+        pages: {  }
+        posts:
+            - posts/digital-storytelling-festival-2022-here-s-everything-you-need-to-know-to-join-in
         data: {  }
         projects: {  }
         events: {  }
@@ -5288,11 +5438,11 @@ pages:
         modules:
             -
                 enabled: enabled
-                title: ''
+                title: About
                 subtitle: ''
-                anchortitle: ''
+                anchortitle: About
                 templates: body
-                body: "<h3><strong>About</strong></h3>\r\n\r\n<p>Audiences want to feel informed by digital stories, but also curious, immersed, inspired and connected by them. It is this that sets storytelling apart from other content types; and it is this that gives storytelling such a role to play in engagement and community-building across the cultural heritage sector.&nbsp;</p>\r\n\r\n<p>These seven tips are a valuable resource for cultural heritage professionals and institutions looking to&nbsp;develop their capacity for successfully sharing their stories online. They were developed in 2021 by a Europeana Task Force on <a href=\"https://pro.europeana.eu/project/europeana-as-a-powerful-platform-for-storytelling\">'Europeana as a powerful platform for digitals storytelling'</a>&nbsp;and have fed into Europeana's Digital Storytelling Festival - <a href=\"https://pro.europeana.eu/event/digital-storytelling-festival-opening-gala\">watch the opening gala from 2022</a>.&nbsp;</p>\r\n\r\n<h3><strong>Use the tips</strong></h3>\r\n\r\n<p>These tips are available as&nbsp;an infographic and introductory video (below),&nbsp;<a href=\"https://docs.google.com/presentation/d/1-lZW3h3otGKGjbTeJLUeQf3xIjSKN8u2cVDqkxg0gnA/edit?usp=sharing\">slidedeck</a>&nbsp;and&nbsp;<a href=\"https://www.youtube.com/watch?v=jbSB2H59GYo\">video presentation</a>, on&nbsp;<a href=\"https://medium.com/digital-storytelling-festival/7-digital-storytelling-tips-for-the-cultural-heritage-sector-8e701a439dd6\">Medium</a>&nbsp;and on&nbsp;<a href=\"https://pro.europeana.eu/search?q=storytelling-task-force\">Europeana Pro News</a>.</p>\r\n"
+                body: "<p>Audiences want to feel informed by digital stories, but also curious, immersed, inspired and connected by them. It is this that sets storytelling apart from other content types; and it is this that gives storytelling such a role to play in engagement and community-building across the cultural heritage sector.&nbsp;</p>\r\n\r\n<p>These seven tips are a valuable resource for cultural heritage professionals and institutions looking to&nbsp;develop their capacity for successfully sharing their stories online. They were developed in 2021 by a Europeana Task Force on <a href=\"https://pro.europeana.eu/project/europeana-as-a-powerful-platform-for-storytelling\">'Europeana as a powerful platform for digitals storytelling'</a>&nbsp;and have fed into Europeana's Digital Storytelling Festival - <a href=\"https://pro.europeana.eu/event/digital-storytelling-festival-opening-gala\">watch the opening gala from 2022</a>.&nbsp;</p>\r\n\r\n<p>These tips are available as&nbsp;an infographic and introductory video (below),&nbsp;<a href=\"https://docs.google.com/presentation/d/1-lZW3h3otGKGjbTeJLUeQf3xIjSKN8u2cVDqkxg0gnA/edit?usp=sharing\">slidedeck</a>&nbsp;and&nbsp;<a href=\"https://www.youtube.com/watch?v=jbSB2H59GYo\">video presentation</a>, on&nbsp;<a href=\"https://medium.com/digital-storytelling-festival/7-digital-storytelling-tips-for-the-cultural-heritage-sector-8e701a439dd6\">Medium</a>&nbsp;and on&nbsp;<a href=\"https://pro.europeana.eu/search?q=storytelling-task-force\">Europeana Pro News</a>.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5305,7 +5455,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5333,9 +5483,54 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: ''
+                title: 'Read the tips'
                 subtitle: ''
-                anchortitle: ''
+                anchortitle: 'Read the tips'
+                templates: body
+                body: "<h3 data-selectable-paragraph=\"\"><strong>Seven tips for digital&nbsp;storytelling</strong></h3>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"6c60\"><strong>1. Be personal</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"43bf\">Personal stories bring the past to life and help people relate to history on an emotional level.</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"2b84\"><strong>2. Be informal but expert</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"5490\">People want to learn from experts, but it shouldn’t be a chore. Overly academic language can put people off, but stories should not be ‘dumbed down’. Finding the right balance is important.</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"5c00\"><strong>3. Tell hidden stories</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"433e\">So much cultural history remains untold. Bringing hidden heritage to light engages audiences and creates a sense of community, identity and shared history. When creating content it helps to ask: can you find stories that haven’t been told elsewhere?</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"d6ad\"><strong>4.&nbsp;Illustrate your points</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"dd2e\">A key strength of the cultural heritage sector is its wealth of visual imagery. This can be used to powerful effect in storytelling. Formats don’t have to be fancy, but do consider how visuals and text work together in the stories you share.</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"757f\"><strong>5.&nbsp;Signpost your journey</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"e715\">The best stories take people on a clear journey. In digital storytelling — particularly on complex or experimental platforms — good signposting helps keep people on track. Having a clear sense of both the narrative and digital structure helps to keep your story compact and capture people’s attention from beginning to end.</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"ebf2\"><strong>6.&nbsp;Be specific</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"e52c\">Storytelling that focuses on specific topics can still engage a broad audience. Generally speaking, it works best to proceed from details to the big picture, rather than the other way round.</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"9cc7\"><strong>7. Be evocative</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"efb4\">Of course, cultural history stories need to be based in fact, but the facts don’t need to be dry. Don’t be afraid to use poetic, descriptive and evocative imagery and approaches — they are more likely to engage people.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Video
+                subtitle: ''
+                anchortitle: Video
                 templates: body
                 body: "<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"500\" src=\"https://www.youtube.com/embed/8EjM9vHOLpw\" title=\"YouTube video player\" width=\"100%\"></iframe></p>\r\n"
                 image:
@@ -5350,7 +5545,52 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Infographic
+                subtitle: ''
+                anchortitle: Infographic
+                templates: body
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5385,7 +5625,7 @@ pages:
                 body: ''
                 image:
                     file: 'Images/Blog_images/2021-05/7 tips for digital storytelling 4.jpeg'
-                    title: 'Seven tips for digital storytelling - full text below'
+                    title: 'Seven tips for digital storytelling - full text above'
                 attribution_title: '7 tips for Digital Storytelling'
                 attribution_creator: 'Maggy Szynkielewska'
                 attribution_date: 'April 2021'
@@ -5395,7 +5635,97 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Translations
+                subtitle: ''
+                anchortitle: Translations
+                templates: body
+                body: "<p>The <a href=\"https://pro.europeana.eu/page/europeana-communicators-group\">Europeana Communicators Community</a> has supported the translation of this page, and the tips it contains, into Polish, Italian, French, Spanish and German. You can read these translations below, and also explore translations in additional languages produced as part of the&nbsp;<a href=\"https://pro.europeana.eu/project/europeana-as-a-powerful-platform-for-storytelling#translations\">Europeana as a ‘powerful platform for storytelling’ Task Force..</a></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: French
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<h3><strong>Sept conseils pour la narration numérique d’histoires&nbsp;&nbsp;</strong></h3>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Comment raconter des histoires engageantes et inspirantes sur le patrimoine culturel en ligne ? Découvrez nos sept conseils.</p>\r\n\r\n<p dir=\"ltr\"><strong>À propos de</strong></p>\r\n\r\n<p dir=\"ltr\">Le public veut volontiers être informé par les histoires numériques, mais aussi être curieux, immergé, inspiré et connecté par elles. C'est ce qui distingue le storytelling des autres types de contenu et c'est ce qui lui confère un tel rôle dans l'engagement et le développement de la communauté dans le secteur du patrimoine culturel.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Ces sept conseils constituent une ressource précieuse pour les professionnels du patrimoine culturel et les institutions qui cherchent à développer leur capacité à partager avec succès leurs histoires en ligne. Ils ont été élaborés en 2021 par un groupe de travail d'Europeana sur <a href=\"https://pro.europeana.eu/project/europeana-as-a-powerful-platform-for-storytelling\">\"Europeana en tant que plateforme puissante pour les récits numériques\"</a> et ont alimenté le festival de récits numériques d'Europeana - <a href=\"https://pro.europeana.eu/event/digital-storytelling-festival-opening-gala\">regardez le gala d'ouverture de 2022</a>.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<ol>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Soyez personnel - Les histoires personnelles peuvent donner vie au passé et aider les gens à s'identifier à l'histoire sur un plan émotionnel. Tenez compte de la signification humaine des artefacts et des sites culturels.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Soyez informel mais expert - Les gens veulent apprendre mais le jargon peut les rebuter. Tant que le contenu est bien avisé, le format de votre article peut être expérimental et ludique.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Raconter les histoires cachées - Une grande partie de l'histoire culturelle n'est pas relatée. Lorsque vous choisissez des sujets, pensez à ceux qui manquent à l'image, et essayez de donner la parole à un éventail de personnes et de communautés.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Illustrez vos propos - Les longs récits écrits ou oraux peuvent être difficiles à suivre. Pour enrichir l'expérience, il est conseillé d'interrompre le récit par des éléments visuels (ou sonores) et de prévoir un temps de réflexion.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Signalez votre parcours - Dans la narration numérique, en particulier sur les plateformes complexes, une structure narrative claire est essentielle. Conservez une navigation simple, afin que le visiteur sache où il se trouve à tout moment.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Soyez précis - Des sujets spécifiques peuvent toujours intéresser un large public. Commencez par un détail particulier qui se trouve au cœur de votre histoire, puis passez à la vue d'ensemble. Des histoires personnelles et des images bien choisies peuvent vous aider à rester concentré.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Soyez évocateur - Les récits d'histoire culturelle doivent être basés sur des faits, mais ils ne doivent pas être stériles. Utilisez des termes descriptifs et invitez le spectateur à s’imaginer dans la scène.&nbsp;</p>\r\n    </li>\r\n</ol>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5426,8 +5756,53 @@ pages:
                 title: ''
                 subtitle: ''
                 anchortitle: ''
-                templates: body
-                body: "<h3 data-selectable-paragraph=\"\"><strong>Seven tips for digital&nbsp;storytelling</strong></h3>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"6c60\"><strong>1. Be personal</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"43bf\">Personal stories bring the past to life and help people relate to history on an emotional level.</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"2b84\"><strong>2. Be informal but expert</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"5490\">People want to learn from experts, but it shouldn’t be a chore. Overly academic language can put people off, but stories should not be ‘dumbed down’. Finding the right balance is important.</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"5c00\"><strong>3. Tell hidden stories</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"433e\">So much cultural history remains untold. Bringing hidden heritage to light engages audiences and creates a sense of community, identity and shared history. When creating content it helps to ask: can you find stories that haven’t been told elsewhere?</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"d6ad\"><strong>4.&nbsp;Illustrate your points</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"dd2e\">A key strength of the cultural heritage sector is its wealth of visual imagery. This can be used to powerful effect in storytelling. Formats don’t have to be fancy, but do consider how visuals and text work together in the stories you share.</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"757f\"><strong>5.&nbsp;Signpost your journey</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"e715\">The best stories take people on a clear journey. In digital storytelling — particularly on complex or experimental platforms — good signposting helps keep people on track. Having a clear sense of both the narrative and digital structure helps to keep your story compact and capture people’s attention from beginning to end.</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"ebf2\"><strong>6.&nbsp;Be specific</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"e52c\">Storytelling that focuses on specific topics can still engage a broad audience. Generally speaking, it works best to proceed from details to the big picture, rather than the other way round.</p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"9cc7\"><strong>7. Be evocative</strong></p>\r\n\r\n<p data-selectable-paragraph=\"\" id=\"efb4\">Of course, cultural history stories need to be based in fact, but the facts don’t need to be dry. Don’t be afraid to use poetic, descriptive and evocative imagery and approaches — they are more likely to engage people.</p>\r\n"
+                templates: image_full
+                body: ''
+                image:
+                    file: Images/Communities/Europeana_Communicators/digital_storytelling_tips_french.png
+                    title: 'Seven tips for digital storytelling - French. See full text above.'
+                attribution_title: '7 tips for Digital Storytelling'
+                attribution_creator: ''
+                attribution_date: 'March 2023'
+                attribution_holder: 'Europeana Foundation'
+                attribution_country: Netherlands
+                attribution_license: CC-BY-SA
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: German
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<h3><strong>Sieben Tipps für Digital Storytelling</strong></h3>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Wie können wir online interessante und inspirierende Geschichten über unser kulturelles Erbe erzählen? Hier unsere sieben Tipps.</p>\r\n\r\n<p dir=\"ltr\"><strong>Über Digital Storytelling</strong></p>\r\n\r\n<p dir=\"ltr\">Die Betrachter möchten durch digitale Geschichten nicht nur informiert, sondern auch neugierig gemacht werden, in sie eintauchen, sich von ihnen inspirieren lassen und sich mit ihnen verbunden fühlen. Dadurch unterscheidet sich Storytelling von anderen Inhaltstypen. Darüber hinaus ist das Geschichtenerzählen sehr wichtig für das Engagement und die Gemeinschaftsbildung im Bereich des kulturellen Erbes.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Diese sieben Tipps sind eine wertvolle Ressource für Fachleute und Institutionen im Bereich des Kulturerbes, die ihre Fähigkeiten zur erfolgreichen Verbreitung ihrer Geschichten im Internet ausbauen möchten. Sie wurden 2021 von einer Projektgruppe von Europeana zum Thema <a href=\"https://pro.europeana.eu/project/europeana-as-a-powerful-platform-for-storytelling\">„Europeana als kraftvolle Plattform für Digital Storytelling“</a> entwickelt und sind in das Digital Storytelling Festival von Europeana eingeflossen – <a href=\"https://pro.europeana.eu/event/digital-storytelling-festival-opening-gala\">sehen Sie sich hier die Eröffnungsgala von 2022 an</a>.</p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<ol>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Seien Sie persönlich - Persönliche Geschichten können die Vergangenheit zum Leben erwecken und Menschen helfen, eine emotionale Beziehung zu historischen Ereignissen aufzubauen. Gehen Sie auf die Bedeutung der kulturellen Artefakte und Kulturstätten für die Menschheit ein.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Präsentieren Sie Ihr Fachwissen in leicht verständlicher Form – Menschen wollen etwas lernen, aber die Verwendung von Fachsprache kann sie abschrecken. Wenn der Inhalt gut recherchiert ist, kann das Format Ihrer Story experimentell und spielerisch sein.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Erzählen Sie verborgene Geschichten - So viel Kulturgeschichte bleibt unerzählt. Denken Sie bei der Auswahl der Themen an Personen, die normalerweise nicht im Fokus stehen. Versuchen Sie, verschiedenen Menschen und Gemeinschaften eine Stimme zu geben.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Veranschaulichen Sie Ihre Ausführungen - Lange schriftliche oder mündliche Erzählungen sind manchmal wenig mitreißend. Wenn Sie die Story mit visuellem (oder auditivem) Material auflockern und Zeit zum Nachdenken einplanen, kann dies die Erfahrung bereichern.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Strukturieren Sie Ihre Reise - Beim digitalen Geschichtenerzählen - insbesondere auf komplexen Plattformen - ist eine klare Erzählstruktur unerlässlich. Gestalten Sie die Navigation einfach, damit der Besucher jederzeit weiß, wo er sich befindet.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Seien Sie spezifisch – Auch spezifische Themen können ein breites Publikum ansprechen. Beginnen Sie mit einem bestimmten Detail, das im Mittelpunkt Ihrer Story steht, und gehen Sie dann zu einem größeren Ganzen über. Persönliche Geschichten und gut gewählte Bilder können dabei helfen, aufmerksam zu bleiben.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Seien Sie anschaulich - Kulturgeschichtliche Stories müssen auf Fakten beruhen, aber sie müssen nicht trocken sein. Verwenden Sie beschreibende Begriffe und laden Sie den Betrachter ein, sich in die Szene hineinzuversetzen.</p>\r\n    </li>\r\n</ol>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5440,7 +5815,322 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: image_full
+                body: ''
+                image:
+                    file: Images/Communities/Europeana_Communicators/digital_storytelling_tips_german.png
+                    title: 'Seven tips for digital storytelling - German. See full text above.'
+                attribution_title: '7 tips for Digital Storytelling'
+                attribution_creator: ''
+                attribution_date: 'March 2023'
+                attribution_holder: 'Europeana Foundation'
+                attribution_country: Netherlands
+                attribution_license: CC-BY-SA
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Italian
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<h3><strong>Sette consigli per raccontare storie digitali</strong></h3>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Come possiamo raccontare storie accattivanti e interessanti che riguardino il patrimonio culturale digitale? Scopri i nostri sette consigli.</p>\r\n\r\n<p dir=\"ltr\"><strong>In merito a</strong></p>\r\n\r\n<p dir=\"ltr\">Il pubblico vuole essere informato dalle storie digitali, ma desidera anche essere incuriosito, avvolto, ispirato e in connessione con le stesse. È per questo motivo che raccontare una storia digitale è diverso dal raccontare altri tipi di contenuto ed è questo che conferisce alle storie digitali un ruolo importante nel coinvolgimento e nel costruire comunità nel settore del patrimonio culturale digitale.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Questi sette consigli sono una preziosa risorsa per i professionisti e le istituzioni che operano nel settore del patrimonio culturale digitale e che vogliono ampliare le loro capacità di condividere con successo le loro storie online. Questi consigli sono stati sviluppati nel 2021 da una task force di Europeana su <a href=\"https://pro.europeana.eu/project/europeana-as-a-powerful-platform-for-storytelling\">'Europeana come potente piattaforma per raccontare storie digitali'</a> e hanno contribuito al Festival del racconto di storie digitali di Europeana – <a href=\"https://pro.europeana.eu/event/digital-storytelling-festival-opening-gala\">guarda il gala di apertura del 2022</a>.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<ol>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Sii personale – I racconti personali possono far rivivere il passato e aiutano le persone a connettersi emotivamente alla storia. Prendi in considerazione il fattore umano dei cimeli e dei siti culturali.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Sii informale ma anche competente – Le persone hanno voglia di imparare ma un linguaggio troppo tecnico può allontanarle. Purché il contenuto dia le giuste informazioni, la forma del tuo racconto può essere sperimentale e ludica.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Racconta le storie nascoste – C’è ancora moltissima storia della cultura che non è mai stata raccontata. Quando scegli un soggetto prendi in considerazione chi manca dal contesto e prova a dare voce ad una varietà di persone e comunità mai raccontate.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Illustra ciò che vuoi raccontare – È difficile mantenere il coinvolgimento con racconti scritti o narrati troppo lunghi. Interrompere la storia con materiale visivo (o audio), lasciando il tempo di riflettere su di esso, può arricchire l’esperienza del pubblico.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Lascia chiare indicazioni durante il viaggio – Nel racconto di storie digitali – soprattutto se si tratta di piattaforme complesse – è essenziale una struttura narrativa chiara. Rendi semplice la navigazione affinché il visitatore sappia sempre dove si trova.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Sii specifico – Argomenti specifici possono comunque interessare un pubblico ampio. Comincia da un particolare che si trova nel cuore della tua storia per poi passare ad un quadro più generale. Storie personali ed immagini ben selezionate possono aiutare a mantenere viva l’attenzione.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Sii suggestivo – I racconti di storia della cultura devono essere basati su fatti concreti ma non per questo devono essere troppo essenziali. Usa termini descrittivi ed invita lo spettatore a collocarsi all’interno della scena.&nbsp;</p>\r\n    </li>\r\n</ol>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: image_full
+                body: ''
+                image:
+                    file: Images/Communities/Europeana_Communicators/digital_storytelling_tips_italian.png
+                    title: 'Seven tips for digital storytelling - Italian. See full text above.'
+                attribution_title: '7 tips for Digital Storytelling'
+                attribution_creator: ''
+                attribution_date: 'March 2023'
+                attribution_holder: 'Europeana Foundation'
+                attribution_country: Netherlands
+                attribution_license: CC-BY-SA
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Polish
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<h3><strong>Cyfrowe opowiadanie historii - siedem wskazówek</strong></h3>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">W jaki sposób zajmująco i inspirująco opowiadamy online historie dotyczące dziedzictwa kulturowego? Zapoznaj się z naszymi wskazówkami.</p>\r\n\r\n<p dir=\"ltr\"><strong>Więcej informacji</strong></p>\r\n\r\n<p dir=\"ltr\">Odbiorcy chcą, by cyfrowe historie nie tylko zawierały informacje, ale też by ich ciekawiły, były wciągające i inspirujące oraz by budowały poczucie więzi. Właśnie to odróżnia opowiadanie historii od innych rodzajów treści i sprawia, że odgrywa ono istotną rolę w&nbsp;angażowaniu i&nbsp;budowaniu społeczności w ramach sektora dziedzictwa kulturowego.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Prezentujemy siedem wskazówek, które stanowią wartościowe źródło dla profesjonalistów i instytucji działających w obszarze dziedzictwa kulturowego i&nbsp;chcących rozwijać swoje kompetencje, by z powodzeniem dzielić się historiami online. Wskazówki te opracował w 2021 roku zespół zadaniowy Europeany, zajmujący się zagadnieniem <a href=\"https://pro.europeana.eu/project/europeana-as-a-powerful-platform-for-storytelling\">„Europeana jako wpływowa platforma cyfrowego opowiadania historii”.</a> Zaprezentowano je na Festiwalu Cyfrowego Opowiadania Historii Europeany w 2022 roku - <a href=\"https://pro.europeana.eu/event/digital-storytelling-festival-opening-gala\">zobacz galę otwarcia</a>.&nbsp;<meta charset=\"utf-8\" /></p>\r\n\r\n<ol>\r\n    <li>Uderz w osobisty ton - Opowieści osobiste ożywiają przeszłość i pomagają ludziom odczuwać emocjonalną więź z historią. Uwzględnij ludzki element artefaktów kulturowych i miejsc.</li>\r\n    <li>Używaj prostego języka pozostając ekspertem - Ludzie chcą dowiadywać się nowych rzeczy, ale język specjalistyczny może ich odstręczać. Jeśli treść jest merytoryczna, format twojej historii może być eksperymentalny i żartobliwy.</li>\r\n    <li>Opowiadaj ukryte historie - Wielka część historii kultury nadal nie została opowiedziana. Wybierając historie do opowiedzenia, zastanów się, kogo jeszcze nie uwzględniono i daj głos społecznościom marginalizowanym.</li>\r\n    <li>Korzystaj z ilustracji - Śledzenie długich narracji pisanych lub mówionych może być trudne. Doświadczenie odbiorcy można wzbogacić, rozdzielając historię materiałami wizualnymi (albo audio) i dając czas na refleksję.</li>\r\n    <li>Wyznacz kierunek podróży - W cyfrowym opowiadaniu historii, zwłaszcza na złożonych platformach, kluczowe znaczenie ma jasna struktura narracyjna. Stosuj prostą nawigację, aby odbiorcy w każdym momencie wiedzieli, gdzie się znajdują.</li>\r\n    <li>Bądź konkretny - Konkretne tematy nadal mogą interesować szeroką publiczność. Zacznij od sprecyzowanego szczegółu, leżącego w sercu opowiadanej historii, a następnie przejdź do szerszego obrazu. Osobiste historie i dobrze dobrane ilustracje pomogą Ci w trzymaniu się tematu.</li>\r\n    <li>Działaj na wyobraźnię - Opowieści dotyczące historii kultury muszą być oparte na faktach, ale nie muszą być suche. Stosuj pojęcia opisowe pozwalające odbiorcom poczuć się częścią opowiadanej historii.</li>\r\n</ol>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: image_full
+                body: ''
+                image:
+                    file: Images/Communities/Europeana_Communicators/digital_storytelling_tips_polish.png
+                    title: 'Seven tips for digital storytelling - Polish. See full text above.'
+                attribution_title: '7 tips for Digital Storytelling'
+                attribution_creator: ''
+                attribution_date: 'March 2023'
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Spanish
+                subtitle: ''
+                anchortitle: ''
+                templates: collapsedcontent
+                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<h3 dir=\"ltr\"><strong>Siete consejos para contar historias digitalmente</strong></h3>\r\n\r\n<p dir=\"ltr\">¿Cómo podemos contar historias atractivas e inspiradoras sobre el patrimonio cultural en Internet? Aquí encontrarás nuestros siete consejos.</p>\r\n\r\n<p dir=\"ltr\"><strong>Acerca de</strong></p>\r\n\r\n<p dir=\"ltr\">El público quiere que las historias digitales le informen, pero también quiere sentir curiosidad, sumergirse en las historias, inspirarse y conectar con ellas. Esto es lo que diferencia la narración de otros tipos de contenidos, y lo que le confiere un papel tan importante en la implicación de los usuarios y la creación de comunidades en el sector del patrimonio cultural.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">Estos siete consejos son un valioso recurso para los profesionales e instituciones del patrimonio cultural que quieran desarrollar su capacidad de compartir sus historias en línea con éxito. Fueron desarrolladas en 2021 por un grupo de trabajo de Europeana sobre <a href=\"https://pro.europeana.eu/project/europeana-as-a-powerful-platform-for-storytelling\">'Europeana as a powerful platform for digital storytelling'</a> (Europeana, una potente plataforma para la narración digital), y se han trasladado al Digital Storytelling Festival de Europeana; <a href=\"https://pro.europeana.eu/event/digital-storytelling-festival-opening-gala\">véase la gala inaugural de 2022</a>.&nbsp;</p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<ol>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Sé personal: Las historias personales pueden dar vida al pasado y ayudar a la gente establecer un nivel emocional con la historia. Plantéate el significado humano de los objetos y yacimientos culturales.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Sé informal sin rebajar el nivel: La gente quiere aprender, pero la jerga técnica puede desanimar. Siempre que el contenido esté bien documentado, el formato de la historia puede ser experimental y lúdico.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Cuenta historias ocultas: ¡Hay tantas historias culturales por contar aún! Al elegir los temas, ten en cuenta quién falta en la imagen, e intenta dar voz a personas y comunidades diversas.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Ilustra tus argumentos: Puede ser difícil conectar con largas narraciones escritas u orales. Interrumpir la historia con material visual (o audios) y dedicar tiempo a reflexionar sobre ello puede enriquecer la experiencia.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Añade puntos de referencia: En la narración digital (especialmente si se hace en una plataforma compleja), una estructura clara es esencial. La navegación debe ser sencilla, para que el visitante sepa dónde se encuentra en cada momento.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Sé específico: Los temas específicos también pueden atraer a un público amplio. Empieza por un detalle concreto que constituya el núcleo de la historia y, a continuación, pasa a la visión de conjunto. Las historias personales y las imágenes bien elegidas pueden ayudar a mantener la atención.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Sé evocativo: Los relatos de historia cultural deben basarse en hechos reales, pero eso no significa que tengan que ser un hueso duro de roer. Usa términos descriptivos, e invita al espectador a situarse en la escena.&nbsp;</p>\r\n    </li>\r\n</ol>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: image_full
+                body: ''
+                image:
+                    file: Images/Communities/Europeana_Communicators/digital_storytelling_tips_spanish.png
+                    title: 'Seven tips for digital storytelling - Spanish. See full text above.'
+                attribution_title: '7 tips for Digital Storytelling'
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: 'Europeana Foundation'
+                attribution_country: Netherlands
+                attribution_license: CC-BY-SA
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5554,7 +6244,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5599,7 +6289,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5713,7 +6403,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5824,7 +6514,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6123,7 +6813,6 @@ pages:
             - pages/news
             - pages/news
             - pages/news
-            - pages/news
         posts: {  }
         data: {  }
         projects: {  }
@@ -6156,7 +6845,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6186,14 +6875,14 @@ pages:
     -
         slug: built-with-bits-designing-virtual-spaces-for-the-future
         datecreated: '2021-07-20 11:23:21'
-        datechanged: '2022-10-14 13:10:54'
+        datechanged: '2023-05-10 10:55:02'
         datepublish: '2021-07-21 11:22:00'
         datedepublish: ''
         ownerid: 124
         status: published
         templatefields: {  }
         title: 'Built with Bits: designing virtual spaces for the future'
-        intro: "<p>This Europeana mentoring programme and educational challenge contributed to the New European Bauhaus movement by inviting students and educators to design beautiful and sustainable spaces with Mozilla Hubs.\_</p>\r\n"
+        intro: "<p>This Europeana mentoring programme and educational challenge contributes\_to the New European Bauhaus movement by inviting students and educators to design beautiful and sustainable spaces with Mozilla Hubs.\_</p>\r\n"
         body: null
         pagefooter: null
         pagetype: landingpage-nohighlight
@@ -6202,7 +6891,7 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>This Europeana mentoring programme and educational challenge contributed to the New European Bauhaus movement by inviting students and educators to design beautiful and sustainable spaces with Mozilla Hubs.\_</p>\r\n"
+        teaser: "<p>This Europeana mentoring programme and educational challenge contributes\_to the New European Bauhaus movement by inviting students and educators to design beautiful and sustainable spaces with Mozilla Hubs.\_</p>\r\n"
         teaser_image:
             file: 'Images/Education/Built with bits teaser.png'
         teaser_attribution_title: 'Indoor pool, fitness and wellness center, Horn, Lower Austria'
@@ -6235,9 +6924,9 @@ pages:
         search_keywords: 'Built with bits'
         pages: {  }
         posts:
-            - posts/looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
             - posts/built-with-bits-brussels-kicks-off-at-festival-of-the-new-european-bauhaus
             - posts/built-with-bits-an-educational-challenge-the-spain-winner
+            - posts/looking-back-on-built-with-bits-an-educational-challenge-with-immersive-technologies
         data: {  }
         projects: {  }
         events:
@@ -6253,18 +6942,12 @@ pages:
                 name: Education
         categories:
             -
-                slug: campaigns
-                name: Campaigns
-            -
                 slug: network
                 name: Network
         tags:
             -
-                slug: challenge
-                name: challenge
-            -
-                slug: open-education
-                name: open-education
+                slug: built-with-bits
+                name: built-with-bits
         modules:
             -
                 enabled: enabled
@@ -6285,7 +6968,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -6320,7 +7003,7 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p>This Europeana mentoring programme and educational challenge contributed to the New European Bauhaus movement by inviting students and educators to design beautiful and sustainable spaces with Mozilla Hubs.&nbsp;</p>\r\n\r\n<p>You can explore the activities and winners from Built with Bits 2021 below, but we are delighted that the second edition of the programme is currently running! We invite teachers, students, young artists and designers&nbsp;and anyone willing to learn how a virtual space&nbsp;can help to address a local issue in their hometowns to get involved. <a href=\"http://\_https://macedonia.notion.site/Built-with-Bits-2-The-Library-Corner-f7a3e3d7aacc4995a06b561369e455df\">Find out more and apply by 30 October</a>.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
+                body: "<p>This Europeana Initiative mentoring programme and educational challenge contributes&nbsp;to the New European Bauhaus movement by inviting students and educators to design beautiful and sustainable spaces with Mozilla Hubs.&nbsp;</p>\r\n\r\n<p>You can explore the activities and winners from the 2021 and 2022 Built with Bits editions below.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -6333,7 +7016,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6361,7 +7044,7 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: 'Learn by creating. Enjoy collaborating.'
+                title: 'About Built with Bits'
                 subtitle: ''
                 anchortitle: About
                 templates: body
@@ -6378,7 +7061,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6423,7 +7106,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6451,11 +7134,11 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: 'The winners'
+                title: 'Built with Bits 2021'
                 subtitle: ''
-                anchortitle: 'The winners'
+                anchortitle: '2021'
                 templates: body
-                body: "<p>All of the virtual spaces created as part of the programme were entered into a challenge, and the winners will be offered the chance to take part in a masterclass with Daniel Llamas and David Mingorance from the Macedonia initiative to develop their project further. The winners were announced at a ceremony in January 2022. You can watch the full ceremony and explore the winners below!&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
+                body: "<p>All of the virtual spaces created as part of the programme in 2021 were entered into a challenge, and the winners were offered the chance to take part in a masterclass with Daniel Llamas and David Mingorance from the Macedonia initiative to develop their project further. The winners were announced at a ceremony in January 2022. You can watch the full ceremony and explore the winners below!&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -6468,7 +7151,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -6516,7 +7199,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6547,51 +7230,6 @@ pages:
                 title: ''
                 subtitle: ''
                 anchortitle: ''
-                templates: body
-                body: "<h3 dir=\"ltr\"><strong>Country winners</strong></h3>\r\n\r\n<ul dir=\"ltr\">\r\n    <li><a href=\"https://hubs.mozilla.com/jc2R2Nc/?hub_invite_id=skw8JwZ\"><strong>Spain</strong>: CODEMA: A century and beyond by Rafael Montero from Colegio Corazón de María, Gijón</a></li>\r\n    <li><a href=\"https://hubs.mozilla.com/cKfsmNf/incomparable-quaint-domain\"><strong>Italy</strong>: Anatomical Open Air Museum by Luigia Palumbo from Capozzi-Galilei school</a></li>\r\n    <li><a href=\"https://hubs.mozilla.com/DSgDKSM/cristina-marques\"><strong>Portugal</strong>: Historic monuments of Tomar by Cristina Paula Lopes Ferreira de Sousa Marques from Agrupamento de Escolas Nuno de Santa Maria</a></li>\r\n    <li><a href=\"https://hubs.mozilla.com/7cLn4RS/loving-miniature-outing\"><strong>Greece</strong>: Children's Games by Sofronia Maravelaki from Iraklia's Junior High School</a></li>\r\n    <li>\r\n    <h3 dir=\"ltr\"><strong>Special mentions&nbsp;</strong></h3>\r\n    </li>\r\n    <li><a href=\"https://hubs.mozilla.com/oTUYUWY/living-on-my-moon\"><strong>Best Europeana project</strong>: Living on my Moon 2021-22&nbsp;- Sustainability 4 Future by Daniela Brogna from IC Pimentel Fonseca</a></li>\r\n    <li><a href=\"https://hubs.mozilla.com/bvsem3e/la-sughereta-park-and-environmental-education-centre\"><strong>Best New European Bauhaus project</strong>: Una nuova vita per La Sughereta (A New life for La Sughereta) by Maria Luisa Onida from Istituto di Istruzione Superiore Leonardo da Vinci</a></li>\r\n</ul>\r\n\r\n<p dir=\"ltr\"><strong>All the spaces developed for this project can be seen in this Mozilla Hub <a href=\"https://hubs.mozilla.com/sihaUCX/built-with-bits-final-ceremony\">exhibition</a>.</strong></p>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: 'Hear from the winners in our interview series'
-                subtitle: ''
-                anchortitle: ''
                 templates: listingsemistatic
                 body: ''
                 image:
@@ -6606,7 +7244,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -6651,58 +7289,10 @@ pages:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: disabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: calltoactioninline
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '880'
-                        _id: resources/built-with-bits-sign-up-form
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
                 enabled: enabled
-                title: Facilitators
-                subtitle: ''
-                anchortitle: Facilitators
+                title: ''
+                subtitle: Facilitators
+                anchortitle: ''
                 templates: listingthumbnailsfive
                 body: ''
                 image:
@@ -6717,7 +7307,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -6760,11 +7350,11 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: 'Outcomes for students and teachers'
+                title: ''
                 subtitle: ''
-                anchortitle: Outcomes
-                templates: body
-                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\" role=\"presentation\">Through this mentoring programme, student and teachers have:&nbsp;</p>\r\n\r\n<p dir=\"ltr\" role=\"presentation\"><meta charset=\"utf-8\" /></p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><meta charset=\"utf-8\" />Contributed to the New European Bauhaus movement by becoming active participants in the discussion of the future of Europe.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Learned about Europeana open content and the educational value of cultural heritage.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Discovered new digital technologies for teaching and learning, and increase your digital skills, creativity and innovation using Mozilla Hubs.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Increased problem-solving and collaborative skills by interacting with peers.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Gained a new appreciation for the importance of individual and group contributions for a more sustainable, diverse, inclusive and equitable space for all.</p>\r\n    </li>\r\n</ul>\r\n"
+                anchortitle: ''
+                templates: calltoactioninline
+                body: "<h3 dir=\"ltr\"><strong>Country winners</strong></h3>\r\n\r\n<ul dir=\"ltr\">\r\n    <li><a href=\"https://hubs.mozilla.com/jc2R2Nc/?hub_invite_id=skw8JwZ\"><strong>Spain</strong>: CODEMA: A century and beyond by Rafael Montero from Colegio Corazón de María, Gijón</a></li>\r\n    <li><a href=\"https://hubs.mozilla.com/cKfsmNf/incomparable-quaint-domain\"><strong>Italy</strong>: Anatomical Open Air Museum by Luigia Palumbo from Capozzi-Galilei school</a></li>\r\n    <li><a href=\"https://hubs.mozilla.com/DSgDKSM/cristina-marques\"><strong>Portugal</strong>: Historic monuments of Tomar by Cristina Paula Lopes Ferreira de Sousa Marques from Agrupamento de Escolas Nuno de Santa Maria</a></li>\r\n    <li><a href=\"https://hubs.mozilla.com/7cLn4RS/loving-miniature-outing\"><strong>Greece</strong>: Children's Games by Sofronia Maravelaki from Iraklia's Junior High School</a></li>\r\n    <li>\r\n    <h3 dir=\"ltr\"><strong>Special mentions&nbsp;</strong></h3>\r\n    </li>\r\n    <li><a href=\"https://hubs.mozilla.com/oTUYUWY/living-on-my-moon\"><strong>Best Europeana project</strong>: Living on my Moon 2021-22&nbsp;- Sustainability 4 Future by Daniela Brogna from IC Pimentel Fonseca</a></li>\r\n    <li><a href=\"https://hubs.mozilla.com/bvsem3e/la-sughereta-park-and-environmental-education-centre\"><strong>Best New European Bauhaus project</strong>: Una nuova vita per La Sughereta (A New life for La Sughereta) by Maria Luisa Onida from Istituto di Istruzione Superiore Leonardo da Vinci</a></li>\r\n</ul>\r\n\r\n<p dir=\"ltr\"><strong>All the spaces developed for this project can be seen in this Mozilla Hub <a href=\"https://hubs.mozilla.com/sihaUCX/built-with-bits-final-ceremony\">exhibition</a>.</strong></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -6777,7 +7367,55 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1123'
+                        _id: resources/visit-the-spaces-from-built-with-bits-2021
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Built with Bits 2022'
+                subtitle: ''
+                anchortitle: '2022'
+                templates: body
+                body: "<p>Find out more about the kick-off of the competition in 2022, watch the final ceremony and read about the winners!</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6805,11 +7443,11 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: Tutorials
+                title: ''
                 subtitle: ''
-                anchortitle: Tutorials
-                templates: body
-                body: "<p>Would you like to follow the Built with Bits programme in your own time? Then explore the video tutorials! They take you step by step through how to work with <a href=\"https://hubs.mozilla.com/\">Mozilla hubs</a> and explore virtual and explore bringing extended reality technologies into the classroom. You can find videos below and more resources on the programme’s website <a href=\"https://bit.ly/3jQopsa\">Notion</a>.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
+                anchortitle: ''
+                templates: teaser
+                body: ''
                 image:
                     file: ''
                     title: ''
@@ -6822,7 +7460,55 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2493'
+                        _id: posts/built-with-bits-brussels-kicks-off-at-festival-of-the-new-european-bauhaus
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen=\"\" frameborder=\"0\" height=\"506\" src=\"https://www.youtube.com/embed/idzXMndFwI4\" title=\"YouTube video player\" width=\"100%\"></iframe></p>\r\n\r\n<p></p>\r\n\r\n<center>\r\n<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen=\"\" frameborder=\"0\" height=\"506\" src=\"https://www.youtube.com/embed/9kAA1DFHkjk\" title=\"YouTube video player\" width=\"100%\"></iframe></p>\r\n</center>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6867,7 +7553,199 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2621'
+                        _id: posts/nine-things-you-need-to-know-about-immersive-technologies-for-education-part-i
+                    -
+                        value: '2624'
+                        _id: posts/nine-things-you-need-to-know-about-immersive-technologies-for-education-part-ii
+                    -
+                        value: '2626'
+                        _id: posts/nine-things-you-need-to-know-about-immersive-technologies-for-education-part-iii
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1124'
+                        _id: resources/visit-the-spaces-from-built-with-bits-2022
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Outcomes for students and teachers'
+                subtitle: ''
+                anchortitle: Outcomes
+                templates: body
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\" role=\"presentation\">Through this mentoring programme, student and teachers have:&nbsp;</p>\r\n\r\n<p dir=\"ltr\" role=\"presentation\"><meta charset=\"utf-8\" /></p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><meta charset=\"utf-8\" />Contributed to the New European Bauhaus movement by becoming active participants in the discussion of the future of Europe.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Learned about Europeana open content and the educational value of cultural heritage.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Discovered new digital technologies for teaching and learning, and increase your digital skills, creativity and innovation using Mozilla Hubs.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Increased problem-solving and collaborative skills by interacting with peers.&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">Gained a new appreciation for the importance of individual and group contributions for a more sustainable, diverse, inclusive and equitable space for all.</p>\r\n    </li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Tutorials
+                subtitle: ''
+                anchortitle: Tutorials
+                templates: body
+                body: "<p>Would you like to follow the Built with Bits programme in your own time? Then explore the video tutorials! They take you step by step through how to work with <a href=\"https://hubs.mozilla.com/\">Mozilla hubs</a> and explore virtual and explore bringing extended reality technologies into the classroom. You can find videos below and more resources on the programme’s website Notion for the <a href=\"http://bit.ly/3jQopsa\">first</a> and <a href=\"https://macedonia.notion.site/Built-with-Bits-2-The-Library-Corner-f7a3e3d7aacc4995a06b561369e455df\">second</a> editions.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -6901,7 +7779,7 @@ pages:
                 selected_resources:
                     -
                         value: ''
-                        _id: resources/eu-datathon-1
+                        _id: resources/media-literacy-competence-framework-en
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -6999,7 +7877,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7108,7 +7986,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7243,7 +8121,7 @@ pages:
                 attribution_link: 'https://www.europeana.eu/en/item/2021659/S2004_1724'
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -7291,7 +8169,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7336,7 +8214,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7381,7 +8259,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7426,7 +8304,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7471,7 +8349,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7516,7 +8394,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7546,7 +8424,7 @@ pages:
     -
         slug: europeana-network-association
         datecreated: '2021-09-30 16:36:57'
-        datechanged: '2022-10-03 13:27:26'
+        datechanged: '2022-11-14 13:23:43'
         datepublish: '2021-09-30 16:36:43'
         datedepublish: ''
         ownerid: 124
@@ -7594,8 +8472,7 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: 'Europeana Network Association, ENA, Network'
-        pages:
-            - pages/europeana-network-association
+        pages: {  }
         posts:
             - posts/professionals-in-focus-marianna-marcucci
             - posts/join-our-working-group-to-support-the-digital-cultural-heritage-of-ukraine
@@ -7639,7 +8516,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7666,7 +8543,7 @@ pages:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: ''
                 subtitle: ''
                 anchortitle: ''
@@ -7684,7 +8561,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -7735,7 +8612,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -7789,7 +8666,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -7843,7 +8720,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -7906,7 +8783,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -7954,7 +8831,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: category
                 sources: posts

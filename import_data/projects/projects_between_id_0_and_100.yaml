@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T10:22:43+01:00'
+    date: '2023-05-30T17:00:15+02:00'
     version: 3.7.4
     platform: mysql
 projects:
@@ -6669,7 +6669,7 @@ projects:
     -
         slug: europeana-dsi
         datecreated: '2015-08-24 11:43:18'
-        datechanged: '2020-03-11 10:19:07'
+        datechanged: '2022-11-14 10:27:04'
         datepublish: '2015-08-24 11:39:00'
         datedepublish: ''
         ownerid: 1
@@ -6678,11 +6678,11 @@ projects:
         title: 'Europeana DSI'
         subtitle: null
         projecttype: Project
-        intro: "<p>As a Digital Service Infrastructure, Europeana will continue to connect the online collections of Europe’s cultural heritage institutions. Europeana DSI-1 is funded by the Connecting Europe Facility (CEF) Trans-European Telecommunications Networks Work Programme.</p>\r\n"
-        body: "<p>The core objectives of the Europeana DSI-1 are to innovate the aggregation infrastructure, boost the distribution infrastructure and work towards long-term financial stability through business model innovation.</p>\r\n\r\n<p>To create a complete, cohesive and integrated Digital Service Infrastructure, Europeana relies on its partnerships with domain and national aggregating partners.</p>\r\n\r\n<p>The EU’s Digital Agenda aims to improve the digital availability and online accessibility of Europe’s cultural memory. The innovative Europeana DSI-1 helps achieve this by making sure that Europe’s businesses and citizens reap the full benefits of the technological revolution in digital services in culture.</p>\r\n"
+        intro: "<p>The Europeana Digital Service Infrastructure provided online access to Europe’s digital cultural heritage from mid-2015 to mid-2016.</p>\r\n"
+        body: "<p>Europeana DSI was the first operational cycle of the Europeana Digital Service Infrastructure (DSI). The service was provided by a consortium of 26 partners, coordinated by the Europeana Foundation.</p>\r\n\r\n<p>The consortium partners worked in close collaboration with domain and national aggregating partners to create a complete, cohesive and integrated Digital Service Infrastructure for cultural heritage.</p>\r\n\r\n<p>Partners involved in the project:\_</p>\r\n\r\n<ol>\r\n    <li>\r\n    <p>Association des Cinémathèques Européemes ASBL, Belgium</p>\r\n    </li>\r\n    <li>\r\n    <p>Michael​ ​Culture​ ​AISBL, Belgium</p>\r\n    </li>\r\n    <li>\r\n    <p>Freie Universität Berlin, Germany</p>\r\n    </li>\r\n    <li>\r\n    <p>2Culture Associates LTD, United Kingdom</p>\r\n    </li>\r\n    <li>\r\n    <p>AthenaRC, Greece</p>\r\n    </li>\r\n    <li>\r\n    <p>Europeana​ ​Fashion​ ​International​ ​Association, Italy\_</p>\r\n    </li>\r\n    <li>\r\n    <p>Stichting​ ​Nederlands​ ​Instituut​ ​voor​ ​Beeld​ ​en​ ​Geluid, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Stichting​ ​International Association of Labour History institutions, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>EUN​ ​Partnership​ ​AISBL, Belgium</p>\r\n    </li>\r\n    <li>\r\n    <p>EUROCLIO - ​European​ ​Association​ ​of​ ​History​ ​Educators, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>CLARIN​ ​ERIC, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Georg-August-Universitat, Gottingen DARIAH, Germany</p>\r\n    </li>\r\n    <li>\r\n    <p>European Museum Academy, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Agence luxembourgeoise dáction culturalle ASBL PLURIO, Luxembourg</p>\r\n    </li>\r\n    <li>\r\n    <p>Koninklijke Bibliotheek, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Stichting​ ​Nederlands​ ​Instituut​ ​voor​ ​Beeld​ ​en​ ​Geluid, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Latvijas Nacionālās bibliotēkas, Latvia</p>\r\n    </li>\r\n    <li>\r\n    <p>Collections Trust, United Kingdom</p>\r\n    </li>\r\n    <li>\r\n    <p>Österreichische Nationalbibliothek, Austria</p>\r\n    </li>\r\n    <li>\r\n    <p>Platoniq Sistema Cultural, Spain</p>\r\n    </li>\r\n    <li>\r\n    <p>Stichting Digitaal Erfgoed Nederland DEN, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Facts &amp; Files Historisches Forschungsinstitut Berlin Drauschke Schreiber Partnerschaftsgesellschaft​ ​Archiv-,​ ​Germany</p>\r\n    </li>\r\n    <li>\r\n    <p>Instytut Chemii Bioorganicznej Polskiej Akademii Nauk - Poznańskie Centrum Superkomputerowo-Sieciowe, Poland\_</p>\r\n    </li>\r\n    <li>\r\n    <p>SE1 Media, United Kingdom\_</p>\r\n    </li>\r\n    <li>\r\n    <p>Stichting Nederlands Kennisland, The Netherlands</p>\r\n    </li>\r\n</ol>\r\n\r\n<p><br>\r\n\_</p>\r\n"
         department: null
         url: null
-        teaser: "<p>Europeana DSI-1\_operated the Europeana core service platform from mid-2015\_to mid-2016.</p>\r\n"
+        teaser: "<p>The Europeana Digital Service Infrastructure provided online access to Europe’s digital cultural heritage from mid-2015 to mid-2016.</p>\r\n"
         teaser_image:
             file: 'Europeana_Professional/Projectpartner/DSI Teaser 7.png'
         teaser_attribution_title: Hondenkevertje
@@ -6710,12 +6710,11 @@ projects:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         contact_record: {  }
         contact_blurb: null
-        pages: {  }
+        pages:
+            - pages/europeana-a-digital-service-infrastructure
         posts: {  }
         data: {  }
         projects:
-            - projects/europeana-dsi
-            - projects/europeana-dsi
             - projects/europeana-dsi
         events: {  }
         persons: {  }
@@ -6783,7 +6782,7 @@ projects:
     -
         slug: europeana-dsi-2
         datecreated: '2016-06-21 13:37:59'
-        datechanged: '2020-03-11 10:18:03'
+        datechanged: '2022-11-14 10:26:02'
         datepublish: '2016-07-01 00:00:00'
         datedepublish: ''
         ownerid: 58
@@ -6792,11 +6791,11 @@ projects:
         title: 'Europeana DSI-2'
         subtitle: null
         projecttype: Project
-        intro: "<p>Europeana DSI-2 is our core project which aims to connect, as a Digital Service Infrastructure, the online collections of Europe’s cultural heritage institutions.</p>\r\n"
-        body: "<p>The core objectives of the Europeana DSI-2 are to create value for our partners, improve data quality, open the data, and to strengthen the Europeana ecosystem.</p>\r\n\r\n<p>Europeana DSI-2 aims to provide a better customer experience for all user groups, as well as embedding network centric thought in all activities. We plan to improve data quality and implement quality frameworks to improve metadata quality. Further, we will make our data partners’ data more openly accessible so that it may be viewed and re-used within its copyright. We aim to develop community-segmented services and champion interoperability. Finally, we intent to make the best use of the Europeana ecosystem, including the Europeana Network Association, the member states, the European Commission, Europeana Foundation and our consortium.</p>\r\n\r\n<p>The EU’s Digital Agenda aims to improve the digital availability and online accessibility of Europe’s cultural memory. The innovative Europeana DSI-2 helps achieve this by making sure that Europe’s businesses and citizens reap the full benefits of the technological revolution in digital services in culture.</p>\r\n"
+        intro: "<p>\_The Europeana Digital Service Infrastructure provided online access to Europe’s digital cultural heritage from mid-2016 to mid-2017.</p>\r\n"
+        body: "<p>Europeana DSI-2 was the second operational cycle of the Europeana Digital Service Infrastructure (DSI). The service was provided by a consortium of 34 partners, coordinated by the Europeana Foundation.</p>\r\n\r\n<p>The consortium partners, Europeana Aggregators’ Forum and Europeana Network Association worked in close collaboration to create value for our partners, improve data quality, open the data, and strengthen the Europeana ecosystem.</p>\r\n\r\n<p>Partners involved in the project:</p>\r\n\r\n<ol>\r\n    <li>\r\n    <p>2Culture Associates LTD, United Kingdom</p>\r\n    </li>\r\n    <li>\r\n    <p>Archives Portal Europe Foundation, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Association des Cinémathèques Européemes ASBL, Belgium\_</p>\r\n    </li>\r\n    <li>\r\n    <p>AthenaRC, Greece</p>\r\n    </li>\r\n    <li>\r\n    <p>Collections Trust, United Kingdom</p>\r\n    </li>\r\n    <li>\r\n    <p>Deutsches​ ​Filminstitut​ ​-​ ​DIF​ ​e.V., Germany</p>\r\n    </li>\r\n    <li>\r\n    <p>Freie Universität Berlin, Germany</p>\r\n    </li>\r\n    <li>\r\n    <p>Stichting​ ​Nederlands​ ​Instituut​ ​voor​ ​Beeld​ ​en​ ​Geluid, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Photoconsortium International​ ​Consortium​ ​for​ ​Photographic​ ​Heritage, Italy</p>\r\n    </li>\r\n    <li>\r\n    <p>Facts &amp; Files Historisches Forschungsinstitut Berlin Drauschke Schreiber Partnerschaftsgesellschaft​ ​Archiv-,​ ​Germany</p>\r\n    </li>\r\n    <li>\r\n    <p>Michael Culture AISBL, Belgium</p>\r\n    </li>\r\n    <li>\r\n    <p>Europeana Fashion International Association, Italy</p>\r\n    </li>\r\n    <li>\r\n    <p>Staatsbibliothek zu Berlin - Preußischer Kulturbesitz, Germany</p>\r\n    </li>\r\n    <li>\r\n    <p>EUN​ ​Partnership​ ​AISBL, Belgium</p>\r\n    </li>\r\n    <li>\r\n    <p>The​ ​University​ ​of​ ​Sheffield, United Kingdom\_</p>\r\n    </li>\r\n    <li>\r\n    <p>CLARIN​ ​ERIC, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Platoniq Sistema Cultural, Spain</p>\r\n    </li>\r\n    <li>\r\n    <p>EUROCLIO - ​European​ ​Association​ ​of​ ​History​ ​Educators, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Stichting​ ​DEN, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Stichting Nederland Kennisland, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>Österreichische Nationalbibliothek, Austria</p>\r\n    </li>\r\n    <li>\r\n    <p>Instituto de Engenharia de Sistemas e Computadores Investigação e Desenvolvimento em Lisboa, Portugal</p>\r\n    </li>\r\n    <li>\r\n    <p>Humboldt-Universität zu Berlin, Germany</p>\r\n    </li>\r\n    <li>\r\n    <p>Bibliothèque nationale de Luxembourg, Luxembourg\_</p>\r\n    </li>\r\n    <li>\r\n    <p>Latvijas Nacionālās bibliotēkas, Latvia</p>\r\n    </li>\r\n    <li>\r\n    <p>Instytut Chemii Bioorganicznej PAN Poznan Supercomputing and Networking Center, Poland</p>\r\n    </li>\r\n    <li>\r\n    <p>AIT Austrian Institute of Technology, Austria</p>\r\n    </li>\r\n    <li>\r\n    <p>National Technical University of Athens, Greece</p>\r\n    </li>\r\n    <li>\r\n    <p>Knowledge Integration Ltd, United Kingdom</p>\r\n    </li>\r\n    <li>\r\n    <p>European Museum Academy, The Netherlands</p>\r\n    </li>\r\n    <li>\r\n    <p>James Lovegrove SPRL, Belgium</p>\r\n    </li>\r\n    <li>\r\n    <p>University of Glasgow, United Kingdom</p>\r\n    </li>\r\n    <li>\r\n    <p>Semantika d.o.o., Slovenia</p>\r\n    </li>\r\n</ol>\r\n"
         department: null
         url: null
-        teaser: "<p id=\"docs-internal-guid-3d504598-b696-0c73-381c-759c31e2201e\" style=\"line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;\">Europeana DSI-2\_operated the Europeana core service platform from mid-2016 to mid-2017.</p>\r\n"
+        teaser: "<p id=\"docs-internal-guid-3d504598-b696-0c73-381c-759c31e2201e\">\_The Europeana Digital Service Infrastructure provided online access to Europe’s digital cultural heritage from mid-2016 to mid-2017.</p>\r\n"
         teaser_image:
             file: 'Europeana_Professional/Projectpartner/DSI Teaser 6.png'
         teaser_attribution_title: null
@@ -6824,12 +6823,11 @@ projects:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         contact_record: {  }
         contact_blurb: null
-        pages: {  }
+        pages:
+            - pages/europeana-a-digital-service-infrastructure
         posts: {  }
         data: {  }
         projects:
-            - projects/europeana-dsi-2
-            - projects/europeana-dsi-2
             - projects/europeana-dsi-2
         events: {  }
         persons: {  }
@@ -9753,7 +9751,7 @@ projects:
     -
         slug: data-quality-committee
         datecreated: '2017-08-01 14:21:04'
-        datechanged: '2021-10-14 22:20:29'
+        datechanged: '2022-11-07 10:20:43'
         datepublish: '2017-08-01 14:19:40'
         datedepublish: ''
         ownerid: 2
@@ -10297,8 +10295,8 @@ projects:
                         value: '2404'
                         _id: persons/antoine-isaac
                     -
-                        value: '2410'
-                        _id: persons/adina-ciocoiu
+                        value: '7810'
+                        _id: persons/ilektra-osmani
                 filter_posts: ''
                 selected_posts: ''
                 filter_data: ''
@@ -10426,6 +10424,12 @@ projects:
                     -
                         value: '5490'
                         _id: persons/chiara-latronico
+                    -
+                        value: '2410'
+                        _id: persons/adina-ciocoiu
+                    -
+                        value: '200'
+                        _id: persons/henk-alkemade
                 filter_posts: ''
                 selected_posts: ''
                 filter_data: ''

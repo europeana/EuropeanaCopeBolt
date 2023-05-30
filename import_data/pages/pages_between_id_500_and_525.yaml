@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:36:02+02:00'
+    date: '2023-05-30T15:08:37+02:00'
     version: 3.7.4
     platform: mysql
 pages:
@@ -90,7 +90,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -178,7 +178,6 @@ pages:
         search_keywords: null
         pages:
             - pages/thematic-collections
-            - pages/thematic-collections
         posts:
             - posts/policy-for-europeana-thematic-collections
             - posts/introducing-the-new-migration-in-the-arts-and-sciences-generic-services-project
@@ -212,7 +211,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -319,7 +318,6 @@ pages:
         pages:
             - pages/thematic-collections
             - pages/online-exhibitions
-            - pages/online-exhibitions
         posts:
             - posts/from-an-exhibition-to-a-competition-wrapping-up-picture-this-vintage-postcards-of-southeastern-europe
             - posts/effective-digital-storytelling-reflecting-on-our-faces-of-europe-exhibition
@@ -355,7 +353,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -392,14 +390,14 @@ pages:
     -
         slug: edm-mooc-introduction
         datecreated: '2017-08-15 14:28:44'
-        datechanged: '2021-10-15 10:55:18'
+        datechanged: '2023-01-03 11:27:32'
         datepublish: '2017-08-15 14:23:43'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
-        title: 'Welcome to the first online course on EDM!'
-        intro: "<p>This course aims to help you understand why the Europeana Foundation developed the Europeana Data Model (EDM), how it works, how you can get a EDM records from MARC21 records\_and what is best practice in creating EDM mappings</p>\r\n"
+        title: 'EDM Online Course'
+        intro: "<p>This course aims to help you understand why the Europeana Foundation developed the Europeana Data Model (EDM), how it works, how you can get a EDM records from MARC21 records\_and what is best practice in creating EDM mappings.</p>\r\n"
         body: null
         pagefooter: "<h2 style=\"line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;\"></h2>\r\n\r\n<p style=\"line-height:1.2;margin-top:0pt;margin-bottom:0pt;\"></p>\r\n"
         pagetype: page
@@ -435,31 +433,16 @@ pages:
         subsite: null
         template: null
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
-        contact_record:
-            -
-                value: '2410'
-                _id: persons/adina-ciocoiu
-            -
-                value: '2393'
-                _id: persons/henning-scholz
-            -
-                value: '849'
-                _id: persons/uldis-zarins
-            -
-                value: '2369'
-                _id: persons/pierre-edouard-barrault
-            -
-                value: '2385'
-                _id: persons/maike-dulk
+        contact_record: {  }
         contact_blurb: null
         contact_name: null
         contact_email: null
         contact_website: null
         search_keywords: null
         pages:
+            - pages/edm-mooc-marc2edm
             - pages/edm-mooc-advanced
             - pages/edm-mooc-basics
-            - pages/edm-mooc-introduction
         posts: {  }
         data: {  }
         projects: {  }
@@ -489,15 +472,15 @@ pages:
                 enabled: enabled
                 title: ''
                 subtitle: ''
-                anchortitle: ''
+                anchortitle: Introduction
                 templates: body
-                body: "<p></p>\r\n\r\n<p style=\"text-align:center;\"><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/RaS6FF003g0\" width=\"560\"></iframe></p>"
+                body: "<p></p>\r\n\r\n<p style=\"text-align:center;\"><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/RaS6FF003g0\" width=\"560\"></iframe></p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -534,9 +517,9 @@ pages:
                 enabled: enabled
                 title: ''
                 subtitle: ''
-                anchortitle: Intro
+                anchortitle: 'Section 1'
                 templates: body
-                body: "<p>The course is divided into three sections. Each section consists mainly of narrated presentations in which we explain the EDM concepts in a way that’s easy to understand.</p>\r\n\r\n<h3><a href=\"/page/edm-mooc-basics\">Section 1 - The basics of EDM</a></h3>\r\n\r\n<ol>\r\n    <li>Why does Europeana need EDM?</li>\r\n    <li>What led to the creation of EDM?</li>\r\n    <li>How does it relate to other metadata schemes?</li>\r\n    <li>What are the main building blocks of EDM?</li>\r\n</ol>\r\n\r\n<h3><a href=\"/page/edm-mooc-advanced\">Section 2 - Advanced specifications</a></h3>\r\n\r\n<ol>\r\n    <li>What are the main classes of EDM?</li>\r\n    <li>What should the main values in EDM look like?</li>\r\n    <li>How do the values chosen in EDM affect what people see on Europeana Collections?</li>\r\n</ol>\r\n\r\n<h3><a href=\"/page/edm-mooc-marc2edm\">Section 3 - Transforming MARC21 to EDM</a></h3>\r\n\r\n<ol>\r\n    <li>What is the process for data transformation from MARC21 to EDM?</li>\r\n    <li>How do you map MARC21 values to the relevant EDM fields?</li>\r\n    <li>Case study: National Library of Serbia mapping experience</li>\r\n    <li>Case study: National and University Library of Debrecen record's journey into Europeana Collections</li>\r\n</ol>\r\n\r\n<p>We hope you enjoy this course and find it useful in your work!</p>\r\n\r\n<p>Your instructors,</p>\r\n\r\n<p>Adina, Henning, Uldis, Pierre and Maike</p>\r\n"
+                body: "<p>The course is divided into three sections. Each section consists mainly of narrated presentations in which we explain the EDM concepts in a way that’s easy to understand.</p>\r\n\r\n<h3>Section 1 - The basics of EDM</h3>\r\n\r\n<ol>\r\n    <li>Why does Europeana need EDM?</li>\r\n    <li>What led to the creation of EDM?</li>\r\n    <li>How does it relate to other metadata schemes?</li>\r\n    <li>What are the main building blocks of EDM?</li>\r\n</ol>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -549,7 +532,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -575,6 +558,345 @@ pages:
                     -
                         value: '28'
                         _id: resources/slug-541139d24c269e05f41091d19fc27888
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1083'
+                        _id: resources/go-to-section-1
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: 'Section 2'
+                templates: body
+                body: "<h3>Section 2 - Advanced specifications</h3>\r\n\r\n<ol>\r\n    <li>What are the main classes of EDM?</li>\r\n    <li>What should the main values in EDM look like?</li>\r\n    <li>How do the values chosen in EDM affect what people see on the Europeana website?</li>\r\n</ol>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1084'
+                        _id: resources/go-to-section-2
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: 'Section 3'
+                templates: body
+                body: "<h3>Section 3 - Transforming MARC21 to EDM</h3>\r\n\r\n<ol>\r\n    <li>What is the process for data transformation from MARC21 to EDM?</li>\r\n    <li>How do you map MARC21 values to the relevant EDM fields?</li>\r\n    <li>Case study: National Library of Serbia mapping experience</li>\r\n    <li>Case study: National and University Library of Debrecen record's journey into the Europeana website</li>\r\n</ol>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1085'
+                        _id: resources/go-to-section-3
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>We hope you enjoy this course and find it useful in your work!</p>\r\n\r\n<p>Your instructors,</p>\r\n\r\n<p>Adina, Henning, Uldis, Pierre and Maike</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnailsfive
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: persons
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons:
+                    -
+                        value: '2410'
+                        _id: persons/adina-ciocoiu
+                    -
+                        value: '2393'
+                        _id: persons/henning-scholz
+                    -
+                        value: '849'
+                        _id: persons/uldis-zarins
+                    -
+                        value: '2369'
+                        _id: persons/pierre-edouard-barrault
+                    -
+                        value: '2385'
+                        _id: persons/maike-dulk
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -658,7 +980,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: data
@@ -695,7 +1017,7 @@ pages:
     -
         slug: member-states
         datecreated: '2017-08-20 03:06:47'
-        datechanged: '2021-05-20 12:51:39'
+        datechanged: '2023-03-15 09:30:22'
         datepublish: '2017-08-20 03:05:44'
         datedepublish: ''
         ownerid: 2
@@ -742,16 +1064,16 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: null
-        pages:
-            - pages/member-states
-            - pages/member-states
-            - pages/member-states
-            - pages/member-states
+        pages: {  }
         posts:
             - posts/digital-conference-for-germany-s-presidency-of-the-council-of-the-european-union-to-explore-copyright
+            - posts/summary-of-the-slovenian-presidency-europeana-conference
+            - posts/the-common-european-data-space-for-cultural-heritage-europeana-presidency-conference
         data: {  }
         projects: {  }
-        events: {  }
+        events:
+            - events/digital-transformation-driving-engagement-and-public-participation
+            - events/towards-recovery-digital-capacity-building-in-the-cultural-heritage-sector
         persons: {  }
         communities:
             -
@@ -776,13 +1098,13 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p><meta charset=\"utf-8\" />Member States of the European Union fund, encourage and co-ordinate activities which occur on a national level related to the Europeana Initiative. In this dedicated area for Member States, we share updates on strategy, policy recommendations, country reports and relevant frameworks.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" />To receive the latest news and updates for Member States straight to your inbox, <a href=\"http://eepurl.com/cLzx_5\">sign up to the Member States newsletter</a>.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" />Member States of the European Union fund, encourage and co-ordinate activities which occur on a national level related to the Europeana Initiative and the common European data space for cultural heritage. In this dedicated area for Member States, we share updates on strategy, policy recommendations, country reports and relevant frameworks.&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -817,17 +1139,17 @@ pages:
                 selected_organisations: ''
             -
                 enabled: enabled
-                title: 'Newsletter archive'
+                title: 'The Europeana Initiative'
                 subtitle: ''
-                anchortitle: ''
-                templates: collapsedcontent
-                body: "<style type=\"text/css\"><!--\r\n.display_archive {font-family: arial,verdana; font-size: 12px;}\r\n.campaign {line-height: 125%; margin: 5px;}\r\n//-->\r\n</style>\r\n<script language=\"javascript\" src=\"//europeana.us3.list-manage.com/generate-js/?u=ad318b7566f97eccc895e014e&fid=8642&show=30\" type=\"text/javascript\"></script>"
+                anchortitle: 'The Europeana Initiative'
+                templates: body
+                body: "<p>Discover the different bodies of the Europeana Initiative and how it supports the digital transformation of the cultural heritage sector.&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -840,120 +1162,6 @@ pages:
                 selected_persons: ''
                 filter_posts: ''
                 selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
-                title: 'Europeana Strategy 2020-2025'
-                subtitle: ''
-                anchortitle: 'Europeana Strategy 2020-2025'
-                templates: breaker
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: pages
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages:
-                    -
-                        value: '739'
-                        _id: pages/strategy-2020-2025-summary
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts:
-                    -
-                        value: '2109'
-                        _id: posts/europeana-strategy-2020-2025-empowering-digital-change
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
-                title: 'Recommendations and publications'
-                subtitle: ''
-                anchortitle: 'Recommendations and publications'
-                templates: listingthumbnailsthree
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: posts
-                override_amount: 4
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: Publication
-                selected_posts:
-                    -
-                        value: '2288'
-                        _id: posts/recommendations-on-copyright-and-its-role-in-the-digital-transformation-of-the-cultural-heritage-sector
-                    -
-                        value: '2092'
-                        _id: posts/benefits-challenges-and-solutions-for-multilingual-digital-cultural-heritage
-                    -
-                        value: '2055'
-                        _id: posts/final-recommendations-under-romanian-presidency
-                    -
-                        value: '2219'
-                        _id: posts/building-digital-capacity-sense-making-findings-and-outcomes
-                    -
-                        value: '2258'
-                        _id: posts/approaches-for-handling-multilingualism-for-digital-cultural-heritage
-                    -
-                        value: '2285'
-                        _id: posts/impact-assessment-report-presidency-events
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -978,15 +1186,261 @@ pages:
                 enabled: enabled
                 title: ''
                 subtitle: ''
-                anchortitle: 'Foundation Business Plan 2021'
-                templates: breaker
+                anchortitle: ''
+                templates: listingsemistatic
                 body: ''
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '2'
+                        _id: pages/mission
+                    -
+                        value: '739'
+                        _id: pages/strategy-2020-2025-summary
+                    -
+                        value: '220'
+                        _id: pages/glossary
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: 'The Common European data space for cultural heritage'
+                subtitle: ''
+                anchortitle: 'Data space'
+                templates: body
+                body: "<p>The common European data space for cultural heritage is the new flagship initiative of the European Commission to accelerate the digital transformation of Europe’s cultural sector, and foster the creation and reuse of content in the cultural and creative sectors.&nbsp;Work to deploy the common Europeana data space for cultural heritage is led by the Europeana Foundation in collaboration with a consortium of 18 partners from nine EU countries - find out more about this work below.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnailsthree
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '831'
+                        _id: pages/common-european-data-space-for-cultural-heritage
+                    -
+                        value: '833'
+                        _id: pages/data-space-deployment
+                    -
+                        value: '832'
+                        _id: pages/data-space-projects
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: 'Presidency events'
+                subtitle: ''
+                anchortitle: 'Presidency events'
+                templates: body
+                body: "<p>Europeana holds conferences under the rotating presidencies of the Council of the EU which explore a topic of relevance to the digital transformation of the cultural heritage sector. Explore upcoming events and&nbsp;the outcomes of previous events below, or read&nbsp;our <a href=\"https://pro.europeana.eu/post/impact-assessment-report-presidency-events\">Impact Assessment report on Presidency events.</a>&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: teaser
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: events
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events:
+                    -
+                        value: '771'
+                        _id: events/the-europeana-conference-under-the-swedish-presidency-of-the-council-of-the-eu
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1000,8 +1454,26 @@ pages:
                 filter_posts: ''
                 selected_posts:
                     -
-                        value: '2298'
-                        _id: posts/europeana-foundation-business-plan-2021
+                        value: '2611'
+                        _id: posts/report-from-the-czech-presidency-europeana-conference
+                    -
+                        value: '2520'
+                        _id: posts/report-from-the-french-presidency-europeana-conference
+                    -
+                        value: '2474'
+                        _id: posts/summary-of-the-slovenian-presidency-europeana-conference
+                    -
+                        value: '2369'
+                        _id: posts/report-from-the-portuguese-presidency-europeana-conference
+                    -
+                        value: '2288'
+                        _id: posts/recommendations-on-copyright-and-its-role-in-the-digital-transformation-of-the-cultural-heritage-sector
+                    -
+                        value: '2092'
+                        _id: posts/benefits-challenges-and-solutions-for-multilingual-digital-cultural-heritage
+                    -
+                        value: '2055'
+                        _id: posts/final-recommendations-under-romanian-presidency
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -1034,7 +1506,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1077,9 +1549,16 @@ pages:
                 image:
                     file: ''
                     title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
                 singlefile: ''
                 fileslistpath: Europeana_Professional/Europeana_Foundation_Governance/Member_States/Country_Reports
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1099,11 +1578,22 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: 'Strategies and frameworks'
+                subtitle: ''
+                anchortitle: 'Strategies and frameworks'
+                templates: body
+                body: "<p>Explore the strategies and frameworks the Europeana Initiative has developed to support the cultural heritage sector in its digital transformation.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
                 attribution_title: ''
                 attribution_creator: ''
                 attribution_date: ''
@@ -1111,20 +1601,54 @@ pages:
                 attribution_country: ''
                 attribution_license: ''
                 attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
                 selected_organisations: ''
             -
                 enabled: enabled
-                title: Frameworks
+                title: ''
                 subtitle: ''
-                anchortitle: Frameworks
-                templates: listingsemistatic
+                anchortitle: ''
+                templates: listingthumbnailsthree
                 body: ''
                 image:
                     file: ''
                     title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1146,6 +1670,15 @@ pages:
                     -
                         value: '1344'
                         _id: posts/europeana-content-strategy
+                    -
+                        value: '2221'
+                        _id: posts/europeana-dsi-4-aggregation-strategy
+                    -
+                        value: '2220'
+                        _id: posts/europeana-dsi-4-multilingual-strategy
+                    -
+                        value: '2201'
+                        _id: posts/europeana-copyright-2020-2025
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -1153,11 +1686,22 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
+                selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnailsthree
+                body: ''
+                image:
+                    file: ''
+                    title: ''
                 attribution_title: ''
                 attribution_creator: ''
                 attribution_date: ''
@@ -1165,20 +1709,9 @@ pages:
                 attribution_country: ''
                 attribution_license: ''
                 attribution_link: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: listingsemistatic
-                body: ''
-                image:
-                    file: ''
-                    title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1207,26 +1740,19 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
+                selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
+                override_css_id: ''
+                override_css_class: ''
             -
                 enabled: enabled
-                title: COVID-19
+                title: 'CDSM Directive Transposition'
                 subtitle: ''
-                anchortitle: COVID-19
+                anchortitle: 'CDSM Directive Transposition'
                 templates: body
-                body: "<p><meta charset=\"utf-8\" />The impact of COVID-19 presents immediate and ongoing challenges to the cultural and creative sector - explore our response below.&nbsp;</p>\r\n"
+                body: "<p>The Copyright in the Digital Single Market (CDSM) Directive aims to harmonise certain aspects of EU Member States’ copyright legislation, and has important provisions for digital cultural heritage. Explore its' transposition by country in our dedicated Europeana Pro news series.&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -1239,7 +1765,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1259,12 +1785,162 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
+                selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingthumbnailsfive
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2570'
+                        _id: posts/copyright-directive-series-a-closer-look-at-sweden
+                    -
+                        value: '2548'
+                        _id: posts/copyright-directive-series-a-closer-look-at-lithuania
+                    -
+                        value: '2515'
+                        _id: posts/copyright-directive-series-a-closer-look-at-the-netherlands
+                    -
+                        value: '2456'
+                        _id: posts/copyright-directive-series-a-closer-look-at-italy
+                    -
+                        value: '2429'
+                        _id: posts/copyright-directive-series-progress-in-the-directive-transposition
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
                 selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: News
+                subtitle: ''
+                anchortitle: News
+                templates: body
+                body: "<p>Explore the latest news from across the Europeana Initiative and common European data space for cultural heritage.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingnews
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest_unpaged
+                sources: posts
+                override_amount: 2
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
             -
                 enabled: enabled
                 title: ''
@@ -1284,7 +1960,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1305,125 +1981,14 @@ pages:
                 selected_events: ''
                 selected_resources:
                     -
-                        value: '668'
-                        _id: resources/covid-19-section-block
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-                selected_organisations: ''
-            -
-                enabled: disabled
-                title: 'About Europeana'
-                subtitle: ''
-                anchortitle: 'About Europeana'
-                templates: listingsemistatic
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: pages
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages:
-                    -
-                        value: '2'
-                        _id: pages/mission
-                    -
-                        value: '85'
-                        _id: pages/foundation
-                    -
-                        value: '455'
-                        _id: pages/office-employees
-                    -
-                        value: '220'
-                        _id: pages/glossary
-                    -
-                        value: '320'
-                        _id: pages/governing-board-papers-documents
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
+                        value: '721'
+                        _id: resources/read-more-news
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
-            -
-                enabled: disabled
-                title: 'White papers'
-                subtitle: ''
-                anchortitle: ''
-                templates: breakerdouble
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts:
-                    -
-                        value: '1193'
-                        _id: posts/best-practices-for-multilingual-access
-                    -
-                        value: '1187'
-                        _id: posts/tranforming-the-world-with-culture
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: grad_network
         _id: pages/member-states
     -
         slug: new-provider
@@ -1509,7 +2074,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1639,7 +2204,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1693,7 +2258,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1756,7 +2321,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1810,7 +2375,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1873,7 +2438,7 @@ pages:
                     title: ''
                 singlefile: 'Europeana_Professional/Share_your_data/Technical_requirements/FAQs/URIs in EDM_pro.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1918,7 +2483,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2048,7 +2613,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2076,7 +2641,7 @@ pages:
                 selected_resources:
                     -
                         value: ''
-                        _id: resources/eu-datathon-1
+                        _id: resources/media-literacy-competence-framework-en
                 override_css_id: ''
                 override_css_class: ''
                 attribution_title: ''
@@ -2178,7 +2743,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2308,7 +2873,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2432,7 +2997,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2484,7 +3049,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2529,7 +3094,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2574,7 +3139,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2604,7 +3169,7 @@ pages:
     -
         slug: edm-mooc-basics
         datecreated: '2017-08-29 11:56:52'
-        datechanged: '2021-10-15 10:28:36'
+        datechanged: '2022-12-21 14:51:00'
         datepublish: '2017-08-29 11:56:25'
         datedepublish: ''
         ownerid: 2
@@ -2697,13 +3262,13 @@ pages:
                 subtitle: 'Why did we develop EDM and why ESE wasn’t enough'
                 anchortitle: 'Lesson 1'
                 templates: body
-                body: "<p>We’ll start with the basics of EDM.</p>\r\n\r\n<p>Why did we need to develop yet another metadata standard? What ideas are behind it? How is it structured - and what's the bare minimum of data that we need to publish your content on Europeana Collections?</p>\r\n"
+                body: "<p>We’ll start with the basics of EDM.</p>\r\n\r\n<p>Why did we need to develop yet another metadata standard? What ideas are behind it? How is it structured - and what's the bare minimum of data that we need to publish your content on the Europeana website?</p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2748,7 +3313,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2787,13 +3352,13 @@ pages:
                 subtitle: 'The wonderful and strange world of LOD'
                 anchortitle: 'Lesson 2'
                 templates: body
-                body: "<p>We’ll take a little detour to explain what <a href=\"https://en.wikipedia.org/wiki/Linked_data\">Linked Open Data</a> (LOD) is all about. Because EDM is built upon the LOD philosophy, understanding LOD will clarify why EDM was built the way it was.</p>\r\n\r\n<p style=\"text-align:center;\"><meta charset=\"utf-8\"></p>\r\n\r\n<p style=\"text-align:center;\"><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/uju4wT9uBIA\" width=\"560\"></iframe></p>\r\n\r\n<p>Background reading: <a href=\"/page/linkinghistory-edm\">An example of how the cultural heritage community is using LOD</a></p>\r\n"
+                body: "<p>We’ll take a little detour to explain what <a href=\"https://en.wikipedia.org/wiki/Linked_data\">Linked Open Data</a><a href=\"https://pro.europeana.eu/page/linked-open-data\"> (LOD)</a> is all about. Because EDM is built upon the LOD philosophy, understanding LOD will clarify why EDM was built the way it was.</p>\r\n\r\n<p style=\"text-align:center;\"><meta charset=\"utf-8\"></p>\r\n\r\n<p style=\"text-align:center;\"><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/uju4wT9uBIA\" width=\"560\"></iframe></p>\r\n\r\n<p>Background reading: <a href=\"/page/linkinghistory-edm\">An example of how the cultural heritage community is using LOD</a></p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: random
                 sources: resources
@@ -2838,7 +3403,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: pages
@@ -2890,7 +3455,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2935,7 +3500,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2980,7 +3545,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3006,11 +3571,59 @@ pages:
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1084'
+                        _id: resources/go-to-section-2
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
         _id: pages/edm-mooc-basics
     -
         slug: advocacy
         datecreated: '2017-08-30 12:52:38'
-        datechanged: '2021-09-29 10:16:58'
+        datechanged: '2023-05-23 10:12:27'
         datepublish: '2017-08-30 12:52:25'
         datedepublish: ''
         ownerid: 2
@@ -3073,102 +3686,6 @@ pages:
         tags: {  }
         modules:
             -
-                enabled: disabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: banner
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '55'
-                        _id: resources/advocacy
-                override_css_id: ''
-                override_css_class: grad_network
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
-                enabled: disabled
-                title: 'Copyright Working Group'
-                subtitle: ''
-                anchortitle: 'Copyright Working Group'
-                templates: calltoactionlink
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: projects
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects:
-                    -
-                        value: '107'
-                        _id: projects/copyright-policy-working-group
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                override_css_id: ''
-                override_css_class: grad_network
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
                 enabled: enabled
                 title: Advocacy
                 subtitle: ''
@@ -3180,7 +3697,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3200,11 +3717,11 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
                 attribution_title: ''
                 attribution_creator: ''
                 attribution_date: ''
@@ -3225,7 +3742,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3245,11 +3762,11 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
                 attribution_title: ''
                 attribution_creator: ''
                 attribution_date: ''
@@ -3270,7 +3787,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3322,16 +3839,9 @@ pages:
                 image:
                     file: ''
                     title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -3350,6 +3860,9 @@ pages:
                     -
                         value: '2200'
                         _id: posts/our-copyright-priorities-throughout-2020-2025
+                    -
+                        value: '2636'
+                        _id: posts/europeana-foundation-creative-commons-and-ifla-join-forces-to-defend-net-neutrality-in-the-eu
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -3357,12 +3870,19 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
-                selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
             -
                 enabled: enabled
                 title: 'Latest News'
@@ -3373,16 +3893,9 @@ pages:
                 image:
                     file: ''
                     title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: category
                 sources: posts
@@ -3402,17 +3915,24 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
-                selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
         _id: pages/advocacy
     -
         slug: edm-mooc-advanced
         datecreated: '2017-08-30 17:22:19'
-        datechanged: '2021-09-08 11:08:40'
+        datechanged: '2022-12-21 14:46:13'
         datepublish: '2017-08-30 17:21:50'
         datedepublish: ''
         ownerid: 2
@@ -3499,13 +4019,13 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p>There is no denying that EDM is a complex thing, and the devil, as usual, is in the detail. In section two of this course, we focus on what you could and should (or, in some cases, shouldn't) do with EDM, so that your records look all nice and shiny on Europeana Collections!</p>\r\n\r\n<p>We’re going to delve deeper into EDM classes and show you what impact each of the properties has on what you see on Europeana Collections. We also share some of the best practice we've acquired over the years, as well as explain what happens with your data here at Europeana before we publish it, or, as we call it, transform it from ‘EDM external’ to ‘EDM internal’.</p>\r\n"
+                body: "<p>There is no denying that EDM is a complex thing, and the devil, as usual, is in the detail. In section 2 of this course, we focus on what you could and should (or, in some cases, shouldn't) do with EDM, so that your records look all nice and shiny on the Europeana website!</p>\r\n\r\n<p>We’re going to delve deeper into EDM classes and show you what impact each of the properties has on what you see on the Europeana website. We also share some of the best practice we've acquired over the years, as well as explain what happens with your data here at Europeana before we publish it, or, as we call it, transform it from ‘EDM external’ to ‘EDM internal’.</p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3544,13 +4064,13 @@ pages:
                 subtitle: ''
                 anchortitle: 'Lesson 5'
                 templates: body
-                body: "<p><em>Part 1 - ProvidedCHO - the physical artwork</em></p>\r\n\r\n<p><br />\r\nThe Provided Cultural Heritage Object - handled through the <strong>edm:ProvidedCHO</strong> class - refers to ‘the original object that is the focus of the metadata description. It may be either a physical object (painting, book, etc.) or a digital original’.</p>\r\n\r\n<p>All the metadata describing the object (creator, historical/geographical coverage, subject, form factor and material, type, licence, etc.) has to be embedded in the<strong> edm:ProvidedCHO</strong> class.</p>\r\n\r\n<p>If this metadata uses dereferenceable URIs, and so is Linked Data compliant, our system will automatically create classes based on those URIs, see Lesson 3.</p>\r\n\r\n<p><br />\r\n<em>Part 2 - WebResource</em></p>\r\n\r\n<p><br />\r\nThe Web Resource - handled through the edm:WebResource class - refers to ‘a digital representation of the provided cultural heritage object’. It is not a mandatory class, as it is meant to be present in an EDM record only if the related representation is defined with more detail than shown in <strong>edm:ProvidedCHO</strong>.</p>\r\n\r\n<p>Example:</p>\r\n\r\n<p>You would use edm:WebResource when the object is in the public domain but the digital representation of it is not. Or if more specific details should be added, such as the position of this representation in relation to other ones - pictures of the object from various angles, pages of a book, etc.&nbsp; For further examples relating to other digital representations, check the links in the additional resources pages below.</p>\r\n\r\n<p></p>\r\n"
+                body: "<p><em>Part 1 - ProvidedCHO - the physical artwork</em></p>\r\n\r\n<p><br />\r\nThe Provided Cultural Heritage Object - handled through the <strong>edm:ProvidedCHO</strong> class - refers to ‘the original object that is the focus of the metadata description. It may be either a physical object (painting, book, etc.) or a digital original’.</p>\r\n\r\n<p>All the metadata describing the object (creator, historical/geographical coverage, subject, form factor and material, type, licence, etc.) has to be embedded in the<strong> edm:ProvidedCHO</strong> class.</p>\r\n\r\n<p>If this metadata uses dereferenceable URIs, and so is Linked Data compliant, our system will automatically create classes based on those URIs, see Lesson 3.</p>\r\n\r\n<p><br />\r\n<em>Part 2 - WebResource</em></p>\r\n\r\n<p><br />\r\nThe Web Resource - handled through the edm:WebResource class - refers to ‘a digital representation of the provided cultural heritage object’. It is not a mandatory class, as it is meant to be present in an EDM record only if the related representation is defined with more detail than shown in <strong>edm:ProvidedCHO</strong>.</p>\r\n\r\n<p>Example:</p>\r\n\r\n<p>You would use edm:WebResource when the object is in the public domain but the digital representation of it is not. Or if more specific details should be added, such as the position of this representation in relation to other ones - pictures of the object from various angles, pages of a book, etc.&nbsp; For further examples relating to other digital representations, check the links in the additional resources pages below.</p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3595,7 +4115,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3640,7 +4160,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3685,7 +4205,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3730,7 +4250,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3763,18 +4283,66 @@ pages:
                 attribution_license: ''
                 attribution_link: ''
                 selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1085'
+                        _id: resources/go-to-section-3
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
         _id: pages/edm-mooc-advanced
     -
         slug: edm-mooc-marc2edm
         datecreated: '2017-08-30 17:22:43'
-        datechanged: '2021-12-21 17:09:38'
+        datechanged: '2022-12-21 14:54:10'
         datepublish: '2017-08-30 17:22:36'
         datedepublish: ''
         ownerid: 2
         status: published
         templatefields: {  }
         title: 'Section 3 - Transforming MARC21 to EDM'
-        intro: "<p>This section is highlighting how the library domain professionals look at developing and applying transformation to their specific library format, MARC 21, how that translates into EDM and further beyond how it is presented in the Europeana Collections site.</p>\r\n"
+        intro: "<p>This section is highlighting how the library domain professionals look at developing and applying transformation to their specific library format, MARC 21, how that translates into EDM and further beyond how it is presented on the Europeana website.</p>\r\n"
         body: null
         pagefooter: null
         pagetype: page
@@ -3831,7 +4399,7 @@ pages:
         pages:
             - pages/edm-mooc-advanced
             - pages/edm-mooc-basics
-            - pages/edm-mooc-introduction
+            - pages/edm-mooc-marc2edm
         posts: {  }
         data: {  }
         projects: {  }
@@ -3869,7 +4437,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3914,7 +4482,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -3959,7 +4527,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4004,7 +4572,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4049,7 +4617,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4094,7 +4662,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4133,13 +4701,13 @@ pages:
                 subtitle: ''
                 anchortitle: 'Case study 2'
                 templates: body
-                body: "<p>To conclude our course, we are now taking you on the journey an object has to make before it appears in Europeana Collections.</p>\r\n\r\n<p>This lesson explains how the metadata for <a href=\"http://research.europeana.eu/data/playbills-of-the-debrecen-theatre-1862-1920\">a playbill of the Debrecen Theatre</a> are catalogued and captured in MARC21. It then illustrates the mapping to EDM and the transformation of that EDM record during the publishing process. At the end, you will see where in <a href=\"http://www.europeana.eu/portal/en/record/9200448/BibliographicResource_3000134110558.html\">Europeana Collections</a> you can find the various elements that were created during the digitization, cataloguing, mapping and transformation process of that playbill.</p>\r\n\r\n<p>If you are interested in looking at the chosen object more closely, you can find it in Europeana Collections and you can also see <a href=\"https://docs.google.com/spreadsheets/d/1KynPoz5rZScHoyc2BitGmZd2OmV94bo7u7LjdKsAzaI/edit#gid=0\">the raw metadata (MARC21, EDM, EDM enriched)</a>.</p>\r\n\r\n<p style=\"text-align:center;\"><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/hG4yt96lRtY\" width=\"560\"></iframe></p>\r\n"
+                body: "<p>To conclude our course, we are now taking you on the journey an object has to make before it appears on the Europeana website.</p>\r\n\r\n<p>This lesson explains how the metadata for <a href=\"http://research.europeana.eu/data/playbills-of-the-debrecen-theatre-1862-1920\">a playbill of the Debrecen Theatre</a> are catalogued and captured in MARC21. It then illustrates the mapping to EDM and the transformation of that EDM record during the publishing process. At the end, you will see where in the&nbsp;<a href=\"http://www.europeana.eu/portal/en/record/9200448/BibliographicResource_3000134110558.html\">Europeana website</a>&nbsp;you can find the various elements that were created during the digitisation, cataloguing, mapping and transformation process of that playbill.</p>\r\n\r\n<p>If you are interested in looking at the chosen object more closely, you can find it in the Europeana website and you can also see <a href=\"https://docs.google.com/spreadsheets/d/1KynPoz5rZScHoyc2BitGmZd2OmV94bo7u7LjdKsAzaI/edit#gid=0\">the raw metadata (MARC21, EDM, EDM enriched)</a>.</p>\r\n\r\n<p style=\"text-align:center;\"><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/hG4yt96lRtY\" width=\"560\"></iframe></p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4174,17 +4742,17 @@ pages:
                 selected_organisations: ''
             -
                 enabled: enabled
-                title: Readings
+                title: Reading
                 subtitle: ''
-                anchortitle: Readings
+                anchortitle: Reading
                 templates: body
-                body: "<p>Lastly, you are invited to read the documentation below to understand how the library domain professionals have understood and created the crosswalk between library specific metadata and the Europeana Data Model, please have a read at the links below:</p>\r\n\r\n<p><a href=\"/page/europeana-libraries-edm\">Europeana Libraries and EDM for libraries</a></p>\r\n\r\n<p><a href=\"/page/polymath-edm\">The Polymath Digital Library and EDM</a></p>\r\n\r\n<p><a href=\"https://docs.google.com/spreadsheets/d/1sasDSEBIHU6jE5Ecvk-2g1KZ-6XR9vCd00wzAvXKXOc/edit#gid=2\">DPLA Partner crosswalk - MARC21 data</a></p>\r\n"
+                body: "<p>Lastly, you are invited to read the documentation below to understand how the library domain professionals have understood and created the crosswalk between library specific metadata and the Europeana Data Model, explore the links below:</p>\r\n\r\n<ul>\r\n    <li><a href=\"/page/europeana-libraries-edm\">Europeana Libraries and EDM for libraries</a></li>\r\n    <li><a href=\"/page/polymath-edm\">The Polymath Digital Library and EDM</a></li>\r\n    <li><a href=\"https://docs.google.com/spreadsheets/d/1sasDSEBIHU6jE5Ecvk-2g1KZ-6XR9vCd00wzAvXKXOc/edit#gid=2\">DPLA Partner crosswalk - MARC21 data</a></li>\r\n</ul>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4229,7 +4797,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4281,7 +4849,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4409,7 +4977,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4453,7 +5021,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4497,7 +5065,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4541,7 +5109,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4585,7 +5153,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4715,7 +5283,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4844,7 +5412,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4969,7 +5537,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5100,7 +5668,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts

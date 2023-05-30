@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T10:53:22+01:00'
+    date: '2023-05-30T17:17:33+02:00'
     version: 3.7.4
     platform: mysql
 events:
@@ -9789,7 +9789,7 @@ events:
     -
         slug: towards-a-common-data-space-for-cultural-heritage
         datecreated: '2021-11-30 17:53:51'
-        datechanged: '2021-12-01 10:54:13'
+        datechanged: '2023-03-09 13:11:34'
         datepublish: '2021-12-01 17:52:00'
         datedepublish: ''
         ownerid: 124
@@ -9854,6 +9854,9 @@ events:
             -
                 slug: webinar
                 name: webinar
+            -
+                slug: data-space
+                name: data-space
         modules:
             -
                 enabled: enabled
@@ -10374,20 +10377,20 @@ events:
     -
         slug: europeana-weave-event-series-on-diversity-and-inclusion
         datecreated: '2021-12-08 13:13:16'
-        datechanged: '2022-03-23 16:15:45'
+        datechanged: '2022-12-19 17:06:00'
         datepublish: '2021-12-08 12:34:50'
         datedepublish: ''
         ownerid: 54
         status: published
         templatefields: {  }
         title: 'Europeana WEAVE Event Series on diversity and inclusion'
-        intro: "<p>Join Europeana and the WEAVE project for a series of events on diversity and inclusion, and how cultural heritage institutions can widen European access to cultural communities via Europeana.</p>\r\n"
+        intro: "<p>This event series,\_organised by\_Europeana and the WEAVE project, explored diversity and inclusion in the cultural heritage sector, and how cultural heritage institutions can widen European access to cultural communities via Europeana.</p>\r\n"
         body: null
         location_name: Online
         geolocation: null
         featured: false
         registerlink: null
-        teaser: "<p>Join Europeana and the WEAVE project for a series of events on diversity and inclusion, and how cultural heritage institutions can widen European access to cultural communities via Europeana.</p>\r\n"
+        teaser: "<p>This event series,\_organised by\_Europeana and the WEAVE project, explored diversity and inclusion in the cultural heritage sector.</p>\r\n"
         teaser_image:
             file: Images/Event_images/WEAVE-cafe600x400.png
             title: 'Event slide showing a young child in a hat and the europeana and weave logos'
@@ -10398,22 +10401,20 @@ events:
         teaser_attribution_country: Netherlands
         teaser_attribution_license: CC-BY-SA
         teaser_attribution_link: null
-        start_event: '2022-03-10 13:00:00'
+        start_event: ''
         unconfirmed_start: false
-        end_event: '2022-03-10 14:00:00'
+        end_event: ''
         unconfirmed_end: false
-        image:
-            alt: 'Event slide showing a young child in a hat and the europeana and weave logos'
-            file: Images/Event_images/WEAVE-cafe1240x600.png
-        image_attribution_title: 'Jongetje in de rokken met druivenboezel'
+        image: null
+        image_attribution_title: null
         image_attribution_creator: null
-        image_attribution_date: '1925 -1935'
-        image_attribution_holder: Zuiderzeemuseum
-        image_attribution_country: Netherlands
-        image_attribution_license: CC-BY-SA
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        image_attribution_license: null
         image_attribution_link: null
-        shoulddatepublish: false
-        shoulddatemodified: false
+        shoulddatepublish: true
+        shoulddatemodified: true
         subsite: null
         template: null
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
@@ -10423,8 +10424,7 @@ events:
         contact_name: null
         contact_email: null
         contact_website: null
-        pages:
-            - pages/news
+        pages: {  }
         posts: {  }
         data: {  }
         projects: {  }
@@ -10449,6 +10449,9 @@ events:
             -
                 slug: webinars
                 name: webinars
+            -
+                slug: diversity-and-inclusion
+                name: diversity-and-inclusion
         modules:
             -
                 enabled: enabled
@@ -10456,7 +10459,7 @@ events:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p>The <a href=\"https://weave-culture.eu/\" target=\"_blank\">WEAVE</a> - Widen European Access to cultural communities Via Europeana - project aims to develop a framework to link the tangible and intangible heritage of underrepresented and minoritised cultural communities, safeguarding the rich and invaluable cultural heritage which they represent. As well as aggregating new content to Europeana, the project will organise events, training&nbsp;and guidelines that explore the correct handling of immaterial cultural heritage and working with vulnerable and marginalised communities.</p>\r\n\r\n<p>As part of this work, in February and March 2022, WEAVE and Europeana have organised a series of events for cultural heritage professionals around diversity and inclusion. These events will provide participants with an opportunity to get a better understanding of how cultural institutions can support a more diverse and inclusive sector.</p>\r\n\r\n<p>The <strong>four events will be held on 11, 18, 25 February, and 10 March 2022</strong>. The sessions will be carefully planned and moderated by WEAVE partners and Europeana with the support of the Europeana Diversity Inclusion Cross-Team to ensure attendees have a safe space for informal and truthful conversations.</p>\r\n\r\n<p>Find out more&nbsp;and register for the individual events below.</p>\r\n"
+                body: "<p>The <a href=\"https://weave-culture.eu/\" target=\"_blank\">WEAVE</a> - Widen European Access to cultural communities Via Europeana - project aimed&nbsp;to develop a framework to link the tangible and intangible heritage of underrepresented and minoritised cultural communities, safeguarding the rich and invaluable cultural heritage which they represent. As well as aggregating new content to Europeana, the project organised events, training&nbsp;and guidelines that explored the correct handling of immaterial cultural heritage and working with vulnerable and marginalised communities.</p>\r\n\r\n<p>As part of this work, in February and March 2022, WEAVE and Europeana&nbsp;organised a series of events for cultural heritage professionals around diversity and inclusion. These events&nbsp;provided participants with an opportunity to get a better understanding of how cultural institutions can support a more diverse and inclusive sector.</p>\r\n\r\n<p>The four events were held on 11, 18, 25 February, and 10 March 2022. The sessions were planned and moderated by WEAVE partners and Europeana with the support of the Europeana Diversity Inclusion Cross-Team to ensure attendees had a safe space for informal and truthful conversations.</p>\r\n\r\n<p>Watch recordings of the event series below.&nbsp;</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -10498,7 +10501,7 @@ events:
                 subtitle: ''
                 anchortitle: 'Europeana WEAVE Café'
                 templates: body
-                body: "<p><strong>Introduction to Europeana WEAVE Event Series on diversity and inclusion.&nbsp;13:00 - 14:00 CET, 11 February 2022</strong></p>\r\n\r\n<p>This Café explored&nbsp;the different activities in the WEAVE project, their progress, relevant&nbsp;learnings and the connection between WEAVE and Europeana’s efforts to bring diversity and inclusion to the cultural heritage sector.</p>\r\n\r\n<p>The Café format&nbsp;is an open space for informal discussions, and it was an opportunity for cultural heritage professionals to get to know and inspire each other, to reflect on specific but broadly formulated topics, and to exchange experiences. Watch the recording below.</p>\r\n"
+                body: "<p><strong>Introduction to Europeana WEAVE Event Series on diversity and inclusion.&nbsp;13:00 - 14:00 CET, 11 February 2022</strong></p>\r\n\r\n<p>This Café explored&nbsp;the different activities in the WEAVE project, their progress, relevant&nbsp;learnings and the connection between WEAVE and Europeana’s efforts to bring diversity and inclusion to the cultural heritage sector.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -10954,7 +10957,7 @@ events:
                 subtitle: ''
                 anchortitle: 'Europeana WEAVE Final Cafe'
                 templates: body
-                body: "<p><strong>13:00 - 14:00 CET, 10 March 2022</strong></p>\r\n\r\n<p>In this cafe, the audience will, together with the partners involved in the WEAVE project and Europeana’s Diversity and Inclusion team, look back at the learnings as well as the outcome of the discussions of the previous WEAVE events in these series.</p>\r\n\r\n<p>The cafe is an open space for informal discussions. It is an opportunity for cultural heritage professionals to get to know and inspire each other, to reflect on specific but broadly formulated topics, and to exchange experiences.</p>\r\n"
+                body: "<p><strong>13:00 - 14:00 CET, 10 March 2022</strong></p>\r\n\r\n<p>In this cafe, the audience,&nbsp;together with the partners involved in the WEAVE project and Europeana’s Diversity and Inclusion team, looked back at the learnings as well as the outcome of the discussions of the previous WEAVE events in this series.</p>\r\n"
                 image:
                     file: ''
                     title: ''

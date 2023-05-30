@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T17:11:02+02:00'
+    date: '2023-05-30T15:30:53+02:00'
     version: 3.7.4
     platform: mysql
 posts:
@@ -290,61 +290,108 @@ posts:
     -
         slug: introducing-europeanas-aggregation-team
         datecreated: '2014-08-28 14:49:43'
-        datechanged: '2015-02-16 16:57:05'
+        datechanged: '2023-02-03 17:00:23'
         datepublish: '2013-09-19 07:57:48'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
         title: 'Introducing Europeana''s Aggregation Team'
-        posttype: blog
+        posttype: News
         featured: false
-        intro: null
-        body: "<p>Introducing Europeana's Aggregation Team</p>\r\n\r\n<p><i>Blog by Joris Pekel, Europeana Community Coordinator</i></p>\r\n\r\n<p><b>Aggregation - Noun - The act of collecting together</b></p>\r\n\r\n<p>Today, I would like to introduce you to one of the Europeana Foundation's teams - the Aggregation team.</p>\r\n\r\n<p>The people in the Aggregation team are the ones who are closest to Europeana's hundreds of data providers. Together, we aim to build the open trusted source for European cultural heritage content. On a daily basis, we work to ingest the millions of records that are being sent to us by around 100 different providers and aggregators.</p>\r\n\r\n<p>In order to understand how this works, you need to know a bit more about the structure of Europeana. The project currently offers over 29 million records, coming from more than 2,300 cultural institutions from all over Europe. As a relatively small organisation with about 40 employees (and an aggregation team of 8) based in The Hague, it would be impossible for us to work directly with all of these institutions. For this reason, aggregators serve as bridges between the cultural institutions and Europeana. They collect the data on a national, thematic, or project-based level, harmonise it, and deliver to Europeana. Aggregators are also important because they share a background with the organisations whose content they bring together, so there is close understanding between them.</p>\r\n\r\n<p>The aggregation model enables Europeana to collect huge quantities of data from thousands of providers, through only a handful of channels.</p>\r\n\r\n<p style=\"text-align:center;\"><img src=\"/files/blogimages/cdf8d566-e92d-4b3a-96f8-514df45aa020.png\" style=\"width: 597px; height: 446px;\" /></p>\r\n\r\n<p>Schematic overview of the Europeana Ecosystem. Image taken from the Europeana Essentials presentation; <a href=\"http://pro.europeana.eu/documents/900548/a03b2598-a3b2-4cb8-8cc5-33eeadbc7aa8\">more facts and figures here</a>.</p>\r\n\r\n<p>Here, the four operation officers (members of the Aggregation team) pick up and process the data through the ingestion tools that are constantly under development. They check the quality and edit where necessary. Every month, the newly added or updated datasets are published and made available on the Europeana portal. From this point, anybody can access the data freely through the <a href=\"http://www.europeana.eu\">Europeana portal</a> or the <a href=\"http://pro.europeana.eu/web/guest/api\">Europeana API</a>.</p>\r\n\r\n<p style=\"text-align:center;\"><img alt=\"\" src=\"/files/blogimages/Joris 2 - aggregation team.png\" style=\"width: 598px; height: 412px;\" /></p>\r\n\r\n<p style=\"text-align:center;\"><i>Meet the Europeana Aggregation team. <a href=\"http://pro.europeana.eu/documents/89999/02d3faed-cf24-4962-ba9e-d0b005578ece\">Download a larger version of this image</a>.</i></p>\r\n\r\n<p>In order to make the most of this huge collection of cultural heritage records from all over Europe, it is important that the data is of high quality. Basically, the better your metadata is, the more likely it is to be found - and more importantly - used. A few months ago, our then technical director Jan Molendijk wrote about the importance of high quality metadata in more detail - <a href=\"http://pro.europeana.eu/pro-blog/-/blogs/1442749\"> read his blog</a>.</p>\r\n\r\n<p>Europeana wants to present the cultural diversity of all Europe’s countries. That is why we are constantly looking for additional data providers and why we help national aggregators to get off the ground. As you can see in <a href=\"http://marijerooze.nl/projects/Europeana/\">this visualisation</a>, Europeana now includes cultural objects from each EU member state. Looking for new partners and helping the existing ones to develop further is therefore a core part of our activities.</p>\r\n\r\n<p>Of course, all these activities raise a lot of issues and questions for both the aggregators and content providers. For that reason, we also produce a lot of <a href=\"http://pro.europeana.eu/provide-data\">documentation</a> and organise workshops with the providers in order to make this process as smooth as possible.</p>\r\n\r\n<p>If you have additional questions about the work we are doing here, or are interested in joining Europeana as a cultural heritage institution, please get in touch (email joris.pekel@kb.nl). We’re always happy to help existing and new providers to connect their cultural heritage treasures to the rest of Europe and - especially now as we are teaming up with other large initiatives like the <a href=\"http://dp.la\">Digital Public Library of America</a> and <a href=\"http://trove.nla.gov.au/\">Trove</a> in Australia - the world.</p>"
+        intro: "<p>Read an introduction to\_one of the Europeana Foundation's teams - the Aggregation team.</p>\r\n"
+        body: "<p><b>Aggregation - Noun - The act of collecting together</b></p>\r\n\r\n<p>The people in the Aggregation team are the ones who are closest to Europeana's hundreds of data providers. Together, we aim to build the open trusted source for European cultural heritage content. On a daily basis, we work to ingest the millions of records that are being sent to us by around 100 different providers and aggregators.</p>\r\n\r\n<p>In order to understand how this works, you need to know a bit more about the structure of Europeana. The project currently offers over 29 million records, coming from more than 2,300 cultural institutions from all over Europe. As a relatively small organisation with about 40 employees (and an aggregation team of 8) based in The Hague, it would be impossible for us to work directly with all of these institutions. For this reason, aggregators serve as bridges between the cultural institutions and Europeana. They collect the data on a national, thematic, or project-based level, harmonise it, and deliver to Europeana. Aggregators are also important because they share a background with the organisations whose content they bring together, so there is close understanding between them.</p>\r\n\r\n<p>The aggregation model enables Europeana to collect huge quantities of data from thousands of providers, through only a handful of channels.</p>\r\n\r\n<p style=\"text-align:center;\"><img src=\"/files/blogimages/cdf8d566-e92d-4b3a-96f8-514df45aa020.png\" style=\"width: 597px; height: 446px;\"></p>\r\n\r\n<p>Schematic overview of the Europeana Ecosystem. Image taken from the Europeana Essentials presentation.</p>\r\n\r\n<p>Here, the four operation officers (members of the Aggregation team) pick up and process the data through the ingestion tools that are constantly under development. They check the quality and edit where necessary. Every month, the newly added or updated datasets are published and made available on the Europeana portal. From this point, anybody can access the data freely through the <a href=\"http://www.europeana.eu\">Europeana portal</a> or the <a href=\"https://pro.europeana.eu/page/apis\">Europeana API</a>.</p>\r\n\r\n<p style=\"text-align:center;\"><img alt=\"\" src=\"/files/blogimages/Joris%202%20-%20aggregation%20team.png\" style=\"width: 598px; height: 412px;\"></p>\r\n\r\n<p style=\"text-align:center;\"><i>Meet the Europeana Aggregation team.</i></p>\r\n\r\n<p>In order to make the most of this huge collection of cultural heritage records from all over Europe, it is important that the data is of high quality. Basically, the better your metadata is, the more likely it is to be found - and more importantly - used. A few months ago, our then technical director Jan Molendijk wrote about the importance of high quality metadata in more detail.</p>\r\n\r\n<p>Europeana wants to present the cultural diversity of all Europe’s countries. That is why we are constantly looking for additional data providers and why we help national aggregators to get off the ground. As you can see in <a href=\"http://marijerooze.nl/projects/Europeana/\">this visualisation</a>, Europeana now includes cultural objects from each EU member state. Looking for new partners and helping the existing ones to develop further is therefore a core part of our activities.</p>\r\n\r\n<p>Of course, all these activities raise a lot of issues and questions for both the aggregators and content providers. For that reason, we also produce a lot of <a href=\"https://pro.europeana.eu/share-your-data/process\">documentation</a> and organise workshops with the providers in order to make this process as smooth as possible.</p>\r\n\r\n<p>If you have additional questions about the work we are doing here, or are interested in joining Europeana as a cultural heritage institution, please get in touch (email joris.pekel@kb.nl). We’re always happy to help existing and new providers to connect their cultural heritage treasures to the rest of Europe and - especially now as we are teaming up with other large initiatives like the <a href=\"http://dp.la\">Digital Public Library of America</a> and <a href=\"http://trove.nla.gov.au/\">Trove</a> in Australia - the world.</p>\r\n"
         author:
-            value: null
-        isbn: ''
-        teaser: ''
+            -
+                value: '4791'
+                _id: persons/joris-pekel
+        isbn: null
+        teaser: "<p>Read an introduction to\_one of the Europeana Foundation's teams - the Aggregation team.</p>\r\n"
         teaser_image: null
-        teaser_attribution_title: ''
-        teaser_attribution_creator: ''
+        teaser_attribution_title: null
+        teaser_attribution_creator: null
         teaser_attribution_date: null
-        teaser_attribution_holder: ''
-        teaser_attribution_country: ''
+        teaser_attribution_holder: null
+        teaser_attribution_country: null
         teaser_attribution_license: null
-        teaser_attribution_link: ''
+        teaser_attribution_link: null
         contact_record:
             value: null
         contact_blurb: null
-        contact_name: ''
-        contact_email: ''
-        contact_website: ''
+        contact_name: null
+        contact_email: null
+        contact_website: null
         image:
             file: blogimages/cdf8d566-e92d-4b3a-96f8-514df45aa020.png
-            title: ''
-        image_attribution_title: ''
-        image_attribution_creator: ''
+        image_attribution_title: null
+        image_attribution_creator: null
         image_attribution_date: null
-        image_attribution_holder: ''
-        image_attribution_country: ''
+        image_attribution_holder: null
+        image_attribution_country: null
         image_attribution_license: null
-        image_attribution_link: ''
+        image_attribution_link: null
         shoulddatepublish: true
         shoulddatemodified: true
         subsite: pro
-        template: ''
-        seo: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts: {  }
         data: {  }
         projects: {  }
         events: {  }
         persons: {  }
-        communities: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
         markets: {  }
         categories: {  }
         tags: {  }
-        modules: {  }
+        modules:
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: ''
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
         _id: posts/introducing-europeanas-aggregation-team
     -
         slug: coming-soon-europeana-open-culture-20-for-ipad-and-android

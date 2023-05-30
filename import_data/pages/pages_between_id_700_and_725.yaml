@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:51:00+02:00'
+    date: '2023-05-30T15:16:16+02:00'
     version: 3.7.4
     platform: mysql
 pages:
@@ -95,7 +95,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -143,7 +143,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -188,7 +188,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -240,7 +240,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -363,7 +363,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -408,7 +408,7 @@ pages:
                 attribution_link: ''
                 singlefile: 'Europeana_Professional/Publications/UsersGuide-Power BI Dashboards.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -453,7 +453,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -498,7 +498,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -543,7 +543,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -588,7 +588,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -707,7 +707,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -834,7 +834,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -960,7 +960,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1085,7 +1085,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1213,7 +1213,7 @@ pages:
                 attribution_link: ''
                 singlefile: Europeana_Professional/EUROPEANA_RERUN_onepager_v4_horizontallogo.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1330,7 +1330,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1439,7 +1439,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: Europeana_Professional/Education/Documents
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1588,7 +1588,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1667,12 +1667,12 @@ pages:
         search_keywords: null
         pages:
             - pages/europeana-a-digital-service-infrastructure
+            - pages/europeana-a-digital-service-infrastructure
+            - pages/europeana-a-digital-service-infrastructure
+            - pages/europeana-a-digital-service-infrastructure
         posts: {  }
         data: {  }
-        projects:
-            - projects/europeana-dsi
-            - projects/europeana-dsi-2
-            - projects/europeana-dsi-3
+        projects: {  }
         events: {  }
         persons: {  }
         communities:
@@ -1702,7 +1702,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1747,7 +1747,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1795,7 +1795,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1843,7 +1843,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1979,7 +1979,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2088,7 +2088,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2218,7 +2218,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2336,7 +2336,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2381,7 +2381,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2426,7 +2426,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2471,7 +2471,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2516,7 +2516,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2546,14 +2546,14 @@ pages:
     -
         slug: europeana-dsi
         datecreated: '2020-02-06 14:38:32'
-        datechanged: '2021-09-01 14:32:04'
+        datechanged: '2022-11-16 10:57:39'
         datepublish: '2020-02-06 14:36:27'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
         title: 'Europeana DSI'
-        intro: "<p>The Europeana Digital Service Infrastructure (DSI) showcases Europe’s cultural and scientific heritage online. Currently, we are in the fourth operational cycle of the Europeana core service platform.</p>\r\n"
+        intro: "<p>The Europeana Digital Service Infrastructure provided online access to Europe’s digital cultural heritage from mid-2015\_to mid-2022.</p>\r\n"
         body: null
         pagefooter: null
         pagetype: page
@@ -2562,7 +2562,7 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>The Europeana Digital Service Infrastructure (DSI) showcases Europe’s cultural and scientific heritage online.</p>\r\n"
+        teaser: "<p>The Europeana Digital Service Infrastructure provided online access to Europe’s digital cultural heritage from mid-2015\_to mid-2022.</p>\r\n"
         teaser_image:
             file: Europeana_Professional/Projectpartner/teaser1.png
             title: 'Still life with fruit, a lobster and a golden goblet'
@@ -2583,7 +2583,7 @@ pages:
         image_attribution_link: null
         imagegallery: {  }
         shoulddatepublish: true
-        shoulddatemodified: false
+        shoulddatemodified: true
         subsite: pro
         template: null
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
@@ -2598,10 +2598,7 @@ pages:
         search_keywords: null
         pages:
             - pages/europeana-dsi
-            - pages/europeana-dsi
-            - pages/europeana-dsi
-        posts:
-            - posts/europeana-opens-up-full-dataset-for-re-use
+        posts: {  }
         data: {  }
         projects: {  }
         events: {  }
@@ -2625,54 +2622,6 @@ pages:
                 title: ''
                 subtitle: ''
                 anchortitle: ''
-                templates: calltoactioninline
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '584'
-                        _id: resources/europeana-a-digital-service-infrastructure-block
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
                 templates: listingsemistatic
                 body: ''
                 image:
@@ -2687,7 +2636,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: projects
@@ -2725,18 +2674,66 @@ pages:
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '584'
+                        _id: resources/europeana-a-digital-service-infrastructure-block
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
         _id: pages/europeana-dsi
     -
         slug: horizon-2020
         datecreated: '2020-02-06 14:40:19'
-        datechanged: '2022-04-06 17:29:13'
+        datechanged: '2023-05-16 10:54:23'
         datepublish: '2020-02-06 14:40:01'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
-        title: 'Horizon 2020'
-        intro: "<p>Horizon 2020 is a seven-year funding programme of the European Commission to develop new, sustainable solutions to social and cultural challenges, driving new forms of innovation and growth. Europeana participates in projects that aim to explore and showcase high impact applications of cultural heritage.</p>\r\n"
+        title: 'Horizon 2020 projects'
+        intro: "<p>Horizon 2020 was a seven-year funding programme of the European Commission to develop new, sustainable solutions to social and cultural challenges, driving new forms of innovation and growth. It ran from 2014 - 2020. The Europeana Initiative\_participateed in projects that aimed to explore and showcase high impact applications of cultural heritage.</p>\r\n"
         body: null
         pagefooter: null
         pagetype: page
@@ -2745,7 +2742,7 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>Funded projects under EU Horizon 2020 Programme.</p>\r\n"
+        teaser: "<p>Horizon 2020 was a seven-year funding programme of the European Commission running from 2014 - 2020.</p>\r\n"
         teaser_image:
             file: Europeana_Professional/Projectpartner/teaser4.png
             title: 'Portrait of a man'
@@ -2779,11 +2776,7 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: null
-        pages:
-            - pages/europeana-dsi
-            - pages/horizon-2020
-            - pages/horizon-2020
-            - pages/horizon-2020
+        pages: {  }
         posts: {  }
         data: {  }
         projects: {  }
@@ -2820,54 +2813,6 @@ pages:
         modules:
             -
                 enabled: enabled
-                title: 'Running projects'
-                subtitle: ''
-                anchortitle: ''
-                templates: listingsemistatic
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: projects
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects:
-                    -
-                        value: '132'
-                        _id: projects/indices
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
                 title: 'Past projects'
                 subtitle: ''
                 anchortitle: ''
@@ -2885,7 +2830,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: projects
@@ -2911,6 +2856,9 @@ pages:
                     -
                         value: '139'
                         _id: projects/time-machine
+                    -
+                        value: '132'
+                        _id: projects/indices
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
@@ -2924,15 +2872,15 @@ pages:
     -
         slug: generic-services-projects
         datecreated: '2020-02-06 14:40:54'
-        datechanged: '2022-07-14 07:09:33'
+        datechanged: '2023-05-16 11:05:53'
         datepublish: '2020-02-06 14:39:22'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
         title: 'Generic Services projects'
-        intro: "<p>Europeana Generic Service projects support cultural heritage institutions with their digital transformation and aim to increase the amount of high-quality content and metadata provided to Europeana. Projects work to raise awareness of Europeana and improve user experience of the platform.</p>\r\n"
-        body: null
+        intro: "<p>Generic Services projects support the digital transformation of cultural heritage institutions by providing innovative tools for user engagement and crowdsourcing activities, data enrichment\_and translations, enhancements of APIs and the Europeana website, as well as making the aggregation process to Europeana more efficient.</p>\r\n"
+        body: "<p>Projects also support\_cultural heritage professionals to build capacity through relevant recommendations, webinars, workshops and toolkits on various topics such as IIIF, copyrights, machine learning, AI, storytelling as well as diversity and inclusion practices within the sector.\_</p>\r\n\r\n<p>Projects increase\_the amount of high-quality content and metadata in various formats including audiovisual and 3D content. They engage\_Europeana's audiences by creating editorials in various formats and on diverse topics such as sport, manuscripts, and the 20th century.\_</p>\r\n\r\n<p>Projects are funded under the CEF Telecom\_ - \_Connecting Europe Facility Programme of the European Union. The programme facilitated\_cross-border interactions between public administrations, businesses and citizens during 2014-2020. Europeana has participated in Generic Service projects since 2016.</p>\r\n"
         pagefooter: null
         pagetype: page
         highlighttitle: null
@@ -2940,7 +2888,7 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>Funded projects under Connecting Europe Facility (CEF) Telecom Work Programme</p>\r\n"
+        teaser: "<p>Funded projects under Connecting Europe Facility Telecom Work Programme (2014-2020).</p>\r\n"
         teaser_image:
             file: Europeana_Professional/Projectpartner/teaser2.png
             title: 'A group in a garden, looking at a mother holding a baby'
@@ -2961,7 +2909,7 @@ pages:
         image_attribution_link: null
         imagegallery: {  }
         shoulddatepublish: true
-        shoulddatemodified: false
+        shoulddatemodified: true
         subsite: pro
         template: null
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
@@ -2976,9 +2924,6 @@ pages:
         search_keywords: 'generic services'
         pages:
             - pages/europeana-dsi
-            - pages/horizon-2020
-            - pages/generic-services-projects
-            - pages/generic-services-projects
             - pages/generic-services-projects
         posts:
             - posts/exploring-biodiversity-with-the-linbi-project
@@ -2988,7 +2933,8 @@ pages:
             - posts/judaica-europeana-2-0-a-new-aggregation-platform-for-jewish-heritage-content
             - posts/how-the-jewish-history-tours-project-is-showcasing-jewish-heritage-across-europe
         data: {  }
-        projects: {  }
+        projects:
+            - projects/the-art-of-reading-in-the-middle-ages-arma
         events: {  }
         persons: {  }
         communities:
@@ -3009,144 +2955,6 @@ pages:
                 name: generic-services
         modules:
             -
-                enabled: disabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: filecontent
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: disabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: breaker
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts:
-                    -
-                        value: '2118'
-                        _id: posts/new-europeana-generic-services-call-now-open
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: disabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: body
-                body: "<p><a href=\"https://pro.europeana.eu/page/generic-services-faqs\">Explore FAQs relating to the&nbsp;2020 CEF Telecom Call for&nbsp;Europeana Generic Services Projects.</a>&nbsp;</p>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
                 enabled: enabled
                 title: 'Running projects'
                 subtitle: ''
@@ -3165,7 +2973,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: projects
@@ -3183,32 +2991,11 @@ pages:
                 filter_projects: ''
                 selected_projects:
                     -
-                        value: '161'
-                        _id: projects/j-ark-european-jewish-community-archive
-                    -
-                        value: '158'
-                        _id: projects/europeana-translate
-                    -
                         value: '157'
                         _id: projects/crafted
                     -
                         value: '156'
                         _id: projects/jewish-history-tours
-                    -
-                        value: '155'
-                        _id: projects/europeana-subtitled
-                    -
-                        value: '154'
-                        _id: projects/weave-widen-european-access-to-cultural-communities-via-europeana
-                    -
-                        value: '153'
-                        _id: projects/enricheuropeana
-                    -
-                        value: '151'
-                        _id: projects/the-art-of-reading-in-the-middle-ages-arma
-                    -
-                        value: '128'
-                        _id: projects/saint-george-on-a-bike
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
@@ -3237,7 +3024,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: projects
@@ -3254,6 +3041,27 @@ pages:
                 selected_data: ''
                 filter_projects: ''
                 selected_projects:
+                    -
+                        value: '161'
+                        _id: projects/j-ark-european-jewish-community-archive
+                    -
+                        value: '128'
+                        _id: projects/saint-george-on-a-bike
+                    -
+                        value: '153'
+                        _id: projects/enricheuropeana
+                    -
+                        value: '158'
+                        _id: projects/europeana-translate
+                    -
+                        value: '155'
+                        _id: projects/europeana-subtitled
+                    -
+                        value: '154'
+                        _id: projects/weave-widen-european-access-to-cultural-communities-via-europeana
+                    -
+                        value: '151'
+                        _id: projects/the-art-of-reading-in-the-middle-ages-arma
                     -
                         value: '150'
                         _id: projects/europeana-sport
@@ -3321,14 +3129,14 @@ pages:
     -
         slug: other-eu-funded-projects
         datecreated: '2020-02-06 14:42:13'
-        datechanged: '2022-09-20 14:02:44'
+        datechanged: '2023-05-25 16:32:43'
         datepublish: '2020-02-06 14:42:00'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
         title: 'Other EU Funded projects'
-        intro: "<p>Projects funded\_under other EU Programmes.</p>\r\n"
+        intro: "<p>Projects funded under EU programmes that ran from 2007 until 2016</p>\r\n"
         body: null
         pagefooter: null
         pagetype: page
@@ -3370,8 +3178,6 @@ pages:
         search_keywords: null
         pages:
             - pages/generic-services-projects
-            - pages/horizon-2020
-            - pages/projects
         posts: {  }
         data: {  }
         projects: {  }
@@ -3410,7 +3216,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: projects
@@ -3699,7 +3505,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3821,7 +3627,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3866,7 +3672,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3911,7 +3717,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3956,7 +3762,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4001,7 +3807,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4046,7 +3852,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4091,7 +3897,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4229,7 +4035,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4274,7 +4080,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4322,7 +4128,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4370,7 +4176,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4454,7 +4260,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: projects
@@ -4490,7 +4296,7 @@ pages:
     -
         slug: copyright
         datecreated: '2020-02-28 16:52:22'
-        datechanged: '2022-10-21 15:53:25'
+        datechanged: '2022-11-25 16:08:41'
         datepublish: '2020-02-28 16:52:00'
         datedepublish: ''
         ownerid: 2
@@ -4543,18 +4349,18 @@ pages:
             - pages/the-data-exchange-agreement
             - pages/submitting-a-rights-statement
             - pages/europeana-licensing-framework
+            - pages/selecting-a-rights-statement
+            - pages/available-rights-statements
             - pages/copyright
             - pages/copyright
         posts:
             - posts/our-copyright-priorities-throughout-2020-2025
             - posts/wiki-loves-monuments-work-in-ireland
             - posts/transcriptions-subtitles-and-enrichments-sharing-our-copyright-approach
-            - posts/copyright-in-the-cultural-heritage-sector-outcomes-of-the-german-presidency-event
             - posts/evaluating-the-orphan-works-directive
             - posts/copyright-when-sharing-data-with-europeana-introducing-a-new-webinar-series
             - posts/orphan-works-and-uk-glams-the-case-for-a-risk-managed-approach
             - posts/a-missed-deadline-the-state-of-play-of-the-copyright-directive
-            - posts/the-europeana-public-domain-charter
         data: {  }
         projects: {  }
         events:
@@ -4611,7 +4417,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4641,7 +4447,7 @@ pages:
                 enabled: enabled
                 title: 'Training on rights statements'
                 subtitle: ''
-                anchortitle: 'Rights statements'
+                anchortitle: 'Training on rights statements'
                 templates: body
                 body: "<p>Follow the training below to gain an understanding of rights statements and how to apply them. Please follow the training in the following order:&nbsp;</p>\r\n\r\n<ol>\r\n    <li>Training on how to identify and clear copyright in collection items</li>\r\n    <li>Understanding the available rights statements used by Europeana</li>\r\n    <li>Training on how to select an accurate rights statement</li>\r\n</ol>\r\n\r\n<p>There is further information on the page to support your understanding of copyright and digital cultural heritage.&nbsp;</p>\r\n"
                 image:
@@ -4656,7 +4462,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4701,7 +4507,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4755,7 +4561,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4809,7 +4615,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4857,7 +4663,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -4905,7 +4711,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -4939,7 +4745,7 @@ pages:
                 selected_resources:
                     -
                         value: ''
-                        _id: resources/eu-datathon-1
+                        _id: resources/media-literacy-competence-framework-en
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -4965,7 +4771,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5013,7 +4819,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages

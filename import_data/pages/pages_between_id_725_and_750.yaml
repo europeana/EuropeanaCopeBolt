@@ -1,12 +1,12 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:52:04+02:00'
+    date: '2023-05-30T15:17:01+02:00'
     version: 3.7.4
     platform: mysql
 pages:
     -
         slug: media
         datecreated: '2020-02-28 16:53:50'
-        datechanged: '2021-09-10 16:13:31'
+        datechanged: '2023-01-05 11:05:08'
         datepublish: '2020-02-28 16:53:22'
         datedepublish: ''
         ownerid: 2
@@ -76,7 +76,7 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p>Partners who share their material through Europeana Collections must provide links to media resources as part of their metadata. On these pages, you can find the Europeana Media Policy, which outlines requirements for our partners, as well as case studies, further guidance, and news related to media.</p>\r\n"
+                body: "<p>Partners who share their material through the Europeana website must provide links to media resources as part of their metadata. On these pages, you can find the Europeana Media Policy, which outlines requirements for our partners, as well as case studies, further guidance, and news related to media.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -89,7 +89,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -134,7 +134,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -185,7 +185,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -236,7 +236,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: projects
@@ -357,7 +357,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -402,7 +402,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -459,7 +459,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -507,7 +507,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: projects
@@ -564,7 +564,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -609,7 +609,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -657,7 +657,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: data
@@ -693,7 +693,7 @@ pages:
     -
         slug: services-and-tools
         datecreated: '2020-02-28 17:02:38'
-        datechanged: '2022-02-15 08:41:36'
+        datechanged: '2023-03-10 13:42:58'
         datepublish: '2020-02-28 17:02:10'
         datedepublish: ''
         ownerid: 2
@@ -774,7 +774,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -819,7 +819,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -838,9 +838,6 @@ pages:
                         value: '15'
                         _id: pages/education
                     -
-                        value: '115'
-                        _id: pages/about-europeana-eu
-                    -
                         value: '533'
                         _id: pages/impact
                     -
@@ -849,9 +846,6 @@ pages:
                     -
                         value: '761'
                         _id: pages/webinars
-                    -
-                        value: '737'
-                        _id: pages/working-with-you-and-for-you-in-the-time-of-covid-19
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -888,7 +882,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -922,6 +916,9 @@ pages:
                         value: '778'
                         _id: pages/europeana-archaeology-vocabulary-services
                     -
+                        value: '835'
+                        _id: pages/europeana-subtitled-ai-pipeline-and-training-suite
+                    -
                         value: '790'
                         _id: pages/events-toolkit
                     -
@@ -951,6 +948,9 @@ pages:
                     -
                         value: '763'
                         _id: pages/storymaker
+                    -
+                        value: '834'
+                        _id: pages/subbit-platform
                     -
                         value: '809'
                         _id: pages/subtitle-a-thon-platform
@@ -1071,7 +1071,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1116,7 +1116,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1161,7 +1161,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1206,7 +1206,7 @@ pages:
                 attribution_link: ''
                 singlefile: 'Europeana_Professional/Share_your_data/Technical_requirements/EDM_profiles/Technical Metadata properties_20150217.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1251,7 +1251,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1296,7 +1296,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1341,7 +1341,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1386,7 +1386,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1416,7 +1416,7 @@ pages:
     -
         slug: gif-it-up
         datecreated: '2020-03-03 13:43:34'
-        datechanged: '2021-05-20 17:08:49'
+        datechanged: '2023-03-21 15:56:19'
         datepublish: '2020-03-03 13:42:59'
         datedepublish: ''
         ownerid: 124
@@ -1424,7 +1424,7 @@ pages:
         templatefields: {  }
         title: 'GIF IT UP'
         intro: "<p>GIF IT UP is\_an annual competition which challenges people to reuse digitised cultural heritage material to produce unique gifs and share them online.</p>\r\n"
-        body: "<p>In close collaboration with the <a href=\"https://dp.la/\">Digital Public Library of America</a>, <a href=\"https://trove.nla.gov.au/\">Trove</a> and <a href=\"https://digitalnz.org/\">DigitalNZ</a>, since 2013 Europeana has organised GIF IT UP, an annual competition which challenges people to reuse digitised cultural heritage material to produce unique gifs and share them online.\_</p>\r\n\r\n<p>Participants use the openly licensed paintings, photography and texts digitised in Europeana and the digital libraries of our collaborators to create, submit, and share striking new GIFs. The competition encourages people to explore and remix cultural heritage material while also helping audiences to learn about image licensing in an interactive and fun way.\_</p>\r\n\r\n<p>GIF IT UP is supported by <a href=\"https://giphy.com/gifitup\">GIPHY</a>, the world's largest library of animated GIFs. GIFs created through the competition are featured on the site, helping bring the collections they are based on to even wider audiences.\_</p>\r\n"
+        body: null
         pagefooter: null
         pagetype: page
         highlighttitle: null
@@ -1464,9 +1464,9 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: null
-        pages:
-            - pages/gif-it-up
-        posts: {  }
+        pages: {  }
+        posts:
+            - posts/exploring-the-highlights-of-gif-it-up-2021
         data: {  }
         projects: {  }
         events: {  }
@@ -1499,10 +1499,55 @@ pages:
         modules:
             -
                 enabled: enabled
-                title: 'Latest news'
+                title: ''
                 subtitle: ''
                 anchortitle: ''
-                templates: listingnews
+                templates: body
+                body: "<p>In close collaboration with the <a href=\"https://dp.la/\">Digital Public Library of America</a>, <a href=\"https://trove.nla.gov.au/\">Trove</a> and <a href=\"https://digitalnz.org/\">DigitalNZ</a>, since 2013 Europeana has organised GIF IT UP, an annual competition which challenges people to reuse digitised cultural heritage material to produce unique gifs and share them online.&nbsp;</p>\r\n\r\n<p>Participants use the openly licensed paintings, photography and texts digitised in Europeana and the digital libraries of our collaborators to create, submit, and share striking new GIFs. The competition encourages people to explore and remix cultural heritage material while also helping audiences to learn about image licensing in an interactive and fun way.&nbsp;</p>\r\n\r\n<p>GIF IT UP is supported by <a href=\"https://giphy.com/gifitup\">GIPHY</a>, the world's largest library of animated GIFs. GIFs created through the competition are featured on the site, helping bring the collections they are based on to even wider audiences.&nbsp;</p>\r\n\r\n<p>Explore previous editions of the competition below and check back on this page for updates on the next round!</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Workshops
+                subtitle: ''
+                anchortitle: Workshops
+                templates: listingsemistatic
                 body: ''
                 image:
                     file: ''
@@ -1516,19 +1561,91 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
-                ordering: tag
-                sources: posts
-                override_amount: 2
-                basetag: gif-it-up
+                ordering: specified
+                sources: events
+                override_amount: 3
+                basetag: ''
                 basecategory: ''
                 basemarket: ''
                 selected_pages: ''
                 filter_persons: ''
                 selected_persons: ''
-                filter_posts: News
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events:
+                    -
+                        value: '735'
+                        _id: events/gif-making-workshop
+                    -
+                        value: '682'
+                        _id: events/sporting-heritage-a-gif-making-workshop
+                    -
+                        value: '442'
+                        _id: events/our-culture-is-our-gif-t
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Previous editions'
+                subtitle: ''
+                anchortitle: 'Previous editions'
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
                 selected_posts:
+                    -
+                        value: '2559'
+                        _id: posts/discover-the-highlights-of-gif-it-up-2022
+                    -
+                        value: '2531'
+                        _id: posts/get-involved-in-gif-it-up-and-promote-your-collections-in-new-ways
+                    -
+                        value: '2406'
+                        _id: posts/exploring-the-highlights-of-gif-it-up-2021
+                    -
+                        value: '2247'
+                        _id: posts/looking-back-on-gif-it-up-2020
+                    -
+                        value: '2228'
+                        _id: posts/why-should-you-open-up-your-digital-collections-for-reuse-explained-in-gifs
+                    -
+                        value: '2217'
+                        _id: posts/gif-it-up-inspiring-students-to-engage-with-digital-cultural-heritage
                     -
                         value: '2039'
                         _id: posts/gif-it-up-returns-for-its-sixth-year-to-fill-the-internet-with-cultural-heritage
@@ -1647,7 +1764,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1692,7 +1809,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1737,7 +1854,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1847,7 +1964,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1957,7 +2074,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2067,7 +2184,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2201,7 +2318,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2246,7 +2363,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2291,7 +2408,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2336,7 +2453,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2381,7 +2498,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2508,7 +2625,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2553,7 +2670,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2607,7 +2724,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -2670,7 +2787,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -2712,14 +2829,14 @@ pages:
     -
         slug: conference
         datecreated: '2020-04-14 09:38:20'
-        datechanged: '2022-10-13 16:41:19'
+        datechanged: '2023-04-26 12:30:15'
         datepublish: '2020-04-14 09:20:34'
         datedepublish: ''
         ownerid: 112
         status: published
         templatefields: {  }
-        title: 'Europeana 2022'
-        intro: "<p>Europeana 2022 took\_place from 28 - 30 September 2022. Find out more about our annual conference.</p>\r\n"
+        title: 'EuropeanaTech 2023'
+        intro: "<p>We are delighted to announce that EuropeanaTech 2023 will be taking place in The Hague, the Netherlands, from 10 - 12 October 2023.\_</p>\r\n\r\n<p></p>\r\n"
         body: null
         pagefooter: null
         pagetype: splashpage
@@ -2728,13 +2845,13 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>Europeana 2022 took\_place from 28 - 30 September 2022. Find out more about our annual conference.</p>\r\n"
+        teaser: "<p>We are delighted to announce that EuropeanaTech 2023 will be taking place in The Hague, the Netherlands, from 10 - 12 October 2023.\_</p>\r\n"
         teaser_image:
-            file: Images/Event_images/Europeana_2022/europeana_2022_teaser_image_reveal.png
-            title: 'Europeana 2022 Making Digital Culture Count 28 - 30 September Hybrid'
-        teaser_attribution_title: 'Europeana 2022'
-        teaser_attribution_creator: null
-        teaser_attribution_date: '2022'
+            file: Images/Event_images/europeana_2023/europeanatech_2023_save_the_date_teaser.jpg
+            title: 'EuropeanaTech 2023 Save the date'
+        teaser_attribution_title: 'EuropeanaTech 2023 collage. This collage is composed of three images. Check our event''s page for detailed attribution'
+        teaser_attribution_creator: 'Ana Moreno'
+        teaser_attribution_date: '2023'
         teaser_attribution_holder: 'Europeana Foundation'
         teaser_attribution_country: Netherlands
         teaser_attribution_license: CC-BY-SA
@@ -2759,7 +2876,7 @@ pages:
         contact_name: null
         contact_email: null
         contact_website: null
-        search_keywords: conference
+        search_keywords: 'conference, europeanatech'
         pages: {  }
         posts:
             - posts/europeana-2020-we-re-looking-for-your-contribution
@@ -2769,16 +2886,16 @@ pages:
             - posts/convening-for-change-the-impact-of-our-annual-conferences
             - posts/submit-your-proposal-for-europeana-2021
             - posts/announcing-our-programme-for-europeana-2021
-            - posts/looking-back-on-europeana-2021
             - posts/submit-your-proposal-for-europeana-2022
             - posts/going-hybrid-bringing-events-in-the-cultural-heritage-sector-online-and-on-site
             - posts/how-to-write-appealing-art-history-stories-insights-from-dailyart-magazine
             - posts/apply-for-a-europeana-esach-bursary-for-europeana-2022
             - posts/secure-your-ticket-for-europeana-2022-making-digital-culture-count
-            - posts/europeana-wins-tender-to-deploy-the-common-european-data-space-for-cultural-heritage
             - posts/opening-up-new-collaborations-between-cultural-heritage-and-tourism
             - posts/how-to-build-your-programme-for-europeana-2022
             - posts/announcing-our-programme-for-europeana-2022
+            - posts/europeana-wins-tender-to-deploy-the-common-european-data-space-for-cultural-heritage
+            - posts/looking-back-on-europeana-2021
         data: {  }
         projects: {  }
         events: {  }
@@ -2819,7 +2936,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2867,7 +2984,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2891,8 +3008,8 @@ pages:
                         _id: events/europeana-conference-2020
                 selected_resources:
                     -
-                        value: '1005'
-                        _id: resources/europeana-2022
+                        value: '1139'
+                        _id: resources/europeanatech-2023-save-the-date
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -2901,11 +3018,11 @@ pages:
                 override_css_class: no-overlay
             -
                 enabled: enabled
-                title: 'Europeana 2022 - making digital culture count'
+                title: 'EuropeanaTech conference 2023'
                 subtitle: ''
-                anchortitle: 'About Europeana 2022'
+                anchortitle: 'About Europeana 2023'
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /><meta charset=\"utf-8\" />Europeana 2022 - making digital culture count took&nbsp;place from 28 - 30 September 2022. As&nbsp;a hybrid conference, it&nbsp;welcomed cultural heritage professionals from around the world both on-site, at&nbsp;the KB, National Library of the Netherlands in The Hague, and digitally. The conference&nbsp;explored how we can collaboratively build a common data space for cultural heritage and raised voices from across the sector to empower digital transformation and explore the role digital cultural heritage plays in today’s and tomorrow’s world.&nbsp;</p>\r\n\r\n<p><strong>Day one</strong>&nbsp;saw&nbsp;us explore how we can build the<strong>&nbsp;data space for cultural heritage</strong>. On&nbsp;<strong>day two</strong>&nbsp;participants found out how&nbsp;<strong>storytelling</strong>, cultural heritage, and digital come together to connect institutions with audiences and with the trends, hot topics and major issues of today. On&nbsp;<strong>Day three</strong>&nbsp;we heard from&nbsp;<strong>EuropeanaTech</strong>&nbsp;on how technology paves the way to digital inclusion and cultural heritage preservation.</p>\r\n\r\n<p>Explore the full programme through the link below.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">We are delighted to announce that EuropeanaTech 2023 will be taking place in The Hague, the Netherlands, from 10 - 12 October 2023.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">The conference is for all tech-minded professionals, developers, researchers and students working in and around digital cultural heritage across the globe. It will be a fantastic opportunity to meet with, learn from and work with your peers, as well as to become part of a community dedicated to Tech in culture, and explore the challenges and opportunities that topics like AI and 3D bring to the sector.&nbsp;</p>\r\n\r\n<p>EuropeanaTech 2023&nbsp; is organised in collaboration with the EuropeanaTech community, the Europeana Network Association’s community of experts from the R&amp;D sector. It will be the fourth EuropeanaTech conference, reviving and continuing the series after successful previous editions in Vienna, Paris and Rotterdam. It will be a predominantly onsite event, with some options for online participation. <strong>The call for proposals is now open - find out more below.</strong></p>\r\n\r\n<p><meta charset=\"utf-8\" />To be the first to hear about ticket sales and more, register your interest through the link below.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -2918,7 +3035,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2946,6 +3063,255 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: 'Register your interest'
+                templates: calltoactioninline
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1138'
+                        _id: resources/europeanatech-2023-register-your-interest
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Call for proposals'
+                subtitle: ''
+                anchortitle: 'Call for proposals'
+                templates: listing
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '768'
+                        _id: pages/conference-call-for-proposals
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Sponsorship
+                subtitle: ''
+                anchortitle: Sponsorship
+                templates: teaser
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '840'
+                        _id: pages/conference-sponsorship
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Our previous conferences'
+                subtitle: ''
+                anchortitle: 'Our previous conferences'
+                templates: listingsemistatic
+                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2543'
+                        _id: posts/relive-europeana-2022-recorded-sessions-now-available
+                    -
+                        value: '2403'
+                        _id: posts/looking-back-on-europeana-2021
+                    -
+                        value: '2241'
+                        _id: posts/catch-up-with-europeana-2020
+                    -
+                        value: '2078'
+                        _id: posts/europeana-2019-relive-it
+                    -
+                        value: '1807'
+                        _id: posts/europeanatech-2018-gorgeous-data-glorious-technology-in-review
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Image attribution'
+                subtitle: ''
+                anchortitle: 'Image attribution'
+                templates: body
+                body: "<p>'EuropeanaTech 2023 collage by Ana Moreno, Europeana Foundation, licensed under CC BY-SA. This collage is composed of three images - full credits:</p>\r\n\r\n<ul>\r\n    <li>\r\n    <p><a href=\"https://www.flickr.com/photos/johnkarakatsanis/4942211202/in/photolist-8wJ8cY-9gJGCc-dvsGZg-w1hRD-22kt62A-U1LCJ7-pDNPcn-S2otdm-9gKik2-9m12n-2tq6g-CKbRfp-SApdZL-39zFYR-DvtRy-8VqBDA-6CA2h-bvBJxo-6cg4Ay-N8RBQY-6YTSQs-dKY811-mZzTE-4s2hJ2-22kt4J5-2EdZyW-8SM81d-4s6jKb-CKbQXa-22kt4fu-832qc6-E6cWv-9mpqQm-2c7vprV-a3Lz5s-pdMBf-zk8im-5RtcSR-28258nS-MTmwbx-8CXpM-Z86mDs-2MqDNb-nXpmtp-9CfCvG-gzNsj-Vt5HPN-87baB6-XYGfUi-vaPwRn\">Asus G73J Gaming Laptop,&nbsp;John Karakatsanis, 2010, CC-BY-SA 2.0</a></p>\r\n    </li>\r\n    <li>\r\n    <p><a href=\"https://www.europeana.eu/item/9200579/kewe74ch\">3D modelling of proteins on computer by Mol. Biophysics, Oxford Univ. - Wellcome Collection, United Kingdom - CC BY.</a></p>\r\n    </li>\r\n    <li><a href=\"http://\_https://commons.wikimedia.org/wiki/File:Rosalba_Carriera_-_Self-Portrait_Holding_a_Portrait_of_Her_Sister_-_WGA4502.jpg#mw-jump-to-license\">Rosalba Carriera - Self-Portrait Holding a Portrait of Her Sister,&nbsp;Rosalba Carriera, 1709,&nbsp;Uffizi Gallery, Public Domain &nbsp;</a></li>\r\n</ul>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: disabled
                 title: Programme
                 subtitle: ''
                 anchortitle: Programme
@@ -2963,7 +3329,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2978,7 +3344,7 @@ pages:
                 selected_posts:
                     -
                         value: ''
-                        _id: posts/team-using-europeana-data-win-prize-at-the-eu-datathon-2022
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -2996,7 +3362,7 @@ pages:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: Recordings
                 subtitle: ''
                 anchortitle: Recordings
@@ -3014,7 +3380,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3044,52 +3410,7 @@ pages:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: body
-                body: "<p></p>\r\n\r\n<center>\r\n<p><iframe allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"360\" src=\"https://player.vimeo.com/video/755526525?h=bf18eade2b&amp;title=0&amp;byline=0&amp;portrait=0\" width=\"640\"></iframe></p>\r\n\r\n<center>\r\n<p><a href=\"https://vimeo.com/755526525\">Europeana 2022 - making digital culture count</a> from <a href=\"https://vimeo.com/europeana\">Europeana</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p>\r\n</center>\r\n</center>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
+                enabled: disabled
                 title: ''
                 subtitle: ''
                 anchortitle: ''
@@ -3107,7 +3428,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3137,7 +3458,7 @@ pages:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: Keynotes
                 subtitle: 'Explore the keynotes and speakers at Europeana 2022 below'
                 anchortitle: 'Keynotes and speakers'
@@ -3155,7 +3476,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -3194,187 +3515,7 @@ pages:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: enabled
-                title: ''
-                subtitle: 'Rehana Schwinninger-Ladak'
-                anchortitle: ''
-                templates: body
-                body: "<p></p>\r\n\r\n<center><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/0FVqA6FJeDI\" title=\"YouTube video player\" width=\"560\"></iframe></center>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: 'Harry Verwayen'
-                anchortitle: ''
-                templates: body
-                body: "<p></p>\r\n\r\n<center>\r\n<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/Ezm6BF93rqI\" title=\"YouTube video player\" width=\"560\"></iframe></p>\r\n</center>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: 'Olia Hercules'
-                anchortitle: ''
-                templates: body
-                body: "<p></p>\r\n\r\n<center>\r\n<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/1fOxfbiWMw4\" title=\"YouTube video player\" width=\"560\"></iframe></p>\r\n</center>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: 'Caitlin Southwick'
-                anchortitle: ''
-                templates: body
-                body: "<p></p>\r\n\r\n<center>\r\n<p><iframe allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"315\" src=\"https://www.youtube.com/embed/yX-3rlQiKQk\" title=\"YouTube video player\" width=\"560\"></iframe></p>\r\n</center>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
+                enabled: disabled
                 title: 'Hosts and moderators'
                 subtitle: ''
                 anchortitle: ''
@@ -3392,7 +3533,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -3428,7 +3569,7 @@ pages:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: Speakers
                 subtitle: ''
                 anchortitle: ''
@@ -3446,7 +3587,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -3720,51 +3861,6 @@ pages:
                 override_css_class: ''
             -
                 enabled: disabled
-                title: 'Look back at Europeana 2021'
-                subtitle: ''
-                anchortitle: 'Look back at Europeana 2021'
-                templates: body
-                body: "<p>Europeana 2021 took place from 10 -12 November 2021. It aimed to raise voices from across the sector to empower digital transformation and explore the role digital cultural heritage plays in supporting a sustainable, responsible and inspiring cultural heritage sector for today and tomorrow. Explore the conference - and get excited about Europeana 2022! - through the recordings of the keynotes below.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: disabled
                 title: ''
                 subtitle: Keynotes
                 anchortitle: ''
@@ -3782,7 +3878,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3839,7 +3935,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3902,7 +3998,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -4129,7 +4225,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4177,7 +4273,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4225,7 +4321,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4273,7 +4369,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4318,7 +4414,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4363,7 +4459,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4417,7 +4513,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4465,7 +4561,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4519,7 +4615,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4564,7 +4660,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4698,7 +4794,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4743,7 +4839,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4857,7 +4953,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4982,7 +5078,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5027,7 +5123,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5132,7 +5228,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5180,7 +5276,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5308,7 +5404,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5353,7 +5449,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5434,7 +5530,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5512,8 +5608,7 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: null
-        pages:
-            - pages/digital-europe-programme-2021-2022-data-for-cultural-heritage-faqs
+        pages: {  }
         posts:
             - posts/apply-now-for-eu-grants-for-data-space-for-cultural-heritage-projects
         data: {  }
@@ -5550,7 +5645,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5595,7 +5690,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5640,7 +5735,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5685,7 +5780,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5715,7 +5810,7 @@ pages:
     -
         slug: research
         datecreated: '2020-04-22 10:05:44'
-        datechanged: '2022-09-01 10:09:32'
+        datechanged: '2023-05-04 15:02:03'
         datepublish: '2020-04-22 09:35:23'
         datedepublish: ''
         ownerid: 112
@@ -5766,9 +5861,8 @@ pages:
         contact_website: null
         search_keywords: 'Europeana research, research, research grants, research webinars, higher education, university, professors, students'
         pages:
-            - pages/europeana-reuse-be-inspired
             - pages/research-community-video-series-in-search-of-the-drowned-testimonies-and-testimonial-fragments-of-the-holocaust
-            - pages/research
+            - pages/europeana-reuse-be-inspired
         posts:
             - posts/bringing-the-past-back-to-life-with-the-estense-digital-library
             - posts/exploring-new-resources-in-clarin-s-virtual-language-observatory
@@ -5782,6 +5876,7 @@ pages:
         events:
             - events/masterclasses-for-open-digital-cultural-heritage
             - events/anthropocenic-objects-perspectives-for-the-future-of-conservational-institutions-and-collection-practices
+            - events/the-potential-contribution-of-the-european-association-of-professors-emeriti-to-education
         persons: {  }
         communities:
             -
@@ -5813,9 +5908,9 @@ pages:
                 enabled: enabled
                 title: Research
                 subtitle: ''
-                anchortitle: ''
+                anchortitle: About
                 templates: body
-                body: "<p><meta charset=\"utf-8\" />The digital transformation of Europe’s cultural heritage institutions makes varied and valuable resources available to researchers, professors and university students. We work to connect academia with cultural heritage institutions, and support heritage professionals in working with researchers. We encourage the development of skills to embrace digital change in research and new ways of teaching and learning at university, and nurture forms of community engagement involving non-professional researchers. Through this page, explore resources to support these activities and find out more about Europeana Research. For any enquiries, contact <a href=\"https://pro.europeana.eu/person/alba-irollo\">Alba Irollo</a>.&nbsp;</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">The digital transformation of Europe’s cultural heritage institutions makes varied and valuable resources available to researchers, professors and university students. We connect academia with cultural heritage institutions, and support heritage professionals in working with researchers. We encourage the development of skills to embrace digital change in research and new ways of teaching and learning at university. We nurture forms of community engagement involving non-professional researchers.&nbsp;</p>\r\n\r\n<p>Through this page, explore resources to support these activities and find out more about how you can collaborate with Europeana Research. For any enquiries, contact <a href=\"https://pro.europeana.eu/person/alba-irollo\">Alba Irollo</a>.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5828,7 +5923,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5856,9 +5951,9 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: Activities
+                title: 'Tools and knowledge'
+                subtitle: 'Access the tools, documentation and case studies we have developed to support researchers and academics who work with digital cultural heritage.'
+                anchortitle: 'Tools and knowledge'
                 templates: listingsemistatic
                 body: ''
                 image:
@@ -5873,7 +5968,109 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '27'
+                        _id: pages/apis
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1125'
+                        _id: resources/apis
+                    -
+                        value: '686'
+                        _id: resources/research-requirements-task-force
+                    -
+                        value: '833'
+                        _id: resources/research-and-digital-cultural-heritage-new-impact-horizons
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Activities
+                subtitle: 'Datasets on other platforms'
+                anchortitle: Activities
+                templates: body
+                body: "<p>In close collaboration with the Europeana Foundation’s technical colleagues, Europeana Research works to make our data available across different platforms with the aim to bring them closer to academia and research. Explore some examples below.</p>\r\n\r\n<p><meta charset=\"utf-8\" /><strong>CLARIN Virtual Language Observatory</strong></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" />Through the Virtual Language Observatory, researchers can explore the language resources made available within the CLARIN research infrastructure and reuse them in combination with a variety of tools. It aims to provide an easy-to-use interface which facilitates a uniform search and discovery process for many resources. Thanks to CLARIN’s long standing contribution to the Europeana’s infrastructure, users can find a selection of Europeana datasets on the Virtual Language Observatory which are relevant to research based on language resources. <strong><a href=\"https://vlo.clarin.eu/?q=_oaiEndpointURI:https://europeana-oai.clarin.eu/provider\_\">Discover the dataset.</a></strong></p>\r\n\r\n<p dir=\"ltr\"><strong>SSHOC</strong></p>\r\n\r\n<p dir=\"ltr\">The Social Sciences &amp; Humanities Open Marketplace is a discovery portal which pools and contextualises resources for Social Sciences and Humanities research communities: tools, services, training materials, datasets, publications and workflows. The Europeana dataset is discoverable via the SSH Open Marketplace. <strong><a href=\"https://marketplace.sshopencloud.eu/dataset/kubP4q\_\">Discover the dataset</a></strong>.</p>\r\n\r\n<p dir=\"ltr\"><strong>European Open Science Cloud</strong></p>\r\n\r\n<p dir=\"ltr\">The European Open Science Cloud, or EOSC, is an environment for hosting and processing research data to support EU science. Europeana’s APIs are accessible through EOSC’s <a href=\"https://marketplace.eosc-portal.eu/\">Portal Catalogue and Marketplace</a>, an integrated platform that allows access to resources for various research domains along with integrated data analytics tools. <strong><a href=\"https://marketplace.eosc-portal.eu/services/europeana-apis\_\">Discover the dataset</a>.</strong></p>\r\n\r\n<p dir=\"ltr\"><strong>Data.europa.eu</strong></p>\r\n\r\n<p dir=\"ltr\">Data.europa.eu is the official portal for European data, managed by the Publications Office of the EU. It aims to collect the metadata of public sector information available on public data portals across Europe. Europeana has published its metadata and APIs on data.europa.eu. <strong><a href=\"https://data.europa.eu/data/datasets/europeana-aggregated-dataset\_\">Discover the dataset</a>.&nbsp;</strong></p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: 'Research grants programme'
+                anchortitle: ''
+                templates: listing
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -5885,12 +6082,69 @@ pages:
                     -
                         value: '487'
                         _id: pages/grants-programme
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Partnerships and collaborations'
+                subtitle: 'To build capacity across the sector, we build partnerships and collaborate closely with established research infrastructures and take part in relevant projects. Explore them below.'
+                anchortitle: Partners
+                templates: listingthumbnailsthree
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
                     -
-                        value: '624'
-                        _id: pages/europeana-research
+                        value: '779'
+                        _id: pages/dariah
                     -
-                        value: '530'
-                        _id: pages/research-advisory-board
+                        value: '772'
+                        _id: pages/clarin
+                    -
+                        value: '821'
+                        _id: pages/europeana-research-collaborations-university-of-warsaw-faculty-of-history
+                    -
+                        value: '823'
+                        _id: pages/europeana-research-collaborations-the-estonian-war-museum-general-laidoner-museum
+                    -
+                        value: '820'
+                        _id: pages/europeana-research-collaborations-museum-fuer-naturkunde-berlin
+                    -
+                        value: '824'
+                        _id: pages/europeana-research-collaborations-the-national-museum-of-world-culture-sweden
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -5913,8 +6167,8 @@ pages:
                 title: ''
                 subtitle: ''
                 anchortitle: ''
-                templates: breaker
-                body: ''
+                templates: body
+                body: "<p></p>\r\n\r\n<center>\r\n<p><iframe height=\"480\" src=\"https://www.google.com/maps/d/embed?mid=1xIyT4jI6ox-X0n5l70a3EdB3fA9I4RU&amp;ehbc=2E312F\" width=\"640\"></iframe></p>\r\n</center>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -5927,10 +6181,10 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
-                ordering: specified
-                sources: resources
+                ordering: latest
+                sources: posts
                 override_amount: 3
                 basetag: ''
                 basecategory: ''
@@ -5945,14 +6199,53 @@ pages:
                 filter_projects: ''
                 selected_projects: ''
                 selected_jobs: ''
-                selected_events:
-                    -
-                        value: '520'
-                        _id: events/research-and-digital-cultural-heritage-new-impact-horizons
-                selected_resources:
-                    -
-                        value: '833'
-                        _id: resources/research-and-digital-cultural-heritage-new-impact-horizons
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p></p>\r\n\r\n<center>\r\n<p><iframe height=\"506\" src=\"https://www.google.com/maps/d/embed?mid=1xIyT4jI6ox-X0n5l70a3EdB3fA9I4RU&amp;ehbc=2E312F\" width=\"100%\"></iframe></p>\r\n</center>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -5961,6 +6254,195 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
+                title: Board
+                subtitle: 'Meet the experts in digital humanities who help us grow and strengthen our research services.'
+                anchortitle: 'Network and communities'
+                templates: teaser
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '530'
+                        _id: pages/research-advisory-board
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Community
+                subtitle: 'Join our dedicated community for professionals interested in cultural heritage as a subject and a source for research'
+                anchortitle: ''
+                templates: teaser
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '624'
+                        _id: pages/europeana-research
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects:
+                    -
+                        value: '132'
+                        _id: projects/indices
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Upcoming events'
+                subtitle: 'Join our events, and those happening across the sector for researchers and academics in cultural heritage to develop new knowledge and collaborate.'
+                anchortitle: Events
+                templates: listingnews
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: calendar_upcoming
+                sources: events
+                override_amount: 2
+                basetag: academic-research
+                basecategory: ''
+                basemarket: 'Academic Research'
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: events
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Latest news'
+                subtitle: 'Keep up to date with the latest news, policies and good practice around for researchers and academics in cultural heritage.'
+                anchortitle: News
+                templates: listingnews
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: market
+                sources: posts
+                override_amount: 2
+                basetag: ''
+                basecategory: ''
+                basemarket: 'Academic research'
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: News
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: news
+                override_css_class: ''
+            -
+                enabled: disabled
                 title: Webinars
                 subtitle: ''
                 anchortitle: Webinars
@@ -5978,7 +6460,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -6024,243 +6506,6 @@ pages:
                 modulemorelabel: ''
                 modulemoretext: ''
                 override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: APIs
-                templates: breaker
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: pages
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages:
-                    -
-                        value: '27'
-                        _id: pages/apis
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: Partnerships
-                subtitle: ''
-                anchortitle: Partnerships
-                templates: listingsemistatic
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: pages
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages:
-                    -
-                        value: '779'
-                        _id: pages/dariah
-                    -
-                        value: '772'
-                        _id: pages/clarin
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: breaker
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: projects
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects:
-                    -
-                        value: '132'
-                        _id: projects/indices
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: 'Upcoming events'
-                subtitle: ''
-                anchortitle: Events
-                templates: listingnews
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: calendar_upcoming
-                sources: events
-                override_amount: 2
-                basetag: academic-research
-                basecategory: ''
-                basemarket: 'Academic Research'
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: events
-                override_css_class: ''
-            -
-                enabled: enabled
-                title: 'Latest news'
-                subtitle: ''
-                anchortitle: News
-                templates: listingnews
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: market
-                sources: posts
-                override_amount: 2
-                basetag: ''
-                basecategory: ''
-                basemarket: 'Academic research'
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: News
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: news
                 override_css_class: ''
         _id: pages/research
     -
@@ -6367,7 +6612,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -6415,7 +6660,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6460,7 +6705,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6505,7 +6750,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -6553,7 +6798,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6598,7 +6843,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6643,7 +6888,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -6697,7 +6942,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -6742,7 +6987,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6861,7 +7106,7 @@ pages:
                 attribution_link: ''
                 singlefile: 'Europeana_Professional/Publications/UsersGuide-Power BI Dashboards.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6906,7 +7151,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6951,7 +7196,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6996,7 +7241,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7041,7 +7286,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7086,7 +7331,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7205,7 +7450,7 @@ pages:
                 attribution_link: ''
                 singlefile: 'Europeana_Professional/Publications/UsersGuide-Power BI Dashboards.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7250,7 +7495,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7295,7 +7540,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7340,7 +7585,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7385,7 +7630,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7430,7 +7675,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7475,7 +7720,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7585,7 +7830,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -7730,7 +7975,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7775,7 +8020,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7820,7 +8065,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7865,7 +8110,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7910,7 +8155,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7955,7 +8200,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -8076,7 +8321,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -8121,7 +8366,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -8169,7 +8414,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -8223,7 +8468,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -8271,7 +8516,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -8322,7 +8567,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -8373,7 +8618,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts

@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T09:36:58+01:00'
+    date: '2023-05-30T16:29:13+02:00'
     version: 3.7.4
     platform: mysql
 posts:
@@ -869,7 +869,7 @@ posts:
     -
         slug: final-recommendations-under-romanian-presidency
         datecreated: '2019-10-28 07:42:11'
-        datechanged: '2021-08-12 14:49:30'
+        datechanged: '2023-02-16 16:24:53'
         datepublish: '2019-10-01 07:05:00'
         datedepublish: ''
         ownerid: 54
@@ -885,7 +885,7 @@ posts:
                 value: '2389'
                 _id: persons/julia-fallon
         isbn: null
-        teaser: null
+        teaser: "<p>During the Romanian Presidency, Europeana held a meeting with high-level policymakers to discuss the challenges and opportunities of preparing a common European approach for Members States to locally support the digital transformation of cultural heritage.</p>\r\n"
         teaser_image:
             file: 'Images/Event_images/Abdel_Badana_-_Teatrul_Naţional_din_Iaşi,_inaugurat_la_1_Decembrie_1896.jpg'
         teaser_attribution_title: 'Teatrul Naţional din Iaşi'
@@ -1454,7 +1454,7 @@ posts:
     -
         slug: europe-at-work-teaching-about-working-women
         datecreated: '2019-11-01 09:59:23'
-        datechanged: '2021-02-25 08:45:31'
+        datechanged: '2023-04-11 13:56:02'
         datepublish: '2019-11-07 09:30:00'
         datedepublish: ''
         ownerid: 124
@@ -1463,7 +1463,7 @@ posts:
         title: 'Europe at Work: Teaching about working women'
         posttype: News
         featured: false
-        intro: "<p><a href=\"https://pro.europeana.eu/page/europe-at-work\">Europe at Work</a> brings stories of our personal working lives together with archive material on industrial and labour-related heritage. Looking at our working lives, we can show students and learners that the working world we inhabit today is rich and varied, and tells the story of technological and societal changes over time.</p>\r\n\r\n<p>In this series, we look at how <a href=\"https://www.euroclio.eu/\">EUROCLIO </a>is using industrial heritage material to create learning resources for educators on their <a href=\"https://historiana.eu/#/\">Historiana</a> portal. This article explores their <a href=\"https://historiana.eu/#/historical-content/source-collections/women-working\">Women Working source collection</a>, which encourages students to consider how the availability of source material from a certain period influences and shapes our perspective of that time.\_\_</p>\r\n\r\n<p></p>\r\n"
+        intro: "<p>As part of Europe at Work we look at how EUROCLIO is using industrial heritage material to create learning resources for educators on their Historiana portal. This post explores their Women Working source collection, which encourages students to consider how the availability of source material from a certain period influences and shapes our perspective of that time.</p>\r\n"
         body: null
         author:
             -
@@ -1505,7 +1505,7 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/europe-at-work-teaching-about-working-women
+            - posts/join-us-in-celebrating-women-s-history-month-2022
         data: {  }
         projects: {  }
         events: {  }
@@ -3074,7 +3074,7 @@ posts:
                 selected_posts:
                     -
                         value: ''
-                        _id: posts/team-using-europeana-data-win-prize-at-the-eu-datathon-2022
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''

@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T09:47:36+01:00'
+    date: '2023-05-30T16:35:52+02:00'
     version: 3.7.4
     platform: mysql
 posts:
@@ -770,7 +770,7 @@ posts:
                 selected_pages:
                     -
                         value: ''
-                        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
+                        _id: pages/tools
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -976,7 +976,6 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/viziel-learning-more-than-you-see-with-europeana-content
             - posts/viziel-learning-more-than-you-see-with-europeana-content
             - posts/viziel-learning-more-than-you-see-with-europeana-content
         data: {  }
@@ -1662,7 +1661,7 @@ posts:
     -
         slug: pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-cynthia-liem
         datecreated: '2021-04-12 10:14:09'
-        datechanged: '2021-12-30 23:28:57'
+        datechanged: '2023-04-11 13:56:43'
         datepublish: '2021-04-14 09:13:00'
         datedepublish: ''
         ownerid: 124
@@ -1716,9 +1715,9 @@ posts:
         pages: {  }
         posts:
             - posts/europeana-in-conversation-with-kim-mckay-from-the-australian-museum
-            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-marieke-van-erp
             - posts/exploring-ai-in-the-cultural-heritage-sector
-            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-cynthia-liem
+            - posts/marking-women-s-history-month-with-the-women-s-museum-of-norway
+            - posts/join-us-in-celebrating-women-s-history-month-2022
             - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-cynthia-liem
         data: {  }
         projects: {  }
@@ -1746,6 +1745,9 @@ posts:
             -
                 slug: ai-theme
                 name: ai-theme
+            -
+                slug: womens-history-month
+                name: womens-history-month
         modules:
             -
                 enabled: enabled
@@ -2901,7 +2903,6 @@ posts:
         posts:
             - posts/europeana-in-conversation-with-kim-mckay-from-the-australian-museum
             - posts/europeana-in-conversation-with-kim-mckay-from-the-australian-museum
-            - posts/europeana-in-conversation-with-kim-mckay-from-the-australian-museum
         data: {  }
         projects: {  }
         events: {  }
@@ -3856,7 +3857,7 @@ posts:
                 selected_events:
                     -
                         value: ''
-                        _id: events/memex-memories-and-experiences-for-inclusive-digital-storytelling
+                        _id: events/archiefdag-2023-de-bias-workshop
                 selected_resources:
                     -
                         value: '843'
@@ -4313,7 +4314,6 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/fostering-reuse-of-digital-cultural-heritage-with-v4design
             - posts/fostering-reuse-of-digital-cultural-heritage-with-v4design
         data: {  }
         projects:
@@ -5069,7 +5069,7 @@ posts:
                 selected_events:
                     -
                         value: ''
-                        _id: events/memex-memories-and-experiences-for-inclusive-digital-storytelling
+                        _id: events/archiefdag-2023-de-bias-workshop
                 selected_resources:
                     -
                         value: '843'
@@ -6893,7 +6893,7 @@ posts:
     -
         slug: seven-tips-for-digital-storytelling-with-cultural-heritage
         datecreated: '2021-05-28 11:26:34'
-        datechanged: '2021-05-31 09:18:23'
+        datechanged: '2022-11-01 10:21:59'
         datepublish: '2021-05-31 11:25:00'
         datedepublish: ''
         ownerid: 124
@@ -6946,7 +6946,7 @@ posts:
             - posts/how-we-ran-a-task-force-entirely-virtually-during-a-pandemic
             - posts/explore-fantastic-examples-of-storytelling-with-digital-culture
             - posts/storytelling-with-digital-culture-is-booming-find-out-why
-            - posts/seven-tips-for-digital-storytelling-with-cultural-heritage
+            - posts/ifla-manual-brings-together-storytelling-impact-and-advocacy-for-sustainable-development-goals
             - posts/seven-tips-for-digital-storytelling-with-cultural-heritage
         data: {  }
         projects: {  }
@@ -7067,7 +7067,7 @@ posts:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<ol>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Be personal</strong>: Personal stories can bring the past to life and help people relate to history on an emotional level. Consider the human significance of cultural artefacts and sites. Help people imagine themselves in someone else’s shoes. We like:&nbsp; <a href=\"https://yourstory.tenement.org/\">Your Story, Our Story</a> (Tenement Museum, New York), <a href=\"https://wellcomecollection.org/stories\">Wellcome Stories</a> (Wellcome Collection, London) and <a href=\"https://izi.travel/it/b0b9-le-storie-del-museo-archeologico-nazionale-delle-marche/it#a7d2-brocca-con-bocca-obliqua-da-conelle-di-arcevia/it\">The stories</a> of the National Archaeological Museum of the Marche.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Be informal but expert</strong>: People want to learn from experts, but it shouldn’t be a chore. As long as the content is well-informed, the format and tone of your story can be experimental and playful. Finding the right balance is important. We like: <a href=\"https://twitter.com/themerl/status/1099661508852752390?lang=en\">‘There is a bat in the library’</a> (Museum of English Rural Life, Reading) and <a href=\"https://www.youtube.com/watch?v=WZskjLq040I&amp;t=1s\">The Royal Game of Ur</a> (British Museum, London).</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Tell those hidden stories</strong>: So much cultural history remains untold. When choosing subjects, consider who is missing from the picture, and try to give a voice to a range of people and communities.&nbsp; We like <a href=\"https://peoplenotproperty.hudsonvalley.org/\">People Not Property</a> (Historic Hudson Valley, USA), <a href=\"https://www.arabnews.com/JewsOfLebanon\">Minority Report: The Jews of Lebanon</a> (Arab News) and <a href=\"https://www.rgs.org/about/our-collections/online-exhibitions/hidden-histories-of-exploration/\">Hidden Histories of Exploration</a> (Royal Geographical Society, London).</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Illustrate your points</strong>: A key strength of the cultural heritage sector is its wealth of visual imagery. Long written or spoken narratives can be hard to engage with. Breaking up the story with visual (or audio) material, and building in time to reflect on it, can enrich the experience. We like <a href=\"https://www.museodelprado.es/actualidad/multimedia/las-hilanderas-una-historia-en-imagenes/39def9b0-fa00-4121-ad78-1deacb907f3b\">Las hilanderas. Una historia en imágenes</a> (Museo del Prado, Madrid), <a href=\"https://www.metmuseum.org/art/online-features/metkids/\">MetKids</a> and <a href=\"https://buntegoetter.liebieghaus.de/en/\">Gods In Color</a> (Liebieghaus, Frankfurt).</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Signpost your journey</strong>:The best stories take people on a clear journey. In digital storytelling - particularly on complex or experimental platforms - clear narrative structure is essential. Keep the navigation simple, so the visitor always knows where they are. We like <a href=\"https://thingsthattalk.net/\">Things that Talk</a> (Things That Talk Foundation) and <a href=\"https://www.nytimes.com/interactive/2020/08/07/arts/design/hokusai-fuji.html\">A Picture of Change for a World in Constant Motion</a> (New York Times).</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Be specific</strong>: Specific topics can still engage a broad audience. Start from a particular detail that lies at the heart of your story, then move to the bigger picture. Personal stories and well-chosen images can help keep your focus. We like <a href=\"https://www.artuk.org/discover/stories\">Artwork in Focus</a> (Art UK) and <a href=\"https://www.louvre.fr/en/oal\">A Closer Look</a> (Louvre, Paris).</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Be evocative</strong>: Cultural history stories need to be based in fact, but the facts don’t need to be dry. Don’t be afraid to use descriptive and evocative imagery and approaches and invite the viewer to place themselves within the scene. We like <a href=\"https://twitter.com/EghamMuseum/status/1311453097462575104\">You Are Flora Seville</a> (Egham Museum), <a href=\"https://www.bl.uk/events/faint-signals\">Faint Signals</a> (British Library, London) and <a href=\"http://80s.nyc/#show/40.6943/-73.9851\">80s.NYC</a> (New York City Municipal Archives’ Department of Finance Collection).</p>\r\n    </li>\r\n</ol>\r\n\r\n<p dir=\"ltr\">You can view these tips as an <a href=\"https://medium.com/digital-storytelling-festival/learn-to-create-better-stories-with-our-tips-a37ca83b2a84\">infographic</a>, or as a <a href=\"https://www.youtube.com/watch?v=jbSB2H59GYo&amp;t=32s\">recorded presentation</a> and <a href=\"https://docs.google.com/presentation/d/1-lZW3h3otGKGjbTeJLUeQf3xIjSKN8u2cVDqkxg0gnA/edit?usp=sharing\">slidedeck</a>, or find an <a href=\"https://medium.com/digital-storytelling-festival/7-digital-storytelling-tips-for-the-cultural-heritage-sector-8e701a439dd6\">extended version of this article on Medium</a>.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">And if you would like to find out more about the work of the storytelling Task Force, don’t miss our webinar on 9 June!</p>\r\n"
+                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<ol>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Be personal</strong>: Personal stories can bring the past to life and help people relate to history on an emotional level. Consider the human significance of cultural artefacts and sites. Help people imagine themselves in someone else’s shoes. We like:&nbsp; <a href=\"https://yourstory.tenement.org/\">Your Story, Our Story</a> (Tenement Museum, New York), <a href=\"https://wellcomecollection.org/stories\">Wellcome Stories</a> (Wellcome Collection, London) and <a href=\"https://izi.travel/it/b0b9-le-storie-del-museo-archeologico-nazionale-delle-marche/it#a7d2-brocca-con-bocca-obliqua-da-conelle-di-arcevia/it\">The stories</a> of the National Archaeological Museum of the Marche.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Be informal but expert</strong>: People want to learn from experts, but it shouldn’t be a chore. As long as the content is well-informed, the format and tone of your story can be experimental and playful. Finding the right balance is important. We like: <a href=\"https://twitter.com/themerl/status/1099661508852752390?lang=en\">‘There is a bat in the library’</a> (Museum of English Rural Life, Reading) and <a href=\"https://www.youtube.com/watch?v=WZskjLq040I&amp;t=1s\">The Royal Game of Ur</a> (British Museum, London).</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Tell those hidden stories</strong>: So much cultural history remains untold. When choosing subjects, consider who is missing from the picture, and try to give a voice to a range of people and communities.&nbsp; We like <a href=\"https://peoplenotproperty.hudsonvalley.org/\">People Not Property</a> (Historic Hudson Valley, USA), <a href=\"https://www.arabnews.com/JewsOfLebanon\">Minority Report: The Jews of Lebanon</a> (Arab News) and <a href=\"https://www.rgs.org/about/our-collections/online-exhibitions/hidden-histories-of-exploration/\">Hidden Histories of Exploration</a> (Royal Geographical Society, London).</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Illustrate your points</strong>: A key strength of the cultural heritage sector is its wealth of visual imagery. Long written or spoken narratives can be hard to engage with. Breaking up the story with visual (or audio) material, and building in time to reflect on it, can enrich the experience. We like <a href=\"https://www.museodelprado.es/actualidad/multimedia/las-hilanderas-una-historia-en-imagenes/39def9b0-fa00-4121-ad78-1deacb907f3b\">Las hilanderas. Una historia en imágenes</a> (Museo del Prado, Madrid), <a href=\"https://www.metmuseum.org/art/online-features/metkids/\">MetKids</a> and <a href=\"https://buntegoetter.liebieghaus.de/en/\">Gods In Color</a> (Liebieghaus, Frankfurt).</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Signpost your journey</strong>:The best stories take people on a clear journey. In digital storytelling - particularly on complex or experimental platforms - clear narrative structure is essential. Keep the navigation simple, so the visitor always knows where they are. We like <a href=\"https://thingsthattalk.net/\">Things that Talk</a> (Things That Talk Foundation) and <a href=\"https://www.nytimes.com/interactive/2020/08/07/arts/design/hokusai-fuji.html\">A Picture of Change for a World in Constant Motion</a> (New York Times).</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Be specific</strong>: Specific topics can still engage a broad audience. Start from a particular detail that lies at the heart of your story, then move to the bigger picture. Personal stories and well-chosen images can help keep your focus. We like <a href=\"https://www.artuk.org/discover/stories\">Artwork in Focus</a> (Art UK) and <a href=\"https://www.louvre.fr/en/oal\">A Closer Look</a> (Louvre, Paris).</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><strong>Be evocative</strong>: Cultural history stories need to be based in fact, but the facts don’t need to be dry. Don’t be afraid to use descriptive and evocative imagery and approaches and invite the viewer to place themselves within the scene. We like <a href=\"https://twitter.com/EghamMuseum/status/1311453097462575104\">You Are Flora Seville</a> (Egham Museum), <a href=\"https://www.bl.uk/events/faint-signals\">Faint Signals</a> (British Library, London) and <a href=\"http://80s.nyc/#show/40.6943/-73.9851\">80s.NYC</a> (New York City Municipal Archives’ Department of Finance Collection).</p>\r\n    </li>\r\n</ol>\r\n\r\n<p dir=\"ltr\">You can view these tips as an <a href=\"https://medium.com/digital-storytelling-festival/learn-to-create-better-stories-with-our-tips-a37ca83b2a84\">infographic</a>, or as a <a href=\"https://www.youtube.com/watch?v=jbSB2H59GYo&amp;t=32s\">recorded presentation</a> and <a href=\"https://docs.google.com/presentation/d/1-lZW3h3otGKGjbTeJLUeQf3xIjSKN8u2cVDqkxg0gnA/edit?usp=sharing\">slidedeck</a>, or find an <a href=\"https://medium.com/digital-storytelling-festival/7-digital-storytelling-tips-for-the-cultural-heritage-sector-8e701a439dd6\">extended version of this article on Medium</a>. You can also <a href=\"https://pro.europeana.eu/project/europeana-as-a-powerful-platform-for-storytelling#translations\">find the tips translated into other languages.</a>&nbsp;</p>\r\n\r\n<p dir=\"ltr\">And if you would like to find out more about the work of the storytelling Task Force, don’t miss our <a href=\"https://pro.europeana.eu/event/storytelling-with-digital-culture\">webinar on 9 June!</a></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -7105,7 +7105,7 @@ posts:
                 override_css_id: ''
                 override_css_class: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: ''
                 subtitle: ''
                 anchortitle: ''
@@ -7686,7 +7686,6 @@ posts:
             - posts/ready-set-go-europeana-s-sport-season-kicks-off
             - posts/ready-set-go-europeana-s-sport-season-kicks-off
             - posts/ready-set-go-europeana-s-sport-season-kicks-off
-            - posts/ready-set-go-europeana-s-sport-season-kicks-off
         data: {  }
         projects: {  }
         events: {  }
@@ -7938,7 +7937,7 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/seven-tips-for-digital-storytelling-with-cultural-heritage
+            - posts/ifla-manual-brings-together-storytelling-impact-and-advocacy-for-sustainable-development-goals
             - posts/ifla-manual-brings-together-storytelling-impact-and-advocacy-for-sustainable-development-goals
             - posts/ifla-manual-brings-together-storytelling-impact-and-advocacy-for-sustainable-development-goals
         data: {  }
@@ -8237,8 +8236,8 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/copyright-in-the-cultural-heritage-sector-outcomes-of-the-german-presidency-event
             - posts/spotlight-on-finland-presidency-of-the-council-of-the-eu-and-three-europe-at-work-collection-days
+            - posts/digital-capacity-building-in-the-cultural-heritage-sector-the-portuguese-presidency-europeana-conference
             - posts/digital-capacity-building-in-the-cultural-heritage-sector-the-portuguese-presidency-europeana-conference
             - posts/digital-capacity-building-in-the-cultural-heritage-sector-the-portuguese-presidency-europeana-conference
             - posts/digital-capacity-building-in-the-cultural-heritage-sector-the-portuguese-presidency-europeana-conference
@@ -9066,7 +9065,7 @@ posts:
         pages: {  }
         posts:
             - posts/digital-capacity-building-in-the-cultural-heritage-sector-the-portuguese-presidency-europeana-conference
-            - posts/copyright-in-the-cultural-heritage-sector-outcomes-of-the-german-presidency-event
+            - posts/putting-culture-into-the-portuguese-presidency-programme-an-interview-with-maria-ines-cordeiro
             - posts/putting-culture-into-the-portuguese-presidency-programme-an-interview-with-maria-ines-cordeiro
             - posts/putting-culture-into-the-portuguese-presidency-programme-an-interview-with-maria-ines-cordeiro
         data: {  }
@@ -10866,7 +10865,7 @@ posts:
                 selected_posts:
                     -
                         value: ''
-                        _id: posts/team-using-europeana-data-win-prize-at-the-eu-datathon-2022
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''

@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T09:46:14+01:00'
+    date: '2023-05-30T16:34:17+02:00'
     version: 3.7.4
     platform: mysql
 posts:
@@ -3124,8 +3124,7 @@ posts:
         posts:
             - posts/judaica-europeana-2-0-a-new-aggregation-platform-for-jewish-heritage-content
         data: {  }
-        projects:
-            - projects/judaica-europeana-2-0
+        projects: {  }
         events: {  }
         persons: {  }
         communities:
@@ -3198,7 +3197,7 @@ posts:
     -
         slug: introducing-strategic-priorities-for-the-europeana-website
         datecreated: '2021-01-26 15:52:46'
-        datechanged: '2021-01-29 07:45:45'
+        datechanged: '2022-12-20 10:45:56'
         datepublish: '2021-01-29 15:52:00'
         datedepublish: ''
         ownerid: 124
@@ -3207,7 +3206,7 @@ posts:
         title: 'Introducing strategic priorities for the Europeana website'
         posttype: News
         featured: false
-        intro: "<p>We take a look at our strategy and plans for the Europeana website in the coming year, and how we will work to make it more engaging than ever for our visitors.\_</p>\r\n"
+        intro: "<p>We take a look at our strategy and plans for the Europeana website in 2021, and how we will work to make it more engaging than ever for our visitors.\_</p>\r\n"
         body: null
         author:
             -
@@ -3217,7 +3216,7 @@ posts:
                 value: '5250'
                 _id: persons/andy-neale
         isbn: null
-        teaser: "<p>We take a look at our strategy and plans for the Europeana website in the coming year, and how we will work to make it more engaging than ever for our visitors.\_</p>\r\n\r\n<p></p>\r\n"
+        teaser: "<p>We take a look at our strategy and plans for the Europeana website in 2021, and how we will work to make it more engaging than ever for our visitors.\_</p>\r\n\r\n<p></p>\r\n"
         teaser_image:
             file: 'Images/Blog_images/2021-01/Introducing the Europeana website strategy 2021teaser.png'
         teaser_attribution_title: '22.0 IBM Modell 360 / 370'
@@ -3249,11 +3248,11 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/introducing-strategic-priorities-for-the-europeana-website
-            - posts/introducing-strategic-priorities-for-the-europeana-website
-            - posts/introducing-strategic-priorities-for-the-europeana-website
-            - posts/introducing-strategic-priorities-for-the-europeana-website
-            - posts/introducing-strategic-priorities-for-the-europeana-website
+            - posts/what-s-new-on-the-europeana-website-september-december-2021
+            - posts/discover-cultural-heritage-by-institution-with-our-new-organisation-pages
+            - posts/website-development-for-cultural-heritage-content-at-europeana
+            - posts/exploring-europeana-s-approach-to-design
+            - posts/making-the-europeana-collections-website-accessible-to-all
         data: {  }
         projects: {  }
         events: {  }
@@ -8156,7 +8155,7 @@ posts:
     -
         slug: recommendations-on-copyright-and-its-role-in-the-digital-transformation-of-the-cultural-heritage-sector
         datecreated: '2021-03-01 13:45:10'
-        datechanged: '2021-03-25 14:17:16'
+        datechanged: '2023-02-01 14:59:37'
         datepublish: '2021-03-02 06:44:00'
         datedepublish: ''
         ownerid: 124
@@ -8175,7 +8174,7 @@ posts:
                 value: '2366'
                 _id: persons/shadi-ardalan
         isbn: null
-        teaser: "<p>During the German Presidency of the Council of the European Union, Europeana held a conference to explore the copyright challenges that arise as the cultural heritage sector embraces its digital transformation. Read the full\_report from the meeting.\_</p>\r\n"
+        teaser: "<p>During the German Presidency of the Council of the European Union, Europeana held a conference to explore the copyright challenges\_the cultural heritage sector faces as it embraces its digital transformation. Read the report.</p>\r\n"
         teaser_image:
             file: 'Images/Publication_thumbnails/Recommendations on Copyright teaser image.png'
             title: 'Photograph of a classical building, the library of Humboldt University in Berlin'
@@ -8601,7 +8600,7 @@ posts:
     -
         slug: pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-maria-cristina-marinescu
         datecreated: '2021-03-08 16:37:49'
-        datechanged: '2021-12-30 23:24:37'
+        datechanged: '2023-04-11 13:57:03'
         datepublish: '2021-03-19 09:30:00'
         datedepublish: ''
         ownerid: 124
@@ -8651,7 +8650,7 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-emmanuelle-bermes
+            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-maria-cristina-marinescu
             - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-maria-cristina-marinescu
         data: {  }
         projects: {  }
@@ -8682,6 +8681,9 @@ posts:
             -
                 slug: ai-theme
                 name: ai-theme
+            -
+                slug: womens-history-month
+                name: womens-history-month
         modules:
             -
                 enabled: enabled
@@ -8773,7 +8775,7 @@ posts:
     -
         slug: pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-emmanuelle-bermes
         datecreated: '2021-03-08 16:56:47'
-        datechanged: '2021-12-30 23:24:26'
+        datechanged: '2023-04-11 13:57:15'
         datepublish: '2021-03-10 11:55:00'
         datedepublish: ''
         ownerid: 124
@@ -8828,8 +8830,8 @@ posts:
         posts:
             - posts/curious-smart-and-resourceful-the-bnf-s-new-digital-roadmap
             - posts/exploring-ai-in-the-cultural-heritage-sector
-            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-emmanuelle-bermes
-            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-emmanuelle-bermes
+            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-marieke-van-erp
+            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-maria-cristina-marinescu
             - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-emmanuelle-bermes
         data: {  }
         projects: {  }
@@ -8860,6 +8862,9 @@ posts:
             -
                 slug: ai-theme
                 name: ai-theme
+            -
+                slug: womens-history-month
+                name: womens-history-month
         modules:
             -
                 enabled: enabled
@@ -8951,7 +8956,7 @@ posts:
     -
         slug: pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-marieke-van-erp
         datecreated: '2021-03-08 17:14:11'
-        datechanged: '2021-12-30 23:25:44'
+        datechanged: '2023-04-11 13:56:53'
         datepublish: '2021-03-29 09:09:00'
         datedepublish: ''
         ownerid: 124
@@ -9002,7 +9007,7 @@ posts:
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
         pages: {  }
         posts:
-            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-emmanuelle-bermes
+            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-cynthia-liem
             - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-marieke-van-erp
             - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-marieke-van-erp
         data: {  }
@@ -9034,6 +9039,9 @@ posts:
             -
                 slug: ai-theme
                 name: ai-theme
+            -
+                slug: womens-history-month
+                name: womens-history-month
         modules:
             -
                 enabled: enabled
@@ -9565,7 +9573,6 @@ posts:
         posts:
             - posts/why-should-you-open-up-your-digital-collections-for-reuse-explained-in-gifs
             - posts/europeana-s-partnership-with-oclc-brings-cultural-heritage-to-new-audiences
-            - posts/europeana-and-the-khalili-collections-introducing-our-new-partnership
         data: {  }
         projects: {  }
         events: {  }

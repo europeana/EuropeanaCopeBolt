@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T09:38:36+01:00'
+    date: '2023-05-30T16:30:54+02:00'
     version: 3.7.4
     platform: mysql
 posts:
@@ -804,7 +804,7 @@ posts:
                 selected_events:
                     -
                         value: ''
-                        _id: events/memex-memories-and-experiences-for-inclusive-digital-storytelling
+                        _id: events/archiefdag-2023-de-bias-workshop
                 selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
@@ -5032,7 +5032,7 @@ posts:
     -
         slug: the-state-of-play-of-copyright-knowledge-in-cultural-heritage-institutions
         datecreated: '2020-07-27 16:48:25'
-        datechanged: '2020-07-28 13:50:47'
+        datechanged: '2023-02-01 14:58:19'
         datepublish: '2020-07-28 13:45:00'
         datedepublish: ''
         ownerid: 124
@@ -5051,7 +5051,7 @@ posts:
                 value: '5864'
                 _id: persons/masa-skrinjar
         isbn: null
-        teaser: "<p>In this report, we explore the challenges faced by institutions and professionals in relation to copyright in the cultural heritage sector.</p>\r\n"
+        teaser: "<p>This report explores the challenges faced by institutions and professionals in relation to copyright in the cultural heritage sector.</p>\r\n"
         teaser_image:
             file: 'Images/Blog_images/2020-07/Copyright knowledge report teaser.png'
         teaser_attribution_title: 'Vulture Flying'
@@ -7527,9 +7527,9 @@ posts:
         posts:
             - posts/presenting-the-opening-up-historiana-project
             - posts/presenting-the-opening-up-historiana-project
+            - posts/presenting-the-opening-up-historiana-project
         data: {  }
-        projects:
-            - projects/opening-up-historiana
+        projects: {  }
         events: {  }
         persons: {  }
         communities:
@@ -8420,7 +8420,7 @@ posts:
                 selected_posts:
                     -
                         value: ''
-                        _id: posts/team-using-europeana-data-win-prize-at-the-eu-datathon-2022
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''

@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:21:40+02:00'
+    date: '2023-05-30T14:42:54+02:00'
     version: 3.7.4
     platform: mysql
 __users:
@@ -209,7 +209,7 @@ __users:
     -
         id: 128
         username: faryel
-        password: $2y$10$oqGQkdtAVLPESRvagzE8EuEpxNaRm2Uz1pET2DMXUAoi4SeOjFjve
+        password: $2y$10$sC2XMylpSfTN01OLsjKOpOlBQsaShN.syxdRyK1m8VPhPu85iY6ha
         email: faryel.duijm@europeana.eu
         displayname: Faryel
         enabled: true
@@ -247,11 +247,21 @@ __users:
         roles:
             - root
             - everyone
+    -
+        id: 133
+        username: 'ana moreno'
+        password: $2y$10$d8ifwdFmA1IEOsNc6UpRFedDRgndq.QFqO2KE6j8Ki6ic87yPdBC.
+        email: ana.moreno@europeana.eu
+        displayname: 'Ana Moreno'
+        enabled: true
+        roles:
+            - chief-editor
+            - everyone
 pages:
     -
         slug: mission
         datecreated: '2017-04-19 10:20:31'
-        datechanged: '2022-09-05 10:37:58'
+        datechanged: '2023-01-13 14:05:05'
         datepublish: '2017-04-19 10:20:08'
         datedepublish: ''
         ownerid: 1
@@ -334,7 +344,7 @@ pages:
                 anchortitle: ''
                 templates: body
                 body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Europeana empowers the cultural heritage sector in its digital transformation.&nbsp; We develop expertise, tools and policies to embrace digital change and encourage partnerships that foster innovation.&nbsp; We make it easier for people to use cultural heritage for education, research, creation and recreation. Our work contributes to an open, knowledgeable and creative society.</p>\r\n"
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -384,7 +394,52 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: 'Our role in the data space'
+                subtitle: ''
+                anchortitle: 'Our role in the data space'
+                templates: body
+                body: "<p><meta charset=\"utf-8\" />Europeana is at the heart of the common European data space for cultural heritage, a flagship initiative of the European Union to support the digital transformation of the cultural heritage sector.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -429,7 +484,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -477,7 +532,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -529,9 +584,16 @@ pages:
                 image:
                     file: ''
                     title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -560,19 +622,12 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
+                selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
+                override_css_id: ''
+                override_css_class: ''
             -
                 enabled: enabled
                 title: ''
@@ -592,7 +647,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -640,7 +695,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -694,7 +749,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -739,7 +794,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -793,7 +848,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -825,7 +880,7 @@ pages:
                 subtitle: ''
                 anchortitle: 'Brief history'
                 templates: body
-                body: "<p>In 2005, a letter signed by French President Jacques Chirac and five other heads of state asked European Union officials to support the development of a European digital library. The Europeana prototype went live on 20 November 2008. Museums, audiovisual archives and galleries joined the libraries, creating a common access point to Europe’s cultural heritage. At launch, Europeana gave access to 4.5 million digital objects.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">In January 2011, the European Commission released its ‘<a href=\"http://europa.eu/rapid/press-release_IP-11-17_en.htm?locale=en\">New Renaissance’ report</a> which endorsed Europeana as ‘the central reference report for Europe’s online cultural heritage’. A huge milestone followed in September 2012 when, <a href=\"/post/europeana-opens-up-full-dataset-for-re-use\">in the first move of its kind</a>, Europeana metadata was released under the terms of the Creative Commons CC0 1.0 Universal Public Domain Dedication, making the metadata itself freely available for any kind of use, boosting opportunities for digital innovation and creativity.</p>\r\n\r\n<p dir=\"ltr\">In May 2015,&nbsp; Europeana became one of the European Commission’s <a href=\"/page/europeana-dsi?utm_source=about-us%2Fmission&amp;utm_medium=Digital service infrastructures&amp;utm_campaign=internal_link\">Digital Service Infrastructures (DSI)</a>, all of which deliver networked cross-border services for citizens, businesses and public administrations. As a DSI, Europeana’s objectives are to make it easier for institutions to share their collections online effectively, to improve the quality of data and content shared with Europeana, and to empower cultural heritage institutions to build their capacity for digital transformation. All of this helps make sure that Europe’s people, institutions and businesses reap the full benefits of the technological revolution in digital services for culture.</p>\r\n\r\n<p dir=\"ltr\">As of early 2020, the <a href=\"http://europeana.eu\">Europeana website</a> provides access to 58 million digital objects - books, music, artworks and more - with sophisticated search and filter tools, and many themed collections, exhibitions, galleries and blogs.</p>\r\n"
+                body: "<p>In 2005, a letter signed by French President Jacques Chirac and five other heads of state asked European Union officials to support the development of a European digital library. The Europeana prototype went live on 20 November 2008. Museums, audiovisual archives and galleries joined the libraries, creating a common access point to Europe’s cultural heritage. At launch, Europeana gave access to 4.5 million digital objects.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">In January 2011, the European Commission released its ‘<a href=\"http://europa.eu/rapid/press-release_IP-11-17_en.htm?locale=en\">New Renaissance’ report</a> which endorsed Europeana as ‘the central reference report for Europe’s online cultural heritage’. A huge milestone followed in September 2012 when, <a href=\"/post/europeana-opens-up-full-dataset-for-re-use\">in the first move of its kind</a>, Europeana metadata was released under the terms of the Creative Commons CC0 1.0 Universal Public Domain Dedication, making the metadata itself freely available for any kind of use, boosting opportunities for digital innovation and creativity.</p>\r\n\r\n<p dir=\"ltr\">In May 2015,&nbsp;Europeana became one of the European Commission’s <a href=\"/page/europeana-dsi?utm_source=about-us%2Fmission&amp;utm_medium=Digital service infrastructures&amp;utm_campaign=internal_link\">Digital Service Infrastructures (DSI)</a>, all of which deliver networked cross-border services for citizens, businesses and public administrations. As a DSI, Europeana’s objectives were to make it easier for institutions to share their collections online effectively, to improve the quality of data and content shared with Europeana, and to empower cultural heritage institutions to build their capacity for digital transformation. All of this helped to ensure that Europe’s people, institutions and businesses reap the full benefits of the technological revolution in digital services for culture.</p>\r\n\r\n<p dir=\"ltr\">As of 2022, Europeana is at the heart of the&nbsp;the European Commission’s <a href=\"https://pro.europeana.eu/page/common-european-data-space-for-cultural-heritage\">common European data space for cultural heritage</a>, funded under the&nbsp;<a href=\"https://digital-strategy.ec.europa.eu/en/activities/digital-programme\">Digital Europe programme</a>&nbsp;as part of&nbsp;<a href=\"https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/europes-digital-decade-digital-targets-2030_en\">Europe’s Digital Decade.</a></p>\r\n\r\n<p dir=\"ltr\">As of early 2023, the <a href=\"http://europeana.eu\">Europeana website</a> provides access to over 55 million digital objects - books, music, artworks and more - with sophisticated search and filter tools, and many themed collections, exhibitions, galleries and blogs.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -838,7 +893,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -904,7 +959,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest_unpaged
                 sources: posts
@@ -916,6 +971,51 @@ pages:
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: News
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: ''
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
                 selected_posts: ''
                 filter_data: ''
                 selected_data: ''
@@ -1022,7 +1122,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1066,7 +1166,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1122,7 +1222,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1166,7 +1266,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1302,7 +1402,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1412,7 +1512,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1457,7 +1557,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1620,7 +1720,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1672,7 +1772,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: jobs
@@ -1778,7 +1878,7 @@ pages:
                 anchortitle: ''
                 templates: fileslisting
                 body: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1907,7 +2007,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1955,7 +2055,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2000,7 +2100,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2126,7 +2226,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2174,7 +2274,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2222,7 +2322,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2267,7 +2367,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2398,7 +2498,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2446,7 +2546,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2491,7 +2591,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2542,7 +2642,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: market_unpaged
                 sources: posts
@@ -2587,7 +2687,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -2641,7 +2741,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -2695,7 +2795,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -2771,7 +2871,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2817,7 +2917,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2871,7 +2971,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2882,7 +2982,7 @@ pages:
                 selected_pages:
                     -
                         value: ''
-                        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
+                        _id: pages/tools
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -2929,7 +3029,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: market_unpaged
                 sources: data
@@ -2940,7 +3040,7 @@ pages:
                 selected_pages:
                     -
                         value: ''
-                        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
+                        _id: pages/tools
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -2977,7 +3077,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3025,7 +3125,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3076,7 +3176,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3190,7 +3290,7 @@ pages:
                 anchortitle: ''
                 templates: banner
                 body: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3238,7 +3338,7 @@ pages:
                 anchortitle: About
                 templates: body
                 body: "<p>Europeana Labs is the go-to place for those who have the imagination, skills and desire to play with digital cultural content and use it in their experimental works or sustainable business projects.</p>\r\n\r\n<p>Find below practical resources to start building with cultural collections as quickly and easily as possible, including openly licensed, thematic datasets and four free APIs. Explore how we can help you fund your idea through online challenges and match funding calls. Discover examples of applications using Europeana.</p>\r\n\r\n<p>We invite you to become part of a growing community through blog posts, events and direct support.</p>\r\n"
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3248,7 +3348,7 @@ pages:
                 selected_pages:
                     -
                         value: ''
-                        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
+                        _id: pages/tools
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -3286,7 +3386,7 @@ pages:
                 anchortitle: Resources
                 templates: listingthumbnails
                 body: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3343,7 +3443,7 @@ pages:
                 anchortitle: ''
                 templates: breakerdouble
                 body: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3394,7 +3494,7 @@ pages:
                 anchortitle: News
                 templates: listingnews
                 body: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: market_unpaged
                 sources: posts
@@ -3444,7 +3544,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: market_unpaged
                 sources: data
@@ -3560,7 +3660,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3608,7 +3708,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3656,7 +3756,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3701,7 +3801,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3753,14 +3853,14 @@ pages:
     -
         slug: education
         datecreated: '2017-04-19 10:38:08'
-        datechanged: '2022-10-21 16:15:04'
+        datechanged: '2023-03-29 15:39:56'
         datepublish: '2017-04-19 10:38:02'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
         title: Education
-        intro: "<p>Cultural heritage has a crucial role to play in education. The digital collections of Europeana provide multiple perspectives on historical, scientific and cultural developments across Europe and beyond. We want to bring this source of knowledge to every learner, educator or educational organisation so that they can experience the pedagogical potential of digital cultural heritage and build new 21st century skills.</p>\r\n"
+        intro: "<p>Cultural heritage has a crucial role to play in education. The digital collections of Europeana provide multiple perspectives on historical, scientific and cultural developments across Europe and beyond.</p>\r\n"
         body: null
         pagefooter: null
         pagetype: landingpage-nohighlight
@@ -3803,7 +3903,7 @@ pages:
         pages:
             - pages/rerun-of-europeana-in-your-classroom-building-21st-century-competences-with-digital-cultural-heritage-1
             - pages/europeana-reuse-be-inspired
-            - pages/europeana-low-code-fest-2022
+            - pages/education
         posts:
             - posts/europeana-collections-teams-up-with-beneylu-school-to-improve-resources-of-primary-school-classrooms
             - posts/european-cultural-heritage-in-educational-activities-on-the-itslearning-learning-platform
@@ -3822,8 +3922,7 @@ pages:
             - posts/bringing-digitised-medieval-objects-into-compulsory-education
             - posts/digital-cultural-heritage-in-education-a-bridge-to-connect-formal-and-non-formal-education
         data: {  }
-        projects:
-            - projects/watching-videos-like-a-historian-watchlikeahist
+        projects: {  }
         events:
             - events/open-edcation-week-webinar-europeana-how-to-inspire-learners-with-digital-culture
             - events/teaching-about-migration-with-europeana-resources
@@ -3874,13 +3973,13 @@ pages:
                 subtitle: ''
                 anchortitle: About
                 templates: body
-                body: "<p>Cultural heritage has a crucial role to play in education. The digital collections of Europeana provide multiple perspectives on historical, scientific and cultural developments across Europe and beyond. We want to bring this source of knowledge to every learner, educator or educational organisation so that they can experience the pedagogical potential of digital cultural heritage and build new 21st century skills. Explore how on this page.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
+                body: "<p>Cultural heritage has a crucial role to play in education. The digital collections of Europeana provide multiple perspectives on historical, scientific and cultural developments across Europe and beyond.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">We want to bring this source of knowledge to every learner, educator or educational organisation so that they can experience the pedagogical potential of digital cultural heritage and build key competences. We develop resources which support educators to reuse cultural heritage data in their classrooms and institutions - explore these below.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3915,17 +4014,17 @@ pages:
                 selected_organisations: ''
             -
                 enabled: enabled
-                title: 'Resources and activities'
-                subtitle: ''
-                anchortitle: 'Resources and activities'
-                templates: listingsemistatic
+                title: Training
+                subtitle: 'Follow Europeana’s MOOC on digital education with cultural heritage.'
+                anchortitle: Training
+                templates: teaser
                 body: ''
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3934,18 +4033,15 @@ pages:
                 basecategory: ''
                 selected_pages:
                     -
-                        value: '490'
-                        _id: pages/europeana-education
-                    -
-                        value: '789'
-                        _id: pages/europeana-education-ambassadors-network
-                    -
-                        value: '782'
-                        _id: pages/historiana
+                        value: '838'
+                        _id: pages/europeana-education-mooc
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
-                selected_posts: ''
+                selected_posts:
+                    -
+                        value: ''
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -3969,9 +4065,9 @@ pages:
                 selected_organisations: ''
             -
                 enabled: enabled
-                title: ''
+                title: 'Tools and knowledge'
                 subtitle: ''
-                anchortitle: ''
+                anchortitle: 'Tools and knowledge'
                 templates: listingsemistatic
                 body: ''
                 image:
@@ -3979,14 +4075,86 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
                 override_amount: 3
                 basetag: ''
                 basecategory: ''
-                selected_pages: ''
+                selected_pages:
+                    -
+                        value: ''
+                        _id: pages/tools
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '586'
+                        _id: resources/resources-for-teachers
+                    -
+                        value: '1094'
+                        _id: resources/teaching-with-europeana
+                    -
+                        value: '974'
+                        _id: resources/digital-learning-in-the-pandemic-cultural-heritage-resources-by-and-for-educators
+                    -
+                        value: '1095'
+                        _id: resources/historiana
+                override_css_id: ''
+                override_css_class: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: Activities
+                subtitle: 'Explore the campaigns and initiatives we run to support educators and students to reuse digital cultural heritage.'
+                anchortitle: Activities
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages:
+                    -
+                        value: '796'
+                        _id: pages/built-with-bits-designing-virtual-spaces-for-the-future
+                    -
+                        value: '775'
+                        _id: pages/reinventing-beethoven
+                    -
+                        value: '826'
+                        _id: pages/low-code-fest
+                    -
+                        value: '816'
+                        _id: pages/erasmus
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -4023,147 +4191,23 @@ pages:
                 selected_organisations: ''
             -
                 enabled: enabled
-                title: ''
-                subtitle: ''
-                anchortitle: ''
-                templates: listingsemistatic
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: pages
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                selected_pages:
-                    -
-                        value: '796'
-                        _id: pages/built-with-bits-designing-virtual-spaces-for-the-future
-                    -
-                        value: '775'
-                        _id: pages/reinventing-beethoven
-                    -
-                        value: '826'
-                        _id: pages/europeana-low-code-fest-2022
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
-                basemarket: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
-                title: 'Webinars and videos'
-                subtitle: ''
-                anchortitle: 'Webinars and videos'
-                templates: listingsemistatic
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: events
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events:
-                    -
-                        value: '387'
-                        _id: events/europeana-communicators-and-europeana-education-webinar-culture-from-home-education
-                    -
-                        value: '490'
-                        _id: events/esach-talks-museums-art-and-cultural-heritage
-                    -
-                        value: '441'
-                        _id: events/stem-and-digital-cultural-heritage-a-perfect-alliance
-                    -
-                        value: '442'
-                        _id: events/our-culture-is-our-gif-t
-                    -
-                        value: '443'
-                        _id: events/europeana-minecraft-and-mozilla-hubs-a-gamified-approach-to-digital-archives
-                    -
-                        value: '573'
-                        _id: events/teaching-about-migration-with-europeana-resources
-                    -
-                        value: '572'
-                        _id: events/europeana-cultura-digital-para-docentes
-                    -
-                        value: '571'
-                        _id: events/open-education-week-2021-online-educational-courses-on-cultural-topics-1
-                selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
-                basemarket: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
                 title: Partners
                 subtitle: ''
                 anchortitle: Partners
                 templates: body
-                body: "<p><meta charset=\"utf-8\" />We aim to bring the knowledge of Europe’s cultural heritage collections to every learner and educator in Europe in formal and non-formal education. To make that possible we are building partnerships with ministries of education, associations and networks working on education at European level, as well as edtechs that integrate Europeana content to design new educational products and services. If you would like to work with us please get in contact with Isabel Crespo at <a href=\"mailto:isabel.crespo@europeana.eu\">isabel.crespo@europeana.eu</a>.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" />We aim to bring the knowledge of Europe’s cultural heritage collections to every learner and educator in Europe in formal and non-formal education. To make that possible we are building partnerships with ministries of education, associations and networks working on education at European level, as well as edtechs that integrate Europeana content to design new educational products and services. If you would like to work with us please get in contact with Isabel Crespo at isabel.crespo@europeana.eu.</p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
                 override_amount: 3
                 basetag: ''
                 basecategory: ''
-                basemarket: ''
                 selected_pages: ''
                 filter_persons: ''
                 selected_persons: ''
@@ -4178,74 +4222,18 @@ pages:
                 selected_resources: ''
                 override_css_id: ''
                 override_css_class: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
-                title: ''
-                subtitle: 'Ministries of Education'
-                anchortitle: ''
-                templates: listingthumbnailsfive
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
                 basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '917'
-                        _id: resources/greek-ministry-for-education
-                    -
-                        value: '914'
-                        _id: resources/portuguese-ministry-for-education
-                    -
-                        value: '913'
-                        _id: resources/spanish-ministry-for-education
-                    -
-                        value: '1014'
-                        _id: resources/indire
-                selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
             -
                 enabled: enabled
                 title: ''
@@ -4256,16 +4244,9 @@ pages:
                 image:
                     file: ''
                     title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4306,22 +4287,23 @@ pages:
                     -
                         value: '906'
                         _id: resources/school-education-gateway
-                    -
-                        value: '1013'
-                        _id: resources/centrum-cyfrowe
-                    -
-                        value: '1065'
-                        _id: resources/macedonia
-                selected_organisations: ''
+                override_css_id: ''
+                override_css_class: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
             -
                 enabled: enabled
                 title: ''
-                subtitle: Industry
+                subtitle: 'Ministries of Education'
                 anchortitle: ''
                 templates: listingthumbnailsfive
                 body: ''
@@ -4337,7 +4319,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4358,14 +4340,71 @@ pages:
                 selected_events: ''
                 selected_resources:
                     -
-                        value: '911'
-                        _id: resources/art-stories
+                        value: '917'
+                        _id: resources/greek-ministry-for-education
+                    -
+                        value: '914'
+                        _id: resources/portuguese-ministry-for-education
+                    -
+                        value: '913'
+                        _id: resources/spanish-ministry-for-education
+                    -
+                        value: '1014'
+                        _id: resources/indire
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: 'Edtech and social innovators'
+                anchortitle: ''
+                templates: listingthumbnailsfive
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
                     -
                         value: '910'
                         _id: resources/canva
                     -
                         value: '909'
                         _id: resources/its-learning
+                    -
+                        value: '1065'
+                        _id: resources/macedonia
                     -
                         value: '908'
                         _id: resources/unsplash
@@ -4377,8 +4416,176 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: 'Latest news'
+                title: 'Network and communities'
+                subtitle: 'Join our vibrant Education community and ambassadors network to engage, collaborate and transfer knowledge with peers across the cultural heritage and education sector.'
+                anchortitle: 'Network and communities'
+                templates: teaser
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '490'
+                        _id: pages/europeana-education
+                    -
+                        value: '789'
+                        _id: pages/europeana-education-ambassadors-network
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Events
                 subtitle: ''
+                anchortitle: Events
+                templates: listingnews
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: calendar_upcoming
+                sources: events
+                override_amount: 2
+                basetag: education
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events:
+                    -
+                        value: ''
+                        _id: events/archiefdag-2023-de-bias-workshop
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: 'Find more educational events'
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Webinars and videos'
+                subtitle: 'Watch presentations and workshops which explore the reuse of digital cultural heritage in education.'
+                anchortitle: Webinars
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: events
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events:
+                    -
+                        value: '573'
+                        _id: events/teaching-about-migration-with-europeana-resources
+                    -
+                        value: '572'
+                        _id: events/europeana-cultura-digital-para-docentes
+                    -
+                        value: '571'
+                        _id: events/open-education-week-2021-online-educational-courses-on-cultural-topics-1
+                    -
+                        value: '490'
+                        _id: events/esach-talks-museums-art-and-cultural-heritage
+                    -
+                        value: '387'
+                        _id: events/europeana-communicators-and-europeana-education-webinar-culture-from-home-education
+                    -
+                        value: '441'
+                        _id: events/stem-and-digital-cultural-heritage-a-perfect-alliance
+                    -
+                        value: '442'
+                        _id: events/our-culture-is-our-gif-t
+                    -
+                        value: '443'
+                        _id: events/europeana-minecraft-and-mozilla-hubs-a-gamified-approach-to-digital-archives
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Latest news'
+                subtitle: 'Keep up to date with the latest news, policies and good practice around education and digital cultural heritage.'
                 anchortitle: News
                 templates: listingnews
                 body: ''
@@ -4394,7 +4601,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: market
                 sources: posts
@@ -4419,171 +4626,6 @@ pages:
                 modulemorelabel: 'See more'
                 modulemoretext: ''
                 override_css_id: news
-                override_css_class: ''
-            -
-                enabled: disabled
-                title: Resources
-                subtitle: ''
-                anchortitle: Resources
-                templates: listingthumbnails
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: pages
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages:
-                    -
-                        value: '100'
-                        _id: pages/apps
-                    -
-                        value: '35'
-                        _id: pages/publications
-                    -
-                        value: '491'
-                        _id: pages/educational-partnerships
-                    -
-                        value: '28'
-                        _id: pages/datasets
-                    -
-                        value: '27'
-                        _id: pages/apis
-                    -
-                        value: '486'
-                        _id: pages/crowd-and-matchfunding
-                    -
-                        value: '490'
-                        _id: pages/europeana-education
-                    -
-                        value: '518'
-                        _id: pages/advocacy
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: disabled
-                title: ''
-                subtitle: ''
-                anchortitle: 'Join us'
-                templates: breaker
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: resources
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources:
-                    -
-                        value: '47'
-                        _id: resources/join-the-europeana-education-community
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: grad_reuse
-            -
-                enabled: disabled
-                title: Events
-                subtitle: ''
-                anchortitle: 'Education events'
-                templates: listingnews
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: events
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events:
-                    -
-                        value: ''
-                        _id: events/memex-memories-and-experiences-for-inclusive-digital-storytelling
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: 'Find more educational events'
-                modulemoretext: ''
-                override_css_id: ''
                 override_css_class: ''
         _id: pages/education
     -
@@ -4688,7 +4730,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4733,7 +4775,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4791,7 +4833,7 @@ pages:
     -
         slug: task-forces
         datecreated: '2017-04-19 10:46:15'
-        datechanged: '2022-08-31 16:42:33'
+        datechanged: '2023-05-24 15:30:05'
         datepublish: '2017-04-19 10:45:56'
         datedepublish: ''
         ownerid: 1
@@ -4809,11 +4851,11 @@ pages:
         highlightlink: null
         teaser: "<p>Task Forces aim to help solve specific issues and challenges affecting the digital heritage field. Working Groups are set up to address ongoing activities and issues of continuing relevance to the Europeana Network Association.</p>\r\n"
         teaser_image:
-            file: Images/New_pro_images_March2020/40381715740_90697756e4_c.jpg
-            title: 'Three people laughing together'
-        teaser_attribution_title: 'EuropeanaTech 2018'
+            file: Images/Teaser_images/task_forces_and_working_groups.png
+            title: 'Lego blocks and figures in the background'
+        teaser_attribution_title: 'Europeana 2022 - making digital culture count'
         teaser_attribution_creator: 'Sebastiaan ter Burg'
-        teaser_attribution_date: '2018'
+        teaser_attribution_date: 'September 28, 2022'
         teaser_attribution_holder: null
         teaser_attribution_country: Netherlands
         teaser_attribution_license: CC-BY
@@ -4841,16 +4883,16 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: 'task force, task forces, working group, working groups, task force recommendations'
-        pages:
-            - pages/task-forces
-            - pages/task-forces
+        pages: {  }
         posts: {  }
         data: {  }
         projects:
             - projects/ena-membership-working-group
             - projects/new-professionals
-            - projects/impact-lite-training-community-building-taskforce
             - projects/digital-transformation-task-force
+            - projects/diversity-and-inclusion-task-force
+            - projects/impact-lite-training-community-building-taskforce
+            - projects/out-of-commerce-works-working-group
         events: {  }
         persons: {  }
         communities:
@@ -4888,7 +4930,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4933,7 +4975,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: projects
@@ -4953,11 +4995,17 @@ pages:
                         value: '148'
                         _id: projects/audiovisual-playout-in-europeana
                     -
+                        value: '174'
+                        _id: projects/capacity-building-working-group
+                    -
                         value: '98'
                         _id: projects/data-quality-committee
                     -
                         value: '159'
                         _id: projects/ena-membership-working-group
+                    -
+                        value: '177'
+                        _id: projects/environmental-sustainability-practice-task-force
                     -
                         value: '108'
                         _id: projects/governance-working-group
@@ -4976,6 +5024,18 @@ pages:
                     -
                         value: '167'
                         _id: projects/supporting-the-digital-cultural-heritage-of-ukraine-working-group
+                    -
+                        value: '169'
+                        _id: projects/workflow-from-shelf-to-europeana
+                    -
+                        value: '175'
+                        _id: projects/linked-data-task-force
+                    -
+                        value: '176'
+                        _id: projects/solid-based-decentralised-aggregation-task-force
+                    -
+                        value: '180'
+                        _id: projects/article-14-task-force
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
@@ -5012,7 +5072,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: calendar_archive
                 sources: projects
@@ -5023,7 +5083,7 @@ pages:
                 selected_pages:
                     -
                         value: ''
-                        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
+                        _id: pages/tools
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -5124,7 +5184,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5169,7 +5229,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: Images/stream_icons/stream_icon_newProvider.png
                 ordering: specified
                 sources: pages
@@ -5217,7 +5277,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: Images/stream_icons/stream_icon_existingProvider.png
                 ordering: specified
                 sources: pages
@@ -5265,7 +5325,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: Images/stream_icons/stream_icon_aggregators.png
                 ordering: specified
                 sources: pages
@@ -5379,7 +5439,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5427,7 +5487,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5472,7 +5532,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: Images/stream_icons/stream_icon_stats.png
                 ordering: specified
                 sources: pages
@@ -5520,7 +5580,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: Images/stream_icons/stream_icon_europeanDigitization.png
                 ordering: specified
                 sources: pages
@@ -5633,7 +5693,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5678,7 +5738,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -5726,7 +5786,7 @@ pages:
     -
         slug: apis
         datecreated: '2017-04-19 10:54:44'
-        datechanged: '2022-08-04 12:00:05'
+        datechanged: '2023-05-17 17:53:31'
         datepublish: '2017-04-19 10:54:37'
         datedepublish: ''
         ownerid: 1
@@ -5742,7 +5802,7 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>Europeana APIs can be used to build applications from the wealth of our collections, drawn from instiutions across Europe.</p>\r\n"
+        teaser: "<p>Europeana APIs can be used to build applications from the wealth of our collections, drawn from Institutions across Europe</p>\r\n"
         teaser_image:
             file: Images/New_pro_images_March2020/Spents..jpeg
             title: 'A dance performance'
@@ -5775,9 +5835,8 @@ pages:
         contact_website: null
         search_keywords: 'APIs, API'
         pages:
-            - pages/get-api
             - pages/get-api-old
-            - pages/apis
+            - pages/get-api
         posts:
             - posts/europeana-rest-api-wins-the-2017-data-apis-category-award
             - posts/viziel-learning-more-than-you-see-with-europeana-content
@@ -5826,7 +5885,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5871,7 +5930,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5922,7 +5981,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -6064,7 +6123,7 @@ pages:
                 anchortitle: ''
                 templates: listing
                 body: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: data
@@ -6185,7 +6244,7 @@ pages:
                 filter_projects: Project
                 override_css_id: ''
                 override_css_class: ''
-                icon:
+                icon_image:
                     file: ''
                 selected_pages: ''
                 selected_persons: ''
@@ -6305,7 +6364,7 @@ pages:
                 filter_projects: ''
                 override_css_id: ''
                 override_css_class: ''
-                icon:
+                icon_image:
                     file: ''
                 selected_pages: ''
                 selected_persons: ''
@@ -6420,7 +6479,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: projects

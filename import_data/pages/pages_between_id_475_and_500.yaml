@@ -1,12 +1,12 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:33:00+02:00'
+    date: '2023-05-30T14:49:09+02:00'
     version: 3.7.4
     platform: mysql
 pages:
     -
         slug: events
         datecreated: '2017-08-05 01:31:30'
-        datechanged: '2022-02-04 12:55:06'
+        datechanged: '2023-03-06 15:04:36'
         datepublish: '2017-08-05 01:30:27'
         datedepublish: ''
         ownerid: 2
@@ -59,13 +59,13 @@ pages:
         pages:
             - pages/documentation
             - pages/events
-            - pages/events
-            - pages/events
         posts:
             - posts/announcing-our-digital-spring-programme
-            - posts/looking-back-on-europeana-2021
             - posts/announcing-our-programme-for-europeana-2021
             - posts/introducing-our-europeanatech-x-ai-webinar-series
+            - posts/going-hybrid-bringing-events-in-the-cultural-heritage-sector-online-and-on-site
+            - posts/secure-your-ticket-for-europeana-2022-making-digital-culture-count
+            - posts/join-the-europeana-aggregators-forum-outreach-event
         data: {  }
         projects:
             - projects/europeana-2019-conference-programme-advisory-committee
@@ -96,15 +96,6 @@ pages:
             -
                 slug: ''
                 name: ''
-            -
-                slug: ''
-                name: ''
-            -
-                slug: ''
-                name: ''
-            -
-                slug: ''
-                name: ''
         modules:
             -
                 enabled: enabled
@@ -118,7 +109,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -163,7 +154,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -218,11 +209,11 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: calendar_upcoming
                 sources: events
-                override_amount: 12
+                override_amount: 6
                 basetag: webinar
                 basecategory: ''
                 basemarket: ''
@@ -242,7 +233,7 @@ pages:
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
-                override_css_id: ''
+                override_css_id: webinars
                 override_css_class: ''
             -
                 enabled: enabled
@@ -263,7 +254,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -311,11 +302,11 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: calendar_upcoming
                 sources: events
-                override_amount: 4
+                override_amount: 6
                 basetag: event
                 basecategory: ''
                 basemarket: ''
@@ -335,7 +326,7 @@ pages:
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
-                override_css_id: ''
+                override_css_id: events
                 override_css_class: ''
             -
                 enabled: enabled
@@ -356,7 +347,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -374,7 +365,7 @@ pages:
                 selected_posts:
                     -
                         value: ''
-                        _id: posts/team-using-europeana-data-win-prize-at-the-eu-datathon-2022
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -384,7 +375,7 @@ pages:
                 selected_resources:
                     -
                         value: ''
-                        _id: resources/eu-datathon-1
+                        _id: resources/media-literacy-competence-framework-en
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -410,7 +401,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -467,7 +458,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -512,7 +503,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -560,7 +551,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: calendar_archive
                 sources: events
@@ -590,7 +581,7 @@ pages:
     -
         slug: campaigns
         datecreated: '2017-08-05 13:48:31'
-        datechanged: '2022-09-21 12:12:06'
+        datechanged: '2023-04-12 09:07:05'
         datepublish: '2017-08-05 13:47:56'
         datedepublish: ''
         ownerid: 2
@@ -675,7 +666,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -720,7 +711,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -729,8 +720,14 @@ pages:
                 basecategory: ''
                 selected_pages:
                     -
+                        value: '841'
+                        _id: pages/digital-storytelling-festival
+                    -
                         value: '826'
-                        _id: pages/europeana-low-code-fest-2022
+                        _id: pages/low-code-fest
+                    -
+                        value: '796'
+                        _id: pages/built-with-bits-designing-virtual-spaces-for-the-future
                     -
                         value: '731'
                         _id: pages/gif-it-up
@@ -799,7 +796,7 @@ pages:
     -
         slug: europeanatech
         datecreated: '2017-08-05 14:45:09'
-        datechanged: '2022-08-26 15:37:29'
+        datechanged: '2023-04-13 11:46:01'
         datepublish: '2017-08-05 14:44:21'
         datedepublish: ''
         ownerid: 2
@@ -857,15 +854,15 @@ pages:
             - posts/training-our-image-classification-model
             - posts/introducing-our-europeanatech-x-ai-webinar-series
             - posts/introducing-our-image-classification-pilot
-            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-marieke-van-erp
             - posts/europeanatech-challenge-for-europeana-ai-ml-datasets-announcing-the-winners
-            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-maria-cristina-marinescu
             - posts/artificial-intelligence-and-copyright-in-the-cultural-heritage-sector-views-from-creative-commons
-            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-emmanuelle-bermes
             - posts/exploring-ai-in-the-cultural-heritage-sector
             - posts/approaches-for-handling-multilingualism-for-digital-cultural-heritage
             - posts/announcing-the-europeanatech-challenge-for-europeana-artificial-intelligence-and-machine-learning-datasets
             - posts/task-force-publishes-artificial-intelligence-in-glams-survey-results
+            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-marieke-van-erp
+            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-maria-cristina-marinescu
+            - posts/pioneering-ai-for-digital-cultural-heritage-an-interview-with-dr-emmanuelle-bermes
         data: {  }
         projects:
             - projects/ai-in-relation-to-glams
@@ -903,7 +900,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -948,7 +945,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -996,7 +993,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1034,24 +1031,27 @@ pages:
                 selected_organisations: ''
             -
                 enabled: enabled
-                title: ''
+                title: 'EuropeanaTech 2023'
                 subtitle: ''
-                anchortitle: ''
-                templates: body
-                body: "<center><iframe allow=\"autoplay; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"360\" src=\"https://player.vimeo.com/video/271459876\" width=\"640\"></iframe>\r\n<p><a href=\"https://vimeo.com/271459876\">EuropeanaTech 2018 - Why it mattered to me</a> from <a href=\"https://vimeo.com/europeana\">Europeana</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p>\r\n</center>\r\n"
+                anchortitle: 'EuropeanaTech 2023'
+                templates: listing
+                body: ''
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
-                ordering: latest
-                sources: posts
+                ordering: specified
+                sources: pages
                 override_amount: 3
                 basetag: ''
                 basecategory: ''
-                selected_pages: ''
+                selected_pages:
+                    -
+                        value: '738'
+                        _id: pages/conference
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -1079,6 +1079,51 @@ pages:
                 selected_organisations: ''
             -
                 enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<center><iframe allow=\"autoplay; fullscreen\" allowfullscreen=\"\" frameborder=\"0\" height=\"360\" src=\"https://player.vimeo.com/video/271459876\" width=\"640\"></iframe>\r\n<p><a href=\"https://vimeo.com/271459876\">EuropeanaTech 2018 - Why it mattered to me</a> from <a href=\"https://vimeo.com/europeana\">Europeana</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p>\r\n</center>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
                 title: 'Activities and resources'
                 subtitle: ''
                 anchortitle: 'Activities and resources'
@@ -1089,7 +1134,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1144,9 +1189,16 @@ pages:
                 image:
                     file: ''
                     title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -1160,8 +1212,8 @@ pages:
                 filter_posts: ''
                 selected_posts:
                     -
-                        value: '2423'
-                        _id: posts/europeanatech-community-work-plan-2022
+                        value: '2573'
+                        _id: posts/europeanatech-work-plan-2023
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -1169,19 +1221,12 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
+                selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
+                override_css_id: ''
+                override_css_class: ''
             -
                 enabled: enabled
                 title: 'Task Forces'
@@ -1201,7 +1246,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: projects
@@ -1255,7 +1300,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag_unpaged
                 sources: pages
@@ -1300,7 +1345,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -1338,9 +1383,6 @@ pages:
                     -
                         value: '932'
                         _id: persons/makx-dekkers
-                    -
-                        value: '4673'
-                        _id: persons/ina-bluemel
                     -
                         value: '4698'
                         _id: persons/larissa-borck
@@ -1399,7 +1441,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1447,7 +1489,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -1492,7 +1534,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: calendar_upcoming
                 sources: events
@@ -1613,7 +1655,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: Europeana_Professional/EuropeanaTech/Readings
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1658,7 +1700,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: Europeana_Professional/EuropeanaTech/EuropeanaTech_taskforces
-                icon:
+                icon_image:
                     file: ''
                 ordering: category_unpaged
                 sources: projects
@@ -1768,7 +1810,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1813,7 +1855,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1861,7 +1903,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -1918,7 +1960,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag_unpaged
                 sources: posts
@@ -2037,7 +2079,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2147,7 +2189,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -2192,7 +2234,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2237,7 +2279,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2291,7 +2333,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2408,7 +2450,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2453,7 +2495,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2498,7 +2540,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -2638,7 +2680,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2748,7 +2790,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2793,7 +2835,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: Images/stream_icons/stream_icon_dataPublication.png
                 ordering: specified
                 sources: pages
@@ -2841,7 +2883,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: Images/stream_icons/stream_icon_discovery.png
                 ordering: specified
                 sources: pages
@@ -2889,7 +2931,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: Images/stream_icons/stream_icon_incubation.png
                 ordering: specified
                 sources: pages
@@ -3010,7 +3052,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -3050,10 +3092,10 @@ pages:
     -
         slug: grants-programme
         datecreated: '2017-08-07 14:28:20'
-        datechanged: '2021-09-10 17:25:50'
+        datechanged: '2023-02-21 09:03:41'
         datepublish: '2018-08-28 16:18:21'
         datedepublish: ''
-        ownerid: 100
+        ownerid: 1
         status: published
         templatefields: {  }
         title: 'Research Grants Programme'
@@ -3100,13 +3142,13 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: 'research grants, grants'
-        pages:
-            - pages/grants-programme
-            - pages/grants-programme
-            - pages/grants-programme
+        pages: {  }
         posts:
             - posts/the-role-of-audio-visual-media-as-a-storyteller-berber-hagedoorn-europeana-research-grants-winner
             - posts/exploring-autobiographical-writings-from-prisoners-of-war-saverio-vita-europeana-research-grants-winner
+            - posts/meet-the-winners-of-the-europeana-research-grants-and-prizes-2021
+            - posts/interactive-mapping-of-memories-elizabeth-benjamin
+            - posts/new-project-at-the-museum-fuer-naturkunde-berlin-explores-crowdsourcing-for-the-anthropocene
         data: {  }
         projects: {  }
         events: {  }
@@ -3143,7 +3185,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3195,7 +3237,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3240,7 +3282,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3285,7 +3327,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3330,7 +3372,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3375,7 +3417,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3420,7 +3462,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3465,7 +3507,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3510,7 +3552,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3555,7 +3597,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3600,7 +3642,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3632,8 +3674,56 @@ pages:
             -
                 enabled: enabled
                 title: '2021 Research Grants Call'
-                subtitle: ''
+                subtitle: 'Read about the call, the winners, and the outputs.'
                 anchortitle: '2021 Call'
+                templates: teaser
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2391'
+                        _id: posts/meet-the-winners-of-the-europeana-research-grants-and-prizes-2021
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
                 templates: listingsemistatic
                 body: ''
                 image:
@@ -3648,10 +3738,64 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
-                sources: pages
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: '2516'
+                        _id: posts/new-project-at-the-museum-fuer-naturkunde-berlin-explores-crowdsourcing-for-the-anthropocene
+                    -
+                        value: '2521'
+                        _id: posts/new-project-explores-crowdsourcing-in-estonian-cultural-heritage-institutions
+                    -
+                        value: '2518'
+                        _id: posts/new-project-at-the-university-of-warsaw-explores-cultural-heritage-geodata-and-crowdsourcing
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
                 override_amount: 3
                 basetag: ''
                 basecategory: ''
@@ -3673,7 +3817,16 @@ pages:
                 selected_projects: ''
                 selected_jobs: ''
                 selected_events: ''
-                selected_resources: ''
+                selected_resources:
+                    -
+                        value: '1091'
+                        _id: resources/new-project-at-the-the-national-museums-of-world-culture-sweden-explores-crowdsourcing-to-decolonise-data
+                    -
+                        value: '1092'
+                        _id: resources/europeana-research-grants-programme-2021-call
+                    -
+                        value: '1093'
+                        _id: resources/europeana-research-grants-2021-frequently-asked-questions
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -3699,7 +3852,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3756,7 +3909,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -3822,7 +3975,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -3894,7 +4047,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -3966,7 +4119,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -4105,7 +4258,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -4164,7 +4317,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4295,7 +4448,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -4337,7 +4490,7 @@ pages:
     -
         slug: europeana-education
         datecreated: '2017-08-08 10:37:40'
-        datechanged: '2022-09-21 12:13:51'
+        datechanged: '2023-01-31 13:05:04'
         datepublish: '2017-08-08 10:34:55'
         datedepublish: ''
         ownerid: 2
@@ -4386,7 +4539,6 @@ pages:
         search_keywords: 'education, education community, Europeana Education'
         pages:
             - pages/europeana-stem-challenge-thank-you-for-your-submission
-            - pages/europeana-education
         posts:
             - posts/children-s-migration-stories-how-a-school-brought-europeana-migration-alive-in-the-classroom
             - posts/announcing-the-winners-of-reinventingbeethoven-an-educational-challenge
@@ -4396,8 +4548,8 @@ pages:
             - posts/supporting-educators-with-the-open-content-toolkit
             - posts/presenting-the-opening-up-historiana-project
             - posts/professionals-in-focus-frederik-truyen
-            - posts/education-community-work-plan-2022
             - posts/reinventingbeethoven-encouraging-creativity-in-education-through-digital-cultural-heritage
+            - posts/education-community-work-plan-2022
         data: {  }
         projects: {  }
         events: {  }
@@ -4434,7 +4586,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4482,7 +4634,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4527,7 +4679,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4575,7 +4727,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4586,7 +4738,7 @@ pages:
                 selected_pages:
                     -
                         value: '826'
-                        _id: pages/europeana-low-code-fest-2022
+                        _id: pages/low-code-fest
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -4623,7 +4775,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -4643,8 +4795,8 @@ pages:
                         value: '2098'
                         _id: posts/teacher-training-guide
                     -
-                        value: '2426'
-                        _id: posts/education-community-work-plan-2022
+                        value: '2578'
+                        _id: posts/europeana-education-community-work-plan-2023
                 filter_data: ''
                 selected_data: ''
                 filter_projects: ''
@@ -4684,7 +4836,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -4732,7 +4884,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4780,7 +4932,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4828,7 +4980,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: persons
@@ -4858,8 +5010,14 @@ pages:
                         value: '306'
                         _id: persons/marco-streefkerk
                     -
-                        value: '7458'
-                        _id: persons/ilona-kish
+                        value: '5676'
+                        _id: persons/tatyana-oleinik
+                    -
+                        value: '6216'
+                        _id: persons/raul-gomez-hernandez
+                    -
+                        value: '1805'
+                        _id: persons/georgia-manolopoulou
                 filter_posts: ''
                 selected_posts: ''
                 filter_data: ''
@@ -4894,7 +5052,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4945,7 +5103,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: market
                 sources: posts
@@ -4990,7 +5148,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: calendar_upcoming
                 sources: events
@@ -5035,7 +5193,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -5159,7 +5317,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5204,7 +5362,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5252,7 +5410,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5297,7 +5455,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest_unpaged
                 sources: posts
@@ -5334,7 +5492,7 @@ pages:
     -
         slug: projects
         datecreated: '2017-08-08 17:52:07'
-        datechanged: '2022-08-26 13:27:30'
+        datechanged: '2023-05-16 10:54:47'
         datepublish: '2017-08-08 17:51:53'
         datedepublish: ''
         ownerid: 2
@@ -5382,34 +5540,21 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: 'projects, funding'
-        pages:
-            - pages/europeana-dsi
-            - pages/digital-europe-programme-2021-2022-data-for-cultural-heritage-faqs
-            - pages/generic-services-projects
-            - pages/horizon-2020
-            - pages/projects
-        posts:
-            - posts/collecting-ireland-s-sport-stories-during-covid-19
-            - posts/european-commission-awards-more-than-900-000-to-two-new-europeana-generic-services-projects
-            - posts/fostering-reuse-of-digital-cultural-heritage-with-v4design
-            - posts/multi-million-euro-partnership-to-strengthen-europe-s-cultural-and-creative-sectors-and-industries
-            - posts/apply-now-for-eu-grants-for-data-space-for-cultural-heritage-projects
+        pages: {  }
+        posts: {  }
         data: {  }
-        projects:
-            - projects/europeana-dsi
-            - projects/europeana-dsi-2
-            - projects/europeana-dsi-3
-            - projects/europeana-dsi-4
-            - projects/watching-videos-like-a-historian-watchlikeahist
-        events:
-            - events/new-frontiers-for-jewish-digital-heritage
+        projects: {  }
+        events: {  }
         persons: {  }
         communities:
             -
                 slug: ''
                 name: ''
         markets: {  }
-        categories: {  }
+        categories:
+            -
+                slug: projects
+                name: Projects
         tags: {  }
         modules:
             -
@@ -5418,13 +5563,13 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p>Europeana Foundation is the operator of Europeana, the European Union’s digital platform for cultural heritage. Our activities to maintain and develop the core service platform are funded under the Digital Service Infrastructure (DSI) project funding cycles.&nbsp;Throughout the years, we have also participated in other EU funded projects to support cultural heritage institutions in their digital transformation. Focus areas vary from digitisation and aggregation of high-quality data to technological innovation, reuse and capacity building.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">If you want to explore new EU-funded project opportunities with Europeana, please get in contact via the button&nbsp;below.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" />Europeana Foundation leads the deployment of the common European data space for cultural heritage.&nbsp;Throughout the years, we have also participated in other EU funded projects to support cultural heritage institutions in their digital transformation. Focus areas vary from digitisation and aggregation of high-quality data to technological innovation, reuse and capacity building.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">If you want to explore new EU-funded project opportunities with Europeana, please get in contact via the button&nbsp;below.</p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -5434,7 +5579,7 @@ pages:
                 selected_pages:
                     -
                         value: ''
-                        _id: pages/out-of-commerce-works-faqs-the-system-in-practice
+                        _id: pages/tools
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -5472,7 +5617,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5513,9 +5658,9 @@ pages:
                 selected_organisations: ''
             -
                 enabled: enabled
-                title: 'EU projects'
+                title: 'EU running projects'
                 subtitle: ''
-                anchortitle: 'EU projects'
+                anchortitle: 'EU running projects'
                 templates: listingsemistatic
                 body: ''
                 image:
@@ -5530,7 +5675,67 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '831'
+                        _id: pages/common-european-data-space-for-cultural-heritage
+                    -
+                        value: '720'
+                        _id: pages/generic-services-projects
+                    -
+                        value: '816'
+                        _id: pages/erasmus
+                    -
+                        value: '836'
+                        _id: pages/eit-culture-creativity
+                    -
+                        value: '837'
+                        _id: pages/creative-europe
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'EU past projects'
+                subtitle: ''
+                anchortitle: 'EU past projects'
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -5542,12 +5747,6 @@ pages:
                     -
                         value: '718'
                         _id: pages/europeana-dsi
-                    -
-                        value: '720'
-                        _id: pages/generic-services-projects
-                    -
-                        value: '816'
-                        _id: pages/erasmus
                     -
                         value: '719'
                         _id: pages/horizon-2020
@@ -5590,7 +5789,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: category
                 sources: posts
@@ -5635,7 +5834,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: category
                 sources: events
@@ -5660,6 +5859,150 @@ pages:
                 modulemorelabel: ''
                 modulemoretext: ''
                 override_css_id: events
+                override_css_class: ''
+            -
+                enabled: disabled
+                title: 'Project tools'
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>The Europeana Initiative takes parts in projects across the cultural heritage sector and data space which support the reuse of cultural heritage and seek to improve data quality. Discover the tools created by these projects for cultural heritage institutions and professionals.&nbsp;</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: disabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '766'
+                        _id: pages/crowdheritage
+                    -
+                        value: '760'
+                        _id: pages/culture-chatbot
+                    -
+                        value: '762'
+                        _id: pages/dashboard
+                    -
+                        value: '765'
+                        _id: pages/enhanced-unified-playout-service
+                    -
+                        value: '778'
+                        _id: pages/europeana-archaeology-vocabulary-services
+                    -
+                        value: '835'
+                        _id: pages/europeana-subtitled-ai-pipeline-and-training-suite
+                    -
+                        value: '812'
+                        _id: pages/heritage-metadata-automatic-translation-system
+                    -
+                        value: '777'
+                        _id: pages/linbi-enrichment-platform
+                    -
+                        value: '764'
+                        _id: pages/motionnotes
+                    -
+                        value: '767'
+                        _id: pages/movescollect-and-movesscrapbook
+                    -
+                        value: '813'
+                        _id: pages/the-recommendation-system
+                    -
+                        value: '811'
+                        _id: pages/sage
+                    -
+                        value: '763'
+                        _id: pages/storymaker
+                    -
+                        value: '834'
+                        _id: pages/subbit-platform
+                    -
+                        value: '809'
+                        _id: pages/subtitle-a-thon-platform
+                    -
+                        value: '732'
+                        _id: pages/transcribathon
+                    -
+                        value: '810'
+                        _id: pages/user-galleries
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects:
+                    -
+                        value: ''
+                        _id: projects/ds4ch-data-governance-stakeholder-group
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
                 override_css_class: ''
         _id: pages/projects
     -
@@ -5751,7 +6094,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5796,7 +6139,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5841,7 +6184,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5886,7 +6229,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5931,7 +6274,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5976,7 +6319,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6021,7 +6364,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6066,7 +6409,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6111,7 +6454,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6156,7 +6499,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6201,7 +6544,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6246,7 +6589,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6291,7 +6634,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6336,7 +6679,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6381,7 +6724,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6426,7 +6769,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6471,7 +6814,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6508,7 +6851,7 @@ pages:
     -
         slug: annotations
         datecreated: '2017-08-09 17:33:15'
-        datechanged: '2022-05-16 08:58:16'
+        datechanged: '2023-02-21 17:21:15'
         datepublish: '2017-08-09 17:33:06'
         datedepublish: ''
         ownerid: 2
@@ -6594,13 +6937,13 @@ pages:
                 subtitle: ''
                 anchortitle: Intro
                 templates: body
-                body: "<style type=\"text/css\">TABLE.listingtable THEAD TR   { background: white; }\r\nTABLE.listingtable THEAD TH   { text-align: center }\r\nPRE CODE { font-size: 10pt; }\r\nTABLE.rigid    { table-layout: fixed;   }\r\nTABLE.rigid TD { word-wrap: break-word; }\r\n</style>\r\n<section>\r\n<p>The Annotations API is an extension to the Europeana REST API which allows you to create, retrieve and manage annotations on Europeana objects. Annotations are user-contributed or system-generated enhancements, additions or corrections to (or a selection of) metadata or media. We adopted the <a href=\"https://www.w3.org/TR/annotation-model/\" target=\"_blank\">Web Annotation Data Model</a> as a base model for the representation of annotations and as a format for exchanging annotations between client applications and the API, but also the <a href=\"https://www.w3.org/TR/annotation-protocol/\">Web Annotation Protocol</a> as base HTTP protocol for the API.</p>\r\n\r\n<p>Before start using this API, we recommend reading the <a href=\"#apikey\">Registering for an API key</a> and reading the <a href=\"http://www.europeana.eu/portal/rights/api-terms-of-use.html\">Terms of Use</a>. If you want to get started with this API, go directly to the <a href=\"#get-started\">Getting Started</a> section or try it out directly on the <a href=\"#console\">Console</a>. If you want to get regular updates about the Europeana API, provide feedback and discuss it with other developers, we suggest to join the <a href=\"https://groups.google.com/forum/?pli=1#!forum/europeanaapi\">Europeana API discussion group at Google Groups</a>.</p>\r\n</section>\r\n"
+                body: "<style type=\"text/css\">TABLE.listingtable THEAD TR   { background: white; }\r\nTABLE.listingtable THEAD TH   { text-align: center }\r\nPRE CODE { font-size: 10pt; }\r\nTABLE.rigid    { table-layout: fixed;   }\r\nTABLE.rigid TD { word-wrap: break-word; }\r\n</style>\r\n<section>\r\n<p>The Annotations API is an extension to the Europeana REST API which allows you to create, retrieve and manage annotations on Europeana objects. Annotations are user-contributed or system-generated enhancements, additions or corrections to (or a selection of) metadata or media. We adopted the <a href=\"https://www.w3.org/TR/annotation-model/\" target=\"_blank\">Web Annotation Data Model</a> as a base model for the representation of annotations and as a format for exchanging annotations between client applications and the API, but also the <a href=\"https://www.w3.org/TR/annotation-protocol/\">Web Annotation Protocol</a> as base HTTP protocol for the API.</p>\r\n\r\n<p><strong>Please note that this API is in an Alpha state, you can use your regular API key for GET requests in this API Using the PUT/POST/DELETE methods for this API is currently not publicly available..&nbsp;</strong>You can <a href=\"https://pro.europeana.eu/page/annotations#get-started\">request an API key here</a>. We have also listed some <a href=\"#get-started\">test API keys you can use</a> below. Before start using this API, we recommend&nbsp;reading the <a href=\"http://www.europeana.eu/portal/rights/api-terms-of-use.html\">Terms of Use</a>. If you want to get started with this API, go directly to the <a href=\"#get-started\">Getting Started</a> section or try it out directly on the <a href=\"#console\">Console</a>. If you want to get regular updates about the Europeana API, provide feedback and discuss it with other developers, we suggest to join the <a href=\"https://groups.google.com/forum/?pli=1#!forum/europeanaapi\">Europeana API discussion group at Google Groups</a>.</p>\r\n</section>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6645,7 +6988,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: data
@@ -6699,13 +7042,13 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<section>\r\n<h3>Roadmap and Changelog</h3>\r\n\r\n<p>The current version of the Annotations API is <a href=\"https://github.com/europeana/annotation/releases/tag/0.2.8-RELEASE\">0.2.8</a> (January 2018). It is currently available as a Public <a href=\"intro#release-alpha\">Alpha</a>, which is the first public version released primarily to get feedback from you. Do note that this means that changes can be introduced which could break backwards compatibility. It also means that to use this API you need a separate API key than for the other Europeana APIs. To see the changes made for the current version and also all previous releases, see the <a href=\"https://github.com/europeana/annotation/releases\">API changelog in the project GitHub</a>.</p>\r\n\r\n<h3 id=\"credits\">Credits</h3>\r\n\r\n<p>This API was initially developed as part of the <a href=\"http://pro.europeana.eu/get-involved/projects/project-list/europeana-sounds\" target=\"_blank\">Europeana Sounds</a> project. It's development has been carried out by the <a href=\"http://www.ait.ac.at/\" target=\"_blank\">AIT Austrian Institute of Technology</a> in cooperation with the Europeana Foundation.</p>\r\n</section>\r\n"
+                body: "<section>\r\n<h3>Roadmap and Changelog</h3>\r\n\r\n<p>The current version of the Annotations API is <a href=\"https://github.com/europeana/annotation/releases/tag/0.3.3\">0.3.3</a>&nbsp;(August 2022). It is currently available as a Public <a href=\"intro#release-alpha\">Alpha</a>, which is the first public version released primarily to get feedback from you. Do note that this means that changes can be introduced which could break backwards compatibility. It also means that to use this API you need a separate API key than for the other Europeana APIs. To see the changes made for the current version and also all previous releases, see the <a href=\"https://github.com/europeana/annotation/releases\">API changelog in the project GitHub</a>.</p>\r\n\r\n<h3 id=\"credits\">Credits</h3>\r\n\r\n<p>This API was initially developed as part of the <a href=\"http://pro.europeana.eu/get-involved/projects/project-list/europeana-sounds\" target=\"_blank\">Europeana Sounds</a> project. It's development has been carried out by the <a href=\"http://www.ait.ac.at/\" target=\"_blank\">AIT Austrian Institute of Technology</a> in cooperation with the Europeana Foundation.</p>\r\n</section>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6750,7 +7093,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6789,13 +7132,13 @@ pages:
                 subtitle: ''
                 anchortitle: Scenarios
                 templates: body
-                body: "<section>\r\n\r\n<p>The Annotations API supports different types of annotations. This page explains the types of annotations that are currently supported, providing examples on how to represent them in the API.</p>\r\n\r\n<blockquote>The examples used in this Section are shortened versions of the Annotation, see the complete version on <a href=\"#data-model\">Data Model</a>.</blockquote>\r\n\r\n<h3>Simple tags (without language)</h3>\r\n\r\n<p>A simple tag is a short textual description of a resource. This scenario only applies when the language of the tag is not know, otherwise see the scenario described in the next Section.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>Examples:</td>\r\n            <td>church<br />\r\n            blue<br />\r\n            black and white</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Requirement:</td>\r\n            <td>A maximum of 64 characters is allowed for a simple tag. A tag cannot be a URL.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"tagging\" and set the tag within the \"bodyValue\" field.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.1.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: tagging a Europeana item with the word \"painting\".</h4>\r\n\r\n<pre><code>{\r\n  \"motivation\": \"tagging\",\r\n  \"bodyValue\": \"painting\",\r\n  \"target\": \"http://data.europeana.eu/item/92062/BibliographicResource_1000126189360\"\r\n}</code></pre>\r\n\r\n\r\n<h3>Simple tags (with language)</h3>\r\n\r\n<p>A simple tag is a short textual description of a resource.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>Examples:</td>\r\n            <td>church<br />\r\n            blue<br />\r\n            black and white</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Requirement:</td>\r\n            <td>A maximum of 64 characters is allowed for a simple tag. A tag cannot be a URL and the language information must be specified.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"tagging\" and set the tag within the \"body\" field as a Textual Body.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.1.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: tagging a Europeana item with the English word \"painting\" </h4>\r\n\r\n<pre><code>{\r\n  \"motivation\": \"tagging\",\r\n  \"body\": {\r\n    \"type\": \"TextualBody\",\r\n    \"value\": \"painting\",\r\n    \"language\": \"en\"\r\n },\r\n  \"target\": \"http://data.europeana.eu/item/92062/BibliographicResource_1000126189360\"\r\n}</code></pre>\r\n\r\n\r\n<h3>Semantic tags</h3>\r\n\r\n<p>A semantic tag is a tag to a resource from a controlled vocabulary, making it machine-interpretable.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>Example:</td>\r\n            <td>This <a href=\"http://www.europeana.eu/portal/record/09102/_UEDIN_214.html\" target=\"_blank\">object in Europeana</a> is somehow related to <a href=\"http://sws.geonames.org/2988507\" target=\"_blank\">France (http://sws.geonames.org/2988507)</a>.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Requirement:</td>\r\n            <td>Any URI is accepted as semantic resource. In the future, it will be limited to a controlled list of acceptable domains.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"tagging\" and set as body the URI for the semantic resource taken from a contolled vocabulary.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.1.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: tagging a Europeana item with the semantic resource for <a href=\"http://sws.geonames.org/2988507\">Paris</a> from Geonames.</h4>\r\n\r\n<pre><code>{\r\n  \"motivation\": \"tagging\",\r\n  \"body\": \"http://sws.geonames.org/2988507\",\r\n  \"target\": \"http://data.europeana.eu/item/09102/_UEDIN_214\"\r\n}</code></pre>\r\n\r\n\r\n<h3>Object links</h3>\r\n\r\n<p>An object link is a relationship between two (Europeana) objects. This relationship can be any.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>Example:</td>\r\n            <td>This <a href=\"http://www.europeana.eu/portal/record/92062/BibliographicResource_1000126189361.html\" target=\"_blank\">object in Europeana</a> is (in some way) similar to <a href=\"http://www.europeana.eu/portal/record/92062/BibliographicResource_1000126189360.html\" target=\"_blank\">this object</a>.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Requirement:</td>\r\n            <td>An object link can only be made between two Europeana objects.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"linking\" and set as target an array containing the URIs of both objects.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.1.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: linking two Europeana items together.</h4>\r\n\r\n<pre><code>{\r\n  \"motivation\": \"linking\",\r\n  \"target\": [\r\n      \"http://data.europeana.eu/item/92062/BibliographicResource_1000126189360\",\r\n      \"http://data.europeana.eu/item/92062/BibliographicResource_1000126189361\"\r\n  ]\r\n}</code></pre>\r\n\r\n\r\n<h3>Geo Tags</h3>\r\n\r\n<p>A geo-tag adds a geographical location to an item.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>Example:</td>\r\n            <td>This <a href=\"http://www.europeana.eu/portal/record/92034/GVNRC_NFA03_kop_6_3.html\" target=\"_blank\">object in Europeana</a> was located at latitude 52.081131 and longitude 4.324053. .</td>\r\n        </tr>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"tagging\" and include the \"type\", \"lat\" and \"long\" attributes in the body as per the example below.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.2.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: tagging a Europeana item with a geographical location.</h4>\r\n\r\n<pre><code>{\r\n  \"motivation\": \"tagging\",\r\n  \"body\": {\r\n    \"@context\": \"http://www.europeana.eu/schemas/context/entity.jsonld\",\r\n    \"type\": \"Place\",\r\n    \"lat\": \"52.081131\",\r\n    \"long\": \"4.324053\"\r\n  },\r\n  \"target\": \"http://data.europeana.eu/item/92034/GVNRC_NFA03_kop_6_3\"\r\n}</code></pre>\r\n\r\n<h3>Annotating media resources</h3>\r\n\r\n<p>Annotating a media resource means that the target of the annotation is not the Europeana item but instead a specific media resource within that item.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"target\" of the annotation to a JSON object with the \"scope\" holding the unique identifier of the Europeana item and the \"source\" field the URL of the actual media resource being annotated.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.8.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: tagging a <a href=\"http://comhaltasarchive.ie/tracks/12535\">sound track</a> of an <a href=\"http://data.europeana.eu/item/2059207/data_sounds_T471_5\">Europeana item</a> with the simple tag \"Folk Music\".</h4>\r\n\r\n<pre><code>{\r\n  \"motivation\": \"tagging\",\r\n  \"bodyValue\": \"Folk Music\",\r\n  \"target\": {\r\n    \"type\": \"SpecificResource\",\r\n    \"scope\": \"http://data.europeana.eu/item/2059207/data_sounds_T471_5\",\r\n    \"source\": \"http://comhaltasarchive.ie/tracks/12535\"\r\n  }\r\n}</code></pre>\r\n\r\n<h3>Transcriptions</h3>\r\n\r\n<p>A transcription is typically an annotation expressing a relation between an image and the text that is represented on that image. Besides the text, the annotation can also refer to a page where the text is displayed, like in the example below.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"transcribing\" and apply the same criteria as for media resources.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.8.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: annotating the <a href=\"http://www.europeana1914-1918.eu/attachments/2020601/20841.235882.full.jpg\">image</a> of an <a href=\"http://data.europeana.eu/item/2020601/contributions_20841\">Europeana item</a> with the <a href=\"https://transcribathon.com/en/documents/id-20841/item-235882/\">transcription page</a> available at <a href=\"https://transcribathon.com\">Transcribathon</a>.</h4>\r\n\r\n<pre><code>{\r\n  \"motivation\": \"transcribing\",\r\n  \"body\": {\r\n    \"id\": \"https://transcribathon.com/en/documents/id-20841/item-235882/\",\r\n    \"language\": \"de\",\r\n    \"format\": \"text/html\"\r\n  },\r\n  \"target\": {\r\n    \"scope\": \"http://data.europeana.eu/item/2020601/contributions_20841\",\r\n    \"source\": \r\n    \"http://www.europeana1914-1918.eu/attachments/2020601/20841.235882.full.jpg\"\r\n  }\r\n}</code></pre>\r\n\r\n\r\n</section>\r\n"
+                body: "<section>\r\n<p>The Annotations API supports different types of annotations. This page explains the types of annotations that are currently supported, providing examples on how to represent them in the API.</p>\r\n\r\n<blockquote>The examples used in this Section are shortened versions of the Annotation, see the complete version on <a href=\"#data-model\">Data Model</a>.</blockquote>\r\n\r\n<h3>Simple tags (without language)</h3>\r\n\r\n<p>A simple tag is a short textual description of a resource. This scenario only applies when the language of the tag is not known, otherwise see the scenario described in the next Section.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>Examples:</td>\r\n            <td>church<br />\r\n            blue<br />\r\n            black and white</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Requirement:</td>\r\n            <td>A maximum of 64 characters is allowed for a simple tag. A tag cannot be a URL.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"tagging\" and set the tag within the \"bodyValue\" field.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.1.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: tagging a Europeana item with the word \"painting\".</h4>\r\n\r\n<pre>\r\n<code>{\r\n  \"motivation\": \"tagging\",\r\n  \"bodyValue\": \"painting\",\r\n  \"target\": \"http://data.europeana.eu/item/92062/BibliographicResource_1000126189360\"\r\n}</code></pre>\r\n\r\n<h3>Simple tags (with language)</h3>\r\n\r\n<p>A simple tag is a short textual description of a resource.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>Examples:</td>\r\n            <td>church<br />\r\n            blue<br />\r\n            black and white</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Requirement:</td>\r\n            <td>A maximum of 64 characters is allowed for a simple tag. A tag cannot be a URL and the language information must be specified.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"tagging\" and set the tag within the \"body\" field as a Textual Body.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.1.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: tagging a Europeana item with the English word \"painting\"</h4>\r\n\r\n<pre>\r\n<code>{\r\n  \"motivation\": \"tagging\",\r\n  \"body\": {\r\n    \"type\": \"TextualBody\",\r\n    \"value\": \"painting\",\r\n    \"language\": \"en\"\r\n },\r\n  \"target\": \"http://data.europeana.eu/item/92062/BibliographicResource_1000126189360\"\r\n}</code></pre>\r\n\r\n<h3>Semantic tags</h3>\r\n\r\n<p>A semantic tag is a tag to a resource from a controlled vocabulary, making it machine-interpretable.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>Example:</td>\r\n            <td>This <a href=\"http://www.europeana.eu/portal/record/09102/_UEDIN_214.html\" target=\"_blank\">object in Europeana</a> is somehow related to <a href=\"http://sws.geonames.org/2988507\" target=\"_blank\">France (http://sws.geonames.org/2988507)</a>.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Requirement:</td>\r\n            <td>Any URI is accepted as semantic resource. In the future, it will be limited to a controlled list of acceptable domains.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"tagging\" and set as body the URI for the semantic resource taken from a contolled vocabulary.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.1.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: tagging a Europeana item with the semantic resource for <a href=\"http://sws.geonames.org/2988507\">Paris</a> from Geonames.</h4>\r\n\r\n<pre>\r\n<code>{\r\n  \"motivation\": \"tagging\",\r\n  \"body\": \"http://sws.geonames.org/2988507\",\r\n  \"target\": \"http://data.europeana.eu/item/09102/_UEDIN_214\"\r\n}</code></pre>\r\n\r\n<h3>Object links</h3>\r\n\r\n<p>An object link is a relationship between two (Europeana) objects. This relationship can be any.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>Example:</td>\r\n            <td>This <a href=\"http://www.europeana.eu/portal/record/92062/BibliographicResource_1000126189361.html\" target=\"_blank\">object in Europeana</a> is (in some way) similar to <a href=\"http://www.europeana.eu/portal/record/92062/BibliographicResource_1000126189360.html\" target=\"_blank\">this object</a>.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Requirement:</td>\r\n            <td>An object link can only be made between two Europeana objects.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"linking\" and set as target an array containing the URIs of both objects.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.1.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: linking two Europeana items together.</h4>\r\n\r\n<pre>\r\n<code>{\r\n  \"motivation\": \"linking\",\r\n  \"target\": [\r\n      \"http://data.europeana.eu/item/92062/BibliographicResource_1000126189360\",\r\n      \"http://data.europeana.eu/item/92062/BibliographicResource_1000126189361\"\r\n  ]\r\n}</code></pre>\r\n\r\n<h3>Geo Tags</h3>\r\n\r\n<p>A geo-tag adds a geographical location to an item.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>Example:</td>\r\n            <td>This <a href=\"http://www.europeana.eu/portal/record/92034/GVNRC_NFA03_kop_6_3.html\" target=\"_blank\">object in Europeana</a> was located at latitude 52.081131 and longitude 4.324053. .</td>\r\n        </tr>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"tagging\" and include the \"type\", \"lat\" and \"long\" attributes in the body as per the example below.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.2.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: tagging a Europeana item with a geographical location.</h4>\r\n\r\n<pre>\r\n<code>{\r\n  \"motivation\": \"tagging\",\r\n  \"body\": {\r\n    \"@context\": \"http://www.europeana.eu/schemas/context/entity.jsonld\",\r\n    \"type\": \"Place\",\r\n    \"lat\": \"52.081131\",\r\n    \"long\": \"4.324053\"\r\n  },\r\n  \"target\": \"http://data.europeana.eu/item/92034/GVNRC_NFA03_kop_6_3\"\r\n}</code></pre>\r\n\r\n<h3>Annotating media resources</h3>\r\n\r\n<p>Annotating a media resource means that the target of the annotation is not the Europeana item but instead a specific media resource within that item.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"target\" of the annotation to a JSON object with the \"scope\" holding the unique identifier of the Europeana item and the \"source\" field the URL of the actual media resource being annotated.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.8.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: tagging a <a href=\"http://comhaltasarchive.ie/tracks/12535\">sound track</a> of an <a href=\"http://data.europeana.eu/item/2059207/data_sounds_T471_5\">Europeana item</a> with the simple tag \"Folk Music\".</h4>\r\n\r\n<pre>\r\n<code>{\r\n  \"motivation\": \"tagging\",\r\n  \"bodyValue\": \"Folk Music\",\r\n  \"target\": {\r\n    \"type\": \"SpecificResource\",\r\n    \"scope\": \"http://data.europeana.eu/item/2059207/data_sounds_T471_5\",\r\n    \"source\": \"http://comhaltasarchive.ie/tracks/12535\"\r\n  }\r\n}</code></pre>\r\n\r\n<h3>Transcriptions</h3>\r\n\r\n<p>A transcription is typically an annotation expressing a relation between an image and the text that is represented on that image. Besides the text, the annotation can also refer to a page where the text is displayed, like in the example below.</p>\r\n\r\n<table class=\"listingtable\">\r\n    <tbody>\r\n        <tr>\r\n            <td>In the API:</td>\r\n            <td>Set the \"motivation\" to \"transcribing\" and apply the same criteria as for media resources.</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Availability:</td>\r\n            <td>Since version 0.2.8.</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<h4>Example: annotating the <a href=\"http://www.europeana1914-1918.eu/attachments/2020601/20841.235882.full.jpg\">image</a> of an <a href=\"http://data.europeana.eu/item/2020601/contributions_20841\">Europeana item</a> with the <a href=\"https://transcribathon.com/en/documents/id-20841/item-235882/\">transcription page</a> available at <a href=\"https://transcribathon.com\">Transcribathon</a>.</h4>\r\n\r\n<pre>\r\n<code>{\r\n  \"motivation\": \"transcribing\",\r\n  \"body\": {\r\n    \"id\": \"https://transcribathon.com/en/documents/id-20841/item-235882/\",\r\n    \"language\": \"de\",\r\n    \"format\": \"text/html\"\r\n  },\r\n  \"target\": {\r\n    \"scope\": \"http://data.europeana.eu/item/2020601/contributions_20841\",\r\n    \"source\": \r\n    \"http://www.europeana1914-1918.eu/attachments/2020601/20841.235882.full.jpg\"\r\n  }\r\n}</code></pre>\r\n</section>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6840,7 +7183,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6885,7 +7228,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6919,18 +7262,18 @@ pages:
                 attribution_link: ''
                 selected_organisations: ''
             -
-                enabled: enabled
+                enabled: disabled
                 title: Console
                 subtitle: ''
                 anchortitle: Console
                 templates: body
-                body: "<section>\r\n\r\n<p>Use the API Console to experiment with the API and build queries. The Request URL will display the call you need to make to the API.</p>\r\n\r\n<p>The console below points to the production environment, to use the API console for the test environment <a href=\"javascript:void(null);\" onclick=\"$('#console').attr('src', 'https://swagger.europeana.eu/?url=http://test-annotations.europeana.eu/api-docs/');\">click here</a>.</p>\r\n\r\n<iframe frameborder=\"0\" height=\"800\" id=\"console\" src=\"https://swagger.europeana.eu/?url=https://annotations.europeana.eu/api-docs/\" width=\"100%\"></iframe>\r\n\r\n</section>\r\n"
+                body: "<section>\r\n<p>Use the API Console to experiment with the API and build queries. The Request URL will display the call you need to make to the API.</p>\r\n\r\n<p>The console below points to the production environment, to use the API console for the test environment <a href=\"javascript:void(null);\" onclick=\"$('#console').attr('src', 'https://swagger.europeana.eu/?url=http://test-annotations.europeana.eu/api-docs/');\">click here</a>.</p>\r\n</section>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 override_amount: 3
@@ -7052,7 +7395,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7097,7 +7440,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -7151,7 +7494,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7203,7 +7546,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7248,7 +7591,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7293,7 +7636,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7338,7 +7681,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -7458,7 +7801,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7503,7 +7846,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -7564,23 +7907,23 @@ pages:
     -
         slug: linked-open-data
         datecreated: '2017-08-14 20:01:28'
-        datechanged: '2022-10-12 17:15:21'
+        datechanged: '2022-12-06 16:56:52'
         datepublish: '2017-08-14 20:01:13'
         datedepublish: ''
         ownerid: 2
         status: published
         templatefields: {  }
         title: 'Linked Open Data'
-        intro: "<p>Linked Open Data is a way of publishing structured data that allows metadata to be connected and enriched\_and links made between related resources.</p>\r\n"
+        intro: "<p>Linked Open Data is a way of publishing structured data that allows metadata to be connected and enriched, so that different representations of the same content can be found, and links made between related resources.\_</p>\r\n"
         body: null
         pagefooter: null
-        pagetype: landingpage-nohighlight
+        pagetype: page
         highlighttitle: null
         highlightsources: posts
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>Linked Open Data is a way of publishing structured data that allows metadata to be connected and enriched\_and links made between related resources.</p>\r\n"
+        teaser: "<p>Linked Open Data is a way of publishing structured data that allows metadata to be connected and enriched, so that different representations of the same content can be found, and links made between related resources.\_</p>\r\n"
         teaser_image:
             file: Images/Blog_images/2018-03/916105_bhm_photo_UMFA53630_0449.jpeg
             title: 'A view of a lake'
@@ -7601,7 +7944,7 @@ pages:
         image_attribution_link: null
         imagegallery: {  }
         shoulddatepublish: true
-        shoulddatemodified: false
+        shoulddatemodified: true
         subsite: null
         template: null
         seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
@@ -7620,8 +7963,8 @@ pages:
         persons: {  }
         communities:
             -
-                slug: labs
-                name: Labs
+                slug: ''
+                name: ''
         markets:
             -
                 slug: academic-research
@@ -7643,164 +7986,17 @@ pages:
         modules:
             -
                 enabled: enabled
-                title: Introduction
+                title: ''
                 subtitle: ''
-                anchortitle: Intro
+                anchortitle: ''
                 templates: body
-                body: "<p>Linked Open Data is a way of publishing structured data that allows metadata to be connected and enriched, so that different representations of the same content can be found, and links made between related resources. All Europeana datasets can be explored and queried through the <a href=\"sparql\">SPARQL API</a>.</p>\r\n\r\n<p>The metadata for all the objects in the Europeana portal is <strong>open</strong>, in that it is all licensed under the <a href=\"http://creativecommons.org/publicdomain/zero/1.0/\">CC0 Public Domain Dedication</a> under the terms of the <a href=\"http://pro.europeana.eu/page/the-data-exchange-agreement\">Data Exchange Agreement</a> (DEA), and can be freely downloaded via the API.</p>\r\n\r\n<p><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"375\" src=\"https://player.vimeo.com/video/36752317\" width=\"100%\"></iframe></p>\r\n\r\n<p><a href=\"https://vimeo.com/36752317\">Linked Open Data - What is it?</a> from <a href=\"https://vimeo.com/europeana\">Europeana</a> on <a href=\"https://vimeo.com\">Vimeo</a> (also <a href=\"http://vimeo.com/album/2072014/video/49231111\">en Français</a>, <a href=\"http://vimeo.com/album/2072014/video/49231110\">auf Deutsch</a>, <a href=\"http://vimeo.com/album/2072014/video/49232562\">in Italiano</a> and <a href=\"https://vimeo.com/album/2072014/video/49231112\">en Español</a> )</p>\r\n\r\n<p>The data is represented in the Europeana Data Model (EDM). The described resources are each <a href=\"http://en.wikipedia.org/wiki/Dereferenceable_Uniform_Resource_Identifier\">addressable and dereferenceable</a> by their URIs; for instance, <a href=\"https://www.europeana.eu/en/item/90402/SK_C_5\">https://www.europeana.eu/en/item/90402/SK_C_5</a>&nbsp;leads either to an HTML page on the Europeana portal for the object it identifies or to raw, machine-processable data on this object. Please see the <a href=\"https://docs.google.com/document/d/1XHqkK1CevIdZq-SLY0T9MiBKLd7w98e4Qy4hIHwEal4\">technical details</a> and the animation above for background on our motivation.</p>\r\n\r\n<p>If you have any questions or feedback, contact us on the <a href=\"https://groups.google.com/forum/#!forum/europeana-lod\">Europeana LOD group</a></p>\r\n\r\n<h3>History</h3>\r\n\r\n<p>The data.europeana.eu started as an experimental pilot in February 2012 with a small number of data providers who committed at an early stage to Europeana's initiative of promoting more open data. The project has been described in a <a href=\"http://dcevents.dublincore.org/index.php/IntConf/dc-2011/paper/view/55\">paper</a> presented at the Dublin Core 2011 conference. In October 2012, a large subset of the Europeana’s dataset (metadata on 20 million texts, images, videos and sounds) was transformed into linked data and made available from <a href=\"http://data.europeana.eu/\">data.europeana.eu</a>. More recently within the <a>Europeana Creative project</a>, a new pilot was developed and hosted by <a href=\"http://ontotext.com/\">Ontotext Corp.</a> containing the full Europeana dataset at the time (metadata on about 36 million).</p>\r\n"
+                body: "<p>You see Europeana's motivation for using Linked Open Data (LOD) in the animation below.</p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
-                basemarket: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
-                title: 'Tools created with the Europeana LOD API'
-                subtitle: ''
-                anchortitle: Tools
-                templates: listingsemistatic
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: data
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts:
-                    -
-                        value: '179'
-                        _id: posts/europeana-linked-open-data-feeds-irish-place-name-database
-                filter_data: ''
-                selected_data:
-                    -
-                        value: '407'
-                        _id: data/linked-logainm
-                    -
-                        value: '400'
-                        _id: data/amsterdam-museum-linked-open-data
-                    -
-                        value: '423'
-                        _id: data/eclap-linked-open-graph
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
-                basemarket: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
-                title: 'Data structure'
-                subtitle: 'This page provides information on how the metadata served by data.europeana.eu is organised.'
-                anchortitle: 'Data structure'
-                templates: body
-                body: "<section>\r\n<p>We assume that the reader has extensive knowledge of <a href=\"http://linkeddata.org/\">Linked Data</a> technology. Data.europeana.eu has also been described in the <a href=\"http://dcevents.dublincore.org/index.php/IntConf/dc-2011/paper/view/55\">technical paper</a> presented at the Dublin Core 2011 conference.</p>\r\n\r\n<h3>Background - The Europeana Data Model (EDM)</h3>\r\n\r\n<p>The Europeana Data Model has replaced the previous model Europeana Semantic Elements (ESE). It is a much more flexible and precise model than ESE, and offers the opportunity to attach every statement to the specific resource it applies to, and to reflect some basic form of data provenance. The main EDM requirements include:</p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>distinguishing between a 'provided item' (painting, book) and its digital representations</p>\r\n    </li>\r\n    <li>\r\n    <p>distinguishing between an item and the metadata record describing it</p>\r\n    </li>\r\n    <li>\r\n    <p>allowing the ingestion of multiple records for the same item, which may contain contradictory statements about it</p>\r\n    </li>\r\n</ul>\r\n\r\n<p>As a consequence of EDM having to meet these requirements, EDM data has a level of complexity above that which Europeana currently maintains. This level of complexity is comparable to what can be found in the data of many Europeana providers, and thus, we argue, it enables better exploitation of that data. Note also that, as much as possible, EDM re-uses elements coming from already-established vocabularies, such as Dublin Core, OAI-ORE, SKOS and CIDOC-CRM, thus lowering the cost of its creation and, hopefully, its adoption.</p>\r\n\r\n<p>For more information on EDM, we refer to the <em>EDM Definitions</em> and <em>EDM Primer</em> on Europeana's <a href=\"http://pro.europeana.eu/edm-documentation\">technical documents</a> page. The EDM OWL ontology is accessible through content negotiation but it is also <a href=\"https://www.europeana.eu/schemas/edm/rdf/edm.owl\">directly available</a>. Please be aware that both data.europeana.eu and those documents are under constant revision. There could therefore be some (minor) discrepancies between them!</p>\r\n\r\n<h3>Generating EDM data for Europeana</h3>\r\n\r\n<p>Data.europeana.eu includes semantic connections to external (linked data) sources. The vast majority of external links come from semantic enrichment realised at the Europeana Office, connecting Europeana items to places (as provided by <a href=\"http://geonames.org\">GeoNames</a>), concepts (from the <a href=\"http://www.eionet.europa.eu/gemet\">GEMET</a> thesaurus), persons (from <a href=\"http://dbpedia.org\">DBpedia</a>) and time periods (from an adhoc time period vocabulary). But the number of external links provided by data providers is constantly growing including links to <a href=\"http://vocab.getty.edu/\">AAT </a>, <a href=\"http://www.dnb.de/EN/Standardisierung/GND/gnd_node.html\">GND</a>, <a href=\"http://www.iconclass.org/\">Iconclass</a>, <a href=\"http://viaf.org/\">VIAF</a>) or any domain vocabulary following the EDM recommendations for metadata on contextual resources.</p>\r\n\r\n<h3>A walk through the resources served at data.europeana.eu</h3>\r\n\r\n<p>The core EDM classes, together with the properties we expect to be applied to their instances, are presented in these <a href=\"http://europeanalabs.eu/wiki/EDMObjectTemplatesEuropeana\">templates</a>. Of course it is unrealistic that all of the EDM properties are used for any single object exposed in Europeana. The EDM data harvested from Europeana providers, as well as the enrichment work by Europeana, allow us to create and describe a network of EDM resources for every Europeana object, as shown in this <a href=\"http://www.few.vu.nl/%7Eaisaac/edm/ese2edm_mapping.png\">big picture example</a>. The following explains in more detail the data that can be found for every class of resource served by data.europeana.eu:</p>\r\n\r\n<p><strong>Item (Provided Cultural Heritage Object)</strong>: Item resources represent objects (painting, book, etc.) for which institutions provide digital representations to be accessed through Europeana. Provided Cultural Heritage Object (CHO) URIs (e.g. <code style=\"word-wrap: break-word;\">http://data.europeana.eu/item/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html3</code> are the main entry points in data.europeana.eu. A provided CHO is the hub of the network of relevant resources (cf. below). When applicable, the Europeana URIs for these objects also link, via 'owl:sameAs' statements, to other linked data resources about the same object. In data.europeana.eu, no descriptive metadata (creator, subject, etc.) is directly attached to item URIs. It is instead attached to the <em>proxies</em> that represent a view of the object, from a specific institution's perspective (either a Europeana provider or Europeana itself).</p>\r\n\r\n<p><img alt=\"Item\" src=\"/files/labs.europeana.eu/labs/api/Linked-Open-Data/City-Item.png\" style=\"width:100%\" /></p>\r\n\r\n<p><strong>Provider's proxy</strong>: These resources (e.g. <code style=\"word-wrap: break-word;\">http://data.europeana.eu/proxy/provider/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</code>) are used as subjects of descriptive statements (creator, subject, date of creation, etc.) for the item, which are contributed by a Europeana provider. In the <a href=\"http://www.openarchives.org/ore/\">OAI-ORE</a> model, proxies enable the separation of different views for the same resource, in the context of different aggregations. This allows us to distinguish the original metadata for the object from the metadata that is created by Europeana, an important requirement for us. Descriptive properties that apply to these proxies mostly come from <a href=\"http://dublincore.org/\">Dublin Core</a> : <a href=\"http://data.europeana.eu/proxy/provider/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">view an example</a>. Proxies are connected to the item they represent a facet of using the 'ore:proxyFor' property. They are attached to the aggregation that contextualises them using 'ore:proxyIn'. <em>Note to the reader: given the lack of support for named graphs (aka 'quadruples') in the RDF standard, <a href=\"http://www.openarchives.org/ore/\">ORE</a> introduced proxies in order to support referencing resources in the context of a graph. Eventually, named graphs may be natively supported by RDF, which would lead to obsolescence of the proxy construct.</em></p>\r\n\r\n<p><img alt=\"Providers Proxy\" src=\"/files/Images/API/providerproxyscreenshot.png\" style=\"width:100%;max-width:900px\" /></p>\r\n\r\n<p><strong>Provider's aggregation</strong>: These resources (e.g. <code style=\"word-wrap: break-word;\">http://data.europeana.eu/aggregation/provider/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</code> provide data related to a Europeana provider's gathering of digitised representations and descriptive metadata for an item. As shown in <a href=\"http://data.europeana.eu/aggregation/provider/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">this data</a>, they are related to digital resources about the item, be they files directly representing it ('edm:object' and 'edm:isShownBy') or webpages showing the object in context ('edm:isShownAt'). They may also provide controlled rights information applying to these resources ('edm:rights'). Other statements provided in the same ESE record as the descriptive metadata for the item – but that do not always clearly apply to it – are also attached to aggregations. Finally, provenance data is given in statements using 'edm:provider' (the direct provider to Europeana in the data aggregation chain) or 'edm:dataProvider' (the cultural institution that curates the object). The aggregation is connected to the item resource using the 'edm:aggregatedCHO' property.</p>\r\n\r\n<p><img alt=\"Providers Aggregation\" src=\"/files/Images/API/provideraggregation1.png\" style=\"width:100%;max-width:900px\" /></p>\r\n\r\n<p><strong>Europeana's proxy</strong>: The second type of proxies served at data.europeana.eu. are Europeana proxies (e.g. <code style=\"word-wrap: break-word;\">http://data.europeana.eu/proxy/europeana/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</code> which provide access to the metadata created by Europeana for a given item, distinct from the metadata provided by the provider. Here one can find 'edm:year' statements, indicating a normalised date associated with the object. We also serve millions of generic 'edm:hasMet' enrichments, created by Europeana from a range of ESE descriptive fields (<a href=\"http://old.europeanalabs.eu/wiki/EDMPrototypingTask21#RelevantWorkdone:EuropeanaOffice\">read documentation</a>). These statements connect a Europeana proxy to places from <a href=\"http://geonames.org/\">GeoNames</a>, concepts from the <a href=\"http://www.eionet.europa.eu/gemet\">GEMET</a> thesaurus, persons from <a href=\"http://dbpedia.org\">DBpedia</a> and periods from an adhoc time vocabulary. Finally, a proxy is connected to the item it represents a facet of, using the 'ore:proxyFor' property, as well as to the aggregation that contextualises it, using 'ore:proxyIn'.</p>\r\n\r\n<p><img alt=\"Europeana Proxy\" src=\"/files/Images/API/Europeana's proxy.png\" style=\"width:100%;max-width:900px\" /></p>\r\n\r\n<p><strong>Europeana's aggregation</strong>: a Europeana aggregation (e.g. <code style=\"word-wrap: break-word;\">http://data.europeana.eu/aggregation/europeana/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</code> bundles together the result of all data creation and aggregation efforts for a given item. It aggregates the provider's aggregation (using ore:aggregates), which in turn will connect to the provider's proxy. Next to the provider aggregation, one can find the digitised resources Europeana.eu serves for the item, i.e., an object page ('edm:landingPage') and a thumbnail (using a combination of 'edm:hasView' and 'foaf:thumbnail'). The Europeana proxy is also connected to this aggregation, as mentioned above.</p>\r\n\r\n<p><img alt=\"Europeana Aggregation\" src=\"/files/Images/API/Europeana's aggregation.png\" style=\"width:100%;max-width:900px\" /></p>\r\n\r\n<h3>Namespaces used in data.europeana.eu</h3>\r\n\r\n<p>The following RDF namespace abbreviations are currently used in data.europeana.eu:</p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>rdf:<a href=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></p>\r\n    </li>\r\n    <li>\r\n    <p>owl:<a href=\"http://www.w3.org/2002/07/owl#\">http://www.w3.org/2002/07/owl#</a></p>\r\n    </li>\r\n    <li>\r\n    <p>dc:<a href=\"http://purl.org/dc/elements/1.1\">http://purl.org/dc/elements/1.1</a></p>\r\n    </li>\r\n    <li>\r\n    <p>dcterms:<a href=\"http://purl.org/dc/terms/\">http://purl.org/dc/terms/</a></p>\r\n    </li>\r\n    <li>\r\n    <p>ore:<a href=\"http://www.openarchives.org/ore/terms/\">http://www.openarchives.org/ore/terms/</a></p>\r\n    </li>\r\n    <li>\r\n    <p>foaf:<a href=\"http://xmlns.com/foaf/0.1/\">http://xmlns.com/foaf/0.1/</a></p>\r\n    </li>\r\n    <li>\r\n    <p>edm:<a href=\"http://www.europeana.eu/schemas/edm/\">http://www.europeana.eu/schemas/edm/</a></p>\r\n    </li>\r\n    <li>\r\n    <p>skos: <a href=\"http://www.w3.org/2004/02/skos/core#\">http://www.w3.org/2004/02/skos/core#</a></p>\r\n    </li>\r\n    <li>\r\n    <p>rdau: <a href=\"http://www.rdaregistry.info/Elements/u/\">http://www.rdaregistry.info/Elements/u/</a></p>\r\n    </li>\r\n    <li>\r\n    <p>wgs84_pos: <a href=\"http://www.w3.org/2003/01/geo/wgs84_pos#\">http://www.w3.org/2003/01/geo/wgs84_pos#</a></p>\r\n    </li>\r\n    <li>\r\n    <p>cc: <a href=\"https://creativecommons.org/ns#\">https://creativecommons.org/ns#</a></p>\r\n    </li>\r\n</ul>\r\n</section>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: latest
-                sources: posts
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons: ''
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                override_css_id: ''
-                override_css_class: ''
-                basemarket: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                selected_organisations: ''
-            -
-                enabled: enabled
-                title: 'Further Reading'
-                subtitle: ''
-                anchortitle: 'Further Reading'
-                templates: body
-                body: "<p dir=\"ltr\">We got inspired by these two blogs for writing this page&nbsp;&nbsp;&nbsp;&nbsp;</p>\r\n\r\n<ul dir=\"ltr\">\r\n    <li><a href=\"http://www.snee.com/bobdc.blog/2013/01/finding-europeana-audio-with-s.html\">http://www.snee.com/bobdc.blog/2013/01/finding-europeana-audio-with-s.html</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>\r\n    <li><a href=\"http://matthewlincoln.net/2014/07/10/sparql-for-humanists.html\">http://matthewlincoln.net/2014/07/10/sparql-for-humanists.html</a></li>\r\n</ul>\r\n\r\n<p>We thank the authors for their interest in data.europeana.eu!</p>\r\n\r\n<p>See the <a href=\"https://groups.google.com/forum/#!topic/europeana-lod/Rn5hpIGOoNo\">Europeana LOD Google Group</a> for a discussion on this topic.</p>\r\n"
-                image:
-                    file: ''
-                    title: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -7837,8 +8033,143 @@ pages:
                 enabled: enabled
                 title: ''
                 subtitle: ''
-                anchortitle: FAQ
-                templates: breakerdouble
+                anchortitle: ''
+                templates: body
+                body: "<p></p>\r\n\r\n<center>\r\n<p><iframe allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"480\" src=\"https://player.vimeo.com/video/36752317?h=1af34f93f0\" width=\"640\"></iframe></p>\r\n\r\n<p><a href=\"https://vimeo.com/36752317\">Linked Open Data - What is it?</a> from <a href=\"https://vimeo.com/europeana\">Europeana</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p>\r\n</center>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<p>This page first starts by providing non-technical information about Europeana and linked data, which is suitable for readers of all backgrounds. It then provides a technical overview about how Europeana's Linked Data is structured, which is aimed at those with detailed knowledge of linked data, and&nbsp; references for additional technical details.<br />\r\n<br />\r\nIf you have any questions or feedback, contact us directly via <a href=\"mailto:api@europeana.eu\">api@europeana.eu</a>.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<h3 dir=\"ltr\">Current status</h3>\r\n\r\n<p dir=\"ltr\">Linked Open Data at Europeana started as an experimental pilot in February 2012, when a small number of data providers committed at an early stage to Europeana's initiative of promoting more open data. The pilot was described in a <a href=\"https://dcpapers.dublincore.org/pubs/article/view/3625\">paper</a> presented at the Dublin Core 2011 conference. In October 2012, a large subset of Europeana’s dataset (metadata on 20 million texts, images, videos and sounds) was transformed into linked data and made available from data.europeana.eu (the domain name data.europeana.eu is the corresponding domain of www.europeana.eu in the web of linked data, as explained in the <a href=\"https://docs.google.com/document/d/1XHqkK1CevIdZq-SLY0T9MiBKLd7w98e4Qy4hIHwEal4\">technical details</a>). Within the <a href=\"https://pro.europeana.eu/project/europeana-creative-project\">Europeana Creative project</a>, a new pilot was developed and hosted by <a href=\"http://ontotext.com/\">Ontotext.</a> containing the full Europeana dataset at the time (metadata on about 36 million objects).</p>\r\n\r\n<p dir=\"ltr\">The metadata for all the objects in the Europeana website is open, in that it is all licensed under the <a href=\"http://creativecommons.org/publicdomain/zero/1.0/\">CC0 Public Domain Dedication</a> under the terms of the <a href=\"http://pro.europeana.eu/page/the-data-exchange-agreement\">Data Exchange Agreement</a> (DEA), and can be freely downloaded <a href=\"https://pro.europeana.eu/page/harvesting-and-downloads#downloads\">in bulk</a>, harvested via the <a href=\"https://pro.europeana.eu/page/harvesting-and-downloads#harvesting\">OAI-PMH Service</a>, and accessed via the <a href=\"https://pro.europeana.eu/page/record\">Record API</a> and the <a href=\"https://pro.europeana.eu/page/sparql\">SPARQL endpoint</a>.</p>\r\n\r\n<p dir=\"ltr\">The data is represented in the <a href=\"https://pro.europeana.eu/page/edm-documentation\">Europeana Data Model (EDM)</a>. The described resources are each <a href=\"http://en.wikipedia.org/wiki/Dereferenceable_Uniform_Resource_Identifier\">addressable and dereferenceable</a> by their URIs; for instance, <a href=\"https://www.europeana.eu/en/item/90402/SK_C_5\">https://www.europeana.eu/en/item/90402/SK_C_5</a> leads either to an HTML page on the Europeana website for the object it identifies or to raw, machine-processable data on this object. data.europeana.eu includes semantic connections to external (linked data) sources. These links come mostly from <a href=\"https://pro.europeana.eu/page/europeana-semantic-enrichment\">semantic enrichment</a> connecting Europeana items to places, concepts, persons and time periods. But the number of external links provided by data providers is constantly growing including links to <a href=\"http://vocab.getty.edu/\">AAT</a>, <a href=\"https://gnd.network/Webs/gnd/EN/Home/home_node.html\">GND</a>, <a href=\"http://www.iconclass.org/\">Iconclass</a>, <a href=\"http://viaf.org/\">VIAF</a>) or any domain vocabulary following the EDM recommendations for metadata on contextual resources (see the <a href=\"https://docs.google.com/spreadsheets/d/1BoDNolkcp_qfvVShdOZyGcf61XslcwKF2MdGcjgYs20/edit?usp=sharing\">list of vocabularies</a> supported by Europeana).</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: 'Tools created with the Europeana Linked Open Data'
+                subtitle: ''
+                anchortitle: Tools
+                templates: body
+                body: "<p>Some tools have been created, which make use of Europeana LOD. Below are some of the earliest cases, and in <a href=\"https://pro.europeana.eu/tags/linked-open-data\">posts on the topic</a> other examples can be found.</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                override_css_id: ''
+                override_css_class: ''
+                basemarket: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
                 body: ''
                 image:
                     file: ''
@@ -7852,21 +8183,69 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
-                sources: pages
+                sources: data
                 override_amount: 3
                 basetag: ''
                 basecategory: ''
                 basemarket: ''
-                selected_pages:
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
                     -
-                        value: '500'
-                        _id: pages/linked-open-data-faq
+                        value: '179'
+                        _id: posts/europeana-linked-open-data-feeds-irish-place-name-database
+                filter_data: ''
+                selected_data:
                     -
-                        value: '501'
-                        _id: pages/linked-open-data-credits
+                        value: '407'
+                        _id: data/linked-logainm
+                    -
+                        value: '423'
+                        _id: data/eclap-linked-open-graph
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+                selected_organisations: ''
+            -
+                enabled: enabled
+                title: 'Data structure'
+                subtitle: ''
+                anchortitle: 'Data structure'
+                templates: body
+                body: "<p>This section provides information on how the metadata served by data.europeana.eu is organised. We assume that the reader has extensive knowledge of <a href=\"https://www.w3.org/standards/semanticweb/data\">Linked Data</a> technology. Note also that the data.europeana.eu URIs mentioned in this section are content negotiated, and when clicked in a web browser they will lead to the Europeana website and not to the actual RDF data. To access the RDF content, the HTTP Accept header must be used, as explained in the already referenced <a href=\"https://docs.google.com/document/d/1XHqkK1CevIdZq-SLY0T9MiBKLd7w98e4Qy4hIHwEal4\">technical details</a> on content negotiation.</p>\r\n\r\n<h3 dir=\"ltr\"><strong>Background - The Europeana Data Model (EDM)</strong></h3>\r\n\r\n<p dir=\"ltr\">The <a href=\"https://pro.europeana.eu/page/edm-documentation\">Europeana Data Model</a> offers the opportunity to attach every statement to the specific resource it applies to, and to reflect some basic form of data provenance. The main EDM requirements include:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">distinguishing between a 'provided item' (painting, book) and its digital representations</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">distinguishing between an item and the metadata record describing it</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">allowing the ingestion of multiple records for the same item, which may contain contradictory statements about it</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">As a consequence of EDM having to meet these requirements, EDM data has a level of complexity that is comparable to the data of many Europeana providers, and thus, we argue, enables better exploitation of that data than simpler formats like Europeana's own earlier Europeana Semantic Elements (ESE). Note also that, as much as possible, EDM re-uses elements coming from already-established vocabularies, such as Dublin Core, OAI-ORE, SKOS and CIDOC-CRM, thus lowering the cost of its creation and, hopefully, supporting its adoption.</p>\r\n\r\n<p dir=\"ltr\">For more information on EDM, we refer to the EDM Definitions and EDM Primer on Europeana's <a href=\"http://pro.europeana.eu/edm-documentation\">technical documents</a> page. The EDM OWL ontology is accessible through content negotiation but it is also directly downloadable as an <a href=\"https://www.europeana.eu/schemas/edm/rdf/edm.owl\">OWL file</a>. Please be aware that both data.europeana.eu and those documents are under constant revision. There could therefore be some discrepancies between them!</p>\r\n\r\n<h3 dir=\"ltr\">A walk through the resources served at data.europeana.eu</h3>\r\n\r\n<p dir=\"ltr\">The core EDM classes, together with the properties we expect to be applied to their instances, are presented in these <a href=\"https://github.com/europeana/corelib/wiki/EDMObjectTemplatesEuropeana\">templates</a> (NB: of course not all EDM properties are used for every object exposed in Europeana). The EDM data harvested from Europeana providers, as well as the enrichment work by Europeana, allow us to create and describe a network of EDM resources for every Europeana object, as described in the <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation/EDM_Primer_130714.pdf\">EDM Primer</a>. The following explains in more detail the data that can be found for every class of resource served by data.europeana.eu:</p>\r\n\r\n<p dir=\"ltr\"><strong>Item (Provided Cultural Heritage Object):</strong> Item resources represent objects (painting, book, etc.) for which institutions provide digital representations to be accessed through Europeana. Provided Cultural Heritage Object&nbsp; URIs (e.g. http://data.europeana.eu/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html) are the main entry points in data.europeana.eu. A provided cultural heritage object is the hub of the network of relevant resources (see below). When applicable, the Europeana URIs for these objects also link, via 'owl:sameAs' statements, to other linked data resources about the same object. In data.europeana.eu, no descriptive metadata (creator, subject, etc.) is directly attached to item URIs. It is instead attached to the proxies that represent a view of the object, from a specific institution's perspective (either a Europeana provider or Europeana itself).</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -7878,25 +8257,208 @@ pages:
                 selected_jobs: ''
                 selected_events: ''
                 selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: image
+                body: ''
+                image:
+                    file: Images/EuropeanaTech/lod_page_example_provided_CHO.jpg
+                    title: ''
+                attribution_title: 'Example of a Provided Cultural Heritage Object. (the Cittie of London 31, The British Library)'
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: 'http://www.europeana.eu/en/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html'
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: ''
+                templates: body
+                body: "<section>\r\n<h5><em>Example of a Provided Cultural Heritage Object.<br />\r\n(the Cittie of London 31, The British Library, <a data-saferedirecturl=\"https://www.google.com/url?q=http://www.europeana.eu/en/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html&amp;source=gmail&amp;ust=1670425362700000&amp;usg=AOvVaw2V15fwJV9Hn55Ibmzd3-zt\" href=\"http://www.europeana.eu/en/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\" target=\"_blank\">http://www.europeana.eu/en/<wbr />item/2059209/item_92037__http_<wbr />__www_bl_uk_onlinegallery_<wbr />onlineex_crace_t_zoomify87870_<wbr />html</a>)</em></h5>\r\n\r\n<p><strong>Provider's proxy</strong>: These resources (e.g. http://data.europeana.eu/proxy/provider/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html) are used as subjects of descriptive statements (creator, subject, date of creation, etc.) for the item, which are contributed by a Europeana provider. In the <a href=\"http://www.openarchives.org/ore/\">OAI-ORE</a> model, proxies enable the separation of different views for the same resource, in the context of different aggregations. This allows us to distinguish the original metadata for the object from the metadata that is created by Europeana, an important requirement for us. Descriptive properties that apply to these proxies mostly come from <a href=\"http://dublincore.org/\">Dublin Core</a> : <a href=\"http://data.europeana.eu/proxy/provider/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">view an example</a>. Proxies are connected to the item they represent a facet of using the 'ore:proxyFor' property. They are attached to the aggregation that contextualises them using 'ore:proxyIn'. <em>Note to the reader: given the lack of support for named graphs (aka 'quadruples') in the RDF standard, <a href=\"http://www.openarchives.org/ore/\">ORE</a> introduced proxies in order to support referencing resources in the context of a graph. Eventually, named graphs may be supported by Europeana, which could lead to obsolescence of the proxy construct.</em></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><img alt=\"Providers Proxy\" src=\"/files/Images/API/providerproxyscreenshot.png\" style=\"width:100%;max-width:900px\" /></p>\r\n\r\n<h5><meta charset=\"utf-8\" /><em>Descriptive statements for an item contributed by a Europeana provider being displayed in the Europeana website. (source: <a href=\"http://www.europeana.eu/en/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://www.europeana.eu/en/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> ; note: the screenshot was taken from a previous version of the Europeana website). </em></h5>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><strong>Provider's aggregation</strong>: These resources (e.g. http://data.europeana.eu/aggregation/provider/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html)&nbsp; supply data related to a Europeana provider's gathering of digitised representations and descriptive metadata for an item. As shown in <a href=\"http://data.europeana.eu/aggregation/provider/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">this example</a>, the data are related to digital resources about the item, be they files directly representing it ('edm:object' and 'edm:isShownBy') or webpages showing the object in context ('edm:isShownAt'). These resources may also provide controlled rights information applying to these resources ('edm:rights'). Other statements provided in the record as the descriptive metadata for the item, but that do not always clearly apply to the item, are also attached to aggregations. Finally, provenance data is given in statements using 'edm:provider' (the organisation who delivers data directly to Europeana) or 'edm:dataProvider' (the organisation who contributes data indirectly to Europeana). The aggregation is connected to the item resource using the 'edm:aggregatedCHO' property.</p>\r\n\r\n<p><img alt=\"Providers Aggregation\" src=\"/files/Images/API/provideraggregation1.png\" style=\"width:100%;max-width:900px\" /></p>\r\n\r\n<h5><meta charset=\"utf-8\" /><em>Statements of the provider’s aggregation being displayed in the Europeana website.&nbsp;Provenance information is highlighted at the bottom of the screen, and information about rights and the digital representation is highlighted in the top right corner. (sources: <a href=\"http://www.europeana.eu/en/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://www.europeana.eu/en/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> and <a href=\"https://www.webarchive.org.uk/wayback/en/archive/20190626074633/http://www.bl.uk/onlinegallery/onlineex/crace/t/largeimage87870.html\">https://www.webarchive.org.uk/wayback/en/archive/20190626074633/http://www.bl.uk/onlinegallery/onlineex/crace/t/largeimage87870.html</a> ; note: these screenshots were taken from a previous version of these websites). </em></h5>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><strong>Europeana's proxy:</strong> The second type of proxies served at data.europeana.eu. are Europeana proxies (e.g. http://data.europeana.eu/proxy/europeana/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html) which provide access to the metadata created by Europeana for a given item, distinct from the metadata provided by the provider. Here one can find administrative metadata (e.g., the date of publication at Europeana, the Europeana dataset the item belongs to) and 'edm:year' statements, indicating a normalised date associated with the object. The <a href=\"https://pro.europeana.eu/page/europeana-semantic-enrichment#automatic-semantic-enrichment\">semantic enrichment</a> made by Europeana results in properties of the Europeana proxies that link to external resources. Finally, a proxy is connected to the item it represents a facet of, using the 'ore:proxyFor' property, as well as to the aggregation that contextualises it, using 'ore:proxyIn'.</p>\r\n\r\n<p><img alt=\"Europeana Proxy\" src=\"/files/Images/API/Europeana's proxy.png\" style=\"width:100%;max-width:900px\" /></p>\r\n\r\n<h5><meta charset=\"utf-8\" /><em>Statements of the Europeana’s proxy being displayed in the Europeana website. Administrative information is highlighted in the middle of the screen, and the section with the semantic enrichment is highlighted in the bottom. (source: <a href=\"http://www.europeana.eu/en/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://www.europeana.eu/en/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> ; note: the screenshot was taken from a previous version of the Europeana website).</em></h5>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><strong>Europeana's aggregation</strong>: a Europeana aggregation (e.g. http://data.europeana.eu/aggregation/europeana/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html) bundles together the result of all data creation and aggregation efforts for a given item. It aggregates the provider's aggregation (using ore:aggregates), which in turn will connect to the provider's proxy. Next to the provider aggregation, one can find the digitised resources Europeana.eu serves for the item, i.e., an object page ('edm:landingPage') and a thumbnail ('edm:preview'). The Europeana proxy is also connected to this aggregation, as mentioned above.</p>\r\n\r\n<p><img alt=\"Europeana Aggregation\" src=\"/files/Images/API/Europeana's aggregation.png\" style=\"width:100%;max-width:900px\" /></p>\r\n\r\n<h3><meta charset=\"utf-8\" /></h3>\r\n\r\n<h5 dir=\"ltr\"><meta charset=\"utf-8\" /><em>Statements of the Europeana’s aggregation in use at the Europeana website. The highlights show the edm:landingPage in the address bar of the browser, and the image previewing the digital object in the top of the screen. (source: <a href=\"http://www.europeana.eu/en/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://www.europeana.eu/en/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> ; note: the screenshot was taken from a previous version of the Europeana website).</em></h5>\r\n\r\n<h3 dir=\"ltr\"><b id=\"docs-internal-guid-bd0c5722-7fff-119a-b761-f84962e8463b\">Namespaces used in data.europeana.eu</b></h3>\r\n\r\n<p dir=\"ltr\">The following RDF namespace abbreviations are currently used in data.europeana.eu:</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">rdf: <a href=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">owl: <a href=\"http://www.w3.org/2002/07/owl#\">http://www.w3.org/2002/07/owl#</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">dc: <a href=\"http://purl.org/dc/elements/1.1\">http://purl.org/dc/elements/1.1</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">dcterms :<a href=\"http://purl.org/dc/terms/\">http://purl.org/dc/terms/</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">ore: <a href=\"http://www.openarchives.org/ore/terms/\">http://www.openarchives.org/ore/terms/</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">foaf: <a href=\"http://xmlns.com/foaf/0.1/\">http://xmlns.com/foaf/0.1/</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">edm: <a href=\"http://www.europeana.eu/schemas/edm/\">http://www.europeana.eu/schemas/edm/</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">skos: <a href=\"http://www.w3.org/2004/02/skos/core#\">http://www.w3.org/2004/02/skos/core#</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">rdaGr2: <a href=\"http://rdvocab.info/ElementsGr2/\">http://rdvocab.info/ElementsGr2/</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">wgs84_pos: <a href=\"http://www.w3.org/2003/01/geo/wgs84_pos#\">http://www.w3.org/2003/01/geo/wgs84_pos#</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">cc: <a href=\"https://creativecommons.org/ns#\">https://creativecommons.org/ns#</a></p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">ebucore: <a href=\"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#\">http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#</a>&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">doap: <a href=\"http://usefulinc.com/ns/doap#\">http://usefulinc.com/ns/doap#</a>&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">odrl: <a href=\"http://www.w3.org/ns/odrl/2/\">http://www.w3.org/ns/odrl/2/</a>&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">svcs: <a href=\"http://rdfs.org/sioc/services#\">http://rdfs.org/sioc/services#</a>&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\">oa: <a href=\"http://www.w3.org/ns/oa#\">http://www.w3.org/ns/oa#</a>&nbsp;</p>\r\n    </li>\r\n    <li>\r\n    <p>dqv: <a href=\"http://www.w3.org/ns/dqv#\">http://www.w3.org/ns/dqv#</a></p>\r\n    </li>\r\n</ul>\r\n</section>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Further Reading'
+                subtitle: ''
+                anchortitle: 'Further Reading'
+                templates: body
+                body: "<p dir=\"ltr\"></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">We got inspired by these two blogs for writing this page&nbsp;&nbsp;&nbsp;&nbsp;</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><a href=\"http://www.snee.com/bobdc.blog/2013/01/finding-europeana-audio-with-s.html\">http://www.snee.com/bobdc.blog/2013/01/finding-europeana-audio-with-s.html</a>&nbsp;&nbsp;&nbsp;&nbsp;</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><a href=\"http://matthewlincoln.net/2014/07/10/sparql-for-humanists.html\">http://matthewlincoln.net/2014/07/10/sparql-for-humanists.html</a></p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">We thank the authors for their interest in data.europeana.eu!</p>\r\n"
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: latest
+                sources: posts
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: ''
+                subtitle: ''
+                anchortitle: FAQ
+                templates: breaker
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: pages
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages:
+                    -
+                        value: '500'
+                        _id: pages/linked-open-data-faq
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: grad_reuse
-                selected_organisations: ''
         _id: pages/linked-open-data
     -
         slug: linked-open-data-faq
         datecreated: '2017-08-14 20:29:53'
-        datechanged: '2021-04-19 11:52:50'
+        datechanged: '2022-11-28 10:29:45'
         datepublish: '2017-08-14 20:27:50'
         datedepublish: ''
         ownerid: 2
         status: published
         templatefields: {  }
         title: 'Linked Open Data FAQ'
-        intro: "<p>This page addresses the most important points of the Linked Open Data pilot.</p>\r\n"
-        body: "<h3 id=\"why-is-linked-open-data-important-for-europeana-and-its-community\">Why is Linked Open Data important for Europeana and its community?</h3>\r\n\r\n<p>Linked Data offers many opportunities to the cultural sector, as suggested in the <a href=\"http://www.w3.org/News/2011.html#entry-9239\">reports</a> from the W3C Library Linked Data incubator group and our own <a href=\"http://vimeo.com/36752317%5D\">animation</a>.</p>\r\n\r\n<p>Releasing Europeana metadata as Linked Open Data is important for Europeana, its partners and third parties. Linked Open Data has a key role in the <a href=\"http://strategy2020.europeana.eu/\">Europeana Strategy 2015-2020</a> and supports the idea that Europeana is a platform where users can access data.</p>\r\n\r\n<h3 id=\"how-can-dataeuropeanaeu-contribute-to-these-goals\">How can data.europeana.eu contribute to these goals ?</h3>\r\n\r\n<p>First, Linked Data is a publishing technique that enables related data to be connected and makes it easily accessible using common Web technologies. See this <a href=\"http://pro.europeana.eu/c/document_library/get_file?uuid=cb417911-1ee0-473b-8840-bd7c6e9c93ae&amp;groupId=10602\">White Paper</a> for further discussion on the scientific interest of Linked Data for the Europeana community.</p>\r\n\r\n<p>Second, Linked Open Data realises this in an open manner, where everyone can access, re-use, enrich and share the data published. See this <a href=\"http://pro.europeana.eu/get-involved/europeana-tech/europeana-tech-events/the-europeana-public-domain-charter\">business document</a> for further explanation on why Europeana and its partners should open the metadata they gather from all around Europe, and the <a href=\"http://pro.europeana.eu/use-our-data/\">Use our data</a> section of our site for general information on Europeana’s efforts. You may also be interested in this <a href=\"http://www.museumsandtheweb.com/mw2012/papers/sharing_cultural_heritage_the_linked_open_data\">paper</a> at Museum &amp; the Web that gives interesting context and pointers to current Linked Open Data developments.</p>\r\n\r\n<h3 id=\"what-does-our-linked-open-data-look-like\">What does our Linked Open Data look like?</h3>\r\n\r\n<p>The data served by data.europeana.eu is generated from the metadata Europeana has harvested using the <a href=\"http://pro.europeana.eu/edm-documentation\">Europeana Data Model (EDM)</a>. To make this data amenable to Linked Data publishing, we have converted it to the <a href=\"http://en.wikipedia.org/wiki/Resource_Description_Framework\">Resource Description Framework (RDF)</a> format, and structured it using EDM. We give more detail on the EDM data we publish on the <a href=\"/api/linked-open-data-data-structure/\">Data Structure page</a>.</p>\r\n\r\n<p>The data harvested by Europeana may include links to Linked Open Data resources such as as <a href=\"http://www.getty.edu/research/tools/vocabularies/lod/\">AAT</a>, <a href=\"http://www.dnb.de/EN/Standardisierung/GND/gnd_node.html\">GND</a>, <a href=\"http://www.iconclass.org/\">Iconclass</a>,<a href=\"http://viaf.org/\">VIAF</a> or any domain vocabulary following the EDM recommendations for metadata on contextual resources.</p>\r\n\r\n<p>In addition to the original data harvested by Europeana from its data providers, the data served at data.europeana.eu includes:</p>\r\n\r\n<ul>\r\n<li>semantic enrichment done at the Europeana Office, connecting Europeana objects to structured representations of places (using <a href=\"http://geonames.org/\">GeoNames</a>), concepts (using the <a href=\"http://www.eionet.europa.eu/gemet\">GEMET</a> thesaurus), people (using <a href=\"http://dbpedia.org/\">DBpedia</a>) and time periods (from an adhoc time period vocabulary).</li>\r\n</ul>\r\n<h3 id=\"how-can-you-access-use-and-contribute-to-europeanas-linked-open-data\">How can you access, use and contribute to Europeana’s Linked Open Data?</h3>\r\n\r\n<p>As this project is about engaging users from different communities, we’ve made sure that data from the service can be accessed, re-used, enriched and shared by everyone.</p>\r\n\r\n<p>data.europeana.eu is serving metadata following the terms of the <a href=\"http://creativecommons.org/publicdomain/zero/1.0/\">Creative Commons CC0</a> public domain dedication.<br>\r\nData can be access via the <a href=\"http://labs.europeana.eu/api/linked-open-data/SPARQL-endpoint/\">SPARQL end-point</a>. You can also fetch a subset of this data over the HTTP protocol, using established <a href=\"http://www.w3.org/TR/cooluris/\">Linked Data recipes</a>, most notably the use of HTTP URIs as identifiers and entry points into data. Here are some examples of these data.europeana.eu resources:</p>\r\n\r\n<ul>\r\n<li>\r\n<a style=\"word-wrap: break-word\" href=\"http://data.europeana.eu/item/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://data.europeana.eu/item/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> refers to a real-world object for which digital resources are available through Europeana (<a href=\"http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fitem%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03\">access data</a>).</li>\r\n    <li>\r\n<a style=\"word-wrap: break-word\" href=\"http://data.europeana.eu/aggregation/provider/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://data.europeana.eu/aggregation/provider/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> links to the digital resources submitted on that object by its provider, and gives meta-information on the digital resource aggregation process, e.g., the name of the data provider (<a href=\"http://www.w3.org/RDF/Validator/rdfval?URI=http%3A%2F%2Fdata.europeana.eu%2Faggregation%2Fprovider%2F92037%2F_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">raw data</a>).</li>\r\n    <li>\r\n<a style=\"word-wrap: break-word\" href=\"http://data.europeana.eu/proxy/provider/http://data.europeana.eu/aggregation/provider/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://data.europeana.eu/proxy/provider/http://data.europeana.eu/aggregation/provider/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> gives all the data that applies to the real-world object, from the perspective of the Europeana provider (<a href=\"http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fproxy%2Fprovider%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03\">raw data</a>).</li>\r\n    <li>\r\n<a style=\"word-wrap: break-word\" href=\"http://data.europeana.eu/proxy/europeana/http://data.europeana.eu/aggregation/provider/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://data.europeana.eu/proxy/europeana/http://data.europeana.eu/aggregation/provider/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> gives all the data that applies to the real-world object, from the perspective of Europeana. This is the resource to which Europeana semantic enrichments are attached (<a href=\"http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fproxy%2Feuropeana%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03\">raw data</a>).</li>\r\n    <li>\r\n<a style=\"word-wrap: break-word\" href=\"http://data.europeana.eu/aggregation/europeana/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://data.europeana.eu/aggregation/europeana/92037/_http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> links to the digital resources maintained by Europeana for the object, and gives meta-information on the data aggregation process, which is created by Europeana (<a href=\"http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Faggregation%2Feuropeana%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03\">raw data</a>).</li>\r\n    <li>\r\n<a style=\"word-wrap: break-word\" href=\"http://data.europeana.eu/item/91622/raa_kmb_16000200000050\">http://data.europeana.eu/item/91622/raa_kmb_16000200000050 </a>is an object for which the Swedish Open Cultural Heritage also provides its own Linked Open Data representation (<a href=\"http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fitem%2F91622%2F1BF8BC466E65367929379C83FC639F27961ACD18\">raw data</a>).</li>\r\n</ul>\r\n<p>The data can also be fetched via the Europeana OAI-PMH Service which allows you to harvest the entirety, or a selection, of all Europeana metadata.</p>\r\n\r\n<h3 id=\"how-can-you-contribute\">How can you contribute?</h3>\r\n\r\n<p>If you are a Europeana data provider, you don’t need to submit your data again to Europeana. Once the <a href=\"http://pro.europeana.eu/web/data-exchange-agreement\">Data Exchange Agreement</a> (DEA) has been signed, we just fetch the metadata Europeana has already gathered.</p>\r\n\r\n<p>If you have any questions or feedback, contact us on the <a href=\"https://groups.google.com/forum/#%21forum/europeana-lod\">Europeana LOD group</a></p>\r\n\r\n<p></p>\r\n"
+        intro: "<p>This page addresses the most important points of Linked Open Data in Europeana.</p>\r\n"
+        body: "<h3 id=\"why-is-linked-open-data-important-for-europeana-and-its-community\"></h3>\r\n\r\n<p></p>\r\n"
         pagefooter: null
         pagetype: page
         highlighttitle: null
@@ -7904,9 +8466,10 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>This page addresses the most important points of the Linked Open Data pilot.</p>\r\n"
+        teaser: "<p>This page addresses the most important points of Linked Open Data in Europeana.</p>\r\n"
         teaser_image:
             file: 'Images/New_pro_images_March2020/Image updates/Linked Open Data FAQ.png'
+            title: 'A woman posing beside paper and magazines'
         teaser_attribution_title: 'Salon des Cent. Octobre-novembre 1895'
         teaser_attribution_creator: 'Lapierre, Charles (1867?-?)'
         teaser_attribution_date: '18th century'
@@ -7964,18 +8527,18 @@ pages:
                 name: lodlam
         modules:
             -
-                enabled: disabled
+                enabled: enabled
                 title: ''
                 subtitle: ''
                 anchortitle: ''
-                templates: ''
-                body: ''
+                templates: body
+                body: "<p></p>\r\n\r\n<h3><meta charset=\"utf-8\" /><strong>Why is Linked Open Data important for Europeana and its community?</strong></h3>\r\n\r\n<p dir=\"ltr\">Linked Data offers many opportunities to the cultural sector, as suggested in the <a href=\"http://www.w3.org/News/2011.html#entry-9239\">reports</a> from the W3C Library Linked Data incubator group and our own <a href=\"https://vimeo.com/36752317\">animation</a>.</p>\r\n\r\n<p dir=\"ltr\">Releasing Europeana metadata as Linked Open Data is important for Europeana, its partners and third parties. Linked Open Data has a key role in the <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Publications/Europeana%20Strategy%202020%20-%202025.pdf\">Europeana Strategy 2020-2025</a> and supports the idea that Europeana is a platform where users can access data.</p>\r\n\r\n<h3 dir=\"ltr\"><strong>How can data.europeana.eu facilitate data reuse?</strong></h3>\r\n\r\n<p dir=\"ltr\">First, Linked Data is a publishing technique that enables related data to be connected and makes it easily accessible using common Web technologies. See this <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Publications/Europeana%20White%20Paper%201.pdf\">White Paper</a> for further discussion on the scientific interest of Linked Data for the Europeana community.</p>\r\n\r\n<p dir=\"ltr\">Second, Linked Open Data realises this in an open manner, where everyone can access, re-use, enrich and share the data published. See this <a href=\"https://pro.europeana.eu/post/the-europeana-public-domain-charter\">policy document</a> for further explanation on why Europeana and its partners should open the metadata they gather from all around Europe, and the <a href=\"https://pro.europeana.eu/page/apis\">APIs section</a> of our site for general information on Europeana’s efforts. You may also be interested in this <a href=\"https://www.museweb.net/bibliography/sharing-cultural-heritage-the-linked-open-data-way-why-you-should-sign-up/\">paper</a> at Museum &amp; the Web that gives interesting context and pointers to current Linked Open Data developments.</p>\r\n\r\n<h3 dir=\"ltr\"><strong>What does our Linked Open Data look like?</strong></h3>\r\n\r\n<p dir=\"ltr\">The data served by data.europeana.eu is generated from the metadata Europeana has harvested using the <a href=\"http://pro.europeana.eu/edm-documentation\">Europeana Data Model (EDM)</a>. To make this data amenable to Linked Data publishing, we have converted it to the <a href=\"http://en.wikipedia.org/wiki/Resource_Description_Framework\">Resource Description Framework (RDF)</a> format, and structured it using EDM. We give more detail on the EDM data we publish on the <a href=\"https://pro.europeana.eu/page/linked-open-data#data-structure\">Data Structure page</a>.</p>\r\n\r\n<p dir=\"ltr\">The data harvested by Europeana may include links to Linked Open Data resources such as <a href=\"http://www.getty.edu/research/tools/vocabularies/lod/\">AAT</a>, <a href=\"https://gnd.network/Webs/gnd/EN/Home/home_node.html\">GND</a>, <a href=\"http://www.iconclass.org/\">Iconclass</a>, <a href=\"http://viaf.org/\">VIAF</a> or any domain vocabulary following the EDM recommendations for metadata on contextual resources (see the <a href=\"https://docs.google.com/spreadsheets/d/1BoDNolkcp_qfvVShdOZyGcf61XslcwKF2MdGcjgYs20/edit?usp=sharing\">list of vocabularies</a> supported by Europeana).</p>\r\n\r\n<p dir=\"ltr\">In addition to the original data harvested by Europeana from its data providers, the data served at data.europeana.eu includes semantic connections to external (linked data) sources, which come mostly from <a href=\"https://pro.europeana.eu/page/europeana-semantic-enrichment\">semantic enrichment</a> connecting Europeana items to structured representations of places, concepts, persons, organisations and time periods.</p>\r\n\r\n<h3 dir=\"ltr\"><strong>How can you access, use and contribute to Europeana’s Linked Open Data?</strong></h3>\r\n\r\n<p dir=\"ltr\">As this project is about engaging users from different communities, we have made sure that data from the service can be accessed, re-used, enriched and shared by everyone.</p>\r\n\r\n<p dir=\"ltr\">data.europeana.eu serves metadata following the terms of the <a href=\"http://creativecommons.org/publicdomain/zero/1.0/\">Creative Commons CC0</a> public domain dedication.</p>\r\n\r\n<p dir=\"ltr\">Data can be accessed via the <a href=\"http://sparql.europeana.eu/\">SPARQL end-point</a>. You can also fetch a subset of this data over the HTTP protocol, using established <a href=\"http://www.w3.org/TR/cooluris/\">Linked Data recipes</a>, most notably the use of HTTP URIs as identifiers and entry points into data. Here are some examples of these data.europeana.eu resources (note that the URIs below are content negotiated, and when clicked on a web browser they will lead to the Europeana website and not to the actual RDF data):</p>\r\n\r\n<ul>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><a href=\"http://data.europeana.eu/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://data.europeana.eu/item/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a><br />\r\n    refers to a real-world object for which digital resources are available through Europeana .</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><a href=\"http://data.europeana.eu/aggregation/provider/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://data.europeana.eu/aggregation/provider/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> links to the digital resources submitted on that object by its provider, and gives meta-information on the digital resource aggregation process, e.g., the name of the data provider.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><a href=\"http://data.europeana.eu/proxy/provider/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://data.europeana.eu/proxy/provider/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> gives all the data that applies to the real-world object, from the perspective of the Europeana provider.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><a href=\"http://data.europeana.eu/proxy/europeana/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://data.europeana.eu/proxy/europeana/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> gives all the data that applies to the real-world object, from the perspective of Europeana. This is the resource to which Europeana semantic enrichments are attached.</p>\r\n    </li>\r\n    <li aria-level=\"1\" dir=\"ltr\">\r\n    <p dir=\"ltr\" role=\"presentation\"><a href=\"http://data.europeana.eu/aggregation/europeana/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html\">http://data.europeana.eu/aggregation/europeana/2059209/item_92037__http___www_bl_uk_onlinegallery_onlineex_crace_t_zoomify87870_html</a> links to the digital resources maintained by Europeana for the object, and gives meta-information on the data aggregation process, which is created by Europeana.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p dir=\"ltr\">The data can also be fetched via the Europeana <a href=\"https://pro.europeana.eu/page/record\">Record API</a>, and the <a href=\"https://pro.europeana.eu/page/harvesting-and-downloads\">harvesting and download services</a>, which allow you to download and harvest the entirety, or a selection, of all Europeana metadata.</p>\r\n\r\n<h3 dir=\"ltr\"><strong>How can you contribute?</strong></h3>\r\n\r\n<p dir=\"ltr\">If you are a Europeana data provider, you don’t need to submit your data again to be part of the Europeana LOD. Once your data is available in the Europeana website it becomes automatically available as linked data via data.europeana.eu.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">If you don’t yet share data with Europeana, you can find out more on our <a href=\"https://pro.europeana.eu/share-your-data/process\">Share your data page</a>.&nbsp;</p>\r\n\r\n<p dir=\"ltr\">If you have any questions or feedback, contact us directly via <a href=\"mailto:api@europeana.eu\">api@europeana.eu</a>.</p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts

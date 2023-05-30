@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-10-27T17:02:00+02:00'
+    date: '2023-05-30T15:23:07+02:00'
     version: 3.7.4
     platform: mysql
 pages:
@@ -85,7 +85,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -130,7 +130,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -178,7 +178,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -232,7 +232,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -283,7 +283,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -337,7 +337,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: posts
@@ -397,7 +397,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -522,7 +522,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -567,7 +567,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -612,7 +612,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -732,7 +732,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -777,7 +777,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -822,7 +822,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -867,7 +867,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -900,7 +900,7 @@ pages:
     -
         slug: climate-action-community
         datecreated: '2021-10-28 09:50:07'
-        datechanged: '2022-10-25 08:23:49'
+        datechanged: '2023-05-02 11:27:18'
         datepublish: '2021-11-03 09:49:00'
         datedepublish: ''
         ownerid: 124
@@ -990,7 +990,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1035,7 +1035,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1080,7 +1080,61 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: resources
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts:
+                    -
+                        value: ''
+                        _id: posts/help-us-to-make-cultural-heritage-data-more-persistent
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources:
+                    -
+                        value: '1132'
+                        _id: resources/climate-action-community-work-plan-2022-2023
+                    -
+                        value: '1131'
+                        _id: resources/climate-heritage-network
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: Webinars
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: events
@@ -1108,6 +1162,90 @@ pages:
                     -
                         value: '501'
                         _id: events/cultural-heritage-and-climate-change
+                    -
+                        value: '796'
+                        _id: events/europeana-ki-culture-sustainability-workshop-series
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Meet the steering Group'
+                subtitle: ''
+                anchortitle: 'Steering Group'
+                templates: listingthumbnailsfive
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: persons
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons:
+                    -
+                        value: '8149'
+                        _id: persons/nelson-brito
+                    -
+                        value: '4617'
+                        _id: persons/flavia-bruni
+                    -
+                        value: '8110'
+                        _id: persons/randi-cecchine
+                    -
+                        value: '7903'
+                        _id: persons/jostina-dhimitri
+                    -
+                        value: '2459'
+                        _id: persons/killian-downing
+                    -
+                        value: '8666'
+                        _id: persons/marco-fiore
+                    -
+                        value: '837'
+                        _id: persons/susan-hazan
+                    -
+                        value: '7941'
+                        _id: persons/matias-katajavaara-seidler
+                    -
+                        value: '8210'
+                        _id: persons/evangelia-paschalidou
+                    -
+                        value: '1619'
+                        _id: persons/corinne-szteinsznaider
+                    -
+                        value: '8145'
+                        _id: persons/helen-vincent
+                    -
+                        value: '2366'
+                        _id: persons/shadi-ardalan
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects: ''
+                selected_jobs: ''
+                selected_events: ''
                 selected_resources: ''
                 selected_organisations: ''
                 modulemorelink: ''
@@ -1134,7 +1272,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1165,90 +1303,6 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: 'Meet the steering Group'
-                subtitle: ''
-                anchortitle: 'Steering Group'
-                templates: listingthumbnailsfive
-                body: ''
-                image:
-                    file: ''
-                    title: ''
-                attribution_title: ''
-                attribution_creator: ''
-                attribution_date: ''
-                attribution_holder: ''
-                attribution_country: ''
-                attribution_license: ''
-                attribution_link: ''
-                singlefile: ''
-                fileslistpath: ''
-                icon:
-                    file: ''
-                ordering: specified
-                sources: persons
-                override_amount: 3
-                basetag: ''
-                basecategory: ''
-                basemarket: ''
-                selected_pages: ''
-                filter_persons: ''
-                selected_persons:
-                    -
-                        value: '8149'
-                        _id: persons/nelson-brito
-                    -
-                        value: '8110'
-                        _id: persons/randi-cecchine
-                    -
-                        value: '7794'
-                        _id: persons/gloria-maria-cavalieri
-                    -
-                        value: '7903'
-                        _id: persons/jostina-dhimitri
-                    -
-                        value: '2459'
-                        _id: persons/killian-downing
-                    -
-                        value: '8666'
-                        _id: persons/marco-fiore
-                    -
-                        value: '837'
-                        _id: persons/susan-hazan
-                    -
-                        value: '7941'
-                        _id: persons/matias-katajavaara-seidler
-                    -
-                        value: '8210'
-                        _id: persons/evangelia-paschalidou
-                    -
-                        value: '8159'
-                        _id: persons/caitlin-southwick
-                    -
-                        value: '1619'
-                        _id: persons/corinne-szteinsznaider
-                    -
-                        value: '8145'
-                        _id: persons/helen-vincent
-                    -
-                        value: '2366'
-                        _id: persons/shadi-ardalan
-                filter_posts: ''
-                selected_posts: ''
-                filter_data: ''
-                selected_data: ''
-                filter_projects: ''
-                selected_projects: ''
-                selected_jobs: ''
-                selected_events: ''
-                selected_resources: ''
-                selected_organisations: ''
-                modulemorelink: ''
-                modulemorelabel: ''
-                modulemoretext: ''
-                override_css_id: ''
-                override_css_class: ''
-            -
-                enabled: enabled
                 title: 'Latest News'
                 subtitle: ''
                 anchortitle: News
@@ -1266,7 +1320,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: posts
@@ -1311,7 +1365,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: tag
                 sources: events
@@ -1420,7 +1474,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1450,7 +1504,7 @@ pages:
     -
         slug: europeana-reuse-be-inspired
         datecreated: '2021-10-29 11:36:18'
-        datechanged: '2022-06-14 11:09:21'
+        datechanged: '2023-02-24 12:58:20'
         datepublish: '2022-01-11 12:00:00'
         datedepublish: ''
         ownerid: 124
@@ -1466,7 +1520,7 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>Educators, researchers, culture lovers and creatives share how they enjoy\_and reuse Europeana’s digital cultural heritage to reach their own goals. Be inspired by their innovative approches.</p>\r\n"
+        teaser: "<p>Educators, researchers, culture lovers and creatives share how they enjoy\_and reuse Europeana’s digital cultural heritage to reach their own goals. Be inspired by their innovative approaches.</p>\r\n"
         teaser_image:
             file: Images/Teaser_images/Re-use.png
             title: 'An extravagant peony and branch with berries. Colour woodcut'
@@ -1501,11 +1555,10 @@ pages:
         pages:
             - pages/europeana-reuse-be-inspired
             - pages/europeana-reuse-be-inspired
-            - pages/europeana-reuse-be-inspired
-            - pages/europeana-reuse-be-inspired
         posts:
             - posts/embracing-new-technology-with-heritage-in-motion-2021-winners-digventures
             - posts/embracing-new-technology-with-heritage-in-motion-2021-winners-casa-batllo-10d-experience
+            - posts/golf-is-art-brings-sporting-content-from-europeana-to-new-audiences
         data: {  }
         projects: {  }
         events: {  }
@@ -1525,7 +1578,7 @@ pages:
                 name: reuse
         modules:
             -
-                enabled: enabled
+                enabled: disabled
                 title: ''
                 subtitle: ''
                 anchortitle: ''
@@ -1543,7 +1596,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1574,7 +1627,7 @@ pages:
                 override_css_class: ''
             -
                 enabled: enabled
-                title: Introduction
+                title: 'Europeana reuse - be inspired'
                 subtitle: ''
                 anchortitle: ''
                 templates: body
@@ -1591,7 +1644,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1636,7 +1689,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1681,7 +1734,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1710,6 +1763,9 @@ pages:
                     -
                         value: '1026'
                         _id: resources/reuse-page-quotation-luigia-palumbo
+                    -
+                        value: '1087'
+                        _id: resources/1
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -1735,7 +1791,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1783,7 +1839,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1812,6 +1868,9 @@ pages:
                     -
                         value: '1003'
                         _id: resources/reuse-page-quotation-jurryt-van-de-vooren
+                    -
+                        value: '1086'
+                        _id: resources/re-use-page-quotation-eelco-bruinsma
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -1837,7 +1896,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1882,7 +1941,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1927,7 +1986,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -1956,6 +2015,9 @@ pages:
                     -
                         value: '1017'
                         _id: resources/reuse-page-quotation-petra-zehner
+                    -
+                        value: '1109'
+                        _id: resources/reuse-page-quotation-dominic-lounds
                 selected_organisations: ''
                 modulemorelink: ''
                 modulemorelabel: ''
@@ -1981,7 +2043,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2029,7 +2091,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2083,7 +2145,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -2113,15 +2175,15 @@ pages:
     -
         slug: season-s-greetings-from-europeana
         datecreated: '2021-12-20 11:20:43'
-        datechanged: '2021-12-24 16:17:09'
+        datechanged: '2022-12-22 08:47:45'
         datepublish: '2021-12-20 10:11:32'
         datedepublish: ''
         ownerid: 112
         status: published
         templatefields: {  }
         title: 'Season''s greetings from Europeana'
-        intro: "<p>Many Europeana Foundation staff members are taking a break over the winter holiday period and there may be a delay in responding to your messages until early January 2022.\_</p>\r\n\r\n<p>In the meantime, why don’t you take a look at what happened across the Europeana Initiative this year through our <a href=\"https://pro.europeana.eu/tags/highlights\">quarterly highlights news posts</a>? Explore all of the great sessions that took place at <a href=\"https://pro.europeana.eu/page/conference\">Europeana 2021</a>? Or get into the festive spirit <a href=\"https://www.europeana.eu/en/seasonal-celebrations-and-traditions\">on Europeana.eu</a> with content on how different countries and cultures celebrate different seasons.\_</p>\r\n\r\n<p>Wishing you a lovely festive period and a happy new year!</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
-        body: null
+        intro: "<p>Many Europeana Foundation staff members are taking a break over the winter holiday period and there may be a delay in responding to your messages until early January 2023.\_</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
+        body: "<p>In the meantime, why don't you explore the great sessions that took place at <a href=\"https://pro.europeana.eu/page/conference\">Europeana 2022</a>? Get into the festive spirit <a href=\"https://www.europeana.eu/en/seasonal-celebrations-and-traditions\">on Europeana.eu</a> with content on how different countries and cultures celebrate different seasons? Or read our new\_<a href=\"https://pro.europeana.eu/tags/data-space\">Europeana Pro news series</a>\_to find out\_how the Europeana Initiative\_has started work to deploy the common European data space for cultural heritage.\_</p>\r\n\r\n<p>Wishing you a lovely festive period and a happy new year!</p>\r\n"
         pagefooter: null
         pagetype: page
         highlighttitle: null
@@ -2129,7 +2191,7 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>Many Europeana Foundation staff members are taking a break over the winter holiday period and there may be a delay in responding to your messages until early January 2022.\_</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
+        teaser: "<p>Many Europeana Foundation staff members are taking a break over the winter holiday period and there may be a delay in responding to your messages until early January 2023.\_</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
         teaser_image:
             file: Images/Teaser_images/festive-message.png
             title: 'Children throwing snowballs at each other in front of a row of houses'
@@ -2194,7 +2256,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2307,7 +2369,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2352,7 +2414,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2397,7 +2459,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2442,7 +2504,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2487,7 +2549,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2532,7 +2594,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2577,7 +2639,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2622,7 +2684,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2741,7 +2803,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2786,7 +2848,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2908,7 +2970,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3030,7 +3092,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3149,7 +3211,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3268,7 +3330,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3382,7 +3444,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3427,7 +3489,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3472,7 +3534,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -3505,14 +3567,14 @@ pages:
     -
         slug: learn-with-us
         datecreated: '2022-02-22 16:26:47'
-        datechanged: '2022-08-24 16:51:17'
+        datechanged: '2023-03-09 09:46:58'
         datepublish: '2022-08-10 16:26:00'
         datedepublish: ''
         ownerid: 124
         status: published
         templatefields: {  }
         title: 'Learn with Us'
-        intro: "<p>Supporting the delivery of high quality cultural heritage data and facilitating its reuse is key to empowering the cultural heritage sector in its digital transformation. We offer training, a tools and knowledge repository, a collaborative network and an extensive events programme which professionals can access to learn and develop their expertise in these areas.\_\_</p>\r\n"
+        intro: "<p>Supporting the delivery of high quality cultural heritage data and facilitating its reuse are key to building the common European data space for cultural heritage, and empowering the professionals who work within it. The Europeana Initiative offers training, a tools and knowledge repository, a collaborative network and an extensive events programme which professionals can access to learn and develop their expertise.\_</p>\r\n"
         body: null
         pagefooter: null
         pagetype: landingpage-nohighlight
@@ -3521,7 +3583,7 @@ pages:
         highlightsubtype: null
         highlightcategory: null
         highlightlink: null
-        teaser: "<p>Supporting the delivery of high quality cultural heritage data and facilitating its reuse is key to empowering the cultural heritage sector in its digital transformation. We offer training, a tools and knowledge repository, a collaborative network and an extensive events programme which professionals can access to learn and develop their expertise in these areas.\_\_</p>\r\n"
+        teaser: "<p>The Europeana Initiative offers training, a tools and knowledge repository, a collaborative network and an extensive events programme which professionals can access to learn and develop their expertise.\_</p>\r\n"
         teaser_image:
             file: Images/Teaser_images/learn_with_us.png
             title: 'Students in a laboratory'
@@ -3573,7 +3635,7 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Supporting the delivery of high quality cultural heritage data and facilitating its reuse is key to empowering the cultural heritage sector in its digital transformation. We offer training, a tools and knowledge repository, a collaborative network and an extensive events programme which professionals can access to learn and develop their expertise in these areas.&nbsp;&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" />Supporting the delivery of high quality cultural heritage data and facilitating its reuse are key to building the common European data space for cultural heritage, and empowering the professionals who work within it. The Europeana Initiative offers training, a tools and knowledge repository, a collaborative network and an extensive events programme which professionals can access to learn and develop their expertise.&nbsp;<b> </b></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -3586,7 +3648,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3631,7 +3693,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3676,7 +3738,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3700,6 +3762,9 @@ pages:
                     -
                         value: '819'
                         _id: pages/guidelines-for-delivering-training-and-development
+                    -
+                        value: '838'
+                        _id: pages/europeana-education-mooc
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -3723,7 +3788,7 @@ pages:
                 subtitle: ''
                 anchortitle: 'Tools and knowledge repository'
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">We offer case studies, documentation and online resources to support cultural heritage professionals in their work, so that they and their audiences can get the most out of cultural heritage data.</p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">We offer case studies, documentation and online resources to support cultural heritage professionals in their work, so that they and their audiences can get the most out of cultural heritage data&nbsp;<meta charset=\"utf-8\" />and support its reuse in the common European data space for cultural heritage.</p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -3736,7 +3801,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3781,7 +3846,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3791,17 +3856,20 @@ pages:
                 basemarket: ''
                 selected_pages:
                     -
+                        value: '785'
+                        _id: pages/copyright-and-digital-cultural-heritage
+                    -
                         value: '15'
                         _id: pages/education
                     -
-                        value: '744'
-                        _id: pages/research
+                        value: '507'
+                        _id: pages/edm-mooc-introduction
                     -
                         value: '533'
                         _id: pages/impact
                     -
-                        value: '785'
-                        _id: pages/copyright-and-digital-cultural-heritage
+                        value: '744'
+                        _id: pages/research
                 filter_persons: ''
                 selected_persons: ''
                 filter_posts: ''
@@ -3825,7 +3893,7 @@ pages:
                 subtitle: ''
                 anchortitle: 'Network and communities'
                 templates: body
-                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">We enable peer-to-peer engagement and knowledge transfer through the Europeana Network Association and its seven communities. Join our network, shape approaches across the sector and find colleagues for collaboration.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
+                body: "<p><meta charset=\"utf-8\" /><meta charset=\"utf-8\" /></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"></p>\r\n\r\n<p dir=\"ltr\"><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">We enable peer-to-peer engagement, collaboration and knowledge transfer across the data space through the Europeana Network Association, its seven communities and the Europeana Aggregators’ Forum. Join our network, shape approaches across the sector and find colleagues for collaboration.&nbsp;</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -3838,7 +3906,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3883,7 +3951,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -3937,7 +4005,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3982,7 +4050,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: pages
@@ -4021,14 +4089,14 @@ pages:
     -
         slug: erasmus
         datecreated: '2022-03-09 12:41:54'
-        datechanged: '2022-03-09 13:56:17'
+        datechanged: '2023-05-16 10:56:02'
         datepublish: '2022-03-09 12:41:41'
         datedepublish: ''
         ownerid: 124
         status: published
         templatefields: {  }
-        title: Erasmus+
-        intro: "<p>Erasmus+ is the European Union's seven year funding programme to support education, training, youth and sport in Europe. Europeana participates in projects that enhance critical thinking and media literacy.</p>\r\n"
+        title: 'Erasmus+ projects'
+        intro: "<p>The European Union's 2021-2027 Erasmus+ funding programme to support education, training, youth and sport in Europe. Europeana participates in projects that enhance critical thinking and media literacy.</p>\r\n"
         body: null
         pagefooter: null
         pagetype: page
@@ -4039,15 +4107,15 @@ pages:
         highlightlink: null
         teaser: "<p>Projects under the EU's funding programme to support education, training, youth and sport in Europe.</p>\r\n"
         teaser_image:
-            file: Images/Teaser_images/erasmus_plus.png
+            file: Europeana_Professional/Projects2022/1Erasmus.png
             title: 'Portrait of a young boy sat writing at a table'
-        teaser_attribution_title: 'Portret van een jongen, zittend in een raamnis en gekleed in een blauw jasje'
+        teaser_attribution_title: 'Portret van twee meisjes met tennisrackets en een jongetje met tennisbal'
         teaser_attribution_creator: null
-        teaser_attribution_date: '1830 - 1850'
+        teaser_attribution_date: '1907 - 1930'
         teaser_attribution_holder: Rijksmuseum
         teaser_attribution_country: Netherlands
         teaser_attribution_license: Public-Domain
-        teaser_attribution_link: 'https://www.europeana.eu/en/item/90402/SK_A_4871'
+        teaser_attribution_link: 'https://www.europeana.eu/item/90402/RP_F_2004_3'
         image: null
         image_attribution_title: null
         image_attribution_creator: null
@@ -4108,7 +4176,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: projects
@@ -4128,6 +4196,51 @@ pages:
                     -
                         value: '164'
                         _id: projects/watching-videos-like-a-historian-watchlikeahist
+                selected_jobs: ''
+                selected_events: ''
+                selected_resources: ''
+                selected_organisations: ''
+                modulemorelink: ''
+                modulemorelabel: ''
+                modulemoretext: ''
+                override_css_id: ''
+                override_css_class: ''
+            -
+                enabled: enabled
+                title: 'Past projects'
+                subtitle: ''
+                anchortitle: ''
+                templates: listingsemistatic
+                body: ''
+                image:
+                    file: ''
+                    title: ''
+                attribution_title: ''
+                attribution_creator: ''
+                attribution_date: ''
+                attribution_holder: ''
+                attribution_country: ''
+                attribution_license: ''
+                attribution_link: ''
+                singlefile: ''
+                fileslistpath: ''
+                icon_image:
+                    file: ''
+                ordering: specified
+                sources: projects
+                override_amount: 3
+                basetag: ''
+                basecategory: ''
+                basemarket: ''
+                selected_pages: ''
+                filter_persons: ''
+                selected_persons: ''
+                filter_posts: ''
+                selected_posts: ''
+                filter_data: ''
+                selected_data: ''
+                filter_projects: ''
+                selected_projects:
                     -
                         value: '140'
                         _id: projects/creative-school
@@ -4223,7 +4336,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4271,7 +4384,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4319,7 +4432,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4364,7 +4477,7 @@ pages:
     -
         slug: europeana-data-statistics-dashboard-training
         datecreated: '2022-04-01 15:37:05'
-        datechanged: '2022-06-13 16:37:12'
+        datechanged: '2023-04-25 15:03:07'
         datepublish: '2022-04-01 15:26:29'
         datedepublish: ''
         ownerid: 112
@@ -4413,7 +4526,7 @@ pages:
         contact_website: null
         search_keywords: null
         pages:
-            - pages/europeana-data-statistics-dashboard-training
+            - pages/guidelines-for-delivering-training-and-development
         posts: {  }
         data: {  }
         projects: {  }
@@ -4446,7 +4559,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4491,7 +4604,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4536,7 +4649,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4581,7 +4694,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4626,7 +4739,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4671,7 +4784,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4703,7 +4816,7 @@ pages:
                 subtitle: ''
                 anchortitle: 'Section 5 - Your use case'
                 templates: body
-                body: "<p>In this section you will be asked to come up with one or more of your use cases of the Data Statistics Dashboard and to create a report for that use case.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p>Below are two example use cases. Read these and then answer our final question.</p>\r\n\r\n<p><strong>Alexi, Aggregator</strong></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Alexi (he/his) works for an aggregator delivering data to Europeana. He uses the Data Statistics Dashboard to influence policy makers and politicians to lobby for more funding. He is an advocate of open content. He uses the dashboard to make comparisons between his country and the surrounding countries and their performance on Europeana. For this he makes detailed reports not only about the amount of objects, but also the tiers they are in (quality and rights).</p>\r\n\r\n<p>He also uses the dashboard to report on the progress his organisation is making as an aggregator.</p>\r\n\r\n<p dir=\"ltr\"><strong>Mara, DPS TEAM (Europeana Foundation)</strong></p>\r\n\r\n<p dir=\"ltr\">Mara (she/hers) is a metadata coordinator at the Europeana Foundation. She uses the dashboard to gather statistics about contributions from data partners. Europeana has DSI commitment targets, for example the amount of records in a specific tier for a project. For example: 60% of the project is at least in Tier C. With the dashboard she can report the progress to her colleagues. She uses the dashboard on a weekly basis for this.</p>\r\n\r\n<p>She shares a static snapshot as a PDF and CSV file and the canned query for a live view.</p>\r\n\r\n<p><strong>Question 5</strong></p>\r\n\r\n<p style=\"text-align:center;\"><iframe frameborder=\"0\" height=\"471\" marginheight=\"0\" marginwidth=\"0\" src=\"https://docs.google.com/forms/d/e/1FAIpQLScjW5bTZfgFUMVIV0qCptioqhGs4ThagYuYylE_oittGnFPBg/viewform?embedded=true\" width=\"640\">Loading…</iframe></p>\r\n\r\n<p>We hope you found this training useful. When you leave this page you'll be asked a short two question survey to help us improve the quality of resources we offer you. We'd love to hear your feedback.</p>\r\n"
+                body: "<p>In this section you will be asked to come up with one or more of your use cases of the Data Statistics Dashboard and to create a report for that use case.</p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p>Below are two example use cases. Read these and then answer our final question.</p>\r\n\r\n<p><strong>Alexi, Aggregator</strong></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\">Alexi (he/his) works for an aggregator delivering data to Europeana. He uses the Data Statistics Dashboard to influence policy makers and politicians to lobby for more funding. He is an advocate of open content. He uses the dashboard to make comparisons between his country and the surrounding countries and their performance on Europeana. For this he makes detailed reports not only about the amount of objects, but also the tiers they are in (quality and rights).</p>\r\n\r\n<p>He also uses the dashboard to report on the progress his organisation is making as an aggregator.</p>\r\n\r\n<p dir=\"ltr\"><strong>Mara, DPS TEAM (Europeana Foundation)</strong></p>\r\n\r\n<p dir=\"ltr\">Mara (she/hers) is a metadata coordinator at the Europeana Foundation. She uses the dashboard to gather statistics about contributions from data partners. Europeana has DSI commitment targets, for example the amount of records in a specific tier for a project. For example: 60% of the project is at least in Tier C. With the dashboard she can report the progress to her colleagues. She uses the dashboard on a weekly basis for this.</p>\r\n\r\n<p>She shares a static snapshot as a PDF and CSV file and the canned query for a live view.</p>\r\n\r\n<p><strong>Question 5</strong></p>\r\n\r\n<p style=\"text-align:center;\"><iframe frameborder=\"0\" height=\"471\" marginheight=\"0\" marginwidth=\"0\" src=\"https://docs.google.com/forms/d/e/1FAIpQLScjW5bTZfgFUMVIV0qCptioqhGs4ThagYuYylE_oittGnFPBg/viewform?embedded=true\" width=\"640\">Loading…</iframe></p>\r\n\r\n<p></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -4716,7 +4829,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4797,8 +4910,8 @@ pages:
         contact_website: null
         search_keywords: null
         pages:
-            - pages/europeana-data-statistics-dashboard-training
-            - pages/building-digital-capacity
+            - pages/guidelines-for-delivering-training-and-development
+            - pages/guidelines-for-delivering-training-and-development
             - pages/guidelines-for-delivering-training-and-development
         posts: {  }
         data: {  }
@@ -4835,7 +4948,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4880,7 +4993,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -4928,7 +5041,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4973,7 +5086,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5018,7 +5131,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5063,7 +5176,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5108,7 +5221,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5153,7 +5266,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5198,7 +5311,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5243,7 +5356,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5365,7 +5478,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5410,7 +5523,7 @@ pages:
                 attribution_link: ''
                 singlefile: Europeana_Professional/Research/anthropocenic_objects_collecting_practices_from_the_age_of_humans.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5529,7 +5642,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5574,7 +5687,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5619,7 +5732,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5664,7 +5777,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -5780,7 +5893,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5899,7 +6012,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -5944,7 +6057,7 @@ pages:
                 attribution_link: ''
                 singlefile: Europeana_Professional/Research/estonian_museums_experience_in_the_field_of_crowdsourcing.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6063,7 +6176,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6108,7 +6221,7 @@ pages:
                 attribution_link: ''
                 singlefile: Europeana_Professional/Research/decolonising_ethnographic_databases.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6136,15 +6249,15 @@ pages:
                 override_css_class: ''
         _id: pages/europeana-research-collaborations-the-national-museum-of-world-culture-sweden
     -
-        slug: the-europeana-website
+        slug: discover-the-data
         datecreated: '2022-09-05 17:25:25'
-        datechanged: '2022-09-05 17:30:27'
+        datechanged: '2022-12-21 11:15:16'
         datepublish: '2022-09-05 17:24:23'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
-        title: 'The Europeana website'
+        title: 'Discover the data'
         intro: null
         body: null
         pagefooter: null
@@ -6217,7 +6330,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -6243,4 +6356,4 @@ pages:
                 modulemoretext: ''
                 override_css_id: ''
                 override_css_class: ''
-        _id: pages/the-europeana-website
+        _id: pages/discover-the-data

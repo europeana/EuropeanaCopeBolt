@@ -1,12 +1,12 @@
 __bolt_export_meta:
-    date: '2022-10-27T16:27:18+02:00'
+    date: '2023-05-30T14:47:20+02:00'
     version: 3.7.4
     platform: mysql
 pages:
     -
         slug: sign-up
         datecreated: '2014-07-31 13:54:13'
-        datechanged: '2022-06-14 14:25:52'
+        datechanged: '2023-04-03 17:20:32'
         datepublish: '2013-08-28 04:36:35'
         datedepublish: ''
         ownerid: 2
@@ -56,8 +56,7 @@ pages:
         contact_email: null
         contact_website: null
         search_keywords: 'ena, europeana network association, network'
-        pages:
-            - pages/sign-up
+        pages: {  }
         posts:
             - posts/introducing-the-new-europeana-pro
             - posts/professionals-in-focus-georgia-manolopoulou
@@ -81,7 +80,6 @@ pages:
             - posts/new-european-bauhaus-an-interview-with-susan-hazan
             - posts/come-forward-in-the-europeana-network-association-members-council-elections
             - posts/looking-back-at-the-europeana-network-association-in-2021
-            - posts/education-community-work-plan-2022
             - posts/research-community-work-plan-2022
             - posts/impact-community-work-plan-2022
             - posts/europeanatech-community-work-plan-2022
@@ -89,6 +87,7 @@ pages:
             - posts/copyright-community-work-plan-2022
             - posts/europeana-network-association-activity-plan-2022
             - posts/professionals-in-focus-evelien-hauwaerts
+            - posts/education-community-work-plan-2022
         data: {  }
         projects:
             - projects/europeana-2019-conference-programme-advisory-committee
@@ -96,6 +95,7 @@ pages:
             - projects/governance-working-group
             - projects/new-professionals
             - projects/ai-in-relation-to-glams
+            - projects/diversity-and-inclusion-task-force
             - projects/impact-lite-training-community-building-taskforce
         events: {  }
         persons: {  }
@@ -125,7 +125,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -170,7 +170,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: specified
                 sources: resources
@@ -227,7 +227,7 @@ pages:
                 subtitle: ''
                 anchortitle: 'Join us!'
                 templates: body
-                body: "<!-- Note :\r\n   - You can modify the font style and form style to suit your website.\r\n   - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code.\r\n   - The Mandatory check script can modified as to suit your business needs.\r\n   - It is important that you test the modified form before going live.-->\r\n<div class=\"zcwf_lblRight crmWebToEntityForm\" id=\"crmWebToEntityForm\"><meta name='viewport' content='width=device-width, initial-scale=1.0'><META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>\r\n<form accept-charset=\"UTF-8\" action=\"https://crm.zoho.com/crm/WebToLeadForm\" class=\"registration-form\" method=\"POST\" name=\"WebToLeads1482250000001117001\" onsubmit=\"javascript:document.charset=&quot;UTF-8&quot;; return checkMandatory1482250000001117001()\"><input name=\"xnQsjsdp\" style=\"display:none;\" type=\"text\" value=\"c50096c169ca85883080b0c68d580d35df70e65a4004d20551df0b0a25ea005e\" /> <input id=\"zc_gad\" name=\"zc_gad\" type=\"hidden\" value=\"\" /> <input name=\"xmIwtLD\" style=\"display:none;\" type=\"text\" value=\"47d808d3e8614a6fe8bf7efd0b5d0ae3b2d4911830669c10e64938c4cd3dce0c\" /> <input name=\"actionType\" style=\"display:none;\" type=\"text\" value=\"TGVhZHM=\" /> <input name=\"returnURL\" style=\"display:none;\" type=\"text\" value=\"https://pro.europeana.eu/page/thank-you-for-your-registration\" /> <!-- Do not remove this code. -->\r\n<div class=\"zcwf_title\">\r\n<h2>Register for the Network</h2>\r\n</div>\r\n\r\n<p class=\"zcwf_title\"><strong>About you</strong></p>\r\n\r\n<div>\r\n<div><label for=\"First_Name\">First Name<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"First_Name\" maxlength=\"40\" name=\"First Name\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Last_Name\">Last Name<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"Last_Name\" maxlength=\"80\" name=\"Last Name\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Email\">Email<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input ftype=\"email\" id=\"Email\" maxlength=\"100\" name=\"Email\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Country\">Country<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"Country\" maxlength=\"100\" name=\"Country\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"City\">City<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"City\" maxlength=\"100\" name=\"City\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF14\">Why do you want to become a Network member?<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><textarea id=\"LEADCF14\" name=\"LEADCF14\"></textarea></div>\r\n</div>\r\n\r\n<p class=\"zcwf_title\">Your work</p>\r\n\r\n<div>\r\n<div><label for=\"Company\">Organisation (in English)<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"Company\" maxlength=\"200\" name=\"Company\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Designation\">Job title</label></div>\r\n\r\n<div><input id=\"Designation\" maxlength=\"100\" name=\"Designation\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF3\">Sector<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><select id=\"LEADCF3\" name=\"LEADCF3\"><option value=\"-None-\">-None-</option><option value=\"Academic Research\">Academic Research</option><option value=\"Creative industries\">Creative industries</option><option value=\"Education\">Education</option><option value=\"Cultural Heritage\">Cultural Heritage</option><option value=\"Government\">Government</option><option value=\"Legal\">Legal</option><option value=\"Other\">Other</option> </select></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Industry\">Industry<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><select id=\"Industry\" name=\"Industry\"><option value=\"-None-\">-None-</option><option value=\"Archive\">Archive</option><option value=\"College\">College</option><option value=\"Communications\">Communications</option><option value=\"Computer Science\">Computer Science</option><option value=\"Consulting\">Consulting</option><option value=\"edTech\">edTech</option><option value=\"Gallery\">Gallery</option><option value=\"Higher Education\">Higher Education</option><option value=\"Humanities - Archaeology\">Humanities - Archaeology</option><option value=\"Humanities - Art History\">Humanities - Art History</option><option value=\"Humanities - Languages\">Humanities - Languages</option><option value=\"Humanities - Law\">Humanities - Law</option><option value=\"Humanities - Religion\">Humanities - Religion</option><option value=\"Humanities - History\">Humanities - History</option><option value=\"Humanities - Linguistics and Literature studies\">Humanities - Linguistics and Literature studies</option><option value=\"Humanities - Philosophy\">Humanities - Philosophy</option><option value=\"Information Technology and services\">Information Technology and services</option><option value=\"Library\">Library</option><option value=\"Marketing\">Marketing</option><option value=\"Ministry\">Ministry</option><option value=\"Museum\">Museum</option><option value=\"Other non-commercial education (association, NGO)\">Other non-commercial education (association, NGO)</option><option value=\"Operations\">Operations</option><option value=\"Press/Journalism\">Press/Journalism</option><option value=\"Primary education\">Primary education</option><option value=\"Research and Development\">Research and Development</option><option value=\"Research Institute\">Research Institute</option><option value=\"Social Media\">Social Media</option><option value=\"Secondary Education\">Secondary Education</option><option value=\"Senior Management\">Senior Management</option><option value=\"Social Sciences\">Social Sciences</option><option value=\"Other\">Other</option> </select></div>\r\n</div>\r\n\r\n<p class=\"zcwf_title\">How can we find you online?</p>\r\n\r\n<div>\r\n<div><label for=\"LEADCF20\">Personal or Organisational URL<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"LEADCF20\" maxlength=\"100\" name=\"LEADCF20\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Twitter\">Twitter</label></div>\r\n\r\n<div><input id=\"Twitter\" maxlength=\"50\" name=\"Twitter\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF19\">LinkedIn profile</label></div>\r\n\r\n<div><input id=\"LEADCF19\" maxlength=\"100\" name=\"LEADCF19\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF136\">I acknowledge and agree that the information provided above will be used to create a profile on Europeana Pro which will show my first name, last name, organisation, country and sector; and if supplied, job title, Twitter profile and LinkedIn profile. <a href=\"https://drive.google.com/file/d/1oYcg4TyA1hB_-aAXyUY_atd--ayQ1XEG/view\" rel=\"noopener noreferrer\" target=\"_blank\">Read our privacy policy</a><span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"LEADCF136\" maxlength=\"3\" name=\"LEADCF136\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<p class=\"zcwf_title\">Which community do you wish to join? You can choose more than one.</p>\r\n\r\n<p style=\"font-size: 14px;\">When you join a community you will be subscribed to its Listserv mailing list. If you join the Impact Community, Copyright Community or Communicators Community you will also be subscribed to their individual newsletters.</p>\r\n\r\n<div>\r\n<div><label for=\"LEADCF108\">Europeana Research community</label></div>\r\n\r\n<div><input id=\"LEADCF108\" maxlength=\"3\" name=\"LEADCF108\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF140\">Europeana Education community</label></div>\r\n\r\n<div><input id=\"LEADCF140\" maxlength=\"3\" name=\"LEADCF140\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF138\">Europeana Impact community</label></div>\r\n\r\n<div><input id=\"LEADCF138\" maxlength=\"3\" name=\"LEADCF138\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF110\">Europeana Copyright community</label></div>\r\n\r\n<div><input id=\"LEADCF110\" maxlength=\"3\" name=\"LEADCF110\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF106\">EuropeanaTech community</label></div>\r\n\r\n<div><input id=\"LEADCF106\" maxlength=\"3\" name=\"LEADCF106\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF139\">Europeana Communicators community</label></div>\r\n\r\n<div><input id=\"LEADCF139\" maxlength=\"3\" name=\"LEADCF139\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF242\">Europeana Climate Action community</label></div>\r\n\r\n<div><input id=\"LEADCF242\" maxlength=\"3\" name=\"LEADCF242\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<hr />\r\n<div>\r\n<div><label for=\"LEADCF244\">I agree to being subscribed to the ENA newsletter and other newsletters/mailing lists according to my choice of community above. For more details about how we process and safeguard your personal data, please <a href=\"https://drive.google.com/file/d/1gzTVsNxavFS3MiDuEdccpZogIIFx0Du8/view\" rel=\"noopener noreferrer\" target=\"_blank\">read our privacy policy</a>.<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"LEADCF244\" maxlength=\"3\" name=\"LEADCF244\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF102\">I have read and agreed to the <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-statutes.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">Statutes</a> and <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-bylaws.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">Bylaws</a><span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"LEADCF102\" maxlength=\"3\" name=\"LEADCF102\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div style=\"visibility: hidden; position: absolute;\">\r\n<div><label for=\"LEADCF137\">I wish to receive Network Association newsletter</label></div>\r\n\r\n<div><input checked=\"checked\" id=\"LEADCF137\" maxlength=\"3\" name=\"LEADCF137\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div class=\"zcwf_col_lab\"></div>\r\n\r\n<div><input class=\"formsubmit zcwf_button\" id=\"formsubmit\" title=\"Submit\" type=\"submit\" value=\"Submit\" /> <!-- <input class=\"zcwf_button\" name=\"reset\" title=\"Reset\" type=\"reset\" value=\"Reset\" /> --></div>\r\n</div>\r\n<script>\r\n        function validateEmail1482250000001117001()\r\n        {\r\n            var form = document.forms['WebToLeads1482250000001117001'];\r\n            var emailFld = form.querySelectorAll('[ftype=email]');\r\n            var i;\r\n            for (i = 0; i < emailFld.length; i++)\r\n            {\r\n                var emailVal = emailFld[i].value;\r\n                if((emailVal.replace(/^\\s+|\\s+$/g, '')).length!=0 )\r\n                {\r\n                    var atpos=emailVal.indexOf('@');\r\n                    var dotpos=emailVal.lastIndexOf('.');\r\n                    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailVal.length)\r\n                    {\r\n                        alert('Please enter a valid email address. ');\r\n                        emailFld[i].focus();\r\n                        return false;\r\n                    }\r\n                }\r\n            }\r\n            return true;\r\n        }\r\n\r\n           function checkMandatory1482250000001117001() {\r\n            var mndFileds = new Array('Company','First Name','Last Name','Email','Industry','City','Country','LEADCF3','LEADCF102','LEADCF136','LEADCF14','LEADCF20','LEADCF244');\r\n            var fldLangVal = new Array('Organisation\\x20\\x28in\\x20English\\x29','First\\x20Name','Last\\x20Name','Email','Industry','City','Country','Sector','I\\x20have\\x20read\\x20and\\x20agreed\\x20to\\x20the\\x20Statutes\\x20and\\x20Bylaws','I\\x20agree\\x20to\\x20the\\x20privacy\\x20policy\\x20terms\\x20and\\x20conditions','Why\\x20do\\x20you\\x20want\\x20to\\x20become\\x20a\\x20Network\\x20member\\x3F','Personal\\x20or\\x20Organisational\\x20URL','Europeana\\x20newsletter\\x20Privacy\\x20Policy');\r\n            for(i=0;i<mndFileds.length;i++) {\r\n              var fieldObj=document.forms['WebToLeads1482250000001117001'][mndFileds[i]];\r\n              if(fieldObj) {\r\n                if (((fieldObj.value).replace(/^\\s+|\\s+$/g, '')).length==0) {\r\n                 if(fieldObj.type =='file')\r\n                    {\r\n                     alert('Please select a file to upload.');\r\n                     fieldObj.focus();\r\n                     return false;\r\n                    }\r\n                alert(fldLangVal[i] +' cannot be empty.');\r\n                          fieldObj.focus();\r\n                          return false;\r\n                }  else if(fieldObj.nodeName=='SELECT') {\r\n                         if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {\r\n                    alert(fldLangVal[i] +' cannot be none.');\r\n                    fieldObj.focus();\r\n                    return false;\r\n                   }\r\n                } else if(fieldObj.type =='checkbox'){\r\n                    if(fieldObj.checked == false){\r\n                    alert('Please accept  '+fldLangVal[i]);\r\n                    fieldObj.focus();\r\n                    return false;\r\n                   }\r\n                 }\r\n                 try {\r\n                     if(fieldObj.name == 'Last Name') {\r\n                    name = fieldObj.value;\r\n                       }\r\n                } catch (e) {}\r\n                }\r\n            }\r\n            if(!validateEmail1482250000001117001()){return false;}\r\n            document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);\r\n        }\r\n\r\n    function tooltipShow1482250000001117001(el){\r\n        var tooltip = el.nextElementSibling;\r\n        var tooltipDisplay = tooltip.style.display;\r\n        if(tooltipDisplay == 'none'){\r\n            var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');\r\n            for(i=0; i<allTooltip.length; i++){\r\n                allTooltip[i].style.display='none';\r\n            }\r\n            tooltip.style.display = 'block';\r\n        }else{\r\n            tooltip.style.display='none';\r\n        }\r\n    }\r\n    </script> <!-- Do not remove this --- Analytics Tracking code starts --><script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=47d808d3e8614a6fe8bf7efd0b5d0ae3b2d4911830669c10e64938c4cd3dce0cgidc50096c169ca85883080b0c68d580d35df70e65a4004d20551df0b0a25ea005egid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a'></script><!-- Do not remove this --- Analytics Tracking code ends. --></form>\r\n</div>\r\n"
+                body: "<!-- Note :\r\n   - You can modify the font style and form style to suit your website.\r\n   - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code.\r\n   - The Mandatory check script can modified as to suit your business needs.\r\n   - It is important that you test the modified form before going live.-->\r\n<div class=\"zcwf_lblRight crmWebToEntityForm\" id=\"crmWebToEntityForm\"><meta name='viewport' content='width=device-width, initial-scale=1.0'><META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>\r\n<form accept-charset=\"UTF-8\" action=\"https://crm.zoho.com/crm/WebToLeadForm\" class=\"registration-form\" method=\"POST\" name=\"WebToLeads1482250000001117001\" onsubmit=\"javascript:document.charset=&quot;UTF-8&quot;; return checkMandatory1482250000001117001()\"><input name=\"xnQsjsdp\" style=\"display:none;\" type=\"text\" value=\"c50096c169ca85883080b0c68d580d35df70e65a4004d20551df0b0a25ea005e\" /> <input id=\"zc_gad\" name=\"zc_gad\" type=\"hidden\" value=\"\" /> <input name=\"xmIwtLD\" style=\"display:none;\" type=\"text\" value=\"47d808d3e8614a6fe8bf7efd0b5d0ae3b2d4911830669c10e64938c4cd3dce0c\" /> <input name=\"actionType\" style=\"display:none;\" type=\"text\" value=\"TGVhZHM=\" /> <input name=\"returnURL\" style=\"display:none;\" type=\"text\" value=\"https://pro.europeana.eu/page/thank-you-for-your-registration\" /> <!-- Do not remove this code. -->\r\n<div class=\"zcwf_title\">\r\n<h2>Register for the Network</h2>\r\n</div>\r\n\r\n<p class=\"zcwf_title\"><strong>About you</strong></p>\r\n\r\n<div>\r\n<div><label for=\"First_Name\">First Name<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"First_Name\" maxlength=\"40\" name=\"First Name\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Last_Name\">Last Name<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"Last_Name\" maxlength=\"80\" name=\"Last Name\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Email\">Email<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input ftype=\"email\" id=\"Email\" maxlength=\"100\" name=\"Email\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Country\">Country<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"Country\" maxlength=\"100\" name=\"Country\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"City\">City<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"City\" maxlength=\"100\" name=\"City\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF14\">Why do you want to become a Network member?<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><textarea id=\"LEADCF14\" name=\"LEADCF14\"></textarea></div>\r\n</div>\r\n\r\n<p class=\"zcwf_title\">Your work</p>\r\n\r\n<div>\r\n<div><label for=\"Company\">Organisation (in English)<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"Company\" maxlength=\"200\" name=\"Company\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Designation\">Job title</label></div>\r\n\r\n<div><input id=\"Designation\" maxlength=\"100\" name=\"Designation\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF3\">Sector<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><select id=\"LEADCF3\" name=\"LEADCF3\"><option value=\"-None-\">-None-</option><option value=\"Academic Research\">Academic Research</option><option value=\"Creative industries\">Creative industries</option><option value=\"Education\">Education</option><option value=\"Cultural Heritage\">Cultural Heritage</option><option value=\"Government\">Government</option><option value=\"Legal\">Legal</option><option value=\"Other\">Other</option> </select></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Industry\">Industry<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><select id=\"Industry\" name=\"Industry\"><option value=\"-None-\">-None-</option><option value=\"Archive\">Archive</option><option value=\"College\">College</option><option value=\"Communications\">Communications</option><option value=\"Computer Science\">Computer Science</option><option value=\"Consulting\">Consulting</option><option value=\"edTech\">edTech</option><option value=\"Gallery\">Gallery</option><option value=\"Higher Education\">Higher Education</option><option value=\"Humanities - Archaeology\">Humanities - Archaeology</option><option value=\"Humanities - Art History\">Humanities - Art History</option><option value=\"Humanities - Languages\">Humanities - Languages</option><option value=\"Humanities - Law\">Humanities - Law</option><option value=\"Humanities - Religion\">Humanities - Religion</option><option value=\"Humanities - History\">Humanities - History</option><option value=\"Humanities - Linguistics and Literature studies\">Humanities - Linguistics and Literature studies</option><option value=\"Humanities - Philosophy\">Humanities - Philosophy</option><option value=\"Information Technology and services\">Information Technology and services</option><option value=\"Library\">Library</option><option value=\"Marketing\">Marketing</option><option value=\"Ministry\">Ministry</option><option value=\"Museum\">Museum</option><option value=\"Other non-commercial education (association, NGO)\">Other non-commercial education (association, NGO)</option><option value=\"Operations\">Operations</option><option value=\"Press/Journalism\">Press/Journalism</option><option value=\"Primary education\">Primary education</option><option value=\"Research and Development\">Research and Development</option><option value=\"Research Institute\">Research Institute</option><option value=\"Social Media\">Social Media</option><option value=\"Secondary Education\">Secondary Education</option><option value=\"Senior Management\">Senior Management</option><option value=\"Social Sciences\">Social Sciences</option><option value=\"Other\">Other</option> </select></div>\r\n</div>\r\n\r\n<div>\r\n  <div><label for='LEADCF22'>How long have you worked in or with the sector?<span style='color:red;'></span></label></div>\r\n  <div>\r\n    <select id='LEADCF22' name='LEADCF22'>\r\n     <option value='-None-'>-None-</option>\r\n     <option value='0-4 years'>0-4 years</option>\r\n     <option value='5-9 years'>5-9 years</option>\r\n     <option value='10-14 years'>10-14 years</option>\r\n     <option value='15-20 years'>15-20 years</option>\r\n     <option value='More than 20 years'>More than 20 years</option>\r\n     <option value='I am a student'>I am a student</option>\r\n     <option value='Unsure'>Unsure</option>\r\n     <option value='N/A'>N/A</option>\r\n    </select>\r\n  </div>\r\n</div>\r\n\r\n<p class=\"zcwf_title\">How can we find you online?</p>\r\n\r\n<div>\r\n<div><label for=\"LEADCF20\">Personal or Organisational URL<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"LEADCF20\" maxlength=\"100\" name=\"LEADCF20\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"Twitter\">Twitter</label></div>\r\n\r\n<div><input id=\"Twitter\" maxlength=\"50\" name=\"Twitter\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF19\">LinkedIn profile</label></div>\r\n\r\n<div><input id=\"LEADCF19\" maxlength=\"100\" name=\"LEADCF19\" type=\"text\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF136\">I acknowledge and agree that the information provided above will be used to create a profile on Europeana Pro which will show my first name, last name, organisation, country and sector; and if supplied, job title, Twitter profile and LinkedIn profile. <a href=\"https://drive.google.com/file/d/1oYcg4TyA1hB_-aAXyUY_atd--ayQ1XEG/view\" rel=\"noopener noreferrer\" target=\"_blank\">Read our privacy policy</a><span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"LEADCF136\" maxlength=\"3\" name=\"LEADCF136\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<p class=\"zcwf_title\">Which <a href=\"https://pro.europeana.eu/europeana-network-association/communities\">community</a> do you wish to join? You can choose more than one.</p>\r\n\r\n<p style=\"font-size: 14px;\">When you join a <a href=\"https://pro.europeana.eu/europeana-network-association/communities\">community</a> you will be subscribed to its Listserv mailing list. If you join the Impact Community or Communicators Community you will also be subscribed to their individual newsletters.</p>\r\n\r\n<div>\r\n<div><label for=\"LEADCF108\">Europeana Research community</label></div>\r\n\r\n<div><input id=\"LEADCF108\" maxlength=\"3\" name=\"LEADCF108\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF140\">Europeana Education community</label></div>\r\n\r\n<div><input id=\"LEADCF140\" maxlength=\"3\" name=\"LEADCF140\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF138\">Europeana Impact community</label></div>\r\n\r\n<div><input id=\"LEADCF138\" maxlength=\"3\" name=\"LEADCF138\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF110\">Europeana Copyright community</label></div>\r\n\r\n<div><input id=\"LEADCF110\" maxlength=\"3\" name=\"LEADCF110\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF106\">EuropeanaTech community</label></div>\r\n\r\n<div><input id=\"LEADCF106\" maxlength=\"3\" name=\"LEADCF106\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF139\">Europeana Communicators community</label></div>\r\n\r\n<div><input id=\"LEADCF139\" maxlength=\"3\" name=\"LEADCF139\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF242\">Europeana Climate Action community</label></div>\r\n\r\n<div><input id=\"LEADCF242\" maxlength=\"3\" name=\"LEADCF242\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<hr />\r\n<div>\r\n<div><label for=\"LEADCF244\">I agree to being subscribed to the ENA newsletter and other newsletters/mailing lists according to my choice of community above. For more details about how we process and safeguard your personal data, please <a href=\"https://drive.google.com/file/d/1t86BSleI1pYq-zMQoV6G8ATCKVGjl39D/view?usp=share_link\" rel=\"noopener noreferrer\" target=\"_blank\">read our privacy policy</a>.<span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"LEADCF244\" maxlength=\"3\" name=\"LEADCF244\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div><label for=\"LEADCF102\">I have read and agreed to the <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-statutes.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">Statutes</a> and <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/europeana-network-association-bylaws.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">Bylaws</a><span style=\"color:red;\">*</span></label></div>\r\n\r\n<div><input id=\"LEADCF102\" maxlength=\"3\" name=\"LEADCF102\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div style=\"visibility: hidden; position: absolute;\">\r\n<div><label for=\"LEADCF137\">I wish to receive Network Association newsletter</label></div>\r\n\r\n<div><input checked=\"checked\" id=\"LEADCF137\" maxlength=\"3\" name=\"LEADCF137\" type=\"checkbox\" /></div>\r\n</div>\r\n\r\n<div>\r\n<div class=\"zcwf_col_lab\"></div>\r\n\r\n<div><input class=\"formsubmit zcwf_button\" id=\"formsubmit\" title=\"Submit\" type=\"submit\" value=\"Submit\" /> <!-- <input class=\"zcwf_button\" name=\"reset\" title=\"Reset\" type=\"reset\" value=\"Reset\" /> --></div>\r\n</div>\r\n<script>\r\n        function validateEmail1482250000001117001()\r\n        {\r\n            var form = document.forms['WebToLeads1482250000001117001'];\r\n            var emailFld = form.querySelectorAll('[ftype=email]');\r\n            var i;\r\n            for (i = 0; i < emailFld.length; i++)\r\n            {\r\n                var emailVal = emailFld[i].value;\r\n                if((emailVal.replace(/^\\s+|\\s+$/g, '')).length!=0 )\r\n                {\r\n                    var atpos=emailVal.indexOf('@');\r\n                    var dotpos=emailVal.lastIndexOf('.');\r\n                    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailVal.length)\r\n                    {\r\n                        alert('Please enter a valid email address. ');\r\n                        emailFld[i].focus();\r\n                        return false;\r\n                    }\r\n                }\r\n            }\r\n            return true;\r\n        }\r\n\r\n           function checkMandatory1482250000001117001() {\r\n            var mndFileds = new Array('Company','First Name','Last Name','Email','Industry','City','Country','LEADCF3','LEADCF102','LEADCF136','LEADCF14','LEADCF20','LEADCF244');\r\n            var fldLangVal = new Array('Organisation\\x20\\x28in\\x20English\\x29','First\\x20Name','Last\\x20Name','Email','Industry','City','Country','Sector','I\\x20have\\x20read\\x20and\\x20agreed\\x20to\\x20the\\x20Statutes\\x20and\\x20Bylaws','I\\x20agree\\x20to\\x20the\\x20privacy\\x20policy\\x20terms\\x20and\\x20conditions','Why\\x20do\\x20you\\x20want\\x20to\\x20become\\x20a\\x20Network\\x20member\\x3F','Personal\\x20or\\x20Organisational\\x20URL','Europeana\\x20newsletter\\x20Privacy\\x20Policy');\r\n            for(i=0;i<mndFileds.length;i++) {\r\n              var fieldObj=document.forms['WebToLeads1482250000001117001'][mndFileds[i]];\r\n              if(fieldObj) {\r\n                if (((fieldObj.value).replace(/^\\s+|\\s+$/g, '')).length==0) {\r\n                 if(fieldObj.type =='file')\r\n                    {\r\n                     alert('Please select a file to upload.');\r\n                     fieldObj.focus();\r\n                     return false;\r\n                    }\r\n                alert(fldLangVal[i] +' cannot be empty.');\r\n                          fieldObj.focus();\r\n                          return false;\r\n                }  else if(fieldObj.nodeName=='SELECT') {\r\n                         if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {\r\n                    alert(fldLangVal[i] +' cannot be none.');\r\n                    fieldObj.focus();\r\n                    return false;\r\n                   }\r\n                } else if(fieldObj.type =='checkbox'){\r\n                    if(fieldObj.checked == false){\r\n                    alert('Please accept  '+fldLangVal[i]);\r\n                    fieldObj.focus();\r\n                    return false;\r\n                   }\r\n                 }\r\n                 try {\r\n                     if(fieldObj.name == 'Last Name') {\r\n                    name = fieldObj.value;\r\n                       }\r\n                } catch (e) {}\r\n                }\r\n            }\r\n            if(!validateEmail1482250000001117001()){return false;}\r\n            document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);\r\n        }\r\n\r\n    function tooltipShow1482250000001117001(el){\r\n        var tooltip = el.nextElementSibling;\r\n        var tooltipDisplay = tooltip.style.display;\r\n        if(tooltipDisplay == 'none'){\r\n            var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');\r\n            for(i=0; i<allTooltip.length; i++){\r\n                allTooltip[i].style.display='none';\r\n            }\r\n            tooltip.style.display = 'block';\r\n        }else{\r\n            tooltip.style.display='none';\r\n        }\r\n    }\r\n    </script> <!-- Do not remove this --- Analytics Tracking code starts --><script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=47d808d3e8614a6fe8bf7efd0b5d0ae3b2d4911830669c10e64938c4cd3dce0cgidc50096c169ca85883080b0c68d580d35df70e65a4004d20551df0b0a25ea005egid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513&tw=61690b96c1d0471b638f31426f38e68aa67fb7ed6da86f32dc10ad817fe55a0a'></script><!-- Do not remove this --- Analytics Tracking code ends. --></form>\r\n</div>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -240,7 +240,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -272,7 +272,7 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><em>By registering as a Network Association member you are confirming that you agree to the <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/Europeana-Network-Association-Code-of-Conduct.pdf\">Network Association Code of Conduct</a> and that you consent to receive the monthly Europeana Network Association newsletter, relevant updates from the Europeana Network Association and Community communications as indicated above. We will only email you useful information. You can unsubscribe from newsletters and Listserv mailing lists at any time, either through the individual newsletter or by emailing <a href=\"mailto:network@europeana.eu\">network@europeana.eu</a>.</em></p>\r\n\r\n<p dir=\"ltr\"><em>If you unsubscribe from receiving newsletters and mailing lists we may still email you from time to time with important news specific to your membership. This includes news about our annual conference, voting in elections and renewing your membership. Your data will be stored by Zoho, Mailchimp, Simply voting (the system providers) and Europeana.&nbsp;</em></p>\r\n\r\n<p dir=\"ltr\"><em>If you no longer wish to be a member of the Europeana Network Association, please send an email to <a href=\"mailto:network@europeana.eu\">network@europeana.eu</a>. You will no longer receive our email updates, be allowed to participate in the Members Council elections and your contact details will be removed from our various communities.</em></p>\r\n"
+                body: "<p></p>\r\n\r\n<p><meta charset=\"utf-8\" /></p>\r\n\r\n<p dir=\"ltr\"><em>By registering as a Network Association member you are confirming that you agree to the <a href=\"https://pro.europeana.eu/files/Europeana_Professional/Europeana_Network/Association_Updates/Governance_documents/Europeana-Network-Association-Code-of-Conduct.pdf\">Network Association Code of Conduct</a> and that you consent to receive the monthly Europeana Network Association newsletter, relevant updates from the Europeana Network Association and Community communications as indicated above. We will only email you useful information. You can unsubscribe from newsletters and Listserv mailing lists at any time, either through the individual newsletter or by emailing <a href=\"mailto:network@europeana.eu\">network@europeana.eu</a>.</em></p>\r\n\r\n<p dir=\"ltr\"><em>If you unsubscribe from receiving newsletters and mailing lists we may still email you from time to time with important news specific to your membership. This includes news about our annual conference, voting in elections and renewing your membership. Your data will be stored by Zoho, Simply voting (the system providers) and Europeana.&nbsp;</em></p>\r\n\r\n<p dir=\"ltr\"><em>If you no longer wish to be a member of the Europeana Network Association, please send an email to <a href=\"mailto:network@europeana.eu\">network@europeana.eu</a>. You will no longer receive our email updates, be allowed to participate in the Members Council elections and your contact details will be removed from our various communities.</em></p>\r\n"
                 image:
                     file: ''
                     title: ''
@@ -285,7 +285,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -330,7 +330,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -375,7 +375,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -486,7 +486,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -596,7 +596,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -729,7 +729,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -781,7 +781,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -826,7 +826,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -871,7 +871,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -916,7 +916,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -961,7 +961,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1006,7 +1006,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1051,7 +1051,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1096,7 +1096,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1141,7 +1141,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1186,7 +1186,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1231,7 +1231,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1276,7 +1276,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1321,7 +1321,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1366,7 +1366,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1411,7 +1411,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1456,7 +1456,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1501,7 +1501,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1546,7 +1546,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1665,7 +1665,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1784,7 +1784,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -1903,7 +1903,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2022,7 +2022,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2149,7 +2149,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2276,7 +2276,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2403,7 +2403,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2521,7 +2521,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2642,7 +2642,7 @@ pages:
                 attribution_link: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2672,7 +2672,7 @@ pages:
     -
         slug: edm-documentation
         datecreated: '2014-11-18 10:03:19'
-        datechanged: '2022-06-02 23:29:13'
+        datechanged: '2023-02-22 12:36:39'
         datepublish: '2014-11-18 09:54:42'
         datedepublish: ''
         ownerid: 2
@@ -2729,7 +2729,7 @@ pages:
             - pages/edm-in-nomisma-org
             - pages/edm-for-performing-arts-metadata
             - pages/the-universitaetsbibliothek-heidelberg-case-study
-            - pages/edm-documentation
+            - pages/edm-profiles
         posts: {  }
         data: {  }
         projects:
@@ -2769,13 +2769,13 @@ pages:
                 subtitle: ''
                 anchortitle: ''
                 templates: body
-                body: "<p>All the documentation you need about the Europeana Data Model (EDM).</p>\r\n\r\n<h2>General EDM factsheet and Presentation</h2>\r\n\r\n<p>The <a href=\"/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation/EDM_Factsheet.pdf\" target=\"_blank\"><em>EDM Factsheet</em></a> and an <em><a href=\"/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation/EDM_slides_130714.ppt\">EDM presentation</a></em> sum up the rationale and expected benefits of EDM.</p>\r\n\r\n<h2>EDM Primer</h2>\r\n\r\n<p>The <em><a href=\"/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation/EDM_Primer_130714.pdf\" target=\"_blank\">EDM Primer</a></em> is the 'story' of EDM and explains how the classes and properties may be used together to model data and support Europeana functionality.</p>\r\n\r\n<h2>Mapping guidelines</h2>\r\n\r\n<p>The <a href=\"/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation/EDM_Mapping_Guidelines_v2.4_102017.pdf\" target=\"_blank\"><em>EDM Mapping Guidelines</em></a> give guidance for providers wanting to map their data to EDM. They contain definitions of the properties, information about the data types that can be used as values and the obligation level of each property. The document also has an example of original data, the same data converted to EDM and diagrams showing the distribution of the properties amongst the classes. The full set of EDM classes and properties are being implemented incrementally, this document shows which are currently available.</p>\r\n\r\n<h2>EDM roadmap</h2>\r\n\r\n<p>Find an overview of the short and long-term plans for the development of EDM in the <a href=\"https://docs.google.com/document/d/1omFFf4KsNZAAnaOUvXOvxRc1nmrKcLHxrrB58KwLY2g/edit#\" target=\"_blank\">EDM roadmap</a>. It is regularly updated by the Europeana R&amp;D team.</p>\r\n\r\n<h2>EDM objects templates</h2>\r\n\r\n<p>The <a href=\"https://github.com/europeana/corelib/wiki/EDMObjectTemplatesProviders\" target=\"_blank\"><em>EDM object templates</em> wiki-listing</a> shows which properties apply to which class and states the data types and obligation of the values. These templates should be regarded as a work in progress however and may be out of step with the <em>Mapping Guidelines.</em> Please refer to the <em>Mapping Guidelines</em> for the current set of classes and properties in use.</p>\r\n\r\n<h2>EDM definition</h2>\r\n\r\n<p>The <a href=\"/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation//EDM_Definition_v5.2.8_102017.pdf\" target=\"_blank\"><em>EDM Definition</em></a> is the formal specification of the classes and properties that could be used in Europeana. This document details all the classes and properties in EDM and therefore includes those that are not currently implemented. Please refer to the <em>Mapping Guidelines</em> for the current set of classes and properties in use.</p>\r\n\r\n<h2>EDM XML Schema and EDM validation in Oxygen</h2>\r\n\r\n<p>The <em>XML Schema</em> for the <em>Europeana Data Model</em> allows for automatic validation of EDM metadata. The EDM mapping rules are defined against the official release of the <em><a href=\"http://www.europeana.eu/schemas/edm/EDM.xsd\" target=\"_blank\">EDM XML Schema</a> and </em>the required <a href=\"https://github.com/schematron\" target=\"_blank\">Schematron</a> rules (embedded in the schema). You can download the latest versions of the <em><a href=\"https://github.com/europeana/metis-schema/tree/master/src/main/resources/schema_xsds\" target=\"_blank\">EDM Schema files</a>&nbsp;</em>directly from Github (<em>NB: this is a working version and should be used with caution!</em>). The <em><a href=\"/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation//EDM%20Schematron%20validation%20in%20Oxygen%20XML%20editor.pdf\" target=\"_blank\">EDM Validation</a>&nbsp;&nbsp;</em>document explains how to make use of the validation rules with the Oxygen XML editor.</p>\r\n\r\n<p>For further information, please contact <a href=\"mailto:info@europeana.eu?subject=EDM\">info@europeana.eu</a> using 'EDM' as the email subject line.</p>\r\n\r\n<h2>EDM profiles and mappings</h2>\r\n\r\n<p>The <a href=\"https://pro.europeana.eu/page/edm-profiles\" target=\"_blank\">EDM mappings, refinements and extensions</a> gather work by Europeana and partners that adapts EDM to the needs of specific domains and applications or make systems that use EDM interoperable with other data models. Here you can check out all of the mappings, refinements and extensions and submit new ones.</p>\r\n"
+                body: "<p>All the documentation you need about the Europeana Data Model (EDM).</p>\r\n\r\n<h2>General EDM factsheet and Presentation</h2>\r\n\r\n<p>The <a href=\"/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation/EDM_Factsheet.pdf\" target=\"_blank\"><em>EDM Factsheet</em></a> and an <em><a href=\"/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation/EDM_slides_130714.ppt\">EDM presentation</a></em> sum up the rationale and expected benefits of EDM.</p>\r\n\r\n<h2>EDM Primer</h2>\r\n\r\n<p>The <em><a href=\"/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation/EDM_Primer_130714.pdf\" target=\"_blank\">EDM Primer</a></em> is the 'story' of EDM and explains how the classes and properties may be used together to model data and support Europeana functionality.</p>\r\n\r\n<h2>Mapping guidelines</h2>\r\n\r\n<p>The <a href=\"https://europeana.atlassian.net/wiki/spaces/EF/pages/987791389/EDM+-+Mapping+guidelines\" target=\"_blank\"><em>EDM Mapping Guidelines</em></a> give guidance for providers wanting to map their data to EDM. They contain definitions of the properties, information about the data types that can be used as values and the obligation level of each property. This documentation&nbsp;also has an example of original data, the same data converted to EDM and diagrams showing the distribution of the properties amongst the classes, as well as other EDM examples specific for content and metadata tiers.&nbsp;The full set of EDM classes and properties are being implemented incrementally,&nbsp;this documentation&nbsp;shows those that are currently available.</p>\r\n\r\n<h2>EDM roadmap</h2>\r\n\r\n<p>Find an overview of the short and long-term plans for the development of EDM in the <a href=\"https://docs.google.com/document/d/1omFFf4KsNZAAnaOUvXOvxRc1nmrKcLHxrrB58KwLY2g/edit#\" target=\"_blank\">EDM roadmap</a>. It is regularly updated by the Europeana R&amp;D team.</p>\r\n\r\n<h2>EDM objects templates</h2>\r\n\r\n<p>The <a href=\"https://github.com/europeana/corelib/wiki/EDMObjectTemplatesProviders\" target=\"_blank\"><em>EDM object templates</em> wiki-listing</a> shows which properties apply to which class and states the data types and obligation of the values. These templates should be regarded as a work in progress however and may be out of step with the <em>Mapping Guidelines.</em> Please refer to the <em>Mapping Guidelines</em> for the current set of classes and properties in use.</p>\r\n\r\n<h2>EDM definition</h2>\r\n\r\n<p>The <a href=\"/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation//EDM_Definition_v5.2.8_102017.pdf\" target=\"_blank\"><em>EDM Definition</em></a> is the formal specification of the classes and properties that could be used in Europeana. This document details all the classes and properties in EDM and therefore includes those that are not currently implemented. Please refer to the <em>Mapping Guidelines</em> for the current set of classes and properties in use.</p>\r\n\r\n<h2>EDM XML Schema and EDM validation in Oxygen</h2>\r\n\r\n<p>The <em>XML Schema</em> for the <em>Europeana Data Model</em> allows for automatic validation of EDM metadata. The EDM mapping rules are defined against the official release of the <em><a href=\"http://www.europeana.eu/schemas/edm/EDM.xsd\" target=\"_blank\">EDM XML Schema</a> and </em>the required <a href=\"https://github.com/schematron\" target=\"_blank\">Schematron</a> rules (embedded in the schema). You can download the latest versions of the <em><a href=\"https://github.com/europeana/metis-schema/tree/master/src/main/resources/schema_xsds\" target=\"_blank\">EDM Schema files</a>&nbsp;</em>directly from Github (<em>NB: this is a working version and should be used with caution!</em>). The <em><a href=\"/files/Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation//EDM%20Schematron%20validation%20in%20Oxygen%20XML%20editor.pdf\" target=\"_blank\">EDM Validation</a>&nbsp;&nbsp;</em>document explains how to make use of the validation rules with the Oxygen XML editor.</p>\r\n\r\n<p>For further information, please contact <a href=\"mailto:info@europeana.eu?subject=EDM\">info@europeana.eu</a> using 'EDM' as the email subject line.</p>\r\n\r\n<h2>EDM profiles and mappings</h2>\r\n\r\n<p>The <a href=\"https://pro.europeana.eu/page/edm-profiles\" target=\"_blank\">EDM mappings, refinements and extensions</a> gather work by Europeana and partners that adapts EDM to the needs of specific domains and applications or make systems that use EDM interoperable with other data models. Here you can check out all of the mappings, refinements and extensions and submit new ones.</p>\r\n"
                 image:
                     file: ''
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2820,7 +2820,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: Europeana_Professional/Share_your_data/Technical_requirements/EDM_Documentation
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -2960,7 +2960,7 @@ pages:
                     title: ''
                 singlefile: 'Europeana_Professional/Share_your_data/Technical_requirements/Cases_studies/MIMO and EDM.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3091,7 +3091,7 @@ pages:
                     title: ''
                 singlefile: 'Europeana_Professional/Share_your_data/Technical_requirements/Cases_studies/Europeana Libraries and EDM.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3226,7 +3226,7 @@ pages:
                     title: ''
                 singlefile: 'Europeana_Professional/Share_your_data/Technical_requirements/Cases_studies/Europeana LOD pilot.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3363,7 +3363,7 @@ pages:
                     title: ''
                 singlefile: 'Europeana_Professional/Share_your_data/Technical_requirements/Cases_studies/Mapping EAD to EDM.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3491,7 +3491,7 @@ pages:
                     title: ''
                 singlefile: 'Europeana_Professional/Share_your_data/Technical_requirements/Cases_studies/Polymath Virtual Library.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3621,7 +3621,7 @@ pages:
                     title: ''
                 singlefile: 'Europeana_Professional/Share_your_data/Technical_requirements/Cases_studies/Carare and EDM case study.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3658,7 +3658,7 @@ pages:
     -
         slug: linkinghistory-edm
         datecreated: '2014-12-04 12:19:35'
-        datechanged: '2021-05-20 14:57:51'
+        datechanged: '2022-12-21 14:52:06'
         datepublish: '2014-12-04 12:19:35'
         datedepublish: ''
         ownerid: 1
@@ -3666,7 +3666,7 @@ pages:
         templatefields: {  }
         title: 'Linking History and EDM'
         intro: "<p>This case study explores the Linking History\_site,\_a research tool for students participating in the History in Place\_project. The project's data\_has\_been modelled using EDM.\_\_</p>\r\n"
-        body: "<p>The <strong><a href=\"http://cv.vic.gov.au/linking-history/\">Linking History</a>\_</strong>site has been created for use as a research tool by students participating in the <strong><a href=\"http://cv.vic.gov.au/stories/history-in-place/\">History In Place</a>\_</strong>project. The students used the site to learn more about their subjects and to identify resources for inclusion in short films they were creating about their local history and people featured in the place names of Australia's capital city, Canberra. The resulting films were uploaded to the <strong><a href=\"http://cv.vic.gov.au/\">Culture Victoria</a>\_</strong>website and to the <strong><a href=\"http://portraitofanation.com.au/\">Portrait of a Nation</a>\_</strong>website (which has subsequently been archived <a href=\"#_ftn1\" name=\"_ftnref1\" title=\"\">[1]</a>).</p>\r\n\r\n<p><img alt=\"\" src=\"/files/Images/Technical_requirements/Cases_studies/LinkingHistory.jpg\" style=\"width: 572px; height: 395px;\"></p>\r\n\r\n<p><strong><a href=\"http://cv.vic.gov.au/linking-history/\">Linking History</a>\_</strong>is an experimental pilot in the practical application of linked open data with the objectives of increasing community engagement with Australia's history and increasing access to archival material. The results are exposed through a web application and as Linked Data.</p>\r\n\r\n<p>The project arose out of the collaborative environment and structures of the <a href=\"http://mw2013.museumsandtheweb.com/paper/from-a-broadband-network-to-a-cultural-network-tales-of-a-cross-domain-collaboration/\"><strong>Victorian Cultural Network</strong></a>. It was funded by the <a href=\"http://www.canberra100.com.au/\"><strong>Centenary of Canberra</strong></a>. The site was built by <a href=\"http://discontents.com.au/\"><strong>Tim Sherratt</strong></a>, and the following text describing the process is summarised from the <a href=\"http://blogs.cv.vic.gov.au/news/linking-history-an-exercise-in-linked-open-data/\">blog</a>\_written by him.</p>\r\n\r\n<h3>Design considerations</h3>\r\n\r\n<p>\LThere were three elements to be considered in the design of the application: the mechanism for storing and publishing the RDF data, the code to query and retrieve details from the RDF storage, and the way in which these details were presented to users. In addition, the RDF had to be discoverable according to one of the standard LOD publishing patterns.\_ The decision was to store and deliver static RDF/XML files, and display the details using javascript and html. One advantage of this approach being that provision of an example of how collections, exposed as Linked Open Data, might be integrated into new forms of online publication that are not dependent on particular platforms.</p>\r\n\r\n<h3>Data structure – Europeana Data Model</h3>\r\n\r\n<p>Since this project concerns cultural heritage institutions it seemed logical to base the data structure on the model used in Europeana.\_ This model, defined in the Europeana Data Model (EDM)<a href=\"#_ftn2\" name=\"_ftnref2\" title=\"\">[2]</a>, is also one of the foundations used by the Digital Public Library of America.<a href=\"#_ftn3\" name=\"_ftnref3\" title=\"\">[3]</a></p>\r\n\r\n<p>At the centre of EDM is the idea of an ‘aggregation' which brings the cultural heritage object together with any digital representations of that object.\_ Linking History follows the same approach by representing each object with an aggregation that bundles together links to:</p>\r\n\r\n<ul>\r\n<li>the object itself</li>\r\n    <li>a web page that provides information about that object</li>\r\n    <li>an image of the object if available</li>\r\n</ul>\r\n<p>A typical object is therefore represented as four interlinked entities: aggregation, object, web page and image. The aggregation is also linked to details of the institution providing the data.</p>\r\n\r\n<p>As with EDM, most of the descriptive metadata – such as title, description and date – is attached to the object entity.\_ In addition are a small set of properties to assert the relationships between the object and people or places: these are subject, creator, and edm:hasMet (an EDM property that can be used to connect things, in this case \_a person and a thing).</p>\r\n\r\n<p>Following the model of the EDM contextual classes, People and Places are described as entities in their own right, with their own properties and relationships. People are related to Places through birth or death events, and via the ‘named for' property that indicates when a place was named after a particular person.\_ The set of properties and classes used are listed at the end of this paper.</p>\r\n\r\n<h3>Data processing</h3>\r\n\r\n<p>The data came from many sources and varied in structure and format.\_ The Open Refine tool<a href=\"#_ftn4\" name=\"_ftnref4\" title=\"\">[4]</a> (OR) (formerly Google Refine) was used to clean and normalise the data and generate the RDF.\_ It enabled the many different source formats to be reduced to a manageable subset for the interface without a lot of manual intervention.\_ It could also be used to create relationships between objects and people and it supported transformations such as modifying punctuation or combining values into one field.</p>\r\n\r\n<p>The more advanced features allow the retrieval and processing of related data. For example, some records did not include direct URLs for images so OR could retrieve and save the html of the web page for each item. Further instructions could then be used to find the image links and save them to a new field by screen scraping.</p>\r\n\r\n<h3>Enrichment and linking to other data sets</h3>\r\n\r\n<p>Open Refine's reconciliation services allow you to find links with other data sets. After normalising the artist field from the National Gallery of Victoria data, values were reconciled against DBPedia. The matches were added as additional people to the data set and they could then be related as creators to the original items.<a href=\"#_ftn5\" name=\"_ftnref5\" title=\"\">[5]</a></p>\r\n\r\n<p>Values can be sent to any number of third party APIs for further processing. Using named entity recognition on the titles from the National Gallery, details of place names were extracted.\_ These were then used against DBPedia and GeoNames to harvest useful metadata, such as coordinates. These places were then related back to the original items as subjects</p>\r\n\r\n<p>There was considerable inconsistency from such experiments and quite a lot of manual intervention was still required. The value lies in the way such techniques can create connections to widely-used datasets such as Wikipedia/DBPedia – this is what really puts the ‘Linked' into Linked Open Data and opens up new opportunities for discovery.</p>\r\n\r\n<p>The five people who were the subjects of the project, and the Canberra places that are named after them, were subject to a considerable amount of manual enrichment. Birth and death details were added, as was information about associated places. Links were created to DBPedia and a range of other biographical sources. In the case of the Canberra places, links were added to the Portrai of a Nation site and to the Government's place name database.</p>\r\n\r\n<h3>RDF Generation</h3>\r\n\r\n<p>The RDF extension for Open Refine made it straightforward to design, manage and export Linked Data for consumption by other applications.\_ For each data set an RDF skeleton was defined that set out the basic EDM entities – aggregation, object, web page and image – and mapped values from the data to properties attached to each of the entities. Once the skeleton was defined, the data could be exported in RDF/XML format and added to the interface. The properties are listed below.</p>\r\n\r\n<p>As part of the mapping, values can be transformed using Open Refine processing instructions. For example, identifiers for the aggregations and the cultural heritage objects were created by combining the project's namespace, the contributing institution's name and a unique system id.</p>\r\n\r\n<h3>Interface construction</h3>\r\n\r\n<p>A web application was constructed giving a series of simple browse lists and an interactive map to provide users with the ability to explore the collections, people and places.\_ A fuller explanation of the interface technology and tools is provided on the blog referred to earlier.\_\_ This case study focuses on the metadata aspects.</p>\r\n\r\n<h3>Possibilities and problems</h3>\r\n\r\n<p>In general, with a clear target model and a good understanding of the source data, the processes of normalisation, mapping and RDF generation were fairly straightforward and the Open Refine application almost made the work enjoyable!</p>\r\n\r\n<p>Where there were difficulties they mostly related to the unavailability of data, such as direct image urls. Some web interfaces embedded images within frames or javascript widgets that made it difficult to dig them out automatically.</p>\r\n\r\n<p>We are all familiar with the arguments for publishing our web resources using persistent urls.\_ This project demonstrated that it is equally important to manage the urls of assets, such as images, that make up such resources. Given an item identifier, it should be possible to retrieve an image of it in a variety of sizes.</p>\r\n\r\n<p>The experiments with named entity extraction were encouraging. Another useful feature of Open Refine is that a series of processing steps can be saved and imported into another project. This means that it might be possible to build and share a series of formulas that could be used for enrichment across data sets such as these.</p>\r\n\r\n<p>This aim of this project was to aggregate and link resources to promote discovery. Aggregation of resources generally comes at the cost of a simplified data model – the richness of individual descriptive models can be lost. The purposes of aggregation, its costs and its benefits, need to be considered.</p>\r\n\r\n<h3>Key data considerations for cultural institutions</h3>\r\n\r\n<ul>\r\n<li>\LWhatever system is used to manage your data there must be a way to get the data out. This seems obvious, but some of the contributors to this project had difficulty exporting to simple formats for data exchange.\L</li>\r\n    <li>Tools like Open Refine facilitate data clean-up and normalisation, so concerns about data quality or differing vocabularies should not inhibit sharing in projects such as this.\L</li>\r\n    <li>Good examples of Linked Data based models for resource aggregation already exist in Europeana and the DPLA. It's worth thinking about how your data might map to such structures.\L</li>\r\n    <li>The importance of unique identifiers and persistent URLs can't be stressed enough. Some contributors had trouble supplying these because of limitations in their software. Linked Data needs reliable links to individual resources.</li>\r\n</ul>\r\n<p><strong>Acknowledgement: </strong></p>\r\n\r\n<p>Thanks to Eleanor Whitworth, Linking History Project Manager eleanor.whitworth@dpc.vic.gov.au</p>\r\n\r\n<div>\r\n<hr width=\"33%\">\r\n<div id=\"ftn1\">\r\n<p><br><a href=\"#_ftnref1\" name=\"_ftn1\" title=\"\">[1]</a><a href=\"http://pandora.nla.gov.au/pan/134426/20120619-1830/portraitofanation.com.au/index.html\">http://pandora.nla.gov.au/pan/134426/20120619-1830/portraitofanation.com.au/index.html</a></p>\r\n</div>\r\n\r\n<div id=\"ftn2\">\r\n<p><a href=\"#_ftnref2\" name=\"_ftn2\" title=\"\">[2]</a> <a href=\"http://pro.europeana.eu/edm-documentation\">http://pro.europeana.eu/edm-documentation</a></p>\r\n</div>\r\n\r\n<div id=\"ftn3\">\r\n<p><a href=\"#_ftnref3\" name=\"_ftn3\" title=\"\">[3]</a> <a href=\"http://dp.la\">http://dp.la</a></p>\r\n</div>\r\n\r\n<div id=\"ftn4\">\r\n<p><a href=\"#_ftnref4\" name=\"_ftn4\" title=\"\">[4]</a><a href=\"http://openrefine.org\">http://openrefine.org</a></p>\r\n</div>\r\n\r\n<div id=\"ftn5\">\r\n<p><a href=\"#_ftnref5\" name=\"_ftn5\" title=\"\">[5]</a>An interesting use of OpenRefine for matching names in the Archive sector can be found at <a href=\"http://archiveshub.ac.uk/blog/2013/08/hub-viaf-namematching/\">http://archiveshub.ac.uk/blog/2013/08/hub-viaf-namematching/</a></p>\r\n</div>\r\n</div>"
+        body: "<p>The <strong><a href=\"http://cv.vic.gov.au/linking-history/\">Linking History</a>\_</strong>site has been created for use as a research tool by students participating in the <strong><a href=\"http://cv.vic.gov.au/stories/history-in-place/\">History In Place</a>\_</strong>project. The students used the site to learn more about their subjects and to identify resources for inclusion in short films they were creating about their local history and people featured in the place names of Australia's capital city, Canberra. The resulting films were uploaded to the <strong><a href=\"http://cv.vic.gov.au/\">Culture Victoria</a>\_</strong>website and to the <strong><a href=\"http://portraitofanation.com.au/\">Portrait of a Nation</a>\_</strong>website (which has subsequently been archived <a href=\"#_ftn1\" name=\"_ftnref1\" title=\"\">[1]</a>).</p>\r\n\r\n<p><img alt=\"\" src=\"/files/Images/Technical_requirements/Cases_studies/LinkingHistory.jpg\" style=\"width: 572px; height: 395px;\"></p>\r\n\r\n<p><strong><a href=\"http://cv.vic.gov.au/linking-history/\">Linking History</a>\_</strong>is an experimental pilot in the practical application of linked open data with the objectives of increasing community engagement with Australia's history and increasing access to archival material. The results are exposed through a web application and as Linked Data.</p>\r\n\r\n<p>The project arose out of the collaborative environment and structures of the <a href=\"http://mw2013.museumsandtheweb.com/paper/from-a-broadband-network-to-a-cultural-network-tales-of-a-cross-domain-collaboration/\"><strong>Victorian Cultural Network</strong></a>. It was funded by the <a href=\"http://www.canberra100.com.au/\"><strong>Centenary of Canberra</strong></a>. The site was built by <a href=\"http://discontents.com.au/\"><strong>Tim Sherratt</strong></a>, and the following text describing the process is summarised from a blog\_written by him.</p>\r\n\r\n<h3>Design considerations</h3>\r\n\r\n<p>\LThere were three elements to be considered in the design of the application: the mechanism for storing and publishing the RDF data, the code to query and retrieve details from the RDF storage, and the way in which these details were presented to users. In addition, the RDF had to be discoverable according to one of the standard LOD publishing patterns.\_ The decision was to store and deliver static RDF/XML files, and display the details using javascript and html. One advantage of this approach being that provision of an example of how collections, exposed as Linked Open Data, might be integrated into new forms of online publication that are not dependent on particular platforms.</p>\r\n\r\n<h3>Data structure – Europeana Data Model</h3>\r\n\r\n<p>Since this project concerns cultural heritage institutions it seemed logical to base the data structure on the model used in Europeana.\_ This model, defined in the Europeana Data Model (EDM)<a href=\"#_ftn2\" name=\"_ftnref2\" title=\"\">[2]</a>, is also one of the foundations used by the Digital Public Library of America.<a href=\"#_ftn3\" name=\"_ftnref3\" title=\"\">[3]</a></p>\r\n\r\n<p>At the centre of EDM is the idea of an ‘aggregation' which brings the cultural heritage object together with any digital representations of that object.\_ Linking History follows the same approach by representing each object with an aggregation that bundles together links to:</p>\r\n\r\n<ul>\r\n    <li>the object itself</li>\r\n    <li>a web page that provides information about that object</li>\r\n    <li>an image of the object if available</li>\r\n</ul>\r\n\r\n<p>A typical object is therefore represented as four interlinked entities: aggregation, object, web page and image. The aggregation is also linked to details of the institution providing the data.</p>\r\n\r\n<p>As with EDM, most of the descriptive metadata – such as title, description and date – is attached to the object entity.\_ In addition are a small set of properties to assert the relationships between the object and people or places: these are subject, creator, and edm:hasMet (an EDM property that can be used to connect things, in this case \_a person and a thing).</p>\r\n\r\n<p>Following the model of the EDM contextual classes, People and Places are described as entities in their own right, with their own properties and relationships. People are related to Places through birth or death events, and via the ‘named for' property that indicates when a place was named after a particular person.\_ The set of properties and classes used are listed at the end of this paper.</p>\r\n\r\n<h3>Data processing</h3>\r\n\r\n<p>The data came from many sources and varied in structure and format.\_ The Open Refine tool<a href=\"#_ftn4\" name=\"_ftnref4\" title=\"\">[4]</a> (OR) (formerly Google Refine) was used to clean and normalise the data and generate the RDF.\_ It enabled the many different source formats to be reduced to a manageable subset for the interface without a lot of manual intervention.\_ It could also be used to create relationships between objects and people and it supported transformations such as modifying punctuation or combining values into one field.</p>\r\n\r\n<p>The more advanced features allow the retrieval and processing of related data. For example, some records did not include direct URLs for images so OR could retrieve and save the html of the web page for each item. Further instructions could then be used to find the image links and save them to a new field by screen scraping.</p>\r\n\r\n<h3>Enrichment and linking to other data sets</h3>\r\n\r\n<p>Open Refine's reconciliation services allow you to find links with other data sets. After normalising the artist field from the National Gallery of Victoria data, values were reconciled against DBPedia. The matches were added as additional people to the data set and they could then be related as creators to the original items.<a href=\"#_ftn5\" name=\"_ftnref5\" title=\"\">[5]</a></p>\r\n\r\n<p>Values can be sent to any number of third party APIs for further processing. Using named entity recognition on the titles from the National Gallery, details of place names were extracted.\_ These were then used against DBPedia and GeoNames to harvest useful metadata, such as coordinates. These places were then related back to the original items as subjects</p>\r\n\r\n<p>There was considerable inconsistency from such experiments and quite a lot of manual intervention was still required. The value lies in the way such techniques can create connections to widely-used datasets such as Wikipedia/DBPedia – this is what really puts the ‘Linked' into Linked Open Data and opens up new opportunities for discovery.</p>\r\n\r\n<p>The five people who were the subjects of the project, and the Canberra places that are named after them, were subject to a considerable amount of manual enrichment. Birth and death details were added, as was information about associated places. Links were created to DBPedia and a range of other biographical sources. In the case of the Canberra places, links were added to the Portrai of a Nation site and to the Government's place name database.</p>\r\n\r\n<h3>RDF Generation</h3>\r\n\r\n<p>The RDF extension for Open Refine made it straightforward to design, manage and export Linked Data for consumption by other applications.\_ For each data set an RDF skeleton was defined that set out the basic EDM entities – aggregation, object, web page and image – and mapped values from the data to properties attached to each of the entities. Once the skeleton was defined, the data could be exported in RDF/XML format and added to the interface. The properties are listed below.</p>\r\n\r\n<p>As part of the mapping, values can be transformed using Open Refine processing instructions. For example, identifiers for the aggregations and the cultural heritage objects were created by combining the project's namespace, the contributing institution's name and a unique system id.</p>\r\n\r\n<h3>Interface construction</h3>\r\n\r\n<p>A web application was constructed giving a series of simple browse lists and an interactive map to provide users with the ability to explore the collections, people and places.\_ A fuller explanation of the interface technology and tools is provided on the blog referred to earlier.\_\_ This case study focuses on the metadata aspects.</p>\r\n\r\n<h3>Possibilities and problems</h3>\r\n\r\n<p>In general, with a clear target model and a good understanding of the source data, the processes of normalisation, mapping and RDF generation were fairly straightforward and the Open Refine application almost made the work enjoyable!</p>\r\n\r\n<p>Where there were difficulties they mostly related to the unavailability of data, such as direct image urls. Some web interfaces embedded images within frames or javascript widgets that made it difficult to dig them out automatically.</p>\r\n\r\n<p>We are all familiar with the arguments for publishing our web resources using persistent urls.\_ This project demonstrated that it is equally important to manage the urls of assets, such as images, that make up such resources. Given an item identifier, it should be possible to retrieve an image of it in a variety of sizes.</p>\r\n\r\n<p>The experiments with named entity extraction were encouraging. Another useful feature of Open Refine is that a series of processing steps can be saved and imported into another project. This means that it might be possible to build and share a series of formulas that could be used for enrichment across data sets such as these.</p>\r\n\r\n<p>This aim of this project was to aggregate and link resources to promote discovery. Aggregation of resources generally comes at the cost of a simplified data model – the richness of individual descriptive models can be lost. The purposes of aggregation, its costs and its benefits, need to be considered.</p>\r\n\r\n<h3>Key data considerations for cultural institutions</h3>\r\n\r\n<ul>\r\n    <li>\LWhatever system is used to manage your data there must be a way to get the data out. This seems obvious, but some of the contributors to this project had difficulty exporting to simple formats for data exchange.\L</li>\r\n    <li>Tools like Open Refine facilitate data clean-up and normalisation, so concerns about data quality or differing vocabularies should not inhibit sharing in projects such as this.\L</li>\r\n    <li>Good examples of Linked Data based models for resource aggregation already exist in Europeana and the DPLA. It's worth thinking about how your data might map to such structures.\L</li>\r\n    <li>The importance of unique identifiers and persistent URLs can't be stressed enough. Some contributors had trouble supplying these because of limitations in their software. Linked Data needs reliable links to individual resources.</li>\r\n</ul>\r\n\r\n<p><strong>Acknowledgement: </strong></p>\r\n\r\n<p>Thanks to Eleanor Whitworth, Linking History Project Manager eleanor.whitworth@dpc.vic.gov.au</p>\r\n\r\n<div>\r\n<hr width=\"33%\">\r\n<div id=\"ftn1\">\r\n<p><br>\r\n<a href=\"#_ftnref1\" name=\"_ftn1\" title=\"\">[1]</a><a href=\"http://pandora.nla.gov.au/pan/134426/20120619-1830/portraitofanation.com.au/index.html\">http://pandora.nla.gov.au/pan/134426/20120619-1830/portraitofanation.com.au/index.html</a></p>\r\n</div>\r\n\r\n<div id=\"ftn2\">\r\n<p><a href=\"#_ftnref2\" name=\"_ftn2\" title=\"\">[2]</a> <a href=\"http://pro.europeana.eu/edm-documentation\">http://pro.europeana.eu/edm-documentation</a></p>\r\n</div>\r\n\r\n<div id=\"ftn3\">\r\n<p><a href=\"#_ftnref3\" name=\"_ftn3\" title=\"\">[3]</a> <a href=\"http://dp.la\">http://dp.la</a></p>\r\n</div>\r\n\r\n<div id=\"ftn4\">\r\n<p><a href=\"#_ftnref4\" name=\"_ftn4\" title=\"\">[4]</a><a href=\"http://openrefine.org\">http://openrefine.org</a></p>\r\n</div>\r\n\r\n<div id=\"ftn5\">\r\n<p><a href=\"#_ftnref5\" name=\"_ftn5\" title=\"\">[5]</a>An interesting use of OpenRefine for matching names in the Archive sector can be found at <a href=\"http://archiveshub.ac.uk/blog/2013/08/hub-viaf-namematching/\">http://archiveshub.ac.uk/blog/2013/08/hub-viaf-namematching/</a></p>\r\n</div>\r\n</div>\r\n"
         pagefooter: null
         pagetype: page
         highlighttitle: null
@@ -3744,7 +3744,7 @@ pages:
                     title: ''
                 singlefile: Europeana_Professional/Share_your_data/Technical_requirements/Cases_studies/Linking_History_Case_Study_20140520.pdf
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -3867,7 +3867,7 @@ pages:
                     title: ''
                 singlefile: 'Europeana_Professional/Share_your_data/Technical_requirements/Cases_studies/EDM in the learning context.pdf'
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4007,7 +4007,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4139,7 +4139,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: ''
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
@@ -4267,7 +4267,7 @@ pages:
                     title: ''
                 singlefile: ''
                 fileslistpath: /Europeana_Professional/Share_your_data/Technical_requirements/ESE_Documentation
-                icon:
+                icon_image:
                     file: ''
                 ordering: latest
                 sources: posts
