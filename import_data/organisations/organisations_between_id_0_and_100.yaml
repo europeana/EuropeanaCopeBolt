@@ -1,12 +1,12 @@
 __bolt_export_meta:
-    date: '2022-11-02T11:05:45+01:00'
+    date: '2023-05-31T09:18:45+02:00'
     version: 3.7.4
     platform: mysql
 organisations:
     -
         slug: the-european-film-gateway
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-02-27 20:57:45'
         datedepublish: ''
         ownerid: 1
@@ -52,12 +52,13 @@ organisations:
         events: {  }
         persons:
             - persons/julia-welter
+            - persons/kerstin-herlt
         tags: {  }
         _id: organisations/the-european-film-gateway
     -
         slug: openup
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2018-04-05 15:44:27'
         datedepublish: ''
         ownerid: 1
@@ -109,7 +110,7 @@ organisations:
     -
         slug: digital-libraries-federation
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2018-04-06 10:39:40'
         datedepublish: ''
         ownerid: 1
@@ -161,7 +162,7 @@ organisations:
     -
         slug: euscreen
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2018-04-05 15:53:02'
         datedepublish: ''
         ownerid: 1
@@ -213,7 +214,7 @@ organisations:
     -
         slug: europeana-sounds
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2018-10-12 14:01:09'
         datedepublish: ''
         ownerid: 1
@@ -265,7 +266,7 @@ organisations:
     -
         slug: german-digital-library
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2018-10-11 14:23:11'
         datedepublish: ''
         ownerid: 1
@@ -317,7 +318,7 @@ organisations:
     -
         slug: carare
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2018-04-05 14:57:01'
         datedepublish: ''
         ownerid: 1
@@ -418,7 +419,7 @@ organisations:
     -
         slug: europeana-foundation
         datecreated: '2016-09-13 11:14:40'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2018-06-25 17:52:23'
         datedepublish: ''
         ownerid: 1
@@ -466,7 +467,7 @@ organisations:
     -
         slug: european-fashion-heritage-association
         datecreated: '2015-08-17 17:04:32'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2018-04-06 11:09:35'
         datedepublish: ''
         ownerid: 1
@@ -518,7 +519,7 @@ organisations:
     -
         slug: museu
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2018-04-06 11:10:40'
         datedepublish: ''
         ownerid: 1
@@ -570,7 +571,7 @@ organisations:
     -
         slug: photoconsortium
         datecreated: '2016-10-07 10:47:29'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2018-10-12 14:06:51'
         datedepublish: ''
         ownerid: 1
@@ -624,7 +625,7 @@ organisations:
     -
         slug: europeana-local-austria
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2018-10-12 14:00:18'
         datedepublish: ''
         ownerid: 1
@@ -677,7 +678,7 @@ organisations:
     -
         slug: kulturpool
         datecreated: '2017-12-04 14:17:55'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-13 06:44:24'
         datedepublish: ''
         ownerid: 1
@@ -781,7 +782,7 @@ organisations:
     -
         slug: greek-aggregator-searchculture-gr
         datecreated: '2019-03-12 00:50:32'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-14 00:37:53'
         datedepublish: ''
         ownerid: 1
@@ -833,7 +834,7 @@ organisations:
     -
         slug: jewish-heritage-network
         datecreated: '2019-03-12 00:34:58'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-13 06:12:46'
         datedepublish: ''
         ownerid: 1
@@ -886,7 +887,7 @@ organisations:
     -
         slug: gallica
         datecreated: '2019-03-12 00:22:30'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-13 06:10:39'
         datedepublish: ''
         ownerid: 1
@@ -938,7 +939,7 @@ organisations:
     -
         slug: swedish-open-cultural-heritage
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-14 01:04:52'
         datedepublish: ''
         ownerid: 1
@@ -990,7 +991,7 @@ organisations:
     -
         slug: slovenian-national-e-content-aggregator
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-14 00:45:16'
         datedepublish: ''
         ownerid: 1
@@ -1042,7 +1043,7 @@ organisations:
     -
         slug: national-register-for-digital-objects
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-14 00:28:07'
         datedepublish: ''
         ownerid: 1
@@ -1094,7 +1095,7 @@ organisations:
     -
         slug: museumap
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-13 23:15:28'
         datedepublish: ''
         ownerid: 1
@@ -1146,7 +1147,7 @@ organisations:
     -
         slug: lt-aggregator-service-national-library-of-lithuania
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-13 22:54:15'
         datedepublish: ''
         ownerid: 1
@@ -1196,7 +1197,7 @@ organisations:
     -
         slug: hispana
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-13 06:11:44'
         datedepublish: ''
         ownerid: 1
@@ -1247,7 +1248,7 @@ organisations:
     -
         slug: dutch-collections-for-europe
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-13 06:07:21'
         datedepublish: ''
         ownerid: 1
@@ -1298,7 +1299,7 @@ organisations:
     -
         slug: forum-hungaricum-non-profit-ltd
         datecreated: '2017-10-24 11:07:53'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-13 06:09:14'
         datedepublish: ''
         ownerid: 1
@@ -1344,14 +1345,13 @@ organisations:
         projects: {  }
         events: {  }
         persons:
-            - persons/lajos-lovas
-            - persons/etele-szuets
+            - persons/henriett-hegedus
         tags: {  }
         _id: organisations/forum-hungaricum-non-profit-ltd
     -
         slug: national-heritage-institute-bucharest
         datecreated: '2016-02-25 12:05:53'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-13 06:16:22'
         datedepublish: ''
         ownerid: 1
@@ -1402,7 +1402,7 @@ organisations:
     -
         slug: culturaitalia
         datecreated: '2015-08-05 17:46:23'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-13 06:04:42'
         datedepublish: ''
         ownerid: 1
@@ -1454,7 +1454,7 @@ organisations:
     -
         slug: mimo-musical-instrument-museums-online
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-15 03:58:12'
         datedepublish: ''
         ownerid: 1
@@ -1506,7 +1506,7 @@ organisations:
     -
         slug: erfgoedplus-be
         datecreated: '2019-03-15 23:56:27'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-21 01:43:08'
         datedepublish: ''
         ownerid: 1
@@ -1558,7 +1558,7 @@ organisations:
     -
         slug: public-library-pencho-slaveykov-varna
         datecreated: '2015-08-17 17:03:25'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-20 23:31:24'
         datedepublish: ''
         ownerid: 1
@@ -1610,7 +1610,7 @@ organisations:
     -
         slug: manuscriptorium
         datecreated: '2015-08-17 16:51:51'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-19 07:22:12'
         datedepublish: ''
         ownerid: 1
@@ -1713,7 +1713,7 @@ organisations:
     -
         slug: moteur-collections
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-03-20 23:25:18'
         datedepublish: ''
         ownerid: 1
@@ -1963,7 +1963,7 @@ organisations:
     -
         slug: digital-repository-of-ireland
         datecreated: '2015-08-17 17:03:01'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-08-15 12:57:45'
         datedepublish: ''
         ownerid: 1
@@ -2015,7 +2015,7 @@ organisations:
     -
         slug: national-library-of-finland
         datecreated: '2015-08-17 17:02:59'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-08-15 10:08:49'
         datedepublish: ''
         ownerid: 1
@@ -2065,7 +2065,7 @@ organisations:
     -
         slug: czech-digital-library
         datecreated: '2017-11-02 08:26:54'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-08-16 09:45:11'
         datedepublish: ''
         ownerid: 1
@@ -2116,7 +2116,7 @@ organisations:
     -
         slug: latvian-national-e-content-aggregator
         datecreated: '2019-09-19 11:27:56'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-09-20 10:21:25'
         datedepublish: ''
         ownerid: 1
@@ -2217,7 +2217,7 @@ organisations:
     -
         slug: ministry-of-culture-and-media-of-the-republic-of-croatia-ekultura-hr
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2019-11-01 10:07:59'
         datedepublish: ''
         ownerid: 1
@@ -2232,7 +2232,7 @@ organisations:
             - Aggregator
             - 'Data Partner'
             - 'Data Provider'
-        website: 'http://agregator.arhivx.net/mk/'
+        website: 'https://ekultura.hr/'
         email: Jelena.rubic@min-kulture.hr
         domain: ''
         scope: null
@@ -2365,7 +2365,7 @@ organisations:
     -
         slug: leibniz-information-centre-for-science-and-technology
         datecreated: '2020-01-16 08:34:50'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2020-05-07 15:54:06'
         datedepublish: ''
         ownerid: 1
@@ -2416,7 +2416,7 @@ organisations:
     -
         slug: estonian-e-repository-and-conservation-of-collections
         datecreated: '2020-11-12 16:59:41'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2020-11-13 09:18:08'
         datedepublish: ''
         ownerid: 1
@@ -2464,36 +2464,36 @@ organisations:
         tags: {  }
         _id: organisations/estonian-e-repository-and-conservation-of-collections
     -
-        slug: cyprus-ministry-of-education-culture-sport-and-youth
+        slug: deputy-ministry-of-culture-republic-of-cyprus
         datecreated: '2015-10-07 16:54:58'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2021-05-20 15:58:35'
         datedepublish: ''
         ownerid: 1
         status: published
         templatefields: {  }
-        name: 'Cyprus Ministry of Education, Culture, Sport and Youth'
-        name_alt1: 'Υπουργείου Παιδείας, Πολιτισμού, Αθλητισμού και Νεολαίας της Κύπρου'
+        name: 'Deputy Ministry of Culture, Republic of Cyprus'
+        name_alt1: 'Υφυπουργείο Πολιτισμού, Κυπριακή Δημοκρατία'
         name_alt2: null
-        acronym: CMOEC
+        acronym: DMC
         org_country: Cyprus
         org_role:
             - Aggregator
-        website: 'http://www.moec.gov.cy/'
+        website: 'http://www.culture.gov.cy/'
         email: null
         domain: ''
         scope: null
         sector: 'Cultural Heritage'
-        description: "<p>The national aggregator for Cyprus is based in\_Cyprus Ministry of Education, Culture, Sport and Youth with the initials CMOEC. It is supported by open-source software. It\_is a national initiative and is currently harvesting collections from a variety of cultural heritage institutions, as well as academic institutions in Cyprus.</p>\r\n\r\n<p><br>\r\n<strong>In addition to data publication, CMOEC offers:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Annual training performed by the aggregator's team: during the training, all participants are presented with new tools and hands-on sessions,</p>\r\n    </li>\r\n    <li>\r\n    <p>Metadata submission via OAI-PMH, or FTP server,</p>\r\n    </li>\r\n    <li>\r\n    <p>Data mapping in EDM,</p>\r\n    </li>\r\n    <li>\r\n    <p>Data enrichment,</p>\r\n    </li>\r\n    <li>\r\n    <p>Feedback report to participants,</p>\r\n    </li>\r\n    <li>\r\n    <p>Helpdesk by email and phone.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with CMOEC:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>A participant CHI must have the ability to provide an OAI-PMH endpoint or exportation of their records in XML files so that the aggregator can proceed in harvesting and mapping the data collected,\_</p>\r\n    </li>\r\n    <li>\r\n    <p>The data format is preferably in Dublin Core schemas.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Aggregator strongly advises all CHIs to provide good quality and well-documented content and generally keep enriching their collections so as to keep the accessibility at high levels,</p>\r\n    </li>\r\n    <li>\r\n    <p>Aggregator encourages participants to maintain open access and free reuse policy on their content so as to keep the datasets as open as possible to everyone,</p>\r\n    </li>\r\n    <li>\r\n    <p>Aggregator advises participants to keep up with Europeana's strategies, policies and technological upgrades so as to keep an effective workflow on their data in terms of publishing in Europeana.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: None. The aggregator is working with public and private CHIs.</p>\r\n\r\n<p>Financial conditions: None.</p>\r\n"
+        description: "<p>The National Aggregator for Cyprus is based in the\_Deputy Ministry of Culture, Republic of Cyprus with the initials DMC. It is supported by open-source software which harvests content from cultural and academic Institutions that wish to share their material in Europeana. As a national cross-domain\_aggregator it has a very important role to promote Cyprus' cultural heritage at a European level by providing Europeana with digital objects.</p>\r\n\r\n<p></p>\r\n\r\n<p><br>\r\n<strong>In addition to data publication, DMC offers:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Annual training performed by the aggregator's team: during the training, all participants are presented with new tools and hands-on sessions,</p>\r\n    </li>\r\n    <li>\r\n    <p>Metadata submission via OAI-PMH, or FTP server,</p>\r\n    </li>\r\n    <li>\r\n    <p>Data mapping in EDM,</p>\r\n    </li>\r\n    <li>\r\n    <p>Data enrichment,</p>\r\n    </li>\r\n    <li>\r\n    <p>Feedback report to participants,</p>\r\n    </li>\r\n    <li>\r\n    <p>Helpdesk by email and phone.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Technical conditions for working with DMC:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>A participant CHI must have the ability to provide an OAI-PMH endpoint or exportation of their records in XML files so that the aggregator can proceed in harvesting and mapping the data collected,\_</p>\r\n    </li>\r\n    <li>\r\n    <p>The data format is preferably in Dublin Core schemas.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>In addition:</strong></p>\r\n\r\n<ul>\r\n    <li>\r\n    <p>Aggregator strongly advises all CHIs to provide good quality and well-documented content and generally keep enriching their collections so as to keep the accessibility at high levels,</p>\r\n    </li>\r\n    <li>\r\n    <p>Aggregator encourages participants to maintain open access and free reuse policy on their content so as to keep the datasets as open as possible to everyone,</p>\r\n    </li>\r\n    <li>\r\n    <p>Aggregator advises participants to keep up with Europeana's strategies, policies and technological upgrades so as to keep an effective workflow on their data in terms of publishing in Europeana.</p>\r\n    </li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p>Limitations: None. The aggregator is working with public and private CHIs.</p>\r\n\r\n<p>Financial conditions: None.</p>\r\n"
         geographical_reach: null
         content_themes: null
         working_languages: ''
         content_languages: ''
         logo_url: null
         image:
-            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Cyprus_transparent.png'
+            file: 'Europeana_Professional/Aggregation Landscape/Logo_pro_Cyprus_new.png'
         city: 'Strovolos Nicosia'
-        street: '27 Ifigenias Street'
+        street: 'Gladstonos 6'
         zipcode: null
         po_box: null
         country: Cyprus
@@ -2501,7 +2501,7 @@ organisations:
         europeana_id: null
         org_uid: '1482250000000602023'
         name_lang: EN(English)
-        name_alt1_lang: EN(English)
+        name_alt1_lang: EL(Greek)
         name_alt2_lang: null
         acronym_lang: EN(English)
         pages: {  }
@@ -2512,11 +2512,11 @@ organisations:
         persons:
             - persons/zachos-polyviou
         tags: {  }
-        _id: organisations/cyprus-ministry-of-education-culture-sport-and-youth
+        _id: organisations/deputy-ministry-of-culture-republic-of-cyprus
     -
         slug: europeana
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -2564,7 +2564,7 @@ organisations:
     -
         slug: europeana-280
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -2612,7 +2612,7 @@ organisations:
     -
         slug: europeana-development
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -2708,7 +2708,7 @@ organisations:
     -
         slug: musit
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -2756,7 +2756,7 @@ organisations:
     -
         slug: partage-plus
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -2804,7 +2804,7 @@ organisations:
     -
         slug: the-natural-europe-project
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -2852,7 +2852,7 @@ organisations:
     -
         slug: euinsideda
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -2900,7 +2900,7 @@ organisations:
     -
         slug: eclap-e-library-for-performing-arts
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -2948,7 +2948,7 @@ organisations:
     -
         slug: eagle
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -2996,7 +2996,7 @@ organisations:
     -
         slug: dm2e
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3044,7 +3044,7 @@ organisations:
     -
         slug: dk-national-aggregation-service
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3092,7 +3092,7 @@ organisations:
     -
         slug: dismarc
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3140,7 +3140,7 @@ organisations:
     -
         slug: digitising-contemporary-art
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3188,7 +3188,7 @@ organisations:
     -
         slug: culturegrid
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3236,7 +3236,7 @@ organisations:
     -
         slug: athenaplus
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3284,7 +3284,7 @@ organisations:
     -
         slug: athena
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3332,7 +3332,7 @@ organisations:
     -
         slug: arts-council-norway
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3380,7 +3380,7 @@ organisations:
     -
         slug: archives-portal-europe
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2022-07-11 10:42:40'
         datedepublish: ''
         ownerid: 1
@@ -3430,7 +3430,7 @@ organisations:
     -
         slug: apenet
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3478,7 +3478,7 @@ organisations:
     -
         slug: 3d-coform-consortium
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3526,7 +3526,7 @@ organisations:
     -
         slug: 3d-icons
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3574,7 +3574,7 @@ organisations:
     -
         slug: university-of-ioannina
         datecreated: '2016-05-30 13:43:49'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3622,7 +3622,7 @@ organisations:
     -
         slug: irish-manuscripts-commission
         datecreated: '2015-09-29 13:37:54'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3670,7 +3670,7 @@ organisations:
     -
         slug: thinkmotion
         datecreated: '2015-08-17 17:03:02'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3718,7 +3718,7 @@ organisations:
     -
         slug: europeana-food-and-drink
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3766,7 +3766,7 @@ organisations:
     -
         slug: europeana-inside-sweden
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3814,7 +3814,7 @@ organisations:
     -
         slug: europeana-local
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3862,7 +3862,7 @@ organisations:
     -
         slug: europeanalocal-portugal
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -3910,7 +3910,7 @@ organisations:
     -
         slug: europeana-office
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null

@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-28T19:32:41+01:00'
+    date: '2023-05-31T09:22:12+02:00'
     version: 3.7.4
     platform: mysql
 resources:
@@ -6054,7 +6054,7 @@ resources:
     -
         slug: get-the-api-key
         datecreated: '2017-10-23 15:56:38'
-        datechanged: '2021-03-04 12:19:36'
+        datechanged: '2023-01-13 16:22:59'
         datepublish: '2017-10-23 15:55:05'
         datedepublish: ''
         ownerid: 2
@@ -6068,7 +6068,7 @@ resources:
         icon_image: null
         body: "<p></p>\r\n"
         htmllink: /pages/get-api
-        buttontext: 'Click here'
+        buttontext: 'Get your API key here'
         weight: 0
         cssclass: null
         cssid: null
@@ -8706,10 +8706,10 @@ resources:
     -
         slug: public-domain-charter
         datecreated: '2018-01-25 14:34:51'
-        datechanged: '2019-03-18 14:15:17'
+        datechanged: '2023-02-01 15:18:42'
         datepublish: '2018-01-25 14:32:27'
         datedepublish: ''
-        ownerid: 26
+        ownerid: 1
         status: published
         templatefields: {  }
         title: 'Public Domain Charter'
@@ -8718,7 +8718,7 @@ resources:
             title: 'Gymnastikkurs i Hasselfors. 7 augusti 1955'
         enable_filter: false
         icon_image: null
-        body: "<p>\r\n  \r\n</p>"
+        body: "<p>This policy document highlights the importance of the public domain by establishing Europeana’s views for a healthy public domain.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/the-europeana-public-domain-charter'
         buttontext: 'Read the Charter'
         weight: 0

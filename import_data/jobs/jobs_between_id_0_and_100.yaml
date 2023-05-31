@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-02T11:00:14+01:00'
+    date: '2023-05-31T09:12:22+02:00'
     version: 3.7.4
     platform: mysql
 jobs:
@@ -2071,11 +2071,11 @@ jobs:
     -
         slug: system-administrator-1
         datecreated: '2021-04-07 16:59:20'
-        datechanged: '2022-09-22 15:41:06'
+        datechanged: '2022-11-28 14:13:08'
         datepublish: '2021-04-08 09:00:00'
         datedepublish: ''
         ownerid: 128
-        status: published
+        status: held
         templatefields: {  }
         position: 'System Administrator Linux'
         body: "<p></p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Location:\_</strong>The Hague, The Netherlands</p>\r\n\r\n<p><strong>Team</strong></p>\r\n\r\n<p>As the System Administrator, you will be joining a department of 30 with colleagues from various backgrounds and countries. The team members are divided into several Scrum teams covering data ingestion, APIs, and the Europeana website. Together with a Platform Engineer, you will be part of a team maintaining a constantly expanding infrastructure, ensuring availability, performance and security of the platform.\_</p>\r\n\r\n<p><strong>Key Responsibilities</strong></p>\r\n\r\n<ul>\r\n    <li>Administer systems running on Linux platforms (Ubuntu/Debian)</li>\r\n    <li>Perform research, analysis, problem re-creation, troubleshooting and identify potential resolutions for operating systems, application and resource contingency issues</li>\r\n    <li>Maintain system security and integrity controls</li>\r\n    <li>Investigate system performance issues to improve its reliability, maintainability and performance of the system</li>\r\n    <li>Perform and manage deployments to production and staging environments</li>\r\n    <li>Conduct daily system monitoring and system maintenance activities and further develop system monitoring capacities</li>\r\n    <li>Develop and implement backup policies</li>\r\n    <li>Maintain an inventory of the existing hardware and software used across the platform</li>\r\n    <li>Maintain documentation related to system administration and operations</li>\r\n    <li>Help to formulate policies, procedures and standards relating to system administration and management</li>\r\n    <li>Work closely with the development team to support it in system-related tasks</li>\r\n    <li>Occasional support for user management in office tools such as Google suite and for IT equipments</li>\r\n</ul>\r\n\r\n<p><strong>Key relationships / customers</strong></p>\r\n\r\n<ul>\r\n    <li>Head of Engineering and Data Services Director\_</li>\r\n    <li>Development teams</li>\r\n    <li>Business and product owners</li>\r\n</ul>\r\n\r\n<p><strong>Knowledge and Experience required</strong></p>\r\n\r\n<ul>\r\n    <li>University level education in computer science or a related field or an equivalent combination of education and working experience</li>\r\n    <li>3+ years of Linux system administration experience</li>\r\n    <li>Understanding and knowledge of system administration, database and server-side batch programming</li>\r\n    <li>Working experience with:\r\n    <ul>\r\n        <li>Live production systems</li>\r\n        <li>Installation, configuration and system administration with Linux (Ubuntu/Debian) using Ansible</li>\r\n        <li>Setting up and configuring monitoring solutions like Nagios or Grafana</li>\r\n        <li>Setting up and configuration of Jenkins</li>\r\n    </ul>\r\n    </li>\r\n    <li>Continuous Integration and Continuous Delivery</li>\r\n    <li>Good written and spoken English with an ability to express complex technical ideas to a non-technical audience</li>\r\n</ul>\r\n\r\n<p><strong>Further, it is a plus if you have working experience with:</strong>\_</p>\r\n\r\n<ul>\r\n    <li>Setting up and administering storage and index services such as\_ MongoDB, Apache Solr, MySQL preferably in cluster deployments</li>\r\n    <li>Administration and deployment on Kubernetes or Cloud Foundry environments</li>\r\n</ul>\r\n\r\n<p><strong>Benefits</strong></p>\r\n\r\n<ul>\r\n    <li>Your monthly salary is estimated between EUR 3,200 - 4,000\_ (based on full-time employment), depending on the level of your experience</li>\r\n    <li>Additionally, you will receive a (pro-rated) holiday allowance of 8% and an annual (year-end, pro-rated) bonus of 8.33%</li>\r\n    <li>1 year fixed term contract with possibility of extension depending on funding availability</li>\r\n    <li>We offer 42.25 days of holiday per year (based on full-time employment)</li>\r\n    <li>We provide a company laptop and offer a WFH allowance to compensate monthly the costs while working from home and not being able to work from the office (Covid-19 / exceptional circumstances)</li>\r\n</ul>\r\n\r\n<p><strong>How to apply</strong></p>\r\n\r\n<ul>\r\n    <li>The position is open until filled</li>\r\n    <li>You must have a valid working permit to work in the Netherlands</li>\r\n    <li>If you are interested in this position, please send your Curriculum Vitae plus motivation letter, both in English to <a href=\"mailto:jobs@europeana.eu\">jobs@europeana.eu</a></li>\r\n    <li>Recruitment agency calls are not appreciated</li>\r\n</ul>\r\n\r\n<p>The Europeana Foundation is committed to principles of diversity, inclusivity, nondiscriminatory practice and equal opportunity for all applicants.</p>\r\n\r\n<h3></h3>\r\n\r\n<p></p>\r\n"
@@ -2111,7 +2111,7 @@ jobs:
         shoulddatemodified: true
         subsite: null
         template: null
-        seo: "{\"title\":\"\",\"description\":\"Looking for a System Administrator for Linux Platforms (Ubuntu/Debian) running applications on a Java Platform, to perform research, analysis, troubleshooting and maintain system security and integrity controls.\_\",\"shortlink\":\"\",\"canonical\":\"\",\"robots\":\"index, follow\",\"ogtype\":\"\",\"keywords\":\"\"}"
+        seo: "{\"title\":\"System Administrator for Linux Platforms (Ubuntu/Debian) \",\"description\":\"Looking for a System Administrator for Linux Platforms (Ubuntu/Debian) running applications on a Java Platform, to perform research, analysis, troubleshooting and maintain system security and integrity controls.\_\",\"shortlink\":\"\",\"canonical\":\"\",\"robots\":\"index, follow\",\"ogtype\":\"\",\"keywords\":\"\"}"
         contact_record:
             -
                 value: '2364'
@@ -2844,11 +2844,11 @@ jobs:
     -
         slug: senior-platform-engineer
         datecreated: '2021-11-09 22:14:23'
-        datechanged: '2022-09-20 16:50:03'
-        datepublish: '2021-11-15 09:00:00'
+        datechanged: '2023-02-21 08:45:19'
+        datepublish: '2023-01-16 09:00:00'
         datedepublish: ''
         ownerid: 128
-        status: published
+        status: held
         templatefields: {  }
         position: 'Senior Platform Engineer'
         body: "<p></p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Location</strong> - The Netherlands (The Hague), Belgium or France</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p><strong>About the Europeana Foundation</strong>\_</p>\r\n\r\n<p>The Europeana Foundation is one of the key players in the digital cultural world. We are an independent, non-profit, organisation that operates <a href=\"https://pro.europeana.eu/\">the Europeana platform</a>, which empowers the cultural heritage sector in its digital transformation. That work and our contribution to other digital initiatives help to develop an open, knowledgeable and creative society.\_</p>\r\n\r\n<p>With staff based in five countries, our international team operates in a hybrid working culture. Our team based in the Netherlands has the flexibility to come to work at our office or to work remotely. Our main office is based in the National Library of the Netherlands, next to The Hague Central Station.</p>\r\n\r\n<p>Our teams based in other countries (including Belgium and France) work fully remotely from there.\_</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Team / Role</strong></p>\r\n\r\n<p>The Europeana Platform consists of four main digital products: the Europeana Website, APIs, Aggregation systems, and the Europeana Pro Website. The supporting infrastructure is currently transitioning to the cloud-based hosting application Kubernetes.</p>\r\n\r\n<p>As the Senior Platform Engineer, you will be joining a team of 30\_ colleagues with expertise ranging from software development to data management. The team members are working as independent Scrum teams covering the four main digital products. You will contribute to and coordinate the designing, building and maintaining of a constantly expanding infrastructure. Together with a Linux System Administrator, you will ensure the availability, performance and security of the platform.\_</p>\r\n\r\n<p>Occasional work-related travel to The Hague would be required if based in Belgium or France.</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Key Responsibilities</strong></p>\r\n\r\n<ul>\r\n    <li>Support the transition of the production (and other) environments from CloudFoundry to Kubernetes</li>\r\n    <li>Manage and support the Kubernetes production environment for Europeana websites, APIs, Aggregation systems and supporting services to meet high availability, performance and security targets</li>\r\n    <li>Develop and manage a full stack failover environment to guarantee uninterrupted access to our public services</li>\r\n    <li>Manage technology resilience practices for the organisation, including product disaster recovery plans, platform testing, monitoring, incident management, and related reporting</li>\r\n    <li>Maintain supporting tools and services for the Europeana Platform, including centralised logging, APM infrastructure, CD/CI</li>\r\n    <li>Set up and maintain monitoring tools, including Nagios, Grafana, and Pingdom</li>\r\n    <li>Develop and maintain security procedures (including security tests)\_</li>\r\n</ul>\r\n\r\n<p>Occasional work-related travel to The Hague would be required if based in Belgium or France</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Secondary responsibilities</strong></p>\r\n\r\n<ul>\r\n    <li>Manage index (Solr) and storage (Mongo, Postgres) systems for all production applications, including coordination of reindexing</li>\r\n    <li>Maintain CD/CI infrastructure, including Jenkins, SonarQube, and Artifactory</li>\r\n    <li>Manage deployment practices on Kubernetes</li>\r\n    <li>Provide platform and architecture advice across the business, including to developers and business managers</li>\r\n    <li>Produce management reports for availability, performance and security targets</li>\r\n    <li>Maintain roadmap plans for all platform components owned by the role</li>\r\n    <li>Support for contract management related to hosted environments, and investments in hard- and software</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Knowledge and Experience</strong></p>\r\n\r\n<ul>\r\n    <li>MSc degree level (or relevant experience) in engineering, computer science (or related studies)</li>\r\n    <li>Significant understanding and knowledge of platform management, in particular for Kubernetes</li>\r\n    <li>Experience with the management of high-performing and resilient platforms for websites and APIs\_</li>\r\n    <li>Experience in the assessment and definition of security procedures\_</li>\r\n    <li>Experience in a business environment where you have to provide advice, produce reports, and coordinate plans with colleagues</li>\r\n    <li>It would be an advantage to also have experience with systems administration (with a focus on Linux), database and server-side programming concepts</li>\r\n    <li>It would be an advantage to also have experience with installation, configuration and systems administration with Apache Solr, MongoDB, and Postgres</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Salary and benefits</strong></p>\r\n\r\n<ul>\r\n    <li>Your monthly salary is estimated between EUR 3,800 - 4,900 (based on full-time employment), negotiable depending on the level of your experience</li>\r\n    <li>A holiday allowance of 8% and a thirteenth-month bonus</li>\r\n    <li>A full-time fixed-term contract for 12 months, with the possibility of an extension\_</li>\r\n    <li>42 days of holiday per year (based on full-time employment)</li>\r\n    <li>A pension scheme will be based on the country where you are operating from, if applicable</li>\r\n    <li>An inspiring work environment and an international organisational culture</li>\r\n    <li>A hybrid working model with the flexibility to work at the office or remotely (for staff based in The Netherlands)</li>\r\n    <li>We provide a company laptop and offer a WFH allowance to compensate monthly the costs while working from home\_</li>\r\n    <li>Commuting costs compensation for people based in the Netherlands</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>How to apply</strong></p>\r\n\r\n<ul>\r\n    <li>The position is open until filled</li>\r\n    <li>You must have a valid working permit to work in the Netherlands,\_Belgium or France</li>\r\n    <li>If you are interested in this position, please send your Curriculum Vitae plus motivation letter, both in English to <a href=\"http://jobs@europeana.eu\">jobs@europeana.eu</a></li>\r\n</ul>\r\n\r\n<p>Europeana Foundation is committed to principles of diversity, inclusivity, nondiscriminatory practice and equal opportunity for all applicants</p>\r\n"
@@ -2861,25 +2861,25 @@ jobs:
             value: null
         teaser: "<p>We are looking for a\_Senior Platform Engineer, who\_will be part of a team designing, building and maintaining a constantly expanding infrastructure. Together with a System Administrator Linux, you will ensure the availability, performance and security of the platform.\_</p>\r\n"
         teaser_image:
-            file: Images/New_pro_images_March2020/2021672_resource_document_mauritshuis_1203.jpeg
-            title: 'Still Life with Cheeses, Almonds and Pretzels'
-        teaser_attribution_title: 'Still Life with Cheeses, Almonds and Pretzels'
-        teaser_attribution_creator: 'Clara Peeters'
-        teaser_attribution_date: '1615'
-        teaser_attribution_holder: 'The Mauritshuis'
-        teaser_attribution_country: Netherlands
+            file: Europeana_Professional_images/90402_RP_P_1933_290.jpeg
+            title: 'Der Fall des Turmes von Babel - Fall of the tower of Babel'
+        teaser_attribution_title: 'Der Fall des Turmes von Babel - Fall of the tower of Babel'
+        teaser_attribution_creator: 'Anthonisz, Cornelis'
+        teaser_attribution_date: '1547'
+        teaser_attribution_holder: 'Herzog Anton Ulrich Museum'
+        teaser_attribution_country: Germany
         teaser_attribution_license: Public-Domain
-        teaser_attribution_link: 'https://www.mauritshuis.nl/pt/descobrir-a-colecao/descobrir-a-colecao/1203-still-life-with-cheeses-almonds-and-pretzels/'
+        teaser_attribution_link: 'https://www.europeana.eu/en/collections/organisation/1482250000004671090'
         image:
-            file: Images/New_pro_images_March2020/2021672_resource_document_mauritshuis_1203.jpeg
-            title: 'Still Life with Cheeses, Almonds and Pretzels'
-        image_attribution_title: 'Still Life with Cheeses, Almonds and Pretzels'
-        image_attribution_creator: 'Clara Peeters'
-        image_attribution_date: '1615'
-        image_attribution_holder: 'The Mauritshuis'
-        image_attribution_country: Netherlands
+            file: Europeana_Professional_images/90402_RP_P_1933_290.jpeg
+            title: 'Der Fall des Turmes von Babel -  Fall of the tower of Babel'
+        image_attribution_title: 'Der Fall des Turmes von Babel - Fall of the tower of Babel'
+        image_attribution_creator: 'Anthonisz, Cornelis'
+        image_attribution_date: '1547'
+        image_attribution_holder: 'Herzog Anton Ulrich Museum'
+        image_attribution_country: Germany
         image_attribution_license: Public-Domain
-        image_attribution_link: 'https://www.mauritshuis.nl/pt/descobrir-a-colecao/descobrir-a-colecao/1203-still-life-with-cheeses-almonds-and-pretzels/'
+        image_attribution_link: 'https://www.europeana.eu/en/collections/organisation/1482250000004671090'
         shoulddatepublish: false
         shoulddatemodified: true
         subsite: null
@@ -3129,11 +3129,11 @@ jobs:
     -
         slug: financial-controller
         datecreated: '2022-05-09 17:27:45'
-        datechanged: '2022-09-22 14:16:41'
-        datepublish: '2022-05-09 16:36:12'
+        datechanged: '2023-05-26 18:42:10'
+        datepublish: '2023-05-11 10:07:28'
         datedepublish: ''
         ownerid: 128
-        status: published
+        status: held
         templatefields: {  }
         position: 'Financial Controller'
         body: "<p><strong>Location:</strong> The Hague, The Netherlands</p>\r\n\r\n<p><strong>Position type:\_</strong>Part-time 0.8 FTE or Full-time\_</p>\r\n\r\n<p></p>\r\n\r\n<p>We are looking for a driven Financial Controller to join our Finance team.\_</p>\r\n\r\n<p>As our Financial Controller, you will be responsible for managing, developing and overseeing our financial management system and our accounting operations:\_</p>\r\n\r\n<p>While ensuring the continuous quality of the financial administration, you will be supporting the organisation on financial matters with clear processes. In your capacity, you will be providing insights and financial advice to ensure financial and strategic decisions are clear and optimised.\_</p>\r\n\r\n<p>Furthermore, you will be the key contact person for financial matters related to European funded projects where the Europeana Foundation is involved in.\_</p>\r\n\r\n<p>Reporting to the Business Operations Director, you will contribute to the organisation's overall financial performance and development.\_</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Key Responsibilities</strong></p>\r\n\r\n<ul>\r\n    <li>Work closely with the Finance Administrator &amp; Office Manager, to maintain full and accurate accounting records to guarantee the quality of the financial administration</li>\r\n    <li>Conduct and monitor internal controls:\r\n    <ul>\r\n        <li>Oversee the overall budget and cash flow control and management of all (project)budgets</li>\r\n        <li>Ensure compliance with financial legislation, policies and procedures, generally accepted accounting principles, and procedures at Dutch and European levels\_</li>\r\n        <li>Manage accounting and financial systems and maintain full and accurate accounting records\_</li>\r\n        <li>Maintain the financial health of the organisation by monitoring project- and team spending and recommending corrective actions as necessary\_</li>\r\n        <li>Develop and implement purchasing practices and monitor the purchasing system\_</li>\r\n        <li>Implement and monitor payment authority practices\_</li>\r\n    </ul>\r\n    </li>\r\n    <li>Conduct financial analysis\_</li>\r\n    <li>Prepare detailed financial (project) reports and statements\_</li>\r\n    <li>Coordinate audit processes</li>\r\n    <li>Participate in budgeting processes</li>\r\n    <li>Streamlining accounting functions and operations</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Knowledge and Experience required</strong></p>\r\n\r\n<ul>\r\n    <li>Advanced degree in accounting, business, economics, finance, or a related field</li>\r\n    <li>Proven experience in a finance role with a solid understanding of financial statistics, accounting fundamentals and financial systems</li>\r\n    <li>Work experience in the field of EU-funded projects or familiarity with the EU funding procedures</li>\r\n    <li>Strong interpersonal, communication and analytical skills</li>\r\n    <li>Excellent Dutch and English language skills</li>\r\n</ul>\r\n\r\n<p><strong>Further, it is a plus if you have knowledge of</strong></p>\r\n\r\n<ul>\r\n    <li>Exact Globe and Synergy</li>\r\n    <li>Google Workspace, in particular, Google sheets</li>\r\n    <li>Have an understanding of data privacy standards</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>The Europeana Foundation offers</strong></p>\r\n\r\n<ul>\r\n    <li>A monthly salary between EUR 3,700 - 4,500 (based on full-time employment), depending on the level of your experience</li>\r\n    <li>Additionally, you will receive a (pro-rated) holiday allowance of 8% and an annual (year-end, pro-rated) bonus of 8.33%</li>\r\n    <li>A part-time 0.8 FTE or full-time fixed-term contract for 12 months, with the possibility of an extension\_</li>\r\n    <li>42.25 days of holiday per year (based on full-time employment)</li>\r\n    <li>A pension scheme\_</li>\r\n    <li>An inspiring work environment and an international organisational culture</li>\r\n    <li>A hybrid working model with the flexibility to work at the office or remotely (for staff based in The Netherlands)</li>\r\n    <li>We provide a company laptop and offer a WFH allowance to compensate monthly the costs while working from home\_</li>\r\n    <li>Commuting costs compensation for people based in the Netherlands</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>\_How to apply</strong></p>\r\n\r\n<ul>\r\n    <li>The position is open until filled</li>\r\n    <li>You must have a valid working permit to work in the Netherlands</li>\r\n    <li>If you are interested in this position, please send your Curriculum Vitae plus motivation letter, both in English to <a href=\"http://jobs@europeana.eu\">jobs@europeana.eu</a></li>\r\n</ul>\r\n\r\n<p>The Europeana Foundation is committed to principles of diversity, inclusivity, nondiscriminatory practice and equal opportunity for all applicants.</p>\r\n"
@@ -3332,24 +3332,24 @@ jobs:
         tags: {  }
         _id: jobs/head-of-external-relations-and-advocacy
     -
-        slug: test-engineer
+        slug: software-test-engineer
         datecreated: '2022-09-22 13:59:29'
-        datechanged: '2022-09-22 14:26:27'
+        datechanged: '2022-12-20 14:27:20'
         datepublish: '2022-09-22 13:52:25'
-        datedepublish: ''
+        datedepublish: '2022-12-20 00:00:00'
         ownerid: 128
-        status: draft
+        status: held
         templatefields: {  }
-        position: 'Test Engineer'
-        body: null
+        position: 'Software Test Engineer'
+        body: "<p><strong>Location:\_</strong>The Hague, The Netherlands</p>\r\n\r\n<p></p>\r\n\r\n<h3>Team and\_Role</h3>\r\n\r\n<p></p>\r\n\r\n<p>As a Europeana Software Test Engineer you are responsible for the quality of our software products and services. You ensure that the software solutions delivered by our developers do what they are supposed to do, while guarding against regression in other parts of the software.</p>\r\n\r\n<p>You operate across multiple agile Scrum teams that work on the Europeana products relating to data ingestion, data search and retrieval and visualisation. You will support these teams by designing, developing and maintaining testing plans covering procedures, resources and tooling. To achieve this, you have a thorough understanding of the products and the functionality they provide. You are able to leverage that knowledge to design, plan and execute the necessary manual as well as automated tests. With your ideas and energy you help us reach a higher level of quality assurance.</p>\r\n\r\n<p>You have a passion for, and are comfortable with technology in general and software development in particular. You are curious and excited about the opportunity to learn and to progressively lead the organisation towards more automated test procedures. You are precise and diligent when it comes to quality control, and inventive when it comes to finding interesting edge cases. You see the connection between different components and functionalities, and you use that to your advantage to make sure that problems don’t go unnoticed. You are a team player, with a positive attitude.</p>\r\n\r\n<p></p>\r\n\r\n<h3>Key Responsibilities:</h3>\r\n\r\n<ul>\r\n    <li>Plan, execute and report on functional and non-functional tests for user stories</li>\r\n    <li>Contribute to the writing and refinement of user stories and the definition of acceptance criteria\_</li>\r\n    <li>Develop, document and maintain test scripts, cases and datasets for Feature, Smoke, Regression, and Performance Testing</li>\r\n    <li>Develop, implement and run manual and automated and/or cross-browser test procedures where appropriate</li>\r\n    <li>Participate in scrum activities – following Agile development processes and agreed-on priorities – as well as development team meetings and activities</li>\r\n    <li>Remain up-to-date with the latest testing tools and practices, and evaluate through pilot these where needed\_</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<h3>Knowledge and Experience:</h3>\r\n\r\n<ul>\r\n    <li>Bachelor or master’s degree, preferably in computer science or software engineering\_</li>\r\n    <li>Minimum 3 years of experience as a test engineer and/or a developer</li>\r\n    <li>Experience in:\r\n    <ul>\r\n        <li>Testing web applications (including websites and API’s)\_</li>\r\n        <li>Automated testing</li>\r\n        <li>Creating test scripts</li>\r\n        <li>Working with the Agile/Scrum software development\_\_</li>\r\n    </ul>\r\n    </li>\r\n    <li>Knowledge about the definition and usage of different types of testing such as regression, functional, user acceptance, and performance\_</li>\r\n</ul>\r\n\r\n<h3>Further, it is a plus if you have:\_</h3>\r\n\r\n<ul>\r\n    <li>Understanding of XML and JSON based data formats\_</li>\r\n    <li>Experience querying APIs\_</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<h3><strong>Salary and benefits:</strong></h3>\r\n\r\n<ul>\r\n    <li>Your monthly salary is estimated between EUR 3,000 - 3,800 (based on full-time employment), negotiable depending on the level of your experience</li>\r\n    <li>A holiday allowance of 8%\_</li>\r\n    <li>A thirteenth-month bonus</li>\r\n    <li>A full-time fixed-term contract for 12 months, with possibility of extension (this position is permanent in the organisation)</li>\r\n    <li>42 days of holiday per year (based on full-time employment)</li>\r\n    <li>A pension scheme\_</li>\r\n    <li>An inspiring work environment and an international organisational culture</li>\r\n    <li>A hybrid working model with the flexibility to work at the office or remotely</li>\r\n    <li>We provide a company laptop and offer a WFH allowance to compensate monthly the costs while working from home\_</li>\r\n    <li>Commuting costs compensation</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<h3>How to apply</h3>\r\n\r\n<ul>\r\n    <li>The position is open until filled</li>\r\n    <li>You must have a valid working permit to work in the Netherlands</li>\r\n    <li>If you are interested in this position, please send your Curriculum Vitae plus motivation letter, both in English to <a href=\"mailto:jobs@europeana.eu?subject=Software%20Test%20Engineer%20-%20Application\">jobs@europeana.eu</a></li>\r\n</ul>\r\n\r\n<p>Europeana Foundation is committed to principles of diversity, inclusivity, nondiscriminatory practice and equal opportunity for all applicants.</p>\r\n"
         department: null
         position_type: 'Full time'
-        salary_eur: null
+        salary_eur: '3,000 - 3,800'
         scale_eur: null
         deadline: ''
         teampage:
             value: null
-        teaser: null
+        teaser: "<p>Do you have a passion for, and are comfortable with technology in general and software development in particular? We are looking for a Software Test Engineer to join our team.\_</p>\r\n"
         teaser_image:
             file: Images/About_us/EuropeanaIdea.jpeg
             title: 'The Art Gallery of Josephus Augustinus Brentano Painting'
@@ -3370,13 +3370,15 @@ jobs:
         image_attribution_country: 'Amsterdam. Netherlands'
         image_attribution_license: Public-Domain
         image_attribution_link: 'https://www.rijksmuseum.nl/en/collection/SK-A-4122'
-        shoulddatepublish: false
-        shoulddatemodified: true
+        shoulddatepublish: true
+        shoulddatemodified: false
         subsite: null
         template: null
-        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        seo: "{\"title\":\"Software Test Engineer\",\"description\":\"Do you have a passion for, and are comfortable with technology in general and software development in particular? We are looking for a Software Test Engineer to join our team.\_\",\"shortlink\":\"\",\"canonical\":\"\",\"robots\":\"index, follow\",\"ogtype\":\"\",\"keywords\":\"\"}"
         contact_record:
-            value: null
+            -
+                value: '5955'
+                _id: persons/faryel-duijm
         contact_blurb: null
         contact_name: null
         contact_email: null
@@ -3394,7 +3396,7 @@ jobs:
         markets: {  }
         categories: {  }
         tags: {  }
-        _id: jobs/test-engineer
+        _id: jobs/software-test-engineer
     -
         slug: support-financial-administrator
         datecreated: '2022-09-22 14:53:19'
@@ -3459,3 +3461,213 @@ jobs:
         categories: {  }
         tags: {  }
         _id: jobs/support-financial-administrator
+    -
+        slug: internship-on-privacy-policy
+        datecreated: '2023-02-21 15:45:56'
+        datechanged: '2023-05-11 10:13:30'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: 128
+        status: published
+        templatefields: {  }
+        position: 'Internship on Privacy Policy'
+        body: "<p><strong>Location:</strong> The Hague, The Netherlands\_or working from abroad</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>About Europeana</strong></p>\r\n\r\n<p>At Europeana, we work to empower the cultural heritage sector in its digital\_transformation. We <a href=\"https://pro.europeana.eu/europeana-network-association/sign-up\">bring together</a> cultural heritage professionals from all over Europe. We provide the cultural heritage sector with <a href=\"https://pro.europeana.eu/page/advocacy\">a voice advocating</a> for better digital practices. We work to share and <a href=\"https://pro.europeana.eu/page/europeana-reuse-be-inspired\">promote cultural heritage</a> so that it can be used and enjoyed by people all over the world. We provide opportunities for institutions and individuals in the cultural heritage sector to <a href=\"https://pro.europeana.eu/page/building-digital-capacity\">develop their digital skills and practice</a>. We develop and maintain technical solutions for showcasing, sharing and using digital cultural heritage.</p>\r\n\r\n<p>As we work toward our mission, questions on data protection and privacy arise. For example, in the management of activities within our network association, in the choice of third-party tools, or perhaps more importantly, in the display of digital cultural heritage through the <a href=\"http://www.europeana.eu\">Europeana.eu</a> website. Beyond ensuring legal compliance, we wish to create secure, reliable and transparent spaces for online audiences. We also believe that it is crucial that we show a positive example as we support the sector in building capacity for its digital transformation.</p>\r\n\r\n<p><strong>We are looking</strong> for an intern for a minimum of 3 to 6 months to support us in this work\_and in turn\_to offer them the experience of working on topics of relevance to the cultural heritage sector.\_</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Key Responsibilities</strong></p>\r\n\r\n<p>The person conducting the internship would be working under the supervision of the Policy Advisor and the Data Protection Officer, as well as a recently-created Data Protection cross-team, in particular by:\_</p>\r\n\r\n<ul>\r\n    <li>Conducting research in policy areas, including privacy implications in the online sharing of digital cultural heritage</li>\r\n    <li>Contributing to the development of policy positions, recommendations and guidance on privacy in the online sharing of digital cultural heritage</li>\r\n    <li>Participating in the Europeana Foundation’s Data protection GDPR/IDPR cross-team, advising, contributing to its decisions and supporting its various actions</li>\r\n    <li>Supporting the development of Europeana’s privacy statements</li>\r\n    <li>Supporting the assessment of the suitability of third-party IT tools</li>\r\n    <li>Supporting Europeana staff and building their capacity through guidelines, awareness-raising activities and ad hoc advice</li>\r\n    <li>Participating\_in the Europeana Copyright Community’s meetings and activities</li>\r\n</ul>\r\n\r\n<p>There will also be\_opportunities to contribute to other areas of the Europeana Foundation’s operations, in particular in relation to law and policy.\_</p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Knowledge and experience required</strong></p>\r\n\r\n<ul>\r\n    <li>Completing\_an advanced degree or specialisation in data protection law and/or privacy law</li>\r\n    <li>Strong interpersonal, communication and analytical skills</li>\r\n    <li>Excellent written and English language skills</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>Further, it is a plus if you have knowledge of or an interest in</strong></p>\r\n\r\n<ul>\r\n    <li>The cultural heritage sector, open data, and the reuse of public sector information</li>\r\n    <li>Copyright law and policy-making</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>The Europeana Foundation offers</strong></p>\r\n\r\n<ul>\r\n    <li>An opportunity to support your studies and training by gaining practical experience, developing skills, making connections, strengthening your resume, learning about digital cultural heritage and working alongside inspiring professionals.\_</li>\r\n    <li>We offer EUR 564,- gross internship allowance per month (based on a full-time internship).\_</li>\r\n    <li>20 days of holiday per year (based on full-time internship)</li>\r\n    <li>An inspiring work environment and an international organisational culture</li>\r\n    <li>A hybrid working model with the flexibility to work at the office or remotely (for staff based in The Netherlands)</li>\r\n    <li>Commuting costs compensation for people based in the Netherlands</li>\r\n</ul>\r\n\r\n<p></p>\r\n\r\n<p><strong>How to apply</strong></p>\r\n\r\n<p>If you are interested in this position, please send your Curriculum Vitae and a one page Cover Letter,\_both in English,\_to <a href=\"mailto:jobs@europeana.eu\">jobs@europeana.eu</a>.</p>\r\n\r\n<p>The Cover Letter should\_include:\_</p>\r\n\r\n<ul>\r\n    <li>Why you want to do this Internship with us;</li>\r\n    <li>Your school/university name;</li>\r\n    <li>Your subject(s) of interest;</li>\r\n    <li>Your time availability for conducting the internship;</li>\r\n    <li>A reference name we can reach out to at the school/university/institution you belong to</li>\r\n</ul>\r\n\r\n<p>You must be enrolled in a university degree.\_</p>\r\n\r\n<p>The internship\_position is open until filled.</p>\r\n\r\n<p>The Europeana Foundation is committed to principles of diversity, inclusivity, nondiscriminatory practice and equal opportunity for all applicants.</p>\r\n"
+        department: null
+        position_type: Internship
+        salary_eur: null
+        scale_eur: 'EUR 564'
+        deadline: ''
+        teampage:
+            value: null
+        teaser: "<p>We are looking for an intern to support us in this work, and in turn, to offer them the experience of working on topics of relevance to the cultural heritage sector.</p>\r\n\r\n<p></p>\r\n"
+        teaser_image:
+            file: 'Images/New_pro_images_March2020/Breakfast in Summer.jpeg'
+            title: 'Breakfast in Summer'
+        teaser_attribution_title: 'Breakfast in Summer'
+        teaser_attribution_creator: 'Justus Lundegård'
+        teaser_attribution_date: '1912'
+        teaser_attribution_holder: 'National Museum'
+        teaser_attribution_country: Sweden
+        teaser_attribution_license: Public-Domain
+        teaser_attribution_link: 'https://www.nationalmuseum.se/en/'
+        image:
+            file: 'Images/New_pro_images_March2020/Breakfast in Summer.jpeg'
+            title: 'Breakfast in Summer'
+        image_attribution_title: 'Breakfast in Summer'
+        image_attribution_creator: 'Justus Lundegård'
+        image_attribution_date: '1912'
+        image_attribution_holder: 'National Museum'
+        image_attribution_country: Sweden
+        image_attribution_license: Public-Domain
+        image_attribution_link: 'https://www.nationalmuseum.se/en/'
+        shoulddatepublish: false
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            -
+                value: '2364'
+                _id: persons/sophie-klein
+            -
+                value: '5955'
+                _id: persons/faryel-duijm
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets:
+            -
+                slug: chis
+                name: 'Cultural Heritage Institutions'
+        categories: {  }
+        tags: {  }
+        _id: jobs/internship-on-privacy-policy
+    -
+        slug: software-developer-1
+        datecreated: '2023-03-31 12:53:47'
+        datechanged: '2023-05-16 10:49:14'
+        datepublish: '2023-05-11 10:18:00'
+        datedepublish: ''
+        ownerid: 128
+        status: published
+        templatefields: {  }
+        position: 'Software Developer'
+        body: "<p></p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Location:</strong>\_The Netherlands (The Hague)</p>\r\n\r\n<p><strong>Team</strong></p>\r\n\r\n<p>As a Software Developer, you will be working physically and remotely with colleagues from many European countries as part of (a) scrum team(s). You will contribute to the development and maintenance of the software that powers all our products. Europeana works only with Open Source software and you will be asked to make our own software also available as Open Source. You may be asked to share your experience and knowledge with the Open Source community and also with other developers in the libraries, archives and museum communities.</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p><strong>The role</strong>\_</p>\r\n\r\n<p>We are looking for a Software Developer who:</p>\r\n\r\n<ul>\r\n    <li>will share our passion for open source and open data, whilst using technology to make culture available to all</li>\r\n    <li>has the experience and discipline to be organised, be capable of time management</li>\r\n    <li>believes that technical design, good-quality software and documentation are an integral part of the job</li>\r\n    <li>can help the team take the next step and improve itself so as to gain a higher level of efficiency and professionality</li>\r\n    <li>is comfortable in written and spoken English and has the ability to work seamlessly in an international environment with colleagues from many cultural backgrounds</li>\r\n</ul>\r\n\r\n<p><strong>Key Responsibilities</strong></p>\r\n\r\n<ul>\r\n    <li>Maintain, update and further develop the Europeana APIs</li>\r\n    <li>Contribute to the development, review and testing of technical solutions for the addition or modifications of components in the Europeana architecture</li>\r\n    <li>Propose technical solutions for the addition or modifications of components in the Europeana architecture, and make sure they fit with the overall Europeana architecture</li>\r\n    <li>Ensure seamless integration of technical components within the Europeana eco-system and contribute to the documentation of technical designs or decisions on the software architecture</li>\r\n    <li>Maintain and improve the code quality and performance of the existing software</li>\r\n</ul>\r\n\r\n<p><strong>Knowledge and Experience required</strong></p>\r\n\r\n<ul>\r\n    <li>Master's degree, preferably in computer science or software engineering</li>\r\n    <li>Minimum 2 years of experience as a Java developer</li>\r\n    <li>Excellent knowledge of Java\_</li>\r\n    <li>Knowledge of Spring Framework, Maven, Jenkins, Docker, Travis, Git</li>\r\n    <li>Proven experience in developing REST APIs and structuring code into services that are autonomous and have independent business domain implementations</li>\r\n    <li>Experience with NoSQL databases such as MongoDB and/or relational databases such as PostgreSQL</li>\r\n    <li>Provide high-quality code that is extensively unit tested</li>\r\n    <li>Experience with multi-threaded applications</li>\r\n    <li>Ability to work in Agile/Scrum teams</li>\r\n    <li>Good written and spoken English with an ability to express complex technical ideas to both technical and non-technical audiences</li>\r\n</ul>\r\n\r\n<p><strong>Further, it is a plus if you have</strong></p>\r\n\r\n<ul>\r\n    <li>Knowledge of Cloud technologies such as Kubernetes</li>\r\n    <li>Knowledge of search engines such as Apache Solr or ElasticSearch</li>\r\n    <li>Knowledge of continuous integration and delivery</li>\r\n    <li>A degree of knowledge in developing data management software for the cultural heritage sector</li>\r\n</ul>\r\n\r\n<p><strong>Salary and benefits</strong></p>\r\n\r\n<ul>\r\n    <li>Your monthly salary is estimated between EUR 3,100 - 4,300 (based on full-time employment), negotiable depending on the level of your experience</li>\r\n    <li>A holiday allowance of 8%\_</li>\r\n    <li>A thirteenth-month bonus</li>\r\n    <li>A full-time fixed-term contract for 12 months, with the possibility of extension (this position is permanent in the organisation)</li>\r\n    <li>42 days of holiday per year (based on full-time employment)</li>\r\n    <li>A pension scheme\_</li>\r\n    <li>An inspiring work environment and an international organisational culture</li>\r\n    <li>A hybrid working model with the flexibility to work at the office or remotely</li>\r\n    <li>We provide a company laptop and offer a working-from-home allowance</li>\r\n    <li>Commuting costs compensation (NS Business Card)\_</li>\r\n</ul>\r\n\r\n<p><strong>How to apply</strong></p>\r\n\r\n<ul>\r\n    <li>The position is open until filled</li>\r\n    <li>You must have a valid working permit to work in the Netherlands</li>\r\n    <li>If you are interested in this position, please send your Curriculum Vitae plus motivation letter, both in English to <a href=\"http://jobs@europeana.eu\">jobs@europeana.eu</a></li>\r\n</ul>\r\n\r\n<p>Europeana Foundation is committed to principles of diversity, inclusivity, nondiscriminatory practice and equal opportunity for all applicants.</p>\r\n\r\n<p></p>\r\n"
+        department: null
+        position_type: 'Full time'
+        salary_eur: 'EUR 3,100 - 4,300'
+        scale_eur: null
+        deadline: ''
+        teampage:
+            value: null
+        teaser: "<p>We are looking for a Software Developer who will share our passion for open source and open data, whilst using technology to make culture available to all.</p>\r\n"
+        teaser_image:
+            file: Images/2063621_FRA_280_007.jpeg
+            title: 'Irises in Monet''s Garden'
+        teaser_attribution_title: 'Irises in Monet''s Garden'
+        teaser_attribution_creator: 'Claude Monet'
+        teaser_attribution_date: '1900'
+        teaser_attribution_holder: 'Musée d''Orsay'
+        teaser_attribution_country: 'Paris, France'
+        teaser_attribution_license: Public-Domain
+        teaser_attribution_link: 'https://www.musee-orsay.fr/fr'
+        image:
+            file: Images/2063621_FRA_280_007.jpeg
+            title: 'Irises in Monet''s Garden'
+        image_attribution_title: 'Irises in Monet''s Garden'
+        image_attribution_creator: 'Claude Monet'
+        image_attribution_date: '1900'
+        image_attribution_holder: 'Musée d''Orsay'
+        image_attribution_country: 'Paris, France'
+        image_attribution_license: Public-Domain
+        image_attribution_link: 'https://www.musee-orsay.fr/fr'
+        shoulddatepublish: true
+        shoulddatemodified: true
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            -
+                value: '2364'
+                _id: persons/sophie-klein
+            -
+                value: '5955'
+                _id: persons/faryel-duijm
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: jobs/software-developer-1
+    -
+        slug: https-pro-europeana-eu-job-collections-engagement-manager
+        datecreated: '2023-03-31 13:30:26'
+        datechanged: '2023-05-11 17:39:06'
+        datepublish: '2023-05-11 10:03:27'
+        datedepublish: ''
+        ownerid: 128
+        status: published
+        templatefields: {  }
+        position: 'Manager Audience Engagement  -  CLOSED for application (received applications are under review)'
+        body: "<p><strong>Location:</strong>\_The Hague (The Netherlands)</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p><strong>The role\_</strong></p>\r\n\r\n<p>The primary purpose of this role is to lead the team that undertakes outreach to audiences who (could) use and reuse digital cultural heritage content, including primary, secondary and tertiary educators, researchers, creatives and other industries. Further, this role is tasked with identifying new audiences for the resources available in Europeana.eu and the Data Space and ensures outreach and engagement in all official languages of the EU.\_</p>\r\n\r\n<p>The role also involves the building of relationships with the cultural heritage institutions whose data are published, promoted and disseminated via Europeana products and services, such as Europeana.eu.\_</p>\r\n\r\n<p>The role includes responsibility for editorial and outreach involvement in separately-funded projects that also support the Data Space—from management and support of editorial pieces deriving from the projects to full management of projects.</p>\r\n\r\n<p>Occasional travel within Europe as well as globally will be required, in keeping with our commitment toward climate considerations and minimising unnecessary travel. \_</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p><strong>Key Responsibilities</strong></p>\r\n\r\n<ul>\r\n    <li>Lead the team in all endeavours and encourage, via coaching and individual growth in our culture of creativity, customer focus, collaboration, and change</li>\r\n    <li>Manage the team, including administration of workload, and work together with other managers through organisational development responsibilities</li>\r\n    <li>Own, deliver and maintain the Europeana Content and Editorial Strategy, and the audience (user/re-user) strategy</li>\r\n    <li>Develop and promote activities of the Europeana Initiative and the Data Space including developing campaigns and new formats of interaction and engagement</li>\r\n    <li>Responsible for the implementation and development of the Europeana Multilingual Strategy focusing on all multilingual coverage of the user interface, editorial and website copy on the Europeana.eu website</li>\r\n    <li>Drive traffic to the Europeana website and increase engagement on the Europeana website</li>\r\n    <li>Create and maintain high-value relationships with educational and academic/research communities (primary, secondary, and tertiary levels of education) to identify their needs for digital cultural heritage and how we can meet those needs via outreach, campaigns, participatory experiences</li>\r\n    <li>Identify creatives and creative industries and other new audiences for (re)use, design outreach efforts to introduce them to Europeana and the Data Space and tools they can use to benefit from the resources\_</li>\r\n    <li>Oversee the creation of high-quality website editorial features that highlight the pan-European nature of materials in the Data Space and Europeana.eu whether produced internally or by project partners</li>\r\n    <li>Grow awareness and usage of Europeana APIs\_</li>\r\n    <li>Assess/analyse success of activities and adjust efforts based on metrics achieved</li>\r\n    <li>Contribute to the collective development of the organisation as a proactive member of the Management Team</li>\r\n    <li>Assist other Europeana Foundation teams in the delivery of events, such as participatory experiences, country workshops, conferences, and network events</li>\r\n    <li>Work hand in hand with staff responsible for the design and development of the Europeana website, those responsible for the user experience online, as well as the Marketing/Communications/Research team, responsible for ensuring promotion of events to appropriate audiences</li>\r\n</ul>\r\n\r\n<p><strong>Knowledge and Experience required</strong></p>\r\n\r\n<ul>\r\n    <li>Academic degree in Humanities, Social Sciences, Communications and Media or other relevant fields, or equivalent experience</li>\r\n    <li>Strong people management skills, with a minimum of two years of management experience</li>\r\n    <li>Familiarity with user experience, audience engagement, and SEO content strategies</li>\r\n    <li>Experience with some form of editorials or web publishing, such as online magazines, exhibitions, or social media</li>\r\n    <li>Creative problem-solving ability, with a willingness to experiment and learn</li>\r\n    <li>Strong ability to think strategically, as well as plan the details</li>\r\n    <li>Strong communication and presentation skills, with an ability to influence areas outside of core responsibilities</li>\r\n    <li>Fluent in English, both written and spoken</li>\r\n</ul>\r\n\r\n<p><strong>Further, it is an advantage if you have</strong></p>\r\n\r\n<ul>\r\n    <li>Broad knowledge of the cultural sector\_</li>\r\n    <li>Experience running engaging events or workshops</li>\r\n    <li>Experience working with educational and academic/research communities\_</li>\r\n    <li>Knowledge of APIs and how to work with them\_</li>\r\n</ul>\r\n\r\n<p><strong>Key relationships/customers</strong></p>\r\n\r\n<p>You will interact primarily with the following parties:\_</p>\r\n\r\n<ul>\r\n    <li>Cultural Heritage Institutions (including project partners)</li>\r\n    <li>Network members</li>\r\n    <li>Teachers and educational communities</li>\r\n    <li>Developers (API users)</li>\r\n    <li>European Commission</li>\r\n    <li>Website Experience staff (internal)</li>\r\n    <li>Community Engagement staff (internal)</li>\r\n    <li>Data Publishing Services staff (internal)</li>\r\n</ul>\r\n\r\n<p><strong>Salary and benefits</strong></p>\r\n\r\n<ul>\r\n    <li>A monthly gross salary between EUR 4,900 - 5,800\_ (based on full-time employment), depending on the level of your experience</li>\r\n    <li>A holiday allowance of 8% and a thirteenth-month bonus</li>\r\n    <li>A full-time fixed-term contract for 12 months, with the possibility of extension (this position is permanent in the organisation)</li>\r\n    <li>42 days of holiday per year (based on full-time employment)</li>\r\n    <li>A pension scheme\_</li>\r\n    <li>An inspiring work environment and an international organisational culture</li>\r\n    <li>A hybrid working model with the flexibility to work at the office or remotely\_</li>\r\n    <li>We provide a company laptop and offer a working-from-home allowance</li>\r\n    <li>Commuting costs compensation (NS Business Card)\_</li>\r\n</ul>\r\n\r\n<p><strong>This vacancy is closed for application. Received applications are currently\_under review.</strong></p>\r\n\r\n<p>Europeana Foundation is committed to principles of diversity, inclusivity, nondiscriminatory practice and equal opportunity for all applicants.</p>\r\n\r\n<p></p>\r\n"
+        department: null
+        position_type: 'Full time'
+        salary_eur: 'EUR 4,900 - 5,800'
+        scale_eur: null
+        deadline: ''
+        teampage:
+            value: null
+        teaser: "<p>Looking for a Manager Audience Engagement to\_lead the team. Build\_relationships with cultural heritage institutions. Identify\_new audiences for the resources available in europeana.eu and the Data Space.\_</p>\r\n"
+        teaser_image:
+            file: 2016-10/2063607-est-280-011.jpeg
+            title: 'Young Gardeners'
+        teaser_attribution_title: 'Young Gardeners'
+        teaser_attribution_creator: 'Malle Leis'
+        teaser_attribution_date: '1968'
+        teaser_attribution_holder: 'Tartu Art Museum'
+        teaser_attribution_country: 'Tartu, Estonia'
+        teaser_attribution_license: Public-Domain
+        teaser_attribution_link: 'https://tartmus.ee/'
+        image:
+            file: 2016-10/2063607-est-280-011.jpeg
+            title: 'Young Gardeners'
+        image_attribution_title: 'Young Gardeners'
+        image_attribution_creator: 'Malle Leis'
+        image_attribution_date: '1968'
+        image_attribution_holder: 'Tartu Art Museum'
+        image_attribution_country: 'Tartu, Estonia'
+        image_attribution_license: Public-Domain
+        image_attribution_link: 'https://tartmus.ee/'
+        shoulddatepublish: false
+        shoulddatemodified: false
+        subsite: null
+        template: null
+        seo: '{"title":"","description":"","shortlink":"","canonical":"","robots":"index, follow","ogtype":"","keywords":""}'
+        contact_record:
+            -
+                value: '2364'
+                _id: persons/sophie-klein
+            -
+                value: '5955'
+                _id: persons/faryel-duijm
+        contact_blurb: null
+        contact_name: null
+        contact_email: null
+        contact_website: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: jobs/https-pro-europeana-eu-job-collections-engagement-manager

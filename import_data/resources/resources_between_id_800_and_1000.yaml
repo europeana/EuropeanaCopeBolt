@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-28T19:20:11+01:00'
+    date: '2023-05-31T09:24:41+02:00'
     version: 3.7.4
     platform: mysql
 resources:
@@ -204,8 +204,7 @@ resources:
         title: 'Diverse and inclusive'
         image: null
         enable_filter: false
-        icon_image:
-            file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Inclusive and diverse.png'
+        icon_image: null
         body: "<p>Cultural heritage empowers society to embrace its diversity and flourish. We want to embed this belief in our work and in our products and services so that everyone feels welcome, represented, equal and safe.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -252,8 +251,7 @@ resources:
         title: Collaborative
         image: null
         enable_filter: false
-        icon_image:
-            file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Collaborative.png'
+        icon_image: null
         body: "<p>We want to work collaboratively with our networks, partners and communities towards a European cultural sector focused on collectively putting digital cultural heritage at the heart of society.\_</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -300,8 +298,7 @@ resources:
         title: Participatory
         image: null
         enable_filter: false
-        icon_image:
-            file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Participatory.png'
+        icon_image: null
         body: "<p>Participation in culture creates value in the cultural sector and society at large.\_We want to set high standards for participatory practices on our platform, in our campaigns and in the global cultural sector.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -348,8 +345,7 @@ resources:
         title: 'We collaborate'
         image: null
         enable_filter: false
-        icon_image:
-            file: Images/Home_page/we_collaborate.png
+        icon_image: null
         body: "<p>We bring together cultural heritage professionals from all over Europe.\_</p>\r\n"
         htmllink: /network-association/sign-up
         buttontext: null
@@ -396,8 +392,7 @@ resources:
         title: 'We advocate'
         image: null
         enable_filter: false
-        icon_image:
-            file: Images/Home_page/we_advocate.png
+        icon_image: null
         body: "<p>We provide the cultural heritage sector with a voice advocating for better digital practices.</p>\r\n"
         htmllink: /page/advocacy
         buttontext: null
@@ -444,8 +439,7 @@ resources:
         title: 'We reach audiences'
         image: null
         enable_filter: false
-        icon_image:
-            file: Images/Home_page/we-reach-audiences.png
+        icon_image: null
         body: "<p>We work to share and promote cultural heritage so that it can be used and enjoyed by people all over the world.\_</p>\r\n"
         htmllink: /page/europeana-reuse-be-inspired
         buttontext: null
@@ -492,8 +486,7 @@ resources:
         title: 'We build capacity'
         image: null
         enable_filter: false
-        icon_image:
-            file: Images/Home_page/we_build_capacity.png
+        icon_image: null
         body: "<p>We provide opportunities for institutions and individuals in the cultural heritage sector to develop their digital skills and practice.</p>\r\n"
         htmllink: /page/building-digital-capacity
         buttontext: null
@@ -540,8 +533,7 @@ resources:
         title: 'We build technology'
         image: null
         enable_filter: false
-        icon_image:
-            file: Images/Home_page/we-build-technology.png
+        icon_image: null
         body: "<p>We develop and maintain technical solutions for showcasing, sharing and using digital cultural heritage.</p>\r\n"
         htmllink: /page/apis
         buttontext: null
@@ -1390,7 +1382,7 @@ resources:
     -
         slug: eventbrite-registration-link-7
         datecreated: '2021-04-12 09:13:29'
-        datechanged: '2022-10-10 08:56:30'
+        datechanged: '2023-03-30 15:25:20'
         datepublish: '2021-04-12 09:13:12'
         datedepublish: ''
         ownerid: 54
@@ -1401,7 +1393,7 @@ resources:
         enable_filter: false
         icon_image: null
         body: null
-        htmllink: 'https://pretix.eu/Europeana-Foundation/xargu/'
+        htmllink: 'https://pretix.eu/Europeana-Foundation/Europeana-KiCulture-April2023/'
         buttontext: 'Register now!'
         weight: 0
         cssclass: null
@@ -1818,7 +1810,7 @@ resources:
     -
         slug: eventbrite-registration-link-8
         datecreated: '2021-04-23 11:15:58'
-        datechanged: '2022-10-13 12:14:03'
+        datechanged: '2023-03-31 08:13:09'
         datepublish: '2021-04-23 11:15:43'
         datedepublish: ''
         ownerid: 54
@@ -1829,7 +1821,7 @@ resources:
         enable_filter: false
         icon_image: null
         body: null
-        htmllink: 'https://pretix.eu/Europeana-Foundation/aa97q/'
+        htmllink: 'https://pretix.eu/Europeana-Foundation/Europeana-KiCultureMay/'
         buttontext: 'Register now!'
         weight: 0
         cssclass: null
@@ -1865,7 +1857,7 @@ resources:
     -
         slug: eventbrite-registration-link-9
         datecreated: '2021-04-29 08:09:18'
-        datechanged: '2022-10-13 13:20:00'
+        datechanged: '2023-03-31 08:19:10'
         datepublish: '2021-04-29 08:09:03'
         datedepublish: ''
         ownerid: 54
@@ -1876,7 +1868,7 @@ resources:
         enable_filter: false
         icon_image: null
         body: null
-        htmllink: 'https://pretix.eu/Europeana-Foundation/ebvnx/'
+        htmllink: 'https://pretix.eu/Europeana-Foundation/Europeana-KiCultureJune/'
         buttontext: 'Register now!'
         weight: 0
         cssclass: null
@@ -7046,7 +7038,7 @@ resources:
     -
         slug: watch-the-videos
         datecreated: '2021-11-30 17:45:10'
-        datechanged: '2021-12-01 11:41:58'
+        datechanged: '2023-02-08 18:40:12'
         datepublish: '2021-11-30 17:44:53'
         datedepublish: ''
         ownerid: 124
@@ -7057,7 +7049,7 @@ resources:
         enable_filter: false
         icon_image: null
         body: null
-        htmllink: 'https://pro.europeana.eu/page/conference#watch-the-sessions'
+        htmllink: 'https://www.youtube.com/watch?v=t5feOqO1iHc&list=PLqmcH-mOlMLx9PAJA8nee1WbHuqjCSOT_'
         buttontext: 'Watch the videos'
         weight: 0
         cssclass: null
@@ -7330,7 +7322,7 @@ resources:
     -
         slug: europeana-mooc-digital-education-with-cultural-heritage
         datecreated: '2021-12-17 08:57:15'
-        datechanged: '2022-01-19 09:14:12'
+        datechanged: '2023-01-25 16:39:02'
         datepublish: '2021-12-17 08:56:50'
         datedepublish: ''
         ownerid: 124
@@ -7342,7 +7334,7 @@ resources:
         enable_filter: false
         icon_image: null
         body: "<p>\_Learn new skills and develop your knowledge through online teaching.</p>\r\n"
-        htmllink: 'https://pro.europeana.eu/post/sign-up-now-for-the-europeana-mooc-digital-education-with-cultural-heritage'
+        htmllink: 'https://pro.europeana.eu/post/register-now-for-the-upgraded-digital-education-with-cultural-heritage-2023-mooc'
         buttontext: 'Sign up now'
         weight: 0
         cssclass: null
@@ -7378,7 +7370,7 @@ resources:
     -
         slug: seasons-greetings-from-the-europeana-foundation
         datecreated: '2021-12-20 12:33:21'
-        datechanged: '2021-12-24 16:17:44'
+        datechanged: '2022-12-22 08:50:08'
         datepublish: '2021-12-20 12:32:58'
         datedepublish: ''
         ownerid: 124
@@ -7388,7 +7380,7 @@ resources:
         image:
             file: Images/Home_page/seasons-greetings.png
             title: 'Children throw snowballs in front of a row of houses'
-        enable_filter: false
+        enable_filter: true
         icon_image: null
         body: "<p>Wishing you a lovely festive period and a happy new year!</p>\r\n"
         htmllink: 'https://pro.europeana.eu/page/season-s-greetings-from-europeana'
@@ -7403,8 +7395,8 @@ resources:
         ripplelocation: null
         ripplecolor: null
         rippleweight: null
-        image_attribution_title: 'Gezicht op de voorgevels van de panden Domplein nrs. 24 (rechts)- 26 te Utrecht met op de voorgrond sneeuwballen gooiende kinderen (padvinders).'
-        image_attribution_creator: 'Werf, F.F. van der, fotograaf'
+        image_attribution_title: 'Gezicht op de voorgevels van de panden Domplein nrs. 24 (rechts)- 26 te Utrecht'
+        image_attribution_creator: 'Werf, F.F. van der'
         image_attribution_date: '1952'
         image_attribution_holder: 'Het Utrechts Archief'
         image_attribution_country: Netherlands
@@ -8349,8 +8341,7 @@ resources:
         title: 'Diverse and inclusive'
         image: null
         enable_filter: false
-        icon_image:
-            file: Images/Blog_images/2021-11/Diversity_teaser.png
+        icon_image: null
         body: "<p>We want our data, stories, events and communities to be diverse and inclusive. We’ll showcase underrepresented communities, consider how we approach contentious content and develop Inclusive Engagement Guidelines.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-diversity-and-inclusivity-at-the-european-foundation-being-bold-and-learning-from-others'
         buttontext: null
@@ -8397,8 +8388,7 @@ resources:
         title: Participatory
         image: null
         enable_filter: false
-        icon_image:
-            file: Images/Blog_images/2021-11/Participation_teaser.png
+        icon_image: null
         body: "<p>We will set high standards for participatory practices on our platform, in our campaigns and in the cultural sector so that everyone can access, share, play with, contribute to and be enriched by digital culture.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-participation-at-the-europeana-foundation-working-with-audiences'
         buttontext: null
@@ -8445,8 +8435,7 @@ resources:
         title: 'Climate action'
         image: null
         enable_filter: false
-        icon_image:
-            file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/climate_change.png'
+        icon_image: null
         body: "<p>We support climate action related to digital transformation. Guided by the Europeana Climate Action Manifesto, we will investigate reducing, off-setting and benchmarking our carbon footprint.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-climate-change-at-the-europeana-foundation-a-green-team-and-community-action'
         buttontext: null
@@ -8493,8 +8482,7 @@ resources:
         title: Collaborative
         image: null
         enable_filter: false
-        icon_image:
-            file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Collaborative.png'
+        icon_image: null
         body: "<p>Collaborating with the sector, we’ll support its digital transformation, putting digital culture at the heart of society. Hybrid collaborative working will maximise our outputs and safeguard our staff and partners.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-collaboration-at-the-europeana-foundation-driving-change-together'
         buttontext: null

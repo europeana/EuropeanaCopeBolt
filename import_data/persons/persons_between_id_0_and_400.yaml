@@ -1,12 +1,12 @@
 __bolt_export_meta:
-    date: '2022-11-02T11:01:02+01:00'
+    date: '2023-05-31T09:13:04+02:00'
     version: 3.7.4
     platform: mysql
 persons:
     -
         slug: adam-horvath
         datecreated: '2015-09-01 11:56:46'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:19'
         datedepublish: ''
         ownerid: 1
@@ -38,6 +38,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -71,7 +77,7 @@ persons:
     -
         slug: aming-shi
         datecreated: '2015-09-01 11:56:46'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:19'
         datedepublish: ''
         ownerid: null
@@ -103,6 +109,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -133,7 +145,7 @@ persons:
     -
         slug: romain-wenz
         datecreated: '2015-09-01 11:56:46'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:20'
         datedepublish: ''
         ownerid: 1
@@ -167,6 +179,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -200,7 +218,7 @@ persons:
     -
         slug: charikleia-zarvala
         datecreated: '2015-09-01 11:56:46'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:20'
         datedepublish: ''
         ownerid: null
@@ -232,6 +250,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -262,7 +286,7 @@ persons:
     -
         slug: corine-deliot
         datecreated: '2015-09-01 11:56:45'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:20'
         datedepublish: ''
         ownerid: null
@@ -294,6 +318,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -324,7 +354,7 @@ persons:
     -
         slug: maria-luisa-martinez-conde
         datecreated: '2015-09-01 11:56:45'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:21'
         datedepublish: ''
         ownerid: null
@@ -356,6 +386,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -386,7 +422,7 @@ persons:
     -
         slug: vera-kriezi
         datecreated: '2015-09-01 11:56:45'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:21'
         datedepublish: ''
         ownerid: 1
@@ -420,6 +456,12 @@ persons:
         community: null
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: 'Network Association Member'
         na_community_role: null
@@ -453,7 +495,7 @@ persons:
     -
         slug: kristian-schneider
         datecreated: '2015-09-01 11:56:45'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:21'
         datedepublish: ''
         ownerid: null
@@ -487,6 +529,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -517,7 +565,7 @@ persons:
     -
         slug: mathy-vanbuel
         datecreated: '2015-09-01 11:56:45'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:22'
         datedepublish: ''
         ownerid: null
@@ -549,6 +597,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -579,7 +633,7 @@ persons:
     -
         slug: eggo-mueller
         datecreated: '2015-09-01 11:56:45'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:22'
         datedepublish: ''
         ownerid: null
@@ -611,6 +665,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -641,7 +701,7 @@ persons:
     -
         slug: katri-hirvonen-nurmi
         datecreated: '2015-09-01 11:56:45'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:22'
         datedepublish: ''
         ownerid: null
@@ -673,6 +733,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -703,7 +769,7 @@ persons:
     -
         slug: fernanda-ferreira
         datecreated: '2015-09-01 11:56:45'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:22'
         datedepublish: ''
         ownerid: null
@@ -735,6 +801,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -765,7 +837,7 @@ persons:
     -
         slug: teresa-albuquerque
         datecreated: '2015-08-31 13:29:33'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:22'
         datedepublish: ''
         ownerid: null
@@ -797,6 +869,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -827,7 +905,7 @@ persons:
     -
         slug: aitor-soroa
         datecreated: '2015-08-31 13:29:33'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:23'
         datedepublish: ''
         ownerid: null
@@ -859,6 +937,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -889,7 +973,7 @@ persons:
     -
         slug: virgil-cojocaru
         datecreated: '2015-08-31 10:20:37'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:24'
         datedepublish: ''
         ownerid: null
@@ -921,6 +1005,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -951,7 +1041,7 @@ persons:
     -
         slug: ruben-logjes
         datecreated: '2015-08-31 10:20:37'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:24'
         datedepublish: ''
         ownerid: null
@@ -983,6 +1073,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1013,7 +1109,7 @@ persons:
     -
         slug: camila-gonzalez-gou
         datecreated: '2015-08-31 10:20:36'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:25'
         datedepublish: ''
         ownerid: null
@@ -1045,6 +1141,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1075,7 +1177,7 @@ persons:
     -
         slug: olena-chaikovska
         datecreated: '2015-08-31 10:20:36'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:25'
         datedepublish: ''
         ownerid: null
@@ -1109,6 +1211,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1139,7 +1247,7 @@ persons:
     -
         slug: nikolaos-maniatis
         datecreated: '2015-08-28 13:20:57'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:25'
         datedepublish: ''
         ownerid: null
@@ -1171,6 +1279,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1201,7 +1315,7 @@ persons:
     -
         slug: karianne-schmidt-vindenes
         datecreated: '2015-08-28 13:20:57'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:25'
         datedepublish: ''
         ownerid: null
@@ -1233,6 +1347,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1263,7 +1383,7 @@ persons:
     -
         slug: oliver-mamo
         datecreated: '2015-08-28 13:20:56'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:26'
         datedepublish: ''
         ownerid: null
@@ -1295,6 +1415,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1325,7 +1451,7 @@ persons:
     -
         slug: ana-sojo
         datecreated: '2015-08-28 13:20:56'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:26'
         datedepublish: ''
         ownerid: null
@@ -1357,6 +1483,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1387,7 +1519,7 @@ persons:
     -
         slug: lorena-dal-poz
         datecreated: '2015-08-28 13:20:56'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:26'
         datedepublish: ''
         ownerid: null
@@ -1419,6 +1551,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1449,7 +1587,7 @@ persons:
     -
         slug: cristina-roiu
         datecreated: '2015-08-28 13:20:56'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:27'
         datedepublish: ''
         ownerid: 1
@@ -1483,6 +1621,12 @@ persons:
         community: null
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1516,7 +1660,7 @@ persons:
     -
         slug: hans-schraven
         datecreated: '2015-08-28 13:20:56'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:27'
         datedepublish: ''
         ownerid: null
@@ -1548,6 +1692,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1578,7 +1728,7 @@ persons:
     -
         slug: andreja-silic-svonja
         datecreated: '2015-08-28 13:20:56'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:27'
         datedepublish: ''
         ownerid: null
@@ -1610,6 +1760,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1640,7 +1796,7 @@ persons:
     -
         slug: ulf-doering
         datecreated: '2015-08-28 13:20:56'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:27'
         datedepublish: ''
         ownerid: null
@@ -1672,6 +1828,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1702,7 +1864,7 @@ persons:
     -
         slug: silvia-gstrein
         datecreated: '2015-08-27 17:32:14'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:28'
         datedepublish: ''
         ownerid: null
@@ -1734,6 +1896,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1764,7 +1932,7 @@ persons:
     -
         slug: reinhard-foertsch
         datecreated: '2015-08-27 17:32:14'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:28'
         datedepublish: ''
         ownerid: null
@@ -1796,6 +1964,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1826,7 +2000,7 @@ persons:
     -
         slug: marinos-ioannides
         datecreated: '2015-08-27 14:05:03'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:28'
         datedepublish: ''
         ownerid: null
@@ -1861,6 +2035,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1891,7 +2071,7 @@ persons:
     -
         slug: ariela-netiv
         datecreated: '2015-08-27 13:06:37'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:29'
         datedepublish: ''
         ownerid: null
@@ -1923,6 +2103,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -1953,7 +2139,7 @@ persons:
     -
         slug: julia-jimenez
         datecreated: '2015-08-27 13:06:37'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:29'
         datedepublish: ''
         ownerid: null
@@ -1985,6 +2171,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2015,7 +2207,7 @@ persons:
     -
         slug: elisa-bonacini
         datecreated: '2015-08-27 11:20:40'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:29'
         datedepublish: ''
         ownerid: null
@@ -2047,6 +2239,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2077,7 +2275,7 @@ persons:
     -
         slug: jan-odijk
         datecreated: '2015-08-27 11:20:40'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:30'
         datedepublish: ''
         ownerid: null
@@ -2109,6 +2307,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2139,7 +2343,7 @@ persons:
     -
         slug: dieter-van-hassel
         datecreated: '2015-08-27 11:20:39'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:31'
         datedepublish: ''
         ownerid: null
@@ -2171,6 +2375,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2201,7 +2411,7 @@ persons:
     -
         slug: sandra-leknickiene
         datecreated: '2015-08-27 11:20:39'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:31'
         datedepublish: ''
         ownerid: null
@@ -2233,6 +2443,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2263,7 +2479,7 @@ persons:
     -
         slug: irene-guidotti
         datecreated: '2015-08-27 11:20:39'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:31'
         datedepublish: ''
         ownerid: null
@@ -2295,6 +2511,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2325,7 +2547,7 @@ persons:
     -
         slug: sven-ubik
         datecreated: '2015-08-27 11:20:39'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:32'
         datedepublish: ''
         ownerid: null
@@ -2357,6 +2579,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2387,7 +2615,7 @@ persons:
     -
         slug: francesca-usala
         datecreated: '2015-08-27 11:20:38'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:32'
         datedepublish: ''
         ownerid: null
@@ -2419,6 +2647,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2449,7 +2683,7 @@ persons:
     -
         slug: pepijn-lemmens
         datecreated: '2015-08-27 11:20:38'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:33'
         datedepublish: ''
         ownerid: null
@@ -2483,6 +2717,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: '1'
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2513,7 +2753,7 @@ persons:
     -
         slug: panos-constantopoulos
         datecreated: '2015-08-27 11:20:38'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:33'
         datedepublish: ''
         ownerid: null
@@ -2545,6 +2785,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2575,7 +2821,7 @@ persons:
     -
         slug: francesca-gobbo
         datecreated: '2015-08-27 11:20:37'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:33'
         datedepublish: ''
         ownerid: null
@@ -2607,6 +2853,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2637,7 +2889,7 @@ persons:
     -
         slug: trond-aalberg
         datecreated: '2015-08-27 11:20:37'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:34'
         datedepublish: ''
         ownerid: 1
@@ -2669,6 +2921,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2699,7 +2957,7 @@ persons:
     -
         slug: susanna-giaccai
         datecreated: '2015-08-27 11:20:37'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:34'
         datedepublish: ''
         ownerid: null
@@ -2731,6 +2989,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2761,7 +3025,7 @@ persons:
     -
         slug: claudio-prandoni
         datecreated: '2015-08-27 11:20:37'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:34'
         datedepublish: ''
         ownerid: null
@@ -2795,6 +3059,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2825,7 +3095,7 @@ persons:
     -
         slug: mike-ellis
         datecreated: '2015-08-26 16:41:38'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:36'
         datedepublish: ''
         ownerid: null
@@ -2857,6 +3127,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -2887,7 +3163,7 @@ persons:
     -
         slug: elisabeth-freyre
         datecreated: '2015-08-26 16:41:37'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:36'
         datedepublish: ''
         ownerid: null
@@ -2923,6 +3199,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: Observer
         na_role: 'Network Association Member'
         na_community_role: null
@@ -2954,7 +3236,7 @@ persons:
     -
         slug: anna-vaglio
         datecreated: '2015-08-26 16:41:37'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:36'
         datedepublish: ''
         ownerid: null
@@ -2986,6 +3268,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3016,7 +3304,7 @@ persons:
     -
         slug: matej-matkovic
         datecreated: '2015-08-26 16:41:37'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:37'
         datedepublish: ''
         ownerid: null
@@ -3048,6 +3336,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3078,7 +3372,7 @@ persons:
     -
         slug: richard-nevell
         datecreated: '2015-08-26 16:41:36'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:38'
         datedepublish: ''
         ownerid: null
@@ -3110,6 +3404,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3140,7 +3440,7 @@ persons:
     -
         slug: giancarlo-martina
         datecreated: '2015-08-26 16:41:36'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:40'
         datedepublish: ''
         ownerid: null
@@ -3172,6 +3472,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3202,7 +3508,7 @@ persons:
     -
         slug: elycia-wallis
         datecreated: '2015-08-26 16:41:36'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:40'
         datedepublish: ''
         ownerid: null
@@ -3234,6 +3540,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3264,7 +3576,7 @@ persons:
     -
         slug: carl-niclas-odenbring
         datecreated: '2015-08-26 16:38:56'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:41'
         datedepublish: ''
         ownerid: 1
@@ -3298,6 +3610,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3328,7 +3646,7 @@ persons:
     -
         slug: kim-schoenning-asplin
         datecreated: '2015-08-24 16:33:25'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:41'
         datedepublish: ''
         ownerid: null
@@ -3360,6 +3678,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3390,7 +3714,7 @@ persons:
     -
         slug: anja-frkovic-trsan
         datecreated: '2015-08-24 16:33:18'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:41'
         datedepublish: ''
         ownerid: null
@@ -3422,6 +3746,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3452,7 +3782,7 @@ persons:
     -
         slug: maeve-gebruers
         datecreated: '2015-08-19 10:53:32'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:42'
         datedepublish: ''
         ownerid: null
@@ -3486,6 +3816,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3516,7 +3852,7 @@ persons:
     -
         slug: klaus-bjerre
         datecreated: '2015-08-19 10:42:58'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:42'
         datedepublish: ''
         ownerid: null
@@ -3548,6 +3884,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3578,7 +3920,7 @@ persons:
     -
         slug: agiatis-benardou
         datecreated: '2015-08-19 10:42:29'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:43'
         datedepublish: ''
         ownerid: null
@@ -3612,6 +3954,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3642,7 +3990,7 @@ persons:
     -
         slug: eleonore-emsbach
         datecreated: '2015-08-19 10:42:19'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:43'
         datedepublish: ''
         ownerid: null
@@ -3674,6 +4022,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3704,7 +4058,7 @@ persons:
     -
         slug: antje-schmidt
         datecreated: '2015-08-19 10:38:08'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:44'
         datedepublish: ''
         ownerid: 1
@@ -3738,6 +4092,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: 'Network Association Member'
         na_community_role: null
@@ -3771,7 +4131,7 @@ persons:
     -
         slug: fatmiroshe-xhemalaj
         datecreated: '2015-08-19 10:38:00'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:44'
         datedepublish: ''
         ownerid: null
@@ -3805,6 +4165,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3835,7 +4201,7 @@ persons:
     -
         slug: eleni-apostolidou
         datecreated: '2015-08-19 10:36:50'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:44'
         datedepublish: ''
         ownerid: null
@@ -3867,6 +4233,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3897,7 +4269,7 @@ persons:
     -
         slug: sebastian-hierl
         datecreated: '2015-08-17 17:04:36'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:45'
         datedepublish: ''
         ownerid: null
@@ -3929,6 +4301,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -3959,7 +4337,7 @@ persons:
     -
         slug: ingrid-de-pourcq
         datecreated: '2015-08-17 17:04:36'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:46'
         datedepublish: ''
         ownerid: null
@@ -3991,6 +4369,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4021,7 +4405,7 @@ persons:
     -
         slug: peter-soemers
         datecreated: '2015-08-17 17:04:36'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:46'
         datedepublish: ''
         ownerid: 1
@@ -4038,7 +4422,7 @@ persons:
             file: zoho_images/1482250000000370575.png
             title: '1482250000000370575'
         teaser: null
-        introduction: 'I was born and raised in the Netherlands. I studied Theology in Frankfurt and Information Science in Potsdam. My digital working life started in libraries as a database manager. In 2000, I joined the Dutch Patent Office; since then I have been working for several departments of the Ministry of Economic Affairs, acting at the intersection of users and IT specialists.<br>In my spare time I''m an avid museum visitor, Europeana user and OpenGLAM advocate. My network consists of GLAM professionals, cultural workers and bloggers.'
+        introduction: 'I was born and raised in the Netherlands. I studied Theology in Frankfurt and Information Science in Potsdam. My digital working life started in libraries as a database manager. In 2000, I joined the Dutch Patent Office; since then I have been working for several departments of the Ministry of Economic Affairs, acting at the intersection of users and IT specialists. I retired in 2021. <br>In my spare time I''m an avid museum visitor, Europeana user and OpenGLAM advocate. My network consists of GLAM professionals, cultural workers and bloggers.'
         speaker_teaser: null
         speaker_intro: null
         company: None
@@ -4056,9 +4440,15 @@ persons:
         community: null
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: '1'
         gb_role: null
         na_role: 'Members Council Member'
-        na_community_role: 'Chair - Communicators community'
+        na_community_role: null
         candidacy_teaser: "<p>Museum, Gallery, Culture, History, Communication</p>\r\n"
         candidacy_intro: "<p>As Council Member for 3 years and Europeana Communicators chair, I know how important human connections are. My focus? Building connections between people, their heritage and each other, and enriching lives by telling stories (shedding light on past/present) and defending human values like truth and solidarity through digital means.</p>\r\n"
         membership_council_term: 'January 2018 - December 2023'
@@ -4089,7 +4479,7 @@ persons:
     -
         slug: edwin-klijn
         datecreated: '2015-08-17 17:04:36'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:47'
         datedepublish: ''
         ownerid: null
@@ -4123,6 +4513,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4153,7 +4549,7 @@ persons:
     -
         slug: donald-weber
         datecreated: '2015-08-17 17:04:36'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:47'
         datedepublish: ''
         ownerid: null
@@ -4187,6 +4583,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4217,7 +4619,7 @@ persons:
     -
         slug: maarten-heerlien
         datecreated: '2015-08-17 17:04:36'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:47'
         datedepublish: ''
         ownerid: null
@@ -4249,6 +4651,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4279,7 +4687,7 @@ persons:
     -
         slug: julia-welter
         datecreated: '2015-08-17 17:04:35'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:48'
         datedepublish: ''
         ownerid: null
@@ -4296,7 +4704,7 @@ persons:
             file: zoho_images/1482250000000370463.png
             title: '1482250000000370463'
         teaser: null
-        introduction: null
+        introduction: 'Julia Welter has been working with DFF - Deutsches Filminstitut & Filmmuseum as project manager for the EFG - European Film Gateway since 2009. She was also the project manager for "EFG1914 - Digitising Film From and About the First World War" (2012-2014) and was involved as WP lead in several other European projects concerned with the publication of archival collections. For the Goethe University in Frankfurt she recently oversaw the technical development of the online exhibition "Frames of Reconstruction" developed in the EU-funded international research project "ViCTOR-E - Visual Culture of Trauma, Obliteration and Reconstruction in Post-WW II Europe" and handled all archive contacts (2019-2022). Julia Welter studied at the University of Marburg, Germany and the University of Portsmouth, England. She holds a Master’s Degree in German and English Literature and in Film Studies.'
         speaker_teaser: ''
         speaker_intro: ''
         company: 'DFF – German Film Institute & Film Museum'
@@ -4314,6 +4722,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4345,7 +4759,7 @@ persons:
     -
         slug: jan-molendijk
         datecreated: '2015-08-17 17:04:35'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:48'
         datedepublish: ''
         ownerid: 1
@@ -4380,6 +4794,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4410,7 +4830,7 @@ persons:
     -
         slug: huub-kurstjens
         datecreated: '2015-08-17 17:04:35'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:49'
         datedepublish: ''
         ownerid: null
@@ -4442,6 +4862,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4472,7 +4898,7 @@ persons:
     -
         slug: martijn-kleppe
         datecreated: '2015-08-17 17:04:35'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:49'
         datedepublish: ''
         ownerid: null
@@ -4504,6 +4930,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4534,7 +4966,7 @@ persons:
     -
         slug: margarida-lopes
         datecreated: '2015-08-17 17:04:35'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:49'
         datedepublish: ''
         ownerid: null
@@ -4567,6 +4999,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4597,7 +5035,7 @@ persons:
     -
         slug: eve-marie-oesterlen
         datecreated: '2015-08-17 17:04:35'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:49'
         datedepublish: ''
         ownerid: null
@@ -4631,6 +5069,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4661,7 +5105,7 @@ persons:
     -
         slug: josefin-kilner
         datecreated: '2015-08-17 17:04:35'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:50'
         datedepublish: ''
         ownerid: null
@@ -4693,6 +5137,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4723,7 +5173,7 @@ persons:
     -
         slug: kai-martonen
         datecreated: '2015-08-17 17:04:35'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:50'
         datedepublish: ''
         ownerid: null
@@ -4755,6 +5205,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4785,7 +5241,7 @@ persons:
     -
         slug: eszter-facsady
         datecreated: '2015-08-17 17:04:34'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:51'
         datedepublish: ''
         ownerid: null
@@ -4817,6 +5273,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4847,7 +5309,7 @@ persons:
     -
         slug: luisa-de-bivar-black
         datecreated: '2015-08-17 17:04:34'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:51'
         datedepublish: ''
         ownerid: null
@@ -4879,6 +5341,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4909,7 +5377,7 @@ persons:
     -
         slug: ute-ackermann-boeros
         datecreated: '2015-08-17 17:04:34'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:51'
         datedepublish: ''
         ownerid: null
@@ -4941,6 +5409,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -4971,7 +5445,7 @@ persons:
     -
         slug: coen-van-der-stappen
         datecreated: '2015-08-17 17:04:34'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:52'
         datedepublish: ''
         ownerid: null
@@ -5003,6 +5477,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5033,7 +5513,7 @@ persons:
     -
         slug: iljo-trajkovski
         datecreated: '2015-08-17 17:04:34'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:52'
         datedepublish: ''
         ownerid: null
@@ -5065,6 +5545,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5095,7 +5581,7 @@ persons:
     -
         slug: yves-lardinois
         datecreated: '2015-08-17 17:04:34'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:52'
         datedepublish: ''
         ownerid: null
@@ -5127,6 +5613,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5157,7 +5649,7 @@ persons:
     -
         slug: silvia-alfreider
         datecreated: '2015-08-17 17:04:34'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:52'
         datedepublish: ''
         ownerid: null
@@ -5189,6 +5681,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5219,7 +5717,7 @@ persons:
     -
         slug: anra-kennedy
         datecreated: '2015-08-17 17:04:34'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:53'
         datedepublish: ''
         ownerid: null
@@ -5253,6 +5751,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: 'Network Association Member'
         na_community_role: null
@@ -5283,7 +5787,7 @@ persons:
     -
         slug: aleksandra-janus
         datecreated: '2015-08-17 17:04:33'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:53'
         datedepublish: ''
         ownerid: 1
@@ -5317,6 +5821,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5350,7 +5860,7 @@ persons:
     -
         slug: georgios-karouzakis
         datecreated: '2015-08-17 17:04:33'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:54'
         datedepublish: ''
         ownerid: null
@@ -5382,6 +5892,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5412,7 +5928,7 @@ persons:
     -
         slug: andrea-scionti
         datecreated: '2015-08-17 17:04:33'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:54'
         datedepublish: ''
         ownerid: null
@@ -5444,6 +5960,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5474,7 +5996,7 @@ persons:
     -
         slug: kristina-bartkiene
         datecreated: '2015-08-17 17:04:33'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:55'
         datedepublish: ''
         ownerid: null
@@ -5506,6 +6028,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5536,7 +6064,7 @@ persons:
     -
         slug: simon-carter
         datecreated: '2015-08-17 17:04:33'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:55'
         datedepublish: ''
         ownerid: null
@@ -5568,6 +6096,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5598,7 +6132,7 @@ persons:
     -
         slug: martin-flynn
         datecreated: '2015-08-17 17:04:32'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:58'
         datedepublish: ''
         ownerid: null
@@ -5630,6 +6164,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5660,7 +6200,7 @@ persons:
     -
         slug: anne-marieke-van-schaik
         datecreated: '2015-08-17 17:04:32'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:43:59'
         datedepublish: ''
         ownerid: null
@@ -5692,6 +6232,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5722,7 +6268,7 @@ persons:
     -
         slug: wim-van-der-weiden
         datecreated: '2015-08-17 17:04:31'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:00'
         datedepublish: ''
         ownerid: null
@@ -5754,6 +6300,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5784,7 +6336,7 @@ persons:
     -
         slug: henk-alkemade
         datecreated: '2015-08-17 17:04:31'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:01'
         datedepublish: ''
         ownerid: 1
@@ -5819,6 +6371,12 @@ persons:
         community: null
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: '1'
         gb_role: null
         na_role: 'Members Council Member'
         na_community_role: 'Chair - EuropeanaTech community'
@@ -5852,7 +6410,7 @@ persons:
     -
         slug: kai-eckert
         datecreated: '2015-08-17 17:04:31'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:02'
         datedepublish: ''
         ownerid: null
@@ -5884,6 +6442,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5914,7 +6478,7 @@ persons:
     -
         slug: paloma-gomez-luengo
         datecreated: '2015-08-17 17:04:31'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:03'
         datedepublish: ''
         ownerid: null
@@ -5946,6 +6510,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -5976,7 +6546,7 @@ persons:
     -
         slug: jan-mueller
         datecreated: '2015-08-17 17:04:31'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:03'
         datedepublish: ''
         ownerid: 1
@@ -6010,6 +6580,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6040,7 +6616,7 @@ persons:
     -
         slug: david-pond-lachmish
         datecreated: '2015-08-17 17:04:31'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:03'
         datedepublish: ''
         ownerid: null
@@ -6074,6 +6650,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6104,7 +6686,7 @@ persons:
     -
         slug: mats-lindquist
         datecreated: '2015-08-17 17:04:31'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:04'
         datedepublish: ''
         ownerid: null
@@ -6136,6 +6718,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6166,7 +6754,7 @@ persons:
     -
         slug: maria-ines-cordeiro
         datecreated: '2015-08-17 17:04:30'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:04'
         datedepublish: ''
         ownerid: null
@@ -6201,6 +6789,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6231,7 +6825,7 @@ persons:
     -
         slug: dan-matei
         datecreated: '2015-08-17 17:04:30'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:04'
         datedepublish: ''
         ownerid: null
@@ -6266,6 +6860,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6297,7 +6897,7 @@ persons:
     -
         slug: holly-wright
         datecreated: '2015-08-17 17:04:30'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:04'
         datedepublish: ''
         ownerid: null
@@ -6329,6 +6929,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6359,7 +6965,7 @@ persons:
     -
         slug: torsten-schassan
         datecreated: '2015-08-17 17:04:30'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:04'
         datedepublish: ''
         ownerid: null
@@ -6391,6 +6997,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6421,7 +7033,7 @@ persons:
     -
         slug: santiago-chumbe
         datecreated: '2015-08-17 17:04:30'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:05'
         datedepublish: ''
         ownerid: null
@@ -6453,6 +7065,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6483,7 +7101,7 @@ persons:
     -
         slug: irena-simic
         datecreated: '2015-08-17 17:04:30'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:05'
         datedepublish: ''
         ownerid: null
@@ -6515,6 +7133,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6545,7 +7169,7 @@ persons:
     -
         slug: maria-lidon-paris-folch
         datecreated: '2015-08-17 17:04:30'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:06'
         datedepublish: ''
         ownerid: null
@@ -6577,6 +7201,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6607,7 +7237,7 @@ persons:
     -
         slug: marike-van-roon
         datecreated: '2015-08-17 17:04:29'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:07'
         datedepublish: ''
         ownerid: null
@@ -6639,6 +7269,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6669,7 +7305,7 @@ persons:
     -
         slug: ilario-valdelli
         datecreated: '2015-08-17 17:04:15'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:07'
         datedepublish: ''
         ownerid: null
@@ -6701,6 +7337,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6731,7 +7373,7 @@ persons:
     -
         slug: jane-finnis
         datecreated: '2015-08-17 17:04:15'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:07'
         datedepublish: ''
         ownerid: null
@@ -6765,6 +7407,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: 'Network Association Member'
         na_community_role: null
@@ -6795,7 +7443,7 @@ persons:
     -
         slug: catharina-veldhuis-meester
         datecreated: '2015-08-17 17:04:15'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:08'
         datedepublish: ''
         ownerid: null
@@ -6827,6 +7475,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6857,7 +7511,7 @@ persons:
     -
         slug: gerhild-krebs
         datecreated: '2015-08-17 17:04:15'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:08'
         datedepublish: ''
         ownerid: null
@@ -6889,6 +7543,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -6919,7 +7579,7 @@ persons:
     -
         slug: marco-de-niet
         datecreated: '2015-08-17 17:04:15'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:08'
         datedepublish: ''
         ownerid: 1
@@ -6955,6 +7615,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: 'Supervisory Board member'
         na_role: null
         na_community_role: null
@@ -6988,7 +7654,7 @@ persons:
     -
         slug: ralph-kits
         datecreated: '2015-08-17 17:04:14'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:09'
         datedepublish: ''
         ownerid: null
@@ -7020,6 +7686,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7050,7 +7722,7 @@ persons:
     -
         slug: lotte-baltussen
         datecreated: '2015-08-17 17:04:14'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:10'
         datedepublish: ''
         ownerid: null
@@ -7082,6 +7754,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7112,7 +7790,7 @@ persons:
     -
         slug: sagi-chaitas
         datecreated: '2015-08-17 17:04:14'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:10'
         datedepublish: ''
         ownerid: null
@@ -7144,6 +7822,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7174,7 +7858,7 @@ persons:
     -
         slug: eugenia-serra
         datecreated: '2015-08-17 17:04:14'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:11'
         datedepublish: ''
         ownerid: null
@@ -7206,6 +7890,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7236,7 +7926,7 @@ persons:
     -
         slug: vincenzo-cesino
         datecreated: '2015-08-17 17:04:14'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:11'
         datedepublish: ''
         ownerid: null
@@ -7268,6 +7958,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7298,7 +7994,7 @@ persons:
     -
         slug: genevieve-clavel
         datecreated: '2015-08-17 17:04:14'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:11'
         datedepublish: ''
         ownerid: null
@@ -7331,6 +8027,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7361,7 +8063,7 @@ persons:
     -
         slug: franco-zoppi
         datecreated: '2015-08-17 17:04:13'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:12'
         datedepublish: ''
         ownerid: null
@@ -7393,6 +8095,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7423,7 +8131,7 @@ persons:
     -
         slug: rosa-fabeiro-garcia
         datecreated: '2015-08-17 17:04:13'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:12'
         datedepublish: ''
         ownerid: null
@@ -7455,6 +8163,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7485,7 +8199,7 @@ persons:
     -
         slug: giampiero-raspa
         datecreated: '2015-08-17 17:04:13'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:12'
         datedepublish: ''
         ownerid: null
@@ -7517,6 +8231,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7547,7 +8267,7 @@ persons:
     -
         slug: aaldert-prins
         datecreated: '2015-08-17 17:04:13'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:13'
         datedepublish: ''
         ownerid: null
@@ -7579,6 +8299,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7609,7 +8335,7 @@ persons:
     -
         slug: benoit-pauwels
         datecreated: '2015-08-17 17:04:13'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:13'
         datedepublish: ''
         ownerid: null
@@ -7641,6 +8367,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7671,7 +8403,7 @@ persons:
     -
         slug: dieter-suls
         datecreated: '2015-08-17 17:04:13'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:13'
         datedepublish: ''
         ownerid: 1
@@ -7705,6 +8437,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7738,7 +8476,7 @@ persons:
     -
         slug: alexandru-stan
         datecreated: '2015-08-17 17:04:13'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:14'
         datedepublish: ''
         ownerid: 1
@@ -7772,6 +8510,12 @@ persons:
         community: null
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7805,7 +8549,7 @@ persons:
     -
         slug: amy-smith
         datecreated: '2015-08-17 17:04:12'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:14'
         datedepublish: ''
         ownerid: null
@@ -7837,6 +8581,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7867,7 +8617,7 @@ persons:
     -
         slug: rimvydas-lauzikas
         datecreated: '2015-08-17 17:04:12'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:15'
         datedepublish: ''
         ownerid: null
@@ -7901,6 +8651,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7931,7 +8687,7 @@ persons:
     -
         slug: jeroen-wilms
         datecreated: '2015-08-17 17:04:12'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:15'
         datedepublish: ''
         ownerid: 1
@@ -7965,6 +8721,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -7998,7 +8760,7 @@ persons:
     -
         slug: alexandros-charkiolakis
         datecreated: '2015-08-17 17:04:12'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:15'
         datedepublish: ''
         ownerid: 1
@@ -8032,6 +8794,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8065,7 +8833,7 @@ persons:
     -
         slug: john-stack
         datecreated: '2015-08-17 17:04:12'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:16'
         datedepublish: ''
         ownerid: null
@@ -8097,6 +8865,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8127,7 +8901,7 @@ persons:
     -
         slug: evaristo-perez-morales
         datecreated: '2015-08-17 17:04:12'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:16'
         datedepublish: ''
         ownerid: null
@@ -8161,6 +8935,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8191,7 +8971,7 @@ persons:
     -
         slug: christiane-gruen
         datecreated: '2015-08-17 17:04:12'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:16'
         datedepublish: ''
         ownerid: null
@@ -8223,6 +9003,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8253,7 +9039,7 @@ persons:
     -
         slug: grace-toland
         datecreated: '2015-08-17 17:04:11'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:16'
         datedepublish: ''
         ownerid: null
@@ -8285,6 +9071,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8315,7 +9107,7 @@ persons:
     -
         slug: eithne-owens
         datecreated: '2015-08-17 17:04:11'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:17'
         datedepublish: ''
         ownerid: null
@@ -8347,6 +9139,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8377,7 +9175,7 @@ persons:
     -
         slug: marianna-marcucci
         datecreated: '2015-08-17 17:04:11'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:17'
         datedepublish: ''
         ownerid: 1
@@ -8412,6 +9210,12 @@ persons:
         community: null
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: 'Management Board Member'
         na_community_role: null
@@ -8445,7 +9249,7 @@ persons:
     -
         slug: lars-rogstad
         datecreated: '2015-08-17 17:04:11'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:17'
         datedepublish: ''
         ownerid: 1
@@ -8479,6 +9283,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8509,7 +9319,7 @@ persons:
     -
         slug: laura-hollink
         datecreated: '2015-08-17 17:04:11'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:18'
         datedepublish: ''
         ownerid: null
@@ -8541,6 +9351,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8571,7 +9387,7 @@ persons:
     -
         slug: ismet-ovcina
         datecreated: '2015-08-17 17:04:11'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:18'
         datedepublish: ''
         ownerid: null
@@ -8603,6 +9419,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8633,7 +9455,7 @@ persons:
     -
         slug: alek-tarkowski
         datecreated: '2015-08-17 17:04:11'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:19'
         datedepublish: ''
         ownerid: null
@@ -8667,6 +9489,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8697,7 +9525,7 @@ persons:
     -
         slug: lora-aroyo
         datecreated: '2015-08-17 17:04:10'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:19'
         datedepublish: ''
         ownerid: null
@@ -8732,6 +9560,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8762,7 +9596,7 @@ persons:
     -
         slug: ruven-pillay
         datecreated: '2015-08-17 17:04:10'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:19'
         datedepublish: ''
         ownerid: null
@@ -8794,6 +9628,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8824,7 +9664,7 @@ persons:
     -
         slug: viktorija-kostoska
         datecreated: '2015-08-17 17:04:10'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:19'
         datedepublish: ''
         ownerid: null
@@ -8856,6 +9696,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8886,7 +9732,7 @@ persons:
     -
         slug: felix-ostrowski
         datecreated: '2015-08-17 17:04:10'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:20'
         datedepublish: ''
         ownerid: null
@@ -8918,6 +9764,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -8948,7 +9800,7 @@ persons:
     -
         slug: lodewijk-gelauff
         datecreated: '2015-08-17 17:04:10'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:21'
         datedepublish: ''
         ownerid: null
@@ -8980,6 +9832,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9010,7 +9868,7 @@ persons:
     -
         slug: dzintra-liepina
         datecreated: '2015-08-17 17:04:10'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:21'
         datedepublish: ''
         ownerid: null
@@ -9042,6 +9900,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9072,7 +9936,7 @@ persons:
     -
         slug: richard-wright
         datecreated: '2015-08-17 17:04:10'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:21'
         datedepublish: ''
         ownerid: null
@@ -9104,6 +9968,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9134,7 +10004,7 @@ persons:
     -
         slug: zane-grosa
         datecreated: '2015-08-17 17:04:10'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:22'
         datedepublish: ''
         ownerid: null
@@ -9166,6 +10036,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9196,7 +10072,7 @@ persons:
     -
         slug: anne-gant
         datecreated: '2015-08-17 17:04:09'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:23'
         datedepublish: ''
         ownerid: null
@@ -9228,6 +10104,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9258,7 +10140,7 @@ persons:
     -
         slug: leif-andresen
         datecreated: '2015-08-17 17:04:09'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:34'
         datepublish: '2015-09-01 13:44:24'
         datedepublish: ''
         ownerid: null
@@ -9291,6 +10173,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9321,7 +10209,7 @@ persons:
     -
         slug: marco-streefkerk
         datecreated: '2015-08-17 17:04:09'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:24'
         datedepublish: ''
         ownerid: 1
@@ -9355,6 +10243,12 @@ persons:
         community: null
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9388,7 +10282,7 @@ persons:
     -
         slug: frank-meijer
         datecreated: '2015-08-17 17:04:09'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:24'
         datedepublish: ''
         ownerid: null
@@ -9420,6 +10314,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9450,7 +10350,7 @@ persons:
     -
         slug: aspasia-tasiopoulou
         datecreated: '2015-08-17 17:04:09'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:24'
         datedepublish: ''
         ownerid: null
@@ -9484,6 +10384,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9553,7 +10459,7 @@ persons:
     -
         slug: stuart-jeffrey
         datecreated: '2015-08-17 17:04:09'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:25'
         datedepublish: ''
         ownerid: null
@@ -9587,6 +10493,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9617,7 +10529,7 @@ persons:
     -
         slug: denis-detling
         datecreated: '2015-08-17 17:04:08'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:25'
         datedepublish: ''
         ownerid: null
@@ -9651,6 +10563,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9681,7 +10599,7 @@ persons:
     -
         slug: markus-merenmies
         datecreated: '2015-08-17 17:04:08'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:26'
         datedepublish: ''
         ownerid: null
@@ -9713,6 +10631,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9743,7 +10667,7 @@ persons:
     -
         slug: guido-ferilli
         datecreated: '2015-08-17 17:04:08'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:26'
         datedepublish: ''
         ownerid: null
@@ -9775,6 +10699,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9805,7 +10735,7 @@ persons:
     -
         slug: nora-white
         datecreated: '2015-08-17 17:04:08'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:27'
         datedepublish: ''
         ownerid: null
@@ -9837,6 +10767,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -9867,7 +10803,7 @@ persons:
     -
         slug: marco-rendina
         datecreated: '2015-08-17 17:04:08'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:27'
         datedepublish: ''
         ownerid: null
@@ -9902,6 +10838,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: 'Advisory Board member'
         na_role: null
         na_community_role: null
@@ -9979,7 +10921,7 @@ persons:
     -
         slug: marieke-van-erp
         datecreated: '2015-08-17 17:04:08'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:28'
         datedepublish: ''
         ownerid: 1
@@ -10013,6 +10955,12 @@ persons:
         community: null
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10046,7 +10994,7 @@ persons:
     -
         slug: janet-zmroczek
         datecreated: '2015-08-17 17:03:51'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:28'
         datedepublish: ''
         ownerid: null
@@ -10078,6 +11026,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10108,7 +11062,7 @@ persons:
     -
         slug: sabine-jank
         datecreated: '2015-08-17 17:03:51'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:28'
         datedepublish: ''
         ownerid: null
@@ -10140,6 +11094,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10170,7 +11130,7 @@ persons:
     -
         slug: susanna-hillhouse
         datecreated: '2015-08-17 17:03:51'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:28'
         datedepublish: ''
         ownerid: null
@@ -10204,6 +11164,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10234,7 +11200,7 @@ persons:
     -
         slug: christina-wolf
         datecreated: '2015-08-17 17:03:51'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:28'
         datedepublish: ''
         ownerid: null
@@ -10266,6 +11232,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10296,7 +11268,7 @@ persons:
     -
         slug: gerald-maier
         datecreated: '2015-08-17 17:03:51'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:29'
         datedepublish: ''
         ownerid: null
@@ -10329,6 +11301,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10359,7 +11337,7 @@ persons:
     -
         slug: bengt-wittgren
         datecreated: '2015-08-17 17:03:51'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:29'
         datedepublish: ''
         ownerid: null
@@ -10391,6 +11369,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10421,7 +11405,7 @@ persons:
     -
         slug: christian-bajomi
         datecreated: '2015-08-17 17:03:51'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:29'
         datedepublish: ''
         ownerid: null
@@ -10453,6 +11437,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10483,7 +11473,7 @@ persons:
     -
         slug: dimitra-atsidis
         datecreated: '2015-08-17 17:03:51'
-        datechanged: '2022-10-27 06:06:50'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:29'
         datedepublish: ''
         ownerid: null
@@ -10518,6 +11508,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10549,7 +11545,7 @@ persons:
     -
         slug: chris-de-loof
         datecreated: '2015-08-17 17:03:50'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:30'
         datedepublish: ''
         ownerid: 1
@@ -10585,6 +11581,12 @@ persons:
         community: null
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: 'Members Council Member'
         na_community_role: null
@@ -10618,7 +11620,7 @@ persons:
     -
         slug: jose-maria-garcia
         datecreated: '2015-08-17 17:03:50'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:31'
         datedepublish: ''
         ownerid: null
@@ -10650,6 +11652,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10680,7 +11688,7 @@ persons:
     -
         slug: oscar-arroyo
         datecreated: '2015-08-17 17:03:50'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:31'
         datedepublish: ''
         ownerid: null
@@ -10712,6 +11720,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10742,7 +11756,7 @@ persons:
     -
         slug: hans-van-der-windt
         datecreated: '2015-08-17 17:03:49'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:32'
         datedepublish: ''
         ownerid: null
@@ -10774,6 +11788,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10804,7 +11824,7 @@ persons:
     -
         slug: donald-russell-bailey
         datecreated: '2015-08-17 17:03:49'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:32'
         datedepublish: ''
         ownerid: null
@@ -10836,6 +11856,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10866,7 +11892,7 @@ persons:
     -
         slug: stephanie-merakos
         datecreated: '2015-08-17 17:03:49'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:33'
         datedepublish: ''
         ownerid: null
@@ -10898,6 +11924,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -10928,7 +11960,7 @@ persons:
     -
         slug: laura-carletti
         datecreated: '2015-08-17 17:03:49'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:33'
         datedepublish: ''
         ownerid: 1
@@ -10962,6 +11994,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: 'Network Association Member'
         na_community_role: null
@@ -10995,7 +12033,7 @@ persons:
     -
         slug: costis-dallas
         datecreated: '2015-08-17 17:03:49'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:34'
         datedepublish: ''
         ownerid: 1
@@ -11030,6 +12068,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11060,7 +12104,7 @@ persons:
     -
         slug: andras-micsik
         datecreated: '2015-08-17 17:03:49'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:34'
         datedepublish: ''
         ownerid: null
@@ -11094,6 +12138,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11124,7 +12174,7 @@ persons:
     -
         slug: paula-goodale
         datecreated: '2015-08-17 17:03:49'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:34'
         datedepublish: ''
         ownerid: null
@@ -11156,6 +12206,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11186,7 +12242,7 @@ persons:
     -
         slug: hans-laagland
         datecreated: '2015-08-17 17:03:48'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:35'
         datedepublish: ''
         ownerid: null
@@ -11218,6 +12274,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11248,7 +12310,7 @@ persons:
     -
         slug: rony-vissers
         datecreated: '2015-08-17 17:03:48'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:35'
         datedepublish: ''
         ownerid: null
@@ -11280,6 +12342,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11310,7 +12378,7 @@ persons:
     -
         slug: joanna-potega
         datecreated: '2015-08-17 17:03:48'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:36'
         datedepublish: ''
         ownerid: null
@@ -11342,6 +12410,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11372,7 +12446,7 @@ persons:
     -
         slug: maria-antonieta-lucio-sainz
         datecreated: '2015-08-17 17:03:48'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:37'
         datedepublish: ''
         ownerid: null
@@ -11404,6 +12478,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11434,7 +12514,7 @@ persons:
     -
         slug: arjan-agema
         datecreated: '2015-08-17 17:03:47'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:37'
         datedepublish: ''
         ownerid: null
@@ -11466,6 +12546,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11535,7 +12621,7 @@ persons:
     -
         slug: sindre-aarsbog
         datecreated: '2015-08-17 17:03:47'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:37'
         datedepublish: ''
         ownerid: 1
@@ -11567,6 +12653,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11597,7 +12689,7 @@ persons:
     -
         slug: maarten-brinkerink
         datecreated: '2015-08-17 17:03:47'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:38'
         datedepublish: ''
         ownerid: null
@@ -11629,6 +12721,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11659,7 +12757,7 @@ persons:
     -
         slug: mikolaj-machowski
         datecreated: '2015-08-17 17:03:47'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:38'
         datedepublish: ''
         ownerid: null
@@ -11691,6 +12789,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11721,7 +12825,7 @@ persons:
     -
         slug: patrick-peiffer
         datecreated: '2015-08-17 17:03:47'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:39'
         datedepublish: ''
         ownerid: null
@@ -11756,6 +12860,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11786,7 +12896,7 @@ persons:
     -
         slug: elin-storostevik
         datecreated: '2015-08-17 17:03:47'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:39'
         datedepublish: ''
         ownerid: null
@@ -11818,6 +12928,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11848,7 +12964,7 @@ persons:
     -
         slug: dieter-van-uytvanck
         datecreated: '2015-08-17 17:03:47'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:39'
         datedepublish: ''
         ownerid: null
@@ -11880,6 +12996,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11910,7 +13032,7 @@ persons:
     -
         slug: mark-den-elzen
         datecreated: '2015-08-17 17:03:46'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:40'
         datedepublish: ''
         ownerid: null
@@ -11942,6 +13064,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -11972,7 +13100,7 @@ persons:
     -
         slug: jan-sanders
         datecreated: '2015-08-17 17:03:46'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:40'
         datedepublish: ''
         ownerid: null
@@ -12004,6 +13132,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -12034,7 +13168,7 @@ persons:
     -
         slug: sandra-fauconnier
         datecreated: '2015-08-17 17:03:46'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:40'
         datedepublish: ''
         ownerid: 1
@@ -12068,6 +13202,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -12101,7 +13241,7 @@ persons:
     -
         slug: jane-darnell
         datecreated: '2015-08-17 17:03:46'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:41'
         datedepublish: ''
         ownerid: null
@@ -12133,6 +13273,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -12163,7 +13309,7 @@ persons:
     -
         slug: stephen-bull
         datecreated: '2015-08-17 17:03:46'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:41'
         datedepublish: ''
         ownerid: 1
@@ -12197,6 +13343,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: '1'
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -12227,7 +13379,7 @@ persons:
     -
         slug: elsie-maclean
         datecreated: '2015-08-17 17:03:46'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:41'
         datedepublish: ''
         ownerid: null
@@ -12259,6 +13411,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: '1'
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -12289,7 +13447,7 @@ persons:
     -
         slug: neil-smith
         datecreated: '2015-08-17 17:03:46'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:41'
         datedepublish: ''
         ownerid: null
@@ -12321,6 +13479,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -12351,7 +13515,7 @@ persons:
     -
         slug: maarten-zeinstra
         datecreated: '2015-08-17 17:03:46'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:42'
         datedepublish: ''
         ownerid: null
@@ -12385,6 +13549,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -12415,7 +13585,7 @@ persons:
     -
         slug: laima-lapiniene
         datecreated: '2015-08-17 17:03:46'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:42'
         datedepublish: ''
         ownerid: null
@@ -12447,6 +13617,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: '1'
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -12477,7 +13653,7 @@ persons:
     -
         slug: stefania-vecchio
         datecreated: '2015-08-17 17:03:46'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:42'
         datedepublish: ''
         ownerid: null
@@ -12509,6 +13685,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: '1'
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -12539,7 +13721,7 @@ persons:
     -
         slug: marco-berni
         datecreated: '2015-08-17 17:03:45'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:43'
         datedepublish: ''
         ownerid: null
@@ -12571,6 +13753,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: '1'
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: '1'
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null
@@ -12601,7 +13789,7 @@ persons:
     -
         slug: paolo-galluzzi
         datecreated: '2015-08-17 17:03:45'
-        datechanged: '2022-10-27 06:07:13'
+        datechanged: '2023-05-30 06:09:56'
         datepublish: '2015-09-01 13:44:43'
         datedepublish: ''
         ownerid: null
@@ -12633,6 +13821,12 @@ persons:
         community: ''
         community_role: null
         europeana_tech: ''
+        member_of_research: ''
+        member_of_education: ''
+        member_of_communicators: ''
+        member_of_impact: ''
+        member_of_copyright: ''
+        member_of_climate: ''
         gb_role: null
         na_role: null
         na_community_role: null

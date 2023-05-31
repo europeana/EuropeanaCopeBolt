@@ -1,12 +1,12 @@
 __bolt_export_meta:
-    date: '2022-11-02T11:06:00+01:00'
+    date: '2023-05-31T09:20:48+02:00'
     version: 3.7.4
     platform: mysql
 organisations:
     -
         slug: europeana-space
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -54,7 +54,7 @@ organisations:
     -
         slug: europeanaconnect-eod
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -102,7 +102,7 @@ organisations:
     -
         slug: europeanalocal-deutschland
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -150,7 +150,7 @@ organisations:
     -
         slug: europeana-local-sweden
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -198,7 +198,7 @@ organisations:
     -
         slug: europeanatravel
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -246,7 +246,7 @@ organisations:
     -
         slug: europhoto
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -294,7 +294,7 @@ organisations:
     -
         slug: heritage-of-the-people-s-europe
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -342,7 +342,7 @@ organisations:
     -
         slug: culture-institute-of-barcelona
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -438,7 +438,7 @@ organisations:
     -
         slug: linked-heritage
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -486,7 +486,7 @@ organisations:
     -
         slug: locloud
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -534,7 +534,7 @@ organisations:
     -
         slug: museums-eu
         datecreated: '2017-12-14 14:57:22'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -582,7 +582,7 @@ organisations:
     -
         slug: national-library-of-serbia
         datecreated: '2015-08-17 16:52:16'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: '2022-07-11 11:24:24'
         datedepublish: ''
         ownerid: 1
@@ -633,7 +633,7 @@ organisations:
     -
         slug: poznan-supercomputing-and-networking-center
         datecreated: '2016-09-13 12:33:51'
-        datechanged: '2022-10-27 06:07:49'
+        datechanged: '2023-05-30 06:10:35'
         datepublish: ''
         datedepublish: ''
         ownerid: null
@@ -678,3 +678,51 @@ organisations:
         persons: {  }
         tags: {  }
         _id: organisations/poznan-supercomputing-and-networking-center
+    -
+        slug: slovakiana
+        datecreated: '2022-12-19 10:43:58'
+        datechanged: '2023-05-30 06:10:35'
+        datepublish: ''
+        datedepublish: ''
+        ownerid: null
+        status: published
+        templatefields: {  }
+        name: Slovakiana
+        name_alt1: null
+        name_alt2: null
+        acronym: null
+        org_country: Slovakia
+        org_role:
+            - Aggregator
+        website: 'https://www.slovakiana.sk/'
+        email: null
+        domain: ''
+        scope: ''
+        sector: 'Cultural Heritage'
+        description: ''
+        geographical_reach: ''
+        content_themes: null
+        working_languages: ''
+        content_languages: ''
+        logo_url: null
+        image: {  }
+        city: null
+        street: null
+        zipcode: null
+        po_box: null
+        country: Slovakia
+        uid: '1482250000052553009'
+        europeana_id: ''
+        org_uid: '1482250000052553009'
+        name_lang: EN(English)
+        name_alt1_lang: null
+        name_alt2_lang: null
+        acronym_lang: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        tags: {  }
+        _id: organisations/slovakiana

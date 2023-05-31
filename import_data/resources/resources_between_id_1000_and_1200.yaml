@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2022-11-28T19:33:34+01:00'
+    date: '2023-05-31T09:24:58+02:00'
     version: 3.7.4
     platform: mysql
 resources:
@@ -2335,13 +2335,13 @@ resources:
     -
         slug: europeana-low-code-fest-2022
         datecreated: '2022-09-19 11:27:52'
-        datechanged: '2022-09-19 11:40:43'
+        datechanged: '2023-05-26 13:35:39'
         datepublish: '2022-09-19 11:27:30'
         datedepublish: ''
         ownerid: 124
         status: published
         templatefields: {  }
-        title: 'Europeana Low-Code Fest 2022'
+        title: 'Europeana Low-Code Fest'
         image:
             file: Images/Education/low_code_fest_lead.png
             title: 'Illustration of a Apple personal computer'
@@ -2867,7 +2867,7 @@ resources:
     -
         slug: download-europeana-dsi-4-final-report
         datecreated: '2022-10-12 09:25:26'
-        datechanged: '2022-10-12 09:28:20'
+        datechanged: '2023-02-27 13:58:08'
         datepublish: '2022-10-12 09:24:46'
         datedepublish: ''
         ownerid: 124
@@ -2878,7 +2878,7 @@ resources:
         enable_filter: false
         icon_image: null
         body: null
-        htmllink: 'https://pro.europeana.eu/files/Europeana_Professional/Publications/Europeana_DSI-4_B.5_Final_report_M48_V1.1.pdf'
+        htmllink: 'https://pro.europeana.eu/files/Europeana_Professional/Projects/Project_list/Europeana_DSI-4/Europeana%20DSI-4_B.5%20Final%20report%202018-2022_M48_PDF%20(Interactive).pdf'
         buttontext: 'Download Europeana DSI-4 Final Report'
         weight: 0
         cssclass: null
@@ -3148,3 +3148,4217 @@ resources:
         categories: {  }
         tags: {  }
         _id: resources/eu-datathon-1
+    -
+        slug: egina
+        datecreated: '2022-10-28 11:58:04'
+        datechanged: '2022-10-28 11:58:30'
+        datepublish: '2022-10-28 11:56:15'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: Egina
+        image:
+            file: Images/Education/Logos/low_code_egina.png
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://www.egina.eu'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/egina
+    -
+        slug: cr-hack-lab
+        datecreated: '2022-10-28 11:59:59'
+        datechanged: '2022-10-28 12:02:43'
+        datepublish: '2022-10-28 11:58:50'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'CR Hack Lab'
+        image:
+            file: Images/Education/Logos/low_code_crhacklabf4d.png
+            title: 'CRHack Lab logo'
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://hubs.mozilla.com/kptZ3fU/crhack-lab-f4d'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/cr-hack-lab
+    -
+        slug: explore-j-story
+        datecreated: '2022-11-02 10:07:46'
+        datechanged: '2022-11-02 10:45:27'
+        datepublish: '2022-11-02 10:06:58'
+        datedepublish: ''
+        ownerid: 34
+        status: published
+        templatefields: {  }
+        title: 'Explore J-Story'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://j-story.org/projects/jewish-history-tours'
+        buttontext: 'Explore Jewish History Tours on J-Story'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/explore-j-story
+    -
+        slug: museum-burg-posterstein-collection
+        datecreated: '2022-11-04 14:37:57'
+        datechanged: '2022-11-04 14:37:57'
+        datepublish: '2022-11-04 14:37:02'
+        datedepublish: ''
+        ownerid: 112
+        status: published
+        templatefields: {  }
+        title: 'Museum Burg Posterstein collection'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://www.europeana.eu/en/search?page=1&view=grid&query=edm_datasetName%3A%20734%2A'
+        buttontext: 'Discover the collections on the Europeana website'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/museum-burg-posterstein-collection
+    -
+        slug: czech-presidency-1
+        datecreated: '2022-11-07 11:58:21'
+        datechanged: '2022-11-11 09:33:06'
+        datepublish: '2022-11-07 11:58:06'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Digital transformation in the data space: measurement and assessment'
+        image:
+            file: Images/Home_page/pro_banner_czech_presidency_2.jpg
+            title: 'An image of flowers with a blue overlay and the text: DIGITAL TRANSFORMATION IN THE DATA SPACE:   MEASUREMENT AND ASSESSMENT  A Europeana Symposium during the Czech Presidency of the Council of the EU. 11 NOVEMBER 2022 | ONLINE'
+        enable_filter: true
+        icon_image: null
+        body: "<p><em>A Europeana Symposium under the auspices of the Czech Presidency of the Council of the EU</em></p>\r\n\r\n<p>11 November 2022, Online.</p>\r\n\r\n<p></p>\r\n"
+        htmllink: 'https://pro.europeana.eu/event/digital-transformation-in-the-data-space-measurement-and-assessment'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Bavlněný tištěný šátek'
+        image_attribution_creator: 'Mgr. Tauberová Monika'
+        image_attribution_date: null
+        image_attribution_holder: 'Historické muzeum'
+        image_attribution_country: 'Česká republika'
+        imagelicense: CC-BY
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/czech-presidency-1
+    -
+        slug: eaf-outreach-event
+        datecreated: '2022-11-23 14:45:37'
+        datechanged: '2022-11-23 16:54:57'
+        datepublish: '2022-11-23 14:43:25'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'EAF Outreach event'
+        image:
+            file: Images/Home_page/eaf_outreach_event_december_2022.jpg
+        enable_filter: true
+        icon_image: null
+        body: "<p>Bring your content to new audiences, meet experts, ask questions. Register now!</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/event/eaf-outreach-event-december2022'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Servizio fotografico Villa Lagarina, 1978'
+        image_attribution_creator: 'Monti, Paolo'
+        image_attribution_date: '1978'
+        image_attribution_holder: 'Fondazione Biblioteca Europea di Informazione e Cultura'
+        image_attribution_country: Italy
+        imagelicense: CC-BY-SA
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/eaf-outreach-event
+    -
+        slug: stewarding-the-common-european-data-space-for-cultural-heritage
+        datecreated: '2022-12-21 11:46:33'
+        datechanged: '2023-01-10 10:51:19'
+        datepublish: '2022-12-21 11:46:28'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Deploying the common European data space for cultural heritage'
+        image:
+            file: 'Images/Publication_thumbnails/business_plan_2023/ef_business_plan 2023_lead.jpg'
+            title: 'Engraving of people working in a laboratory with long wooden benches'
+        enable_filter: true
+        icon_image: null
+        body: "<p></p>\r\n\r\n<p></p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'The chemical laboratory at Massachusetts Institute of Technology, Boston: women and men at class.'
+        image_attribution_creator: null
+        image_attribution_date: c.1880
+        image_attribution_holder: 'Wellcome Collection'
+        image_attribution_country: 'United Kingdom'
+        imagelicense: CC-BY
+        image_attribution_link: 'https://www.europeana.eu/item/9200579/g4w9q949'
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/stewarding-the-common-european-data-space-for-cultural-heritage
+    -
+        slug: collaborative-2023
+        datecreated: '2022-12-21 11:51:48'
+        datechanged: '2022-12-21 13:47:53'
+        datepublish: '2022-12-21 11:51:32'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: Collaborative
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: "<p>Effective cooperation helps us engage with each other, and build and maintain the relationships that contribute to the growth and future use of the data space.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/europeana-network-association'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/collaborative-2023
+    -
+        slug: diverse-and-inclusive
+        datecreated: '2022-12-21 11:53:58'
+        datechanged: '2022-12-21 13:47:48'
+        datepublish: '2022-12-21 11:53:13'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Diverse and inclusive'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: "<p>Data, stories, events and communities should be diverse and inclusive. We give visibility to underrepresented communities in our editorial, and uphold our inclusive engagement guidelines.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/search?q=black+history'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/diverse-and-inclusive
+    -
+        slug: participatory-2023
+        datecreated: '2022-12-21 12:02:55'
+        datechanged: '2022-12-21 13:47:44'
+        datepublish: '2022-12-21 12:02:13'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: Participatory
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: "<p>We set high standards for participatory practices on our websites, in our campaigns and in the cultural sector so that everyone can access, share, play with, contribute to and be enriched by digital culture.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/discover-the-data/about-europeana-eu'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/participatory-2023
+    -
+        slug: climate-action
+        datecreated: '2022-12-21 12:04:28'
+        datechanged: '2022-12-21 13:47:39'
+        datepublish: '2022-12-21 12:04:19'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Climate action'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: "<p>We embed eco-thinking in\_digital transformation. Guided by the Europeana Climate Action Manifesto, we reduce, off-set and benchmark our carbon footprint, and support the Climate Action Community.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/post/the-europeana-climate-action-manifesto'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/climate-action
+    -
+        slug: data-governance
+        datecreated: '2022-12-21 13:11:43'
+        datechanged: '2023-01-10 14:58:12'
+        datepublish: '2022-12-21 12:57:26'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Data governance'
+        image:
+            file: Images/Publication_thumbnails/business_plan_2023/integration_of_high_quality_data_1.jpg
+            title: 'Stacks of coiled wires'
+        enable_filter: false
+        icon_image: null
+        body: "<p><strong>Working on 3D together</strong></p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p>In cooperation with our network of accredited aggregators and cultural heritage professionals, we will source and make available 3D content, and update our data frameworks. A working group will be created to develop expertise and nurture the reuse of these high-value datasets along with the rich 2D content already available in Europeana.\_</p>\r\n\r\n<p><strong>Data governance</strong></p>\r\n\r\n<p>Various Europeana frameworks and standards ensure that data storage, access and reuse is subject to clear conditions and permissions. As we collectively build the data space, we will develop these frameworks to support the sharing and reuse of new types of data, through new means and for new purposes.</p>\r\n\r\n<p><strong>Innovation</strong></p>\r\n\r\n<p>We’ll deploy automated approaches and artificial intelligence to support the increase of high-quality data, as defined by the Europeana Publishing Framework.</p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Den första helautomatiska telefonstationen i Stockholm, "Norra Vasa", installerades av Telefon A.B. L.M. Ericsson 1924.'
+        image_attribution_creator: Okänd
+        image_attribution_date: null
+        image_attribution_holder: 'Tekniska museet'
+        image_attribution_country: Sweden
+        imagelicense: Public-Domain
+        image_attribution_link: 'https://www.europeana.eu/item/916118/S_TEK_photo_TEKA0143532'
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/data-governance
+    -
+        slug: next-generation-infrastructure
+        datecreated: '2022-12-21 13:22:35'
+        datechanged: '2023-01-13 12:11:42'
+        datepublish: '2022-12-21 13:22:09'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Next generation infrastructure'
+        image:
+            file: Images/Publication_thumbnails/business_plan_2023/development_and_operation_of_the_ds_1.jpg
+            title: 'Close up of circuitry on a silicon chip.'
+        enable_filter: false
+        icon_image: null
+        body: "<p><b id=\"docs-internal-guid-bb1a79c9-7fff-6101-5bab-e118364abbb6\">Next generation infrastructure</b></p>\r\n\r\n<p>A successful data space needs reliable and interoperable data. We will expand our current infrastructure and aggregation systems to support the growth and quality of the data it holds. We’ll improve our identifiers for digital records to be permanent and unique, increasing accessibility, security and resilience. And we’ll extend our suite of APIs so that digital cultural heritage can be used by more people in more ways.\_</p>\r\n\r\n<p><strong>Deploying the core components for a multilingual search</strong></p>\r\n\r\n<p>We will complete the deployment and assessment of multilingual search for one language so it can\_be scaled up to 24 languages later on. We will also cooperate with the European Commission service, eTranslation, to support this scaling up in the coming years.</p>\r\n\r\n<p><strong>Innovative data sharing models \_</strong></p>\r\n\r\n<p>With the support of the EuropeanaTech community and the Data Quality Committee, we’ll make sure our sector remains relevant and updated with the latest technological developments. We’ll investigate decentralised aggregation models and we’ll work with the Data Space Support Centre to make sure information can flow easily and usefully from one data space to another.\_<br>\r\n\_</p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Silicon chip'
+        image_attribution_creator: 'Paul Griggs'
+        image_attribution_date: null
+        image_attribution_holder: 'Wellcome Collection'
+        image_attribution_country: 'United Kingdom'
+        imagelicense: null
+        image_attribution_link: 'https://www.europeana.eu/item/9200579/zyh66cge'
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/next-generation-infrastructure
+    -
+        slug: training-programme
+        datecreated: '2022-12-21 13:29:59'
+        datechanged: '2023-01-10 11:12:18'
+        datepublish: '2022-12-21 13:28:42'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Training programme'
+        image:
+            file: Images/Publication_thumbnails/business_plan_2023/building_capacity_2.jpg
+        enable_filter: false
+        icon_image: null
+        body: "<p><strong>Training programme</strong></p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n\r\n<p>We will collaboratively develop a training programme that enhances participation in, and the resulting impact of, the data space. Through this programme and our work on community-led knowledge transfer, we will create a robust suite of capacity-building resources.</p>\r\n\r\n<p>We will engage stakeholders to tailor a programme with measurable impact, and to identify the best tools to deliver the training and allow easy and effective collaboration among professionals.</p>\r\n\r\n<p><strong>Events</strong></p>\r\n\r\n<p>Working closely with the incoming Swedish and Spanish Presidencies of the Council of the EU, we will align visions and actively engage Member States in shaping and developing the data space, building on their long-standing support for our work.\_</p>\r\n\r\n<p>And our EuropeanaTech conference will bring together professionals from across the globe to explore the challenges and opportunities that topics like AI and 3D bring to the sector.</p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'carpentry production line'
+        image_attribution_creator: 'Saarinen, UA'
+        image_attribution_date: null
+        image_attribution_holder: 'Finnish Heritage Agency'
+        image_attribution_country: Finland
+        imagelicense: CC-BY
+        image_attribution_link: 'https://www.europeana.eu/item/2021009/_4253D2513507703CCC6C9C1894C22BCD'
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/training-programme
+    -
+        slug: audience-needs-for-reuse
+        datecreated: '2022-12-21 13:32:54'
+        datechanged: '2023-01-10 11:13:16'
+        datepublish: '2022-12-21 13:32:47'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Audience needs for reuse'
+        image:
+            file: Images/Publication_thumbnails/business_plan_2023/building_capacity_1.jpg
+        enable_filter: false
+        icon_image: null
+        body: "<p><strong>Audience needs for reuse</strong></p>\r\n\r\n<p>We’ll learn more about our established reuse audiences in education and research, and we’ll explore potential reuse cases in media, tourism and creative sectors.\_</p>\r\n\r\n<p>We’ll work with partners to develop our education communities, focusing on reusability of existing resources and their availability in multiple languages.</p>\r\n\r\n<p>We’ll continue to engage with the developer/API community and tailor our APIs and accompanying documentation to their needs.</p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Hyytiälän metsäaseman opiskelijat ilmeisesti kartanpiirustusta harjoittelemassa.'
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: 'Lusto - The Finnish Forest Museum'
+        image_attribution_country: Finland
+        imagelicense: CC-BY
+        image_attribution_link: 'https://www.europeana.eu/item/2021008/_knp_90865'
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/audience-needs-for-reuse
+    -
+        slug: access-for-all-1
+        datecreated: '2022-12-21 13:37:21'
+        datechanged: '2023-01-10 11:15:46'
+        datepublish: '2022-12-21 13:36:57'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Access for all'
+        image:
+            file: Images/Publication_thumbnails/business_plan_2023/digital_services_1.jpg
+        enable_filter: false
+        icon_image: null
+        body: "<p><strong>Access for all</strong></p>\r\n\r\n<p>The Europeana website offers cultural heritage content to everyone. It allows people to search, browse and access content in all 24 official languages of the EU. We will ensure the website is engaging, easy to access, and functions well on all devices – and that it is ready to take advantage of a 5G infrastructure.\_</p>\r\n\r\n<p>To improve the website experience, we will deploy greater automation to refresh and highlight new and interesting content. We will make items easier to find than ever before and we will increase multilingual content. We will extend user participation features and optimise how we manage and respond to user feedback.</p>\r\n\r\n<p><strong>Participation\_</strong><br>\r\n<br>\r\nWe will expand digital participation with cultural heritage in and around the data space. We will work with partners to curate, publish and promote content that reflects pan-European themes and perspectives. We will promote engaging, high-quality content on the Europeana website, social media channels, newsletters and on external platforms.<br>\r\n\_</p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Koolmees op paulownia tak'
+        image_attribution_creator: null
+        image_attribution_date: '1925 - 1936'
+        image_attribution_holder: Rijksmuseum
+        image_attribution_country: Netherlands
+        imagelicense: Public-Domain
+        image_attribution_link: 'https://www.europeana.eu/item/90402/RP_P_1999_375'
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/access-for-all-1
+    -
+        slug: go-to-section-1
+        datecreated: '2022-12-21 14:37:10'
+        datechanged: '2022-12-21 14:42:35'
+        datepublish: '2022-12-21 14:36:30'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Go to section 1'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://pro.europeana.eu/page/edm-mooc-basics'
+        buttontext: 'Go to section 1'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/go-to-section-1
+    -
+        slug: go-to-section-2
+        datecreated: '2022-12-21 14:37:49'
+        datechanged: '2022-12-21 14:42:28'
+        datepublish: '2022-12-21 14:37:40'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Go to Section 2'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://pro.europeana.eu/page/edm-mooc-advanced'
+        buttontext: 'Go to Section 2'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/go-to-section-2
+    -
+        slug: go-to-section-3
+        datecreated: '2022-12-21 14:38:21'
+        datechanged: '2022-12-21 14:42:23'
+        datepublish: '2022-12-21 14:38:10'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Go to Section 3'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://pro.europeana.eu/page/edm-mooc-marc2edm'
+        buttontext: 'Go to Section 3'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/go-to-section-3
+    -
+        slug: re-use-page-quotation-eelco-bruinsma
+        datecreated: '2023-01-06 10:39:21'
+        datechanged: '2023-01-06 10:52:50'
+        datepublish: '2023-01-06 10:38:11'
+        datedepublish: ''
+        ownerid: 34
+        status: published
+        templatefields: {  }
+        title: 'Re-use page quotation - Eelco Bruinsma'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: "<p><img src=\"https://pro.europeana.eu/thumbs/600x400c/Images/Reuse/Eelco.jpg\"></p>\r\n\r\n<h6>Büffelkopf - Ethnological Museum, Staatliche Museen zu Berlin, Germany - CC BY-NC-SA.</h6>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: 'I use Europeana galleries to support my research. This one is devoted to beaded art from Cameroon. It brings together objects from different cultural spheres and helps me explore iconography, symbolism and meaning, contributing to my research on authenticity and inherent notions of cultural, societal and emotional value.'
+        quotesourcename: 'Eelco Bruinsma'
+        quotesourcefunction: 'Researcher, The Netherlands'
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/re-use-page-quotation-eelco-bruinsma
+    -
+        slug: '1'
+        datecreated: '2023-01-10 12:52:32'
+        datechanged: '2023-01-11 08:44:45'
+        datepublish: '2023-01-10 12:49:18'
+        datedepublish: ''
+        ownerid: 34
+        status: published
+        templatefields: {  }
+        title: 'Reuse page quotation - Jorge Cardoso'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: "<p><img src=\"https://pro.europeana.eu/thumbs/600x400c/Images/Reuse/Jorge_apps.jpg\"></p>\r\n\r\n<h6>A screen set from Artence (by the students Cátia da Costa Pereira, Marco André Ribeiro Braga, Pedro Duarte Ferreira de Matos Bexiga), 2022, CC BY-SA</h6>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: 'My students of the Interactive Media Design course used Europeana as the theme for their Interaction Design projects: to design a mobile application that makes use of Europeana''s content. The resulting prototypes are inspiring and range from games to educational apps.'
+        quotesourcename: 'Jorge Cardoso'
+        quotesourcefunction: 'Educator, Portugal'
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/1
+    -
+        slug: eit-culture-and-creativiyt
+        datecreated: '2023-01-12 14:40:00'
+        datechanged: '2023-01-12 14:41:26'
+        datepublish: '2023-01-12 14:39:43'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'EIT Culture and Creativity'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://eit.europa.eu/eit-community/eit-culture-creativity'
+        buttontext: 'Find out more about EIT Culture & Creativity'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/eit-culture-and-creativiyt
+    -
+        slug: register-for-mooc-2023
+        datecreated: '2023-01-24 12:04:41'
+        datechanged: '2023-01-24 12:04:41'
+        datepublish: '2023-01-24 12:04:16'
+        datedepublish: ''
+        ownerid: 34
+        status: published
+        templatefields: {  }
+        title: 'Register for MOOC 2023'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://www.europeanschoolnetacademy.eu/courses/course-v1:Europeana+Culture_EN+2023/about'
+        buttontext: 'Register for MOOC 2023'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/register-for-mooc-2023
+    -
+        slug: apply-for-an-editorial-grant
+        datecreated: '2023-02-01 11:28:57'
+        datechanged: '2023-02-02 09:30:40'
+        datepublish: '2023-02-01 11:28:51'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Apply for an editorial grant'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://survey.zohopublic.com/zs/KHD76s'
+        buttontext: 'Apply for an editorial grant'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/apply-for-an-editorial-grant
+    -
+        slug: new-project-at-the-the-national-museums-of-world-culture-sweden-explores-crowdsourcing-to-decolonise-data
+        datecreated: '2023-02-01 13:06:39'
+        datechanged: '2023-02-01 13:06:48'
+        datepublish: '2023-02-01 13:05:29'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'New project at the the National Museums of World Culture, Sweden explores crowdsourcing to decolonise data'
+        image:
+            file: Images/Blog_images/2022-08/eliane_waiwai.png
+        enable_filter: false
+        icon_image: null
+        body: "<p>In 2021, the Europeana\_Research Grants Programme awarded funding for innovative projects exploring crowdsourcing and research. Hear about a pilot project which explored decolonialsing a Swedish database for museum collections.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/post/new-project-at-the-the-national-museums-of-world-culture-sweden-explores-crowdsourcing-to-decolonialise-data'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Eliane Waiwai, telling through the objects the myth of production manioc. CC-BY-NC-ND.'
+        image_attribution_creator: 'Beatrice Törnros'
+        image_attribution_date: 'May 2022'
+        image_attribution_holder: 'Museum of World Culture'
+        image_attribution_country: Sweden
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/new-project-at-the-the-national-museums-of-world-culture-sweden-explores-crowdsourcing-to-decolonise-data
+    -
+        slug: europeana-research-grants-programme-2021-call
+        datecreated: '2023-02-01 13:08:24'
+        datechanged: '2023-02-01 13:08:32'
+        datepublish: '2023-02-01 13:07:07'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Europeana Research Grants Programme: 2021 Call'
+        image:
+            file: Images/Blog_images/2021-04/2064116_Museu_ProvidedCHO_Nationalmuseum__Sweden_18727.jpeg
+            title: 'A group of people seated around a table in a darkened room, listening to someone reading.'
+        enable_filter: false
+        icon_image: null
+        body: "<p>Eligibility details, application guidelines,\_terms and other useful information.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/page/europeana-research-grants-programme-2021-call'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: Friends
+        image_attribution_creator: 'Hanna Hirsch-Pauli'
+        image_attribution_date: 1900/1907
+        image_attribution_holder: Nationalmuseum
+        image_attribution_country: Sweden
+        imagelicense: Public-Domain
+        image_attribution_link: 'http://www.europeana.eu/item/2064116/Museu_ProvidedCHO_Nationalmuseum__Sweden_18727'
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/europeana-research-grants-programme-2021-call
+    -
+        slug: europeana-research-grants-2021-frequently-asked-questions
+        datecreated: '2023-02-01 13:09:29'
+        datechanged: '2023-02-01 13:10:27'
+        datepublish: '2023-02-01 13:08:43'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Europeana Research Grants 2021 - Frequently Asked Questions'
+        image:
+            file: Images/Blog_images/2021-04/2064116_Museu_ProvidedCHO_Nationalmuseum__Sweden_18727.jpeg
+        enable_filter: false
+        icon_image: null
+        body: "<p>Find the answers to frequently asked questions about the Europeana Research Grants Programme.\_</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/page/europeana-research-event-grants-faqs'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: Friends
+        image_attribution_creator: 'Hanna Hirsch-Pauli'
+        image_attribution_date: 1900/1907
+        image_attribution_holder: 'Nationalmuseum Sweden'
+        image_attribution_country: Sweden
+        imagelicense: Public-Domain
+        image_attribution_link: 'http://www.europeana.eu/item/2064116/Museu_ProvidedCHO_Nationalmuseum__Sweden_18727'
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/europeana-research-grants-2021-frequently-asked-questions
+    -
+        slug: teaching-with-europeana
+        datecreated: '2023-02-01 14:27:26'
+        datechanged: '2023-02-01 14:29:42'
+        datepublish: '2023-02-01 14:26:01'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Teaching with Europeana'
+        image:
+            file: Images/Blog_images/2022-05/christine_de_pisan.png
+            title: 'A manuscript illustration of women gathered in a circle, presenting a book'
+        enable_filter: false
+        icon_image: null
+        body: "<p>An initiative which\_encourages teachers to share their experience in incorporating\_Europeana resources\_in their classrooms - discover learning scenarios and more.\_</p>\r\n"
+        htmllink: 'https://teachwitheuropeana.eun.org/'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Christine de Pisan from BL Harley 4431, f. 3'
+        image_attribution_creator: null
+        image_attribution_date: 'c. 1410-c. 1414'
+        image_attribution_holder: 'British Library'
+        image_attribution_country: 'United Kingdom'
+        imagelicense: Public-Domain
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/teaching-with-europeana
+    -
+        slug: historiana
+        datecreated: '2023-02-01 14:31:50'
+        datechanged: '2023-02-01 14:34:05'
+        datepublish: '2023-02-01 14:31:11'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: Historiana
+        image:
+            file: 'Images/Education/Historiana lead 2.png'
+            title: 'Screenshot of the Historiana website'
+        enable_filter: false
+        icon_image: null
+        body: "<p>An online learning platform supporting the use of cultural heritage collections in education.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/page/historiana'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Historiana.eu landing page'
+        image_attribution_creator: Historiana
+        image_attribution_date: '2021'
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: CC-BY-SA
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/historiana
+    -
+        slug: copyright-when-sharing-data-with-europeana
+        datecreated: '2023-02-01 15:03:27'
+        datechanged: '2023-02-01 15:04:28'
+        datepublish: '2023-02-01 15:01:46'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Copyright when sharing data with Europeana'
+        image:
+            file: Images/New_pro_images_March2020/2021672_resource_document_mauritshuis_1203_SMALLER.jpeg
+            title: 'Breads, cheese and sausages on a table'
+        enable_filter: false
+        icon_image: null
+        body: "<p>Guidance on rights statements and information on copyright for data partners and aggregators who share data with Europeana.\_</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/share-your-data/copyright'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Stilleven met kazen, amandelen en krakelingen'
+        image_attribution_creator: 'Clara Peeters'
+        image_attribution_date: '1615'
+        image_attribution_holder: Mauritshuis
+        image_attribution_country: Netherlands
+        imagelicense: Public-Domain
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/copyright-when-sharing-data-with-europeana
+    -
+        slug: copyright-tools-and-resources
+        datecreated: '2023-02-01 15:05:28'
+        datechanged: '2023-02-01 15:06:03'
+        datepublish: '2023-02-01 15:04:49'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Copyright tools and resources'
+        image:
+            file: Images/IPR/Copyrightexceptions.eu.jpeg
+            title: 'Painting of sea shells'
+        enable_filter: false
+        icon_image: null
+        body: "<p>A set of tools and resources to support professionals dealing with copyright in the cultural heritage sector.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/page/copyright-tools-and-resources'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Shells on a Table'
+        image_attribution_creator: 'Balthasar van der Ast'
+        image_attribution_date: null
+        image_attribution_holder: Mauritshuis
+        image_attribution_country: Netherlands
+        imagelicense: Public-Domain
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/copyright-tools-and-resources
+    -
+        slug: faqs-on-out-of-commerce-works
+        datecreated: '2023-02-01 15:07:16'
+        datechanged: '2023-02-01 15:08:27'
+        datepublish: '2023-02-01 15:06:37'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'FAQs on Out of Commerce works'
+        image:
+            file: Images/Event_images/OOCWorkingGroup600x400.png
+            title: 'Helsinki railway station, perspective drawing from the central hall'
+        enable_filter: false
+        icon_image: null
+        body: "<p>Discover information about out of commerce works.\_</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/project/out-of-commerce-works-working-group#faqs'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Helsingin rautatieasema, perspektiivipiirustus keskushallista'
+        image_attribution_creator: 'Saarinen, Eliel'
+        image_attribution_date: '1913'
+        image_attribution_holder: 'Museum of Finnish Architecture'
+        image_attribution_country: Finland
+        imagelicense: CC-BY
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/faqs-on-out-of-commerce-works
+    -
+        slug: opening-up-approaches-from-cultural-heritage-institutions-across-europe
+        datecreated: '2023-02-01 15:19:43'
+        datechanged: '2023-02-01 15:21:12'
+        datepublish: '2023-02-01 15:19:00'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Opening up: approaches from cultural heritage institutions across Europe'
+        image:
+            file: 'Images/Event_images/Opening up rights.png'
+            title: 'Title slide - group of women'
+        enable_filter: false
+        icon_image: null
+        body: "<p>This webinar shares perspectives on\_open access to heritage collections from practitioners, advocates and scholars.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/event/opening-up-approaches-from-cultural-heritage-institutions-across-europe'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: '[Castellfollit de la Roca]'
+        image_attribution_creator: Desconegut
+        image_attribution_date: 1910/1920
+        image_attribution_holder: 'Ajuntament de Girona'
+        image_attribution_country: Italy
+        imagelicense: Public-Domain
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/opening-up-approaches-from-cultural-heritage-institutions-across-europe
+    -
+        slug: open-and-reusable-digital-cultural-heritage
+        datecreated: '2023-02-01 15:22:08'
+        datechanged: '2023-02-01 15:23:20'
+        datepublish: '2023-02-01 15:21:47'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Open and reusable digital cultural heritage'
+        image:
+            file: 'Images/IPR/Open and reusable digital cultural heritage teaser.png'
+            title: 'A woman in a white headscarf looking at a field'
+        enable_filter: false
+        icon_image: null
+        body: "<p>Discover how and why Europeana encourages you to open up\_collections for reuse.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/page/open-and-reusable-digital-cultural-heritage'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Girl in a Folk Costume'
+        image_attribution_creator: 'Žabota, Ivan'
+        image_attribution_date: '1914'
+        image_attribution_holder: 'Slovak National Gallery'
+        image_attribution_country: Slovakia
+        imagelicense: Public-Domain
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/open-and-reusable-digital-cultural-heritage
+    -
+        slug: quotation-test-block
+        datecreated: '2023-02-03 14:41:17'
+        datechanged: '2023-02-03 14:42:36'
+        datepublish: '2023-02-03 14:41:09'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Quotation test block'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: 'This is a test to show how quotation blocks can work.'
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/quotation-test-block
+    -
+        slug: join-our-leadership-programme-for-cultural-heritage-leaders
+        datecreated: '2023-02-08 12:17:29'
+        datechanged: '2023-02-08 12:23:49'
+        datepublish: '2023-02-08 12:16:26'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Join our leadership programme for cultural heritage leaders'
+        image:
+            file: Images/Home_page/den_leadership_academy_2.png
+            title: 'Two women lean against the tail wings of a plane'
+        enable_filter: true
+        icon_image: null
+        body: "<p>Apply now to the DEN Academy Leadership programme Digital Strategy &amp; Innovation - deadline 25 February</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/post/apply-to-join-our-leadership-programme-for-cultural-heritage-leaders'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'A-B. Gösta Forslund Aviation.'
+        image_attribution_creator: 'Carl Larssons Fotografiska Ateljé AB'
+        image_attribution_date: '1947'
+        image_attribution_holder: 'Länsmuseet Gävleborg'
+        image_attribution_country: Sweden
+        imagelicense: CC-BY-SA
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/join-our-leadership-programme-for-cultural-heritage-leaders
+    -
+        slug: share-your-europeana-blog-idea
+        datecreated: '2023-02-08 15:22:33'
+        datechanged: '2023-02-08 15:22:33'
+        datepublish: '2023-02-08 15:21:40'
+        datedepublish: ''
+        ownerid: 34
+        status: published
+        templatefields: {  }
+        title: 'Share your Europeana blog idea'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://survey.zohopublic.com/zs/KHD76s'
+        buttontext: 'Share your Europeana blog idea'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/share-your-europeana-blog-idea
+    -
+        slug: explore-implementation-across-member-states
+        datecreated: '2023-02-13 12:10:41'
+        datechanged: '2023-02-13 12:18:07'
+        datepublish: '2023-02-13 12:10:30'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Explore an overview of out of commerce works implementations'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://docs.google.com/document/d/12-zCPTuZSg_3SW969fqvjbg2r6Tb3iVDw6QKwVUkoy0/edit?usp=sharing'
+        buttontext: 'Explore the overview of out of commerce works implementations'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/explore-implementation-across-member-states
+    -
+        slug: register-now-for-the-digital-education-with-cultural-heritage-2023-mooc
+        datecreated: '2023-02-15 18:14:26'
+        datechanged: '2023-02-15 18:51:42'
+        datepublish: '2023-02-15 17:59:18'
+        datedepublish: ''
+        ownerid: 112
+        status: published
+        templatefields: {  }
+        title: 'Register for the ‘Digital Education with Cultural Heritage’ 2023 MOOC'
+        image:
+            file: 'Images/Home_page/Europeana-MOOC-2023_1500x527-04 (2).jpg'
+            title: 'MOOC promotional graphic featuring a typewriter and the start date of 27 February'
+        enable_filter: true
+        icon_image: null
+        body: "<p>Our 2023 MOOC\_is available in English and Romanian. It has upgraded content and more resources for integrating audiovisual materials into learning practices.\_</p>\r\n\r\n<p>Register by 27 February to secure your place</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/post/register-now-for-the-upgraded-digital-education-with-cultural-heritage-2023-mooc'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Bedienungsanleitung Schreibmaschine Adler Spezial'
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: 'Roscheider Hof Open Air Museum'
+        image_attribution_country: Germany
+        imagelicense: CC0
+        image_attribution_link: 'https://www.europeana.eu/item/192/item_HKUIGYIIOKJZ7CH5WLZIQDS6VXIK6V'
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/register-now-for-the-digital-education-with-cultural-heritage-2023-mooc
+    -
+        slug: improving-object-detection-in-paintings-based-on-time-contexts
+        datecreated: '2023-02-15 19:13:25'
+        datechanged: '2023-02-21 17:11:21'
+        datepublish: '2023-02-15 19:07:28'
+        datedepublish: ''
+        ownerid: 112
+        status: published
+        templatefields: {  }
+        title: 'Improving object detection in paintings based on time contexts'
+        image:
+            file: Images/Project_logos/SGoaB_RGB.png
+            title: 'Saint George on a bike logo'
+        enable_filter: true
+        icon_image: null
+        body: "<p>This paper, by\_Marinescu, M. C., Reshetnikov, A. and and López, J.M.\_proposes a novel approach to object detection for the cultural heritage domain</p>\r\n"
+        htmllink: 'https://saintgeorgeonabike.eu/results/improving-object-detection-paintings-based-time-contexts'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/improving-object-detection-in-paintings-based-on-time-contexts
+    -
+        slug: explore-the-j-ark-platform
+        datecreated: '2023-02-21 15:40:44'
+        datechanged: '2023-02-21 15:40:49'
+        datepublish: '2023-02-21 15:40:33'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Explore the J-Ark platform'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://j-ark.org/home'
+        buttontext: 'Explore the J-Ark platform'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/explore-the-j-ark-platform
+    -
+        slug: deart-dataset-of-european-art
+        datecreated: '2023-02-21 17:08:57'
+        datechanged: '2023-03-14 11:37:22'
+        datepublish: '2023-02-21 17:05:02'
+        datedepublish: ''
+        ownerid: 112
+        status: published
+        templatefields: {  }
+        title: 'DEArt: Dataset of European Art'
+        image:
+            file: Images/Project_logos/SGoaB_RGB.png
+        enable_filter: false
+        icon_image: null
+        body: "<p>SGoaB\_present\_the paper \"DEArt: Dataset of European Art\" at the\_Vision for Art VISART VI Workshop\_at the\_European Conference of Computer Vision\_</p>\r\n"
+        htmllink: 'https://saintgeorgeonabike.eu/results/deart-dataset-european-art'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/deart-dataset-of-european-art
+    -
+        slug: reuse-page-quotation-dominic-lounds
+        datecreated: '2023-02-24 12:57:47'
+        datechanged: '2023-03-15 15:33:39'
+        datepublish: '2023-02-24 12:54:56'
+        datedepublish: ''
+        ownerid: 34
+        status: published
+        templatefields: {  }
+        title: 'Reuse page quotation - Dominic Lounds'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: "<p><img src=\"https://pro.europeana.eu/thumbs/600x400c/Images/Reuse/Reuse_DomLounds.jpeg\"></p>\r\n\r\n<h6>Gezelschap van twee mannen en twee vrouwen speelt Monopoly aan keukentafel - Gooi and Vecht Historic, Netherlands - CC BY-SA.</h6>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: 'My team''s editor found a great photograph on a Europeana blog and used it in ''Ruthless: Monopoly''s Secret History'', a documentary for the broadcaster PBS. We used the photograph to introduce the popular game of Monopoly as something that now celebrates capitalism but was initially created to critique it. These kinds of documentaries wouldn''t exist without the efforts of institutions that collect, archive and share historic material.'
+        quotesourcename: 'Dominic Lounds'
+        quotesourcefunction: 'Associate Producer, USA'
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/reuse-page-quotation-dominic-lounds
+    -
+        slug: explore-the-europeana-subtitled-training-suite
+        datecreated: '2023-02-24 14:53:04'
+        datechanged: '2023-02-24 14:53:16'
+        datepublish: '2023-02-24 14:52:49'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Explore the Europeana Subtitled Training Suite'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://pro.europeana.eu/page/europeana-subtitled-ai-pipeline-and-training-suite'
+        buttontext: 'Explore the Europeana Subtitled Training Suite'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/explore-the-europeana-subtitled-training-suite
+    -
+        slug: enrichment-survey
+        datecreated: '2023-03-03 09:12:34'
+        datechanged: '2023-03-08 12:37:11'
+        datepublish: '2023-03-03 09:12:14'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Enrichment survey'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://survey.zohopublic.com/zs/oBCsgq'
+        buttontext: 'Answer the survey before 27 March'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/enrichment-survey
+    -
+        slug: europeana-education-mooc
+        datecreated: '2023-03-09 09:41:13'
+        datechanged: '2023-03-09 09:41:18'
+        datepublish: '2023-03-09 09:40:23'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Europeana Education MOOC'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://www.europeana.eu/en/europeana-classroom/moocs'
+        buttontext: 'Discover previous MOOCs'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/europeana-education-mooc
+    -
+        slug: swedish-presidency
+        datecreated: '2023-03-09 10:52:42'
+        datechanged: '2023-03-09 10:57:44'
+        datepublish: '2023-03-09 10:51:43'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'The Europeana conference under the Swedish Presidency of the Council of the EU'
+        image:
+            file: Images/Home_page/swedish_presidency.jpg
+            title: 'A church with a blue overlay'
+        enable_filter: false
+        icon_image: null
+        body: "<p>Accelerating 3D in the common European data space for cultural heritage: Why 3D matters</p>\r\n\r\n<p>18 April - Register now</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/event/the-europeana-conference-under-the-swedish-presidency-of-the-council-of-the-eu'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Gerums kyrka'
+        image_attribution_creator: 'Fant, Erik'
+        image_attribution_date: '1927-01-01 - 1927-12-31'
+        image_attribution_holder: 'Swedish National Heritage Board'
+        image_attribution_country: Sweden
+        imagelicense: Public-Domain
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/swedish-presidency
+    -
+        slug: the-directive-and-its-transposition
+        datecreated: '2023-03-09 11:18:05'
+        datechanged: '2023-03-09 11:19:32'
+        datepublish: '2023-03-09 11:17:52'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'The Directive and its transposition'
+        image:
+            file: Images/Teaser_images/oocw_faqs.png
+            title: 'Helsinki railway station, perspective drawing of imperial waiting room'
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://pro.europeana.eu/page/out-of-commerce-works-faqs-the-directive-and-its-transposition'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Helsingin rautatieasema, perspektiivipiirustus keisarillinen odotushuone, ajoittamaton'
+        image_attribution_creator: 'Saarinen, Eliel'
+        image_attribution_date: null
+        image_attribution_holder: 'Museum of Finnish Architecture'
+        image_attribution_country: Finland
+        imagelicense: CC-BY
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/the-directive-and-its-transposition
+    -
+        slug: key-concepts-in-the-directive
+        datecreated: '2023-03-09 11:20:28'
+        datechanged: '2023-03-09 11:21:02'
+        datepublish: '2023-03-09 11:19:39'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Key concepts in the Directive'
+        image:
+            file: Images/IPR/oocw_faqs_key_concepts.png
+            title: 'Perspective drawing of a large, vaulted hall, with a chair in front of a fireplace, chairs and a table with flowers on it, and a piano'
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://pro.europeana.eu/page/out-of-commerce-works-faqs-key-concepts-in-the-directive'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Suur-Merijoen kartano, Viipurin maalaiskunta, hallin perspektiivipiirustus, 1902'
+        image_attribution_creator: null
+        image_attribution_date: 'Gesellius, Lindgren & Saarinen'
+        image_attribution_holder: 'Museum of Finnish Architecture'
+        image_attribution_country: Finland
+        imagelicense: CC-BY
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/key-concepts-in-the-directive
+    -
+        slug: stakeholder-dialogues
+        datecreated: '2023-03-09 11:21:25'
+        datechanged: '2023-03-09 11:22:21'
+        datepublish: '2023-03-09 11:21:17'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Stakeholder dialogues'
+        image:
+            file: Images/IPR/oocw_faqs_stakeholder.png
+            title: 'Perspective drawing of a large vaulted hall'
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://pro.europeana.eu/page/out-of-commerce-works-faqs-stakeholder-dialogues'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Helsingin rautatieasema, perspektiivipiirustus odotussalista, 1910'
+        image_attribution_creator: 'Saarinen, Eliel'
+        image_attribution_date: null
+        image_attribution_holder: 'Museum of Finnish Architecture'
+        image_attribution_country: Finland
+        imagelicense: CC-BY
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/stakeholder-dialogues
+    -
+        slug: the-system-in-practice
+        datecreated: '2023-03-09 11:22:42'
+        datechanged: '2023-03-09 11:23:36'
+        datepublish: '2023-03-09 11:22:34'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'The system in practice'
+        image:
+            file: Images/IPR/oocw_faqs_the_system.png
+            title: 'An illustration of a room with seats, a desk and a vaulted ceiling'
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://pro.europeana.eu/page/out-of-commerce-works-faqs-the-system-in-practice'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Decoration fantasy, interior perspective drawing, 1901'
+        image_attribution_creator: null
+        image_attribution_date: 'Saarinen, Eliel'
+        image_attribution_holder: 'Museum of Finnish Architecture'
+        image_attribution_country: Finland
+        imagelicense: CC-BY
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/the-system-in-practice
+    -
+        slug: territoriality
+        datecreated: '2023-03-09 11:24:32'
+        datechanged: '2023-03-09 11:25:11'
+        datepublish: '2023-03-09 11:23:59'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: Territoriality
+        image:
+            file: Images/IPR/oocws_faqs_territoriality.jpg
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://pro.europeana.eu/page/out-of-commerce-works-faqs-territoriality'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Painting of a woman sat in a living room'
+        image_attribution_creator: 'Saarinen, Eliel'
+        image_attribution_date: null
+        image_attribution_holder: 'Museum of Finnish Architecture'
+        image_attribution_country: Finland
+        imagelicense: CC-BY
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/territoriality
+    -
+        slug: annual-report-2022-michelle-quotation
+        datecreated: '2023-03-15 14:56:01'
+        datechanged: '2023-03-15 15:02:44'
+        datepublish: '2023-03-15 14:55:48'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Annual report 2022 - Michelle quotation'
+        image:
+            file: Images/Publication_thumbnails/ef_annual_report_2022/michelle_lewis.png
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: 'Working on projects where different people, from different European countries, come together for the love of culture and do their best for the cultural heritage sector is inspiring! '
+        quotesourcename: 'Michelle Lewis'
+        quotesourcefunction: 'Project & Business Development Coordinator'
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/annual-report-2022-michelle-quotation
+    -
+        slug: annual-report-2022-sebastiaan-ter-burg
+        datecreated: '2023-03-15 15:03:25'
+        datechanged: '2023-03-17 10:35:33'
+        datepublish: '2023-03-15 15:02:55'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Annual report 2022 - Sebastiaan ter Burg'
+        image:
+            file: Images/Publication_thumbnails/ef_annual_report_2022/sebastiaan_ter_burg.jpg
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: 'I was excited by the development of our training offer in 2022. We gained insights, developed sustainable training resources and delivered some great sessions. I hope our experiences can inspire the sector - and other data spaces! '
+        quotesourcename: 'Sebastiaan ter Burg'
+        quotesourcefunction: 'Knowledge Development Specialist'
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/annual-report-2022-sebastiaan-ter-burg
+    -
+        slug: annual-report-2022-isabel-quotation
+        datecreated: '2023-03-15 15:05:52'
+        datechanged: '2023-03-15 15:06:36'
+        datepublish: '2023-03-15 15:05:36'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Annual report 2022 - Isabel quotation'
+        image:
+            file: Images/Publication_thumbnails/ef_annual_report_2022/isabel_crespo.png
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: 'It was a pleasure to work with new partners in education, build projects that will have sustainability, and get close to students; their commitment to our programmes was a highlight!'
+        quotesourcename: 'Isabel Crespo'
+        quotesourcefunction: 'Business Development Coordinator, Education'
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/annual-report-2022-isabel-quotation
+    -
+        slug: annual-report-2022-lianne-quotation
+        datecreated: '2023-03-15 15:07:19'
+        datechanged: '2023-03-17 12:10:02'
+        datepublish: '2023-03-15 15:07:03'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Annual report 2022 - Lianne quotation'
+        image:
+            file: Images/Publication_thumbnails/ef_annual_report_2022/lianne_heslinga.png
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: 'In order to improve data quality, you need a good team. It has been fantastic working with colleagues across the Foundation with so much expertise - in IIIF, licenses, networking, documentation … I was very happy that together we were able to support so many data partners in 2022!'
+        quotesourcename: 'Lianne Heslinga'
+        quotesourcefunction: 'Metadata Coordinator'
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/annual-report-2022-lianne-quotation
+    -
+        slug: visit-the-spaces-from-built-with-bits-2021
+        datecreated: '2023-03-29 14:23:58'
+        datechanged: '2023-03-29 14:24:17'
+        datepublish: '2023-03-29 14:23:46'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Visit the spaces from Built with Bits 2021'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://hubs.mozilla.com/sihaUCX/built-with-bits-final-ceremony'
+        buttontext: 'Visit the spaces from Built with Bits 2021'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/visit-the-spaces-from-built-with-bits-2021
+    -
+        slug: visit-the-spaces-from-built-with-bits-2022
+        datecreated: '2023-03-29 14:25:00'
+        datechanged: '2023-03-29 14:25:04'
+        datepublish: '2023-03-29 14:24:42'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Visit the spaces from Built with Bits 2022'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://hubs.mozilla.com/eCZ7TNz/built-with-bits-2-final-ceremony'
+        buttontext: 'Visit the spaces from Built with Bits 2022'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/visit-the-spaces-from-built-with-bits-2022
+    -
+        slug: apis
+        datecreated: '2023-03-29 15:04:15'
+        datechanged: '2023-03-29 15:07:49'
+        datepublish: '2023-03-29 14:57:15'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: APIs
+        image:
+            file: Images/New_pro_images_March2020/Spents..jpeg
+        enable_filter: false
+        icon_image: null
+        body: "<p>Europeana APIs allow you to build applications that use the wealth of our collections drawn from the major museums and galleries across Europe.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/page/apis'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: Spents.
+        image_attribution_creator: 'Lövqvist, Albin'
+        image_attribution_date: null
+        image_attribution_holder: 'Länsmuseet Gävleborg'
+        image_attribution_country: Sweden
+        imagelicense: CC-BY-SA
+        image_attribution_link: 'https://www.europeana.eu/item/916124/S_XLM_photo_XLMAL01683?q=#dcId=1583224357751&p=10'
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/apis
+    -
+        slug: clarin-virtual-language-observatory
+        datecreated: '2023-03-29 15:14:19'
+        datechanged: '2023-03-29 15:14:32'
+        datepublish: '2023-03-29 15:14:09'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'CLARIN Virtual Language Observatory'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://vlo.clarin.eu/?q=_oaiEndpointURI:https://europeana-oai.clarin.eu/provider'
+        buttontext: 'Explore the dataset'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/clarin-virtual-language-observatory
+    -
+        slug: sshoc
+        datecreated: '2023-03-29 15:15:01'
+        datechanged: '2023-03-29 15:15:06'
+        datepublish: '2023-03-29 15:14:39'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: SSHOC
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://marketplace.sshopencloud.eu/dataset/kubP4q'
+        buttontext: 'Explore the dataset'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/sshoc
+    -
+        slug: european-open-science-cloud
+        datecreated: '2023-03-29 15:15:36'
+        datechanged: '2023-03-29 15:15:41'
+        datepublish: '2023-03-29 15:15:17'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'European Open Science Cloud'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://marketplace.eosc-portal.eu/services/europeana-apis'
+        buttontext: 'Explore the dataset'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/european-open-science-cloud
+    -
+        slug: data-europa-eu
+        datecreated: '2023-03-29 15:16:08'
+        datechanged: '2023-03-29 15:16:14'
+        datepublish: '2023-03-29 15:15:50'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: Data.europa.eu
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://data.europa.eu/data/datasets/europeana-aggregated-dataset'
+        buttontext: 'Explore the dataset'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/data-europa-eu
+    -
+        slug: europeana-2023
+        datecreated: '2023-04-03 10:59:59'
+        datechanged: '2023-04-03 11:15:27'
+        datepublish: '2023-04-03 10:59:00'
+        datedepublish: ''
+        ownerid: 112
+        status: published
+        templatefields: {  }
+        title: 'EuropeanaTech 2023'
+        image:
+            file: 'Images/Event_images/Europeana 2023/Europeana2023banner.jpg'
+            title: 'EuropeanaTech 2023 banner image'
+        enable_filter: true
+        icon_image: null
+        body: "<p>10-12 October 2023</p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'EuropeanaTech 2023 collage. This collage is composed of three images. See below for detailed attribution'
+        image_attribution_creator: 'Ana Moreno'
+        image_attribution_date: '2023'
+        image_attribution_holder: 'Europeana Foundation'
+        image_attribution_country: null
+        imagelicense: CC-BY-SA
+        image_attribution_link: 'http://pro.europeana.eu/page/conference#image-attribution'
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/europeana-2023
+    -
+        slug: climate-heritage-network
+        datecreated: '2023-04-04 09:07:49'
+        datechanged: '2023-04-04 09:18:30'
+        datepublish: '2023-04-04 09:06:20'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: "Climate\_Heritage Network"
+        image:
+            file: Images/Event_images/Research-PlanningCrowdsourcingProjects-600x400.jpg
+            title: 'Birch trees'
+        enable_filter: false
+        icon_image: null
+        body: "<p>The Europeana Network Association is proud to be part of the\_Climate\_Heritage Network.\_Explore their work and our participation.</p>\r\n"
+        htmllink: 'https://www.climateheritage.org/press/2023/92-new-members'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Group of Birch Trees in a Flat Landscape'
+        image_attribution_creator: 'Čordák, Ľudovít'
+        image_attribution_date: 1900/1910
+        image_attribution_holder: 'Slovak national gallery'
+        image_attribution_country: Slovakia
+        imagelicense: Public-Domain
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/climate-heritage-network
+    -
+        slug: climate-action-community-work-plan-2022-2023
+        datecreated: '2023-04-04 09:13:13'
+        datechanged: '2023-04-04 09:15:30'
+        datepublish: '2023-04-04 09:11:41'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Climate Action Community Work Plan 2022-2023'
+        image:
+            file: Images/Network/work_plans_2023/climate_action_work_plan_teaser.jpg
+        enable_filter: false
+        icon_image: null
+        body: "<p>The Community seeks to drive impactful, cooperative and sustainable action to address the climate emergency. Read our\_work plan.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/post/climate-action-community-work-plan-2022-2023'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Twelve different species of bees swarming a flowery meadow.'
+        image_attribution_creator: 'James Stewart'
+        image_attribution_date: null
+        image_attribution_holder: 'Wellcome Collection'
+        image_attribution_country: 'United Kingdom'
+        imagelicense: CC-BY
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/climate-action-community-work-plan-2022-2023
+    -
+        slug: get-in-the-spotlight
+        datecreated: '2023-04-05 11:35:54'
+        datechanged: '2023-04-05 14:00:30'
+        datepublish: '2023-04-05 11:35:37'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Get in the spotlight'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: "<p>Grab a unique opportunity to showcase your offer to an international audience of over 1,000 participants.</p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/get-in-the-spotlight
+    -
+        slug: collaborate-and-network
+        datecreated: '2023-04-05 11:36:22'
+        datechanged: '2023-04-05 14:00:23'
+        datepublish: '2023-04-05 11:36:06'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Collaborate and network'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: "<p>EuropeanaTech is known for collaboration. Get an innovative international network of technical and R&amp;D specialists engaged with your work.</p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/collaborate-and-network
+    -
+        slug: create-new-opportunities
+        datecreated: '2023-04-05 11:36:49'
+        datechanged: '2023-04-05 14:00:39'
+        datepublish: '2023-04-05 11:36:37'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Create new opportunities'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: "<p>Connect with a wide range of professionals in the cultural heritage, creative industries, research, and education sectors.</p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/create-new-opportunities
+    -
+        slug: raise-your-brand-recognition
+        datecreated: '2023-04-05 11:37:20'
+        datechanged: '2023-04-05 14:00:49'
+        datepublish: '2023-04-05 11:37:04'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Raise your brand recognition'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: "<p>Promote your organisation as an informed and approachable partner of a leading event in the cultural heritage calendar.</p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/raise-your-brand-recognition
+    -
+        slug: sponsorship-opportunities
+        datecreated: '2023-04-05 11:39:15'
+        datechanged: '2023-05-16 09:34:04'
+        datepublish: '2023-04-05 11:38:36'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Sponsorship opportunities'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://pro.europeana.eu/person/albert-verhaar'
+        buttontext: 'Get in touch'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/sponsorship-opportunities
+    -
+        slug: europeanatech-2023-register-your-interest
+        datecreated: '2023-04-05 11:48:13'
+        datechanged: '2023-04-05 11:48:18'
+        datepublish: '2023-04-05 11:47:29'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'EuropeanaTech 2023 register your interest'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://zcmp.eu/TyC'
+        buttontext: 'Register your interest'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/europeanatech-2023-register-your-interest
+    -
+        slug: europeanatech-2023-save-the-date
+        datecreated: '2023-04-05 14:14:43'
+        datechanged: '2023-04-05 14:19:37'
+        datepublish: '2023-04-05 14:14:30'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: ''
+        image:
+            file: Images/Event_images/europeana_2023/europeanatech_2023_save_the_date_banner.png
+            title: 'EuropeanaTech Save the data banner'
+        enable_filter: false
+        icon_image: null
+        body: "<p></p>\r\n\r\n<p></p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/europeanatech-2023-save-the-date
+    -
+        slug: europeana-translate-final-event
+        datecreated: '2023-04-05 15:41:06'
+        datechanged: '2023-04-05 15:41:13'
+        datepublish: '2023-04-05 15:40:51'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Europeana Translate final event'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://bit.ly/Translate-multilingualism2023'
+        buttontext: 'Register now'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/europeana-translate-final-event
+    -
+        slug: digital-storytelling-festival
+        datecreated: '2023-04-11 09:53:38'
+        datechanged: '2023-04-11 09:53:57'
+        datepublish: '2023-04-11 09:53:19'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Digital storytelling festival'
+        image:
+            file: Images/Reuse/digital_storytelling_festival_page_lead.jpg
+        enable_filter: false
+        icon_image: null
+        body: "<p>#DigiStoryFest</p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/digital-storytelling-festival
+    -
+        slug: digital-storytelling-festival-residency-application
+        datecreated: '2023-04-11 10:03:16'
+        datechanged: '2023-04-11 10:03:21'
+        datepublish: '2023-04-11 10:03:01'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Digital storytelling festival residency application'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://survey.zohopublic.eu/zs/AFBjZU'
+        buttontext: 'Apply now'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/digital-storytelling-festival-residency-application
+    -
+        slug: digital-storytelling-festival-submissions-2022
+        datecreated: '2023-04-11 11:10:33'
+        datechanged: '2023-04-11 11:10:40'
+        datepublish: '2023-04-11 11:03:08'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Digital storytelling festival submissions 2022'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://medium.com/digital-storytelling-festival/submissions2022/home'
+        buttontext: 'Discover the submissions from 2022'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/digital-storytelling-festival-submissions-2022
+    -
+        slug: digital-storytelling-festival-2021-submissions
+        datecreated: '2023-04-11 11:11:20'
+        datechanged: '2023-04-11 11:11:26'
+        datepublish: '2023-04-11 11:10:49'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Digital Storytelling Festival 2021 submissions'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://medium.com/digital-storytelling-festival/submissions2021/home'
+        buttontext: 'Discover the submissions from 2021'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/digital-storytelling-festival-2021-submissions
+    -
+        slug: storytelling-resources
+        datecreated: '2023-04-11 11:14:20'
+        datechanged: '2023-04-11 11:23:08'
+        datepublish: '2023-04-11 11:13:49'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Storytelling resources'
+        image:
+            file: Images/Event_images/Digital-Storytelling-Festival2023-600x400.jpg
+            title: 'Digital storytelling festival logo - a figure with a loudspeaker'
+        enable_filter: false
+        icon_image: null
+        body: "<p>Discover storytelling resources on the Festival's Medium page.</p>\r\n"
+        htmllink: 'https://medium.com/digital-storytelling-festival/resources/home'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Digital storytelling festival image'
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: CC-BY-SA
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/storytelling-resources
+    -
+        slug: seven-tips-for-digital-storytelling
+        datecreated: '2023-04-11 11:16:33'
+        datechanged: '2023-04-11 11:18:01'
+        datepublish: '2023-04-11 11:16:01'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Seven tips for digital storytelling'
+        image:
+            file: 'Images/Resources/Seven tips for storytelling teaser image.png'
+            title: '7 digital storytelling tips'
+        enable_filter: false
+        icon_image: null
+        body: "<p>How do we tell engaging and inspiring stories with cultural heritage online? Explore our seven\_tips.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/page/seven-tips-for-digital-storytelling'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: '7 digital storytelling tips'
+        image_attribution_creator: null
+        image_attribution_date: 'April 2021'
+        image_attribution_holder: 'Europeana Foundation'
+        image_attribution_country: Netherlands
+        imagelicense: CC-BY-SA
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/seven-tips-for-digital-storytelling
+    -
+        slug: storytelling-with-digital-culture
+        datecreated: '2023-04-11 11:18:58'
+        datechanged: '2023-04-11 11:20:53'
+        datepublish: '2023-04-11 11:18:11'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Storytelling with digital culture'
+        image:
+            file: 'Images/Event_images/Storytelling with digital culture 600 x 400.png'
+            title: 'Storytelling with digital culture'
+        enable_filter: false
+        icon_image: null
+        body: "<p>Rewatch a webinar exploring\_examples of online digital storytelling from the cultural heritage sector.</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/event/storytelling-with-digital-culture'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Merriment and Mirth for Merry Little People'
+        image_attribution_creator: null
+        image_attribution_date: '1889'
+        image_attribution_holder: 'The British Library'
+        image_attribution_country: 'United Kingdom'
+        imagelicense: Public-Domain
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/storytelling-with-digital-culture
+    -
+        slug: a-look-back-at-2022
+        datecreated: '2023-04-17 16:39:32'
+        datechanged: '2023-04-17 16:41:29'
+        datepublish: '2023-04-17 16:38:39'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'A look back at 2022'
+        image:
+            file: Images/Publication_thumbnails/ef_annual_report_2022_lead.jpg
+            title: 'City view with a large church in the background'
+        enable_filter: true
+        icon_image: null
+        body: "<p></p>\r\n\r\n<p></p>\r\n"
+        htmllink: null
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'Detail from City view with a large church in the background'
+        image_attribution_creator: 'Koster, Everhardus, (1817-1892)'
+        image_attribution_date: '1839'
+        image_attribution_holder: 'Universitaire Bibliotheken Leiden'
+        image_attribution_country: 'The Netherlands'
+        imagelicense: CC-BY
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/a-look-back-at-2022
+    -
+        slug: europeanatech-2023-call-for-proposals-pretalx-link
+        datecreated: '2023-04-25 09:44:30'
+        datechanged: '2023-04-25 09:45:48'
+        datepublish: '2023-04-25 09:44:00'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'EuropeanaTech 2023 call for proposals pretalx link'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://pretalx.com/europeanatech-2023/cfp'
+        buttontext: 'Submit your proposal'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/europeanatech-2023-call-for-proposals-pretalx-link
+    -
+        slug: europeanatech-2023-call-for-proposals
+        datecreated: '2023-04-25 10:09:15'
+        datechanged: '2023-04-26 09:27:07'
+        datepublish: '2023-04-25 10:08:16'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'EuropeanaTech 2023'
+        image:
+            file: Images/Event_images/europeana_2023/europeanatech2023_call_for_proposals_banner_no_text.png
+            title: 'Collage of figures, one on a computer, one looking out at the viewer'
+        enable_filter: true
+        icon_image: null
+        body: "<p>The call for proposals is now open - submit your idea by 30 May!</p>\r\n"
+        htmllink: 'https://pro.europeana.eu/post/submit-your-proposal-for-europeanatech-2023-explore-engage-experience-cultural-heritage-in-the-data-space-and-beyond'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: 'EuropeanaTech 2023 collage - check our event page for detailed attribution'
+        image_attribution_creator: 'Ana Moreno'
+        image_attribution_date: '2023'
+        image_attribution_holder: 'Europeana Foundation'
+        image_attribution_country: Netherlands
+        imagelicense: CC-BY-SA
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/europeanatech-2023-call-for-proposals
+    -
+        slug: net-neutrality-statement
+        datecreated: '2023-05-23 10:10:29'
+        datechanged: '2023-05-23 10:10:34'
+        datepublish: '2023-05-23 10:09:53'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Net neutrality statement'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://creativecommons.org/wp-content/uploads/2023/05/Final-GLAM_CHI-institutions-letter-re_-Fair-Share.pdf'
+        buttontext: 'Read the statement in full'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/net-neutrality-statement
+    -
+        slug: persistent-identifiers-survey
+        datecreated: '2023-05-24 12:49:40'
+        datechanged: '2023-05-24 12:49:47'
+        datepublish: '2023-05-24 12:48:58'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Persistent identifiers survey'
+        image: null
+        enable_filter: false
+        icon_image: null
+        body: null
+        htmllink: 'https://survey.zohopublic.com/zs/CCCNrf'
+        buttontext: 'Take the survey'
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/persistent-identifiers-survey
+    -
+        slug: state-of-the-field-report-on-media-literacy-supported-by-av-collections
+        datecreated: '2023-05-25 16:55:10'
+        datechanged: '2023-05-25 16:56:28'
+        datepublish: '2023-05-25 16:54:57'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'State of the Field Report on Media Literacy supported by AV collections'
+        image:
+            file: Europeana_Professional/Projectpartner/watchlikeahist.jpeg
+            title: 'Children sat watching a television'
+        enable_filter: false
+        icon_image: null
+        body: "<p>An analysis of how audio-visual materials are used for education, what are the challenges teachers, students, and educators face, and what can be done to face them.</p>\r\n"
+        htmllink: 'https://euroclio.eu/wp-content/uploads/State-of-the-Field-Report-on-Media-Literacy-supported-by-AV-Collections.pdf'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/state-of-the-field-report-on-media-literacy-supported-by-av-collections
+    -
+        slug: media-literacy-competence-framework-en
+        datecreated: '2023-05-25 16:57:16'
+        datechanged: '2023-05-25 16:57:50'
+        datepublish: '2023-05-25 16:56:49'
+        datedepublish: ''
+        ownerid: 124
+        status: published
+        templatefields: {  }
+        title: 'Media Literacy Competence Framework (EN)'
+        image:
+            file: Europeana_Professional/Projectpartner/watchlikeahist.jpeg
+            title: 'Children sat watching a television'
+        enable_filter: false
+        icon_image: null
+        body: "<p>An analysis of what are the media literacy competencies needed in history and citizenship education, and how they are supported by audio-visual materials.</p>\r\n"
+        htmllink: 'https://euroclio.eu/wp-content/uploads/Media-Literacy-Competence-Framework-final-version-EN.pdf'
+        buttontext: null
+        weight: 0
+        cssclass: null
+        cssid: null
+        quotetext: null
+        quotesourcename: null
+        quotesourcefunction: null
+        quotelink: null
+        ripplelocation: null
+        ripplecolor: null
+        rippleweight: null
+        image_attribution_title: null
+        image_attribution_creator: null
+        image_attribution_date: null
+        image_attribution_holder: null
+        image_attribution_country: null
+        imagelicense: null
+        image_attribution_link: null
+        pages: {  }
+        posts: {  }
+        data: {  }
+        projects: {  }
+        events: {  }
+        persons: {  }
+        communities:
+            -
+                slug: ''
+                name: ''
+        markets: {  }
+        categories: {  }
+        tags: {  }
+        _id: resources/media-literacy-competence-framework-en
