@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2023-05-31T09:24:41+02:00'
+    date: '2023-05-31T09:47:18+02:00'
     version: 3.7.4
     platform: mysql
 resources:
@@ -204,7 +204,8 @@ resources:
         title: 'Diverse and inclusive'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Inclusive and diverse.png'
         body: "<p>Cultural heritage empowers society to embrace its diversity and flourish. We want to embed this belief in our work and in our products and services so that everyone feels welcome, represented, equal and safe.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -251,7 +252,8 @@ resources:
         title: Collaborative
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Collaborative.png'
         body: "<p>We want to work collaboratively with our networks, partners and communities towards a European cultural sector focused on collectively putting digital cultural heritage at the heart of society.\_</p>\r\n\r\n<p></p>\r\n\r\n<p></p>\r\n"
         htmllink: null
         buttontext: null
@@ -298,7 +300,8 @@ resources:
         title: Participatory
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Participatory.png'
         body: "<p>Participation in culture creates value in the cultural sector and society at large.\_We want to set high standards for participatory practices on our platform, in our campaigns and in the global cultural sector.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -345,7 +348,8 @@ resources:
         title: 'We collaborate'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Home_page/we_collaborate.png
         body: "<p>We bring together cultural heritage professionals from all over Europe.\_</p>\r\n"
         htmllink: /network-association/sign-up
         buttontext: null
@@ -392,7 +396,8 @@ resources:
         title: 'We advocate'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Home_page/we_advocate.png
         body: "<p>We provide the cultural heritage sector with a voice advocating for better digital practices.</p>\r\n"
         htmllink: /page/advocacy
         buttontext: null
@@ -439,7 +444,8 @@ resources:
         title: 'We reach audiences'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Home_page/we-reach-audiences.png
         body: "<p>We work to share and promote cultural heritage so that it can be used and enjoyed by people all over the world.\_</p>\r\n"
         htmllink: /page/europeana-reuse-be-inspired
         buttontext: null
@@ -486,7 +492,8 @@ resources:
         title: 'We build capacity'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Home_page/we_build_capacity.png
         body: "<p>We provide opportunities for institutions and individuals in the cultural heritage sector to develop their digital skills and practice.</p>\r\n"
         htmllink: /page/building-digital-capacity
         buttontext: null
@@ -533,7 +540,8 @@ resources:
         title: 'We build technology'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Home_page/we-build-technology.png
         body: "<p>We develop and maintain technical solutions for showcasing, sharing and using digital cultural heritage.</p>\r\n"
         htmllink: /page/apis
         buttontext: null
@@ -8341,7 +8349,8 @@ resources:
         title: 'Diverse and inclusive'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Blog_images/2021-11/Diversity_teaser.png
         body: "<p>We want our data, stories, events and communities to be diverse and inclusive. We’ll showcase underrepresented communities, consider how we approach contentious content and develop Inclusive Engagement Guidelines.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-diversity-and-inclusivity-at-the-european-foundation-being-bold-and-learning-from-others'
         buttontext: null
@@ -8388,7 +8397,8 @@ resources:
         title: Participatory
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Blog_images/2021-11/Participation_teaser.png
         body: "<p>We will set high standards for participatory practices on our platform, in our campaigns and in the cultural sector so that everyone can access, share, play with, contribute to and be enriched by digital culture.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-participation-at-the-europeana-foundation-working-with-audiences'
         buttontext: null
@@ -8435,7 +8445,8 @@ resources:
         title: 'Climate action'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/climate_change.png'
         body: "<p>We support climate action related to digital transformation. Guided by the Europeana Climate Action Manifesto, we will investigate reducing, off-setting and benchmarking our carbon footprint.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-climate-change-at-the-europeana-foundation-a-green-team-and-community-action'
         buttontext: null
@@ -8482,7 +8493,8 @@ resources:
         title: Collaborative
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/Collaborative.png'
         body: "<p>Collaborating with the sector, we’ll support its digital transformation, putting digital culture at the heart of society. Hybrid collaborative working will maximise our outputs and safeguard our staff and partners.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/talking-collaboration-at-the-europeana-foundation-driving-change-together'
         buttontext: null

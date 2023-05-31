@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2023-05-31T09:24:21+02:00'
+    date: '2023-05-31T09:48:34+02:00'
     version: 3.7.4
     platform: mysql
 resources:
@@ -8078,7 +8078,8 @@ resources:
         title: 'Recover, Rebuild and Grow'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Icons/World_Blue@4x.png
         body: "<p>Our inspiring keynotes will discuss how we can use digital cultural heritage to create a sustainable, value-led and inclusive cultural heritage sector.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -8125,7 +8126,8 @@ resources:
         title: 'Designed for and by you'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Icons/Group_Blue@4x.png
         body: "<p>We developed our conference programme with cultural heritage professionals. So if you work in, with or around digital cultural heritage, or want to learn more, join in.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -8172,7 +8174,8 @@ resources:
         title: 'Interactive and engaging'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Icons/Lamp_Blue@4x.png
         body: "<p>Get involved and interactive by taking part in three days of panel discussions, workshops and more. Follow and join in live post-session reflections and connect via\_#Europeana2021.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -8219,7 +8222,8 @@ resources:
         title: 'Designed for digital'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Icons/Websites_Blue@4x.png
         body: "<p>Explore and build your own digital programme, then join in from your PC, laptop, mobile phone or tablet as together we look to inspire and support the sector to recover, rebuild and grow.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -8266,7 +8270,8 @@ resources:
         title: 'Stay connected'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Icons/Social_Blue@4x.png
         body: "<p>Just because it’s digital doesn’t mean you'll miss out on important networking and social events. With over 500 professionals attending, check out and join our fringe events.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -8313,7 +8318,8 @@ resources:
         title: 'Build your skills'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Icons/Strenght_Blue@4x.png
         body: "<p>Europeana 2021\_helps you develop skills for working with digital cultural heritage. Whether it's the basics or gaining new skills, to level up or refine existing knowledge, it is designed for all.</p>\r\n"
         htmllink: null
         buttontext: null

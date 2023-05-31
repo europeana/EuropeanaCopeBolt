@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2023-05-31T09:24:58+02:00'
+    date: '2023-05-31T09:48:56+02:00'
     version: 3.7.4
     platform: mysql
 resources:
@@ -3497,7 +3497,8 @@ resources:
         title: Collaborative
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Blog_images/2021-11/Collaboration_teaser.png
         body: "<p>Effective cooperation helps us engage with each other, and build and maintain the relationships that contribute to the growth and future use of the data space.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/europeana-network-association'
         buttontext: null
@@ -3544,7 +3545,8 @@ resources:
         title: 'Diverse and inclusive'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Blog_images/2021-11/Diversity_teaser.png
         body: "<p>Data, stories, events and communities should be diverse and inclusive. We give visibility to underrepresented communities in our editorial, and uphold our inclusive engagement guidelines.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/search?q=black+history'
         buttontext: null
@@ -3591,7 +3593,8 @@ resources:
         title: Participatory
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Blog_images/2021-11/Participation_teaser.png
         body: "<p>We set high standards for participatory practices on our websites, in our campaigns and in the cultural sector so that everyone can access, share, play with, contribute to and be enriched by digital culture.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/discover-the-data/about-europeana-eu'
         buttontext: null
@@ -3638,7 +3641,8 @@ resources:
         title: 'Climate action'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Publication_thumbnails/Europeana Foundation Business plan 2021/climate_change.png'
         body: "<p>We embed eco-thinking in\_digital transformation. Guided by the Europeana Climate Action Manifesto, we reduce, off-set and benchmark our carbon footprint, and support the Climate Action Community.</p>\r\n"
         htmllink: 'https://pro.europeana.eu/post/the-europeana-climate-action-manifesto'
         buttontext: null
@@ -4791,7 +4795,8 @@ resources:
         title: 'Quotation test block'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Zoho/Susan Hazan.png'
         body: null
         htmllink: null
         buttontext: null
@@ -6323,7 +6328,8 @@ resources:
         title: 'Get in the spotlight'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Event_images/europeana_2023/spotlightblue.png
         body: "<p>Grab a unique opportunity to showcase your offer to an international audience of over 1,000 participants.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -6370,7 +6376,8 @@ resources:
         title: 'Collaborate and network'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Event_images/europeana_2023/collaborateblue.png
         body: "<p>EuropeanaTech is known for collaboration. Get an innovative international network of technical and R&amp;D specialists engaged with your work.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -6417,7 +6424,8 @@ resources:
         title: 'Create new opportunities'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Event_images/europeana_2023/newopportunitiesblue.png
         body: "<p>Connect with a wide range of professionals in the cultural heritage, creative industries, research, and education sectors.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -6464,7 +6472,8 @@ resources:
         title: 'Raise your brand recognition'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Event_images/europeana_2023/raisebrandblue.png
         body: "<p>Promote your organisation as an informed and approachable partner of a leading event in the cultural heritage calendar.</p>\r\n"
         htmllink: null
         buttontext: null

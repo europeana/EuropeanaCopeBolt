@@ -1,5 +1,5 @@
 __bolt_export_meta:
-    date: '2023-05-31T09:23:58+02:00'
+    date: '2023-05-31T09:48:14+02:00'
     version: 3.7.4
     platform: mysql
 resources:
@@ -7668,7 +7668,8 @@ resources:
         title: 'Working with you in the time of Coronavirus'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/New_pro_images_March2020/Pro Hero Banner 1500x446.png'
         body: "<p>Explore our approach</p>\r\n"
         htmllink: /post/europeana-foundation-working-with-you-in-the-time-of-coronavirus
         buttontext: null
@@ -7997,7 +7998,8 @@ resources:
         title: 'Join communities'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Icons/Group_Blue@4x (1).png'
         body: "<p>Exchange knowledge, expertise and best practice in our seven special interest communities.</p>\r\n"
         htmllink: null
         buttontext: 'Go to communities'
@@ -8044,7 +8046,8 @@ resources:
         title: Collaborate
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Icons/Partnership_Blue@4x.png
         body: "<p>Meet colleagues from the cultural heritage sector to develop new projects and foster cross-border and cross-domain collaboration.</p>\r\n"
         htmllink: null
         buttontext: 'Go to members'
@@ -8091,7 +8094,8 @@ resources:
         title: Lead
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Icons/Lead_Blue@4x.png
         body: "<p>Stand for election as a Members Councillor to lead on new initiatives for digital cultural heritage and influence the future of the Europeana Initiative.</p>\r\n"
         htmllink: null
         buttontext: 'Go to Members Council'
@@ -8138,7 +8142,8 @@ resources:
         title: 'Influence the sector'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Icons/Campaign_Blue@4x.png
         body: "<p>Work with the Europeana Foundation to involve policymakers, make recommendations and set the agenda for digital cultural heritage in funded Task Forces and Working Groups.</p>\r\n"
         htmllink: null
         buttontext: 'Go to Task Forces'
@@ -8185,7 +8190,8 @@ resources:
         title: 'Stay informed'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Icons/Information_Blue@4x.png
         body: "<p>Get the latest news from Europeana and the Europeana cultural heritage landscape through our monthly Network Association newsletter and community updates.</p>\r\n"
         htmllink: null
         buttontext: 'Go to Documentation'
@@ -8232,7 +8238,8 @@ resources:
         title: 'Participate in events'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: Images/Icons/Events_Blue@4x.png
         body: "<p>Attend our annual conference and benefit from the engaging workshops, discussions, panels, interaction and networking.</p>\r\n"
         htmllink: null
         buttontext: 'Go to Events'
@@ -8991,7 +8998,8 @@ resources:
         title: 'Digital means ‘usable’.'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Icons for values and services/usable_icon@4x (1).png'
         body: "<p>Europeana provides the impetus, expertise and tools to support cultural heritage institutions in harnessing digital to open up their collections - to make them available to be used in new ways.</p>\r\n"
         htmllink: null
         buttontext: null
@@ -9038,7 +9046,8 @@ resources:
         title: 'Europeana works for ‘mutual’ benefit.'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Icons for values and services/mutual_icon@4x (1).png'
         body: null
         htmllink: null
         buttontext: null
@@ -9085,7 +9094,8 @@ resources:
         title: 'Europeana works for ‘mutual’ benefit.'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Icons for values and services/mutual_icon@4x (1).png'
         body: "<p>The Europeana Initiative is a networked organisation, a partnership of connected bodies and cultural heritage professionals.\_</p>\r\n"
         htmllink: null
         buttontext: null
@@ -9132,7 +9142,8 @@ resources:
         title: 'Europeana’s work is ‘reliable’.'
         image: null
         enable_filter: false
-        icon_image: null
+        icon_image:
+            file: 'Images/Icons for values and services/reliable_icon@4x (1).png'
         body: "<p>Europeana supports the cultural heritage institutions that safeguard Europe’s heritage, those who organise it, structure it and make it accessible with great care and precision.\_</p>\r\n"
         htmllink: null
         buttontext: null
